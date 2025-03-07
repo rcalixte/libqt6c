@@ -1,0 +1,166 @@
+#include "libqfont.hpp"
+#include "libqsize.hpp"
+#include <string.h>
+#include "libqtextoption.hpp"
+#include "libqtransform.hpp"
+#include "libqstatictext.hpp"
+#include "libqstatictext.h"
+
+/// https://doc.qt.io/qt-6/qstatictext.html
+
+/// q_statictext_new constructs a new QStaticText object.
+///
+///
+QStaticText* q_statictext_new() {
+    return QStaticText_new();
+}
+
+/// q_statictext_new2 constructs a new QStaticText object.
+///
+/// ``` const char* text ```
+QStaticText* q_statictext_new2(const char* text) {
+    return QStaticText_new2(qstring(text));
+}
+
+/// q_statictext_new3 constructs a new QStaticText object.
+///
+/// ``` QStaticText* other ```
+QStaticText* q_statictext_new3(void* other) {
+    return QStaticText_new3((QStaticText*)other);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#operator=)
+///
+/// ``` QStaticText* self, QStaticText* param1 ```
+void q_statictext_operator_assign(void* self, void* param1) {
+    QStaticText_OperatorAssign((QStaticText*)self, (QStaticText*)param1);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#swap)
+///
+/// ``` QStaticText* self, QStaticText* other ```
+void q_statictext_swap(void* self, void* other) {
+    QStaticText_Swap((QStaticText*)self, (QStaticText*)other);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#setText)
+///
+/// ``` QStaticText* self, const char* text ```
+void q_statictext_set_text(void* self, const char* text) {
+    QStaticText_SetText((QStaticText*)self, qstring(text));
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#text)
+///
+/// ``` QStaticText* self ```
+const char* q_statictext_text(void* self) {
+    libqt_string _str = QStaticText_Text((QStaticText*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#setTextFormat)
+///
+/// ``` QStaticText* self, enum Qt__TextFormat textFormat ```
+void q_statictext_set_text_format(void* self, int64_t textFormat) {
+    QStaticText_SetTextFormat((QStaticText*)self, textFormat);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#textFormat)
+///
+/// ``` QStaticText* self ```
+int64_t q_statictext_text_format(void* self) {
+    return QStaticText_TextFormat((QStaticText*)self);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#setTextWidth)
+///
+/// ``` QStaticText* self, double textWidth ```
+void q_statictext_set_text_width(void* self, double textWidth) {
+    QStaticText_SetTextWidth((QStaticText*)self, textWidth);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#textWidth)
+///
+/// ``` QStaticText* self ```
+double q_statictext_text_width(void* self) {
+    return QStaticText_TextWidth((QStaticText*)self);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#setTextOption)
+///
+/// ``` QStaticText* self, QTextOption* textOption ```
+void q_statictext_set_text_option(void* self, void* textOption) {
+    QStaticText_SetTextOption((QStaticText*)self, (QTextOption*)textOption);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#textOption)
+///
+/// ``` QStaticText* self ```
+QTextOption* q_statictext_text_option(void* self) {
+    return QStaticText_TextOption((QStaticText*)self);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#size)
+///
+/// ``` QStaticText* self ```
+QSizeF* q_statictext_size(void* self) {
+    return QStaticText_Size((QStaticText*)self);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#prepare)
+///
+/// ``` QStaticText* self ```
+void q_statictext_prepare(void* self) {
+    QStaticText_Prepare((QStaticText*)self);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#setPerformanceHint)
+///
+/// ``` QStaticText* self, enum QStaticText__PerformanceHint performanceHint ```
+void q_statictext_set_performance_hint(void* self, int64_t performanceHint) {
+    QStaticText_SetPerformanceHint((QStaticText*)self, performanceHint);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#performanceHint)
+///
+/// ``` QStaticText* self ```
+int64_t q_statictext_performance_hint(void* self) {
+    return QStaticText_PerformanceHint((QStaticText*)self);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#operator==)
+///
+/// ``` QStaticText* self, QStaticText* param1 ```
+bool q_statictext_operator_equal(void* self, void* param1) {
+    return QStaticText_OperatorEqual((QStaticText*)self, (QStaticText*)param1);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#operator!=)
+///
+/// ``` QStaticText* self, QStaticText* param1 ```
+bool q_statictext_operator_not_equal(void* self, void* param1) {
+    return QStaticText_OperatorNotEqual((QStaticText*)self, (QStaticText*)param1);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#prepare)
+///
+/// ``` QStaticText* self, QTransform* matrix ```
+void q_statictext_prepare1(void* self, void* matrix) {
+    QStaticText_Prepare1((QStaticText*)self, (QTransform*)matrix);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#prepare)
+///
+/// ``` QStaticText* self, QTransform* matrix, QFont* font ```
+void q_statictext_prepare2(void* self, void* matrix, void* font) {
+    QStaticText_Prepare2((QStaticText*)self, (QTransform*)matrix, (QFont*)font);
+}
+
+/// Delete this object from C++ memory.
+///
+/// ``` QStaticText* self ```
+void q_statictext_delete(void* self) {
+    QStaticText_Delete((QStaticText*)(self));
+}

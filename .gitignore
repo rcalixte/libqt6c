@@ -1,0 +1,5 @@
+*.swp
+.zig-cache
+cachedir
+cmd/genbindings/genbindings
+zig-out

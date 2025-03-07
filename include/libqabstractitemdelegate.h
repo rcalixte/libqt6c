@@ -1,0 +1,159 @@
+#pragma once
+#ifndef SRCQT6C_LIBQABSTRACTITEMDELEGATE_H
+#define SRCQT6C_LIBQABSTRACTITEMDELEGATE_H
+
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+
+#include "libqttypedefs.h"
+
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
+#include "qtlibc.h"
+
+#include "libqabstractitemmodel.h"
+#include "libqabstractitemview.h"
+#include "libqanystringview.h"
+#include "libqbindingstorage.h"
+#include "libqevent.h"
+#include "libqmetaobject.h"
+#include "libqobject.h"
+#include "libqpainter.h"
+#include "libqsize.h"
+#include <string.h>
+#include "libqstyleoption.h"
+#include "libqthread.h"
+#include "libqvariant.h"
+#include "libqwidget.h"
+
+QAbstractItemDelegate* q_abstractitemdelegate_new();
+QAbstractItemDelegate* q_abstractitemdelegate_new2(void* parent);
+QMetaObject* q_abstractitemdelegate_meta_object(void* self);
+void* q_abstractitemdelegate_metacast(void* self, const char* param1);
+int32_t q_abstractitemdelegate_metacall(void* self, int64_t param1, int param2, void* param3);
+void q_abstractitemdelegate_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+int32_t q_abstractitemdelegate_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+const char* q_abstractitemdelegate_tr(const char* s);
+void q_abstractitemdelegate_paint(void* self, void* painter, void* option, void* index);
+void q_abstractitemdelegate_on_paint(void* self, void (*slot)(void*, void*, void*, void*));
+void q_abstractitemdelegate_qbase_paint(void* self, void* painter, void* option, void* index);
+QSize* q_abstractitemdelegate_size_hint(void* self, void* option, void* index);
+void q_abstractitemdelegate_on_size_hint(void* self, QSize* (*slot)(void*, void*, void*));
+QSize* q_abstractitemdelegate_qbase_size_hint(void* self, void* option, void* index);
+QWidget* q_abstractitemdelegate_create_editor(void* self, void* parent, void* option, void* index);
+void q_abstractitemdelegate_on_create_editor(void* self, QWidget* (*slot)(void*, void*, void*, void*));
+QWidget* q_abstractitemdelegate_qbase_create_editor(void* self, void* parent, void* option, void* index);
+void q_abstractitemdelegate_destroy_editor(void* self, void* editor, void* index);
+void q_abstractitemdelegate_on_destroy_editor(void* self, void (*slot)(void*, void*, void*));
+void q_abstractitemdelegate_qbase_destroy_editor(void* self, void* editor, void* index);
+void q_abstractitemdelegate_set_editor_data(void* self, void* editor, void* index);
+void q_abstractitemdelegate_on_set_editor_data(void* self, void (*slot)(void*, void*, void*));
+void q_abstractitemdelegate_qbase_set_editor_data(void* self, void* editor, void* index);
+void q_abstractitemdelegate_set_model_data(void* self, void* editor, void* model, void* index);
+void q_abstractitemdelegate_on_set_model_data(void* self, void (*slot)(void*, void*, void*, void*));
+void q_abstractitemdelegate_qbase_set_model_data(void* self, void* editor, void* model, void* index);
+void q_abstractitemdelegate_update_editor_geometry(void* self, void* editor, void* option, void* index);
+void q_abstractitemdelegate_on_update_editor_geometry(void* self, void (*slot)(void*, void*, void*, void*));
+void q_abstractitemdelegate_qbase_update_editor_geometry(void* self, void* editor, void* option, void* index);
+bool q_abstractitemdelegate_editor_event(void* self, void* event, void* model, void* option, void* index);
+void q_abstractitemdelegate_on_editor_event(void* self, bool (*slot)(void*, void*, void*, void*, void*));
+bool q_abstractitemdelegate_qbase_editor_event(void* self, void* event, void* model, void* option, void* index);
+bool q_abstractitemdelegate_help_event(void* self, void* event, void* view, void* option, void* index);
+void q_abstractitemdelegate_on_help_event(void* self, bool (*slot)(void*, void*, void*, void*, void*));
+bool q_abstractitemdelegate_qbase_help_event(void* self, void* event, void* view, void* option, void* index);
+libqt_list /* of int */ q_abstractitemdelegate_painting_roles(void* self);
+void q_abstractitemdelegate_on_painting_roles(void* self, libqt_list /* of int */ (*slot)());
+libqt_list /* of int */ q_abstractitemdelegate_qbase_painting_roles(void* self);
+void q_abstractitemdelegate_commit_data(void* self, void* editor);
+void q_abstractitemdelegate_on_commit_data(void* self, void (*slot)(void*, void*));
+void q_abstractitemdelegate_close_editor(void* self, void* editor);
+void q_abstractitemdelegate_on_close_editor(void* self, void (*slot)(void*, void*));
+void q_abstractitemdelegate_size_hint_changed(void* self, void* param1);
+void q_abstractitemdelegate_on_size_hint_changed(void* self, void (*slot)(void*, void*));
+const char* q_abstractitemdelegate_tr2(const char* s, const char* c);
+const char* q_abstractitemdelegate_tr3(const char* s, const char* c, int n);
+void q_abstractitemdelegate_close_editor2(void* self, void* editor, int64_t hint);
+void q_abstractitemdelegate_on_close_editor2(void* self, void (*slot)(void*, void*, int64_t));
+const char* q_abstractitemdelegate_object_name(void* self);
+void q_abstractitemdelegate_set_object_name(void* self, const char* name);
+bool q_abstractitemdelegate_is_widget_type(void* self);
+bool q_abstractitemdelegate_is_window_type(void* self);
+bool q_abstractitemdelegate_is_quick_item_type(void* self);
+bool q_abstractitemdelegate_signals_blocked(void* self);
+bool q_abstractitemdelegate_block_signals(void* self, bool b);
+QThread* q_abstractitemdelegate_thread(void* self);
+void q_abstractitemdelegate_move_to_thread(void* self, void* thread);
+int32_t q_abstractitemdelegate_start_timer(void* self, int interval);
+void q_abstractitemdelegate_kill_timer(void* self, int id);
+libqt_list /* of QObject* */ q_abstractitemdelegate_children(void* self);
+void q_abstractitemdelegate_set_parent(void* self, void* parent);
+void q_abstractitemdelegate_install_event_filter(void* self, void* filterObj);
+void q_abstractitemdelegate_remove_event_filter(void* self, void* obj);
+QMetaObject__Connection* q_abstractitemdelegate_connect(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_abstractitemdelegate_connect2(void* self, void* sender, const char* signal, const char* member);
+bool q_abstractitemdelegate_disconnect(void* sender, void* signal, void* receiver, void* member);
+bool q_abstractitemdelegate_disconnect_with_q_meta_object_connection(void* param1);
+void q_abstractitemdelegate_dump_object_tree(void* self);
+void q_abstractitemdelegate_dump_object_info(void* self);
+bool q_abstractitemdelegate_set_property(void* self, const char* name, void* value);
+QVariant* q_abstractitemdelegate_property(void* self, const char* name);
+const char** q_abstractitemdelegate_dynamic_property_names(void* self);
+QBindingStorage* q_abstractitemdelegate_binding_storage(void* self);
+QBindingStorage* q_abstractitemdelegate_binding_storage2(void* self);
+void q_abstractitemdelegate_destroyed(void* self);
+void q_abstractitemdelegate_on_destroyed(void* self, void (*slot)(void*));
+QObject* q_abstractitemdelegate_parent(void* self);
+bool q_abstractitemdelegate_inherits(void* self, const char* classname);
+void q_abstractitemdelegate_delete_later(void* self);
+int32_t q_abstractitemdelegate_start_timer2(void* self, int interval, int64_t timerType);
+QMetaObject__Connection* q_abstractitemdelegate_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_abstractitemdelegate_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+void q_abstractitemdelegate_destroyed1(void* self, void* param1);
+void q_abstractitemdelegate_on_destroyed1(void* self, void (*slot)(void*, void*));
+bool q_abstractitemdelegate_event(void* self, void* event);
+bool q_abstractitemdelegate_qbase_event(void* self, void* event);
+void q_abstractitemdelegate_on_event(void* self, bool (*slot)(void*, void*));
+bool q_abstractitemdelegate_event_filter(void* self, void* watched, void* event);
+bool q_abstractitemdelegate_qbase_event_filter(void* self, void* watched, void* event);
+void q_abstractitemdelegate_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+void q_abstractitemdelegate_timer_event(void* self, void* event);
+void q_abstractitemdelegate_qbase_timer_event(void* self, void* event);
+void q_abstractitemdelegate_on_timer_event(void* self, void (*slot)(void*, void*));
+void q_abstractitemdelegate_child_event(void* self, void* event);
+void q_abstractitemdelegate_qbase_child_event(void* self, void* event);
+void q_abstractitemdelegate_on_child_event(void* self, void (*slot)(void*, void*));
+void q_abstractitemdelegate_custom_event(void* self, void* event);
+void q_abstractitemdelegate_qbase_custom_event(void* self, void* event);
+void q_abstractitemdelegate_on_custom_event(void* self, void (*slot)(void*, void*));
+void q_abstractitemdelegate_connect_notify(void* self, void* signal);
+void q_abstractitemdelegate_qbase_connect_notify(void* self, void* signal);
+void q_abstractitemdelegate_on_connect_notify(void* self, void (*slot)(void*, void*));
+void q_abstractitemdelegate_disconnect_notify(void* self, void* signal);
+void q_abstractitemdelegate_qbase_disconnect_notify(void* self, void* signal);
+void q_abstractitemdelegate_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+QObject* q_abstractitemdelegate_sender(void* self);
+QObject* q_abstractitemdelegate_qbase_sender(void* self);
+void q_abstractitemdelegate_on_sender(void* self, QObject* (*slot)());
+int32_t q_abstractitemdelegate_sender_signal_index(void* self);
+int32_t q_abstractitemdelegate_qbase_sender_signal_index(void* self);
+void q_abstractitemdelegate_on_sender_signal_index(void* self, int32_t (*slot)());
+int32_t q_abstractitemdelegate_receivers(void* self, const char* signal);
+int32_t q_abstractitemdelegate_qbase_receivers(void* self, const char* signal);
+void q_abstractitemdelegate_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+bool q_abstractitemdelegate_is_signal_connected(void* self, void* signal);
+bool q_abstractitemdelegate_qbase_is_signal_connected(void* self, void* signal);
+void q_abstractitemdelegate_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+void q_abstractitemdelegate_delete(void* self);
+
+/// https://doc.qt.io/qt-6/qabstractitemdelegate.html#types
+
+typedef enum {
+    QABSTRACTITEMDELEGATE_ENDEDITHINT_NOHINT = 0,
+    QABSTRACTITEMDELEGATE_ENDEDITHINT_EDITNEXTITEM = 1,
+    QABSTRACTITEMDELEGATE_ENDEDITHINT_EDITPREVIOUSITEM = 2,
+    QABSTRACTITEMDELEGATE_ENDEDITHINT_SUBMITMODELCACHE = 3,
+    QABSTRACTITEMDELEGATE_ENDEDITHINT_REVERTMODELCACHE = 4
+} QAbstractItemDelegate__EndEditHint;
+
+#endif

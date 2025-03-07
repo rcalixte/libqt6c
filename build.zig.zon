@@ -1,0 +1,14 @@
+.{
+    .name = .libqt6c,
+    .version = "6.4.2",
+    .dependencies = .{},
+    .paths = .{
+        "LICENSE",
+        "README.md",
+        "build.zig",
+        "build.zig.zon",
+        "include",
+        "src",
+    },
+    .fingerprint = 0xc0af25b23661b80c,
+}

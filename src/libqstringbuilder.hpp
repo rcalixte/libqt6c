@@ -1,0 +1,32 @@
+#pragma once
+#ifndef SRCC_LIBQSTRINGBUILDER_HPP
+#define SRCC_LIBQSTRINGBUILDER_HPP
+
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
+#include "qtlibc.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#ifdef __cplusplus
+#else
+typedef struct QAbstractConcatenable QAbstractConcatenable;
+#endif
+
+QAbstractConcatenable* QAbstractConcatenable_new(QAbstractConcatenable* other);
+QAbstractConcatenable* QAbstractConcatenable_new2(QAbstractConcatenable* other);
+void QAbstractConcatenable_CopyAssign(QAbstractConcatenable* self, QAbstractConcatenable* other);
+void QAbstractConcatenable_MoveAssign(QAbstractConcatenable* self, QAbstractConcatenable* other);
+void QAbstractConcatenable_Delete(QAbstractConcatenable* self);
+
+#ifdef __cplusplus
+} /* extern C */
+#endif
+
+#endif

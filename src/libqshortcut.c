@@ -1,0 +1,926 @@
+#include "libqanystringview.hpp"
+#include "libqbindingstorage.hpp"
+#include "libqevent.hpp"
+#include "libqkeysequence.hpp"
+#include "libqmetaobject.hpp"
+#include "libqobject.hpp"
+#include <string.h>
+#include "libqthread.hpp"
+#include "libqvariant.hpp"
+#include "libqcoreevent.hpp"
+#include "libqshortcut.hpp"
+#include "libqshortcut.h"
+
+/// https://doc.qt.io/qt-6/qshortcut.html
+
+/// q_shortcut_new constructs a new QShortcut object.
+///
+/// ``` QObject* parent ```
+QShortcut* q_shortcut_new(void* parent) {
+    return QShortcut_new((QObject*)parent);
+}
+
+/// q_shortcut_new2 constructs a new QShortcut object.
+///
+/// ``` QKeySequence* key, QObject* parent ```
+QShortcut* q_shortcut_new2(void* key, void* parent) {
+    return QShortcut_new2((QKeySequence*)key, (QObject*)parent);
+}
+
+/// q_shortcut_new3 constructs a new QShortcut object.
+///
+/// ``` enum QKeySequence__StandardKey key, QObject* parent ```
+QShortcut* q_shortcut_new3(int64_t key, void* parent) {
+    return QShortcut_new3(key, (QObject*)parent);
+}
+
+/// q_shortcut_new4 constructs a new QShortcut object.
+///
+/// ``` QKeySequence* key, QObject* parent, const char* member ```
+QShortcut* q_shortcut_new4(void* key, void* parent, const char* member) {
+    return QShortcut_new4((QKeySequence*)key, (QObject*)parent, member);
+}
+
+/// q_shortcut_new5 constructs a new QShortcut object.
+///
+/// ``` QKeySequence* key, QObject* parent, const char* member, const char* ambiguousMember ```
+QShortcut* q_shortcut_new5(void* key, void* parent, const char* member, const char* ambiguousMember) {
+    return QShortcut_new5((QKeySequence*)key, (QObject*)parent, member, ambiguousMember);
+}
+
+/// q_shortcut_new6 constructs a new QShortcut object.
+///
+/// ``` QKeySequence* key, QObject* parent, const char* member, const char* ambiguousMember, enum Qt__ShortcutContext context ```
+QShortcut* q_shortcut_new6(void* key, void* parent, const char* member, const char* ambiguousMember, int64_t context) {
+    return QShortcut_new6((QKeySequence*)key, (QObject*)parent, member, ambiguousMember, context);
+}
+
+/// q_shortcut_new7 constructs a new QShortcut object.
+///
+/// ``` enum QKeySequence__StandardKey key, QObject* parent, const char* member ```
+QShortcut* q_shortcut_new7(int64_t key, void* parent, const char* member) {
+    return QShortcut_new7(key, (QObject*)parent, member);
+}
+
+/// q_shortcut_new8 constructs a new QShortcut object.
+///
+/// ``` enum QKeySequence__StandardKey key, QObject* parent, const char* member, const char* ambiguousMember ```
+QShortcut* q_shortcut_new8(int64_t key, void* parent, const char* member, const char* ambiguousMember) {
+    return QShortcut_new8(key, (QObject*)parent, member, ambiguousMember);
+}
+
+/// q_shortcut_new9 constructs a new QShortcut object.
+///
+/// ``` enum QKeySequence__StandardKey key, QObject* parent, const char* member, const char* ambiguousMember, enum Qt__ShortcutContext context ```
+QShortcut* q_shortcut_new9(int64_t key, void* parent, const char* member, const char* ambiguousMember, int64_t context) {
+    return QShortcut_new9(key, (QObject*)parent, member, ambiguousMember, context);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// ``` QShortcut* self ```
+QMetaObject* q_shortcut_meta_object(void* self) {
+    return QShortcut_MetaObject((QShortcut*)self);
+}
+
+/// ``` QShortcut* self, const char* param1 ```
+void* q_shortcut_metacast(void* self, const char* param1) {
+    return QShortcut_Metacast((QShortcut*)self, param1);
+}
+
+/// ``` QShortcut* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+int32_t q_shortcut_metacall(void* self, int64_t param1, int param2, void* param3) {
+    return QShortcut_Metacall((QShortcut*)self, param1, param2, param3);
+}
+
+/// Allows for overriding the related default method
+///
+/// ``` QShortcut* self, int32_t (*slot)(QShortcut*, enum QMetaObject__Call, int, void*) ```
+void q_shortcut_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
+    QShortcut_OnMetacall((QShortcut*)self, (intptr_t)slot);
+}
+
+/// Base class method implementation
+///
+/// ``` QShortcut* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+int32_t q_shortcut_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+    return QShortcut_QBaseMetacall((QShortcut*)self, param1, param2, param3);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+///
+/// ``` const char* s ```
+const char* q_shortcut_tr(const char* s) {
+    libqt_string _str = QShortcut_Tr(s);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#setKey)
+///
+/// ``` QShortcut* self, QKeySequence* key ```
+void q_shortcut_set_key(void* self, void* key) {
+    QShortcut_SetKey((QShortcut*)self, (QKeySequence*)key);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#key)
+///
+/// ``` QShortcut* self ```
+QKeySequence* q_shortcut_key(void* self) {
+    return QShortcut_Key((QShortcut*)self);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#setKeys)
+///
+/// ``` QShortcut* self, enum QKeySequence__StandardKey key ```
+void q_shortcut_set_keys(void* self, int64_t key) {
+    QShortcut_SetKeys((QShortcut*)self, key);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#setKeys)
+///
+/// ``` QShortcut* self, QKeySequence* keys[] ```
+void q_shortcut_set_keys_with_keys(void* self, void* keys[]) {
+    QKeySequence** keys_arr = (QKeySequence**)keys;
+    size_t keys_len = 0;
+    while (keys_arr[keys_len] != NULL) {
+        keys_len++;
+    }
+    libqt_list keys_list = {
+        .len = keys_len,
+        .data = {(QKeySequence*)keys},
+    };
+    QShortcut_SetKeysWithKeys((QShortcut*)self, keys_list);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#keys)
+///
+/// ``` QShortcut* self ```
+libqt_list /* of QKeySequence* */ q_shortcut_keys(void* self) {
+    libqt_list _arr = QShortcut_Keys((QShortcut*)self);
+    return _arr;
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#setEnabled)
+///
+/// ``` QShortcut* self, bool enable ```
+void q_shortcut_set_enabled(void* self, bool enable) {
+    QShortcut_SetEnabled((QShortcut*)self, enable);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#isEnabled)
+///
+/// ``` QShortcut* self ```
+bool q_shortcut_is_enabled(void* self) {
+    return QShortcut_IsEnabled((QShortcut*)self);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#setContext)
+///
+/// ``` QShortcut* self, enum Qt__ShortcutContext context ```
+void q_shortcut_set_context(void* self, int64_t context) {
+    QShortcut_SetContext((QShortcut*)self, context);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#context)
+///
+/// ``` QShortcut* self ```
+int64_t q_shortcut_context(void* self) {
+    return QShortcut_Context((QShortcut*)self);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#setAutoRepeat)
+///
+/// ``` QShortcut* self, bool on ```
+void q_shortcut_set_auto_repeat(void* self, bool on) {
+    QShortcut_SetAutoRepeat((QShortcut*)self, on);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#autoRepeat)
+///
+/// ``` QShortcut* self ```
+bool q_shortcut_auto_repeat(void* self) {
+    return QShortcut_AutoRepeat((QShortcut*)self);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#id)
+///
+/// ``` QShortcut* self ```
+int32_t q_shortcut_id(void* self) {
+    return QShortcut_Id((QShortcut*)self);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#setWhatsThis)
+///
+/// ``` QShortcut* self, const char* text ```
+void q_shortcut_set_whats_this(void* self, const char* text) {
+    QShortcut_SetWhatsThis((QShortcut*)self, qstring(text));
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#whatsThis)
+///
+/// ``` QShortcut* self ```
+const char* q_shortcut_whats_this(void* self) {
+    libqt_string _str = QShortcut_WhatsThis((QShortcut*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#activated)
+///
+/// ``` QShortcut* self ```
+void q_shortcut_activated(void* self) {
+    QShortcut_Activated((QShortcut*)self);
+}
+
+/// ``` QShortcut* self, void (*slot)(QShortcut*) ```
+void q_shortcut_on_activated(void* self, void (*slot)(void*)) {
+    QShortcut_Connect_Activated((QShortcut*)self, (intptr_t)slot);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#activatedAmbiguously)
+///
+/// ``` QShortcut* self ```
+void q_shortcut_activated_ambiguously(void* self) {
+    QShortcut_ActivatedAmbiguously((QShortcut*)self);
+}
+
+/// ``` QShortcut* self, void (*slot)(QShortcut*) ```
+void q_shortcut_on_activated_ambiguously(void* self, void (*slot)(void*)) {
+    QShortcut_Connect_ActivatedAmbiguously((QShortcut*)self, (intptr_t)slot);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#event)
+///
+/// ``` QShortcut* self, QEvent* e ```
+bool q_shortcut_event(void* self, void* e) {
+    return QShortcut_Event((QShortcut*)self, (QEvent*)e);
+}
+
+/// Allows for overriding the related default method
+///
+/// ``` QShortcut* self, bool (*slot)(QShortcut*, QEvent*) ```
+void q_shortcut_on_event(void* self, bool (*slot)(void*, void*)) {
+    QShortcut_OnEvent((QShortcut*)self, (intptr_t)slot);
+}
+
+/// Base class method implementation
+///
+/// ``` QShortcut* self, QEvent* e ```
+bool q_shortcut_qbase_event(void* self, void* e) {
+    return QShortcut_QBaseEvent((QShortcut*)self, (QEvent*)e);
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+///
+/// ``` const char* s, const char* c ```
+const char* q_shortcut_tr2(const char* s, const char* c) {
+    libqt_string _str = QShortcut_Tr2(s, c);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+///
+/// ``` const char* s, const char* c, int n ```
+const char* q_shortcut_tr3(const char* s, const char* c, int n) {
+    libqt_string _str = QShortcut_Tr3(s, c, n);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+///
+/// ``` QShortcut* self ```
+const char* q_shortcut_object_name(void* self) {
+    libqt_string _str = QObject_ObjectName((QObject*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+///
+/// ``` QShortcut* self, const char* name ```
+void q_shortcut_set_object_name(void* self, const char* name) {
+    libqt_strview name_strview = qstrview(name);
+    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+///
+/// ``` QShortcut* self ```
+bool q_shortcut_is_widget_type(void* self) {
+    return QObject_IsWidgetType((QObject*)self);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+///
+/// ``` QShortcut* self ```
+bool q_shortcut_is_window_type(void* self) {
+    return QObject_IsWindowType((QObject*)self);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+///
+/// ``` QShortcut* self ```
+bool q_shortcut_is_quick_item_type(void* self) {
+    return QObject_IsQuickItemType((QObject*)self);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+///
+/// ``` QShortcut* self ```
+bool q_shortcut_signals_blocked(void* self) {
+    return QObject_SignalsBlocked((QObject*)self);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+///
+/// ``` QShortcut* self, bool b ```
+bool q_shortcut_block_signals(void* self, bool b) {
+    return QObject_BlockSignals((QObject*)self, b);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+///
+/// ``` QShortcut* self ```
+QThread* q_shortcut_thread(void* self) {
+    return QObject_Thread((QObject*)self);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QShortcut* self, QThread* thread ```
+void q_shortcut_move_to_thread(void* self, void* thread) {
+    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// ``` QShortcut* self, int interval ```
+int32_t q_shortcut_start_timer(void* self, int interval) {
+    return QObject_StartTimer((QObject*)self, interval);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QShortcut* self, int id ```
+void q_shortcut_kill_timer(void* self, int id) {
+    QObject_KillTimer((QObject*)self, id);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+///
+/// ``` QShortcut* self ```
+libqt_list /* of QObject* */ q_shortcut_children(void* self) {
+    libqt_list _arr = QObject_Children((QObject*)self);
+    return _arr;
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+///
+/// ``` QShortcut* self, QObject* parent ```
+void q_shortcut_set_parent(void* self, void* parent) {
+    QObject_SetParent((QObject*)self, (QObject*)parent);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+///
+/// ``` QShortcut* self, QObject* filterObj ```
+void q_shortcut_install_event_filter(void* self, void* filterObj) {
+    QObject_InstallEventFilter((QObject*)self, (QObject*)filterObj);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+///
+/// ``` QShortcut* self, QObject* obj ```
+void q_shortcut_remove_event_filter(void* self, void* obj) {
+    QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+QMetaObject__Connection* q_shortcut_connect(void* sender, void* signal, void* receiver, void* method) {
+    return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// ``` QShortcut* self, QObject* sender, const char* signal, const char* member ```
+QMetaObject__Connection* q_shortcut_connect2(void* self, void* sender, const char* signal, const char* member) {
+    return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+bool q_shortcut_disconnect(void* sender, void* signal, void* receiver, void* member) {
+    return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// ``` QMetaObject__Connection* param1 ```
+bool q_shortcut_disconnect_with_q_meta_object_connection(void* param1) {
+    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+///
+/// ``` QShortcut* self ```
+void q_shortcut_dump_object_tree(void* self) {
+    QObject_DumpObjectTree((QObject*)self);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+///
+/// ``` QShortcut* self ```
+void q_shortcut_dump_object_info(void* self) {
+    QObject_DumpObjectInfo((QObject*)self);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+///
+/// ``` QShortcut* self, const char* name, QVariant* value ```
+bool q_shortcut_set_property(void* self, const char* name, void* value) {
+    return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+///
+/// ``` QShortcut* self, const char* name ```
+QVariant* q_shortcut_property(void* self, const char* name) {
+    return QObject_Property((QObject*)self, name);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+///
+/// ``` QShortcut* self ```
+const char** q_shortcut_dynamic_property_names(void* self) {
+    libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
+    const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
+    const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
+    for (size_t _i = 0; _i < _arr.len; ++_i) {
+        _ret[_i] = qstring_to_char(_qstr[_i]);
+    }
+    for (size_t _i = 0; _i < _arr.len; ++_i) {
+        libqt_string_free((libqt_string*)&_qstr[_i]);
+    }
+    free((void*)_arr.data.ptr);
+    return _ret;
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+///
+/// ``` QShortcut* self ```
+QBindingStorage* q_shortcut_binding_storage(void* self) {
+    return QObject_BindingStorage((QObject*)self);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+///
+/// ``` QShortcut* self ```
+QBindingStorage* q_shortcut_binding_storage2(void* self) {
+    return QObject_BindingStorage2((QObject*)self);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
+/// ``` QShortcut* self ```
+void q_shortcut_destroyed(void* self) {
+    QObject_Destroyed((QObject*)self);
+}
+
+/// Inherited from QObject
+///
+/// ``` QShortcut* self, void (*slot)(QObject*) ```
+void q_shortcut_on_destroyed(void* self, void (*slot)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+///
+/// ``` QShortcut* self ```
+QObject* q_shortcut_parent(void* self) {
+    return QObject_Parent((QObject*)self);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+///
+/// ``` QShortcut* self, const char* classname ```
+bool q_shortcut_inherits(void* self, const char* classname) {
+    return QObject_Inherits((QObject*)self, classname);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+///
+/// ``` QShortcut* self ```
+void q_shortcut_delete_later(void* self) {
+    QObject_DeleteLater((QObject*)self);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// ``` QShortcut* self, int interval, enum Qt__TimerType timerType ```
+int32_t q_shortcut_start_timer2(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer2((QObject*)self, interval, timerType);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+QMetaObject__Connection* q_shortcut_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// ``` QShortcut* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+QMetaObject__Connection* q_shortcut_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
+/// ``` QShortcut* self, QObject* param1 ```
+void q_shortcut_destroyed1(void* self, void* param1) {
+    QObject_Destroyed1((QObject*)self, (QObject*)param1);
+}
+
+/// Inherited from QObject
+///
+/// ``` QShortcut* self, void (*slot)(QObject*, QObject*) ```
+void q_shortcut_on_destroyed1(void* self, void (*slot)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QShortcut* self, QObject* watched, QEvent* event ```
+bool q_shortcut_event_filter(void* self, void* watched, void* event) {
+    return QShortcut_EventFilter((QShortcut*)self, (QObject*)watched, (QEvent*)event);
+}
+
+/// Inherited from QObject
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QShortcut* self, QObject* watched, QEvent* event ```
+bool q_shortcut_qbase_event_filter(void* self, void* watched, void* event) {
+    return QShortcut_QBaseEventFilter((QShortcut*)self, (QObject*)watched, (QEvent*)event);
+}
+
+/// Inherited from QObject
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QShortcut* self, bool (*slot)(QShortcut*, QObject*, QEvent*) ```
+void q_shortcut_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
+    QShortcut_OnEventFilter((QShortcut*)self, (intptr_t)slot);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QShortcut* self, QTimerEvent* event ```
+void q_shortcut_timer_event(void* self, void* event) {
+    QShortcut_TimerEvent((QShortcut*)self, (QTimerEvent*)event);
+}
+
+/// Inherited from QObject
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QShortcut* self, QTimerEvent* event ```
+void q_shortcut_qbase_timer_event(void* self, void* event) {
+    QShortcut_QBaseTimerEvent((QShortcut*)self, (QTimerEvent*)event);
+}
+
+/// Inherited from QObject
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QShortcut* self, void (*slot)(QShortcut*, QTimerEvent*) ```
+void q_shortcut_on_timer_event(void* self, void (*slot)(void*, void*)) {
+    QShortcut_OnTimerEvent((QShortcut*)self, (intptr_t)slot);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QShortcut* self, QChildEvent* event ```
+void q_shortcut_child_event(void* self, void* event) {
+    QShortcut_ChildEvent((QShortcut*)self, (QChildEvent*)event);
+}
+
+/// Inherited from QObject
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QShortcut* self, QChildEvent* event ```
+void q_shortcut_qbase_child_event(void* self, void* event) {
+    QShortcut_QBaseChildEvent((QShortcut*)self, (QChildEvent*)event);
+}
+
+/// Inherited from QObject
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QShortcut* self, void (*slot)(QShortcut*, QChildEvent*) ```
+void q_shortcut_on_child_event(void* self, void (*slot)(void*, void*)) {
+    QShortcut_OnChildEvent((QShortcut*)self, (intptr_t)slot);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QShortcut* self, QEvent* event ```
+void q_shortcut_custom_event(void* self, void* event) {
+    QShortcut_CustomEvent((QShortcut*)self, (QEvent*)event);
+}
+
+/// Inherited from QObject
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QShortcut* self, QEvent* event ```
+void q_shortcut_qbase_custom_event(void* self, void* event) {
+    QShortcut_QBaseCustomEvent((QShortcut*)self, (QEvent*)event);
+}
+
+/// Inherited from QObject
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QShortcut* self, void (*slot)(QShortcut*, QEvent*) ```
+void q_shortcut_on_custom_event(void* self, void (*slot)(void*, void*)) {
+    QShortcut_OnCustomEvent((QShortcut*)self, (intptr_t)slot);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QShortcut* self, QMetaMethod* signal ```
+void q_shortcut_connect_notify(void* self, void* signal) {
+    QShortcut_ConnectNotify((QShortcut*)self, (QMetaMethod*)signal);
+}
+
+/// Inherited from QObject
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QShortcut* self, QMetaMethod* signal ```
+void q_shortcut_qbase_connect_notify(void* self, void* signal) {
+    QShortcut_QBaseConnectNotify((QShortcut*)self, (QMetaMethod*)signal);
+}
+
+/// Inherited from QObject
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QShortcut* self, void (*slot)(QShortcut*, QMetaMethod*) ```
+void q_shortcut_on_connect_notify(void* self, void (*slot)(void*, void*)) {
+    QShortcut_OnConnectNotify((QShortcut*)self, (intptr_t)slot);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QShortcut* self, QMetaMethod* signal ```
+void q_shortcut_disconnect_notify(void* self, void* signal) {
+    QShortcut_DisconnectNotify((QShortcut*)self, (QMetaMethod*)signal);
+}
+
+/// Inherited from QObject
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QShortcut* self, QMetaMethod* signal ```
+void q_shortcut_qbase_disconnect_notify(void* self, void* signal) {
+    QShortcut_QBaseDisconnectNotify((QShortcut*)self, (QMetaMethod*)signal);
+}
+
+/// Inherited from QObject
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QShortcut* self, void (*slot)(QShortcut*, QMetaMethod*) ```
+void q_shortcut_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
+    QShortcut_OnDisconnectNotify((QShortcut*)self, (intptr_t)slot);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QShortcut* self ```
+QObject* q_shortcut_sender(void* self) {
+    return QShortcut_Sender((QShortcut*)self);
+}
+
+/// Inherited from QObject
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QShortcut* self ```
+QObject* q_shortcut_qbase_sender(void* self) {
+    return QShortcut_QBaseSender((QShortcut*)self);
+}
+
+/// Inherited from QObject
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QShortcut* self, QObject* (*slot)() ```
+void q_shortcut_on_sender(void* self, QObject* (*slot)()) {
+    QShortcut_OnSender((QShortcut*)self, (intptr_t)slot);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QShortcut* self ```
+int32_t q_shortcut_sender_signal_index(void* self) {
+    return QShortcut_SenderSignalIndex((QShortcut*)self);
+}
+
+/// Inherited from QObject
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QShortcut* self ```
+int32_t q_shortcut_qbase_sender_signal_index(void* self) {
+    return QShortcut_QBaseSenderSignalIndex((QShortcut*)self);
+}
+
+/// Inherited from QObject
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QShortcut* self, int32_t (*slot)() ```
+void q_shortcut_on_sender_signal_index(void* self, int32_t (*slot)()) {
+    QShortcut_OnSenderSignalIndex((QShortcut*)self, (intptr_t)slot);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QShortcut* self, const char* signal ```
+int32_t q_shortcut_receivers(void* self, const char* signal) {
+    return QShortcut_Receivers((QShortcut*)self, signal);
+}
+
+/// Inherited from QObject
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QShortcut* self, const char* signal ```
+int32_t q_shortcut_qbase_receivers(void* self, const char* signal) {
+    return QShortcut_QBaseReceivers((QShortcut*)self, signal);
+}
+
+/// Inherited from QObject
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QShortcut* self, int32_t (*slot)(QShortcut*, const char*) ```
+void q_shortcut_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
+    QShortcut_OnReceivers((QShortcut*)self, (intptr_t)slot);
+}
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QShortcut* self, QMetaMethod* signal ```
+bool q_shortcut_is_signal_connected(void* self, void* signal) {
+    return QShortcut_IsSignalConnected((QShortcut*)self, (QMetaMethod*)signal);
+}
+
+/// Inherited from QObject
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QShortcut* self, QMetaMethod* signal ```
+bool q_shortcut_qbase_is_signal_connected(void* self, void* signal) {
+    return QShortcut_QBaseIsSignalConnected((QShortcut*)self, (QMetaMethod*)signal);
+}
+
+/// Inherited from QObject
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QShortcut* self, bool (*slot)(QShortcut*, QMetaMethod*) ```
+void q_shortcut_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
+    QShortcut_OnIsSignalConnected((QShortcut*)self, (intptr_t)slot);
+}
+
+/// Delete this object from C++ memory.
+///
+/// ``` QShortcut* self ```
+void q_shortcut_delete(void* self) {
+    QShortcut_Delete((QShortcut*)(self));
+}
