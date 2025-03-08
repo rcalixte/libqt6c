@@ -288,7 +288,7 @@ zig build -Doptimize=ReleaseSafe
 
 ### Q5. Can I use another build system?
 
-In theory, any build system that supports C should work. However, this has only been lightly tested and is therefore unsupported and left as an exercise for the interested reader.
+In theory, any build system that supports both C and C++ should work. However, this has only been lightly tested and is therefore unsupported and left as an exercise for the interested reader.
 
 ### Q6. Can I use Qt Designer and the Qt Resource system?
 
