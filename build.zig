@@ -2,7 +2,7 @@ const std = @import("std");
 
 pub fn build(b: *std.Build) !void {
     const target = b.standardTargetOptions(.{});
-    const linkage = b.option(std.builtin.LinkMode, "linkage", "Link mode for libqt6zig") orelse .static;
+    const linkage = b.option(std.builtin.LinkMode, "linkage", "Link mode for libqt6c") orelse .static;
     const enable_workaround = b.option(bool, "enable-workaround", "Enable workaround for missing Qt C++ headers") orelse false;
     const skip_restricted = b.option(bool, "skip-restricted", "Skip restricted libraries") orelse false;
     const optimize = standardOptimizeOption(b, .{});
