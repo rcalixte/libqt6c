@@ -120,7 +120,7 @@ sudo pkg install qt6-base qt6-multimedia qt6-svg qt6-webchannel qt6-webengine qs
 Linux (native)
 --------------
 
-- *Tested with Debian 12 + 13 / Qt 6.4 + 6.7 / GCC 12 + 14*
+- *Tested with Debian 12 + 13 / Qt 6.4 + 6.8 / GCC 12 + 14*
 
 - *Tested with Linux Mint 22 / Qt 6.4 / GCC 13*
 
