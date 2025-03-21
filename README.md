@@ -233,7 +233,7 @@ Yes. You must also meet your Qt license obligations: either dynamically link Qt 
 
 ### Q2. How long does it take to compile?
 
-Under normal conditions, the first compilation should take less than 10 minutes, assuming the hardware in use is at or above the level of that of a consumer-grade mid-tier machine released in the past decade. Once the build cache is warmed up, subsequent compilations should be very fast, on the order of seconds. This assumes the Zig build system is being used.
+Under normal conditions, the first compilation of the entire library should take less than 10 minutes, assuming the hardware in use is at or above the level of that of a consumer-grade mid-tier machine released in the past decade. Once the build cache is warmed up, subsequent compilations should be very fast, on the order of seconds. For client applications that use and configure a specific subset of the main library, the expected compilation time should be much shorter, e.g. compiling the `helloworld` example, only linking the libraries needed and without a warm cache, should take under 30 seconds. This assumes the Zig build system is being used.
 
 ### Q3. How does the `libqt6c` API differ from the official Qt C++ API?
 
