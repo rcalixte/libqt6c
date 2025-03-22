@@ -381,10 +381,7 @@ func generateClangCaches(includeFiles []string, clangBin string, cflags []string
 					panic(err)
 				}
 
-				astInner = nil
-				jb = nil
 				runtime.GC()
-
 			}
 		}()
 	}
