@@ -935,14 +935,6 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			baseMethods = append(baseMethods, im.Method)
 		}
 
-		var inheritedVirtualMethods []InheritedMethod
-		for _, base := range c.DirectInherits {
-			inherited := collectInheritedMethodsForC(base, seenMethods)
-			if inherited != nil {
-				inheritedVirtualMethods = append(inheritedVirtualMethods, inherited...)
-			}
-		}
-
 		previousMethods := map[string]struct{}{}
 		seenMethodVariants := map[string]bool{}
 
