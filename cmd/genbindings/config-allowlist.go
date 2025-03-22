@@ -69,12 +69,14 @@ func Widgets_AllowHeader(fullpath string) bool {
 		"cache_adaptor.h",                 // Clang error new 6.4
 		"deviceeventcontroller_adaptor.h", // Clang error new 6.4
 		"socket_interface.h",              // Clang error new 6.4
-		"qlatin1stringview.h",             // Clang error new Qt6.7
-		"qpermissions.h",                  // Clang error new Qt6.7
-		"qtipccommon.h",                   // Clang error new Qt6.7
-		"qscreen_platform.h",              // Clang error new Qt6.7
-		"qrhiwidget.h",                    // Clang error new Qt6.7
-		"qscreencapture.h",                // Clang error new Qt6.7 + ParameterType == Error
+		"qlatin1stringview.h",             // Clang error new Qt 6.7
+		"qpermissions.h",                  // Clang error new Qt 6.7
+		"qtipccommon.h",                   // Clang error new Qt 6.7
+		"qscreen_platform.h",              // Clang error new Qt 6.7
+		"qrhiwidget.h",                    // Clang error new Qt 6.7
+		"qscreencapture.h",                // Clang error new Qt 6.7 + ParameterType == Error
+		"properties_interface.h",          // Qt 6.8 error
+		"qdirlisting.h",                   // Qt 6.8 error
 		"qatomic.h",                       // broken inheritance
 		"qtestsupport_widgets.h",          // broken inheritance
 		"qmaccocoaviewcontainer_mac.h",    // Needs NSView* headers. TODO allow with darwin build tag
@@ -123,6 +125,7 @@ func ImportHeaderForClass(className string) bool {
 		"QText",                 // e.g. qtextcursor.h
 		"QVLABaseBase",          // e.g. Qt 6 qvarlengtharray.h
 		"QAdoptSharedDataTag",   // Qt 6 qshareddata.h
+		"QFormDataPartBuilder",  // Qt 6.8 qformdatabuilder.h
 		"____last____":
 		return false
 	}
@@ -322,6 +325,16 @@ func AllowMethod(className string, mm CppMethod) error {
 		return ErrTooComplex
 	}
 
+	if className == "QAbstractVideoBuffer" && mm.MethodName == "map" {
+		// Present in Qt 6.8 but the return type is not properly handled yet
+		return ErrTooComplex
+	}
+
+	if className == "QChronoTimer" && mm.MethodName == "id" {
+		// Present in Qt 6.8 but the return type is not properly handled yet
+		return ErrTooComplex
+	}
+
 	return nil // OK, allow
 }
 
@@ -390,6 +403,9 @@ func AllowType(p CppParameter, isReturnType bool) error {
 
 	if strings.Contains(p.ParameterType, "(*)") { // Function pointer.
 		return ErrTooComplex // e.g. QAccessible_InstallFactory
+	}
+	if strings.Contains(p.ParameterType, "QJSValue") { // callback function pointer
+		return ErrTooComplex // e.g. QWebEngineFrame_RunJavaScript2
 	}
 	if strings.HasPrefix(p.ParameterType, "StringResult<") {
 		return ErrTooComplex // e.g. qcborstreamreader.h
