@@ -661,7 +661,6 @@ var (
 		"QFileDevice_Seek":                     {},
 		"QFileDevice_SetPermissions":           {},
 		"QFileDevice_Size":                     {},
-		"QGradient_SetStops":                   {},
 		"QPagedPaintDevice_SetPageLayout":      {},
 		"QPagedPaintDevice_SetPageMargins":     {},
 		"QPagedPaintDevice_SetPageOrientation": {},
@@ -979,13 +978,6 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 			previousMethods[m.MethodName] = struct{}{}
 			previousMethods[mSafeMethodName] = struct{}{}
-
-			if cmdStructName == "QGradient" && mSafeMethodName == "SetStops" {
-				continue
-			}
-			if (cmdStructName == "QsciScintillaBase" || cmdStructName == "QsciScintilla") && mSafeMethodName == "InputMethodQuery" {
-				continue
-			}
 
 			cfs.castType = cmdStructName
 
@@ -1552,13 +1544,6 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 			if m.InheritedInClass != "" {
 				inheritedFrom = "\n    /// Inherited from " + m.InheritedInClass + "\n    ///"
-			}
-
-			if cmdStructName == "QGradient" && mSafeMethodName == "SetStops" {
-				continue
-			}
-			if (cmdStructName == "QsciScintillaBase" || cmdStructName == "QsciScintilla") && mSafeMethodName == "InputMethodQuery" {
-				continue
 			}
 
 			ret.WriteString(inheritedFrom)

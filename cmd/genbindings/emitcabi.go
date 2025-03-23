@@ -1885,12 +1885,6 @@ extern "C" {
 			if (m.IsProtected || m.IsPrivate) && (!virtualEligible || len(virtualMethods) == 0) {
 				continue
 			}
-			if methodPrefixName == "QGradient" && m.SafeMethodName() == "SetStops" {
-				continue
-			}
-			if methodPrefixName == "QsciScintillaBase" && m.SafeMethodName() == "InputMethodQuery" {
-				continue
-			}
 			if _, exists := seenClassMethods[methodPrefixName+"_"+m.SafeMethodName()]; !exists {
 				seenClassMethods[methodPrefixName+"_"+m.SafeMethodName()] = struct{}{}
 			} else {
@@ -2208,12 +2202,6 @@ func emitBindingCpp(src *CppParsedHeader, filename, packageName string) (string,
 				continue
 			}
 			if (m.IsProtected || m.IsPrivate) && (!virtualEligible || len(virtualMethods) == 0) {
-				continue
-			}
-			if methodPrefixName == "QGradient" && m.SafeMethodName() == "SetStops" {
-				continue
-			}
-			if methodPrefixName == "QsciScintillaBase" && m.SafeMethodName() == "InputMethodQuery" {
 				continue
 			}
 			var showHiddenParams bool

@@ -320,6 +320,14 @@ func AllowMethod(className string, mm CppMethod) error {
 		return ErrTooComplex
 	}
 
+	if className == "QGradient" && mm.MethodName == "setStops" {
+		return ErrTooComplex // Qt 6.4: undefined symbol error during compilation
+	}
+
+	if className == "QsciScintillaBase" && mm.MethodName == "inputMethodQuery" {
+		return ErrTooComplex // Qt 6.4: private method
+	}
+
 	if className == "QXmlStreamEntityResolver" && mm.MethodName == "operator=" {
 		// Present in Qt 6.7, but marked as =delete by Q_DISABLE_COPY_MOVE in Qt 6.8
 		return ErrTooComplex
