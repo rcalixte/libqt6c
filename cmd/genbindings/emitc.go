@@ -946,6 +946,12 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				continue
 			}
 
+			if _, ok := privateAndSkippedMethods[c.ClassName+"_"+m.SafeMethodName()]; ok {
+				if m.InheritedFrom == "" {
+					continue
+				}
+			}
+
 			var showHiddenParams bool
 			if _, ok := seenMethodVariants[m.SafeMethodName()]; ok {
 				continue
@@ -1058,6 +1064,13 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			if !virtualEligible {
 				continue
 			}
+
+			if _, ok := privateAndSkippedMethods[c.ClassName+"_"+m.SafeMethodName()]; ok {
+				if m.InheritedFrom == "" {
+					continue
+				}
+			}
+
 			var showHiddenParams bool
 			if _, ok := seenVirtuals[m.SafeMethodName()]; ok {
 				continue
@@ -1072,16 +1085,6 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 			seenVirtuals[m.MethodName] = false
 			seenVirtuals[m.SafeMethodName()] = false
-
-			if (c.ClassName == "QsciScintillaBase" || c.ClassName == "QsciScintilla") && m.SafeMethodName() == "InputMethodQuery" {
-				continue
-			}
-
-			if _, ok := privateMethods[c.ClassName+"_"+m.SafeMethodName()]; ok {
-				if m.InheritedFrom == "" {
-					continue
-				}
-			}
 
 			if _, ok := previousMethods[m.MethodName]; ok {
 				continue
@@ -1503,6 +1506,12 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				continue
 			}
 
+			if _, ok := privateAndSkippedMethods[c.ClassName+"_"+m.SafeMethodName()]; ok {
+				if m.InheritedFrom == "" {
+					continue
+				}
+			}
+
 			var showHiddenParams bool
 			if _, ok := seenMethodVariants[m.SafeMethodName()]; ok {
 				continue
@@ -1519,12 +1528,6 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			seenMethodVariants[m.SafeMethodName()] = false
 
 			mSafeMethodName := m.SafeMethodName()
-
-			if _, ok := privateMethods[c.ClassName+"_"+mSafeMethodName]; ok {
-				if m.InheritedFrom == "" {
-					continue
-				}
-			}
 
 			if _, ok := previousMethods[mSafeMethodName]; ok {
 				continue
@@ -1709,6 +1712,13 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			if !virtualEligible {
 				continue
 			}
+
+			if _, ok := privateAndSkippedMethods[c.ClassName+"_"+m.SafeMethodName()]; ok {
+				if m.InheritedFrom == "" {
+					continue
+				}
+			}
+
 			var showHiddenParams bool
 			if _, ok := seenVirtuals[m.SafeMethodName()]; ok {
 				continue
@@ -1723,10 +1733,6 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 			seenVirtuals[m.MethodName] = false
 			seenVirtuals[m.SafeMethodName()] = false
-
-			if (c.ClassName == "QsciScintillaBase" || c.ClassName == "QsciScintilla") && m.SafeMethodName() == "InputMethodQuery" {
-				continue
-			}
 
 			if _, ok := previousMethods[m.MethodName]; ok {
 				continue
