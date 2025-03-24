@@ -110,7 +110,6 @@ int32_t q_pointerevent_register_event_type();
 int32_t q_pointerevent_register_event_type1(int hint);
 void q_pointerevent_delete(void* self);
 
-QSinglePointEvent* q_singlepointevent_clone(void* self);
 int64_t q_singlepointevent_button(void* self);
 int64_t q_singlepointevent_buttons(void* self);
 QPointF* q_singlepointevent_position(void* self);

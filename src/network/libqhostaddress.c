@@ -229,13 +229,6 @@ bool q_hostaddress_is_in_subnet(void* self, void* subnet, int netmask) {
     return QHostAddress_IsInSubnet((QHostAddress*)self, (QHostAddress*)subnet, netmask);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#isInSubnet)
-///
-/// ``` QHostAddress* self, libqt_pair /* tuple of QHostAddress* and int */ subnet ```
-bool q_hostaddress_is_in_subnet_with_subnet(void* self, libqt_pair /* tuple of QHostAddress* and int */ subnet) {
-    return QHostAddress_IsInSubnetWithSubnet((QHostAddress*)self, subnet);
-}
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#isLoopback)
 ///
 /// ``` QHostAddress* self ```

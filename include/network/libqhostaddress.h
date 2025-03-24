@@ -46,7 +46,6 @@ bool q_hostaddress_operator_not_equal_with_address(void* self, int64_t address);
 bool q_hostaddress_is_null(void* self);
 void q_hostaddress_clear(void* self);
 bool q_hostaddress_is_in_subnet(void* self, void* subnet, int netmask);
-bool q_hostaddress_is_in_subnet_with_subnet(void* self, libqt_pair /* tuple of QHostAddress* and int */ subnet);
 bool q_hostaddress_is_loopback(void* self);
 bool q_hostaddress_is_global(void* self);
 bool q_hostaddress_is_link_local(void* self);
