@@ -674,11 +674,15 @@ var (
 	}
 
 	undoIncludePrefixMap = map[string]struct{}{
-		"qabstractnetwork": {}, "qabstractprint": {}, "qaudio": {}, "qauth": {},
-		"qcamera": {}, "qcaptur": {}, "qcbor": {}, "qhost": {}, "qhst": {},
-		"qhttp": {}, "qimagecapture": {}, "qmedia": {}, "qnet": {}, "qocsp": {},
-		"qprint": {}, "qssl": {}, "qsvg": {}, "qtcp": {}, "qudp": {},
-		"qvideo": {}, "qweb": {},
+		"qabstractaxis": {}, "qabstractbar": {}, "qabstractnetwork": {},
+		"qabstractprint": {}, "qabstractseries": {}, "qareaseries": {},
+		"qaudio": {}, "qauth": {}, "qbarmodel": {}, "qbarset": {},
+		"qboxplot": {}, "qboxset": {}, "qcamera": {}, "qcandlestick": {},
+		"qcaptur": {}, "qcbor": {}, "qchart": {}, "qhost": {}, "qhst": {},
+		"qhttp": {}, "qimagecapture": {}, "qlegend": {}, "qlineseries": {},
+		"qmedia": {}, "qnet": {}, "qocsp": {}, "qpie": {}, "qprint": {},
+		"qssl": {}, "qsvg": {}, "qtcp": {}, "qudp": {}, "qvalueaxis": {},
+		"qvideo": {}, "qweb": {}, "qxymodel": {}, "qxyseries": {},
 	}
 
 	undoIncludeSuffixMap = map[string]struct{}{
