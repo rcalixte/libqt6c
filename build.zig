@@ -19,44 +19,40 @@ pub fn build(b: *std.Build) !void {
     var cpp_sources: std.ArrayListUnmanaged([]const u8) = .empty;
     var c_sources: std.StringHashMapUnmanaged([]const u8) = .empty;
 
-    {
-        const src_dir = b.build_root.path.?;
-        var dir = try std.fs.cwd().openDir(src_dir, .{ .iterate = true });
-        var walker = try dir.walk(b.allocator);
-        defer walker.deinit();
+    const src_dir = b.build_root.path.?;
+    var dir = try std.fs.cwd().openDir(src_dir, .{ .iterate = true });
+    var walker = try dir.walk(b.allocator);
+    defer walker.deinit();
 
-        while (try walker.next()) |entry| {
-            if (entry.kind == .file and std.mem.endsWith(u8, entry.path, ".cpp")) {
-                var basename = std.fs.path.basename(entry.path);
-                basename = basename[3 .. basename.len - 4];
-                // conditional removals
-                if (workaroundNeeded(enable_workaround, is_bsd_family, basename))
-                    continue;
-                if (skip_restricted and std.mem.startsWith(u8, entry.path, "src/restricted"))
-                    continue;
+    while (try walker.next()) |entry| {
+        if (entry.kind == .file and std.mem.endsWith(u8, entry.path, ".cpp")) {
+            var basename = std.fs.path.basename(entry.path);
+            basename = basename[3 .. basename.len - 4];
+            // conditional removals
+            if (workaroundNeeded(enable_workaround, is_bsd_family, basename))
+                continue;
+            if (skip_restricted and std.mem.startsWith(u8, entry.path, "src/restricted"))
+                continue;
 
-                try cpp_sources.append(allocator, b.dupe(entry.path));
-            } else if (entry.kind == .file and std.mem.endsWith(u8, entry.path, ".c")) {
-                var c_basename = std.fs.path.basename(entry.path);
-                c_basename = c_basename[3 .. c_basename.len - 2];
-                // conditional removals
-                if (workaroundNeeded(enable_workaround, is_bsd_family, c_basename))
-                    continue;
-                if (skip_restricted and std.mem.startsWith(u8, entry.path, "src/restricted"))
-                    continue;
+            try cpp_sources.append(allocator, b.dupe(entry.path));
+        } else if (entry.kind == .file and std.mem.endsWith(u8, entry.path, ".c")) {
+            var c_basename = std.fs.path.basename(entry.path);
+            c_basename = c_basename[3 .. c_basename.len - 2];
+            // conditional removals
+            if (workaroundNeeded(enable_workaround, is_bsd_family, c_basename))
+                continue;
+            if (skip_restricted and std.mem.startsWith(u8, entry.path, "src/restricted"))
+                continue;
 
-                try c_sources.put(allocator, b.dupe(c_basename), b.dupe(entry.path));
-            }
+            try c_sources.put(allocator, b.dupe(c_basename), b.dupe(entry.path));
         }
     }
 
-    if (cpp_sources.items.len == 0) {
+    if (cpp_sources.items.len == 0)
         @panic("No .cpp files found.\n");
-    }
 
-    if (cpp_sources.items.len != c_sources.count()) {
+    if (cpp_sources.items.len != c_sources.count())
         @panic("Number of C sources does not match number of C++ sources.\n");
-    }
 
     const qt_include_path: []const []const u8 = switch (target.result.os.tag) {
         .dragonfly, .freebsd, .netbsd, .openbsd => &.{"/usr/local/include/qt6"},
@@ -86,6 +82,7 @@ pub fn build(b: *std.Build) !void {
         "QtCore",
         "QtWidgets",
         "QtGui",
+        "QtCharts",
         "QtMultimedia",
         "QtMultimediaWidgets",
         "QtNetwork",
