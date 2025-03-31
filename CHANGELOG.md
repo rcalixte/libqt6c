@@ -1,4 +1,8 @@
 
+### 6.4.2 rev4 (31 March 2025)
+
+* **BREAKING CHANGE:** Mark Qt Charts restricted (#4)
+
 ### 6.4.2 rev3 (30 March 2025)
 
 * Add [Qt Charts](https://doc.qt.io/qt-6/qtcharts-index.html) (#3)
