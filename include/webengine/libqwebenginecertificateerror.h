@@ -16,16 +16,61 @@
 #include <string.h>
 #include "../libqurl.h"
 
+/// https://doc.qt.io/qt-6/qwebenginecertificateerror.html
+
+/// q_webenginecertificateerror_new constructs a new QWebEngineCertificateError object.
+///
+/// ``` QWebEngineCertificateError* other ```
 QWebEngineCertificateError* q_webenginecertificateerror_new(void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#operator=)
+///
+/// ``` QWebEngineCertificateError* self, QWebEngineCertificateError* other ```
 void q_webenginecertificateerror_operator_assign(void* self, void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#type)
+///
+/// ``` QWebEngineCertificateError* self ```
 int64_t q_webenginecertificateerror_type(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#url)
+///
+/// ``` QWebEngineCertificateError* self ```
 QUrl* q_webenginecertificateerror_url(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#isOverridable)
+///
+/// ``` QWebEngineCertificateError* self ```
 bool q_webenginecertificateerror_is_overridable(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#description)
+///
+/// ``` QWebEngineCertificateError* self ```
 const char* q_webenginecertificateerror_description(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#defer)
+///
+/// ``` QWebEngineCertificateError* self ```
 void q_webenginecertificateerror_defer(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#rejectCertificate)
+///
+/// ``` QWebEngineCertificateError* self ```
 void q_webenginecertificateerror_reject_certificate(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#acceptCertificate)
+///
+/// ``` QWebEngineCertificateError* self ```
 void q_webenginecertificateerror_accept_certificate(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#certificateChain)
+///
+/// ``` QWebEngineCertificateError* self ```
 libqt_list /* of QSslCertificate* */ q_webenginecertificateerror_certificate_chain(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// ``` QWebEngineCertificateError* self ```
 void q_webenginecertificateerror_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qwebenginecertificateerror.html#types

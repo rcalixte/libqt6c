@@ -15,17 +15,66 @@
 #include "libqsslcertificate.h"
 #include <string.h>
 
+/// https://doc.qt.io/qt-6/qsslerror.html
+
+/// q_sslerror_new constructs a new QSslError object.
+///
+///
 QSslError* q_sslerror_new();
+
+/// q_sslerror_new2 constructs a new QSslError object.
+///
+/// ``` enum QSslError__SslError errorVal ```
 QSslError* q_sslerror_new2(int64_t errorVal);
+
+/// q_sslerror_new3 constructs a new QSslError object.
+///
+/// ``` enum QSslError__SslError errorVal, QSslCertificate* certificate ```
 QSslError* q_sslerror_new3(int64_t errorVal, void* certificate);
+
+/// q_sslerror_new4 constructs a new QSslError object.
+///
+/// ``` QSslError* other ```
 QSslError* q_sslerror_new4(void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#swap)
+///
+/// ``` QSslError* self, QSslError* other ```
 void q_sslerror_swap(void* self, void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#operator=)
+///
+/// ``` QSslError* self, QSslError* other ```
 void q_sslerror_operator_assign(void* self, void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#operator==)
+///
+/// ``` QSslError* self, QSslError* other ```
 bool q_sslerror_operator_equal(void* self, void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#operator!=)
+///
+/// ``` QSslError* self, QSslError* other ```
 bool q_sslerror_operator_not_equal(void* self, void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#error)
+///
+/// ``` QSslError* self ```
 int64_t q_sslerror_error(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#errorString)
+///
+/// ``` QSslError* self ```
 const char* q_sslerror_error_string(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#certificate)
+///
+/// ``` QSslError* self ```
 QSslCertificate* q_sslerror_certificate(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// ``` QSslError* self ```
 void q_sslerror_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qsslerror.html#types

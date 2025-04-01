@@ -14,7 +14,16 @@
 
 #include <string.h>
 
+/// https://doc.qt.io/qt-6/qfactoryinterface.html
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfactoryinterface.html#keys)
+///
+/// ``` QFactoryInterface* self ```
 const char** q_factoryinterface_keys(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// ``` QFactoryInterface* self ```
 void q_factoryinterface_delete(void* self);
 
 #endif

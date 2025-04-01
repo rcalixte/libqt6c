@@ -14,8 +14,21 @@
 
 #include <string.h>
 
+/// https://doc.qt.io/qt-6/qcborerror.html
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborerror.html#operator QCborError::Code)
+///
+/// ``` QCborError* self ```
 int64_t q_cborerror_to_q_cbor_error___code(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborerror.html#toString)
+///
+/// ``` QCborError* self ```
 const char* q_cborerror_to_string(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// ``` QCborError* self ```
 void q_cborerror_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qcborcommon.html#types

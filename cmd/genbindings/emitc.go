@@ -883,17 +883,44 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 		}
 
+		if len(c.Ctors) > 0 || len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 {
+			pageName := getPageName(cStructName)
+			ret.WriteString(`
+
+/// https://doc.qt.io/qt-6/` + pageName + `.html
+`)
+		}
+
 		for i, ctor := range c.Ctors {
+			var backticks, maybeMoveCtor string
+
+			if len(ctor.Parameters) > 0 {
+				backticks = "```"
+			}
+
+			if ctor.IsMoveCtor {
+				maybeMoveCtor = " object and invalidates the source " + c.ClassName
+			}
+
 			cfs.castType = cStructName
-			ret.WriteString(cStructName + `* ` + cMethodPrefix + `_new` + maybeSuffix(i) + `(` + cfs.emitParametersC(ctor.Parameters, false) + `);` + "\n")
+			ret.WriteString(`
+
+/// ` + cMethodPrefix + `_new` + maybeSuffix(i) + ` constructs a new ` + c.ClassName + maybeMoveCtor +
+				" object.\n///\n/// " + backticks + " " +
+				cfs.emitCommentParametersC(ctor.Parameters, false) + " " + backticks + "\n" +
+				cStructName + `* ` + cMethodPrefix + `_new` + maybeSuffix(i) + `(` + cfs.emitParametersC(ctor.Parameters, false) + `);` + "\n\n")
 		}
 
 		if c.HasTrivialCopyAssign && cStructName != "QCborValueConstRef" && cStructName != "QJsonValueConstRef" {
-			ret.WriteString("void " + cMethodPrefix + "_copy_assign(void* self, void* other);" + "\n")
+			ret.WriteString("/// " + cMethodPrefix + "_copy_assign shallow copies `other` into `self`.\n" + "///\n" +
+				"/// ``` " + cStructName + "* self, " + cStructName + "* other ```\n" +
+				"void " + cMethodPrefix + "_copy_assign(void* self, void* other);\n\n")
 		}
 
 		if c.HasTrivialMoveAssign {
-			ret.WriteString("void " + cMethodPrefix + "_move_assign(void* self, void* other);" + "\n")
+			ret.WriteString("/// " + cMethodPrefix + "_move_assign moves `other` into `self` and invalidates `other`.\n" + "///\n" +
+				"/// ``` " + cStructName + "* self, " + cStructName + "* other ```\n" +
+				"void " + cMethodPrefix + "_move_assign(void* self, void* other);\n\n")
 		}
 
 		seenMethods := make(map[string]struct{})
@@ -982,8 +1009,29 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			cmdStructName := cStructName
 			cmdMethodName := "q_" + strings.ToLower(cStructName[nameIndex:])
 			safeMethodName := cSafeMethodName(mSafeMethodName)
+			var inheritedFrom string
 			if m.InheritedFrom != "" {
+				inheritedFrom = "\n/// Inherited from " + m.InheritedFrom + "\n///"
 				cmdStructName = m.InheritedFrom
+			}
+
+			if m.InheritedInClass != "" {
+				inheritedFrom = "\n    /// Inherited from " + m.InheritedInClass + "\n    ///"
+			}
+
+			ret.WriteString(inheritedFrom)
+
+			subjectURL := strings.ToLower(ifv(m.InheritedInClass == "", cmdStructName, m.InheritedInClass))
+			cmdURL := m.MethodName
+			if m.OverrideMethodName != "" {
+				cmdURL = m.OverrideMethodName
+			}
+			if newURL, ok := qtMethodUrlOverrides[cmdURL]; ok {
+				subjectURL = newURL
+			}
+			if subjectURL != "" {
+				baseURL := "https://doc.qt.io/qt-6/" + subjectURL + ".html#"
+				ret.WriteString("\n/// [Qt documentation](" + baseURL + cmdURL + ")\n///")
 			}
 
 			previousMethods[m.MethodName] = struct{}{}
@@ -998,17 +1046,29 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				commaParams = ", "
 			}
 
+			commentParam := cStructName + "* self" + commaParams
+
 			mSafeName := mSafeMethodName
 			mTrim := mSafeName[:len(mSafeName)-1]
 			method := safeMethodName + `(void* self` + commaParams
 			if m.IsStatic {
+				commentParam = ""
 				method = safeMethodName + `(`
 			}
 
 			if mSafeMethodName == "Tr" || mTrim == "Tr" {
+				commentParam = ""
 			}
 
-			ret.WriteString(returnTypeDecl + " " + cmdMethodName + method + cfs.emitParametersC(m.Parameters, false) + ");\n")
+			var backticks string
+			if commentParam != "" || len(m.Parameters) > 0 {
+				backticks = "```"
+			}
+
+			ret.WriteString("\n/// " + backticks + " " +
+				commentParam + cfs.emitCommentParametersC(m.Parameters, false) +
+				" " + backticks + "\n" +
+				returnTypeDecl + " " + cmdMethodName + method + cfs.emitParametersC(m.Parameters, false) + ");\n")
 
 			// Add Connect() wrappers for signal functions
 			if m.IsSignal {
@@ -1016,6 +1076,8 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				if len(m.Parameters) != 0 {
 					slotComma = ", "
 				}
+				ret.WriteString(inheritedFrom + "\n/// ``` " + cStructName + "* self, void (*slot)(" +
+					cmdStructName + "*" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ") ```\n")
 
 				addConnect := true
 				if _, ok := noQtConnect[cmdStructName]; ok {
@@ -1040,7 +1102,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 
 			if (m.IsVirtual || m.IsProtected) && len(virtualMethods) > 0 && virtualEligible {
-				var maybeVoid, maybeComma string
+				var maybeStruct, maybeVoid, maybeComma string
 				if len(m.Parameters) > 0 {
 					maybeComma = ", "
 				}
@@ -1048,17 +1110,27 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 					maybeComma = ", "
 				}
 				if len(m.Parameters) != 0 {
+					maybeStruct = cmdStructName + "*" + maybeComma
 					maybeVoid = "void*"
 				}
 				if showHiddenParams && len(m.HiddenParams) != 0 {
+					maybeStruct = cmdStructName + "*" + maybeComma
 					maybeVoid = "void*"
 				}
 
-				ret.WriteString(`void ` + cmdMethodName + "_on" + safeMethodName + `(void* self, ` + m.ReturnType.renderReturnTypeC(&cfs) +
+				onDocComment := "\n/// Allows for overriding the related default method\n    ///"
+				ret.WriteString(inheritedFrom + onDocComment + "\n/// ``` " + cmdStructName +
+					"* self, " + m.ReturnType.renderReturnTypeC(&cfs) + " (*slot)(" + maybeStruct +
+					cfs.emitCommentParametersC(m.Parameters, true) + ") ```\n" +
+					`void ` + cmdMethodName + "_on" + safeMethodName + `(void* self, ` + m.ReturnType.renderReturnTypeC(&cfs) +
 					`(*slot)(` + maybeVoid + maybeComma + cfs.emitParametersC(m.Parameters, true) + `)` + `);` + "\n")
 
+				qbaseDocComment := "\n/// Base class method implementation\n    ///"
 				baseMethodName := "q_" + strings.ToLower(cStructName[nameIndex:]) + "_qbase"
-				ret.WriteString(returnTypeDecl + " " + baseMethodName + method + cfs.emitParametersC(m.Parameters, false) + ");\n")
+				ret.WriteString(inheritedFrom + qbaseDocComment + "\n/// " + backticks + " " +
+					commentParam + cfs.emitCommentParametersC(m.Parameters, false) +
+					" " + backticks + "\n" +
+					returnTypeDecl + " " + baseMethodName + method + cfs.emitParametersC(m.Parameters, false) + ");\n")
 			}
 		}
 
@@ -1096,16 +1168,32 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			previousMethods[m.MethodName] = struct{}{}
 			previousMethods[m.SafeMethodName()] = struct{}{}
 
+			cmdStructName := cStructName
 			cmdMethodName := "q_" + strings.ToLower(cStructName[nameIndex:])
 			safeMethodName := cSafeMethodName(m.SafeMethodName())
 
-			var commaParams string
+			var inheritedFrom, commaParams string
 			if len(m.Parameters) > 0 {
 				commaParams = ", "
 			}
-			if showHiddenParams && (len(m.Parameters) > 0 || len(m.HiddenParams) > 0) {
-				commaParams = ", "
+			// Include inheritance information if we have it
+			if m.InheritedFrom != "" {
+				inheritedFrom = "\n/// Inherited from " + m.InheritedFrom + "\n ///"
+				cmdStructName = m.InheritedFrom
 			}
+
+			if m.InheritedInClass != "" {
+				inheritedFrom = "\n/// Inherited from " + m.InheritedInClass + "\n ///"
+			}
+
+			subjectURL := strings.ToLower(ifv(m.InheritedInClass == "", cmdStructName, m.InheritedInClass))
+
+			baseURL := "https://doc.qt.io/qt-6/" + subjectURL + ".html#"
+			cmdURL := m.MethodName
+			if m.OverrideMethodName != "" {
+				cmdURL = m.OverrideMethodName
+			}
+			documentationURL := "\n/// [Qt documentation](" + baseURL + cmdURL + ")\n///\n"
 
 			// Add a package-private function to call the C++ base class method
 			// QWidget_PaintEvent
@@ -1113,25 +1201,52 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs)
 			cfsParams := cfs.emitParametersC(m.Parameters, false)
 
-			ret.WriteString(returnTypeDecl + ` ` + cmdMethodName + safeMethodName + `(void* self` + commaParams + cfsParams + `);` + "\n")
+			headerComment := " /// Wrapper to allow calling virtual or protected method\n ///\n"
 
-			ret.WriteString(returnTypeDecl + ` ` + cmdMethodName + "_qbase" + safeMethodName + `(void* self` + commaParams + cfsParams + `);` + "\n")
+			ret.WriteString(inheritedFrom + documentationURL + headerComment + "/// ``` " + cStructName + "* self" +
+				commaParams + cfs.emitCommentParametersC(m.Parameters, false) + " ```\n" +
+				returnTypeDecl + ` ` + cmdMethodName + safeMethodName + `(void* self` + commaParams + cfsParams + `);` + "\n")
 
-			var maybeVoid string
+			if !AllowVirtual(m) {
+				continue
+			}
+
+			headerComment = "\n /// Wrapper to allow calling base class virtual or protected method\n ///\n"
+
+			ret.WriteString(inheritedFrom + headerComment + "/// ``` " + cStructName + "* self" +
+				commaParams + cfs.emitCommentParametersC(m.Parameters, false) + " ```\n" +
+				returnTypeDecl + ` ` + cmdMethodName + "_qbase" + safeMethodName + `(void* self` + commaParams + cfsParams + `);` + "\n")
+
+			var maybeStruct, maybeVoid string
+			if showHiddenParams && (len(m.Parameters) > 0 || len(m.HiddenParams) > 0) {
+				commaParams = ", "
+			}
+
 			if len(m.Parameters) != 0 {
+				maybeStruct = cmdStructName + "*" + commaParams
 				maybeVoid = "void*"
 			}
 			if showHiddenParams && len(m.HiddenParams) != 0 {
+				maybeStruct = cmdStructName + "*" + commaParams
 				maybeVoid = "void*"
 			}
 
-			ret.WriteString(`void ` + cmdMethodName + "_on" + safeMethodName + `(void* self, ` + m.ReturnType.renderReturnTypeC(&cfs) +
+			headerComment = "\n /// Wrapper to allow overriding base class virtual or protected method\n ///\n"
+
+			ret.WriteString(inheritedFrom + headerComment + "/// ``` " + cmdStructName +
+				"* self, " + m.ReturnType.renderReturnTypeC(&cfs) + " (*slot)(" + maybeStruct +
+				cfs.emitCommentParametersC(m.Parameters, true) + ") ```\n" +
+				`void ` + cmdMethodName + "_on" + safeMethodName + `(void* self, ` + m.ReturnType.renderReturnTypeC(&cfs) +
 				`(*slot)(` + maybeVoid + commaParams + cfs.emitParametersC(m.Parameters, true) + `)` + `);` + "\n")
 
 		}
 
 		if c.CanDelete && (len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 || len(c.Ctors) > 0) {
-			ret.WriteString("void q_" + cSafeMethodName(strings.ToLower(cStructName[nameIndex:])) + `_delete(void* self);` + "\n\n")
+			ret.WriteString(`
+/// Delete this object from C++ memory.
+///
+` + "/// ``` " + cStructName + "* self ```\n" +
+				"void q_" + cSafeMethodName(strings.ToLower(cStructName[nameIndex:])) + `_delete(void* self);` + "\n\n")
 		}
 	}
 
@@ -1372,79 +1487,42 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 		}
 
-		if len(c.Ctors) > 0 || len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 {
-			pageName := getPageName(cStructName)
-			ret.WriteString(`
-
-/// https://doc.qt.io/qt-6/` + pageName + `.html
-`)
-		}
+		ret.WriteString("\n")
 
 		for i, ctor := range c.Ctors {
 			cfs.castType = cStructName
 			preamble, forwarding := cfs.emitParametersC2CABIForwarding(ctor)
 
 			if ctor.LinuxOnly {
-				var backticks string
-				var commaParams string
 
-				if len(ctor.Parameters) > 0 {
-					backticks = "```"
-					commaParams = ", "
-				}
-
-				ret.WriteString(`
-
-/// ` + cMethodPrefix + `_new` + maybeSuffix(i) + ` constructs a new ` + c.ClassName +
-					" object.\n///\n/// " + backticks + " " +
-					cfs.emitCommentParametersC(ctor.Parameters, false) + commaParams + " " + backticks + "\n" +
-					cStructName + `* ` + cMethodPrefix + `_new` + maybeSuffix(i) + `(` + cfs.emitParametersC(ctor.Parameters, false) + `) {
+				ret.WriteString(cStructName + `* ` + cMethodPrefix + `_new` + maybeSuffix(i) + `(` + cfs.emitParametersC(ctor.Parameters, false) + `) {
         #ifdef __linux__
             return ` + cStructName + `_new` + maybeSuffix(i) + `(` + forwarding + `);
         #else
             fprintf(stderr, "Error: Unsupported operating system\n");
             abort();
         #endif
-}
-`)
+}` + "\n\n")
 			} else {
-				var backticks, maybeMoveCtor string
-				if len(ctor.Parameters) > 0 {
-					backticks = "```"
-				}
-
 				if preamble != "" {
 					preamble = "        " + preamble + "\n"
 				}
-				if ctor.IsMoveCtor {
-					maybeMoveCtor = " object and invalidates the source " + c.ClassName
-				}
 
-				ret.WriteString(`
-/// ` + cMethodPrefix + `_new` + maybeSuffix(i) + ` constructs a new ` + c.ClassName + maybeMoveCtor +
-					" object.\n///\n/// " + backticks + " " +
-					cfs.emitCommentParametersC(ctor.Parameters, false) + " " + backticks + "\n" +
-					cStructName + `* ` + cMethodPrefix + `_new` + maybeSuffix(i) + `(` + cfs.emitParametersC(ctor.Parameters, false) + `) {
+				ret.WriteString(cStructName + `* ` + cMethodPrefix + `_new` + maybeSuffix(i) + `(` + cfs.emitParametersC(ctor.Parameters, false) + `) {
 ` +
 					preamble +
 					`    return ` + cStructName + `_new` + maybeSuffix(i) + `(` + forwarding + `);
-}
-
-`)
+}` + "\n\n")
 			}
 		}
 
 		if c.HasTrivialCopyAssign && cStructName != "QCborValueConstRef" && cStructName != "QJsonValueConstRef" {
-			ret.WriteString("/// " + cMethodPrefix + "_copy_assign shallow copies `other` into `self`.\n" + "///\n" +
-				"/// ``` " + cStructName + "* self, " + cStructName + "* other ```\n" +
-				"void " + cMethodPrefix + "_copy_assign(void* self, void* other) {\n" +
+			ret.WriteString("void " + cMethodPrefix + "_copy_assign(void* self, void* other) {\n" +
 				cStructName + "_CopyAssign((" + cStructName + "*)self, (" + cStructName + "*)other);\n" + "}\n\n")
 		}
 
 		if c.HasTrivialMoveAssign {
-			ret.WriteString("/// " + cMethodPrefix + "_move_assign moves `other` into `self` and invalidates `other`.\n" + "///\n" +
-				"/// ``` " + cStructName + "* self, " + cStructName + "* other ```\n" +
-				"void " + cMethodPrefix + "_move_assign(void* self, void* other) {\n" +
+			ret.WriteString("void " + cMethodPrefix + "_move_assign(void* self, void* other) {\n" +
 				cStructName + "_MoveAssign((" + cStructName + "*)self, (" + cStructName + "*)other);\n" + "}\n\n")
 		}
 
@@ -1488,14 +1566,6 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		for _, im := range inheritedMethods {
 			im.Method.InheritedFrom = im.SourceClass
 			baseMethods = append(baseMethods, im.Method)
-		}
-
-		var inheritedVirtualMethods []InheritedMethod
-		for _, base := range c.DirectInherits {
-			inherited := collectInheritedMethodsForC(base, seenMethods)
-			if inherited != nil {
-				inheritedVirtualMethods = append(inheritedVirtualMethods, inherited...)
-			}
 		}
 
 		previousMethods := map[string]struct{}{}
@@ -1543,29 +1613,8 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			cmdStructName := cStructName
 			cmdMethodName := "q_" + strings.ToLower(cStructName[nameIndex:])
 			safeMethodName := cSafeMethodName(mSafeMethodName)
-			var inheritedFrom string
 			if m.InheritedFrom != "" {
-				inheritedFrom = "\n/// Inherited from " + m.InheritedFrom + "\n///"
 				cmdStructName = m.InheritedFrom
-			}
-
-			if m.InheritedInClass != "" {
-				inheritedFrom = "\n    /// Inherited from " + m.InheritedInClass + "\n    ///"
-			}
-
-			ret.WriteString(inheritedFrom)
-
-			subjectURL := strings.ToLower(ifv(m.InheritedInClass == "", cmdStructName, m.InheritedInClass))
-			cmdURL := m.MethodName
-			if m.OverrideMethodName != "" {
-				cmdURL = m.OverrideMethodName
-			}
-			if newURL, ok := qtMethodUrlOverrides[cmdURL]; ok {
-				subjectURL = newURL
-			}
-			if subjectURL != "" {
-				baseURL := "https://doc.qt.io/qt-6/" + subjectURL + ".html#"
-				ret.WriteString("\n/// [Qt documentation](" + baseURL + cmdURL + ")\n///")
 			}
 
 			previousMethods[m.MethodName] = struct{}{}
@@ -1582,28 +1631,12 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				commaParams = ", "
 			}
 
-			commentParam := cStructName + "* self" + commaParams
-
-			mTrim := mSafeMethodName[:len(mSafeMethodName)-1]
 			method := safeMethodName + `(void* self` + commaParams
 			if m.IsStatic {
-				commentParam = ""
 				method = safeMethodName + `(`
 			}
 
-			if mSafeMethodName == "Tr" || mTrim == "Tr" {
-				commentParam = ""
-			}
-
-			var backticks string
-			if commentParam != "" || len(m.Parameters) > 0 {
-				backticks = "```"
-			}
-
-			ret.WriteString("\n/// " + backticks + " " +
-				commentParam + cfs.emitCommentParametersC(m.Parameters, false) +
-				" " + backticks + "\n" +
-				returnTypeDecl + " " + cmdMethodName + method + cfs.emitParametersC(m.Parameters, false) + ") {")
+			ret.WriteString(returnTypeDecl + " " + cmdMethodName + method + cfs.emitParametersC(m.Parameters, false) + ") {")
 
 			if m.LinuxOnly {
 				ret.WriteString(`
@@ -1617,8 +1650,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			ret.WriteString(`
     ` + preamble +
 				returnFunc + `
-}
-`)
+}` + "\n\n")
 
 			// Add Connect() wrappers for signal functions
 			if m.IsSignal {
@@ -1626,8 +1658,6 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				if len(m.Parameters) != 0 {
 					slotComma = ", "
 				}
-				ret.WriteString(inheritedFrom + "\n/// ``` " + cStructName + "* self, void (*slot)(" +
-					cmdStructName + "*" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ") ```\n")
 
 				addConnect := true
 				if _, ok := noQtConnect[cmdStructName]; ok {
@@ -1637,8 +1667,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 					ret.WriteString(`void ` + cmdMethodName + "_on" + safeMethodName + `(void* self, void (*slot)(void*` +
 						slotComma + cfs.emitParametersC(m.Parameters, true) + `)) {
     ` + cmdStructName + `_Connect_` + mSafeMethodName + `((` + cmdStructName + `*)` + `self, (intptr_t)slot);
-}
-`)
+}` + "\n\n")
 				}
 			}
 
@@ -1657,7 +1686,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 
 			if (m.IsVirtual || m.IsProtected) && len(virtualMethods) > 0 && virtualEligible {
-				var maybeStruct, maybeVoid, maybeComma string
+				var maybeVoid, maybeComma string
 				if len(m.Parameters) > 0 {
 					maybeComma = ", "
 				}
@@ -1665,33 +1694,22 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 					maybeComma = ", "
 				}
 				if len(m.Parameters) != 0 {
-					maybeStruct = cmdStructName + "*" + maybeComma
 					maybeVoid = "void*"
 				}
 				if showHiddenParams && len(m.HiddenParams) != 0 {
-					maybeStruct = cmdStructName + "*" + maybeComma
 					maybeVoid = "void*"
 				}
 
-				onDocComment := "\n/// Allows for overriding the related default method\n    ///"
-				ret.WriteString(inheritedFrom + onDocComment + "\n/// ``` " + cmdStructName +
-					"* self, " + m.ReturnType.renderReturnTypeC(&cfs) + " (*slot)(" + maybeStruct +
-					cfs.emitCommentParametersC(m.Parameters, true) + ") ```\n" +
-					`void ` + cmdMethodName + "_on" + safeMethodName + `(void* self, ` + m.ReturnType.renderReturnTypeC(&cfs) +
+				ret.WriteString(`void ` + cmdMethodName + "_on" + safeMethodName + `(void* self, ` + m.ReturnType.renderReturnTypeC(&cfs) +
 					`(*slot)(` + maybeVoid + maybeComma + cfs.emitParametersC(m.Parameters, true) + `)` + `) {
 ` + cmdStructName + `_On` + mSafeMethodName + `((` + cmdStructName + `*)` + `self, (intptr_t)slot);
-}
-`)
+}` + "\n\n")
 
-				qbaseDocComment := "\n/// Base class method implementation\n    ///"
 				baseMethodName := "q_" + strings.ToLower(cStructName[nameIndex:]) + "_qbase"
 				baseCallTarget := cmdStructName + `_QBase` + mSafeMethodName + `(` + forwarding + `)`
 				basereturnFunc := cfs.emitCabiToC("return ", m.ReturnType, baseCallTarget)
 
-				ret.WriteString(inheritedFrom + qbaseDocComment + "\n/// " + backticks + " " +
-					commentParam + cfs.emitCommentParametersC(m.Parameters, false) +
-					" " + backticks + "\n" +
-					returnTypeDecl + " " + baseMethodName + method + cfs.emitParametersC(m.Parameters, false) + ") {")
+				ret.WriteString(returnTypeDecl + " " + baseMethodName + method + cfs.emitParametersC(m.Parameters, false) + ") {")
 
 				if m.LinuxOnly {
 					ret.WriteString(`
@@ -1705,8 +1723,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				ret.WriteString(`
 ` + preamble +
 					basereturnFunc + `
-}
-`)
+}` + "\n\n")
 			}
 		}
 
@@ -1748,29 +1765,10 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			cmdMethodName := "q_" + strings.ToLower(cStructName[nameIndex:])
 			safeMethodName := cSafeMethodName(m.SafeMethodName())
 
-			var inheritedFrom, commaParams string
+			var commaParams string
 			if len(m.Parameters) > 0 {
 				commaParams = ", "
 			}
-
-			// Include inheritance information if we have it
-			if m.InheritedFrom != "" {
-				inheritedFrom = "\n/// Inherited from " + m.InheritedFrom + "\n ///"
-				cmdStructName = m.InheritedFrom
-			}
-
-			if m.InheritedInClass != "" {
-				inheritedFrom = "\n/// Inherited from " + m.InheritedInClass + "\n ///"
-			}
-
-			subjectURL := strings.ToLower(ifv(m.InheritedInClass == "", cmdStructName, m.InheritedInClass))
-
-			baseURL := "https://doc.qt.io/qt-6/" + subjectURL + ".html#"
-			cmdURL := m.MethodName
-			if m.OverrideMethodName != "" {
-				cmdURL = m.OverrideMethodName
-			}
-			documentationURL := "\n/// [Qt documentation](" + baseURL + cmdURL + ")\n///\n"
 
 			// Add a package-private function to call the C++ base class method
 			// QWidget_PaintEvent
@@ -1781,69 +1779,44 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			cfsParams := cfs.emitParametersC(m.Parameters, false)
 			returnFunc := cfs.emitCabiToC("return ", m.ReturnType, cmdStructName+`_`+m.SafeMethodName()+`(`+forwarding+`)`)
 
-			headerComment := " /// Wrapper to allow calling virtual or protected method\n ///\n"
-
-			ret.WriteString(inheritedFrom + documentationURL + headerComment + "/// ``` " + cStructName + "* self" +
-				commaParams + cfs.emitCommentParametersC(m.Parameters, false) + " ```\n" +
-				returnTypeDecl + ` ` + cmdMethodName + safeMethodName + `(void* self` + commaParams + cfsParams + `) {` +
+			ret.WriteString(returnTypeDecl + ` ` + cmdMethodName + safeMethodName + `(void* self` + commaParams + cfsParams + `) {` +
 				"\n    " + preamble +
 				returnFunc + `
-    }
-`)
+    }` + "\n\n")
 
 			if !AllowVirtual(m) {
 				continue
 			}
 
-			headerComment = "\n /// Wrapper to allow calling base class virtual or protected method\n ///\n"
-
 			returnFunc = cfs.emitCabiToC("return ", m.ReturnType, cmdStructName+`_QBase`+m.SafeMethodName()+`(`+forwarding+`)`)
 
-			ret.WriteString(inheritedFrom + headerComment + "/// ``` " + cStructName + "* self" +
-				commaParams + cfs.emitCommentParametersC(m.Parameters, false) + " ```\n" +
-				returnTypeDecl + ` ` + cmdMethodName + "_qbase" + safeMethodName + `(void* self` + commaParams + cfsParams + `) {` +
+			ret.WriteString(returnTypeDecl + ` ` + cmdMethodName + "_qbase" + safeMethodName + `(void* self` + commaParams + cfsParams + `) {` +
 				"\n    " + preamble +
 				returnFunc + `
-    }
-`)
+    }` + "\n\n")
 
-			var maybeStruct, maybeVoid string
+			var maybeVoid string
 			if showHiddenParams && (len(m.Parameters) > 0 || len(m.HiddenParams) > 0) {
 				commaParams = ", "
 			}
-			if len(m.Parameters) > 0 {
-				commaParams = ", "
-			}
 			if len(m.Parameters) != 0 {
-				maybeStruct = cmdStructName + "*" + commaParams
 				maybeVoid = "void*"
 			}
 			if showHiddenParams && len(m.HiddenParams) != 0 {
-				maybeStruct = cmdStructName + "*" + commaParams
 				maybeVoid = "void*"
 			}
 
-			headerComment = "\n /// Wrapper to allow overriding base class virtual or protected method\n ///\n"
-
-			ret.WriteString(inheritedFrom + headerComment + "/// ``` " + cmdStructName +
-				"* self, " + m.ReturnType.renderReturnTypeC(&cfs) + " (*slot)(" + maybeStruct +
-				cfs.emitCommentParametersC(m.Parameters, true) + ") ```\n" +
-				`void ` + cmdMethodName + "_on" + safeMethodName + `(void* self, ` + m.ReturnType.renderReturnTypeC(&cfs) +
+			ret.WriteString(`void ` + cmdMethodName + "_on" + safeMethodName + `(void* self, ` + m.ReturnType.renderReturnTypeC(&cfs) +
 				`(*slot)(` + maybeVoid + commaParams + cfs.emitParametersC(m.Parameters, true) + `)` + `) {
 ` + cmdStructName + `_On` + m.SafeMethodName() + `((` + cmdStructName + `*)` + `self, (intptr_t)slot);
-}
-`)
+}` + "\n\n")
 
 		}
 
 		if c.CanDelete && (len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 || len(c.Ctors) > 0) {
-			ret.WriteString(`
-/// Delete this object from C++ memory.
-///
-` + "/// ``` " + cStructName + "* self ```\n" +
-				"void q_" + cSafeMethodName(strings.ToLower(cStructName[nameIndex:])) + `_delete(void* self) {
+			ret.WriteString("void q_" + cSafeMethodName(strings.ToLower(cStructName[nameIndex:])) + `_delete(void* self) {
     ` + cStructName + `_Delete((` + cStructName + `*)(self));
-}`)
+}` + "\n")
 		}
 	}
 

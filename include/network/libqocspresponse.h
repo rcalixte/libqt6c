@@ -14,14 +14,51 @@
 
 #include "libqsslcertificate.h"
 
+/// https://doc.qt.io/qt-6/qocspresponse.html
+
+/// q_ocspresponse_new constructs a new QOcspResponse object.
+///
+///
 QOcspResponse* q_ocspresponse_new();
+
+/// q_ocspresponse_new2 constructs a new QOcspResponse object.
+///
+/// ``` QOcspResponse* other ```
 QOcspResponse* q_ocspresponse_new2(void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#operator=)
+///
+/// ``` QOcspResponse* self, QOcspResponse* other ```
 void q_ocspresponse_operator_assign(void* self, void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#certificateStatus)
+///
+/// ``` QOcspResponse* self ```
 int64_t q_ocspresponse_certificate_status(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#revocationReason)
+///
+/// ``` QOcspResponse* self ```
 int64_t q_ocspresponse_revocation_reason(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#responder)
+///
+/// ``` QOcspResponse* self ```
 QSslCertificate* q_ocspresponse_responder(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#subject)
+///
+/// ``` QOcspResponse* self ```
 QSslCertificate* q_ocspresponse_subject(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#swap)
+///
+/// ``` QOcspResponse* self, QOcspResponse* other ```
 void q_ocspresponse_swap(void* self, void* other);
+
+/// Delete this object from C++ memory.
+///
+/// ``` QOcspResponse* self ```
 void q_ocspresponse_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qocspresponse.html#types

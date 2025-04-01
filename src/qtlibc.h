@@ -11,6 +11,7 @@ extern "C" {
 #endif
 
 // Forward declarations
+
 struct libqt_string;
 struct libqt_strview;
 struct libqt_list;
@@ -70,6 +71,7 @@ struct libqt_pair {
 };
 
 // Helper functions for common cases
+
 static libqt_string qstring(const char* string) {
     libqt_string str = {0}; // Initialize to zero
     if (string) {

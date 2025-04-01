@@ -23,75 +23,416 @@
 #include "../libqthread.h"
 #include "../libqvariant.h"
 
+/// https://doc.qt.io/qt-6/qabstractseries.html
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// ``` QAbstractSeries* self ```
 QMetaObject* q_abstractseries_meta_object(void* self);
+
+/// ``` QAbstractSeries* self, const char* param1 ```
 void* q_abstractseries_metacast(void* self, const char* param1);
+
+/// ``` QAbstractSeries* self, enum QMetaObject__Call param1, int param2, void* param3 ```
 int32_t q_abstractseries_metacall(void* self, int64_t param1, int param2, void* param3);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+///
+/// ``` const char* s ```
 const char* q_abstractseries_tr(const char* s);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#type)
+///
+/// ``` QAbstractSeries* self ```
 int64_t q_abstractseries_type(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setName)
+///
+/// ``` QAbstractSeries* self, const char* name ```
 void q_abstractseries_set_name(void* self, const char* name);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#name)
+///
+/// ``` QAbstractSeries* self ```
 const char* q_abstractseries_name(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setVisible)
+///
+/// ``` QAbstractSeries* self ```
 void q_abstractseries_set_visible(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#isVisible)
+///
+/// ``` QAbstractSeries* self ```
 bool q_abstractseries_is_visible(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacity)
+///
+/// ``` QAbstractSeries* self ```
 double q_abstractseries_opacity(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setOpacity)
+///
+/// ``` QAbstractSeries* self, double opacity ```
 void q_abstractseries_set_opacity(void* self, double opacity);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setUseOpenGL)
+///
+/// ``` QAbstractSeries* self ```
 void q_abstractseries_set_use_open_g_l(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGL)
+///
+/// ``` QAbstractSeries* self ```
 bool q_abstractseries_use_open_g_l(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#chart)
+///
+/// ``` QAbstractSeries* self ```
 QChart* q_abstractseries_chart(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#attachAxis)
+///
+/// ``` QAbstractSeries* self, QAbstractAxis* axis ```
 bool q_abstractseries_attach_axis(void* self, void* axis);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#detachAxis)
+///
+/// ``` QAbstractSeries* self, QAbstractAxis* axis ```
 bool q_abstractseries_detach_axis(void* self, void* axis);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#attachedAxes)
+///
+/// ``` QAbstractSeries* self ```
 libqt_list /* of QAbstractAxis* */ q_abstractseries_attached_axes(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#show)
+///
+/// ``` QAbstractSeries* self ```
 void q_abstractseries_show(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#hide)
+///
+/// ``` QAbstractSeries* self ```
 void q_abstractseries_hide(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
+///
+/// ``` QAbstractSeries* self ```
 void q_abstractseries_name_changed(void* self);
+
+/// ``` QAbstractSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_abstractseries_on_name_changed(void* self, void (*slot)(void*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
+///
+/// ``` QAbstractSeries* self ```
 void q_abstractseries_visible_changed(void* self);
+
+/// ``` QAbstractSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_abstractseries_on_visible_changed(void* self, void (*slot)(void*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
+///
+/// ``` QAbstractSeries* self ```
 void q_abstractseries_opacity_changed(void* self);
+
+/// ``` QAbstractSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_abstractseries_on_opacity_changed(void* self, void (*slot)(void*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
+///
+/// ``` QAbstractSeries* self ```
 void q_abstractseries_use_open_g_l_changed(void* self);
+
+/// ``` QAbstractSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_abstractseries_on_use_open_g_l_changed(void* self, void (*slot)(void*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+///
+/// ``` const char* s, const char* c ```
 const char* q_abstractseries_tr2(const char* s, const char* c);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+///
+/// ``` const char* s, const char* c, int n ```
 const char* q_abstractseries_tr3(const char* s, const char* c, int n);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setVisible)
+///
+/// ``` QAbstractSeries* self, bool visible ```
 void q_abstractseries_set_visible1(void* self, bool visible);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setUseOpenGL)
+///
+/// ``` QAbstractSeries* self, bool enable ```
 void q_abstractseries_set_use_open_g_l1(void* self, bool enable);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
+/// ``` QAbstractSeries* self, QEvent* event ```
 bool q_abstractseries_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
+/// ``` QAbstractSeries* self, QObject* watched, QEvent* event ```
 bool q_abstractseries_event_filter(void* self, void* watched, void* event);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+///
+/// ``` QAbstractSeries* self ```
 const char* q_abstractseries_object_name(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+///
+/// ``` QAbstractSeries* self, const char* name ```
 void q_abstractseries_set_object_name(void* self, const char* name);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+///
+/// ``` QAbstractSeries* self ```
 bool q_abstractseries_is_widget_type(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+///
+/// ``` QAbstractSeries* self ```
 bool q_abstractseries_is_window_type(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+///
+/// ``` QAbstractSeries* self ```
 bool q_abstractseries_is_quick_item_type(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+///
+/// ``` QAbstractSeries* self ```
 bool q_abstractseries_signals_blocked(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+///
+/// ``` QAbstractSeries* self, bool b ```
 bool q_abstractseries_block_signals(void* self, bool b);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+///
+/// ``` QAbstractSeries* self ```
 QThread* q_abstractseries_thread(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QAbstractSeries* self, QThread* thread ```
 void q_abstractseries_move_to_thread(void* self, void* thread);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// ``` QAbstractSeries* self, int interval ```
 int32_t q_abstractseries_start_timer(void* self, int interval);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QAbstractSeries* self, int id ```
 void q_abstractseries_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+///
+/// ``` QAbstractSeries* self ```
 libqt_list /* of QObject* */ q_abstractseries_children(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+///
+/// ``` QAbstractSeries* self, QObject* parent ```
 void q_abstractseries_set_parent(void* self, void* parent);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+///
+/// ``` QAbstractSeries* self, QObject* filterObj ```
 void q_abstractseries_install_event_filter(void* self, void* filterObj);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+///
+/// ``` QAbstractSeries* self, QObject* obj ```
 void q_abstractseries_remove_event_filter(void* self, void* obj);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
 QMetaObject__Connection* q_abstractseries_connect(void* sender, void* signal, void* receiver, void* method);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// ``` QAbstractSeries* self, QObject* sender, const char* signal, const char* member ```
 QMetaObject__Connection* q_abstractseries_connect2(void* self, void* sender, const char* signal, const char* member);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
 bool q_abstractseries_disconnect(void* sender, void* signal, void* receiver, void* member);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// ``` QMetaObject__Connection* param1 ```
 bool q_abstractseries_disconnect_with_q_meta_object_connection(void* param1);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+///
+/// ``` QAbstractSeries* self ```
 void q_abstractseries_dump_object_tree(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+///
+/// ``` QAbstractSeries* self ```
 void q_abstractseries_dump_object_info(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+///
+/// ``` QAbstractSeries* self, const char* name, QVariant* value ```
 bool q_abstractseries_set_property(void* self, const char* name, void* value);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+///
+/// ``` QAbstractSeries* self, const char* name ```
 QVariant* q_abstractseries_property(void* self, const char* name);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+///
+/// ``` QAbstractSeries* self ```
 const char** q_abstractseries_dynamic_property_names(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+///
+/// ``` QAbstractSeries* self ```
 QBindingStorage* q_abstractseries_binding_storage(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+///
+/// ``` QAbstractSeries* self ```
 QBindingStorage* q_abstractseries_binding_storage2(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
+/// ``` QAbstractSeries* self ```
 void q_abstractseries_destroyed(void* self);
+
+/// Inherited from QObject
+///
+/// ``` QAbstractSeries* self, void (*slot)(QObject*) ```
 void q_abstractseries_on_destroyed(void* self, void (*slot)(void*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+///
+/// ``` QAbstractSeries* self ```
 QObject* q_abstractseries_parent(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+///
+/// ``` QAbstractSeries* self, const char* classname ```
 bool q_abstractseries_inherits(void* self, const char* classname);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+///
+/// ``` QAbstractSeries* self ```
 void q_abstractseries_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// ``` QAbstractSeries* self, int interval, enum Qt__TimerType timerType ```
 int32_t q_abstractseries_start_timer2(void* self, int interval, int64_t timerType);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
 QMetaObject__Connection* q_abstractseries_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// ``` QAbstractSeries* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
 QMetaObject__Connection* q_abstractseries_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
+/// ``` QAbstractSeries* self, QObject* param1 ```
 void q_abstractseries_destroyed1(void* self, void* param1);
+
+/// Inherited from QObject
+///
+/// ``` QAbstractSeries* self, void (*slot)(QObject*, QObject*) ```
 void q_abstractseries_on_destroyed1(void* self, void (*slot)(void*, void*));
+
+/// Delete this object from C++ memory.
+///
+/// ``` QAbstractSeries* self ```
 void q_abstractseries_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qabstractseries.html#types

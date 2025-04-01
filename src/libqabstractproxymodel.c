@@ -15,56 +15,34 @@
 #include "libqabstractproxymodel.hpp"
 #include "libqabstractproxymodel.h"
 
-/// https://doc.qt.io/qt-6/qabstractproxymodel.html
-
-/// q_abstractproxymodel_new constructs a new QAbstractProxyModel object.
-///
-///
 QAbstractProxyModel* q_abstractproxymodel_new() {
     return QAbstractProxyModel_new();
 }
 
-/// q_abstractproxymodel_new2 constructs a new QAbstractProxyModel object.
-///
-/// ``` QObject* parent ```
 QAbstractProxyModel* q_abstractproxymodel_new2(void* parent) {
     return QAbstractProxyModel_new2((QObject*)parent);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
-///
-/// ``` QAbstractProxyModel* self ```
 QMetaObject* q_abstractproxymodel_meta_object(void* self) {
     return QAbstractProxyModel_MetaObject((QAbstractProxyModel*)self);
 }
 
-/// ``` QAbstractProxyModel* self, const char* param1 ```
 void* q_abstractproxymodel_metacast(void* self, const char* param1) {
     return QAbstractProxyModel_Metacast((QAbstractProxyModel*)self, param1);
 }
 
-/// ``` QAbstractProxyModel* self, enum QMetaObject__Call param1, int param2, void* param3 ```
 int32_t q_abstractproxymodel_metacall(void* self, int64_t param1, int param2, void* param3) {
     return QAbstractProxyModel_Metacall((QAbstractProxyModel*)self, param1, param2, param3);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, int32_t (*slot)(QAbstractProxyModel*, enum QMetaObject__Call, int, void*) ```
 void q_abstractproxymodel_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
     QAbstractProxyModel_OnMetacall((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, enum QMetaObject__Call param1, int param2, void* param3 ```
 int32_t q_abstractproxymodel_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
     return QAbstractProxyModel_QBaseMetacall((QAbstractProxyModel*)self, param1, param2, param3);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
-///
-/// ``` const char* s ```
 const char* q_abstractproxymodel_tr(const char* s) {
     libqt_string _str = QAbstractProxyModel_Tr(s);
     char* _ret = qstring_to_char(_str);
@@ -72,478 +50,274 @@ const char* q_abstractproxymodel_tr(const char* s) {
     return _ret;
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setSourceModel)
-///
-/// ``` QAbstractProxyModel* self, QAbstractItemModel* sourceModel ```
 void q_abstractproxymodel_set_source_model(void* self, void* sourceModel) {
     QAbstractProxyModel_SetSourceModel((QAbstractProxyModel*)self, (QAbstractItemModel*)sourceModel);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractProxyModel*, QAbstractItemModel*) ```
 void q_abstractproxymodel_on_set_source_model(void* self, void (*slot)(void*, void*)) {
     QAbstractProxyModel_OnSetSourceModel((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, QAbstractItemModel* sourceModel ```
 void q_abstractproxymodel_qbase_set_source_model(void* self, void* sourceModel) {
     QAbstractProxyModel_QBaseSetSourceModel((QAbstractProxyModel*)self, (QAbstractItemModel*)sourceModel);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#sourceModel)
-///
-/// ``` QAbstractProxyModel* self ```
 QAbstractItemModel* q_abstractproxymodel_source_model(void* self) {
     return QAbstractProxyModel_SourceModel((QAbstractProxyModel*)self);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#mapToSource)
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* proxyIndex ```
 QModelIndex* q_abstractproxymodel_map_to_source(void* self, void* proxyIndex) {
     return QAbstractProxyModel_MapToSource((QAbstractProxyModel*)self, (QModelIndex*)proxyIndex);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* (*slot)(QAbstractProxyModel*, QModelIndex*) ```
 void q_abstractproxymodel_on_map_to_source(void* self, QModelIndex* (*slot)(void*, void*)) {
     QAbstractProxyModel_OnMapToSource((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* proxyIndex ```
 QModelIndex* q_abstractproxymodel_qbase_map_to_source(void* self, void* proxyIndex) {
     return QAbstractProxyModel_QBaseMapToSource((QAbstractProxyModel*)self, (QModelIndex*)proxyIndex);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#mapFromSource)
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* sourceIndex ```
 QModelIndex* q_abstractproxymodel_map_from_source(void* self, void* sourceIndex) {
     return QAbstractProxyModel_MapFromSource((QAbstractProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* (*slot)(QAbstractProxyModel*, QModelIndex*) ```
 void q_abstractproxymodel_on_map_from_source(void* self, QModelIndex* (*slot)(void*, void*)) {
     QAbstractProxyModel_OnMapFromSource((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* sourceIndex ```
 QModelIndex* q_abstractproxymodel_qbase_map_from_source(void* self, void* sourceIndex) {
     return QAbstractProxyModel_QBaseMapFromSource((QAbstractProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#mapSelectionToSource)
-///
-/// ``` QAbstractProxyModel* self, QItemSelection* selection ```
 QItemSelection* q_abstractproxymodel_map_selection_to_source(void* self, void* selection) {
     return QAbstractProxyModel_MapSelectionToSource((QAbstractProxyModel*)self, (QItemSelection*)selection);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, QItemSelection* (*slot)(QAbstractProxyModel*, QItemSelection*) ```
 void q_abstractproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*slot)(void*, void*)) {
     QAbstractProxyModel_OnMapSelectionToSource((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, QItemSelection* selection ```
 QItemSelection* q_abstractproxymodel_qbase_map_selection_to_source(void* self, void* selection) {
     return QAbstractProxyModel_QBaseMapSelectionToSource((QAbstractProxyModel*)self, (QItemSelection*)selection);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#mapSelectionFromSource)
-///
-/// ``` QAbstractProxyModel* self, QItemSelection* selection ```
 QItemSelection* q_abstractproxymodel_map_selection_from_source(void* self, void* selection) {
     return QAbstractProxyModel_MapSelectionFromSource((QAbstractProxyModel*)self, (QItemSelection*)selection);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, QItemSelection* (*slot)(QAbstractProxyModel*, QItemSelection*) ```
 void q_abstractproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*slot)(void*, void*)) {
     QAbstractProxyModel_OnMapSelectionFromSource((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, QItemSelection* selection ```
 QItemSelection* q_abstractproxymodel_qbase_map_selection_from_source(void* self, void* selection) {
     return QAbstractProxyModel_QBaseMapSelectionFromSource((QAbstractProxyModel*)self, (QItemSelection*)selection);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#submit)
-///
-/// ``` QAbstractProxyModel* self ```
 bool q_abstractproxymodel_submit(void* self) {
     return QAbstractProxyModel_Submit((QAbstractProxyModel*)self);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, bool (*slot)() ```
 void q_abstractproxymodel_on_submit(void* self, bool (*slot)()) {
     QAbstractProxyModel_OnSubmit((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self ```
 bool q_abstractproxymodel_qbase_submit(void* self) {
     return QAbstractProxyModel_QBaseSubmit((QAbstractProxyModel*)self);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#revert)
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_revert(void* self) {
     QAbstractProxyModel_Revert((QAbstractProxyModel*)self);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)() ```
 void q_abstractproxymodel_on_revert(void* self, void (*slot)()) {
     QAbstractProxyModel_OnRevert((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_qbase_revert(void* self) {
     QAbstractProxyModel_QBaseRevert((QAbstractProxyModel*)self);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#data)
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* proxyIndex, int role ```
 QVariant* q_abstractproxymodel_data(void* self, void* proxyIndex, int role) {
     return QAbstractProxyModel_Data((QAbstractProxyModel*)self, (QModelIndex*)proxyIndex, role);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, QVariant* (*slot)(QAbstractProxyModel*, QModelIndex*, int) ```
 void q_abstractproxymodel_on_data(void* self, QVariant* (*slot)(void*, void*, int)) {
     QAbstractProxyModel_OnData((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* proxyIndex, int role ```
 QVariant* q_abstractproxymodel_qbase_data(void* self, void* proxyIndex, int role) {
     return QAbstractProxyModel_QBaseData((QAbstractProxyModel*)self, (QModelIndex*)proxyIndex, role);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#headerData)
-///
-/// ``` QAbstractProxyModel* self, int section, enum Qt__Orientation orientation, int role ```
 QVariant* q_abstractproxymodel_header_data(void* self, int section, int64_t orientation, int role) {
     return QAbstractProxyModel_HeaderData((QAbstractProxyModel*)self, section, orientation, role);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, QVariant* (*slot)(QAbstractProxyModel*, int, enum Qt__Orientation, int) ```
 void q_abstractproxymodel_on_header_data(void* self, QVariant* (*slot)(void*, int, int64_t, int)) {
     QAbstractProxyModel_OnHeaderData((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, int section, enum Qt__Orientation orientation, int role ```
 QVariant* q_abstractproxymodel_qbase_header_data(void* self, int section, int64_t orientation, int role) {
     return QAbstractProxyModel_QBaseHeaderData((QAbstractProxyModel*)self, section, orientation, role);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#itemData)
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* index ```
 libqt_map /* of int to QVariant* */ q_abstractproxymodel_item_data(void* self, void* index) {
     return QAbstractProxyModel_ItemData((QAbstractProxyModel*)self, (QModelIndex*)index);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, libqt_map /* of int to QVariant* */ (*slot)(QAbstractProxyModel*, QModelIndex*) ```
 void q_abstractproxymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*slot)(void*, void*)) {
     QAbstractProxyModel_OnItemData((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* index ```
 libqt_map /* of int to QVariant* */ q_abstractproxymodel_qbase_item_data(void* self, void* index) {
     return QAbstractProxyModel_QBaseItemData((QAbstractProxyModel*)self, (QModelIndex*)index);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#flags)
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* index ```
 int64_t q_abstractproxymodel_flags(void* self, void* index) {
     return QAbstractProxyModel_Flags((QAbstractProxyModel*)self, (QModelIndex*)index);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, int64_t (*slot)(QAbstractProxyModel*, QModelIndex*) ```
 void q_abstractproxymodel_on_flags(void* self, int64_t (*slot)(void*, void*)) {
     QAbstractProxyModel_OnFlags((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* index ```
 int64_t q_abstractproxymodel_qbase_flags(void* self, void* index) {
     return QAbstractProxyModel_QBaseFlags((QAbstractProxyModel*)self, (QModelIndex*)index);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setData)
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* index, QVariant* value, int role ```
 bool q_abstractproxymodel_set_data(void* self, void* index, void* value, int role) {
     return QAbstractProxyModel_SetData((QAbstractProxyModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, bool (*slot)(QAbstractProxyModel*, QModelIndex*, QVariant*, int) ```
 void q_abstractproxymodel_on_set_data(void* self, bool (*slot)(void*, void*, void*, int)) {
     QAbstractProxyModel_OnSetData((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* index, QVariant* value, int role ```
 bool q_abstractproxymodel_qbase_set_data(void* self, void* index, void* value, int role) {
     return QAbstractProxyModel_QBaseSetData((QAbstractProxyModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setItemData)
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ roles ```
 bool q_abstractproxymodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
     return QAbstractProxyModel_SetItemData((QAbstractProxyModel*)self, (QModelIndex*)index, roles);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, bool (*slot)(QAbstractProxyModel*, QModelIndex*, libqt_map /* of int to QVariant* */) ```
 void q_abstractproxymodel_on_set_item_data(void* self, bool (*slot)(void*, void*, libqt_map /* of int to QVariant* */)) {
     QAbstractProxyModel_OnSetItemData((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ roles ```
 bool q_abstractproxymodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
     return QAbstractProxyModel_QBaseSetItemData((QAbstractProxyModel*)self, (QModelIndex*)index, roles);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setHeaderData)
-///
-/// ``` QAbstractProxyModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role ```
 bool q_abstractproxymodel_set_header_data(void* self, int section, int64_t orientation, void* value, int role) {
     return QAbstractProxyModel_SetHeaderData((QAbstractProxyModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, bool (*slot)(QAbstractProxyModel*, int, enum Qt__Orientation, QVariant*, int) ```
 void q_abstractproxymodel_on_set_header_data(void* self, bool (*slot)(void*, int, int64_t, void*, int)) {
     QAbstractProxyModel_OnSetHeaderData((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role ```
 bool q_abstractproxymodel_qbase_set_header_data(void* self, int section, int64_t orientation, void* value, int role) {
     return QAbstractProxyModel_QBaseSetHeaderData((QAbstractProxyModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#clearItemData)
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* index ```
 bool q_abstractproxymodel_clear_item_data(void* self, void* index) {
     return QAbstractProxyModel_ClearItemData((QAbstractProxyModel*)self, (QModelIndex*)index);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, bool (*slot)(QAbstractProxyModel*, QModelIndex*) ```
 void q_abstractproxymodel_on_clear_item_data(void* self, bool (*slot)(void*, void*)) {
     QAbstractProxyModel_OnClearItemData((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* index ```
 bool q_abstractproxymodel_qbase_clear_item_data(void* self, void* index) {
     return QAbstractProxyModel_QBaseClearItemData((QAbstractProxyModel*)self, (QModelIndex*)index);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#buddy)
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* index ```
 QModelIndex* q_abstractproxymodel_buddy(void* self, void* index) {
     return QAbstractProxyModel_Buddy((QAbstractProxyModel*)self, (QModelIndex*)index);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* (*slot)(QAbstractProxyModel*, QModelIndex*) ```
 void q_abstractproxymodel_on_buddy(void* self, QModelIndex* (*slot)(void*, void*)) {
     QAbstractProxyModel_OnBuddy((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* index ```
 QModelIndex* q_abstractproxymodel_qbase_buddy(void* self, void* index) {
     return QAbstractProxyModel_QBaseBuddy((QAbstractProxyModel*)self, (QModelIndex*)index);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#canFetchMore)
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* parent ```
 bool q_abstractproxymodel_can_fetch_more(void* self, void* parent) {
     return QAbstractProxyModel_CanFetchMore((QAbstractProxyModel*)self, (QModelIndex*)parent);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, bool (*slot)(QAbstractProxyModel*, QModelIndex*) ```
 void q_abstractproxymodel_on_can_fetch_more(void* self, bool (*slot)(void*, void*)) {
     QAbstractProxyModel_OnCanFetchMore((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* parent ```
 bool q_abstractproxymodel_qbase_can_fetch_more(void* self, void* parent) {
     return QAbstractProxyModel_QBaseCanFetchMore((QAbstractProxyModel*)self, (QModelIndex*)parent);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#fetchMore)
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* parent ```
 void q_abstractproxymodel_fetch_more(void* self, void* parent) {
     QAbstractProxyModel_FetchMore((QAbstractProxyModel*)self, (QModelIndex*)parent);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractProxyModel*, QModelIndex*) ```
 void q_abstractproxymodel_on_fetch_more(void* self, void (*slot)(void*, void*)) {
     QAbstractProxyModel_OnFetchMore((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* parent ```
 void q_abstractproxymodel_qbase_fetch_more(void* self, void* parent) {
     QAbstractProxyModel_QBaseFetchMore((QAbstractProxyModel*)self, (QModelIndex*)parent);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#sort)
-///
-/// ``` QAbstractProxyModel* self, int column, enum Qt__SortOrder order ```
 void q_abstractproxymodel_sort(void* self, int column, int64_t order) {
     QAbstractProxyModel_Sort((QAbstractProxyModel*)self, column, order);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractProxyModel*, int, enum Qt__SortOrder) ```
 void q_abstractproxymodel_on_sort(void* self, void (*slot)(void*, int, int64_t)) {
     QAbstractProxyModel_OnSort((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, int column, enum Qt__SortOrder order ```
 void q_abstractproxymodel_qbase_sort(void* self, int column, int64_t order) {
     QAbstractProxyModel_QBaseSort((QAbstractProxyModel*)self, column, order);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#span)
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* index ```
 QSize* q_abstractproxymodel_span(void* self, void* index) {
     return QAbstractProxyModel_Span((QAbstractProxyModel*)self, (QModelIndex*)index);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, QSize* (*slot)(QAbstractProxyModel*, QModelIndex*) ```
 void q_abstractproxymodel_on_span(void* self, QSize* (*slot)(void*, void*)) {
     QAbstractProxyModel_OnSpan((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* index ```
 QSize* q_abstractproxymodel_qbase_span(void* self, void* index) {
     return QAbstractProxyModel_QBaseSpan((QAbstractProxyModel*)self, (QModelIndex*)index);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#hasChildren)
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* parent ```
 bool q_abstractproxymodel_has_children(void* self, void* parent) {
     return QAbstractProxyModel_HasChildren((QAbstractProxyModel*)self, (QModelIndex*)parent);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, bool (*slot)(QAbstractProxyModel*, QModelIndex*) ```
 void q_abstractproxymodel_on_has_children(void* self, bool (*slot)(void*, void*)) {
     QAbstractProxyModel_OnHasChildren((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* parent ```
 bool q_abstractproxymodel_qbase_has_children(void* self, void* parent) {
     return QAbstractProxyModel_QBaseHasChildren((QAbstractProxyModel*)self, (QModelIndex*)parent);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#sibling)
-///
-/// ``` QAbstractProxyModel* self, int row, int column, QModelIndex* idx ```
 QModelIndex* q_abstractproxymodel_sibling(void* self, int row, int column, void* idx) {
     return QAbstractProxyModel_Sibling((QAbstractProxyModel*)self, row, column, (QModelIndex*)idx);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* (*slot)(QAbstractProxyModel*, int, int, QModelIndex*) ```
 void q_abstractproxymodel_on_sibling(void* self, QModelIndex* (*slot)(void*, int, int, void*)) {
     QAbstractProxyModel_OnSibling((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, int row, int column, QModelIndex* idx ```
 QModelIndex* q_abstractproxymodel_qbase_sibling(void* self, int row, int column, void* idx) {
     return QAbstractProxyModel_QBaseSibling((QAbstractProxyModel*)self, row, column, (QModelIndex*)idx);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeData)
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* indexes[] ```
 QMimeData* q_abstractproxymodel_mime_data(void* self, void* indexes[]) {
     QModelIndex** indexes_arr = (QModelIndex**)indexes;
     size_t indexes_len = 0;
@@ -557,16 +331,10 @@ QMimeData* q_abstractproxymodel_mime_data(void* self, void* indexes[]) {
     return QAbstractProxyModel_MimeData((QAbstractProxyModel*)self, indexes_list);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, QMimeData* (*slot)(QAbstractProxyModel*, QModelIndex*[]) ```
 void q_abstractproxymodel_on_mime_data(void* self, QMimeData* (*slot)(void*, void*)) {
     QAbstractProxyModel_OnMimeData((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* indexes[] ```
 QMimeData* q_abstractproxymodel_qbase_mime_data(void* self, void* indexes[]) {
     QModelIndex** indexes_arr = (QModelIndex**)indexes;
     size_t indexes_len = 0;
@@ -580,51 +348,30 @@ QMimeData* q_abstractproxymodel_qbase_mime_data(void* self, void* indexes[]) {
     return QAbstractProxyModel_QBaseMimeData((QAbstractProxyModel*)self, indexes_list);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#canDropMimeData)
-///
-/// ``` QAbstractProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent ```
 bool q_abstractproxymodel_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
     return QAbstractProxyModel_CanDropMimeData((QAbstractProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, bool (*slot)(QAbstractProxyModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*) ```
 void q_abstractproxymodel_on_can_drop_mime_data(void* self, bool (*slot)(void*, void*, int64_t, int, int, void*)) {
     QAbstractProxyModel_OnCanDropMimeData((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent ```
 bool q_abstractproxymodel_qbase_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
     return QAbstractProxyModel_QBaseCanDropMimeData((QAbstractProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#dropMimeData)
-///
-/// ``` QAbstractProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent ```
 bool q_abstractproxymodel_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
     return QAbstractProxyModel_DropMimeData((QAbstractProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, bool (*slot)(QAbstractProxyModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*) ```
 void q_abstractproxymodel_on_drop_mime_data(void* self, bool (*slot)(void*, void*, int64_t, int, int, void*)) {
     QAbstractProxyModel_OnDropMimeData((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent ```
 bool q_abstractproxymodel_qbase_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
     return QAbstractProxyModel_QBaseDropMimeData((QAbstractProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeTypes)
-///
-/// ``` QAbstractProxyModel* self ```
 const char** q_abstractproxymodel_mime_types(void* self) {
     libqt_list _arr = QAbstractProxyModel_MimeTypes((QAbstractProxyModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
@@ -639,16 +386,10 @@ const char** q_abstractproxymodel_mime_types(void* self) {
     return _ret;
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, const char** (*slot)() ```
 void q_abstractproxymodel_on_mime_types(void* self, const char** (*slot)()) {
     QAbstractProxyModel_OnMimeTypes((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self ```
 const char** q_abstractproxymodel_qbase_mime_types(void* self) {
     libqt_list _arr = QAbstractProxyModel_QBaseMimeTypes((QAbstractProxyModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
@@ -663,93 +404,54 @@ const char** q_abstractproxymodel_qbase_mime_types(void* self) {
     return _ret;
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
-///
-/// ``` QAbstractProxyModel* self ```
 int64_t q_abstractproxymodel_supported_drag_actions(void* self) {
     return QAbstractProxyModel_SupportedDragActions((QAbstractProxyModel*)self);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, int64_t (*slot)() ```
 void q_abstractproxymodel_on_supported_drag_actions(void* self, int64_t (*slot)()) {
     QAbstractProxyModel_OnSupportedDragActions((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self ```
 int64_t q_abstractproxymodel_qbase_supported_drag_actions(void* self) {
     return QAbstractProxyModel_QBaseSupportedDragActions((QAbstractProxyModel*)self);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDropActions)
-///
-/// ``` QAbstractProxyModel* self ```
 int64_t q_abstractproxymodel_supported_drop_actions(void* self) {
     return QAbstractProxyModel_SupportedDropActions((QAbstractProxyModel*)self);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, int64_t (*slot)() ```
 void q_abstractproxymodel_on_supported_drop_actions(void* self, int64_t (*slot)()) {
     QAbstractProxyModel_OnSupportedDropActions((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self ```
 int64_t q_abstractproxymodel_qbase_supported_drop_actions(void* self) {
     return QAbstractProxyModel_QBaseSupportedDropActions((QAbstractProxyModel*)self);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
-///
-/// ``` QAbstractProxyModel* self ```
 libqt_map /* of int to char* */ q_abstractproxymodel_role_names(void* self) {
     return QAbstractProxyModel_RoleNames((QAbstractProxyModel*)self);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, libqt_map /* of int to char* */ (*slot)() ```
 void q_abstractproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*slot)()) {
     QAbstractProxyModel_OnRoleNames((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self ```
 libqt_map /* of int to char* */ q_abstractproxymodel_qbase_role_names(void* self) {
     return QAbstractProxyModel_QBaseRoleNames((QAbstractProxyModel*)self);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#createSourceIndex)
-///
-/// ``` QAbstractProxyModel* self, int row, int col, void* internalPtr ```
 QModelIndex* q_abstractproxymodel_create_source_index(void* self, int row, int col, void* internalPtr) {
     return QAbstractProxyModel_CreateSourceIndex((QAbstractProxyModel*)self, row, col, internalPtr);
 }
 
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* (*slot)(QAbstractProxyModel*, int, int, void*) ```
 void q_abstractproxymodel_on_create_source_index(void* self, QModelIndex* (*slot)(void*, int, int, void*)) {
     QAbstractProxyModel_OnCreateSourceIndex((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Base class method implementation
-///
-/// ``` QAbstractProxyModel* self, int row, int col, void* internalPtr ```
 QModelIndex* q_abstractproxymodel_qbase_create_source_index(void* self, int row, int col, void* internalPtr) {
     return QAbstractProxyModel_QBaseCreateSourceIndex((QAbstractProxyModel*)self, row, col, internalPtr);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
-///
-/// ``` const char* s, const char* c ```
 const char* q_abstractproxymodel_tr2(const char* s, const char* c) {
     libqt_string _str = QAbstractProxyModel_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
@@ -757,9 +459,6 @@ const char* q_abstractproxymodel_tr2(const char* s, const char* c) {
     return _ret;
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
-///
-/// ``` const char* s, const char* c, int n ```
 const char* q_abstractproxymodel_tr3(const char* s, const char* c, int n) {
     libqt_string _str = QAbstractProxyModel_Tr3(s, c, n);
     char* _ret = qstring_to_char(_str);
@@ -767,201 +466,94 @@ const char* q_abstractproxymodel_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
-///
-/// ``` QAbstractProxyModel* self, int row, int column ```
 bool q_abstractproxymodel_has_index(void* self, int row, int column) {
     return QAbstractItemModel_HasIndex((QAbstractItemModel*)self, row, column);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
-///
-/// ``` QAbstractProxyModel* self, int row ```
 bool q_abstractproxymodel_insert_row(void* self, int row) {
     return QAbstractItemModel_InsertRow((QAbstractItemModel*)self, row);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
-///
-/// ``` QAbstractProxyModel* self, int column ```
 bool q_abstractproxymodel_insert_column(void* self, int column) {
     return QAbstractItemModel_InsertColumn((QAbstractItemModel*)self, column);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
-///
-/// ``` QAbstractProxyModel* self, int row ```
 bool q_abstractproxymodel_remove_row(void* self, int row) {
     return QAbstractItemModel_RemoveRow((QAbstractItemModel*)self, row);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
-///
-/// ``` QAbstractProxyModel* self, int column ```
 bool q_abstractproxymodel_remove_column(void* self, int column) {
     return QAbstractItemModel_RemoveColumn((QAbstractItemModel*)self, column);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRow)
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* sourceParent, int sourceRow, QModelIndex* destinationParent, int destinationChild ```
 bool q_abstractproxymodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild) {
     return QAbstractItemModel_MoveRow((QAbstractItemModel*)self, (QModelIndex*)sourceParent, sourceRow, (QModelIndex*)destinationParent, destinationChild);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumn)
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* sourceParent, int sourceColumn, QModelIndex* destinationParent, int destinationChild ```
 bool q_abstractproxymodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild) {
     return QAbstractItemModel_MoveColumn((QAbstractItemModel*)self, (QModelIndex*)sourceParent, sourceColumn, (QModelIndex*)destinationParent, destinationChild);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* index ```
 bool q_abstractproxymodel_check_index(void* self, void* index) {
     return QAbstractItemModel_CheckIndex((QAbstractItemModel*)self, (QModelIndex*)index);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight ```
 void q_abstractproxymodel_data_changed(void* self, void* topLeft, void* bottomRight) {
     QAbstractItemModel_DataChanged((QAbstractItemModel*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*) ```
 void q_abstractproxymodel_on_data_changed(void* self, void (*slot)(void*, void*, void*)) {
     QAbstractItemModel_Connect_DataChanged((QAbstractItemModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
-///
-/// ``` QAbstractProxyModel* self, enum Qt__Orientation orientation, int first, int last ```
 void q_abstractproxymodel_header_data_changed(void* self, int64_t orientation, int first, int last) {
     QAbstractItemModel_HeaderDataChanged((QAbstractItemModel*)self, orientation, first, last);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractItemModel*, enum Qt__Orientation, int, int) ```
 void q_abstractproxymodel_on_header_data_changed(void* self, void (*slot)(void*, int64_t, int, int)) {
     QAbstractItemModel_Connect_HeaderDataChanged((QAbstractItemModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_layout_changed(void* self) {
     QAbstractItemModel_LayoutChanged((QAbstractItemModel*)self);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractItemModel*) ```
 void q_abstractproxymodel_on_layout_changed(void* self, void (*slot)(void*)) {
     QAbstractItemModel_Connect_LayoutChanged((QAbstractItemModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_layout_about_to_be_changed(void* self) {
     QAbstractItemModel_LayoutAboutToBeChanged((QAbstractItemModel*)self);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractItemModel*) ```
 void q_abstractproxymodel_on_layout_about_to_be_changed(void* self, void (*slot)(void*)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged((QAbstractItemModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
-///
-/// ``` QAbstractProxyModel* self, int row, int column, QModelIndex* parent ```
 bool q_abstractproxymodel_has_index3(void* self, int row, int column, void* parent) {
     return QAbstractItemModel_HasIndex3((QAbstractItemModel*)self, row, column, (QModelIndex*)parent);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
-///
-/// ``` QAbstractProxyModel* self, int row, QModelIndex* parent ```
 bool q_abstractproxymodel_insert_row2(void* self, int row, void* parent) {
     return QAbstractItemModel_InsertRow2((QAbstractItemModel*)self, row, (QModelIndex*)parent);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
-///
-/// ``` QAbstractProxyModel* self, int column, QModelIndex* parent ```
 bool q_abstractproxymodel_insert_column2(void* self, int column, void* parent) {
     return QAbstractItemModel_InsertColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
-///
-/// ``` QAbstractProxyModel* self, int row, QModelIndex* parent ```
 bool q_abstractproxymodel_remove_row2(void* self, int row, void* parent) {
     return QAbstractItemModel_RemoveRow2((QAbstractItemModel*)self, row, (QModelIndex*)parent);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
-///
-/// ``` QAbstractProxyModel* self, int column, QModelIndex* parent ```
 bool q_abstractproxymodel_remove_column2(void* self, int column, void* parent) {
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* index, int options ```
 bool q_abstractproxymodel_check_index2(void* self, void* index, int64_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* roles[] ```
 void q_abstractproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, int* roles[]) {
     size_t roles_len = 0;
     while (roles[roles_len] != NULL) {
@@ -974,18 +566,10 @@ void q_abstractproxymodel_data_changed3(void* self, void* topLeft, void* bottomR
     QAbstractItemModel_DataChanged3((QAbstractItemModel*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles_list);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*, int*[]) ```
 void q_abstractproxymodel_on_data_changed3(void* self, void (*slot)(void*, void*, void*, int*)) {
     QAbstractItemModel_Connect_DataChanged3((QAbstractItemModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
-///
-/// ``` QAbstractProxyModel* self, QPersistentModelIndex* parents[] ```
 void q_abstractproxymodel_layout_changed1(void* self, void* parents[]) {
     QPersistentModelIndex** parents_arr = (QPersistentModelIndex**)parents;
     size_t parents_len = 0;
@@ -999,18 +583,10 @@ void q_abstractproxymodel_layout_changed1(void* self, void* parents[]) {
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents_list);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractItemModel*, QPersistentModelIndex*[]) ```
 void q_abstractproxymodel_on_layout_changed1(void* self, void (*slot)(void*, void*)) {
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
-///
-/// ``` QAbstractProxyModel* self, QPersistentModelIndex* parents[], enum QAbstractItemModel__LayoutChangeHint hint ```
 void q_abstractproxymodel_layout_changed2(void* self, void* parents[], int64_t hint) {
     QPersistentModelIndex** parents_arr = (QPersistentModelIndex**)parents;
     size_t parents_len = 0;
@@ -1024,18 +600,10 @@ void q_abstractproxymodel_layout_changed2(void* self, void* parents[], int64_t h
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents_list, hint);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractItemModel*, QPersistentModelIndex*[], enum QAbstractItemModel__LayoutChangeHint) ```
 void q_abstractproxymodel_on_layout_changed2(void* self, void (*slot)(void*, void*, int64_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
-///
-/// ``` QAbstractProxyModel* self, QPersistentModelIndex* parents[] ```
 void q_abstractproxymodel_layout_about_to_be_changed1(void* self, void* parents[]) {
     QPersistentModelIndex** parents_arr = (QPersistentModelIndex**)parents;
     size_t parents_len = 0;
@@ -1049,18 +617,10 @@ void q_abstractproxymodel_layout_about_to_be_changed1(void* self, void* parents[
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents_list);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractItemModel*, QPersistentModelIndex*[]) ```
 void q_abstractproxymodel_on_layout_about_to_be_changed1(void* self, void (*slot)(void*, void*)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
-///
-/// ``` QAbstractProxyModel* self, QPersistentModelIndex* parents[], enum QAbstractItemModel__LayoutChangeHint hint ```
 void q_abstractproxymodel_layout_about_to_be_changed2(void* self, void* parents[], int64_t hint) {
     QPersistentModelIndex** parents_arr = (QPersistentModelIndex**)parents;
     size_t parents_len = 0;
@@ -1074,18 +634,10 @@ void q_abstractproxymodel_layout_about_to_be_changed2(void* self, void* parents[
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents_list, hint);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractItemModel*, QPersistentModelIndex*[], enum QAbstractItemModel__LayoutChangeHint) ```
 void q_abstractproxymodel_on_layout_about_to_be_changed2(void* self, void (*slot)(void*, void*, int64_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
-///
-/// ``` QAbstractProxyModel* self ```
 const char* q_abstractproxymodel_object_name(void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
@@ -1093,211 +645,96 @@ const char* q_abstractproxymodel_object_name(void* self) {
     return _ret;
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
-///
-/// ``` QAbstractProxyModel* self, const char* name ```
 void q_abstractproxymodel_set_object_name(void* self, const char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
-///
-/// ``` QAbstractProxyModel* self ```
 bool q_abstractproxymodel_is_widget_type(void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
-///
-/// ``` QAbstractProxyModel* self ```
 bool q_abstractproxymodel_is_window_type(void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
-///
-/// ``` QAbstractProxyModel* self ```
 bool q_abstractproxymodel_is_quick_item_type(void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
-///
-/// ``` QAbstractProxyModel* self ```
 bool q_abstractproxymodel_signals_blocked(void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
-///
-/// ``` QAbstractProxyModel* self, bool b ```
 bool q_abstractproxymodel_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
-///
-/// ``` QAbstractProxyModel* self ```
 QThread* q_abstractproxymodel_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
-///
-/// ``` QAbstractProxyModel* self, QThread* thread ```
 void q_abstractproxymodel_move_to_thread(void* self, void* thread) {
     QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
-///
-/// ``` QAbstractProxyModel* self, int interval ```
 int32_t q_abstractproxymodel_start_timer(void* self, int interval) {
     return QObject_StartTimer((QObject*)self, interval);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
-///
-/// ``` QAbstractProxyModel* self, int id ```
 void q_abstractproxymodel_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
-///
-/// ``` QAbstractProxyModel* self ```
 libqt_list /* of QObject* */ q_abstractproxymodel_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
-///
-/// ``` QAbstractProxyModel* self, QObject* parent ```
 void q_abstractproxymodel_set_parent(void* self, void* parent) {
     QObject_SetParent((QObject*)self, (QObject*)parent);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
-///
-/// ``` QAbstractProxyModel* self, QObject* filterObj ```
 void q_abstractproxymodel_install_event_filter(void* self, void* filterObj) {
     QObject_InstallEventFilter((QObject*)self, (QObject*)filterObj);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
-///
-/// ``` QAbstractProxyModel* self, QObject* obj ```
 void q_abstractproxymodel_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
-///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
 QMetaObject__Connection* q_abstractproxymodel_connect(void* sender, void* signal, void* receiver, void* method) {
     return QObject_Connect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
-///
-/// ``` QAbstractProxyModel* self, QObject* sender, const char* signal, const char* member ```
 QMetaObject__Connection* q_abstractproxymodel_connect2(void* self, void* sender, const char* signal, const char* member) {
     return QObject_Connect2((QObject*)self, (QObject*)sender, signal, member);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
 bool q_abstractproxymodel_disconnect(void* sender, void* signal, void* receiver, void* member) {
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// ``` QMetaObject__Connection* param1 ```
 bool q_abstractproxymodel_disconnect_with_q_meta_object_connection(void* param1) {
     return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_dump_object_tree(void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_dump_object_info(void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
-///
-/// ``` QAbstractProxyModel* self, const char* name, QVariant* value ```
 bool q_abstractproxymodel_set_property(void* self, const char* name, void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
-///
-/// ``` QAbstractProxyModel* self, const char* name ```
 QVariant* q_abstractproxymodel_property(void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
-///
-/// ``` QAbstractProxyModel* self ```
 const char** q_abstractproxymodel_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
@@ -1312,719 +749,304 @@ const char** q_abstractproxymodel_dynamic_property_names(void* self) {
     return _ret;
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
-///
-/// ``` QAbstractProxyModel* self ```
 QBindingStorage* q_abstractproxymodel_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
-///
-/// ``` QAbstractProxyModel* self ```
 QBindingStorage* q_abstractproxymodel_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-/// Inherited from QObject
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QObject*) ```
 void q_abstractproxymodel_on_destroyed(void* self, void (*slot)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
-///
-/// ``` QAbstractProxyModel* self, const char* classname ```
 bool q_abstractproxymodel_inherits(void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
-///
-/// ``` QAbstractProxyModel* self, int interval, enum Qt__TimerType timerType ```
 int32_t q_abstractproxymodel_start_timer2(void* self, int interval, int64_t timerType) {
     return QObject_StartTimer2((QObject*)self, interval, timerType);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
-///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
 QMetaObject__Connection* q_abstractproxymodel_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
-///
-/// ``` QAbstractProxyModel* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
 QMetaObject__Connection* q_abstractproxymodel_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
-///
-/// ``` QAbstractProxyModel* self, QObject* param1 ```
 void q_abstractproxymodel_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-/// Inherited from QObject
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QObject*, QObject*) ```
 void q_abstractproxymodel_on_destroyed1(void* self, void (*slot)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#index)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, int row, int column, QModelIndex* parent ```
 QModelIndex* q_abstractproxymodel_index(void* self, int row, int column, void* parent) {
     return QAbstractProxyModel_Index((QAbstractProxyModel*)self, row, column, (QModelIndex*)parent);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, int row, int column, QModelIndex* parent ```
 QModelIndex* q_abstractproxymodel_qbase_index(void* self, int row, int column, void* parent) {
     return QAbstractProxyModel_QBaseIndex((QAbstractProxyModel*)self, row, column, (QModelIndex*)parent);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* (*slot)(QAbstractProxyModel*, int, int, QModelIndex*) ```
 void q_abstractproxymodel_on_index(void* self, QModelIndex* (*slot)(void*, int, int, void*)) {
     QAbstractProxyModel_OnIndex((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#parent)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* child ```
 QModelIndex* q_abstractproxymodel_parent(void* self, void* child) {
     return QAbstractProxyModel_Parent((QAbstractProxyModel*)self, (QModelIndex*)child);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* child ```
 QModelIndex* q_abstractproxymodel_qbase_parent(void* self, void* child) {
     return QAbstractProxyModel_QBaseParent((QAbstractProxyModel*)self, (QModelIndex*)child);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* (*slot)(QAbstractProxyModel*, QModelIndex*) ```
 void q_abstractproxymodel_on_parent(void* self, QModelIndex* (*slot)(void*, void*)) {
     QAbstractProxyModel_OnParent((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowCount)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* parent ```
 int32_t q_abstractproxymodel_row_count(void* self, void* parent) {
     return QAbstractProxyModel_RowCount((QAbstractProxyModel*)self, (QModelIndex*)parent);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* parent ```
 int32_t q_abstractproxymodel_qbase_row_count(void* self, void* parent) {
     return QAbstractProxyModel_QBaseRowCount((QAbstractProxyModel*)self, (QModelIndex*)parent);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, int32_t (*slot)(QAbstractProxyModel*, QModelIndex*) ```
 void q_abstractproxymodel_on_row_count(void* self, int32_t (*slot)(void*, void*)) {
     QAbstractProxyModel_OnRowCount((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnCount)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* parent ```
 int32_t q_abstractproxymodel_column_count(void* self, void* parent) {
     return QAbstractProxyModel_ColumnCount((QAbstractProxyModel*)self, (QModelIndex*)parent);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* parent ```
 int32_t q_abstractproxymodel_qbase_column_count(void* self, void* parent) {
     return QAbstractProxyModel_QBaseColumnCount((QAbstractProxyModel*)self, (QModelIndex*)parent);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, int32_t (*slot)(QAbstractProxyModel*, QModelIndex*) ```
 void q_abstractproxymodel_on_column_count(void* self, int32_t (*slot)(void*, void*)) {
     QAbstractProxyModel_OnColumnCount((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, int row, int count, QModelIndex* parent ```
 bool q_abstractproxymodel_insert_rows(void* self, int row, int count, void* parent) {
     return QAbstractProxyModel_InsertRows((QAbstractProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, int row, int count, QModelIndex* parent ```
 bool q_abstractproxymodel_qbase_insert_rows(void* self, int row, int count, void* parent) {
     return QAbstractProxyModel_QBaseInsertRows((QAbstractProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, bool (*slot)(QAbstractProxyModel*, int, int, QModelIndex*) ```
 void q_abstractproxymodel_on_insert_rows(void* self, bool (*slot)(void*, int, int, void*)) {
     QAbstractProxyModel_OnInsertRows((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, int column, int count, QModelIndex* parent ```
 bool q_abstractproxymodel_insert_columns(void* self, int column, int count, void* parent) {
     return QAbstractProxyModel_InsertColumns((QAbstractProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, int column, int count, QModelIndex* parent ```
 bool q_abstractproxymodel_qbase_insert_columns(void* self, int column, int count, void* parent) {
     return QAbstractProxyModel_QBaseInsertColumns((QAbstractProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, bool (*slot)(QAbstractProxyModel*, int, int, QModelIndex*) ```
 void q_abstractproxymodel_on_insert_columns(void* self, bool (*slot)(void*, int, int, void*)) {
     QAbstractProxyModel_OnInsertColumns((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, int row, int count, QModelIndex* parent ```
 bool q_abstractproxymodel_remove_rows(void* self, int row, int count, void* parent) {
     return QAbstractProxyModel_RemoveRows((QAbstractProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, int row, int count, QModelIndex* parent ```
 bool q_abstractproxymodel_qbase_remove_rows(void* self, int row, int count, void* parent) {
     return QAbstractProxyModel_QBaseRemoveRows((QAbstractProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, bool (*slot)(QAbstractProxyModel*, int, int, QModelIndex*) ```
 void q_abstractproxymodel_on_remove_rows(void* self, bool (*slot)(void*, int, int, void*)) {
     QAbstractProxyModel_OnRemoveRows((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumns)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, int column, int count, QModelIndex* parent ```
 bool q_abstractproxymodel_remove_columns(void* self, int column, int count, void* parent) {
     return QAbstractProxyModel_RemoveColumns((QAbstractProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, int column, int count, QModelIndex* parent ```
 bool q_abstractproxymodel_qbase_remove_columns(void* self, int column, int count, void* parent) {
     return QAbstractProxyModel_QBaseRemoveColumns((QAbstractProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, bool (*slot)(QAbstractProxyModel*, int, int, QModelIndex*) ```
 void q_abstractproxymodel_on_remove_columns(void* self, bool (*slot)(void*, int, int, void*)) {
     QAbstractProxyModel_OnRemoveColumns((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild ```
 bool q_abstractproxymodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
     return QAbstractProxyModel_MoveRows((QAbstractProxyModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild ```
 bool q_abstractproxymodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
     return QAbstractProxyModel_QBaseMoveRows((QAbstractProxyModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, bool (*slot)(QAbstractProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_abstractproxymodel_on_move_rows(void* self, bool (*slot)(void*, void*, int, int, void*, int)) {
     QAbstractProxyModel_OnMoveRows((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild ```
 bool q_abstractproxymodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
     return QAbstractProxyModel_MoveColumns((QAbstractProxyModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild ```
 bool q_abstractproxymodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
     return QAbstractProxyModel_QBaseMoveColumns((QAbstractProxyModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, bool (*slot)(QAbstractProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_abstractproxymodel_on_move_columns(void* self, bool (*slot)(void*, void*, int, int, void*, int)) {
     QAbstractProxyModel_OnMoveColumns((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, int flags ```
 libqt_list /* of QModelIndex* */ q_abstractproxymodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
     libqt_list _arr = QAbstractProxyModel_Match((QAbstractProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, int flags ```
 libqt_list /* of QModelIndex* */ q_abstractproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
     libqt_list _arr = QAbstractProxyModel_QBaseMatch((QAbstractProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, libqt_list /* of QModelIndex* */ (*slot)(QAbstractProxyModel*, QModelIndex*, int, QVariant*, int, int) ```
 void q_abstractproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*slot)(void*, void*, int, void*, int, int64_t)) {
     QAbstractProxyModel_OnMatch((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan ```
 void q_abstractproxymodel_multi_data(void* self, void* index, void* roleDataSpan) {
     QAbstractProxyModel_MultiData((QAbstractProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan ```
 void q_abstractproxymodel_qbase_multi_data(void* self, void* index, void* roleDataSpan) {
     QAbstractProxyModel_QBaseMultiData((QAbstractProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractProxyModel*, QModelIndex*, QModelRoleDataSpan*) ```
 void q_abstractproxymodel_on_multi_data(void* self, void (*slot)(void*, void*, void*)) {
     QAbstractProxyModel_OnMultiData((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_reset_internal_data(void* self) {
     QAbstractProxyModel_ResetInternalData((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_qbase_reset_internal_data(void* self) {
     QAbstractProxyModel_QBaseResetInternalData((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)() ```
 void q_abstractproxymodel_on_reset_internal_data(void* self, void (*slot)()) {
     QAbstractProxyModel_OnResetInternalData((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QEvent* event ```
 bool q_abstractproxymodel_event(void* self, void* event) {
     return QAbstractProxyModel_Event((QAbstractProxyModel*)self, (QEvent*)event);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QEvent* event ```
 bool q_abstractproxymodel_qbase_event(void* self, void* event) {
     return QAbstractProxyModel_QBaseEvent((QAbstractProxyModel*)self, (QEvent*)event);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, bool (*slot)(QAbstractProxyModel*, QEvent*) ```
 void q_abstractproxymodel_on_event(void* self, bool (*slot)(void*, void*)) {
     QAbstractProxyModel_OnEvent((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QObject* watched, QEvent* event ```
 bool q_abstractproxymodel_event_filter(void* self, void* watched, void* event) {
     return QAbstractProxyModel_EventFilter((QAbstractProxyModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QObject* watched, QEvent* event ```
 bool q_abstractproxymodel_qbase_event_filter(void* self, void* watched, void* event) {
     return QAbstractProxyModel_QBaseEventFilter((QAbstractProxyModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, bool (*slot)(QAbstractProxyModel*, QObject*, QEvent*) ```
 void q_abstractproxymodel_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
     QAbstractProxyModel_OnEventFilter((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QTimerEvent* event ```
 void q_abstractproxymodel_timer_event(void* self, void* event) {
     QAbstractProxyModel_TimerEvent((QAbstractProxyModel*)self, (QTimerEvent*)event);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QTimerEvent* event ```
 void q_abstractproxymodel_qbase_timer_event(void* self, void* event) {
     QAbstractProxyModel_QBaseTimerEvent((QAbstractProxyModel*)self, (QTimerEvent*)event);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractProxyModel*, QTimerEvent*) ```
 void q_abstractproxymodel_on_timer_event(void* self, void (*slot)(void*, void*)) {
     QAbstractProxyModel_OnTimerEvent((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QChildEvent* event ```
 void q_abstractproxymodel_child_event(void* self, void* event) {
     QAbstractProxyModel_ChildEvent((QAbstractProxyModel*)self, (QChildEvent*)event);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QChildEvent* event ```
 void q_abstractproxymodel_qbase_child_event(void* self, void* event) {
     QAbstractProxyModel_QBaseChildEvent((QAbstractProxyModel*)self, (QChildEvent*)event);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractProxyModel*, QChildEvent*) ```
 void q_abstractproxymodel_on_child_event(void* self, void (*slot)(void*, void*)) {
     QAbstractProxyModel_OnChildEvent((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QEvent* event ```
 void q_abstractproxymodel_custom_event(void* self, void* event) {
     QAbstractProxyModel_CustomEvent((QAbstractProxyModel*)self, (QEvent*)event);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QEvent* event ```
 void q_abstractproxymodel_qbase_custom_event(void* self, void* event) {
     QAbstractProxyModel_QBaseCustomEvent((QAbstractProxyModel*)self, (QEvent*)event);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractProxyModel*, QEvent*) ```
 void q_abstractproxymodel_on_custom_event(void* self, void (*slot)(void*, void*)) {
     QAbstractProxyModel_OnCustomEvent((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QMetaMethod* signal ```
 void q_abstractproxymodel_connect_notify(void* self, void* signal) {
     QAbstractProxyModel_ConnectNotify((QAbstractProxyModel*)self, (QMetaMethod*)signal);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QMetaMethod* signal ```
 void q_abstractproxymodel_qbase_connect_notify(void* self, void* signal) {
     QAbstractProxyModel_QBaseConnectNotify((QAbstractProxyModel*)self, (QMetaMethod*)signal);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractProxyModel*, QMetaMethod*) ```
 void q_abstractproxymodel_on_connect_notify(void* self, void (*slot)(void*, void*)) {
     QAbstractProxyModel_OnConnectNotify((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QMetaMethod* signal ```
 void q_abstractproxymodel_disconnect_notify(void* self, void* signal) {
     QAbstractProxyModel_DisconnectNotify((QAbstractProxyModel*)self, (QMetaMethod*)signal);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QMetaMethod* signal ```
 void q_abstractproxymodel_qbase_disconnect_notify(void* self, void* signal) {
     QAbstractProxyModel_QBaseDisconnectNotify((QAbstractProxyModel*)self, (QMetaMethod*)signal);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractProxyModel*, QMetaMethod*) ```
 void q_abstractproxymodel_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
     QAbstractProxyModel_OnDisconnectNotify((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, int row, int column ```
 QModelIndex* q_abstractproxymodel_create_index(void* self, int row, int column) {
     return QAbstractProxyModel_CreateIndex((QAbstractProxyModel*)self, row, column);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, int row, int column ```
 QModelIndex* q_abstractproxymodel_qbase_create_index(void* self, int row, int column) {
     return QAbstractProxyModel_QBaseCreateIndex((QAbstractProxyModel*)self, row, column);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* (*slot)(QAbstractProxyModel*, int, int) ```
 void q_abstractproxymodel_on_create_index(void* self, QModelIndex* (*slot)(void*, int, int)) {
     QAbstractProxyModel_OnCreateIndex((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* indexes[], QDataStream* stream ```
 void q_abstractproxymodel_encode_data(void* self, void* indexes[], void* stream) {
     QModelIndex** indexes_arr = (QModelIndex**)indexes;
     size_t indexes_len = 0;
@@ -2038,11 +1060,6 @@ void q_abstractproxymodel_encode_data(void* self, void* indexes[], void* stream)
     QAbstractProxyModel_EncodeData((QAbstractProxyModel*)self, indexes_list, (QDataStream*)stream);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* indexes[], QDataStream* stream ```
 void q_abstractproxymodel_qbase_encode_data(void* self, void* indexes[], void* stream) {
     QModelIndex** indexes_arr = (QModelIndex**)indexes;
     size_t indexes_len = 0;
@@ -2056,486 +1073,202 @@ void q_abstractproxymodel_qbase_encode_data(void* self, void* indexes[], void* s
     QAbstractProxyModel_QBaseEncodeData((QAbstractProxyModel*)self, indexes_list, (QDataStream*)stream);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractProxyModel*, QModelIndex*[], QDataStream*) ```
 void q_abstractproxymodel_on_encode_data(void* self, void (*slot)(void*, void*, void*)) {
     QAbstractProxyModel_OnEncodeData((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, int row, int column, QModelIndex* parent, QDataStream* stream ```
 bool q_abstractproxymodel_decode_data(void* self, int row, int column, void* parent, void* stream) {
     return QAbstractProxyModel_DecodeData((QAbstractProxyModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, int row, int column, QModelIndex* parent, QDataStream* stream ```
 bool q_abstractproxymodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream) {
     return QAbstractProxyModel_QBaseDecodeData((QAbstractProxyModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, bool (*slot)(QAbstractProxyModel*, int, int, QModelIndex*, QDataStream*) ```
 void q_abstractproxymodel_on_decode_data(void* self, bool (*slot)(void*, int, int, void*, void*)) {
     QAbstractProxyModel_OnDecodeData((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* parent, int first, int last ```
 void q_abstractproxymodel_begin_insert_rows(void* self, void* parent, int first, int last) {
     QAbstractProxyModel_BeginInsertRows((QAbstractProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* parent, int first, int last ```
 void q_abstractproxymodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last) {
     QAbstractProxyModel_QBaseBeginInsertRows((QAbstractProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractProxyModel*, QModelIndex*, int, int) ```
 void q_abstractproxymodel_on_begin_insert_rows(void* self, void (*slot)(void*, void*, int, int)) {
     QAbstractProxyModel_OnBeginInsertRows((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_end_insert_rows(void* self) {
     QAbstractProxyModel_EndInsertRows((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_qbase_end_insert_rows(void* self) {
     QAbstractProxyModel_QBaseEndInsertRows((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)() ```
 void q_abstractproxymodel_on_end_insert_rows(void* self, void (*slot)()) {
     QAbstractProxyModel_OnEndInsertRows((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* parent, int first, int last ```
 void q_abstractproxymodel_begin_remove_rows(void* self, void* parent, int first, int last) {
     QAbstractProxyModel_BeginRemoveRows((QAbstractProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* parent, int first, int last ```
 void q_abstractproxymodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last) {
     QAbstractProxyModel_QBaseBeginRemoveRows((QAbstractProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractProxyModel*, QModelIndex*, int, int) ```
 void q_abstractproxymodel_on_begin_remove_rows(void* self, void (*slot)(void*, void*, int, int)) {
     QAbstractProxyModel_OnBeginRemoveRows((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_end_remove_rows(void* self) {
     QAbstractProxyModel_EndRemoveRows((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_qbase_end_remove_rows(void* self) {
     QAbstractProxyModel_QBaseEndRemoveRows((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)() ```
 void q_abstractproxymodel_on_end_remove_rows(void* self, void (*slot)()) {
     QAbstractProxyModel_OnEndRemoveRows((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow ```
 bool q_abstractproxymodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
     return QAbstractProxyModel_BeginMoveRows((QAbstractProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow ```
 bool q_abstractproxymodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
     return QAbstractProxyModel_QBaseBeginMoveRows((QAbstractProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, bool (*slot)(QAbstractProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_abstractproxymodel_on_begin_move_rows(void* self, bool (*slot)(void*, void*, int, int, void*, int)) {
     QAbstractProxyModel_OnBeginMoveRows((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_end_move_rows(void* self) {
     QAbstractProxyModel_EndMoveRows((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_qbase_end_move_rows(void* self) {
     QAbstractProxyModel_QBaseEndMoveRows((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)() ```
 void q_abstractproxymodel_on_end_move_rows(void* self, void (*slot)()) {
     QAbstractProxyModel_OnEndMoveRows((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* parent, int first, int last ```
 void q_abstractproxymodel_begin_insert_columns(void* self, void* parent, int first, int last) {
     QAbstractProxyModel_BeginInsertColumns((QAbstractProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* parent, int first, int last ```
 void q_abstractproxymodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last) {
     QAbstractProxyModel_QBaseBeginInsertColumns((QAbstractProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractProxyModel*, QModelIndex*, int, int) ```
 void q_abstractproxymodel_on_begin_insert_columns(void* self, void (*slot)(void*, void*, int, int)) {
     QAbstractProxyModel_OnBeginInsertColumns((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_end_insert_columns(void* self) {
     QAbstractProxyModel_EndInsertColumns((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_qbase_end_insert_columns(void* self) {
     QAbstractProxyModel_QBaseEndInsertColumns((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)() ```
 void q_abstractproxymodel_on_end_insert_columns(void* self, void (*slot)()) {
     QAbstractProxyModel_OnEndInsertColumns((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* parent, int first, int last ```
 void q_abstractproxymodel_begin_remove_columns(void* self, void* parent, int first, int last) {
     QAbstractProxyModel_BeginRemoveColumns((QAbstractProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* parent, int first, int last ```
 void q_abstractproxymodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last) {
     QAbstractProxyModel_QBaseBeginRemoveColumns((QAbstractProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractProxyModel*, QModelIndex*, int, int) ```
 void q_abstractproxymodel_on_begin_remove_columns(void* self, void (*slot)(void*, void*, int, int)) {
     QAbstractProxyModel_OnBeginRemoveColumns((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_end_remove_columns(void* self) {
     QAbstractProxyModel_EndRemoveColumns((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_qbase_end_remove_columns(void* self) {
     QAbstractProxyModel_QBaseEndRemoveColumns((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)() ```
 void q_abstractproxymodel_on_end_remove_columns(void* self, void (*slot)()) {
     QAbstractProxyModel_OnEndRemoveColumns((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn ```
 bool q_abstractproxymodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
     return QAbstractProxyModel_BeginMoveColumns((QAbstractProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn ```
 bool q_abstractproxymodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
     return QAbstractProxyModel_QBaseBeginMoveColumns((QAbstractProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, bool (*slot)(QAbstractProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_abstractproxymodel_on_begin_move_columns(void* self, bool (*slot)(void*, void*, int, int, void*, int)) {
     QAbstractProxyModel_OnBeginMoveColumns((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_end_move_columns(void* self) {
     QAbstractProxyModel_EndMoveColumns((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_qbase_end_move_columns(void* self) {
     QAbstractProxyModel_QBaseEndMoveColumns((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)() ```
 void q_abstractproxymodel_on_end_move_columns(void* self, void (*slot)()) {
     QAbstractProxyModel_OnEndMoveColumns((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_begin_reset_model(void* self) {
     QAbstractProxyModel_BeginResetModel((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_qbase_begin_reset_model(void* self) {
     QAbstractProxyModel_QBaseBeginResetModel((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)() ```
 void q_abstractproxymodel_on_begin_reset_model(void* self, void (*slot)()) {
     QAbstractProxyModel_OnBeginResetModel((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_end_reset_model(void* self) {
     QAbstractProxyModel_EndResetModel((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_qbase_end_reset_model(void* self) {
     QAbstractProxyModel_QBaseEndResetModel((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)() ```
 void q_abstractproxymodel_on_end_reset_model(void* self, void (*slot)()) {
     QAbstractProxyModel_OnEndResetModel((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* from, QModelIndex* to ```
 void q_abstractproxymodel_change_persistent_index(void* self, void* from, void* to) {
     QAbstractProxyModel_ChangePersistentIndex((QAbstractProxyModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* from, QModelIndex* to ```
 void q_abstractproxymodel_qbase_change_persistent_index(void* self, void* from, void* to) {
     QAbstractProxyModel_QBaseChangePersistentIndex((QAbstractProxyModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractProxyModel*, QModelIndex*, QModelIndex*) ```
 void q_abstractproxymodel_on_change_persistent_index(void* self, void (*slot)(void*, void*, void*)) {
     QAbstractProxyModel_OnChangePersistentIndex((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* from[], QModelIndex* to[] ```
 void q_abstractproxymodel_change_persistent_index_list(void* self, void* from[], void* to[]) {
     QModelIndex** from_arr = (QModelIndex**)from;
     size_t from_len = 0;
@@ -2558,11 +1291,6 @@ void q_abstractproxymodel_change_persistent_index_list(void* self, void* from[],
     QAbstractProxyModel_ChangePersistentIndexList((QAbstractProxyModel*)self, from_list, to_list);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QModelIndex* from[], QModelIndex* to[] ```
 void q_abstractproxymodel_qbase_change_persistent_index_list(void* self, void* from[], void* to[]) {
     QModelIndex** from_arr = (QModelIndex**)from;
     size_t from_len = 0;
@@ -2585,165 +1313,72 @@ void q_abstractproxymodel_qbase_change_persistent_index_list(void* self, void* f
     QAbstractProxyModel_QBaseChangePersistentIndexList((QAbstractProxyModel*)self, from_list, to_list);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, void (*slot)(QAbstractProxyModel*, QModelIndex*[], QModelIndex*[]) ```
 void q_abstractproxymodel_on_change_persistent_index_list(void* self, void (*slot)(void*, void*, void*)) {
     QAbstractProxyModel_OnChangePersistentIndexList((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 libqt_list /* of QModelIndex* */ q_abstractproxymodel_persistent_index_list(void* self) {
     libqt_list _arr = QAbstractProxyModel_PersistentIndexList((QAbstractProxyModel*)self);
     return _arr;
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 libqt_list /* of QModelIndex* */ q_abstractproxymodel_qbase_persistent_index_list(void* self) {
     libqt_list _arr = QAbstractProxyModel_QBasePersistentIndexList((QAbstractProxyModel*)self);
     return _arr;
 }
 
-/// Inherited from QAbstractItemModel
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, libqt_list /* of QModelIndex* */ (*slot)() ```
 void q_abstractproxymodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*slot)()) {
     QAbstractProxyModel_OnPersistentIndexList((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 QObject* q_abstractproxymodel_sender(void* self) {
     return QAbstractProxyModel_Sender((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 QObject* q_abstractproxymodel_qbase_sender(void* self) {
     return QAbstractProxyModel_QBaseSender((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QObject* (*slot)() ```
 void q_abstractproxymodel_on_sender(void* self, QObject* (*slot)()) {
     QAbstractProxyModel_OnSender((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 int32_t q_abstractproxymodel_sender_signal_index(void* self) {
     return QAbstractProxyModel_SenderSignalIndex((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self ```
 int32_t q_abstractproxymodel_qbase_sender_signal_index(void* self) {
     return QAbstractProxyModel_QBaseSenderSignalIndex((QAbstractProxyModel*)self);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, int32_t (*slot)() ```
 void q_abstractproxymodel_on_sender_signal_index(void* self, int32_t (*slot)()) {
     QAbstractProxyModel_OnSenderSignalIndex((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, const char* signal ```
 int32_t q_abstractproxymodel_receivers(void* self, const char* signal) {
     return QAbstractProxyModel_Receivers((QAbstractProxyModel*)self, signal);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, const char* signal ```
 int32_t q_abstractproxymodel_qbase_receivers(void* self, const char* signal) {
     return QAbstractProxyModel_QBaseReceivers((QAbstractProxyModel*)self, signal);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, int32_t (*slot)(QAbstractProxyModel*, const char*) ```
 void q_abstractproxymodel_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
     QAbstractProxyModel_OnReceivers((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QMetaMethod* signal ```
 bool q_abstractproxymodel_is_signal_connected(void* self, void* signal) {
     return QAbstractProxyModel_IsSignalConnected((QAbstractProxyModel*)self, (QMetaMethod*)signal);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, QMetaMethod* signal ```
 bool q_abstractproxymodel_qbase_is_signal_connected(void* self, void* signal) {
     return QAbstractProxyModel_QBaseIsSignalConnected((QAbstractProxyModel*)self, (QMetaMethod*)signal);
 }
 
-/// Inherited from QObject
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QAbstractProxyModel* self, bool (*slot)(QAbstractProxyModel*, QMetaMethod*) ```
 void q_abstractproxymodel_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QAbstractProxyModel_OnIsSignalConnected((QAbstractProxyModel*)self, (intptr_t)slot);
 }
 
-/// Delete this object from C++ memory.
-///
-/// ``` QAbstractProxyModel* self ```
 void q_abstractproxymodel_delete(void* self) {
     QAbstractProxyModel_Delete((QAbstractProxyModel*)(self));
 }

@@ -15,11 +15,36 @@
 #include "libqsize.h"
 #include "libqsurfaceformat.h"
 
+/// https://doc.qt.io/qt-6/qsurface.html
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#surfaceClass)
+///
+/// ``` QSurface* self ```
 int64_t q_surface_surface_class(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#format)
+///
+/// ``` QSurface* self ```
 QSurfaceFormat* q_surface_format(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#surfaceType)
+///
+/// ``` QSurface* self ```
 int64_t q_surface_surface_type(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#supportsOpenGL)
+///
+/// ``` QSurface* self ```
 bool q_surface_supports_open_g_l(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#size)
+///
+/// ``` QSurface* self ```
 QSize* q_surface_size(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// ``` QSurface* self ```
 void q_surface_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qsurface.html#types
