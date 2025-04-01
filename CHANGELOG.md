@@ -1,4 +1,8 @@
 
+### 6.4.2 rev5 (31 March 2025)
+
+* Move documentation comments from source to headers (#5)
+
 ### 6.4.2 rev4 (31 March 2025)
 
 * **BREAKING CHANGE:** Mark Qt Charts restricted (#4)
