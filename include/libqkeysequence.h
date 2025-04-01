@@ -16,43 +16,196 @@
 #include <string.h>
 #include "libqvariant.h"
 
+/// https://doc.qt.io/qt-6/qkeysequence.html
+
+/// q_keysequence_new constructs a new QKeySequence object.
+///
+///
 QKeySequence* q_keysequence_new();
+
+/// q_keysequence_new2 constructs a new QKeySequence object.
+///
+/// ``` const char* key ```
 QKeySequence* q_keysequence_new2(const char* key);
+
+/// q_keysequence_new3 constructs a new QKeySequence object.
+///
+/// ``` int k1 ```
 QKeySequence* q_keysequence_new3(int k1);
+
+/// q_keysequence_new4 constructs a new QKeySequence object.
+///
+/// ``` QKeyCombination* k1 ```
 QKeySequence* q_keysequence_new4(void* k1);
+
+/// q_keysequence_new5 constructs a new QKeySequence object.
+///
+/// ``` QKeySequence* ks ```
 QKeySequence* q_keysequence_new5(void* ks);
+
+/// q_keysequence_new6 constructs a new QKeySequence object.
+///
+/// ``` enum QKeySequence__StandardKey key ```
 QKeySequence* q_keysequence_new6(int64_t key);
+
+/// q_keysequence_new7 constructs a new QKeySequence object.
+///
+/// ``` const char* key, enum QKeySequence__SequenceFormat format ```
 QKeySequence* q_keysequence_new7(const char* key, int64_t format);
+
+/// q_keysequence_new8 constructs a new QKeySequence object.
+///
+/// ``` int k1, int k2 ```
 QKeySequence* q_keysequence_new8(int k1, int k2);
+
+/// q_keysequence_new9 constructs a new QKeySequence object.
+///
+/// ``` int k1, int k2, int k3 ```
 QKeySequence* q_keysequence_new9(int k1, int k2, int k3);
+
+/// q_keysequence_new10 constructs a new QKeySequence object.
+///
+/// ``` int k1, int k2, int k3, int k4 ```
 QKeySequence* q_keysequence_new10(int k1, int k2, int k3, int k4);
+
+/// q_keysequence_new11 constructs a new QKeySequence object.
+///
+/// ``` QKeyCombination* k1, QKeyCombination* k2 ```
 QKeySequence* q_keysequence_new11(void* k1, void* k2);
+
+/// q_keysequence_new12 constructs a new QKeySequence object.
+///
+/// ``` QKeyCombination* k1, QKeyCombination* k2, QKeyCombination* k3 ```
 QKeySequence* q_keysequence_new12(void* k1, void* k2, void* k3);
+
+/// q_keysequence_new13 constructs a new QKeySequence object.
+///
+/// ``` QKeyCombination* k1, QKeyCombination* k2, QKeyCombination* k3, QKeyCombination* k4 ```
 QKeySequence* q_keysequence_new13(void* k1, void* k2, void* k3, void* k4);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#count)
+///
+/// ``` QKeySequence* self ```
 int32_t q_keysequence_count(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#isEmpty)
+///
+/// ``` QKeySequence* self ```
 bool q_keysequence_is_empty(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#toString)
+///
+/// ``` QKeySequence* self ```
 const char* q_keysequence_to_string(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#fromString)
+///
+/// ``` const char* str ```
 QKeySequence* q_keysequence_from_string(const char* str);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#listFromString)
+///
+/// ``` const char* str ```
 libqt_list /* of QKeySequence* */ q_keysequence_list_from_string(const char* str);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#listToString)
+///
+/// ``` QKeySequence* list[] ```
 const char* q_keysequence_list_to_string(void* list[]);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#matches)
+///
+/// ``` QKeySequence* self, QKeySequence* seq ```
 int64_t q_keysequence_matches(void* self, void* seq);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#mnemonic)
+///
+/// ``` const char* text ```
 QKeySequence* q_keysequence_mnemonic(const char* text);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#keyBindings)
+///
+/// ``` enum QKeySequence__StandardKey key ```
 libqt_list /* of QKeySequence* */ q_keysequence_key_bindings(int64_t key);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator QVariant)
+///
+/// ``` QKeySequence* self ```
 QVariant* q_keysequence_to_q_variant(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator[])
+///
+/// ``` QKeySequence* self, uint32_t i ```
 QKeyCombination* q_keysequence_operator_subscript(void* self, uint32_t i);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator=)
+///
+/// ``` QKeySequence* self, QKeySequence* other ```
 void q_keysequence_operator_assign(void* self, void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#swap)
+///
+/// ``` QKeySequence* self, QKeySequence* other ```
 void q_keysequence_swap(void* self, void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator==)
+///
+/// ``` QKeySequence* self, QKeySequence* other ```
 bool q_keysequence_operator_equal(void* self, void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator!=)
+///
+/// ``` QKeySequence* self, QKeySequence* other ```
 bool q_keysequence_operator_not_equal(void* self, void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator<)
+///
+/// ``` QKeySequence* self, QKeySequence* ks ```
 bool q_keysequence_operator_lesser(void* self, void* ks);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator>)
+///
+/// ``` QKeySequence* self, QKeySequence* other ```
 bool q_keysequence_operator_greater(void* self, void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator<=)
+///
+/// ``` QKeySequence* self, QKeySequence* other ```
 bool q_keysequence_operator_lesser_or_equal(void* self, void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator>=)
+///
+/// ``` QKeySequence* self, QKeySequence* other ```
 bool q_keysequence_operator_greater_or_equal(void* self, void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#isDetached)
+///
+/// ``` QKeySequence* self ```
 bool q_keysequence_is_detached(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#toString)
+///
+/// ``` QKeySequence* self, enum QKeySequence__SequenceFormat format ```
 const char* q_keysequence_to_string1(void* self, int64_t format);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#fromString)
+///
+/// ``` const char* str, enum QKeySequence__SequenceFormat format ```
 QKeySequence* q_keysequence_from_string2(const char* str, int64_t format);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#listFromString)
+///
+/// ``` const char* str, enum QKeySequence__SequenceFormat format ```
 libqt_list /* of QKeySequence* */ q_keysequence_list_from_string2(const char* str, int64_t format);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#listToString)
+///
+/// ``` QKeySequence* list[], enum QKeySequence__SequenceFormat format ```
 const char* q_keysequence_list_to_string2(void* list[], int64_t format);
+
+/// Delete this object from C++ memory.
+///
+/// ``` QKeySequence* self ```
 void q_keysequence_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qkeysequence.html#types

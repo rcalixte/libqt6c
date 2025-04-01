@@ -14,14 +14,51 @@
 
 #include <string.h>
 
+/// https://doc.qt.io/qt-6/qscicommand.html
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qscicommand.html#command)
+///
+/// ``` QsciCommand* self ```
 int64_t q_scicommand_command(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qscicommand.html#execute)
+///
+/// ``` QsciCommand* self ```
 void q_scicommand_execute(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qscicommand.html#setKey)
+///
+/// ``` QsciCommand* self, int key ```
 void q_scicommand_set_key(void* self, int key);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qscicommand.html#setAlternateKey)
+///
+/// ``` QsciCommand* self, int altkey ```
 void q_scicommand_set_alternate_key(void* self, int altkey);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qscicommand.html#key)
+///
+/// ``` QsciCommand* self ```
 int32_t q_scicommand_key(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qscicommand.html#alternateKey)
+///
+/// ``` QsciCommand* self ```
 int32_t q_scicommand_alternate_key(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qscicommand.html#validKey)
+///
+/// ``` int key ```
 bool q_scicommand_valid_key(int key);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qscicommand.html#description)
+///
+/// ``` QsciCommand* self ```
 const char* q_scicommand_description(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// ``` QsciCommand* self ```
 void q_scicommand_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qscicommand.html#types

@@ -14,20 +14,81 @@
 
 #include <string.h>
 
+/// https://doc.qt.io/qt-6/qwebenginesettings.html
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#setFontFamily)
+///
+/// ``` QWebEngineSettings* self, enum QWebEngineSettings__FontFamily which, const char* family ```
 void q_webenginesettings_set_font_family(void* self, int64_t which, const char* family);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#fontFamily)
+///
+/// ``` QWebEngineSettings* self, enum QWebEngineSettings__FontFamily which ```
 const char* q_webenginesettings_font_family(void* self, int64_t which);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#resetFontFamily)
+///
+/// ``` QWebEngineSettings* self, enum QWebEngineSettings__FontFamily which ```
 void q_webenginesettings_reset_font_family(void* self, int64_t which);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#setFontSize)
+///
+/// ``` QWebEngineSettings* self, enum QWebEngineSettings__FontSize typeVal, int size ```
 void q_webenginesettings_set_font_size(void* self, int64_t typeVal, int size);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#fontSize)
+///
+/// ``` QWebEngineSettings* self, enum QWebEngineSettings__FontSize typeVal ```
 int32_t q_webenginesettings_font_size(void* self, int64_t typeVal);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#resetFontSize)
+///
+/// ``` QWebEngineSettings* self, enum QWebEngineSettings__FontSize typeVal ```
 void q_webenginesettings_reset_font_size(void* self, int64_t typeVal);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#setAttribute)
+///
+/// ``` QWebEngineSettings* self, enum QWebEngineSettings__WebAttribute attr, bool on ```
 void q_webenginesettings_set_attribute(void* self, int64_t attr, bool on);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#testAttribute)
+///
+/// ``` QWebEngineSettings* self, enum QWebEngineSettings__WebAttribute attr ```
 bool q_webenginesettings_test_attribute(void* self, int64_t attr);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#resetAttribute)
+///
+/// ``` QWebEngineSettings* self, enum QWebEngineSettings__WebAttribute attr ```
 void q_webenginesettings_reset_attribute(void* self, int64_t attr);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#setDefaultTextEncoding)
+///
+/// ``` QWebEngineSettings* self, const char* encoding ```
 void q_webenginesettings_set_default_text_encoding(void* self, const char* encoding);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#defaultTextEncoding)
+///
+/// ``` QWebEngineSettings* self ```
 const char* q_webenginesettings_default_text_encoding(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#unknownUrlSchemePolicy)
+///
+/// ``` QWebEngineSettings* self ```
 int64_t q_webenginesettings_unknown_url_scheme_policy(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#setUnknownUrlSchemePolicy)
+///
+/// ``` QWebEngineSettings* self, enum QWebEngineSettings__UnknownUrlSchemePolicy policy ```
 void q_webenginesettings_set_unknown_url_scheme_policy(void* self, int64_t policy);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#resetUnknownUrlSchemePolicy)
+///
+/// ``` QWebEngineSettings* self ```
 void q_webenginesettings_reset_unknown_url_scheme_policy(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// ``` QWebEngineSettings* self ```
 void q_webenginesettings_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qwebenginesettings.html#types

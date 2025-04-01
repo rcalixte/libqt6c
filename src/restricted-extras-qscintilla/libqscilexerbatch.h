@@ -24,197 +24,1366 @@
 #include "../libqthread.h"
 #include "../libqvariant.h"
 
+/// https://doc.qt.io/qt-6/qscilexerbatch.html
+
+/// q_scilexerbatch_new constructs a new QsciLexerBatch object.
+///
+///
 QsciLexerBatch* q_scilexerbatch_new();
+
+/// q_scilexerbatch_new2 constructs a new QsciLexerBatch object.
+///
+/// ``` QObject* parent ```
 QsciLexerBatch* q_scilexerbatch_new2(void* parent);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
+///
+/// ``` QsciLexerBatch* self ```
 QMetaObject* q_scilexerbatch_meta_object(void* self);
+
+/// ``` QsciLexerBatch* self, const char* param1 ```
 void* q_scilexerbatch_metacast(void* self, const char* param1);
+
+/// ``` QsciLexerBatch* self, enum QMetaObject__Call param1, int param2, void* param3 ```
 int32_t q_scilexerbatch_metacall(void* self, int64_t param1, int param2, void* param3);
+
+/// Allows for overriding the related default method
+///
+/// ``` QsciLexerBatch* self, int32_t (*slot)(QsciLexerBatch*, enum QMetaObject__Call, int, void*) ```
 void q_scilexerbatch_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+
+/// Base class method implementation
+///
+/// ``` QsciLexerBatch* self, enum QMetaObject__Call param1, int param2, void* param3 ```
 int32_t q_scilexerbatch_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+///
+/// ``` const char* s ```
 const char* q_scilexerbatch_tr(const char* s);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexerbatch.html#language)
+///
+/// ``` QsciLexerBatch* self ```
 const char* q_scilexerbatch_language(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexerbatch.html#lexer)
+///
+/// ``` QsciLexerBatch* self ```
 const char* q_scilexerbatch_lexer(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexerbatch.html#wordCharacters)
+///
+/// ``` QsciLexerBatch* self ```
 const char* q_scilexerbatch_word_characters(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexerbatch.html#caseSensitive)
+///
+/// ``` QsciLexerBatch* self ```
 bool q_scilexerbatch_case_sensitive(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexerbatch.html#defaultColor)
+///
+/// ``` QsciLexerBatch* self, int style ```
 QColor* q_scilexerbatch_default_color(void* self, int style);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexerbatch.html#defaultEolFill)
+///
+/// ``` QsciLexerBatch* self, int style ```
 bool q_scilexerbatch_default_eol_fill(void* self, int style);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexerbatch.html#defaultFont)
+///
+/// ``` QsciLexerBatch* self, int style ```
 QFont* q_scilexerbatch_default_font(void* self, int style);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexerbatch.html#defaultPaper)
+///
+/// ``` QsciLexerBatch* self, int style ```
 QColor* q_scilexerbatch_default_paper(void* self, int style);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexerbatch.html#keywords)
+///
+/// ``` QsciLexerBatch* self, int set ```
 const char* q_scilexerbatch_keywords(void* self, int set);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexerbatch.html#description)
+///
+/// ``` QsciLexerBatch* self, int style ```
 const char* q_scilexerbatch_description(void* self, int style);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+///
+/// ``` const char* s, const char* c ```
 const char* q_scilexerbatch_tr2(const char* s, const char* c);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+///
+/// ``` const char* s, const char* c, int n ```
 const char* q_scilexerbatch_tr3(const char* s, const char* c, int n);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#apis)
+///
+/// ``` QsciLexerBatch* self ```
 QsciAbstractAPIs* q_scilexerbatch_apis(void* self);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#autoIndentStyle)
+///
+/// ``` QsciLexerBatch* self ```
 int32_t q_scilexerbatch_auto_indent_style(void* self);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#editor)
+///
+/// ``` QsciLexerBatch* self ```
 QsciScintilla* q_scilexerbatch_editor(void* self);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#setAPIs)
+///
+/// ``` QsciLexerBatch* self, QsciAbstractAPIs* apis ```
 void q_scilexerbatch_set_a_p_is(void* self, void* apis);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#setDefaultColor)
+///
+/// ``` QsciLexerBatch* self, QColor* c ```
 void q_scilexerbatch_set_default_color(void* self, void* c);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#setDefaultFont)
+///
+/// ``` QsciLexerBatch* self, QFont* f ```
 void q_scilexerbatch_set_default_font(void* self, void* f);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#setDefaultPaper)
+///
+/// ``` QsciLexerBatch* self, QColor* c ```
 void q_scilexerbatch_set_default_paper(void* self, void* c);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#readSettings)
+///
+/// ``` QsciLexerBatch* self, QSettings* qs ```
 bool q_scilexerbatch_read_settings(void* self, void* qs);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#writeSettings)
+///
+/// ``` QsciLexerBatch* self, QSettings* qs ```
 bool q_scilexerbatch_write_settings(void* self, void* qs);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#colorChanged)
+///
+/// ``` QsciLexerBatch* self, QColor* c, int style ```
 void q_scilexerbatch_color_changed(void* self, void* c, int style);
+
+/// Inherited from QsciLexer
+///
+/// ``` QsciLexerBatch* self, void (*slot)(QsciLexer*, QColor*, int) ```
 void q_scilexerbatch_on_color_changed(void* self, void (*slot)(void*, void*, int));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#eolFillChanged)
+///
+/// ``` QsciLexerBatch* self, bool eolfilled, int style ```
 void q_scilexerbatch_eol_fill_changed(void* self, bool eolfilled, int style);
+
+/// Inherited from QsciLexer
+///
+/// ``` QsciLexerBatch* self, void (*slot)(QsciLexer*, bool, int) ```
 void q_scilexerbatch_on_eol_fill_changed(void* self, void (*slot)(void*, bool, int));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#fontChanged)
+///
+/// ``` QsciLexerBatch* self, QFont* f, int style ```
 void q_scilexerbatch_font_changed(void* self, void* f, int style);
+
+/// Inherited from QsciLexer
+///
+/// ``` QsciLexerBatch* self, void (*slot)(QsciLexer*, QFont*, int) ```
 void q_scilexerbatch_on_font_changed(void* self, void (*slot)(void*, void*, int));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#paperChanged)
+///
+/// ``` QsciLexerBatch* self, QColor* c, int style ```
 void q_scilexerbatch_paper_changed(void* self, void* c, int style);
+
+/// Inherited from QsciLexer
+///
+/// ``` QsciLexerBatch* self, void (*slot)(QsciLexer*, QColor*, int) ```
 void q_scilexerbatch_on_paper_changed(void* self, void (*slot)(void*, void*, int));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#propertyChanged)
+///
+/// ``` QsciLexerBatch* self, const char* prop, const char* val ```
 void q_scilexerbatch_property_changed(void* self, const char* prop, const char* val);
+
+/// Inherited from QsciLexer
+///
+/// ``` QsciLexerBatch* self, void (*slot)(QsciLexer*, const char*, const char*) ```
 void q_scilexerbatch_on_property_changed(void* self, void (*slot)(void*, const char*, const char*));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#readSettings)
+///
+/// ``` QsciLexerBatch* self, QSettings* qs, const char* prefix ```
 bool q_scilexerbatch_read_settings2(void* self, void* qs, const char* prefix);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#writeSettings)
+///
+/// ``` QsciLexerBatch* self, QSettings* qs, const char* prefix ```
 bool q_scilexerbatch_write_settings2(void* self, void* qs, const char* prefix);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
+///
+/// ``` QsciLexerBatch* self ```
 const char* q_scilexerbatch_object_name(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
+///
+/// ``` QsciLexerBatch* self, const char* name ```
 void q_scilexerbatch_set_object_name(void* self, const char* name);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
+///
+/// ``` QsciLexerBatch* self ```
 bool q_scilexerbatch_is_widget_type(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
+///
+/// ``` QsciLexerBatch* self ```
 bool q_scilexerbatch_is_window_type(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
+///
+/// ``` QsciLexerBatch* self ```
 bool q_scilexerbatch_is_quick_item_type(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
+///
+/// ``` QsciLexerBatch* self ```
 bool q_scilexerbatch_signals_blocked(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
+///
+/// ``` QsciLexerBatch* self, bool b ```
 bool q_scilexerbatch_block_signals(void* self, bool b);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
+///
+/// ``` QsciLexerBatch* self ```
 QThread* q_scilexerbatch_thread(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QsciLexerBatch* self, QThread* thread ```
 void q_scilexerbatch_move_to_thread(void* self, void* thread);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// ``` QsciLexerBatch* self, int interval ```
 int32_t q_scilexerbatch_start_timer(void* self, int interval);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QsciLexerBatch* self, int id ```
 void q_scilexerbatch_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
+///
+/// ``` QsciLexerBatch* self ```
 libqt_list /* of QObject* */ q_scilexerbatch_children(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
+///
+/// ``` QsciLexerBatch* self, QObject* parent ```
 void q_scilexerbatch_set_parent(void* self, void* parent);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
+///
+/// ``` QsciLexerBatch* self, QObject* filterObj ```
 void q_scilexerbatch_install_event_filter(void* self, void* filterObj);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
+///
+/// ``` QsciLexerBatch* self, QObject* obj ```
 void q_scilexerbatch_remove_event_filter(void* self, void* obj);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
 QMetaObject__Connection* q_scilexerbatch_connect(void* sender, void* signal, void* receiver, void* method);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// ``` QsciLexerBatch* self, QObject* sender, const char* signal, const char* member ```
 QMetaObject__Connection* q_scilexerbatch_connect2(void* self, void* sender, const char* signal, const char* member);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
 bool q_scilexerbatch_disconnect(void* sender, void* signal, void* receiver, void* member);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// ``` QMetaObject__Connection* param1 ```
 bool q_scilexerbatch_disconnect_with_q_meta_object_connection(void* param1);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
+///
+/// ``` QsciLexerBatch* self ```
 void q_scilexerbatch_dump_object_tree(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
+///
+/// ``` QsciLexerBatch* self ```
 void q_scilexerbatch_dump_object_info(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
+///
+/// ``` QsciLexerBatch* self, const char* name, QVariant* value ```
 bool q_scilexerbatch_set_property(void* self, const char* name, void* value);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
+///
+/// ``` QsciLexerBatch* self, const char* name ```
 QVariant* q_scilexerbatch_property(void* self, const char* name);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
+///
+/// ``` QsciLexerBatch* self ```
 const char** q_scilexerbatch_dynamic_property_names(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+///
+/// ``` QsciLexerBatch* self ```
 QBindingStorage* q_scilexerbatch_binding_storage(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
+///
+/// ``` QsciLexerBatch* self ```
 QBindingStorage* q_scilexerbatch_binding_storage2(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
+/// ``` QsciLexerBatch* self ```
 void q_scilexerbatch_destroyed(void* self);
+
+/// Inherited from QObject
+///
+/// ``` QsciLexerBatch* self, void (*slot)(QObject*) ```
 void q_scilexerbatch_on_destroyed(void* self, void (*slot)(void*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
+///
+/// ``` QsciLexerBatch* self ```
 QObject* q_scilexerbatch_parent(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
+///
+/// ``` QsciLexerBatch* self, const char* classname ```
 bool q_scilexerbatch_inherits(void* self, const char* classname);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
+///
+/// ``` QsciLexerBatch* self ```
 void q_scilexerbatch_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
+///
+/// ``` QsciLexerBatch* self, int interval, enum Qt__TimerType timerType ```
 int32_t q_scilexerbatch_start_timer2(void* self, int interval, int64_t timerType);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
 QMetaObject__Connection* q_scilexerbatch_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
+///
+/// ``` QsciLexerBatch* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
 QMetaObject__Connection* q_scilexerbatch_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
+/// ``` QsciLexerBatch* self, QObject* param1 ```
 void q_scilexerbatch_destroyed1(void* self, void* param1);
+
+/// Inherited from QObject
+///
+/// ``` QsciLexerBatch* self, void (*slot)(QObject*, QObject*) ```
 void q_scilexerbatch_on_destroyed1(void* self, void (*slot)(void*, void*));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#lexerId)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 int32_t q_scilexerbatch_lexer_id(void* self);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 int32_t q_scilexerbatch_qbase_lexer_id(void* self);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int32_t (*slot)() ```
 void q_scilexerbatch_on_lexer_id(void* self, int32_t (*slot)());
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#autoCompletionFillups)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 const char* q_scilexerbatch_auto_completion_fillups(void* self);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 const char* q_scilexerbatch_qbase_auto_completion_fillups(void* self);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, const char* (*slot)() ```
 void q_scilexerbatch_on_auto_completion_fillups(void* self, const char* (*slot)());
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#autoCompletionWordSeparators)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 const char** q_scilexerbatch_auto_completion_word_separators(void* self);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 const char** q_scilexerbatch_qbase_auto_completion_word_separators(void* self);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, const char** (*slot)() ```
 void q_scilexerbatch_on_auto_completion_word_separators(void* self, const char** (*slot)());
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#blockEnd)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int* style ```
 const char* q_scilexerbatch_block_end(void* self, int* style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int* style ```
 const char* q_scilexerbatch_qbase_block_end(void* self, int* style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, const char* (*slot)(QsciLexerBatch*, int*) ```
 void q_scilexerbatch_on_block_end(void* self, const char* (*slot)(void*, int*));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#blockLookback)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 int32_t q_scilexerbatch_block_lookback(void* self);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 int32_t q_scilexerbatch_qbase_block_lookback(void* self);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int32_t (*slot)() ```
 void q_scilexerbatch_on_block_lookback(void* self, int32_t (*slot)());
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#blockStart)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int* style ```
 const char* q_scilexerbatch_block_start(void* self, int* style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int* style ```
 const char* q_scilexerbatch_qbase_block_start(void* self, int* style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, const char* (*slot)(QsciLexerBatch*, int*) ```
 void q_scilexerbatch_on_block_start(void* self, const char* (*slot)(void*, int*));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#blockStartKeyword)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int* style ```
 const char* q_scilexerbatch_block_start_keyword(void* self, int* style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int* style ```
 const char* q_scilexerbatch_qbase_block_start_keyword(void* self, int* style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, const char* (*slot)(QsciLexerBatch*, int*) ```
 void q_scilexerbatch_on_block_start_keyword(void* self, const char* (*slot)(void*, int*));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#braceStyle)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 int32_t q_scilexerbatch_brace_style(void* self);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 int32_t q_scilexerbatch_qbase_brace_style(void* self);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int32_t (*slot)() ```
 void q_scilexerbatch_on_brace_style(void* self, int32_t (*slot)());
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#color)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int style ```
 QColor* q_scilexerbatch_color(void* self, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int style ```
 QColor* q_scilexerbatch_qbase_color(void* self, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QColor* (*slot)(QsciLexerBatch*, int) ```
 void q_scilexerbatch_on_color(void* self, QColor* (*slot)(void*, int));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#eolFill)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int style ```
 bool q_scilexerbatch_eol_fill(void* self, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int style ```
 bool q_scilexerbatch_qbase_eol_fill(void* self, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, bool (*slot)(QsciLexerBatch*, int) ```
 void q_scilexerbatch_on_eol_fill(void* self, bool (*slot)(void*, int));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#font)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int style ```
 QFont* q_scilexerbatch_font(void* self, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int style ```
 QFont* q_scilexerbatch_qbase_font(void* self, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QFont* (*slot)(QsciLexerBatch*, int) ```
 void q_scilexerbatch_on_font(void* self, QFont* (*slot)(void*, int));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#indentationGuideView)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 int32_t q_scilexerbatch_indentation_guide_view(void* self);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 int32_t q_scilexerbatch_qbase_indentation_guide_view(void* self);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int32_t (*slot)() ```
 void q_scilexerbatch_on_indentation_guide_view(void* self, int32_t (*slot)());
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#defaultStyle)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 int32_t q_scilexerbatch_default_style(void* self);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 int32_t q_scilexerbatch_qbase_default_style(void* self);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int32_t (*slot)() ```
 void q_scilexerbatch_on_default_style(void* self, int32_t (*slot)());
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#paper)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int style ```
 QColor* q_scilexerbatch_paper(void* self, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int style ```
 QColor* q_scilexerbatch_qbase_paper(void* self, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QColor* (*slot)(QsciLexerBatch*, int) ```
 void q_scilexerbatch_on_paper(void* self, QColor* (*slot)(void*, int));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#defaultColor)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int style ```
 QColor* q_scilexerbatch_default_color_with_style(void* self, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int style ```
 QColor* q_scilexerbatch_qbase_default_color_with_style(void* self, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QColor* (*slot)(QsciLexerBatch*, int) ```
 void q_scilexerbatch_on_default_color_with_style(void* self, QColor* (*slot)(void*, int));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#defaultFont)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int style ```
 QFont* q_scilexerbatch_default_font_with_style(void* self, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int style ```
 QFont* q_scilexerbatch_qbase_default_font_with_style(void* self, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QFont* (*slot)(QsciLexerBatch*, int) ```
 void q_scilexerbatch_on_default_font_with_style(void* self, QFont* (*slot)(void*, int));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#defaultPaper)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int style ```
 QColor* q_scilexerbatch_default_paper_with_style(void* self, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int style ```
 QColor* q_scilexerbatch_qbase_default_paper_with_style(void* self, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QColor* (*slot)(QsciLexerBatch*, int) ```
 void q_scilexerbatch_on_default_paper_with_style(void* self, QColor* (*slot)(void*, int));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#setEditor)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QsciScintilla* editor ```
 void q_scilexerbatch_set_editor(void* self, void* editor);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QsciScintilla* editor ```
 void q_scilexerbatch_qbase_set_editor(void* self, void* editor);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, void (*slot)(QsciLexerBatch*, QsciScintilla*) ```
 void q_scilexerbatch_on_set_editor(void* self, void (*slot)(void*, void*));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#refreshProperties)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 void q_scilexerbatch_refresh_properties(void* self);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 void q_scilexerbatch_qbase_refresh_properties(void* self);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, void (*slot)() ```
 void q_scilexerbatch_on_refresh_properties(void* self, void (*slot)());
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#styleBitsNeeded)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 int32_t q_scilexerbatch_style_bits_needed(void* self);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 int32_t q_scilexerbatch_qbase_style_bits_needed(void* self);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int32_t (*slot)() ```
 void q_scilexerbatch_on_style_bits_needed(void* self, int32_t (*slot)());
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#setAutoIndentStyle)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int autoindentstyle ```
 void q_scilexerbatch_set_auto_indent_style(void* self, int autoindentstyle);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int autoindentstyle ```
 void q_scilexerbatch_qbase_set_auto_indent_style(void* self, int autoindentstyle);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, void (*slot)(QsciLexerBatch*, int) ```
 void q_scilexerbatch_on_set_auto_indent_style(void* self, void (*slot)(void*, int));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#setColor)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QColor* c, int style ```
 void q_scilexerbatch_set_color(void* self, void* c, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QColor* c, int style ```
 void q_scilexerbatch_qbase_set_color(void* self, void* c, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, void (*slot)(QsciLexerBatch*, QColor*, int) ```
 void q_scilexerbatch_on_set_color(void* self, void (*slot)(void*, void*, int));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#setEolFill)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, bool eoffill, int style ```
 void q_scilexerbatch_set_eol_fill(void* self, bool eoffill, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, bool eoffill, int style ```
 void q_scilexerbatch_qbase_set_eol_fill(void* self, bool eoffill, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, void (*slot)(QsciLexerBatch*, bool, int) ```
 void q_scilexerbatch_on_set_eol_fill(void* self, void (*slot)(void*, bool, int));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#setFont)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QFont* f, int style ```
 void q_scilexerbatch_set_font(void* self, void* f, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QFont* f, int style ```
 void q_scilexerbatch_qbase_set_font(void* self, void* f, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, void (*slot)(QsciLexerBatch*, QFont*, int) ```
 void q_scilexerbatch_on_set_font(void* self, void (*slot)(void*, void*, int));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#setPaper)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QColor* c, int style ```
 void q_scilexerbatch_set_paper(void* self, void* c, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QColor* c, int style ```
 void q_scilexerbatch_qbase_set_paper(void* self, void* c, int style);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, void (*slot)(QsciLexerBatch*, QColor*, int) ```
 void q_scilexerbatch_on_set_paper(void* self, void (*slot)(void*, void*, int));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#readProperties)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QSettings* qs, const char* prefix ```
 bool q_scilexerbatch_read_properties(void* self, void* qs, const char* prefix);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QSettings* qs, const char* prefix ```
 bool q_scilexerbatch_qbase_read_properties(void* self, void* qs, const char* prefix);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, bool (*slot)(QsciLexerBatch*, QSettings*, const char*) ```
 void q_scilexerbatch_on_read_properties(void* self, bool (*slot)(void*, void*, const char*));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qscilexer.html#writeProperties)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QSettings* qs, const char* prefix ```
 bool q_scilexerbatch_write_properties(void* self, void* qs, const char* prefix);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QSettings* qs, const char* prefix ```
 bool q_scilexerbatch_qbase_write_properties(void* self, void* qs, const char* prefix);
+
+/// Inherited from QsciLexer
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, bool (*slot)(QsciLexerBatch*, QSettings*, const char*) ```
 void q_scilexerbatch_on_write_properties(void* self, bool (*slot)(void*, void*, const char*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QEvent* event ```
 bool q_scilexerbatch_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QEvent* event ```
 bool q_scilexerbatch_qbase_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, bool (*slot)(QsciLexerBatch*, QEvent*) ```
 void q_scilexerbatch_on_event(void* self, bool (*slot)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QObject* watched, QEvent* event ```
 bool q_scilexerbatch_event_filter(void* self, void* watched, void* event);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QObject* watched, QEvent* event ```
 bool q_scilexerbatch_qbase_event_filter(void* self, void* watched, void* event);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, bool (*slot)(QsciLexerBatch*, QObject*, QEvent*) ```
 void q_scilexerbatch_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QTimerEvent* event ```
 void q_scilexerbatch_timer_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QTimerEvent* event ```
 void q_scilexerbatch_qbase_timer_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, void (*slot)(QsciLexerBatch*, QTimerEvent*) ```
 void q_scilexerbatch_on_timer_event(void* self, void (*slot)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QChildEvent* event ```
 void q_scilexerbatch_child_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QChildEvent* event ```
 void q_scilexerbatch_qbase_child_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, void (*slot)(QsciLexerBatch*, QChildEvent*) ```
 void q_scilexerbatch_on_child_event(void* self, void (*slot)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QEvent* event ```
 void q_scilexerbatch_custom_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QEvent* event ```
 void q_scilexerbatch_qbase_custom_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, void (*slot)(QsciLexerBatch*, QEvent*) ```
 void q_scilexerbatch_on_custom_event(void* self, void (*slot)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QMetaMethod* signal ```
 void q_scilexerbatch_connect_notify(void* self, void* signal);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QMetaMethod* signal ```
 void q_scilexerbatch_qbase_connect_notify(void* self, void* signal);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, void (*slot)(QsciLexerBatch*, QMetaMethod*) ```
 void q_scilexerbatch_on_connect_notify(void* self, void (*slot)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QMetaMethod* signal ```
 void q_scilexerbatch_disconnect_notify(void* self, void* signal);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QMetaMethod* signal ```
 void q_scilexerbatch_qbase_disconnect_notify(void* self, void* signal);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, void (*slot)(QsciLexerBatch*, QMetaMethod*) ```
 void q_scilexerbatch_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 QObject* q_scilexerbatch_sender(void* self);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 QObject* q_scilexerbatch_qbase_sender(void* self);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QObject* (*slot)() ```
 void q_scilexerbatch_on_sender(void* self, QObject* (*slot)());
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 int32_t q_scilexerbatch_sender_signal_index(void* self);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self ```
 int32_t q_scilexerbatch_qbase_sender_signal_index(void* self);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int32_t (*slot)() ```
 void q_scilexerbatch_on_sender_signal_index(void* self, int32_t (*slot)());
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, const char* signal ```
 int32_t q_scilexerbatch_receivers(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, const char* signal ```
 int32_t q_scilexerbatch_qbase_receivers(void* self, const char* signal);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, int32_t (*slot)(QsciLexerBatch*, const char*) ```
 void q_scilexerbatch_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QMetaMethod* signal ```
 bool q_scilexerbatch_is_signal_connected(void* self, void* signal);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, QMetaMethod* signal ```
 bool q_scilexerbatch_qbase_is_signal_connected(void* self, void* signal);
+
+/// Inherited from QObject
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerBatch* self, bool (*slot)(QsciLexerBatch*, QMetaMethod*) ```
 void q_scilexerbatch_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+
+/// Delete this object from C++ memory.
+///
+/// ``` QsciLexerBatch* self ```
 void q_scilexerbatch_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qscilexerbatch.html#types

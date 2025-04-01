@@ -14,13 +14,46 @@
 
 #include "../libqvariant.h"
 
+/// https://doc.qt.io/qt-6/qprintengine.html
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#setProperty)
+///
+/// ``` QPrintEngine* self, enum QPrintEngine__PrintEnginePropertyKey key, QVariant* value ```
 void q_printengine_set_property(void* self, int64_t key, void* value);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#property)
+///
+/// ``` QPrintEngine* self, enum QPrintEngine__PrintEnginePropertyKey key ```
 QVariant* q_printengine_property(void* self, int64_t key);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#newPage)
+///
+/// ``` QPrintEngine* self ```
 bool q_printengine_new_page(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#abort)
+///
+/// ``` QPrintEngine* self ```
 bool q_printengine_abort(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#metric)
+///
+/// ``` QPrintEngine* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_printengine_metric(void* self, int64_t param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#printerState)
+///
+/// ``` QPrintEngine* self ```
 int64_t q_printengine_printer_state(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#operator=)
+///
+/// ``` QPrintEngine* self, QPrintEngine* param1 ```
 void q_printengine_operator_assign(void* self, void* param1);
+
+/// Delete this object from C++ memory.
+///
+/// ``` QPrintEngine* self ```
 void q_printengine_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qprintengine.html#types

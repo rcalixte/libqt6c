@@ -15,15 +15,56 @@
 #include "libqbytearrayview.h"
 #include "libqiodevice.h"
 
+/// https://doc.qt.io/qt-6/qcryptographichash.html
+
+/// q_cryptographichash_new constructs a new QCryptographicHash object.
+///
+/// ``` enum QCryptographicHash__Algorithm method ```
 QCryptographicHash* q_cryptographichash_new(int64_t method);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#reset)
+///
+/// ``` QCryptographicHash* self ```
 void q_cryptographichash_reset(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#addData)
+///
+/// ``` QCryptographicHash* self, const char* data, int64_t length ```
 void q_cryptographichash_add_data(void* self, const char* data, int64_t length);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#addData)
+///
+/// ``` QCryptographicHash* self, const char* data ```
 void q_cryptographichash_add_data_with_data(void* self, const char* data);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#addData)
+///
+/// ``` QCryptographicHash* self, QIODevice* device ```
 bool q_cryptographichash_add_data_with_device(void* self, void* device);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#result)
+///
+/// ``` QCryptographicHash* self ```
 char* q_cryptographichash_result(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#resultView)
+///
+/// ``` QCryptographicHash* self ```
 const char* q_cryptographichash_result_view(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#hash)
+///
+/// ``` const char* data, enum QCryptographicHash__Algorithm method ```
 char* q_cryptographichash_hash(const char* data, int64_t method);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#hashLength)
+///
+/// ``` enum QCryptographicHash__Algorithm method ```
 int32_t q_cryptographichash_hash_length(int64_t method);
+
+/// Delete this object from C++ memory.
+///
+/// ``` QCryptographicHash* self ```
 void q_cryptographichash_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qcryptographichash.html#types

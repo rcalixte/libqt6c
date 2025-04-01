@@ -2,11 +2,6 @@
 #include "libqstandardpaths.hpp"
 #include "libqstandardpaths.h"
 
-/// https://doc.qt.io/qt-6/qstandardpaths.html
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qstandardpaths.html#writableLocation)
-///
-/// ``` enum QStandardPaths__StandardLocation typeVal ```
 const char* q_standardpaths_writable_location(int64_t typeVal) {
     libqt_string _str = QStandardPaths_WritableLocation(typeVal);
     char* _ret = qstring_to_char(_str);
@@ -14,9 +9,6 @@ const char* q_standardpaths_writable_location(int64_t typeVal) {
     return _ret;
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstandardpaths.html#standardLocations)
-///
-/// ``` enum QStandardPaths__StandardLocation typeVal ```
 const char** q_standardpaths_standard_locations(int64_t typeVal) {
     libqt_list _arr = QStandardPaths_StandardLocations(typeVal);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
@@ -31,9 +23,6 @@ const char** q_standardpaths_standard_locations(int64_t typeVal) {
     return _ret;
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstandardpaths.html#locate)
-///
-/// ``` enum QStandardPaths__StandardLocation typeVal, const char* fileName ```
 const char* q_standardpaths_locate(int64_t typeVal, const char* fileName) {
     libqt_string _str = QStandardPaths_Locate(typeVal, qstring(fileName));
     char* _ret = qstring_to_char(_str);
@@ -41,9 +30,6 @@ const char* q_standardpaths_locate(int64_t typeVal, const char* fileName) {
     return _ret;
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstandardpaths.html#locateAll)
-///
-/// ``` enum QStandardPaths__StandardLocation typeVal, const char* fileName ```
 const char** q_standardpaths_locate_all(int64_t typeVal, const char* fileName) {
     libqt_list _arr = QStandardPaths_LocateAll(typeVal, qstring(fileName));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
@@ -58,9 +44,6 @@ const char** q_standardpaths_locate_all(int64_t typeVal, const char* fileName) {
     return _ret;
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstandardpaths.html#displayName)
-///
-/// ``` enum QStandardPaths__StandardLocation typeVal ```
 const char* q_standardpaths_display_name(int64_t typeVal) {
     libqt_string _str = QStandardPaths_DisplayName(typeVal);
     char* _ret = qstring_to_char(_str);
@@ -68,9 +51,6 @@ const char* q_standardpaths_display_name(int64_t typeVal) {
     return _ret;
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstandardpaths.html#findExecutable)
-///
-/// ``` const char* executableName ```
 const char* q_standardpaths_find_executable(const char* executableName) {
     libqt_string _str = QStandardPaths_FindExecutable(qstring(executableName));
     char* _ret = qstring_to_char(_str);
@@ -78,23 +58,14 @@ const char* q_standardpaths_find_executable(const char* executableName) {
     return _ret;
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstandardpaths.html#setTestModeEnabled)
-///
-/// ``` bool testMode ```
 void q_standardpaths_set_test_mode_enabled(bool testMode) {
     QStandardPaths_SetTestModeEnabled(testMode);
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstandardpaths.html#isTestModeEnabled)
-///
-///
 bool q_standardpaths_is_test_mode_enabled() {
     return QStandardPaths_IsTestModeEnabled();
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstandardpaths.html#locate)
-///
-/// ``` enum QStandardPaths__StandardLocation typeVal, const char* fileName, int options ```
 const char* q_standardpaths_locate3(int64_t typeVal, const char* fileName, int64_t options) {
     libqt_string _str = QStandardPaths_Locate3(typeVal, qstring(fileName), options);
     char* _ret = qstring_to_char(_str);
@@ -102,9 +73,6 @@ const char* q_standardpaths_locate3(int64_t typeVal, const char* fileName, int64
     return _ret;
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstandardpaths.html#locateAll)
-///
-/// ``` enum QStandardPaths__StandardLocation typeVal, const char* fileName, int options ```
 const char** q_standardpaths_locate_all3(int64_t typeVal, const char* fileName, int64_t options) {
     libqt_list _arr = QStandardPaths_LocateAll3(typeVal, qstring(fileName), options);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
@@ -119,9 +87,6 @@ const char** q_standardpaths_locate_all3(int64_t typeVal, const char* fileName, 
     return _ret;
 }
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstandardpaths.html#findExecutable)
-///
-/// ``` const char* executableName, const char* paths[] ```
 const char* q_standardpaths_find_executable2(const char* executableName, const char* paths[]) {
     size_t paths_len = libqt_strv_length(paths);
     libqt_string* paths_qstr = malloc(paths_len * sizeof(libqt_string));

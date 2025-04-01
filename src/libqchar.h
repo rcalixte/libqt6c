@@ -14,69 +14,323 @@
 
 #include <string.h>
 
+/// https://doc.qt.io/qt-6/qlatin1char.html
+
+/// q_latin1char_new constructs a new QLatin1Char object.
+///
+/// ``` QLatin1Char* other ```
 QLatin1Char* q_latin1char_new(void* other);
+
+/// q_latin1char_new2 constructs a new QLatin1Char object and invalidates the source QLatin1Char object.
+///
+/// ``` QLatin1Char* other ```
 QLatin1Char* q_latin1char_new2(void* other);
+
+/// q_latin1char_new3 constructs a new QLatin1Char object.
+///
+/// ``` char c ```
 QLatin1Char* q_latin1char_new3(char c);
+
+/// q_latin1char_new4 constructs a new QLatin1Char object.
+///
+/// ``` QLatin1Char* param1 ```
 QLatin1Char* q_latin1char_new4(void* param1);
+
+/// q_latin1char_copy_assign shallow copies `other` into `self`.
+///
+/// ``` QLatin1Char* self, QLatin1Char* other ```
 void q_latin1char_copy_assign(void* self, void* other);
+
+/// q_latin1char_move_assign moves `other` into `self` and invalidates `other`.
+///
+/// ``` QLatin1Char* self, QLatin1Char* other ```
 void q_latin1char_move_assign(void* self, void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qlatin1char.html#toLatin1)
+///
+/// ``` QLatin1Char* self ```
 char q_latin1char_to_latin1(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// ``` QLatin1Char* self ```
 void q_latin1char_delete(void* self);
 
+/// https://doc.qt.io/qt-6/qchar.html
+
+/// q_char_new constructs a new QChar object.
+///
+/// ``` QChar* other ```
 QChar* q_char_new(void* other);
+
+/// q_char_new2 constructs a new QChar object and invalidates the source QChar object.
+///
+/// ``` QChar* other ```
 QChar* q_char_new2(void* other);
+
+/// q_char_new3 constructs a new QChar object.
+///
+///
 QChar* q_char_new3();
+
+/// q_char_new4 constructs a new QChar object.
+///
+/// ``` unsigned short rc ```
 QChar* q_char_new4(unsigned short rc);
+
+/// q_char_new5 constructs a new QChar object.
+///
+/// ``` unsigned char c, unsigned char r ```
 QChar* q_char_new5(unsigned char c, unsigned char r);
+
+/// q_char_new6 constructs a new QChar object.
+///
+/// ``` short rc ```
 QChar* q_char_new6(short rc);
+
+/// q_char_new7 constructs a new QChar object.
+///
+/// ``` uint32_t rc ```
 QChar* q_char_new7(uint32_t rc);
+
+/// q_char_new8 constructs a new QChar object.
+///
+/// ``` int rc ```
 QChar* q_char_new8(int rc);
+
+/// q_char_new9 constructs a new QChar object.
+///
+/// ``` enum QChar__SpecialCharacter s ```
 QChar* q_char_new9(int64_t s);
+
+/// q_char_new10 constructs a new QChar object.
+///
+/// ``` QLatin1Char* ch ```
 QChar* q_char_new10(void* ch);
+
+/// q_char_new11 constructs a new QChar object.
+///
+/// ``` char c ```
 QChar* q_char_new11(char c);
+
+/// q_char_new12 constructs a new QChar object.
+///
+/// ``` unsigned char c ```
 QChar* q_char_new12(unsigned char c);
+
+/// q_char_new13 constructs a new QChar object.
+///
+/// ``` QChar* param1 ```
 QChar* q_char_new13(void* param1);
+
+/// q_char_copy_assign shallow copies `other` into `self`.
+///
+/// ``` QChar* self, QChar* other ```
 void q_char_copy_assign(void* self, void* other);
+
+/// q_char_move_assign moves `other` into `self` and invalidates `other`.
+///
+/// ``` QChar* self, QChar* other ```
 void q_char_move_assign(void* self, void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#category)
+///
+/// ``` QChar* self ```
 int64_t q_char_category(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#direction)
+///
+/// ``` QChar* self ```
 int64_t q_char_direction(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#joiningType)
+///
+/// ``` QChar* self ```
 int64_t q_char_joining_type(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#combiningClass)
+///
+/// ``` QChar* self ```
 unsigned char q_char_combining_class(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#mirroredChar)
+///
+/// ``` QChar* self ```
 QChar* q_char_mirrored_char(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#hasMirrored)
+///
+/// ``` QChar* self ```
 bool q_char_has_mirrored(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#decomposition)
+///
+/// ``` QChar* self ```
 const char* q_char_decomposition(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#decompositionTag)
+///
+/// ``` QChar* self ```
 int64_t q_char_decomposition_tag(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#digitValue)
+///
+/// ``` QChar* self ```
 int32_t q_char_digit_value(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#toLower)
+///
+/// ``` QChar* self ```
 QChar* q_char_to_lower(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#toUpper)
+///
+/// ``` QChar* self ```
 QChar* q_char_to_upper(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#toTitleCase)
+///
+/// ``` QChar* self ```
 QChar* q_char_to_title_case(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#toCaseFolded)
+///
+/// ``` QChar* self ```
 QChar* q_char_to_case_folded(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#script)
+///
+/// ``` QChar* self ```
 int64_t q_char_script(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#unicodeVersion)
+///
+/// ``` QChar* self ```
 int64_t q_char_unicode_version(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#toLatin1)
+///
+/// ``` QChar* self ```
 char q_char_to_latin1(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#fromLatin1)
+///
+/// ``` char c ```
 QChar* q_char_from_latin1(char c);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#isNull)
+///
+/// ``` QChar* self ```
 bool q_char_is_null(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#isPrint)
+///
+/// ``` QChar* self ```
 bool q_char_is_print(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#isSpace)
+///
+/// ``` QChar* self ```
 bool q_char_is_space(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#isMark)
+///
+/// ``` QChar* self ```
 bool q_char_is_mark(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#isPunct)
+///
+/// ``` QChar* self ```
 bool q_char_is_punct(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#isSymbol)
+///
+/// ``` QChar* self ```
 bool q_char_is_symbol(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#isLetter)
+///
+/// ``` QChar* self ```
 bool q_char_is_letter(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#isNumber)
+///
+/// ``` QChar* self ```
 bool q_char_is_number(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#isLetterOrNumber)
+///
+/// ``` QChar* self ```
 bool q_char_is_letter_or_number(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#isDigit)
+///
+/// ``` QChar* self ```
 bool q_char_is_digit(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#isLower)
+///
+/// ``` QChar* self ```
 bool q_char_is_lower(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#isUpper)
+///
+/// ``` QChar* self ```
 bool q_char_is_upper(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#isTitleCase)
+///
+/// ``` QChar* self ```
 bool q_char_is_title_case(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#isNonCharacter)
+///
+/// ``` QChar* self ```
 bool q_char_is_non_character(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#isHighSurrogate)
+///
+/// ``` QChar* self ```
 bool q_char_is_high_surrogate(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#isLowSurrogate)
+///
+/// ``` QChar* self ```
 bool q_char_is_low_surrogate(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#isSurrogate)
+///
+/// ``` QChar* self ```
 bool q_char_is_surrogate(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#cell)
+///
+/// ``` QChar* self ```
 unsigned char q_char_cell(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#row)
+///
+/// ``` QChar* self ```
 unsigned char q_char_row(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#setCell)
+///
+/// ``` QChar* self, unsigned char acell ```
 void q_char_set_cell(void* self, unsigned char acell);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#setRow)
+///
+/// ``` QChar* self, unsigned char arow ```
 void q_char_set_row(void* self, unsigned char arow);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#currentUnicodeVersion)
+///
+///
 int64_t q_char_current_unicode_version();
+
+/// Delete this object from C++ memory.
+///
+/// ``` QChar* self ```
 void q_char_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qchar.html#types

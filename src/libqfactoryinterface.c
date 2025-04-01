@@ -2,11 +2,6 @@
 #include "libqfactoryinterface.hpp"
 #include "libqfactoryinterface.h"
 
-/// https://doc.qt.io/qt-6/qfactoryinterface.html
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qfactoryinterface.html#keys)
-///
-/// ``` QFactoryInterface* self ```
 const char** q_factoryinterface_keys(void* self) {
     libqt_list _arr = QFactoryInterface_Keys((QFactoryInterface*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
@@ -21,9 +16,6 @@ const char** q_factoryinterface_keys(void* self) {
     return _ret;
 }
 
-/// Delete this object from C++ memory.
-///
-/// ``` QFactoryInterface* self ```
 void q_factoryinterface_delete(void* self) {
     QFactoryInterface_Delete((QFactoryInterface*)(self));
 }

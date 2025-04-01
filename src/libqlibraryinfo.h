@@ -15,16 +15,61 @@
 #include <string.h>
 #include "libqversionnumber.h"
 
+/// https://doc.qt.io/qt-6/qlibraryinfo.html
+
+/// q_libraryinfo_new constructs a new QLibraryInfo object.
+///
+/// ``` QLibraryInfo* other ```
 QLibraryInfo* q_libraryinfo_new(void* other);
+
+/// q_libraryinfo_new2 constructs a new QLibraryInfo object and invalidates the source QLibraryInfo object.
+///
+/// ``` QLibraryInfo* other ```
 QLibraryInfo* q_libraryinfo_new2(void* other);
+
+/// q_libraryinfo_copy_assign shallow copies `other` into `self`.
+///
+/// ``` QLibraryInfo* self, QLibraryInfo* other ```
 void q_libraryinfo_copy_assign(void* self, void* other);
+
+/// q_libraryinfo_move_assign moves `other` into `self` and invalidates `other`.
+///
+/// ``` QLibraryInfo* self, QLibraryInfo* other ```
 void q_libraryinfo_move_assign(void* self, void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#build)
+///
+///
 const char* q_libraryinfo_build();
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#isDebugBuild)
+///
+///
 bool q_libraryinfo_is_debug_build();
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#version)
+///
+///
 QVersionNumber* q_libraryinfo_version();
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#path)
+///
+/// ``` enum QLibraryInfo__LibraryPath p ```
 const char* q_libraryinfo_path(int64_t p);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#location)
+///
+/// ``` enum QLibraryInfo__LibraryPath location ```
 const char* q_libraryinfo_location(int64_t location);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#platformPluginArguments)
+///
+/// ``` const char* platformName ```
 const char** q_libraryinfo_platform_plugin_arguments(const char* platformName);
+
+/// Delete this object from C++ memory.
+///
+/// ``` QLibraryInfo* self ```
 void q_libraryinfo_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qlibraryinfo.html#types

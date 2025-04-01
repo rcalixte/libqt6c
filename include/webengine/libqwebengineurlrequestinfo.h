@@ -14,15 +14,56 @@
 
 #include "../libqurl.h"
 
+/// https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#resourceType)
+///
+/// ``` QWebEngineUrlRequestInfo* self ```
 int64_t q_webengineurlrequestinfo_resource_type(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#navigationType)
+///
+/// ``` QWebEngineUrlRequestInfo* self ```
 int64_t q_webengineurlrequestinfo_navigation_type(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#requestUrl)
+///
+/// ``` QWebEngineUrlRequestInfo* self ```
 QUrl* q_webengineurlrequestinfo_request_url(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#firstPartyUrl)
+///
+/// ``` QWebEngineUrlRequestInfo* self ```
 QUrl* q_webengineurlrequestinfo_first_party_url(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#initiator)
+///
+/// ``` QWebEngineUrlRequestInfo* self ```
 QUrl* q_webengineurlrequestinfo_initiator(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#requestMethod)
+///
+/// ``` QWebEngineUrlRequestInfo* self ```
 char* q_webengineurlrequestinfo_request_method(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#changed)
+///
+/// ``` QWebEngineUrlRequestInfo* self ```
 bool q_webengineurlrequestinfo_changed(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#block)
+///
+/// ``` QWebEngineUrlRequestInfo* self, bool shouldBlock ```
 void q_webengineurlrequestinfo_block(void* self, bool shouldBlock);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#redirect)
+///
+/// ``` QWebEngineUrlRequestInfo* self, QUrl* url ```
 void q_webengineurlrequestinfo_redirect(void* self, void* url);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#setHttpHeader)
+///
+/// ``` QWebEngineUrlRequestInfo* self, const char* name, const char* value ```
 void q_webengineurlrequestinfo_set_http_header(void* self, const char* name, const char* value);
 
 /// https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#types

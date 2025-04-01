@@ -14,15 +14,58 @@
 
 #include "libqstringconverter.h"
 
+/// https://doc.qt.io/qt-6/qstringconverter.html
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#isValid)
+///
+/// ``` QStringConverter* self ```
 bool q_stringconverter_is_valid(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#resetState)
+///
+/// ``` QStringConverter* self ```
 void q_stringconverter_reset_state(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#hasError)
+///
+/// ``` QStringConverter* self ```
 bool q_stringconverter_has_error(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#name)
+///
+/// ``` QStringConverter* self ```
 const char* q_stringconverter_name(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#nameForEncoding)
+///
+/// ``` enum QStringConverter__Encoding e ```
 const char* q_stringconverter_name_for_encoding(int64_t e);
+
+/// https://doc.qt.io/qt-6/qstringconverterbase-state.html
+
+/// q_stringconverterbase__state_new constructs a new QStringConverterBase::State object.
+///
+///
 QStringConverterBase__State* q_stringconverterbase__state_new();
+
+/// q_stringconverterbase__state_new2 constructs a new QStringConverterBase::State object.
+///
+/// ``` int f ```
 QStringConverterBase__State* q_stringconverterbase__state_new2(int64_t f);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase__state.html#clear)
+///
+/// ``` QStringConverterBase__State* self ```
 void q_stringconverterbase__state_clear(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase__state.html#reset)
+///
+/// ``` QStringConverterBase__State* self ```
 void q_stringconverterbase__state_reset(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// ``` QStringConverterBase__State* self ```
 void q_stringconverterbase__state_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstringconverter_base.html#types
