@@ -1558,6 +1558,14 @@ extern "C" {
 
 `)
 
+	// We need this macro for QObjectData::dynamicMetaObject for Qt 6.9
+	if filename == "qobject.h" {
+		ret.WriteString("// Based on the macro from Qt (LGPLv3), see https://www.qt.io/qt-licensing/\n" +
+			"// Macro is trivial and used here under fair use\n" +
+			"// Usage does not imply derivation\n" +
+			"#define QT_VERSION_CHECK(major, minor, patch) ((major<<16)|(minor<<8)|(patch))\n\n")
+	}
+
 	foundTypesList := getReferencedTypes(src)
 
 	ret.WriteString("#ifdef __cplusplus\n")
@@ -1902,8 +1910,19 @@ extern "C" {
 					returnCabi = enum.UnderlyingType.RenderTypeCabi()
 				}
 			}
+
 			maybeConst := ifv(m.IsConst, "const ", "")
-			ret.WriteString(fmt.Sprintf("%s %s_%s(%s);\n", returnCabi, methodPrefixName, m.SafeMethodName(), emitParametersCabi(m, maybeConst+methodPrefixName+"*")))
+
+			if m.ReturnType.BecomesConstInVersion != nil {
+				ret.WriteString(fmt.Sprintf("// This method's return type was changed from non-const to const in Qt %s\n", *m.ReturnType.BecomesConstInVersion) +
+					"#if QT_VERSION >= QT_VERSION_CHECK(" + strings.Replace(*m.ReturnType.BecomesConstInVersion, `.`, `,`, -1) + ",0)\n" +
+					fmt.Sprintf("%s %s_%s(%s);\n", "const "+returnCabi, methodPrefixName, m.SafeMethodName(), emitParametersCabi(m, maybeConst+methodPrefixName+"*")) +
+					"#else\n" +
+					fmt.Sprintf("%s %s_%s(%s);\n", returnCabi, methodPrefixName, m.SafeMethodName(), emitParametersCabi(m, maybeConst+methodPrefixName+"*")) +
+					"#endif\n")
+			} else {
+				ret.WriteString(fmt.Sprintf("%s %s_%s(%s);\n", returnCabi, methodPrefixName, m.SafeMethodName(), emitParametersCabi(m, maybeConst+methodPrefixName+"*")))
+			}
 
 			if m.IsSignal {
 				addConnect := true
@@ -2253,6 +2272,7 @@ func emitBindingCpp(src *CppParsedHeader, filename, packageName string) (string,
 			}
 
 			maybeConst := ifv(m.IsConst, "const ", "")
+
 			if m.LinuxOnly {
 				ret.WriteString(fmt.Sprintf(
 					"%s %s_%s(%s) {\n"+
@@ -2286,6 +2306,20 @@ func emitBindingCpp(src *CppParsedHeader, filename, packageName string) (string,
 					"#endif\n" +
 					"}\n" +
 					"\n",
+				)
+
+			} else if m.ReturnType.BecomesConstInVersion != nil {
+
+				ret.WriteString("" +
+					"// This method's return type was changed from non-const to const in Qt " + *m.ReturnType.BecomesConstInVersion + "\n" +
+					"#if QT_VERSION >= QT_VERSION_CHECK(" + strings.Replace(*m.ReturnType.BecomesConstInVersion, `.`, `,`, -1) + ",0)\n" +
+					"const " + m.ReturnType.RenderTypeCabi() + " " + methodPrefixName + "_" + m.SafeMethodName() + "(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {\n" +
+					"#else\n" +
+					m.ReturnType.RenderTypeCabi() + " " + methodPrefixName + "_" + m.SafeMethodName() + "(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {\n" +
+					"#endif\n" +
+					preamble +
+					emitAssignCppToCabi("\treturn ", m.ReturnType, callTarget) +
+					"}\n\n",
 				)
 
 			} else {
