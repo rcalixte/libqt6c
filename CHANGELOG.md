@@ -1,4 +1,8 @@
 
+### 6.4.2 rev6 (11 April 2025)
+
+* Qt 6.9: Return type for QObjectData::dynamicMetaObject is now const (#6)
+
 ### 6.4.2 rev5 (31 March 2025)
 
 * Move documentation comments from source to headers (#5)
