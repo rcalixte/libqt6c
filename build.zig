@@ -68,13 +68,7 @@ pub fn build(b: *std.Build) !void {
             else => &.{"/usr/include/qt6"},
         },
         .macos => &.{"/usr/local/opt/qt6/include"},
-        .windows => &.{
-            "C:/Qt/6.4.3/msvc2019_64/include",
-            "C:/Qt/6.5.5/msvc2019_64/include",
-            "C:/Qt/6.6.3/msvc2019_64/include",
-            "C:/Qt/6.7.3/msvc2019_64/include",
-            "C:/Qt/6.8.2/msvc2019_64/include",
-        },
+        .windows => try generateWindowsBuildPaths(allocator),
         else => @panic("Unsupported OS"),
     };
 
@@ -209,4 +203,31 @@ fn workaroundNeeded(workaround: bool, bsd_family: bool, basename: []const u8) bo
     }
 
     return false;
+}
+
+fn generateWindowsBuildPaths(allocator: std.mem.Allocator) ![]const []const u8 {
+    var qt_win_paths: std.ArrayListUnmanaged([]const u8) = .empty;
+
+    const qt_win_versions = &.{
+        "6.4.3",
+        "6.5.5",
+        "6.6.3",
+        "6.7.3",
+        "6.8.2",
+        "6.9.0",
+    };
+
+    const win_compilers = &.{
+        "mingw_64",
+        "msvc2019_64",
+        "msvc2022_64",
+    };
+
+    inline for (qt_win_versions) |ver| {
+        inline for (win_compilers) |wc| {
+            try qt_win_paths.append(allocator, "C:/Qt/" ++ ver ++ "/" ++ wc ++ "/include");
+        }
+    }
+
+    return qt_win_paths.items;
 }
