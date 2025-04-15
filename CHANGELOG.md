@@ -1,4 +1,8 @@
 
+### 6.4.2 rev7 (14 April 2025)
+
+* Revamp attempt at Windows support
+
 ### 6.4.2 rev6 (11 April 2025)
 
 * Qt 6.9: Return type for QObjectData::dynamicMetaObject is now const (#6)
