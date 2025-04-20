@@ -1,4 +1,8 @@
 
+### 6.4.2 rev8 (20 April 2025)
+
+* Add [Qt PDF](https://doc.qt.io/qt-6/qtpdf-index.html) (#7)
+
 ### 6.4.2 rev7 (14 April 2025)
 
 * Revamp attempt at Windows support
