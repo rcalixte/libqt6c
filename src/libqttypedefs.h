@@ -455,6 +455,15 @@ typedef struct QPanGesture QPanGesture;
 typedef struct QParallelAnimationGroup QParallelAnimationGroup;
 typedef struct QPartialOrdering QPartialOrdering;
 typedef struct QPauseAnimation QPauseAnimation;
+typedef struct QPdfBookmarkModel QPdfBookmarkModel;
+typedef struct QPdfDocument QPdfDocument;
+typedef struct QPdfDocumentRenderOptions QPdfDocumentRenderOptions;
+typedef struct QPdfLink QPdfLink;
+typedef struct QPdfPageNavigator QPdfPageNavigator;
+typedef struct QPdfPageRenderer QPdfPageRenderer;
+typedef struct QPdfSearchModel QPdfSearchModel;
+typedef struct QPdfSelection QPdfSelection;
+typedef struct QPdfView QPdfView;
 typedef struct QPdfWriter QPdfWriter;
 typedef struct QPen QPen;
 typedef struct QPercentBarSeries QPercentBarSeries;
@@ -1238,6 +1247,7 @@ typedef int MemoryMapFlags;                                                    /
 typedef int MenuItemType;                                                      // C ABI enum
 typedef int MenuRole;                                                          // C ABI enum
 typedef int MessageIcon;                                                       // C ABI enum
+typedef int MetaDataField;                                                     // C ABI enum
 typedef int MetaInformation;                                                   // C ABI enum
 typedef int Method;                                                            // C ABI enum
 typedef int MethodType;                                                        // C ABI enum
@@ -1291,6 +1301,8 @@ typedef int OutputMode;                                                        /
 typedef int OvershootPolicy;                                                   // C ABI enum
 typedef int PageBreakFlag;                                                     // C ABI enum
 typedef int PageBreakFlags;                                                    // C ABI QFlags
+typedef int PageMode;                                                          // C ABI enum
+typedef int PageModelRole;                                                     // C ABI enum
 typedef int PageOrder;                                                         // C ABI enum
 typedef int PageSizeId;                                                        // C ABI enum
 typedef int PaintDeviceFlags;                                                  // C ABI enum
@@ -1376,6 +1388,7 @@ typedef int RenderFlag;                                                        /
 typedef int RenderFlags;                                                       // C ABI QFlags
 typedef int RenderHint;                                                        // C ABI enum
 typedef int RenderHints;                                                       // C ABI QFlags
+typedef int RenderMode;                                                        // C ABI enum
 typedef int RenderProcessTerminationStatus;                                    // C ABI enum
 typedef int RenderableType;                                                    // C ABI enum
 typedef int RequestSoftwareInputPanel;                                         // C ABI enum
@@ -1389,6 +1402,7 @@ typedef int ResultFlag;                                                        /
 typedef int ReturnByValueConstant;                                             // C ABI enum
 typedef int Role;                                                              // C ABI enum
 typedef int Roles;                                                             // C ABI enum
+typedef int Rotation;                                                          // C ABI enum
 typedef int RotationAngle;                                                     // C ABI enum
 typedef int RowWrapPolicy;                                                     // C ABI enum
 typedef int RubberBand;                                                        // C ABI enum
