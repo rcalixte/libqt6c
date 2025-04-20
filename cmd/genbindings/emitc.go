@@ -680,9 +680,10 @@ var (
 		"qboxplot": {}, "qboxset": {}, "qcamera": {}, "qcandlestick": {},
 		"qcaptur": {}, "qcbor": {}, "qchart": {}, "qhost": {}, "qhst": {},
 		"qhttp": {}, "qimagecapture": {}, "qlegend": {}, "qlineseries": {},
-		"qmedia": {}, "qnet": {}, "qocsp": {}, "qpie": {}, "qprint": {},
-		"qssl": {}, "qsvg": {}, "qtcp": {}, "qudp": {}, "qvalueaxis": {},
-		"qvideo": {}, "qweb": {}, "qxymodel": {}, "qxyseries": {},
+		"qmedia": {}, "qnet": {}, "qocsp": {}, "qpdf": {}, "qpie": {},
+		"qprint": {}, "qssl": {}, "qsvg": {}, "qtcp": {}, "qudp": {},
+		"qvalueaxis": {}, "qvideo": {}, "qweb": {}, "qxymodel": {},
+		"qxyseries": {},
 	}
 
 	undoIncludeSuffixMap = map[string]struct{}{
