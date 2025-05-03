@@ -59,14 +59,16 @@ func cSafeMethodName(name string) string {
 }
 
 func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType bool, fullEnumName bool) string {
-	if (p.Pointer && p.ParameterType == "char") || p.ParameterType == "QByteArray" {
+	if (p.Pointer && p.ParameterType == "char") || p.ParameterType == "QByteArray" ||
+		p.ParameterType == "QAnyStringView" {
 		if p.Const {
 			return "const char*"
 		}
 		return "char*"
 	}
-	if p.ParameterType == "QString" || p.ParameterType == "QAnyStringView" ||
-		p.ParameterType == "QByteArrayView" || p.ParameterType == "QStringView" {
+
+	if p.ParameterType == "QString" || p.ParameterType == "QByteArrayView" ||
+		p.ParameterType == "QStringView" {
 		return "const char*"
 	}
 
