@@ -2435,8 +2435,8 @@ const char* q_mdisubwindow_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QMdiSubWindow* self, const char* name ```
-void q_mdisubwindow_set_object_name(void* self, const char* name);
+/// ``` QMdiSubWindow* self, char* name ```
+void q_mdisubwindow_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

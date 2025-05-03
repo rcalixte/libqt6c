@@ -2103,8 +2103,8 @@ const char* q_rubberband_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QRubberBand* self, const char* name ```
-void q_rubberband_set_object_name(void* self, const char* name);
+/// ``` QRubberBand* self, char* name ```
+void q_rubberband_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

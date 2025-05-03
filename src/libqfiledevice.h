@@ -517,8 +517,8 @@ const char* q_filedevice_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QFileDevice* self, const char* name ```
-void q_filedevice_set_object_name(void* self, const char* name);
+/// ``` QFileDevice* self, char* name ```
+void q_filedevice_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

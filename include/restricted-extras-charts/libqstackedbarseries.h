@@ -563,8 +563,8 @@ const char* q_stackedbarseries_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QStackedBarSeries* self, const char* name ```
-void q_stackedbarseries_set_object_name(void* self, const char* name);
+/// ``` QStackedBarSeries* self, char* name ```
+void q_stackedbarseries_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

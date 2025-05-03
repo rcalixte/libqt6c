@@ -102,7 +102,7 @@ const char* q_dtlsclientverifier_object_name(void* self) {
     return _ret;
 }
 
-void q_dtlsclientverifier_set_object_name(void* self, const char* name) {
+void q_dtlsclientverifier_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }
@@ -597,7 +597,7 @@ const char* q_dtls_object_name(void* self) {
     return _ret;
 }
 
-void q_dtls_set_object_name(void* self, const char* name) {
+void q_dtls_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }

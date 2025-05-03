@@ -1514,7 +1514,7 @@ const char* q_spinbox_object_name(void* self) {
     return _ret;
 }
 
-void q_spinbox_set_object_name(void* self, const char* name) {
+void q_spinbox_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }
@@ -3907,7 +3907,7 @@ const char* q_doublespinbox_object_name(void* self) {
     return _ret;
 }
 
-void q_doublespinbox_set_object_name(void* self, const char* name) {
+void q_doublespinbox_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }

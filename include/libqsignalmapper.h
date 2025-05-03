@@ -149,8 +149,8 @@ const char* q_signalmapper_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSignalMapper* self, const char* name ```
-void q_signalmapper_set_object_name(void* self, const char* name);
+/// ``` QSignalMapper* self, char* name ```
+void q_signalmapper_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

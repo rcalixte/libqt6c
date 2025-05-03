@@ -273,8 +273,8 @@ const char* q_futurewatcherbase_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QFutureWatcherBase* self, const char* name ```
-void q_futurewatcherbase_set_object_name(void* self, const char* name);
+/// ``` QFutureWatcherBase* self, char* name ```
+void q_futurewatcherbase_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

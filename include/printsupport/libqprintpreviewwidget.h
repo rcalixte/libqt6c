@@ -2169,8 +2169,8 @@ const char* q_printpreviewwidget_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPrintPreviewWidget* self, const char* name ```
-void q_printpreviewwidget_set_object_name(void* self, const char* name);
+/// ``` QPrintPreviewWidget* self, char* name ```
+void q_printpreviewwidget_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

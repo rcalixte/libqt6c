@@ -335,8 +335,8 @@ const char* q_scilexerlua_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerLua* self, const char* name ```
-void q_scilexerlua_set_object_name(void* self, const char* name);
+/// ``` QsciLexerLua* self, char* name ```
+void q_scilexerlua_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -270,8 +270,8 @@ const char* q_scilexerbatch_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerBatch* self, const char* name ```
-void q_scilexerbatch_set_object_name(void* self, const char* name);
+/// ``` QsciLexerBatch* self, char* name ```
+void q_scilexerbatch_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -2510,8 +2510,8 @@ const char* q_menu_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QMenu* self, const char* name ```
-void q_menu_set_object_name(void* self, const char* name);
+/// ``` QMenu* self, char* name ```
+void q_menu_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

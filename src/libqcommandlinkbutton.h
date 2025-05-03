@@ -2427,8 +2427,8 @@ const char* q_commandlinkbutton_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QCommandLinkButton* self, const char* name ```
-void q_commandlinkbutton_set_object_name(void* self, const char* name);
+/// ``` QCommandLinkButton* self, char* name ```
+void q_commandlinkbutton_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

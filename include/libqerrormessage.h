@@ -2114,8 +2114,8 @@ const char* q_errormessage_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QErrorMessage* self, const char* name ```
-void q_errormessage_set_object_name(void* self, const char* name);
+/// ``` QErrorMessage* self, char* name ```
+void q_errormessage_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

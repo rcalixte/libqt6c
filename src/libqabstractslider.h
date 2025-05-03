@@ -2315,8 +2315,8 @@ const char* q_abstractslider_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAbstractSlider* self, const char* name ```
-void q_abstractslider_set_object_name(void* self, const char* name);
+/// ``` QAbstractSlider* self, char* name ```
+void q_abstractslider_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

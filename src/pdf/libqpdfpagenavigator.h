@@ -205,8 +205,8 @@ const char* q_pdfpagenavigator_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPdfPageNavigator* self, const char* name ```
-void q_pdfpagenavigator_set_object_name(void* self, const char* name);
+/// ``` QPdfPageNavigator* self, char* name ```
+void q_pdfpagenavigator_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

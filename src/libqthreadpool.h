@@ -186,8 +186,8 @@ const char* q_threadpool_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QThreadPool* self, const char* name ```
-void q_threadpool_set_object_name(void* self, const char* name);
+/// ``` QThreadPool* self, char* name ```
+void q_threadpool_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

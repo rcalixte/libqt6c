@@ -130,8 +130,8 @@ const char* q_validator_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QValidator* self, const char* name ```
-void q_validator_set_object_name(void* self, const char* name);
+/// ``` QValidator* self, char* name ```
+void q_validator_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
@@ -791,8 +791,8 @@ const char* q_intvalidator_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QIntValidator* self, const char* name ```
-void q_intvalidator_set_object_name(void* self, const char* name);
+/// ``` QIntValidator* self, char* name ```
+void q_intvalidator_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
@@ -1493,8 +1493,8 @@ const char* q_doublevalidator_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QDoubleValidator* self, const char* name ```
-void q_doublevalidator_set_object_name(void* self, const char* name);
+/// ``` QDoubleValidator* self, char* name ```
+void q_doublevalidator_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
@@ -2116,8 +2116,8 @@ const char* q_regularexpressionvalidator_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QRegularExpressionValidator* self, const char* name ```
-void q_regularexpressionvalidator_set_object_name(void* self, const char* name);
+/// ``` QRegularExpressionValidator* self, char* name ```
+void q_regularexpressionvalidator_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

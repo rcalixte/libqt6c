@@ -309,8 +309,8 @@ const char* q_pauseanimation_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPauseAnimation* self, const char* name ```
-void q_pauseanimation_set_object_name(void* self, const char* name);
+/// ``` QPauseAnimation* self, char* name ```
+void q_pauseanimation_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

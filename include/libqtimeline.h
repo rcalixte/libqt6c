@@ -246,8 +246,8 @@ const char* q_timeline_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QTimeLine* self, const char* name ```
-void q_timeline_set_object_name(void* self, const char* name);
+/// ``` QTimeLine* self, char* name ```
+void q_timeline_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

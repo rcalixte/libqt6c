@@ -241,8 +241,8 @@ const char* q_inputmethod_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QInputMethod* self, const char* name ```
-void q_inputmethod_set_object_name(void* self, const char* name);
+/// ``` QInputMethod* self, char* name ```
+void q_inputmethod_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

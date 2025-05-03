@@ -803,8 +803,8 @@ const char* q_webenginepage_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QWebEnginePage* self, const char* name ```
-void q_webenginepage_set_object_name(void* self, const char* name);
+/// ``` QWebEnginePage* self, char* name ```
+void q_webenginepage_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

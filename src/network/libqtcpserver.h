@@ -269,8 +269,8 @@ const char* q_tcpserver_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QTcpServer* self, const char* name ```
-void q_tcpserver_set_object_name(void* self, const char* name);
+/// ``` QTcpServer* self, char* name ```
+void q_tcpserver_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

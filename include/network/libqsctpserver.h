@@ -293,8 +293,8 @@ const char* q_sctpserver_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSctpServer* self, const char* name ```
-void q_sctpserver_set_object_name(void* self, const char* name);
+/// ``` QSctpServer* self, char* name ```
+void q_sctpserver_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

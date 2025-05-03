@@ -1102,8 +1102,8 @@ const char* q_lineseries_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QLineSeries* self, const char* name ```
-void q_lineseries_set_object_name(void* self, const char* name);
+/// ``` QLineSeries* self, char* name ```
+void q_lineseries_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

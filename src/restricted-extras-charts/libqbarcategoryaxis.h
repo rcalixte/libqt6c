@@ -1034,8 +1034,8 @@ const char* q_barcategoryaxis_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QBarCategoryAxis* self, const char* name ```
-void q_barcategoryaxis_set_object_name(void* self, const char* name);
+/// ``` QBarCategoryAxis* self, char* name ```
+void q_barcategoryaxis_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

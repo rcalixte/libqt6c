@@ -333,8 +333,8 @@ const char* q_stylehints_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QStyleHints* self, const char* name ```
-void q_stylehints_set_object_name(void* self, const char* name);
+/// ``` QStyleHints* self, char* name ```
+void q_stylehints_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

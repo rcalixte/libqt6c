@@ -96,8 +96,8 @@ const char* q_iconengineplugin_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QIconEnginePlugin* self, const char* name ```
-void q_iconengineplugin_set_object_name(void* self, const char* name);
+/// ``` QIconEnginePlugin* self, char* name ```
+void q_iconengineplugin_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

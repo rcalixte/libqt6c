@@ -427,8 +427,8 @@ const char* q_pieslice_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPieSlice* self, const char* name ```
-void q_pieslice_set_object_name(void* self, const char* name);
+/// ``` QPieSlice* self, char* name ```
+void q_pieslice_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

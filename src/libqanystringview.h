@@ -24,8 +24,8 @@ QAnyStringView* q_anystringview_new(const char* other);
 
 /// q_anystringview_new2 constructs a new QAnyStringView object and invalidates the source QAnyStringView object.
 ///
-/// ``` const char* other ```
-QAnyStringView* q_anystringview_new2(const char* other);
+/// ``` char* other ```
+QAnyStringView* q_anystringview_new2(char* other);
 
 /// q_anystringview_new3 constructs a new QAnyStringView object.
 ///
@@ -79,13 +79,13 @@ void* q_anystringview_data(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanystringview.html#compare)
 ///
-/// ``` const char* lhs, const char* rhs ```
-int32_t q_anystringview_compare(const char* lhs, const char* rhs);
+/// ``` char* lhs, char* rhs ```
+int32_t q_anystringview_compare(char* lhs, char* rhs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanystringview.html#equal)
 ///
-/// ``` const char* lhs, const char* rhs ```
-bool q_anystringview_equal(const char* lhs, const char* rhs);
+/// ``` char* lhs, char* rhs ```
+bool q_anystringview_equal(char* lhs, char* rhs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanystringview.html#front)
 ///
@@ -124,8 +124,8 @@ int64_t q_anystringview_length(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanystringview.html#compare)
 ///
-/// ``` const char* lhs, const char* rhs, enum Qt__CaseSensitivity cs ```
-int32_t q_anystringview_compare3(const char* lhs, const char* rhs, int64_t cs);
+/// ``` char* lhs, char* rhs, enum Qt__CaseSensitivity cs ```
+int32_t q_anystringview_compare3(char* lhs, char* rhs, int64_t cs);
 
 /// Delete this object from C++ memory.
 ///

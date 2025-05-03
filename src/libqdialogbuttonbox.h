@@ -2166,8 +2166,8 @@ const char* q_dialogbuttonbox_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QDialogButtonBox* self, const char* name ```
-void q_dialogbuttonbox_set_object_name(void* self, const char* name);
+/// ``` QDialogButtonBox* self, char* name ```
+void q_dialogbuttonbox_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -145,8 +145,8 @@ const char* q_audiooutput_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAudioOutput* self, const char* name ```
-void q_audiooutput_set_object_name(void* self, const char* name);
+/// ``` QAudioOutput* self, char* name ```
+void q_audiooutput_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

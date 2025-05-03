@@ -909,8 +909,8 @@ const char* q_process_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QProcess* self, const char* name ```
-void q_process_set_object_name(void* self, const char* name);
+/// ``` QProcess* self, char* name ```
+void q_process_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

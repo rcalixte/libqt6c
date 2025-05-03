@@ -165,8 +165,8 @@ const char* q_library_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QLibrary* self, const char* name ```
-void q_library_set_object_name(void* self, const char* name);
+/// ``` QLibrary* self, char* name ```
+void q_library_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -381,8 +381,8 @@ const char* q_texttable_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QTextTable* self, const char* name ```
-void q_texttable_set_object_name(void* self, const char* name);
+/// ``` QTextTable* self, char* name ```
+void q_texttable_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

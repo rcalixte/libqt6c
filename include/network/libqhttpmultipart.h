@@ -168,8 +168,8 @@ const char* q_httpmultipart_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QHttpMultiPart* self, const char* name ```
-void q_httpmultipart_set_object_name(void* self, const char* name);
+/// ``` QHttpMultiPart* self, char* name ```
+void q_httpmultipart_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

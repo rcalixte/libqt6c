@@ -95,8 +95,8 @@ const char* q_genericplugin_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QGenericPlugin* self, const char* name ```
-void q_genericplugin_set_object_name(void* self, const char* name);
+/// ``` QGenericPlugin* self, char* name ```
+void q_genericplugin_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

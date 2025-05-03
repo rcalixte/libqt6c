@@ -107,8 +107,8 @@ const char* q_object_object_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QObject* self, const char* name ```
-void q_object_set_object_name(void* self, const char* name);
+/// ``` QObject* self, char* name ```
+void q_object_set_object_name(void* self, char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///

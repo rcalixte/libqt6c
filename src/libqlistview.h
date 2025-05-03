@@ -3409,8 +3409,8 @@ const char* q_listview_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QListView* self, const char* name ```
-void q_listview_set_object_name(void* self, const char* name);
+/// ``` QListView* self, char* name ```
+void q_listview_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

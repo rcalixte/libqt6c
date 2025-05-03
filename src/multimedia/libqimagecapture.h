@@ -286,8 +286,8 @@ const char* q_imagecapture_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QImageCapture* self, const char* name ```
-void q_imagecapture_set_object_name(void* self, const char* name);
+/// ``` QImageCapture* self, char* name ```
+void q_imagecapture_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

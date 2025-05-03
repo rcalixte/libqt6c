@@ -959,8 +959,8 @@ const char* q_abstractsocket_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAbstractSocket* self, const char* name ```
-void q_abstractsocket_set_object_name(void* self, const char* name);
+/// ``` QAbstractSocket* self, char* name ```
+void q_abstractsocket_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

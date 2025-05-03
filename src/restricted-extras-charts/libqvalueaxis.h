@@ -1081,8 +1081,8 @@ const char* q_valueaxis_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QValueAxis* self, const char* name ```
-void q_valueaxis_set_object_name(void* self, const char* name);
+/// ``` QValueAxis* self, char* name ```
+void q_valueaxis_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

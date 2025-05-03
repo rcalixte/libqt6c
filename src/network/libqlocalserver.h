@@ -229,8 +229,8 @@ const char* q_localserver_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QLocalServer* self, const char* name ```
-void q_localserver_set_object_name(void* self, const char* name);
+/// ``` QLocalServer* self, char* name ```
+void q_localserver_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

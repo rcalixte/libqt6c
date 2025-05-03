@@ -356,8 +356,8 @@ const char* q_graphicssvgitem_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QGraphicsSvgItem* self, const char* name ```
-void q_graphicssvgitem_set_object_name(void* self, const char* name);
+/// ``` QGraphicsSvgItem* self, char* name ```
+void q_graphicssvgitem_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

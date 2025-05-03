@@ -2068,8 +2068,8 @@ const char* q_focusframe_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QFocusFrame* self, const char* name ```
-void q_focusframe_set_object_name(void* self, const char* name);
+/// ``` QFocusFrame* self, char* name ```
+void q_focusframe_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

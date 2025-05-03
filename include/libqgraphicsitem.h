@@ -1670,8 +1670,8 @@ const char* q_graphicsobject_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QGraphicsObject* self, const char* name ```
-void q_graphicsobject_set_object_name(void* self, const char* name);
+/// ``` QGraphicsObject* self, char* name ```
+void q_graphicsobject_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
@@ -19300,8 +19300,8 @@ const char* q_graphicstextitem_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QGraphicsTextItem* self, const char* name ```
-void q_graphicstextitem_set_object_name(void* self, const char* name);
+/// ``` QGraphicsTextItem* self, char* name ```
+void q_graphicstextitem_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

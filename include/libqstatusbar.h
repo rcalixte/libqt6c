@@ -2170,8 +2170,8 @@ const char* q_statusbar_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QStatusBar* self, const char* name ```
-void q_statusbar_set_object_name(void* self, const char* name);
+/// ``` QStatusBar* self, char* name ```
+void q_statusbar_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

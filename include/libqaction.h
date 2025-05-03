@@ -453,8 +453,8 @@ const char* q_action_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAction* self, const char* name ```
-void q_action_set_object_name(void* self, const char* name);
+/// ``` QAction* self, char* name ```
+void q_action_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

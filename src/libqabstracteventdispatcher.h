@@ -182,8 +182,8 @@ const char* q_abstracteventdispatcher_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAbstractEventDispatcher* self, const char* name ```
-void q_abstracteventdispatcher_set_object_name(void* self, const char* name);
+/// ``` QAbstractEventDispatcher* self, char* name ```
+void q_abstracteventdispatcher_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

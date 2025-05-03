@@ -139,8 +139,8 @@ const char* q_webchannel_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QWebChannel* self, const char* name ```
-void q_webchannel_set_object_name(void* self, const char* name);
+/// ``` QWebChannel* self, char* name ```
+void q_webchannel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

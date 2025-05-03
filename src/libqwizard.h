@@ -2455,8 +2455,8 @@ const char* q_wizard_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QWizard* self, const char* name ```
-void q_wizard_set_object_name(void* self, const char* name);
+/// ``` QWizard* self, char* name ```
+void q_wizard_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
@@ -6243,8 +6243,8 @@ const char* q_wizardpage_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QWizardPage* self, const char* name ```
-void q_wizardpage_set_object_name(void* self, const char* name);
+/// ``` QWizardPage* self, char* name ```
+void q_wizardpage_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

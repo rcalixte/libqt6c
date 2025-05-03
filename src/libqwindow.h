@@ -1173,8 +1173,8 @@ const char* q_window_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QWindow* self, const char* name ```
-void q_window_set_object_name(void* self, const char* name);
+/// ``` QWindow* self, char* name ```
+void q_window_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

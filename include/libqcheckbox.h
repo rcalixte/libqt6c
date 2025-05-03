@@ -2420,8 +2420,8 @@ const char* q_checkbox_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QCheckBox* self, const char* name ```
-void q_checkbox_set_object_name(void* self, const char* name);
+/// ``` QCheckBox* self, char* name ```
+void q_checkbox_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

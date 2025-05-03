@@ -40,8 +40,8 @@ QUuid* q_uuid_new4(uint32_t l, unsigned short w1, unsigned short w2, unsigned ch
 
 /// q_uuid_new5 constructs a new QUuid object.
 ///
-/// ``` const char* stringVal ```
-QUuid* q_uuid_new5(const char* stringVal);
+/// ``` char* stringVal ```
+QUuid* q_uuid_new5(char* stringVal);
 
 /// q_uuid_new6 constructs a new QUuid object.
 ///
@@ -60,8 +60,8 @@ void q_uuid_move_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#fromString)
 ///
-/// ``` const char* stringVal ```
-QUuid* q_uuid_from_string(const char* stringVal);
+/// ``` char* stringVal ```
+QUuid* q_uuid_from_string(char* stringVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#toString)
 ///

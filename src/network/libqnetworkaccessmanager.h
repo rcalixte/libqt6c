@@ -400,8 +400,8 @@ const char* q_networkaccessmanager_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QNetworkAccessManager* self, const char* name ```
-void q_networkaccessmanager_set_object_name(void* self, const char* name);
+/// ``` QNetworkAccessManager* self, char* name ```
+void q_networkaccessmanager_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

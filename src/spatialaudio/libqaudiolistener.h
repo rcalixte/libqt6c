@@ -86,8 +86,8 @@ const char* q_audiolistener_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAudioListener* self, const char* name ```
-void q_audiolistener_set_object_name(void* self, const char* name);
+/// ``` QAudioListener* self, char* name ```
+void q_audiolistener_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

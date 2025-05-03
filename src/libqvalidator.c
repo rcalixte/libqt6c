@@ -108,7 +108,7 @@ const char* q_validator_object_name(void* self) {
     return _ret;
 }
 
-void q_validator_set_object_name(void* self, const char* name) {
+void q_validator_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }
@@ -536,7 +536,7 @@ const char* q_intvalidator_object_name(void* self) {
     return _ret;
 }
 
-void q_intvalidator_set_object_name(void* self, const char* name) {
+void q_intvalidator_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }
@@ -1000,7 +1000,7 @@ const char* q_doublevalidator_object_name(void* self) {
     return _ret;
 }
 
-void q_doublevalidator_set_object_name(void* self, const char* name) {
+void q_doublevalidator_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }
@@ -1396,7 +1396,7 @@ const char* q_regularexpressionvalidator_object_name(void* self) {
     return _ret;
 }
 
-void q_regularexpressionvalidator_set_object_name(void* self, const char* name) {
+void q_regularexpressionvalidator_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }

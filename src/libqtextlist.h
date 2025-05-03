@@ -144,8 +144,8 @@ const char* q_textlist_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QTextList* self, const char* name ```
-void q_textlist_set_object_name(void* self, const char* name);
+/// ``` QTextList* self, char* name ```
+void q_textlist_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

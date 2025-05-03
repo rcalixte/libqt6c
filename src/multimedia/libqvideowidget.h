@@ -2124,8 +2124,8 @@ const char* q_videowidget_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QVideoWidget* self, const char* name ```
-void q_videowidget_set_object_name(void* self, const char* name);
+/// ``` QVideoWidget* self, char* name ```
+void q_videowidget_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

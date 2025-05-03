@@ -252,8 +252,8 @@ const char* q_boxset_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QBoxSet* self, const char* name ```
-void q_boxset_set_object_name(void* self, const char* name);
+/// ``` QBoxSet* self, char* name ```
+void q_boxset_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

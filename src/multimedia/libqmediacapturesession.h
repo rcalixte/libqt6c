@@ -204,8 +204,8 @@ const char* q_mediacapturesession_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QMediaCaptureSession* self, const char* name ```
-void q_mediacapturesession_set_object_name(void* self, const char* name);
+/// ``` QMediaCaptureSession* self, char* name ```
+void q_mediacapturesession_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

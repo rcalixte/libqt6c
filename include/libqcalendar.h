@@ -41,8 +41,8 @@ QCalendar* q_calendar_new4(int64_t system);
 
 /// q_calendar_new5 constructs a new QCalendar object.
 ///
-/// ``` const char* name ```
-QCalendar* q_calendar_new5(const char* name);
+/// ``` char* name ```
+QCalendar* q_calendar_new5(char* name);
 
 /// q_calendar_new6 constructs a new QCalendar object.
 ///

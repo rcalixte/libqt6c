@@ -217,8 +217,8 @@ const char* q_shortcut_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QShortcut* self, const char* name ```
-void q_shortcut_set_object_name(void* self, const char* name);
+/// ``` QShortcut* self, char* name ```
+void q_shortcut_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

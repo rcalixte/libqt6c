@@ -359,8 +359,8 @@ const char* q_abstracttextdocumentlayout_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAbstractTextDocumentLayout* self, const char* name ```
-void q_abstracttextdocumentlayout_set_object_name(void* self, const char* name);
+/// ``` QAbstractTextDocumentLayout* self, char* name ```
+void q_abstracttextdocumentlayout_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

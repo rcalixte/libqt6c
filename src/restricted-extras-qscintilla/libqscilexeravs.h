@@ -342,8 +342,8 @@ const char* q_scilexeravs_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerAVS* self, const char* name ```
-void q_scilexeravs_set_object_name(void* self, const char* name);
+/// ``` QsciLexerAVS* self, char* name ```
+void q_scilexeravs_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

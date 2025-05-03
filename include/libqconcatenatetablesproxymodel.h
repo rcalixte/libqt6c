@@ -540,8 +540,8 @@ const char* q_concatenatetablesproxymodel_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QConcatenateTablesProxyModel* self, const char* name ```
-void q_concatenatetablesproxymodel_set_object_name(void* self, const char* name);
+/// ``` QConcatenateTablesProxyModel* self, char* name ```
+void q_concatenatetablesproxymodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

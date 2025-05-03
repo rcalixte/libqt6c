@@ -2157,8 +2157,8 @@ const char* q_sizegrip_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSizeGrip* self, const char* name ```
-void q_sizegrip_set_object_name(void* self, const char* name);
+/// ``` QSizeGrip* self, char* name ```
+void q_sizegrip_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

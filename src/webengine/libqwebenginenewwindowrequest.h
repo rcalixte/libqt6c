@@ -102,8 +102,8 @@ const char* q_webenginenewwindowrequest_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QWebEngineNewWindowRequest* self, const char* name ```
-void q_webenginenewwindowrequest_set_object_name(void* self, const char* name);
+/// ``` QWebEngineNewWindowRequest* self, char* name ```
+void q_webenginenewwindowrequest_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

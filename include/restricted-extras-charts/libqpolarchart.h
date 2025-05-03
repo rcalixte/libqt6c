@@ -1197,8 +1197,8 @@ const char* q_polarchart_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPolarChart* self, const char* name ```
-void q_polarchart_set_object_name(void* self, const char* name);
+/// ``` QPolarChart* self, char* name ```
+void q_polarchart_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

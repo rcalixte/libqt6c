@@ -3199,8 +3199,8 @@ const char* q_textedit_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QTextEdit* self, const char* name ```
-void q_textedit_set_object_name(void* self, const char* name);
+/// ``` QTextEdit* self, char* name ```
+void q_textedit_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

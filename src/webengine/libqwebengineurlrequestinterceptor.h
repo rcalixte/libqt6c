@@ -96,8 +96,8 @@ const char* q_webengineurlrequestinterceptor_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QWebEngineUrlRequestInterceptor* self, const char* name ```
-void q_webengineurlrequestinterceptor_set_object_name(void* self, const char* name);
+/// ``` QWebEngineUrlRequestInterceptor* self, char* name ```
+void q_webengineurlrequestinterceptor_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

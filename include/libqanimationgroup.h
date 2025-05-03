@@ -303,8 +303,8 @@ const char* q_animationgroup_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAnimationGroup* self, const char* name ```
-void q_animationgroup_set_object_name(void* self, const char* name);
+/// ``` QAnimationGroup* self, char* name ```
+void q_animationgroup_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

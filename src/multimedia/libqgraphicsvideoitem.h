@@ -384,8 +384,8 @@ const char* q_graphicsvideoitem_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QGraphicsVideoItem* self, const char* name ```
-void q_graphicsvideoitem_set_object_name(void* self, const char* name);
+/// ``` QGraphicsVideoItem* self, char* name ```
+void q_graphicsvideoitem_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

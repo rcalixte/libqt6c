@@ -151,8 +151,8 @@ void q_settings_set_atomic_sync_required(void* self, bool enable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#beginGroup)
 ///
-/// ``` QSettings* self, const char* prefix ```
-void q_settings_begin_group(void* self, const char* prefix);
+/// ``` QSettings* self, char* prefix ```
+void q_settings_begin_group(void* self, char* prefix);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#endGroup)
 ///
@@ -166,13 +166,13 @@ const char* q_settings_group(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#beginReadArray)
 ///
-/// ``` QSettings* self, const char* prefix ```
-int32_t q_settings_begin_read_array(void* self, const char* prefix);
+/// ``` QSettings* self, char* prefix ```
+int32_t q_settings_begin_read_array(void* self, char* prefix);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#beginWriteArray)
 ///
-/// ``` QSettings* self, const char* prefix ```
-void q_settings_begin_write_array(void* self, const char* prefix);
+/// ``` QSettings* self, char* prefix ```
+void q_settings_begin_write_array(void* self, char* prefix);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#endArray)
 ///
@@ -206,28 +206,28 @@ bool q_settings_is_writable(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#setValue)
 ///
-/// ``` QSettings* self, const char* key, QVariant* value ```
-void q_settings_set_value(void* self, const char* key, void* value);
+/// ``` QSettings* self, char* key, QVariant* value ```
+void q_settings_set_value(void* self, char* key, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#value)
 ///
-/// ``` QSettings* self, const char* key, QVariant* defaultValue ```
-QVariant* q_settings_value(void* self, const char* key, void* defaultValue);
+/// ``` QSettings* self, char* key, QVariant* defaultValue ```
+QVariant* q_settings_value(void* self, char* key, void* defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#value)
 ///
-/// ``` QSettings* self, const char* key ```
-QVariant* q_settings_value_with_key(void* self, const char* key);
+/// ``` QSettings* self, char* key ```
+QVariant* q_settings_value_with_key(void* self, char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#remove)
 ///
-/// ``` QSettings* self, const char* key ```
-void q_settings_remove(void* self, const char* key);
+/// ``` QSettings* self, char* key ```
+void q_settings_remove(void* self, char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#contains)
 ///
-/// ``` QSettings* self, const char* key ```
-bool q_settings_contains(void* self, const char* key);
+/// ``` QSettings* self, char* key ```
+bool q_settings_contains(void* self, char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#setFallbacksEnabled)
 ///
@@ -306,8 +306,8 @@ const char* q_settings_tr3(const char* s, const char* c, int n);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#beginWriteArray)
 ///
-/// ``` QSettings* self, const char* prefix, int size ```
-void q_settings_begin_write_array2(void* self, const char* prefix, int size);
+/// ``` QSettings* self, char* prefix, int size ```
+void q_settings_begin_write_array2(void* self, char* prefix, int size);
 
 /// Inherited from QObject
 ///
@@ -320,8 +320,8 @@ const char* q_settings_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSettings* self, const char* name ```
-void q_settings_set_object_name(void* self, const char* name);
+/// ``` QSettings* self, char* name ```
+void q_settings_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

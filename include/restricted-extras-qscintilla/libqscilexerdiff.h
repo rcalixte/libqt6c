@@ -259,8 +259,8 @@ const char* q_scilexerdiff_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerDiff* self, const char* name ```
-void q_scilexerdiff_set_object_name(void* self, const char* name);
+/// ``` QsciLexerDiff* self, char* name ```
+void q_scilexerdiff_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -219,8 +219,8 @@ const char* q_abstractnetworkcache_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAbstractNetworkCache* self, const char* name ```
-void q_abstractnetworkcache_set_object_name(void* self, const char* name);
+/// ``` QAbstractNetworkCache* self, char* name ```
+void q_abstractnetworkcache_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

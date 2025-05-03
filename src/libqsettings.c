@@ -117,7 +117,7 @@ void q_settings_set_atomic_sync_required(void* self, bool enable) {
     QSettings_SetAtomicSyncRequired((QSettings*)self, enable);
 }
 
-void q_settings_begin_group(void* self, const char* prefix) {
+void q_settings_begin_group(void* self, char* prefix) {
     libqt_strview prefix_strview = qstrview(prefix);
     QSettings_BeginGroup((QSettings*)self, (QAnyStringView*)&prefix_strview);
 }
@@ -133,12 +133,12 @@ const char* q_settings_group(void* self) {
     return _ret;
 }
 
-int32_t q_settings_begin_read_array(void* self, const char* prefix) {
+int32_t q_settings_begin_read_array(void* self, char* prefix) {
     libqt_strview prefix_strview = qstrview(prefix);
     return QSettings_BeginReadArray((QSettings*)self, (QAnyStringView*)&prefix_strview);
 }
 
-void q_settings_begin_write_array(void* self, const char* prefix) {
+void q_settings_begin_write_array(void* self, char* prefix) {
     libqt_strview prefix_strview = qstrview(prefix);
     QSettings_BeginWriteArray((QSettings*)self, (QAnyStringView*)&prefix_strview);
 }
@@ -197,27 +197,27 @@ bool q_settings_is_writable(void* self) {
     return QSettings_IsWritable((QSettings*)self);
 }
 
-void q_settings_set_value(void* self, const char* key, void* value) {
+void q_settings_set_value(void* self, char* key, void* value) {
     libqt_strview key_strview = qstrview(key);
     QSettings_SetValue((QSettings*)self, (QAnyStringView*)&key_strview, (QVariant*)value);
 }
 
-QVariant* q_settings_value(void* self, const char* key, void* defaultValue) {
+QVariant* q_settings_value(void* self, char* key, void* defaultValue) {
     libqt_strview key_strview = qstrview(key);
     return QSettings_Value((QSettings*)self, (QAnyStringView*)&key_strview, (QVariant*)defaultValue);
 }
 
-QVariant* q_settings_value_with_key(void* self, const char* key) {
+QVariant* q_settings_value_with_key(void* self, char* key) {
     libqt_strview key_strview = qstrview(key);
     return QSettings_ValueWithKey((QSettings*)self, (QAnyStringView*)&key_strview);
 }
 
-void q_settings_remove(void* self, const char* key) {
+void q_settings_remove(void* self, char* key) {
     libqt_strview key_strview = qstrview(key);
     QSettings_Remove((QSettings*)self, (QAnyStringView*)&key_strview);
 }
 
-bool q_settings_contains(void* self, const char* key) {
+bool q_settings_contains(void* self, char* key) {
     libqt_strview key_strview = qstrview(key);
     return QSettings_Contains((QSettings*)self, (QAnyStringView*)&key_strview);
 }
@@ -297,7 +297,7 @@ const char* q_settings_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_settings_begin_write_array2(void* self, const char* prefix, int size) {
+void q_settings_begin_write_array2(void* self, char* prefix, int size) {
     libqt_strview prefix_strview = qstrview(prefix);
     QSettings_BeginWriteArray2((QSettings*)self, (QAnyStringView*)&prefix_strview, size);
 }
@@ -309,7 +309,7 @@ const char* q_settings_object_name(void* self) {
     return _ret;
 }
 
-void q_settings_set_object_name(void* self, const char* name) {
+void q_settings_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }

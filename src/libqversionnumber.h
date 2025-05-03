@@ -114,13 +114,13 @@ const char* q_versionnumber_to_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qversionnumber.html#fromString)
 ///
-/// ``` const char* stringVal ```
-QVersionNumber* q_versionnumber_from_string(const char* stringVal);
+/// ``` char* stringVal ```
+QVersionNumber* q_versionnumber_from_string(char* stringVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qversionnumber.html#fromString)
 ///
-/// ``` const char* stringVal, int64_t* suffixIndex ```
-QVersionNumber* q_versionnumber_from_string2(const char* stringVal, int64_t* suffixIndex);
+/// ``` char* stringVal, int64_t* suffixIndex ```
+QVersionNumber* q_versionnumber_from_string2(char* stringVal, int64_t* suffixIndex);
 
 /// Delete this object from C++ memory.
 ///

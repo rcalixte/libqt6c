@@ -106,8 +106,8 @@ const char* q_webengineurlrequestjob_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QWebEngineUrlRequestJob* self, const char* name ```
-void q_webengineurlrequestjob_set_object_name(void* self, const char* name);
+/// ``` QWebEngineUrlRequestJob* self, char* name ```
+void q_webengineurlrequestjob_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

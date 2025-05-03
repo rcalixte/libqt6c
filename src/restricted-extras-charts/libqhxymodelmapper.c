@@ -165,7 +165,7 @@ const char* q_hxymodelmapper_object_name(void* self) {
     return _ret;
 }
 
-void q_hxymodelmapper_set_object_name(void* self, const char* name) {
+void q_hxymodelmapper_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }

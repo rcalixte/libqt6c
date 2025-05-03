@@ -2557,8 +2557,8 @@ const char* q_abstractspinbox_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAbstractSpinBox* self, const char* name ```
-void q_abstractspinbox_set_object_name(void* self, const char* name);
+/// ``` QAbstractSpinBox* self, char* name ```
+void q_abstractspinbox_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -404,8 +404,8 @@ const char* q_sequentialanimationgroup_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSequentialAnimationGroup* self, const char* name ```
-void q_sequentialanimationgroup_set_object_name(void* self, const char* name);
+/// ``` QSequentialAnimationGroup* self, char* name ```
+void q_sequentialanimationgroup_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

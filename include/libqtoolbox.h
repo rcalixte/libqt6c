@@ -2278,8 +2278,8 @@ const char* q_toolbox_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QToolBox* self, const char* name ```
-void q_toolbox_set_object_name(void* self, const char* name);
+/// ``` QToolBox* self, char* name ```
+void q_toolbox_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

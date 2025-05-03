@@ -112,8 +112,8 @@ const char* q_graphicstransform_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QGraphicsTransform* self, const char* name ```
-void q_graphicstransform_set_object_name(void* self, const char* name);
+/// ``` QGraphicsTransform* self, char* name ```
+void q_graphicstransform_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
@@ -761,8 +761,8 @@ const char* q_graphicsscale_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QGraphicsScale* self, const char* name ```
-void q_graphicsscale_set_object_name(void* self, const char* name);
+/// ``` QGraphicsScale* self, char* name ```
+void q_graphicsscale_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
@@ -1412,8 +1412,8 @@ const char* q_graphicsrotation_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QGraphicsRotation* self, const char* name ```
-void q_graphicsrotation_set_object_name(void* self, const char* name);
+/// ``` QGraphicsRotation* self, char* name ```
+void q_graphicsrotation_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

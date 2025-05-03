@@ -200,8 +200,8 @@ const char* q_buttongroup_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QButtonGroup* self, const char* name ```
-void q_buttongroup_set_object_name(void* self, const char* name);
+/// ``` QButtonGroup* self, char* name ```
+void q_buttongroup_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

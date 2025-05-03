@@ -2629,8 +2629,8 @@ const char* q_tabbar_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QTabBar* self, const char* name ```
-void q_tabbar_set_object_name(void* self, const char* name);
+/// ``` QTabBar* self, char* name ```
+void q_tabbar_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

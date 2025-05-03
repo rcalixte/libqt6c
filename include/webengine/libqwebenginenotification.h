@@ -139,8 +139,8 @@ const char* q_webenginenotification_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QWebEngineNotification* self, const char* name ```
-void q_webenginenotification_set_object_name(void* self, const char* name);
+/// ``` QWebEngineNotification* self, char* name ```
+void q_webenginenotification_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

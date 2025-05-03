@@ -256,8 +256,8 @@ const char* q_scilexeroctave_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerOctave* self, const char* name ```
-void q_scilexeroctave_set_object_name(void* self, const char* name);
+/// ``` QsciLexerOctave* self, char* name ```
+void q_scilexeroctave_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

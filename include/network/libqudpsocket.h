@@ -705,8 +705,8 @@ const char* q_udpsocket_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QUdpSocket* self, const char* name ```
-void q_udpsocket_set_object_name(void* self, const char* name);
+/// ``` QUdpSocket* self, char* name ```
+void q_udpsocket_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

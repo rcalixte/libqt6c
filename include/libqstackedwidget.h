@@ -2171,8 +2171,8 @@ const char* q_stackedwidget_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QStackedWidget* self, const char* name ```
-void q_stackedwidget_set_object_name(void* self, const char* name);
+/// ``` QStackedWidget* self, char* name ```
+void q_stackedwidget_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

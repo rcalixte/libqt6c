@@ -2459,8 +2459,8 @@ const char* q_webengineview_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QWebEngineView* self, const char* name ```
-void q_webengineview_set_object_name(void* self, const char* name);
+/// ``` QWebEngineView* self, char* name ```
+void q_webengineview_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

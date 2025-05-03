@@ -1044,8 +1044,8 @@ const char* q_graphicsscene_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QGraphicsScene* self, const char* name ```
-void q_graphicsscene_set_object_name(void* self, const char* name);
+/// ``` QGraphicsScene* self, char* name ```
+void q_graphicsscene_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

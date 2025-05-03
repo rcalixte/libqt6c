@@ -2383,8 +2383,8 @@ const char* q_splitter_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSplitter* self, const char* name ```
-void q_splitter_set_object_name(void* self, const char* name);
+/// ``` QSplitter* self, char* name ```
+void q_splitter_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
@@ -5996,8 +5996,8 @@ const char* q_splitterhandle_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSplitterHandle* self, const char* name ```
-void q_splitterhandle_set_object_name(void* self, const char* name);
+/// ``` QSplitterHandle* self, char* name ```
+void q_splitterhandle_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -320,8 +320,8 @@ const char* q_scilexerfortran77_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerFortran77* self, const char* name ```
-void q_scilexerfortran77_set_object_name(void* self, const char* name);
+/// ``` QsciLexerFortran77* self, char* name ```
+void q_scilexerfortran77_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

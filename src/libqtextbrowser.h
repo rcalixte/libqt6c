@@ -3299,8 +3299,8 @@ const char* q_textbrowser_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QTextBrowser* self, const char* name ```
-void q_textbrowser_set_object_name(void* self, const char* name);
+/// ``` QTextBrowser* self, char* name ```
+void q_textbrowser_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

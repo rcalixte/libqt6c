@@ -355,8 +355,8 @@ const char* q_scilexerverilog_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerVerilog* self, const char* name ```
-void q_scilexerverilog_set_object_name(void* self, const char* name);
+/// ``` QsciLexerVerilog* self, char* name ```
+void q_scilexerverilog_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

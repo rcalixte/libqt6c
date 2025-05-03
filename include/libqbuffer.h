@@ -568,8 +568,8 @@ const char* q_buffer_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QBuffer* self, const char* name ```
-void q_buffer_set_object_name(void* self, const char* name);
+/// ``` QBuffer* self, char* name ```
+void q_buffer_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

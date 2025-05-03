@@ -2300,8 +2300,8 @@ const char* q_progressdialog_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QProgressDialog* self, const char* name ```
-void q_progressdialog_set_object_name(void* self, const char* name);
+/// ``` QProgressDialog* self, char* name ```
+void q_progressdialog_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

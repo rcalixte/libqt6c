@@ -249,8 +249,8 @@ const char* q_soundeffect_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSoundEffect* self, const char* name ```
-void q_soundeffect_set_object_name(void* self, const char* name);
+/// ``` QSoundEffect* self, char* name ```
+void q_soundeffect_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

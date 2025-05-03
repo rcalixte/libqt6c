@@ -2133,8 +2133,8 @@ const char* q_printpreviewdialog_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPrintPreviewDialog* self, const char* name ```
-void q_printpreviewdialog_set_object_name(void* self, const char* name);
+/// ``` QPrintPreviewDialog* self, char* name ```
+void q_printpreviewdialog_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

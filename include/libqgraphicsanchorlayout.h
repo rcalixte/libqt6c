@@ -105,8 +105,8 @@ const char* q_graphicsanchor_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QGraphicsAnchor* self, const char* name ```
-void q_graphicsanchor_set_object_name(void* self, const char* name);
+/// ``` QGraphicsAnchor* self, char* name ```
+void q_graphicsanchor_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

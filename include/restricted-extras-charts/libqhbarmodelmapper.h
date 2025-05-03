@@ -191,8 +191,8 @@ const char* q_hbarmodelmapper_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QHBarModelMapper* self, const char* name ```
-void q_hbarmodelmapper_set_object_name(void* self, const char* name);
+/// ``` QHBarModelMapper* self, char* name ```
+void q_hbarmodelmapper_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

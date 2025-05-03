@@ -2375,8 +2375,8 @@ const char* q_spinbox_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSpinBox* self, const char* name ```
-void q_spinbox_set_object_name(void* self, const char* name);
+/// ``` QSpinBox* self, char* name ```
+void q_spinbox_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
@@ -6405,8 +6405,8 @@ const char* q_doublespinbox_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QDoubleSpinBox* self, const char* name ```
-void q_doublespinbox_set_object_name(void* self, const char* name);
+/// ``` QDoubleSpinBox* self, char* name ```
+void q_doublespinbox_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

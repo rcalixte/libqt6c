@@ -125,8 +125,8 @@ const char* q_sciabstractapis_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciAbstractAPIs* self, const char* name ```
-void q_sciabstractapis_set_object_name(void* self, const char* name);
+/// ``` QsciAbstractAPIs* self, char* name ```
+void q_sciabstractapis_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

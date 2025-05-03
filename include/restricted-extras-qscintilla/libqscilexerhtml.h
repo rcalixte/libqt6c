@@ -405,8 +405,8 @@ const char* q_scilexerhtml_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerHTML* self, const char* name ```
-void q_scilexerhtml_set_object_name(void* self, const char* name);
+/// ``` QsciLexerHTML* self, char* name ```
+void q_scilexerhtml_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -166,8 +166,8 @@ const char* q_networkinformation_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QNetworkInformation* self, const char* name ```
-void q_networkinformation_set_object_name(void* self, const char* name);
+/// ``` QNetworkInformation* self, char* name ```
+void q_networkinformation_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -602,8 +602,8 @@ const char* q_camera_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QCamera* self, const char* name ```
-void q_camera_set_object_name(void* self, const char* name);
+/// ``` QCamera* self, char* name ```
+void q_camera_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

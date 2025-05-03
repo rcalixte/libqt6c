@@ -391,8 +391,8 @@ const char* q_undostack_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QUndoStack* self, const char* name ```
-void q_undostack_set_object_name(void* self, const char* name);
+/// ``` QUndoStack* self, char* name ```
+void q_undostack_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

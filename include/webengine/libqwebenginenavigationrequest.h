@@ -108,8 +108,8 @@ const char* q_webenginenavigationrequest_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QWebEngineNavigationRequest* self, const char* name ```
-void q_webenginenavigationrequest_set_object_name(void* self, const char* name);
+/// ``` QWebEngineNavigationRequest* self, char* name ```
+void q_webenginenavigationrequest_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

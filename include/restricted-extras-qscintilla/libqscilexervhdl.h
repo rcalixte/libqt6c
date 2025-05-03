@@ -400,8 +400,8 @@ const char* q_scilexervhdl_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerVHDL* self, const char* name ```
-void q_scilexervhdl_set_object_name(void* self, const char* name);
+/// ``` QsciLexerVHDL* self, char* name ```
+void q_scilexervhdl_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

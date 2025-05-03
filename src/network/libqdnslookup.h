@@ -453,8 +453,8 @@ const char* q_dnslookup_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QDnsLookup* self, const char* name ```
-void q_dnslookup_set_object_name(void* self, const char* name);
+/// ``` QDnsLookup* self, char* name ```
+void q_dnslookup_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -663,8 +663,8 @@ const char* q_file_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QFile* self, const char* name ```
-void q_file_set_object_name(void* self, const char* name);
+/// ``` QFile* self, char* name ```
+void q_file_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

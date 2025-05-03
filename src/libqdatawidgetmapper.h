@@ -231,8 +231,8 @@ const char* q_datawidgetmapper_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QDataWidgetMapper* self, const char* name ```
-void q_datawidgetmapper_set_object_name(void* self, const char* name);
+/// ``` QDataWidgetMapper* self, char* name ```
+void q_datawidgetmapper_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

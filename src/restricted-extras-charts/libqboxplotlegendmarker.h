@@ -323,8 +323,8 @@ const char* q_boxplotlegendmarker_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QBoxPlotLegendMarker* self, const char* name ```
-void q_boxplotlegendmarker_set_object_name(void* self, const char* name);
+/// ``` QBoxPlotLegendMarker* self, char* name ```
+void q_boxplotlegendmarker_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

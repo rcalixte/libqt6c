@@ -1191,8 +1191,8 @@ const char* q_graphicsproxywidget_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QGraphicsProxyWidget* self, const char* name ```
-void q_graphicsproxywidget_set_object_name(void* self, const char* name);
+/// ``` QGraphicsProxyWidget* self, char* name ```
+void q_graphicsproxywidget_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

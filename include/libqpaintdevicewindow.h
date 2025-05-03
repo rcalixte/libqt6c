@@ -1108,8 +1108,8 @@ const char* q_paintdevicewindow_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPaintDeviceWindow* self, const char* name ```
-void q_paintdevicewindow_set_object_name(void* self, const char* name);
+/// ``` QPaintDeviceWindow* self, char* name ```
+void q_paintdevicewindow_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

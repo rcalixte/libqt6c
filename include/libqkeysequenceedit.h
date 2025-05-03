@@ -2123,8 +2123,8 @@ const char* q_keysequenceedit_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QKeySequenceEdit* self, const char* name ```
-void q_keysequenceedit_set_object_name(void* self, const char* name);
+/// ``` QKeySequenceEdit* self, char* name ```
+void q_keysequenceedit_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

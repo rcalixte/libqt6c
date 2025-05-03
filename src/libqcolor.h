@@ -101,8 +101,8 @@ void q_color_move_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolor.html#fromString)
 ///
-/// ``` const char* name ```
-QColor* q_color_from_string(const char* name);
+/// ``` char* name ```
+QColor* q_color_from_string(char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolor.html#operator=)
 ///
@@ -566,8 +566,8 @@ bool q_color_is_valid_color(const char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolor.html#isValidColorName)
 ///
-/// ``` const char* param1 ```
-bool q_color_is_valid_color_name(const char* param1);
+/// ``` char* param1 ```
+bool q_color_is_valid_color_name(char* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolor.html#name)
 ///

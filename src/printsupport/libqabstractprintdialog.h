@@ -2120,8 +2120,8 @@ const char* q_abstractprintdialog_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAbstractPrintDialog* self, const char* name ```
-void q_abstractprintdialog_set_object_name(void* self, const char* name);
+/// ``` QAbstractPrintDialog* self, char* name ```
+void q_abstractprintdialog_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

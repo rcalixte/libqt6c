@@ -3056,8 +3056,8 @@ const char* q_graphicsview_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QGraphicsView* self, const char* name ```
-void q_graphicsview_set_object_name(void* self, const char* name);
+/// ``` QGraphicsView* self, char* name ```
+void q_graphicsview_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

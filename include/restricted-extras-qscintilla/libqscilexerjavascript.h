@@ -395,8 +395,8 @@ const char* q_scilexerjavascript_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerJavaScript* self, const char* name ```
-void q_scilexerjavascript_set_object_name(void* self, const char* name);
+/// ``` QsciLexerJavaScript* self, char* name ```
+void q_scilexerjavascript_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

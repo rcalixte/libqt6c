@@ -365,8 +365,8 @@ const char* q_sslserver_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSslServer* self, const char* name ```
-void q_sslserver_set_object_name(void* self, const char* name);
+/// ``` QSslServer* self, char* name ```
+void q_sslserver_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

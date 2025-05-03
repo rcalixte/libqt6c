@@ -1260,8 +1260,8 @@ const char* q_application_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QApplication* self, const char* name ```
-void q_application_set_object_name(void* self, const char* name);
+/// ``` QApplication* self, char* name ```
+void q_application_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

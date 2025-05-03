@@ -2115,8 +2115,8 @@ const char* q_pagesetupdialog_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPageSetupDialog* self, const char* name ```
-void q_pagesetupdialog_set_object_name(void* self, const char* name);
+/// ``` QPageSetupDialog* self, char* name ```
+void q_pagesetupdialog_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

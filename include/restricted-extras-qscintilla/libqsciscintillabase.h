@@ -2912,8 +2912,8 @@ const char* q_sciscintillabase_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciScintillaBase* self, const char* name ```
-void q_sciscintillabase_set_object_name(void* self, const char* name);
+/// ``` QsciScintillaBase* self, char* name ```
+void q_sciscintillabase_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

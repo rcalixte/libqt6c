@@ -350,8 +350,8 @@ const char* q_scilexerruby_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerRuby* self, const char* name ```
-void q_scilexerruby_set_object_name(void* self, const char* name);
+/// ``` QsciLexerRuby* self, char* name ```
+void q_scilexerruby_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

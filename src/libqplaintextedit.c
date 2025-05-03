@@ -2168,7 +2168,7 @@ const char* q_plaintextedit_object_name(void* self) {
     return _ret;
 }
 
-void q_plaintextedit_set_object_name(void* self, const char* name) {
+void q_plaintextedit_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }
@@ -3090,7 +3090,7 @@ const char* q_plaintextdocumentlayout_object_name(void* self) {
     return _ret;
 }
 
-void q_plaintextdocumentlayout_set_object_name(void* self, const char* name) {
+void q_plaintextdocumentlayout_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }

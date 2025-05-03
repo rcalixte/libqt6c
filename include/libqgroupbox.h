@@ -2247,8 +2247,8 @@ const char* q_groupbox_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QGroupBox* self, const char* name ```
-void q_groupbox_set_object_name(void* self, const char* name);
+/// ``` QGroupBox* self, char* name ```
+void q_groupbox_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
