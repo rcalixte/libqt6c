@@ -191,8 +191,8 @@ const char* q_vpiemodelmapper_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QVPieModelMapper* self, const char* name ```
-void q_vpiemodelmapper_set_object_name(void* self, const char* name);
+/// ``` QVPieModelMapper* self, char* name ```
+void q_vpiemodelmapper_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

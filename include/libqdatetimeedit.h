@@ -2721,8 +2721,8 @@ const char* q_datetimeedit_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QDateTimeEdit* self, const char* name ```
-void q_datetimeedit_set_object_name(void* self, const char* name);
+/// ``` QDateTimeEdit* self, char* name ```
+void q_datetimeedit_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
@@ -6708,8 +6708,8 @@ const char* q_timeedit_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QTimeEdit* self, const char* name ```
-void q_timeedit_set_object_name(void* self, const char* name);
+/// ``` QTimeEdit* self, char* name ```
+void q_timeedit_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
@@ -11063,8 +11063,8 @@ const char* q_dateedit_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QDateEdit* self, const char* name ```
-void q_dateedit_set_object_name(void* self, const char* name);
+/// ``` QDateEdit* self, char* name ```
+void q_dateedit_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

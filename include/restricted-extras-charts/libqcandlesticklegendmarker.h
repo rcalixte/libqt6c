@@ -323,8 +323,8 @@ const char* q_candlesticklegendmarker_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QCandlestickLegendMarker* self, const char* name ```
-void q_candlesticklegendmarker_set_object_name(void* self, const char* name);
+/// ``` QCandlestickLegendMarker* self, char* name ```
+void q_candlesticklegendmarker_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

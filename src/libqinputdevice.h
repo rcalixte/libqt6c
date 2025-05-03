@@ -164,8 +164,8 @@ const char* q_inputdevice_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QInputDevice* self, const char* name ```
-void q_inputdevice_set_object_name(void* self, const char* name);
+/// ``` QInputDevice* self, char* name ```
+void q_inputdevice_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -291,8 +291,8 @@ const char* q_webengineprofile_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QWebEngineProfile* self, const char* name ```
-void q_webengineprofile_set_object_name(void* self, const char* name);
+/// ``` QWebEngineProfile* self, char* name ```
+void q_webengineprofile_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

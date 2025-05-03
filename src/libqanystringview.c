@@ -9,7 +9,7 @@ QAnyStringView* q_anystringview_new(const char* other) {
     return QAnyStringView_new((QAnyStringView*)&other_strview);
 }
 
-QAnyStringView* q_anystringview_new2(const char* other) {
+QAnyStringView* q_anystringview_new2(char* other) {
     libqt_strview other_strview = qstrview(other);
 
     return QAnyStringView_new2((QAnyStringView*)&other_strview);
@@ -60,13 +60,13 @@ void* q_anystringview_data(void* self) {
     return QAnyStringView_Data((QAnyStringView*)self);
 }
 
-int32_t q_anystringview_compare(const char* lhs, const char* rhs) {
+int32_t q_anystringview_compare(char* lhs, char* rhs) {
     libqt_strview lhs_strview = qstrview(lhs);
     libqt_strview rhs_strview = qstrview(rhs);
     return QAnyStringView_Compare((QAnyStringView*)&lhs_strview, (QAnyStringView*)&rhs_strview);
 }
 
-bool q_anystringview_equal(const char* lhs, const char* rhs) {
+bool q_anystringview_equal(char* lhs, char* rhs) {
     libqt_strview lhs_strview = qstrview(lhs);
     libqt_strview rhs_strview = qstrview(rhs);
     return QAnyStringView_Equal((QAnyStringView*)&lhs_strview, (QAnyStringView*)&rhs_strview);
@@ -100,7 +100,7 @@ int64_t q_anystringview_length(void* self) {
     return QAnyStringView_Length((QAnyStringView*)self);
 }
 
-int32_t q_anystringview_compare3(const char* lhs, const char* rhs, int64_t cs) {
+int32_t q_anystringview_compare3(char* lhs, char* rhs, int64_t cs) {
     libqt_strview lhs_strview = qstrview(lhs);
     libqt_strview rhs_strview = qstrview(rhs);
     return QAnyStringView_Compare3((QAnyStringView*)&lhs_strview, (QAnyStringView*)&rhs_strview, cs);

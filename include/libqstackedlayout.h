@@ -483,8 +483,8 @@ const char* q_stackedlayout_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QStackedLayout* self, const char* name ```
-void q_stackedlayout_set_object_name(void* self, const char* name);
+/// ``` QStackedLayout* self, char* name ```
+void q_stackedlayout_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

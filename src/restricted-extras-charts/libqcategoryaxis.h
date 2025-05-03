@@ -1225,8 +1225,8 @@ const char* q_categoryaxis_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QCategoryAxis* self, const char* name ```
-void q_categoryaxis_set_object_name(void* self, const char* name);
+/// ``` QCategoryAxis* self, char* name ```
+void q_categoryaxis_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

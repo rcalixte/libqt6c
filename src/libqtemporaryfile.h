@@ -685,8 +685,8 @@ const char* q_temporaryfile_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QTemporaryFile* self, const char* name ```
-void q_temporaryfile_set_object_name(void* self, const char* name);
+/// ``` QTemporaryFile* self, char* name ```
+void q_temporaryfile_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

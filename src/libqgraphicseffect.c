@@ -240,7 +240,7 @@ const char* q_graphicseffect_object_name(void* self) {
     return _ret;
 }
 
-void q_graphicseffect_set_object_name(void* self, const char* name) {
+void q_graphicseffect_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }
@@ -652,7 +652,7 @@ const char* q_graphicscolorizeeffect_object_name(void* self) {
     return _ret;
 }
 
-void q_graphicscolorizeeffect_set_object_name(void* self, const char* name) {
+void q_graphicscolorizeeffect_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }
@@ -1160,7 +1160,7 @@ const char* q_graphicsblureffect_object_name(void* self) {
     return _ret;
 }
 
-void q_graphicsblureffect_set_object_name(void* self, const char* name) {
+void q_graphicsblureffect_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }
@@ -1696,7 +1696,7 @@ const char* q_graphicsdropshadoweffect_object_name(void* self) {
     return _ret;
 }
 
-void q_graphicsdropshadoweffect_set_object_name(void* self, const char* name) {
+void q_graphicsdropshadoweffect_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }
@@ -2180,7 +2180,7 @@ const char* q_graphicsopacityeffect_object_name(void* self) {
     return _ret;
 }
 
-void q_graphicsopacityeffect_set_object_name(void* self, const char* name) {
+void q_graphicsopacityeffect_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }

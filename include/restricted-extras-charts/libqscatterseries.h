@@ -1184,8 +1184,8 @@ const char* q_scatterseries_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QScatterSeries* self, const char* name ```
-void q_scatterseries_set_object_name(void* self, const char* name);
+/// ``` QScatterSeries* self, char* name ```
+void q_scatterseries_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -2414,8 +2414,8 @@ const char* q_scrollbar_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QScrollBar* self, const char* name ```
-void q_scrollbar_set_object_name(void* self, const char* name);
+/// ``` QScrollBar* self, char* name ```
+void q_scrollbar_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

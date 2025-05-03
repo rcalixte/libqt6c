@@ -152,8 +152,8 @@ const char* q_pluginloader_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPluginLoader* self, const char* name ```
-void q_pluginloader_set_object_name(void* self, const char* name);
+/// ``` QPluginLoader* self, char* name ```
+void q_pluginloader_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

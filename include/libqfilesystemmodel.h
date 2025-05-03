@@ -799,8 +799,8 @@ const char* q_filesystemmodel_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QFileSystemModel* self, const char* name ```
-void q_filesystemmodel_set_object_name(void* self, const char* name);
+/// ``` QFileSystemModel* self, char* name ```
+void q_filesystemmodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

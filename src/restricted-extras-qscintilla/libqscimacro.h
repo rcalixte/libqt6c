@@ -140,8 +140,8 @@ const char* q_scimacro_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciMacro* self, const char* name ```
-void q_scimacro_set_object_name(void* self, const char* name);
+/// ``` QsciMacro* self, char* name ```
+void q_scimacro_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

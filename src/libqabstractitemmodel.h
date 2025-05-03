@@ -1493,8 +1493,8 @@ const char* q_abstractitemmodel_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAbstractItemModel* self, const char* name ```
-void q_abstractitemmodel_set_object_name(void* self, const char* name);
+/// ``` QAbstractItemModel* self, char* name ```
+void q_abstractitemmodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
@@ -2348,8 +2348,8 @@ const char* q_abstracttablemodel_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAbstractTableModel* self, const char* name ```
-void q_abstracttablemodel_set_object_name(void* self, const char* name);
+/// ``` QAbstractTableModel* self, char* name ```
+void q_abstracttablemodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
@@ -4397,8 +4397,8 @@ const char* q_abstractlistmodel_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAbstractListModel* self, const char* name ```
-void q_abstractlistmodel_set_object_name(void* self, const char* name);
+/// ``` QAbstractListModel* self, char* name ```
+void q_abstractlistmodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

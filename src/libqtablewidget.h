@@ -3838,8 +3838,8 @@ const char* q_tablewidget_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QTableWidget* self, const char* name ```
-void q_tablewidget_set_object_name(void* self, const char* name);
+/// ``` QTableWidget* self, char* name ```
+void q_tablewidget_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

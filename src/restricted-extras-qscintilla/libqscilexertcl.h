@@ -310,8 +310,8 @@ const char* q_scilexertcl_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerTCL* self, const char* name ```
-void q_scilexertcl_set_object_name(void* self, const char* name);
+/// ``` QsciLexerTCL* self, char* name ```
+void q_scilexertcl_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

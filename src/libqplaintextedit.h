@@ -3177,8 +3177,8 @@ const char* q_plaintextedit_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPlainTextEdit* self, const char* name ```
-void q_plaintextedit_set_object_name(void* self, const char* name);
+/// ``` QPlainTextEdit* self, char* name ```
+void q_plaintextedit_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
@@ -4732,8 +4732,8 @@ const char* q_plaintextdocumentlayout_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPlainTextDocumentLayout* self, const char* name ```
-void q_plaintextdocumentlayout_set_object_name(void* self, const char* name);
+/// ``` QPlainTextDocumentLayout* self, char* name ```
+void q_plaintextdocumentlayout_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

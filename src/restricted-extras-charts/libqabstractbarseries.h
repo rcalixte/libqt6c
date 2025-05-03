@@ -454,8 +454,8 @@ const char* q_abstractbarseries_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAbstractBarSeries* self, const char* name ```
-void q_abstractbarseries_set_object_name(void* self, const char* name);
+/// ``` QAbstractBarSeries* self, char* name ```
+void q_abstractbarseries_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

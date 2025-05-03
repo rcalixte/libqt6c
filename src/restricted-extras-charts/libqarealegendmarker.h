@@ -323,8 +323,8 @@ const char* q_arealegendmarker_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAreaLegendMarker* self, const char* name ```
-void q_arealegendmarker_set_object_name(void* self, const char* name);
+/// ``` QAreaLegendMarker* self, char* name ```
+void q_arealegendmarker_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

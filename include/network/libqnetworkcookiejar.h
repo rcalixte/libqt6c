@@ -202,8 +202,8 @@ const char* q_networkcookiejar_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QNetworkCookieJar* self, const char* name ```
-void q_networkcookiejar_set_object_name(void* self, const char* name);
+/// ``` QNetworkCookieJar* self, char* name ```
+void q_networkcookiejar_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

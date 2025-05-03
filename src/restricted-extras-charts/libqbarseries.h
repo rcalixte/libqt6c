@@ -563,8 +563,8 @@ const char* q_barseries_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QBarSeries* self, const char* name ```
-void q_barseries_set_object_name(void* self, const char* name);
+/// ``` QBarSeries* self, char* name ```
+void q_barseries_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

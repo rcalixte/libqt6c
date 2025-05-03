@@ -1103,8 +1103,8 @@ const char* q_splineseries_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSplineSeries* self, const char* name ```
-void q_splineseries_set_object_name(void* self, const char* name);
+/// ``` QSplineSeries* self, char* name ```
+void q_splineseries_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

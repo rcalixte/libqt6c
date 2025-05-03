@@ -116,8 +116,8 @@ const char* q_dtlsclientverifier_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QDtlsClientVerifier* self, const char* name ```
-void q_dtlsclientverifier_set_object_name(void* self, const char* name);
+/// ``` QDtlsClientVerifier* self, char* name ```
+void q_dtlsclientverifier_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
@@ -831,8 +831,8 @@ const char* q_dtls_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QDtls* self, const char* name ```
-void q_dtls_set_object_name(void* self, const char* name);
+/// ``` QDtls* self, char* name ```
+void q_dtls_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

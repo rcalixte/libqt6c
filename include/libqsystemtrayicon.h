@@ -214,8 +214,8 @@ const char* q_systemtrayicon_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSystemTrayIcon* self, const char* name ```
-void q_systemtrayicon_set_object_name(void* self, const char* name);
+/// ``` QSystemTrayIcon* self, char* name ```
+void q_systemtrayicon_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

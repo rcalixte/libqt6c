@@ -276,8 +276,8 @@ const char* q_vcandlestickmodelmapper_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QVCandlestickModelMapper* self, const char* name ```
-void q_vcandlestickmodelmapper_set_object_name(void* self, const char* name);
+/// ``` QVCandlestickModelMapper* self, char* name ```
+void q_vcandlestickmodelmapper_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

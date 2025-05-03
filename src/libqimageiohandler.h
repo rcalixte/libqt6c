@@ -351,8 +351,8 @@ const char* q_imageioplugin_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QImageIOPlugin* self, const char* name ```
-void q_imageioplugin_set_object_name(void* self, const char* name);
+/// ``` QImageIOPlugin* self, char* name ```
+void q_imageioplugin_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

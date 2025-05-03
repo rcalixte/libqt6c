@@ -444,8 +444,8 @@ const char* q_itemdelegate_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QItemDelegate* self, const char* name ```
-void q_itemdelegate_set_object_name(void* self, const char* name);
+/// ``` QItemDelegate* self, char* name ```
+void q_itemdelegate_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

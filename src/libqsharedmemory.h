@@ -180,8 +180,8 @@ const char* q_sharedmemory_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSharedMemory* self, const char* name ```
-void q_sharedmemory_set_object_name(void* self, const char* name);
+/// ``` QSharedMemory* self, char* name ```
+void q_sharedmemory_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

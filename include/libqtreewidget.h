@@ -3981,8 +3981,8 @@ const char* q_treewidget_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QTreeWidget* self, const char* name ```
-void q_treewidget_set_object_name(void* self, const char* name);
+/// ``` QTreeWidget* self, char* name ```
+void q_treewidget_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

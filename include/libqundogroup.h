@@ -218,8 +218,8 @@ const char* q_undogroup_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QUndoGroup* self, const char* name ```
-void q_undogroup_set_object_name(void* self, const char* name);
+/// ``` QUndoGroup* self, char* name ```
+void q_undogroup_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -2276,8 +2276,8 @@ const char* q_dialog_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QDialog* self, const char* name ```
-void q_dialog_set_object_name(void* self, const char* name);
+/// ``` QDialog* self, char* name ```
+void q_dialog_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

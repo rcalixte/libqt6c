@@ -2541,8 +2541,8 @@ const char* q_toolbutton_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QToolButton* self, const char* name ```
-void q_toolbutton_set_object_name(void* self, const char* name);
+/// ``` QToolButton* self, char* name ```
+void q_toolbutton_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

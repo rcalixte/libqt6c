@@ -260,8 +260,8 @@ const char* q_scilexermakefile_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerMakefile* self, const char* name ```
-void q_scilexermakefile_set_object_name(void* self, const char* name);
+/// ``` QsciLexerMakefile* self, char* name ```
+void q_scilexermakefile_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

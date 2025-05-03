@@ -1051,8 +1051,8 @@ const char* q_chart_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QChart* self, const char* name ```
-void q_chart_set_object_name(void* self, const char* name);
+/// ``` QChart* self, char* name ```
+void q_chart_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

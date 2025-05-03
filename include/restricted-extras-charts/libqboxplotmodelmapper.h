@@ -76,8 +76,8 @@ const char* q_boxplotmodelmapper_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QBoxPlotModelMapper* self, const char* name ```
-void q_boxplotmodelmapper_set_object_name(void* self, const char* name);
+/// ``` QBoxPlotModelMapper* self, char* name ```
+void q_boxplotmodelmapper_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

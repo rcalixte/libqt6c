@@ -1420,8 +1420,8 @@ const char* q_standarditemmodel_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QStandardItemModel* self, const char* name ```
-void q_standarditemmodel_set_object_name(void* self, const char* name);
+/// ``` QStandardItemModel* self, char* name ```
+void q_standarditemmodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

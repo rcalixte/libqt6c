@@ -263,8 +263,8 @@ const char* q_scilexerfortran_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerFortran* self, const char* name ```
-void q_scilexerfortran_set_object_name(void* self, const char* name);
+/// ``` QsciLexerFortran* self, char* name ```
+void q_scilexerfortran_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

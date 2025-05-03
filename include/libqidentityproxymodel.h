@@ -584,8 +584,8 @@ const char* q_identityproxymodel_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QIdentityProxyModel* self, const char* name ```
-void q_identityproxymodel_set_object_name(void* self, const char* name);
+/// ``` QIdentityProxyModel* self, char* name ```
+void q_identityproxymodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

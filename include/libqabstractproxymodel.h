@@ -746,8 +746,8 @@ const char* q_abstractproxymodel_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAbstractProxyModel* self, const char* name ```
-void q_abstractproxymodel_set_object_name(void* self, const char* name);
+/// ``` QAbstractProxyModel* self, char* name ```
+void q_abstractproxymodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

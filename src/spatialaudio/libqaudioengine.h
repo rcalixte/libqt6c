@@ -216,8 +216,8 @@ const char* q_audioengine_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAudioEngine* self, const char* name ```
-void q_audioengine_set_object_name(void* self, const char* name);
+/// ``` QAudioEngine* self, char* name ```
+void q_audioengine_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

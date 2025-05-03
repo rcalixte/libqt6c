@@ -343,8 +343,8 @@ const char* q_candlestickmodelmapper_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QCandlestickModelMapper* self, const char* name ```
-void q_candlestickmodelmapper_set_object_name(void* self, const char* name);
+/// ``` QCandlestickModelMapper* self, char* name ```
+void q_candlestickmodelmapper_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

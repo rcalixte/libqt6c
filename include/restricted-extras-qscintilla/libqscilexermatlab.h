@@ -257,8 +257,8 @@ const char* q_scilexermatlab_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerMatlab* self, const char* name ```
-void q_scilexermatlab_set_object_name(void* self, const char* name);
+/// ``` QsciLexerMatlab* self, char* name ```
+void q_scilexermatlab_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

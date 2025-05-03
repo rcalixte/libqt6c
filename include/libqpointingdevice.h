@@ -302,8 +302,8 @@ const char* q_pointingdevice_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPointingDevice* self, const char* name ```
-void q_pointingdevice_set_object_name(void* self, const char* name);
+/// ``` QPointingDevice* self, char* name ```
+void q_pointingdevice_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

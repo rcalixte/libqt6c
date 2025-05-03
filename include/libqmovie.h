@@ -327,8 +327,8 @@ const char* q_movie_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QMovie* self, const char* name ```
-void q_movie_set_object_name(void* self, const char* name);
+/// ``` QMovie* self, char* name ```
+void q_movie_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

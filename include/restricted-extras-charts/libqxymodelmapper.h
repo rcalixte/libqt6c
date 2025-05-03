@@ -76,8 +76,8 @@ const char* q_xymodelmapper_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QXYModelMapper* self, const char* name ```
-void q_xymodelmapper_set_object_name(void* self, const char* name);
+/// ``` QXYModelMapper* self, char* name ```
+void q_xymodelmapper_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

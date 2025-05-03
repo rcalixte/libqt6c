@@ -563,8 +563,8 @@ const char* q_horizontalbarseries_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QHorizontalBarSeries* self, const char* name ```
-void q_horizontalbarseries_set_object_name(void* self, const char* name);
+/// ``` QHorizontalBarSeries* self, char* name ```
+void q_horizontalbarseries_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

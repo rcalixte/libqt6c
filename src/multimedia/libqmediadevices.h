@@ -136,8 +136,8 @@ const char* q_mediadevices_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QMediaDevices* self, const char* name ```
-void q_mediadevices_set_object_name(void* self, const char* name);
+/// ``` QMediaDevices* self, char* name ```
+void q_mediadevices_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

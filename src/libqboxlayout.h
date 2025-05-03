@@ -637,8 +637,8 @@ const char* q_boxlayout_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QBoxLayout* self, const char* name ```
-void q_boxlayout_set_object_name(void* self, const char* name);
+/// ``` QBoxLayout* self, char* name ```
+void q_boxlayout_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
@@ -1875,8 +1875,8 @@ const char* q_hboxlayout_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QHBoxLayout* self, const char* name ```
-void q_hboxlayout_set_object_name(void* self, const char* name);
+/// ``` QHBoxLayout* self, char* name ```
+void q_hboxlayout_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
@@ -3458,8 +3458,8 @@ const char* q_vboxlayout_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QVBoxLayout* self, const char* name ```
-void q_vboxlayout_set_object_name(void* self, const char* name);
+/// ``` QVBoxLayout* self, char* name ```
+void q_vboxlayout_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -399,8 +399,8 @@ const char* q_pdfbookmarkmodel_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPdfBookmarkModel* self, const char* name ```
-void q_pdfbookmarkmodel_set_object_name(void* self, const char* name);
+/// ``` QPdfBookmarkModel* self, char* name ```
+void q_pdfbookmarkmodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

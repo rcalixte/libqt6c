@@ -1034,8 +1034,8 @@ const char* q_sortfilterproxymodel_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSortFilterProxyModel* self, const char* name ```
-void q_sortfilterproxymodel_set_object_name(void* self, const char* name);
+/// ``` QSortFilterProxyModel* self, char* name ```
+void q_sortfilterproxymodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

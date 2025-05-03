@@ -589,8 +589,8 @@ const char* q_webenginehistorymodel_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QWebEngineHistoryModel* self, const char* name ```
-void q_webenginehistorymodel_set_object_name(void* self, const char* name);
+/// ``` QWebEngineHistoryModel* self, char* name ```
+void q_webenginehistorymodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
@@ -962,8 +962,8 @@ const char* q_webenginehistory_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QWebEngineHistory* self, const char* name ```
-void q_webenginehistory_set_object_name(void* self, const char* name);
+/// ``` QWebEngineHistory* self, char* name ```
+void q_webenginehistory_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -2225,8 +2225,8 @@ const char* q_fontdialog_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QFontDialog* self, const char* name ```
-void q_fontdialog_set_object_name(void* self, const char* name);
+/// ``` QFontDialog* self, char* name ```
+void q_fontdialog_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

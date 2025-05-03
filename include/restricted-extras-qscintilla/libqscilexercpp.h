@@ -505,8 +505,8 @@ const char* q_scilexercpp_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerCPP* self, const char* name ```
-void q_scilexercpp_set_object_name(void* self, const char* name);
+/// ``` QsciLexerCPP* self, char* name ```
+void q_scilexercpp_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

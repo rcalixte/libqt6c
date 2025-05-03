@@ -263,8 +263,8 @@ const char* q_webenginedownloadrequest_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QWebEngineDownloadRequest* self, const char* name ```
-void q_webenginedownloadrequest_set_object_name(void* self, const char* name);
+/// ``` QWebEngineDownloadRequest* self, char* name ```
+void q_webenginedownloadrequest_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

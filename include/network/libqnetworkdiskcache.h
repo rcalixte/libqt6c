@@ -243,8 +243,8 @@ const char* q_networkdiskcache_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QNetworkDiskCache* self, const char* name ```
-void q_networkdiskcache_set_object_name(void* self, const char* name);
+/// ``` QNetworkDiskCache* self, char* name ```
+void q_networkdiskcache_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

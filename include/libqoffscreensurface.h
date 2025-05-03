@@ -192,8 +192,8 @@ const char* q_offscreensurface_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QOffscreenSurface* self, const char* name ```
-void q_offscreensurface_set_object_name(void* self, const char* name);
+/// ``` QOffscreenSurface* self, char* name ```
+void q_offscreensurface_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

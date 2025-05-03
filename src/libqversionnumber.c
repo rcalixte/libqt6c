@@ -92,12 +92,12 @@ const char* q_versionnumber_to_string(void* self) {
     return _ret;
 }
 
-QVersionNumber* q_versionnumber_from_string(const char* stringVal) {
+QVersionNumber* q_versionnumber_from_string(char* stringVal) {
     libqt_strview stringVal_strview = qstrview(stringVal);
     return QVersionNumber_FromString((QAnyStringView*)&stringVal_strview);
 }
 
-QVersionNumber* q_versionnumber_from_string2(const char* stringVal, int64_t* suffixIndex) {
+QVersionNumber* q_versionnumber_from_string2(char* stringVal, int64_t* suffixIndex) {
     libqt_strview stringVal_strview = qstrview(stringVal);
     return QVersionNumber_FromString2((QAnyStringView*)&stringVal_strview, suffixIndex);
 }

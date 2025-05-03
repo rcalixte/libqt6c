@@ -2109,8 +2109,8 @@ const char* q_splashscreen_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSplashScreen* self, const char* name ```
-void q_splashscreen_set_object_name(void* self, const char* name);
+/// ``` QSplashScreen* self, char* name ```
+void q_splashscreen_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

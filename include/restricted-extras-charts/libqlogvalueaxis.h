@@ -1035,8 +1035,8 @@ const char* q_logvalueaxis_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QLogValueAxis* self, const char* name ```
-void q_logvalueaxis_set_object_name(void* self, const char* name);
+/// ``` QLogValueAxis* self, char* name ```
+void q_logvalueaxis_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

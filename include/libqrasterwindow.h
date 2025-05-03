@@ -1124,8 +1124,8 @@ const char* q_rasterwindow_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QRasterWindow* self, const char* name ```
-void q_rasterwindow_set_object_name(void* self, const char* name);
+/// ``` QRasterWindow* self, char* name ```
+void q_rasterwindow_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

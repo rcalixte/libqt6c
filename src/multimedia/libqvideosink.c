@@ -115,7 +115,7 @@ const char* q_videosink_object_name(void* self) {
     return _ret;
 }
 
-void q_videosink_set_object_name(void* self, const char* name) {
+void q_videosink_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }

@@ -21,7 +21,7 @@ QCalendar* q_calendar_new4(int64_t system) {
     return QCalendar_new4(system);
 }
 
-QCalendar* q_calendar_new5(const char* name) {
+QCalendar* q_calendar_new5(char* name) {
     libqt_strview name_strview = qstrview(name);
 
     return QCalendar_new5((QAnyStringView*)&name_strview);

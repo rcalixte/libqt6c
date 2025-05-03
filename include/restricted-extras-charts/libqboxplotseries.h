@@ -437,8 +437,8 @@ const char* q_boxplotseries_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QBoxPlotSeries* self, const char* name ```
-void q_boxplotseries_set_object_name(void* self, const char* name);
+/// ``` QBoxPlotSeries* self, char* name ```
+void q_boxplotseries_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

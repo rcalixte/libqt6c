@@ -2458,8 +2458,8 @@ const char* q_pushbutton_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPushButton* self, const char* name ```
-void q_pushbutton_set_object_name(void* self, const char* name);
+/// ``` QPushButton* self, char* name ```
+void q_pushbutton_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

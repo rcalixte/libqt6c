@@ -715,8 +715,8 @@ const char* q_localsocket_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QLocalSocket* self, const char* name ```
-void q_localsocket_set_object_name(void* self, const char* name);
+/// ``` QLocalSocket* self, char* name ```
+void q_localsocket_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

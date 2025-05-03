@@ -2193,8 +2193,8 @@ const char* q_dockwidget_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QDockWidget* self, const char* name ```
-void q_dockwidget_set_object_name(void* self, const char* name);
+/// ``` QDockWidget* self, char* name ```
+void q_dockwidget_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

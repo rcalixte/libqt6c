@@ -131,8 +131,8 @@ const char* q_videosink_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QVideoSink* self, const char* name ```
-void q_videosink_set_object_name(void* self, const char* name);
+/// ``` QVideoSink* self, char* name ```
+void q_videosink_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

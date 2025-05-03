@@ -297,8 +297,8 @@ const char* q_styleditemdelegate_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QStyledItemDelegate* self, const char* name ```
-void q_styleditemdelegate_set_object_name(void* self, const char* name);
+/// ``` QStyledItemDelegate* self, char* name ```
+void q_styleditemdelegate_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

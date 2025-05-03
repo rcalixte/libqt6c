@@ -563,8 +563,8 @@ const char* q_percentbarseries_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPercentBarSeries* self, const char* name ```
-void q_percentbarseries_set_object_name(void* self, const char* name);
+/// ``` QPercentBarSeries* self, char* name ```
+void q_percentbarseries_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

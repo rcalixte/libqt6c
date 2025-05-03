@@ -191,8 +191,8 @@ const char* q_hxymodelmapper_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QHXYModelMapper* self, const char* name ```
-void q_hxymodelmapper_set_object_name(void* self, const char* name);
+/// ``` QHXYModelMapper* self, char* name ```
+void q_hxymodelmapper_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

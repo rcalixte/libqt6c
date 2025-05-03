@@ -551,8 +551,8 @@ const char* q_candlestickseries_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QCandlestickSeries* self, const char* name ```
-void q_candlestickseries_set_object_name(void* self, const char* name);
+/// ``` QCandlestickSeries* self, char* name ```
+void q_candlestickseries_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

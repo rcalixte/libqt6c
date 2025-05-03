@@ -118,8 +118,8 @@ const char* q_accessiblebridgeplugin_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAccessibleBridgePlugin* self, const char* name ```
-void q_accessiblebridgeplugin_set_object_name(void* self, const char* name);
+/// ``` QAccessibleBridgePlugin* self, char* name ```
+void q_accessiblebridgeplugin_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -699,8 +699,8 @@ const char* q_formlayout_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QFormLayout* self, const char* name ```
-void q_formlayout_set_object_name(void* self, const char* name);
+/// ``` QFormLayout* self, char* name ```
+void q_formlayout_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

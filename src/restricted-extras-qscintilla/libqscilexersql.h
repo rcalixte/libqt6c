@@ -410,8 +410,8 @@ const char* q_scilexersql_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerSQL* self, const char* name ```
-void q_scilexersql_set_object_name(void* self, const char* name);
+/// ``` QsciLexerSQL* self, char* name ```
+void q_scilexersql_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

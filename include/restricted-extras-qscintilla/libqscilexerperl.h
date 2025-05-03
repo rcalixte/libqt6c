@@ -400,8 +400,8 @@ const char* q_scilexerperl_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerPerl* self, const char* name ```
-void q_scilexerperl_set_object_name(void* self, const char* name);
+/// ``` QsciLexerPerl* self, char* name ```
+void q_scilexerperl_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

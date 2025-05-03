@@ -2395,8 +2395,8 @@ const char* q_menubar_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QMenuBar* self, const char* name ```
-void q_menubar_set_object_name(void* self, const char* name);
+/// ``` QMenuBar* self, char* name ```
+void q_menubar_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

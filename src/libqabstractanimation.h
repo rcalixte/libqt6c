@@ -273,8 +273,8 @@ const char* q_abstractanimation_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAbstractAnimation* self, const char* name ```
-void q_abstractanimation_set_object_name(void* self, const char* name);
+/// ``` QAbstractAnimation* self, char* name ```
+void q_abstractanimation_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
@@ -910,8 +910,8 @@ const char* q_animationdriver_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAnimationDriver* self, const char* name ```
-void q_animationdriver_set_object_name(void* self, const char* name);
+/// ``` QAnimationDriver* self, char* name ```
+void q_animationdriver_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

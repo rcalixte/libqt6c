@@ -234,8 +234,8 @@ const char* q_clipboard_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QClipboard* self, const char* name ```
-void q_clipboard_set_object_name(void* self, const char* name);
+/// ``` QClipboard* self, char* name ```
+void q_clipboard_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

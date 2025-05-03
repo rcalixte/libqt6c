@@ -231,7 +231,7 @@ const char* q_boxset_object_name(void* self) {
     return _ret;
 }
 
-void q_boxset_set_object_name(void* self, const char* name) {
+void q_boxset_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }

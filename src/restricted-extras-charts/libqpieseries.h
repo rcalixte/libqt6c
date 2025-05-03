@@ -466,8 +466,8 @@ const char* q_pieseries_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPieSeries* self, const char* name ```
-void q_pieseries_set_object_name(void* self, const char* name);
+/// ``` QPieSeries* self, char* name ```
+void q_pieseries_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -154,8 +154,8 @@ const char* q_sessionmanager_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSessionManager* self, const char* name ```
-void q_sessionmanager_set_object_name(void* self, const char* name);
+/// ``` QSessionManager* self, char* name ```
+void q_sessionmanager_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

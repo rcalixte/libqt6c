@@ -168,8 +168,8 @@ const char* q_actiongroup_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QActionGroup* self, const char* name ```
-void q_actiongroup_set_object_name(void* self, const char* name);
+/// ``` QActionGroup* self, char* name ```
+void q_actiongroup_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

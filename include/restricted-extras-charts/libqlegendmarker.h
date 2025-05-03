@@ -230,8 +230,8 @@ const char* q_legendmarker_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QLegendMarker* self, const char* name ```
-void q_legendmarker_set_object_name(void* self, const char* name);
+/// ``` QLegendMarker* self, char* name ```
+void q_legendmarker_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

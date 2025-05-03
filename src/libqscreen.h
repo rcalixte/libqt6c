@@ -341,8 +341,8 @@ const char* q_screen_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QScreen* self, const char* name ```
-void q_screen_set_object_name(void* self, const char* name);
+/// ``` QScreen* self, char* name ```
+void q_screen_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

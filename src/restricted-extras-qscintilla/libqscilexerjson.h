@@ -325,8 +325,8 @@ const char* q_scilexerjson_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerJSON* self, const char* name ```
-void q_scilexerjson_set_object_name(void* self, const char* name);
+/// ``` QsciLexerJSON* self, char* name ```
+void q_scilexerjson_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

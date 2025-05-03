@@ -191,8 +191,8 @@ const char* q_vboxplotmodelmapper_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QVBoxPlotModelMapper* self, const char* name ```
-void q_vboxplotmodelmapper_set_object_name(void* self, const char* name);
+/// ``` QVBoxPlotModelMapper* self, char* name ```
+void q_vboxplotmodelmapper_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

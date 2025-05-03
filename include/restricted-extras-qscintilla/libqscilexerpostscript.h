@@ -375,8 +375,8 @@ const char* q_scilexerpostscript_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerPostScript* self, const char* name ```
-void q_scilexerpostscript_set_object_name(void* self, const char* name);
+/// ``` QsciLexerPostScript* self, char* name ```
+void q_scilexerpostscript_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

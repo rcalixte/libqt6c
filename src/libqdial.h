@@ -2424,8 +2424,8 @@ const char* q_dial_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QDial* self, const char* name ```
-void q_dial_set_object_name(void* self, const char* name);
+/// ``` QDial* self, char* name ```
+void q_dial_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

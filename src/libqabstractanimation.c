@@ -227,7 +227,7 @@ const char* q_abstractanimation_object_name(void* self) {
     return _ret;
 }
 
-void q_abstractanimation_set_object_name(void* self, const char* name) {
+void q_abstractanimation_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }
@@ -647,7 +647,7 @@ const char* q_animationdriver_object_name(void* self) {
     return _ret;
 }
 
-void q_animationdriver_set_object_name(void* self, const char* name) {
+void q_animationdriver_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }

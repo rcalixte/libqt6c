@@ -447,7 +447,7 @@ const char* q_webenginehistorymodel_object_name(void* self) {
     return _ret;
 }
 
-void q_webenginehistorymodel_set_object_name(void* self, const char* name) {
+void q_webenginehistorymodel_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }
@@ -718,7 +718,7 @@ const char* q_webenginehistory_object_name(void* self) {
     return _ret;
 }
 
-void q_webenginehistory_set_object_name(void* self, const char* name) {
+void q_webenginehistory_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }

@@ -212,8 +212,8 @@ const char* q_pdfdocument_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPdfDocument* self, const char* name ```
-void q_pdfdocument_set_object_name(void* self, const char* name);
+/// ``` QPdfDocument* self, char* name ```
+void q_pdfdocument_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

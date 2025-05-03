@@ -195,8 +195,8 @@ const char* q_pdfwriter_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPdfWriter* self, const char* name ```
-void q_pdfwriter_set_object_name(void* self, const char* name);
+/// ``` QPdfWriter* self, char* name ```
+void q_pdfwriter_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -380,8 +380,8 @@ const char* q_parallelanimationgroup_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QParallelAnimationGroup* self, const char* name ```
-void q_parallelanimationgroup_set_object_name(void* self, const char* name);
+/// ``` QParallelAnimationGroup* self, char* name ```
+void q_parallelanimationgroup_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

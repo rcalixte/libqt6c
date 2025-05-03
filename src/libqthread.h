@@ -261,8 +261,8 @@ const char* q_thread_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QThread* self, const char* name ```
-void q_thread_set_object_name(void* self, const char* name);
+/// ``` QThread* self, char* name ```
+void q_thread_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

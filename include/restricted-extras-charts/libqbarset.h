@@ -423,8 +423,8 @@ const char* q_barset_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QBarSet* self, const char* name ```
-void q_barset_set_object_name(void* self, const char* name);
+/// ``` QBarSet* self, char* name ```
+void q_barset_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

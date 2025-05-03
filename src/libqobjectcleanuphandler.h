@@ -95,8 +95,8 @@ const char* q_objectcleanuphandler_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QObjectCleanupHandler* self, const char* name ```
-void q_objectcleanuphandler_set_object_name(void* self, const char* name);
+/// ``` QObjectCleanupHandler* self, char* name ```
+void q_objectcleanuphandler_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

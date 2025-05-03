@@ -941,8 +941,8 @@ const char* q_legend_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QLegend* self, const char* name ```
-void q_legend_set_object_name(void* self, const char* name);
+/// ``` QLegend* self, char* name ```
+void q_legend_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -270,8 +270,8 @@ const char* q_syntaxhighlighter_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSyntaxHighlighter* self, const char* name ```
-void q_syntaxhighlighter_set_object_name(void* self, const char* name);
+/// ``` QSyntaxHighlighter* self, char* name ```
+void q_syntaxhighlighter_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

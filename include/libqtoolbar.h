@@ -2267,8 +2267,8 @@ const char* q_toolbar_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QToolBar* self, const char* name ```
-void q_toolbar_set_object_name(void* self, const char* name);
+/// ``` QToolBar* self, char* name ```
+void q_toolbar_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -138,8 +138,8 @@ const char* q_pdfpagerenderer_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPdfPageRenderer* self, const char* name ```
-void q_pdfpagerenderer_set_object_name(void* self, const char* name);
+/// ``` QPdfPageRenderer* self, char* name ```
+void q_pdfpagerenderer_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

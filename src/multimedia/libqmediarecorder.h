@@ -383,8 +383,8 @@ const char* q_mediarecorder_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QMediaRecorder* self, const char* name ```
-void q_mediarecorder_set_object_name(void* self, const char* name);
+/// ``` QMediaRecorder* self, char* name ```
+void q_mediarecorder_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

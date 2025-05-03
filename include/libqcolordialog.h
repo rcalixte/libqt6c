@@ -2231,8 +2231,8 @@ const char* q_colordialog_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QColorDialog* self, const char* name ```
-void q_colordialog_set_object_name(void* self, const char* name);
+/// ``` QColorDialog* self, char* name ```
+void q_colordialog_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

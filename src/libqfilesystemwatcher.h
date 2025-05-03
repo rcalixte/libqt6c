@@ -120,8 +120,8 @@ const char* q_filesystemwatcher_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QFileSystemWatcher* self, const char* name ```
-void q_filesystemwatcher_set_object_name(void* self, const char* name);
+/// ``` QFileSystemWatcher* self, char* name ```
+void q_filesystemwatcher_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

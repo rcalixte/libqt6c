@@ -574,8 +574,8 @@ const char* q_iodevice_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QIODevice* self, const char* name ```
-void q_iodevice_set_object_name(void* self, const char* name);
+/// ``` QIODevice* self, char* name ```
+void q_iodevice_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

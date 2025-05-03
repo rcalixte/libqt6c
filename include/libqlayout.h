@@ -575,8 +575,8 @@ const char* q_layout_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QLayout* self, const char* name ```
-void q_layout_set_object_name(void* self, const char* name);
+/// ``` QLayout* self, char* name ```
+void q_layout_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

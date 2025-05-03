@@ -1040,8 +1040,8 @@ const char* q_coloraxis_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QColorAxis* self, const char* name ```
-void q_coloraxis_set_object_name(void* self, const char* name);
+/// ``` QColorAxis* self, char* name ```
+void q_coloraxis_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

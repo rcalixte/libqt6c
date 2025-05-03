@@ -2248,8 +2248,8 @@ const char* q_lcdnumber_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QLCDNumber* self, const char* name ```
-void q_lcdnumber_set_object_name(void* self, const char* name);
+/// ``` QLCDNumber* self, char* name ```
+void q_lcdnumber_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

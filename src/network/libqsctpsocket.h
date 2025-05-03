@@ -709,8 +709,8 @@ const char* q_sctpsocket_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSctpSocket* self, const char* name ```
-void q_sctpsocket_set_object_name(void* self, const char* name);
+/// ``` QSctpSocket* self, char* name ```
+void q_sctpsocket_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

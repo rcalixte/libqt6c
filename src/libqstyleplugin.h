@@ -96,8 +96,8 @@ const char* q_styleplugin_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QStylePlugin* self, const char* name ```
-void q_styleplugin_set_object_name(void* self, const char* name);
+/// ``` QStylePlugin* self, char* name ```
+void q_styleplugin_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

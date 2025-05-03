@@ -243,8 +243,8 @@ const char* q_svgrenderer_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSvgRenderer* self, const char* name ```
-void q_svgrenderer_set_object_name(void* self, const char* name);
+/// ``` QSvgRenderer* self, char* name ```
+void q_svgrenderer_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

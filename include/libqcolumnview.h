@@ -3029,8 +3029,8 @@ const char* q_columnview_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QColumnView* self, const char* name ```
-void q_columnview_set_object_name(void* self, const char* name);
+/// ``` QColumnView* self, char* name ```
+void q_columnview_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

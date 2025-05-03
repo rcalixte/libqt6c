@@ -169,8 +169,8 @@ const char* q_ambientsound_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAmbientSound* self, const char* name ```
-void q_ambientsound_set_object_name(void* self, const char* name);
+/// ``` QAmbientSound* self, char* name ```
+void q_ambientsound_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

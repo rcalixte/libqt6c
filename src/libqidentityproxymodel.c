@@ -478,7 +478,7 @@ const char* q_identityproxymodel_object_name(void* self) {
     return _ret;
 }
 
-void q_identityproxymodel_set_object_name(void* self, const char* name) {
+void q_identityproxymodel_set_object_name(void* self, char* name) {
     libqt_strview name_strview = qstrview(name);
     QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
 }

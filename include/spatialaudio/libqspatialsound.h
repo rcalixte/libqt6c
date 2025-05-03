@@ -351,8 +351,8 @@ const char* q_spatialsound_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSpatialSound* self, const char* name ```
-void q_spatialsound_set_object_name(void* self, const char* name);
+/// ``` QSpatialSound* self, char* name ```
+void q_spatialsound_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

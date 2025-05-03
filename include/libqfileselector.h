@@ -106,8 +106,8 @@ const char* q_fileselector_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QFileSelector* self, const char* name ```
-void q_fileselector_set_object_name(void* self, const char* name);
+/// ``` QFileSelector* self, char* name ```
+void q_fileselector_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

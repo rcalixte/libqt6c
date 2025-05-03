@@ -2381,8 +2381,8 @@ const char* q_scrollarea_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QScrollArea* self, const char* name ```
-void q_scrollarea_set_object_name(void* self, const char* name);
+/// ``` QScrollArea* self, char* name ```
+void q_scrollarea_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -2158,8 +2158,8 @@ const char* q_frame_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QFrame* self, const char* name ```
-void q_frame_set_object_name(void* self, const char* name);
+/// ``` QFrame* self, char* name ```
+void q_frame_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

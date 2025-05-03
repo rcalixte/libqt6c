@@ -76,8 +76,8 @@ const char* q_piemodelmapper_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPieModelMapper* self, const char* name ```
-void q_piemodelmapper_set_object_name(void* self, const char* name);
+/// ``` QPieModelMapper* self, char* name ```
+void q_piemodelmapper_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

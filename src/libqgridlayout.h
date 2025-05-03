@@ -672,8 +672,8 @@ const char* q_gridlayout_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QGridLayout* self, const char* name ```
-void q_gridlayout_set_object_name(void* self, const char* name);
+/// ``` QGridLayout* self, char* name ```
+void q_gridlayout_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///

@@ -422,8 +422,8 @@ const char* q_propertyanimation_object_name(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPropertyAnimation* self, const char* name ```
-void q_propertyanimation_set_object_name(void* self, const char* name);
+/// ``` QPropertyAnimation* self, char* name ```
+void q_propertyanimation_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
