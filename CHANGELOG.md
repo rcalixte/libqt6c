@@ -1,4 +1,8 @@
 
+### 6.4.2 rev9 (3 May 2025)
+
+* Fix projection of QAnyStringView (#8)
+
 ### 6.4.2 rev8 (20 April 2025)
 
 * Add [Qt PDF](https://doc.qt.io/qt-6/qtpdf-index.html) (#7)
