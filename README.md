@@ -165,7 +165,7 @@ zig build
 Users of Arch-based distributions need to __make sure that all packages are up-to-date__ first and will need to add the following option to support successful compilation:
 
 ```bash
-zig build -Denable-workaround=true
+zig build -Denable-workaround
 ```
 
 The compiled libraries can be installed to the system in a non-default location by adding the `--prefix-lib-dir` option to the build command:
@@ -177,7 +177,7 @@ sudo zig build --prefix-lib-dir /usr/local/lib/libqt6c # creates /usr/local/lib/
 To skip the restricted extras:
 
 ```bash
-zig build -Dskip-restricted=true
+zig build -Dskip-restricted
 ```
 
 To see the full list of build options available:
@@ -284,6 +284,12 @@ Currently, only `ReleaseFast`, `ReleaseSafe`, and `ReleaseSmall` are supported. 
 
 ```bash
 zig build -Doptimize=ReleaseSafe
+```
+
+or
+
+```bash
+zig build --release=safe
 ```
 
 ### Q5. Can I use another build system?
