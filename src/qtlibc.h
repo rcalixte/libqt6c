@@ -98,7 +98,7 @@ static libqt_strview qstrview(const char* string) {
     return view;
 }
 
-static libqt_list qstrlist(void* items, size_t len) {
+static libqt_list qlist(void* items, size_t len) {
     libqt_list arr;
     arr.data.ptr = items;
     arr.len = len;
