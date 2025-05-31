@@ -34,6 +34,8 @@ void q_abstractconcatenable_copy_assign(void* self, void* other);
 /// ``` QAbstractConcatenable* self, QAbstractConcatenable* other ```
 void q_abstractconcatenable_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractconcatenable.html#dtor.QAbstractConcatenable)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAbstractConcatenable* self ```

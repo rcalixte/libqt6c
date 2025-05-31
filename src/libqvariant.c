@@ -84,7 +84,7 @@ QVariant* q_variant_new15(const char* stringlist[]) {
     for (size_t _i = 0; _i < stringlist_len; ++_i) {
         stringlist_qstr[_i] = qstring(stringlist[_i]);
     }
-    libqt_list stringlist_list = qstrlist(stringlist_qstr, stringlist_len);
+    libqt_list stringlist_list = qlist(stringlist_qstr, stringlist_len);
 
     return QVariant_new15(stringlist_list);
 }
@@ -449,11 +449,11 @@ void* q_variant_data(void* self) {
     return QVariant_Data((QVariant*)self);
 }
 
-void* q_variant_const_data(void* self) {
+const void* q_variant_const_data(void* self) {
     return QVariant_ConstData((QVariant*)self);
 }
 
-void* q_variant_data2(void* self) {
+const void* q_variant_data2(void* self) {
     return QVariant_Data2((QVariant*)self);
 }
 
@@ -509,7 +509,7 @@ QVariant* q_variantconstpointer_operator_multiply(void* self) {
     return QVariantConstPointer_OperatorMultiply((QVariantConstPointer*)self);
 }
 
-QVariant* q_variantconstpointer_operator_minus_greater(void* self) {
+const QVariant* q_variantconstpointer_operator_minus_greater(void* self) {
     return QVariantConstPointer_OperatorMinusGreater((QVariantConstPointer*)self);
 }
 

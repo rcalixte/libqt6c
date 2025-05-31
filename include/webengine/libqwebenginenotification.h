@@ -12,23 +12,18 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
-#include "../libqevent.h"
 #include "../libqimage.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include <string.h>
-#include "../libqthread.h"
 #include "../libqurl.h"
-#include "../libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qwebenginenotification.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QWebEngineNotification* self ```
-QMetaObject* q_webenginenotification_meta_object(void* self);
+const QMetaObject* q_webenginenotification_meta_object(void* self);
 
 /// ``` QWebEngineNotification* self, const char* param1 ```
 void* q_webenginenotification_metacast(void* self, const char* param1);
@@ -101,6 +96,8 @@ void q_webenginenotification_close(void* self);
 /// ``` QWebEngineNotification* self ```
 void q_webenginenotification_closed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenotification.html#closed)
+///
 /// ``` QWebEngineNotification* self, void (*slot)(QWebEngineNotification*) ```
 void q_webenginenotification_on_closed(void* self, void (*slot)(void*));
 
@@ -210,7 +207,7 @@ void q_webenginenotification_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QWebEngineNotification* self ```
-libqt_list /* of QObject* */ q_webenginenotification_children(void* self);
+const libqt_list /* of QObject* */ q_webenginenotification_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -308,7 +305,7 @@ QBindingStorage* q_webenginenotification_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QWebEngineNotification* self ```
-QBindingStorage* q_webenginenotification_binding_storage2(void* self);
+const QBindingStorage* q_webenginenotification_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -318,6 +315,8 @@ QBindingStorage* q_webenginenotification_binding_storage2(void* self);
 void q_webenginenotification_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QWebEngineNotification* self, void (*slot)(QObject*) ```
 void q_webenginenotification_on_destroyed(void* self, void (*slot)(void*));
@@ -373,9 +372,22 @@ void q_webenginenotification_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QWebEngineNotification* self, void (*slot)(QObject*, QObject*) ```
 void q_webenginenotification_on_destroyed1(void* self, void (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineNotification* self, void (*slot)(QObject*, const char*) ```
+void q_webenginenotification_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenotification.html#dtor.QWebEngineNotification)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWebEngineNotification* self ```

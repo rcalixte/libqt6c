@@ -1,16 +1,11 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqlayout.hpp"
 #include "libqlayoutitem.hpp"
-#include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
 #include <string.h>
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqwidget.hpp"
 #include "libqcoreevent.hpp"
 #include "libqgridlayout.hpp"
@@ -24,7 +19,7 @@ QGridLayout* q_gridlayout_new2() {
     return QGridLayout_new2();
 }
 
-QMetaObject* q_gridlayout_meta_object(void* self) {
+const QMetaObject* q_gridlayout_meta_object(void* self) {
     return QGridLayout_MetaObject((QGridLayout*)self);
 }
 
@@ -497,8 +492,7 @@ const char* q_gridlayout_object_name(void* self) {
 }
 
 void q_gridlayout_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_gridlayout_is_widget_type(void* self) {
@@ -537,7 +531,7 @@ void q_gridlayout_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_gridlayout_children(void* self) {
+const libqt_list /* of QObject* */ q_gridlayout_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -604,7 +598,7 @@ QBindingStorage* q_gridlayout_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_gridlayout_binding_storage2(void* self) {
+const QBindingStorage* q_gridlayout_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -938,6 +932,10 @@ bool q_gridlayout_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_gridlayout_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QGridLayout_OnIsSignalConnected((QGridLayout*)self, (intptr_t)slot);
+}
+
+void q_gridlayout_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_gridlayout_delete(void* self) {

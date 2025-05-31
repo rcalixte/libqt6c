@@ -1,10 +1,5 @@
-#include "libqabstractaxis.hpp"
 #include "libqabstractseries.hpp"
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqbrush.hpp"
-#include "libqchart.hpp"
-#include "../libqevent.hpp"
 #include "../libqcolor.hpp"
 #include "../libqfont.hpp"
 #include "../libqimage.hpp"
@@ -13,13 +8,11 @@
 #include "../libqpen.hpp"
 #include "../libqpoint.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
 #include "../libqvariant.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqxyseries.hpp"
 #include "libqxyseries.h"
 
-QMetaObject* q_xyseries_meta_object(void* self) {
+const QMetaObject* q_xyseries_meta_object(void* self) {
     return QXYSeries_MetaObject((QXYSeries*)self);
 }
 
@@ -46,17 +39,8 @@ void q_xyseries_append_with_point(void* self, void* point) {
     QXYSeries_AppendWithPoint((QXYSeries*)self, (QPointF*)point);
 }
 
-void q_xyseries_append_with_points(void* self, void* points[]) {
-    QPointF** points_arr = (QPointF**)points;
-    size_t points_len = 0;
-    while (points_arr[points_len] != NULL) {
-        points_len++;
-    }
-    libqt_list points_list = {
-        .len = points_len,
-        .data = {(QPointF*)points},
-    };
-    QXYSeries_AppendWithPoints((QXYSeries*)self, points_list);
+void q_xyseries_append_with_points(void* self, libqt_list points) {
+    QXYSeries_AppendWithPoints((QXYSeries*)self, points);
 }
 
 void q_xyseries_replace(void* self, double oldX, double oldY, double newX, double newY) {
@@ -113,7 +97,7 @@ libqt_list /* of QPointF* */ q_xyseries_points_vector(void* self) {
     return _arr;
 }
 
-QPointF* q_xyseries_at(void* self, int index) {
+const QPointF* q_xyseries_at(void* self, int index) {
     return QXYSeries_At((QXYSeries*)self, index);
 }
 
@@ -121,17 +105,8 @@ QXYSeries* q_xyseries_operator_shift_left(void* self, void* point) {
     return QXYSeries_OperatorShiftLeft((QXYSeries*)self, (QPointF*)point);
 }
 
-QXYSeries* q_xyseries_operator_shift_left_with_points(void* self, void* points[]) {
-    QPointF** points_arr = (QPointF**)points;
-    size_t points_len = 0;
-    while (points_arr[points_len] != NULL) {
-        points_len++;
-    }
-    libqt_list points_list = {
-        .len = points_len,
-        .data = {(QPointF*)points},
-    };
-    return QXYSeries_OperatorShiftLeftWithPoints((QXYSeries*)self, points_list);
+QXYSeries* q_xyseries_operator_shift_left_with_points(void* self, libqt_list points) {
+    return QXYSeries_OperatorShiftLeftWithPoints((QXYSeries*)self, points);
 }
 
 void q_xyseries_set_pen(void* self, void* pen) {
@@ -217,17 +192,8 @@ bool q_xyseries_point_labels_clipping(void* self) {
     return QXYSeries_PointLabelsClipping((QXYSeries*)self);
 }
 
-void q_xyseries_replace_with_points(void* self, void* points[]) {
-    QPointF** points_arr = (QPointF**)points;
-    size_t points_len = 0;
-    while (points_arr[points_len] != NULL) {
-        points_len++;
-    }
-    libqt_list points_list = {
-        .len = points_len,
-        .data = {(QPointF*)points},
-    };
-    QXYSeries_ReplaceWithPoints((QXYSeries*)self, points_list);
+void q_xyseries_replace_with_points(void* self, libqt_list points) {
+    QXYSeries_ReplaceWithPoints((QXYSeries*)self, points);
 }
 
 bool q_xyseries_is_point_selected(void* self, int index) {
@@ -254,40 +220,16 @@ void q_xyseries_deselect_all_points(void* self) {
     QXYSeries_DeselectAllPoints((QXYSeries*)self);
 }
 
-void q_xyseries_select_points(void* self, int* indexes[]) {
-    size_t indexes_len = 0;
-    while (indexes[indexes_len] != NULL) {
-        indexes_len++;
-    }
-    libqt_list indexes_list = {
-        .len = indexes_len,
-        .data = {(int*)indexes},
-    };
-    QXYSeries_SelectPoints((QXYSeries*)self, indexes_list);
+void q_xyseries_select_points(void* self, libqt_list indexes) {
+    QXYSeries_SelectPoints((QXYSeries*)self, indexes);
 }
 
-void q_xyseries_deselect_points(void* self, int* indexes[]) {
-    size_t indexes_len = 0;
-    while (indexes[indexes_len] != NULL) {
-        indexes_len++;
-    }
-    libqt_list indexes_list = {
-        .len = indexes_len,
-        .data = {(int*)indexes},
-    };
-    QXYSeries_DeselectPoints((QXYSeries*)self, indexes_list);
+void q_xyseries_deselect_points(void* self, libqt_list indexes) {
+    QXYSeries_DeselectPoints((QXYSeries*)self, indexes);
 }
 
-void q_xyseries_toggle_selection(void* self, int* indexes[]) {
-    size_t indexes_len = 0;
-    while (indexes[indexes_len] != NULL) {
-        indexes_len++;
-    }
-    libqt_list indexes_list = {
-        .len = indexes_len,
-        .data = {(int*)indexes},
-    };
-    QXYSeries_ToggleSelection((QXYSeries*)self, indexes_list);
+void q_xyseries_toggle_selection(void* self, libqt_list indexes) {
+    QXYSeries_ToggleSelection((QXYSeries*)self, indexes);
 }
 
 libqt_list /* of int */ q_xyseries_selected_points(void* self) {
@@ -299,7 +241,7 @@ void q_xyseries_set_light_marker(void* self, void* lightMarker) {
     QXYSeries_SetLightMarker((QXYSeries*)self, (QImage*)lightMarker);
 }
 
-QImage* q_xyseries_light_marker(void* self) {
+const QImage* q_xyseries_light_marker(void* self) {
     return QXYSeries_LightMarker((QXYSeries*)self);
 }
 
@@ -307,7 +249,7 @@ void q_xyseries_set_selected_light_marker(void* self, void* selectedLightMarker)
     QXYSeries_SetSelectedLightMarker((QXYSeries*)self, (QImage*)selectedLightMarker);
 }
 
-QImage* q_xyseries_selected_light_marker(void* self) {
+const QImage* q_xyseries_selected_light_marker(void* self) {
     return QXYSeries_SelectedLightMarker((QXYSeries*)self);
 }
 
@@ -383,28 +325,12 @@ libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ q_xyseries_points_
     return QXYSeries_PointsConfiguration((QXYSeries*)self);
 }
 
-void q_xyseries_size_by(void* self, double* sourceData[], double minSize, double maxSize) {
-    size_t sourceData_len = 0;
-    while (sourceData[sourceData_len] != NULL) {
-        sourceData_len++;
-    }
-    libqt_list sourceData_list = {
-        .len = sourceData_len,
-        .data = {(double*)sourceData},
-    };
-    QXYSeries_SizeBy((QXYSeries*)self, sourceData_list, minSize, maxSize);
+void q_xyseries_size_by(void* self, libqt_list sourceData, double minSize, double maxSize) {
+    QXYSeries_SizeBy((QXYSeries*)self, sourceData, minSize, maxSize);
 }
 
-void q_xyseries_color_by(void* self, double* sourceData[]) {
-    size_t sourceData_len = 0;
-    while (sourceData[sourceData_len] != NULL) {
-        sourceData_len++;
-    }
-    libqt_list sourceData_list = {
-        .len = sourceData_len,
-        .data = {(double*)sourceData},
-    };
-    QXYSeries_ColorBy((QXYSeries*)self, sourceData_list);
+void q_xyseries_color_by(void* self, libqt_list sourceData) {
+    QXYSeries_ColorBy((QXYSeries*)self, sourceData);
 }
 
 void q_xyseries_clicked(void* self, void* point) {
@@ -645,16 +571,8 @@ void q_xyseries_set_best_fit_line_visible1(void* self, bool visible) {
     QXYSeries_SetBestFitLineVisible1((QXYSeries*)self, visible);
 }
 
-void q_xyseries_color_by2(void* self, double* sourceData[], void* gradient) {
-    size_t sourceData_len = 0;
-    while (sourceData[sourceData_len] != NULL) {
-        sourceData_len++;
-    }
-    libqt_list sourceData_list = {
-        .len = sourceData_len,
-        .data = {(double*)sourceData},
-    };
-    QXYSeries_ColorBy2((QXYSeries*)self, sourceData_list, (QLinearGradient*)gradient);
+void q_xyseries_color_by2(void* self, libqt_list sourceData, void* gradient) {
+    QXYSeries_ColorBy2((QXYSeries*)self, sourceData, (QLinearGradient*)gradient);
 }
 
 int64_t q_xyseries_type(void* self) {
@@ -777,8 +695,7 @@ const char* q_xyseries_object_name(void* self) {
 }
 
 void q_xyseries_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_xyseries_is_widget_type(void* self) {
@@ -817,7 +734,7 @@ void q_xyseries_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_xyseries_children(void* self) {
+const libqt_list /* of QObject* */ q_xyseries_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -884,7 +801,7 @@ QBindingStorage* q_xyseries_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_xyseries_binding_storage2(void* self) {
+const QBindingStorage* q_xyseries_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -926,6 +843,10 @@ void q_xyseries_destroyed1(void* self, void* param1) {
 
 void q_xyseries_on_destroyed1(void* self, void (*slot)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+}
+
+void q_xyseries_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_xyseries_delete(void* self) {

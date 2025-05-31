@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
@@ -21,8 +19,6 @@
 #include "libqtextobject.h"
 #include "libqtextdocument.h"
 #include "libqtextformat.h"
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qtextlist.html
 
@@ -34,7 +30,7 @@ QTextList* q_textlist_new(void* doc);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QTextList* self ```
-QMetaObject* q_textlist_meta_object(void* self);
+const QMetaObject* q_textlist_meta_object(void* self);
 
 /// ``` QTextList* self, const char* param1 ```
 void* q_textlist_metacast(void* self, const char* param1);
@@ -215,7 +211,7 @@ void q_textlist_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QTextList* self ```
-libqt_list /* of QObject* */ q_textlist_children(void* self);
+const libqt_list /* of QObject* */ q_textlist_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -313,7 +309,7 @@ QBindingStorage* q_textlist_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QTextList* self ```
-QBindingStorage* q_textlist_binding_storage2(void* self);
+const QBindingStorage* q_textlist_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -323,6 +319,8 @@ QBindingStorage* q_textlist_binding_storage2(void* self);
 void q_textlist_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QTextList* self, void (*slot)(QObject*) ```
 void q_textlist_on_destroyed(void* self, void (*slot)(void*));
@@ -378,6 +376,8 @@ void q_textlist_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QTextList* self, void (*slot)(QObject*, QObject*) ```
 void q_textlist_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -392,12 +392,16 @@ void q_textlist_block_inserted(void* self, void* block);
 
 /// Inherited from QTextBlockGroup
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblockgroup.html#blockInserted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextList* self, QTextBlock* block ```
 void q_textlist_qbase_block_inserted(void* self, void* block);
 
 /// Inherited from QTextBlockGroup
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblockgroup.html#blockInserted)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -415,12 +419,16 @@ void q_textlist_block_removed(void* self, void* block);
 
 /// Inherited from QTextBlockGroup
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblockgroup.html#blockRemoved)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextList* self, QTextBlock* block ```
 void q_textlist_qbase_block_removed(void* self, void* block);
 
 /// Inherited from QTextBlockGroup
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblockgroup.html#blockRemoved)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -438,12 +446,16 @@ void q_textlist_block_format_changed(void* self, void* block);
 
 /// Inherited from QTextBlockGroup
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblockgroup.html#blockFormatChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextList* self, QTextBlock* block ```
 void q_textlist_qbase_block_format_changed(void* self, void* block);
 
 /// Inherited from QTextBlockGroup
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblockgroup.html#blockFormatChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -461,12 +473,16 @@ bool q_textlist_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextList* self, QEvent* event ```
 bool q_textlist_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -484,12 +500,16 @@ bool q_textlist_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextList* self, QObject* watched, QEvent* event ```
 bool q_textlist_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -507,12 +527,16 @@ void q_textlist_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextList* self, QTimerEvent* event ```
 void q_textlist_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -530,12 +554,16 @@ void q_textlist_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextList* self, QChildEvent* event ```
 void q_textlist_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -553,12 +581,16 @@ void q_textlist_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextList* self, QEvent* event ```
 void q_textlist_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -576,12 +608,16 @@ void q_textlist_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextList* self, QMetaMethod* signal ```
 void q_textlist_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -599,12 +635,16 @@ void q_textlist_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextList* self, QMetaMethod* signal ```
 void q_textlist_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -622,12 +662,16 @@ libqt_list /* of QTextBlock* */ q_textlist_block_list(void* self);
 
 /// Inherited from QTextBlockGroup
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblockgroup.html#blockList)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextList* self ```
 libqt_list /* of QTextBlock* */ q_textlist_qbase_block_list(void* self);
 
 /// Inherited from QTextBlockGroup
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblockgroup.html#blockList)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -645,12 +689,16 @@ QObject* q_textlist_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextList* self ```
 QObject* q_textlist_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -668,12 +716,16 @@ int32_t q_textlist_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextList* self ```
 int32_t q_textlist_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -691,12 +743,16 @@ int32_t q_textlist_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextList* self, const char* signal ```
 int32_t q_textlist_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -714,6 +770,8 @@ bool q_textlist_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextList* self, QMetaMethod* signal ```
@@ -721,11 +779,24 @@ bool q_textlist_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QTextList* self, bool (*slot)(QTextList*, QMetaMethod*) ```
 void q_textlist_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QTextList* self, void (*slot)(QObject*, const char*) ```
+void q_textlist_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextlist.html#dtor.QTextList)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextList* self ```

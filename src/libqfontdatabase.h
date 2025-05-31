@@ -208,6 +208,8 @@ bool q_fontdatabase_is_scalable2(const char* family, const char* style);
 /// ``` const char* family, const char* style ```
 bool q_fontdatabase_is_fixed_pitch2(const char* family, const char* style);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#dtor.QFontDatabase)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QFontDatabase* self ```

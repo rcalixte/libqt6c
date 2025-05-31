@@ -81,12 +81,12 @@ void q_palette_set_current_color_group(void* self, int64_t cg);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#color)
 ///
 /// ``` QPalette* self, enum QPalette__ColorGroup cg, enum QPalette__ColorRole cr ```
-QColor* q_palette_color(void* self, int64_t cg, int64_t cr);
+const QColor* q_palette_color(void* self, int64_t cg, int64_t cr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#brush)
 ///
 /// ``` QPalette* self, enum QPalette__ColorGroup cg, enum QPalette__ColorRole cr ```
-QBrush* q_palette_brush(void* self, int64_t cg, int64_t cr);
+const QBrush* q_palette_brush(void* self, int64_t cg, int64_t cr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#setColor)
 ///
@@ -126,112 +126,112 @@ bool q_palette_is_equal(void* self, int64_t cr1, int64_t cr2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#color)
 ///
 /// ``` QPalette* self, enum QPalette__ColorRole cr ```
-QColor* q_palette_color_with_cr(void* self, int64_t cr);
+const QColor* q_palette_color_with_cr(void* self, int64_t cr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#brush)
 ///
 /// ``` QPalette* self, enum QPalette__ColorRole cr ```
-QBrush* q_palette_brush_with_cr(void* self, int64_t cr);
+const QBrush* q_palette_brush_with_cr(void* self, int64_t cr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#windowText)
 ///
 /// ``` QPalette* self ```
-QBrush* q_palette_window_text(void* self);
+const QBrush* q_palette_window_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#button)
 ///
 /// ``` QPalette* self ```
-QBrush* q_palette_button(void* self);
+const QBrush* q_palette_button(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#light)
 ///
 /// ``` QPalette* self ```
-QBrush* q_palette_light(void* self);
+const QBrush* q_palette_light(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#dark)
 ///
 /// ``` QPalette* self ```
-QBrush* q_palette_dark(void* self);
+const QBrush* q_palette_dark(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#mid)
 ///
 /// ``` QPalette* self ```
-QBrush* q_palette_mid(void* self);
+const QBrush* q_palette_mid(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#text)
 ///
 /// ``` QPalette* self ```
-QBrush* q_palette_text(void* self);
+const QBrush* q_palette_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#base)
 ///
 /// ``` QPalette* self ```
-QBrush* q_palette_base(void* self);
+const QBrush* q_palette_base(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#alternateBase)
 ///
 /// ``` QPalette* self ```
-QBrush* q_palette_alternate_base(void* self);
+const QBrush* q_palette_alternate_base(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#toolTipBase)
 ///
 /// ``` QPalette* self ```
-QBrush* q_palette_tool_tip_base(void* self);
+const QBrush* q_palette_tool_tip_base(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#toolTipText)
 ///
 /// ``` QPalette* self ```
-QBrush* q_palette_tool_tip_text(void* self);
+const QBrush* q_palette_tool_tip_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#window)
 ///
 /// ``` QPalette* self ```
-QBrush* q_palette_window(void* self);
+const QBrush* q_palette_window(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#midlight)
 ///
 /// ``` QPalette* self ```
-QBrush* q_palette_midlight(void* self);
+const QBrush* q_palette_midlight(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#brightText)
 ///
 /// ``` QPalette* self ```
-QBrush* q_palette_bright_text(void* self);
+const QBrush* q_palette_bright_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#buttonText)
 ///
 /// ``` QPalette* self ```
-QBrush* q_palette_button_text(void* self);
+const QBrush* q_palette_button_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#shadow)
 ///
 /// ``` QPalette* self ```
-QBrush* q_palette_shadow(void* self);
+const QBrush* q_palette_shadow(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#highlight)
 ///
 /// ``` QPalette* self ```
-QBrush* q_palette_highlight(void* self);
+const QBrush* q_palette_highlight(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#highlightedText)
 ///
 /// ``` QPalette* self ```
-QBrush* q_palette_highlighted_text(void* self);
+const QBrush* q_palette_highlighted_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#link)
 ///
 /// ``` QPalette* self ```
-QBrush* q_palette_link(void* self);
+const QBrush* q_palette_link(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#linkVisited)
 ///
 /// ``` QPalette* self ```
-QBrush* q_palette_link_visited(void* self);
+const QBrush* q_palette_link_visited(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#placeholderText)
 ///
 /// ``` QPalette* self ```
-QBrush* q_palette_placeholder_text(void* self);
+const QBrush* q_palette_placeholder_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#operator==)
 ///
@@ -268,6 +268,8 @@ uint64_t q_palette_resolve_mask(void* self);
 /// ``` QPalette* self, uint64_t mask ```
 void q_palette_set_resolve_mask(void* self, uint64_t mask);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#dtor.QPalette)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPalette* self ```

@@ -202,7 +202,7 @@ int64_t q_eventpoint_state(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qeventpoint.html#device)
 ///
 /// ``` QEventPoint* self ```
-QPointingDevice* q_eventpoint_device(void* self);
+const QPointingDevice* q_eventpoint_device(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeventpoint.html#id)
 ///
@@ -264,6 +264,8 @@ void q_eventpoint_set_accepted(void* self);
 /// ``` QEventPoint* self, bool accepted ```
 void q_eventpoint_set_accepted1(void* self, bool accepted);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qeventpoint.html#dtor.QEventPoint)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QEventPoint* self ```

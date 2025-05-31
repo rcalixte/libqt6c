@@ -12,8 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "../libqbrush.h"
 #include "../libqevent.h"
 #include "../libqcolor.h"
@@ -22,10 +20,8 @@
 #include "../libqobject.h"
 #include "../libqpen.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
-/// https://doc.qt.io/qt-6/qbarset.html
+/// https://doc.qt.io/qt-6/qbarset-qtcharts.html
 
 /// q_barset_new constructs a new QBarSet object.
 ///
@@ -40,7 +36,7 @@ QBarSet* q_barset_new2(const char* label, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QBarSet* self ```
-QMetaObject* q_barset_meta_object(void* self);
+const QMetaObject* q_barset_meta_object(void* self);
 
 /// ``` QBarSet* self, const char* param1 ```
 void* q_barset_metacast(void* self, const char* param1);
@@ -63,339 +59,375 @@ int32_t q_barset_qbase_metacall(void* self, int64_t param1, int param2, void* pa
 /// ``` const char* s ```
 const char* q_barset_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#setLabel)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#setLabel)
 ///
 /// ``` QBarSet* self, const char* label ```
 void q_barset_set_label(void* self, const char* label);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#label)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#label)
 ///
 /// ``` QBarSet* self ```
 const char* q_barset_label(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#append)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#append)
 ///
 /// ``` QBarSet* self, double value ```
 void q_barset_append(void* self, double value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#append)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#append)
 ///
-/// ``` QBarSet* self, double* values[] ```
-void q_barset_append_with_values(void* self, double* values[]);
+/// ``` QBarSet* self, libqt_list /* of double */ values ```
+void q_barset_append_with_values(void* self, libqt_list values);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#operator<<)
 ///
 /// ``` QBarSet* self, double* value ```
 QBarSet* q_barset_operator_shift_left(void* self, double* value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#insert)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#insert)
 ///
 /// ``` QBarSet* self, int index, double value ```
 void q_barset_insert(void* self, int index, double value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#remove)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#remove)
 ///
 /// ``` QBarSet* self, int index ```
 void q_barset_remove(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#replace)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#replace)
 ///
 /// ``` QBarSet* self, int index, double value ```
 void q_barset_replace(void* self, int index, double value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#at)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#at)
 ///
 /// ``` QBarSet* self, int index ```
 double q_barset_at(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#operator[])
 ///
 /// ``` QBarSet* self, int index ```
 double q_barset_operator_subscript(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#count)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#count)
 ///
 /// ``` QBarSet* self ```
 int32_t q_barset_count(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#sum)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#sum)
 ///
 /// ``` QBarSet* self ```
 double q_barset_sum(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#setPen)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#setPen)
 ///
 /// ``` QBarSet* self, QPen* pen ```
 void q_barset_set_pen(void* self, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#pen)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#pen)
 ///
 /// ``` QBarSet* self ```
 QPen* q_barset_pen(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#setBrush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#setBrush)
 ///
 /// ``` QBarSet* self, QBrush* brush ```
 void q_barset_set_brush(void* self, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#brush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#brush)
 ///
 /// ``` QBarSet* self ```
 QBrush* q_barset_brush(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#setLabelBrush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#setLabelBrush)
 ///
 /// ``` QBarSet* self, QBrush* brush ```
 void q_barset_set_label_brush(void* self, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#labelBrush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#labelBrush)
 ///
 /// ``` QBarSet* self ```
 QBrush* q_barset_label_brush(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#setLabelFont)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#setLabelFont)
 ///
 /// ``` QBarSet* self, QFont* font ```
 void q_barset_set_label_font(void* self, void* font);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#labelFont)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#labelFont)
 ///
 /// ``` QBarSet* self ```
 QFont* q_barset_label_font(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#color)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#color)
 ///
 /// ``` QBarSet* self ```
 QColor* q_barset_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#setColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#setColor)
 ///
 /// ``` QBarSet* self, QColor* color ```
 void q_barset_set_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#borderColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#borderColor)
 ///
 /// ``` QBarSet* self ```
 QColor* q_barset_border_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#setBorderColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#setBorderColor)
 ///
 /// ``` QBarSet* self, QColor* color ```
 void q_barset_set_border_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#labelColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#labelColor)
 ///
 /// ``` QBarSet* self ```
 QColor* q_barset_label_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#setLabelColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#setLabelColor)
 ///
 /// ``` QBarSet* self, QColor* color ```
 void q_barset_set_label_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#selectedColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#selectedColor)
 ///
 /// ``` QBarSet* self ```
 QColor* q_barset_selected_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#setSelectedColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#setSelectedColor)
 ///
 /// ``` QBarSet* self, QColor* color ```
 void q_barset_set_selected_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#isBarSelected)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#isBarSelected)
 ///
 /// ``` QBarSet* self, int index ```
 bool q_barset_is_bar_selected(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#selectBar)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#selectBar)
 ///
 /// ``` QBarSet* self, int index ```
 void q_barset_select_bar(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#deselectBar)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#deselectBar)
 ///
 /// ``` QBarSet* self, int index ```
 void q_barset_deselect_bar(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#setBarSelected)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#setBarSelected)
 ///
 /// ``` QBarSet* self, int index, bool selected ```
 void q_barset_set_bar_selected(void* self, int index, bool selected);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#selectAllBars)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#selectAllBars)
 ///
 /// ``` QBarSet* self ```
 void q_barset_select_all_bars(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#deselectAllBars)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#deselectAllBars)
 ///
 /// ``` QBarSet* self ```
 void q_barset_deselect_all_bars(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#selectBars)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#selectBars)
 ///
-/// ``` QBarSet* self, int* indexes[] ```
-void q_barset_select_bars(void* self, int* indexes[]);
+/// ``` QBarSet* self, libqt_list /* of int */ indexes ```
+void q_barset_select_bars(void* self, libqt_list indexes);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#deselectBars)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#deselectBars)
 ///
-/// ``` QBarSet* self, int* indexes[] ```
-void q_barset_deselect_bars(void* self, int* indexes[]);
+/// ``` QBarSet* self, libqt_list /* of int */ indexes ```
+void q_barset_deselect_bars(void* self, libqt_list indexes);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#toggleSelection)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#toggleSelection)
 ///
-/// ``` QBarSet* self, int* indexes[] ```
-void q_barset_toggle_selection(void* self, int* indexes[]);
+/// ``` QBarSet* self, libqt_list /* of int */ indexes ```
+void q_barset_toggle_selection(void* self, libqt_list indexes);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#selectedBars)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#selectedBars)
 ///
 /// ``` QBarSet* self ```
 libqt_list /* of int */ q_barset_selected_bars(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#clicked)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#clicked)
 ///
 /// ``` QBarSet* self, int index ```
 void q_barset_clicked(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#clicked)
+///
 /// ``` QBarSet* self, void (*slot)(QBarSet*, int) ```
 void q_barset_on_clicked(void* self, void (*slot)(void*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#hovered)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#hovered)
 ///
 /// ``` QBarSet* self, bool status, int index ```
 void q_barset_hovered(void* self, bool status, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#hovered)
+///
 /// ``` QBarSet* self, void (*slot)(QBarSet*, bool, int) ```
 void q_barset_on_hovered(void* self, void (*slot)(void*, bool, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#pressed)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#pressed)
 ///
 /// ``` QBarSet* self, int index ```
 void q_barset_pressed(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#pressed)
+///
 /// ``` QBarSet* self, void (*slot)(QBarSet*, int) ```
 void q_barset_on_pressed(void* self, void (*slot)(void*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#released)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#released)
 ///
 /// ``` QBarSet* self, int index ```
 void q_barset_released(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#released)
+///
 /// ``` QBarSet* self, void (*slot)(QBarSet*, int) ```
 void q_barset_on_released(void* self, void (*slot)(void*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#doubleClicked)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#doubleClicked)
 ///
 /// ``` QBarSet* self, int index ```
 void q_barset_double_clicked(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#doubleClicked)
+///
 /// ``` QBarSet* self, void (*slot)(QBarSet*, int) ```
 void q_barset_on_double_clicked(void* self, void (*slot)(void*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#penChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#penChanged)
 ///
 /// ``` QBarSet* self ```
 void q_barset_pen_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#penChanged)
+///
 /// ``` QBarSet* self, void (*slot)(QBarSet*) ```
 void q_barset_on_pen_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#brushChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#brushChanged)
 ///
 /// ``` QBarSet* self ```
 void q_barset_brush_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#brushChanged)
+///
 /// ``` QBarSet* self, void (*slot)(QBarSet*) ```
 void q_barset_on_brush_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#labelChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#labelChanged)
 ///
 /// ``` QBarSet* self ```
 void q_barset_label_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#labelChanged)
+///
 /// ``` QBarSet* self, void (*slot)(QBarSet*) ```
 void q_barset_on_label_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#labelBrushChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#labelBrushChanged)
 ///
 /// ``` QBarSet* self ```
 void q_barset_label_brush_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#labelBrushChanged)
+///
 /// ``` QBarSet* self, void (*slot)(QBarSet*) ```
 void q_barset_on_label_brush_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#labelFontChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#labelFontChanged)
 ///
 /// ``` QBarSet* self ```
 void q_barset_label_font_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#labelFontChanged)
+///
 /// ``` QBarSet* self, void (*slot)(QBarSet*) ```
 void q_barset_on_label_font_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#colorChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#colorChanged)
 ///
 /// ``` QBarSet* self, QColor* color ```
 void q_barset_color_changed(void* self, void* color);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#colorChanged)
+///
 /// ``` QBarSet* self, void (*slot)(QBarSet*, QColor*) ```
 void q_barset_on_color_changed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#borderColorChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#borderColorChanged)
 ///
 /// ``` QBarSet* self, QColor* color ```
 void q_barset_border_color_changed(void* self, void* color);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#borderColorChanged)
+///
 /// ``` QBarSet* self, void (*slot)(QBarSet*, QColor*) ```
 void q_barset_on_border_color_changed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#labelColorChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#labelColorChanged)
 ///
 /// ``` QBarSet* self, QColor* color ```
 void q_barset_label_color_changed(void* self, void* color);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#labelColorChanged)
+///
 /// ``` QBarSet* self, void (*slot)(QBarSet*, QColor*) ```
 void q_barset_on_label_color_changed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#selectedColorChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#selectedColorChanged)
 ///
 /// ``` QBarSet* self, QColor* color ```
 void q_barset_selected_color_changed(void* self, void* color);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#selectedColorChanged)
+///
 /// ``` QBarSet* self, void (*slot)(QBarSet*, QColor*) ```
 void q_barset_on_selected_color_changed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#valuesAdded)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#valuesAdded)
 ///
 /// ``` QBarSet* self, int index, int count ```
 void q_barset_values_added(void* self, int index, int count);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#valuesAdded)
+///
 /// ``` QBarSet* self, void (*slot)(QBarSet*, int, int) ```
 void q_barset_on_values_added(void* self, void (*slot)(void*, int, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#valuesRemoved)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#valuesRemoved)
 ///
 /// ``` QBarSet* self, int index, int count ```
 void q_barset_values_removed(void* self, int index, int count);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#valuesRemoved)
+///
 /// ``` QBarSet* self, void (*slot)(QBarSet*, int, int) ```
 void q_barset_on_values_removed(void* self, void (*slot)(void*, int, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#valueChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#valueChanged)
 ///
 /// ``` QBarSet* self, int index ```
 void q_barset_value_changed(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#valueChanged)
+///
 /// ``` QBarSet* self, void (*slot)(QBarSet*, int) ```
 void q_barset_on_value_changed(void* self, void (*slot)(void*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#selectedBarsChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#selectedBarsChanged)
 ///
-/// ``` QBarSet* self, int* indexes[] ```
-void q_barset_selected_bars_changed(void* self, int* indexes[]);
+/// ``` QBarSet* self, libqt_list /* of int */ indexes ```
+void q_barset_selected_bars_changed(void* self, libqt_list indexes);
 
-/// ``` QBarSet* self, void (*slot)(QBarSet*, int*[]) ```
-void q_barset_on_selected_bars_changed(void* self, void (*slot)(void*, int*));
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#selectedBarsChanged)
+///
+/// ``` QBarSet* self, void (*slot)(QBarSet*, libqt_list /* of int */ indexes ) ```
+void q_barset_on_selected_bars_changed(void* self, void (*slot)(void*, libqt_list));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -407,7 +439,7 @@ const char* q_barset_tr2(const char* s, const char* c);
 /// ``` const char* s, const char* c, int n ```
 const char* q_barset_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset.html#remove)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#remove)
 ///
 /// ``` QBarSet* self, int index, int count ```
 void q_barset_remove2(void* self, int index, int count);
@@ -494,7 +526,7 @@ void q_barset_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QBarSet* self ```
-libqt_list /* of QObject* */ q_barset_children(void* self);
+const libqt_list /* of QObject* */ q_barset_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -592,7 +624,7 @@ QBindingStorage* q_barset_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QBarSet* self ```
-QBindingStorage* q_barset_binding_storage2(void* self);
+const QBindingStorage* q_barset_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -602,6 +634,8 @@ QBindingStorage* q_barset_binding_storage2(void* self);
 void q_barset_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QBarSet* self, void (*slot)(QObject*) ```
 void q_barset_on_destroyed(void* self, void (*slot)(void*));
@@ -657,6 +691,8 @@ void q_barset_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QBarSet* self, void (*slot)(QObject*, QObject*) ```
 void q_barset_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -671,12 +707,16 @@ bool q_barset_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarSet* self, QEvent* event ```
 bool q_barset_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -694,12 +734,16 @@ bool q_barset_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarSet* self, QObject* watched, QEvent* event ```
 bool q_barset_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -717,12 +761,16 @@ void q_barset_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarSet* self, QTimerEvent* event ```
 void q_barset_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -740,12 +788,16 @@ void q_barset_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarSet* self, QChildEvent* event ```
 void q_barset_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -763,12 +815,16 @@ void q_barset_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarSet* self, QEvent* event ```
 void q_barset_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -786,12 +842,16 @@ void q_barset_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarSet* self, QMetaMethod* signal ```
 void q_barset_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -809,12 +869,16 @@ void q_barset_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarSet* self, QMetaMethod* signal ```
 void q_barset_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -832,12 +896,16 @@ QObject* q_barset_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarSet* self ```
 QObject* q_barset_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -855,12 +923,16 @@ int32_t q_barset_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarSet* self ```
 int32_t q_barset_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -878,12 +950,16 @@ int32_t q_barset_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarSet* self, const char* signal ```
 int32_t q_barset_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -901,6 +977,8 @@ bool q_barset_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarSet* self, QMetaMethod* signal ```
@@ -908,11 +986,24 @@ bool q_barset_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QBarSet* self, bool (*slot)(QBarSet*, QMetaMethod*) ```
 void q_barset_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QBarSet* self, void (*slot)(QObject*, const char*) ```
+void q_barset_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#dtor.QBarSet)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QBarSet* self ```

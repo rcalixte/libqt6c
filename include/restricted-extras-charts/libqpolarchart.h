@@ -14,46 +14,24 @@
 
 #include "libqabstractaxis.h"
 #include "libqabstractseries.h"
-#include "../libqaction.h"
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
-#include "../libqbrush.h"
 #include "libqchart.h"
 #include "../libqevent.h"
-#include "../libqcursor.h"
-#include "../libqeasingcurve.h"
-#include "../libqfont.h"
-#include "../libqgraphicseffect.h"
 #include "../libqgraphicsitem.h"
-#include "../libqgraphicslayout.h"
 #include "../libqgraphicslayoutitem.h"
-#include "../libqgraphicsscene.h"
-#include "../libqgraphicstransform.h"
 #include "../libqgraphicswidget.h"
-#include "../libqkeysequence.h"
-#include "libqlegend.h"
-#include "../libqlocale.h"
-#include "../libqmargins.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include "../libqpainter.h"
 #include "../libqpainterpath.h"
-#include "../libqpalette.h"
-#include "../libqpen.h"
 #include "../libqpoint.h"
 #include "../libqrect.h"
-#include "../libqregion.h"
 #include "../libqsize.h"
-#include "../libqsizepolicy.h"
 #include <string.h>
-#include "../libqstyle.h"
 #include "../libqstyleoption.h"
-#include "../libqthread.h"
-#include "../libqtransform.h"
 #include "../libqvariant.h"
 #include "../libqwidget.h"
 
-/// https://doc.qt.io/qt-6/qpolarchart.html
+/// https://doc.qt.io/qt-6/qpolarchart-qtcharts.html
 
 /// q_polarchart_new constructs a new QPolarChart object.
 ///
@@ -73,7 +51,7 @@ QPolarChart* q_polarchart_new3(void* parent, int64_t wFlags);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QPolarChart* self ```
-QMetaObject* q_polarchart_meta_object(void* self);
+const QMetaObject* q_polarchart_meta_object(void* self);
 
 /// ``` QPolarChart* self, const char* param1 ```
 void* q_polarchart_metacast(void* self, const char* param1);
@@ -96,17 +74,17 @@ int32_t q_polarchart_qbase_metacall(void* self, int64_t param1, int param2, void
 /// ``` const char* s ```
 const char* q_polarchart_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpolarchart.html#addAxis)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpolarchart-qtcharts.html#addAxis)
 ///
 /// ``` QPolarChart* self, QAbstractAxis* axis, enum QPolarChart__PolarOrientation polarOrientation ```
 void q_polarchart_add_axis(void* self, void* axis, int64_t polarOrientation);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpolarchart.html#axes)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpolarchart-qtcharts.html#axes)
 ///
 /// ``` QPolarChart* self ```
 libqt_list /* of QAbstractAxis* */ q_polarchart_axes(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpolarchart.html#axisPolarOrientation)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpolarchart-qtcharts.html#axisPolarOrientation)
 ///
 /// ``` QAbstractAxis* axis ```
 int64_t q_polarchart_axis_polar_orientation(void* axis);
@@ -121,12 +99,12 @@ const char* q_polarchart_tr2(const char* s, const char* c);
 /// ``` const char* s, const char* c, int n ```
 const char* q_polarchart_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpolarchart.html#axes)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpolarchart-qtcharts.html#axes)
 ///
 /// ``` QPolarChart* self, int polarOrientation ```
 libqt_list /* of QAbstractAxis* */ q_polarchart_axes1(void* self, int64_t polarOrientation);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpolarchart.html#axes)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpolarchart-qtcharts.html#axes)
 ///
 /// ``` QPolarChart* self, int polarOrientation, QAbstractSeries* series ```
 libqt_list /* of QAbstractAxis* */ q_polarchart_axes2(void* self, int64_t polarOrientation, void* series);
@@ -553,6 +531,8 @@ void q_polarchart_plot_area_changed(void* self, void* plotArea);
 
 /// Inherited from QChart
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#plotAreaChanged)
+///
 /// ``` QPolarChart* self, void (*slot)(QChart*, QRectF*) ```
 void q_polarchart_on_plot_area_changed(void* self, void (*slot)(void*, void*));
 
@@ -917,15 +897,15 @@ void q_polarchart_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#addActions)
 ///
-/// ``` QPolarChart* self, QAction* actions[] ```
-void q_polarchart_add_actions(void* self, void* actions[]);
+/// ``` QPolarChart* self, libqt_list /* of QAction* */ actions ```
+void q_polarchart_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#insertActions)
 ///
-/// ``` QPolarChart* self, QAction* before, QAction* actions[] ```
-void q_polarchart_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QPolarChart* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_polarchart_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -971,6 +951,8 @@ void q_polarchart_geometry_changed(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#geometryChanged)
+///
 /// ``` QPolarChart* self, void (*slot)(QGraphicsWidget*) ```
 void q_polarchart_on_geometry_changed(void* self, void (*slot)(void*));
 
@@ -982,6 +964,8 @@ void q_polarchart_on_geometry_changed(void* self, void (*slot)(void*));
 void q_polarchart_layout_changed(void* self);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#layoutChanged)
 ///
 /// ``` QPolarChart* self, void (*slot)(QGraphicsWidget*) ```
 void q_polarchart_on_layout_changed(void* self, void (*slot)(void*));
@@ -1044,6 +1028,8 @@ void q_polarchart_parent_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#parentChanged)
+///
 /// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
 void q_polarchart_on_parent_changed(void* self, void (*slot)(void*));
 
@@ -1055,6 +1041,8 @@ void q_polarchart_on_parent_changed(void* self, void (*slot)(void*));
 void q_polarchart_opacity_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#opacityChanged)
 ///
 /// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
 void q_polarchart_on_opacity_changed(void* self, void (*slot)(void*));
@@ -1068,6 +1056,8 @@ void q_polarchart_visible_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#visibleChanged)
+///
 /// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
 void q_polarchart_on_visible_changed(void* self, void (*slot)(void*));
 
@@ -1079,6 +1069,8 @@ void q_polarchart_on_visible_changed(void* self, void (*slot)(void*));
 void q_polarchart_enabled_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#enabledChanged)
 ///
 /// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
 void q_polarchart_on_enabled_changed(void* self, void (*slot)(void*));
@@ -1092,6 +1084,8 @@ void q_polarchart_x_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#xChanged)
+///
 /// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
 void q_polarchart_on_x_changed(void* self, void (*slot)(void*));
 
@@ -1103,6 +1097,8 @@ void q_polarchart_on_x_changed(void* self, void (*slot)(void*));
 void q_polarchart_y_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#yChanged)
 ///
 /// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
 void q_polarchart_on_y_changed(void* self, void (*slot)(void*));
@@ -1116,6 +1112,8 @@ void q_polarchart_z_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#zChanged)
+///
 /// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
 void q_polarchart_on_z_changed(void* self, void (*slot)(void*));
 
@@ -1127,6 +1125,8 @@ void q_polarchart_on_z_changed(void* self, void (*slot)(void*));
 void q_polarchart_rotation_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#rotationChanged)
 ///
 /// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
 void q_polarchart_on_rotation_changed(void* self, void (*slot)(void*));
@@ -1140,6 +1140,8 @@ void q_polarchart_scale_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#scaleChanged)
+///
 /// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
 void q_polarchart_on_scale_changed(void* self, void (*slot)(void*));
 
@@ -1151,6 +1153,8 @@ void q_polarchart_on_scale_changed(void* self, void (*slot)(void*));
 void q_polarchart_children_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#childrenChanged)
 ///
 /// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
 void q_polarchart_on_children_changed(void* self, void (*slot)(void*));
@@ -1164,6 +1168,8 @@ void q_polarchart_width_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#widthChanged)
+///
 /// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
 void q_polarchart_on_width_changed(void* self, void (*slot)(void*));
 
@@ -1175,6 +1181,8 @@ void q_polarchart_on_width_changed(void* self, void (*slot)(void*));
 void q_polarchart_height_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#heightChanged)
 ///
 /// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
 void q_polarchart_on_height_changed(void* self, void (*slot)(void*));
@@ -1268,7 +1276,7 @@ void q_polarchart_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QPolarChart* self ```
-libqt_list /* of QObject* */ q_polarchart_children(void* self);
+const libqt_list /* of QObject* */ q_polarchart_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1366,7 +1374,7 @@ QBindingStorage* q_polarchart_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QPolarChart* self ```
-QBindingStorage* q_polarchart_binding_storage2(void* self);
+const QBindingStorage* q_polarchart_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -1376,6 +1384,8 @@ QBindingStorage* q_polarchart_binding_storage2(void* self);
 void q_polarchart_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QPolarChart* self, void (*slot)(QObject*) ```
 void q_polarchart_on_destroyed(void* self, void (*slot)(void*));
@@ -1430,6 +1440,8 @@ QMetaObject__Connection* q_polarchart_connect4(void* self, void* sender, const c
 void q_polarchart_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QPolarChart* self, void (*slot)(QObject*, QObject*) ```
 void q_polarchart_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -1537,7 +1549,7 @@ QGraphicsObject* q_polarchart_to_graphics_object(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
 /// ``` QPolarChart* self ```
-QGraphicsObject* q_polarchart_to_graphics_object2(void* self);
+const QGraphicsObject* q_polarchart_to_graphics_object2(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2082,8 +2094,8 @@ libqt_list /* of QGraphicsTransform* */ q_polarchart_transformations(void* self)
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransformations)
 ///
-/// ``` QPolarChart* self, QGraphicsTransform* transformations[] ```
-void q_polarchart_set_transformations(void* self, void* transformations[]);
+/// ``` QPolarChart* self, libqt_list /* of QGraphicsTransform* */ transformations ```
+void q_polarchart_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2831,12 +2843,16 @@ void q_polarchart_set_geometry(void* self, void* rect);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setGeometry)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QRectF* rect ```
 void q_polarchart_qbase_set_geometry(void* self, void* rect);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setGeometry)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2854,12 +2870,16 @@ void q_polarchart_get_contents_margins(void* self, double* left, double* top, do
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#getContentsMargins)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, double* left, double* top, double* right, double* bottom ```
 void q_polarchart_qbase_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#getContentsMargins)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2877,12 +2897,16 @@ int32_t q_polarchart_type(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#type)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self ```
 int32_t q_polarchart_qbase_type(void* self);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#type)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2900,12 +2924,16 @@ void q_polarchart_paint(void* self, void* painter, void* option, void* widget);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#paint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget ```
 void q_polarchart_qbase_paint(void* self, void* painter, void* option, void* widget);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#paint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2923,12 +2951,16 @@ void q_polarchart_paint_window_frame(void* self, void* painter, void* option, vo
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#paintWindowFrame)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget ```
 void q_polarchart_qbase_paint_window_frame(void* self, void* painter, void* option, void* widget);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#paintWindowFrame)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2946,12 +2978,16 @@ QRectF* q_polarchart_bounding_rect(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#boundingRect)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self ```
 QRectF* q_polarchart_qbase_bounding_rect(void* self);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#boundingRect)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2969,12 +3005,16 @@ QPainterPath* q_polarchart_shape(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#shape)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self ```
 QPainterPath* q_polarchart_qbase_shape(void* self);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#shape)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2992,12 +3032,16 @@ void q_polarchart_init_style_option(void* self, void* option);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#initStyleOption)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QStyleOption* option ```
 void q_polarchart_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#initStyleOption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3015,12 +3059,16 @@ QSizeF* q_polarchart_size_hint(void* self, int64_t which, void* constraint);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#sizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, enum Qt__SizeHint which, QSizeF* constraint ```
 QSizeF* q_polarchart_qbase_size_hint(void* self, int64_t which, void* constraint);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3038,12 +3086,16 @@ void q_polarchart_update_geometry(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#updateGeometry)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self ```
 void q_polarchart_qbase_update_geometry(void* self);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#updateGeometry)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3061,12 +3113,16 @@ QVariant* q_polarchart_item_change(void* self, int64_t change, void* value);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#itemChange)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value ```
 QVariant* q_polarchart_qbase_item_change(void* self, int64_t change, void* value);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#itemChange)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3084,12 +3140,16 @@ QVariant* q_polarchart_property_change(void* self, const char* propertyName, voi
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#propertyChange)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, const char* propertyName, QVariant* value ```
 QVariant* q_polarchart_qbase_property_change(void* self, const char* propertyName, void* value);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#propertyChange)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3107,12 +3167,16 @@ bool q_polarchart_scene_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#sceneEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QEvent* event ```
 bool q_polarchart_qbase_scene_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#sceneEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3130,12 +3194,16 @@ bool q_polarchart_window_frame_event(void* self, void* e);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QEvent* e ```
 bool q_polarchart_qbase_window_frame_event(void* self, void* e);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3153,12 +3221,16 @@ int64_t q_polarchart_window_frame_section_at(void* self, void* pos);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameSectionAt)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QPointF* pos ```
 int64_t q_polarchart_qbase_window_frame_section_at(void* self, void* pos);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameSectionAt)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3176,12 +3248,16 @@ bool q_polarchart_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QEvent* event ```
 bool q_polarchart_qbase_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3199,12 +3275,16 @@ void q_polarchart_change_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#changeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QEvent* event ```
 void q_polarchart_qbase_change_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3222,12 +3302,16 @@ void q_polarchart_close_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QCloseEvent* event ```
 void q_polarchart_qbase_close_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3245,12 +3329,16 @@ void q_polarchart_focus_in_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QFocusEvent* event ```
 void q_polarchart_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3268,12 +3356,16 @@ bool q_polarchart_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, bool next ```
 bool q_polarchart_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3291,12 +3383,16 @@ void q_polarchart_focus_out_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QFocusEvent* event ```
 void q_polarchart_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3314,12 +3410,16 @@ void q_polarchart_hide_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QHideEvent* event ```
 void q_polarchart_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3337,12 +3437,16 @@ void q_polarchart_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QGraphicsSceneMoveEvent* event ```
 void q_polarchart_qbase_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3360,12 +3464,16 @@ void q_polarchart_polish_event(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#polishEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self ```
 void q_polarchart_qbase_polish_event(void* self);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#polishEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3383,12 +3491,16 @@ void q_polarchart_resize_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#resizeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QGraphicsSceneResizeEvent* event ```
 void q_polarchart_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3406,12 +3518,16 @@ void q_polarchart_show_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QShowEvent* event ```
 void q_polarchart_qbase_show_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3429,12 +3545,16 @@ void q_polarchart_hover_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#hoverMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QGraphicsSceneHoverEvent* event ```
 void q_polarchart_qbase_hover_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#hoverMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3452,12 +3572,16 @@ void q_polarchart_hover_leave_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#hoverLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QGraphicsSceneHoverEvent* event ```
 void q_polarchart_qbase_hover_leave_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#hoverLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3475,12 +3599,16 @@ void q_polarchart_grab_mouse_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#grabMouseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QEvent* event ```
 void q_polarchart_qbase_grab_mouse_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#grabMouseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3498,12 +3626,16 @@ void q_polarchart_ungrab_mouse_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#ungrabMouseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QEvent* event ```
 void q_polarchart_qbase_ungrab_mouse_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#ungrabMouseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3521,12 +3653,16 @@ void q_polarchart_grab_keyboard_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#grabKeyboardEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QEvent* event ```
 void q_polarchart_qbase_grab_keyboard_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#grabKeyboardEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3544,12 +3680,16 @@ void q_polarchart_ungrab_keyboard_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#ungrabKeyboardEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QEvent* event ```
 void q_polarchart_qbase_ungrab_keyboard_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#ungrabKeyboardEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3567,12 +3707,16 @@ bool q_polarchart_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QObject* watched, QEvent* event ```
 bool q_polarchart_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3590,12 +3734,16 @@ void q_polarchart_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QTimerEvent* event ```
 void q_polarchart_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3613,12 +3761,16 @@ void q_polarchart_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QChildEvent* event ```
 void q_polarchart_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3636,12 +3788,16 @@ void q_polarchart_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QEvent* event ```
 void q_polarchart_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3659,12 +3815,16 @@ void q_polarchart_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QMetaMethod* signal ```
 void q_polarchart_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3682,12 +3842,16 @@ void q_polarchart_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QMetaMethod* signal ```
 void q_polarchart_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3705,12 +3869,16 @@ void q_polarchart_advance(void* self, int phase);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#advance)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, int phase ```
 void q_polarchart_qbase_advance(void* self, int phase);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#advance)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3728,12 +3896,16 @@ bool q_polarchart_contains(void* self, void* point);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#contains)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QPointF* point ```
 bool q_polarchart_qbase_contains(void* self, void* point);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#contains)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3751,12 +3923,16 @@ bool q_polarchart_collides_with_item(void* self, void* other, int64_t mode);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithItem)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode ```
 bool q_polarchart_qbase_collides_with_item(void* self, void* other, int64_t mode);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithItem)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3774,12 +3950,16 @@ bool q_polarchart_collides_with_path(void* self, void* path, int64_t mode);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QPainterPath* path, enum Qt__ItemSelectionMode mode ```
 bool q_polarchart_qbase_collides_with_path(void* self, void* path, int64_t mode);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3797,12 +3977,16 @@ bool q_polarchart_is_obscured_by(void* self, void* item);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscuredBy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QGraphicsItem* item ```
 bool q_polarchart_qbase_is_obscured_by(void* self, void* item);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscuredBy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3820,12 +4004,16 @@ QPainterPath* q_polarchart_opaque_area(void* self);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#opaqueArea)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self ```
 QPainterPath* q_polarchart_qbase_opaque_area(void* self);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#opaqueArea)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3843,12 +4031,16 @@ bool q_polarchart_scene_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QGraphicsItem* watched, QEvent* event ```
 bool q_polarchart_qbase_scene_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3866,12 +4058,16 @@ void q_polarchart_context_menu_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QGraphicsSceneContextMenuEvent* event ```
 void q_polarchart_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3889,12 +4085,16 @@ void q_polarchart_drag_enter_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QGraphicsSceneDragDropEvent* event ```
 void q_polarchart_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3912,12 +4112,16 @@ void q_polarchart_drag_leave_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QGraphicsSceneDragDropEvent* event ```
 void q_polarchart_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3935,12 +4139,16 @@ void q_polarchart_drag_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QGraphicsSceneDragDropEvent* event ```
 void q_polarchart_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3958,12 +4166,16 @@ void q_polarchart_drop_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QGraphicsSceneDragDropEvent* event ```
 void q_polarchart_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3981,12 +4193,16 @@ void q_polarchart_hover_enter_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QGraphicsSceneHoverEvent* event ```
 void q_polarchart_qbase_hover_enter_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4004,12 +4220,16 @@ void q_polarchart_key_press_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QKeyEvent* event ```
 void q_polarchart_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4027,12 +4247,16 @@ void q_polarchart_key_release_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QKeyEvent* event ```
 void q_polarchart_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4050,12 +4274,16 @@ void q_polarchart_mouse_press_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mousePressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QGraphicsSceneMouseEvent* event ```
 void q_polarchart_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4073,12 +4301,16 @@ void q_polarchart_mouse_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QGraphicsSceneMouseEvent* event ```
 void q_polarchart_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4096,12 +4328,16 @@ void q_polarchart_mouse_release_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QGraphicsSceneMouseEvent* event ```
 void q_polarchart_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4119,12 +4355,16 @@ void q_polarchart_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QGraphicsSceneMouseEvent* event ```
 void q_polarchart_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4142,12 +4382,16 @@ void q_polarchart_wheel_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QGraphicsSceneWheelEvent* event ```
 void q_polarchart_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4165,12 +4409,16 @@ void q_polarchart_input_method_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QInputMethodEvent* event ```
 void q_polarchart_qbase_input_method_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4188,12 +4436,16 @@ QVariant* q_polarchart_input_method_query(void* self, int64_t query);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, enum Qt__InputMethodQuery query ```
 QVariant* q_polarchart_qbase_input_method_query(void* self, int64_t query);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4211,12 +4463,16 @@ bool q_polarchart_supports_extension(void* self, int64_t extension);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#supportsExtension)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, enum QGraphicsItem__Extension extension ```
 bool q_polarchart_qbase_supports_extension(void* self, int64_t extension);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#supportsExtension)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4234,12 +4490,16 @@ void q_polarchart_set_extension(void* self, int64_t extension, void* variant);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setExtension)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, enum QGraphicsItem__Extension extension, QVariant* variant ```
 void q_polarchart_qbase_set_extension(void* self, int64_t extension, void* variant);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setExtension)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4257,12 +4517,16 @@ QVariant* q_polarchart_extension(void* self, void* variant);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#extension)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QVariant* variant ```
 QVariant* q_polarchart_qbase_extension(void* self, void* variant);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#extension)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4280,12 +4544,16 @@ bool q_polarchart_is_empty(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isEmpty)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self ```
 bool q_polarchart_qbase_is_empty(void* self);
 
 /// Inherited from QGraphicsLayoutItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isEmpty)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4303,12 +4571,16 @@ void q_polarchart_update_micro_focus(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self ```
 void q_polarchart_qbase_update_micro_focus(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4326,12 +4598,16 @@ QObject* q_polarchart_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self ```
 QObject* q_polarchart_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4349,12 +4625,16 @@ int32_t q_polarchart_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self ```
 int32_t q_polarchart_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4372,12 +4652,16 @@ int32_t q_polarchart_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, const char* signal ```
 int32_t q_polarchart_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4395,12 +4679,16 @@ bool q_polarchart_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QMetaMethod* signal ```
 bool q_polarchart_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4418,12 +4706,16 @@ void q_polarchart_add_to_index(void* self);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#addToIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self ```
 void q_polarchart_qbase_add_to_index(void* self);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#addToIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4441,12 +4733,16 @@ void q_polarchart_remove_from_index(void* self);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self ```
 void q_polarchart_qbase_remove_from_index(void* self);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4464,12 +4760,16 @@ void q_polarchart_prepare_geometry_change(void* self);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#prepareGeometryChange)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self ```
 void q_polarchart_qbase_prepare_geometry_change(void* self);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#prepareGeometryChange)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4487,12 +4787,16 @@ void q_polarchart_set_graphics_item(void* self, void* item);
 
 /// Inherited from QGraphicsLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setGraphicsItem)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, QGraphicsItem* item ```
 void q_polarchart_qbase_set_graphics_item(void* self, void* item);
 
 /// Inherited from QGraphicsLayoutItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setGraphicsItem)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4510,6 +4814,8 @@ void q_polarchart_set_owned_by_layout(void* self, bool ownedByLayout);
 
 /// Inherited from QGraphicsLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setOwnedByLayout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPolarChart* self, bool ownedByLayout ```
@@ -4517,17 +4823,30 @@ void q_polarchart_qbase_set_owned_by_layout(void* self, bool ownedByLayout);
 
 /// Inherited from QGraphicsLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setOwnedByLayout)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QPolarChart* self, void (*slot)(QPolarChart*, bool) ```
 void q_polarchart_on_set_owned_by_layout(void* self, void (*slot)(void*, bool));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QPolarChart* self, void (*slot)(QObject*, const char*) ```
+void q_polarchart_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpolarchart-qtcharts.html#dtor.QPolarChart)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPolarChart* self ```
 void q_polarchart_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qpolarchart.html#types
+/// https://doc.qt.io/qt-6/qpolarchart-qtcharts.html#types
 
 typedef enum {
     QPOLARCHART_POLARORIENTATION_POLARORIENTATIONRADIAL = 1,

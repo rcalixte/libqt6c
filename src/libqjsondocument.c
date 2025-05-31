@@ -104,11 +104,11 @@ void q_jsondocument_set_array(void* self, void* array) {
     QJsonDocument_SetArray((QJsonDocument*)self, (QJsonArray*)array);
 }
 
-QJsonValue* q_jsondocument_operator_subscript(void* self, const char* key) {
+const QJsonValue* q_jsondocument_operator_subscript(void* self, const char* key) {
     return QJsonDocument_OperatorSubscript((QJsonDocument*)self, qstring(key));
 }
 
-QJsonValue* q_jsondocument_operator_subscript_with_qsizetype(void* self, int64_t i) {
+const QJsonValue* q_jsondocument_operator_subscript_with_qsizetype(void* self, int64_t i) {
     return QJsonDocument_OperatorSubscriptWithQsizetype((QJsonDocument*)self, i);
 }
 

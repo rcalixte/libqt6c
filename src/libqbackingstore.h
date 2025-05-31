@@ -90,6 +90,8 @@ void q_backingstore_flush2(void* self, void* region, void* window);
 /// ``` QBackingStore* self, QRegion* region, QWindow* window, QPoint* offset ```
 void q_backingstore_flush3(void* self, void* region, void* window, void* offset);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbackingstore.html#dtor.QBackingStore)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QBackingStore* self ```

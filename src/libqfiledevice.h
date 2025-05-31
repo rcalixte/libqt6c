@@ -12,24 +12,19 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
-#include "libqevent.h"
 #include "libqdatetime.h"
 #include "libqiodevice.h"
 #include "libqiodevicebase.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qfiledevice.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QFileDevice* self ```
-QMetaObject* q_filedevice_meta_object(void* self);
+const QMetaObject* q_filedevice_meta_object(void* self);
 
 /// ``` QFileDevice* self, const char* param1 ```
 void* q_filedevice_metacast(void* self, const char* param1);
@@ -422,6 +417,8 @@ void q_filedevice_ready_read(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
+///
 /// ``` QFileDevice* self, void (*slot)(QIODevice*) ```
 void q_filedevice_on_ready_read(void* self, void (*slot)(void*));
 
@@ -433,6 +430,8 @@ void q_filedevice_on_ready_read(void* self, void (*slot)(void*));
 void q_filedevice_channel_ready_read(void* self, int channel);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
 /// ``` QFileDevice* self, void (*slot)(QIODevice*, int) ```
 void q_filedevice_on_channel_ready_read(void* self, void (*slot)(void*, int));
@@ -446,6 +445,8 @@ void q_filedevice_bytes_written(void* self, long long bytes);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
+///
 /// ``` QFileDevice* self, void (*slot)(QIODevice*, long long) ```
 void q_filedevice_on_bytes_written(void* self, void (*slot)(void*, long long));
 
@@ -457,6 +458,8 @@ void q_filedevice_on_bytes_written(void* self, void (*slot)(void*, long long));
 void q_filedevice_channel_bytes_written(void* self, int channel, long long bytes);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// ``` QFileDevice* self, void (*slot)(QIODevice*, int, long long) ```
 void q_filedevice_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long));
@@ -470,6 +473,8 @@ void q_filedevice_about_to_close(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
+///
 /// ``` QFileDevice* self, void (*slot)(QIODevice*) ```
 void q_filedevice_on_about_to_close(void* self, void (*slot)(void*));
 
@@ -481,6 +486,8 @@ void q_filedevice_on_about_to_close(void* self, void (*slot)(void*));
 void q_filedevice_read_channel_finished(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
 /// ``` QFileDevice* self, void (*slot)(QIODevice*) ```
 void q_filedevice_on_read_channel_finished(void* self, void (*slot)(void*));
@@ -588,7 +595,7 @@ void q_filedevice_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QFileDevice* self ```
-libqt_list /* of QObject* */ q_filedevice_children(void* self);
+const libqt_list /* of QObject* */ q_filedevice_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -686,7 +693,7 @@ QBindingStorage* q_filedevice_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QFileDevice* self ```
-QBindingStorage* q_filedevice_binding_storage2(void* self);
+const QBindingStorage* q_filedevice_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -696,6 +703,8 @@ QBindingStorage* q_filedevice_binding_storage2(void* self);
 void q_filedevice_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QFileDevice* self, void (*slot)(QObject*) ```
 void q_filedevice_on_destroyed(void* self, void (*slot)(void*));
@@ -751,9 +760,22 @@ void q_filedevice_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QFileDevice* self, void (*slot)(QObject*, QObject*) ```
 void q_filedevice_on_destroyed1(void* self, void (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFileDevice* self, void (*slot)(QObject*, const char*) ```
+void q_filedevice_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#dtor.QFileDevice)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QFileDevice* self ```

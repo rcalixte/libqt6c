@@ -81,6 +81,8 @@ int64_t q_bytearraymatcher_index_in3(void* self, const char* str, int64_t lenVal
 /// ``` QByteArrayMatcher* self, const char* data, int64_t from ```
 int64_t q_bytearraymatcher_index_in2(void* self, const char* data, int64_t from);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbytearraymatcher.html#dtor.QByteArrayMatcher)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QByteArrayMatcher* self ```

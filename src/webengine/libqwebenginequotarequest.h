@@ -56,6 +56,8 @@ bool q_webenginequotarequest_operator_equal(void* self, void* that);
 /// ``` QWebEngineQuotaRequest* self, QWebEngineQuotaRequest* that ```
 bool q_webenginequotarequest_operator_not_equal(void* self, void* that);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginequotarequest.html#dtor.QWebEngineQuotaRequest)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWebEngineQuotaRequest* self ```

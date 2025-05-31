@@ -2,46 +2,23 @@
 #include "libqabstractitemmodel.hpp"
 #include "libqabstractitemview.hpp"
 #include "libqabstractscrollarea.hpp"
-#include "libqaction.hpp"
 #include "libqevent.hpp"
-#include "libqanystringview.hpp"
-#include "libqbackingstore.hpp"
-#include "libqbindingstorage.hpp"
-#include "libqbitmap.hpp"
-#include "libqcursor.hpp"
-#include "libqfont.hpp"
-#include "libqfontinfo.hpp"
-#include "libqfontmetrics.hpp"
 #include "libqframe.hpp"
-#include "libqgraphicseffect.hpp"
-#include "libqgraphicsproxywidget.hpp"
-#include "libqicon.hpp"
 #include "libqitemselectionmodel.hpp"
-#include "libqkeysequence.hpp"
-#include "libqlayout.hpp"
-#include "libqlocale.hpp"
 #include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
 #include "libqpainter.hpp"
-#include "libqpalette.hpp"
-#include "libqpixmap.hpp"
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
 #include "libqregion.hpp"
-#include "libqscreen.hpp"
-#include "libqscrollbar.hpp"
 #include "libqsize.hpp"
-#include "libqsizepolicy.hpp"
 #include <string.h>
-#include "libqstyle.hpp"
 #include "libqstyleoption.hpp"
-#include "libqthread.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqwindow.hpp"
 #include "libqcoreevent.hpp"
 #include "libqcolumnview.hpp"
 #include "libqcolumnview.h"
@@ -54,7 +31,7 @@ QColumnView* q_columnview_new2() {
     return QColumnView_new2();
 }
 
-QMetaObject* q_columnview_meta_object(void* self) {
+const QMetaObject* q_columnview_meta_object(void* self) {
     return QColumnView_MetaObject((QColumnView*)self);
 }
 
@@ -201,16 +178,8 @@ void q_columnview_set_preview_widget(void* self, void* widget) {
     QColumnView_SetPreviewWidget((QColumnView*)self, (QWidget*)widget);
 }
 
-void q_columnview_set_column_widths(void* self, int* list[]) {
-    size_t list_len = 0;
-    while (list[list_len] != NULL) {
-        list_len++;
-    }
-    libqt_list list_list = {
-        .len = list_len,
-        .data = {(int*)list},
-    };
-    QColumnView_SetColumnWidths((QColumnView*)self, list_list);
+void q_columnview_set_column_widths(void* self, libqt_list list) {
+    QColumnView_SetColumnWidths((QColumnView*)self, list);
 }
 
 libqt_list /* of int */ q_columnview_column_widths(void* self) {
@@ -849,7 +818,7 @@ QRect* q_columnview_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_columnview_geometry(void* self) {
+const QRect* q_columnview_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -1053,7 +1022,7 @@ QWidget* q_columnview_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_columnview_palette(void* self) {
+const QPalette* q_columnview_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -1077,7 +1046,7 @@ int64_t q_columnview_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_columnview_font(void* self) {
+const QFont* q_columnview_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -1678,30 +1647,12 @@ void q_columnview_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_columnview_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_columnview_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_columnview_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_columnview_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_columnview_insert_action(void* self, void* before, void* action) {
@@ -1921,8 +1872,7 @@ const char* q_columnview_object_name(void* self) {
 }
 
 void q_columnview_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_columnview_is_widget_type(void* self) {
@@ -1961,7 +1911,7 @@ void q_columnview_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_columnview_children(void* self) {
+const libqt_list /* of QObject* */ q_columnview_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -2024,7 +1974,7 @@ QBindingStorage* q_columnview_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_columnview_binding_storage2(void* self) {
+const QBindingStorage* q_columnview_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2200,31 +2150,15 @@ void q_columnview_on_do_items_layout(void* self, void (*slot)()) {
     QColumnView_OnDoItemsLayout((QColumnView*)self, (intptr_t)slot);
 }
 
-void q_columnview_data_changed(void* self, void* topLeft, void* bottomRight, int* roles[]) {
-    size_t roles_len = 0;
-    while (roles[roles_len] != NULL) {
-        roles_len++;
-    }
-    libqt_list roles_list = {
-        .len = roles_len,
-        .data = {(int*)roles},
-    };
-    QColumnView_DataChanged((QColumnView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles_list);
+void q_columnview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles) {
+    QColumnView_DataChanged((QColumnView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_columnview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, int* roles[]) {
-    size_t roles_len = 0;
-    while (roles[roles_len] != NULL) {
-        roles_len++;
-    }
-    libqt_list roles_list = {
-        .len = roles_len,
-        .data = {(int*)roles},
-    };
-    QColumnView_QBaseDataChanged((QColumnView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles_list);
+void q_columnview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles) {
+    QColumnView_QBaseDataChanged((QColumnView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_columnview_on_data_changed(void* self, void (*slot)(void*, void*, void*, int*)) {
+void q_columnview_on_data_changed(void* self, void (*slot)(void*, void*, void*, libqt_list)) {
     QColumnView_OnDataChanged((QColumnView*)self, (intptr_t)slot);
 }
 
@@ -3284,6 +3218,10 @@ bool q_columnview_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_columnview_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QColumnView_OnIsSignalConnected((QColumnView*)self, (intptr_t)slot);
+}
+
+void q_columnview_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_columnview_delete(void* self) {

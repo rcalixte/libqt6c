@@ -16,46 +16,23 @@
 #include "libqabstractitemmodel.h"
 #include "libqabstractitemview.h"
 #include "libqabstractscrollarea.h"
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
-#include "libqcursor.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
 #include "libqframe.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
 #include "libqitemselectionmodel.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
-#include "libqlocale.h"
 #include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
 #include "libqrect.h"
 #include "libqregion.h"
-#include "libqscreen.h"
-#include "libqscrollbar.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
 #include "libqstyleoption.h"
-#include "libqthread.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qheaderview.html
 
@@ -72,7 +49,7 @@ QHeaderView* q_headerview_new2(int64_t orientation, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QHeaderView* self ```
-QMetaObject* q_headerview_meta_object(void* self);
+const QMetaObject* q_headerview_meta_object(void* self);
 
 /// ``` QHeaderView* self, const char* param1 ```
 void* q_headerview_metacast(void* self, const char* param1);
@@ -100,11 +77,15 @@ const char* q_headerview_tr(const char* s);
 /// ``` QHeaderView* self, QAbstractItemModel* model ```
 void q_headerview_set_model(void* self, void* model);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#setModel)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, QAbstractItemModel*) ```
 void q_headerview_on_set_model(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#setModel)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, QAbstractItemModel* model ```
@@ -130,11 +111,15 @@ int32_t q_headerview_length(void* self);
 /// ``` QHeaderView* self ```
 QSize* q_headerview_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, QSize* (*slot)() ```
 void q_headerview_on_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self ```
@@ -145,11 +130,15 @@ QSize* q_headerview_qbase_size_hint(void* self);
 /// ``` QHeaderView* self, bool v ```
 void q_headerview_set_visible(void* self, bool v);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#setVisible)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, bool) ```
 void q_headerview_on_set_visible(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#setVisible)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, bool v ```
@@ -430,11 +419,15 @@ void q_headerview_set_default_alignment(void* self, int64_t alignment);
 /// ``` QHeaderView* self ```
 void q_headerview_do_items_layout(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#doItemsLayout)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)() ```
 void q_headerview_on_do_items_layout(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#doItemsLayout)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self ```
@@ -465,11 +458,15 @@ bool q_headerview_restore_state(void* self, const char* state);
 /// ``` QHeaderView* self ```
 void q_headerview_reset(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#reset)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)() ```
 void q_headerview_on_reset(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#reset)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self ```
@@ -500,6 +497,8 @@ void q_headerview_header_data_changed(void* self, int64_t orientation, int logic
 /// ``` QHeaderView* self, int logicalIndex, int oldVisualIndex, int newVisualIndex ```
 void q_headerview_section_moved(void* self, int logicalIndex, int oldVisualIndex, int newVisualIndex);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionMoved)
+///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, int, int, int) ```
 void q_headerview_on_section_moved(void* self, void (*slot)(void*, int, int, int));
 
@@ -508,6 +507,8 @@ void q_headerview_on_section_moved(void* self, void (*slot)(void*, int, int, int
 /// ``` QHeaderView* self, int logicalIndex, int oldSize, int newSize ```
 void q_headerview_section_resized(void* self, int logicalIndex, int oldSize, int newSize);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionResized)
+///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, int, int, int) ```
 void q_headerview_on_section_resized(void* self, void (*slot)(void*, int, int, int));
 
@@ -516,6 +517,8 @@ void q_headerview_on_section_resized(void* self, void (*slot)(void*, int, int, i
 /// ``` QHeaderView* self, int logicalIndex ```
 void q_headerview_section_pressed(void* self, int logicalIndex);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionPressed)
+///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, int) ```
 void q_headerview_on_section_pressed(void* self, void (*slot)(void*, int));
 
@@ -524,6 +527,8 @@ void q_headerview_on_section_pressed(void* self, void (*slot)(void*, int));
 /// ``` QHeaderView* self, int logicalIndex ```
 void q_headerview_section_clicked(void* self, int logicalIndex);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionClicked)
+///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, int) ```
 void q_headerview_on_section_clicked(void* self, void (*slot)(void*, int));
 
@@ -532,6 +537,8 @@ void q_headerview_on_section_clicked(void* self, void (*slot)(void*, int));
 /// ``` QHeaderView* self, int logicalIndex ```
 void q_headerview_section_entered(void* self, int logicalIndex);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionEntered)
+///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, int) ```
 void q_headerview_on_section_entered(void* self, void (*slot)(void*, int));
 
@@ -540,6 +547,8 @@ void q_headerview_on_section_entered(void* self, void (*slot)(void*, int));
 /// ``` QHeaderView* self, int logicalIndex ```
 void q_headerview_section_double_clicked(void* self, int logicalIndex);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionDoubleClicked)
+///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, int) ```
 void q_headerview_on_section_double_clicked(void* self, void (*slot)(void*, int));
 
@@ -548,6 +557,8 @@ void q_headerview_on_section_double_clicked(void* self, void (*slot)(void*, int)
 /// ``` QHeaderView* self, int oldCount, int newCount ```
 void q_headerview_section_count_changed(void* self, int oldCount, int newCount);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionCountChanged)
+///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, int, int) ```
 void q_headerview_on_section_count_changed(void* self, void (*slot)(void*, int, int));
 
@@ -556,6 +567,8 @@ void q_headerview_on_section_count_changed(void* self, void (*slot)(void*, int, 
 /// ``` QHeaderView* self, int logicalIndex ```
 void q_headerview_section_handle_double_clicked(void* self, int logicalIndex);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionHandleDoubleClicked)
+///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, int) ```
 void q_headerview_on_section_handle_double_clicked(void* self, void (*slot)(void*, int));
 
@@ -564,6 +577,8 @@ void q_headerview_on_section_handle_double_clicked(void* self, void (*slot)(void
 /// ``` QHeaderView* self ```
 void q_headerview_geometries_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#geometriesChanged)
+///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*) ```
 void q_headerview_on_geometries_changed(void* self, void (*slot)(void*));
 
@@ -572,6 +587,8 @@ void q_headerview_on_geometries_changed(void* self, void (*slot)(void*));
 /// ``` QHeaderView* self, int logicalIndex, enum Qt__SortOrder order ```
 void q_headerview_sort_indicator_changed(void* self, int logicalIndex, int64_t order);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sortIndicatorChanged)
+///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, int, enum Qt__SortOrder) ```
 void q_headerview_on_sort_indicator_changed(void* self, void (*slot)(void*, int, int64_t));
 
@@ -580,6 +597,8 @@ void q_headerview_on_sort_indicator_changed(void* self, void (*slot)(void*, int,
 /// ``` QHeaderView* self, bool clearable ```
 void q_headerview_sort_indicator_clearable_changed(void* self, bool clearable);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sortIndicatorClearableChanged)
+///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, bool) ```
 void q_headerview_on_sort_indicator_clearable_changed(void* self, void (*slot)(void*, bool));
 
@@ -588,11 +607,15 @@ void q_headerview_on_sort_indicator_clearable_changed(void* self, void (*slot)(v
 /// ``` QHeaderView* self, int logicalIndex ```
 void q_headerview_update_section(void* self, int logicalIndex);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#updateSection)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, int) ```
 void q_headerview_on_update_section(void* self, void (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#updateSection)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, int logicalIndex ```
@@ -603,11 +626,15 @@ void q_headerview_qbase_update_section(void* self, int logicalIndex);
 /// ``` QHeaderView* self ```
 void q_headerview_resize_sections2(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#resizeSections)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)() ```
 void q_headerview_on_resize_sections2(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#resizeSections)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self ```
@@ -618,11 +645,15 @@ void q_headerview_qbase_resize_sections2(void* self);
 /// ``` QHeaderView* self, QModelIndex* parent, int logicalFirst, int logicalLast ```
 void q_headerview_sections_inserted(void* self, void* parent, int logicalFirst, int logicalLast);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionsInserted)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, QModelIndex*, int, int) ```
 void q_headerview_on_sections_inserted(void* self, void (*slot)(void*, void*, int, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionsInserted)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, QModelIndex* parent, int logicalFirst, int logicalLast ```
@@ -633,11 +664,15 @@ void q_headerview_qbase_sections_inserted(void* self, void* parent, int logicalF
 /// ``` QHeaderView* self, QModelIndex* parent, int logicalFirst, int logicalLast ```
 void q_headerview_sections_about_to_be_removed(void* self, void* parent, int logicalFirst, int logicalLast);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionsAboutToBeRemoved)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, QModelIndex*, int, int) ```
 void q_headerview_on_sections_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionsAboutToBeRemoved)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, QModelIndex* parent, int logicalFirst, int logicalLast ```
@@ -648,11 +683,15 @@ void q_headerview_qbase_sections_about_to_be_removed(void* self, void* parent, i
 /// ``` QHeaderView* self ```
 void q_headerview_initialize(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#initialize)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)() ```
 void q_headerview_on_initialize(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#initialize)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self ```
@@ -663,11 +702,15 @@ void q_headerview_qbase_initialize(void* self);
 /// ``` QHeaderView* self ```
 void q_headerview_initialize_sections(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#initializeSections)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)() ```
 void q_headerview_on_initialize_sections(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#initializeSections)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self ```
@@ -678,11 +721,15 @@ void q_headerview_qbase_initialize_sections(void* self);
 /// ``` QHeaderView* self, int start, int end ```
 void q_headerview_initialize_sections2(void* self, int start, int end);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#initializeSections)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, int, int) ```
 void q_headerview_on_initialize_sections2(void* self, void (*slot)(void*, int, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#initializeSections)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, int start, int end ```
@@ -693,11 +740,15 @@ void q_headerview_qbase_initialize_sections2(void* self, int start, int end);
 /// ``` QHeaderView* self, QModelIndex* current, QModelIndex* old ```
 void q_headerview_current_changed(void* self, void* current, void* old);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#currentChanged)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, QModelIndex*, QModelIndex*) ```
 void q_headerview_on_current_changed(void* self, void (*slot)(void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#currentChanged)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, QModelIndex* current, QModelIndex* old ```
@@ -708,11 +759,15 @@ void q_headerview_qbase_current_changed(void* self, void* current, void* old);
 /// ``` QHeaderView* self, QEvent* e ```
 bool q_headerview_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, bool (*slot)(QHeaderView*, QEvent*) ```
 void q_headerview_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, QEvent* e ```
@@ -723,11 +778,15 @@ bool q_headerview_qbase_event(void* self, void* e);
 /// ``` QHeaderView* self, QPaintEvent* e ```
 void q_headerview_paint_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#paintEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, QPaintEvent*) ```
 void q_headerview_on_paint_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#paintEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, QPaintEvent* e ```
@@ -738,11 +797,15 @@ void q_headerview_qbase_paint_event(void* self, void* e);
 /// ``` QHeaderView* self, QMouseEvent* e ```
 void q_headerview_mouse_press_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#mousePressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, QMouseEvent*) ```
 void q_headerview_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#mousePressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, QMouseEvent* e ```
@@ -753,11 +816,15 @@ void q_headerview_qbase_mouse_press_event(void* self, void* e);
 /// ``` QHeaderView* self, QMouseEvent* e ```
 void q_headerview_mouse_move_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#mouseMoveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, QMouseEvent*) ```
 void q_headerview_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#mouseMoveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, QMouseEvent* e ```
@@ -768,11 +835,15 @@ void q_headerview_qbase_mouse_move_event(void* self, void* e);
 /// ``` QHeaderView* self, QMouseEvent* e ```
 void q_headerview_mouse_release_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#mouseReleaseEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, QMouseEvent*) ```
 void q_headerview_on_mouse_release_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#mouseReleaseEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, QMouseEvent* e ```
@@ -783,11 +854,15 @@ void q_headerview_qbase_mouse_release_event(void* self, void* e);
 /// ``` QHeaderView* self, QMouseEvent* e ```
 void q_headerview_mouse_double_click_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#mouseDoubleClickEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, QMouseEvent*) ```
 void q_headerview_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#mouseDoubleClickEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, QMouseEvent* e ```
@@ -798,11 +873,15 @@ void q_headerview_qbase_mouse_double_click_event(void* self, void* e);
 /// ``` QHeaderView* self, QEvent* e ```
 bool q_headerview_viewport_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#viewportEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, bool (*slot)(QHeaderView*, QEvent*) ```
 void q_headerview_on_viewport_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#viewportEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, QEvent* e ```
@@ -813,11 +892,15 @@ bool q_headerview_qbase_viewport_event(void* self, void* e);
 /// ``` QHeaderView* self, QPainter* painter, QRect* rect, int logicalIndex ```
 void q_headerview_paint_section(void* self, void* painter, void* rect, int logicalIndex);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#paintSection)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, QPainter*, QRect*, int) ```
 void q_headerview_on_paint_section(void* self, void (*slot)(void*, void*, void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#paintSection)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, QPainter* painter, QRect* rect, int logicalIndex ```
@@ -828,11 +911,15 @@ void q_headerview_qbase_paint_section(void* self, void* painter, void* rect, int
 /// ``` QHeaderView* self, int logicalIndex ```
 QSize* q_headerview_section_size_from_contents(void* self, int logicalIndex);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionSizeFromContents)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, QSize* (*slot)(QHeaderView*, int) ```
 void q_headerview_on_section_size_from_contents(void* self, QSize* (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionSizeFromContents)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, int logicalIndex ```
@@ -843,11 +930,15 @@ QSize* q_headerview_qbase_section_size_from_contents(void* self, int logicalInde
 /// ``` QHeaderView* self ```
 int32_t q_headerview_horizontal_offset(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#horizontalOffset)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, int32_t (*slot)() ```
 void q_headerview_on_horizontal_offset(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#horizontalOffset)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self ```
@@ -858,11 +949,15 @@ int32_t q_headerview_qbase_horizontal_offset(void* self);
 /// ``` QHeaderView* self ```
 int32_t q_headerview_vertical_offset(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#verticalOffset)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, int32_t (*slot)() ```
 void q_headerview_on_vertical_offset(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#verticalOffset)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self ```
@@ -873,11 +968,15 @@ int32_t q_headerview_qbase_vertical_offset(void* self);
 /// ``` QHeaderView* self ```
 void q_headerview_update_geometries(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#updateGeometries)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)() ```
 void q_headerview_on_update_geometries(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#updateGeometries)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self ```
@@ -888,11 +987,15 @@ void q_headerview_qbase_update_geometries(void* self);
 /// ``` QHeaderView* self, int dx, int dy ```
 void q_headerview_scroll_contents_by(void* self, int dx, int dy);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#scrollContentsBy)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, int, int) ```
 void q_headerview_on_scroll_contents_by(void* self, void (*slot)(void*, int, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#scrollContentsBy)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, int dx, int dy ```
@@ -900,29 +1003,37 @@ void q_headerview_qbase_scroll_contents_by(void* self, int dx, int dy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#dataChanged)
 ///
-/// ``` QHeaderView* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* roles[] ```
-void q_headerview_data_changed(void* self, void* topLeft, void* bottomRight, int* roles[]);
+/// ``` QHeaderView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles ```
+void q_headerview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#dataChanged)
+///
 /// Allows for overriding the related default method
 ///
-/// ``` QHeaderView* self, void (*slot)(QHeaderView*, QModelIndex*, QModelIndex*, int*[]) ```
-void q_headerview_on_data_changed(void* self, void (*slot)(void*, void*, void*, int*));
+/// ``` QHeaderView* self, void (*slot)(QHeaderView*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
+void q_headerview_on_data_changed(void* self, void (*slot)(void*, void*, void*, libqt_list));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#dataChanged)
+///
 /// Base class method implementation
 ///
-/// ``` QHeaderView* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* roles[] ```
-void q_headerview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, int* roles[]);
+/// ``` QHeaderView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles ```
+void q_headerview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#rowsInserted)
 ///
 /// ``` QHeaderView* self, QModelIndex* parent, int start, int end ```
 void q_headerview_rows_inserted(void* self, void* parent, int start, int end);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#rowsInserted)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, QModelIndex*, int, int) ```
 void q_headerview_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#rowsInserted)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, QModelIndex* parent, int start, int end ```
@@ -933,11 +1044,15 @@ void q_headerview_qbase_rows_inserted(void* self, void* parent, int start, int e
 /// ``` QHeaderView* self, QModelIndex* index ```
 QRect* q_headerview_visual_rect(void* self, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#visualRect)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, QRect* (*slot)(QHeaderView*, QModelIndex*) ```
 void q_headerview_on_visual_rect(void* self, QRect* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#visualRect)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, QModelIndex* index ```
@@ -948,11 +1063,15 @@ QRect* q_headerview_qbase_visual_rect(void* self, void* index);
 /// ``` QHeaderView* self, QModelIndex* index, enum QAbstractItemView__ScrollHint hint ```
 void q_headerview_scroll_to(void* self, void* index, int64_t hint);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#scrollTo)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, QModelIndex*, enum QAbstractItemView__ScrollHint) ```
 void q_headerview_on_scroll_to(void* self, void (*slot)(void*, void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#scrollTo)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, QModelIndex* index, enum QAbstractItemView__ScrollHint hint ```
@@ -963,11 +1082,15 @@ void q_headerview_qbase_scroll_to(void* self, void* index, int64_t hint);
 /// ``` QHeaderView* self, QPoint* p ```
 QModelIndex* q_headerview_index_at(void* self, void* p);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#indexAt)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, QModelIndex* (*slot)(QHeaderView*, QPoint*) ```
 void q_headerview_on_index_at(void* self, QModelIndex* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#indexAt)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, QPoint* p ```
@@ -978,11 +1101,15 @@ QModelIndex* q_headerview_qbase_index_at(void* self, void* p);
 /// ``` QHeaderView* self, QModelIndex* index ```
 bool q_headerview_is_index_hidden(void* self, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#isIndexHidden)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, bool (*slot)(QHeaderView*, QModelIndex*) ```
 void q_headerview_on_is_index_hidden(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#isIndexHidden)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, QModelIndex* index ```
@@ -993,11 +1120,15 @@ bool q_headerview_qbase_is_index_hidden(void* self, void* index);
 /// ``` QHeaderView* self, enum QAbstractItemView__CursorAction param1, int param2 ```
 QModelIndex* q_headerview_move_cursor(void* self, int64_t param1, int64_t param2);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#moveCursor)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, QModelIndex* (*slot)(QHeaderView*, enum QAbstractItemView__CursorAction, int) ```
 void q_headerview_on_move_cursor(void* self, QModelIndex* (*slot)(void*, int64_t, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#moveCursor)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, enum QAbstractItemView__CursorAction param1, int param2 ```
@@ -1008,11 +1139,15 @@ QModelIndex* q_headerview_qbase_move_cursor(void* self, int64_t param1, int64_t 
 /// ``` QHeaderView* self, QRect* rect, int flags ```
 void q_headerview_set_selection(void* self, void* rect, int64_t flags);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#setSelection)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, QRect*, int) ```
 void q_headerview_on_set_selection(void* self, void (*slot)(void*, void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#setSelection)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, QRect* rect, int flags ```
@@ -1023,11 +1158,15 @@ void q_headerview_qbase_set_selection(void* self, void* rect, int64_t flags);
 /// ``` QHeaderView* self, QItemSelection* selection ```
 QRegion* q_headerview_visual_region_for_selection(void* self, void* selection);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#visualRegionForSelection)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, QRegion* (*slot)(QHeaderView*, QItemSelection*) ```
 void q_headerview_on_visual_region_for_selection(void* self, QRegion* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#visualRegionForSelection)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, QItemSelection* selection ```
@@ -1038,11 +1177,15 @@ QRegion* q_headerview_qbase_visual_region_for_selection(void* self, void* select
 /// ``` QHeaderView* self, QStyleOptionHeader* option, int logicalIndex ```
 void q_headerview_init_style_option_for_index(void* self, void* option, int logicalIndex);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#initStyleOptionForIndex)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, QStyleOptionHeader*, int) ```
 void q_headerview_on_init_style_option_for_index(void* self, void (*slot)(void*, void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#initStyleOptionForIndex)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, QStyleOptionHeader* option, int logicalIndex ```
@@ -1053,11 +1196,15 @@ void q_headerview_qbase_init_style_option_for_index(void* self, void* option, in
 /// ``` QHeaderView* self, QStyleOptionHeader* option ```
 void q_headerview_init_style_option(void* self, void* option);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#initStyleOption)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHeaderView* self, void (*slot)(QHeaderView*, QStyleOptionHeader*) ```
 void q_headerview_on_init_style_option(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#initStyleOption)
+///
 /// Base class method implementation
 ///
 /// ``` QHeaderView* self, QStyleOptionHeader* option ```
@@ -1481,6 +1628,8 @@ void q_headerview_pressed(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#pressed)
+///
 /// ``` QHeaderView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
 void q_headerview_on_pressed(void* self, void (*slot)(void*, void*));
 
@@ -1492,6 +1641,8 @@ void q_headerview_on_pressed(void* self, void (*slot)(void*, void*));
 void q_headerview_clicked(void* self, void* index);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#clicked)
 ///
 /// ``` QHeaderView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
 void q_headerview_on_clicked(void* self, void (*slot)(void*, void*));
@@ -1505,6 +1656,8 @@ void q_headerview_double_clicked(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doubleClicked)
+///
 /// ``` QHeaderView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
 void q_headerview_on_double_clicked(void* self, void (*slot)(void*, void*));
 
@@ -1516,6 +1669,8 @@ void q_headerview_on_double_clicked(void* self, void (*slot)(void*, void*));
 void q_headerview_activated(void* self, void* index);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#activated)
 ///
 /// ``` QHeaderView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
 void q_headerview_on_activated(void* self, void (*slot)(void*, void*));
@@ -1529,6 +1684,8 @@ void q_headerview_entered(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#entered)
+///
 /// ``` QHeaderView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
 void q_headerview_on_entered(void* self, void (*slot)(void*, void*));
 
@@ -1541,6 +1698,8 @@ void q_headerview_viewport_entered(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportEntered)
+///
 /// ``` QHeaderView* self, void (*slot)(QAbstractItemView*) ```
 void q_headerview_on_viewport_entered(void* self, void (*slot)(void*));
 
@@ -1552,6 +1711,8 @@ void q_headerview_on_viewport_entered(void* self, void (*slot)(void*));
 void q_headerview_icon_size_changed(void* self, void* size);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#iconSizeChanged)
 ///
 /// ``` QHeaderView* self, void (*slot)(QAbstractItemView*, QSize*) ```
 void q_headerview_on_icon_size_changed(void* self, void (*slot)(void*, void*));
@@ -1890,7 +2051,7 @@ QRect* q_headerview_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QHeaderView* self ```
-QRect* q_headerview_geometry(void* self);
+const QRect* q_headerview_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2247,7 +2408,7 @@ QWidget* q_headerview_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QHeaderView* self ```
-QPalette* q_headerview_palette(void* self);
+const QPalette* q_headerview_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2289,7 +2450,7 @@ int64_t q_headerview_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QHeaderView* self ```
-QFont* q_headerview_font(void* self);
+const QFont* q_headerview_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3282,15 +3443,15 @@ void q_headerview_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QHeaderView* self, QAction* actions[] ```
-void q_headerview_add_actions(void* self, void* actions[]);
+/// ``` QHeaderView* self, libqt_list /* of QAction* */ actions ```
+void q_headerview_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QHeaderView* self, QAction* before, QAction* actions[] ```
-void q_headerview_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QHeaderView* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_headerview_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3490,6 +3651,8 @@ void q_headerview_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QHeaderView* self, void (*slot)(QWidget*, const char*) ```
 void q_headerview_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -3501,6 +3664,8 @@ void q_headerview_on_window_title_changed(void* self, void (*slot)(void*, const 
 void q_headerview_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QHeaderView* self, void (*slot)(QWidget*, QIcon*) ```
 void q_headerview_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -3514,6 +3679,8 @@ void q_headerview_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QHeaderView* self, void (*slot)(QWidget*, const char*) ```
 void q_headerview_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -3525,6 +3692,8 @@ void q_headerview_on_window_icon_text_changed(void* self, void (*slot)(void*, co
 void q_headerview_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QHeaderView* self, void (*slot)(QWidget*, QPoint*) ```
 void q_headerview_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -3730,7 +3899,7 @@ void q_headerview_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QHeaderView* self ```
-libqt_list /* of QObject* */ q_headerview_children(void* self);
+const libqt_list /* of QObject* */ q_headerview_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -3821,7 +3990,7 @@ QBindingStorage* q_headerview_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QHeaderView* self ```
-QBindingStorage* q_headerview_binding_storage2(void* self);
+const QBindingStorage* q_headerview_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -3831,6 +4000,8 @@ QBindingStorage* q_headerview_binding_storage2(void* self);
 void q_headerview_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QHeaderView* self, void (*slot)(QObject*) ```
 void q_headerview_on_destroyed(void* self, void (*slot)(void*));
@@ -3885,6 +4056,8 @@ QMetaObject__Connection* q_headerview_connect4(void* self, void* sender, const c
 void q_headerview_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QHeaderView* self, void (*slot)(QObject*, QObject*) ```
 void q_headerview_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -3984,12 +4157,16 @@ void q_headerview_set_selection_model(void* self, void* selectionModel);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setSelectionModel)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QItemSelectionModel* selectionModel ```
 void q_headerview_qbase_set_selection_model(void* self, void* selectionModel);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setSelectionModel)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4007,12 +4184,16 @@ void q_headerview_keyboard_search(void* self, const char* search);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#keyboardSearch)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, const char* search ```
 void q_headerview_qbase_keyboard_search(void* self, const char* search);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#keyboardSearch)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4030,12 +4211,16 @@ int32_t q_headerview_size_hint_for_row(void* self, int row);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForRow)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, int row ```
 int32_t q_headerview_qbase_size_hint_for_row(void* self, int row);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForRow)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4053,12 +4238,16 @@ int32_t q_headerview_size_hint_for_column(void* self, int column);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForColumn)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, int column ```
 int32_t q_headerview_qbase_size_hint_for_column(void* self, int column);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForColumn)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4076,12 +4265,16 @@ QAbstractItemDelegate* q_headerview_item_delegate_for_index(void* self, void* in
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QModelIndex* index ```
 QAbstractItemDelegate* q_headerview_qbase_item_delegate_for_index(void* self, void* index);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4099,12 +4292,16 @@ QVariant* q_headerview_input_method_query(void* self, int64_t query);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, enum Qt__InputMethodQuery query ```
 QVariant* q_headerview_qbase_input_method_query(void* self, int64_t query);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4122,12 +4319,16 @@ void q_headerview_set_root_index(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setRootIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QModelIndex* index ```
 void q_headerview_qbase_set_root_index(void* self, void* index);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setRootIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4145,12 +4346,16 @@ void q_headerview_select_all(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectAll)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 void q_headerview_qbase_select_all(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectAll)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4168,12 +4373,16 @@ void q_headerview_rows_about_to_be_removed(void* self, void* parent, int start, 
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#rowsAboutToBeRemoved)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QModelIndex* parent, int start, int end ```
 void q_headerview_qbase_rows_about_to_be_removed(void* self, void* parent, int start, int end);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#rowsAboutToBeRemoved)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4191,12 +4400,16 @@ void q_headerview_selection_changed(void* self, void* selected, void* deselected
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectionChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QItemSelection* selected, QItemSelection* deselected ```
 void q_headerview_qbase_selection_changed(void* self, void* selected, void* deselected);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectionChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4214,12 +4427,16 @@ void q_headerview_update_editor_data(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 void q_headerview_qbase_update_editor_data(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4237,12 +4454,16 @@ void q_headerview_update_editor_geometries(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorGeometries)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 void q_headerview_qbase_update_editor_geometries(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorGeometries)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4260,12 +4481,16 @@ void q_headerview_vertical_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollbarAction)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, int action ```
 void q_headerview_qbase_vertical_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollbarAction)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4283,12 +4508,16 @@ void q_headerview_horizontal_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollbarAction)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, int action ```
 void q_headerview_qbase_horizontal_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollbarAction)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4306,12 +4535,16 @@ void q_headerview_vertical_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollbarValueChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, int value ```
 void q_headerview_qbase_vertical_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollbarValueChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4329,12 +4562,16 @@ void q_headerview_horizontal_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollbarValueChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, int value ```
 void q_headerview_qbase_horizontal_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollbarValueChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4352,12 +4589,16 @@ void q_headerview_close_editor(void* self, void* editor, int64_t hint);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#closeEditor)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QWidget* editor, enum QAbstractItemDelegate__EndEditHint hint ```
 void q_headerview_qbase_close_editor(void* self, void* editor, int64_t hint);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#closeEditor)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4375,12 +4616,16 @@ void q_headerview_commit_data(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#commitData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QWidget* editor ```
 void q_headerview_qbase_commit_data(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#commitData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4398,12 +4643,16 @@ void q_headerview_editor_destroyed(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#editorDestroyed)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QObject* editor ```
 void q_headerview_qbase_editor_destroyed(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#editorDestroyed)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4421,12 +4670,16 @@ libqt_list /* of QModelIndex* */ q_headerview_selected_indexes(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectedIndexes)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 libqt_list /* of QModelIndex* */ q_headerview_qbase_selected_indexes(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectedIndexes)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4444,12 +4697,16 @@ bool q_headerview_edit2(void* self, void* index, int64_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#edit)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QModelIndex* index, enum QAbstractItemView__EditTrigger trigger, QEvent* event ```
 bool q_headerview_qbase_edit2(void* self, void* index, int64_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#edit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4467,12 +4724,16 @@ int64_t q_headerview_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectionCommand)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QModelIndex* index, QEvent* event ```
 int64_t q_headerview_qbase_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectionCommand)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4490,12 +4751,16 @@ void q_headerview_start_drag(void* self, int64_t supportedActions);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#startDrag)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, int supportedActions ```
 void q_headerview_qbase_start_drag(void* self, int64_t supportedActions);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#startDrag)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4513,12 +4778,16 @@ void q_headerview_init_view_item_option(void* self, void* option);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#initViewItemOption)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QStyleOptionViewItem* option ```
 void q_headerview_qbase_init_view_item_option(void* self, void* option);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#initViewItemOption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4536,12 +4805,16 @@ bool q_headerview_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, bool next ```
 bool q_headerview_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4559,12 +4832,16 @@ void q_headerview_drag_enter_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QDragEnterEvent* event ```
 void q_headerview_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4582,12 +4859,16 @@ void q_headerview_drag_move_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QDragMoveEvent* event ```
 void q_headerview_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4605,12 +4886,16 @@ void q_headerview_drag_leave_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QDragLeaveEvent* event ```
 void q_headerview_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4628,12 +4913,16 @@ void q_headerview_drop_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QDropEvent* event ```
 void q_headerview_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4651,12 +4940,16 @@ void q_headerview_focus_in_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QFocusEvent* event ```
 void q_headerview_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4674,12 +4967,16 @@ void q_headerview_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QFocusEvent* event ```
 void q_headerview_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4697,12 +4994,16 @@ void q_headerview_key_press_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QKeyEvent* event ```
 void q_headerview_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4720,12 +5021,16 @@ void q_headerview_resize_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#resizeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QResizeEvent* event ```
 void q_headerview_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4743,12 +5048,16 @@ void q_headerview_timer_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QTimerEvent* event ```
 void q_headerview_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4766,12 +5075,16 @@ void q_headerview_input_method_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QInputMethodEvent* event ```
 void q_headerview_qbase_input_method_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4789,12 +5102,16 @@ bool q_headerview_event_filter(void* self, void* object, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QObject* object, QEvent* event ```
 bool q_headerview_qbase_event_filter(void* self, void* object, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4812,12 +5129,16 @@ QSize* q_headerview_viewport_size_hint(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 QSize* q_headerview_qbase_viewport_size_hint(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4835,12 +5156,16 @@ QSize* q_headerview_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 QSize* q_headerview_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4858,12 +5183,16 @@ void q_headerview_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QWidget* viewport ```
 void q_headerview_qbase_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4881,12 +5210,16 @@ void q_headerview_wheel_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QWheelEvent* param1 ```
 void q_headerview_qbase_wheel_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4904,12 +5237,16 @@ void q_headerview_context_menu_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QContextMenuEvent* param1 ```
 void q_headerview_qbase_context_menu_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4927,12 +5264,16 @@ void q_headerview_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#changeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QEvent* param1 ```
 void q_headerview_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4950,12 +5291,16 @@ int32_t q_headerview_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 int32_t q_headerview_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4973,12 +5318,16 @@ int32_t q_headerview_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, int param1 ```
 int32_t q_headerview_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4996,12 +5345,16 @@ bool q_headerview_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 bool q_headerview_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5019,12 +5372,16 @@ QPaintEngine* q_headerview_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 QPaintEngine* q_headerview_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5042,12 +5399,16 @@ void q_headerview_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QKeyEvent* event ```
 void q_headerview_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5065,12 +5426,16 @@ void q_headerview_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QEnterEvent* event ```
 void q_headerview_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5088,12 +5453,16 @@ void q_headerview_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QEvent* event ```
 void q_headerview_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5111,12 +5480,16 @@ void q_headerview_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QMoveEvent* event ```
 void q_headerview_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5134,12 +5507,16 @@ void q_headerview_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QCloseEvent* event ```
 void q_headerview_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5157,12 +5534,16 @@ void q_headerview_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QTabletEvent* event ```
 void q_headerview_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5180,12 +5561,16 @@ void q_headerview_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QActionEvent* event ```
 void q_headerview_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5203,12 +5588,16 @@ void q_headerview_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QShowEvent* event ```
 void q_headerview_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5226,12 +5615,16 @@ void q_headerview_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QHideEvent* event ```
 void q_headerview_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5249,12 +5642,16 @@ bool q_headerview_native_event(void* self, const char* eventType, void* message,
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, const char* eventType, void* message, intptr_t* result ```
 bool q_headerview_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5272,12 +5669,16 @@ int32_t q_headerview_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_headerview_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5295,12 +5696,16 @@ void q_headerview_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QPainter* painter ```
 void q_headerview_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5318,12 +5723,16 @@ QPaintDevice* q_headerview_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QPoint* offset ```
 QPaintDevice* q_headerview_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5341,12 +5750,16 @@ QPainter* q_headerview_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 QPainter* q_headerview_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5364,12 +5777,16 @@ void q_headerview_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QChildEvent* event ```
 void q_headerview_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5387,12 +5804,16 @@ void q_headerview_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QEvent* event ```
 void q_headerview_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5410,12 +5831,16 @@ void q_headerview_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QMetaMethod* signal ```
 void q_headerview_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5433,12 +5858,16 @@ void q_headerview_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QMetaMethod* signal ```
 void q_headerview_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5456,12 +5885,16 @@ int64_t q_headerview_state(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#state)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 int64_t q_headerview_qbase_state(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#state)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5479,12 +5912,16 @@ void q_headerview_set_state(void* self, int64_t state);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setState)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, enum QAbstractItemView__State state ```
 void q_headerview_qbase_set_state(void* self, int64_t state);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setState)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5502,12 +5939,16 @@ void q_headerview_schedule_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#scheduleDelayedItemsLayout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 void q_headerview_qbase_schedule_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#scheduleDelayedItemsLayout)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5525,12 +5966,16 @@ void q_headerview_execute_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#executeDelayedItemsLayout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 void q_headerview_qbase_execute_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#executeDelayedItemsLayout)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5548,12 +5993,16 @@ void q_headerview_set_dirty_region(void* self, void* region);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setDirtyRegion)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QRegion* region ```
 void q_headerview_qbase_set_dirty_region(void* self, void* region);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setDirtyRegion)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5571,12 +6020,16 @@ void q_headerview_scroll_dirty_region(void* self, int dx, int dy);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#scrollDirtyRegion)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, int dx, int dy ```
 void q_headerview_qbase_scroll_dirty_region(void* self, int dx, int dy);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#scrollDirtyRegion)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5594,12 +6047,16 @@ QPoint* q_headerview_dirty_region_offset(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dirtyRegionOffset)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 QPoint* q_headerview_qbase_dirty_region_offset(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dirtyRegionOffset)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5617,12 +6074,16 @@ void q_headerview_start_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#startAutoScroll)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 void q_headerview_qbase_start_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#startAutoScroll)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5640,12 +6101,16 @@ void q_headerview_stop_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#stopAutoScroll)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 void q_headerview_qbase_stop_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#stopAutoScroll)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5663,12 +6128,16 @@ void q_headerview_do_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doAutoScroll)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 void q_headerview_qbase_do_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doAutoScroll)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5686,12 +6155,16 @@ int64_t q_headerview_drop_indicator_position(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dropIndicatorPosition)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 int64_t q_headerview_qbase_drop_indicator_position(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dropIndicatorPosition)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5709,12 +6182,16 @@ void q_headerview_set_viewport_margins(void* self, int left, int top, int right,
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, int left, int top, int right, int bottom ```
 void q_headerview_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5732,12 +6209,16 @@ QMargins* q_headerview_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 QMargins* q_headerview_qbase_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5755,12 +6236,16 @@ void q_headerview_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QPainter* param1 ```
 void q_headerview_qbase_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5778,12 +6263,16 @@ void q_headerview_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 void q_headerview_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5801,12 +6290,16 @@ void q_headerview_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 void q_headerview_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5824,12 +6317,16 @@ void q_headerview_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 void q_headerview_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5847,12 +6344,16 @@ bool q_headerview_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 bool q_headerview_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5870,12 +6371,16 @@ bool q_headerview_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 bool q_headerview_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5893,12 +6398,16 @@ QObject* q_headerview_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 QObject* q_headerview_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5916,12 +6425,16 @@ int32_t q_headerview_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self ```
 int32_t q_headerview_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5939,12 +6452,16 @@ int32_t q_headerview_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, const char* signal ```
 int32_t q_headerview_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5962,6 +6479,8 @@ bool q_headerview_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHeaderView* self, QMetaMethod* signal ```
@@ -5969,11 +6488,24 @@ bool q_headerview_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QHeaderView* self, bool (*slot)(QHeaderView*, QMetaMethod*) ```
 void q_headerview_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QHeaderView* self, void (*slot)(QObject*, const char*) ```
+void q_headerview_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#dtor.QHeaderView)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QHeaderView* self ```

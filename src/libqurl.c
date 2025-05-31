@@ -305,17 +305,8 @@ const char** q_url_idn_whitelist() {
     return _ret;
 }
 
-const char** q_url_to_string_list(void* uris[]) {
-    QUrl** uris_arr = (QUrl**)uris;
-    size_t uris_len = 0;
-    while (uris_arr[uris_len] != NULL) {
-        uris_len++;
-    }
-    libqt_list uris_list = {
-        .len = uris_len,
-        .data = {(QUrl*)uris},
-    };
-    libqt_list _arr = QUrl_ToStringList(uris_list);
+const char** q_url_to_string_list(libqt_list uris) {
+    libqt_list _arr = QUrl_ToStringList(uris);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     for (size_t _i = 0; _i < _arr.len; ++_i) {
@@ -334,7 +325,7 @@ libqt_list /* of QUrl* */ q_url_from_string_list(const char* uris[]) {
     for (size_t _i = 0; _i < uris_len; ++_i) {
         uris_qstr[_i] = qstring(uris[_i]);
     }
-    libqt_list uris_list = qstrlist(uris_qstr, uris_len);
+    libqt_list uris_list = qlist(uris_qstr, uris_len);
     libqt_list _arr = QUrl_FromStringList(uris_list);
     return _arr;
 }
@@ -345,7 +336,7 @@ void q_url_set_idn_whitelist(const char* idnWhitelist[]) {
     for (size_t _i = 0; _i < idnWhitelist_len; ++_i) {
         idnWhitelist_qstr[_i] = qstring(idnWhitelist[_i]);
     }
-    libqt_list idnWhitelist_list = qstrlist(idnWhitelist_qstr, idnWhitelist_len);
+    libqt_list idnWhitelist_list = qlist(idnWhitelist_qstr, idnWhitelist_len);
     QUrl_SetIdnWhitelist(idnWhitelist_list);
 }
 
@@ -498,7 +489,7 @@ libqt_list /* of QUrl* */ q_url_from_string_list2(const char* uris[], int64_t mo
     for (size_t _i = 0; _i < uris_len; ++_i) {
         uris_qstr[_i] = qstring(uris[_i]);
     }
-    libqt_list uris_list = qstrlist(uris_qstr, uris_len);
+    libqt_list uris_list = qlist(uris_qstr, uris_len);
     libqt_list _arr = QUrl_FromStringList2(uris_list, mode);
     return _arr;
 }

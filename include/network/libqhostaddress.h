@@ -21,6 +21,8 @@
 /// ``` QIPv6Address* self, int index ```
 unsigned char q_ipv6address_operator_subscript(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qipv6address.html#dtor.QIPv6Address)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QIPv6Address* self ```
@@ -223,6 +225,8 @@ uint32_t q_hostaddress_to_i_pv4_address1(void* self, bool* ok);
 /// ``` QHostAddress* self, QHostAddress* address, int mode ```
 bool q_hostaddress_is_equal2(void* self, void* address, int64_t mode);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#dtor.QHostAddress)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QHostAddress* self ```

@@ -15,25 +15,16 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QColor QColor;
 typedef struct QEvent QEvent;
 typedef struct QFont QFont;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QSettings QSettings;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
-typedef struct QsciAbstractAPIs QsciAbstractAPIs;
 typedef struct QsciLexer QsciLexer;
 typedef struct QsciLexerYAML QsciLexerYAML;
 typedef struct QsciScintilla QsciScintilla;
@@ -143,6 +134,9 @@ void QsciLexerYAML_QBaseSetPaper(QsciLexerYAML* self, QColor* c, int style);
 bool QsciLexerYAML_ReadProperties(QsciLexerYAML* self, QSettings* qs, libqt_string prefix);
 void QsciLexerYAML_OnReadProperties(QsciLexerYAML* self, intptr_t slot);
 bool QsciLexerYAML_QBaseReadProperties(QsciLexerYAML* self, QSettings* qs, libqt_string prefix);
+bool QsciLexerYAML_WriteProperties(const QsciLexerYAML* self, QSettings* qs, libqt_string prefix);
+void QsciLexerYAML_OnWriteProperties(const QsciLexerYAML* self, intptr_t slot);
+bool QsciLexerYAML_QBaseWriteProperties(const QsciLexerYAML* self, QSettings* qs, libqt_string prefix);
 bool QsciLexerYAML_Event(QsciLexerYAML* self, QEvent* event);
 void QsciLexerYAML_OnEvent(QsciLexerYAML* self, intptr_t slot);
 bool QsciLexerYAML_QBaseEvent(QsciLexerYAML* self, QEvent* event);
@@ -164,9 +158,6 @@ void QsciLexerYAML_QBaseConnectNotify(QsciLexerYAML* self, QMetaMethod* signal);
 void QsciLexerYAML_DisconnectNotify(QsciLexerYAML* self, QMetaMethod* signal);
 void QsciLexerYAML_OnDisconnectNotify(QsciLexerYAML* self, intptr_t slot);
 void QsciLexerYAML_QBaseDisconnectNotify(QsciLexerYAML* self, QMetaMethod* signal);
-bool QsciLexerYAML_WriteProperties(const QsciLexerYAML* self, QSettings* qs, libqt_string prefix);
-void QsciLexerYAML_OnWriteProperties(const QsciLexerYAML* self, intptr_t slot);
-bool QsciLexerYAML_QBaseWriteProperties(const QsciLexerYAML* self, QSettings* qs, libqt_string prefix);
 QObject* QsciLexerYAML_Sender(const QsciLexerYAML* self);
 void QsciLexerYAML_OnSender(const QsciLexerYAML* self, intptr_t slot);
 QObject* QsciLexerYAML_QBaseSender(const QsciLexerYAML* self);

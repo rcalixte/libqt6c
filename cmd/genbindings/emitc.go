@@ -27,6 +27,40 @@ func getPageName(c string) string {
 	return pageName
 }
 
+type PageType int
+
+const (
+	QtPage PageType = iota
+	EnumPage
+	DtorPage
+	QsciPage
+)
+
+func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
+	if strings.HasPrefix(pageName, "qsci") {
+		if pageType == EnumPage {
+			return ""
+		}
+		return "https://www.riverbankcomputing.com/static/Docs/QScintilla/class" + className + ".html"
+	}
+
+	if pageType == DtorPage && strings.Contains(className, "__") {
+		return ""
+	}
+
+	qtUrl := "https://doc.qt.io/qt-6/"
+
+	switch pageType {
+	case QtPage:
+		return qtUrl + pageName + ".html" + ifv(cmdURL != "", "#"+cmdURL, "")
+	case EnumPage:
+		return qtUrl + pageName + ".html#types"
+	case DtorPage:
+		return qtUrl + pageName + ".html#dtor." + className
+	}
+	return ""
+}
+
 // cabiEnumName returns the C ABI enum name for a Qt C++ class.
 func cabiEnumName(className string) string {
 	// Many types are defined in qnamespace.h under Qt::
@@ -250,7 +284,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType bool, fullEnumNa
 	if !strings.HasSuffix(ret, "*") {
 		if p.Pointer {
 			ret += strings.Repeat("*", p.PointerCount)
-		} else if p.ByRef || strings.HasPrefix(ret, "Q") {
+		} else if p.ByRef || IsKnownClass(p.ParameterType) {
 			ret += "*"
 		}
 	}
@@ -285,7 +319,8 @@ func (p CppParameter) renderReturnTypeC(cfs *cFileState) string {
 		ret = strings.Replace(ret, "::", "__", -1)
 	}
 
-	return ret
+	maybeConst := ifv(p.Const && !strings.HasPrefix(ret, "const "), "const ", "")
+	return maybeConst + ret
 }
 
 func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool) string {
@@ -305,8 +340,14 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 			pName := p.ParameterName
 			pType := p.RenderTypeC(cfs, false, true)
 			var pTypeSlot string
-			if _, ok := p.QListOf(); ok {
-				if !strings.HasPrefix(pType, "libqt_") {
+			if t, ok := p.QListOf(); ok {
+				if IsKnownClass(t.ParameterType) || strings.Contains(t.ParameterType, "::") ||
+					t.IntType() {
+					pName = cppComment("of "+t.RenderTypeC(cfs, false, true)) + " " + p.ParameterName
+					pTypeSlot = " " + pName + " "
+					pType = "libqt_list"
+				} else if (strings.Contains(pType, "char*") && !strings.Contains(pType, "libqt_")) ||
+					!strings.HasPrefix(pType, "libqt_") {
 					pName += "[]"
 					pTypeSlot = "[]"
 				}
@@ -338,8 +379,13 @@ func (cfs *cFileState) emitParametersC(params []CppParameter, isSlot bool) strin
 			// Ordinary parameter
 			pName := p.ParameterName
 			pType := p.RenderTypeC(cfs, false, false)
-			if _, ok := p.QListOf(); ok {
-				if !strings.HasPrefix(pType, "libqt_") {
+			if t, ok := p.QListOf(); ok {
+				if IsKnownClass(t.ParameterType) || strings.Contains(t.ParameterType, "::") ||
+					t.IntType() {
+					pName = p.ParameterName
+					pType = "libqt_list"
+				} else if (strings.Contains(pType, "char*") && !strings.Contains(pType, "libqt_")) ||
+					!strings.HasPrefix(pType, "libqt_") {
 					pName += "[]"
 				}
 			}
@@ -347,7 +393,8 @@ func (cfs *cFileState) emitParametersC(params []CppParameter, isSlot bool) strin
 			if reservedWordC(pName) {
 				pName = "_" + pName
 			}
-			if strings.HasPrefix(pType, "Q") && strings.HasSuffix(pType, "*") {
+			if IsKnownClass(p.ParameterType) && strings.HasSuffix(pType, "*") &&
+				!strings.Contains(pType, "char*") {
 				pType = "void*"
 			}
 			if isSlot {
@@ -413,9 +460,10 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 		// temporary libqt_string is passed by value
 		rvalue = "qstring(" + nameprefix + ")"
 
-	} else if p.ParameterType == "QAnyStringView" || p.ParameterType == "QByteArrayView" ||
-		p.ParameterType == "QStringView" {
+	} else if p.ParameterType == "QAnyStringView" {
+		rvalue = nameprefix
 
+	} else if p.ParameterType == "QByteArrayView" || p.ParameterType == "QStringView" {
 		// Take the address of the pointer and cast it to the expected type
 		preamble += "libqt_strview " + nameprefix + "_strview = qstrview(" + p.ParameterName + ");\n"
 		rvalue = "(" + p.ParameterType + "*)&" + nameprefix + "_strview"
@@ -430,30 +478,10 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 			preamble += "for (size_t _i = 0; _i < " + nameprefix + "_len; ++_i) {\n"
 			preamble += "    " + nameprefix + "_qstr[_i] = qstring(" + p.ParameterName + "[_i]);\n"
 			preamble += "}\n"
-			preamble += "libqt_list " + nameprefix + "_list = qstrlist(" + nameprefix + "_qstr, " + nameprefix + "_len);\n"
+			preamble += "libqt_list " + nameprefix + "_list = qlist(" + nameprefix + "_qstr, " + nameprefix + "_len);\n"
 
 			rvalue = nameprefix + "_list"
-		} else if t.QtClassType() {
-			preamble += t.RenderTypeCabi() + "* " + nameprefix + "_arr = (" + t.RenderTypeCabi() + "*)" + p.ParameterName + ";\n"
-			preamble += "size_t " + nameprefix + "_len = 0;\n"
-			preamble += "while (" + nameprefix + "_arr[" + nameprefix + "_len] != NULL) {\n"
-			preamble += "    " + nameprefix + "_len++;\n"
-			preamble += "}\n"
-			preamble += "libqt_list " + nameprefix + "_list = {\n"
-			preamble += "    .len = " + nameprefix + "_len,\n"
-			preamble += "    .data = {(" + t.RenderTypeCabi() + ")" + p.ParameterName + "},\n"
-			preamble += "};\n"
-			rvalue = nameprefix + "_list"
-		} else if t.IntType() {
-			preamble += "size_t " + nameprefix + "_len = 0;\n"
-			preamble += "while (" + p.ParameterName + "[" + nameprefix + "_len] != NULL) {\n"
-			preamble += "    " + nameprefix + "_len++;\n"
-			preamble += "}\n"
-			preamble += "libqt_list " + nameprefix + "_list = {\n"
-			preamble += "    .len = " + nameprefix + "_len,\n"
-			preamble += "    .data = {(" + t.RenderTypeCabi() + "*)" + p.ParameterName + "},\n"
-			preamble += "};\n"
-			rvalue = nameprefix + "_list"
+
 		} else {
 			rvalue = nameprefix
 		}
@@ -643,6 +671,43 @@ func collectInheritedMethodsForC(class string, seenMethods map[string]struct{}) 
 	return methods
 }
 
+// Helper function to recursively get private signals from parent classes
+func collectInheritedPrivateSignals(class string, seenSignals map[string]struct{}) []InheritedMethod {
+	var signals []InheritedMethod
+
+	if pkg, ok := KnownClassnames[class]; ok {
+		for _, m := range pkg.Class.PrivateSignals {
+			if _, seen := seenSignals[m.MethodName]; !seen {
+				if m.InheritedFrom != "" {
+					continue
+				}
+
+				// Create a copy of the method to avoid modifying the original
+				methodCopy := m
+				// Apply typedefs to ensure proper type resolution
+				applyTypedefs_Method(&methodCopy)
+				if err := blocklist_MethodAllowed(&methodCopy); err != nil {
+					continue
+				}
+
+				signals = append(signals, InheritedMethod{
+					Method:      methodCopy,
+					SourceClass: pkg.Class.ClassName,
+				})
+				seenSignals[m.MethodName] = struct{}{}
+			}
+		}
+
+		for _, parentClass := range pkg.Class.DirectInherits {
+			if parentSignals := collectInheritedPrivateSignals(parentClass, seenSignals); parentSignals != nil {
+				signals = append(signals, parentSignals...)
+			}
+		}
+	}
+
+	return signals
+}
+
 // Useful at the package level since we need to do the same thing
 // for headers and code
 var (
@@ -652,27 +717,9 @@ var (
 	}
 
 	// We need to brute force these for now
-	// The proper conditional doesn't seem to be apparent yet
 	skipFunction = map[string]struct{}{
-		"QFileDevice_AtEnd":                    {},
-		"QFileDevice_Close":                    {},
-		"QFileDevice_IsSequential":             {},
-		"QFileDevice_Permissions":              {},
-		"QFileDevice_Pos":                      {},
-		"QFileDevice_Resize":                   {},
-		"QFileDevice_Seek":                     {},
-		"QFileDevice_SetPermissions":           {},
-		"QFileDevice_Size":                     {},
-		"QPagedPaintDevice_SetPageLayout":      {},
-		"QPagedPaintDevice_SetPageMargins":     {},
-		"QPagedPaintDevice_SetPageOrientation": {},
-		"QPagedPaintDevice_SetPageRanges":      {},
-		"QPagedPaintDevice_SetPageSize":        {},
-		"QPaintDevice_DevType":                 {},
-		"QPaintDevice_PaintEngine":             {},
-		"QSinglePointEvent_IsBeginEvent":       {},
-		"QSinglePointEvent_IsEndEvent":         {},
-		"QSinglePointEvent_IsUpdateEvent":      {},
+		"QFileDevice_Close":        {},
+		"QPaintDevice_PaintEngine": {},
 	}
 
 	undoIncludePrefixMap = map[string]struct{}{
@@ -887,11 +934,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 		}
 
 		if len(c.Ctors) > 0 || len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 {
-			pageName := getPageName(cStructName)
-			ret.WriteString(`
-
-/// https://doc.qt.io/qt-6/` + pageName + `.html
-`)
+			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
+			pageName := getPageName(cStructName) + maybeCharts
+			ret.WriteString("\n\n/// " + getPageUrl(QtPage, pageName, "", cStructName) + "\n")
 		}
 
 		for i, ctor := range c.Ctors {
@@ -968,6 +1013,20 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			baseMethods = append(baseMethods, im.Method)
 		}
 
+		privateSignals := c.PrivateSignals
+		var inheritedPrivateSignals []InheritedMethod
+		for _, base := range c.DirectInherits {
+			inheritedS := collectInheritedPrivateSignals(base, seenMethods)
+			if inheritedS != nil {
+				inheritedPrivateSignals = append(inheritedPrivateSignals, inheritedS...)
+			}
+		}
+
+		for _, im := range inheritedPrivateSignals {
+			im.Method.InheritedFrom = im.SourceClass
+			privateSignals = append(privateSignals, im.Method)
+		}
+
 		previousMethods := map[string]struct{}{}
 		seenMethodVariants := map[string]bool{}
 
@@ -980,7 +1039,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				continue
 			}
 
-			if _, ok := privateAndSkippedMethods[c.ClassName+"_"+m.SafeMethodName()]; ok {
+			if _, ok := skippedMethods[c.ClassName+"_"+m.SafeMethodName()]; ok {
 				if m.InheritedFrom == "" {
 					continue
 				}
@@ -1024,7 +1083,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 			ret.WriteString(inheritedFrom)
 
-			subjectURL := strings.ToLower(ifv(m.InheritedInClass == "", cmdStructName, m.InheritedInClass))
+			var docCommentUrl string
+			className := ifv(m.InheritedInClass == "", cmdStructName, m.InheritedInClass)
+			subjectURL := strings.ToLower(className)
 			cmdURL := m.MethodName
 			if m.OverrideMethodName != "" {
 				cmdURL = m.OverrideMethodName
@@ -1033,8 +1094,10 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				subjectURL = newURL
 			}
 			if subjectURL != "" {
-				baseURL := "https://doc.qt.io/qt-6/" + subjectURL + ".html#"
-				ret.WriteString("\n/// [Qt documentation](" + baseURL + cmdURL + ")\n///")
+				maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "" && subjectURL != "qobject", "-qtcharts", "")
+				pageURL := getPageUrl(QtPage, subjectURL+maybeCharts, cmdURL, className)
+				docCommentUrl = "\n/// [Qt documentation](" + pageURL + ")\n///"
+				ret.WriteString(docCommentUrl)
 			}
 
 			previousMethods[m.MethodName] = struct{}{}
@@ -1075,28 +1138,26 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 			// Add Connect() wrappers for signal functions
 			if m.IsSignal {
-				var slotComma string
-				if len(m.Parameters) != 0 {
-					slotComma = ", "
-				}
-				ret.WriteString(inheritedFrom + "\n/// ``` " + cStructName + "* self, void (*slot)(" +
-					cmdStructName + "*" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ") ```\n")
-
 				addConnect := true
 				if _, ok := noQtConnect[cmdStructName]; ok {
 					addConnect = false
 				}
+
 				if addConnect {
-					ret.WriteString(`void ` + cmdMethodName + "_on" + safeMethodName + `(void* self, void (*slot)(void*` +
-						slotComma + cfs.emitParametersC(m.Parameters, true) + `));` + "\n")
+					var slotComma string
+					if len(m.Parameters) != 0 {
+						slotComma = ", "
+					}
+					ret.WriteString(inheritedFrom + docCommentUrl + "\n/// ``` " + cStructName + "* self, void (*slot)(" +
+						cmdStructName + "*" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ") ```\n")
+
+					ret.WriteString("void " + cmdMethodName + "_on" + safeMethodName + "(void* self, void (*slot)(void*" +
+						slotComma + cfs.emitParametersC(m.Parameters, true) + "));\n")
 				}
 			}
 
+			// We need to brute force these for now
 			if _, ok := skipFunction[cmdStructName+"_"+mSafeMethodName]; ok {
-				continue
-			}
-
-			if _, ok := skipNoOverride[cmdStructName+"_"+m.SafeMethodName()]; ok {
 				continue
 			}
 
@@ -1122,7 +1183,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				}
 
 				onDocComment := "\n/// Allows for overriding the related default method\n    ///"
-				ret.WriteString(inheritedFrom + onDocComment + "\n/// ``` " + cmdStructName +
+				ret.WriteString(inheritedFrom + docCommentUrl + onDocComment + "\n/// ``` " + cmdStructName +
 					"* self, " + m.ReturnType.renderReturnTypeC(&cfs) + " (*slot)(" + maybeStruct +
 					cfs.emitCommentParametersC(m.Parameters, true) + ") ```\n" +
 					`void ` + cmdMethodName + "_on" + safeMethodName + `(void* self, ` + m.ReturnType.renderReturnTypeC(&cfs) +
@@ -1130,7 +1191,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 				qbaseDocComment := "\n/// Base class method implementation\n    ///"
 				baseMethodName := "q_" + strings.ToLower(cStructName[nameIndex:]) + "_qbase"
-				ret.WriteString(inheritedFrom + qbaseDocComment + "\n/// " + backticks + " " +
+				ret.WriteString(inheritedFrom + docCommentUrl + qbaseDocComment + "\n/// " + backticks + " " +
 					commentParam + cfs.emitCommentParametersC(m.Parameters, false) +
 					" " + backticks + "\n" +
 					returnTypeDecl + " " + baseMethodName + method + cfs.emitParametersC(m.Parameters, false) + ");\n")
@@ -1144,7 +1205,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				continue
 			}
 
-			if _, ok := privateAndSkippedMethods[c.ClassName+"_"+m.SafeMethodName()]; ok {
+			if _, ok := skippedMethods[c.ClassName+"_"+m.SafeMethodName()]; ok {
 				if m.InheritedFrom == "" {
 					continue
 				}
@@ -1189,14 +1250,15 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				inheritedFrom = "\n/// Inherited from " + m.InheritedInClass + "\n ///"
 			}
 
-			subjectURL := strings.ToLower(ifv(m.InheritedInClass == "", cmdStructName, m.InheritedInClass))
-
-			baseURL := "https://doc.qt.io/qt-6/" + subjectURL + ".html#"
+			className := ifv(m.InheritedInClass == "", cmdStructName, m.InheritedInClass)
+			subjectURL := strings.ToLower(className)
 			cmdURL := m.MethodName
 			if m.OverrideMethodName != "" {
 				cmdURL = m.OverrideMethodName
 			}
-			documentationURL := "\n/// [Qt documentation](" + baseURL + cmdURL + ")\n///\n"
+			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "", "-qtcharts", "")
+			pageURL := getPageUrl(QtPage, subjectURL+maybeCharts, cmdURL, className)
+			documentationURL := "\n/// [Qt documentation](" + pageURL + ")\n///"
 
 			// Add a package-private function to call the C++ base class method
 			// QWidget_PaintEvent
@@ -1204,7 +1266,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs)
 			cfsParams := cfs.emitParametersC(m.Parameters, false)
 
-			headerComment := " /// Wrapper to allow calling virtual or protected method\n ///\n"
+			headerComment := "\n/// Wrapper to allow calling virtual or protected method\n ///\n"
 
 			ret.WriteString(inheritedFrom + documentationURL + headerComment + "/// ``` " + cStructName + "* self" +
 				commaParams + cfs.emitCommentParametersC(m.Parameters, false) + " ```\n" +
@@ -1214,9 +1276,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				continue
 			}
 
-			headerComment = "\n /// Wrapper to allow calling base class virtual or protected method\n ///\n"
+			headerComment = "\n/// Wrapper to allow calling base class virtual or protected method\n ///\n"
 
-			ret.WriteString(inheritedFrom + headerComment + "/// ``` " + cStructName + "* self" +
+			ret.WriteString(inheritedFrom + documentationURL + headerComment + "/// ``` " + cStructName + "* self" +
 				commaParams + cfs.emitCommentParametersC(m.Parameters, false) + " ```\n" +
 				returnTypeDecl + ` ` + cmdMethodName + "_qbase" + safeMethodName + `(void* self` + commaParams + cfsParams + `);` + "\n")
 
@@ -1234,9 +1296,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				maybeVoid = "void*"
 			}
 
-			headerComment = "\n /// Wrapper to allow overriding base class virtual or protected method\n ///\n"
+			headerComment = "\n/// Wrapper to allow overriding base class virtual or protected method\n ///\n"
 
-			ret.WriteString(inheritedFrom + headerComment + "/// ``` " + cmdStructName +
+			ret.WriteString(inheritedFrom + documentationURL + headerComment + "/// ``` " + cmdStructName +
 				"* self, " + m.ReturnType.renderReturnTypeC(&cfs) + " (*slot)(" + maybeStruct +
 				cfs.emitCommentParametersC(m.Parameters, true) + ") ```\n" +
 				`void ` + cmdMethodName + "_on" + safeMethodName + `(void* self, ` + m.ReturnType.renderReturnTypeC(&cfs) +
@@ -1244,9 +1306,50 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 		}
 
+		for _, m := range privateSignals {
+			cmdStructName := cStructName
+			cmdMethodName := "q_" + strings.ToLower(cStructName[nameIndex:])
+			safeMethodName := cSafeMethodName(m.SafeMethodName())
+			var inheritedFrom, docCommentUrl string
+			if m.InheritedFrom != "" {
+				inheritedFrom = "\n/// Inherited from " + m.InheritedFrom + "\n///"
+				cmdStructName = m.InheritedFrom
+			}
+
+			if m.InheritedInClass != "" {
+				inheritedFrom = "\n    /// Inherited from " + m.InheritedInClass + "\n    ///"
+			}
+
+			className := ifv(m.InheritedInClass == "", cmdStructName, m.InheritedInClass)
+			subjectURL := strings.ToLower(className)
+			cmdURL := m.MethodName
+			if m.OverrideMethodName != "" {
+				cmdURL = m.OverrideMethodName
+			}
+			if newURL, ok := qtMethodUrlOverrides[cmdURL]; ok {
+				subjectURL = newURL
+			}
+			if subjectURL != "" {
+				maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "" && subjectURL != "qobject", "-qtcharts", "")
+				pageURL := getPageUrl(QtPage, subjectURL+maybeCharts, cmdURL, className)
+				docCommentUrl = "\n/// [Qt documentation](" + pageURL + ")\n///\n"
+			}
+
+			slotComma := ifv(len(m.Parameters) != 0, ", ", "")
+			headerComment := "/// Wrapper to allow calling private signal\n///"
+
+			ret.WriteString(inheritedFrom + docCommentUrl + headerComment + "\n/// ``` " + cStructName + "* self, void (*slot)(" +
+				cmdStructName + "*" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ") ```\n")
+
+			ret.WriteString("void " + cmdMethodName + "_on" + safeMethodName + "(void* self, void (*slot)(void*" +
+				slotComma + cfs.emitParametersC(m.Parameters, true) + "));\n")
+		}
+
 		if c.CanDelete && (len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 || len(c.Ctors) > 0) {
-			ret.WriteString(`
-/// Delete this object from C++ memory.
+			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
+			pageUrl := getPageUrl(DtorPage, getPageName(c.ClassName)+maybeCharts, "", c.ClassName)
+			ret.WriteString(ifv(pageUrl != "", "\n/// [Qt documentation]("+pageUrl+")\n///\n", "\n") +
+				`/// Delete this object from C++ memory.
 ///
 ` + "/// ``` " + cStructName + "* self ```\n" +
 				"void q_" + cSafeMethodName(strings.ToLower(cStructName[nameIndex:])) + `_delete(void* self);` + "\n\n")
@@ -1255,7 +1358,10 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 	if len(src.Enums) > 0 {
 		pageName := getPageName(cfs.currentHeaderName)
-		ret.WriteString("\n\n/// https://doc.qt.io/qt-6/" + pageName + ".html#types\n\n")
+		maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
+		pageUrl := getPageUrl(EnumPage, pageName+maybeCharts, "", "")
+		maybeUrl := ifv(pageUrl != "", "\n\n/// "+pageUrl, "")
+		ret.WriteString(maybeUrl + "\n\n")
 	}
 
 	for _, e := range src.Enums {
@@ -1486,7 +1592,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				continue
 			}
 			if strings.HasPrefix(base, `QList<`) {
-				ret.WriteString("// Also inherits unprojectable " + base + "\n")
+				ret.WriteString("\n// Also inherits unprojectable " + base + "\n")
 			}
 		}
 
@@ -1571,6 +1677,20 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			baseMethods = append(baseMethods, im.Method)
 		}
 
+		privateSignals := c.PrivateSignals
+		var inheritedPrivateSignals []InheritedMethod
+		for _, base := range c.DirectInherits {
+			inheritedS := collectInheritedPrivateSignals(base, seenMethods)
+			if inheritedS != nil {
+				inheritedPrivateSignals = append(inheritedPrivateSignals, inheritedS...)
+			}
+		}
+
+		for _, im := range inheritedPrivateSignals {
+			im.Method.InheritedFrom = im.SourceClass
+			privateSignals = append(privateSignals, im.Method)
+		}
+
 		previousMethods := map[string]struct{}{}
 		seenMethodVariants := map[string]bool{}
 
@@ -1583,7 +1703,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				continue
 			}
 
-			if _, ok := privateAndSkippedMethods[c.ClassName+"_"+m.SafeMethodName()]; ok {
+			if _, ok := skippedMethods[c.ClassName+"_"+m.SafeMethodName()]; ok {
 				if m.InheritedFrom == "" {
 					continue
 				}
@@ -1667,20 +1787,15 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 					addConnect = false
 				}
 				if addConnect {
-					ret.WriteString(`void ` + cmdMethodName + "_on" + safeMethodName + `(void* self, void (*slot)(void*` +
+					ret.WriteString("void " + cmdMethodName + "_on" + safeMethodName + "(void* self, void (*slot)(void*" +
 						slotComma + cfs.emitParametersC(m.Parameters, true) + `)) {
-    ` + cmdStructName + `_Connect_` + mSafeMethodName + `((` + cmdStructName + `*)` + `self, (intptr_t)slot);
+    ` + cmdStructName + "_Connect_" + mSafeMethodName + "((" + cmdStructName + "*)" + `self, (intptr_t)slot);
 }` + "\n\n")
 				}
 			}
 
 			// We need to brute force these for now
-			// The proper conditional doesn't seem to be apparent yet
 			if _, ok := skipFunction[cmdStructName+"_"+mSafeMethodName]; ok {
-				continue
-			}
-
-			if _, ok := skipNoOverride[cmdStructName+"_"+m.SafeMethodName()]; ok {
 				continue
 			}
 
@@ -1737,7 +1852,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				continue
 			}
 
-			if _, ok := privateAndSkippedMethods[c.ClassName+"_"+m.SafeMethodName()]; ok {
+			if _, ok := skippedMethods[c.ClassName+"_"+m.SafeMethodName()]; ok {
 				if m.InheritedFrom == "" {
 					continue
 				}
@@ -1816,9 +1931,28 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 		}
 
+		for _, m := range privateSignals {
+			cmdStructName := cStructName
+			mSafeMethodName := m.SafeMethodName()
+			cmdMethodName := "q_" + strings.ToLower(cStructName[nameIndex:])
+			safeMethodName := cSafeMethodName(mSafeMethodName)
+			if m.InheritedFrom != "" {
+				cmdStructName = m.InheritedFrom
+			}
+			var slotComma string
+			if len(m.Parameters) != 0 {
+				slotComma = ", "
+			}
+
+			ret.WriteString("void " + cmdMethodName + "_on" + safeMethodName + "(void* self, void (*slot)(void*" +
+				slotComma + cfs.emitParametersC(m.Parameters, true) + `)) {
+    ` + cmdStructName + "_Connect_" + mSafeMethodName + "((" + cmdStructName + "*)" + `self, (intptr_t)slot);
+}` + "\n\n")
+		}
+
 		if c.CanDelete && (len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 || len(c.Ctors) > 0) {
 			ret.WriteString("void q_" + cSafeMethodName(strings.ToLower(cStructName[nameIndex:])) + `_delete(void* self) {
-    ` + cStructName + `_Delete((` + cStructName + `*)(self));
+    ` + cStructName + "_Delete((" + cStructName + `*)(self));
 }` + "\n")
 		}
 	}

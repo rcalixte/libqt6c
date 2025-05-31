@@ -57,6 +57,8 @@ int64_t q_webengineloadinginfo_error_domain(void* self);
 /// ``` QWebEngineLoadingInfo* self ```
 int32_t q_webengineloadinginfo_error_code(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#dtor.QWebEngineLoadingInfo)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWebEngineLoadingInfo* self ```

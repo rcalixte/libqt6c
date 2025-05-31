@@ -15,36 +15,25 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #if defined(WORKAROUND_INNER_CLASS_DEFINITION_QTextFrame__iterator)
 typedef QTextFrame::iterator QTextFrame__iterator;
 #endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QEvent QEvent;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QTextCharFormat QTextCharFormat;
 typedef struct QTextCursor QTextCursor;
 typedef struct QTextDocument QTextDocument;
-typedef struct QTextFormat QTextFormat;
 typedef struct QTextFrame QTextFrame;
-typedef struct QTextFrameFormat QTextFrameFormat;
-typedef struct QTextFrameLayoutData QTextFrameLayoutData;
 typedef struct QTextFrame__iterator QTextFrame__iterator;
 typedef struct QTextObject QTextObject;
 typedef struct QTextTable QTextTable;
 typedef struct QTextTableCell QTextTableCell;
 typedef struct QTextTableFormat QTextTableFormat;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
 #endif
 
 QTextTableCell* QTextTableCell_new();

@@ -47,6 +47,8 @@ const char** q_genericpluginfactory_keys();
 /// ``` const char* param1, const char* param2 ```
 QObject* q_genericpluginfactory_create(const char* param1, const char* param2);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgenericpluginfactory.html#dtor.QGenericPluginFactory)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGenericPluginFactory* self ```

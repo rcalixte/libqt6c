@@ -1,7 +1,5 @@
 #include "../libqaction.hpp"
-#include "../libqanystringview.hpp"
 #include "../network/libqauthenticator.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
 #include "../libqcolor.hpp"
 #include "../libqicon.hpp"
@@ -13,9 +11,7 @@
 #include "../libqrect.hpp"
 #include "../libqsize.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
 #include "../libqurl.hpp"
-#include "../libqvariant.hpp"
 #include "../webchannel/libqwebchannel.hpp"
 #include "libqwebenginecertificateerror.hpp"
 #include "libqwebengineclientcertificateselection.hpp"
@@ -53,7 +49,7 @@ QWebEnginePage* q_webenginepage_new4(void* profile, void* parent) {
     return QWebEnginePage_new4((QWebEngineProfile*)profile, (QObject*)parent);
 }
 
-QMetaObject* q_webenginepage_meta_object(void* self) {
+const QMetaObject* q_webenginepage_meta_object(void* self) {
     return QWebEnginePage_MetaObject((QWebEnginePage*)self);
 }
 
@@ -608,13 +604,13 @@ const char** q_webenginepage_choose_files(void* self, int64_t mode, const char* 
     for (size_t _i = 0; _i < oldFiles_len; ++_i) {
         oldFiles_qstr[_i] = qstring(oldFiles[_i]);
     }
-    libqt_list oldFiles_list = qstrlist(oldFiles_qstr, oldFiles_len);
+    libqt_list oldFiles_list = qlist(oldFiles_qstr, oldFiles_len);
     size_t acceptedMimeTypes_len = libqt_strv_length(acceptedMimeTypes);
     libqt_string* acceptedMimeTypes_qstr = malloc(acceptedMimeTypes_len * sizeof(libqt_string));
     for (size_t _i = 0; _i < acceptedMimeTypes_len; ++_i) {
         acceptedMimeTypes_qstr[_i] = qstring(acceptedMimeTypes[_i]);
     }
-    libqt_list acceptedMimeTypes_list = qstrlist(acceptedMimeTypes_qstr, acceptedMimeTypes_len);
+    libqt_list acceptedMimeTypes_list = qlist(acceptedMimeTypes_qstr, acceptedMimeTypes_len);
     libqt_list _arr = QWebEnginePage_ChooseFiles((QWebEnginePage*)self, mode, oldFiles_list, acceptedMimeTypes_list);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -638,13 +634,13 @@ const char** q_webenginepage_qbase_choose_files(void* self, int64_t mode, const 
     for (size_t _i = 0; _i < oldFiles_len; ++_i) {
         oldFiles_qstr[_i] = qstring(oldFiles[_i]);
     }
-    libqt_list oldFiles_list = qstrlist(oldFiles_qstr, oldFiles_len);
+    libqt_list oldFiles_list = qlist(oldFiles_qstr, oldFiles_len);
     size_t acceptedMimeTypes_len = libqt_strv_length(acceptedMimeTypes);
     libqt_string* acceptedMimeTypes_qstr = malloc(acceptedMimeTypes_len * sizeof(libqt_string));
     for (size_t _i = 0; _i < acceptedMimeTypes_len; ++_i) {
         acceptedMimeTypes_qstr[_i] = qstring(acceptedMimeTypes[_i]);
     }
-    libqt_list acceptedMimeTypes_list = qstrlist(acceptedMimeTypes_qstr, acceptedMimeTypes_len);
+    libqt_list acceptedMimeTypes_list = qlist(acceptedMimeTypes_qstr, acceptedMimeTypes_len);
     libqt_list _arr = QWebEnginePage_QBaseChooseFiles((QWebEnginePage*)self, mode, oldFiles_list, acceptedMimeTypes_list);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -760,8 +756,7 @@ const char* q_webenginepage_object_name(void* self) {
 }
 
 void q_webenginepage_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_webenginepage_is_widget_type(void* self) {
@@ -800,7 +795,7 @@ void q_webenginepage_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_webenginepage_children(void* self) {
+const libqt_list /* of QObject* */ q_webenginepage_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -867,7 +862,7 @@ QBindingStorage* q_webenginepage_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_webenginepage_binding_storage2(void* self) {
+const QBindingStorage* q_webenginepage_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1029,6 +1024,10 @@ bool q_webenginepage_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_webenginepage_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QWebEnginePage_OnIsSignalConnected((QWebEnginePage*)self, (intptr_t)slot);
+}
+
+void q_webenginepage_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_webenginepage_delete(void* self) {

@@ -1,16 +1,8 @@
 #include "libqaction.hpp"
-#include "libqactiongroup.hpp"
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
-#include "libqfont.hpp"
-#include "libqicon.hpp"
-#include "libqkeysequence.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include <string.h>
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqwidget.hpp"
 #include "libqcoreevent.hpp"
 #include "libqwidgetaction.hpp"
@@ -20,7 +12,7 @@ QWidgetAction* q_widgetaction_new(void* parent) {
     return QWidgetAction_new((QObject*)parent);
 }
 
-QMetaObject* q_widgetaction_meta_object(void* self) {
+const QMetaObject* q_widgetaction_meta_object(void* self) {
     return QWidgetAction_MetaObject((QWidgetAction*)self);
 }
 
@@ -239,17 +231,8 @@ QKeySequence* q_widgetaction_shortcut(void* self) {
     return QAction_Shortcut((QAction*)self);
 }
 
-void q_widgetaction_set_shortcuts(void* self, void* shortcuts[]) {
-    QKeySequence** shortcuts_arr = (QKeySequence**)shortcuts;
-    size_t shortcuts_len = 0;
-    while (shortcuts_arr[shortcuts_len] != NULL) {
-        shortcuts_len++;
-    }
-    libqt_list shortcuts_list = {
-        .len = shortcuts_len,
-        .data = {(QKeySequence*)shortcuts},
-    };
-    QAction_SetShortcuts((QAction*)self, shortcuts_list);
+void q_widgetaction_set_shortcuts(void* self, libqt_list shortcuts) {
+    QAction_SetShortcuts((QAction*)self, shortcuts);
 }
 
 void q_widgetaction_set_shortcuts_with_shortcuts(void* self, int64_t shortcuts) {
@@ -453,8 +436,7 @@ const char* q_widgetaction_object_name(void* self) {
 }
 
 void q_widgetaction_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_widgetaction_is_widget_type(void* self) {
@@ -493,7 +475,7 @@ void q_widgetaction_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_widgetaction_children(void* self) {
+const libqt_list /* of QObject* */ q_widgetaction_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -560,7 +542,7 @@ QBindingStorage* q_widgetaction_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_widgetaction_binding_storage2(void* self) {
+const QBindingStorage* q_widgetaction_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -710,6 +692,10 @@ bool q_widgetaction_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_widgetaction_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QWidgetAction_OnIsSignalConnected((QWidgetAction*)self, (intptr_t)slot);
+}
+
+void q_widgetaction_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_widgetaction_delete(void* self) {

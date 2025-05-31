@@ -24,6 +24,8 @@ QContiguousCacheData* q_contiguouscachedata_allocate_data(int64_t size, int64_t 
 /// ``` QContiguousCacheData* data ```
 void q_contiguouscachedata_free_data(void* data);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcontiguouscachedata.html#dtor.QContiguousCacheData)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QContiguousCacheData* self ```

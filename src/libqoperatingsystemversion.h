@@ -87,6 +87,8 @@ int64_t q_operatingsystemversionbase_type(void* self);
 /// ``` QOperatingSystemVersionBase* self ```
 const char* q_operatingsystemversionbase_name2(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#dtor.QOperatingSystemVersionBase)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QOperatingSystemVersionBase* self ```
@@ -171,6 +173,8 @@ const char* q_operatingsystemversion_name(void* self);
 /// ``` QOperatingSystemVersion* self ```
 const char* q_operatingsystemversion_name2(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qoperatingsystemversion.html#dtor.QOperatingSystemVersion)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QOperatingSystemVersion* self ```

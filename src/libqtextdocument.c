@@ -1,6 +1,4 @@
 #include "libqabstracttextdocumentlayout.hpp"
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqchar.hpp"
 #include "libqevent.hpp"
 #include "libqfont.hpp"
@@ -16,7 +14,6 @@
 #include "libqtextcursor.hpp"
 #include "libqtextformat.hpp"
 #include "libqtextoption.hpp"
-#include "libqthread.hpp"
 #include "libqurl.hpp"
 #include "libqvariant.hpp"
 #include "libqcoreevent.hpp"
@@ -55,7 +52,7 @@ QTextDocument* q_textdocument_new4(const char* text, void* parent) {
     return QTextDocument_new4(qstring(text), (QObject*)parent);
 }
 
-QMetaObject* q_textdocument_meta_object(void* self) {
+const QMetaObject* q_textdocument_meta_object(void* self) {
     return QTextDocument_MetaObject((QTextDocument*)self);
 }
 
@@ -638,8 +635,7 @@ const char* q_textdocument_object_name(void* self) {
 }
 
 void q_textdocument_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_textdocument_is_widget_type(void* self) {
@@ -678,7 +674,7 @@ void q_textdocument_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_textdocument_children(void* self) {
+const libqt_list /* of QObject* */ q_textdocument_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -745,7 +741,7 @@ QBindingStorage* q_textdocument_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_textdocument_binding_storage2(void* self) {
+const QBindingStorage* q_textdocument_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -919,6 +915,10 @@ bool q_textdocument_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_textdocument_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QTextDocument_OnIsSignalConnected((QTextDocument*)self, (intptr_t)slot);
+}
+
+void q_textdocument_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_textdocument_delete(void* self) {

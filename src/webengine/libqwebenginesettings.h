@@ -86,6 +86,8 @@ void q_webenginesettings_set_unknown_url_scheme_policy(void* self, int64_t polic
 /// ``` QWebEngineSettings* self ```
 void q_webenginesettings_reset_unknown_url_scheme_policy(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#dtor.QWebEngineSettings)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWebEngineSettings* self ```

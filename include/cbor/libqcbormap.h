@@ -82,17 +82,17 @@ QCborValue* q_cbormap_value3(void* self, void* key);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator[])
 ///
 /// ``` QCborMap* self, long long key ```
-QCborValue* q_cbormap_operator_subscript(void* self, long long key);
+const QCborValue* q_cbormap_operator_subscript(void* self, long long key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator[])
 ///
 /// ``` QCborMap* self, const char* key ```
-QCborValue* q_cbormap_operator_subscript2(void* self, const char* key);
+const QCborValue* q_cbormap_operator_subscript2(void* self, const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator[])
 ///
 /// ``` QCborMap* self, QCborValue* key ```
-QCborValue* q_cbormap_operator_subscript3(void* self, void* key);
+const QCborValue* q_cbormap_operator_subscript3(void* self, void* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator[])
 ///
@@ -334,6 +334,8 @@ libqt_map /* of const char* to QVariant* */ q_cbormap_to_variant_hash(void* self
 /// ``` QCborMap* self ```
 QJsonObject* q_cbormap_to_json_object(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#dtor.QCborMap)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCborMap* self ```
@@ -379,7 +381,7 @@ QCborValueRef* q_cbormap__iterator_operator_minus_greater(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#operator->)
 ///
 /// ``` QCborMap__Iterator* self ```
-QCborValueConstRef* q_cbormap__iterator_operator_minus_greater2(void* self);
+const QCborValueConstRef* q_cbormap__iterator_operator_minus_greater2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#key)
 ///
@@ -496,6 +498,8 @@ QCborMap__Iterator* q_cbormap__iterator_operator_minus(void* self, int64_t j);
 /// ``` QCborMap__Iterator* self, QCborMap__Iterator* j ```
 int64_t q_cbormap__iterator_operator_minus_with_q_cbor_map_iterator(void* self, void* j);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap::iterator.html#dtor.QCborMap::Iterator)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCborMap__Iterator* self ```
@@ -536,7 +540,7 @@ libqt_pair /* tuple of QCborValueConstRef* and QCborValueConstRef* */ q_cbormap_
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__constiterator.html#operator->)
 ///
 /// ``` QCborMap__ConstIterator* self ```
-QCborValueConstRef* q_cbormap__constiterator_operator_minus_greater(void* self);
+const QCborValueConstRef* q_cbormap__constiterator_operator_minus_greater(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__constiterator.html#key)
 ///
@@ -653,6 +657,8 @@ QCborMap__ConstIterator* q_cbormap__constiterator_operator_minus(void* self, int
 /// ``` QCborMap__ConstIterator* self, QCborMap__ConstIterator* j ```
 int64_t q_cbormap__constiterator_operator_minus_with_q_cbor_map_const_iterator(void* self, void* j);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap::constiterator.html#dtor.QCborMap::ConstIterator)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCborMap__ConstIterator* self ```

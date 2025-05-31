@@ -13,8 +13,6 @@
 #include "qtlibc.h"
 
 #include "libqaccessible.h"
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqcursor.h"
 #include "libqicon.h"
@@ -29,8 +27,6 @@
 #include <string.h>
 #include "libqsurface.h"
 #include "libqsurfaceformat.h"
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qwindow.html
 
@@ -52,7 +48,7 @@ QWindow* q_window_new3(void* screen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QWindow* self ```
-QMetaObject* q_window_meta_object(void* self);
+const QMetaObject* q_window_meta_object(void* self);
 
 /// ``` QWindow* self, const char* param1 ```
 void* q_window_metacast(void* self, const char* param1);
@@ -85,11 +81,15 @@ void q_window_set_surface_type(void* self, int64_t surfaceType);
 /// ``` QWindow* self ```
 int64_t q_window_surface_type(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#surfaceType)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, int64_t (*slot)() ```
 void q_window_on_surface_type(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#surfaceType)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self ```
@@ -160,11 +160,15 @@ void q_window_set_format(void* self, void* format);
 /// ``` QWindow* self ```
 QSurfaceFormat* q_window_format(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#format)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, QSurfaceFormat* (*slot)() ```
 void q_window_on_format(void* self, QSurfaceFormat* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#format)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self ```
@@ -390,11 +394,15 @@ int32_t q_window_y(void* self);
 /// ``` QWindow* self ```
 QSize* q_window_size(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#size)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, QSize* (*slot)() ```
 void q_window_on_size(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#size)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self ```
@@ -475,11 +483,15 @@ void q_window_set_screen(void* self, void* screen);
 /// ``` QWindow* self ```
 QAccessibleInterface* q_window_accessible_root(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#accessibleRoot)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, QAccessibleInterface* (*slot)() ```
 void q_window_on_accessible_root(void* self, QAccessibleInterface* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#accessibleRoot)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self ```
@@ -490,11 +502,15 @@ QAccessibleInterface* q_window_qbase_accessible_root(void* self);
 /// ``` QWindow* self ```
 QObject* q_window_focus_object(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusObject)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, QObject* (*slot)() ```
 void q_window_on_focus_object(void* self, QObject* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusObject)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self ```
@@ -545,11 +561,15 @@ QWindow* q_window_from_win_id(uintptr_t id);
 /// ``` QWindow* self, const char* name, int revision ```
 void* q_window_resolve_interface(void* self, const char* name, int revision);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#resolveInterface)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, void* (*slot)(QWindow*, const char*, int) ```
 void q_window_on_resolve_interface(void* self, void* (*slot)(void*, const char*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#resolveInterface)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self, const char* name, int revision ```
@@ -690,6 +710,8 @@ void q_window_request_update(void* self);
 /// ``` QWindow* self, QScreen* screen ```
 void q_window_screen_changed(void* self, void* screen);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#screenChanged)
+///
 /// ``` QWindow* self, void (*slot)(QWindow*, QScreen*) ```
 void q_window_on_screen_changed(void* self, void (*slot)(void*, void*));
 
@@ -698,6 +720,8 @@ void q_window_on_screen_changed(void* self, void (*slot)(void*, void*));
 /// ``` QWindow* self, enum Qt__WindowModality modality ```
 void q_window_modality_changed(void* self, int64_t modality);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#modalityChanged)
+///
 /// ``` QWindow* self, void (*slot)(QWindow*, enum Qt__WindowModality) ```
 void q_window_on_modality_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -706,6 +730,8 @@ void q_window_on_modality_changed(void* self, void (*slot)(void*, int64_t));
 /// ``` QWindow* self, enum Qt__WindowState windowState ```
 void q_window_window_state_changed(void* self, int64_t windowState);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#windowStateChanged)
+///
 /// ``` QWindow* self, void (*slot)(QWindow*, enum Qt__WindowState) ```
 void q_window_on_window_state_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -714,6 +740,8 @@ void q_window_on_window_state_changed(void* self, void (*slot)(void*, int64_t));
 /// ``` QWindow* self, const char* title ```
 void q_window_window_title_changed(void* self, const char* title);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#windowTitleChanged)
+///
 /// ``` QWindow* self, void (*slot)(QWindow*, const char*) ```
 void q_window_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -722,6 +750,8 @@ void q_window_on_window_title_changed(void* self, void (*slot)(void*, const char
 /// ``` QWindow* self, int arg ```
 void q_window_x_changed(void* self, int arg);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#xChanged)
+///
 /// ``` QWindow* self, void (*slot)(QWindow*, int) ```
 void q_window_on_x_changed(void* self, void (*slot)(void*, int));
 
@@ -730,6 +760,8 @@ void q_window_on_x_changed(void* self, void (*slot)(void*, int));
 /// ``` QWindow* self, int arg ```
 void q_window_y_changed(void* self, int arg);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#yChanged)
+///
 /// ``` QWindow* self, void (*slot)(QWindow*, int) ```
 void q_window_on_y_changed(void* self, void (*slot)(void*, int));
 
@@ -738,6 +770,8 @@ void q_window_on_y_changed(void* self, void (*slot)(void*, int));
 /// ``` QWindow* self, int arg ```
 void q_window_width_changed(void* self, int arg);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#widthChanged)
+///
 /// ``` QWindow* self, void (*slot)(QWindow*, int) ```
 void q_window_on_width_changed(void* self, void (*slot)(void*, int));
 
@@ -746,6 +780,8 @@ void q_window_on_width_changed(void* self, void (*slot)(void*, int));
 /// ``` QWindow* self, int arg ```
 void q_window_height_changed(void* self, int arg);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#heightChanged)
+///
 /// ``` QWindow* self, void (*slot)(QWindow*, int) ```
 void q_window_on_height_changed(void* self, void (*slot)(void*, int));
 
@@ -754,6 +790,8 @@ void q_window_on_height_changed(void* self, void (*slot)(void*, int));
 /// ``` QWindow* self, int arg ```
 void q_window_minimum_width_changed(void* self, int arg);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#minimumWidthChanged)
+///
 /// ``` QWindow* self, void (*slot)(QWindow*, int) ```
 void q_window_on_minimum_width_changed(void* self, void (*slot)(void*, int));
 
@@ -762,6 +800,8 @@ void q_window_on_minimum_width_changed(void* self, void (*slot)(void*, int));
 /// ``` QWindow* self, int arg ```
 void q_window_minimum_height_changed(void* self, int arg);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#minimumHeightChanged)
+///
 /// ``` QWindow* self, void (*slot)(QWindow*, int) ```
 void q_window_on_minimum_height_changed(void* self, void (*slot)(void*, int));
 
@@ -770,6 +810,8 @@ void q_window_on_minimum_height_changed(void* self, void (*slot)(void*, int));
 /// ``` QWindow* self, int arg ```
 void q_window_maximum_width_changed(void* self, int arg);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#maximumWidthChanged)
+///
 /// ``` QWindow* self, void (*slot)(QWindow*, int) ```
 void q_window_on_maximum_width_changed(void* self, void (*slot)(void*, int));
 
@@ -778,6 +820,8 @@ void q_window_on_maximum_width_changed(void* self, void (*slot)(void*, int));
 /// ``` QWindow* self, int arg ```
 void q_window_maximum_height_changed(void* self, int arg);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#maximumHeightChanged)
+///
 /// ``` QWindow* self, void (*slot)(QWindow*, int) ```
 void q_window_on_maximum_height_changed(void* self, void (*slot)(void*, int));
 
@@ -786,6 +830,8 @@ void q_window_on_maximum_height_changed(void* self, void (*slot)(void*, int));
 /// ``` QWindow* self, bool arg ```
 void q_window_visible_changed(void* self, bool arg);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#visibleChanged)
+///
 /// ``` QWindow* self, void (*slot)(QWindow*, bool) ```
 void q_window_on_visible_changed(void* self, void (*slot)(void*, bool));
 
@@ -794,6 +840,8 @@ void q_window_on_visible_changed(void* self, void (*slot)(void*, bool));
 /// ``` QWindow* self, enum QWindow__Visibility visibility ```
 void q_window_visibility_changed(void* self, int64_t visibility);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#visibilityChanged)
+///
 /// ``` QWindow* self, void (*slot)(QWindow*, enum QWindow__Visibility) ```
 void q_window_on_visibility_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -802,6 +850,8 @@ void q_window_on_visibility_changed(void* self, void (*slot)(void*, int64_t));
 /// ``` QWindow* self ```
 void q_window_active_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#activeChanged)
+///
 /// ``` QWindow* self, void (*slot)(QWindow*) ```
 void q_window_on_active_changed(void* self, void (*slot)(void*));
 
@@ -810,6 +860,8 @@ void q_window_on_active_changed(void* self, void (*slot)(void*));
 /// ``` QWindow* self, enum Qt__ScreenOrientation orientation ```
 void q_window_content_orientation_changed(void* self, int64_t orientation);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#contentOrientationChanged)
+///
 /// ``` QWindow* self, void (*slot)(QWindow*, enum Qt__ScreenOrientation) ```
 void q_window_on_content_orientation_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -818,6 +870,8 @@ void q_window_on_content_orientation_changed(void* self, void (*slot)(void*, int
 /// ``` QWindow* self, QObject* object ```
 void q_window_focus_object_changed(void* self, void* object);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusObjectChanged)
+///
 /// ``` QWindow* self, void (*slot)(QWindow*, QObject*) ```
 void q_window_on_focus_object_changed(void* self, void (*slot)(void*, void*));
 
@@ -826,6 +880,8 @@ void q_window_on_focus_object_changed(void* self, void (*slot)(void*, void*));
 /// ``` QWindow* self, double opacity ```
 void q_window_opacity_changed(void* self, double opacity);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#opacityChanged)
+///
 /// ``` QWindow* self, void (*slot)(QWindow*, double) ```
 void q_window_on_opacity_changed(void* self, void (*slot)(void*, double));
 
@@ -834,6 +890,8 @@ void q_window_on_opacity_changed(void* self, void (*slot)(void*, double));
 /// ``` QWindow* self, QWindow* transientParent ```
 void q_window_transient_parent_changed(void* self, void* transientParent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#transientParentChanged)
+///
 /// ``` QWindow* self, void (*slot)(QWindow*, QWindow*) ```
 void q_window_on_transient_parent_changed(void* self, void (*slot)(void*, void*));
 
@@ -842,11 +900,15 @@ void q_window_on_transient_parent_changed(void* self, void (*slot)(void*, void*)
 /// ``` QWindow* self, QExposeEvent* param1 ```
 void q_window_expose_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#exposeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, void (*slot)(QWindow*, QExposeEvent*) ```
 void q_window_on_expose_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#exposeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self, QExposeEvent* param1 ```
@@ -857,11 +919,15 @@ void q_window_qbase_expose_event(void* self, void* param1);
 /// ``` QWindow* self, QResizeEvent* param1 ```
 void q_window_resize_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#resizeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, void (*slot)(QWindow*, QResizeEvent*) ```
 void q_window_on_resize_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#resizeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self, QResizeEvent* param1 ```
@@ -872,11 +938,15 @@ void q_window_qbase_resize_event(void* self, void* param1);
 /// ``` QWindow* self, QPaintEvent* param1 ```
 void q_window_paint_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#paintEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, void (*slot)(QWindow*, QPaintEvent*) ```
 void q_window_on_paint_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#paintEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self, QPaintEvent* param1 ```
@@ -887,11 +957,15 @@ void q_window_qbase_paint_event(void* self, void* param1);
 /// ``` QWindow* self, QMoveEvent* param1 ```
 void q_window_move_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#moveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, void (*slot)(QWindow*, QMoveEvent*) ```
 void q_window_on_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#moveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self, QMoveEvent* param1 ```
@@ -902,11 +976,15 @@ void q_window_qbase_move_event(void* self, void* param1);
 /// ``` QWindow* self, QFocusEvent* param1 ```
 void q_window_focus_in_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusInEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, void (*slot)(QWindow*, QFocusEvent*) ```
 void q_window_on_focus_in_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusInEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self, QFocusEvent* param1 ```
@@ -917,11 +995,15 @@ void q_window_qbase_focus_in_event(void* self, void* param1);
 /// ``` QWindow* self, QFocusEvent* param1 ```
 void q_window_focus_out_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusOutEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, void (*slot)(QWindow*, QFocusEvent*) ```
 void q_window_on_focus_out_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusOutEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self, QFocusEvent* param1 ```
@@ -932,11 +1014,15 @@ void q_window_qbase_focus_out_event(void* self, void* param1);
 /// ``` QWindow* self, QShowEvent* param1 ```
 void q_window_show_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#showEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, void (*slot)(QWindow*, QShowEvent*) ```
 void q_window_on_show_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#showEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self, QShowEvent* param1 ```
@@ -947,11 +1033,15 @@ void q_window_qbase_show_event(void* self, void* param1);
 /// ``` QWindow* self, QHideEvent* param1 ```
 void q_window_hide_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#hideEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, void (*slot)(QWindow*, QHideEvent*) ```
 void q_window_on_hide_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#hideEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self, QHideEvent* param1 ```
@@ -962,11 +1052,15 @@ void q_window_qbase_hide_event(void* self, void* param1);
 /// ``` QWindow* self, QCloseEvent* param1 ```
 void q_window_close_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#closeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, void (*slot)(QWindow*, QCloseEvent*) ```
 void q_window_on_close_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#closeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self, QCloseEvent* param1 ```
@@ -977,11 +1071,15 @@ void q_window_qbase_close_event(void* self, void* param1);
 /// ``` QWindow* self, QEvent* param1 ```
 bool q_window_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, bool (*slot)(QWindow*, QEvent*) ```
 void q_window_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self, QEvent* param1 ```
@@ -992,11 +1090,15 @@ bool q_window_qbase_event(void* self, void* param1);
 /// ``` QWindow* self, QKeyEvent* param1 ```
 void q_window_key_press_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#keyPressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, void (*slot)(QWindow*, QKeyEvent*) ```
 void q_window_on_key_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#keyPressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self, QKeyEvent* param1 ```
@@ -1007,11 +1109,15 @@ void q_window_qbase_key_press_event(void* self, void* param1);
 /// ``` QWindow* self, QKeyEvent* param1 ```
 void q_window_key_release_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#keyReleaseEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, void (*slot)(QWindow*, QKeyEvent*) ```
 void q_window_on_key_release_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#keyReleaseEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self, QKeyEvent* param1 ```
@@ -1022,11 +1128,15 @@ void q_window_qbase_key_release_event(void* self, void* param1);
 /// ``` QWindow* self, QMouseEvent* param1 ```
 void q_window_mouse_press_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mousePressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, void (*slot)(QWindow*, QMouseEvent*) ```
 void q_window_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mousePressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self, QMouseEvent* param1 ```
@@ -1037,11 +1147,15 @@ void q_window_qbase_mouse_press_event(void* self, void* param1);
 /// ``` QWindow* self, QMouseEvent* param1 ```
 void q_window_mouse_release_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mouseReleaseEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, void (*slot)(QWindow*, QMouseEvent*) ```
 void q_window_on_mouse_release_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mouseReleaseEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self, QMouseEvent* param1 ```
@@ -1052,11 +1166,15 @@ void q_window_qbase_mouse_release_event(void* self, void* param1);
 /// ``` QWindow* self, QMouseEvent* param1 ```
 void q_window_mouse_double_click_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mouseDoubleClickEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, void (*slot)(QWindow*, QMouseEvent*) ```
 void q_window_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mouseDoubleClickEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self, QMouseEvent* param1 ```
@@ -1067,11 +1185,15 @@ void q_window_qbase_mouse_double_click_event(void* self, void* param1);
 /// ``` QWindow* self, QMouseEvent* param1 ```
 void q_window_mouse_move_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mouseMoveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, void (*slot)(QWindow*, QMouseEvent*) ```
 void q_window_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mouseMoveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self, QMouseEvent* param1 ```
@@ -1082,11 +1204,15 @@ void q_window_qbase_mouse_move_event(void* self, void* param1);
 /// ``` QWindow* self, QWheelEvent* param1 ```
 void q_window_wheel_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#wheelEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, void (*slot)(QWindow*, QWheelEvent*) ```
 void q_window_on_wheel_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#wheelEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self, QWheelEvent* param1 ```
@@ -1097,11 +1223,15 @@ void q_window_qbase_wheel_event(void* self, void* param1);
 /// ``` QWindow* self, QTouchEvent* param1 ```
 void q_window_touch_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#touchEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, void (*slot)(QWindow*, QTouchEvent*) ```
 void q_window_on_touch_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#touchEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self, QTouchEvent* param1 ```
@@ -1112,11 +1242,15 @@ void q_window_qbase_touch_event(void* self, void* param1);
 /// ``` QWindow* self, QTabletEvent* param1 ```
 void q_window_tablet_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#tabletEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, void (*slot)(QWindow*, QTabletEvent*) ```
 void q_window_on_tablet_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#tabletEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self, QTabletEvent* param1 ```
@@ -1127,11 +1261,15 @@ void q_window_qbase_tablet_event(void* self, void* param1);
 /// ``` QWindow* self, const char* eventType, void* message, intptr_t* result ```
 bool q_window_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#nativeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindow* self, bool (*slot)(QWindow*, const char*, void*, intptr_t*) ```
 void q_window_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#nativeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWindow* self, const char* eventType, void* message, intptr_t* result ```
@@ -1244,7 +1382,7 @@ void q_window_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QWindow* self ```
-libqt_list /* of QObject* */ q_window_children(void* self);
+const libqt_list /* of QObject* */ q_window_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1335,7 +1473,7 @@ QBindingStorage* q_window_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QWindow* self ```
-QBindingStorage* q_window_binding_storage2(void* self);
+const QBindingStorage* q_window_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -1345,6 +1483,8 @@ QBindingStorage* q_window_binding_storage2(void* self);
 void q_window_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QWindow* self, void (*slot)(QObject*) ```
 void q_window_on_destroyed(void* self, void (*slot)(void*));
@@ -1393,6 +1533,8 @@ void q_window_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QWindow* self, void (*slot)(QObject*, QObject*) ```
 void q_window_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -1421,12 +1563,16 @@ bool q_window_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWindow* self, QObject* watched, QEvent* event ```
 bool q_window_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1444,12 +1590,16 @@ void q_window_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWindow* self, QTimerEvent* event ```
 void q_window_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1467,12 +1617,16 @@ void q_window_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWindow* self, QChildEvent* event ```
 void q_window_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1490,12 +1644,16 @@ void q_window_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWindow* self, QEvent* event ```
 void q_window_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1513,12 +1671,16 @@ void q_window_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWindow* self, QMetaMethod* signal ```
 void q_window_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1536,12 +1698,16 @@ void q_window_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWindow* self, QMetaMethod* signal ```
 void q_window_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1559,12 +1725,16 @@ QObject* q_window_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWindow* self ```
 QObject* q_window_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1582,12 +1752,16 @@ int32_t q_window_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWindow* self ```
 int32_t q_window_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1605,12 +1779,16 @@ int32_t q_window_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWindow* self, const char* signal ```
 int32_t q_window_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1628,6 +1806,8 @@ bool q_window_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWindow* self, QMetaMethod* signal ```
@@ -1635,11 +1815,24 @@ bool q_window_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QWindow* self, bool (*slot)(QWindow*, QMetaMethod*) ```
 void q_window_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWindow* self, void (*slot)(QObject*, const char*) ```
+void q_window_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#dtor.QWindow)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWindow* self ```

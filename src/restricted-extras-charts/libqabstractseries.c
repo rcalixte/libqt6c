@@ -1,18 +1,12 @@
 #include "libqabstractaxis.hpp"
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "libqchart.hpp"
-#include "../libqevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqabstractseries.hpp"
 #include "libqabstractseries.h"
 
-QMetaObject* q_abstractseries_meta_object(void* self) {
+const QMetaObject* q_abstractseries_meta_object(void* self) {
     return QAbstractSeries_MetaObject((QAbstractSeries*)self);
 }
 
@@ -165,8 +159,7 @@ const char* q_abstractseries_object_name(void* self) {
 }
 
 void q_abstractseries_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_abstractseries_is_widget_type(void* self) {
@@ -205,7 +198,7 @@ void q_abstractseries_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_abstractseries_children(void* self) {
+const libqt_list /* of QObject* */ q_abstractseries_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -272,7 +265,7 @@ QBindingStorage* q_abstractseries_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_abstractseries_binding_storage2(void* self) {
+const QBindingStorage* q_abstractseries_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -314,6 +307,10 @@ void q_abstractseries_destroyed1(void* self, void* param1) {
 
 void q_abstractseries_on_destroyed1(void* self, void (*slot)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+}
+
+void q_abstractseries_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_abstractseries_delete(void* self) {

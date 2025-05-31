@@ -1,13 +1,9 @@
-#include "../libqanystringview.hpp"
 #include "libqaudiodevice.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
 #include "../libqurl.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqsoundeffect.hpp"
 #include "libqsoundeffect.h"
@@ -28,7 +24,7 @@ QSoundEffect* q_soundeffect_new4(void* audioDevice, void* parent) {
     return QSoundEffect_new4((QAudioDevice*)audioDevice, (QObject*)parent);
 }
 
-QMetaObject* q_soundeffect_meta_object(void* self) {
+const QMetaObject* q_soundeffect_meta_object(void* self) {
     return QSoundEffect_MetaObject((QSoundEffect*)self);
 }
 
@@ -227,8 +223,7 @@ const char* q_soundeffect_object_name(void* self) {
 }
 
 void q_soundeffect_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_soundeffect_is_widget_type(void* self) {
@@ -267,7 +262,7 @@ void q_soundeffect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_soundeffect_children(void* self) {
+const libqt_list /* of QObject* */ q_soundeffect_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -334,7 +329,7 @@ QBindingStorage* q_soundeffect_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_soundeffect_binding_storage2(void* self) {
+const QBindingStorage* q_soundeffect_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -508,6 +503,10 @@ bool q_soundeffect_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_soundeffect_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QSoundEffect_OnIsSignalConnected((QSoundEffect*)self, (intptr_t)slot);
+}
+
+void q_soundeffect_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_soundeffect_delete(void* self) {

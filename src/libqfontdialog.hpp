@@ -15,20 +15,11 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAction QAction;
 typedef struct QActionEvent QActionEvent;
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBackingStore QBackingStore;
-typedef struct QBindingStorage QBindingStorage;
-typedef struct QBitmap QBitmap;
 typedef struct QChildEvent QChildEvent;
 typedef struct QCloseEvent QCloseEvent;
 typedef struct QContextMenuEvent QContextMenuEvent;
-typedef struct QCursor QCursor;
 typedef struct QDialog QDialog;
 typedef struct QDragEnterEvent QDragEnterEvent;
 typedef struct QDragLeaveEvent QDragLeaveEvent;
@@ -39,21 +30,11 @@ typedef struct QEvent QEvent;
 typedef struct QFocusEvent QFocusEvent;
 typedef struct QFont QFont;
 typedef struct QFontDialog QFontDialog;
-typedef struct QFontInfo QFontInfo;
-typedef struct QFontMetrics QFontMetrics;
-typedef struct QGraphicsEffect QGraphicsEffect;
-typedef struct QGraphicsProxyWidget QGraphicsProxyWidget;
 typedef struct QHideEvent QHideEvent;
-typedef struct QIcon QIcon;
 typedef struct QInputMethodEvent QInputMethodEvent;
 typedef struct QKeyEvent QKeyEvent;
-typedef struct QKeySequence QKeySequence;
-typedef struct QLayout QLayout;
-typedef struct QLocale QLocale;
-typedef struct QMargins QMargins;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QMouseEvent QMouseEvent;
 typedef struct QMoveEvent QMoveEvent;
 typedef struct QObject QObject;
@@ -61,25 +42,15 @@ typedef struct QPaintDevice QPaintDevice;
 typedef struct QPaintEngine QPaintEngine;
 typedef struct QPaintEvent QPaintEvent;
 typedef struct QPainter QPainter;
-typedef struct QPalette QPalette;
-typedef struct QPixmap QPixmap;
 typedef struct QPoint QPoint;
-typedef struct QPointF QPointF;
-typedef struct QRect QRect;
-typedef struct QRegion QRegion;
 typedef struct QResizeEvent QResizeEvent;
-typedef struct QScreen QScreen;
 typedef struct QShowEvent QShowEvent;
 typedef struct QSize QSize;
-typedef struct QSizePolicy QSizePolicy;
-typedef struct QStyle QStyle;
 typedef struct QTabletEvent QTabletEvent;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
-typedef struct QWindow QWindow;
 #endif
 
 #ifdef __cplusplus
@@ -240,6 +211,18 @@ void QFontDialog_QBaseHideEvent(QFontDialog* self, QHideEvent* event);
 bool QFontDialog_NativeEvent(QFontDialog* self, libqt_string eventType, void* message, intptr_t* result);
 void QFontDialog_OnNativeEvent(QFontDialog* self, intptr_t slot);
 bool QFontDialog_QBaseNativeEvent(QFontDialog* self, libqt_string eventType, void* message, intptr_t* result);
+int QFontDialog_Metric(const QFontDialog* self, int param1);
+void QFontDialog_OnMetric(const QFontDialog* self, intptr_t slot);
+int QFontDialog_QBaseMetric(const QFontDialog* self, int param1);
+void QFontDialog_InitPainter(const QFontDialog* self, QPainter* painter);
+void QFontDialog_OnInitPainter(const QFontDialog* self, intptr_t slot);
+void QFontDialog_QBaseInitPainter(const QFontDialog* self, QPainter* painter);
+QPaintDevice* QFontDialog_Redirected(const QFontDialog* self, QPoint* offset);
+void QFontDialog_OnRedirected(const QFontDialog* self, intptr_t slot);
+QPaintDevice* QFontDialog_QBaseRedirected(const QFontDialog* self, QPoint* offset);
+QPainter* QFontDialog_SharedPainter(const QFontDialog* self);
+void QFontDialog_OnSharedPainter(const QFontDialog* self, intptr_t slot);
+QPainter* QFontDialog_QBaseSharedPainter(const QFontDialog* self);
 void QFontDialog_InputMethodEvent(QFontDialog* self, QInputMethodEvent* param1);
 void QFontDialog_OnInputMethodEvent(QFontDialog* self, intptr_t slot);
 void QFontDialog_QBaseInputMethodEvent(QFontDialog* self, QInputMethodEvent* param1);
@@ -264,18 +247,6 @@ void QFontDialog_QBaseConnectNotify(QFontDialog* self, QMetaMethod* signal);
 void QFontDialog_DisconnectNotify(QFontDialog* self, QMetaMethod* signal);
 void QFontDialog_OnDisconnectNotify(QFontDialog* self, intptr_t slot);
 void QFontDialog_QBaseDisconnectNotify(QFontDialog* self, QMetaMethod* signal);
-int QFontDialog_Metric(const QFontDialog* self, int param1);
-void QFontDialog_OnMetric(const QFontDialog* self, intptr_t slot);
-int QFontDialog_QBaseMetric(const QFontDialog* self, int param1);
-void QFontDialog_InitPainter(const QFontDialog* self, QPainter* painter);
-void QFontDialog_OnInitPainter(const QFontDialog* self, intptr_t slot);
-void QFontDialog_QBaseInitPainter(const QFontDialog* self, QPainter* painter);
-QPaintDevice* QFontDialog_Redirected(const QFontDialog* self, QPoint* offset);
-void QFontDialog_OnRedirected(const QFontDialog* self, intptr_t slot);
-QPaintDevice* QFontDialog_QBaseRedirected(const QFontDialog* self, QPoint* offset);
-QPainter* QFontDialog_SharedPainter(const QFontDialog* self);
-void QFontDialog_OnSharedPainter(const QFontDialog* self, intptr_t slot);
-QPainter* QFontDialog_QBaseSharedPainter(const QFontDialog* self);
 void QFontDialog_AdjustPosition(QFontDialog* self, QWidget* param1);
 void QFontDialog_OnAdjustPosition(QFontDialog* self, intptr_t slot);
 void QFontDialog_QBaseAdjustPosition(QFontDialog* self, QWidget* param1);

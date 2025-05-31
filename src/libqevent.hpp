@@ -150,6 +150,7 @@ bool QPointerEvent_AddPassiveGrabber(QPointerEvent* self, QEventPoint* point, QO
 bool QPointerEvent_RemovePassiveGrabber(QPointerEvent* self, QEventPoint* point, QObject* grabber);
 void QPointerEvent_Delete(QPointerEvent* self);
 
+QSinglePointEvent* QSinglePointEvent_Clone(const QSinglePointEvent* self);
 int QSinglePointEvent_Button(const QSinglePointEvent* self);
 int QSinglePointEvent_Buttons(const QSinglePointEvent* self);
 QPointF* QSinglePointEvent_Position(const QSinglePointEvent* self);
@@ -160,8 +161,6 @@ bool QSinglePointEvent_IsUpdateEvent(const QSinglePointEvent* self);
 bool QSinglePointEvent_IsEndEvent(const QSinglePointEvent* self);
 QObject* QSinglePointEvent_ExclusivePointGrabber(const QSinglePointEvent* self);
 void QSinglePointEvent_SetExclusivePointGrabber(QSinglePointEvent* self, QObject* exclusiveGrabber);
-void QSinglePointEvent_SetTimestamp(QSinglePointEvent* self, unsigned long long timestamp);
-void QSinglePointEvent_SetAccepted(QSinglePointEvent* self, bool accepted);
 void QSinglePointEvent_Delete(QSinglePointEvent* self);
 
 QEnterEvent* QEnterEvent_new(QPointF* localPos, QPointF* scenePos, QPointF* globalPos);

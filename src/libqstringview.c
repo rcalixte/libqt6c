@@ -27,11 +27,11 @@ int64_t q_stringview_size(void* self) {
     return QStringView_Size((QStringView*)self);
 }
 
-QChar* q_stringview_data(void* self) {
+const QChar* q_stringview_data(void* self) {
     return QStringView_Data((QStringView*)self);
 }
 
-QChar* q_stringview_const_data(void* self) {
+const QChar* q_stringview_const_data(void* self) {
     return QStringView_ConstData((QStringView*)self);
 }
 
@@ -185,19 +185,19 @@ double q_stringview_to_double(void* self) {
     return QStringView_ToDouble((QStringView*)self);
 }
 
-QChar* q_stringview_begin(void* self) {
+const QChar* q_stringview_begin(void* self) {
     return QStringView_Begin((QStringView*)self);
 }
 
-QChar* q_stringview_end(void* self) {
+const QChar* q_stringview_end(void* self) {
     return QStringView_End((QStringView*)self);
 }
 
-QChar* q_stringview_cbegin(void* self) {
+const QChar* q_stringview_cbegin(void* self) {
     return QStringView_Cbegin((QStringView*)self);
 }
 
-QChar* q_stringview_cend(void* self) {
+const QChar* q_stringview_cend(void* self) {
     return QStringView_Cend((QStringView*)self);
 }
 
@@ -213,11 +213,11 @@ QChar* q_stringview_back(void* self) {
     return QStringView_Back((QStringView*)self);
 }
 
-QChar* q_stringview_const_begin(void* self) {
+const QChar* q_stringview_const_begin(void* self) {
     return QStringView_ConstBegin((QStringView*)self);
 }
 
-QChar* q_stringview_const_end(void* self) {
+const QChar* q_stringview_const_end(void* self) {
     return QStringView_ConstEnd((QStringView*)self);
 }
 

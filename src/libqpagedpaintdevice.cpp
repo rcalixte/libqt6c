@@ -4,7 +4,6 @@
 #include <QPageSize>
 #include <QPagedPaintDevice>
 #include <QPaintDevice>
-#include <QPaintEngine>
 #include <qpagedpaintdevice.h>
 #include "libqpagedpaintdevice.hpp"
 #include "libqpagedpaintdevice.hxx"
@@ -39,14 +38,6 @@ void QPagedPaintDevice_SetPageRanges(QPagedPaintDevice* self, QPageRanges* range
 
 QPageRanges* QPagedPaintDevice_PageRanges(const QPagedPaintDevice* self) {
     return new QPageRanges(self->pageRanges());
-}
-
-int QPagedPaintDevice_DevType(const QPagedPaintDevice* self) {
-    return self->devType();
-}
-
-QPaintEngine* QPagedPaintDevice_PaintEngine(const QPagedPaintDevice* self) {
-    return self->paintEngine();
 }
 
 void QPagedPaintDevice_Delete(QPagedPaintDevice* self) {

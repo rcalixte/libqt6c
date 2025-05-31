@@ -15,14 +15,9 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
 typedef struct QAbstractNetworkCache QAbstractNetworkCache;
-typedef struct QAnyStringView QAnyStringView;
 typedef struct QAuthenticator QAuthenticator;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QEvent QEvent;
 typedef struct QHstsPolicy QHstsPolicy;
@@ -30,7 +25,6 @@ typedef struct QHttpMultiPart QHttpMultiPart;
 typedef struct QIODevice QIODevice;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QNetworkAccessManager QNetworkAccessManager;
 typedef struct QNetworkCookieJar QNetworkCookieJar;
 typedef struct QNetworkProxy QNetworkProxy;
@@ -41,9 +35,7 @@ typedef struct QObject QObject;
 typedef struct QSslConfiguration QSslConfiguration;
 typedef struct QSslError QSslError;
 typedef struct QSslPreSharedKeyAuthenticator QSslPreSharedKeyAuthenticator;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
 #endif
 
 #ifdef __cplusplus

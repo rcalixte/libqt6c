@@ -1,6 +1,4 @@
 #include "libqabstractitemmodel.hpp"
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqdatastream.hpp"
 #include "libqmetaobject.hpp"
@@ -8,7 +6,6 @@
 #include "libqobject.hpp"
 #include "libqsize.hpp"
 #include <string.h>
-#include "libqthread.hpp"
 #include "libqvariant.hpp"
 #include "libqcoreevent.hpp"
 #include "libqconcatenatetablesproxymodel.hpp"
@@ -22,7 +19,7 @@ QConcatenateTablesProxyModel* q_concatenatetablesproxymodel_new2(void* parent) {
     return QConcatenateTablesProxyModel_new2((QObject*)parent);
 }
 
-QMetaObject* q_concatenatetablesproxymodel_meta_object(void* self) {
+const QMetaObject* q_concatenatetablesproxymodel_meta_object(void* self) {
     return QConcatenateTablesProxyModel_MetaObject((QConcatenateTablesProxyModel*)self);
 }
 
@@ -222,34 +219,16 @@ const char** q_concatenatetablesproxymodel_qbase_mime_types(void* self) {
     return _ret;
 }
 
-QMimeData* q_concatenatetablesproxymodel_mime_data(void* self, void* indexes[]) {
-    QModelIndex** indexes_arr = (QModelIndex**)indexes;
-    size_t indexes_len = 0;
-    while (indexes_arr[indexes_len] != NULL) {
-        indexes_len++;
-    }
-    libqt_list indexes_list = {
-        .len = indexes_len,
-        .data = {(QModelIndex*)indexes},
-    };
-    return QConcatenateTablesProxyModel_MimeData((QConcatenateTablesProxyModel*)self, indexes_list);
+QMimeData* q_concatenatetablesproxymodel_mime_data(void* self, libqt_list indexes) {
+    return QConcatenateTablesProxyModel_MimeData((QConcatenateTablesProxyModel*)self, indexes);
 }
 
-void q_concatenatetablesproxymodel_on_mime_data(void* self, QMimeData* (*slot)(void*, void*)) {
+void q_concatenatetablesproxymodel_on_mime_data(void* self, QMimeData* (*slot)(void*, libqt_list)) {
     QConcatenateTablesProxyModel_OnMimeData((QConcatenateTablesProxyModel*)self, (intptr_t)slot);
 }
 
-QMimeData* q_concatenatetablesproxymodel_qbase_mime_data(void* self, void* indexes[]) {
-    QModelIndex** indexes_arr = (QModelIndex**)indexes;
-    size_t indexes_len = 0;
-    while (indexes_arr[indexes_len] != NULL) {
-        indexes_len++;
-    }
-    libqt_list indexes_list = {
-        .len = indexes_len,
-        .data = {(QModelIndex*)indexes},
-    };
-    return QConcatenateTablesProxyModel_QBaseMimeData((QConcatenateTablesProxyModel*)self, indexes_list);
+QMimeData* q_concatenatetablesproxymodel_qbase_mime_data(void* self, libqt_list indexes) {
+    return QConcatenateTablesProxyModel_QBaseMimeData((QConcatenateTablesProxyModel*)self, indexes);
 }
 
 bool q_concatenatetablesproxymodel_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
@@ -390,87 +369,43 @@ bool q_concatenatetablesproxymodel_check_index2(void* self, void* index, int64_t
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
-void q_concatenatetablesproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, int* roles[]) {
-    size_t roles_len = 0;
-    while (roles[roles_len] != NULL) {
-        roles_len++;
-    }
-    libqt_list roles_list = {
-        .len = roles_len,
-        .data = {(int*)roles},
-    };
-    QAbstractItemModel_DataChanged3((QAbstractItemModel*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles_list);
+void q_concatenatetablesproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles) {
+    QAbstractItemModel_DataChanged3((QAbstractItemModel*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_concatenatetablesproxymodel_on_data_changed3(void* self, void (*slot)(void*, void*, void*, int*)) {
+void q_concatenatetablesproxymodel_on_data_changed3(void* self, void (*slot)(void*, void*, void*, libqt_list)) {
     QAbstractItemModel_Connect_DataChanged3((QAbstractItemModel*)self, (intptr_t)slot);
 }
 
-void q_concatenatetablesproxymodel_layout_changed1(void* self, void* parents[]) {
-    QPersistentModelIndex** parents_arr = (QPersistentModelIndex**)parents;
-    size_t parents_len = 0;
-    while (parents_arr[parents_len] != NULL) {
-        parents_len++;
-    }
-    libqt_list parents_list = {
-        .len = parents_len,
-        .data = {(QPersistentModelIndex*)parents},
-    };
-    QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents_list);
+void q_concatenatetablesproxymodel_layout_changed1(void* self, libqt_list parents) {
+    QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
-void q_concatenatetablesproxymodel_on_layout_changed1(void* self, void (*slot)(void*, void*)) {
+void q_concatenatetablesproxymodel_on_layout_changed1(void* self, void (*slot)(void*, libqt_list)) {
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)slot);
 }
 
-void q_concatenatetablesproxymodel_layout_changed2(void* self, void* parents[], int64_t hint) {
-    QPersistentModelIndex** parents_arr = (QPersistentModelIndex**)parents;
-    size_t parents_len = 0;
-    while (parents_arr[parents_len] != NULL) {
-        parents_len++;
-    }
-    libqt_list parents_list = {
-        .len = parents_len,
-        .data = {(QPersistentModelIndex*)parents},
-    };
-    QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents_list, hint);
+void q_concatenatetablesproxymodel_layout_changed2(void* self, libqt_list parents, int64_t hint) {
+    QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_concatenatetablesproxymodel_on_layout_changed2(void* self, void (*slot)(void*, void*, int64_t)) {
+void q_concatenatetablesproxymodel_on_layout_changed2(void* self, void (*slot)(void*, libqt_list, int64_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)slot);
 }
 
-void q_concatenatetablesproxymodel_layout_about_to_be_changed1(void* self, void* parents[]) {
-    QPersistentModelIndex** parents_arr = (QPersistentModelIndex**)parents;
-    size_t parents_len = 0;
-    while (parents_arr[parents_len] != NULL) {
-        parents_len++;
-    }
-    libqt_list parents_list = {
-        .len = parents_len,
-        .data = {(QPersistentModelIndex*)parents},
-    };
-    QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents_list);
+void q_concatenatetablesproxymodel_layout_about_to_be_changed1(void* self, libqt_list parents) {
+    QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
-void q_concatenatetablesproxymodel_on_layout_about_to_be_changed1(void* self, void (*slot)(void*, void*)) {
+void q_concatenatetablesproxymodel_on_layout_about_to_be_changed1(void* self, void (*slot)(void*, libqt_list)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)slot);
 }
 
-void q_concatenatetablesproxymodel_layout_about_to_be_changed2(void* self, void* parents[], int64_t hint) {
-    QPersistentModelIndex** parents_arr = (QPersistentModelIndex**)parents;
-    size_t parents_len = 0;
-    while (parents_arr[parents_len] != NULL) {
-        parents_len++;
-    }
-    libqt_list parents_list = {
-        .len = parents_len,
-        .data = {(QPersistentModelIndex*)parents},
-    };
-    QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents_list, hint);
+void q_concatenatetablesproxymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int64_t hint) {
+    QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_concatenatetablesproxymodel_on_layout_about_to_be_changed2(void* self, void (*slot)(void*, void*, int64_t)) {
+void q_concatenatetablesproxymodel_on_layout_about_to_be_changed2(void* self, void (*slot)(void*, libqt_list, int64_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)slot);
 }
 
@@ -482,8 +417,7 @@ const char* q_concatenatetablesproxymodel_object_name(void* self) {
 }
 
 void q_concatenatetablesproxymodel_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_concatenatetablesproxymodel_is_widget_type(void* self) {
@@ -522,7 +456,7 @@ void q_concatenatetablesproxymodel_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_concatenatetablesproxymodel_children(void* self) {
+const libqt_list /* of QObject* */ q_concatenatetablesproxymodel_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -589,7 +523,7 @@ QBindingStorage* q_concatenatetablesproxymodel_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_concatenatetablesproxymodel_binding_storage2(void* self) {
+const QBindingStorage* q_concatenatetablesproxymodel_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -991,33 +925,15 @@ void q_concatenatetablesproxymodel_on_create_index(void* self, QModelIndex* (*sl
     QConcatenateTablesProxyModel_OnCreateIndex((QConcatenateTablesProxyModel*)self, (intptr_t)slot);
 }
 
-void q_concatenatetablesproxymodel_encode_data(void* self, void* indexes[], void* stream) {
-    QModelIndex** indexes_arr = (QModelIndex**)indexes;
-    size_t indexes_len = 0;
-    while (indexes_arr[indexes_len] != NULL) {
-        indexes_len++;
-    }
-    libqt_list indexes_list = {
-        .len = indexes_len,
-        .data = {(QModelIndex*)indexes},
-    };
-    QConcatenateTablesProxyModel_EncodeData((QConcatenateTablesProxyModel*)self, indexes_list, (QDataStream*)stream);
+void q_concatenatetablesproxymodel_encode_data(void* self, libqt_list indexes, void* stream) {
+    QConcatenateTablesProxyModel_EncodeData((QConcatenateTablesProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
-void q_concatenatetablesproxymodel_qbase_encode_data(void* self, void* indexes[], void* stream) {
-    QModelIndex** indexes_arr = (QModelIndex**)indexes;
-    size_t indexes_len = 0;
-    while (indexes_arr[indexes_len] != NULL) {
-        indexes_len++;
-    }
-    libqt_list indexes_list = {
-        .len = indexes_len,
-        .data = {(QModelIndex*)indexes},
-    };
-    QConcatenateTablesProxyModel_QBaseEncodeData((QConcatenateTablesProxyModel*)self, indexes_list, (QDataStream*)stream);
+void q_concatenatetablesproxymodel_qbase_encode_data(void* self, libqt_list indexes, void* stream) {
+    QConcatenateTablesProxyModel_QBaseEncodeData((QConcatenateTablesProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
-void q_concatenatetablesproxymodel_on_encode_data(void* self, void (*slot)(void*, void*, void*)) {
+void q_concatenatetablesproxymodel_on_encode_data(void* self, void (*slot)(void*, libqt_list, void*)) {
     QConcatenateTablesProxyModel_OnEncodeData((QConcatenateTablesProxyModel*)self, (intptr_t)slot);
 }
 
@@ -1213,51 +1129,15 @@ void q_concatenatetablesproxymodel_on_change_persistent_index(void* self, void (
     QConcatenateTablesProxyModel_OnChangePersistentIndex((QConcatenateTablesProxyModel*)self, (intptr_t)slot);
 }
 
-void q_concatenatetablesproxymodel_change_persistent_index_list(void* self, void* from[], void* to[]) {
-    QModelIndex** from_arr = (QModelIndex**)from;
-    size_t from_len = 0;
-    while (from_arr[from_len] != NULL) {
-        from_len++;
-    }
-    libqt_list from_list = {
-        .len = from_len,
-        .data = {(QModelIndex*)from},
-    };
-    QModelIndex** to_arr = (QModelIndex**)to;
-    size_t to_len = 0;
-    while (to_arr[to_len] != NULL) {
-        to_len++;
-    }
-    libqt_list to_list = {
-        .len = to_len,
-        .data = {(QModelIndex*)to},
-    };
-    QConcatenateTablesProxyModel_ChangePersistentIndexList((QConcatenateTablesProxyModel*)self, from_list, to_list);
+void q_concatenatetablesproxymodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to) {
+    QConcatenateTablesProxyModel_ChangePersistentIndexList((QConcatenateTablesProxyModel*)self, from, to);
 }
 
-void q_concatenatetablesproxymodel_qbase_change_persistent_index_list(void* self, void* from[], void* to[]) {
-    QModelIndex** from_arr = (QModelIndex**)from;
-    size_t from_len = 0;
-    while (from_arr[from_len] != NULL) {
-        from_len++;
-    }
-    libqt_list from_list = {
-        .len = from_len,
-        .data = {(QModelIndex*)from},
-    };
-    QModelIndex** to_arr = (QModelIndex**)to;
-    size_t to_len = 0;
-    while (to_arr[to_len] != NULL) {
-        to_len++;
-    }
-    libqt_list to_list = {
-        .len = to_len,
-        .data = {(QModelIndex*)to},
-    };
-    QConcatenateTablesProxyModel_QBaseChangePersistentIndexList((QConcatenateTablesProxyModel*)self, from_list, to_list);
+void q_concatenatetablesproxymodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to) {
+    QConcatenateTablesProxyModel_QBaseChangePersistentIndexList((QConcatenateTablesProxyModel*)self, from, to);
 }
 
-void q_concatenatetablesproxymodel_on_change_persistent_index_list(void* self, void (*slot)(void*, void*, void*)) {
+void q_concatenatetablesproxymodel_on_change_persistent_index_list(void* self, void (*slot)(void*, libqt_list, libqt_list)) {
     QConcatenateTablesProxyModel_OnChangePersistentIndexList((QConcatenateTablesProxyModel*)self, (intptr_t)slot);
 }
 
@@ -1321,6 +1201,66 @@ bool q_concatenatetablesproxymodel_qbase_is_signal_connected(void* self, void* s
 
 void q_concatenatetablesproxymodel_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QConcatenateTablesProxyModel_OnIsSignalConnected((QConcatenateTablesProxyModel*)self, (intptr_t)slot);
+}
+
+void q_concatenatetablesproxymodel_on_rows_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int)) {
+    QAbstractItemModel_Connect_RowsAboutToBeInserted((QAbstractItemModel*)self, (intptr_t)slot);
+}
+
+void q_concatenatetablesproxymodel_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int)) {
+    QAbstractItemModel_Connect_RowsInserted((QAbstractItemModel*)self, (intptr_t)slot);
+}
+
+void q_concatenatetablesproxymodel_on_rows_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int)) {
+    QAbstractItemModel_Connect_RowsAboutToBeRemoved((QAbstractItemModel*)self, (intptr_t)slot);
+}
+
+void q_concatenatetablesproxymodel_on_rows_removed(void* self, void (*slot)(void*, void*, int, int)) {
+    QAbstractItemModel_Connect_RowsRemoved((QAbstractItemModel*)self, (intptr_t)slot);
+}
+
+void q_concatenatetablesproxymodel_on_columns_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int)) {
+    QAbstractItemModel_Connect_ColumnsAboutToBeInserted((QAbstractItemModel*)self, (intptr_t)slot);
+}
+
+void q_concatenatetablesproxymodel_on_columns_inserted(void* self, void (*slot)(void*, void*, int, int)) {
+    QAbstractItemModel_Connect_ColumnsInserted((QAbstractItemModel*)self, (intptr_t)slot);
+}
+
+void q_concatenatetablesproxymodel_on_columns_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int)) {
+    QAbstractItemModel_Connect_ColumnsAboutToBeRemoved((QAbstractItemModel*)self, (intptr_t)slot);
+}
+
+void q_concatenatetablesproxymodel_on_columns_removed(void* self, void (*slot)(void*, void*, int, int)) {
+    QAbstractItemModel_Connect_ColumnsRemoved((QAbstractItemModel*)self, (intptr_t)slot);
+}
+
+void q_concatenatetablesproxymodel_on_model_about_to_be_reset(void* self, void (*slot)(void*)) {
+    QAbstractItemModel_Connect_ModelAboutToBeReset((QAbstractItemModel*)self, (intptr_t)slot);
+}
+
+void q_concatenatetablesproxymodel_on_model_reset(void* self, void (*slot)(void*)) {
+    QAbstractItemModel_Connect_ModelReset((QAbstractItemModel*)self, (intptr_t)slot);
+}
+
+void q_concatenatetablesproxymodel_on_rows_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int)) {
+    QAbstractItemModel_Connect_RowsAboutToBeMoved((QAbstractItemModel*)self, (intptr_t)slot);
+}
+
+void q_concatenatetablesproxymodel_on_rows_moved(void* self, void (*slot)(void*, void*, int, int, void*, int)) {
+    QAbstractItemModel_Connect_RowsMoved((QAbstractItemModel*)self, (intptr_t)slot);
+}
+
+void q_concatenatetablesproxymodel_on_columns_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int)) {
+    QAbstractItemModel_Connect_ColumnsAboutToBeMoved((QAbstractItemModel*)self, (intptr_t)slot);
+}
+
+void q_concatenatetablesproxymodel_on_columns_moved(void* self, void (*slot)(void*, void*, int, int, void*, int)) {
+    QAbstractItemModel_Connect_ColumnsMoved((QAbstractItemModel*)self, (intptr_t)slot);
+}
+
+void q_concatenatetablesproxymodel_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_concatenatetablesproxymodel_delete(void* self) {

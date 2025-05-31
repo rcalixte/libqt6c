@@ -39,6 +39,8 @@ void q_partialordering_copy_assign(void* self, void* other);
 /// ``` QPartialOrdering* self, QPartialOrdering* other ```
 void q_partialordering_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpartialordering.html#dtor.QPartialOrdering)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPartialOrdering* self ```

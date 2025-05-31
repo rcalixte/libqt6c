@@ -12,21 +12,16 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
-#include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qnetworkinformation.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QNetworkInformation* self ```
-QMetaObject* q_networkinformation_meta_object(void* self);
+const QMetaObject* q_networkinformation_meta_object(void* self);
 
 /// ``` QNetworkInformation* self, const char* param1 ```
 void* q_networkinformation_metacast(void* self, const char* param1);
@@ -104,6 +99,8 @@ QNetworkInformation* q_networkinformation_instance();
 /// ``` QNetworkInformation* self, enum QNetworkInformation__Reachability newReachability ```
 void q_networkinformation_reachability_changed(void* self, int64_t newReachability);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#reachabilityChanged)
+///
 /// ``` QNetworkInformation* self, void (*slot)(QNetworkInformation*, enum QNetworkInformation__Reachability) ```
 void q_networkinformation_on_reachability_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -112,6 +109,8 @@ void q_networkinformation_on_reachability_changed(void* self, void (*slot)(void*
 /// ``` QNetworkInformation* self, bool state ```
 void q_networkinformation_is_behind_captive_portal_changed(void* self, bool state);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#isBehindCaptivePortalChanged)
+///
 /// ``` QNetworkInformation* self, void (*slot)(QNetworkInformation*, bool) ```
 void q_networkinformation_on_is_behind_captive_portal_changed(void* self, void (*slot)(void*, bool));
 
@@ -120,6 +119,8 @@ void q_networkinformation_on_is_behind_captive_portal_changed(void* self, void (
 /// ``` QNetworkInformation* self, enum QNetworkInformation__TransportMedium current ```
 void q_networkinformation_transport_medium_changed(void* self, int64_t current);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#transportMediumChanged)
+///
 /// ``` QNetworkInformation* self, void (*slot)(QNetworkInformation*, enum QNetworkInformation__TransportMedium) ```
 void q_networkinformation_on_transport_medium_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -128,6 +129,8 @@ void q_networkinformation_on_transport_medium_changed(void* self, void (*slot)(v
 /// ``` QNetworkInformation* self, bool isMetered ```
 void q_networkinformation_is_metered_changed(void* self, bool isMetered);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#isMeteredChanged)
+///
 /// ``` QNetworkInformation* self, void (*slot)(QNetworkInformation*, bool) ```
 void q_networkinformation_on_is_metered_changed(void* self, void (*slot)(void*, bool));
 
@@ -237,7 +240,7 @@ void q_networkinformation_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QNetworkInformation* self ```
-libqt_list /* of QObject* */ q_networkinformation_children(void* self);
+const libqt_list /* of QObject* */ q_networkinformation_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -335,7 +338,7 @@ QBindingStorage* q_networkinformation_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QNetworkInformation* self ```
-QBindingStorage* q_networkinformation_binding_storage2(void* self);
+const QBindingStorage* q_networkinformation_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -345,6 +348,8 @@ QBindingStorage* q_networkinformation_binding_storage2(void* self);
 void q_networkinformation_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QNetworkInformation* self, void (*slot)(QObject*) ```
 void q_networkinformation_on_destroyed(void* self, void (*slot)(void*));
@@ -400,8 +405,19 @@ void q_networkinformation_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QNetworkInformation* self, void (*slot)(QObject*, QObject*) ```
 void q_networkinformation_on_destroyed1(void* self, void (*slot)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QNetworkInformation* self, void (*slot)(QObject*, const char*) ```
+void q_networkinformation_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qnetworkinformation.html#types
 

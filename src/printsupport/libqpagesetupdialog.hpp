@@ -15,20 +15,11 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAction QAction;
 typedef struct QActionEvent QActionEvent;
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBackingStore QBackingStore;
-typedef struct QBindingStorage QBindingStorage;
-typedef struct QBitmap QBitmap;
 typedef struct QChildEvent QChildEvent;
 typedef struct QCloseEvent QCloseEvent;
 typedef struct QContextMenuEvent QContextMenuEvent;
-typedef struct QCursor QCursor;
 typedef struct QDialog QDialog;
 typedef struct QDragEnterEvent QDragEnterEvent;
 typedef struct QDragLeaveEvent QDragLeaveEvent;
@@ -37,22 +28,11 @@ typedef struct QDropEvent QDropEvent;
 typedef struct QEnterEvent QEnterEvent;
 typedef struct QEvent QEvent;
 typedef struct QFocusEvent QFocusEvent;
-typedef struct QFont QFont;
-typedef struct QFontInfo QFontInfo;
-typedef struct QFontMetrics QFontMetrics;
-typedef struct QGraphicsEffect QGraphicsEffect;
-typedef struct QGraphicsProxyWidget QGraphicsProxyWidget;
 typedef struct QHideEvent QHideEvent;
-typedef struct QIcon QIcon;
 typedef struct QInputMethodEvent QInputMethodEvent;
 typedef struct QKeyEvent QKeyEvent;
-typedef struct QKeySequence QKeySequence;
-typedef struct QLayout QLayout;
-typedef struct QLocale QLocale;
-typedef struct QMargins QMargins;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QMouseEvent QMouseEvent;
 typedef struct QMoveEvent QMoveEvent;
 typedef struct QObject QObject;
@@ -61,26 +41,16 @@ typedef struct QPaintDevice QPaintDevice;
 typedef struct QPaintEngine QPaintEngine;
 typedef struct QPaintEvent QPaintEvent;
 typedef struct QPainter QPainter;
-typedef struct QPalette QPalette;
-typedef struct QPixmap QPixmap;
 typedef struct QPoint QPoint;
-typedef struct QPointF QPointF;
 typedef struct QPrinter QPrinter;
-typedef struct QRect QRect;
-typedef struct QRegion QRegion;
 typedef struct QResizeEvent QResizeEvent;
-typedef struct QScreen QScreen;
 typedef struct QShowEvent QShowEvent;
 typedef struct QSize QSize;
-typedef struct QSizePolicy QSizePolicy;
-typedef struct QStyle QStyle;
 typedef struct QTabletEvent QTabletEvent;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
-typedef struct QWindow QWindow;
 #endif
 
 QPageSetupDialog* QPageSetupDialog_new(QWidget* parent);
@@ -216,6 +186,18 @@ bool QPageSetupDialog_QBaseNativeEvent(QPageSetupDialog* self, libqt_string even
 void QPageSetupDialog_ChangeEvent(QPageSetupDialog* self, QEvent* param1);
 void QPageSetupDialog_OnChangeEvent(QPageSetupDialog* self, intptr_t slot);
 void QPageSetupDialog_QBaseChangeEvent(QPageSetupDialog* self, QEvent* param1);
+int QPageSetupDialog_Metric(const QPageSetupDialog* self, int param1);
+void QPageSetupDialog_OnMetric(const QPageSetupDialog* self, intptr_t slot);
+int QPageSetupDialog_QBaseMetric(const QPageSetupDialog* self, int param1);
+void QPageSetupDialog_InitPainter(const QPageSetupDialog* self, QPainter* painter);
+void QPageSetupDialog_OnInitPainter(const QPageSetupDialog* self, intptr_t slot);
+void QPageSetupDialog_QBaseInitPainter(const QPageSetupDialog* self, QPainter* painter);
+QPaintDevice* QPageSetupDialog_Redirected(const QPageSetupDialog* self, QPoint* offset);
+void QPageSetupDialog_OnRedirected(const QPageSetupDialog* self, intptr_t slot);
+QPaintDevice* QPageSetupDialog_QBaseRedirected(const QPageSetupDialog* self, QPoint* offset);
+QPainter* QPageSetupDialog_SharedPainter(const QPageSetupDialog* self);
+void QPageSetupDialog_OnSharedPainter(const QPageSetupDialog* self, intptr_t slot);
+QPainter* QPageSetupDialog_QBaseSharedPainter(const QPageSetupDialog* self);
 void QPageSetupDialog_InputMethodEvent(QPageSetupDialog* self, QInputMethodEvent* param1);
 void QPageSetupDialog_OnInputMethodEvent(QPageSetupDialog* self, intptr_t slot);
 void QPageSetupDialog_QBaseInputMethodEvent(QPageSetupDialog* self, QInputMethodEvent* param1);
@@ -240,18 +222,6 @@ void QPageSetupDialog_QBaseConnectNotify(QPageSetupDialog* self, QMetaMethod* si
 void QPageSetupDialog_DisconnectNotify(QPageSetupDialog* self, QMetaMethod* signal);
 void QPageSetupDialog_OnDisconnectNotify(QPageSetupDialog* self, intptr_t slot);
 void QPageSetupDialog_QBaseDisconnectNotify(QPageSetupDialog* self, QMetaMethod* signal);
-int QPageSetupDialog_Metric(const QPageSetupDialog* self, int param1);
-void QPageSetupDialog_OnMetric(const QPageSetupDialog* self, intptr_t slot);
-int QPageSetupDialog_QBaseMetric(const QPageSetupDialog* self, int param1);
-void QPageSetupDialog_InitPainter(const QPageSetupDialog* self, QPainter* painter);
-void QPageSetupDialog_OnInitPainter(const QPageSetupDialog* self, intptr_t slot);
-void QPageSetupDialog_QBaseInitPainter(const QPageSetupDialog* self, QPainter* painter);
-QPaintDevice* QPageSetupDialog_Redirected(const QPageSetupDialog* self, QPoint* offset);
-void QPageSetupDialog_OnRedirected(const QPageSetupDialog* self, intptr_t slot);
-QPaintDevice* QPageSetupDialog_QBaseRedirected(const QPageSetupDialog* self, QPoint* offset);
-QPainter* QPageSetupDialog_SharedPainter(const QPageSetupDialog* self);
-void QPageSetupDialog_OnSharedPainter(const QPageSetupDialog* self, intptr_t slot);
-QPainter* QPageSetupDialog_QBaseSharedPainter(const QPageSetupDialog* self);
 void QPageSetupDialog_AdjustPosition(QPageSetupDialog* self, QWidget* param1);
 void QPageSetupDialog_OnAdjustPosition(QPageSetupDialog* self, intptr_t slot);
 void QPageSetupDialog_QBaseAdjustPosition(QPageSetupDialog* self, QWidget* param1);

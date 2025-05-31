@@ -1,15 +1,9 @@
-#include "libqabstractaxis.hpp"
 #include "libqabstractseries.hpp"
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
-#include "libqchart.hpp"
 #include "../libqevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include "libqpieslice.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqpieseries.hpp"
 #include "libqpieseries.h"
@@ -22,7 +16,7 @@ QPieSeries* q_pieseries_new2(void* parent) {
     return QPieSeries_new2((QObject*)parent);
 }
 
-QMetaObject* q_pieseries_meta_object(void* self) {
+const QMetaObject* q_pieseries_meta_object(void* self) {
     return QPieSeries_MetaObject((QPieSeries*)self);
 }
 
@@ -65,17 +59,8 @@ bool q_pieseries_append(void* self, void* slice) {
     return QPieSeries_Append((QPieSeries*)self, (QPieSlice*)slice);
 }
 
-bool q_pieseries_append_with_slices(void* self, void* slices[]) {
-    QPieSlice** slices_arr = (QPieSlice**)slices;
-    size_t slices_len = 0;
-    while (slices_arr[slices_len] != NULL) {
-        slices_len++;
-    }
-    libqt_list slices_list = {
-        .len = slices_len,
-        .data = {(QPieSlice*)slices},
-    };
-    return QPieSeries_AppendWithSlices((QPieSeries*)self, slices_list);
+bool q_pieseries_append_with_slices(void* self, libqt_list slices) {
+    return QPieSeries_AppendWithSlices((QPieSeries*)self, slices);
 }
 
 QPieSeries* q_pieseries_operator_shift_left(void* self, void* slice) {
@@ -175,37 +160,19 @@ void q_pieseries_set_labels_position(void* self, int64_t position) {
     QPieSeries_SetLabelsPosition((QPieSeries*)self, position);
 }
 
-void q_pieseries_added(void* self, void* slices[]) {
-    QPieSlice** slices_arr = (QPieSlice**)slices;
-    size_t slices_len = 0;
-    while (slices_arr[slices_len] != NULL) {
-        slices_len++;
-    }
-    libqt_list slices_list = {
-        .len = slices_len,
-        .data = {(QPieSlice*)slices},
-    };
-    QPieSeries_Added((QPieSeries*)self, slices_list);
+void q_pieseries_added(void* self, libqt_list slices) {
+    QPieSeries_Added((QPieSeries*)self, slices);
 }
 
-void q_pieseries_on_added(void* self, void (*slot)(void*, void*)) {
+void q_pieseries_on_added(void* self, void (*slot)(void*, libqt_list)) {
     QPieSeries_Connect_Added((QPieSeries*)self, (intptr_t)slot);
 }
 
-void q_pieseries_removed(void* self, void* slices[]) {
-    QPieSlice** slices_arr = (QPieSlice**)slices;
-    size_t slices_len = 0;
-    while (slices_arr[slices_len] != NULL) {
-        slices_len++;
-    }
-    libqt_list slices_list = {
-        .len = slices_len,
-        .data = {(QPieSlice*)slices},
-    };
-    QPieSeries_Removed((QPieSeries*)self, slices_list);
+void q_pieseries_removed(void* self, libqt_list slices) {
+    QPieSeries_Removed((QPieSeries*)self, slices);
 }
 
-void q_pieseries_on_removed(void* self, void (*slot)(void*, void*)) {
+void q_pieseries_on_removed(void* self, void (*slot)(void*, libqt_list)) {
     QPieSeries_Connect_Removed((QPieSeries*)self, (intptr_t)slot);
 }
 
@@ -391,8 +358,7 @@ const char* q_pieseries_object_name(void* self) {
 }
 
 void q_pieseries_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_pieseries_is_widget_type(void* self) {
@@ -431,7 +397,7 @@ void q_pieseries_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_pieseries_children(void* self) {
+const libqt_list /* of QObject* */ q_pieseries_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -498,7 +464,7 @@ QBindingStorage* q_pieseries_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_pieseries_binding_storage2(void* self) {
+const QBindingStorage* q_pieseries_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -672,6 +638,10 @@ bool q_pieseries_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_pieseries_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QPieSeries_OnIsSignalConnected((QPieSeries*)self, (intptr_t)slot);
+}
+
+void q_pieseries_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_pieseries_delete(void* self) {

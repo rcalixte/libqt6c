@@ -47,6 +47,8 @@ void q_styleoption_init_from(void* self, void* w);
 /// ``` QStyleOption* self, QStyleOption* other ```
 void q_styleoption_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#dtor.QStyleOption)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOption* self ```
@@ -78,6 +80,8 @@ void q_styleoptionfocusrect_init_from(void* self, void* w);
 /// ``` QStyleOptionFocusRect* self, QStyleOption* other ```
 void q_styleoptionfocusrect_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionfocusrect.html#dtor.QStyleOptionFocusRect)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionFocusRect* self ```
@@ -109,6 +113,8 @@ void q_styleoptionframe_init_from(void* self, void* w);
 /// ``` QStyleOptionFrame* self, QStyleOption* other ```
 void q_styleoptionframe_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionframe.html#dtor.QStyleOptionFrame)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionFrame* self ```
@@ -140,6 +146,8 @@ void q_styleoptiontabwidgetframe_init_from(void* self, void* w);
 /// ``` QStyleOptionTabWidgetFrame* self, QStyleOption* other ```
 void q_styleoptiontabwidgetframe_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html#dtor.QStyleOptionTabWidgetFrame)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionTabWidgetFrame* self ```
@@ -171,6 +179,8 @@ void q_styleoptiontabbarbase_init_from(void* self, void* w);
 /// ``` QStyleOptionTabBarBase* self, QStyleOption* other ```
 void q_styleoptiontabbarbase_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontabbarbase.html#dtor.QStyleOptionTabBarBase)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionTabBarBase* self ```
@@ -202,6 +212,8 @@ void q_styleoptionheader_init_from(void* self, void* w);
 /// ``` QStyleOptionHeader* self, QStyleOption* other ```
 void q_styleoptionheader_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionheader.html#dtor.QStyleOptionHeader)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionHeader* self ```
@@ -233,6 +245,8 @@ void q_styleoptionheaderv2_init_from(void* self, void* w);
 /// ``` QStyleOptionHeaderV2* self, QStyleOption* other ```
 void q_styleoptionheaderv2_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionheaderv2.html#dtor.QStyleOptionHeaderV2)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionHeaderV2* self ```
@@ -264,6 +278,8 @@ void q_styleoptionbutton_init_from(void* self, void* w);
 /// ``` QStyleOptionButton* self, QStyleOption* other ```
 void q_styleoptionbutton_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionbutton.html#dtor.QStyleOptionButton)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionButton* self ```
@@ -295,6 +311,8 @@ void q_styleoptiontab_init_from(void* self, void* w);
 /// ``` QStyleOptionTab* self, QStyleOption* other ```
 void q_styleoptiontab_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontab.html#dtor.QStyleOptionTab)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionTab* self ```
@@ -326,6 +344,8 @@ void q_styleoptiontoolbar_init_from(void* self, void* w);
 /// ``` QStyleOptionToolBar* self, QStyleOption* other ```
 void q_styleoptiontoolbar_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontoolbar.html#dtor.QStyleOptionToolBar)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionToolBar* self ```
@@ -357,6 +377,8 @@ void q_styleoptionprogressbar_init_from(void* self, void* w);
 /// ``` QStyleOptionProgressBar* self, QStyleOption* other ```
 void q_styleoptionprogressbar_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#dtor.QStyleOptionProgressBar)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionProgressBar* self ```
@@ -388,6 +410,8 @@ void q_styleoptionmenuitem_init_from(void* self, void* w);
 /// ``` QStyleOptionMenuItem* self, QStyleOption* other ```
 void q_styleoptionmenuitem_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#dtor.QStyleOptionMenuItem)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionMenuItem* self ```
@@ -419,6 +443,8 @@ void q_styleoptiondockwidget_init_from(void* self, void* w);
 /// ``` QStyleOptionDockWidget* self, QStyleOption* other ```
 void q_styleoptiondockwidget_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiondockwidget.html#dtor.QStyleOptionDockWidget)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionDockWidget* self ```
@@ -450,6 +476,8 @@ void q_styleoptionviewitem_init_from(void* self, void* w);
 /// ``` QStyleOptionViewItem* self, QStyleOption* other ```
 void q_styleoptionviewitem_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#dtor.QStyleOptionViewItem)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionViewItem* self ```
@@ -481,6 +509,8 @@ void q_styleoptiontoolbox_init_from(void* self, void* w);
 /// ``` QStyleOptionToolBox* self, QStyleOption* other ```
 void q_styleoptiontoolbox_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontoolbox.html#dtor.QStyleOptionToolBox)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionToolBox* self ```
@@ -512,6 +542,8 @@ void q_styleoptionrubberband_init_from(void* self, void* w);
 /// ``` QStyleOptionRubberBand* self, QStyleOption* other ```
 void q_styleoptionrubberband_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionrubberband.html#dtor.QStyleOptionRubberBand)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionRubberBand* self ```
@@ -553,6 +585,8 @@ void q_styleoptioncomplex_init_from(void* self, void* w);
 /// ``` QStyleOptionComplex* self, QStyleOption* other ```
 void q_styleoptioncomplex_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#dtor.QStyleOptionComplex)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionComplex* self ```
@@ -584,6 +618,8 @@ void q_styleoptionslider_init_from(void* self, void* w);
 /// ``` QStyleOptionSlider* self, QStyleOption* other ```
 void q_styleoptionslider_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionslider.html#dtor.QStyleOptionSlider)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionSlider* self ```
@@ -615,6 +651,8 @@ void q_styleoptionspinbox_init_from(void* self, void* w);
 /// ``` QStyleOptionSpinBox* self, QStyleOption* other ```
 void q_styleoptionspinbox_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionspinbox.html#dtor.QStyleOptionSpinBox)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionSpinBox* self ```
@@ -646,6 +684,8 @@ void q_styleoptiontoolbutton_init_from(void* self, void* w);
 /// ``` QStyleOptionToolButton* self, QStyleOption* other ```
 void q_styleoptiontoolbutton_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#dtor.QStyleOptionToolButton)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionToolButton* self ```
@@ -677,6 +717,8 @@ void q_styleoptioncombobox_init_from(void* self, void* w);
 /// ``` QStyleOptionComboBox* self, QStyleOption* other ```
 void q_styleoptioncombobox_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptioncombobox.html#dtor.QStyleOptionComboBox)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionComboBox* self ```
@@ -708,6 +750,8 @@ void q_styleoptiontitlebar_init_from(void* self, void* w);
 /// ``` QStyleOptionTitleBar* self, QStyleOption* other ```
 void q_styleoptiontitlebar_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontitlebar.html#dtor.QStyleOptionTitleBar)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionTitleBar* self ```
@@ -739,6 +783,8 @@ void q_styleoptiongroupbox_init_from(void* self, void* w);
 /// ``` QStyleOptionGroupBox* self, QStyleOption* other ```
 void q_styleoptiongroupbox_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiongroupbox.html#dtor.QStyleOptionGroupBox)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionGroupBox* self ```
@@ -770,6 +816,8 @@ void q_styleoptionsizegrip_init_from(void* self, void* w);
 /// ``` QStyleOptionSizeGrip* self, QStyleOption* other ```
 void q_styleoptionsizegrip_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionsizegrip.html#dtor.QStyleOptionSizeGrip)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionSizeGrip* self ```
@@ -806,6 +854,8 @@ void q_styleoptiongraphicsitem_init_from(void* self, void* w);
 /// ``` QStyleOptionGraphicsItem* self, QStyleOption* other ```
 void q_styleoptiongraphicsitem_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiongraphicsitem.html#dtor.QStyleOptionGraphicsItem)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleOptionGraphicsItem* self ```
@@ -838,6 +888,8 @@ QStyleHintReturn* q_stylehintreturn_new4(int version, int typeVal);
 /// ``` QStyleHintReturn* self, QStyleHintReturn* param1 ```
 void q_stylehintreturn_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehintreturn.html#dtor.QStyleHintReturn)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleHintReturn* self ```
@@ -860,6 +912,8 @@ QStyleHintReturnMask* q_stylehintreturnmask_new2(void* param1);
 /// ``` QStyleHintReturnMask* self, QStyleHintReturnMask* param1 ```
 void q_stylehintreturnmask_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehintreturnmask.html#dtor.QStyleHintReturnMask)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleHintReturnMask* self ```
@@ -882,6 +936,8 @@ QStyleHintReturnVariant* q_stylehintreturnvariant_new2(void* param1);
 /// ``` QStyleHintReturnVariant* self, QStyleHintReturnVariant* param1 ```
 void q_stylehintreturnvariant_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehintreturnvariant.html#dtor.QStyleHintReturnVariant)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleHintReturnVariant* self ```

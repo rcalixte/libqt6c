@@ -139,7 +139,7 @@ bool q_metamethod_is_const(void* self) {
     return QMetaMethod_IsConst((QMetaMethod*)self);
 }
 
-QMetaObject* q_metamethod_enclosing_meta_object(void* self) {
+const QMetaObject* q_metamethod_enclosing_meta_object(void* self) {
     return QMetaMethod_EnclosingMetaObject((QMetaMethod*)self);
 }
 
@@ -490,7 +490,7 @@ char* q_metaenum_value_to_keys(void* self, int value) {
     return _ret;
 }
 
-QMetaObject* q_metaenum_enclosing_meta_object(void* self) {
+const QMetaObject* q_metaenum_enclosing_meta_object(void* self) {
     return QMetaEnum_EnclosingMetaObject((QMetaEnum*)self);
 }
 
@@ -674,7 +674,7 @@ bool q_metaproperty_is_valid(void* self) {
     return QMetaProperty_IsValid((QMetaProperty*)self);
 }
 
-QMetaObject* q_metaproperty_enclosing_meta_object(void* self) {
+const QMetaObject* q_metaproperty_enclosing_meta_object(void* self) {
     return QMetaProperty_EnclosingMetaObject((QMetaProperty*)self);
 }
 
@@ -710,7 +710,7 @@ const char* q_metaclassinfo_value(void* self) {
     return QMetaClassInfo_Value((QMetaClassInfo*)self);
 }
 
-QMetaObject* q_metaclassinfo_enclosing_meta_object(void* self) {
+const QMetaObject* q_metaclassinfo_enclosing_meta_object(void* self) {
     return QMetaClassInfo_EnclosingMetaObject((QMetaClassInfo*)self);
 }
 

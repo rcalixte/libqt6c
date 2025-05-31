@@ -104,8 +104,10 @@ void QUrlQuery_SetQueryItems(QUrlQuery* self, libqt_list /* of libqt_pair  tuple
         QPair<QString, QString> query_arr_i_QPair;
         libqt_string* query_arr_i_first = static_cast<libqt_string*>(query_arr[i].first);
         libqt_string* query_arr_i_second = static_cast<libqt_string*>(query_arr[i].second);
-        query_arr_i_QPair.first = QString::fromUtf8(query_arr_i_first->data, query_arr_i_first->len);
-        query_arr_i_QPair.second = QString::fromUtf8(query_arr_i_second->data, query_arr_i_second->len);
+        QString query_arr_i_first_0_QString = QString::fromUtf8(query_arr_i_first[0].data, query_arr_i_first[0].len);
+        QString query_arr_i_second_0_QString = QString::fromUtf8(query_arr_i_second[0].data, query_arr_i_second[0].len);
+        query_arr_i_QPair.first = query_arr_i_first_0_QString;
+        query_arr_i_QPair.second = query_arr_i_second_0_QString;
         query_QList.push_back(query_arr_i_QPair);
     }
     self->setQueryItems(query_QList);

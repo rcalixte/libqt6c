@@ -12,15 +12,11 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
 #include "libqstyle.h"
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qstyleplugin.html
 
@@ -37,7 +33,7 @@ QStylePlugin* q_styleplugin_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QStylePlugin* self ```
-QMetaObject* q_styleplugin_meta_object(void* self);
+const QMetaObject* q_styleplugin_meta_object(void* self);
 
 /// ``` QStylePlugin* self, const char* param1 ```
 void* q_styleplugin_metacast(void* self, const char* param1);
@@ -65,11 +61,15 @@ const char* q_styleplugin_tr(const char* s);
 /// ``` QStylePlugin* self, const char* key ```
 QStyle* q_styleplugin_create(void* self, const char* key);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleplugin.html#create)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStylePlugin* self, QStyle* (*slot)(QStylePlugin*, const char*) ```
 void q_styleplugin_on_create(void* self, QStyle* (*slot)(void*, const char*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleplugin.html#create)
+///
 /// Base class method implementation
 ///
 /// ``` QStylePlugin* self, const char* key ```
@@ -167,7 +167,7 @@ void q_styleplugin_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QStylePlugin* self ```
-libqt_list /* of QObject* */ q_styleplugin_children(void* self);
+const libqt_list /* of QObject* */ q_styleplugin_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -265,7 +265,7 @@ QBindingStorage* q_styleplugin_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QStylePlugin* self ```
-QBindingStorage* q_styleplugin_binding_storage2(void* self);
+const QBindingStorage* q_styleplugin_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -275,6 +275,8 @@ QBindingStorage* q_styleplugin_binding_storage2(void* self);
 void q_styleplugin_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QStylePlugin* self, void (*slot)(QObject*) ```
 void q_styleplugin_on_destroyed(void* self, void (*slot)(void*));
@@ -330,6 +332,8 @@ void q_styleplugin_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QStylePlugin* self, void (*slot)(QObject*, QObject*) ```
 void q_styleplugin_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -344,12 +348,16 @@ bool q_styleplugin_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStylePlugin* self, QEvent* event ```
 bool q_styleplugin_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -367,12 +375,16 @@ bool q_styleplugin_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStylePlugin* self, QObject* watched, QEvent* event ```
 bool q_styleplugin_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -390,12 +402,16 @@ void q_styleplugin_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStylePlugin* self, QTimerEvent* event ```
 void q_styleplugin_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -413,12 +429,16 @@ void q_styleplugin_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStylePlugin* self, QChildEvent* event ```
 void q_styleplugin_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -436,12 +456,16 @@ void q_styleplugin_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStylePlugin* self, QEvent* event ```
 void q_styleplugin_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -459,12 +483,16 @@ void q_styleplugin_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStylePlugin* self, QMetaMethod* signal ```
 void q_styleplugin_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -482,12 +510,16 @@ void q_styleplugin_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStylePlugin* self, QMetaMethod* signal ```
 void q_styleplugin_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -505,12 +537,16 @@ QObject* q_styleplugin_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStylePlugin* self ```
 QObject* q_styleplugin_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -528,12 +564,16 @@ int32_t q_styleplugin_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStylePlugin* self ```
 int32_t q_styleplugin_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -551,12 +591,16 @@ int32_t q_styleplugin_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStylePlugin* self, const char* signal ```
 int32_t q_styleplugin_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -574,6 +618,8 @@ bool q_styleplugin_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStylePlugin* self, QMetaMethod* signal ```
@@ -581,11 +627,24 @@ bool q_styleplugin_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QStylePlugin* self, bool (*slot)(QStylePlugin*, QMetaMethod*) ```
 void q_styleplugin_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QStylePlugin* self, void (*slot)(QObject*, const char*) ```
+void q_styleplugin_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyleplugin.html#dtor.QStylePlugin)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStylePlugin* self ```

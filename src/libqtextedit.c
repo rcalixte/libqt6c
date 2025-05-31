@@ -1,22 +1,8 @@
 #include "libqabstractscrollarea.hpp"
-#include "libqaction.hpp"
 #include "libqevent.hpp"
-#include "libqanystringview.hpp"
-#include "libqbackingstore.hpp"
-#include "libqbindingstorage.hpp"
-#include "libqbitmap.hpp"
 #include "libqcolor.hpp"
-#include "libqcursor.hpp"
 #include "libqfont.hpp"
-#include "libqfontinfo.hpp"
-#include "libqfontmetrics.hpp"
 #include "libqframe.hpp"
-#include "libqgraphicseffect.hpp"
-#include "libqgraphicsproxywidget.hpp"
-#include "libqicon.hpp"
-#include "libqkeysequence.hpp"
-#include "libqlayout.hpp"
-#include "libqlocale.hpp"
 #include "libqmargins.hpp"
 #include "libqmenu.hpp"
 #include "libqmetaobject.hpp"
@@ -26,27 +12,18 @@
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
 #include "libqpainter.hpp"
-#include "libqpalette.hpp"
-#include "libqpixmap.hpp"
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
-#include "libqregion.hpp"
 #include "libqregularexpression.hpp"
-#include "libqscreen.hpp"
-#include "libqscrollbar.hpp"
 #include "libqsize.hpp"
-#include "libqsizepolicy.hpp"
 #include <string.h>
-#include "libqstyle.hpp"
 #include "libqstyleoption.hpp"
 #include "libqtextformat.hpp"
 #include "libqtextcursor.hpp"
 #include "libqtextdocument.hpp"
-#include "libqthread.hpp"
 #include "libqurl.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqwindow.hpp"
 #include "libqcoreevent.hpp"
 #include "libqtextedit.hpp"
 #include "libqtextedit.h"
@@ -67,7 +44,7 @@ QTextEdit* q_textedit_new4(const char* text, void* parent) {
     return QTextEdit_new4(qstring(text), (QWidget*)parent);
 }
 
-QMetaObject* q_textedit_meta_object(void* self) {
+const QMetaObject* q_textedit_meta_object(void* self) {
     return QTextEdit_MetaObject((QTextEdit*)self);
 }
 
@@ -351,17 +328,8 @@ void q_textedit_set_accept_rich_text(void* self, bool accept) {
     QTextEdit_SetAcceptRichText((QTextEdit*)self, accept);
 }
 
-void q_textedit_set_extra_selections(void* self, void* selections[]) {
-    QTextEdit__ExtraSelection** selections_arr = (QTextEdit__ExtraSelection**)selections;
-    size_t selections_len = 0;
-    while (selections_arr[selections_len] != NULL) {
-        selections_len++;
-    }
-    libqt_list selections_list = {
-        .len = selections_len,
-        .data = {(QTextEdit__ExtraSelection*)selections},
-    };
-    QTextEdit_SetExtraSelections((QTextEdit*)self, selections_list);
+void q_textedit_set_extra_selections(void* self, libqt_list selections) {
+    QTextEdit_SetExtraSelections((QTextEdit*)self, selections);
 }
 
 libqt_list /* of QTextEdit__ExtraSelection* */ q_textedit_extra_selections(void* self) {
@@ -1123,7 +1091,7 @@ QRect* q_textedit_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_textedit_geometry(void* self) {
+const QRect* q_textedit_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -1327,7 +1295,7 @@ QWidget* q_textedit_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_textedit_palette(void* self) {
+const QPalette* q_textedit_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -1351,7 +1319,7 @@ int64_t q_textedit_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_textedit_font(void* self) {
+const QFont* q_textedit_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -1956,30 +1924,12 @@ void q_textedit_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_textedit_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_textedit_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_textedit_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_textedit_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_textedit_insert_action(void* self, void* before, void* action) {
@@ -2195,8 +2145,7 @@ const char* q_textedit_object_name(void* self) {
 }
 
 void q_textedit_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_textedit_is_widget_type(void* self) {
@@ -2235,7 +2184,7 @@ void q_textedit_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_textedit_children(void* self) {
+const libqt_list /* of QObject* */ q_textedit_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -2298,7 +2247,7 @@ QBindingStorage* q_textedit_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_textedit_binding_storage2(void* self) {
+const QBindingStorage* q_textedit_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2868,6 +2817,10 @@ bool q_textedit_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_textedit_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QTextEdit_OnIsSignalConnected((QTextEdit*)self, (intptr_t)slot);
+}
+
+void q_textedit_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_textedit_delete(void* self) {

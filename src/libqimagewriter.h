@@ -193,6 +193,8 @@ const char* q_imagewriter_tr2(const char* sourceText, const char* disambiguation
 /// ``` const char* sourceText, const char* disambiguation, int n ```
 const char* q_imagewriter_tr3(const char* sourceText, const char* disambiguation, int n);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimagewriter.html#dtor.QImageWriter)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QImageWriter* self ```

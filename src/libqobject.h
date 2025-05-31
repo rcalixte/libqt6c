@@ -27,6 +27,8 @@
 /// ``` QObjectData* self ```
 QMetaObject* q_objectdata_dynamic_meta_object(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#dtor.QObjectData)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QObjectData* self ```
@@ -47,7 +49,7 @@ QObject* q_object_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QObject* self ```
-QMetaObject* q_object_meta_object(void* self);
+const QMetaObject* q_object_meta_object(void* self);
 
 /// ``` QObject* self, const char* param1 ```
 void* q_object_metacast(void* self, const char* param1);
@@ -75,11 +77,15 @@ const char* q_object_tr(const char* s);
 /// ``` QObject* self, QEvent* event ```
 bool q_object_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QObject* self, bool (*slot)(QObject*, QEvent*) ```
 void q_object_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QObject* self, QEvent* event ```
@@ -90,11 +96,15 @@ bool q_object_qbase_event(void* self, void* event);
 /// ``` QObject* self, QObject* watched, QEvent* event ```
 bool q_object_event_filter(void* self, void* watched, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QObject* self, bool (*slot)(QObject*, QObject*, QEvent*) ```
 void q_object_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Base class method implementation
 ///
 /// ``` QObject* self, QObject* watched, QEvent* event ```
@@ -158,7 +168,7 @@ void q_object_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QObject* self ```
-libqt_list /* of QObject* */ q_object_children(void* self);
+const libqt_list /* of QObject* */ q_object_children(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
@@ -228,13 +238,15 @@ QBindingStorage* q_object_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QObject* self ```
-QBindingStorage* q_object_binding_storage2(void* self);
+const QBindingStorage* q_object_binding_storage2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QObject* self ```
 void q_object_destroyed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QObject* self, void (*slot)(QObject*) ```
 void q_object_on_destroyed(void* self, void (*slot)(void*));
 
@@ -258,11 +270,15 @@ void q_object_delete_later(void* self);
 /// ``` QObject* self ```
 QObject* q_object_sender(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QObject* self, QObject* (*slot)() ```
 void q_object_on_sender(void* self, QObject* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Base class method implementation
 ///
 /// ``` QObject* self ```
@@ -273,11 +289,15 @@ QObject* q_object_qbase_sender(void* self);
 /// ``` QObject* self ```
 int32_t q_object_sender_signal_index(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QObject* self, int32_t (*slot)() ```
 void q_object_on_sender_signal_index(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Base class method implementation
 ///
 /// ``` QObject* self ```
@@ -288,11 +308,15 @@ int32_t q_object_qbase_sender_signal_index(void* self);
 /// ``` QObject* self, const char* signal ```
 int32_t q_object_receivers(void* self, const char* signal);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QObject* self, int32_t (*slot)(QObject*, const char*) ```
 void q_object_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Base class method implementation
 ///
 /// ``` QObject* self, const char* signal ```
@@ -303,11 +327,15 @@ int32_t q_object_qbase_receivers(void* self, const char* signal);
 /// ``` QObject* self, QMetaMethod* signal ```
 bool q_object_is_signal_connected(void* self, void* signal);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QObject* self, bool (*slot)(QObject*, QMetaMethod*) ```
 void q_object_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Base class method implementation
 ///
 /// ``` QObject* self, QMetaMethod* signal ```
@@ -318,11 +346,15 @@ bool q_object_qbase_is_signal_connected(void* self, void* signal);
 /// ``` QObject* self, QTimerEvent* event ```
 void q_object_timer_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QObject* self, void (*slot)(QObject*, QTimerEvent*) ```
 void q_object_on_timer_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QObject* self, QTimerEvent* event ```
@@ -333,11 +365,15 @@ void q_object_qbase_timer_event(void* self, void* event);
 /// ``` QObject* self, QChildEvent* event ```
 void q_object_child_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QObject* self, void (*slot)(QObject*, QChildEvent*) ```
 void q_object_on_child_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QObject* self, QChildEvent* event ```
@@ -348,11 +384,15 @@ void q_object_qbase_child_event(void* self, void* event);
 /// ``` QObject* self, QEvent* event ```
 void q_object_custom_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QObject* self, void (*slot)(QObject*, QEvent*) ```
 void q_object_on_custom_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QObject* self, QEvent* event ```
@@ -363,11 +403,15 @@ void q_object_qbase_custom_event(void* self, void* event);
 /// ``` QObject* self, QMetaMethod* signal ```
 void q_object_connect_notify(void* self, void* signal);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QObject* self, void (*slot)(QObject*, QMetaMethod*) ```
 void q_object_on_connect_notify(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Base class method implementation
 ///
 /// ``` QObject* self, QMetaMethod* signal ```
@@ -378,11 +422,15 @@ void q_object_qbase_connect_notify(void* self, void* signal);
 /// ``` QObject* self, QMetaMethod* signal ```
 void q_object_disconnect_notify(void* self, void* signal);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QObject* self, void (*slot)(QObject*, QMetaMethod*) ```
 void q_object_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Base class method implementation
 ///
 /// ``` QObject* self, QMetaMethod* signal ```
@@ -418,9 +466,20 @@ QMetaObject__Connection* q_object_connect4(void* self, void* sender, const char*
 /// ``` QObject* self, QObject* param1 ```
 void q_object_destroyed1(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QObject* self, void (*slot)(QObject*, QObject*) ```
 void q_object_on_destroyed1(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QObject* self, void (*slot)(QObject*, const char*) ```
+void q_object_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dtor.QObject)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QObject* self ```
@@ -448,6 +507,8 @@ void q_signalblocker_reblock(void* self);
 /// ``` QSignalBlocker* self ```
 void q_signalblocker_unblock(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsignalblocker.html#dtor.QSignalBlocker)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSignalBlocker* self ```

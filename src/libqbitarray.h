@@ -194,6 +194,8 @@ bool q_bitarray_fill22(void* self, bool val, int64_t size);
 /// ``` QBitArray* self, enum QSysInfo__Endian endianness, bool* ok ```
 uint32_t q_bitarray_to_u_int322(void* self, int64_t endianness, bool* ok);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#dtor.QBitArray)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QBitArray* self ```
@@ -231,6 +233,8 @@ void q_bitref_operator_assign(void* self, void* val);
 /// ``` QBitRef* self, bool val ```
 void q_bitref_operator_assign_with_val(void* self, bool val);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbitref.html#dtor.QBitRef)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QBitRef* self ```

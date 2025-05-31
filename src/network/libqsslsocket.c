@@ -1,13 +1,9 @@
 #include "libqabstractsocket.hpp"
-#include "../libqanystringview.hpp"
-#include "libqauthenticator.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
 #include "libqhostaddress.hpp"
 #include "../libqiodevice.hpp"
 #include "../libqiodevicebase.hpp"
 #include "../libqmetaobject.hpp"
-#include "libqnetworkproxy.hpp"
 #include "../libqobject.hpp"
 #include "libqocspresponse.hpp"
 #include "libqsslcertificate.hpp"
@@ -18,7 +14,6 @@
 #include "libqsslpresharedkeyauthenticator.hpp"
 #include <string.h>
 #include "libqtcpsocket.hpp"
-#include "../libqthread.hpp"
 #include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqsslsocket.hpp"
@@ -32,7 +27,7 @@ QSslSocket* q_sslsocket_new2(void* parent) {
     return QSslSocket_new2((QObject*)parent);
 }
 
-QMetaObject* q_sslsocket_meta_object(void* self) {
+const QMetaObject* q_sslsocket_meta_object(void* self) {
     return QSslSocket_MetaObject((QSslSocket*)self);
 }
 
@@ -270,17 +265,8 @@ void q_sslsocket_set_ssl_configuration(void* self, void* config) {
     QSslSocket_SetSslConfiguration((QSslSocket*)self, (QSslConfiguration*)config);
 }
 
-void q_sslsocket_set_local_certificate_chain(void* self, void* localChain[]) {
-    QSslCertificate** localChain_arr = (QSslCertificate**)localChain;
-    size_t localChain_len = 0;
-    while (localChain_arr[localChain_len] != NULL) {
-        localChain_len++;
-    }
-    libqt_list localChain_list = {
-        .len = localChain_len,
-        .data = {(QSslCertificate*)localChain},
-    };
-    QSslSocket_SetLocalCertificateChain((QSslSocket*)self, localChain_list);
+void q_sslsocket_set_local_certificate_chain(void* self, libqt_list localChain) {
+    QSslSocket_SetLocalCertificateChain((QSslSocket*)self, localChain);
 }
 
 libqt_list /* of QSslCertificate* */ q_sslsocket_local_certificate_chain(void* self) {
@@ -469,17 +455,8 @@ bool q_sslsocket_is_feature_supported(int64_t feat) {
     return QSslSocket_IsFeatureSupported(feat);
 }
 
-void q_sslsocket_ignore_ssl_errors(void* self, void* errors[]) {
-    QSslError** errors_arr = (QSslError**)errors;
-    size_t errors_len = 0;
-    while (errors_arr[errors_len] != NULL) {
-        errors_len++;
-    }
-    libqt_list errors_list = {
-        .len = errors_len,
-        .data = {(QSslError*)errors},
-    };
-    QSslSocket_IgnoreSslErrors((QSslSocket*)self, errors_list);
+void q_sslsocket_ignore_ssl_errors(void* self, libqt_list errors) {
+    QSslSocket_IgnoreSslErrors((QSslSocket*)self, errors);
 }
 
 void q_sslsocket_continue_interrupted_handshake(void* self) {
@@ -514,20 +491,11 @@ void q_sslsocket_on_peer_verify_error(void* self, void (*slot)(void*, void*)) {
     QSslSocket_Connect_PeerVerifyError((QSslSocket*)self, (intptr_t)slot);
 }
 
-void q_sslsocket_ssl_errors(void* self, void* errors[]) {
-    QSslError** errors_arr = (QSslError**)errors;
-    size_t errors_len = 0;
-    while (errors_arr[errors_len] != NULL) {
-        errors_len++;
-    }
-    libqt_list errors_list = {
-        .len = errors_len,
-        .data = {(QSslError*)errors},
-    };
-    QSslSocket_SslErrors((QSslSocket*)self, errors_list);
+void q_sslsocket_ssl_errors(void* self, libqt_list errors) {
+    QSslSocket_SslErrors((QSslSocket*)self, errors);
 }
 
-void q_sslsocket_on_ssl_errors(void* self, void (*slot)(void*, void*)) {
+void q_sslsocket_on_ssl_errors(void* self, void (*slot)(void*, libqt_list)) {
     QSslSocket_Connect_SslErrors((QSslSocket*)self, (intptr_t)slot);
 }
 
@@ -1052,8 +1020,7 @@ const char* q_sslsocket_object_name(void* self) {
 }
 
 void q_sslsocket_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_sslsocket_is_widget_type(void* self) {
@@ -1092,7 +1059,7 @@ void q_sslsocket_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_sslsocket_children(void* self) {
+const libqt_list /* of QObject* */ q_sslsocket_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1159,7 +1126,7 @@ QBindingStorage* q_sslsocket_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_sslsocket_binding_storage2(void* self) {
+const QBindingStorage* q_sslsocket_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1549,6 +1516,10 @@ bool q_sslsocket_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_sslsocket_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QSslSocket_OnIsSignalConnected((QSslSocket*)self, (intptr_t)slot);
+}
+
+void q_sslsocket_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_sslsocket_delete(void* self) {

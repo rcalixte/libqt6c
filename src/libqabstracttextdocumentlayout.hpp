@@ -21,20 +21,14 @@ typedef QAbstractTextDocumentLayout::PaintContext QAbstractTextDocumentLayout__P
 #if defined(WORKAROUND_INNER_CLASS_DEFINITION_QAbstractTextDocumentLayout__Selection)
 typedef QAbstractTextDocumentLayout::Selection QAbstractTextDocumentLayout__Selection;
 #endif
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
 typedef struct QAbstractTextDocumentLayout QAbstractTextDocumentLayout;
 typedef struct QAbstractTextDocumentLayout__PaintContext QAbstractTextDocumentLayout__PaintContext;
 typedef struct QAbstractTextDocumentLayout__Selection QAbstractTextDocumentLayout__Selection;
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QEvent QEvent;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QPaintDevice QPaintDevice;
 typedef struct QPainter QPainter;
@@ -48,9 +42,7 @@ typedef struct QTextFormat QTextFormat;
 typedef struct QTextFrame QTextFrame;
 typedef struct QTextInlineObject QTextInlineObject;
 typedef struct QTextObjectInterface QTextObjectInterface;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
 #endif
 
 QAbstractTextDocumentLayout* QAbstractTextDocumentLayout_new(QTextDocument* doc);

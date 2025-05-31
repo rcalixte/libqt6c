@@ -158,7 +158,7 @@ void q_surfaceformat_set_swap_interval(void* self, int interval) {
     QSurfaceFormat_SetSwapInterval((QSurfaceFormat*)self, interval);
 }
 
-QColorSpace* q_surfaceformat_color_space(void* self) {
+const QColorSpace* q_surfaceformat_color_space(void* self) {
     return QSurfaceFormat_ColorSpace((QSurfaceFormat*)self);
 }
 

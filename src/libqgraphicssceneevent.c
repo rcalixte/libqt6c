@@ -943,7 +943,7 @@ void q_graphicsscenedragdropevent_set_source(void* self, void* source) {
     QGraphicsSceneDragDropEvent_SetSource((QGraphicsSceneDragDropEvent*)self, (QWidget*)source);
 }
 
-QMimeData* q_graphicsscenedragdropevent_mime_data(void* self) {
+const QMimeData* q_graphicsscenedragdropevent_mime_data(void* self) {
     return QGraphicsSceneDragDropEvent_MimeData((QGraphicsSceneDragDropEvent*)self);
 }
 

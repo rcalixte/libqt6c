@@ -1,7 +1,5 @@
 #include "libqabstractnetworkcache.hpp"
-#include "../libqanystringview.hpp"
 #include "libqauthenticator.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
 #include "libqhstspolicy.hpp"
 #include "libqhttpmultipart.hpp"
@@ -16,8 +14,6 @@
 #include "libqsslerror.hpp"
 #include "libqsslpresharedkeyauthenticator.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqnetworkaccessmanager.hpp"
 #include "libqnetworkaccessmanager.h"
@@ -30,7 +26,7 @@ QNetworkAccessManager* q_networkaccessmanager_new2(void* parent) {
     return QNetworkAccessManager_new2((QObject*)parent);
 }
 
-QMetaObject* q_networkaccessmanager_meta_object(void* self) {
+const QMetaObject* q_networkaccessmanager_meta_object(void* self) {
     return QNetworkAccessManager_MetaObject((QNetworkAccessManager*)self);
 }
 
@@ -145,17 +141,8 @@ bool q_networkaccessmanager_is_strict_transport_security_store_enabled(void* sel
     return QNetworkAccessManager_IsStrictTransportSecurityStoreEnabled((QNetworkAccessManager*)self);
 }
 
-void q_networkaccessmanager_add_strict_transport_security_hosts(void* self, void* knownHosts[]) {
-    QHstsPolicy** knownHosts_arr = (QHstsPolicy**)knownHosts;
-    size_t knownHosts_len = 0;
-    while (knownHosts_arr[knownHosts_len] != NULL) {
-        knownHosts_len++;
-    }
-    libqt_list knownHosts_list = {
-        .len = knownHosts_len,
-        .data = {(QHstsPolicy*)knownHosts},
-    };
-    QNetworkAccessManager_AddStrictTransportSecurityHosts((QNetworkAccessManager*)self, knownHosts_list);
+void q_networkaccessmanager_add_strict_transport_security_hosts(void* self, libqt_list knownHosts) {
+    QNetworkAccessManager_AddStrictTransportSecurityHosts((QNetworkAccessManager*)self, knownHosts);
 }
 
 libqt_list /* of QHstsPolicy* */ q_networkaccessmanager_strict_transport_security_hosts(void* self) {
@@ -279,20 +266,11 @@ void q_networkaccessmanager_on_encrypted(void* self, void (*slot)(void*, void*))
     QNetworkAccessManager_Connect_Encrypted((QNetworkAccessManager*)self, (intptr_t)slot);
 }
 
-void q_networkaccessmanager_ssl_errors(void* self, void* reply, void* errors[]) {
-    QSslError** errors_arr = (QSslError**)errors;
-    size_t errors_len = 0;
-    while (errors_arr[errors_len] != NULL) {
-        errors_len++;
-    }
-    libqt_list errors_list = {
-        .len = errors_len,
-        .data = {(QSslError*)errors},
-    };
-    QNetworkAccessManager_SslErrors((QNetworkAccessManager*)self, (QNetworkReply*)reply, errors_list);
+void q_networkaccessmanager_ssl_errors(void* self, void* reply, libqt_list errors) {
+    QNetworkAccessManager_SslErrors((QNetworkAccessManager*)self, (QNetworkReply*)reply, errors);
 }
 
-void q_networkaccessmanager_on_ssl_errors(void* self, void (*slot)(void*, void*, void*)) {
+void q_networkaccessmanager_on_ssl_errors(void* self, void (*slot)(void*, void*, libqt_list)) {
     QNetworkAccessManager_Connect_SslErrors((QNetworkAccessManager*)self, (intptr_t)slot);
 }
 
@@ -394,8 +372,7 @@ const char* q_networkaccessmanager_object_name(void* self) {
 }
 
 void q_networkaccessmanager_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_networkaccessmanager_is_widget_type(void* self) {
@@ -434,7 +411,7 @@ void q_networkaccessmanager_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_networkaccessmanager_children(void* self) {
+const libqt_list /* of QObject* */ q_networkaccessmanager_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -501,7 +478,7 @@ QBindingStorage* q_networkaccessmanager_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_networkaccessmanager_binding_storage2(void* self) {
+const QBindingStorage* q_networkaccessmanager_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -675,6 +652,10 @@ bool q_networkaccessmanager_qbase_is_signal_connected(void* self, void* signal) 
 
 void q_networkaccessmanager_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QNetworkAccessManager_OnIsSignalConnected((QNetworkAccessManager*)self, (intptr_t)slot);
+}
+
+void q_networkaccessmanager_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_networkaccessmanager_delete(void* self) {

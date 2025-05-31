@@ -99,6 +99,8 @@ long long q_elapsedtimer_msecs_to(void* self, void* other);
 /// ``` QElapsedTimer* self, QElapsedTimer* other ```
 long long q_elapsedtimer_secs_to(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qelapsedtimer.html#dtor.QElapsedTimer)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QElapsedTimer* self ```

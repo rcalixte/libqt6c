@@ -13,22 +13,17 @@
 #include "../qtlibc.h"
 
 #include "libqabstractaxis.h"
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "libqchart.h"
-#include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
-/// https://doc.qt.io/qt-6/qabstractseries.html
+/// https://doc.qt.io/qt-6/qabstractseries-qtcharts.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QAbstractSeries* self ```
-QMetaObject* q_abstractseries_meta_object(void* self);
+const QMetaObject* q_abstractseries_meta_object(void* self);
 
 /// ``` QAbstractSeries* self, const char* param1 ```
 void* q_abstractseries_metacast(void* self, const char* param1);
@@ -41,110 +36,118 @@ int32_t q_abstractseries_metacall(void* self, int64_t param1, int param2, void* 
 /// ``` const char* s ```
 const char* q_abstractseries_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#type)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#type)
 ///
 /// ``` QAbstractSeries* self ```
 int64_t q_abstractseries_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setName)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#setName)
 ///
 /// ``` QAbstractSeries* self, const char* name ```
 void q_abstractseries_set_name(void* self, const char* name);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#name)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#name)
 ///
 /// ``` QAbstractSeries* self ```
 const char* q_abstractseries_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#setVisible)
 ///
 /// ``` QAbstractSeries* self ```
 void q_abstractseries_set_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#isVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#isVisible)
 ///
 /// ``` QAbstractSeries* self ```
 bool q_abstractseries_is_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacity)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#opacity)
 ///
 /// ``` QAbstractSeries* self ```
 double q_abstractseries_opacity(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setOpacity)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#setOpacity)
 ///
 /// ``` QAbstractSeries* self, double opacity ```
 void q_abstractseries_set_opacity(void* self, double opacity);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setUseOpenGL)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#setUseOpenGL)
 ///
 /// ``` QAbstractSeries* self ```
 void q_abstractseries_set_use_open_g_l(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGL)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#useOpenGL)
 ///
 /// ``` QAbstractSeries* self ```
 bool q_abstractseries_use_open_g_l(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#chart)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#chart)
 ///
 /// ``` QAbstractSeries* self ```
 QChart* q_abstractseries_chart(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#attachAxis)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#attachAxis)
 ///
 /// ``` QAbstractSeries* self, QAbstractAxis* axis ```
 bool q_abstractseries_attach_axis(void* self, void* axis);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#detachAxis)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#detachAxis)
 ///
 /// ``` QAbstractSeries* self, QAbstractAxis* axis ```
 bool q_abstractseries_detach_axis(void* self, void* axis);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#attachedAxes)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#attachedAxes)
 ///
 /// ``` QAbstractSeries* self ```
 libqt_list /* of QAbstractAxis* */ q_abstractseries_attached_axes(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#show)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#show)
 ///
 /// ``` QAbstractSeries* self ```
 void q_abstractseries_show(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#hide)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#hide)
 ///
 /// ``` QAbstractSeries* self ```
 void q_abstractseries_hide(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#nameChanged)
 ///
 /// ``` QAbstractSeries* self ```
 void q_abstractseries_name_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#nameChanged)
+///
 /// ``` QAbstractSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_abstractseries_on_name_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#visibleChanged)
 ///
 /// ``` QAbstractSeries* self ```
 void q_abstractseries_visible_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#visibleChanged)
+///
 /// ``` QAbstractSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_abstractseries_on_visible_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#opacityChanged)
 ///
 /// ``` QAbstractSeries* self ```
 void q_abstractseries_opacity_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#opacityChanged)
+///
 /// ``` QAbstractSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_abstractseries_on_opacity_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#useOpenGLChanged)
 ///
 /// ``` QAbstractSeries* self ```
 void q_abstractseries_use_open_g_l_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#useOpenGLChanged)
+///
 /// ``` QAbstractSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_abstractseries_on_use_open_g_l_changed(void* self, void (*slot)(void*));
 
@@ -158,12 +161,12 @@ const char* q_abstractseries_tr2(const char* s, const char* c);
 /// ``` const char* s, const char* c, int n ```
 const char* q_abstractseries_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#setVisible)
 ///
 /// ``` QAbstractSeries* self, bool visible ```
 void q_abstractseries_set_visible1(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setUseOpenGL)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#setUseOpenGL)
 ///
 /// ``` QAbstractSeries* self, bool enable ```
 void q_abstractseries_set_use_open_g_l1(void* self, bool enable);
@@ -264,7 +267,7 @@ void q_abstractseries_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QAbstractSeries* self ```
-libqt_list /* of QObject* */ q_abstractseries_children(void* self);
+const libqt_list /* of QObject* */ q_abstractseries_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -362,7 +365,7 @@ QBindingStorage* q_abstractseries_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QAbstractSeries* self ```
-QBindingStorage* q_abstractseries_binding_storage2(void* self);
+const QBindingStorage* q_abstractseries_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -372,6 +375,8 @@ QBindingStorage* q_abstractseries_binding_storage2(void* self);
 void q_abstractseries_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QAbstractSeries* self, void (*slot)(QObject*) ```
 void q_abstractseries_on_destroyed(void* self, void (*slot)(void*));
@@ -427,15 +432,28 @@ void q_abstractseries_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QAbstractSeries* self, void (*slot)(QObject*, QObject*) ```
 void q_abstractseries_on_destroyed1(void* self, void (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QAbstractSeries* self, void (*slot)(QObject*, const char*) ```
+void q_abstractseries_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#dtor.QAbstractSeries)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAbstractSeries* self ```
 void q_abstractseries_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qabstractseries.html#types
+/// https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#types
 
 typedef enum {
     QABSTRACTSERIES_SERIESTYPE_SERIESTYPELINE = 0,

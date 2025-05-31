@@ -153,7 +153,7 @@ void q_icon_set_theme_search_paths(const char* searchpath[]) {
     for (size_t _i = 0; _i < searchpath_len; ++_i) {
         searchpath_qstr[_i] = qstring(searchpath[_i]);
     }
-    libqt_list searchpath_list = qstrlist(searchpath_qstr, searchpath_len);
+    libqt_list searchpath_list = qlist(searchpath_qstr, searchpath_len);
     QIcon_SetThemeSearchPaths(searchpath_list);
 }
 
@@ -177,7 +177,7 @@ void q_icon_set_fallback_search_paths(const char* paths[]) {
     for (size_t _i = 0; _i < paths_len; ++_i) {
         paths_qstr[_i] = qstring(paths[_i]);
     }
-    libqt_list paths_list = qstrlist(paths_qstr, paths_len);
+    libqt_list paths_list = qlist(paths_qstr, paths_len);
     QIcon_SetFallbackSearchPaths(paths_list);
 }
 

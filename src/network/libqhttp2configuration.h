@@ -84,6 +84,8 @@ uint32_t q_http2configuration_max_frame_size(void* self);
 /// ``` QHttp2Configuration* self, QHttp2Configuration* other ```
 void q_http2configuration_swap(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhttp2configuration.html#dtor.QHttp2Configuration)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QHttp2Configuration* self ```

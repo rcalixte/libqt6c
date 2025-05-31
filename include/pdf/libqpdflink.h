@@ -94,6 +94,8 @@ void q_pdflink_copy_to_clipboard(void* self);
 /// ``` QPdfLink* self, enum QClipboard__Mode mode ```
 void q_pdflink_copy_to_clipboard1(void* self, int64_t mode);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdflink.html#dtor.QPdfLink)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPdfLink* self ```

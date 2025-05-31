@@ -3,7 +3,6 @@
 #include "libqgraphicslayoutitem.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
-#include "libqsizepolicy.hpp"
 #include "libqcoreevent.hpp"
 #include "libqgraphicslayout.hpp"
 #include "libqgraphicslayout.h"

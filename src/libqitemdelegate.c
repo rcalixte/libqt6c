@@ -1,8 +1,6 @@
 #include "libqabstractitemdelegate.hpp"
 #include "libqabstractitemmodel.hpp"
 #include "libqabstractitemview.hpp"
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqfont.hpp"
 #include "libqitemeditorfactory.hpp"
@@ -14,7 +12,6 @@
 #include "libqsize.hpp"
 #include <string.h>
 #include "libqstyleoption.hpp"
-#include "libqthread.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
 #include "libqcoreevent.hpp"
@@ -29,7 +26,7 @@ QItemDelegate* q_itemdelegate_new2(void* parent) {
     return QItemDelegate_new2((QObject*)parent);
 }
 
-QMetaObject* q_itemdelegate_meta_object(void* self) {
+const QMetaObject* q_itemdelegate_meta_object(void* self) {
     return QItemDelegate_MetaObject((QItemDelegate*)self);
 }
 
@@ -354,8 +351,7 @@ const char* q_itemdelegate_object_name(void* self) {
 }
 
 void q_itemdelegate_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_itemdelegate_is_widget_type(void* self) {
@@ -394,7 +390,7 @@ void q_itemdelegate_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_itemdelegate_children(void* self) {
+const libqt_list /* of QObject* */ q_itemdelegate_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -461,7 +457,7 @@ QBindingStorage* q_itemdelegate_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_itemdelegate_binding_storage2(void* self) {
+const QBindingStorage* q_itemdelegate_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -661,6 +657,10 @@ bool q_itemdelegate_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_itemdelegate_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QItemDelegate_OnIsSignalConnected((QItemDelegate*)self, (intptr_t)slot);
+}
+
+void q_itemdelegate_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_itemdelegate_delete(void* self) {

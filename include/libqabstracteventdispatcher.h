@@ -13,22 +13,18 @@
 #include "qtlibc.h"
 
 #include "libqabstractnativeeventfilter.h"
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
-#include "libqevent.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqsocketnotifier.h"
 #include <string.h>
 #include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qabstracteventdispatcher.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QAbstractEventDispatcher* self ```
-QMetaObject* q_abstracteventdispatcher_meta_object(void* self);
+const QMetaObject* q_abstracteventdispatcher_meta_object(void* self);
 
 /// ``` QAbstractEventDispatcher* self, const char* param1 ```
 void* q_abstracteventdispatcher_metacast(void* self, const char* param1);
@@ -131,6 +127,8 @@ bool q_abstracteventdispatcher_filter_native_event(void* self, const char* event
 /// ``` QAbstractEventDispatcher* self ```
 void q_abstracteventdispatcher_about_to_block(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#aboutToBlock)
+///
 /// ``` QAbstractEventDispatcher* self, void (*slot)(QAbstractEventDispatcher*) ```
 void q_abstracteventdispatcher_on_about_to_block(void* self, void (*slot)(void*));
 
@@ -139,6 +137,8 @@ void q_abstracteventdispatcher_on_about_to_block(void* self, void (*slot)(void*)
 /// ``` QAbstractEventDispatcher* self ```
 void q_abstracteventdispatcher_awake(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#awake)
+///
 /// ``` QAbstractEventDispatcher* self, void (*slot)(QAbstractEventDispatcher*) ```
 void q_abstracteventdispatcher_on_awake(void* self, void (*slot)(void*));
 
@@ -253,7 +253,7 @@ void q_abstracteventdispatcher_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QAbstractEventDispatcher* self ```
-libqt_list /* of QObject* */ q_abstracteventdispatcher_children(void* self);
+const libqt_list /* of QObject* */ q_abstracteventdispatcher_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -351,7 +351,7 @@ QBindingStorage* q_abstracteventdispatcher_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QAbstractEventDispatcher* self ```
-QBindingStorage* q_abstracteventdispatcher_binding_storage2(void* self);
+const QBindingStorage* q_abstracteventdispatcher_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -361,6 +361,8 @@ QBindingStorage* q_abstracteventdispatcher_binding_storage2(void* self);
 void q_abstracteventdispatcher_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QAbstractEventDispatcher* self, void (*slot)(QObject*) ```
 void q_abstracteventdispatcher_on_destroyed(void* self, void (*slot)(void*));
@@ -416,9 +418,22 @@ void q_abstracteventdispatcher_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QAbstractEventDispatcher* self, void (*slot)(QObject*, QObject*) ```
 void q_abstracteventdispatcher_on_destroyed1(void* self, void (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QAbstractEventDispatcher* self, void (*slot)(QObject*, const char*) ```
+void q_abstracteventdispatcher_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#dtor.QAbstractEventDispatcher)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAbstractEventDispatcher* self ```
@@ -451,6 +466,8 @@ void q_abstracteventdispatcher__timerinfo_copy_assign(void* self, void* other);
 /// ``` QAbstractEventDispatcher__TimerInfo* self, QAbstractEventDispatcher__TimerInfo* other ```
 void q_abstracteventdispatcher__timerinfo_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher::timerinfo.html#dtor.QAbstractEventDispatcher::TimerInfo)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAbstractEventDispatcher__TimerInfo* self ```

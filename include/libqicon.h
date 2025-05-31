@@ -348,6 +348,8 @@ libqt_list /* of QSize* */ q_icon_available_sizes1(void* self, int64_t mode);
 /// ``` QIcon* self, enum QIcon__Mode mode, enum QIcon__State state ```
 libqt_list /* of QSize* */ q_icon_available_sizes2(void* self, int64_t mode, int64_t state);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#dtor.QIcon)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QIcon* self ```

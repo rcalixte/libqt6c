@@ -84,6 +84,8 @@ bool q_textdocumentwriter_write_with_fragment(void* self, void* fragment);
 ///
 const char** q_textdocumentwriter_supported_document_formats();
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextdocumentwriter.html#dtor.QTextDocumentWriter)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextDocumentWriter* self ```

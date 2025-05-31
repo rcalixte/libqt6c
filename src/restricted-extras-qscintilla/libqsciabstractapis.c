@@ -1,11 +1,7 @@
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqsciabstractapis.hpp"
 #include "libqsciabstractapis.h"
@@ -14,7 +10,7 @@ QsciAbstractAPIs* q_sciabstractapis_new(void* lexer) {
     return QsciAbstractAPIs_new((QsciLexer*)lexer);
 }
 
-QMetaObject* q_sciabstractapis_meta_object(void* self) {
+const QMetaObject* q_sciabstractapis_meta_object(void* self) {
     return QsciAbstractAPIs_MetaObject((QsciAbstractAPIs*)self);
 }
 
@@ -51,13 +47,13 @@ void q_sciabstractapis_update_auto_completion_list(void* self, const char* conte
     for (size_t _i = 0; _i < context_len; ++_i) {
         context_qstr[_i] = qstring(context[_i]);
     }
-    libqt_list context_list = qstrlist(context_qstr, context_len);
+    libqt_list context_list = qlist(context_qstr, context_len);
     size_t list_len = libqt_strv_length(list);
     libqt_string* list_qstr = malloc(list_len * sizeof(libqt_string));
     for (size_t _i = 0; _i < list_len; ++_i) {
         list_qstr[_i] = qstring(list[_i]);
     }
-    libqt_list list_list = qstrlist(list_qstr, list_len);
+    libqt_list list_list = qlist(list_qstr, list_len);
     QsciAbstractAPIs_UpdateAutoCompletionList((QsciAbstractAPIs*)self, context_list, list_list);
 }
 
@@ -71,13 +67,13 @@ void q_sciabstractapis_qbase_update_auto_completion_list(void* self, const char*
     for (size_t _i = 0; _i < context_len; ++_i) {
         context_qstr[_i] = qstring(context[_i]);
     }
-    libqt_list context_list = qstrlist(context_qstr, context_len);
+    libqt_list context_list = qlist(context_qstr, context_len);
     size_t list_len = libqt_strv_length(list);
     libqt_string* list_qstr = malloc(list_len * sizeof(libqt_string));
     for (size_t _i = 0; _i < list_len; ++_i) {
         list_qstr[_i] = qstring(list[_i]);
     }
-    libqt_list list_list = qstrlist(list_qstr, list_len);
+    libqt_list list_list = qlist(list_qstr, list_len);
     QsciAbstractAPIs_QBaseUpdateAutoCompletionList((QsciAbstractAPIs*)self, context_list, list_list);
 }
 
@@ -93,22 +89,14 @@ void q_sciabstractapis_qbase_auto_completion_selected(void* self, const char* se
     QsciAbstractAPIs_QBaseAutoCompletionSelected((QsciAbstractAPIs*)self, qstring(selection));
 }
 
-const char** q_sciabstractapis_call_tips(void* self, const char* context[], int commas, int64_t style, int* shifts[]) {
+const char** q_sciabstractapis_call_tips(void* self, const char* context[], int commas, int64_t style, libqt_list shifts) {
     size_t context_len = libqt_strv_length(context);
     libqt_string* context_qstr = malloc(context_len * sizeof(libqt_string));
     for (size_t _i = 0; _i < context_len; ++_i) {
         context_qstr[_i] = qstring(context[_i]);
     }
-    libqt_list context_list = qstrlist(context_qstr, context_len);
-    size_t shifts_len = 0;
-    while (shifts[shifts_len] != NULL) {
-        shifts_len++;
-    }
-    libqt_list shifts_list = {
-        .len = shifts_len,
-        .data = {(int*)shifts},
-    };
-    libqt_list _arr = QsciAbstractAPIs_CallTips((QsciAbstractAPIs*)self, context_list, commas, style, shifts_list);
+    libqt_list context_list = qlist(context_qstr, context_len);
+    libqt_list _arr = QsciAbstractAPIs_CallTips((QsciAbstractAPIs*)self, context_list, commas, style, shifts);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     for (size_t _i = 0; _i < _arr.len; ++_i) {
@@ -121,26 +109,18 @@ const char** q_sciabstractapis_call_tips(void* self, const char* context[], int 
     return _ret;
 }
 
-void q_sciabstractapis_on_call_tips(void* self, const char** (*slot)(void*, const char*, int, int64_t, int*)) {
+void q_sciabstractapis_on_call_tips(void* self, const char** (*slot)(void*, const char*, int, int64_t, libqt_list)) {
     QsciAbstractAPIs_OnCallTips((QsciAbstractAPIs*)self, (intptr_t)slot);
 }
 
-const char** q_sciabstractapis_qbase_call_tips(void* self, const char* context[], int commas, int64_t style, int* shifts[]) {
+const char** q_sciabstractapis_qbase_call_tips(void* self, const char* context[], int commas, int64_t style, libqt_list shifts) {
     size_t context_len = libqt_strv_length(context);
     libqt_string* context_qstr = malloc(context_len * sizeof(libqt_string));
     for (size_t _i = 0; _i < context_len; ++_i) {
         context_qstr[_i] = qstring(context[_i]);
     }
-    libqt_list context_list = qstrlist(context_qstr, context_len);
-    size_t shifts_len = 0;
-    while (shifts[shifts_len] != NULL) {
-        shifts_len++;
-    }
-    libqt_list shifts_list = {
-        .len = shifts_len,
-        .data = {(int*)shifts},
-    };
-    libqt_list _arr = QsciAbstractAPIs_QBaseCallTips((QsciAbstractAPIs*)self, context_list, commas, style, shifts_list);
+    libqt_list context_list = qlist(context_qstr, context_len);
+    libqt_list _arr = QsciAbstractAPIs_QBaseCallTips((QsciAbstractAPIs*)self, context_list, commas, style, shifts);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     for (size_t _i = 0; _i < _arr.len; ++_i) {
@@ -175,8 +155,7 @@ const char* q_sciabstractapis_object_name(void* self) {
 }
 
 void q_sciabstractapis_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_sciabstractapis_is_widget_type(void* self) {
@@ -215,7 +194,7 @@ void q_sciabstractapis_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_sciabstractapis_children(void* self) {
+const libqt_list /* of QObject* */ q_sciabstractapis_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -282,7 +261,7 @@ QBindingStorage* q_sciabstractapis_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_sciabstractapis_binding_storage2(void* self) {
+const QBindingStorage* q_sciabstractapis_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -456,6 +435,10 @@ bool q_sciabstractapis_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_sciabstractapis_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QsciAbstractAPIs_OnIsSignalConnected((QsciAbstractAPIs*)self, (intptr_t)slot);
+}
+
+void q_sciabstractapis_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_sciabstractapis_delete(void* self) {

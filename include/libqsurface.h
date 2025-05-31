@@ -42,6 +42,8 @@ bool q_surface_supports_open_g_l(void* self);
 /// ``` QSurface* self ```
 QSize* q_surface_size(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#dtor.QSurface)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSurface* self ```

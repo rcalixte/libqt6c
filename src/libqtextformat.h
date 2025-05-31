@@ -86,6 +86,8 @@ bool q_textlength_operator_not_equal(void* self, void* other);
 /// ``` QTextLength* self ```
 QVariant* q_textlength_to_q_variant(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextlength.html#dtor.QTextLength)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextLength* self ```
@@ -215,8 +217,8 @@ libqt_list /* of QTextLength* */ q_textformat_length_vector_property(void* self,
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextformat.html#setProperty)
 ///
-/// ``` QTextFormat* self, int propertyId, QTextLength* lengths[] ```
-void q_textformat_set_property2(void* self, int propertyId, void* lengths[]);
+/// ``` QTextFormat* self, int propertyId, libqt_list /* of QTextLength* */ lengths ```
+void q_textformat_set_property2(void* self, int propertyId, libqt_list lengths);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextformat.html#properties)
 ///
@@ -363,6 +365,8 @@ QBrush* q_textformat_foreground(void* self);
 /// ``` QTextFormat* self ```
 void q_textformat_clear_foreground(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextformat.html#dtor.QTextFormat)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextFormat* self ```
@@ -869,8 +873,8 @@ libqt_list /* of QTextLength* */ q_textcharformat_length_vector_property(void* s
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextformat.html#setProperty)
 ///
-/// ``` QTextCharFormat* self, int propertyId, QTextLength* lengths[] ```
-void q_textcharformat_set_property2(void* self, int propertyId, void* lengths[]);
+/// ``` QTextCharFormat* self, int propertyId, libqt_list /* of QTextLength* */ lengths ```
+void q_textcharformat_set_property2(void* self, int propertyId, libqt_list lengths);
 
 /// Inherited from QTextFormat
 ///
@@ -1075,6 +1079,8 @@ QBrush* q_textcharformat_foreground(void* self);
 /// ``` QTextCharFormat* self ```
 void q_textcharformat_clear_foreground(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextcharformat.html#dtor.QTextCharFormat)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextCharFormat* self ```
@@ -1219,8 +1225,8 @@ int64_t q_textblockformat_page_break_policy(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblockformat.html#setTabPositions)
 ///
-/// ``` QTextBlockFormat* self, QTextOption__Tab* tabs[] ```
-void q_textblockformat_set_tab_positions(void* self, void* tabs[]);
+/// ``` QTextBlockFormat* self, libqt_list /* of QTextOption__Tab* */ tabs ```
+void q_textblockformat_set_tab_positions(void* self, libqt_list tabs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblockformat.html#tabPositions)
 ///
@@ -1381,8 +1387,8 @@ libqt_list /* of QTextLength* */ q_textblockformat_length_vector_property(void* 
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextformat.html#setProperty)
 ///
-/// ``` QTextBlockFormat* self, int propertyId, QTextLength* lengths[] ```
-void q_textblockformat_set_property2(void* self, int propertyId, void* lengths[]);
+/// ``` QTextBlockFormat* self, int propertyId, libqt_list /* of QTextLength* */ lengths ```
+void q_textblockformat_set_property2(void* self, int propertyId, libqt_list lengths);
 
 /// Inherited from QTextFormat
 ///
@@ -1587,6 +1593,8 @@ QBrush* q_textblockformat_foreground(void* self);
 /// ``` QTextBlockFormat* self ```
 void q_textblockformat_clear_foreground(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblockformat.html#dtor.QTextBlockFormat)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextBlockFormat* self ```
@@ -1793,8 +1801,8 @@ libqt_list /* of QTextLength* */ q_textlistformat_length_vector_property(void* s
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextformat.html#setProperty)
 ///
-/// ``` QTextListFormat* self, int propertyId, QTextLength* lengths[] ```
-void q_textlistformat_set_property2(void* self, int propertyId, void* lengths[]);
+/// ``` QTextListFormat* self, int propertyId, libqt_list /* of QTextLength* */ lengths ```
+void q_textlistformat_set_property2(void* self, int propertyId, libqt_list lengths);
 
 /// Inherited from QTextFormat
 ///
@@ -1999,6 +2007,8 @@ QBrush* q_textlistformat_foreground(void* self);
 /// ``` QTextListFormat* self ```
 void q_textlistformat_clear_foreground(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextlistformat.html#dtor.QTextListFormat)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextListFormat* self ```
@@ -2681,8 +2691,8 @@ libqt_list /* of QTextLength* */ q_textimageformat_length_vector_property(void* 
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextformat.html#setProperty)
 ///
-/// ``` QTextImageFormat* self, int propertyId, QTextLength* lengths[] ```
-void q_textimageformat_set_property2(void* self, int propertyId, void* lengths[]);
+/// ``` QTextImageFormat* self, int propertyId, libqt_list /* of QTextLength* */ lengths ```
+void q_textimageformat_set_property2(void* self, int propertyId, libqt_list lengths);
 
 /// Inherited from QTextFormat
 ///
@@ -2887,6 +2897,8 @@ QBrush* q_textimageformat_foreground(void* self);
 /// ``` QTextImageFormat* self ```
 void q_textimageformat_clear_foreground(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextimageformat.html#dtor.QTextImageFormat)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextImageFormat* self ```
@@ -3193,8 +3205,8 @@ libqt_list /* of QTextLength* */ q_textframeformat_length_vector_property(void* 
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextformat.html#setProperty)
 ///
-/// ``` QTextFrameFormat* self, int propertyId, QTextLength* lengths[] ```
-void q_textframeformat_set_property2(void* self, int propertyId, void* lengths[]);
+/// ``` QTextFrameFormat* self, int propertyId, libqt_list /* of QTextLength* */ lengths ```
+void q_textframeformat_set_property2(void* self, int propertyId, libqt_list lengths);
 
 /// Inherited from QTextFormat
 ///
@@ -3399,6 +3411,8 @@ QBrush* q_textframeformat_foreground(void* self);
 /// ``` QTextFrameFormat* self ```
 void q_textframeformat_clear_foreground(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextframeformat.html#dtor.QTextFrameFormat)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextFrameFormat* self ```
@@ -3428,8 +3442,8 @@ void q_texttableformat_set_columns(void* self, int columns);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttableformat.html#setColumnWidthConstraints)
 ///
-/// ``` QTextTableFormat* self, QTextLength* constraints[] ```
-void q_texttableformat_set_column_width_constraints(void* self, void* constraints[]);
+/// ``` QTextTableFormat* self, libqt_list /* of QTextLength* */ constraints ```
+void q_texttableformat_set_column_width_constraints(void* self, libqt_list constraints);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttableformat.html#columnWidthConstraints)
 ///
@@ -3831,8 +3845,8 @@ libqt_list /* of QTextLength* */ q_texttableformat_length_vector_property(void* 
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextformat.html#setProperty)
 ///
-/// ``` QTextTableFormat* self, int propertyId, QTextLength* lengths[] ```
-void q_texttableformat_set_property2(void* self, int propertyId, void* lengths[]);
+/// ``` QTextTableFormat* self, int propertyId, libqt_list /* of QTextLength* */ lengths ```
+void q_texttableformat_set_property2(void* self, int propertyId, libqt_list lengths);
 
 /// Inherited from QTextFormat
 ///
@@ -4037,6 +4051,8 @@ QBrush* q_texttableformat_foreground(void* self);
 /// ``` QTextTableFormat* self ```
 void q_texttableformat_clear_foreground(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtexttableformat.html#dtor.QTextTableFormat)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextTableFormat* self ```
@@ -4854,8 +4870,8 @@ libqt_list /* of QTextLength* */ q_texttablecellformat_length_vector_property(vo
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextformat.html#setProperty)
 ///
-/// ``` QTextTableCellFormat* self, int propertyId, QTextLength* lengths[] ```
-void q_texttablecellformat_set_property2(void* self, int propertyId, void* lengths[]);
+/// ``` QTextTableCellFormat* self, int propertyId, libqt_list /* of QTextLength* */ lengths ```
+void q_texttablecellformat_set_property2(void* self, int propertyId, libqt_list lengths);
 
 /// Inherited from QTextFormat
 ///
@@ -5060,6 +5076,8 @@ QBrush* q_texttablecellformat_foreground(void* self);
 /// ``` QTextTableCellFormat* self ```
 void q_texttablecellformat_clear_foreground(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecellformat.html#dtor.QTextTableCellFormat)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextTableCellFormat* self ```

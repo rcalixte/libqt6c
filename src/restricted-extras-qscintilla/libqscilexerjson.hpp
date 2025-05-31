@@ -15,25 +15,16 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QColor QColor;
 typedef struct QEvent QEvent;
 typedef struct QFont QFont;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QSettings QSettings;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
-typedef struct QsciAbstractAPIs QsciAbstractAPIs;
 typedef struct QsciLexer QsciLexer;
 typedef struct QsciLexerJSON QsciLexerJSON;
 typedef struct QsciScintilla QsciScintilla;
@@ -145,6 +136,9 @@ void QsciLexerJSON_QBaseSetPaper(QsciLexerJSON* self, QColor* c, int style);
 bool QsciLexerJSON_ReadProperties(QsciLexerJSON* self, QSettings* qs, libqt_string prefix);
 void QsciLexerJSON_OnReadProperties(QsciLexerJSON* self, intptr_t slot);
 bool QsciLexerJSON_QBaseReadProperties(QsciLexerJSON* self, QSettings* qs, libqt_string prefix);
+bool QsciLexerJSON_WriteProperties(const QsciLexerJSON* self, QSettings* qs, libqt_string prefix);
+void QsciLexerJSON_OnWriteProperties(const QsciLexerJSON* self, intptr_t slot);
+bool QsciLexerJSON_QBaseWriteProperties(const QsciLexerJSON* self, QSettings* qs, libqt_string prefix);
 bool QsciLexerJSON_Event(QsciLexerJSON* self, QEvent* event);
 void QsciLexerJSON_OnEvent(QsciLexerJSON* self, intptr_t slot);
 bool QsciLexerJSON_QBaseEvent(QsciLexerJSON* self, QEvent* event);
@@ -166,9 +160,6 @@ void QsciLexerJSON_QBaseConnectNotify(QsciLexerJSON* self, QMetaMethod* signal);
 void QsciLexerJSON_DisconnectNotify(QsciLexerJSON* self, QMetaMethod* signal);
 void QsciLexerJSON_OnDisconnectNotify(QsciLexerJSON* self, intptr_t slot);
 void QsciLexerJSON_QBaseDisconnectNotify(QsciLexerJSON* self, QMetaMethod* signal);
-bool QsciLexerJSON_WriteProperties(const QsciLexerJSON* self, QSettings* qs, libqt_string prefix);
-void QsciLexerJSON_OnWriteProperties(const QsciLexerJSON* self, intptr_t slot);
-bool QsciLexerJSON_QBaseWriteProperties(const QsciLexerJSON* self, QSettings* qs, libqt_string prefix);
 QObject* QsciLexerJSON_Sender(const QsciLexerJSON* self);
 void QsciLexerJSON_OnSender(const QsciLexerJSON* self, intptr_t slot);
 QObject* QsciLexerJSON_QBaseSender(const QsciLexerJSON* self);

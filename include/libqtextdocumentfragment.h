@@ -98,6 +98,8 @@ QTextDocumentFragment* q_textdocumentfragment_from_html2(const char* html, void*
 /// ``` const char* markdown, int features ```
 QTextDocumentFragment* q_textdocumentfragment_from_markdown2(const char* markdown, int64_t features);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextdocumentfragment.html#dtor.QTextDocumentFragment)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextDocumentFragment* self ```

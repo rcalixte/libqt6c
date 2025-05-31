@@ -15,25 +15,16 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QColor QColor;
 typedef struct QEvent QEvent;
 typedef struct QFont QFont;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QSettings QSettings;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
-typedef struct QsciAbstractAPIs QsciAbstractAPIs;
 typedef struct QsciLexer QsciLexer;
 typedef struct QsciLexerVerilog QsciLexerVerilog;
 typedef struct QsciScintilla QsciScintilla;
@@ -145,6 +136,9 @@ void QsciLexerVerilog_QBaseSetPaper(QsciLexerVerilog* self, QColor* c, int style
 bool QsciLexerVerilog_ReadProperties(QsciLexerVerilog* self, QSettings* qs, libqt_string prefix);
 void QsciLexerVerilog_OnReadProperties(QsciLexerVerilog* self, intptr_t slot);
 bool QsciLexerVerilog_QBaseReadProperties(QsciLexerVerilog* self, QSettings* qs, libqt_string prefix);
+bool QsciLexerVerilog_WriteProperties(const QsciLexerVerilog* self, QSettings* qs, libqt_string prefix);
+void QsciLexerVerilog_OnWriteProperties(const QsciLexerVerilog* self, intptr_t slot);
+bool QsciLexerVerilog_QBaseWriteProperties(const QsciLexerVerilog* self, QSettings* qs, libqt_string prefix);
 bool QsciLexerVerilog_Event(QsciLexerVerilog* self, QEvent* event);
 void QsciLexerVerilog_OnEvent(QsciLexerVerilog* self, intptr_t slot);
 bool QsciLexerVerilog_QBaseEvent(QsciLexerVerilog* self, QEvent* event);
@@ -166,9 +160,6 @@ void QsciLexerVerilog_QBaseConnectNotify(QsciLexerVerilog* self, QMetaMethod* si
 void QsciLexerVerilog_DisconnectNotify(QsciLexerVerilog* self, QMetaMethod* signal);
 void QsciLexerVerilog_OnDisconnectNotify(QsciLexerVerilog* self, intptr_t slot);
 void QsciLexerVerilog_QBaseDisconnectNotify(QsciLexerVerilog* self, QMetaMethod* signal);
-bool QsciLexerVerilog_WriteProperties(const QsciLexerVerilog* self, QSettings* qs, libqt_string prefix);
-void QsciLexerVerilog_OnWriteProperties(const QsciLexerVerilog* self, intptr_t slot);
-bool QsciLexerVerilog_QBaseWriteProperties(const QsciLexerVerilog* self, QSettings* qs, libqt_string prefix);
 QObject* QsciLexerVerilog_Sender(const QsciLexerVerilog* self);
 void QsciLexerVerilog_OnSender(const QsciLexerVerilog* self, intptr_t slot);
 QObject* QsciLexerVerilog_QBaseSender(const QsciLexerVerilog* self);

@@ -46,12 +46,12 @@ int64_t q_stringview_size(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#data)
 ///
 /// ``` QStringView* self ```
-QChar* q_stringview_data(void* self);
+const QChar* q_stringview_data(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#constData)
 ///
 /// ``` QStringView* self ```
-QChar* q_stringview_const_data(void* self);
+const QChar* q_stringview_const_data(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#operator[])
 ///
@@ -231,22 +231,22 @@ double q_stringview_to_double(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#begin)
 ///
 /// ``` QStringView* self ```
-QChar* q_stringview_begin(void* self);
+const QChar* q_stringview_begin(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#end)
 ///
 /// ``` QStringView* self ```
-QChar* q_stringview_end(void* self);
+const QChar* q_stringview_end(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#cbegin)
 ///
 /// ``` QStringView* self ```
-QChar* q_stringview_cbegin(void* self);
+const QChar* q_stringview_cbegin(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#cend)
 ///
 /// ``` QStringView* self ```
-QChar* q_stringview_cend(void* self);
+const QChar* q_stringview_cend(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#empty)
 ///
@@ -266,12 +266,12 @@ QChar* q_stringview_back(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#constBegin)
 ///
 /// ``` QStringView* self ```
-QChar* q_stringview_const_begin(void* self);
+const QChar* q_stringview_const_begin(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#constEnd)
 ///
 /// ``` QStringView* self ```
-QChar* q_stringview_const_end(void* self);
+const QChar* q_stringview_const_end(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#isNull)
 ///
@@ -438,6 +438,8 @@ float q_stringview_to_float1(void* self, bool* ok);
 /// ``` QStringView* self, bool* ok ```
 double q_stringview_to_double1(void* self, bool* ok);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#dtor.QStringView)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStringView* self ```

@@ -60,8 +60,8 @@ libqt_list /* of uint32_t */ q_glyphrun_glyph_indexes(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qglyphrun.html#setGlyphIndexes)
 ///
-/// ``` QGlyphRun* self, unsigned int* glyphIndexes[] ```
-void q_glyphrun_set_glyph_indexes(void* self, unsigned int* glyphIndexes[]);
+/// ``` QGlyphRun* self, libqt_list /* of uint32_t */ glyphIndexes ```
+void q_glyphrun_set_glyph_indexes(void* self, libqt_list glyphIndexes);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qglyphrun.html#positions)
 ///
@@ -70,8 +70,8 @@ libqt_list /* of QPointF* */ q_glyphrun_positions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qglyphrun.html#setPositions)
 ///
-/// ``` QGlyphRun* self, QPointF* positions[] ```
-void q_glyphrun_set_positions(void* self, void* positions[]);
+/// ``` QGlyphRun* self, libqt_list /* of QPointF* */ positions ```
+void q_glyphrun_set_positions(void* self, libqt_list positions);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qglyphrun.html#clear)
 ///
@@ -163,6 +163,8 @@ bool q_glyphrun_is_empty(void* self);
 /// ``` QGlyphRun* self, enum QGlyphRun__GlyphRunFlag flag, bool enabled ```
 void q_glyphrun_set_flag2(void* self, int64_t flag, bool enabled);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qglyphrun.html#dtor.QGlyphRun)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGlyphRun* self ```

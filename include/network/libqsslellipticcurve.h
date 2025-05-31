@@ -76,6 +76,8 @@ bool q_sslellipticcurve_is_valid(void* self);
 /// ``` QSslEllipticCurve* self ```
 bool q_sslellipticcurve_is_tls_named_curve(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslellipticcurve.html#dtor.QSslEllipticCurve)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSslEllipticCurve* self ```

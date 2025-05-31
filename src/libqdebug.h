@@ -195,6 +195,8 @@ QDebug* q_debug_operator_shift_left_with_void(void* self, void* t);
 /// ``` QDebug* self, char c ```
 QDebug* q_debug_maybe_quote1(void* self, char c);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#dtor.QDebug)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QDebug* self ```
@@ -207,6 +209,8 @@ void q_debug_delete(void* self);
 /// ``` QDebug* dbg ```
 QDebugStateSaver* q_debugstatesaver_new(void* dbg);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebugstatesaver.html#dtor.QDebugStateSaver)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QDebugStateSaver* self ```
@@ -274,6 +278,8 @@ QNoDebug* q_nodebug_verbosity(void* self, int param1);
 /// ``` QNoDebug* self, char param1 ```
 QNoDebug* q_nodebug_maybe_quote1(void* self, char param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnodebug.html#dtor.QNoDebug)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QNoDebug* self ```

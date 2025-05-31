@@ -1,13 +1,9 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqlocale.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqregularexpression.hpp"
 #include <string.h>
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqcoreevent.hpp"
 #include "libqvalidator.hpp"
 #include "libqvalidator.h"
@@ -20,7 +16,7 @@ QValidator* q_validator_new2(void* parent) {
     return QValidator_new2((QObject*)parent);
 }
 
-QMetaObject* q_validator_meta_object(void* self) {
+const QMetaObject* q_validator_meta_object(void* self) {
     return QValidator_MetaObject((QValidator*)self);
 }
 
@@ -109,8 +105,7 @@ const char* q_validator_object_name(void* self) {
 }
 
 void q_validator_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_validator_is_widget_type(void* self) {
@@ -149,7 +144,7 @@ void q_validator_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_validator_children(void* self) {
+const libqt_list /* of QObject* */ q_validator_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -216,7 +211,7 @@ QBindingStorage* q_validator_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_validator_binding_storage2(void* self) {
+const QBindingStorage* q_validator_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -392,6 +387,10 @@ void q_validator_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) 
     QValidator_OnIsSignalConnected((QValidator*)self, (intptr_t)slot);
 }
 
+void q_validator_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
 void q_validator_delete(void* self) {
     QValidator_Delete((QValidator*)(self));
 }
@@ -412,7 +411,7 @@ QIntValidator* q_intvalidator_new4(int bottom, int top, void* parent) {
     return QIntValidator_new4(bottom, top, (QObject*)parent);
 }
 
-QMetaObject* q_intvalidator_meta_object(void* self) {
+const QMetaObject* q_intvalidator_meta_object(void* self) {
     return QIntValidator_MetaObject((QIntValidator*)self);
 }
 
@@ -537,8 +536,7 @@ const char* q_intvalidator_object_name(void* self) {
 }
 
 void q_intvalidator_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_intvalidator_is_widget_type(void* self) {
@@ -577,7 +575,7 @@ void q_intvalidator_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_intvalidator_children(void* self) {
+const libqt_list /* of QObject* */ q_intvalidator_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -644,7 +642,7 @@ QBindingStorage* q_intvalidator_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_intvalidator_binding_storage2(void* self) {
+const QBindingStorage* q_intvalidator_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -820,6 +818,10 @@ void q_intvalidator_on_is_signal_connected(void* self, bool (*slot)(void*, void*
     QIntValidator_OnIsSignalConnected((QIntValidator*)self, (intptr_t)slot);
 }
 
+void q_intvalidator_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
 void q_intvalidator_delete(void* self) {
     QIntValidator_Delete((QIntValidator*)(self));
 }
@@ -840,7 +842,7 @@ QDoubleValidator* q_doublevalidator_new4(double bottom, double top, int decimals
     return QDoubleValidator_new4(bottom, top, decimals, (QObject*)parent);
 }
 
-QMetaObject* q_doublevalidator_meta_object(void* self) {
+const QMetaObject* q_doublevalidator_meta_object(void* self) {
     return QDoubleValidator_MetaObject((QDoubleValidator*)self);
 }
 
@@ -1001,8 +1003,7 @@ const char* q_doublevalidator_object_name(void* self) {
 }
 
 void q_doublevalidator_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_doublevalidator_is_widget_type(void* self) {
@@ -1041,7 +1042,7 @@ void q_doublevalidator_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_doublevalidator_children(void* self) {
+const libqt_list /* of QObject* */ q_doublevalidator_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1108,7 +1109,7 @@ QBindingStorage* q_doublevalidator_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_doublevalidator_binding_storage2(void* self) {
+const QBindingStorage* q_doublevalidator_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1284,6 +1285,10 @@ void q_doublevalidator_on_is_signal_connected(void* self, bool (*slot)(void*, vo
     QDoubleValidator_OnIsSignalConnected((QDoubleValidator*)self, (intptr_t)slot);
 }
 
+void q_doublevalidator_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
 void q_doublevalidator_delete(void* self) {
     QDoubleValidator_Delete((QDoubleValidator*)(self));
 }
@@ -1304,7 +1309,7 @@ QRegularExpressionValidator* q_regularexpressionvalidator_new4(void* re, void* p
     return QRegularExpressionValidator_new4((QRegularExpression*)re, (QObject*)parent);
 }
 
-QMetaObject* q_regularexpressionvalidator_meta_object(void* self) {
+const QMetaObject* q_regularexpressionvalidator_meta_object(void* self) {
     return QRegularExpressionValidator_MetaObject((QRegularExpressionValidator*)self);
 }
 
@@ -1397,8 +1402,7 @@ const char* q_regularexpressionvalidator_object_name(void* self) {
 }
 
 void q_regularexpressionvalidator_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_regularexpressionvalidator_is_widget_type(void* self) {
@@ -1437,7 +1441,7 @@ void q_regularexpressionvalidator_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_regularexpressionvalidator_children(void* self) {
+const libqt_list /* of QObject* */ q_regularexpressionvalidator_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1504,7 +1508,7 @@ QBindingStorage* q_regularexpressionvalidator_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_regularexpressionvalidator_binding_storage2(void* self) {
+const QBindingStorage* q_regularexpressionvalidator_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1690,6 +1694,10 @@ bool q_regularexpressionvalidator_qbase_is_signal_connected(void* self, void* si
 
 void q_regularexpressionvalidator_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QRegularExpressionValidator_OnIsSignalConnected((QRegularExpressionValidator*)self, (intptr_t)slot);
+}
+
+void q_regularexpressionvalidator_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_regularexpressionvalidator_delete(void* self) {

@@ -12,23 +12,18 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
-#include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../network/libqnetworkcookie.h"
 #include "../libqobject.h"
 #include <string.h>
-#include "../libqthread.h"
 #include "../libqurl.h"
-#include "../libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qwebenginecookiestore.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QWebEngineCookieStore* self ```
-QMetaObject* q_webenginecookiestore_meta_object(void* self);
+const QMetaObject* q_webenginecookiestore_meta_object(void* self);
 
 /// ``` QWebEngineCookieStore* self, const char* param1 ```
 void* q_webenginecookiestore_metacast(void* self, const char* param1);
@@ -71,6 +66,8 @@ void q_webenginecookiestore_load_all_cookies(void* self);
 /// ``` QWebEngineCookieStore* self, QNetworkCookie* cookie ```
 void q_webenginecookiestore_cookie_added(void* self, void* cookie);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore.html#cookieAdded)
+///
 /// ``` QWebEngineCookieStore* self, void (*slot)(QWebEngineCookieStore*, QNetworkCookie*) ```
 void q_webenginecookiestore_on_cookie_added(void* self, void (*slot)(void*, void*));
 
@@ -79,6 +76,8 @@ void q_webenginecookiestore_on_cookie_added(void* self, void (*slot)(void*, void
 /// ``` QWebEngineCookieStore* self, QNetworkCookie* cookie ```
 void q_webenginecookiestore_cookie_removed(void* self, void* cookie);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore.html#cookieRemoved)
+///
 /// ``` QWebEngineCookieStore* self, void (*slot)(QWebEngineCookieStore*, QNetworkCookie*) ```
 void q_webenginecookiestore_on_cookie_removed(void* self, void (*slot)(void*, void*));
 
@@ -198,7 +197,7 @@ void q_webenginecookiestore_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QWebEngineCookieStore* self ```
-libqt_list /* of QObject* */ q_webenginecookiestore_children(void* self);
+const libqt_list /* of QObject* */ q_webenginecookiestore_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -296,7 +295,7 @@ QBindingStorage* q_webenginecookiestore_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QWebEngineCookieStore* self ```
-QBindingStorage* q_webenginecookiestore_binding_storage2(void* self);
+const QBindingStorage* q_webenginecookiestore_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -306,6 +305,8 @@ QBindingStorage* q_webenginecookiestore_binding_storage2(void* self);
 void q_webenginecookiestore_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QWebEngineCookieStore* self, void (*slot)(QObject*) ```
 void q_webenginecookiestore_on_destroyed(void* self, void (*slot)(void*));
@@ -361,9 +362,22 @@ void q_webenginecookiestore_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QWebEngineCookieStore* self, void (*slot)(QObject*, QObject*) ```
 void q_webenginecookiestore_on_destroyed1(void* self, void (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineCookieStore* self, void (*slot)(QObject*, const char*) ```
+void q_webenginecookiestore_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore.html#dtor.QWebEngineCookieStore)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWebEngineCookieStore* self ```

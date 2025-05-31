@@ -38,11 +38,11 @@ uint32_t q_colormap_pixel(void* self, void* color) {
     return QColormap_Pixel((QColormap*)self, (QColor*)color);
 }
 
-QColor* q_colormap_color_at(void* self, uint32_t pixel) {
+const QColor* q_colormap_color_at(void* self, uint32_t pixel) {
     return QColormap_ColorAt((QColormap*)self, pixel);
 }
 
-libqt_list /* of QColor* */ q_colormap_colormap(void* self) {
+const libqt_list /* of QColor* */ q_colormap_colormap(void* self) {
     libqt_list _arr = QColormap_Colormap((QColormap*)self);
     return _arr;
 }

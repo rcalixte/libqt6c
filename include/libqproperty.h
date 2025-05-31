@@ -47,6 +47,8 @@ void q_propertybindingsourcelocation_copy_assign(void* self, void* other);
 /// ``` QPropertyBindingSourceLocation* self, QPropertyBindingSourceLocation* other ```
 void q_propertybindingsourcelocation_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#dtor.QPropertyBindingSourceLocation)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPropertyBindingSourceLocation* self ```
@@ -94,6 +96,8 @@ int64_t q_propertybindingerror_type(void* self);
 /// ``` QPropertyBindingError* self ```
 const char* q_propertybindingerror_description(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingerror.html#dtor.QPropertyBindingError)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPropertyBindingError* self ```
@@ -131,6 +135,8 @@ QPropertyBindingError* q_untypedpropertybinding_error(void* self);
 /// ``` QUntypedPropertyBinding* self ```
 QMetaType* q_untypedpropertybinding_value_meta_type(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/quntypedpropertybinding.html#dtor.QUntypedPropertyBinding)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QUntypedPropertyBinding* self ```
@@ -148,6 +154,8 @@ QPropertyObserverBase* q_propertyobserverbase_new();
 /// ``` QPropertyObserverBase* param1 ```
 QPropertyObserverBase* q_propertyobserverbase_new2(void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertyobserverbase.html#dtor.QPropertyObserverBase)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPropertyObserverBase* self ```
@@ -160,6 +168,8 @@ void q_propertyobserverbase_delete(void* self);
 ///
 QPropertyObserver* q_propertyobserver_new();
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertyobserver.html#dtor.QPropertyObserver)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPropertyObserver* self ```
@@ -172,6 +182,8 @@ void q_propertyobserver_delete(void* self);
 ///
 QPropertyNotifier* q_propertynotifier_new();
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertynotifier.html#dtor.QPropertyNotifier)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPropertyNotifier* self ```
@@ -264,6 +276,8 @@ QMetaType* q_untypedbindable_meta_type(void* self);
 /// ``` QUntypedBindable* self, QPropertyBindingSourceLocation* location ```
 QUntypedPropertyBinding* q_untypedbindable_make_binding1(void* self, void* location);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/quntypedbindable.html#dtor.QUntypedBindable)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QUntypedBindable* self ```

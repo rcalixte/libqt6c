@@ -24,17 +24,8 @@ void q_webenginescriptcollection_insert(void* self, void* param1) {
     QWebEngineScriptCollection_Insert((QWebEngineScriptCollection*)self, (QWebEngineScript*)param1);
 }
 
-void q_webenginescriptcollection_insert_with_list(void* self, void* list[]) {
-    QWebEngineScript** list_arr = (QWebEngineScript**)list;
-    size_t list_len = 0;
-    while (list_arr[list_len] != NULL) {
-        list_len++;
-    }
-    libqt_list list_list = {
-        .len = list_len,
-        .data = {(QWebEngineScript*)list},
-    };
-    QWebEngineScriptCollection_InsertWithList((QWebEngineScriptCollection*)self, list_list);
+void q_webenginescriptcollection_insert_with_list(void* self, libqt_list list) {
+    QWebEngineScriptCollection_InsertWithList((QWebEngineScriptCollection*)self, list);
 }
 
 bool q_webenginescriptcollection_remove(void* self, void* param1) {

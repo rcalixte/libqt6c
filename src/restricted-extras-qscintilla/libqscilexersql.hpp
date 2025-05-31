@@ -15,25 +15,16 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QColor QColor;
 typedef struct QEvent QEvent;
 typedef struct QFont QFont;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QSettings QSettings;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
-typedef struct QsciAbstractAPIs QsciAbstractAPIs;
 typedef struct QsciLexer QsciLexer;
 typedef struct QsciLexerSQL QsciLexerSQL;
 typedef struct QsciScintilla QsciScintilla;
@@ -159,6 +150,9 @@ void QsciLexerSQL_QBaseSetPaper(QsciLexerSQL* self, QColor* c, int style);
 bool QsciLexerSQL_ReadProperties(QsciLexerSQL* self, QSettings* qs, libqt_string prefix);
 void QsciLexerSQL_OnReadProperties(QsciLexerSQL* self, intptr_t slot);
 bool QsciLexerSQL_QBaseReadProperties(QsciLexerSQL* self, QSettings* qs, libqt_string prefix);
+bool QsciLexerSQL_WriteProperties(const QsciLexerSQL* self, QSettings* qs, libqt_string prefix);
+void QsciLexerSQL_OnWriteProperties(const QsciLexerSQL* self, intptr_t slot);
+bool QsciLexerSQL_QBaseWriteProperties(const QsciLexerSQL* self, QSettings* qs, libqt_string prefix);
 bool QsciLexerSQL_Event(QsciLexerSQL* self, QEvent* event);
 void QsciLexerSQL_OnEvent(QsciLexerSQL* self, intptr_t slot);
 bool QsciLexerSQL_QBaseEvent(QsciLexerSQL* self, QEvent* event);
@@ -180,9 +174,6 @@ void QsciLexerSQL_QBaseConnectNotify(QsciLexerSQL* self, QMetaMethod* signal);
 void QsciLexerSQL_DisconnectNotify(QsciLexerSQL* self, QMetaMethod* signal);
 void QsciLexerSQL_OnDisconnectNotify(QsciLexerSQL* self, intptr_t slot);
 void QsciLexerSQL_QBaseDisconnectNotify(QsciLexerSQL* self, QMetaMethod* signal);
-bool QsciLexerSQL_WriteProperties(const QsciLexerSQL* self, QSettings* qs, libqt_string prefix);
-void QsciLexerSQL_OnWriteProperties(const QsciLexerSQL* self, intptr_t slot);
-bool QsciLexerSQL_QBaseWriteProperties(const QsciLexerSQL* self, QSettings* qs, libqt_string prefix);
 QObject* QsciLexerSQL_Sender(const QsciLexerSQL* self);
 void QsciLexerSQL_OnSender(const QsciLexerSQL* self, intptr_t slot);
 QObject* QsciLexerSQL_QBaseSender(const QsciLexerSQL* self);

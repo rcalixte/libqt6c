@@ -385,6 +385,8 @@ QTextStream* q_textstream_operator_shift_left_with_ptr(void* self, void* ptr);
 /// ``` QTextStream* self, long long maxlen ```
 const char* q_textstream_read_line1(void* self, long long maxlen);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#dtor.QTextStream)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextStream* self ```

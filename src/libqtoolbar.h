@@ -14,41 +14,18 @@
 
 #include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
-#include "libqcursor.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
-#include "libqlocale.h"
-#include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
 #include "libqrect.h"
-#include "libqregion.h"
-#include "libqscreen.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
 #include "libqstyleoption.h"
-#include "libqthread.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qtoolbar.html
 
@@ -75,7 +52,7 @@ QToolBar* q_toolbar_new4(const char* title, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QToolBar* self ```
-QMetaObject* q_toolbar_meta_object(void* self);
+const QMetaObject* q_toolbar_meta_object(void* self);
 
 /// ``` QToolBar* self, const char* param1 ```
 void* q_toolbar_metacast(void* self, const char* param1);
@@ -223,6 +200,8 @@ void q_toolbar_set_tool_button_style(void* self, int64_t toolButtonStyle);
 /// ``` QToolBar* self, QAction* action ```
 void q_toolbar_action_triggered(void* self, void* action);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#actionTriggered)
+///
 /// ``` QToolBar* self, void (*slot)(QToolBar*, QAction*) ```
 void q_toolbar_on_action_triggered(void* self, void (*slot)(void*, void*));
 
@@ -231,6 +210,8 @@ void q_toolbar_on_action_triggered(void* self, void (*slot)(void*, void*));
 /// ``` QToolBar* self, bool movable ```
 void q_toolbar_movable_changed(void* self, bool movable);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#movableChanged)
+///
 /// ``` QToolBar* self, void (*slot)(QToolBar*, bool) ```
 void q_toolbar_on_movable_changed(void* self, void (*slot)(void*, bool));
 
@@ -239,6 +220,8 @@ void q_toolbar_on_movable_changed(void* self, void (*slot)(void*, bool));
 /// ``` QToolBar* self, int allowedAreas ```
 void q_toolbar_allowed_areas_changed(void* self, int64_t allowedAreas);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#allowedAreasChanged)
+///
 /// ``` QToolBar* self, void (*slot)(QToolBar*, int) ```
 void q_toolbar_on_allowed_areas_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -247,6 +230,8 @@ void q_toolbar_on_allowed_areas_changed(void* self, void (*slot)(void*, int64_t)
 /// ``` QToolBar* self, enum Qt__Orientation orientation ```
 void q_toolbar_orientation_changed(void* self, int64_t orientation);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#orientationChanged)
+///
 /// ``` QToolBar* self, void (*slot)(QToolBar*, enum Qt__Orientation) ```
 void q_toolbar_on_orientation_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -255,6 +240,8 @@ void q_toolbar_on_orientation_changed(void* self, void (*slot)(void*, int64_t));
 /// ``` QToolBar* self, QSize* iconSize ```
 void q_toolbar_icon_size_changed(void* self, void* iconSize);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#iconSizeChanged)
+///
 /// ``` QToolBar* self, void (*slot)(QToolBar*, QSize*) ```
 void q_toolbar_on_icon_size_changed(void* self, void (*slot)(void*, void*));
 
@@ -263,6 +250,8 @@ void q_toolbar_on_icon_size_changed(void* self, void (*slot)(void*, void*));
 /// ``` QToolBar* self, enum Qt__ToolButtonStyle toolButtonStyle ```
 void q_toolbar_tool_button_style_changed(void* self, int64_t toolButtonStyle);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#toolButtonStyleChanged)
+///
 /// ``` QToolBar* self, void (*slot)(QToolBar*, enum Qt__ToolButtonStyle) ```
 void q_toolbar_on_tool_button_style_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -271,6 +260,8 @@ void q_toolbar_on_tool_button_style_changed(void* self, void (*slot)(void*, int6
 /// ``` QToolBar* self, bool topLevel ```
 void q_toolbar_top_level_changed(void* self, bool topLevel);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#topLevelChanged)
+///
 /// ``` QToolBar* self, void (*slot)(QToolBar*, bool) ```
 void q_toolbar_on_top_level_changed(void* self, void (*slot)(void*, bool));
 
@@ -279,6 +270,8 @@ void q_toolbar_on_top_level_changed(void* self, void (*slot)(void*, bool));
 /// ``` QToolBar* self, bool visible ```
 void q_toolbar_visibility_changed(void* self, bool visible);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#visibilityChanged)
+///
 /// ``` QToolBar* self, void (*slot)(QToolBar*, bool) ```
 void q_toolbar_on_visibility_changed(void* self, void (*slot)(void*, bool));
 
@@ -287,11 +280,15 @@ void q_toolbar_on_visibility_changed(void* self, void (*slot)(void*, bool));
 /// ``` QToolBar* self, QActionEvent* event ```
 void q_toolbar_action_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#actionEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QToolBar* self, void (*slot)(QToolBar*, QActionEvent*) ```
 void q_toolbar_on_action_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#actionEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QToolBar* self, QActionEvent* event ```
@@ -302,11 +299,15 @@ void q_toolbar_qbase_action_event(void* self, void* event);
 /// ``` QToolBar* self, QEvent* event ```
 void q_toolbar_change_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#changeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QToolBar* self, void (*slot)(QToolBar*, QEvent*) ```
 void q_toolbar_on_change_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#changeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QToolBar* self, QEvent* event ```
@@ -317,11 +318,15 @@ void q_toolbar_qbase_change_event(void* self, void* event);
 /// ``` QToolBar* self, QPaintEvent* event ```
 void q_toolbar_paint_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#paintEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QToolBar* self, void (*slot)(QToolBar*, QPaintEvent*) ```
 void q_toolbar_on_paint_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#paintEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QToolBar* self, QPaintEvent* event ```
@@ -332,11 +337,15 @@ void q_toolbar_qbase_paint_event(void* self, void* event);
 /// ``` QToolBar* self, QEvent* event ```
 bool q_toolbar_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QToolBar* self, bool (*slot)(QToolBar*, QEvent*) ```
 void q_toolbar_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QToolBar* self, QEvent* event ```
@@ -347,11 +356,15 @@ bool q_toolbar_qbase_event(void* self, void* event);
 /// ``` QToolBar* self, QStyleOptionToolBar* option ```
 void q_toolbar_init_style_option(void* self, void* option);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#initStyleOption)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QToolBar* self, void (*slot)(QToolBar*, QStyleOptionToolBar*) ```
 void q_toolbar_on_init_style_option(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#initStyleOption)
+///
 /// Base class method implementation
 ///
 /// ``` QToolBar* self, QStyleOptionToolBar* option ```
@@ -491,7 +504,7 @@ QRect* q_toolbar_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QToolBar* self ```
-QRect* q_toolbar_geometry(void* self);
+const QRect* q_toolbar_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -848,7 +861,7 @@ QWidget* q_toolbar_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QToolBar* self ```
-QPalette* q_toolbar_palette(void* self);
+const QPalette* q_toolbar_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -890,7 +903,7 @@ int64_t q_toolbar_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QToolBar* self ```
-QFont* q_toolbar_font(void* self);
+const QFont* q_toolbar_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1890,15 +1903,15 @@ void q_toolbar_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QToolBar* self, QAction* actions[] ```
-void q_toolbar_add_actions(void* self, void* actions[]);
+/// ``` QToolBar* self, libqt_list /* of QAction* */ actions ```
+void q_toolbar_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QToolBar* self, QAction* before, QAction* actions[] ```
-void q_toolbar_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QToolBar* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_toolbar_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2098,6 +2111,8 @@ void q_toolbar_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QToolBar* self, void (*slot)(QWidget*, const char*) ```
 void q_toolbar_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2109,6 +2124,8 @@ void q_toolbar_on_window_title_changed(void* self, void (*slot)(void*, const cha
 void q_toolbar_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QToolBar* self, void (*slot)(QWidget*, QIcon*) ```
 void q_toolbar_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -2122,6 +2139,8 @@ void q_toolbar_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QToolBar* self, void (*slot)(QWidget*, const char*) ```
 void q_toolbar_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2133,6 +2152,8 @@ void q_toolbar_on_window_icon_text_changed(void* self, void (*slot)(void*, const
 void q_toolbar_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QToolBar* self, void (*slot)(QWidget*, QPoint*) ```
 void q_toolbar_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2338,7 +2359,7 @@ void q_toolbar_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QToolBar* self ```
-libqt_list /* of QObject* */ q_toolbar_children(void* self);
+const libqt_list /* of QObject* */ q_toolbar_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2429,7 +2450,7 @@ QBindingStorage* q_toolbar_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QToolBar* self ```
-QBindingStorage* q_toolbar_binding_storage2(void* self);
+const QBindingStorage* q_toolbar_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2439,6 +2460,8 @@ QBindingStorage* q_toolbar_binding_storage2(void* self);
 void q_toolbar_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QToolBar* self, void (*slot)(QObject*) ```
 void q_toolbar_on_destroyed(void* self, void (*slot)(void*));
@@ -2493,6 +2516,8 @@ QMetaObject__Connection* q_toolbar_connect4(void* self, void* sender, const char
 void q_toolbar_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QToolBar* self, void (*slot)(QObject*, QObject*) ```
 void q_toolbar_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -2592,12 +2617,16 @@ int32_t q_toolbar_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self ```
 int32_t q_toolbar_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2615,12 +2644,16 @@ void q_toolbar_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, bool visible ```
 void q_toolbar_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2638,12 +2671,16 @@ QSize* q_toolbar_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self ```
 QSize* q_toolbar_qbase_size_hint(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2661,12 +2698,16 @@ QSize* q_toolbar_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self ```
 QSize* q_toolbar_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2684,12 +2725,16 @@ int32_t q_toolbar_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, int param1 ```
 int32_t q_toolbar_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2707,12 +2752,16 @@ bool q_toolbar_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self ```
 bool q_toolbar_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2730,12 +2779,16 @@ QPaintEngine* q_toolbar_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self ```
 QPaintEngine* q_toolbar_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2753,12 +2806,16 @@ void q_toolbar_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QMouseEvent* event ```
 void q_toolbar_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2776,12 +2833,16 @@ void q_toolbar_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QMouseEvent* event ```
 void q_toolbar_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2799,12 +2860,16 @@ void q_toolbar_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QMouseEvent* event ```
 void q_toolbar_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2822,12 +2887,16 @@ void q_toolbar_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QMouseEvent* event ```
 void q_toolbar_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2845,12 +2914,16 @@ void q_toolbar_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QWheelEvent* event ```
 void q_toolbar_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2868,12 +2941,16 @@ void q_toolbar_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QKeyEvent* event ```
 void q_toolbar_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2891,12 +2968,16 @@ void q_toolbar_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QKeyEvent* event ```
 void q_toolbar_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2914,12 +2995,16 @@ void q_toolbar_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QFocusEvent* event ```
 void q_toolbar_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2937,12 +3022,16 @@ void q_toolbar_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QFocusEvent* event ```
 void q_toolbar_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2960,12 +3049,16 @@ void q_toolbar_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QEnterEvent* event ```
 void q_toolbar_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2983,12 +3076,16 @@ void q_toolbar_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QEvent* event ```
 void q_toolbar_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3006,12 +3103,16 @@ void q_toolbar_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QMoveEvent* event ```
 void q_toolbar_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3029,12 +3130,16 @@ void q_toolbar_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QResizeEvent* event ```
 void q_toolbar_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3052,12 +3157,16 @@ void q_toolbar_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QCloseEvent* event ```
 void q_toolbar_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3075,12 +3184,16 @@ void q_toolbar_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QContextMenuEvent* event ```
 void q_toolbar_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3098,12 +3211,16 @@ void q_toolbar_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QTabletEvent* event ```
 void q_toolbar_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3121,12 +3238,16 @@ void q_toolbar_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QDragEnterEvent* event ```
 void q_toolbar_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3144,12 +3265,16 @@ void q_toolbar_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QDragMoveEvent* event ```
 void q_toolbar_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3167,12 +3292,16 @@ void q_toolbar_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QDragLeaveEvent* event ```
 void q_toolbar_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3190,12 +3319,16 @@ void q_toolbar_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QDropEvent* event ```
 void q_toolbar_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3213,12 +3346,16 @@ void q_toolbar_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QShowEvent* event ```
 void q_toolbar_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3236,12 +3373,16 @@ void q_toolbar_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QHideEvent* event ```
 void q_toolbar_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3259,12 +3400,16 @@ bool q_toolbar_native_event(void* self, const char* eventType, void* message, in
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, const char* eventType, void* message, intptr_t* result ```
 bool q_toolbar_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3282,12 +3427,16 @@ int32_t q_toolbar_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_toolbar_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3305,12 +3454,16 @@ void q_toolbar_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QPainter* painter ```
 void q_toolbar_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3328,12 +3481,16 @@ QPaintDevice* q_toolbar_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QPoint* offset ```
 QPaintDevice* q_toolbar_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3351,12 +3508,16 @@ QPainter* q_toolbar_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self ```
 QPainter* q_toolbar_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3374,12 +3535,16 @@ void q_toolbar_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QInputMethodEvent* param1 ```
 void q_toolbar_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3397,12 +3562,16 @@ QVariant* q_toolbar_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_toolbar_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3420,12 +3589,16 @@ bool q_toolbar_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, bool next ```
 bool q_toolbar_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3443,12 +3616,16 @@ bool q_toolbar_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QObject* watched, QEvent* event ```
 bool q_toolbar_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3466,12 +3643,16 @@ void q_toolbar_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QTimerEvent* event ```
 void q_toolbar_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3489,12 +3670,16 @@ void q_toolbar_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QChildEvent* event ```
 void q_toolbar_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3512,12 +3697,16 @@ void q_toolbar_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QEvent* event ```
 void q_toolbar_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3535,12 +3724,16 @@ void q_toolbar_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QMetaMethod* signal ```
 void q_toolbar_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3558,12 +3751,16 @@ void q_toolbar_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QMetaMethod* signal ```
 void q_toolbar_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3581,12 +3778,16 @@ void q_toolbar_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self ```
 void q_toolbar_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3604,12 +3805,16 @@ void q_toolbar_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self ```
 void q_toolbar_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3627,12 +3832,16 @@ void q_toolbar_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self ```
 void q_toolbar_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3650,12 +3859,16 @@ bool q_toolbar_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self ```
 bool q_toolbar_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3673,12 +3886,16 @@ bool q_toolbar_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self ```
 bool q_toolbar_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3696,12 +3913,16 @@ QObject* q_toolbar_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self ```
 QObject* q_toolbar_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3719,12 +3940,16 @@ int32_t q_toolbar_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self ```
 int32_t q_toolbar_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3742,12 +3967,16 @@ int32_t q_toolbar_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, const char* signal ```
 int32_t q_toolbar_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3765,6 +3994,8 @@ bool q_toolbar_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBar* self, QMetaMethod* signal ```
@@ -3772,11 +4003,24 @@ bool q_toolbar_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QToolBar* self, bool (*slot)(QToolBar*, QMetaMethod*) ```
 void q_toolbar_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QToolBar* self, void (*slot)(QObject*, const char*) ```
+void q_toolbar_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#dtor.QToolBar)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QToolBar* self ```

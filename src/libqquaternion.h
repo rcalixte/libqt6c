@@ -277,6 +277,8 @@ QQuaternion* q_quaternion_slerp(void* q1, void* q2, float t);
 /// ``` QQuaternion* q1, QQuaternion* q2, float t ```
 QQuaternion* q_quaternion_nlerp(void* q1, void* q2, float t);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qquaternion.html#dtor.QQuaternion)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QQuaternion* self ```

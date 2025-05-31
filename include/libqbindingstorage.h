@@ -36,6 +36,8 @@ void q_bindingstatus_copy_assign(void* self, void* other);
 /// ``` QBindingStatus* self, QBindingStatus* other ```
 void q_bindingstatus_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbindingstatus.html#dtor.QBindingStatus)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QBindingStatus* self ```
@@ -63,6 +65,8 @@ bool q_bindingstorage_is_valid(void* self);
 /// ``` QBindingStorage* self, QUntypedPropertyData* data ```
 void q_bindingstorage_register_dependency(void* self, void* data);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbindingstorage.html#dtor.QBindingStorage)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QBindingStorage* self ```

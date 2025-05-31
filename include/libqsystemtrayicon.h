@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqicon.h"
 #include "libqmenu.h"
@@ -21,8 +19,6 @@
 #include "libqobject.h"
 #include "libqrect.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qsystemtrayicon.html
 
@@ -49,7 +45,7 @@ QSystemTrayIcon* q_systemtrayicon_new4(void* icon, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QSystemTrayIcon* self ```
-QMetaObject* q_systemtrayicon_meta_object(void* self);
+const QMetaObject* q_systemtrayicon_meta_object(void* self);
 
 /// ``` QSystemTrayIcon* self, const char* param1 ```
 void* q_systemtrayicon_metacast(void* self, const char* param1);
@@ -152,6 +148,8 @@ void q_systemtrayicon_show_message2(void* self, const char* title, const char* m
 /// ``` QSystemTrayIcon* self, enum QSystemTrayIcon__ActivationReason reason ```
 void q_systemtrayicon_activated(void* self, int64_t reason);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsystemtrayicon.html#activated)
+///
 /// ``` QSystemTrayIcon* self, void (*slot)(QSystemTrayIcon*, enum QSystemTrayIcon__ActivationReason) ```
 void q_systemtrayicon_on_activated(void* self, void (*slot)(void*, int64_t));
 
@@ -160,6 +158,8 @@ void q_systemtrayicon_on_activated(void* self, void (*slot)(void*, int64_t));
 /// ``` QSystemTrayIcon* self ```
 void q_systemtrayicon_message_clicked(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsystemtrayicon.html#messageClicked)
+///
 /// ``` QSystemTrayIcon* self, void (*slot)(QSystemTrayIcon*) ```
 void q_systemtrayicon_on_message_clicked(void* self, void (*slot)(void*));
 
@@ -168,11 +168,15 @@ void q_systemtrayicon_on_message_clicked(void* self, void (*slot)(void*));
 /// ``` QSystemTrayIcon* self, QEvent* event ```
 bool q_systemtrayicon_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsystemtrayicon.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSystemTrayIcon* self, bool (*slot)(QSystemTrayIcon*, QEvent*) ```
 void q_systemtrayicon_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsystemtrayicon.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QSystemTrayIcon* self, QEvent* event ```
@@ -285,7 +289,7 @@ void q_systemtrayicon_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QSystemTrayIcon* self ```
-libqt_list /* of QObject* */ q_systemtrayicon_children(void* self);
+const libqt_list /* of QObject* */ q_systemtrayicon_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -383,7 +387,7 @@ QBindingStorage* q_systemtrayicon_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QSystemTrayIcon* self ```
-QBindingStorage* q_systemtrayicon_binding_storage2(void* self);
+const QBindingStorage* q_systemtrayicon_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -393,6 +397,8 @@ QBindingStorage* q_systemtrayicon_binding_storage2(void* self);
 void q_systemtrayicon_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QSystemTrayIcon* self, void (*slot)(QObject*) ```
 void q_systemtrayicon_on_destroyed(void* self, void (*slot)(void*));
@@ -448,6 +454,8 @@ void q_systemtrayicon_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QSystemTrayIcon* self, void (*slot)(QObject*, QObject*) ```
 void q_systemtrayicon_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -462,12 +470,16 @@ bool q_systemtrayicon_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSystemTrayIcon* self, QObject* watched, QEvent* event ```
 bool q_systemtrayicon_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -485,12 +497,16 @@ void q_systemtrayicon_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSystemTrayIcon* self, QTimerEvent* event ```
 void q_systemtrayicon_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -508,12 +524,16 @@ void q_systemtrayicon_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSystemTrayIcon* self, QChildEvent* event ```
 void q_systemtrayicon_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -531,12 +551,16 @@ void q_systemtrayicon_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSystemTrayIcon* self, QEvent* event ```
 void q_systemtrayicon_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -554,12 +578,16 @@ void q_systemtrayicon_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSystemTrayIcon* self, QMetaMethod* signal ```
 void q_systemtrayicon_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -577,12 +605,16 @@ void q_systemtrayicon_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSystemTrayIcon* self, QMetaMethod* signal ```
 void q_systemtrayicon_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -600,12 +632,16 @@ QObject* q_systemtrayicon_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSystemTrayIcon* self ```
 QObject* q_systemtrayicon_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -623,12 +659,16 @@ int32_t q_systemtrayicon_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSystemTrayIcon* self ```
 int32_t q_systemtrayicon_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -646,12 +686,16 @@ int32_t q_systemtrayicon_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSystemTrayIcon* self, const char* signal ```
 int32_t q_systemtrayicon_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -669,6 +713,8 @@ bool q_systemtrayicon_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSystemTrayIcon* self, QMetaMethod* signal ```
@@ -676,11 +722,24 @@ bool q_systemtrayicon_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QSystemTrayIcon* self, bool (*slot)(QSystemTrayIcon*, QMetaMethod*) ```
 void q_systemtrayicon_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QSystemTrayIcon* self, void (*slot)(QObject*, const char*) ```
+void q_systemtrayicon_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsystemtrayicon.html#dtor.QSystemTrayIcon)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSystemTrayIcon* self ```

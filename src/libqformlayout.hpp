@@ -18,29 +18,20 @@ extern "C" {
 #if defined(WORKAROUND_INNER_CLASS_DEFINITION_QFormLayout__TakeRowResult)
 typedef QFormLayout::TakeRowResult QFormLayout__TakeRowResult;
 #endif
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QEvent QEvent;
 typedef struct QFormLayout QFormLayout;
 typedef struct QFormLayout__TakeRowResult QFormLayout__TakeRowResult;
 typedef struct QLayout QLayout;
 typedef struct QLayoutItem QLayoutItem;
-typedef struct QMargins QMargins;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QRect QRect;
 typedef struct QSize QSize;
 typedef struct QSpacerItem QSpacerItem;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
 
@@ -155,7 +146,6 @@ QSize* QFormLayout_QBaseMaximumSize(const QFormLayout* self);
 int QFormLayout_IndexOf(const QFormLayout* self, QWidget* param1);
 void QFormLayout_OnIndexOf(const QFormLayout* self, intptr_t slot);
 int QFormLayout_QBaseIndexOf(const QFormLayout* self, QWidget* param1);
-int QFormLayout_IndexOfWithQLayoutItem(const QFormLayout* self, QLayoutItem* param1);
 bool QFormLayout_IsEmpty(const QFormLayout* self);
 void QFormLayout_OnIsEmpty(const QFormLayout* self, intptr_t slot);
 bool QFormLayout_QBaseIsEmpty(const QFormLayout* self);

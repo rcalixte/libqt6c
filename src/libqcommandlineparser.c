@@ -27,17 +27,8 @@ bool q_commandlineparser_add_option(void* self, void* commandLineOption) {
     return QCommandLineParser_AddOption((QCommandLineParser*)self, (QCommandLineOption*)commandLineOption);
 }
 
-bool q_commandlineparser_add_options(void* self, void* options[]) {
-    QCommandLineOption** options_arr = (QCommandLineOption**)options;
-    size_t options_len = 0;
-    while (options_arr[options_len] != NULL) {
-        options_len++;
-    }
-    libqt_list options_list = {
-        .len = options_len,
-        .data = {(QCommandLineOption*)options},
-    };
-    return QCommandLineParser_AddOptions((QCommandLineParser*)self, options_list);
+bool q_commandlineparser_add_options(void* self, libqt_list options) {
+    return QCommandLineParser_AddOptions((QCommandLineParser*)self, options);
 }
 
 QCommandLineOption* q_commandlineparser_add_version_option(void* self) {
@@ -73,7 +64,7 @@ void q_commandlineparser_process(void* self, const char* arguments[]) {
     for (size_t _i = 0; _i < arguments_len; ++_i) {
         arguments_qstr[_i] = qstring(arguments[_i]);
     }
-    libqt_list arguments_list = qstrlist(arguments_qstr, arguments_len);
+    libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
     QCommandLineParser_Process((QCommandLineParser*)self, arguments_list);
 }
 
@@ -87,7 +78,7 @@ bool q_commandlineparser_parse(void* self, const char* arguments[]) {
     for (size_t _i = 0; _i < arguments_len; ++_i) {
         arguments_qstr[_i] = qstring(arguments[_i]);
     }
-    libqt_list arguments_list = qstrlist(arguments_qstr, arguments_len);
+    libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
     return QCommandLineParser_Parse((QCommandLineParser*)self, arguments_list);
 }
 

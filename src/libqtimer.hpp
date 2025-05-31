@@ -15,22 +15,14 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QEvent QEvent;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
-typedef struct QThread QThread;
 typedef struct QTimer QTimer;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
 #endif
 
 QTimer* QTimer_new();
@@ -88,6 +80,7 @@ int QTimer_QBaseReceivers(const QTimer* self, const char* signal);
 bool QTimer_IsSignalConnected(const QTimer* self, QMetaMethod* signal);
 void QTimer_OnIsSignalConnected(const QTimer* self, intptr_t slot);
 bool QTimer_QBaseIsSignalConnected(const QTimer* self, QMetaMethod* signal);
+void QTimer_Connect_Timeout(QTimer* self, intptr_t slot);
 void QTimer_Delete(QTimer* self);
 
 #ifdef __cplusplus

@@ -96,6 +96,8 @@ void q_tooltip_show_text4(void* pos, const char* text, void* w, void* rect);
 /// ``` QPoint* pos, const char* text, QWidget* w, QRect* rect, int msecShowTime ```
 void q_tooltip_show_text5(void* pos, const char* text, void* w, void* rect, int msecShowTime);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtooltip.html#dtor.QToolTip)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QToolTip* self ```

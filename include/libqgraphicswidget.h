@@ -13,17 +13,11 @@
 #include "qtlibc.h"
 
 #include "libqaction.h"
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
-#include "libqcursor.h"
 #include "libqfont.h"
-#include "libqgraphicseffect.h"
 #include "libqgraphicsitem.h"
 #include "libqgraphicslayout.h"
 #include "libqgraphicslayoutitem.h"
-#include "libqgraphicsscene.h"
-#include "libqgraphicstransform.h"
 #include "libqkeysequence.h"
 #include "libqmargins.h"
 #include "libqmetaobject.h"
@@ -33,14 +27,10 @@
 #include "libqpalette.h"
 #include "libqpoint.h"
 #include "libqrect.h"
-#include "libqregion.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
 #include "libqstyle.h"
 #include "libqstyleoption.h"
-#include "libqthread.h"
-#include "libqtransform.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
 
@@ -64,7 +54,7 @@ QGraphicsWidget* q_graphicswidget_new3(void* parent, int64_t wFlags);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QGraphicsWidget* self ```
-QMetaObject* q_graphicswidget_meta_object(void* self);
+const QMetaObject* q_graphicswidget_meta_object(void* self);
 
 /// ``` QGraphicsWidget* self, const char* param1 ```
 void* q_graphicswidget_metacast(void* self, const char* param1);
@@ -177,11 +167,15 @@ QSizeF* q_graphicswidget_size(void* self);
 /// ``` QGraphicsWidget* self, QRectF* rect ```
 void q_graphicswidget_set_geometry(void* self, void* rect);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setGeometry)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, QRectF*) ```
 void q_graphicswidget_on_set_geometry(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setGeometry)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QRectF* rect ```
@@ -212,11 +206,15 @@ void q_graphicswidget_set_contents_margins_with_margins(void* self, void* margin
 /// ``` QGraphicsWidget* self, double* left, double* top, double* right, double* bottom ```
 void q_graphicswidget_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#getContentsMargins)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, double*, double*, double*, double*) ```
 void q_graphicswidget_on_get_contents_margins(void* self, void (*slot)(void*, double*, double*, double*, double*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#getContentsMargins)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, double* left, double* top, double* right, double* bottom ```
@@ -329,13 +327,13 @@ void q_graphicswidget_add_action(void* self, void* action);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#addActions)
 ///
-/// ``` QGraphicsWidget* self, QAction* actions[] ```
-void q_graphicswidget_add_actions(void* self, void* actions[]);
+/// ``` QGraphicsWidget* self, libqt_list /* of QAction* */ actions ```
+void q_graphicswidget_add_actions(void* self, libqt_list actions);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#insertActions)
 ///
-/// ``` QGraphicsWidget* self, QAction* before, QAction* actions[] ```
-void q_graphicswidget_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QGraphicsWidget* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_graphicswidget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#insertAction)
 ///
@@ -367,11 +365,15 @@ bool q_graphicswidget_test_attribute(void* self, int64_t attribute);
 /// ``` QGraphicsWidget* self ```
 int32_t q_graphicswidget_type(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#type)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, int32_t (*slot)() ```
 void q_graphicswidget_on_type(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#type)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self ```
@@ -382,11 +384,15 @@ int32_t q_graphicswidget_qbase_type(void* self);
 /// ``` QGraphicsWidget* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget ```
 void q_graphicswidget_paint(void* self, void* painter, void* option, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#paint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, QPainter*, QStyleOptionGraphicsItem*, QWidget*) ```
 void q_graphicswidget_on_paint(void* self, void (*slot)(void*, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#paint)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget ```
@@ -397,11 +403,15 @@ void q_graphicswidget_qbase_paint(void* self, void* painter, void* option, void*
 /// ``` QGraphicsWidget* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget ```
 void q_graphicswidget_paint_window_frame(void* self, void* painter, void* option, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#paintWindowFrame)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, QPainter*, QStyleOptionGraphicsItem*, QWidget*) ```
 void q_graphicswidget_on_paint_window_frame(void* self, void (*slot)(void*, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#paintWindowFrame)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget ```
@@ -412,11 +422,15 @@ void q_graphicswidget_qbase_paint_window_frame(void* self, void* painter, void* 
 /// ``` QGraphicsWidget* self ```
 QRectF* q_graphicswidget_bounding_rect(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#boundingRect)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, QRectF* (*slot)() ```
 void q_graphicswidget_on_bounding_rect(void* self, QRectF* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#boundingRect)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self ```
@@ -427,11 +441,15 @@ QRectF* q_graphicswidget_qbase_bounding_rect(void* self);
 /// ``` QGraphicsWidget* self ```
 QPainterPath* q_graphicswidget_shape(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#shape)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, QPainterPath* (*slot)() ```
 void q_graphicswidget_on_shape(void* self, QPainterPath* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#shape)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self ```
@@ -442,6 +460,8 @@ QPainterPath* q_graphicswidget_qbase_shape(void* self);
 /// ``` QGraphicsWidget* self ```
 void q_graphicswidget_geometry_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#geometryChanged)
+///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*) ```
 void q_graphicswidget_on_geometry_changed(void* self, void (*slot)(void*));
 
@@ -450,6 +470,8 @@ void q_graphicswidget_on_geometry_changed(void* self, void (*slot)(void*));
 /// ``` QGraphicsWidget* self ```
 void q_graphicswidget_layout_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#layoutChanged)
+///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*) ```
 void q_graphicswidget_on_layout_changed(void* self, void (*slot)(void*));
 
@@ -463,11 +485,15 @@ bool q_graphicswidget_close(void* self);
 /// ``` QGraphicsWidget* self, QStyleOption* option ```
 void q_graphicswidget_init_style_option(void* self, void* option);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#initStyleOption)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, QStyleOption*) ```
 void q_graphicswidget_on_init_style_option(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#initStyleOption)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QStyleOption* option ```
@@ -478,11 +504,15 @@ void q_graphicswidget_qbase_init_style_option(void* self, void* option);
 /// ``` QGraphicsWidget* self, enum Qt__SizeHint which, QSizeF* constraint ```
 QSizeF* q_graphicswidget_size_hint(void* self, int64_t which, void* constraint);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, QSizeF* (*slot)(QGraphicsWidget*, enum Qt__SizeHint, QSizeF*) ```
 void q_graphicswidget_on_size_hint(void* self, QSizeF* (*slot)(void*, int64_t, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, enum Qt__SizeHint which, QSizeF* constraint ```
@@ -493,11 +523,15 @@ QSizeF* q_graphicswidget_qbase_size_hint(void* self, int64_t which, void* constr
 /// ``` QGraphicsWidget* self ```
 void q_graphicswidget_update_geometry(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#updateGeometry)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)() ```
 void q_graphicswidget_on_update_geometry(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#updateGeometry)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self ```
@@ -508,11 +542,15 @@ void q_graphicswidget_qbase_update_geometry(void* self);
 /// ``` QGraphicsWidget* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value ```
 QVariant* q_graphicswidget_item_change(void* self, int64_t change, void* value);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#itemChange)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, QVariant* (*slot)(QGraphicsWidget*, enum QGraphicsItem__GraphicsItemChange, QVariant*) ```
 void q_graphicswidget_on_item_change(void* self, QVariant* (*slot)(void*, int64_t, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#itemChange)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value ```
@@ -523,11 +561,15 @@ QVariant* q_graphicswidget_qbase_item_change(void* self, int64_t change, void* v
 /// ``` QGraphicsWidget* self, const char* propertyName, QVariant* value ```
 QVariant* q_graphicswidget_property_change(void* self, const char* propertyName, void* value);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#propertyChange)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, QVariant* (*slot)(QGraphicsWidget*, const char*, QVariant*) ```
 void q_graphicswidget_on_property_change(void* self, QVariant* (*slot)(void*, const char*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#propertyChange)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, const char* propertyName, QVariant* value ```
@@ -538,11 +580,15 @@ QVariant* q_graphicswidget_qbase_property_change(void* self, const char* propert
 /// ``` QGraphicsWidget* self, QEvent* event ```
 bool q_graphicswidget_scene_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#sceneEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, bool (*slot)(QGraphicsWidget*, QEvent*) ```
 void q_graphicswidget_on_scene_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#sceneEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QEvent* event ```
@@ -553,11 +599,15 @@ bool q_graphicswidget_qbase_scene_event(void* self, void* event);
 /// ``` QGraphicsWidget* self, QEvent* e ```
 bool q_graphicswidget_window_frame_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, bool (*slot)(QGraphicsWidget*, QEvent*) ```
 void q_graphicswidget_on_window_frame_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QEvent* e ```
@@ -568,11 +618,15 @@ bool q_graphicswidget_qbase_window_frame_event(void* self, void* e);
 /// ``` QGraphicsWidget* self, QPointF* pos ```
 int64_t q_graphicswidget_window_frame_section_at(void* self, void* pos);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameSectionAt)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, int64_t (*slot)(QGraphicsWidget*, QPointF*) ```
 void q_graphicswidget_on_window_frame_section_at(void* self, int64_t (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameSectionAt)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QPointF* pos ```
@@ -583,11 +637,15 @@ int64_t q_graphicswidget_qbase_window_frame_section_at(void* self, void* pos);
 /// ``` QGraphicsWidget* self, QEvent* event ```
 bool q_graphicswidget_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, bool (*slot)(QGraphicsWidget*, QEvent*) ```
 void q_graphicswidget_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QEvent* event ```
@@ -598,11 +656,15 @@ bool q_graphicswidget_qbase_event(void* self, void* event);
 /// ``` QGraphicsWidget* self, QEvent* event ```
 void q_graphicswidget_change_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#changeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, QEvent*) ```
 void q_graphicswidget_on_change_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#changeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QEvent* event ```
@@ -613,11 +675,15 @@ void q_graphicswidget_qbase_change_event(void* self, void* event);
 /// ``` QGraphicsWidget* self, QCloseEvent* event ```
 void q_graphicswidget_close_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#closeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, QCloseEvent*) ```
 void q_graphicswidget_on_close_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#closeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QCloseEvent* event ```
@@ -628,11 +694,15 @@ void q_graphicswidget_qbase_close_event(void* self, void* event);
 /// ``` QGraphicsWidget* self, QFocusEvent* event ```
 void q_graphicswidget_focus_in_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusInEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, QFocusEvent*) ```
 void q_graphicswidget_on_focus_in_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusInEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QFocusEvent* event ```
@@ -643,11 +713,15 @@ void q_graphicswidget_qbase_focus_in_event(void* self, void* event);
 /// ``` QGraphicsWidget* self, bool next ```
 bool q_graphicswidget_focus_next_prev_child(void* self, bool next);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusNextPrevChild)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, bool (*slot)(QGraphicsWidget*, bool) ```
 void q_graphicswidget_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusNextPrevChild)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, bool next ```
@@ -658,11 +732,15 @@ bool q_graphicswidget_qbase_focus_next_prev_child(void* self, bool next);
 /// ``` QGraphicsWidget* self, QFocusEvent* event ```
 void q_graphicswidget_focus_out_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusOutEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, QFocusEvent*) ```
 void q_graphicswidget_on_focus_out_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusOutEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QFocusEvent* event ```
@@ -673,11 +751,15 @@ void q_graphicswidget_qbase_focus_out_event(void* self, void* event);
 /// ``` QGraphicsWidget* self, QHideEvent* event ```
 void q_graphicswidget_hide_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#hideEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, QHideEvent*) ```
 void q_graphicswidget_on_hide_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#hideEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QHideEvent* event ```
@@ -688,11 +770,15 @@ void q_graphicswidget_qbase_hide_event(void* self, void* event);
 /// ``` QGraphicsWidget* self, QGraphicsSceneMoveEvent* event ```
 void q_graphicswidget_move_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#moveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, QGraphicsSceneMoveEvent*) ```
 void q_graphicswidget_on_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#moveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QGraphicsSceneMoveEvent* event ```
@@ -703,11 +789,15 @@ void q_graphicswidget_qbase_move_event(void* self, void* event);
 /// ``` QGraphicsWidget* self ```
 void q_graphicswidget_polish_event(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#polishEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)() ```
 void q_graphicswidget_on_polish_event(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#polishEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self ```
@@ -718,11 +808,15 @@ void q_graphicswidget_qbase_polish_event(void* self);
 /// ``` QGraphicsWidget* self, QGraphicsSceneResizeEvent* event ```
 void q_graphicswidget_resize_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#resizeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, QGraphicsSceneResizeEvent*) ```
 void q_graphicswidget_on_resize_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#resizeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QGraphicsSceneResizeEvent* event ```
@@ -733,11 +827,15 @@ void q_graphicswidget_qbase_resize_event(void* self, void* event);
 /// ``` QGraphicsWidget* self, QShowEvent* event ```
 void q_graphicswidget_show_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#showEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, QShowEvent*) ```
 void q_graphicswidget_on_show_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#showEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QShowEvent* event ```
@@ -748,11 +846,15 @@ void q_graphicswidget_qbase_show_event(void* self, void* event);
 /// ``` QGraphicsWidget* self, QGraphicsSceneHoverEvent* event ```
 void q_graphicswidget_hover_move_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#hoverMoveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, QGraphicsSceneHoverEvent*) ```
 void q_graphicswidget_on_hover_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#hoverMoveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QGraphicsSceneHoverEvent* event ```
@@ -763,11 +865,15 @@ void q_graphicswidget_qbase_hover_move_event(void* self, void* event);
 /// ``` QGraphicsWidget* self, QGraphicsSceneHoverEvent* event ```
 void q_graphicswidget_hover_leave_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#hoverLeaveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, QGraphicsSceneHoverEvent*) ```
 void q_graphicswidget_on_hover_leave_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#hoverLeaveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QGraphicsSceneHoverEvent* event ```
@@ -778,11 +884,15 @@ void q_graphicswidget_qbase_hover_leave_event(void* self, void* event);
 /// ``` QGraphicsWidget* self, QEvent* event ```
 void q_graphicswidget_grab_mouse_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#grabMouseEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, QEvent*) ```
 void q_graphicswidget_on_grab_mouse_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#grabMouseEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QEvent* event ```
@@ -793,11 +903,15 @@ void q_graphicswidget_qbase_grab_mouse_event(void* self, void* event);
 /// ``` QGraphicsWidget* self, QEvent* event ```
 void q_graphicswidget_ungrab_mouse_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#ungrabMouseEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, QEvent*) ```
 void q_graphicswidget_on_ungrab_mouse_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#ungrabMouseEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QEvent* event ```
@@ -808,11 +922,15 @@ void q_graphicswidget_qbase_ungrab_mouse_event(void* self, void* event);
 /// ``` QGraphicsWidget* self, QEvent* event ```
 void q_graphicswidget_grab_keyboard_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#grabKeyboardEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, QEvent*) ```
 void q_graphicswidget_on_grab_keyboard_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#grabKeyboardEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QEvent* event ```
@@ -823,11 +941,15 @@ void q_graphicswidget_qbase_grab_keyboard_event(void* self, void* event);
 /// ``` QGraphicsWidget* self, QEvent* event ```
 void q_graphicswidget_ungrab_keyboard_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#ungrabKeyboardEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, QEvent*) ```
 void q_graphicswidget_on_ungrab_keyboard_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#ungrabKeyboardEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsWidget* self, QEvent* event ```
@@ -886,6 +1008,8 @@ void q_graphicswidget_parent_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#parentChanged)
+///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
 void q_graphicswidget_on_parent_changed(void* self, void (*slot)(void*));
 
@@ -897,6 +1021,8 @@ void q_graphicswidget_on_parent_changed(void* self, void (*slot)(void*));
 void q_graphicswidget_opacity_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#opacityChanged)
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
 void q_graphicswidget_on_opacity_changed(void* self, void (*slot)(void*));
@@ -910,6 +1036,8 @@ void q_graphicswidget_visible_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#visibleChanged)
+///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
 void q_graphicswidget_on_visible_changed(void* self, void (*slot)(void*));
 
@@ -921,6 +1049,8 @@ void q_graphicswidget_on_visible_changed(void* self, void (*slot)(void*));
 void q_graphicswidget_enabled_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#enabledChanged)
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
 void q_graphicswidget_on_enabled_changed(void* self, void (*slot)(void*));
@@ -934,6 +1064,8 @@ void q_graphicswidget_x_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#xChanged)
+///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
 void q_graphicswidget_on_x_changed(void* self, void (*slot)(void*));
 
@@ -945,6 +1077,8 @@ void q_graphicswidget_on_x_changed(void* self, void (*slot)(void*));
 void q_graphicswidget_y_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#yChanged)
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
 void q_graphicswidget_on_y_changed(void* self, void (*slot)(void*));
@@ -958,6 +1092,8 @@ void q_graphicswidget_z_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#zChanged)
+///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
 void q_graphicswidget_on_z_changed(void* self, void (*slot)(void*));
 
@@ -969,6 +1105,8 @@ void q_graphicswidget_on_z_changed(void* self, void (*slot)(void*));
 void q_graphicswidget_rotation_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#rotationChanged)
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
 void q_graphicswidget_on_rotation_changed(void* self, void (*slot)(void*));
@@ -982,6 +1120,8 @@ void q_graphicswidget_scale_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#scaleChanged)
+///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
 void q_graphicswidget_on_scale_changed(void* self, void (*slot)(void*));
 
@@ -993,6 +1133,8 @@ void q_graphicswidget_on_scale_changed(void* self, void (*slot)(void*));
 void q_graphicswidget_children_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#childrenChanged)
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
 void q_graphicswidget_on_children_changed(void* self, void (*slot)(void*));
@@ -1006,6 +1148,8 @@ void q_graphicswidget_width_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#widthChanged)
+///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
 void q_graphicswidget_on_width_changed(void* self, void (*slot)(void*));
 
@@ -1017,6 +1161,8 @@ void q_graphicswidget_on_width_changed(void* self, void (*slot)(void*));
 void q_graphicswidget_height_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#heightChanged)
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
 void q_graphicswidget_on_height_changed(void* self, void (*slot)(void*));
@@ -1110,7 +1256,7 @@ void q_graphicswidget_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QGraphicsWidget* self ```
-libqt_list /* of QObject* */ q_graphicswidget_children(void* self);
+const libqt_list /* of QObject* */ q_graphicswidget_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1208,7 +1354,7 @@ QBindingStorage* q_graphicswidget_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QGraphicsWidget* self ```
-QBindingStorage* q_graphicswidget_binding_storage2(void* self);
+const QBindingStorage* q_graphicswidget_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -1218,6 +1364,8 @@ QBindingStorage* q_graphicswidget_binding_storage2(void* self);
 void q_graphicswidget_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QObject*) ```
 void q_graphicswidget_on_destroyed(void* self, void (*slot)(void*));
@@ -1272,6 +1420,8 @@ QMetaObject__Connection* q_graphicswidget_connect4(void* self, void* sender, con
 void q_graphicswidget_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QObject*, QObject*) ```
 void q_graphicswidget_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -1379,7 +1529,7 @@ QGraphicsObject* q_graphicswidget_to_graphics_object(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
 /// ``` QGraphicsWidget* self ```
-QGraphicsObject* q_graphicswidget_to_graphics_object2(void* self);
+const QGraphicsObject* q_graphicswidget_to_graphics_object2(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1924,8 +2074,8 @@ libqt_list /* of QGraphicsTransform* */ q_graphicswidget_transformations(void* s
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransformations)
 ///
-/// ``` QGraphicsWidget* self, QGraphicsTransform* transformations[] ```
-void q_graphicswidget_set_transformations(void* self, void* transformations[]);
+/// ``` QGraphicsWidget* self, libqt_list /* of QGraphicsTransform* */ transformations ```
+void q_graphicswidget_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2680,12 +2830,16 @@ bool q_graphicswidget_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QObject* watched, QEvent* event ```
 bool q_graphicswidget_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2703,12 +2857,16 @@ void q_graphicswidget_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QTimerEvent* event ```
 void q_graphicswidget_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2726,12 +2884,16 @@ void q_graphicswidget_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QChildEvent* event ```
 void q_graphicswidget_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2749,12 +2911,16 @@ void q_graphicswidget_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QEvent* event ```
 void q_graphicswidget_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2772,12 +2938,16 @@ void q_graphicswidget_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QMetaMethod* signal ```
 void q_graphicswidget_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2795,12 +2965,16 @@ void q_graphicswidget_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QMetaMethod* signal ```
 void q_graphicswidget_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2818,12 +2992,16 @@ void q_graphicswidget_advance(void* self, int phase);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#advance)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, int phase ```
 void q_graphicswidget_qbase_advance(void* self, int phase);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#advance)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2841,12 +3019,16 @@ bool q_graphicswidget_contains(void* self, void* point);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#contains)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QPointF* point ```
 bool q_graphicswidget_qbase_contains(void* self, void* point);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#contains)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2864,12 +3046,16 @@ bool q_graphicswidget_collides_with_item(void* self, void* other, int64_t mode);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithItem)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode ```
 bool q_graphicswidget_qbase_collides_with_item(void* self, void* other, int64_t mode);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithItem)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2887,12 +3073,16 @@ bool q_graphicswidget_collides_with_path(void* self, void* path, int64_t mode);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QPainterPath* path, enum Qt__ItemSelectionMode mode ```
 bool q_graphicswidget_qbase_collides_with_path(void* self, void* path, int64_t mode);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2910,12 +3100,16 @@ bool q_graphicswidget_is_obscured_by(void* self, void* item);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscuredBy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QGraphicsItem* item ```
 bool q_graphicswidget_qbase_is_obscured_by(void* self, void* item);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscuredBy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2933,12 +3127,16 @@ QPainterPath* q_graphicswidget_opaque_area(void* self);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#opaqueArea)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self ```
 QPainterPath* q_graphicswidget_qbase_opaque_area(void* self);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#opaqueArea)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2956,12 +3154,16 @@ bool q_graphicswidget_scene_event_filter(void* self, void* watched, void* event)
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QGraphicsItem* watched, QEvent* event ```
 bool q_graphicswidget_qbase_scene_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2979,12 +3181,16 @@ void q_graphicswidget_context_menu_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QGraphicsSceneContextMenuEvent* event ```
 void q_graphicswidget_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3002,12 +3208,16 @@ void q_graphicswidget_drag_enter_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QGraphicsSceneDragDropEvent* event ```
 void q_graphicswidget_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3025,12 +3235,16 @@ void q_graphicswidget_drag_leave_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QGraphicsSceneDragDropEvent* event ```
 void q_graphicswidget_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3048,12 +3262,16 @@ void q_graphicswidget_drag_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QGraphicsSceneDragDropEvent* event ```
 void q_graphicswidget_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3071,12 +3289,16 @@ void q_graphicswidget_drop_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QGraphicsSceneDragDropEvent* event ```
 void q_graphicswidget_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3094,12 +3316,16 @@ void q_graphicswidget_hover_enter_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QGraphicsSceneHoverEvent* event ```
 void q_graphicswidget_qbase_hover_enter_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3117,12 +3343,16 @@ void q_graphicswidget_key_press_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QKeyEvent* event ```
 void q_graphicswidget_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3140,12 +3370,16 @@ void q_graphicswidget_key_release_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QKeyEvent* event ```
 void q_graphicswidget_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3163,12 +3397,16 @@ void q_graphicswidget_mouse_press_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mousePressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QGraphicsSceneMouseEvent* event ```
 void q_graphicswidget_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3186,12 +3424,16 @@ void q_graphicswidget_mouse_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QGraphicsSceneMouseEvent* event ```
 void q_graphicswidget_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3209,12 +3451,16 @@ void q_graphicswidget_mouse_release_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QGraphicsSceneMouseEvent* event ```
 void q_graphicswidget_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3232,12 +3478,16 @@ void q_graphicswidget_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QGraphicsSceneMouseEvent* event ```
 void q_graphicswidget_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3255,12 +3505,16 @@ void q_graphicswidget_wheel_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QGraphicsSceneWheelEvent* event ```
 void q_graphicswidget_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3278,12 +3532,16 @@ void q_graphicswidget_input_method_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QInputMethodEvent* event ```
 void q_graphicswidget_qbase_input_method_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3301,12 +3559,16 @@ QVariant* q_graphicswidget_input_method_query(void* self, int64_t query);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, enum Qt__InputMethodQuery query ```
 QVariant* q_graphicswidget_qbase_input_method_query(void* self, int64_t query);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3324,12 +3586,16 @@ bool q_graphicswidget_supports_extension(void* self, int64_t extension);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#supportsExtension)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, enum QGraphicsItem__Extension extension ```
 bool q_graphicswidget_qbase_supports_extension(void* self, int64_t extension);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#supportsExtension)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3347,12 +3613,16 @@ void q_graphicswidget_set_extension(void* self, int64_t extension, void* variant
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setExtension)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, enum QGraphicsItem__Extension extension, QVariant* variant ```
 void q_graphicswidget_qbase_set_extension(void* self, int64_t extension, void* variant);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setExtension)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3370,12 +3640,16 @@ QVariant* q_graphicswidget_extension(void* self, void* variant);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#extension)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QVariant* variant ```
 QVariant* q_graphicswidget_qbase_extension(void* self, void* variant);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#extension)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3393,12 +3667,16 @@ bool q_graphicswidget_is_empty(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isEmpty)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self ```
 bool q_graphicswidget_qbase_is_empty(void* self);
 
 /// Inherited from QGraphicsLayoutItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isEmpty)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3416,12 +3694,16 @@ void q_graphicswidget_update_micro_focus(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self ```
 void q_graphicswidget_qbase_update_micro_focus(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3439,12 +3721,16 @@ QObject* q_graphicswidget_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self ```
 QObject* q_graphicswidget_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3462,12 +3748,16 @@ int32_t q_graphicswidget_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self ```
 int32_t q_graphicswidget_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3485,12 +3775,16 @@ int32_t q_graphicswidget_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, const char* signal ```
 int32_t q_graphicswidget_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3508,12 +3802,16 @@ bool q_graphicswidget_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QMetaMethod* signal ```
 bool q_graphicswidget_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3531,12 +3829,16 @@ void q_graphicswidget_add_to_index(void* self);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#addToIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self ```
 void q_graphicswidget_qbase_add_to_index(void* self);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#addToIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3554,12 +3856,16 @@ void q_graphicswidget_remove_from_index(void* self);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self ```
 void q_graphicswidget_qbase_remove_from_index(void* self);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3577,12 +3883,16 @@ void q_graphicswidget_prepare_geometry_change(void* self);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#prepareGeometryChange)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self ```
 void q_graphicswidget_qbase_prepare_geometry_change(void* self);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#prepareGeometryChange)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3600,12 +3910,16 @@ void q_graphicswidget_set_graphics_item(void* self, void* item);
 
 /// Inherited from QGraphicsLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setGraphicsItem)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, QGraphicsItem* item ```
 void q_graphicswidget_qbase_set_graphics_item(void* self, void* item);
 
 /// Inherited from QGraphicsLayoutItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setGraphicsItem)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3623,6 +3937,8 @@ void q_graphicswidget_set_owned_by_layout(void* self, bool ownedByLayout);
 
 /// Inherited from QGraphicsLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setOwnedByLayout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, bool ownedByLayout ```
@@ -3630,11 +3946,24 @@ void q_graphicswidget_qbase_set_owned_by_layout(void* self, bool ownedByLayout);
 
 /// Inherited from QGraphicsLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setOwnedByLayout)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, bool) ```
 void q_graphicswidget_on_set_owned_by_layout(void* self, void (*slot)(void*, bool));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QGraphicsWidget* self, void (*slot)(QObject*, const char*) ```
+void q_graphicswidget_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#dtor.QGraphicsWidget)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGraphicsWidget* self ```

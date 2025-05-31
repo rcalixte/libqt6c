@@ -1,5 +1,3 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqglyphrun.hpp"
 #include "libqmetaobject.hpp"
@@ -10,13 +8,11 @@
 #include "libqtextdocument.hpp"
 #include "libqtextlayout.hpp"
 #include "libqtextlist.hpp"
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqcoreevent.hpp"
 #include "libqtextobject.hpp"
 #include "libqtextobject.h"
 
-QMetaObject* q_textobject_meta_object(void* self) {
+const QMetaObject* q_textobject_meta_object(void* self) {
     return QTextObject_MetaObject((QTextObject*)self);
 }
 
@@ -81,8 +77,7 @@ const char* q_textobject_object_name(void* self) {
 }
 
 void q_textobject_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_textobject_is_widget_type(void* self) {
@@ -121,7 +116,7 @@ void q_textobject_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_textobject_children(void* self) {
+const libqt_list /* of QObject* */ q_textobject_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -188,7 +183,7 @@ QBindingStorage* q_textobject_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_textobject_binding_storage2(void* self) {
+const QBindingStorage* q_textobject_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -232,7 +227,11 @@ void q_textobject_on_destroyed1(void* self, void (*slot)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
 }
 
-QMetaObject* q_textblockgroup_meta_object(void* self) {
+void q_textobject_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
+const QMetaObject* q_textblockgroup_meta_object(void* self) {
     return QTextBlockGroup_MetaObject((QTextBlockGroup*)self);
 }
 
@@ -297,8 +296,7 @@ const char* q_textblockgroup_object_name(void* self) {
 }
 
 void q_textblockgroup_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_textblockgroup_is_widget_type(void* self) {
@@ -337,7 +335,7 @@ void q_textblockgroup_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_textblockgroup_children(void* self) {
+const libqt_list /* of QObject* */ q_textblockgroup_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -404,7 +402,7 @@ QBindingStorage* q_textblockgroup_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_textblockgroup_binding_storage2(void* self) {
+const QBindingStorage* q_textblockgroup_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -448,6 +446,10 @@ void q_textblockgroup_on_destroyed1(void* self, void (*slot)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
 }
 
+void q_textblockgroup_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
 void q_textframelayoutdata_operator_assign(void* self, void* param1) {
     QTextFrameLayoutData_OperatorAssign((QTextFrameLayoutData*)self, (QTextFrameLayoutData*)param1);
 }
@@ -460,7 +462,7 @@ QTextFrame* q_textframe_new(void* doc) {
     return QTextFrame_new((QTextDocument*)doc);
 }
 
-QMetaObject* q_textframe_meta_object(void* self) {
+const QMetaObject* q_textframe_meta_object(void* self) {
     return QTextFrame_MetaObject((QTextFrame*)self);
 }
 
@@ -574,8 +576,7 @@ const char* q_textframe_object_name(void* self) {
 }
 
 void q_textframe_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_textframe_is_widget_type(void* self) {
@@ -614,7 +615,7 @@ void q_textframe_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_textframe_children(void* self) {
+const libqt_list /* of QObject* */ q_textframe_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -681,7 +682,7 @@ QBindingStorage* q_textframe_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_textframe_binding_storage2(void* self) {
+const QBindingStorage* q_textframe_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -869,6 +870,10 @@ void q_textframe_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) 
     QTextFrame_OnIsSignalConnected((QTextFrame*)self, (intptr_t)slot);
 }
 
+void q_textframe_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
 void q_textframe_delete(void* self) {
     QTextFrame_Delete((QTextFrame*)(self));
 }
@@ -961,7 +966,7 @@ libqt_list /* of QTextLayout__FormatRange* */ q_textblock_text_formats(void* sel
     return _arr;
 }
 
-QTextDocument* q_textblock_document(void* self) {
+const QTextDocument* q_textblock_document(void* self) {
     return QTextBlock_Document((QTextBlock*)self);
 }
 

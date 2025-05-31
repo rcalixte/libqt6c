@@ -104,6 +104,8 @@ void q_accessible_cleanup();
 /// ``` QTextCursor* cursor, enum QAccessible__TextBoundaryType boundaryType ```
 libqt_pair /* tuple of int and int */ q_accessible_q_accessible_text_boundary_helper(void* cursor, int64_t boundaryType);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#dtor.QAccessible)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAccessible* self ```
@@ -136,6 +138,8 @@ void q_accessible__state_copy_assign(void* self, void* other);
 /// ``` QAccessible__State* self, QAccessible__State* other ```
 void q_accessible__state_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible::state.html#dtor.QAccessible::State)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAccessible__State* self ```
@@ -153,6 +157,8 @@ void q_accessible__activationobserver_accessibility_active_changed(void* self, b
 /// ``` QAccessible__ActivationObserver* self, QAccessible__ActivationObserver* param1 ```
 void q_accessible__activationobserver_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible::activationobserver.html#dtor.QAccessible::ActivationObserver)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAccessible__ActivationObserver* self ```

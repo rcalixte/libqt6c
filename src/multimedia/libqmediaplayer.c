@@ -1,6 +1,4 @@
-#include "../libqanystringview.hpp"
 #include "libqaudiooutput.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
 #include "../libqiodevice.hpp"
 #include "libqmediametadata.hpp"
@@ -8,9 +6,7 @@
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
 #include "../libqurl.hpp"
-#include "../libqvariant.hpp"
 #include "libqvideosink.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqmediaplayer.hpp"
@@ -24,7 +20,7 @@ QMediaPlayer* q_mediaplayer_new2(void* parent) {
     return QMediaPlayer_new2((QObject*)parent);
 }
 
-QMetaObject* q_mediaplayer_meta_object(void* self) {
+const QMetaObject* q_mediaplayer_meta_object(void* self) {
     return QMediaPlayer_MetaObject((QMediaPlayer*)self);
 }
 
@@ -118,7 +114,7 @@ QUrl* q_mediaplayer_source(void* self) {
     return QMediaPlayer_Source((QMediaPlayer*)self);
 }
 
-QIODevice* q_mediaplayer_source_device(void* self) {
+const QIODevice* q_mediaplayer_source_device(void* self) {
     return QMediaPlayer_SourceDevice((QMediaPlayer*)self);
 }
 
@@ -387,8 +383,7 @@ const char* q_mediaplayer_object_name(void* self) {
 }
 
 void q_mediaplayer_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_mediaplayer_is_widget_type(void* self) {
@@ -427,7 +422,7 @@ void q_mediaplayer_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_mediaplayer_children(void* self) {
+const libqt_list /* of QObject* */ q_mediaplayer_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -494,7 +489,7 @@ QBindingStorage* q_mediaplayer_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_mediaplayer_binding_storage2(void* self) {
+const QBindingStorage* q_mediaplayer_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -668,6 +663,10 @@ bool q_mediaplayer_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_mediaplayer_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QMediaPlayer_OnIsSignalConnected((QMediaPlayer*)self, (intptr_t)slot);
+}
+
+void q_mediaplayer_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_mediaplayer_delete(void* self) {

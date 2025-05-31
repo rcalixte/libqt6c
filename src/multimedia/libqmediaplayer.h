@@ -12,9 +12,7 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
 #include "libqaudiooutput.h"
-#include "../libqbindingstorage.h"
 #include "../libqevent.h"
 #include "../libqiodevice.h"
 #include "libqmediametadata.h"
@@ -22,9 +20,7 @@
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include <string.h>
-#include "../libqthread.h"
 #include "../libqurl.h"
-#include "../libqvariant.h"
 #include "libqvideosink.h"
 
 /// https://doc.qt.io/qt-6/qmediaplayer.html
@@ -42,7 +38,7 @@ QMediaPlayer* q_mediaplayer_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QMediaPlayer* self ```
-QMetaObject* q_mediaplayer_meta_object(void* self);
+const QMetaObject* q_mediaplayer_meta_object(void* self);
 
 /// ``` QMediaPlayer* self, const char* param1 ```
 void* q_mediaplayer_metacast(void* self, const char* param1);
@@ -148,7 +144,7 @@ QUrl* q_mediaplayer_source(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#sourceDevice)
 ///
 /// ``` QMediaPlayer* self ```
-QIODevice* q_mediaplayer_source_device(void* self);
+const QIODevice* q_mediaplayer_source_device(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#playbackState)
 ///
@@ -270,6 +266,8 @@ void q_mediaplayer_set_source_device(void* self, void* device);
 /// ``` QMediaPlayer* self, QUrl* media ```
 void q_mediaplayer_source_changed(void* self, void* media);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#sourceChanged)
+///
 /// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*, QUrl*) ```
 void q_mediaplayer_on_source_changed(void* self, void (*slot)(void*, void*));
 
@@ -278,6 +276,8 @@ void q_mediaplayer_on_source_changed(void* self, void (*slot)(void*, void*));
 /// ``` QMediaPlayer* self, enum QMediaPlayer__PlaybackState newState ```
 void q_mediaplayer_playback_state_changed(void* self, int64_t newState);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#playbackStateChanged)
+///
 /// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*, enum QMediaPlayer__PlaybackState) ```
 void q_mediaplayer_on_playback_state_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -286,6 +286,8 @@ void q_mediaplayer_on_playback_state_changed(void* self, void (*slot)(void*, int
 /// ``` QMediaPlayer* self, enum QMediaPlayer__MediaStatus status ```
 void q_mediaplayer_media_status_changed(void* self, int64_t status);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#mediaStatusChanged)
+///
 /// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*, enum QMediaPlayer__MediaStatus) ```
 void q_mediaplayer_on_media_status_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -294,6 +296,8 @@ void q_mediaplayer_on_media_status_changed(void* self, void (*slot)(void*, int64
 /// ``` QMediaPlayer* self, long long duration ```
 void q_mediaplayer_duration_changed(void* self, long long duration);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#durationChanged)
+///
 /// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*, long long) ```
 void q_mediaplayer_on_duration_changed(void* self, void (*slot)(void*, long long));
 
@@ -302,6 +306,8 @@ void q_mediaplayer_on_duration_changed(void* self, void (*slot)(void*, long long
 /// ``` QMediaPlayer* self, long long position ```
 void q_mediaplayer_position_changed(void* self, long long position);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#positionChanged)
+///
 /// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*, long long) ```
 void q_mediaplayer_on_position_changed(void* self, void (*slot)(void*, long long));
 
@@ -310,6 +316,8 @@ void q_mediaplayer_on_position_changed(void* self, void (*slot)(void*, long long
 /// ``` QMediaPlayer* self, bool available ```
 void q_mediaplayer_has_audio_changed(void* self, bool available);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#hasAudioChanged)
+///
 /// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*, bool) ```
 void q_mediaplayer_on_has_audio_changed(void* self, void (*slot)(void*, bool));
 
@@ -318,6 +326,8 @@ void q_mediaplayer_on_has_audio_changed(void* self, void (*slot)(void*, bool));
 /// ``` QMediaPlayer* self, bool videoAvailable ```
 void q_mediaplayer_has_video_changed(void* self, bool videoAvailable);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#hasVideoChanged)
+///
 /// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*, bool) ```
 void q_mediaplayer_on_has_video_changed(void* self, void (*slot)(void*, bool));
 
@@ -326,6 +336,8 @@ void q_mediaplayer_on_has_video_changed(void* self, void (*slot)(void*, bool));
 /// ``` QMediaPlayer* self, float progress ```
 void q_mediaplayer_buffer_progress_changed(void* self, float progress);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#bufferProgressChanged)
+///
 /// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*, float) ```
 void q_mediaplayer_on_buffer_progress_changed(void* self, void (*slot)(void*, float));
 
@@ -334,6 +346,8 @@ void q_mediaplayer_on_buffer_progress_changed(void* self, void (*slot)(void*, fl
 /// ``` QMediaPlayer* self, bool seekable ```
 void q_mediaplayer_seekable_changed(void* self, bool seekable);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#seekableChanged)
+///
 /// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*, bool) ```
 void q_mediaplayer_on_seekable_changed(void* self, void (*slot)(void*, bool));
 
@@ -342,6 +356,8 @@ void q_mediaplayer_on_seekable_changed(void* self, void (*slot)(void*, bool));
 /// ``` QMediaPlayer* self, double rate ```
 void q_mediaplayer_playback_rate_changed(void* self, double rate);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#playbackRateChanged)
+///
 /// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*, double) ```
 void q_mediaplayer_on_playback_rate_changed(void* self, void (*slot)(void*, double));
 
@@ -350,6 +366,8 @@ void q_mediaplayer_on_playback_rate_changed(void* self, void (*slot)(void*, doub
 /// ``` QMediaPlayer* self ```
 void q_mediaplayer_loops_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#loopsChanged)
+///
 /// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*) ```
 void q_mediaplayer_on_loops_changed(void* self, void (*slot)(void*));
 
@@ -358,6 +376,8 @@ void q_mediaplayer_on_loops_changed(void* self, void (*slot)(void*));
 /// ``` QMediaPlayer* self ```
 void q_mediaplayer_meta_data_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#metaDataChanged)
+///
 /// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*) ```
 void q_mediaplayer_on_meta_data_changed(void* self, void (*slot)(void*));
 
@@ -366,6 +386,8 @@ void q_mediaplayer_on_meta_data_changed(void* self, void (*slot)(void*));
 /// ``` QMediaPlayer* self ```
 void q_mediaplayer_video_output_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#videoOutputChanged)
+///
 /// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*) ```
 void q_mediaplayer_on_video_output_changed(void* self, void (*slot)(void*));
 
@@ -374,6 +396,8 @@ void q_mediaplayer_on_video_output_changed(void* self, void (*slot)(void*));
 /// ``` QMediaPlayer* self ```
 void q_mediaplayer_audio_output_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#audioOutputChanged)
+///
 /// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*) ```
 void q_mediaplayer_on_audio_output_changed(void* self, void (*slot)(void*));
 
@@ -382,6 +406,8 @@ void q_mediaplayer_on_audio_output_changed(void* self, void (*slot)(void*));
 /// ``` QMediaPlayer* self ```
 void q_mediaplayer_tracks_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#tracksChanged)
+///
 /// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*) ```
 void q_mediaplayer_on_tracks_changed(void* self, void (*slot)(void*));
 
@@ -390,6 +416,8 @@ void q_mediaplayer_on_tracks_changed(void* self, void (*slot)(void*));
 /// ``` QMediaPlayer* self ```
 void q_mediaplayer_active_tracks_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#activeTracksChanged)
+///
 /// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*) ```
 void q_mediaplayer_on_active_tracks_changed(void* self, void (*slot)(void*));
 
@@ -398,6 +426,8 @@ void q_mediaplayer_on_active_tracks_changed(void* self, void (*slot)(void*));
 /// ``` QMediaPlayer* self ```
 void q_mediaplayer_error_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#errorChanged)
+///
 /// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*) ```
 void q_mediaplayer_on_error_changed(void* self, void (*slot)(void*));
 
@@ -406,6 +436,8 @@ void q_mediaplayer_on_error_changed(void* self, void (*slot)(void*));
 /// ``` QMediaPlayer* self, enum QMediaPlayer__Error errorVal, const char* errorString ```
 void q_mediaplayer_error_occurred(void* self, int64_t errorVal, const char* errorString);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#errorOccurred)
+///
 /// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*, enum QMediaPlayer__Error, const char*) ```
 void q_mediaplayer_on_error_occurred(void* self, void (*slot)(void*, int64_t, const char*));
 
@@ -506,7 +538,7 @@ void q_mediaplayer_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QMediaPlayer* self ```
-libqt_list /* of QObject* */ q_mediaplayer_children(void* self);
+const libqt_list /* of QObject* */ q_mediaplayer_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -604,7 +636,7 @@ QBindingStorage* q_mediaplayer_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QMediaPlayer* self ```
-QBindingStorage* q_mediaplayer_binding_storage2(void* self);
+const QBindingStorage* q_mediaplayer_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -614,6 +646,8 @@ QBindingStorage* q_mediaplayer_binding_storage2(void* self);
 void q_mediaplayer_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QMediaPlayer* self, void (*slot)(QObject*) ```
 void q_mediaplayer_on_destroyed(void* self, void (*slot)(void*));
@@ -669,6 +703,8 @@ void q_mediaplayer_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QMediaPlayer* self, void (*slot)(QObject*, QObject*) ```
 void q_mediaplayer_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -683,12 +719,16 @@ bool q_mediaplayer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaPlayer* self, QEvent* event ```
 bool q_mediaplayer_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -706,12 +746,16 @@ bool q_mediaplayer_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaPlayer* self, QObject* watched, QEvent* event ```
 bool q_mediaplayer_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -729,12 +773,16 @@ void q_mediaplayer_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaPlayer* self, QTimerEvent* event ```
 void q_mediaplayer_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -752,12 +800,16 @@ void q_mediaplayer_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaPlayer* self, QChildEvent* event ```
 void q_mediaplayer_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -775,12 +827,16 @@ void q_mediaplayer_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaPlayer* self, QEvent* event ```
 void q_mediaplayer_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -798,12 +854,16 @@ void q_mediaplayer_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaPlayer* self, QMetaMethod* signal ```
 void q_mediaplayer_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -821,12 +881,16 @@ void q_mediaplayer_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaPlayer* self, QMetaMethod* signal ```
 void q_mediaplayer_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -844,12 +908,16 @@ QObject* q_mediaplayer_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaPlayer* self ```
 QObject* q_mediaplayer_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -867,12 +935,16 @@ int32_t q_mediaplayer_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaPlayer* self ```
 int32_t q_mediaplayer_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -890,12 +962,16 @@ int32_t q_mediaplayer_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaPlayer* self, const char* signal ```
 int32_t q_mediaplayer_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -913,6 +989,8 @@ bool q_mediaplayer_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaPlayer* self, QMetaMethod* signal ```
@@ -920,11 +998,24 @@ bool q_mediaplayer_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QMediaPlayer* self, bool (*slot)(QMediaPlayer*, QMetaMethod*) ```
 void q_mediaplayer_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QMediaPlayer* self, void (*slot)(QObject*, const char*) ```
+void q_mediaplayer_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#dtor.QMediaPlayer)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMediaPlayer* self ```

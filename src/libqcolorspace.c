@@ -21,63 +21,20 @@ QColorSpace* q_colorspace_new4(int64_t primaries, float gamma) {
     return QColorSpace_new4(primaries, gamma);
 }
 
-QColorSpace* q_colorspace_new5(int64_t primaries, uint16_t* transferFunctionTable[]) {
-    size_t transferFunctionTable_len = 0;
-    while (transferFunctionTable[transferFunctionTable_len] != NULL) {
-        transferFunctionTable_len++;
-    }
-    libqt_list transferFunctionTable_list = {
-        .len = transferFunctionTable_len,
-        .data = {(uint16_t*)transferFunctionTable},
-    };
-
-    return QColorSpace_new5(primaries, transferFunctionTable_list);
+QColorSpace* q_colorspace_new5(int64_t primaries, libqt_list transferFunctionTable) {
+    return QColorSpace_new5(primaries, transferFunctionTable);
 }
 
 QColorSpace* q_colorspace_new6(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, int64_t transferFunction) {
     return QColorSpace_new6((QPointF*)whitePoint, (QPointF*)redPoint, (QPointF*)greenPoint, (QPointF*)bluePoint, transferFunction);
 }
 
-QColorSpace* q_colorspace_new7(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, uint16_t* transferFunctionTable[]) {
-    size_t transferFunctionTable_len = 0;
-    while (transferFunctionTable[transferFunctionTable_len] != NULL) {
-        transferFunctionTable_len++;
-    }
-    libqt_list transferFunctionTable_list = {
-        .len = transferFunctionTable_len,
-        .data = {(uint16_t*)transferFunctionTable},
-    };
-
-    return QColorSpace_new7((QPointF*)whitePoint, (QPointF*)redPoint, (QPointF*)greenPoint, (QPointF*)bluePoint, transferFunctionTable_list);
+QColorSpace* q_colorspace_new7(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, libqt_list transferFunctionTable) {
+    return QColorSpace_new7((QPointF*)whitePoint, (QPointF*)redPoint, (QPointF*)greenPoint, (QPointF*)bluePoint, transferFunctionTable);
 }
 
-QColorSpace* q_colorspace_new8(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, uint16_t* redTransferFunctionTable[], uint16_t* greenTransferFunctionTable[], uint16_t* blueTransferFunctionTable[]) {
-    size_t redTransferFunctionTable_len = 0;
-    while (redTransferFunctionTable[redTransferFunctionTable_len] != NULL) {
-        redTransferFunctionTable_len++;
-    }
-    libqt_list redTransferFunctionTable_list = {
-        .len = redTransferFunctionTable_len,
-        .data = {(uint16_t*)redTransferFunctionTable},
-    };
-    size_t greenTransferFunctionTable_len = 0;
-    while (greenTransferFunctionTable[greenTransferFunctionTable_len] != NULL) {
-        greenTransferFunctionTable_len++;
-    }
-    libqt_list greenTransferFunctionTable_list = {
-        .len = greenTransferFunctionTable_len,
-        .data = {(uint16_t*)greenTransferFunctionTable},
-    };
-    size_t blueTransferFunctionTable_len = 0;
-    while (blueTransferFunctionTable[blueTransferFunctionTable_len] != NULL) {
-        blueTransferFunctionTable_len++;
-    }
-    libqt_list blueTransferFunctionTable_list = {
-        .len = blueTransferFunctionTable_len,
-        .data = {(uint16_t*)blueTransferFunctionTable},
-    };
-
-    return QColorSpace_new8((QPointF*)whitePoint, (QPointF*)redPoint, (QPointF*)greenPoint, (QPointF*)bluePoint, redTransferFunctionTable_list, greenTransferFunctionTable_list, blueTransferFunctionTable_list);
+QColorSpace* q_colorspace_new8(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, libqt_list redTransferFunctionTable, libqt_list greenTransferFunctionTable, libqt_list blueTransferFunctionTable) {
+    return QColorSpace_new8((QPointF*)whitePoint, (QPointF*)redPoint, (QPointF*)greenPoint, (QPointF*)bluePoint, redTransferFunctionTable, greenTransferFunctionTable, blueTransferFunctionTable);
 }
 
 QColorSpace* q_colorspace_new9(void* colorSpace) {
@@ -127,88 +84,24 @@ void q_colorspace_set_transfer_function(void* self, int64_t transferFunction) {
     QColorSpace_SetTransferFunction((QColorSpace*)self, transferFunction);
 }
 
-void q_colorspace_set_transfer_function_with_transfer_function_table(void* self, uint16_t* transferFunctionTable[]) {
-    size_t transferFunctionTable_len = 0;
-    while (transferFunctionTable[transferFunctionTable_len] != NULL) {
-        transferFunctionTable_len++;
-    }
-    libqt_list transferFunctionTable_list = {
-        .len = transferFunctionTable_len,
-        .data = {(uint16_t*)transferFunctionTable},
-    };
-    QColorSpace_SetTransferFunctionWithTransferFunctionTable((QColorSpace*)self, transferFunctionTable_list);
+void q_colorspace_set_transfer_function_with_transfer_function_table(void* self, libqt_list transferFunctionTable) {
+    QColorSpace_SetTransferFunctionWithTransferFunctionTable((QColorSpace*)self, transferFunctionTable);
 }
 
-void q_colorspace_set_transfer_functions(void* self, uint16_t* redTransferFunctionTable[], uint16_t* greenTransferFunctionTable[], uint16_t* blueTransferFunctionTable[]) {
-    size_t redTransferFunctionTable_len = 0;
-    while (redTransferFunctionTable[redTransferFunctionTable_len] != NULL) {
-        redTransferFunctionTable_len++;
-    }
-    libqt_list redTransferFunctionTable_list = {
-        .len = redTransferFunctionTable_len,
-        .data = {(uint16_t*)redTransferFunctionTable},
-    };
-    size_t greenTransferFunctionTable_len = 0;
-    while (greenTransferFunctionTable[greenTransferFunctionTable_len] != NULL) {
-        greenTransferFunctionTable_len++;
-    }
-    libqt_list greenTransferFunctionTable_list = {
-        .len = greenTransferFunctionTable_len,
-        .data = {(uint16_t*)greenTransferFunctionTable},
-    };
-    size_t blueTransferFunctionTable_len = 0;
-    while (blueTransferFunctionTable[blueTransferFunctionTable_len] != NULL) {
-        blueTransferFunctionTable_len++;
-    }
-    libqt_list blueTransferFunctionTable_list = {
-        .len = blueTransferFunctionTable_len,
-        .data = {(uint16_t*)blueTransferFunctionTable},
-    };
-    QColorSpace_SetTransferFunctions((QColorSpace*)self, redTransferFunctionTable_list, greenTransferFunctionTable_list, blueTransferFunctionTable_list);
+void q_colorspace_set_transfer_functions(void* self, libqt_list redTransferFunctionTable, libqt_list greenTransferFunctionTable, libqt_list blueTransferFunctionTable) {
+    QColorSpace_SetTransferFunctions((QColorSpace*)self, redTransferFunctionTable, greenTransferFunctionTable, blueTransferFunctionTable);
 }
 
 QColorSpace* q_colorspace_with_transfer_function(void* self, int64_t transferFunction) {
     return QColorSpace_WithTransferFunction((QColorSpace*)self, transferFunction);
 }
 
-QColorSpace* q_colorspace_with_transfer_function_with_transfer_function_table(void* self, uint16_t* transferFunctionTable[]) {
-    size_t transferFunctionTable_len = 0;
-    while (transferFunctionTable[transferFunctionTable_len] != NULL) {
-        transferFunctionTable_len++;
-    }
-    libqt_list transferFunctionTable_list = {
-        .len = transferFunctionTable_len,
-        .data = {(uint16_t*)transferFunctionTable},
-    };
-    return QColorSpace_WithTransferFunctionWithTransferFunctionTable((QColorSpace*)self, transferFunctionTable_list);
+QColorSpace* q_colorspace_with_transfer_function_with_transfer_function_table(void* self, libqt_list transferFunctionTable) {
+    return QColorSpace_WithTransferFunctionWithTransferFunctionTable((QColorSpace*)self, transferFunctionTable);
 }
 
-QColorSpace* q_colorspace_with_transfer_functions(void* self, uint16_t* redTransferFunctionTable[], uint16_t* greenTransferFunctionTable[], uint16_t* blueTransferFunctionTable[]) {
-    size_t redTransferFunctionTable_len = 0;
-    while (redTransferFunctionTable[redTransferFunctionTable_len] != NULL) {
-        redTransferFunctionTable_len++;
-    }
-    libqt_list redTransferFunctionTable_list = {
-        .len = redTransferFunctionTable_len,
-        .data = {(uint16_t*)redTransferFunctionTable},
-    };
-    size_t greenTransferFunctionTable_len = 0;
-    while (greenTransferFunctionTable[greenTransferFunctionTable_len] != NULL) {
-        greenTransferFunctionTable_len++;
-    }
-    libqt_list greenTransferFunctionTable_list = {
-        .len = greenTransferFunctionTable_len,
-        .data = {(uint16_t*)greenTransferFunctionTable},
-    };
-    size_t blueTransferFunctionTable_len = 0;
-    while (blueTransferFunctionTable[blueTransferFunctionTable_len] != NULL) {
-        blueTransferFunctionTable_len++;
-    }
-    libqt_list blueTransferFunctionTable_list = {
-        .len = blueTransferFunctionTable_len,
-        .data = {(uint16_t*)blueTransferFunctionTable},
-    };
-    return QColorSpace_WithTransferFunctions((QColorSpace*)self, redTransferFunctionTable_list, greenTransferFunctionTable_list, blueTransferFunctionTable_list);
+QColorSpace* q_colorspace_with_transfer_functions(void* self, libqt_list redTransferFunctionTable, libqt_list greenTransferFunctionTable, libqt_list blueTransferFunctionTable) {
+    return QColorSpace_WithTransferFunctions((QColorSpace*)self, redTransferFunctionTable, greenTransferFunctionTable, blueTransferFunctionTable);
 }
 
 void q_colorspace_set_primaries(void* self, int64_t primariesId) {

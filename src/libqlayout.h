@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqlayoutitem.h"
 #include "libqmargins.h"
@@ -22,8 +20,6 @@
 #include "libqrect.h"
 #include "libqsize.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 #include "libqwidget.h"
 
 /// https://doc.qt.io/qt-6/qlayout.html
@@ -41,7 +37,7 @@ QLayout* q_layout_new2();
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QLayout* self ```
-QMetaObject* q_layout_meta_object(void* self);
+const QMetaObject* q_layout_meta_object(void* self);
 
 /// ``` QLayout* self, const char* param1 ```
 void* q_layout_metacast(void* self, const char* param1);
@@ -69,11 +65,15 @@ const char* q_layout_tr(const char* s);
 /// ``` QLayout* self ```
 int32_t q_layout_spacing(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#spacing)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, int32_t (*slot)() ```
 void q_layout_on_spacing(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#spacing)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self ```
@@ -84,11 +84,15 @@ int32_t q_layout_qbase_spacing(void* self);
 /// ``` QLayout* self, int spacing ```
 void q_layout_set_spacing(void* self, int spacing);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#setSpacing)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, void (*slot)(QLayout*, int) ```
 void q_layout_on_set_spacing(void* self, void (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#setSpacing)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self, int spacing ```
@@ -164,11 +168,15 @@ QWidget* q_layout_parent_widget(void* self);
 /// ``` QLayout* self ```
 void q_layout_invalidate(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#invalidate)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, void (*slot)() ```
 void q_layout_on_invalidate(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#invalidate)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self ```
@@ -179,11 +187,15 @@ void q_layout_qbase_invalidate(void* self);
 /// ``` QLayout* self ```
 QRect* q_layout_geometry(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#geometry)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, QRect* (*slot)() ```
 void q_layout_on_geometry(void* self, QRect* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#geometry)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self ```
@@ -209,11 +221,15 @@ void q_layout_add_widget(void* self, void* w);
 /// ``` QLayout* self, QLayoutItem* param1 ```
 void q_layout_add_item(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#addItem)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, void (*slot)(QLayout*, QLayoutItem*) ```
 void q_layout_on_add_item(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#addItem)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self, QLayoutItem* param1 ```
@@ -234,11 +250,15 @@ void q_layout_remove_item(void* self, void* param1);
 /// ``` QLayout* self ```
 int64_t q_layout_expanding_directions(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#expandingDirections)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, int64_t (*slot)() ```
 void q_layout_on_expanding_directions(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#expandingDirections)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self ```
@@ -249,11 +269,15 @@ int64_t q_layout_qbase_expanding_directions(void* self);
 /// ``` QLayout* self ```
 QSize* q_layout_minimum_size(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#minimumSize)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, QSize* (*slot)() ```
 void q_layout_on_minimum_size(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#minimumSize)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self ```
@@ -264,11 +288,15 @@ QSize* q_layout_qbase_minimum_size(void* self);
 /// ``` QLayout* self ```
 QSize* q_layout_maximum_size(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#maximumSize)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, QSize* (*slot)() ```
 void q_layout_on_maximum_size(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#maximumSize)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self ```
@@ -279,11 +307,15 @@ QSize* q_layout_qbase_maximum_size(void* self);
 /// ``` QLayout* self, QRect* geometry ```
 void q_layout_set_geometry(void* self, void* geometry);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#setGeometry)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, void (*slot)(QLayout*, QRect*) ```
 void q_layout_on_set_geometry(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#setGeometry)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self, QRect* geometry ```
@@ -294,11 +326,15 @@ void q_layout_qbase_set_geometry(void* self, void* geometry);
 /// ``` QLayout* self, int index ```
 QLayoutItem* q_layout_item_at(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#itemAt)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, QLayoutItem* (*slot)(QLayout*, int) ```
 void q_layout_on_item_at(void* self, QLayoutItem* (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#itemAt)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self, int index ```
@@ -309,11 +345,15 @@ QLayoutItem* q_layout_qbase_item_at(void* self, int index);
 /// ``` QLayout* self, int index ```
 QLayoutItem* q_layout_take_at(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#takeAt)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, QLayoutItem* (*slot)(QLayout*, int) ```
 void q_layout_on_take_at(void* self, QLayoutItem* (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#takeAt)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self, int index ```
@@ -324,11 +364,15 @@ QLayoutItem* q_layout_qbase_take_at(void* self, int index);
 /// ``` QLayout* self, QWidget* param1 ```
 int32_t q_layout_index_of(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#indexOf)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, int32_t (*slot)(QLayout*, QWidget*) ```
 void q_layout_on_index_of(void* self, int32_t (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#indexOf)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self, QWidget* param1 ```
@@ -339,11 +383,15 @@ int32_t q_layout_qbase_index_of(void* self, void* param1);
 /// ``` QLayout* self, QLayoutItem* param1 ```
 int32_t q_layout_index_of_with_q_layout_item(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#indexOf)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, int32_t (*slot)(QLayout*, QLayoutItem*) ```
 void q_layout_on_index_of_with_q_layout_item(void* self, int32_t (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#indexOf)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self, QLayoutItem* param1 ```
@@ -354,11 +402,15 @@ int32_t q_layout_qbase_index_of_with_q_layout_item(void* self, void* param1);
 /// ``` QLayout* self ```
 int32_t q_layout_count(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#count)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, int32_t (*slot)() ```
 void q_layout_on_count(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#count)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self ```
@@ -369,11 +421,15 @@ int32_t q_layout_qbase_count(void* self);
 /// ``` QLayout* self ```
 bool q_layout_is_empty(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#isEmpty)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, bool (*slot)() ```
 void q_layout_on_is_empty(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#isEmpty)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self ```
@@ -384,11 +440,15 @@ bool q_layout_qbase_is_empty(void* self);
 /// ``` QLayout* self ```
 int64_t q_layout_control_types(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#controlTypes)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, int64_t (*slot)() ```
 void q_layout_on_control_types(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#controlTypes)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self ```
@@ -399,11 +459,15 @@ int64_t q_layout_qbase_control_types(void* self);
 /// ``` QLayout* self, QWidget* from, QWidget* to, int options ```
 QLayoutItem* q_layout_replace_widget(void* self, void* from, void* to, int64_t options);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#replaceWidget)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, QLayoutItem* (*slot)(QLayout*, QWidget*, QWidget*, int) ```
 void q_layout_on_replace_widget(void* self, QLayoutItem* (*slot)(void*, void*, void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#replaceWidget)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self, QWidget* from, QWidget* to, int options ```
@@ -439,11 +503,15 @@ QSize* q_layout_total_size_hint(void* self);
 /// ``` QLayout* self ```
 QLayout* q_layout_layout(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#layout)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, QLayout* (*slot)() ```
 void q_layout_on_layout(void* self, QLayout* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#layout)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self ```
@@ -469,11 +537,15 @@ QSize* q_layout_closest_acceptable_size(void* w, void* s);
 /// ``` QLayout* self, QEvent* param1 ```
 void q_layout_widget_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#widgetEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, void (*slot)(QLayout*, QEvent*) ```
 void q_layout_on_widget_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#widgetEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self, QEvent* param1 ```
@@ -484,11 +556,15 @@ void q_layout_qbase_widget_event(void* self, void* param1);
 /// ``` QLayout* self, QChildEvent* e ```
 void q_layout_child_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#childEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, void (*slot)(QLayout*, QChildEvent*) ```
 void q_layout_on_child_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#childEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self, QChildEvent* e ```
@@ -499,11 +575,15 @@ void q_layout_qbase_child_event(void* self, void* e);
 /// ``` QLayout* self, QLayout* l ```
 void q_layout_add_child_layout(void* self, void* l);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#addChildLayout)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, void (*slot)(QLayout*, QLayout*) ```
 void q_layout_on_add_child_layout(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#addChildLayout)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self, QLayout* l ```
@@ -514,11 +594,15 @@ void q_layout_qbase_add_child_layout(void* self, void* l);
 /// ``` QLayout* self, QWidget* w ```
 void q_layout_add_child_widget(void* self, void* w);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#addChildWidget)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, void (*slot)(QLayout*, QWidget*) ```
 void q_layout_on_add_child_widget(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#addChildWidget)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self, QWidget* w ```
@@ -529,11 +613,15 @@ void q_layout_qbase_add_child_widget(void* self, void* w);
 /// ``` QLayout* self, QLayout* layout ```
 bool q_layout_adopt_layout(void* self, void* layout);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#adoptLayout)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, bool (*slot)(QLayout*, QLayout*) ```
 void q_layout_on_adopt_layout(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#adoptLayout)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self, QLayout* layout ```
@@ -544,11 +632,15 @@ bool q_layout_qbase_adopt_layout(void* self, void* layout);
 /// ``` QLayout* self, QRect* param1 ```
 QRect* q_layout_alignment_rect(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#alignmentRect)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, QRect* (*slot)(QLayout*, QRect*) ```
 void q_layout_on_alignment_rect(void* self, QRect* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#alignmentRect)
+///
 /// Base class method implementation
 ///
 /// ``` QLayout* self, QRect* param1 ```
@@ -646,7 +738,7 @@ void q_layout_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QLayout* self ```
-libqt_list /* of QObject* */ q_layout_children(void* self);
+const libqt_list /* of QObject* */ q_layout_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -744,7 +836,7 @@ QBindingStorage* q_layout_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QLayout* self ```
-QBindingStorage* q_layout_binding_storage2(void* self);
+const QBindingStorage* q_layout_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -754,6 +846,8 @@ QBindingStorage* q_layout_binding_storage2(void* self);
 void q_layout_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QLayout* self, void (*slot)(QObject*) ```
 void q_layout_on_destroyed(void* self, void (*slot)(void*));
@@ -809,6 +903,8 @@ void q_layout_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QLayout* self, void (*slot)(QObject*, QObject*) ```
 void q_layout_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -830,12 +926,16 @@ bool q_layout_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLayout* self, QEvent* event ```
 bool q_layout_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -853,12 +953,16 @@ bool q_layout_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLayout* self, QObject* watched, QEvent* event ```
 bool q_layout_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -876,12 +980,16 @@ void q_layout_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLayout* self, QTimerEvent* event ```
 void q_layout_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -899,12 +1007,16 @@ void q_layout_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLayout* self, QEvent* event ```
 void q_layout_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -922,12 +1034,16 @@ void q_layout_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLayout* self, QMetaMethod* signal ```
 void q_layout_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -945,12 +1061,16 @@ void q_layout_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLayout* self, QMetaMethod* signal ```
 void q_layout_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -968,12 +1088,16 @@ QSize* q_layout_size_hint(void* self);
 
 /// Inherited from QLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#sizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLayout* self ```
 QSize* q_layout_qbase_size_hint(void* self);
 
 /// Inherited from QLayoutItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -991,12 +1115,16 @@ bool q_layout_has_height_for_width(void* self);
 
 /// Inherited from QLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLayout* self ```
 bool q_layout_qbase_has_height_for_width(void* self);
 
 /// Inherited from QLayoutItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1014,12 +1142,16 @@ int32_t q_layout_height_for_width(void* self, int param1);
 
 /// Inherited from QLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLayout* self, int param1 ```
 int32_t q_layout_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QLayoutItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1037,12 +1169,16 @@ int32_t q_layout_minimum_height_for_width(void* self, int param1);
 
 /// Inherited from QLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#minimumHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLayout* self, int param1 ```
 int32_t q_layout_qbase_minimum_height_for_width(void* self, int param1);
 
 /// Inherited from QLayoutItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#minimumHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1060,12 +1196,16 @@ QWidget* q_layout_widget(void* self);
 
 /// Inherited from QLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#widget)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLayout* self ```
 QWidget* q_layout_qbase_widget(void* self);
 
 /// Inherited from QLayoutItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#widget)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1083,12 +1223,16 @@ QSpacerItem* q_layout_spacer_item(void* self);
 
 /// Inherited from QLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#spacerItem)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLayout* self ```
 QSpacerItem* q_layout_qbase_spacer_item(void* self);
 
 /// Inherited from QLayoutItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#spacerItem)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1106,12 +1250,16 @@ QObject* q_layout_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLayout* self ```
 QObject* q_layout_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1129,12 +1277,16 @@ int32_t q_layout_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLayout* self ```
 int32_t q_layout_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1152,12 +1304,16 @@ int32_t q_layout_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLayout* self, const char* signal ```
 int32_t q_layout_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1175,6 +1331,8 @@ bool q_layout_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLayout* self, QMetaMethod* signal ```
@@ -1182,11 +1340,24 @@ bool q_layout_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QLayout* self, bool (*slot)(QLayout*, QMetaMethod*) ```
 void q_layout_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QLayout* self, void (*slot)(QObject*, const char*) ```
+void q_layout_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#dtor.QLayout)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QLayout* self ```

@@ -67,6 +67,8 @@ const char* q_libraryinfo_location(int64_t location);
 /// ``` const char* platformName ```
 const char** q_libraryinfo_platform_plugin_arguments(const char* platformName);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#dtor.QLibraryInfo)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QLibraryInfo* self ```

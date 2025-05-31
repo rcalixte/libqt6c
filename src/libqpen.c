@@ -57,16 +57,8 @@ libqt_list /* of double */ q_pen_dash_pattern(void* self) {
     return _arr;
 }
 
-void q_pen_set_dash_pattern(void* self, double* pattern[]) {
-    size_t pattern_len = 0;
-    while (pattern[pattern_len] != NULL) {
-        pattern_len++;
-    }
-    libqt_list pattern_list = {
-        .len = pattern_len,
-        .data = {(double*)pattern},
-    };
-    QPen_SetDashPattern((QPen*)self, pattern_list);
+void q_pen_set_dash_pattern(void* self, libqt_list pattern) {
+    QPen_SetDashPattern((QPen*)self, pattern);
 }
 
 double q_pen_dash_offset(void* self) {

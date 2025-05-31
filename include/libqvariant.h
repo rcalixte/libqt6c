@@ -544,12 +544,12 @@ void* q_variant_data(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#constData)
 ///
 /// ``` QVariant* self ```
-void* q_variant_const_data(void* self);
+const void* q_variant_const_data(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#data)
 ///
 /// ``` QVariant* self ```
-void* q_variant_data2(void* self);
+const void* q_variant_data2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#setValue)
 ///
@@ -596,6 +596,8 @@ float q_variant_to_float1(void* self, bool* ok);
 /// ``` QVariant* self, bool* ok ```
 double q_variant_to_real1(void* self, bool* ok);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#dtor.QVariant)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QVariant* self ```
@@ -621,13 +623,15 @@ QVariant* q_variantconstpointer_operator_multiply(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariantconstpointer.html#operator->)
 ///
 /// ``` QVariantConstPointer* self ```
-QVariant* q_variantconstpointer_operator_minus_greater(void* self);
+const QVariant* q_variantconstpointer_operator_minus_greater(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariantconstpointer.html#operator=)
 ///
 /// ``` QVariantConstPointer* self, QVariantConstPointer* param1 ```
 void q_variantconstpointer_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvariantconstpointer.html#dtor.QVariantConstPointer)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QVariantConstPointer* self ```

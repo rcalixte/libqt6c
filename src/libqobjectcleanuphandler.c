@@ -1,11 +1,7 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include <string.h>
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqcoreevent.hpp"
 #include "libqobjectcleanuphandler.hpp"
 #include "libqobjectcleanuphandler.h"
@@ -14,7 +10,7 @@ QObjectCleanupHandler* q_objectcleanuphandler_new() {
     return QObjectCleanupHandler_new();
 }
 
-QMetaObject* q_objectcleanuphandler_meta_object(void* self) {
+const QMetaObject* q_objectcleanuphandler_meta_object(void* self) {
     return QObjectCleanupHandler_MetaObject((QObjectCleanupHandler*)self);
 }
 
@@ -79,8 +75,7 @@ const char* q_objectcleanuphandler_object_name(void* self) {
 }
 
 void q_objectcleanuphandler_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_objectcleanuphandler_is_widget_type(void* self) {
@@ -119,7 +114,7 @@ void q_objectcleanuphandler_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_objectcleanuphandler_children(void* self) {
+const libqt_list /* of QObject* */ q_objectcleanuphandler_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -186,7 +181,7 @@ QBindingStorage* q_objectcleanuphandler_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_objectcleanuphandler_binding_storage2(void* self) {
+const QBindingStorage* q_objectcleanuphandler_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -360,6 +355,10 @@ bool q_objectcleanuphandler_qbase_is_signal_connected(void* self, void* signal) 
 
 void q_objectcleanuphandler_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QObjectCleanupHandler_OnIsSignalConnected((QObjectCleanupHandler*)self, (intptr_t)slot);
+}
+
+void q_objectcleanuphandler_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_objectcleanuphandler_delete(void* self) {

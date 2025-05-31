@@ -85,8 +85,8 @@ libqt_list /* of double */ q_pen_dash_pattern(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#setDashPattern)
 ///
-/// ``` QPen* self, double* pattern[] ```
-void q_pen_set_dash_pattern(void* self, double* pattern[]);
+/// ``` QPen* self, libqt_list /* of double */ pattern ```
+void q_pen_set_dash_pattern(void* self, libqt_list pattern);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#dashOffset)
 ///
@@ -203,6 +203,8 @@ QVariant* q_pen_to_q_variant(void* self);
 /// ``` QPen* self ```
 bool q_pen_is_detached(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#dtor.QPen)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPen* self ```

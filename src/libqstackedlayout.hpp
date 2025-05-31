@@ -15,28 +15,19 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QEvent QEvent;
 typedef struct QLayout QLayout;
 typedef struct QLayoutItem QLayoutItem;
-typedef struct QMargins QMargins;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QRect QRect;
 typedef struct QSize QSize;
 typedef struct QSpacerItem QSpacerItem;
 typedef struct QStackedLayout QStackedLayout;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
 
@@ -118,7 +109,6 @@ QSize* QStackedLayout_QBaseMaximumSize(const QStackedLayout* self);
 int QStackedLayout_IndexOf(const QStackedLayout* self, QWidget* param1);
 void QStackedLayout_OnIndexOf(const QStackedLayout* self, intptr_t slot);
 int QStackedLayout_QBaseIndexOf(const QStackedLayout* self, QWidget* param1);
-int QStackedLayout_IndexOfWithQLayoutItem(const QStackedLayout* self, QLayoutItem* param1);
 bool QStackedLayout_IsEmpty(const QStackedLayout* self);
 void QStackedLayout_OnIsEmpty(const QStackedLayout* self, intptr_t slot);
 bool QStackedLayout_QBaseIsEmpty(const QStackedLayout* self);

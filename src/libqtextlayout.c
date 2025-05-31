@@ -135,7 +135,7 @@ void q_textlayout_set_text_option(void* self, void* option) {
     QTextLayout_SetTextOption((QTextLayout*)self, (QTextOption*)option);
 }
 
-QTextOption* q_textlayout_text_option(void* self) {
+const QTextOption* q_textlayout_text_option(void* self) {
     return QTextLayout_TextOption((QTextLayout*)self);
 }
 
@@ -154,17 +154,8 @@ const char* q_textlayout_preedit_area_text(void* self) {
     return _ret;
 }
 
-void q_textlayout_set_formats(void* self, void* overrides[]) {
-    QTextLayout__FormatRange** overrides_arr = (QTextLayout__FormatRange**)overrides;
-    size_t overrides_len = 0;
-    while (overrides_arr[overrides_len] != NULL) {
-        overrides_len++;
-    }
-    libqt_list overrides_list = {
-        .len = overrides_len,
-        .data = {(QTextLayout__FormatRange*)overrides},
-    };
-    QTextLayout_SetFormats((QTextLayout*)self, overrides_list);
+void q_textlayout_set_formats(void* self, libqt_list overrides) {
+    QTextLayout_SetFormats((QTextLayout*)self, overrides);
 }
 
 libqt_list /* of QTextLayout__FormatRange* */ q_textlayout_formats(void* self) {
@@ -289,30 +280,12 @@ int32_t q_textlayout_previous_cursor_position2(void* self, int oldPos, int64_t m
     return QTextLayout_PreviousCursorPosition2((QTextLayout*)self, oldPos, mode);
 }
 
-void q_textlayout_draw3(void* self, void* p, void* pos, void* selections[]) {
-    QTextLayout__FormatRange** selections_arr = (QTextLayout__FormatRange**)selections;
-    size_t selections_len = 0;
-    while (selections_arr[selections_len] != NULL) {
-        selections_len++;
-    }
-    libqt_list selections_list = {
-        .len = selections_len,
-        .data = {(QTextLayout__FormatRange*)selections},
-    };
-    QTextLayout_Draw3((QTextLayout*)self, (QPainter*)p, (QPointF*)pos, selections_list);
+void q_textlayout_draw3(void* self, void* p, void* pos, libqt_list selections) {
+    QTextLayout_Draw3((QTextLayout*)self, (QPainter*)p, (QPointF*)pos, selections);
 }
 
-void q_textlayout_draw4(void* self, void* p, void* pos, void* selections[], void* clip) {
-    QTextLayout__FormatRange** selections_arr = (QTextLayout__FormatRange**)selections;
-    size_t selections_len = 0;
-    while (selections_arr[selections_len] != NULL) {
-        selections_len++;
-    }
-    libqt_list selections_list = {
-        .len = selections_len,
-        .data = {(QTextLayout__FormatRange*)selections},
-    };
-    QTextLayout_Draw4((QTextLayout*)self, (QPainter*)p, (QPointF*)pos, selections_list, (QRectF*)clip);
+void q_textlayout_draw4(void* self, void* p, void* pos, libqt_list selections, void* clip) {
+    QTextLayout_Draw4((QTextLayout*)self, (QPainter*)p, (QPointF*)pos, selections, (QRectF*)clip);
 }
 
 libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs1(void* self, int from) {

@@ -117,6 +117,8 @@ void q_webenginehttprequest_set_header(void* self, const char* headerName, const
 /// ``` QWebEngineHttpRequest* self, const char* headerName ```
 void q_webenginehttprequest_unset_header(void* self, const char* headerName);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#dtor.QWebEngineHttpRequest)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWebEngineHttpRequest* self ```

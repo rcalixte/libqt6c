@@ -12,9 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
-#include "libqevent.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpixmap.h"
@@ -22,16 +19,14 @@
 #include "libqrect.h"
 #include "libqsize.h"
 #include <string.h>
-#include "libqthread.h"
 #include "libqtransform.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qscreen.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QScreen* self ```
-QMetaObject* q_screen_meta_object(void* self);
+const QMetaObject* q_screen_meta_object(void* self);
 
 /// ``` QScreen* self, const char* param1 ```
 void* q_screen_metacast(void* self, const char* param1);
@@ -214,6 +209,8 @@ double q_screen_refresh_rate(void* self);
 /// ``` QScreen* self, QRect* geometry ```
 void q_screen_geometry_changed(void* self, void* geometry);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#geometryChanged)
+///
 /// ``` QScreen* self, void (*slot)(QScreen*, QRect*) ```
 void q_screen_on_geometry_changed(void* self, void (*slot)(void*, void*));
 
@@ -222,6 +219,8 @@ void q_screen_on_geometry_changed(void* self, void (*slot)(void*, void*));
 /// ``` QScreen* self, QRect* geometry ```
 void q_screen_available_geometry_changed(void* self, void* geometry);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#availableGeometryChanged)
+///
 /// ``` QScreen* self, void (*slot)(QScreen*, QRect*) ```
 void q_screen_on_available_geometry_changed(void* self, void (*slot)(void*, void*));
 
@@ -230,6 +229,8 @@ void q_screen_on_available_geometry_changed(void* self, void (*slot)(void*, void
 /// ``` QScreen* self, QSizeF* size ```
 void q_screen_physical_size_changed(void* self, void* size);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#physicalSizeChanged)
+///
 /// ``` QScreen* self, void (*slot)(QScreen*, QSizeF*) ```
 void q_screen_on_physical_size_changed(void* self, void (*slot)(void*, void*));
 
@@ -238,6 +239,8 @@ void q_screen_on_physical_size_changed(void* self, void (*slot)(void*, void*));
 /// ``` QScreen* self, double dpi ```
 void q_screen_physical_dots_per_inch_changed(void* self, double dpi);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#physicalDotsPerInchChanged)
+///
 /// ``` QScreen* self, void (*slot)(QScreen*, double) ```
 void q_screen_on_physical_dots_per_inch_changed(void* self, void (*slot)(void*, double));
 
@@ -246,6 +249,8 @@ void q_screen_on_physical_dots_per_inch_changed(void* self, void (*slot)(void*, 
 /// ``` QScreen* self, double dpi ```
 void q_screen_logical_dots_per_inch_changed(void* self, double dpi);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#logicalDotsPerInchChanged)
+///
 /// ``` QScreen* self, void (*slot)(QScreen*, double) ```
 void q_screen_on_logical_dots_per_inch_changed(void* self, void (*slot)(void*, double));
 
@@ -254,6 +259,8 @@ void q_screen_on_logical_dots_per_inch_changed(void* self, void (*slot)(void*, d
 /// ``` QScreen* self, QRect* rect ```
 void q_screen_virtual_geometry_changed(void* self, void* rect);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#virtualGeometryChanged)
+///
 /// ``` QScreen* self, void (*slot)(QScreen*, QRect*) ```
 void q_screen_on_virtual_geometry_changed(void* self, void (*slot)(void*, void*));
 
@@ -262,6 +269,8 @@ void q_screen_on_virtual_geometry_changed(void* self, void (*slot)(void*, void*)
 /// ``` QScreen* self, enum Qt__ScreenOrientation orientation ```
 void q_screen_primary_orientation_changed(void* self, int64_t orientation);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#primaryOrientationChanged)
+///
 /// ``` QScreen* self, void (*slot)(QScreen*, enum Qt__ScreenOrientation) ```
 void q_screen_on_primary_orientation_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -270,6 +279,8 @@ void q_screen_on_primary_orientation_changed(void* self, void (*slot)(void*, int
 /// ``` QScreen* self, enum Qt__ScreenOrientation orientation ```
 void q_screen_orientation_changed(void* self, int64_t orientation);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#orientationChanged)
+///
 /// ``` QScreen* self, void (*slot)(QScreen*, enum Qt__ScreenOrientation) ```
 void q_screen_on_orientation_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -278,6 +289,8 @@ void q_screen_on_orientation_changed(void* self, void (*slot)(void*, int64_t));
 /// ``` QScreen* self, double refreshRate ```
 void q_screen_refresh_rate_changed(void* self, double refreshRate);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#refreshRateChanged)
+///
 /// ``` QScreen* self, void (*slot)(QScreen*, double) ```
 void q_screen_on_refresh_rate_changed(void* self, void (*slot)(void*, double));
 
@@ -412,7 +425,7 @@ void q_screen_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QScreen* self ```
-libqt_list /* of QObject* */ q_screen_children(void* self);
+const libqt_list /* of QObject* */ q_screen_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -510,7 +523,7 @@ QBindingStorage* q_screen_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QScreen* self ```
-QBindingStorage* q_screen_binding_storage2(void* self);
+const QBindingStorage* q_screen_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -520,6 +533,8 @@ QBindingStorage* q_screen_binding_storage2(void* self);
 void q_screen_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QScreen* self, void (*slot)(QObject*) ```
 void q_screen_on_destroyed(void* self, void (*slot)(void*));
@@ -575,9 +590,22 @@ void q_screen_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QScreen* self, void (*slot)(QObject*, QObject*) ```
 void q_screen_on_destroyed1(void* self, void (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QScreen* self, void (*slot)(QObject*, const char*) ```
+void q_screen_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#dtor.QScreen)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QScreen* self ```

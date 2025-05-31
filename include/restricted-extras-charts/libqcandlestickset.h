@@ -12,18 +12,14 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "../libqbrush.h"
 #include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include "../libqpen.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
-/// https://doc.qt.io/qt-6/qcandlestickset.html
+/// https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html
 
 /// q_candlestickset_new constructs a new QCandlestickSet object.
 ///
@@ -58,7 +54,7 @@ QCandlestickSet* q_candlestickset_new6(double open, double high, double low, dou
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QCandlestickSet* self ```
-QMetaObject* q_candlestickset_meta_object(void* self);
+const QMetaObject* q_candlestickset_meta_object(void* self);
 
 /// ``` QCandlestickSet* self, const char* param1 ```
 void* q_candlestickset_metacast(void* self, const char* param1);
@@ -81,169 +77,193 @@ int32_t q_candlestickset_qbase_metacall(void* self, int64_t param1, int param2, 
 /// ``` const char* s ```
 const char* q_candlestickset_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#setTimestamp)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#setTimestamp)
 ///
 /// ``` QCandlestickSet* self, double timestamp ```
 void q_candlestickset_set_timestamp(void* self, double timestamp);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#timestamp)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#timestamp)
 ///
 /// ``` QCandlestickSet* self ```
 double q_candlestickset_timestamp(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#setOpen)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#setOpen)
 ///
 /// ``` QCandlestickSet* self, double open ```
 void q_candlestickset_set_open(void* self, double open);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#open)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#open)
 ///
 /// ``` QCandlestickSet* self ```
 double q_candlestickset_open(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#setHigh)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#setHigh)
 ///
 /// ``` QCandlestickSet* self, double high ```
 void q_candlestickset_set_high(void* self, double high);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#high)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#high)
 ///
 /// ``` QCandlestickSet* self ```
 double q_candlestickset_high(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#setLow)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#setLow)
 ///
 /// ``` QCandlestickSet* self, double low ```
 void q_candlestickset_set_low(void* self, double low);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#low)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#low)
 ///
 /// ``` QCandlestickSet* self ```
 double q_candlestickset_low(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#setClose)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#setClose)
 ///
 /// ``` QCandlestickSet* self, double close ```
 void q_candlestickset_set_close(void* self, double close);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#close)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#close)
 ///
 /// ``` QCandlestickSet* self ```
 double q_candlestickset_close(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#setBrush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#setBrush)
 ///
 /// ``` QCandlestickSet* self, QBrush* brush ```
 void q_candlestickset_set_brush(void* self, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#brush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#brush)
 ///
 /// ``` QCandlestickSet* self ```
 QBrush* q_candlestickset_brush(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#setPen)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#setPen)
 ///
 /// ``` QCandlestickSet* self, QPen* pen ```
 void q_candlestickset_set_pen(void* self, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#pen)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#pen)
 ///
 /// ``` QCandlestickSet* self ```
 QPen* q_candlestickset_pen(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#clicked)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#clicked)
 ///
 /// ``` QCandlestickSet* self ```
 void q_candlestickset_clicked(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#clicked)
+///
 /// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
 void q_candlestickset_on_clicked(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#hovered)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#hovered)
 ///
 /// ``` QCandlestickSet* self, bool status ```
 void q_candlestickset_hovered(void* self, bool status);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#hovered)
+///
 /// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*, bool) ```
 void q_candlestickset_on_hovered(void* self, void (*slot)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#pressed)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#pressed)
 ///
 /// ``` QCandlestickSet* self ```
 void q_candlestickset_pressed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#pressed)
+///
 /// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
 void q_candlestickset_on_pressed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#released)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#released)
 ///
 /// ``` QCandlestickSet* self ```
 void q_candlestickset_released(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#released)
+///
 /// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
 void q_candlestickset_on_released(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#doubleClicked)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#doubleClicked)
 ///
 /// ``` QCandlestickSet* self ```
 void q_candlestickset_double_clicked(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#doubleClicked)
+///
 /// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
 void q_candlestickset_on_double_clicked(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#timestampChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#timestampChanged)
 ///
 /// ``` QCandlestickSet* self ```
 void q_candlestickset_timestamp_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#timestampChanged)
+///
 /// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
 void q_candlestickset_on_timestamp_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#openChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#openChanged)
 ///
 /// ``` QCandlestickSet* self ```
 void q_candlestickset_open_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#openChanged)
+///
 /// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
 void q_candlestickset_on_open_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#highChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#highChanged)
 ///
 /// ``` QCandlestickSet* self ```
 void q_candlestickset_high_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#highChanged)
+///
 /// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
 void q_candlestickset_on_high_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#lowChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#lowChanged)
 ///
 /// ``` QCandlestickSet* self ```
 void q_candlestickset_low_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#lowChanged)
+///
 /// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
 void q_candlestickset_on_low_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#closeChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#closeChanged)
 ///
 /// ``` QCandlestickSet* self ```
 void q_candlestickset_close_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#closeChanged)
+///
 /// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
 void q_candlestickset_on_close_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#brushChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#brushChanged)
 ///
 /// ``` QCandlestickSet* self ```
 void q_candlestickset_brush_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#brushChanged)
+///
 /// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
 void q_candlestickset_on_brush_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset.html#penChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#penChanged)
 ///
 /// ``` QCandlestickSet* self ```
 void q_candlestickset_pen_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#penChanged)
+///
 /// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
 void q_candlestickset_on_pen_changed(void* self, void (*slot)(void*));
 
@@ -339,7 +359,7 @@ void q_candlestickset_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QCandlestickSet* self ```
-libqt_list /* of QObject* */ q_candlestickset_children(void* self);
+const libqt_list /* of QObject* */ q_candlestickset_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -437,7 +457,7 @@ QBindingStorage* q_candlestickset_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QCandlestickSet* self ```
-QBindingStorage* q_candlestickset_binding_storage2(void* self);
+const QBindingStorage* q_candlestickset_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -447,6 +467,8 @@ QBindingStorage* q_candlestickset_binding_storage2(void* self);
 void q_candlestickset_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QCandlestickSet* self, void (*slot)(QObject*) ```
 void q_candlestickset_on_destroyed(void* self, void (*slot)(void*));
@@ -502,6 +524,8 @@ void q_candlestickset_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QCandlestickSet* self, void (*slot)(QObject*, QObject*) ```
 void q_candlestickset_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -516,12 +540,16 @@ bool q_candlestickset_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCandlestickSet* self, QEvent* event ```
 bool q_candlestickset_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -539,12 +567,16 @@ bool q_candlestickset_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCandlestickSet* self, QObject* watched, QEvent* event ```
 bool q_candlestickset_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -562,12 +594,16 @@ void q_candlestickset_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCandlestickSet* self, QTimerEvent* event ```
 void q_candlestickset_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -585,12 +621,16 @@ void q_candlestickset_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCandlestickSet* self, QChildEvent* event ```
 void q_candlestickset_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -608,12 +648,16 @@ void q_candlestickset_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCandlestickSet* self, QEvent* event ```
 void q_candlestickset_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -631,12 +675,16 @@ void q_candlestickset_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCandlestickSet* self, QMetaMethod* signal ```
 void q_candlestickset_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -654,12 +702,16 @@ void q_candlestickset_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCandlestickSet* self, QMetaMethod* signal ```
 void q_candlestickset_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -677,12 +729,16 @@ QObject* q_candlestickset_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCandlestickSet* self ```
 QObject* q_candlestickset_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -700,12 +756,16 @@ int32_t q_candlestickset_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCandlestickSet* self ```
 int32_t q_candlestickset_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -723,12 +783,16 @@ int32_t q_candlestickset_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCandlestickSet* self, const char* signal ```
 int32_t q_candlestickset_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -746,6 +810,8 @@ bool q_candlestickset_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCandlestickSet* self, QMetaMethod* signal ```
@@ -753,11 +819,24 @@ bool q_candlestickset_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QCandlestickSet* self, bool (*slot)(QCandlestickSet*, QMetaMethod*) ```
 void q_candlestickset_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QCandlestickSet* self, void (*slot)(QObject*, const char*) ```
+void q_candlestickset_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#dtor.QCandlestickSet)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCandlestickSet* self ```

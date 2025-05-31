@@ -166,6 +166,8 @@ void q_metacontainer_advance_const_iterator(void* self, void* iterator, int64_t 
 /// ``` QMetaContainer* self, void* i, void* j ```
 int64_t q_metacontainer_diff_const_iterator(void* self, void* i, void* j);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetacontainer.html#dtor.QMetaContainer)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMetaContainer* self ```
@@ -516,6 +518,8 @@ void q_metasequence_advance_const_iterator(void* self, void* iterator, int64_t s
 /// ``` QMetaSequence* self, void* i, void* j ```
 int64_t q_metasequence_diff_const_iterator(void* self, void* i, void* j);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetasequence.html#dtor.QMetaSequence)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMetaSequence* self ```
@@ -846,6 +850,8 @@ void q_metaassociation_advance_const_iterator(void* self, void* iterator, int64_
 /// ``` QMetaAssociation* self, void* i, void* j ```
 int64_t q_metaassociation_diff_const_iterator(void* self, void* i, void* j);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaassociation.html#dtor.QMetaAssociation)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMetaAssociation* self ```

@@ -12,24 +12,19 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
-#include "libqevent.h"
 #include "libqimage.h"
 #include "libqmetaobject.h"
 #include "libqmimedata.h"
 #include "libqobject.h"
 #include "libqpixmap.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qclipboard.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QClipboard* self ```
-QMetaObject* q_clipboard_meta_object(void* self);
+const QMetaObject* q_clipboard_meta_object(void* self);
 
 /// ``` QClipboard* self, const char* param1 ```
 void* q_clipboard_metacast(void* self, const char* param1);
@@ -90,7 +85,7 @@ void q_clipboard_set_text(void* self, const char* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#mimeData)
 ///
 /// ``` QClipboard* self ```
-QMimeData* q_clipboard_mime_data(void* self);
+const QMimeData* q_clipboard_mime_data(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#setMimeData)
 ///
@@ -122,6 +117,8 @@ void q_clipboard_set_pixmap(void* self, void* param1);
 /// ``` QClipboard* self, enum QClipboard__Mode mode ```
 void q_clipboard_changed(void* self, int64_t mode);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#changed)
+///
 /// ``` QClipboard* self, void (*slot)(QClipboard*, enum QClipboard__Mode) ```
 void q_clipboard_on_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -130,6 +127,8 @@ void q_clipboard_on_changed(void* self, void (*slot)(void*, int64_t));
 /// ``` QClipboard* self ```
 void q_clipboard_selection_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#selectionChanged)
+///
 /// ``` QClipboard* self, void (*slot)(QClipboard*) ```
 void q_clipboard_on_selection_changed(void* self, void (*slot)(void*));
 
@@ -138,6 +137,8 @@ void q_clipboard_on_selection_changed(void* self, void (*slot)(void*));
 /// ``` QClipboard* self ```
 void q_clipboard_find_buffer_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#findBufferChanged)
+///
 /// ``` QClipboard* self, void (*slot)(QClipboard*) ```
 void q_clipboard_on_find_buffer_changed(void* self, void (*slot)(void*));
 
@@ -146,6 +147,8 @@ void q_clipboard_on_find_buffer_changed(void* self, void (*slot)(void*));
 /// ``` QClipboard* self ```
 void q_clipboard_data_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#dataChanged)
+///
 /// ``` QClipboard* self, void (*slot)(QClipboard*) ```
 void q_clipboard_on_data_changed(void* self, void (*slot)(void*));
 
@@ -182,7 +185,7 @@ void q_clipboard_set_text2(void* self, const char* param1, int64_t mode);
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#mimeData)
 ///
 /// ``` QClipboard* self, enum QClipboard__Mode mode ```
-QMimeData* q_clipboard_mime_data1(void* self, int64_t mode);
+const QMimeData* q_clipboard_mime_data1(void* self, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#setMimeData)
 ///
@@ -305,7 +308,7 @@ void q_clipboard_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QClipboard* self ```
-libqt_list /* of QObject* */ q_clipboard_children(void* self);
+const libqt_list /* of QObject* */ q_clipboard_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -403,7 +406,7 @@ QBindingStorage* q_clipboard_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QClipboard* self ```
-QBindingStorage* q_clipboard_binding_storage2(void* self);
+const QBindingStorage* q_clipboard_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -413,6 +416,8 @@ QBindingStorage* q_clipboard_binding_storage2(void* self);
 void q_clipboard_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QClipboard* self, void (*slot)(QObject*) ```
 void q_clipboard_on_destroyed(void* self, void (*slot)(void*));
@@ -468,8 +473,19 @@ void q_clipboard_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QClipboard* self, void (*slot)(QObject*, QObject*) ```
 void q_clipboard_on_destroyed1(void* self, void (*slot)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QClipboard* self, void (*slot)(QObject*, const char*) ```
+void q_clipboard_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qclipboard.html#types
 

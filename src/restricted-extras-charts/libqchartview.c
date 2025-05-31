@@ -1,50 +1,21 @@
 #include "../libqabstractscrollarea.hpp"
-#include "../libqaction.hpp"
 #include "../libqevent.hpp"
-#include "../libqanystringview.hpp"
-#include "../libqbackingstore.hpp"
-#include "../libqbindingstorage.hpp"
-#include "../libqbitmap.hpp"
-#include "../libqbrush.hpp"
 #include "libqchart.hpp"
-#include "../libqcursor.hpp"
-#include "../libqfont.hpp"
-#include "../libqfontinfo.hpp"
-#include "../libqfontmetrics.hpp"
 #include "../libqframe.hpp"
-#include "../libqgraphicseffect.hpp"
-#include "../libqgraphicsitem.hpp"
-#include "../libqgraphicsproxywidget.hpp"
-#include "../libqgraphicsscene.hpp"
 #include "../libqgraphicsview.hpp"
-#include "../libqicon.hpp"
-#include "../libqkeysequence.hpp"
-#include "../libqlayout.hpp"
-#include "../libqlocale.hpp"
 #include "../libqmargins.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include "../libqpaintdevice.hpp"
 #include "../libqpaintengine.hpp"
 #include "../libqpainter.hpp"
-#include "../libqpainterpath.hpp"
-#include "../libqpalette.hpp"
-#include "../libqpixmap.hpp"
 #include "../libqpoint.hpp"
 #include "../libqrect.hpp"
-#include "../libqregion.hpp"
-#include "../libqscreen.hpp"
-#include "../libqscrollbar.hpp"
 #include "../libqsize.hpp"
-#include "../libqsizepolicy.hpp"
 #include <string.h>
-#include "../libqstyle.hpp"
 #include "../libqstyleoption.hpp"
-#include "../libqthread.hpp"
-#include "../libqtransform.hpp"
 #include "../libqvariant.hpp"
 #include "../libqwidget.hpp"
-#include "../libqwindow.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqchartview.hpp"
 #include "libqchartview.h"
@@ -65,7 +36,7 @@ QChartView* q_chartview_new4(void* chart, void* parent) {
     return QChartView_new4((QChart*)chart, (QWidget*)parent);
 }
 
-QMetaObject* q_chartview_meta_object(void* self) {
+const QMetaObject* q_chartview_meta_object(void* self) {
     return QChartView_MetaObject((QChartView*)self);
 }
 
@@ -440,17 +411,8 @@ void q_chartview_set_foreground_brush(void* self, void* brush) {
     QGraphicsView_SetForegroundBrush((QGraphicsView*)self, (QBrush*)brush);
 }
 
-void q_chartview_update_scene(void* self, void* rects[]) {
-    QRectF** rects_arr = (QRectF**)rects;
-    size_t rects_len = 0;
-    while (rects_arr[rects_len] != NULL) {
-        rects_len++;
-    }
-    libqt_list rects_list = {
-        .len = rects_len,
-        .data = {(QRectF*)rects},
-    };
-    QGraphicsView_UpdateScene((QGraphicsView*)self, rects_list);
+void q_chartview_update_scene(void* self, libqt_list rects) {
+    QGraphicsView_UpdateScene((QGraphicsView*)self, rects);
 }
 
 void q_chartview_invalidate_scene(void* self) {
@@ -741,7 +703,7 @@ QRect* q_chartview_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_chartview_geometry(void* self) {
+const QRect* q_chartview_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -945,7 +907,7 @@ QWidget* q_chartview_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_chartview_palette(void* self) {
+const QPalette* q_chartview_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -969,7 +931,7 @@ int64_t q_chartview_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_chartview_font(void* self) {
+const QFont* q_chartview_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -1570,30 +1532,12 @@ void q_chartview_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_chartview_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_chartview_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_chartview_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_chartview_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_chartview_insert_action(void* self, void* before, void* action) {
@@ -1801,8 +1745,7 @@ const char* q_chartview_object_name(void* self) {
 }
 
 void q_chartview_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_chartview_is_widget_type(void* self) {
@@ -1841,7 +1784,7 @@ void q_chartview_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_chartview_children(void* self) {
+const libqt_list /* of QObject* */ q_chartview_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1904,7 +1847,7 @@ QBindingStorage* q_chartview_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_chartview_binding_storage2(void* self) {
+const QBindingStorage* q_chartview_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2738,6 +2681,10 @@ bool q_chartview_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_chartview_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QChartView_OnIsSignalConnected((QChartView*)self, (intptr_t)slot);
+}
+
+void q_chartview_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_chartview_delete(void* self) {

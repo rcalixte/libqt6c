@@ -83,6 +83,8 @@ const char* q_stringencoder_name(void* self);
 /// ``` enum QStringConverter__Encoding e ```
 const char* q_stringencoder_name_for_encoding(int64_t e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringencoder.html#dtor.QStringEncoder)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStringEncoder* self ```
@@ -165,6 +167,8 @@ const char* q_stringdecoder_name(void* self);
 /// ``` enum QStringConverter__Encoding e ```
 const char* q_stringdecoder_name_for_encoding(int64_t e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringdecoder.html#dtor.QStringDecoder)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStringDecoder* self ```

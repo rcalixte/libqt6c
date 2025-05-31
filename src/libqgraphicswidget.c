@@ -1,15 +1,9 @@
 #include "libqaction.hpp"
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
-#include "libqcursor.hpp"
 #include "libqfont.hpp"
-#include "libqgraphicseffect.hpp"
 #include "libqgraphicsitem.hpp"
 #include "libqgraphicslayout.hpp"
 #include "libqgraphicslayoutitem.hpp"
-#include "libqgraphicsscene.hpp"
-#include "libqgraphicstransform.hpp"
 #include "libqkeysequence.hpp"
 #include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
@@ -19,14 +13,10 @@
 #include "libqpalette.hpp"
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
-#include "libqregion.hpp"
 #include "libqsize.hpp"
-#include "libqsizepolicy.hpp"
 #include <string.h>
 #include "libqstyle.hpp"
 #include "libqstyleoption.hpp"
-#include "libqthread.hpp"
-#include "libqtransform.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
 #include "libqcoreevent.hpp"
@@ -45,7 +35,7 @@ QGraphicsWidget* q_graphicswidget_new3(void* parent, int64_t wFlags) {
     return QGraphicsWidget_new3((QGraphicsItem*)parent, wFlags);
 }
 
-QMetaObject* q_graphicswidget_meta_object(void* self) {
+const QMetaObject* q_graphicswidget_meta_object(void* self) {
     return QGraphicsWidget_MetaObject((QGraphicsWidget*)self);
 }
 
@@ -267,30 +257,12 @@ void q_graphicswidget_add_action(void* self, void* action) {
     QGraphicsWidget_AddAction((QGraphicsWidget*)self, (QAction*)action);
 }
 
-void q_graphicswidget_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QGraphicsWidget_AddActions((QGraphicsWidget*)self, actions_list);
+void q_graphicswidget_add_actions(void* self, libqt_list actions) {
+    QGraphicsWidget_AddActions((QGraphicsWidget*)self, actions);
 }
 
-void q_graphicswidget_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QGraphicsWidget_InsertActions((QGraphicsWidget*)self, (QAction*)before, actions_list);
+void q_graphicswidget_insert_actions(void* self, void* before, libqt_list actions) {
+    QGraphicsWidget_InsertActions((QGraphicsWidget*)self, (QAction*)before, actions);
 }
 
 void q_graphicswidget_insert_action(void* self, void* before, void* action) {
@@ -840,8 +812,7 @@ const char* q_graphicswidget_object_name(void* self) {
 }
 
 void q_graphicswidget_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_graphicswidget_is_widget_type(void* self) {
@@ -880,7 +851,7 @@ void q_graphicswidget_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_graphicswidget_children(void* self) {
+const libqt_list /* of QObject* */ q_graphicswidget_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -947,7 +918,7 @@ QBindingStorage* q_graphicswidget_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_graphicswidget_binding_storage2(void* self) {
+const QBindingStorage* q_graphicswidget_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1048,7 +1019,7 @@ QGraphicsObject* q_graphicswidget_to_graphics_object(void* self) {
     return QGraphicsItem_ToGraphicsObject((QGraphicsItem*)self);
 }
 
-QGraphicsObject* q_graphicswidget_to_graphics_object2(void* self) {
+const QGraphicsObject* q_graphicswidget_to_graphics_object2(void* self) {
     return QGraphicsItem_ToGraphicsObject2((QGraphicsItem*)self);
 }
 
@@ -1364,17 +1335,8 @@ libqt_list /* of QGraphicsTransform* */ q_graphicswidget_transformations(void* s
     return _arr;
 }
 
-void q_graphicswidget_set_transformations(void* self, void* transformations[]) {
-    QGraphicsTransform** transformations_arr = (QGraphicsTransform**)transformations;
-    size_t transformations_len = 0;
-    while (transformations_arr[transformations_len] != NULL) {
-        transformations_len++;
-    }
-    libqt_list transformations_list = {
-        .len = transformations_len,
-        .data = {(QGraphicsTransform*)transformations},
-    };
-    QGraphicsItem_SetTransformations((QGraphicsItem*)self, transformations_list);
+void q_graphicswidget_set_transformations(void* self, libqt_list transformations) {
+    QGraphicsItem_SetTransformations((QGraphicsItem*)self, transformations);
 }
 
 QPointF* q_graphicswidget_transform_origin_point(void* self) {
@@ -2305,6 +2267,10 @@ void q_graphicswidget_qbase_set_owned_by_layout(void* self, bool ownedByLayout) 
 
 void q_graphicswidget_on_set_owned_by_layout(void* self, void (*slot)(void*, bool)) {
     QGraphicsWidget_OnSetOwnedByLayout((QGraphicsWidget*)self, (intptr_t)slot);
+}
+
+void q_graphicswidget_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_graphicswidget_delete(void* self) {

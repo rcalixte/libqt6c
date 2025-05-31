@@ -12,14 +12,10 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qtimer.html
 
@@ -36,7 +32,7 @@ QTimer* q_timer_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QTimer* self ```
-QMetaObject* q_timer_meta_object(void* self);
+const QMetaObject* q_timer_meta_object(void* self);
 
 /// ``` QTimer* self, const char* param1 ```
 void* q_timer_metacast(void* self, const char* param1);
@@ -124,11 +120,15 @@ void q_timer_stop(void* self);
 /// ``` QTimer* self, QTimerEvent* param1 ```
 void q_timer_timer_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#timerEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTimer* self, void (*slot)(QTimer*, QTimerEvent*) ```
 void q_timer_on_timer_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#timerEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTimer* self, QTimerEvent* param1 ```
@@ -226,7 +226,7 @@ void q_timer_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QTimer* self ```
-libqt_list /* of QObject* */ q_timer_children(void* self);
+const libqt_list /* of QObject* */ q_timer_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -324,7 +324,7 @@ QBindingStorage* q_timer_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QTimer* self ```
-QBindingStorage* q_timer_binding_storage2(void* self);
+const QBindingStorage* q_timer_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -334,6 +334,8 @@ QBindingStorage* q_timer_binding_storage2(void* self);
 void q_timer_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QTimer* self, void (*slot)(QObject*) ```
 void q_timer_on_destroyed(void* self, void (*slot)(void*));
@@ -389,6 +391,8 @@ void q_timer_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QTimer* self, void (*slot)(QObject*, QObject*) ```
 void q_timer_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -403,12 +407,16 @@ bool q_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimer* self, QEvent* event ```
 bool q_timer_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -426,12 +434,16 @@ bool q_timer_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimer* self, QObject* watched, QEvent* event ```
 bool q_timer_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -449,12 +461,16 @@ void q_timer_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimer* self, QChildEvent* event ```
 void q_timer_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -472,12 +488,16 @@ void q_timer_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimer* self, QEvent* event ```
 void q_timer_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -495,12 +515,16 @@ void q_timer_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimer* self, QMetaMethod* signal ```
 void q_timer_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -518,12 +542,16 @@ void q_timer_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimer* self, QMetaMethod* signal ```
 void q_timer_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -541,12 +569,16 @@ QObject* q_timer_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimer* self ```
 QObject* q_timer_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -564,12 +596,16 @@ int32_t q_timer_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimer* self ```
 int32_t q_timer_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -587,12 +623,16 @@ int32_t q_timer_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimer* self, const char* signal ```
 int32_t q_timer_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -610,6 +650,8 @@ bool q_timer_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimer* self, QMetaMethod* signal ```
@@ -617,11 +659,31 @@ bool q_timer_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QTimer* self, bool (*slot)(QTimer*, QMetaMethod*) ```
 void q_timer_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#timeout)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QTimer* self, void (*slot)(QTimer*) ```
+void q_timer_on_timeout(void* self, void (*slot)(void*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QTimer* self, void (*slot)(QObject*, const char*) ```
+void q_timer_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#dtor.QTimer)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTimer* self ```

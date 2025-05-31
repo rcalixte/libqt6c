@@ -39,6 +39,8 @@ bool q_basicmutex_try_lock(void* self);
 /// ``` QBasicMutex* self ```
 bool q_basicmutex_try_lock2(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbasicmutex.html#dtor.QBasicMutex)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QBasicMutex* self ```
@@ -82,6 +84,8 @@ void q_mutex_unlock(void* self);
 /// ``` QMutex* self ```
 bool q_mutex_try_lock2(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmutex.html#dtor.QMutex)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMutex* self ```
@@ -119,6 +123,8 @@ bool q_recursivemutex_try_lock2(void* self);
 /// ``` QRecursiveMutex* self, int timeout ```
 bool q_recursivemutex_try_lock1(void* self, int timeout);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qrecursivemutex.html#dtor.QRecursiveMutex)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QRecursiveMutex* self ```

@@ -29,11 +29,15 @@ QFileIconProvider* q_fileiconprovider_new();
 /// ``` QFileIconProvider* self, enum QAbstractFileIconProvider__IconType typeVal ```
 QIcon* q_fileiconprovider_icon(void* self, int64_t typeVal);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileIconProvider* self, QIcon* (*slot)(QFileIconProvider*, enum QAbstractFileIconProvider__IconType) ```
 void q_fileiconprovider_on_icon(void* self, QIcon* (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
+///
 /// Base class method implementation
 ///
 /// ``` QFileIconProvider* self, enum QAbstractFileIconProvider__IconType typeVal ```
@@ -44,11 +48,15 @@ QIcon* q_fileiconprovider_qbase_icon(void* self, int64_t typeVal);
 /// ``` QFileIconProvider* self, QFileInfo* info ```
 QIcon* q_fileiconprovider_icon_with_info(void* self, void* info);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileIconProvider* self, QIcon* (*slot)(QFileIconProvider*, QFileInfo*) ```
 void q_fileiconprovider_on_icon_with_info(void* self, QIcon* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
+///
 /// Base class method implementation
 ///
 /// ``` QFileIconProvider* self, QFileInfo* info ```
@@ -63,12 +71,16 @@ QIcon* q_fileiconprovider_icon_with_q_file_info(void* self, void* param1);
 
 /// Inherited from QAbstractFileIconProvider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractFileIconProvider* self, QIcon* (*slot)(QAbstractFileIconProvider*, QFileInfo*) ```
 void q_fileiconprovider_on_icon_with_q_file_info(void* self, QIcon* (*slot)(void*, void*));
 
 /// Inherited from QAbstractFileIconProvider
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
 ///
 /// Base class method implementation
 ///
@@ -86,12 +98,16 @@ const char* q_fileiconprovider_type(void* self, void* param1);
 
 /// Inherited from QAbstractFileIconProvider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#type)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileIconProvider* self, QFileInfo* param1 ```
 const char* q_fileiconprovider_qbase_type(void* self, void* param1);
 
 /// Inherited from QAbstractFileIconProvider
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#type)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -109,12 +125,16 @@ void q_fileiconprovider_set_options(void* self, int64_t options);
 
 /// Inherited from QAbstractFileIconProvider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#setOptions)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileIconProvider* self, int options ```
 void q_fileiconprovider_qbase_set_options(void* self, int64_t options);
 
 /// Inherited from QAbstractFileIconProvider
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#setOptions)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -132,6 +152,8 @@ int64_t q_fileiconprovider_options(void* self);
 
 /// Inherited from QAbstractFileIconProvider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#options)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileIconProvider* self ```
@@ -139,11 +161,15 @@ int64_t q_fileiconprovider_qbase_options(void* self);
 
 /// Inherited from QAbstractFileIconProvider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#options)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QFileIconProvider* self, int64_t (*slot)() ```
 void q_fileiconprovider_on_options(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#dtor.QFileIconProvider)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QFileIconProvider* self ```

@@ -76,7 +76,7 @@ QCborValue* q_cborarray_last(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#operator[])
 ///
 /// ``` QCborArray* self, int64_t i ```
-QCborValue* q_cborarray_operator_subscript(void* self, int64_t i);
+const QCborValue* q_cborarray_operator_subscript(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#first)
 ///
@@ -288,6 +288,8 @@ QCborArray* q_cborarray_from_json_array(void* array);
 /// ``` QCborArray* self ```
 QJsonArray* q_cborarray_to_json_array(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#dtor.QCborArray)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCborArray* self ```
@@ -328,7 +330,7 @@ QCborValueRef* q_cborarray__iterator_operator_minus_greater(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator->)
 ///
 /// ``` QCborArray__Iterator* self ```
-QCborValueConstRef* q_cborarray__iterator_operator_minus_greater2(void* self);
+const QCborValueConstRef* q_cborarray__iterator_operator_minus_greater2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator[])
 ///
@@ -440,6 +442,8 @@ QCborArray__Iterator* q_cborarray__iterator_operator_minus(void* self, int64_t j
 /// ``` QCborArray__Iterator* self, QCborArray__Iterator* j ```
 int64_t q_cborarray__iterator_operator_minus_with_q_cbor_array_iterator(void* self, void* j);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray::iterator.html#dtor.QCborArray::Iterator)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCborArray__Iterator* self ```
@@ -475,7 +479,7 @@ QCborValueConstRef* q_cborarray__constiterator_operator_multiply(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__constiterator.html#operator->)
 ///
 /// ``` QCborArray__ConstIterator* self ```
-QCborValueConstRef* q_cborarray__constiterator_operator_minus_greater(void* self);
+const QCborValueConstRef* q_cborarray__constiterator_operator_minus_greater(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__constiterator.html#operator[])
 ///
@@ -587,6 +591,8 @@ QCborArray__ConstIterator* q_cborarray__constiterator_operator_minus(void* self,
 /// ``` QCborArray__ConstIterator* self, QCborArray__ConstIterator* j ```
 int64_t q_cborarray__constiterator_operator_minus_with_q_cbor_array_const_iterator(void* self, void* j);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray::constiterator.html#dtor.QCborArray::ConstIterator)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCborArray__ConstIterator* self ```

@@ -62,6 +62,8 @@ bool q_sslcertificateextension_is_critical(void* self);
 /// ``` QSslCertificateExtension* self ```
 bool q_sslcertificateextension_is_supported(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificateextension.html#dtor.QSslCertificateExtension)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSslCertificateExtension* self ```

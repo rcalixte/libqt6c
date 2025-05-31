@@ -1,45 +1,20 @@
 #include "libqabstractfileiconprovider.hpp"
 #include "libqabstractitemdelegate.hpp"
 #include "libqabstractproxymodel.hpp"
-#include "libqaction.hpp"
 #include "libqevent.hpp"
-#include "libqanystringview.hpp"
-#include "libqbackingstore.hpp"
-#include "libqbindingstorage.hpp"
-#include "libqbitmap.hpp"
-#include "libqcursor.hpp"
 #include "libqdialog.hpp"
 #include "libqdir.hpp"
-#include "libqfont.hpp"
-#include "libqfontinfo.hpp"
-#include "libqfontmetrics.hpp"
-#include "libqgraphicseffect.hpp"
-#include "libqgraphicsproxywidget.hpp"
-#include "libqicon.hpp"
-#include "libqkeysequence.hpp"
-#include "libqlayout.hpp"
-#include "libqlocale.hpp"
-#include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
 #include "libqpainter.hpp"
-#include "libqpalette.hpp"
-#include "libqpixmap.hpp"
 #include "libqpoint.hpp"
-#include "libqrect.hpp"
-#include "libqregion.hpp"
-#include "libqscreen.hpp"
 #include "libqsize.hpp"
-#include "libqsizepolicy.hpp"
 #include <string.h>
-#include "libqstyle.hpp"
-#include "libqthread.hpp"
 #include "libqurl.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqwindow.hpp"
 #include "libqcoreevent.hpp"
 #include "libqfiledialog.hpp"
 #include "libqfiledialog.h"
@@ -68,7 +43,7 @@ QFileDialog* q_filedialog_new6(void* parent, const char* caption, const char* di
     return QFileDialog_new6((QWidget*)parent, qstring(caption), qstring(directory), qstring(filter));
 }
 
-QMetaObject* q_filedialog_meta_object(void* self) {
+const QMetaObject* q_filedialog_meta_object(void* self) {
     return QFileDialog_MetaObject((QFileDialog*)self);
 }
 
@@ -152,7 +127,7 @@ void q_filedialog_set_name_filters(void* self, const char* filters[]) {
     for (size_t _i = 0; _i < filters_len; ++_i) {
         filters_qstr[_i] = qstring(filters[_i]);
     }
-    libqt_list filters_list = qstrlist(filters_qstr, filters_len);
+    libqt_list filters_list = qlist(filters_qstr, filters_len);
     QFileDialog_SetNameFilters((QFileDialog*)self, filters_list);
 }
 
@@ -194,7 +169,7 @@ void q_filedialog_set_mime_type_filters(void* self, const char* filters[]) {
     for (size_t _i = 0; _i < filters_len; ++_i) {
         filters_qstr[_i] = qstring(filters[_i]);
     }
-    libqt_list filters_list = qstrlist(filters_qstr, filters_len);
+    libqt_list filters_list = qlist(filters_qstr, filters_len);
     QFileDialog_SetMimeTypeFilters((QFileDialog*)self, filters_list);
 }
 
@@ -248,17 +223,8 @@ int64_t q_filedialog_accept_mode(void* self) {
     return QFileDialog_AcceptMode((QFileDialog*)self);
 }
 
-void q_filedialog_set_sidebar_urls(void* self, void* urls[]) {
-    QUrl** urls_arr = (QUrl**)urls;
-    size_t urls_len = 0;
-    while (urls_arr[urls_len] != NULL) {
-        urls_len++;
-    }
-    libqt_list urls_list = {
-        .len = urls_len,
-        .data = {(QUrl*)urls},
-    };
-    QFileDialog_SetSidebarUrls((QFileDialog*)self, urls_list);
+void q_filedialog_set_sidebar_urls(void* self, libqt_list urls) {
+    QFileDialog_SetSidebarUrls((QFileDialog*)self, urls);
 }
 
 libqt_list /* of QUrl* */ q_filedialog_sidebar_urls(void* self) {
@@ -294,7 +260,7 @@ void q_filedialog_set_history(void* self, const char* paths[]) {
     for (size_t _i = 0; _i < paths_len; ++_i) {
         paths_qstr[_i] = qstring(paths[_i]);
     }
-    libqt_list paths_list = qstrlist(paths_qstr, paths_len);
+    libqt_list paths_list = qlist(paths_qstr, paths_len);
     QFileDialog_SetHistory((QFileDialog*)self, paths_list);
 }
 
@@ -345,7 +311,7 @@ void q_filedialog_set_supported_schemes(void* self, const char* schemes[]) {
     for (size_t _i = 0; _i < schemes_len; ++_i) {
         schemes_qstr[_i] = qstring(schemes[_i]);
     }
-    libqt_list schemes_list = qstrlist(schemes_qstr, schemes_len);
+    libqt_list schemes_list = qlist(schemes_qstr, schemes_len);
     QFileDialog_SetSupportedSchemes((QFileDialog*)self, schemes_list);
 }
 
@@ -413,7 +379,7 @@ void q_filedialog_files_selected(void* self, const char* files[]) {
     for (size_t _i = 0; _i < files_len; ++_i) {
         files_qstr[_i] = qstring(files[_i]);
     }
-    libqt_list files_list = qstrlist(files_qstr, files_len);
+    libqt_list files_list = qlist(files_qstr, files_len);
     QFileDialog_FilesSelected((QFileDialog*)self, files_list);
 }
 
@@ -445,20 +411,11 @@ void q_filedialog_on_url_selected(void* self, void (*slot)(void*, void*)) {
     QFileDialog_Connect_UrlSelected((QFileDialog*)self, (intptr_t)slot);
 }
 
-void q_filedialog_urls_selected(void* self, void* urls[]) {
-    QUrl** urls_arr = (QUrl**)urls;
-    size_t urls_len = 0;
-    while (urls_arr[urls_len] != NULL) {
-        urls_len++;
-    }
-    libqt_list urls_list = {
-        .len = urls_len,
-        .data = {(QUrl*)urls},
-    };
-    QFileDialog_UrlsSelected((QFileDialog*)self, urls_list);
+void q_filedialog_urls_selected(void* self, libqt_list urls) {
+    QFileDialog_UrlsSelected((QFileDialog*)self, urls);
 }
 
-void q_filedialog_on_urls_selected(void* self, void (*slot)(void*, void*)) {
+void q_filedialog_on_urls_selected(void* self, void (*slot)(void*, libqt_list)) {
     QFileDialog_Connect_UrlsSelected((QFileDialog*)self, (intptr_t)slot);
 }
 
@@ -734,7 +691,7 @@ QUrl* q_filedialog_get_existing_directory_url5(void* parent, const char* caption
     for (size_t _i = 0; _i < supportedSchemes_len; ++_i) {
         supportedSchemes_qstr[_i] = qstring(supportedSchemes[_i]);
     }
-    libqt_list supportedSchemes_list = qstrlist(supportedSchemes_qstr, supportedSchemes_len);
+    libqt_list supportedSchemes_list = qlist(supportedSchemes_qstr, supportedSchemes_len);
     return QFileDialog_GetExistingDirectoryUrl5((QWidget*)parent, qstring(caption), (QUrl*)dir, options, supportedSchemes_list);
 }
 
@@ -926,7 +883,7 @@ QRect* q_filedialog_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_filedialog_geometry(void* self) {
+const QRect* q_filedialog_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -1130,7 +1087,7 @@ QWidget* q_filedialog_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_filedialog_palette(void* self) {
+const QPalette* q_filedialog_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -1154,7 +1111,7 @@ int64_t q_filedialog_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_filedialog_font(void* self) {
+const QFont* q_filedialog_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -1759,30 +1716,12 @@ void q_filedialog_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_filedialog_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_filedialog_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_filedialog_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_filedialog_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_filedialog_insert_action(void* self, void* before, void* action) {
@@ -2002,8 +1941,7 @@ const char* q_filedialog_object_name(void* self) {
 }
 
 void q_filedialog_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_filedialog_is_widget_type(void* self) {
@@ -2042,7 +1980,7 @@ void q_filedialog_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_filedialog_children(void* self) {
+const libqt_list /* of QObject* */ q_filedialog_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -2105,7 +2043,7 @@ QBindingStorage* q_filedialog_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_filedialog_binding_storage2(void* self) {
+const QBindingStorage* q_filedialog_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2891,6 +2829,10 @@ bool q_filedialog_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_filedialog_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QFileDialog_OnIsSignalConnected((QFileDialog*)self, (intptr_t)slot);
+}
+
+void q_filedialog_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_filedialog_delete(void* self) {

@@ -15,25 +15,16 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QColor QColor;
 typedef struct QEvent QEvent;
 typedef struct QFont QFont;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QSettings QSettings;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
-typedef struct QsciAbstractAPIs QsciAbstractAPIs;
 typedef struct QsciLexer QsciLexer;
 typedef struct QsciLexerRuby QsciLexerRuby;
 typedef struct QsciScintilla QsciScintilla;
@@ -138,6 +129,9 @@ void QsciLexerRuby_QBaseSetPaper(QsciLexerRuby* self, QColor* c, int style);
 bool QsciLexerRuby_ReadProperties(QsciLexerRuby* self, QSettings* qs, libqt_string prefix);
 void QsciLexerRuby_OnReadProperties(QsciLexerRuby* self, intptr_t slot);
 bool QsciLexerRuby_QBaseReadProperties(QsciLexerRuby* self, QSettings* qs, libqt_string prefix);
+bool QsciLexerRuby_WriteProperties(const QsciLexerRuby* self, QSettings* qs, libqt_string prefix);
+void QsciLexerRuby_OnWriteProperties(const QsciLexerRuby* self, intptr_t slot);
+bool QsciLexerRuby_QBaseWriteProperties(const QsciLexerRuby* self, QSettings* qs, libqt_string prefix);
 bool QsciLexerRuby_Event(QsciLexerRuby* self, QEvent* event);
 void QsciLexerRuby_OnEvent(QsciLexerRuby* self, intptr_t slot);
 bool QsciLexerRuby_QBaseEvent(QsciLexerRuby* self, QEvent* event);
@@ -159,9 +153,6 @@ void QsciLexerRuby_QBaseConnectNotify(QsciLexerRuby* self, QMetaMethod* signal);
 void QsciLexerRuby_DisconnectNotify(QsciLexerRuby* self, QMetaMethod* signal);
 void QsciLexerRuby_OnDisconnectNotify(QsciLexerRuby* self, intptr_t slot);
 void QsciLexerRuby_QBaseDisconnectNotify(QsciLexerRuby* self, QMetaMethod* signal);
-bool QsciLexerRuby_WriteProperties(const QsciLexerRuby* self, QSettings* qs, libqt_string prefix);
-void QsciLexerRuby_OnWriteProperties(const QsciLexerRuby* self, intptr_t slot);
-bool QsciLexerRuby_QBaseWriteProperties(const QsciLexerRuby* self, QSettings* qs, libqt_string prefix);
 QObject* QsciLexerRuby_Sender(const QsciLexerRuby* self);
 void QsciLexerRuby_OnSender(const QsciLexerRuby* self, intptr_t slot);
 QObject* QsciLexerRuby_QBaseSender(const QsciLexerRuby* self);

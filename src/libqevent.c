@@ -39,7 +39,7 @@ QInputEvent* q_inputevent_qbase_clone(void* self) {
     return QInputEvent_QBaseClone((QInputEvent*)self);
 }
 
-QInputDevice* q_inputevent_device(void* self) {
+const QInputDevice* q_inputevent_device(void* self) {
     return QInputEvent_Device((QInputEvent*)self);
 }
 
@@ -135,18 +135,8 @@ QPointerEvent* q_pointerevent_new2(int64_t typeVal, void* dev, int64_t modifiers
     return QPointerEvent_new2(typeVal, (QPointingDevice*)dev, modifiers);
 }
 
-QPointerEvent* q_pointerevent_new3(int64_t typeVal, void* dev, int64_t modifiers, void* points[]) {
-    QEventPoint** points_arr = (QEventPoint**)points;
-    size_t points_len = 0;
-    while (points_arr[points_len] != NULL) {
-        points_len++;
-    }
-    libqt_list points_list = {
-        .len = points_len,
-        .data = {(QEventPoint*)points},
-    };
-
-    return QPointerEvent_new3(typeVal, (QPointingDevice*)dev, modifiers, points_list);
+QPointerEvent* q_pointerevent_new3(int64_t typeVal, void* dev, int64_t modifiers, libqt_list points) {
+    return QPointerEvent_new3(typeVal, (QPointingDevice*)dev, modifiers, points);
 }
 
 QPointerEvent* q_pointerevent_clone(void* self) {
@@ -161,7 +151,7 @@ QPointerEvent* q_pointerevent_qbase_clone(void* self) {
     return QPointerEvent_QBaseClone((QPointerEvent*)self);
 }
 
-QPointingDevice* q_pointerevent_pointing_device(void* self) {
+const QPointingDevice* q_pointerevent_pointing_device(void* self) {
     return QPointerEvent_PointingDevice((QPointerEvent*)self);
 }
 
@@ -189,7 +179,7 @@ QEventPoint* q_pointerevent_point(void* self, int64_t i) {
     return QPointerEvent_Point((QPointerEvent*)self, i);
 }
 
-libqt_list /* of QEventPoint* */ q_pointerevent_points(void* self) {
+const libqt_list /* of QEventPoint* */ q_pointerevent_points(void* self) {
     libqt_list _arr = QPointerEvent_Points((QPointerEvent*)self);
     return _arr;
 }
@@ -274,7 +264,7 @@ bool q_pointerevent_remove_passive_grabber(void* self, void* point, void* grabbe
     return QPointerEvent_RemovePassiveGrabber((QPointerEvent*)self, (QEventPoint*)point, (QObject*)grabber);
 }
 
-QInputDevice* q_pointerevent_device(void* self) {
+const QInputDevice* q_pointerevent_device(void* self) {
     return QInputEvent_Device((QInputEvent*)self);
 }
 
@@ -338,6 +328,10 @@ void q_pointerevent_delete(void* self) {
     QPointerEvent_Delete((QPointerEvent*)(self));
 }
 
+QSinglePointEvent* q_singlepointevent_clone(void* self) {
+    return QSinglePointEvent_Clone((QSinglePointEvent*)self);
+}
+
 int64_t q_singlepointevent_button(void* self) {
     return QSinglePointEvent_Button((QSinglePointEvent*)self);
 }
@@ -378,7 +372,7 @@ void q_singlepointevent_set_exclusive_point_grabber(void* self, void* exclusiveG
     QSinglePointEvent_SetExclusivePointGrabber((QSinglePointEvent*)self, (QObject*)exclusiveGrabber);
 }
 
-QPointingDevice* q_singlepointevent_pointing_device(void* self) {
+const QPointingDevice* q_singlepointevent_pointing_device(void* self) {
     return QPointerEvent_PointingDevice((QPointerEvent*)self);
 }
 
@@ -398,7 +392,7 @@ QEventPoint* q_singlepointevent_point(void* self, int64_t i) {
     return QPointerEvent_Point((QPointerEvent*)self, i);
 }
 
-libqt_list /* of QEventPoint* */ q_singlepointevent_points(void* self) {
+const libqt_list /* of QEventPoint* */ q_singlepointevent_points(void* self) {
     libqt_list _arr = QPointerEvent_Points((QPointerEvent*)self);
     return _arr;
 }
@@ -439,7 +433,7 @@ bool q_singlepointevent_remove_passive_grabber(void* self, void* point, void* gr
     return QPointerEvent_RemovePassiveGrabber((QPointerEvent*)self, (QEventPoint*)point, (QObject*)grabber);
 }
 
-QInputDevice* q_singlepointevent_device(void* self) {
+const QInputDevice* q_singlepointevent_device(void* self) {
     return QInputEvent_Device((QInputEvent*)self);
 }
 
@@ -587,7 +581,7 @@ void q_enterevent_set_exclusive_point_grabber(void* self, void* exclusiveGrabber
     QSinglePointEvent_SetExclusivePointGrabber((QSinglePointEvent*)self, (QObject*)exclusiveGrabber);
 }
 
-QPointingDevice* q_enterevent_pointing_device(void* self) {
+const QPointingDevice* q_enterevent_pointing_device(void* self) {
     return QPointerEvent_PointingDevice((QPointerEvent*)self);
 }
 
@@ -603,7 +597,7 @@ QEventPoint* q_enterevent_point(void* self, int64_t i) {
     return QPointerEvent_Point((QPointerEvent*)self, i);
 }
 
-libqt_list /* of QEventPoint* */ q_enterevent_points(void* self) {
+const libqt_list /* of QEventPoint* */ q_enterevent_points(void* self) {
     libqt_list _arr = QPointerEvent_Points((QPointerEvent*)self);
     return _arr;
 }
@@ -640,7 +634,7 @@ bool q_enterevent_remove_passive_grabber(void* self, void* point, void* grabber)
     return QPointerEvent_RemovePassiveGrabber((QPointerEvent*)self, (QEventPoint*)point, (QObject*)grabber);
 }
 
-QInputDevice* q_enterevent_device(void* self) {
+const QInputDevice* q_enterevent_device(void* self) {
     return QInputEvent_Device((QInputEvent*)self);
 }
 
@@ -880,7 +874,7 @@ void q_mouseevent_set_exclusive_point_grabber(void* self, void* exclusiveGrabber
     QSinglePointEvent_SetExclusivePointGrabber((QSinglePointEvent*)self, (QObject*)exclusiveGrabber);
 }
 
-QPointingDevice* q_mouseevent_pointing_device(void* self) {
+const QPointingDevice* q_mouseevent_pointing_device(void* self) {
     return QPointerEvent_PointingDevice((QPointerEvent*)self);
 }
 
@@ -896,7 +890,7 @@ QEventPoint* q_mouseevent_point(void* self, int64_t i) {
     return QPointerEvent_Point((QPointerEvent*)self, i);
 }
 
-libqt_list /* of QEventPoint* */ q_mouseevent_points(void* self) {
+const libqt_list /* of QEventPoint* */ q_mouseevent_points(void* self) {
     libqt_list _arr = QPointerEvent_Points((QPointerEvent*)self);
     return _arr;
 }
@@ -933,7 +927,7 @@ bool q_mouseevent_remove_passive_grabber(void* self, void* point, void* grabber)
     return QPointerEvent_RemovePassiveGrabber((QPointerEvent*)self, (QEventPoint*)point, (QObject*)grabber);
 }
 
-QInputDevice* q_mouseevent_device(void* self) {
+const QInputDevice* q_mouseevent_device(void* self) {
     return QInputEvent_Device((QInputEvent*)self);
 }
 
@@ -1149,7 +1143,7 @@ void q_hoverevent_set_exclusive_point_grabber(void* self, void* exclusiveGrabber
     QSinglePointEvent_SetExclusivePointGrabber((QSinglePointEvent*)self, (QObject*)exclusiveGrabber);
 }
 
-QPointingDevice* q_hoverevent_pointing_device(void* self) {
+const QPointingDevice* q_hoverevent_pointing_device(void* self) {
     return QPointerEvent_PointingDevice((QPointerEvent*)self);
 }
 
@@ -1165,7 +1159,7 @@ QEventPoint* q_hoverevent_point(void* self, int64_t i) {
     return QPointerEvent_Point((QPointerEvent*)self, i);
 }
 
-libqt_list /* of QEventPoint* */ q_hoverevent_points(void* self) {
+const libqt_list /* of QEventPoint* */ q_hoverevent_points(void* self) {
     libqt_list _arr = QPointerEvent_Points((QPointerEvent*)self);
     return _arr;
 }
@@ -1202,7 +1196,7 @@ bool q_hoverevent_remove_passive_grabber(void* self, void* point, void* grabber)
     return QPointerEvent_RemovePassiveGrabber((QPointerEvent*)self, (QEventPoint*)point, (QObject*)grabber);
 }
 
-QInputDevice* q_hoverevent_device(void* self) {
+const QInputDevice* q_hoverevent_device(void* self) {
     return QInputEvent_Device((QInputEvent*)self);
 }
 
@@ -1430,7 +1424,7 @@ void q_wheelevent_set_exclusive_point_grabber(void* self, void* exclusiveGrabber
     QSinglePointEvent_SetExclusivePointGrabber((QSinglePointEvent*)self, (QObject*)exclusiveGrabber);
 }
 
-QPointingDevice* q_wheelevent_pointing_device(void* self) {
+const QPointingDevice* q_wheelevent_pointing_device(void* self) {
     return QPointerEvent_PointingDevice((QPointerEvent*)self);
 }
 
@@ -1446,7 +1440,7 @@ QEventPoint* q_wheelevent_point(void* self, int64_t i) {
     return QPointerEvent_Point((QPointerEvent*)self, i);
 }
 
-libqt_list /* of QEventPoint* */ q_wheelevent_points(void* self) {
+const libqt_list /* of QEventPoint* */ q_wheelevent_points(void* self) {
     libqt_list _arr = QPointerEvent_Points((QPointerEvent*)self);
     return _arr;
 }
@@ -1483,7 +1477,7 @@ bool q_wheelevent_remove_passive_grabber(void* self, void* point, void* grabber)
     return QPointerEvent_RemovePassiveGrabber((QPointerEvent*)self, (QEventPoint*)point, (QObject*)grabber);
 }
 
-QInputDevice* q_wheelevent_device(void* self) {
+const QInputDevice* q_wheelevent_device(void* self) {
     return QInputEvent_Device((QInputEvent*)self);
 }
 
@@ -1595,11 +1589,11 @@ QPoint* q_tabletevent_global_pos(void* self) {
     return QTabletEvent_GlobalPos((QTabletEvent*)self);
 }
 
-QPointF* q_tabletevent_pos_f(void* self) {
+const QPointF* q_tabletevent_pos_f(void* self) {
     return QTabletEvent_PosF((QTabletEvent*)self);
 }
 
-QPointF* q_tabletevent_global_pos_f(void* self) {
+const QPointF* q_tabletevent_global_pos_f(void* self) {
     return QTabletEvent_GlobalPosF((QTabletEvent*)self);
 }
 
@@ -1683,7 +1677,7 @@ void q_tabletevent_set_exclusive_point_grabber(void* self, void* exclusiveGrabbe
     QSinglePointEvent_SetExclusivePointGrabber((QSinglePointEvent*)self, (QObject*)exclusiveGrabber);
 }
 
-QPointingDevice* q_tabletevent_pointing_device(void* self) {
+const QPointingDevice* q_tabletevent_pointing_device(void* self) {
     return QPointerEvent_PointingDevice((QPointerEvent*)self);
 }
 
@@ -1699,7 +1693,7 @@ QEventPoint* q_tabletevent_point(void* self, int64_t i) {
     return QPointerEvent_Point((QPointerEvent*)self, i);
 }
 
-libqt_list /* of QEventPoint* */ q_tabletevent_points(void* self) {
+const libqt_list /* of QEventPoint* */ q_tabletevent_points(void* self) {
     libqt_list _arr = QPointerEvent_Points((QPointerEvent*)self);
     return _arr;
 }
@@ -1736,7 +1730,7 @@ bool q_tabletevent_remove_passive_grabber(void* self, void* point, void* grabber
     return QPointerEvent_RemovePassiveGrabber((QPointerEvent*)self, (QEventPoint*)point, (QObject*)grabber);
 }
 
-QInputDevice* q_tabletevent_device(void* self) {
+const QInputDevice* q_tabletevent_device(void* self) {
     return QInputEvent_Device((QInputEvent*)self);
 }
 
@@ -1900,11 +1894,11 @@ QPointF* q_nativegestureevent_delta(void* self) {
     return QNativeGestureEvent_Delta((QNativeGestureEvent*)self);
 }
 
-QPoint* q_nativegestureevent_pos(void* self) {
+const QPoint* q_nativegestureevent_pos(void* self) {
     return QNativeGestureEvent_Pos((QNativeGestureEvent*)self);
 }
 
-QPoint* q_nativegestureevent_global_pos(void* self) {
+const QPoint* q_nativegestureevent_global_pos(void* self) {
     return QNativeGestureEvent_GlobalPos((QNativeGestureEvent*)self);
 }
 
@@ -1948,7 +1942,7 @@ void q_nativegestureevent_set_exclusive_point_grabber(void* self, void* exclusiv
     QSinglePointEvent_SetExclusivePointGrabber((QSinglePointEvent*)self, (QObject*)exclusiveGrabber);
 }
 
-QPointingDevice* q_nativegestureevent_pointing_device(void* self) {
+const QPointingDevice* q_nativegestureevent_pointing_device(void* self) {
     return QPointerEvent_PointingDevice((QPointerEvent*)self);
 }
 
@@ -1964,7 +1958,7 @@ QEventPoint* q_nativegestureevent_point(void* self, int64_t i) {
     return QPointerEvent_Point((QPointerEvent*)self, i);
 }
 
-libqt_list /* of QEventPoint* */ q_nativegestureevent_points(void* self) {
+const libqt_list /* of QEventPoint* */ q_nativegestureevent_points(void* self) {
     libqt_list _arr = QPointerEvent_Points((QPointerEvent*)self);
     return _arr;
 }
@@ -2001,7 +1995,7 @@ bool q_nativegestureevent_remove_passive_grabber(void* self, void* point, void* 
     return QPointerEvent_RemovePassiveGrabber((QPointerEvent*)self, (QEventPoint*)point, (QObject*)grabber);
 }
 
-QInputDevice* q_nativegestureevent_device(void* self) {
+const QInputDevice* q_nativegestureevent_device(void* self) {
     return QInputEvent_Device((QInputEvent*)self);
 }
 
@@ -2216,7 +2210,7 @@ uint32_t q_keyevent_native_modifiers(void* self) {
     return QKeyEvent_NativeModifiers((QKeyEvent*)self);
 }
 
-QInputDevice* q_keyevent_device(void* self) {
+const QInputDevice* q_keyevent_device(void* self) {
     return QInputEvent_Device((QInputEvent*)self);
 }
 
@@ -2408,11 +2402,11 @@ QPaintEvent* q_paintevent_qbase_clone(void* self) {
     return QPaintEvent_QBaseClone((QPaintEvent*)self);
 }
 
-QRect* q_paintevent_rect(void* self) {
+const QRect* q_paintevent_rect(void* self) {
     return QPaintEvent_Rect((QPaintEvent*)self);
 }
 
-QRegion* q_paintevent_region(void* self) {
+const QRegion* q_paintevent_region(void* self) {
     return QPaintEvent_Region((QPaintEvent*)self);
 }
 
@@ -2488,11 +2482,11 @@ QMoveEvent* q_moveevent_qbase_clone(void* self) {
     return QMoveEvent_QBaseClone((QMoveEvent*)self);
 }
 
-QPoint* q_moveevent_pos(void* self) {
+const QPoint* q_moveevent_pos(void* self) {
     return QMoveEvent_Pos((QMoveEvent*)self);
 }
 
-QPoint* q_moveevent_old_pos(void* self) {
+const QPoint* q_moveevent_old_pos(void* self) {
     return QMoveEvent_OldPos((QMoveEvent*)self);
 }
 
@@ -2568,7 +2562,7 @@ QExposeEvent* q_exposeevent_qbase_clone(void* self) {
     return QExposeEvent_QBaseClone((QExposeEvent*)self);
 }
 
-QRegion* q_exposeevent_region(void* self) {
+const QRegion* q_exposeevent_region(void* self) {
     return QExposeEvent_Region((QExposeEvent*)self);
 }
 
@@ -2720,11 +2714,11 @@ QResizeEvent* q_resizeevent_qbase_clone(void* self) {
     return QResizeEvent_QBaseClone((QResizeEvent*)self);
 }
 
-QSize* q_resizeevent_size(void* self) {
+const QSize* q_resizeevent_size(void* self) {
     return QResizeEvent_Size((QResizeEvent*)self);
 }
 
-QSize* q_resizeevent_old_size(void* self) {
+const QSize* q_resizeevent_old_size(void* self) {
     return QResizeEvent_OldSize((QResizeEvent*)self);
 }
 
@@ -3112,11 +3106,11 @@ int32_t q_contextmenuevent_global_y(void* self) {
     return QContextMenuEvent_GlobalY((QContextMenuEvent*)self);
 }
 
-QPoint* q_contextmenuevent_pos(void* self) {
+const QPoint* q_contextmenuevent_pos(void* self) {
     return QContextMenuEvent_Pos((QContextMenuEvent*)self);
 }
 
-QPoint* q_contextmenuevent_global_pos(void* self) {
+const QPoint* q_contextmenuevent_global_pos(void* self) {
     return QContextMenuEvent_GlobalPos((QContextMenuEvent*)self);
 }
 
@@ -3124,7 +3118,7 @@ int64_t q_contextmenuevent_reason(void* self) {
     return QContextMenuEvent_Reason((QContextMenuEvent*)self);
 }
 
-QInputDevice* q_contextmenuevent_device(void* self) {
+const QInputDevice* q_contextmenuevent_device(void* self) {
     return QInputEvent_Device((QInputEvent*)self);
 }
 
@@ -3216,18 +3210,8 @@ QInputMethodEvent* q_inputmethodevent_new() {
     return QInputMethodEvent_new();
 }
 
-QInputMethodEvent* q_inputmethodevent_new2(const char* preeditText, void* attributes[]) {
-    QInputMethodEvent__Attribute** attributes_arr = (QInputMethodEvent__Attribute**)attributes;
-    size_t attributes_len = 0;
-    while (attributes_arr[attributes_len] != NULL) {
-        attributes_len++;
-    }
-    libqt_list attributes_list = {
-        .len = attributes_len,
-        .data = {(QInputMethodEvent__Attribute*)attributes},
-    };
-
-    return QInputMethodEvent_new2(qstring(preeditText), attributes_list);
+QInputMethodEvent* q_inputmethodevent_new2(const char* preeditText, libqt_list attributes) {
+    return QInputMethodEvent_new2(qstring(preeditText), attributes);
 }
 
 QInputMethodEvent* q_inputmethodevent_clone(void* self) {
@@ -3246,7 +3230,7 @@ void q_inputmethodevent_set_commit_string(void* self, const char* commitString) 
     QInputMethodEvent_SetCommitString((QInputMethodEvent*)self, qstring(commitString));
 }
 
-libqt_list /* of QInputMethodEvent__Attribute* */ q_inputmethodevent_attributes(void* self) {
+const libqt_list /* of QInputMethodEvent__Attribute* */ q_inputmethodevent_attributes(void* self) {
     libqt_list _arr = QInputMethodEvent_Attributes((QInputMethodEvent*)self);
     return _arr;
 }
@@ -3493,7 +3477,7 @@ QObject* q_dropevent_source(void* self) {
     return QDropEvent_Source((QDropEvent*)self);
 }
 
-QMimeData* q_dropevent_mime_data(void* self) {
+const QMimeData* q_dropevent_mime_data(void* self) {
     return QDropEvent_MimeData((QDropEvent*)self);
 }
 
@@ -3645,7 +3629,7 @@ QObject* q_dragmoveevent_source(void* self) {
     return QDropEvent_Source((QDropEvent*)self);
 }
 
-QMimeData* q_dragmoveevent_mime_data(void* self) {
+const QMimeData* q_dragmoveevent_mime_data(void* self) {
     return QDropEvent_MimeData((QDropEvent*)self);
 }
 
@@ -3785,7 +3769,7 @@ QObject* q_dragenterevent_source(void* self) {
     return QDropEvent_Source((QDropEvent*)self);
 }
 
-QMimeData* q_dragenterevent_mime_data(void* self) {
+const QMimeData* q_dragenterevent_mime_data(void* self) {
     return QDropEvent_MimeData((QDropEvent*)self);
 }
 
@@ -3941,11 +3925,11 @@ int32_t q_helpevent_global_y(void* self) {
     return QHelpEvent_GlobalY((QHelpEvent*)self);
 }
 
-QPoint* q_helpevent_pos(void* self) {
+const QPoint* q_helpevent_pos(void* self) {
     return QHelpEvent_Pos((QHelpEvent*)self);
 }
 
-QPoint* q_helpevent_global_pos(void* self) {
+const QPoint* q_helpevent_global_pos(void* self) {
     return QHelpEvent_GlobalPos((QHelpEvent*)self);
 }
 
@@ -4434,7 +4418,7 @@ QShortcutEvent* q_shortcutevent_qbase_clone(void* self) {
     return QShortcutEvent_QBaseClone((QShortcutEvent*)self);
 }
 
-QKeySequence* q_shortcutevent_key(void* self) {
+const QKeySequence* q_shortcutevent_key(void* self) {
     return QShortcutEvent_Key((QShortcutEvent*)self);
 }
 
@@ -4602,32 +4586,12 @@ QTouchEvent* q_touchevent_new4(int64_t eventType, void* device, int64_t modifier
     return QTouchEvent_new4(eventType, (QPointingDevice*)device, modifiers);
 }
 
-QTouchEvent* q_touchevent_new5(int64_t eventType, void* device, int64_t modifiers, void* touchPoints[]) {
-    QEventPoint** touchPoints_arr = (QEventPoint**)touchPoints;
-    size_t touchPoints_len = 0;
-    while (touchPoints_arr[touchPoints_len] != NULL) {
-        touchPoints_len++;
-    }
-    libqt_list touchPoints_list = {
-        .len = touchPoints_len,
-        .data = {(QEventPoint*)touchPoints},
-    };
-
-    return QTouchEvent_new5(eventType, (QPointingDevice*)device, modifiers, touchPoints_list);
+QTouchEvent* q_touchevent_new5(int64_t eventType, void* device, int64_t modifiers, libqt_list touchPoints) {
+    return QTouchEvent_new5(eventType, (QPointingDevice*)device, modifiers, touchPoints);
 }
 
-QTouchEvent* q_touchevent_new6(int64_t eventType, void* device, int64_t modifiers, int64_t touchPointStates, void* touchPoints[]) {
-    QEventPoint** touchPoints_arr = (QEventPoint**)touchPoints;
-    size_t touchPoints_len = 0;
-    while (touchPoints_arr[touchPoints_len] != NULL) {
-        touchPoints_len++;
-    }
-    libqt_list touchPoints_list = {
-        .len = touchPoints_len,
-        .data = {(QEventPoint*)touchPoints},
-    };
-
-    return QTouchEvent_new6(eventType, (QPointingDevice*)device, modifiers, touchPointStates, touchPoints_list);
+QTouchEvent* q_touchevent_new6(int64_t eventType, void* device, int64_t modifiers, int64_t touchPointStates, libqt_list touchPoints) {
+    return QTouchEvent_new6(eventType, (QPointingDevice*)device, modifiers, touchPointStates, touchPoints);
 }
 
 QTouchEvent* q_touchevent_clone(void* self) {
@@ -4650,7 +4614,7 @@ int64_t q_touchevent_touch_point_states(void* self) {
     return QTouchEvent_TouchPointStates((QTouchEvent*)self);
 }
 
-libqt_list /* of QEventPoint* */ q_touchevent_touch_points(void* self) {
+const libqt_list /* of QEventPoint* */ q_touchevent_touch_points(void* self) {
     libqt_list _arr = QTouchEvent_TouchPoints((QTouchEvent*)self);
     return _arr;
 }
@@ -4691,7 +4655,7 @@ bool q_touchevent_qbase_is_end_event(void* self) {
     return QTouchEvent_QBaseIsEndEvent((QTouchEvent*)self);
 }
 
-QPointingDevice* q_touchevent_pointing_device(void* self) {
+const QPointingDevice* q_touchevent_pointing_device(void* self) {
     return QPointerEvent_PointingDevice((QPointerEvent*)self);
 }
 
@@ -4707,7 +4671,7 @@ QEventPoint* q_touchevent_point(void* self, int64_t i) {
     return QPointerEvent_Point((QPointerEvent*)self, i);
 }
 
-libqt_list /* of QEventPoint* */ q_touchevent_points(void* self) {
+const libqt_list /* of QEventPoint* */ q_touchevent_points(void* self) {
     libqt_list _arr = QPointerEvent_Points((QPointerEvent*)self);
     return _arr;
 }
@@ -4744,7 +4708,7 @@ bool q_touchevent_remove_passive_grabber(void* self, void* point, void* grabber)
     return QPointerEvent_RemovePassiveGrabber((QPointerEvent*)self, (QEventPoint*)point, (QObject*)grabber);
 }
 
-QInputDevice* q_touchevent_device(void* self) {
+const QInputDevice* q_touchevent_device(void* self) {
     return QInputEvent_Device((QInputEvent*)self);
 }
 

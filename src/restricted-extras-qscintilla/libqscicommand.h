@@ -14,54 +14,54 @@
 
 #include <string.h>
 
-/// https://doc.qt.io/qt-6/qscicommand.html
+/// https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscicommand.html#command)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
 /// ``` QsciCommand* self ```
 int64_t q_scicommand_command(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscicommand.html#execute)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
 /// ``` QsciCommand* self ```
 void q_scicommand_execute(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscicommand.html#setKey)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
 /// ``` QsciCommand* self, int key ```
 void q_scicommand_set_key(void* self, int key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscicommand.html#setAlternateKey)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
 /// ``` QsciCommand* self, int altkey ```
 void q_scicommand_set_alternate_key(void* self, int altkey);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscicommand.html#key)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
 /// ``` QsciCommand* self ```
 int32_t q_scicommand_key(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscicommand.html#alternateKey)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
 /// ``` QsciCommand* self ```
 int32_t q_scicommand_alternate_key(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscicommand.html#validKey)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
 /// ``` int key ```
 bool q_scicommand_valid_key(int key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscicommand.html#description)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///
 /// ``` QsciCommand* self ```
 const char* q_scicommand_description(void* self);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QsciCommand* self ```
 void q_scicommand_delete(void* self);
-
-/// https://doc.qt.io/qt-6/qscicommand.html#types
 
 typedef enum {
     QSCICOMMAND_COMMAND_LINEDOWN = 2300,

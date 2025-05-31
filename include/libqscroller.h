@@ -12,24 +12,19 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
-#include "libqevent.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpoint.h"
 #include "libqrect.h"
 #include "libqscrollerproperties.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qscroller.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QScroller* self ```
-QMetaObject* q_scroller_meta_object(void* self);
+const QMetaObject* q_scroller_meta_object(void* self);
 
 /// ``` QScroller* self, const char* param1 ```
 void* q_scroller_metacast(void* self, const char* param1);
@@ -55,7 +50,7 @@ QScroller* q_scroller_scroller(void* target);
 /// [Qt documentation](https://doc.qt.io/qt-6/qscroller.html#scroller)
 ///
 /// ``` QObject* target ```
-QScroller* q_scroller_scroller_with_target(void* target);
+const QScroller* q_scroller_scroller_with_target(void* target);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscroller.html#grabGesture)
 ///
@@ -119,8 +114,8 @@ QScrollerProperties* q_scroller_scroller_properties(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscroller.html#setSnapPositionsX)
 ///
-/// ``` QScroller* self, double* positions[] ```
-void q_scroller_set_snap_positions_x(void* self, double* positions[]);
+/// ``` QScroller* self, libqt_list /* of double */ positions ```
+void q_scroller_set_snap_positions_x(void* self, libqt_list positions);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscroller.html#setSnapPositionsX)
 ///
@@ -129,8 +124,8 @@ void q_scroller_set_snap_positions_x2(void* self, double first, double interval)
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscroller.html#setSnapPositionsY)
 ///
-/// ``` QScroller* self, double* positions[] ```
-void q_scroller_set_snap_positions_y(void* self, double* positions[]);
+/// ``` QScroller* self, libqt_list /* of double */ positions ```
+void q_scroller_set_snap_positions_y(void* self, libqt_list positions);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscroller.html#setSnapPositionsY)
 ///
@@ -172,6 +167,8 @@ void q_scroller_resend_prepare_event(void* self);
 /// ``` QScroller* self, enum QScroller__State newstate ```
 void q_scroller_state_changed(void* self, int64_t newstate);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscroller.html#stateChanged)
+///
 /// ``` QScroller* self, void (*slot)(QScroller*, enum QScroller__State) ```
 void q_scroller_on_state_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -180,6 +177,8 @@ void q_scroller_on_state_changed(void* self, void (*slot)(void*, int64_t));
 /// ``` QScroller* self, QScrollerProperties* param1 ```
 void q_scroller_scroller_properties_changed(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscroller.html#scrollerPropertiesChanged)
+///
 /// ``` QScroller* self, void (*slot)(QScroller*, QScrollerProperties*) ```
 void q_scroller_on_scroller_properties_changed(void* self, void (*slot)(void*, void*));
 
@@ -299,7 +298,7 @@ void q_scroller_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QScroller* self ```
-libqt_list /* of QObject* */ q_scroller_children(void* self);
+const libqt_list /* of QObject* */ q_scroller_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -397,7 +396,7 @@ QBindingStorage* q_scroller_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QScroller* self ```
-QBindingStorage* q_scroller_binding_storage2(void* self);
+const QBindingStorage* q_scroller_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -407,6 +406,8 @@ QBindingStorage* q_scroller_binding_storage2(void* self);
 void q_scroller_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QScroller* self, void (*slot)(QObject*) ```
 void q_scroller_on_destroyed(void* self, void (*slot)(void*));
@@ -462,8 +463,19 @@ void q_scroller_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QScroller* self, void (*slot)(QObject*, QObject*) ```
 void q_scroller_on_destroyed1(void* self, void (*slot)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QScroller* self, void (*slot)(QObject*, const char*) ```
+void q_scroller_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qscroller.html#types
 

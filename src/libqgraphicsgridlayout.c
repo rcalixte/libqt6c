@@ -4,7 +4,6 @@
 #include "libqgraphicslayoutitem.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
-#include "libqsizepolicy.hpp"
 #include "libqcoreevent.hpp"
 #include "libqgraphicsgridlayout.hpp"
 #include "libqgraphicsgridlayout.h"

@@ -14,15 +14,11 @@
 
 #include "libqabstractitemmodel.h"
 #include "libqabstractitemview.h"
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqrect.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 #include "libqwidget.h"
 
 /// https://doc.qt.io/qt-6/qcompleter.html
@@ -60,7 +56,7 @@ QCompleter* q_completer_new6(const char* completions[], void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QCompleter* self ```
-QMetaObject* q_completer_meta_object(void* self);
+const QMetaObject* q_completer_meta_object(void* self);
 
 /// ``` QCompleter* self, const char* param1 ```
 void* q_completer_metacast(void* self, const char* param1);
@@ -243,11 +239,15 @@ void q_completer_set_wrap_around(void* self, bool wrap);
 /// ``` QCompleter* self, QModelIndex* index ```
 const char* q_completer_path_from_index(void* self, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcompleter.html#pathFromIndex)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QCompleter* self, const char* (*slot)(QCompleter*, QModelIndex*) ```
 void q_completer_on_path_from_index(void* self, const char* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcompleter.html#pathFromIndex)
+///
 /// Base class method implementation
 ///
 /// ``` QCompleter* self, QModelIndex* index ```
@@ -258,11 +258,15 @@ const char* q_completer_qbase_path_from_index(void* self, void* index);
 /// ``` QCompleter* self, const char* path ```
 const char** q_completer_split_path(void* self, const char* path);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcompleter.html#splitPath)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QCompleter* self, const char** (*slot)(QCompleter*, const char*) ```
 void q_completer_on_split_path(void* self, const char** (*slot)(void*, const char*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcompleter.html#splitPath)
+///
 /// Base class method implementation
 ///
 /// ``` QCompleter* self, const char* path ```
@@ -273,11 +277,15 @@ const char** q_completer_qbase_split_path(void* self, const char* path);
 /// ``` QCompleter* self, QObject* o, QEvent* e ```
 bool q_completer_event_filter(void* self, void* o, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcompleter.html#eventFilter)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QCompleter* self, bool (*slot)(QCompleter*, QObject*, QEvent*) ```
 void q_completer_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcompleter.html#eventFilter)
+///
 /// Base class method implementation
 ///
 /// ``` QCompleter* self, QObject* o, QEvent* e ```
@@ -288,11 +296,15 @@ bool q_completer_qbase_event_filter(void* self, void* o, void* e);
 /// ``` QCompleter* self, QEvent* param1 ```
 bool q_completer_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcompleter.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QCompleter* self, bool (*slot)(QCompleter*, QEvent*) ```
 void q_completer_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcompleter.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QCompleter* self, QEvent* param1 ```
@@ -303,28 +315,20 @@ bool q_completer_qbase_event(void* self, void* param1);
 /// ``` QCompleter* self, const char* text ```
 void q_completer_activated(void* self, const char* text);
 
-/// ``` QCompleter* self, void (*slot)(QCompleter*, const char*) ```
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qcompleter.html#activated)
 ///
 /// ``` QCompleter* self, QModelIndex* index ```
 void q_completer_activated_with_index(void* self, void* index);
-
-/// ``` QCompleter* self, void (*slot)(QCompleter*, QModelIndex*) ```
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcompleter.html#highlighted)
 ///
 /// ``` QCompleter* self, const char* text ```
 void q_completer_highlighted(void* self, const char* text);
 
-/// ``` QCompleter* self, void (*slot)(QCompleter*, const char*) ```
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qcompleter.html#highlighted)
 ///
 /// ``` QCompleter* self, QModelIndex* index ```
 void q_completer_highlighted_with_index(void* self, void* index);
-
-/// ``` QCompleter* self, void (*slot)(QCompleter*, QModelIndex*) ```
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -423,7 +427,7 @@ void q_completer_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QCompleter* self ```
-libqt_list /* of QObject* */ q_completer_children(void* self);
+const libqt_list /* of QObject* */ q_completer_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -521,7 +525,7 @@ QBindingStorage* q_completer_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QCompleter* self ```
-QBindingStorage* q_completer_binding_storage2(void* self);
+const QBindingStorage* q_completer_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -531,6 +535,8 @@ QBindingStorage* q_completer_binding_storage2(void* self);
 void q_completer_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QCompleter* self, void (*slot)(QObject*) ```
 void q_completer_on_destroyed(void* self, void (*slot)(void*));
@@ -586,6 +592,8 @@ void q_completer_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QCompleter* self, void (*slot)(QObject*, QObject*) ```
 void q_completer_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -600,12 +608,16 @@ void q_completer_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCompleter* self, QTimerEvent* event ```
 void q_completer_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -623,12 +635,16 @@ void q_completer_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCompleter* self, QChildEvent* event ```
 void q_completer_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -646,12 +662,16 @@ void q_completer_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCompleter* self, QEvent* event ```
 void q_completer_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -669,12 +689,16 @@ void q_completer_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCompleter* self, QMetaMethod* signal ```
 void q_completer_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -692,12 +716,16 @@ void q_completer_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCompleter* self, QMetaMethod* signal ```
 void q_completer_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -715,12 +743,16 @@ QObject* q_completer_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCompleter* self ```
 QObject* q_completer_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -738,12 +770,16 @@ int32_t q_completer_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCompleter* self ```
 int32_t q_completer_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -761,12 +797,16 @@ int32_t q_completer_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCompleter* self, const char* signal ```
 int32_t q_completer_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -784,6 +824,8 @@ bool q_completer_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCompleter* self, QMetaMethod* signal ```
@@ -791,11 +833,24 @@ bool q_completer_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QCompleter* self, bool (*slot)(QCompleter*, QMetaMethod*) ```
 void q_completer_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QCompleter* self, void (*slot)(QObject*, const char*) ```
+void q_completer_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcompleter.html#dtor.QCompleter)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCompleter* self ```

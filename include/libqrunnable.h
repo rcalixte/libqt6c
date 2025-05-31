@@ -24,11 +24,15 @@ QRunnable* q_runnable_new();
 /// ``` QRunnable* self ```
 void q_runnable_run(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qrunnable.html#run)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QRunnable* self, void (*slot)() ```
 void q_runnable_on_run(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qrunnable.html#run)
+///
 /// Base class method implementation
 ///
 /// ``` QRunnable* self ```
@@ -44,6 +48,8 @@ bool q_runnable_auto_delete(void* self);
 /// ``` QRunnable* self, bool autoDelete ```
 void q_runnable_set_auto_delete(void* self, bool autoDelete);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qrunnable.html#dtor.QRunnable)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QRunnable* self ```

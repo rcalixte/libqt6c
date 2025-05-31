@@ -213,6 +213,8 @@ int64_t q_videoframeformat_image_format_from_pixel_format(int64_t format);
 /// ``` enum QVideoFrameFormat__PixelFormat pixelFormat ```
 const char* q_videoframeformat_pixel_format_to_string(int64_t pixelFormat);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#dtor.QVideoFrameFormat)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QVideoFrameFormat* self ```

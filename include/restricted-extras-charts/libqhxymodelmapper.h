@@ -13,18 +13,14 @@
 #include "../qtlibc.h"
 
 #include "../libqabstractitemmodel.h"
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 #include "libqxymodelmapper.h"
 #include "libqxyseries.h"
 
-/// https://doc.qt.io/qt-6/qhxymodelmapper.html
+/// https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html
 
 /// q_hxymodelmapper_new constructs a new QHXYModelMapper object.
 ///
@@ -39,7 +35,7 @@ QHXYModelMapper* q_hxymodelmapper_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QHXYModelMapper* self ```
-QMetaObject* q_hxymodelmapper_meta_object(void* self);
+const QMetaObject* q_hxymodelmapper_meta_object(void* self);
 
 /// ``` QHXYModelMapper* self, const char* param1 ```
 void* q_hxymodelmapper_metacast(void* self, const char* param1);
@@ -62,111 +58,123 @@ int32_t q_hxymodelmapper_qbase_metacall(void* self, int64_t param1, int param2, 
 /// ``` const char* s ```
 const char* q_hxymodelmapper_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper.html#model)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#model)
 ///
 /// ``` QHXYModelMapper* self ```
 QAbstractItemModel* q_hxymodelmapper_model(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper.html#setModel)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#setModel)
 ///
 /// ``` QHXYModelMapper* self, QAbstractItemModel* model ```
 void q_hxymodelmapper_set_model(void* self, void* model);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper.html#series)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#series)
 ///
 /// ``` QHXYModelMapper* self ```
 QXYSeries* q_hxymodelmapper_series(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper.html#setSeries)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#setSeries)
 ///
 /// ``` QHXYModelMapper* self, QXYSeries* series ```
 void q_hxymodelmapper_set_series(void* self, void* series);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper.html#xRow)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#xRow)
 ///
 /// ``` QHXYModelMapper* self ```
 int32_t q_hxymodelmapper_x_row(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper.html#setXRow)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#setXRow)
 ///
 /// ``` QHXYModelMapper* self, int xRow ```
 void q_hxymodelmapper_set_x_row(void* self, int xRow);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper.html#yRow)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#yRow)
 ///
 /// ``` QHXYModelMapper* self ```
 int32_t q_hxymodelmapper_y_row(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper.html#setYRow)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#setYRow)
 ///
 /// ``` QHXYModelMapper* self, int yRow ```
 void q_hxymodelmapper_set_y_row(void* self, int yRow);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper.html#firstColumn)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#firstColumn)
 ///
 /// ``` QHXYModelMapper* self ```
 int32_t q_hxymodelmapper_first_column(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper.html#setFirstColumn)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#setFirstColumn)
 ///
 /// ``` QHXYModelMapper* self, int firstColumn ```
 void q_hxymodelmapper_set_first_column(void* self, int firstColumn);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper.html#columnCount)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#columnCount)
 ///
 /// ``` QHXYModelMapper* self ```
 int32_t q_hxymodelmapper_column_count(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper.html#setColumnCount)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#setColumnCount)
 ///
 /// ``` QHXYModelMapper* self, int columnCount ```
 void q_hxymodelmapper_set_column_count(void* self, int columnCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper.html#seriesReplaced)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#seriesReplaced)
 ///
 /// ``` QHXYModelMapper* self ```
 void q_hxymodelmapper_series_replaced(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#seriesReplaced)
+///
 /// ``` QHXYModelMapper* self, void (*slot)(QHXYModelMapper*) ```
 void q_hxymodelmapper_on_series_replaced(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper.html#modelReplaced)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#modelReplaced)
 ///
 /// ``` QHXYModelMapper* self ```
 void q_hxymodelmapper_model_replaced(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#modelReplaced)
+///
 /// ``` QHXYModelMapper* self, void (*slot)(QHXYModelMapper*) ```
 void q_hxymodelmapper_on_model_replaced(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper.html#xRowChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#xRowChanged)
 ///
 /// ``` QHXYModelMapper* self ```
 void q_hxymodelmapper_x_row_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#xRowChanged)
+///
 /// ``` QHXYModelMapper* self, void (*slot)(QHXYModelMapper*) ```
 void q_hxymodelmapper_on_x_row_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper.html#yRowChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#yRowChanged)
 ///
 /// ``` QHXYModelMapper* self ```
 void q_hxymodelmapper_y_row_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#yRowChanged)
+///
 /// ``` QHXYModelMapper* self, void (*slot)(QHXYModelMapper*) ```
 void q_hxymodelmapper_on_y_row_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper.html#firstColumnChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#firstColumnChanged)
 ///
 /// ``` QHXYModelMapper* self ```
 void q_hxymodelmapper_first_column_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#firstColumnChanged)
+///
 /// ``` QHXYModelMapper* self, void (*slot)(QHXYModelMapper*) ```
 void q_hxymodelmapper_on_first_column_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper.html#columnCountChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#columnCountChanged)
 ///
 /// ``` QHXYModelMapper* self ```
 void q_hxymodelmapper_column_count_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#columnCountChanged)
+///
 /// ``` QHXYModelMapper* self, void (*slot)(QHXYModelMapper*) ```
 void q_hxymodelmapper_on_column_count_changed(void* self, void (*slot)(void*));
 
@@ -262,7 +270,7 @@ void q_hxymodelmapper_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QHXYModelMapper* self ```
-libqt_list /* of QObject* */ q_hxymodelmapper_children(void* self);
+const libqt_list /* of QObject* */ q_hxymodelmapper_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -360,7 +368,7 @@ QBindingStorage* q_hxymodelmapper_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QHXYModelMapper* self ```
-QBindingStorage* q_hxymodelmapper_binding_storage2(void* self);
+const QBindingStorage* q_hxymodelmapper_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -370,6 +378,8 @@ QBindingStorage* q_hxymodelmapper_binding_storage2(void* self);
 void q_hxymodelmapper_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QHXYModelMapper* self, void (*slot)(QObject*) ```
 void q_hxymodelmapper_on_destroyed(void* self, void (*slot)(void*));
@@ -425,6 +435,8 @@ void q_hxymodelmapper_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QHXYModelMapper* self, void (*slot)(QObject*, QObject*) ```
 void q_hxymodelmapper_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -439,12 +451,16 @@ bool q_hxymodelmapper_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self, QEvent* event ```
 bool q_hxymodelmapper_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -462,12 +478,16 @@ bool q_hxymodelmapper_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self, QObject* watched, QEvent* event ```
 bool q_hxymodelmapper_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -485,12 +505,16 @@ void q_hxymodelmapper_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self, QTimerEvent* event ```
 void q_hxymodelmapper_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -508,12 +532,16 @@ void q_hxymodelmapper_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self, QChildEvent* event ```
 void q_hxymodelmapper_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -531,12 +559,16 @@ void q_hxymodelmapper_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self, QEvent* event ```
 void q_hxymodelmapper_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -554,12 +586,16 @@ void q_hxymodelmapper_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self, QMetaMethod* signal ```
 void q_hxymodelmapper_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -577,12 +613,16 @@ void q_hxymodelmapper_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self, QMetaMethod* signal ```
 void q_hxymodelmapper_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -600,12 +640,16 @@ int32_t q_hxymodelmapper_first(void* self);
 
 /// Inherited from QXYModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper.html#first)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self ```
 int32_t q_hxymodelmapper_qbase_first(void* self);
 
 /// Inherited from QXYModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper.html#first)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -623,12 +667,16 @@ void q_hxymodelmapper_set_first(void* self, int first);
 
 /// Inherited from QXYModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper.html#setFirst)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self, int first ```
 void q_hxymodelmapper_qbase_set_first(void* self, int first);
 
 /// Inherited from QXYModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper.html#setFirst)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -646,12 +694,16 @@ int32_t q_hxymodelmapper_count(void* self);
 
 /// Inherited from QXYModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper.html#count)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self ```
 int32_t q_hxymodelmapper_qbase_count(void* self);
 
 /// Inherited from QXYModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper.html#count)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -669,12 +721,16 @@ void q_hxymodelmapper_set_count(void* self, int count);
 
 /// Inherited from QXYModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper.html#setCount)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self, int count ```
 void q_hxymodelmapper_qbase_set_count(void* self, int count);
 
 /// Inherited from QXYModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper.html#setCount)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -692,12 +748,16 @@ int64_t q_hxymodelmapper_orientation(void* self);
 
 /// Inherited from QXYModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper.html#orientation)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self ```
 int64_t q_hxymodelmapper_qbase_orientation(void* self);
 
 /// Inherited from QXYModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper.html#orientation)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -715,12 +775,16 @@ void q_hxymodelmapper_set_orientation(void* self, int64_t orientation);
 
 /// Inherited from QXYModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper.html#setOrientation)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self, enum Qt__Orientation orientation ```
 void q_hxymodelmapper_qbase_set_orientation(void* self, int64_t orientation);
 
 /// Inherited from QXYModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper.html#setOrientation)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -738,12 +802,16 @@ int32_t q_hxymodelmapper_x_section(void* self);
 
 /// Inherited from QXYModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper.html#xSection)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self ```
 int32_t q_hxymodelmapper_qbase_x_section(void* self);
 
 /// Inherited from QXYModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper.html#xSection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -761,12 +829,16 @@ void q_hxymodelmapper_set_x_section(void* self, int xSection);
 
 /// Inherited from QXYModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper.html#setXSection)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self, int xSection ```
 void q_hxymodelmapper_qbase_set_x_section(void* self, int xSection);
 
 /// Inherited from QXYModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper.html#setXSection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -784,12 +856,16 @@ int32_t q_hxymodelmapper_y_section(void* self);
 
 /// Inherited from QXYModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper.html#ySection)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self ```
 int32_t q_hxymodelmapper_qbase_y_section(void* self);
 
 /// Inherited from QXYModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper.html#ySection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -807,12 +883,16 @@ void q_hxymodelmapper_set_y_section(void* self, int ySection);
 
 /// Inherited from QXYModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper.html#setYSection)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self, int ySection ```
 void q_hxymodelmapper_qbase_set_y_section(void* self, int ySection);
 
 /// Inherited from QXYModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper.html#setYSection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -830,12 +910,16 @@ QObject* q_hxymodelmapper_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self ```
 QObject* q_hxymodelmapper_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -853,12 +937,16 @@ int32_t q_hxymodelmapper_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self ```
 int32_t q_hxymodelmapper_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -876,12 +964,16 @@ int32_t q_hxymodelmapper_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self, const char* signal ```
 int32_t q_hxymodelmapper_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -899,6 +991,8 @@ bool q_hxymodelmapper_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self, QMetaMethod* signal ```
@@ -906,11 +1000,24 @@ bool q_hxymodelmapper_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QHXYModelMapper* self, bool (*slot)(QHXYModelMapper*, QMetaMethod*) ```
 void q_hxymodelmapper_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QHXYModelMapper* self, void (*slot)(QObject*, const char*) ```
+void q_hxymodelmapper_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qhxymodelmapper-qtcharts.html#dtor.QHXYModelMapper)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QHXYModelMapper* self ```

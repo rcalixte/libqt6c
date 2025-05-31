@@ -94,8 +94,8 @@ libqt_list /* of QSslCertificate* */ q_sslconfiguration_local_certificate_chain(
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#setLocalCertificateChain)
 ///
-/// ``` QSslConfiguration* self, QSslCertificate* localChain[] ```
-void q_sslconfiguration_set_local_certificate_chain(void* self, void* localChain[]);
+/// ``` QSslConfiguration* self, libqt_list /* of QSslCertificate* */ localChain ```
+void q_sslconfiguration_set_local_certificate_chain(void* self, libqt_list localChain);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#localCertificate)
 ///
@@ -144,8 +144,8 @@ libqt_list /* of QSslCipher* */ q_sslconfiguration_ciphers(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#setCiphers)
 ///
-/// ``` QSslConfiguration* self, QSslCipher* ciphers[] ```
-void q_sslconfiguration_set_ciphers(void* self, void* ciphers[]);
+/// ``` QSslConfiguration* self, libqt_list /* of QSslCipher* */ ciphers ```
+void q_sslconfiguration_set_ciphers(void* self, libqt_list ciphers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#setCiphers)
 ///
@@ -164,8 +164,8 @@ libqt_list /* of QSslCertificate* */ q_sslconfiguration_ca_certificates(void* se
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#setCaCertificates)
 ///
-/// ``` QSslConfiguration* self, QSslCertificate* certificates[] ```
-void q_sslconfiguration_set_ca_certificates(void* self, void* certificates[]);
+/// ``` QSslConfiguration* self, libqt_list /* of QSslCertificate* */ certificates ```
+void q_sslconfiguration_set_ca_certificates(void* self, libqt_list certificates);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#addCaCertificates)
 ///
@@ -179,8 +179,8 @@ void q_sslconfiguration_add_ca_certificate(void* self, void* certificate);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#addCaCertificates)
 ///
-/// ``` QSslConfiguration* self, QSslCertificate* certificates[] ```
-void q_sslconfiguration_add_ca_certificates_with_certificates(void* self, void* certificates[]);
+/// ``` QSslConfiguration* self, libqt_list /* of QSslCertificate* */ certificates ```
+void q_sslconfiguration_add_ca_certificates_with_certificates(void* self, libqt_list certificates);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#systemCaCertificates)
 ///
@@ -224,8 +224,8 @@ libqt_list /* of QSslEllipticCurve* */ q_sslconfiguration_elliptic_curves(void* 
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#setEllipticCurves)
 ///
-/// ``` QSslConfiguration* self, QSslEllipticCurve* curves[] ```
-void q_sslconfiguration_set_elliptic_curves(void* self, void* curves[]);
+/// ``` QSslConfiguration* self, libqt_list /* of QSslEllipticCurve* */ curves ```
+void q_sslconfiguration_set_elliptic_curves(void* self, libqt_list curves);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#supportedEllipticCurves)
 ///
@@ -352,6 +352,8 @@ bool q_sslconfiguration_add_ca_certificates2(void* self, const char* path, int64
 /// ``` QSslConfiguration* self, const char* path, enum QSsl__EncodingFormat format, enum QSslCertificate__PatternSyntax syntax ```
 bool q_sslconfiguration_add_ca_certificates3(void* self, const char* path, int64_t format, int64_t syntax);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#dtor.QSslConfiguration)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSslConfiguration* self ```

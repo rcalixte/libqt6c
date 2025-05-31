@@ -80,17 +80,8 @@ libqt_list /* of QKeySequence* */ q_keysequence_list_from_string(const char* str
     return _arr;
 }
 
-const char* q_keysequence_list_to_string(void* list[]) {
-    QKeySequence** list_arr = (QKeySequence**)list;
-    size_t list_len = 0;
-    while (list_arr[list_len] != NULL) {
-        list_len++;
-    }
-    libqt_list list_list = {
-        .len = list_len,
-        .data = {(QKeySequence*)list},
-    };
-    libqt_string _str = QKeySequence_ListToString(list_list);
+const char* q_keysequence_list_to_string(libqt_list list) {
+    libqt_string _str = QKeySequence_ListToString(list);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -169,17 +160,8 @@ libqt_list /* of QKeySequence* */ q_keysequence_list_from_string2(const char* st
     return _arr;
 }
 
-const char* q_keysequence_list_to_string2(void* list[], int64_t format) {
-    QKeySequence** list_arr = (QKeySequence**)list;
-    size_t list_len = 0;
-    while (list_arr[list_len] != NULL) {
-        list_len++;
-    }
-    libqt_list list_list = {
-        .len = list_len,
-        .data = {(QKeySequence*)list},
-    };
-    libqt_string _str = QKeySequence_ListToString2(list_list, format);
+const char* q_keysequence_list_to_string2(libqt_list list, int64_t format) {
+    libqt_string _str = QKeySequence_ListToString2(list, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

@@ -12,8 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "../libqevent.h"
 #include "../libqimage.h"
 #include "libqmediacapturesession.h"
@@ -22,8 +20,6 @@
 #include "../libqobject.h"
 #include "../libqsize.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 #include "libqvideoframe.h"
 
 /// https://doc.qt.io/qt-6/qimagecapture.html
@@ -41,7 +37,7 @@ QImageCapture* q_imagecapture_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QImageCapture* self ```
-QMetaObject* q_imagecapture_meta_object(void* self);
+const QMetaObject* q_imagecapture_meta_object(void* self);
 
 /// ``` QImageCapture* self, const char* param1 ```
 void* q_imagecapture_metacast(void* self, const char* param1);
@@ -169,6 +165,8 @@ int32_t q_imagecapture_capture(void* self);
 /// ``` QImageCapture* self ```
 void q_imagecapture_error_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#errorChanged)
+///
 /// ``` QImageCapture* self, void (*slot)(QImageCapture*) ```
 void q_imagecapture_on_error_changed(void* self, void (*slot)(void*));
 
@@ -177,6 +175,8 @@ void q_imagecapture_on_error_changed(void* self, void (*slot)(void*));
 /// ``` QImageCapture* self, int id, enum QImageCapture__Error errorVal, const char* errorString ```
 void q_imagecapture_error_occurred(void* self, int id, int64_t errorVal, const char* errorString);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#errorOccurred)
+///
 /// ``` QImageCapture* self, void (*slot)(QImageCapture*, int, enum QImageCapture__Error, const char*) ```
 void q_imagecapture_on_error_occurred(void* self, void (*slot)(void*, int, int64_t, const char*));
 
@@ -185,6 +185,8 @@ void q_imagecapture_on_error_occurred(void* self, void (*slot)(void*, int, int64
 /// ``` QImageCapture* self, bool ready ```
 void q_imagecapture_ready_for_capture_changed(void* self, bool ready);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#readyForCaptureChanged)
+///
 /// ``` QImageCapture* self, void (*slot)(QImageCapture*, bool) ```
 void q_imagecapture_on_ready_for_capture_changed(void* self, void (*slot)(void*, bool));
 
@@ -193,6 +195,8 @@ void q_imagecapture_on_ready_for_capture_changed(void* self, void (*slot)(void*,
 /// ``` QImageCapture* self ```
 void q_imagecapture_meta_data_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#metaDataChanged)
+///
 /// ``` QImageCapture* self, void (*slot)(QImageCapture*) ```
 void q_imagecapture_on_meta_data_changed(void* self, void (*slot)(void*));
 
@@ -201,6 +205,8 @@ void q_imagecapture_on_meta_data_changed(void* self, void (*slot)(void*));
 /// ``` QImageCapture* self ```
 void q_imagecapture_file_format_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#fileFormatChanged)
+///
 /// ``` QImageCapture* self, void (*slot)(QImageCapture*) ```
 void q_imagecapture_on_file_format_changed(void* self, void (*slot)(void*));
 
@@ -209,6 +215,8 @@ void q_imagecapture_on_file_format_changed(void* self, void (*slot)(void*));
 /// ``` QImageCapture* self ```
 void q_imagecapture_quality_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#qualityChanged)
+///
 /// ``` QImageCapture* self, void (*slot)(QImageCapture*) ```
 void q_imagecapture_on_quality_changed(void* self, void (*slot)(void*));
 
@@ -217,6 +225,8 @@ void q_imagecapture_on_quality_changed(void* self, void (*slot)(void*));
 /// ``` QImageCapture* self ```
 void q_imagecapture_resolution_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#resolutionChanged)
+///
 /// ``` QImageCapture* self, void (*slot)(QImageCapture*) ```
 void q_imagecapture_on_resolution_changed(void* self, void (*slot)(void*));
 
@@ -225,6 +235,8 @@ void q_imagecapture_on_resolution_changed(void* self, void (*slot)(void*));
 /// ``` QImageCapture* self, int id ```
 void q_imagecapture_image_exposed(void* self, int id);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#imageExposed)
+///
 /// ``` QImageCapture* self, void (*slot)(QImageCapture*, int) ```
 void q_imagecapture_on_image_exposed(void* self, void (*slot)(void*, int));
 
@@ -233,6 +245,8 @@ void q_imagecapture_on_image_exposed(void* self, void (*slot)(void*, int));
 /// ``` QImageCapture* self, int id, QImage* preview ```
 void q_imagecapture_image_captured(void* self, int id, void* preview);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#imageCaptured)
+///
 /// ``` QImageCapture* self, void (*slot)(QImageCapture*, int, QImage*) ```
 void q_imagecapture_on_image_captured(void* self, void (*slot)(void*, int, void*));
 
@@ -241,6 +255,8 @@ void q_imagecapture_on_image_captured(void* self, void (*slot)(void*, int, void*
 /// ``` QImageCapture* self, int id, QMediaMetaData* metaData ```
 void q_imagecapture_image_metadata_available(void* self, int id, void* metaData);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#imageMetadataAvailable)
+///
 /// ``` QImageCapture* self, void (*slot)(QImageCapture*, int, QMediaMetaData*) ```
 void q_imagecapture_on_image_metadata_available(void* self, void (*slot)(void*, int, void*));
 
@@ -249,6 +265,8 @@ void q_imagecapture_on_image_metadata_available(void* self, void (*slot)(void*, 
 /// ``` QImageCapture* self, int id, QVideoFrame* frame ```
 void q_imagecapture_image_available(void* self, int id, void* frame);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#imageAvailable)
+///
 /// ``` QImageCapture* self, void (*slot)(QImageCapture*, int, QVideoFrame*) ```
 void q_imagecapture_on_image_available(void* self, void (*slot)(void*, int, void*));
 
@@ -257,6 +275,8 @@ void q_imagecapture_on_image_available(void* self, void (*slot)(void*, int, void
 /// ``` QImageCapture* self, int id, const char* fileName ```
 void q_imagecapture_image_saved(void* self, int id, const char* fileName);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#imageSaved)
+///
 /// ``` QImageCapture* self, void (*slot)(QImageCapture*, int, const char*) ```
 void q_imagecapture_on_image_saved(void* self, void (*slot)(void*, int, const char*));
 
@@ -357,7 +377,7 @@ void q_imagecapture_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QImageCapture* self ```
-libqt_list /* of QObject* */ q_imagecapture_children(void* self);
+const libqt_list /* of QObject* */ q_imagecapture_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -455,7 +475,7 @@ QBindingStorage* q_imagecapture_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QImageCapture* self ```
-QBindingStorage* q_imagecapture_binding_storage2(void* self);
+const QBindingStorage* q_imagecapture_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -465,6 +485,8 @@ QBindingStorage* q_imagecapture_binding_storage2(void* self);
 void q_imagecapture_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QImageCapture* self, void (*slot)(QObject*) ```
 void q_imagecapture_on_destroyed(void* self, void (*slot)(void*));
@@ -520,6 +542,8 @@ void q_imagecapture_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QImageCapture* self, void (*slot)(QObject*, QObject*) ```
 void q_imagecapture_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -534,12 +558,16 @@ bool q_imagecapture_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageCapture* self, QEvent* event ```
 bool q_imagecapture_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -557,12 +585,16 @@ bool q_imagecapture_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageCapture* self, QObject* watched, QEvent* event ```
 bool q_imagecapture_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -580,12 +612,16 @@ void q_imagecapture_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageCapture* self, QTimerEvent* event ```
 void q_imagecapture_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -603,12 +639,16 @@ void q_imagecapture_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageCapture* self, QChildEvent* event ```
 void q_imagecapture_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -626,12 +666,16 @@ void q_imagecapture_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageCapture* self, QEvent* event ```
 void q_imagecapture_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -649,12 +693,16 @@ void q_imagecapture_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageCapture* self, QMetaMethod* signal ```
 void q_imagecapture_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -672,12 +720,16 @@ void q_imagecapture_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageCapture* self, QMetaMethod* signal ```
 void q_imagecapture_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -695,12 +747,16 @@ QObject* q_imagecapture_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageCapture* self ```
 QObject* q_imagecapture_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -718,12 +774,16 @@ int32_t q_imagecapture_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageCapture* self ```
 int32_t q_imagecapture_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -741,12 +801,16 @@ int32_t q_imagecapture_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageCapture* self, const char* signal ```
 int32_t q_imagecapture_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -764,6 +828,8 @@ bool q_imagecapture_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageCapture* self, QMetaMethod* signal ```
@@ -771,11 +837,24 @@ bool q_imagecapture_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QImageCapture* self, bool (*slot)(QImageCapture*, QMetaMethod*) ```
 void q_imagecapture_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QImageCapture* self, void (*slot)(QObject*, const char*) ```
+void q_imagecapture_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#dtor.QImageCapture)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QImageCapture* self ```

@@ -13,22 +13,17 @@
 #include "../qtlibc.h"
 
 #include "../libqabstractitemmodel.h"
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
-#include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 #include "libqxyseries.h"
 
-/// https://doc.qt.io/qt-6/qxymodelmapper.html
+/// https://doc.qt.io/qt-6/qxymodelmapper-qtcharts.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QXYModelMapper* self ```
-QMetaObject* q_xymodelmapper_meta_object(void* self);
+const QMetaObject* q_xymodelmapper_meta_object(void* self);
 
 /// ``` QXYModelMapper* self, const char* param1 ```
 void* q_xymodelmapper_metacast(void* self, const char* param1);
@@ -147,7 +142,7 @@ void q_xymodelmapper_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QXYModelMapper* self ```
-libqt_list /* of QObject* */ q_xymodelmapper_children(void* self);
+const libqt_list /* of QObject* */ q_xymodelmapper_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -245,7 +240,7 @@ QBindingStorage* q_xymodelmapper_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QXYModelMapper* self ```
-QBindingStorage* q_xymodelmapper_binding_storage2(void* self);
+const QBindingStorage* q_xymodelmapper_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -255,6 +250,8 @@ QBindingStorage* q_xymodelmapper_binding_storage2(void* self);
 void q_xymodelmapper_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QXYModelMapper* self, void (*slot)(QObject*) ```
 void q_xymodelmapper_on_destroyed(void* self, void (*slot)(void*));
@@ -310,9 +307,22 @@ void q_xymodelmapper_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QXYModelMapper* self, void (*slot)(QObject*, QObject*) ```
 void q_xymodelmapper_on_destroyed1(void* self, void (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QXYModelMapper* self, void (*slot)(QObject*, const char*) ```
+void q_xymodelmapper_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper-qtcharts.html#dtor.QXYModelMapper)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QXYModelMapper* self ```

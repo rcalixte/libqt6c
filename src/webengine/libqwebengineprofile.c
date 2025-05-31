@@ -1,12 +1,8 @@
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
 #include "../libqurl.hpp"
-#include "../libqvariant.hpp"
 #include "libqwebengineclientcertificatestore.hpp"
 #include "libqwebenginecookiestore.hpp"
 #include "libqwebenginedownloadrequest.hpp"
@@ -34,7 +30,7 @@ QWebEngineProfile* q_webengineprofile_new4(const char* name, void* parent) {
     return QWebEngineProfile_new4(qstring(name), (QObject*)parent);
 }
 
-QMetaObject* q_webengineprofile_meta_object(void* self) {
+const QMetaObject* q_webengineprofile_meta_object(void* self) {
     return QWebEngineProfile_MetaObject((QWebEngineProfile*)self);
 }
 
@@ -152,17 +148,8 @@ void q_webengineprofile_clear_all_visited_links(void* self) {
     QWebEngineProfile_ClearAllVisitedLinks((QWebEngineProfile*)self);
 }
 
-void q_webengineprofile_clear_visited_links(void* self, void* urls[]) {
-    QUrl** urls_arr = (QUrl**)urls;
-    size_t urls_len = 0;
-    while (urls_arr[urls_len] != NULL) {
-        urls_len++;
-    }
-    libqt_list urls_list = {
-        .len = urls_len,
-        .data = {(QUrl*)urls},
-    };
-    QWebEngineProfile_ClearVisitedLinks((QWebEngineProfile*)self, urls_list);
+void q_webengineprofile_clear_visited_links(void* self, libqt_list urls) {
+    QWebEngineProfile_ClearVisitedLinks((QWebEngineProfile*)self, urls);
 }
 
 bool q_webengineprofile_visited_links_contains_url(void* self, void* url) {
@@ -177,7 +164,7 @@ QWebEngineScriptCollection* q_webengineprofile_scripts(void* self) {
     return QWebEngineProfile_Scripts((QWebEngineProfile*)self);
 }
 
-QWebEngineUrlSchemeHandler* q_webengineprofile_url_scheme_handler(void* self, const char* param1) {
+const QWebEngineUrlSchemeHandler* q_webengineprofile_url_scheme_handler(void* self, const char* param1) {
     return QWebEngineProfile_UrlSchemeHandler((QWebEngineProfile*)self, qstring(param1));
 }
 
@@ -207,7 +194,7 @@ void q_webengineprofile_set_spell_check_languages(void* self, const char* langua
     for (size_t _i = 0; _i < languages_len; ++_i) {
         languages_qstr[_i] = qstring(languages[_i]);
     }
-    libqt_list languages_list = qstrlist(languages_qstr, languages_len);
+    libqt_list languages_list = qlist(languages_qstr, languages_len);
     QWebEngineProfile_SetSpellCheckLanguages((QWebEngineProfile*)self, languages_list);
 }
 
@@ -282,8 +269,7 @@ const char* q_webengineprofile_object_name(void* self) {
 }
 
 void q_webengineprofile_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_webengineprofile_is_widget_type(void* self) {
@@ -322,7 +308,7 @@ void q_webengineprofile_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_webengineprofile_children(void* self) {
+const libqt_list /* of QObject* */ q_webengineprofile_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -389,7 +375,7 @@ QBindingStorage* q_webengineprofile_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_webengineprofile_binding_storage2(void* self) {
+const QBindingStorage* q_webengineprofile_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -563,6 +549,10 @@ bool q_webengineprofile_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_webengineprofile_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QWebEngineProfile_OnIsSignalConnected((QWebEngineProfile*)self, (intptr_t)slot);
+}
+
+void q_webengineprofile_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_webengineprofile_delete(void* self) {

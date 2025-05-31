@@ -423,6 +423,8 @@ bool q_rect_contains22(void* self, void* r, bool proper);
 /// ``` QRect* self, QPoint* p, bool proper ```
 bool q_rect_contains23(void* self, void* p, bool proper);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#dtor.QRect)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QRect* self ```
@@ -825,6 +827,8 @@ QRect* q_rectf_to_rect(void* self);
 /// ``` QRectF* self ```
 QRect* q_rectf_to_aligned_rect(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#dtor.QRectF)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QRectF* self ```

@@ -12,9 +12,7 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
 #include "libqapplication.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqcommonstyle.h"
 #include "libqfontmetrics.h"
@@ -30,8 +28,6 @@
 #include <string.h>
 #include "libqstyle.h"
 #include "libqstyleoption.h"
-#include "libqthread.h"
-#include "libqvariant.h"
 #include "libqwidget.h"
 
 /// https://doc.qt.io/qt-6/qproxystyle.html
@@ -54,7 +50,7 @@ QProxyStyle* q_proxystyle_new3(void* style);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QProxyStyle* self ```
-QMetaObject* q_proxystyle_meta_object(void* self);
+const QMetaObject* q_proxystyle_meta_object(void* self);
 
 /// ``` QProxyStyle* self, const char* param1 ```
 void* q_proxystyle_metacast(void* self, const char* param1);
@@ -92,11 +88,15 @@ void q_proxystyle_set_base_style(void* self, void* style);
 /// ``` QProxyStyle* self, enum QStyle__PrimitiveElement element, QStyleOption* option, QPainter* painter, QWidget* widget ```
 void q_proxystyle_draw_primitive(void* self, int64_t element, void* option, void* painter, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#drawPrimitive)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, void (*slot)(QProxyStyle*, enum QStyle__PrimitiveElement, QStyleOption*, QPainter*, QWidget*) ```
 void q_proxystyle_on_draw_primitive(void* self, void (*slot)(void*, int64_t, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#drawPrimitive)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, enum QStyle__PrimitiveElement element, QStyleOption* option, QPainter* painter, QWidget* widget ```
@@ -107,11 +107,15 @@ void q_proxystyle_qbase_draw_primitive(void* self, int64_t element, void* option
 /// ``` QProxyStyle* self, enum QStyle__ControlElement element, QStyleOption* option, QPainter* painter, QWidget* widget ```
 void q_proxystyle_draw_control(void* self, int64_t element, void* option, void* painter, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#drawControl)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, void (*slot)(QProxyStyle*, enum QStyle__ControlElement, QStyleOption*, QPainter*, QWidget*) ```
 void q_proxystyle_on_draw_control(void* self, void (*slot)(void*, int64_t, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#drawControl)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, enum QStyle__ControlElement element, QStyleOption* option, QPainter* painter, QWidget* widget ```
@@ -122,11 +126,15 @@ void q_proxystyle_qbase_draw_control(void* self, int64_t element, void* option, 
 /// ``` QProxyStyle* self, enum QStyle__ComplexControl control, QStyleOptionComplex* option, QPainter* painter, QWidget* widget ```
 void q_proxystyle_draw_complex_control(void* self, int64_t control, void* option, void* painter, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#drawComplexControl)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, void (*slot)(QProxyStyle*, enum QStyle__ComplexControl, QStyleOptionComplex*, QPainter*, QWidget*) ```
 void q_proxystyle_on_draw_complex_control(void* self, void (*slot)(void*, int64_t, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#drawComplexControl)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, enum QStyle__ComplexControl control, QStyleOptionComplex* option, QPainter* painter, QWidget* widget ```
@@ -137,11 +145,15 @@ void q_proxystyle_qbase_draw_complex_control(void* self, int64_t control, void* 
 /// ``` QProxyStyle* self, QPainter* painter, QRect* rect, int flags, QPalette* pal, bool enabled, const char* text, enum QPalette__ColorRole textRole ```
 void q_proxystyle_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int64_t textRole);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#drawItemText)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, void (*slot)(QProxyStyle*, QPainter*, QRect*, int, QPalette*, bool, const char*, enum QPalette__ColorRole) ```
 void q_proxystyle_on_draw_item_text(void* self, void (*slot)(void*, void*, void*, int, void*, bool, const char*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#drawItemText)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, QPainter* painter, QRect* rect, int flags, QPalette* pal, bool enabled, const char* text, enum QPalette__ColorRole textRole ```
@@ -152,11 +164,15 @@ void q_proxystyle_qbase_draw_item_text(void* self, void* painter, void* rect, in
 /// ``` QProxyStyle* self, QPainter* painter, QRect* rect, int alignment, QPixmap* pixmap ```
 void q_proxystyle_draw_item_pixmap(void* self, void* painter, void* rect, int alignment, void* pixmap);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#drawItemPixmap)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, void (*slot)(QProxyStyle*, QPainter*, QRect*, int, QPixmap*) ```
 void q_proxystyle_on_draw_item_pixmap(void* self, void (*slot)(void*, void*, void*, int, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#drawItemPixmap)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, QPainter* painter, QRect* rect, int alignment, QPixmap* pixmap ```
@@ -167,11 +183,15 @@ void q_proxystyle_qbase_draw_item_pixmap(void* self, void* painter, void* rect, 
 /// ``` QProxyStyle* self, enum QStyle__ContentsType typeVal, QStyleOption* option, QSize* size, QWidget* widget ```
 QSize* q_proxystyle_size_from_contents(void* self, int64_t typeVal, void* option, void* size, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#sizeFromContents)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, QSize* (*slot)(QProxyStyle*, enum QStyle__ContentsType, QStyleOption*, QSize*, QWidget*) ```
 void q_proxystyle_on_size_from_contents(void* self, QSize* (*slot)(void*, int64_t, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#sizeFromContents)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, enum QStyle__ContentsType typeVal, QStyleOption* option, QSize* size, QWidget* widget ```
@@ -182,11 +202,15 @@ QSize* q_proxystyle_qbase_size_from_contents(void* self, int64_t typeVal, void* 
 /// ``` QProxyStyle* self, enum QStyle__SubElement element, QStyleOption* option, QWidget* widget ```
 QRect* q_proxystyle_sub_element_rect(void* self, int64_t element, void* option, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#subElementRect)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, QRect* (*slot)(QProxyStyle*, enum QStyle__SubElement, QStyleOption*, QWidget*) ```
 void q_proxystyle_on_sub_element_rect(void* self, QRect* (*slot)(void*, int64_t, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#subElementRect)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, enum QStyle__SubElement element, QStyleOption* option, QWidget* widget ```
@@ -197,11 +221,15 @@ QRect* q_proxystyle_qbase_sub_element_rect(void* self, int64_t element, void* op
 /// ``` QProxyStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, enum QStyle__SubControl sc, QWidget* widget ```
 QRect* q_proxystyle_sub_control_rect(void* self, int64_t cc, void* opt, int64_t sc, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#subControlRect)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, QRect* (*slot)(QProxyStyle*, enum QStyle__ComplexControl, QStyleOptionComplex*, enum QStyle__SubControl, QWidget*) ```
 void q_proxystyle_on_sub_control_rect(void* self, QRect* (*slot)(void*, int64_t, void*, int64_t, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#subControlRect)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, enum QStyle__SubControl sc, QWidget* widget ```
@@ -212,11 +240,15 @@ QRect* q_proxystyle_qbase_sub_control_rect(void* self, int64_t cc, void* opt, in
 /// ``` QProxyStyle* self, QFontMetrics* fm, QRect* r, int flags, bool enabled, const char* text ```
 QRect* q_proxystyle_item_text_rect(void* self, void* fm, void* r, int flags, bool enabled, const char* text);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#itemTextRect)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, QRect* (*slot)(QProxyStyle*, QFontMetrics*, QRect*, int, bool, const char*) ```
 void q_proxystyle_on_item_text_rect(void* self, QRect* (*slot)(void*, void*, void*, int, bool, const char*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#itemTextRect)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, QFontMetrics* fm, QRect* r, int flags, bool enabled, const char* text ```
@@ -227,11 +259,15 @@ QRect* q_proxystyle_qbase_item_text_rect(void* self, void* fm, void* r, int flag
 /// ``` QProxyStyle* self, QRect* r, int flags, QPixmap* pixmap ```
 QRect* q_proxystyle_item_pixmap_rect(void* self, void* r, int flags, void* pixmap);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#itemPixmapRect)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, QRect* (*slot)(QProxyStyle*, QRect*, int, QPixmap*) ```
 void q_proxystyle_on_item_pixmap_rect(void* self, QRect* (*slot)(void*, void*, int, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#itemPixmapRect)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, QRect* r, int flags, QPixmap* pixmap ```
@@ -242,11 +278,15 @@ QRect* q_proxystyle_qbase_item_pixmap_rect(void* self, void* r, int flags, void*
 /// ``` QProxyStyle* self, enum QStyle__ComplexControl control, QStyleOptionComplex* option, QPoint* pos, QWidget* widget ```
 int64_t q_proxystyle_hit_test_complex_control(void* self, int64_t control, void* option, void* pos, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#hitTestComplexControl)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, int64_t (*slot)(QProxyStyle*, enum QStyle__ComplexControl, QStyleOptionComplex*, QPoint*, QWidget*) ```
 void q_proxystyle_on_hit_test_complex_control(void* self, int64_t (*slot)(void*, int64_t, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#hitTestComplexControl)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, enum QStyle__ComplexControl control, QStyleOptionComplex* option, QPoint* pos, QWidget* widget ```
@@ -257,11 +297,15 @@ int64_t q_proxystyle_qbase_hit_test_complex_control(void* self, int64_t control,
 /// ``` QProxyStyle* self, enum QStyle__StyleHint hint, QStyleOption* option, QWidget* widget, QStyleHintReturn* returnData ```
 int32_t q_proxystyle_style_hint(void* self, int64_t hint, void* option, void* widget, void* returnData);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#styleHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, int32_t (*slot)(QProxyStyle*, enum QStyle__StyleHint, QStyleOption*, QWidget*, QStyleHintReturn*) ```
 void q_proxystyle_on_style_hint(void* self, int32_t (*slot)(void*, int64_t, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#styleHint)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, enum QStyle__StyleHint hint, QStyleOption* option, QWidget* widget, QStyleHintReturn* returnData ```
@@ -272,11 +316,15 @@ int32_t q_proxystyle_qbase_style_hint(void* self, int64_t hint, void* option, vo
 /// ``` QProxyStyle* self, enum QStyle__PixelMetric metric, QStyleOption* option, QWidget* widget ```
 int32_t q_proxystyle_pixel_metric(void* self, int64_t metric, void* option, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#pixelMetric)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, int32_t (*slot)(QProxyStyle*, enum QStyle__PixelMetric, QStyleOption*, QWidget*) ```
 void q_proxystyle_on_pixel_metric(void* self, int32_t (*slot)(void*, int64_t, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#pixelMetric)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, enum QStyle__PixelMetric metric, QStyleOption* option, QWidget* widget ```
@@ -287,11 +335,15 @@ int32_t q_proxystyle_qbase_pixel_metric(void* self, int64_t metric, void* option
 /// ``` QProxyStyle* self, enum QSizePolicy__ControlType control1, enum QSizePolicy__ControlType control2, enum Qt__Orientation orientation, QStyleOption* option, QWidget* widget ```
 int32_t q_proxystyle_layout_spacing(void* self, int64_t control1, int64_t control2, int64_t orientation, void* option, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#layoutSpacing)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, int32_t (*slot)(QProxyStyle*, enum QSizePolicy__ControlType, enum QSizePolicy__ControlType, enum Qt__Orientation, QStyleOption*, QWidget*) ```
 void q_proxystyle_on_layout_spacing(void* self, int32_t (*slot)(void*, int64_t, int64_t, int64_t, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#layoutSpacing)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, enum QSizePolicy__ControlType control1, enum QSizePolicy__ControlType control2, enum Qt__Orientation orientation, QStyleOption* option, QWidget* widget ```
@@ -302,11 +354,15 @@ int32_t q_proxystyle_qbase_layout_spacing(void* self, int64_t control1, int64_t 
 /// ``` QProxyStyle* self, enum QStyle__StandardPixmap standardIcon, QStyleOption* option, QWidget* widget ```
 QIcon* q_proxystyle_standard_icon(void* self, int64_t standardIcon, void* option, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#standardIcon)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, QIcon* (*slot)(QProxyStyle*, enum QStyle__StandardPixmap, QStyleOption*, QWidget*) ```
 void q_proxystyle_on_standard_icon(void* self, QIcon* (*slot)(void*, int64_t, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#standardIcon)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, enum QStyle__StandardPixmap standardIcon, QStyleOption* option, QWidget* widget ```
@@ -317,11 +373,15 @@ QIcon* q_proxystyle_qbase_standard_icon(void* self, int64_t standardIcon, void* 
 /// ``` QProxyStyle* self, enum QStyle__StandardPixmap standardPixmap, QStyleOption* opt, QWidget* widget ```
 QPixmap* q_proxystyle_standard_pixmap(void* self, int64_t standardPixmap, void* opt, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#standardPixmap)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, QPixmap* (*slot)(QProxyStyle*, enum QStyle__StandardPixmap, QStyleOption*, QWidget*) ```
 void q_proxystyle_on_standard_pixmap(void* self, QPixmap* (*slot)(void*, int64_t, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#standardPixmap)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, enum QStyle__StandardPixmap standardPixmap, QStyleOption* opt, QWidget* widget ```
@@ -332,11 +392,15 @@ QPixmap* q_proxystyle_qbase_standard_pixmap(void* self, int64_t standardPixmap, 
 /// ``` QProxyStyle* self, enum QIcon__Mode iconMode, QPixmap* pixmap, QStyleOption* opt ```
 QPixmap* q_proxystyle_generated_icon_pixmap(void* self, int64_t iconMode, void* pixmap, void* opt);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#generatedIconPixmap)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, QPixmap* (*slot)(QProxyStyle*, enum QIcon__Mode, QPixmap*, QStyleOption*) ```
 void q_proxystyle_on_generated_icon_pixmap(void* self, QPixmap* (*slot)(void*, int64_t, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#generatedIconPixmap)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, enum QIcon__Mode iconMode, QPixmap* pixmap, QStyleOption* opt ```
@@ -347,11 +411,15 @@ QPixmap* q_proxystyle_qbase_generated_icon_pixmap(void* self, int64_t iconMode, 
 /// ``` QProxyStyle* self ```
 QPalette* q_proxystyle_standard_palette(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#standardPalette)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, QPalette* (*slot)() ```
 void q_proxystyle_on_standard_palette(void* self, QPalette* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#standardPalette)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self ```
@@ -362,11 +430,15 @@ QPalette* q_proxystyle_qbase_standard_palette(void* self);
 /// ``` QProxyStyle* self, QWidget* widget ```
 void q_proxystyle_polish(void* self, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#polish)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, void (*slot)(QProxyStyle*, QWidget*) ```
 void q_proxystyle_on_polish(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#polish)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, QWidget* widget ```
@@ -377,11 +449,15 @@ void q_proxystyle_qbase_polish(void* self, void* widget);
 /// ``` QProxyStyle* self, QPalette* pal ```
 void q_proxystyle_polish_with_pal(void* self, void* pal);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#polish)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, void (*slot)(QProxyStyle*, QPalette*) ```
 void q_proxystyle_on_polish_with_pal(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#polish)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, QPalette* pal ```
@@ -392,11 +468,15 @@ void q_proxystyle_qbase_polish_with_pal(void* self, void* pal);
 /// ``` QProxyStyle* self, QApplication* app ```
 void q_proxystyle_polish_with_app(void* self, void* app);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#polish)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, void (*slot)(QProxyStyle*, QApplication*) ```
 void q_proxystyle_on_polish_with_app(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#polish)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, QApplication* app ```
@@ -407,11 +487,15 @@ void q_proxystyle_qbase_polish_with_app(void* self, void* app);
 /// ``` QProxyStyle* self, QWidget* widget ```
 void q_proxystyle_unpolish(void* self, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#unpolish)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, void (*slot)(QProxyStyle*, QWidget*) ```
 void q_proxystyle_on_unpolish(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#unpolish)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, QWidget* widget ```
@@ -422,11 +506,15 @@ void q_proxystyle_qbase_unpolish(void* self, void* widget);
 /// ``` QProxyStyle* self, QApplication* app ```
 void q_proxystyle_unpolish_with_app(void* self, void* app);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#unpolish)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, void (*slot)(QProxyStyle*, QApplication*) ```
 void q_proxystyle_on_unpolish_with_app(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#unpolish)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, QApplication* app ```
@@ -437,11 +525,15 @@ void q_proxystyle_qbase_unpolish_with_app(void* self, void* app);
 /// ``` QProxyStyle* self, QEvent* e ```
 bool q_proxystyle_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, bool (*slot)(QProxyStyle*, QEvent*) ```
 void q_proxystyle_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, QEvent* e ```
@@ -466,12 +558,16 @@ void q_proxystyle_polish_with_widget(void* self, void* widget);
 
 /// Inherited from QCommonStyle
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QCommonStyle* self, void (*slot)(QCommonStyle*, QWidget*) ```
 void q_proxystyle_on_polish_with_widget(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QCommonStyle
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
 ///
 /// Base class method implementation
 ///
@@ -487,12 +583,16 @@ void q_proxystyle_unpolish_with_application(void* self, void* application);
 
 /// Inherited from QCommonStyle
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QCommonStyle* self, void (*slot)(QCommonStyle*, QApplication*) ```
 void q_proxystyle_on_unpolish_with_application(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QCommonStyle
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
 ///
 /// Base class method implementation
 ///
@@ -515,12 +615,16 @@ void q_proxystyle_polish_with_application(void* self, void* application);
 
 /// Inherited from QStyle
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, void (*slot)(QStyle*, QApplication*) ```
 void q_proxystyle_on_polish_with_application(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QStyle
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
 ///
 /// Base class method implementation
 ///
@@ -536,12 +640,16 @@ void q_proxystyle_polish_with_palette(void* self, void* palette);
 
 /// Inherited from QStyle
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, void (*slot)(QStyle*, QPalette*) ```
 void q_proxystyle_on_polish_with_palette(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QStyle
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
 ///
 /// Base class method implementation
 ///
@@ -602,7 +710,7 @@ int32_t q_proxystyle_combined_layout_spacing(void* self, int64_t controls1, int6
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#proxy)
 ///
 /// ``` QProxyStyle* self ```
-QStyle* q_proxystyle_proxy(void* self);
+const QStyle* q_proxystyle_proxy(void* self);
 
 /// Inherited from QStyle
 ///
@@ -714,7 +822,7 @@ void q_proxystyle_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QProxyStyle* self ```
-libqt_list /* of QObject* */ q_proxystyle_children(void* self);
+const libqt_list /* of QObject* */ q_proxystyle_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -812,7 +920,7 @@ QBindingStorage* q_proxystyle_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QProxyStyle* self ```
-QBindingStorage* q_proxystyle_binding_storage2(void* self);
+const QBindingStorage* q_proxystyle_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -822,6 +930,8 @@ QBindingStorage* q_proxystyle_binding_storage2(void* self);
 void q_proxystyle_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QProxyStyle* self, void (*slot)(QObject*) ```
 void q_proxystyle_on_destroyed(void* self, void (*slot)(void*));
@@ -877,6 +987,8 @@ void q_proxystyle_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QProxyStyle* self, void (*slot)(QObject*, QObject*) ```
 void q_proxystyle_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -891,12 +1003,16 @@ bool q_proxystyle_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProxyStyle* self, QObject* watched, QEvent* event ```
 bool q_proxystyle_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -914,12 +1030,16 @@ void q_proxystyle_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProxyStyle* self, QTimerEvent* event ```
 void q_proxystyle_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -937,12 +1057,16 @@ void q_proxystyle_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProxyStyle* self, QChildEvent* event ```
 void q_proxystyle_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -960,12 +1084,16 @@ void q_proxystyle_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProxyStyle* self, QEvent* event ```
 void q_proxystyle_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -983,12 +1111,16 @@ void q_proxystyle_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProxyStyle* self, QMetaMethod* signal ```
 void q_proxystyle_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1006,12 +1138,16 @@ void q_proxystyle_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProxyStyle* self, QMetaMethod* signal ```
 void q_proxystyle_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1029,12 +1165,16 @@ QObject* q_proxystyle_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProxyStyle* self ```
 QObject* q_proxystyle_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1052,12 +1192,16 @@ int32_t q_proxystyle_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProxyStyle* self ```
 int32_t q_proxystyle_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1075,12 +1219,16 @@ int32_t q_proxystyle_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProxyStyle* self, const char* signal ```
 int32_t q_proxystyle_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1098,6 +1246,8 @@ bool q_proxystyle_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProxyStyle* self, QMetaMethod* signal ```
@@ -1105,11 +1255,24 @@ bool q_proxystyle_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QProxyStyle* self, bool (*slot)(QProxyStyle*, QMetaMethod*) ```
 void q_proxystyle_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QProxyStyle* self, void (*slot)(QObject*, const char*) ```
+void q_proxystyle_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#dtor.QProxyStyle)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QProxyStyle* self ```

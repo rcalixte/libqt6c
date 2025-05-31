@@ -214,7 +214,7 @@ void q_surfaceformat_set_swap_interval(void* self, int interval);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurfaceformat.html#colorSpace)
 ///
 /// ``` QSurfaceFormat* self ```
-QColorSpace* q_surfaceformat_color_space(void* self);
+const QColorSpace* q_surfaceformat_color_space(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurfaceformat.html#setColorSpace)
 ///
@@ -241,6 +241,8 @@ QSurfaceFormat* q_surfaceformat_default_format();
 /// ``` QSurfaceFormat* self, enum QSurfaceFormat__FormatOption option, bool on ```
 void q_surfaceformat_set_option2(void* self, int64_t option, bool on);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsurfaceformat.html#dtor.QSurfaceFormat)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSurfaceFormat* self ```

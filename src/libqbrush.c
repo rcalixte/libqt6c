@@ -99,7 +99,7 @@ void q_brush_set_texture_image(void* self, void* image) {
     QBrush_SetTextureImage((QBrush*)self, (QImage*)image);
 }
 
-QColor* q_brush_color(void* self) {
+const QColor* q_brush_color(void* self) {
     return QBrush_Color((QBrush*)self);
 }
 
@@ -111,7 +111,7 @@ void q_brush_set_color_with_color(void* self, int64_t color) {
     QBrush_SetColorWithColor((QBrush*)self, color);
 }
 
-QGradient* q_brush_gradient(void* self) {
+const QGradient* q_brush_gradient(void* self) {
     return QBrush_Gradient((QBrush*)self);
 }
 

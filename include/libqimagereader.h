@@ -311,6 +311,8 @@ const char* q_imagereader_tr2(const char* sourceText, const char* disambiguation
 /// ``` const char* sourceText, const char* disambiguation, int n ```
 const char* q_imagereader_tr3(const char* sourceText, const char* disambiguation, int n);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimagereader.html#dtor.QImageReader)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QImageReader* self ```

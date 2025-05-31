@@ -13,54 +13,32 @@
 #include "qtlibc.h"
 
 #include "libqabstractitemdelegate.h"
-#include "libqabstractitemmodel.h"
 #include "libqabstractitemview.h"
 #include "libqabstractscrollarea.h"
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
 #include "libqbrush.h"
-#include "libqcursor.h"
 #include "libqdatastream.h"
 #include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
 #include "libqframe.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqheaderview.h"
 #include "libqicon.h"
 #include "libqitemselectionmodel.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
-#include "libqlocale.h"
 #include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqmimedata.h"
+#include "libqabstractitemmodel.h"
 #include "libqobject.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
 #include "libqrect.h"
 #include "libqregion.h"
-#include "libqscreen.h"
-#include "libqscrollbar.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
 #include "libqstyleoption.h"
-#include "libqthread.h"
 #include "libqtreeview.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qtreewidgetitem.html
 
@@ -154,11 +132,15 @@ QTreeWidgetItem* q_treewidgetitem_new17(void* parent, void* after, int typeVal);
 /// ``` QTreeWidgetItem* self ```
 QTreeWidgetItem* q_treewidgetitem_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTreeWidgetItem* self, QTreeWidgetItem* (*slot)() ```
 void q_treewidgetitem_on_clone(void* self, QTreeWidgetItem* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QTreeWidgetItem* self ```
@@ -364,11 +346,15 @@ void q_treewidgetitem_set_size_hint(void* self, int column, void* size);
 /// ``` QTreeWidgetItem* self, int column, int role ```
 QVariant* q_treewidgetitem_data(void* self, int column, int role);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#data)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTreeWidgetItem* self, QVariant* (*slot)(QTreeWidgetItem*, int, int) ```
 void q_treewidgetitem_on_data(void* self, QVariant* (*slot)(void*, int, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#data)
+///
 /// Base class method implementation
 ///
 /// ``` QTreeWidgetItem* self, int column, int role ```
@@ -379,11 +365,15 @@ QVariant* q_treewidgetitem_qbase_data(void* self, int column, int role);
 /// ``` QTreeWidgetItem* self, int column, int role, QVariant* value ```
 void q_treewidgetitem_set_data(void* self, int column, int role, void* value);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#setData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTreeWidgetItem* self, void (*slot)(QTreeWidgetItem*, int, int, QVariant*) ```
 void q_treewidgetitem_on_set_data(void* self, void (*slot)(void*, int, int, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#setData)
+///
 /// Base class method implementation
 ///
 /// ``` QTreeWidgetItem* self, int column, int role, QVariant* value ```
@@ -394,11 +384,15 @@ void q_treewidgetitem_qbase_set_data(void* self, int column, int role, void* val
 /// ``` QTreeWidgetItem* self, QTreeWidgetItem* other ```
 bool q_treewidgetitem_operator_lesser(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#operator<)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTreeWidgetItem* self, bool (*slot)(QTreeWidgetItem*, QTreeWidgetItem*) ```
 void q_treewidgetitem_on_operator_lesser(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#operator<)
+///
 /// Base class method implementation
 ///
 /// ``` QTreeWidgetItem* self, QTreeWidgetItem* other ```
@@ -409,11 +403,15 @@ bool q_treewidgetitem_qbase_operator_lesser(void* self, void* other);
 /// ``` QTreeWidgetItem* self, QDataStream* in ```
 void q_treewidgetitem_read(void* self, void* in);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#read)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTreeWidgetItem* self, void (*slot)(QTreeWidgetItem*, QDataStream*) ```
 void q_treewidgetitem_on_read(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#read)
+///
 /// Base class method implementation
 ///
 /// ``` QTreeWidgetItem* self, QDataStream* in ```
@@ -424,11 +422,15 @@ void q_treewidgetitem_qbase_read(void* self, void* in);
 /// ``` QTreeWidgetItem* self, QDataStream* out ```
 void q_treewidgetitem_write(void* self, void* out);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#write)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTreeWidgetItem* self, void (*slot)(QTreeWidgetItem*, QDataStream*) ```
 void q_treewidgetitem_on_write(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#write)
+///
 /// Base class method implementation
 ///
 /// ``` QTreeWidgetItem* self, QDataStream* out ```
@@ -486,13 +488,13 @@ QTreeWidgetItem* q_treewidgetitem_take_child(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#addChildren)
 ///
-/// ``` QTreeWidgetItem* self, QTreeWidgetItem* children[] ```
-void q_treewidgetitem_add_children(void* self, void* children[]);
+/// ``` QTreeWidgetItem* self, libqt_list /* of QTreeWidgetItem* */ children ```
+void q_treewidgetitem_add_children(void* self, libqt_list children);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#insertChildren)
 ///
-/// ``` QTreeWidgetItem* self, int index, QTreeWidgetItem* children[] ```
-void q_treewidgetitem_insert_children(void* self, int index, void* children[]);
+/// ``` QTreeWidgetItem* self, int index, libqt_list /* of QTreeWidgetItem* */ children ```
+void q_treewidgetitem_insert_children(void* self, int index, libqt_list children);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#takeChildren)
 ///
@@ -514,16 +516,22 @@ void q_treewidgetitem_sort_children(void* self, int column, int64_t order);
 /// ``` QTreeWidgetItem* self ```
 void q_treewidgetitem_emit_data_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#emitDataChanged)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTreeWidgetItem* self, void (*slot)() ```
 void q_treewidgetitem_on_emit_data_changed(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#emitDataChanged)
+///
 /// Base class method implementation
 ///
 /// ``` QTreeWidgetItem* self ```
 void q_treewidgetitem_qbase_emit_data_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#dtor.QTreeWidgetItem)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTreeWidgetItem* self ```
@@ -544,7 +552,7 @@ QTreeWidget* q_treewidget_new2();
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QTreeWidget* self ```
-QMetaObject* q_treewidget_meta_object(void* self);
+const QMetaObject* q_treewidget_meta_object(void* self);
 
 /// ``` QTreeWidget* self, const char* param1 ```
 void* q_treewidget_metacast(void* self, const char* param1);
@@ -614,13 +622,13 @@ int32_t q_treewidget_index_of_top_level_item(void* self, void* item);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#insertTopLevelItems)
 ///
-/// ``` QTreeWidget* self, int index, QTreeWidgetItem* items[] ```
-void q_treewidget_insert_top_level_items(void* self, int index, void* items[]);
+/// ``` QTreeWidget* self, int index, libqt_list /* of QTreeWidgetItem* */ items ```
+void q_treewidget_insert_top_level_items(void* self, int index, libqt_list items);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#addTopLevelItems)
 ///
-/// ``` QTreeWidget* self, QTreeWidgetItem* items[] ```
-void q_treewidget_add_top_level_items(void* self, void* items[]);
+/// ``` QTreeWidget* self, libqt_list /* of QTreeWidgetItem* */ items ```
+void q_treewidget_add_top_level_items(void* self, libqt_list items);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#headerItem)
 ///
@@ -762,11 +770,15 @@ QTreeWidgetItem* q_treewidget_item_from_index(void* self, void* index);
 /// ``` QTreeWidget* self, QItemSelectionModel* selectionModel ```
 void q_treewidget_set_selection_model(void* self, void* selectionModel);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#setSelectionModel)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QItemSelectionModel*) ```
 void q_treewidget_on_set_selection_model(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#setSelectionModel)
+///
 /// Base class method implementation
 ///
 /// ``` QTreeWidget* self, QItemSelectionModel* selectionModel ```
@@ -797,6 +809,8 @@ void q_treewidget_clear(void* self);
 /// ``` QTreeWidget* self, QTreeWidgetItem* item, int column ```
 void q_treewidget_item_pressed(void* self, void* item, int column);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#itemPressed)
+///
 /// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QTreeWidgetItem*, int) ```
 void q_treewidget_on_item_pressed(void* self, void (*slot)(void*, void*, int));
 
@@ -805,6 +819,8 @@ void q_treewidget_on_item_pressed(void* self, void (*slot)(void*, void*, int));
 /// ``` QTreeWidget* self, QTreeWidgetItem* item, int column ```
 void q_treewidget_item_clicked(void* self, void* item, int column);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#itemClicked)
+///
 /// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QTreeWidgetItem*, int) ```
 void q_treewidget_on_item_clicked(void* self, void (*slot)(void*, void*, int));
 
@@ -813,6 +829,8 @@ void q_treewidget_on_item_clicked(void* self, void (*slot)(void*, void*, int));
 /// ``` QTreeWidget* self, QTreeWidgetItem* item, int column ```
 void q_treewidget_item_double_clicked(void* self, void* item, int column);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#itemDoubleClicked)
+///
 /// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QTreeWidgetItem*, int) ```
 void q_treewidget_on_item_double_clicked(void* self, void (*slot)(void*, void*, int));
 
@@ -821,6 +839,8 @@ void q_treewidget_on_item_double_clicked(void* self, void (*slot)(void*, void*, 
 /// ``` QTreeWidget* self, QTreeWidgetItem* item, int column ```
 void q_treewidget_item_activated(void* self, void* item, int column);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#itemActivated)
+///
 /// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QTreeWidgetItem*, int) ```
 void q_treewidget_on_item_activated(void* self, void (*slot)(void*, void*, int));
 
@@ -829,6 +849,8 @@ void q_treewidget_on_item_activated(void* self, void (*slot)(void*, void*, int))
 /// ``` QTreeWidget* self, QTreeWidgetItem* item, int column ```
 void q_treewidget_item_entered(void* self, void* item, int column);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#itemEntered)
+///
 /// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QTreeWidgetItem*, int) ```
 void q_treewidget_on_item_entered(void* self, void (*slot)(void*, void*, int));
 
@@ -837,6 +859,8 @@ void q_treewidget_on_item_entered(void* self, void (*slot)(void*, void*, int));
 /// ``` QTreeWidget* self, QTreeWidgetItem* item, int column ```
 void q_treewidget_item_changed(void* self, void* item, int column);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#itemChanged)
+///
 /// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QTreeWidgetItem*, int) ```
 void q_treewidget_on_item_changed(void* self, void (*slot)(void*, void*, int));
 
@@ -845,6 +869,8 @@ void q_treewidget_on_item_changed(void* self, void (*slot)(void*, void*, int));
 /// ``` QTreeWidget* self, QTreeWidgetItem* item ```
 void q_treewidget_item_expanded(void* self, void* item);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#itemExpanded)
+///
 /// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QTreeWidgetItem*) ```
 void q_treewidget_on_item_expanded(void* self, void (*slot)(void*, void*));
 
@@ -853,6 +879,8 @@ void q_treewidget_on_item_expanded(void* self, void (*slot)(void*, void*));
 /// ``` QTreeWidget* self, QTreeWidgetItem* item ```
 void q_treewidget_item_collapsed(void* self, void* item);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#itemCollapsed)
+///
 /// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QTreeWidgetItem*) ```
 void q_treewidget_on_item_collapsed(void* self, void (*slot)(void*, void*));
 
@@ -861,6 +889,8 @@ void q_treewidget_on_item_collapsed(void* self, void (*slot)(void*, void*));
 /// ``` QTreeWidget* self, QTreeWidgetItem* current, QTreeWidgetItem* previous ```
 void q_treewidget_current_item_changed(void* self, void* current, void* previous);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#currentItemChanged)
+///
 /// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QTreeWidgetItem*, QTreeWidgetItem*) ```
 void q_treewidget_on_current_item_changed(void* self, void (*slot)(void*, void*, void*));
 
@@ -869,6 +899,8 @@ void q_treewidget_on_current_item_changed(void* self, void (*slot)(void*, void*,
 /// ``` QTreeWidget* self ```
 void q_treewidget_item_selection_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#itemSelectionChanged)
+///
 /// ``` QTreeWidget* self, void (*slot)(QTreeWidget*) ```
 void q_treewidget_on_item_selection_changed(void* self, void (*slot)(void*));
 
@@ -877,11 +909,15 @@ void q_treewidget_on_item_selection_changed(void* self, void (*slot)(void*));
 /// ``` QTreeWidget* self, QEvent* e ```
 bool q_treewidget_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTreeWidget* self, bool (*slot)(QTreeWidget*, QEvent*) ```
 void q_treewidget_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QTreeWidget* self, QEvent* e ```
@@ -892,11 +928,15 @@ bool q_treewidget_qbase_event(void* self, void* e);
 /// ``` QTreeWidget* self ```
 const char** q_treewidget_mime_types(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#mimeTypes)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTreeWidget* self, const char** (*slot)() ```
 void q_treewidget_on_mime_types(void* self, const char** (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#mimeTypes)
+///
 /// Base class method implementation
 ///
 /// ``` QTreeWidget* self ```
@@ -904,29 +944,37 @@ const char** q_treewidget_qbase_mime_types(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#mimeData)
 ///
-/// ``` QTreeWidget* self, QTreeWidgetItem* items[] ```
-QMimeData* q_treewidget_mime_data(void* self, void* items[]);
+/// ``` QTreeWidget* self, libqt_list /* of QTreeWidgetItem* */ items ```
+QMimeData* q_treewidget_mime_data(void* self, libqt_list items);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#mimeData)
+///
 /// Allows for overriding the related default method
 ///
-/// ``` QTreeWidget* self, QMimeData* (*slot)(QTreeWidget*, QTreeWidgetItem*[]) ```
-void q_treewidget_on_mime_data(void* self, QMimeData* (*slot)(void*, void*));
+/// ``` QTreeWidget* self, QMimeData* (*slot)(QTreeWidget*, libqt_list /* of QTreeWidgetItem* */ items ) ```
+void q_treewidget_on_mime_data(void* self, QMimeData* (*slot)(void*, libqt_list));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#mimeData)
+///
 /// Base class method implementation
 ///
-/// ``` QTreeWidget* self, QTreeWidgetItem* items[] ```
-QMimeData* q_treewidget_qbase_mime_data(void* self, void* items[]);
+/// ``` QTreeWidget* self, libqt_list /* of QTreeWidgetItem* */ items ```
+QMimeData* q_treewidget_qbase_mime_data(void* self, libqt_list items);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#dropMimeData)
 ///
 /// ``` QTreeWidget* self, QTreeWidgetItem* parent, int index, QMimeData* data, enum Qt__DropAction action ```
 bool q_treewidget_drop_mime_data(void* self, void* parent, int index, void* data, int64_t action);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#dropMimeData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTreeWidget* self, bool (*slot)(QTreeWidget*, QTreeWidgetItem*, int, QMimeData*, enum Qt__DropAction) ```
 void q_treewidget_on_drop_mime_data(void* self, bool (*slot)(void*, void*, int, void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#dropMimeData)
+///
 /// Base class method implementation
 ///
 /// ``` QTreeWidget* self, QTreeWidgetItem* parent, int index, QMimeData* data, enum Qt__DropAction action ```
@@ -937,11 +985,15 @@ bool q_treewidget_qbase_drop_mime_data(void* self, void* parent, int index, void
 /// ``` QTreeWidget* self ```
 int64_t q_treewidget_supported_drop_actions(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#supportedDropActions)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTreeWidget* self, int64_t (*slot)() ```
 void q_treewidget_on_supported_drop_actions(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#supportedDropActions)
+///
 /// Base class method implementation
 ///
 /// ``` QTreeWidget* self ```
@@ -952,11 +1004,15 @@ int64_t q_treewidget_qbase_supported_drop_actions(void* self);
 /// ``` QTreeWidget* self, QDropEvent* event ```
 void q_treewidget_drop_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#dropEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QDropEvent*) ```
 void q_treewidget_on_drop_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#dropEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTreeWidget* self, QDropEvent* event ```
@@ -1016,12 +1072,16 @@ void q_treewidget_set_model(void* self, void* model);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#setModel)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTreeView* self, void (*slot)(QTreeView*, QAbstractItemModel*) ```
 void q_treewidget_on_set_model(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#setModel)
 ///
 /// Base class method implementation
 ///
@@ -1324,6 +1384,8 @@ void q_treewidget_expanded(void* self, void* index);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#expanded)
+///
 /// ``` QTreeWidget* self, void (*slot)(QTreeView*, QModelIndex*) ```
 void q_treewidget_on_expanded(void* self, void (*slot)(void*, void*));
 
@@ -1335,6 +1397,8 @@ void q_treewidget_on_expanded(void* self, void (*slot)(void*, void*));
 void q_treewidget_collapsed(void* self, void* index);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#collapsed)
 ///
 /// ``` QTreeWidget* self, void (*slot)(QTreeView*, QModelIndex*) ```
 void q_treewidget_on_collapsed(void* self, void (*slot)(void*, void*));
@@ -1803,6 +1867,8 @@ void q_treewidget_pressed(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#pressed)
+///
 /// ``` QTreeWidget* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
 void q_treewidget_on_pressed(void* self, void (*slot)(void*, void*));
 
@@ -1814,6 +1880,8 @@ void q_treewidget_on_pressed(void* self, void (*slot)(void*, void*));
 void q_treewidget_clicked(void* self, void* index);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#clicked)
 ///
 /// ``` QTreeWidget* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
 void q_treewidget_on_clicked(void* self, void (*slot)(void*, void*));
@@ -1827,6 +1895,8 @@ void q_treewidget_double_clicked(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doubleClicked)
+///
 /// ``` QTreeWidget* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
 void q_treewidget_on_double_clicked(void* self, void (*slot)(void*, void*));
 
@@ -1838,6 +1908,8 @@ void q_treewidget_on_double_clicked(void* self, void (*slot)(void*, void*));
 void q_treewidget_activated(void* self, void* index);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#activated)
 ///
 /// ``` QTreeWidget* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
 void q_treewidget_on_activated(void* self, void (*slot)(void*, void*));
@@ -1851,6 +1923,8 @@ void q_treewidget_entered(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#entered)
+///
 /// ``` QTreeWidget* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
 void q_treewidget_on_entered(void* self, void (*slot)(void*, void*));
 
@@ -1863,6 +1937,8 @@ void q_treewidget_viewport_entered(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportEntered)
+///
 /// ``` QTreeWidget* self, void (*slot)(QAbstractItemView*) ```
 void q_treewidget_on_viewport_entered(void* self, void (*slot)(void*));
 
@@ -1874,6 +1950,8 @@ void q_treewidget_on_viewport_entered(void* self, void (*slot)(void*));
 void q_treewidget_icon_size_changed(void* self, void* size);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#iconSizeChanged)
 ///
 /// ``` QTreeWidget* self, void (*slot)(QAbstractItemView*, QSize*) ```
 void q_treewidget_on_icon_size_changed(void* self, void (*slot)(void*, void*));
@@ -2212,7 +2290,7 @@ QRect* q_treewidget_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QTreeWidget* self ```
-QRect* q_treewidget_geometry(void* self);
+const QRect* q_treewidget_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2569,7 +2647,7 @@ QWidget* q_treewidget_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QTreeWidget* self ```
-QPalette* q_treewidget_palette(void* self);
+const QPalette* q_treewidget_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2611,7 +2689,7 @@ int64_t q_treewidget_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QTreeWidget* self ```
-QFont* q_treewidget_font(void* self);
+const QFont* q_treewidget_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3604,15 +3682,15 @@ void q_treewidget_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QTreeWidget* self, QAction* actions[] ```
-void q_treewidget_add_actions(void* self, void* actions[]);
+/// ``` QTreeWidget* self, libqt_list /* of QAction* */ actions ```
+void q_treewidget_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QTreeWidget* self, QAction* before, QAction* actions[] ```
-void q_treewidget_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QTreeWidget* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_treewidget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3812,6 +3890,8 @@ void q_treewidget_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QTreeWidget* self, void (*slot)(QWidget*, const char*) ```
 void q_treewidget_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -3823,6 +3903,8 @@ void q_treewidget_on_window_title_changed(void* self, void (*slot)(void*, const 
 void q_treewidget_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QTreeWidget* self, void (*slot)(QWidget*, QIcon*) ```
 void q_treewidget_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -3836,6 +3918,8 @@ void q_treewidget_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QTreeWidget* self, void (*slot)(QWidget*, const char*) ```
 void q_treewidget_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -3847,6 +3931,8 @@ void q_treewidget_on_window_icon_text_changed(void* self, void (*slot)(void*, co
 void q_treewidget_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QTreeWidget* self, void (*slot)(QWidget*, QPoint*) ```
 void q_treewidget_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -4052,7 +4138,7 @@ void q_treewidget_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QTreeWidget* self ```
-libqt_list /* of QObject* */ q_treewidget_children(void* self);
+const libqt_list /* of QObject* */ q_treewidget_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4143,7 +4229,7 @@ QBindingStorage* q_treewidget_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QTreeWidget* self ```
-QBindingStorage* q_treewidget_binding_storage2(void* self);
+const QBindingStorage* q_treewidget_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -4153,6 +4239,8 @@ QBindingStorage* q_treewidget_binding_storage2(void* self);
 void q_treewidget_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QTreeWidget* self, void (*slot)(QObject*) ```
 void q_treewidget_on_destroyed(void* self, void (*slot)(void*));
@@ -4207,6 +4295,8 @@ QMetaObject__Connection* q_treewidget_connect4(void* self, void* sender, const c
 void q_treewidget_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QTreeWidget* self, void (*slot)(QObject*, QObject*) ```
 void q_treewidget_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -4306,12 +4396,16 @@ void q_treewidget_set_root_index(void* self, void* index);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#setRootIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QModelIndex* index ```
 void q_treewidget_qbase_set_root_index(void* self, void* index);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#setRootIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4329,12 +4423,16 @@ void q_treewidget_keyboard_search(void* self, const char* search);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#keyboardSearch)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, const char* search ```
 void q_treewidget_qbase_keyboard_search(void* self, const char* search);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#keyboardSearch)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4352,12 +4450,16 @@ QRect* q_treewidget_visual_rect(void* self, void* index);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#visualRect)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QModelIndex* index ```
 QRect* q_treewidget_qbase_visual_rect(void* self, void* index);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#visualRect)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4375,12 +4477,16 @@ void q_treewidget_scroll_to(void* self, void* index, int64_t hint);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#scrollTo)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QModelIndex* index, enum QAbstractItemView__ScrollHint hint ```
 void q_treewidget_qbase_scroll_to(void* self, void* index, int64_t hint);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#scrollTo)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4398,12 +4504,16 @@ QModelIndex* q_treewidget_index_at(void* self, void* p);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#indexAt)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QPoint* p ```
 QModelIndex* q_treewidget_qbase_index_at(void* self, void* p);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#indexAt)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4421,12 +4531,16 @@ void q_treewidget_do_items_layout(void* self);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#doItemsLayout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 void q_treewidget_qbase_do_items_layout(void* self);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#doItemsLayout)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4444,12 +4558,16 @@ void q_treewidget_reset(void* self);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#reset)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 void q_treewidget_qbase_reset(void* self);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#reset)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4462,22 +4580,26 @@ void q_treewidget_on_reset(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTreeWidget* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* roles[] ```
-void q_treewidget_data_changed(void* self, void* topLeft, void* bottomRight, int* roles[]);
+/// ``` QTreeWidget* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles ```
+void q_treewidget_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#dataChanged)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTreeWidget* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* roles[] ```
-void q_treewidget_qbase_data_changed(void* self, void* topLeft, void* bottomRight, int* roles[]);
+/// ``` QTreeWidget* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles ```
+void q_treewidget_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#dataChanged)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QModelIndex*, QModelIndex*, int*[]) ```
-void q_treewidget_on_data_changed(void* self, void (*slot)(void*, void*, void*, int*));
+/// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
+void q_treewidget_on_data_changed(void* self, void (*slot)(void*, void*, void*, libqt_list));
 
 /// Inherited from QTreeView
 ///
@@ -4490,12 +4612,16 @@ void q_treewidget_select_all(void* self);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#selectAll)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 void q_treewidget_qbase_select_all(void* self);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#selectAll)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4513,12 +4639,16 @@ void q_treewidget_vertical_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#verticalScrollbarValueChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, int value ```
 void q_treewidget_qbase_vertical_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#verticalScrollbarValueChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4536,12 +4666,16 @@ void q_treewidget_scroll_contents_by(void* self, int dx, int dy);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#scrollContentsBy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, int dx, int dy ```
 void q_treewidget_qbase_scroll_contents_by(void* self, int dx, int dy);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#scrollContentsBy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4559,12 +4693,16 @@ void q_treewidget_rows_inserted(void* self, void* parent, int start, int end);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#rowsInserted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QModelIndex* parent, int start, int end ```
 void q_treewidget_qbase_rows_inserted(void* self, void* parent, int start, int end);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#rowsInserted)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4582,12 +4720,16 @@ void q_treewidget_rows_about_to_be_removed(void* self, void* parent, int start, 
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#rowsAboutToBeRemoved)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QModelIndex* parent, int start, int end ```
 void q_treewidget_qbase_rows_about_to_be_removed(void* self, void* parent, int start, int end);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#rowsAboutToBeRemoved)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4605,12 +4747,16 @@ QModelIndex* q_treewidget_move_cursor(void* self, int64_t cursorAction, int64_t 
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#moveCursor)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, enum QAbstractItemView__CursorAction cursorAction, int modifiers ```
 QModelIndex* q_treewidget_qbase_move_cursor(void* self, int64_t cursorAction, int64_t modifiers);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#moveCursor)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4628,12 +4774,16 @@ int32_t q_treewidget_horizontal_offset(void* self);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#horizontalOffset)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 int32_t q_treewidget_qbase_horizontal_offset(void* self);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#horizontalOffset)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4651,12 +4801,16 @@ int32_t q_treewidget_vertical_offset(void* self);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#verticalOffset)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 int32_t q_treewidget_qbase_vertical_offset(void* self);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#verticalOffset)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4674,12 +4828,16 @@ void q_treewidget_set_selection(void* self, void* rect, int64_t command);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#setSelection)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QRect* rect, int command ```
 void q_treewidget_qbase_set_selection(void* self, void* rect, int64_t command);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#setSelection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4697,12 +4855,16 @@ QRegion* q_treewidget_visual_region_for_selection(void* self, void* selection);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#visualRegionForSelection)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QItemSelection* selection ```
 QRegion* q_treewidget_qbase_visual_region_for_selection(void* self, void* selection);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#visualRegionForSelection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4720,12 +4882,16 @@ libqt_list /* of QModelIndex* */ q_treewidget_selected_indexes(void* self);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#selectedIndexes)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 libqt_list /* of QModelIndex* */ q_treewidget_qbase_selected_indexes(void* self);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#selectedIndexes)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4743,12 +4909,16 @@ void q_treewidget_change_event(void* self, void* event);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#changeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QEvent* event ```
 void q_treewidget_qbase_change_event(void* self, void* event);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4766,12 +4936,16 @@ void q_treewidget_timer_event(void* self, void* event);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QTimerEvent* event ```
 void q_treewidget_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4789,12 +4963,16 @@ void q_treewidget_paint_event(void* self, void* event);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#paintEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QPaintEvent* event ```
 void q_treewidget_qbase_paint_event(void* self, void* event);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#paintEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4812,12 +4990,16 @@ void q_treewidget_draw_row(void* self, void* painter, void* options, void* index
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#drawRow)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QPainter* painter, QStyleOptionViewItem* options, QModelIndex* index ```
 void q_treewidget_qbase_draw_row(void* self, void* painter, void* options, void* index);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#drawRow)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4835,12 +5017,16 @@ void q_treewidget_draw_branches(void* self, void* painter, void* rect, void* ind
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#drawBranches)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QPainter* painter, QRect* rect, QModelIndex* index ```
 void q_treewidget_qbase_draw_branches(void* self, void* painter, void* rect, void* index);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#drawBranches)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4858,12 +5044,16 @@ void q_treewidget_mouse_press_event(void* self, void* event);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#mousePressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QMouseEvent* event ```
 void q_treewidget_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4881,12 +5071,16 @@ void q_treewidget_mouse_release_event(void* self, void* event);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#mouseReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QMouseEvent* event ```
 void q_treewidget_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4904,12 +5098,16 @@ void q_treewidget_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QMouseEvent* event ```
 void q_treewidget_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4927,12 +5125,16 @@ void q_treewidget_mouse_move_event(void* self, void* event);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QMouseEvent* event ```
 void q_treewidget_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4950,12 +5152,16 @@ void q_treewidget_key_press_event(void* self, void* event);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QKeyEvent* event ```
 void q_treewidget_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4973,12 +5179,16 @@ void q_treewidget_drag_move_event(void* self, void* event);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QDragMoveEvent* event ```
 void q_treewidget_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4996,12 +5206,16 @@ bool q_treewidget_viewport_event(void* self, void* event);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#viewportEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QEvent* event ```
 bool q_treewidget_qbase_viewport_event(void* self, void* event);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#viewportEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5019,12 +5233,16 @@ void q_treewidget_update_geometries(void* self);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#updateGeometries)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 void q_treewidget_qbase_update_geometries(void* self);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#updateGeometries)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5042,12 +5260,16 @@ QSize* q_treewidget_viewport_size_hint(void* self);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#viewportSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 QSize* q_treewidget_qbase_viewport_size_hint(void* self);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#viewportSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5065,12 +5287,16 @@ int32_t q_treewidget_size_hint_for_column(void* self, int column);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#sizeHintForColumn)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, int column ```
 int32_t q_treewidget_qbase_size_hint_for_column(void* self, int column);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#sizeHintForColumn)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5088,12 +5314,16 @@ void q_treewidget_horizontal_scrollbar_action(void* self, int action);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#horizontalScrollbarAction)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, int action ```
 void q_treewidget_qbase_horizontal_scrollbar_action(void* self, int action);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#horizontalScrollbarAction)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5111,12 +5341,16 @@ bool q_treewidget_is_index_hidden(void* self, void* index);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#isIndexHidden)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QModelIndex* index ```
 bool q_treewidget_qbase_is_index_hidden(void* self, void* index);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#isIndexHidden)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5134,12 +5368,16 @@ void q_treewidget_selection_changed(void* self, void* selected, void* deselected
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#selectionChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QItemSelection* selected, QItemSelection* deselected ```
 void q_treewidget_qbase_selection_changed(void* self, void* selected, void* deselected);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#selectionChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5157,12 +5395,16 @@ void q_treewidget_current_changed(void* self, void* current, void* previous);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#currentChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QModelIndex* current, QModelIndex* previous ```
 void q_treewidget_qbase_current_changed(void* self, void* current, void* previous);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#currentChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5180,12 +5422,16 @@ int32_t q_treewidget_size_hint_for_row(void* self, int row);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForRow)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, int row ```
 int32_t q_treewidget_qbase_size_hint_for_row(void* self, int row);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForRow)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5203,12 +5449,16 @@ QAbstractItemDelegate* q_treewidget_item_delegate_for_index(void* self, void* in
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QModelIndex* index ```
 QAbstractItemDelegate* q_treewidget_qbase_item_delegate_for_index(void* self, void* index);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5226,12 +5476,16 @@ QVariant* q_treewidget_input_method_query(void* self, int64_t query);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, enum Qt__InputMethodQuery query ```
 QVariant* q_treewidget_qbase_input_method_query(void* self, int64_t query);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5249,12 +5503,16 @@ void q_treewidget_update_editor_data(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 void q_treewidget_qbase_update_editor_data(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5272,12 +5530,16 @@ void q_treewidget_update_editor_geometries(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorGeometries)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 void q_treewidget_qbase_update_editor_geometries(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorGeometries)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5295,12 +5557,16 @@ void q_treewidget_vertical_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollbarAction)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, int action ```
 void q_treewidget_qbase_vertical_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollbarAction)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5318,12 +5584,16 @@ void q_treewidget_horizontal_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollbarValueChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, int value ```
 void q_treewidget_qbase_horizontal_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollbarValueChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5341,12 +5611,16 @@ void q_treewidget_close_editor(void* self, void* editor, int64_t hint);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#closeEditor)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QWidget* editor, enum QAbstractItemDelegate__EndEditHint hint ```
 void q_treewidget_qbase_close_editor(void* self, void* editor, int64_t hint);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#closeEditor)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5364,12 +5638,16 @@ void q_treewidget_commit_data(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#commitData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QWidget* editor ```
 void q_treewidget_qbase_commit_data(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#commitData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5387,12 +5665,16 @@ void q_treewidget_editor_destroyed(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#editorDestroyed)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QObject* editor ```
 void q_treewidget_qbase_editor_destroyed(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#editorDestroyed)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5410,12 +5692,16 @@ bool q_treewidget_edit2(void* self, void* index, int64_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#edit)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QModelIndex* index, enum QAbstractItemView__EditTrigger trigger, QEvent* event ```
 bool q_treewidget_qbase_edit2(void* self, void* index, int64_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#edit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5433,12 +5719,16 @@ int64_t q_treewidget_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectionCommand)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QModelIndex* index, QEvent* event ```
 int64_t q_treewidget_qbase_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectionCommand)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5456,12 +5746,16 @@ void q_treewidget_start_drag(void* self, int64_t supportedActions);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#startDrag)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, int supportedActions ```
 void q_treewidget_qbase_start_drag(void* self, int64_t supportedActions);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#startDrag)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5479,12 +5773,16 @@ void q_treewidget_init_view_item_option(void* self, void* option);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#initViewItemOption)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QStyleOptionViewItem* option ```
 void q_treewidget_qbase_init_view_item_option(void* self, void* option);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#initViewItemOption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5502,12 +5800,16 @@ bool q_treewidget_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, bool next ```
 bool q_treewidget_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5525,12 +5827,16 @@ void q_treewidget_drag_enter_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QDragEnterEvent* event ```
 void q_treewidget_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5548,12 +5854,16 @@ void q_treewidget_drag_leave_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QDragLeaveEvent* event ```
 void q_treewidget_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5571,12 +5881,16 @@ void q_treewidget_focus_in_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QFocusEvent* event ```
 void q_treewidget_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5594,12 +5908,16 @@ void q_treewidget_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QFocusEvent* event ```
 void q_treewidget_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5617,12 +5935,16 @@ void q_treewidget_resize_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#resizeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QResizeEvent* event ```
 void q_treewidget_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5640,12 +5962,16 @@ void q_treewidget_input_method_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QInputMethodEvent* event ```
 void q_treewidget_qbase_input_method_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5663,12 +5989,16 @@ bool q_treewidget_event_filter(void* self, void* object, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QObject* object, QEvent* event ```
 bool q_treewidget_qbase_event_filter(void* self, void* object, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5686,12 +6016,16 @@ QSize* q_treewidget_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 QSize* q_treewidget_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5709,12 +6043,16 @@ QSize* q_treewidget_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 QSize* q_treewidget_qbase_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5732,12 +6070,16 @@ void q_treewidget_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QWidget* viewport ```
 void q_treewidget_qbase_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5755,12 +6097,16 @@ void q_treewidget_wheel_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QWheelEvent* param1 ```
 void q_treewidget_qbase_wheel_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5778,12 +6124,16 @@ void q_treewidget_context_menu_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QContextMenuEvent* param1 ```
 void q_treewidget_qbase_context_menu_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5801,12 +6151,16 @@ void q_treewidget_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QStyleOptionFrame* option ```
 void q_treewidget_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5824,12 +6178,16 @@ int32_t q_treewidget_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 int32_t q_treewidget_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5847,12 +6205,16 @@ void q_treewidget_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, bool visible ```
 void q_treewidget_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5870,12 +6232,16 @@ int32_t q_treewidget_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, int param1 ```
 int32_t q_treewidget_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5893,12 +6259,16 @@ bool q_treewidget_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 bool q_treewidget_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5916,12 +6286,16 @@ QPaintEngine* q_treewidget_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 QPaintEngine* q_treewidget_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5939,12 +6313,16 @@ void q_treewidget_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QKeyEvent* event ```
 void q_treewidget_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5962,12 +6340,16 @@ void q_treewidget_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QEnterEvent* event ```
 void q_treewidget_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5985,12 +6367,16 @@ void q_treewidget_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QEvent* event ```
 void q_treewidget_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6008,12 +6394,16 @@ void q_treewidget_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QMoveEvent* event ```
 void q_treewidget_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6031,12 +6421,16 @@ void q_treewidget_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QCloseEvent* event ```
 void q_treewidget_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6054,12 +6448,16 @@ void q_treewidget_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QTabletEvent* event ```
 void q_treewidget_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6077,12 +6475,16 @@ void q_treewidget_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QActionEvent* event ```
 void q_treewidget_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6100,12 +6502,16 @@ void q_treewidget_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QShowEvent* event ```
 void q_treewidget_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6123,12 +6529,16 @@ void q_treewidget_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QHideEvent* event ```
 void q_treewidget_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6146,12 +6556,16 @@ bool q_treewidget_native_event(void* self, const char* eventType, void* message,
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, const char* eventType, void* message, intptr_t* result ```
 bool q_treewidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6169,12 +6583,16 @@ int32_t q_treewidget_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_treewidget_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6192,12 +6610,16 @@ void q_treewidget_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QPainter* painter ```
 void q_treewidget_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6215,12 +6637,16 @@ QPaintDevice* q_treewidget_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QPoint* offset ```
 QPaintDevice* q_treewidget_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6238,12 +6664,16 @@ QPainter* q_treewidget_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 QPainter* q_treewidget_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6261,12 +6691,16 @@ void q_treewidget_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QChildEvent* event ```
 void q_treewidget_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6284,12 +6718,16 @@ void q_treewidget_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QEvent* event ```
 void q_treewidget_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6307,12 +6745,16 @@ void q_treewidget_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QMetaMethod* signal ```
 void q_treewidget_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6330,12 +6772,16 @@ void q_treewidget_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QMetaMethod* signal ```
 void q_treewidget_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6353,12 +6799,16 @@ void q_treewidget_column_resized(void* self, int column, int oldSize, int newSiz
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#columnResized)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, int column, int oldSize, int newSize ```
 void q_treewidget_qbase_column_resized(void* self, int column, int oldSize, int newSize);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#columnResized)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6376,12 +6826,16 @@ void q_treewidget_column_count_changed(void* self, int oldCount, int newCount);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#columnCountChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, int oldCount, int newCount ```
 void q_treewidget_qbase_column_count_changed(void* self, int oldCount, int newCount);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#columnCountChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6399,12 +6853,16 @@ void q_treewidget_column_moved(void* self);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#columnMoved)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 void q_treewidget_qbase_column_moved(void* self);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#columnMoved)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6422,12 +6880,16 @@ void q_treewidget_reexpand(void* self);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#reexpand)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 void q_treewidget_qbase_reexpand(void* self);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#reexpand)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6445,12 +6907,16 @@ void q_treewidget_rows_removed(void* self, void* parent, int first, int last);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#rowsRemoved)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QModelIndex* parent, int first, int last ```
 void q_treewidget_qbase_rows_removed(void* self, void* parent, int first, int last);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#rowsRemoved)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6468,12 +6934,16 @@ void q_treewidget_draw_tree(void* self, void* painter, void* region);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#drawTree)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QPainter* painter, QRegion* region ```
 void q_treewidget_qbase_draw_tree(void* self, void* painter, void* region);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#drawTree)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6491,12 +6961,16 @@ int32_t q_treewidget_index_row_size_hint(void* self, void* index);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#indexRowSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QModelIndex* index ```
 int32_t q_treewidget_qbase_index_row_size_hint(void* self, void* index);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#indexRowSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6514,12 +6988,16 @@ int32_t q_treewidget_row_height(void* self, void* index);
 
 /// Inherited from QTreeView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#rowHeight)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QModelIndex* index ```
 int32_t q_treewidget_qbase_row_height(void* self, void* index);
 
 /// Inherited from QTreeView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#rowHeight)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6537,12 +7015,16 @@ int64_t q_treewidget_state(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#state)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 int64_t q_treewidget_qbase_state(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#state)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6560,12 +7042,16 @@ void q_treewidget_set_state(void* self, int64_t state);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setState)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, enum QAbstractItemView__State state ```
 void q_treewidget_qbase_set_state(void* self, int64_t state);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setState)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6583,12 +7069,16 @@ void q_treewidget_schedule_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#scheduleDelayedItemsLayout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 void q_treewidget_qbase_schedule_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#scheduleDelayedItemsLayout)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6606,12 +7096,16 @@ void q_treewidget_execute_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#executeDelayedItemsLayout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 void q_treewidget_qbase_execute_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#executeDelayedItemsLayout)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6629,12 +7123,16 @@ void q_treewidget_set_dirty_region(void* self, void* region);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setDirtyRegion)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QRegion* region ```
 void q_treewidget_qbase_set_dirty_region(void* self, void* region);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setDirtyRegion)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6652,12 +7150,16 @@ void q_treewidget_scroll_dirty_region(void* self, int dx, int dy);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#scrollDirtyRegion)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, int dx, int dy ```
 void q_treewidget_qbase_scroll_dirty_region(void* self, int dx, int dy);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#scrollDirtyRegion)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6675,12 +7177,16 @@ QPoint* q_treewidget_dirty_region_offset(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dirtyRegionOffset)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 QPoint* q_treewidget_qbase_dirty_region_offset(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dirtyRegionOffset)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6698,12 +7204,16 @@ void q_treewidget_start_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#startAutoScroll)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 void q_treewidget_qbase_start_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#startAutoScroll)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6721,12 +7231,16 @@ void q_treewidget_stop_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#stopAutoScroll)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 void q_treewidget_qbase_stop_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#stopAutoScroll)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6744,12 +7258,16 @@ void q_treewidget_do_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doAutoScroll)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 void q_treewidget_qbase_do_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doAutoScroll)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6767,12 +7285,16 @@ int64_t q_treewidget_drop_indicator_position(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dropIndicatorPosition)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 int64_t q_treewidget_qbase_drop_indicator_position(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dropIndicatorPosition)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6790,12 +7312,16 @@ void q_treewidget_set_viewport_margins(void* self, int left, int top, int right,
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, int left, int top, int right, int bottom ```
 void q_treewidget_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6813,12 +7339,16 @@ QMargins* q_treewidget_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 QMargins* q_treewidget_qbase_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6836,12 +7366,16 @@ void q_treewidget_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QPainter* param1 ```
 void q_treewidget_qbase_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6859,12 +7393,16 @@ void q_treewidget_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 void q_treewidget_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6882,12 +7420,16 @@ void q_treewidget_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 void q_treewidget_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6905,12 +7447,16 @@ void q_treewidget_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 void q_treewidget_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6928,12 +7474,16 @@ bool q_treewidget_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 bool q_treewidget_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6951,12 +7501,16 @@ bool q_treewidget_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 bool q_treewidget_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6974,12 +7528,16 @@ QObject* q_treewidget_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 QObject* q_treewidget_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6997,12 +7555,16 @@ int32_t q_treewidget_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self ```
 int32_t q_treewidget_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7020,12 +7582,16 @@ int32_t q_treewidget_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, const char* signal ```
 int32_t q_treewidget_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7043,6 +7609,8 @@ bool q_treewidget_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, QMetaMethod* signal ```
@@ -7050,11 +7618,24 @@ bool q_treewidget_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QTreeWidget* self, bool (*slot)(QTreeWidget*, QMetaMethod*) ```
 void q_treewidget_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QTreeWidget* self, void (*slot)(QObject*, const char*) ```
+void q_treewidget_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#dtor.QTreeWidget)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTreeWidget* self ```

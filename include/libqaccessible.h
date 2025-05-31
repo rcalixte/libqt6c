@@ -246,6 +246,8 @@ const char* q_accessibletextinterface_attributes(void* self, int offset, int* st
 /// ``` QAccessibleTextInterface* self, QAccessibleTextInterface* param1 ```
 void q_accessibletextinterface_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletextinterface.html#dtor.QAccessibleTextInterface)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAccessibleTextInterface* self ```
@@ -273,6 +275,8 @@ void q_accessibleeditabletextinterface_replace_text(void* self, int startOffset,
 /// ``` QAccessibleEditableTextInterface* self, QAccessibleEditableTextInterface* param1 ```
 void q_accessibleeditabletextinterface_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleeditabletextinterface.html#dtor.QAccessibleEditableTextInterface)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAccessibleEditableTextInterface* self ```
@@ -310,6 +314,8 @@ QVariant* q_accessiblevalueinterface_minimum_step_size(void* self);
 /// ``` QAccessibleValueInterface* self, QAccessibleValueInterface* param1 ```
 void q_accessiblevalueinterface_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessiblevalueinterface.html#dtor.QAccessibleValueInterface)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAccessibleValueInterface* self ```
@@ -362,6 +368,8 @@ QAccessibleInterface* q_accessibletablecellinterface_table(void* self);
 /// ``` QAccessibleTableCellInterface* self, QAccessibleTableCellInterface* param1 ```
 void q_accessibletablecellinterface_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletablecellinterface.html#dtor.QAccessibleTableCellInterface)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAccessibleTableCellInterface* self ```
@@ -469,6 +477,8 @@ bool q_accessibletableinterface_unselect_column(void* self, int column);
 /// ``` QAccessibleTableInterface* self, QAccessibleTableModelChangeEvent* event ```
 void q_accessibletableinterface_model_change(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletableinterface.html#dtor.QAccessibleTableInterface)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAccessibleTableInterface* self ```
@@ -581,6 +591,8 @@ const char* q_accessibleactioninterface_tr2(const char* sourceText, const char* 
 /// ``` const char* sourceText, const char* disambiguation, int n ```
 const char* q_accessibleactioninterface_tr3(const char* sourceText, const char* disambiguation, int n);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#dtor.QAccessibleActionInterface)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAccessibleActionInterface* self ```
@@ -608,6 +620,8 @@ QPoint* q_accessibleimageinterface_image_position(void* self);
 /// ``` QAccessibleImageInterface* self, QAccessibleImageInterface* param1 ```
 void q_accessibleimageinterface_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleimageinterface.html#dtor.QAccessibleImageInterface)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAccessibleImageInterface* self ```
@@ -645,6 +659,8 @@ bool q_accessiblehyperlinkinterface_is_valid(void* self);
 /// ``` QAccessibleHyperlinkInterface* self, QAccessibleHyperlinkInterface* param1 ```
 void q_accessiblehyperlinkinterface_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessiblehyperlinkinterface.html#dtor.QAccessibleHyperlinkInterface)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAccessibleHyperlinkInterface* self ```
@@ -692,16 +708,22 @@ int32_t q_accessibleevent_child(void* self);
 /// ``` QAccessibleEvent* self ```
 QAccessibleInterface* q_accessibleevent_accessible_interface(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAccessibleEvent* self, QAccessibleInterface* (*slot)() ```
 void q_accessibleevent_on_accessible_interface(void* self, QAccessibleInterface* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
+///
 /// Base class method implementation
 ///
 /// ``` QAccessibleEvent* self ```
 QAccessibleInterface* q_accessibleevent_qbase_accessible_interface(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#dtor.QAccessibleEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAccessibleEvent* self ```
@@ -770,6 +792,8 @@ QAccessibleInterface* q_accessiblestatechangeevent_accessible_interface(void* se
 
 /// Inherited from QAccessibleEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAccessibleStateChangeEvent* self ```
@@ -777,11 +801,15 @@ QAccessibleInterface* q_accessiblestatechangeevent_qbase_accessible_interface(vo
 
 /// Inherited from QAccessibleEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QAccessibleStateChangeEvent* self, QAccessibleInterface* (*slot)() ```
 void q_accessiblestatechangeevent_on_accessible_interface(void* self, QAccessibleInterface* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessiblestatechangeevent.html#dtor.QAccessibleStateChangeEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAccessibleStateChangeEvent* self ```
@@ -855,6 +883,8 @@ QAccessibleInterface* q_accessibletextcursorevent_accessible_interface(void* sel
 
 /// Inherited from QAccessibleEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAccessibleTextCursorEvent* self ```
@@ -862,11 +892,15 @@ QAccessibleInterface* q_accessibletextcursorevent_qbase_accessible_interface(voi
 
 /// Inherited from QAccessibleEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QAccessibleTextCursorEvent* self, QAccessibleInterface* (*slot)() ```
 void q_accessibletextcursorevent_on_accessible_interface(void* self, QAccessibleInterface* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletextcursorevent.html#dtor.QAccessibleTextCursorEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAccessibleTextCursorEvent* self ```
@@ -959,6 +993,8 @@ QAccessibleInterface* q_accessibletextselectionevent_accessible_interface(void* 
 
 /// Inherited from QAccessibleEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAccessibleTextSelectionEvent* self ```
@@ -966,11 +1002,15 @@ QAccessibleInterface* q_accessibletextselectionevent_qbase_accessible_interface(
 
 /// Inherited from QAccessibleEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QAccessibleTextSelectionEvent* self, QAccessibleInterface* (*slot)() ```
 void q_accessibletextselectionevent_on_accessible_interface(void* self, QAccessibleInterface* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletextselectionevent.html#dtor.QAccessibleTextSelectionEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAccessibleTextSelectionEvent* self ```
@@ -1058,6 +1098,8 @@ QAccessibleInterface* q_accessibletextinsertevent_accessible_interface(void* sel
 
 /// Inherited from QAccessibleEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAccessibleTextInsertEvent* self ```
@@ -1065,11 +1107,15 @@ QAccessibleInterface* q_accessibletextinsertevent_qbase_accessible_interface(voi
 
 /// Inherited from QAccessibleEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QAccessibleTextInsertEvent* self, QAccessibleInterface* (*slot)() ```
 void q_accessibletextinsertevent_on_accessible_interface(void* self, QAccessibleInterface* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletextinsertevent.html#dtor.QAccessibleTextInsertEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAccessibleTextInsertEvent* self ```
@@ -1157,6 +1203,8 @@ QAccessibleInterface* q_accessibletextremoveevent_accessible_interface(void* sel
 
 /// Inherited from QAccessibleEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAccessibleTextRemoveEvent* self ```
@@ -1164,11 +1212,15 @@ QAccessibleInterface* q_accessibletextremoveevent_qbase_accessible_interface(voi
 
 /// Inherited from QAccessibleEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QAccessibleTextRemoveEvent* self, QAccessibleInterface* (*slot)() ```
 void q_accessibletextremoveevent_on_accessible_interface(void* self, QAccessibleInterface* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletextremoveevent.html#dtor.QAccessibleTextRemoveEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAccessibleTextRemoveEvent* self ```
@@ -1261,6 +1313,8 @@ QAccessibleInterface* q_accessibletextupdateevent_accessible_interface(void* sel
 
 /// Inherited from QAccessibleEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAccessibleTextUpdateEvent* self ```
@@ -1268,11 +1322,15 @@ QAccessibleInterface* q_accessibletextupdateevent_qbase_accessible_interface(voi
 
 /// Inherited from QAccessibleEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QAccessibleTextUpdateEvent* self, QAccessibleInterface* (*slot)() ```
 void q_accessibletextupdateevent_on_accessible_interface(void* self, QAccessibleInterface* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletextupdateevent.html#dtor.QAccessibleTextUpdateEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAccessibleTextUpdateEvent* self ```
@@ -1346,6 +1404,8 @@ QAccessibleInterface* q_accessiblevaluechangeevent_accessible_interface(void* se
 
 /// Inherited from QAccessibleEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAccessibleValueChangeEvent* self ```
@@ -1353,11 +1413,15 @@ QAccessibleInterface* q_accessiblevaluechangeevent_qbase_accessible_interface(vo
 
 /// Inherited from QAccessibleEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QAccessibleValueChangeEvent* self, QAccessibleInterface* (*slot)() ```
 void q_accessiblevaluechangeevent_on_accessible_interface(void* self, QAccessibleInterface* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessiblevaluechangeevent.html#dtor.QAccessibleValueChangeEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAccessibleValueChangeEvent* self ```
@@ -1471,6 +1535,8 @@ QAccessibleInterface* q_accessibletablemodelchangeevent_accessible_interface(voi
 
 /// Inherited from QAccessibleEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAccessibleTableModelChangeEvent* self ```
@@ -1478,11 +1544,15 @@ QAccessibleInterface* q_accessibletablemodelchangeevent_qbase_accessible_interfa
 
 /// Inherited from QAccessibleEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QAccessibleTableModelChangeEvent* self, QAccessibleInterface* (*slot)() ```
 void q_accessibletablemodelchangeevent_on_accessible_interface(void* self, QAccessibleInterface* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletablemodelchangeevent.html#dtor.QAccessibleTableModelChangeEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAccessibleTableModelChangeEvent* self ```

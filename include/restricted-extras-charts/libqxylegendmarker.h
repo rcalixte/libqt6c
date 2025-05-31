@@ -12,23 +12,15 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractseries.h"
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
-#include "../libqbrush.h"
 #include "../libqevent.h"
-#include "../libqfont.h"
 #include "libqlegend.h"
 #include "libqlegendmarker.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
-#include "../libqpen.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 #include "libqxyseries.h"
 
-/// https://doc.qt.io/qt-6/qxylegendmarker.html
+/// https://doc.qt.io/qt-6/qxylegendmarker-qtcharts.html
 
 /// q_xylegendmarker_new constructs a new QXYLegendMarker object.
 ///
@@ -43,7 +35,7 @@ QXYLegendMarker* q_xylegendmarker_new2(void* series, void* legend, void* parent)
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QXYLegendMarker* self ```
-QMetaObject* q_xylegendmarker_meta_object(void* self);
+const QMetaObject* q_xylegendmarker_meta_object(void* self);
 
 /// ``` QXYLegendMarker* self, const char* param1 ```
 void* q_xylegendmarker_metacast(void* self, const char* param1);
@@ -66,31 +58,39 @@ int32_t q_xylegendmarker_qbase_metacall(void* self, int64_t param1, int param2, 
 /// ``` const char* s ```
 const char* q_xylegendmarker_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxylegendmarker.html#type)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxylegendmarker-qtcharts.html#type)
 ///
 /// ``` QXYLegendMarker* self ```
 int64_t q_xylegendmarker_type(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxylegendmarker-qtcharts.html#type)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QXYLegendMarker* self, int64_t (*slot)() ```
 void q_xylegendmarker_on_type(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxylegendmarker-qtcharts.html#type)
+///
 /// Base class method implementation
 ///
 /// ``` QXYLegendMarker* self ```
 int64_t q_xylegendmarker_qbase_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxylegendmarker.html#series)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxylegendmarker-qtcharts.html#series)
 ///
 /// ``` QXYLegendMarker* self ```
 QXYSeries* q_xylegendmarker_series(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxylegendmarker-qtcharts.html#series)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QXYLegendMarker* self, QXYSeries* (*slot)() ```
 void q_xylegendmarker_on_series(void* self, QXYSeries* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxylegendmarker-qtcharts.html#series)
+///
 /// Base class method implementation
 ///
 /// ``` QXYLegendMarker* self ```
@@ -213,6 +213,8 @@ void q_xylegendmarker_clicked(void* self);
 
 /// Inherited from QLegendMarker
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#clicked)
+///
 /// ``` QXYLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_xylegendmarker_on_clicked(void* self, void (*slot)(void*));
 
@@ -224,6 +226,8 @@ void q_xylegendmarker_on_clicked(void* self, void (*slot)(void*));
 void q_xylegendmarker_hovered(void* self, bool status);
 
 /// Inherited from QLegendMarker
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#hovered)
 ///
 /// ``` QXYLegendMarker* self, void (*slot)(QLegendMarker*, bool) ```
 void q_xylegendmarker_on_hovered(void* self, void (*slot)(void*, bool));
@@ -237,6 +241,8 @@ void q_xylegendmarker_label_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelChanged)
+///
 /// ``` QXYLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_xylegendmarker_on_label_changed(void* self, void (*slot)(void*));
 
@@ -248,6 +254,8 @@ void q_xylegendmarker_on_label_changed(void* self, void (*slot)(void*));
 void q_xylegendmarker_label_brush_changed(void* self);
 
 /// Inherited from QLegendMarker
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelBrushChanged)
 ///
 /// ``` QXYLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_xylegendmarker_on_label_brush_changed(void* self, void (*slot)(void*));
@@ -261,6 +269,8 @@ void q_xylegendmarker_font_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#fontChanged)
+///
 /// ``` QXYLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_xylegendmarker_on_font_changed(void* self, void (*slot)(void*));
 
@@ -272,6 +282,8 @@ void q_xylegendmarker_on_font_changed(void* self, void (*slot)(void*));
 void q_xylegendmarker_pen_changed(void* self);
 
 /// Inherited from QLegendMarker
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#penChanged)
 ///
 /// ``` QXYLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_xylegendmarker_on_pen_changed(void* self, void (*slot)(void*));
@@ -285,6 +297,8 @@ void q_xylegendmarker_brush_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#brushChanged)
+///
 /// ``` QXYLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_xylegendmarker_on_brush_changed(void* self, void (*slot)(void*));
 
@@ -297,6 +311,8 @@ void q_xylegendmarker_visible_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#visibleChanged)
+///
 /// ``` QXYLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_xylegendmarker_on_visible_changed(void* self, void (*slot)(void*));
 
@@ -308,6 +324,8 @@ void q_xylegendmarker_on_visible_changed(void* self, void (*slot)(void*));
 void q_xylegendmarker_shape_changed(void* self);
 
 /// Inherited from QLegendMarker
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#shapeChanged)
 ///
 /// ``` QXYLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_xylegendmarker_on_shape_changed(void* self, void (*slot)(void*));
@@ -394,7 +412,7 @@ void q_xylegendmarker_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QXYLegendMarker* self ```
-libqt_list /* of QObject* */ q_xylegendmarker_children(void* self);
+const libqt_list /* of QObject* */ q_xylegendmarker_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -492,7 +510,7 @@ QBindingStorage* q_xylegendmarker_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QXYLegendMarker* self ```
-QBindingStorage* q_xylegendmarker_binding_storage2(void* self);
+const QBindingStorage* q_xylegendmarker_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -502,6 +520,8 @@ QBindingStorage* q_xylegendmarker_binding_storage2(void* self);
 void q_xylegendmarker_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QXYLegendMarker* self, void (*slot)(QObject*) ```
 void q_xylegendmarker_on_destroyed(void* self, void (*slot)(void*));
@@ -557,6 +577,8 @@ void q_xylegendmarker_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QXYLegendMarker* self, void (*slot)(QObject*, QObject*) ```
 void q_xylegendmarker_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -571,12 +593,16 @@ bool q_xylegendmarker_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QXYLegendMarker* self, QEvent* event ```
 bool q_xylegendmarker_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -594,12 +620,16 @@ bool q_xylegendmarker_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QXYLegendMarker* self, QObject* watched, QEvent* event ```
 bool q_xylegendmarker_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -617,12 +647,16 @@ void q_xylegendmarker_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QXYLegendMarker* self, QTimerEvent* event ```
 void q_xylegendmarker_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -640,12 +674,16 @@ void q_xylegendmarker_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QXYLegendMarker* self, QChildEvent* event ```
 void q_xylegendmarker_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -663,12 +701,16 @@ void q_xylegendmarker_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QXYLegendMarker* self, QEvent* event ```
 void q_xylegendmarker_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -686,12 +728,16 @@ void q_xylegendmarker_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QXYLegendMarker* self, QMetaMethod* signal ```
 void q_xylegendmarker_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -709,12 +755,16 @@ void q_xylegendmarker_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QXYLegendMarker* self, QMetaMethod* signal ```
 void q_xylegendmarker_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -732,12 +782,16 @@ QObject* q_xylegendmarker_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QXYLegendMarker* self ```
 QObject* q_xylegendmarker_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -755,12 +809,16 @@ int32_t q_xylegendmarker_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QXYLegendMarker* self ```
 int32_t q_xylegendmarker_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -778,12 +836,16 @@ int32_t q_xylegendmarker_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QXYLegendMarker* self, const char* signal ```
 int32_t q_xylegendmarker_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -801,6 +863,8 @@ bool q_xylegendmarker_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QXYLegendMarker* self, QMetaMethod* signal ```
@@ -808,11 +872,24 @@ bool q_xylegendmarker_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QXYLegendMarker* self, bool (*slot)(QXYLegendMarker*, QMetaMethod*) ```
 void q_xylegendmarker_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QXYLegendMarker* self, void (*slot)(QObject*, const char*) ```
+void q_xylegendmarker_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qxylegendmarker-qtcharts.html#dtor.QXYLegendMarker)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QXYLegendMarker* self ```

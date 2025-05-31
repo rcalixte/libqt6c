@@ -13,17 +13,11 @@
 #include "../qtlibc.h"
 
 #include "../libqabstractitemmodel.h"
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
-#include "../libqevent.h"
 #include "../libqdatastream.h"
 #include "../libqdatetime.h"
 #include "../libqmetaobject.h"
-#include "../libqmimedata.h"
 #include "../libqobject.h"
-#include "../libqsize.h"
 #include <string.h>
-#include "../libqthread.h"
 #include "../libqurl.h"
 #include "../libqvariant.h"
 
@@ -74,6 +68,8 @@ bool q_webenginehistoryitem_is_valid(void* self);
 /// ``` QWebEngineHistoryItem* self, QWebEngineHistoryItem* other ```
 void q_webenginehistoryitem_swap(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistoryitem.html#dtor.QWebEngineHistoryItem)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWebEngineHistoryItem* self ```
@@ -84,7 +80,7 @@ void q_webenginehistoryitem_delete(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QWebEngineHistoryModel* self ```
-QMetaObject* q_webenginehistorymodel_meta_object(void* self);
+const QMetaObject* q_webenginehistorymodel_meta_object(void* self);
 
 /// ``` QWebEngineHistoryModel* self, const char* param1 ```
 void* q_webenginehistorymodel_metacast(void* self, const char* param1);
@@ -236,8 +232,8 @@ const char** q_webenginehistorymodel_mime_types(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeData)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* indexes[] ```
-QMimeData* q_webenginehistorymodel_mime_data(void* self, void* indexes[]);
+/// ``` QWebEngineHistoryModel* self, libqt_list /* of QModelIndex* */ indexes ```
+QMimeData* q_webenginehistorymodel_mime_data(void* self, libqt_list indexes);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -409,6 +405,8 @@ void q_webenginehistorymodel_data_changed(void* self, void* topLeft, void* botto
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+///
 /// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*) ```
 void q_webenginehistorymodel_on_data_changed(void* self, void (*slot)(void*, void*, void*));
 
@@ -420,6 +418,8 @@ void q_webenginehistorymodel_on_data_changed(void* self, void (*slot)(void*, voi
 void q_webenginehistorymodel_header_data_changed(void* self, int64_t orientation, int first, int last);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, enum Qt__Orientation, int, int) ```
 void q_webenginehistorymodel_on_header_data_changed(void* self, void (*slot)(void*, int64_t, int, int));
@@ -433,6 +433,8 @@ void q_webenginehistorymodel_layout_changed(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+///
 /// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*) ```
 void q_webenginehistorymodel_on_layout_changed(void* self, void (*slot)(void*));
 
@@ -444,6 +446,8 @@ void q_webenginehistorymodel_on_layout_changed(void* self, void (*slot)(void*));
 void q_webenginehistorymodel_layout_about_to_be_changed(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*) ```
 void q_webenginehistorymodel_on_layout_about_to_be_changed(void* self, void (*slot)(void*));
@@ -508,61 +512,71 @@ bool q_webenginehistorymodel_check_index2(void* self, void* index, int64_t optio
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* roles[] ```
-void q_webenginehistorymodel_data_changed3(void* self, void* topLeft, void* bottomRight, int* roles[]);
+/// ``` QWebEngineHistoryModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles ```
+void q_webenginehistorymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*, int*[]) ```
-void q_webenginehistorymodel_on_data_changed3(void* self, void (*slot)(void*, void*, void*, int*));
-
-/// Inherited from QAbstractItemModel
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
-///
-/// ``` QWebEngineHistoryModel* self, QPersistentModelIndex* parents[] ```
-void q_webenginehistorymodel_layout_changed1(void* self, void* parents[]);
-
-/// Inherited from QAbstractItemModel
-///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, QPersistentModelIndex*[]) ```
-void q_webenginehistorymodel_on_layout_changed1(void* self, void (*slot)(void*, void*));
+/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
+void q_webenginehistorymodel_on_data_changed3(void* self, void (*slot)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QWebEngineHistoryModel* self, QPersistentModelIndex* parents[], enum QAbstractItemModel__LayoutChangeHint hint ```
-void q_webenginehistorymodel_layout_changed2(void* self, void* parents[], int64_t hint);
+/// ``` QWebEngineHistoryModel* self, libqt_list /* of QPersistentModelIndex* */ parents ```
+void q_webenginehistorymodel_layout_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, QPersistentModelIndex*[], enum QAbstractItemModel__LayoutChangeHint) ```
-void q_webenginehistorymodel_on_layout_changed2(void* self, void (*slot)(void*, void*, int64_t));
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+///
+/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+void q_webenginehistorymodel_on_layout_changed1(void* self, void (*slot)(void*, libqt_list));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+///
+/// ``` QWebEngineHistoryModel* self, libqt_list /* of QPersistentModelIndex* */ parents, enum QAbstractItemModel__LayoutChangeHint hint ```
+void q_webenginehistorymodel_layout_changed2(void* self, libqt_list parents, int64_t hint);
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+///
+/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+void q_webenginehistorymodel_on_layout_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QWebEngineHistoryModel* self, QPersistentModelIndex* parents[] ```
-void q_webenginehistorymodel_layout_about_to_be_changed1(void* self, void* parents[]);
-
-/// Inherited from QAbstractItemModel
-///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, QPersistentModelIndex*[]) ```
-void q_webenginehistorymodel_on_layout_about_to_be_changed1(void* self, void (*slot)(void*, void*));
+/// ``` QWebEngineHistoryModel* self, libqt_list /* of QPersistentModelIndex* */ parents ```
+void q_webenginehistorymodel_layout_about_to_be_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QWebEngineHistoryModel* self, QPersistentModelIndex* parents[], enum QAbstractItemModel__LayoutChangeHint hint ```
-void q_webenginehistorymodel_layout_about_to_be_changed2(void* self, void* parents[], int64_t hint);
+/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+void q_webenginehistorymodel_on_layout_about_to_be_changed1(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, QPersistentModelIndex*[], enum QAbstractItemModel__LayoutChangeHint) ```
-void q_webenginehistorymodel_on_layout_about_to_be_changed2(void* self, void (*slot)(void*, void*, int64_t));
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+///
+/// ``` QWebEngineHistoryModel* self, libqt_list /* of QPersistentModelIndex* */ parents, enum QAbstractItemModel__LayoutChangeHint hint ```
+void q_webenginehistorymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int64_t hint);
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+///
+/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+void q_webenginehistorymodel_on_layout_about_to_be_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QObject
 ///
@@ -660,7 +674,7 @@ void q_webenginehistorymodel_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QWebEngineHistoryModel* self ```
-libqt_list /* of QObject* */ q_webenginehistorymodel_children(void* self);
+const libqt_list /* of QObject* */ q_webenginehistorymodel_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -758,7 +772,7 @@ QBindingStorage* q_webenginehistorymodel_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QWebEngineHistoryModel* self ```
-QBindingStorage* q_webenginehistorymodel_binding_storage2(void* self);
+const QBindingStorage* q_webenginehistorymodel_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -768,6 +782,8 @@ QBindingStorage* q_webenginehistorymodel_binding_storage2(void* self);
 void q_webenginehistorymodel_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QWebEngineHistoryModel* self, void (*slot)(QObject*) ```
 void q_webenginehistorymodel_on_destroyed(void* self, void (*slot)(void*));
@@ -816,15 +832,152 @@ void q_webenginehistorymodel_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QWebEngineHistoryModel* self, void (*slot)(QObject*, QObject*) ```
 void q_webenginehistorymodel_on_destroyed1(void* self, void (*slot)(void*, void*));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeInserted)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_webenginehistorymodel_on_rows_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsInserted)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_webenginehistorymodel_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeRemoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_webenginehistorymodel_on_rows_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsRemoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_webenginehistorymodel_on_rows_removed(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeInserted)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_webenginehistorymodel_on_columns_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsInserted)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_webenginehistorymodel_on_columns_inserted(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeRemoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_webenginehistorymodel_on_columns_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsRemoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_webenginehistorymodel_on_columns_removed(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelAboutToBeReset)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*) ```
+void q_webenginehistorymodel_on_model_about_to_be_reset(void* self, void (*slot)(void*));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelReset)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*) ```
+void q_webenginehistorymodel_on_model_reset(void* self, void (*slot)(void*));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeMoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+void q_webenginehistorymodel_on_rows_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsMoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+void q_webenginehistorymodel_on_rows_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeMoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+void q_webenginehistorymodel_on_columns_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsMoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineHistoryModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+void q_webenginehistorymodel_on_columns_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineHistoryModel* self, void (*slot)(QObject*, const char*) ```
+void q_webenginehistorymodel_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qwebenginehistory.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QWebEngineHistory* self ```
-QMetaObject* q_webenginehistory_meta_object(void* self);
+const QMetaObject* q_webenginehistory_meta_object(void* self);
 
 /// ``` QWebEngineHistory* self, const char* param1 ```
 void* q_webenginehistory_metacast(void* self, const char* param1);
@@ -1033,7 +1186,7 @@ void q_webenginehistory_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QWebEngineHistory* self ```
-libqt_list /* of QObject* */ q_webenginehistory_children(void* self);
+const libqt_list /* of QObject* */ q_webenginehistory_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1131,7 +1284,7 @@ QBindingStorage* q_webenginehistory_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QWebEngineHistory* self ```
-QBindingStorage* q_webenginehistory_binding_storage2(void* self);
+const QBindingStorage* q_webenginehistory_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -1141,6 +1294,8 @@ QBindingStorage* q_webenginehistory_binding_storage2(void* self);
 void q_webenginehistory_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QWebEngineHistory* self, void (*slot)(QObject*) ```
 void q_webenginehistory_on_destroyed(void* self, void (*slot)(void*));
@@ -1196,8 +1351,19 @@ void q_webenginehistory_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QWebEngineHistory* self, void (*slot)(QObject*, QObject*) ```
 void q_webenginehistory_on_destroyed1(void* self, void (*slot)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineHistory* self, void (*slot)(QObject*, const char*) ```
+void q_webenginehistory_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qwebenginehistory.html#types
 

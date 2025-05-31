@@ -139,6 +139,8 @@ QMediaTimeRange* q_mediatimerange_operator_minus_assign_with_q_media_time_range_
 /// ``` QMediaTimeRange* self ```
 void q_mediatimerange_clear(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediatimerange.html#dtor.QMediaTimeRange)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMediaTimeRange* self ```
@@ -211,6 +213,8 @@ QMediaTimeRange__Interval* q_mediatimerange__interval_normalized(void* self);
 /// ``` QMediaTimeRange__Interval* self, long long offset ```
 QMediaTimeRange__Interval* q_mediatimerange__interval_translated(void* self, long long offset);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediatimerange::interval.html#dtor.QMediaTimeRange::Interval)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMediaTimeRange__Interval* self ```

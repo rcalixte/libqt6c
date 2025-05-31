@@ -15,9 +15,6 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #if defined(WORKAROUND_INNER_CLASS_DEFINITION_QTextBlock__iterator)
 typedef QTextBlock::iterator QTextBlock__iterator;
 #endif
@@ -28,14 +25,11 @@ typedef QTextFrame::iterator QTextFrame__iterator;
 typedef QTextLayout::FormatRange QTextLayout__FormatRange;
 #endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QEvent QEvent;
 typedef struct QGlyphRun QGlyphRun;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QTextBlock QTextBlock;
 typedef struct QTextBlockFormat QTextBlockFormat;
@@ -55,9 +49,7 @@ typedef struct QTextLayout QTextLayout;
 typedef struct QTextLayout__FormatRange QTextLayout__FormatRange;
 typedef struct QTextList QTextList;
 typedef struct QTextObject QTextObject;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
 #endif
 
 #ifdef __cplusplus
@@ -76,8 +68,6 @@ QTextDocument* QTextObject_Document(const QTextObject* self);
 int QTextObject_ObjectIndex(const QTextObject* self);
 libqt_string QTextObject_Tr2(const char* s, const char* c);
 libqt_string QTextObject_Tr3(const char* s, const char* c, int n);
-bool QTextObject_Event(QTextObject* self, QEvent* event);
-bool QTextObject_EventFilter(QTextObject* self, QObject* watched, QEvent* event);
 
 QMetaObject* QTextBlockGroup_MetaObject(const QTextBlockGroup* self);
 void* QTextBlockGroup_Metacast(QTextBlockGroup* self, const char* param1);
@@ -85,8 +75,6 @@ int QTextBlockGroup_Metacall(QTextBlockGroup* self, int param1, int param2, void
 libqt_string QTextBlockGroup_Tr(const char* s);
 libqt_string QTextBlockGroup_Tr2(const char* s, const char* c);
 libqt_string QTextBlockGroup_Tr3(const char* s, const char* c, int n);
-bool QTextBlockGroup_Event(QTextBlockGroup* self, QEvent* event);
-bool QTextBlockGroup_EventFilter(QTextBlockGroup* self, QObject* watched, QEvent* event);
 
 void QTextFrameLayoutData_OperatorAssign(QTextFrameLayoutData* self, QTextFrameLayoutData* param1);
 void QTextFrameLayoutData_Delete(QTextFrameLayoutData* self);

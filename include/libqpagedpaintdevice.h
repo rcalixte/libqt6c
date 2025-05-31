@@ -17,7 +17,6 @@
 #include "libqpageranges.h"
 #include "libqpagesize.h"
 #include "libqpaintdevice.h"
-#include "libqpaintengine.h"
 
 /// https://doc.qt.io/qt-6/qpagedpaintdevice.html
 
@@ -173,6 +172,8 @@ int32_t q_pagedpaintdevice_depth(void* self);
 ///
 double q_pagedpaintdevice_device_pixel_ratio_f_scale();
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagedpaintdevice.html#dtor.QPagedPaintDevice)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPagedPaintDevice* self ```

@@ -137,6 +137,8 @@ libqt_list /* of QStorageInfo* */ q_storageinfo_mounted_volumes();
 ///
 QStorageInfo* q_storageinfo_root();
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstorageinfo.html#dtor.QStorageInfo)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStorageInfo* self ```

@@ -198,8 +198,8 @@ libqt_list /* of QSslCertificate* */ q_sslcertificate_from_data(const char* data
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#verify)
 ///
-/// ``` QSslCertificate* certificateChain[] ```
-libqt_list /* of QSslError* */ q_sslcertificate_verify(void* certificateChain[]);
+/// ``` libqt_list /* of QSslCertificate* */ certificateChain ```
+libqt_list /* of QSslError* */ q_sslcertificate_verify(libqt_list certificateChain);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#importPkcs12)
 ///
@@ -238,19 +238,21 @@ libqt_list /* of QSslCertificate* */ q_sslcertificate_from_data2(const char* dat
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#verify)
 ///
-/// ``` QSslCertificate* certificateChain[], const char* hostName ```
-libqt_list /* of QSslError* */ q_sslcertificate_verify2(void* certificateChain[], const char* hostName);
+/// ``` libqt_list /* of QSslCertificate* */ certificateChain, const char* hostName ```
+libqt_list /* of QSslError* */ q_sslcertificate_verify2(libqt_list certificateChain, const char* hostName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#importPkcs12)
 ///
-/// ``` QIODevice* device, QSslKey* key, QSslCertificate* cert, QSslCertificate* caCertificates[] ```
-bool q_sslcertificate_import_pkcs124(void* device, void* key, void* cert, void* caCertificates[]);
+/// ``` QIODevice* device, QSslKey* key, QSslCertificate* cert, libqt_list /* of QSslCertificate* */ caCertificates ```
+bool q_sslcertificate_import_pkcs124(void* device, void* key, void* cert, libqt_list caCertificates);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#importPkcs12)
 ///
-/// ``` QIODevice* device, QSslKey* key, QSslCertificate* cert, QSslCertificate* caCertificates[], const char* passPhrase ```
-bool q_sslcertificate_import_pkcs125(void* device, void* key, void* cert, void* caCertificates[], const char* passPhrase);
+/// ``` QIODevice* device, QSslKey* key, QSslCertificate* cert, libqt_list /* of QSslCertificate* */ caCertificates, const char* passPhrase ```
+bool q_sslcertificate_import_pkcs125(void* device, void* key, void* cert, libqt_list caCertificates, const char* passPhrase);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#dtor.QSslCertificate)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSslCertificate* self ```

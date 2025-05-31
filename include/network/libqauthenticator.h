@@ -97,6 +97,8 @@ bool q_authenticator_is_null(void* self);
 /// ``` QAuthenticator* self ```
 void q_authenticator_detach(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qauthenticator.html#dtor.QAuthenticator)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAuthenticator* self ```

@@ -13,18 +13,10 @@
 #include "qtlibc.h"
 
 #include "libqaction.h"
-#include "libqactiongroup.h"
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
-#include "libqfont.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 #include "libqwidget.h"
 
 /// https://doc.qt.io/qt-6/qwidgetaction.html
@@ -37,7 +29,7 @@ QWidgetAction* q_widgetaction_new(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QWidgetAction* self ```
-QMetaObject* q_widgetaction_meta_object(void* self);
+const QMetaObject* q_widgetaction_meta_object(void* self);
 
 /// ``` QWidgetAction* self, const char* param1 ```
 void* q_widgetaction_metacast(void* self, const char* param1);
@@ -85,11 +77,15 @@ void q_widgetaction_release_widget(void* self, void* widget);
 /// ``` QWidgetAction* self, QEvent* param1 ```
 bool q_widgetaction_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWidgetAction* self, bool (*slot)(QWidgetAction*, QEvent*) ```
 void q_widgetaction_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QWidgetAction* self, QEvent* param1 ```
@@ -100,11 +96,15 @@ bool q_widgetaction_qbase_event(void* self, void* param1);
 /// ``` QWidgetAction* self, QObject* param1, QEvent* param2 ```
 bool q_widgetaction_event_filter(void* self, void* param1, void* param2);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#eventFilter)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWidgetAction* self, bool (*slot)(QWidgetAction*, QObject*, QEvent*) ```
 void q_widgetaction_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#eventFilter)
+///
 /// Base class method implementation
 ///
 /// ``` QWidgetAction* self, QObject* param1, QEvent* param2 ```
@@ -115,11 +115,15 @@ bool q_widgetaction_qbase_event_filter(void* self, void* param1, void* param2);
 /// ``` QWidgetAction* self, QWidget* parent ```
 QWidget* q_widgetaction_create_widget(void* self, void* parent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#createWidget)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWidgetAction* self, QWidget* (*slot)(QWidgetAction*, QWidget*) ```
 void q_widgetaction_on_create_widget(void* self, QWidget* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#createWidget)
+///
 /// Base class method implementation
 ///
 /// ``` QWidgetAction* self, QWidget* parent ```
@@ -130,11 +134,15 @@ QWidget* q_widgetaction_qbase_create_widget(void* self, void* parent);
 /// ``` QWidgetAction* self, QWidget* widget ```
 void q_widgetaction_delete_widget(void* self, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#deleteWidget)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWidgetAction* self, void (*slot)(QWidgetAction*, QWidget*) ```
 void q_widgetaction_on_delete_widget(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#deleteWidget)
+///
 /// Base class method implementation
 ///
 /// ``` QWidgetAction* self, QWidget* widget ```
@@ -145,11 +153,15 @@ void q_widgetaction_qbase_delete_widget(void* self, void* widget);
 /// ``` QWidgetAction* self ```
 libqt_list /* of QWidget* */ q_widgetaction_created_widgets(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWidgetAction* self, libqt_list /* of QWidget* */ (*slot)() ```
 void q_widgetaction_on_created_widgets(void* self, libqt_list /* of QWidget* */ (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
+///
 /// Base class method implementation
 ///
 /// ``` QWidgetAction* self ```
@@ -316,8 +328,8 @@ QKeySequence* q_widgetaction_shortcut(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///
-/// ``` QWidgetAction* self, QKeySequence* shortcuts[] ```
-void q_widgetaction_set_shortcuts(void* self, void* shortcuts[]);
+/// ``` QWidgetAction* self, libqt_list /* of QKeySequence* */ shortcuts ```
+void q_widgetaction_set_shortcuts(void* self, libqt_list shortcuts);
 
 /// Inherited from QAction
 ///
@@ -545,6 +557,8 @@ void q_widgetaction_changed(void* self);
 
 /// Inherited from QAction
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#changed)
+///
 /// ``` QWidgetAction* self, void (*slot)(QAction*) ```
 void q_widgetaction_on_changed(void* self, void (*slot)(void*));
 
@@ -556,6 +570,8 @@ void q_widgetaction_on_changed(void* self, void (*slot)(void*));
 void q_widgetaction_enabled_changed(void* self, bool enabled);
 
 /// Inherited from QAction
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
 ///
 /// ``` QWidgetAction* self, void (*slot)(QAction*, bool) ```
 void q_widgetaction_on_enabled_changed(void* self, void (*slot)(void*, bool));
@@ -569,6 +585,8 @@ void q_widgetaction_checkable_changed(void* self, bool checkable);
 
 /// Inherited from QAction
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
+///
 /// ``` QWidgetAction* self, void (*slot)(QAction*, bool) ```
 void q_widgetaction_on_checkable_changed(void* self, void (*slot)(void*, bool));
 
@@ -580,6 +598,8 @@ void q_widgetaction_on_checkable_changed(void* self, void (*slot)(void*, bool));
 void q_widgetaction_visible_changed(void* self);
 
 /// Inherited from QAction
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
 ///
 /// ``` QWidgetAction* self, void (*slot)(QAction*) ```
 void q_widgetaction_on_visible_changed(void* self, void (*slot)(void*));
@@ -593,6 +613,8 @@ void q_widgetaction_triggered(void* self);
 
 /// Inherited from QAction
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
+///
 /// ``` QWidgetAction* self, void (*slot)(QAction*) ```
 void q_widgetaction_on_triggered(void* self, void (*slot)(void*));
 
@@ -605,6 +627,8 @@ void q_widgetaction_hovered(void* self);
 
 /// Inherited from QAction
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hovered)
+///
 /// ``` QWidgetAction* self, void (*slot)(QAction*) ```
 void q_widgetaction_on_hovered(void* self, void (*slot)(void*));
 
@@ -616,6 +640,8 @@ void q_widgetaction_on_hovered(void* self, void (*slot)(void*));
 void q_widgetaction_toggled(void* self, bool param1);
 
 /// Inherited from QAction
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggled)
 ///
 /// ``` QWidgetAction* self, void (*slot)(QAction*, bool) ```
 void q_widgetaction_on_toggled(void* self, void (*slot)(void*, bool));
@@ -635,6 +661,8 @@ bool q_widgetaction_show_status_text1(void* self, void* object);
 void q_widgetaction_triggered1(void* self, bool checked);
 
 /// Inherited from QAction
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// ``` QWidgetAction* self, void (*slot)(QAction*, bool) ```
 void q_widgetaction_on_triggered1(void* self, void (*slot)(void*, bool));
@@ -721,7 +749,7 @@ void q_widgetaction_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QWidgetAction* self ```
-libqt_list /* of QObject* */ q_widgetaction_children(void* self);
+const libqt_list /* of QObject* */ q_widgetaction_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -819,7 +847,7 @@ QBindingStorage* q_widgetaction_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QWidgetAction* self ```
-QBindingStorage* q_widgetaction_binding_storage2(void* self);
+const QBindingStorage* q_widgetaction_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -829,6 +857,8 @@ QBindingStorage* q_widgetaction_binding_storage2(void* self);
 void q_widgetaction_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QWidgetAction* self, void (*slot)(QObject*) ```
 void q_widgetaction_on_destroyed(void* self, void (*slot)(void*));
@@ -884,6 +914,8 @@ void q_widgetaction_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QWidgetAction* self, void (*slot)(QObject*, QObject*) ```
 void q_widgetaction_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -898,12 +930,16 @@ void q_widgetaction_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWidgetAction* self, QTimerEvent* event ```
 void q_widgetaction_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -921,12 +957,16 @@ void q_widgetaction_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWidgetAction* self, QChildEvent* event ```
 void q_widgetaction_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -944,12 +984,16 @@ void q_widgetaction_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWidgetAction* self, QEvent* event ```
 void q_widgetaction_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -967,12 +1011,16 @@ void q_widgetaction_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWidgetAction* self, QMetaMethod* signal ```
 void q_widgetaction_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -990,12 +1038,16 @@ void q_widgetaction_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWidgetAction* self, QMetaMethod* signal ```
 void q_widgetaction_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1013,12 +1065,16 @@ QObject* q_widgetaction_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWidgetAction* self ```
 QObject* q_widgetaction_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1036,12 +1092,16 @@ int32_t q_widgetaction_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWidgetAction* self ```
 int32_t q_widgetaction_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1059,12 +1119,16 @@ int32_t q_widgetaction_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWidgetAction* self, const char* signal ```
 int32_t q_widgetaction_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1082,6 +1146,8 @@ bool q_widgetaction_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWidgetAction* self, QMetaMethod* signal ```
@@ -1089,11 +1155,24 @@ bool q_widgetaction_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QWidgetAction* self, bool (*slot)(QWidgetAction*, QMetaMethod*) ```
 void q_widgetaction_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWidgetAction* self, void (*slot)(QObject*, const char*) ```
+void q_widgetaction_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#dtor.QWidgetAction)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWidgetAction* self ```

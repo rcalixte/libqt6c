@@ -65,17 +65,8 @@ libqt_list /* of QSslCertificate* */ q_sslconfiguration_local_certificate_chain(
     return _arr;
 }
 
-void q_sslconfiguration_set_local_certificate_chain(void* self, void* localChain[]) {
-    QSslCertificate** localChain_arr = (QSslCertificate**)localChain;
-    size_t localChain_len = 0;
-    while (localChain_arr[localChain_len] != NULL) {
-        localChain_len++;
-    }
-    libqt_list localChain_list = {
-        .len = localChain_len,
-        .data = {(QSslCertificate*)localChain},
-    };
-    QSslConfiguration_SetLocalCertificateChain((QSslConfiguration*)self, localChain_list);
+void q_sslconfiguration_set_local_certificate_chain(void* self, libqt_list localChain) {
+    QSslConfiguration_SetLocalCertificateChain((QSslConfiguration*)self, localChain);
 }
 
 QSslCertificate* q_sslconfiguration_local_certificate(void* self) {
@@ -116,17 +107,8 @@ libqt_list /* of QSslCipher* */ q_sslconfiguration_ciphers(void* self) {
     return _arr;
 }
 
-void q_sslconfiguration_set_ciphers(void* self, void* ciphers[]) {
-    QSslCipher** ciphers_arr = (QSslCipher**)ciphers;
-    size_t ciphers_len = 0;
-    while (ciphers_arr[ciphers_len] != NULL) {
-        ciphers_len++;
-    }
-    libqt_list ciphers_list = {
-        .len = ciphers_len,
-        .data = {(QSslCipher*)ciphers},
-    };
-    QSslConfiguration_SetCiphers((QSslConfiguration*)self, ciphers_list);
+void q_sslconfiguration_set_ciphers(void* self, libqt_list ciphers) {
+    QSslConfiguration_SetCiphers((QSslConfiguration*)self, ciphers);
 }
 
 void q_sslconfiguration_set_ciphers_with_ciphers(void* self, const char* ciphers) {
@@ -143,17 +125,8 @@ libqt_list /* of QSslCertificate* */ q_sslconfiguration_ca_certificates(void* se
     return _arr;
 }
 
-void q_sslconfiguration_set_ca_certificates(void* self, void* certificates[]) {
-    QSslCertificate** certificates_arr = (QSslCertificate**)certificates;
-    size_t certificates_len = 0;
-    while (certificates_arr[certificates_len] != NULL) {
-        certificates_len++;
-    }
-    libqt_list certificates_list = {
-        .len = certificates_len,
-        .data = {(QSslCertificate*)certificates},
-    };
-    QSslConfiguration_SetCaCertificates((QSslConfiguration*)self, certificates_list);
+void q_sslconfiguration_set_ca_certificates(void* self, libqt_list certificates) {
+    QSslConfiguration_SetCaCertificates((QSslConfiguration*)self, certificates);
 }
 
 bool q_sslconfiguration_add_ca_certificates(void* self, const char* path) {
@@ -164,17 +137,8 @@ void q_sslconfiguration_add_ca_certificate(void* self, void* certificate) {
     QSslConfiguration_AddCaCertificate((QSslConfiguration*)self, (QSslCertificate*)certificate);
 }
 
-void q_sslconfiguration_add_ca_certificates_with_certificates(void* self, void* certificates[]) {
-    QSslCertificate** certificates_arr = (QSslCertificate**)certificates;
-    size_t certificates_len = 0;
-    while (certificates_arr[certificates_len] != NULL) {
-        certificates_len++;
-    }
-    libqt_list certificates_list = {
-        .len = certificates_len,
-        .data = {(QSslCertificate*)certificates},
-    };
-    QSslConfiguration_AddCaCertificatesWithCertificates((QSslConfiguration*)self, certificates_list);
+void q_sslconfiguration_add_ca_certificates_with_certificates(void* self, libqt_list certificates) {
+    QSslConfiguration_AddCaCertificatesWithCertificates((QSslConfiguration*)self, certificates);
 }
 
 libqt_list /* of QSslCertificate* */ q_sslconfiguration_system_ca_certificates() {
@@ -214,17 +178,8 @@ libqt_list /* of QSslEllipticCurve* */ q_sslconfiguration_elliptic_curves(void* 
     return _arr;
 }
 
-void q_sslconfiguration_set_elliptic_curves(void* self, void* curves[]) {
-    QSslEllipticCurve** curves_arr = (QSslEllipticCurve**)curves;
-    size_t curves_len = 0;
-    while (curves_arr[curves_len] != NULL) {
-        curves_len++;
-    }
-    libqt_list curves_list = {
-        .len = curves_len,
-        .data = {(QSslEllipticCurve*)curves},
-    };
-    QSslConfiguration_SetEllipticCurves((QSslConfiguration*)self, curves_list);
+void q_sslconfiguration_set_elliptic_curves(void* self, libqt_list curves) {
+    QSslConfiguration_SetEllipticCurves((QSslConfiguration*)self, curves);
 }
 
 libqt_list /* of QSslEllipticCurve* */ q_sslconfiguration_supported_elliptic_curves() {
@@ -313,7 +268,7 @@ void q_sslconfiguration_set_allowed_next_protocols(void* self, const char* proto
     for (size_t _i = 0; _i < protocols_len; ++_i) {
         protocols_qstr[_i] = qstring(protocols[_i]);
     }
-    libqt_list protocols_list = qstrlist(protocols_qstr, protocols_len);
+    libqt_list protocols_list = qlist(protocols_qstr, protocols_len);
     QSslConfiguration_SetAllowedNextProtocols((QSslConfiguration*)self, protocols_list);
 }
 

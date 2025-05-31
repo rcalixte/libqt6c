@@ -24,8 +24,8 @@ QVersionNumber* q_versionnumber_new();
 
 /// q_versionnumber_new2 constructs a new QVersionNumber object.
 ///
-/// ``` int* seg[] ```
-QVersionNumber* q_versionnumber_new2(int* seg[]);
+/// ``` libqt_list /* of int */ seg ```
+QVersionNumber* q_versionnumber_new2(libqt_list seg);
 
 /// q_versionnumber_new3 constructs a new QVersionNumber object.
 ///
@@ -122,6 +122,8 @@ QVersionNumber* q_versionnumber_from_string(char* stringVal);
 /// ``` char* stringVal, int64_t* suffixIndex ```
 QVersionNumber* q_versionnumber_from_string2(char* stringVal, int64_t* suffixIndex);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qversionnumber.html#dtor.QVersionNumber)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QVersionNumber* self ```
@@ -189,6 +191,8 @@ unsigned char q_typerevision_minor_version(void* self);
 /// ``` QTypeRevision* self ```
 bool q_typerevision_is_valid(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtyperevision.html#dtor.QTypeRevision)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTypeRevision* self ```

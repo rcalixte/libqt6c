@@ -13,22 +13,17 @@
 #include "../qtlibc.h"
 
 #include "../libqabstractitemmodel.h"
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "libqboxplotseries.h"
-#include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
-/// https://doc.qt.io/qt-6/qboxplotmodelmapper.html
+/// https://doc.qt.io/qt-6/qboxplotmodelmapper-qtcharts.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QBoxPlotModelMapper* self ```
-QMetaObject* q_boxplotmodelmapper_meta_object(void* self);
+const QMetaObject* q_boxplotmodelmapper_meta_object(void* self);
 
 /// ``` QBoxPlotModelMapper* self, const char* param1 ```
 void* q_boxplotmodelmapper_metacast(void* self, const char* param1);
@@ -147,7 +142,7 @@ void q_boxplotmodelmapper_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QBoxPlotModelMapper* self ```
-libqt_list /* of QObject* */ q_boxplotmodelmapper_children(void* self);
+const libqt_list /* of QObject* */ q_boxplotmodelmapper_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -245,7 +240,7 @@ QBindingStorage* q_boxplotmodelmapper_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QBoxPlotModelMapper* self ```
-QBindingStorage* q_boxplotmodelmapper_binding_storage2(void* self);
+const QBindingStorage* q_boxplotmodelmapper_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -255,6 +250,8 @@ QBindingStorage* q_boxplotmodelmapper_binding_storage2(void* self);
 void q_boxplotmodelmapper_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QBoxPlotModelMapper* self, void (*slot)(QObject*) ```
 void q_boxplotmodelmapper_on_destroyed(void* self, void (*slot)(void*));
@@ -310,9 +307,22 @@ void q_boxplotmodelmapper_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QBoxPlotModelMapper* self, void (*slot)(QObject*, QObject*) ```
 void q_boxplotmodelmapper_on_destroyed1(void* self, void (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QBoxPlotModelMapper* self, void (*slot)(QObject*, const char*) ```
+void q_boxplotmodelmapper_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotmodelmapper-qtcharts.html#dtor.QBoxPlotModelMapper)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QBoxPlotModelMapper* self ```

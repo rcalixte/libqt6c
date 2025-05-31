@@ -77,22 +77,22 @@ bool q_region_is_null(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#begin)
 ///
 /// ``` QRegion* self ```
-QRect* q_region_begin(void* self);
+const QRect* q_region_begin(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#cbegin)
 ///
 /// ``` QRegion* self ```
-QRect* q_region_cbegin(void* self);
+const QRect* q_region_cbegin(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#end)
 ///
 /// ``` QRegion* self ```
-QRect* q_region_end(void* self);
+const QRect* q_region_end(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#cend)
 ///
 /// ``` QRegion* self ```
-QRect* q_region_cend(void* self);
+const QRect* q_region_cend(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#contains)
 ///
@@ -264,6 +264,8 @@ bool q_region_operator_not_equal(void* self, void* r);
 /// ``` QRegion* self ```
 QVariant* q_region_to_q_variant(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#dtor.QRegion)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QRegion* self ```

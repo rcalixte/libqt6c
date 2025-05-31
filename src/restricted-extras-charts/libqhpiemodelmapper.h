@@ -13,18 +13,14 @@
 #include "../qtlibc.h"
 
 #include "../libqabstractitemmodel.h"
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include "libqpiemodelmapper.h"
 #include "libqpieseries.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
-/// https://doc.qt.io/qt-6/qhpiemodelmapper.html
+/// https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html
 
 /// q_hpiemodelmapper_new constructs a new QHPieModelMapper object.
 ///
@@ -39,7 +35,7 @@ QHPieModelMapper* q_hpiemodelmapper_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QHPieModelMapper* self ```
-QMetaObject* q_hpiemodelmapper_meta_object(void* self);
+const QMetaObject* q_hpiemodelmapper_meta_object(void* self);
 
 /// ``` QHPieModelMapper* self, const char* param1 ```
 void* q_hpiemodelmapper_metacast(void* self, const char* param1);
@@ -62,111 +58,123 @@ int32_t q_hpiemodelmapper_qbase_metacall(void* self, int64_t param1, int param2,
 /// ``` const char* s ```
 const char* q_hpiemodelmapper_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper.html#model)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#model)
 ///
 /// ``` QHPieModelMapper* self ```
 QAbstractItemModel* q_hpiemodelmapper_model(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper.html#setModel)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#setModel)
 ///
 /// ``` QHPieModelMapper* self, QAbstractItemModel* model ```
 void q_hpiemodelmapper_set_model(void* self, void* model);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper.html#series)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#series)
 ///
 /// ``` QHPieModelMapper* self ```
 QPieSeries* q_hpiemodelmapper_series(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper.html#setSeries)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#setSeries)
 ///
 /// ``` QHPieModelMapper* self, QPieSeries* series ```
 void q_hpiemodelmapper_set_series(void* self, void* series);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper.html#valuesRow)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#valuesRow)
 ///
 /// ``` QHPieModelMapper* self ```
 int32_t q_hpiemodelmapper_values_row(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper.html#setValuesRow)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#setValuesRow)
 ///
 /// ``` QHPieModelMapper* self, int valuesRow ```
 void q_hpiemodelmapper_set_values_row(void* self, int valuesRow);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper.html#labelsRow)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#labelsRow)
 ///
 /// ``` QHPieModelMapper* self ```
 int32_t q_hpiemodelmapper_labels_row(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper.html#setLabelsRow)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#setLabelsRow)
 ///
 /// ``` QHPieModelMapper* self, int labelsRow ```
 void q_hpiemodelmapper_set_labels_row(void* self, int labelsRow);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper.html#firstColumn)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#firstColumn)
 ///
 /// ``` QHPieModelMapper* self ```
 int32_t q_hpiemodelmapper_first_column(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper.html#setFirstColumn)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#setFirstColumn)
 ///
 /// ``` QHPieModelMapper* self, int firstColumn ```
 void q_hpiemodelmapper_set_first_column(void* self, int firstColumn);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper.html#columnCount)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#columnCount)
 ///
 /// ``` QHPieModelMapper* self ```
 int32_t q_hpiemodelmapper_column_count(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper.html#setColumnCount)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#setColumnCount)
 ///
 /// ``` QHPieModelMapper* self, int columnCount ```
 void q_hpiemodelmapper_set_column_count(void* self, int columnCount);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper.html#seriesReplaced)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#seriesReplaced)
 ///
 /// ``` QHPieModelMapper* self ```
 void q_hpiemodelmapper_series_replaced(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#seriesReplaced)
+///
 /// ``` QHPieModelMapper* self, void (*slot)(QHPieModelMapper*) ```
 void q_hpiemodelmapper_on_series_replaced(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper.html#modelReplaced)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#modelReplaced)
 ///
 /// ``` QHPieModelMapper* self ```
 void q_hpiemodelmapper_model_replaced(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#modelReplaced)
+///
 /// ``` QHPieModelMapper* self, void (*slot)(QHPieModelMapper*) ```
 void q_hpiemodelmapper_on_model_replaced(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper.html#valuesRowChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#valuesRowChanged)
 ///
 /// ``` QHPieModelMapper* self ```
 void q_hpiemodelmapper_values_row_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#valuesRowChanged)
+///
 /// ``` QHPieModelMapper* self, void (*slot)(QHPieModelMapper*) ```
 void q_hpiemodelmapper_on_values_row_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper.html#labelsRowChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#labelsRowChanged)
 ///
 /// ``` QHPieModelMapper* self ```
 void q_hpiemodelmapper_labels_row_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#labelsRowChanged)
+///
 /// ``` QHPieModelMapper* self, void (*slot)(QHPieModelMapper*) ```
 void q_hpiemodelmapper_on_labels_row_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper.html#firstColumnChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#firstColumnChanged)
 ///
 /// ``` QHPieModelMapper* self ```
 void q_hpiemodelmapper_first_column_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#firstColumnChanged)
+///
 /// ``` QHPieModelMapper* self, void (*slot)(QHPieModelMapper*) ```
 void q_hpiemodelmapper_on_first_column_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper.html#columnCountChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#columnCountChanged)
 ///
 /// ``` QHPieModelMapper* self ```
 void q_hpiemodelmapper_column_count_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#columnCountChanged)
+///
 /// ``` QHPieModelMapper* self, void (*slot)(QHPieModelMapper*) ```
 void q_hpiemodelmapper_on_column_count_changed(void* self, void (*slot)(void*));
 
@@ -262,7 +270,7 @@ void q_hpiemodelmapper_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QHPieModelMapper* self ```
-libqt_list /* of QObject* */ q_hpiemodelmapper_children(void* self);
+const libqt_list /* of QObject* */ q_hpiemodelmapper_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -360,7 +368,7 @@ QBindingStorage* q_hpiemodelmapper_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QHPieModelMapper* self ```
-QBindingStorage* q_hpiemodelmapper_binding_storage2(void* self);
+const QBindingStorage* q_hpiemodelmapper_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -370,6 +378,8 @@ QBindingStorage* q_hpiemodelmapper_binding_storage2(void* self);
 void q_hpiemodelmapper_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QHPieModelMapper* self, void (*slot)(QObject*) ```
 void q_hpiemodelmapper_on_destroyed(void* self, void (*slot)(void*));
@@ -425,6 +435,8 @@ void q_hpiemodelmapper_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QHPieModelMapper* self, void (*slot)(QObject*, QObject*) ```
 void q_hpiemodelmapper_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -439,12 +451,16 @@ bool q_hpiemodelmapper_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self, QEvent* event ```
 bool q_hpiemodelmapper_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -462,12 +478,16 @@ bool q_hpiemodelmapper_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self, QObject* watched, QEvent* event ```
 bool q_hpiemodelmapper_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -485,12 +505,16 @@ void q_hpiemodelmapper_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self, QTimerEvent* event ```
 void q_hpiemodelmapper_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -508,12 +532,16 @@ void q_hpiemodelmapper_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self, QChildEvent* event ```
 void q_hpiemodelmapper_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -531,12 +559,16 @@ void q_hpiemodelmapper_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self, QEvent* event ```
 void q_hpiemodelmapper_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -554,12 +586,16 @@ void q_hpiemodelmapper_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self, QMetaMethod* signal ```
 void q_hpiemodelmapper_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -577,12 +613,16 @@ void q_hpiemodelmapper_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self, QMetaMethod* signal ```
 void q_hpiemodelmapper_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -600,12 +640,16 @@ int32_t q_hpiemodelmapper_first(void* self);
 
 /// Inherited from QPieModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper.html#first)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self ```
 int32_t q_hpiemodelmapper_qbase_first(void* self);
 
 /// Inherited from QPieModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper.html#first)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -623,12 +667,16 @@ void q_hpiemodelmapper_set_first(void* self, int first);
 
 /// Inherited from QPieModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper.html#setFirst)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self, int first ```
 void q_hpiemodelmapper_qbase_set_first(void* self, int first);
 
 /// Inherited from QPieModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper.html#setFirst)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -646,12 +694,16 @@ int32_t q_hpiemodelmapper_count(void* self);
 
 /// Inherited from QPieModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper.html#count)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self ```
 int32_t q_hpiemodelmapper_qbase_count(void* self);
 
 /// Inherited from QPieModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper.html#count)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -669,12 +721,16 @@ void q_hpiemodelmapper_set_count(void* self, int count);
 
 /// Inherited from QPieModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper.html#setCount)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self, int count ```
 void q_hpiemodelmapper_qbase_set_count(void* self, int count);
 
 /// Inherited from QPieModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper.html#setCount)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -692,12 +748,16 @@ int32_t q_hpiemodelmapper_values_section(void* self);
 
 /// Inherited from QPieModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper.html#valuesSection)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self ```
 int32_t q_hpiemodelmapper_qbase_values_section(void* self);
 
 /// Inherited from QPieModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper.html#valuesSection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -715,12 +775,16 @@ void q_hpiemodelmapper_set_values_section(void* self, int valuesSection);
 
 /// Inherited from QPieModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper.html#setValuesSection)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self, int valuesSection ```
 void q_hpiemodelmapper_qbase_set_values_section(void* self, int valuesSection);
 
 /// Inherited from QPieModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper.html#setValuesSection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -738,12 +802,16 @@ int32_t q_hpiemodelmapper_labels_section(void* self);
 
 /// Inherited from QPieModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper.html#labelsSection)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self ```
 int32_t q_hpiemodelmapper_qbase_labels_section(void* self);
 
 /// Inherited from QPieModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper.html#labelsSection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -761,12 +829,16 @@ void q_hpiemodelmapper_set_labels_section(void* self, int labelsSection);
 
 /// Inherited from QPieModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper.html#setLabelsSection)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self, int labelsSection ```
 void q_hpiemodelmapper_qbase_set_labels_section(void* self, int labelsSection);
 
 /// Inherited from QPieModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper.html#setLabelsSection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -784,12 +856,16 @@ int64_t q_hpiemodelmapper_orientation(void* self);
 
 /// Inherited from QPieModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper.html#orientation)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self ```
 int64_t q_hpiemodelmapper_qbase_orientation(void* self);
 
 /// Inherited from QPieModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper.html#orientation)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -807,12 +883,16 @@ void q_hpiemodelmapper_set_orientation(void* self, int64_t orientation);
 
 /// Inherited from QPieModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper.html#setOrientation)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self, enum Qt__Orientation orientation ```
 void q_hpiemodelmapper_qbase_set_orientation(void* self, int64_t orientation);
 
 /// Inherited from QPieModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper.html#setOrientation)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -830,12 +910,16 @@ QObject* q_hpiemodelmapper_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self ```
 QObject* q_hpiemodelmapper_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -853,12 +937,16 @@ int32_t q_hpiemodelmapper_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self ```
 int32_t q_hpiemodelmapper_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -876,12 +964,16 @@ int32_t q_hpiemodelmapper_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self, const char* signal ```
 int32_t q_hpiemodelmapper_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -899,6 +991,8 @@ bool q_hpiemodelmapper_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self, QMetaMethod* signal ```
@@ -906,11 +1000,24 @@ bool q_hpiemodelmapper_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QHPieModelMapper* self, bool (*slot)(QHPieModelMapper*, QMetaMethod*) ```
 void q_hpiemodelmapper_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QHPieModelMapper* self, void (*slot)(QObject*, const char*) ```
+void q_hpiemodelmapper_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#dtor.QHPieModelMapper)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QHPieModelMapper* self ```

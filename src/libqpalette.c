@@ -52,11 +52,11 @@ void q_palette_set_current_color_group(void* self, int64_t cg) {
     QPalette_SetCurrentColorGroup((QPalette*)self, cg);
 }
 
-QColor* q_palette_color(void* self, int64_t cg, int64_t cr) {
+const QColor* q_palette_color(void* self, int64_t cg, int64_t cr) {
     return QPalette_Color((QPalette*)self, cg, cr);
 }
 
-QBrush* q_palette_brush(void* self, int64_t cg, int64_t cr) {
+const QBrush* q_palette_brush(void* self, int64_t cg, int64_t cr) {
     return QPalette_Brush((QPalette*)self, cg, cr);
 }
 
@@ -88,91 +88,91 @@ bool q_palette_is_equal(void* self, int64_t cr1, int64_t cr2) {
     return QPalette_IsEqual((QPalette*)self, cr1, cr2);
 }
 
-QColor* q_palette_color_with_cr(void* self, int64_t cr) {
+const QColor* q_palette_color_with_cr(void* self, int64_t cr) {
     return QPalette_ColorWithCr((QPalette*)self, cr);
 }
 
-QBrush* q_palette_brush_with_cr(void* self, int64_t cr) {
+const QBrush* q_palette_brush_with_cr(void* self, int64_t cr) {
     return QPalette_BrushWithCr((QPalette*)self, cr);
 }
 
-QBrush* q_palette_window_text(void* self) {
+const QBrush* q_palette_window_text(void* self) {
     return QPalette_WindowText((QPalette*)self);
 }
 
-QBrush* q_palette_button(void* self) {
+const QBrush* q_palette_button(void* self) {
     return QPalette_Button((QPalette*)self);
 }
 
-QBrush* q_palette_light(void* self) {
+const QBrush* q_palette_light(void* self) {
     return QPalette_Light((QPalette*)self);
 }
 
-QBrush* q_palette_dark(void* self) {
+const QBrush* q_palette_dark(void* self) {
     return QPalette_Dark((QPalette*)self);
 }
 
-QBrush* q_palette_mid(void* self) {
+const QBrush* q_palette_mid(void* self) {
     return QPalette_Mid((QPalette*)self);
 }
 
-QBrush* q_palette_text(void* self) {
+const QBrush* q_palette_text(void* self) {
     return QPalette_Text((QPalette*)self);
 }
 
-QBrush* q_palette_base(void* self) {
+const QBrush* q_palette_base(void* self) {
     return QPalette_Base((QPalette*)self);
 }
 
-QBrush* q_palette_alternate_base(void* self) {
+const QBrush* q_palette_alternate_base(void* self) {
     return QPalette_AlternateBase((QPalette*)self);
 }
 
-QBrush* q_palette_tool_tip_base(void* self) {
+const QBrush* q_palette_tool_tip_base(void* self) {
     return QPalette_ToolTipBase((QPalette*)self);
 }
 
-QBrush* q_palette_tool_tip_text(void* self) {
+const QBrush* q_palette_tool_tip_text(void* self) {
     return QPalette_ToolTipText((QPalette*)self);
 }
 
-QBrush* q_palette_window(void* self) {
+const QBrush* q_palette_window(void* self) {
     return QPalette_Window((QPalette*)self);
 }
 
-QBrush* q_palette_midlight(void* self) {
+const QBrush* q_palette_midlight(void* self) {
     return QPalette_Midlight((QPalette*)self);
 }
 
-QBrush* q_palette_bright_text(void* self) {
+const QBrush* q_palette_bright_text(void* self) {
     return QPalette_BrightText((QPalette*)self);
 }
 
-QBrush* q_palette_button_text(void* self) {
+const QBrush* q_palette_button_text(void* self) {
     return QPalette_ButtonText((QPalette*)self);
 }
 
-QBrush* q_palette_shadow(void* self) {
+const QBrush* q_palette_shadow(void* self) {
     return QPalette_Shadow((QPalette*)self);
 }
 
-QBrush* q_palette_highlight(void* self) {
+const QBrush* q_palette_highlight(void* self) {
     return QPalette_Highlight((QPalette*)self);
 }
 
-QBrush* q_palette_highlighted_text(void* self) {
+const QBrush* q_palette_highlighted_text(void* self) {
     return QPalette_HighlightedText((QPalette*)self);
 }
 
-QBrush* q_palette_link(void* self) {
+const QBrush* q_palette_link(void* self) {
     return QPalette_Link((QPalette*)self);
 }
 
-QBrush* q_palette_link_visited(void* self) {
+const QBrush* q_palette_link_visited(void* self) {
     return QPalette_LinkVisited((QPalette*)self);
 }
 
-QBrush* q_palette_placeholder_text(void* self) {
+const QBrush* q_palette_placeholder_text(void* self) {
     return QPalette_PlaceholderText((QPalette*)self);
 }
 

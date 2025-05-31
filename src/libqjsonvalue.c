@@ -143,11 +143,11 @@ QJsonObject* q_jsonvalue_to_object_with_default_value(void* self, void* defaultV
     return QJsonValue_ToObjectWithDefaultValue((QJsonValue*)self, (QJsonObject*)defaultValue);
 }
 
-QJsonValue* q_jsonvalue_operator_subscript(void* self, const char* key) {
+const QJsonValue* q_jsonvalue_operator_subscript(void* self, const char* key) {
     return QJsonValue_OperatorSubscript((QJsonValue*)self, qstring(key));
 }
 
-QJsonValue* q_jsonvalue_operator_subscript_with_qsizetype(void* self, int64_t i) {
+const QJsonValue* q_jsonvalue_operator_subscript_with_qsizetype(void* self, int64_t i) {
     return QJsonValue_OperatorSubscriptWithQsizetype((QJsonValue*)self, i);
 }
 
@@ -258,7 +258,7 @@ QJsonObject* q_jsonvalueconstref_to_object(void* self) {
     return QJsonValueConstRef_ToObject((QJsonValueConstRef*)self);
 }
 
-QJsonValue* q_jsonvalueconstref_operator_subscript_with_qsizetype(void* self, int64_t i) {
+const QJsonValue* q_jsonvalueconstref_operator_subscript_with_qsizetype(void* self, int64_t i) {
     return QJsonValueConstRef_OperatorSubscriptWithQsizetype((QJsonValueConstRef*)self, i);
 }
 
@@ -392,7 +392,7 @@ QJsonObject* q_jsonvalueref_to_object(void* self) {
     return QJsonValueRef_ToObject((QJsonValueRef*)self);
 }
 
-QJsonValue* q_jsonvalueref_operator_subscript_with_qsizetype(void* self, int64_t i) {
+const QJsonValue* q_jsonvalueref_operator_subscript_with_qsizetype(void* self, int64_t i) {
     return QJsonValueRef_OperatorSubscriptWithQsizetype((QJsonValueRef*)self, i);
 }
 

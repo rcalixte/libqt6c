@@ -709,6 +709,8 @@ QColor* q_color_lighter1(void* self, int f);
 /// ``` QColor* self, int f ```
 QColor* q_color_darker1(void* self, int f);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolor.html#dtor.QColor)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QColor* self ```

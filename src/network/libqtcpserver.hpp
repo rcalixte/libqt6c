@@ -15,25 +15,17 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QEvent QEvent;
 typedef struct QHostAddress QHostAddress;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QNetworkProxy QNetworkProxy;
 typedef struct QObject QObject;
 typedef struct QTcpServer QTcpServer;
 typedef struct QTcpSocket QTcpSocket;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
 #endif
 
 QTcpServer* QTcpServer_new();
@@ -117,6 +109,7 @@ int QTcpServer_QBaseReceivers(const QTcpServer* self, const char* signal);
 bool QTcpServer_IsSignalConnected(const QTcpServer* self, QMetaMethod* signal);
 void QTcpServer_OnIsSignalConnected(const QTcpServer* self, intptr_t slot);
 bool QTcpServer_QBaseIsSignalConnected(const QTcpServer* self, QMetaMethod* signal);
+void QTcpServer_Connect_PendingConnectionAvailable(QTcpServer* self, intptr_t slot);
 void QTcpServer_Delete(QTcpServer* self);
 
 #ifdef __cplusplus

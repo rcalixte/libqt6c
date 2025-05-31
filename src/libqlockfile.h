@@ -71,6 +71,8 @@ int64_t q_lockfile_error(void* self);
 /// ``` QLockFile* self, int timeout ```
 bool q_lockfile_try_lock1(void* self, int timeout);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlockfile.html#dtor.QLockFile)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QLockFile* self ```

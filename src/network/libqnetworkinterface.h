@@ -133,6 +133,8 @@ bool q_networkaddressentry_is_permanent(void* self);
 /// ``` QNetworkAddressEntry* self ```
 bool q_networkaddressentry_is_temporary(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#dtor.QNetworkAddressEntry)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QNetworkAddressEntry* self ```
@@ -235,6 +237,8 @@ libqt_list /* of QNetworkInterface* */ q_networkinterface_all_interfaces();
 ///
 libqt_list /* of QHostAddress* */ q_networkinterface_all_addresses();
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#dtor.QNetworkInterface)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QNetworkInterface* self ```

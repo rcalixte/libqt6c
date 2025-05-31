@@ -13,8 +13,6 @@
 #include "qtlibc.h"
 
 #include "libqabstractitemmodel.h"
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqbrush.h"
 #include "libqevent.h"
 #include "libqdatastream.h"
@@ -25,7 +23,6 @@
 #include "libqobject.h"
 #include "libqsize.h"
 #include <string.h>
-#include "libqthread.h"
 #include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qstandarditem.html
@@ -60,11 +57,15 @@ QStandardItem* q_standarditem_new5(int rows, int columns);
 /// ``` QStandardItem* self, int role ```
 QVariant* q_standarditem_data(void* self, int role);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#data)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItem* self, QVariant* (*slot)(QStandardItem*, int) ```
 void q_standarditem_on_data(void* self, QVariant* (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#data)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItem* self, int role ```
@@ -75,11 +76,15 @@ QVariant* q_standarditem_qbase_data(void* self, int role);
 /// ``` QStandardItem* self, QModelRoleDataSpan* roleDataSpan ```
 void q_standarditem_multi_data(void* self, void* roleDataSpan);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#multiData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItem* self, void (*slot)(QStandardItem*, QModelRoleDataSpan*) ```
 void q_standarditem_on_multi_data(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#multiData)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItem* self, QModelRoleDataSpan* roleDataSpan ```
@@ -90,11 +95,15 @@ void q_standarditem_qbase_multi_data(void* self, void* roleDataSpan);
 /// ``` QStandardItem* self, QVariant* value, int role ```
 void q_standarditem_set_data(void* self, void* value, int role);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#setData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItem* self, void (*slot)(QStandardItem*, QVariant*, int) ```
 void q_standarditem_on_set_data(void* self, void (*slot)(void*, void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#setData)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItem* self, QVariant* value, int role ```
@@ -392,18 +401,18 @@ void q_standarditem_set_child2(void* self, int row, void* item);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#insertRow)
 ///
-/// ``` QStandardItem* self, int row, QStandardItem* items[] ```
-void q_standarditem_insert_row(void* self, int row, void* items[]);
+/// ``` QStandardItem* self, int row, libqt_list /* of QStandardItem* */ items ```
+void q_standarditem_insert_row(void* self, int row, libqt_list items);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#insertColumn)
 ///
-/// ``` QStandardItem* self, int column, QStandardItem* items[] ```
-void q_standarditem_insert_column(void* self, int column, void* items[]);
+/// ``` QStandardItem* self, int column, libqt_list /* of QStandardItem* */ items ```
+void q_standarditem_insert_column(void* self, int column, libqt_list items);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#insertRows)
 ///
-/// ``` QStandardItem* self, int row, QStandardItem* items[] ```
-void q_standarditem_insert_rows(void* self, int row, void* items[]);
+/// ``` QStandardItem* self, int row, libqt_list /* of QStandardItem* */ items ```
+void q_standarditem_insert_rows(void* self, int row, libqt_list items);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#insertRows)
 ///
@@ -437,18 +446,18 @@ void q_standarditem_remove_columns(void* self, int column, int count);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#appendRow)
 ///
-/// ``` QStandardItem* self, QStandardItem* items[] ```
-void q_standarditem_append_row(void* self, void* items[]);
+/// ``` QStandardItem* self, libqt_list /* of QStandardItem* */ items ```
+void q_standarditem_append_row(void* self, libqt_list items);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#appendRows)
 ///
-/// ``` QStandardItem* self, QStandardItem* items[] ```
-void q_standarditem_append_rows(void* self, void* items[]);
+/// ``` QStandardItem* self, libqt_list /* of QStandardItem* */ items ```
+void q_standarditem_append_rows(void* self, libqt_list items);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#appendColumn)
 ///
-/// ``` QStandardItem* self, QStandardItem* items[] ```
-void q_standarditem_append_column(void* self, void* items[]);
+/// ``` QStandardItem* self, libqt_list /* of QStandardItem* */ items ```
+void q_standarditem_append_column(void* self, libqt_list items);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#insertRow)
 ///
@@ -485,11 +494,15 @@ void q_standarditem_sort_children(void* self, int column);
 /// ``` QStandardItem* self ```
 QStandardItem* q_standarditem_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItem* self, QStandardItem* (*slot)() ```
 void q_standarditem_on_clone(void* self, QStandardItem* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItem* self ```
@@ -500,11 +513,15 @@ QStandardItem* q_standarditem_qbase_clone(void* self);
 /// ``` QStandardItem* self ```
 int32_t q_standarditem_type(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#type)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItem* self, int32_t (*slot)() ```
 void q_standarditem_on_type(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#type)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItem* self ```
@@ -515,11 +532,15 @@ int32_t q_standarditem_qbase_type(void* self);
 /// ``` QStandardItem* self, QDataStream* in ```
 void q_standarditem_read(void* self, void* in);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#read)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItem* self, void (*slot)(QStandardItem*, QDataStream*) ```
 void q_standarditem_on_read(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#read)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItem* self, QDataStream* in ```
@@ -530,11 +551,15 @@ void q_standarditem_qbase_read(void* self, void* in);
 /// ``` QStandardItem* self, QDataStream* out ```
 void q_standarditem_write(void* self, void* out);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#write)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItem* self, void (*slot)(QStandardItem*, QDataStream*) ```
 void q_standarditem_on_write(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#write)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItem* self, QDataStream* out ```
@@ -545,11 +570,15 @@ void q_standarditem_qbase_write(void* self, void* out);
 /// ``` QStandardItem* self, QStandardItem* other ```
 bool q_standarditem_operator_lesser(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#operator<)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItem* self, bool (*slot)(QStandardItem*, QStandardItem*) ```
 void q_standarditem_on_operator_lesser(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#operator<)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItem* self, QStandardItem* other ```
@@ -560,11 +589,15 @@ bool q_standarditem_qbase_operator_lesser(void* self, void* other);
 /// ``` QStandardItem* self, QStandardItem* other ```
 void q_standarditem_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#operator=)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItem* self, void (*slot)(QStandardItem*, QStandardItem*) ```
 void q_standarditem_on_operator_assign(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#operator=)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItem* self, QStandardItem* other ```
@@ -575,11 +608,15 @@ void q_standarditem_qbase_operator_assign(void* self, void* other);
 /// ``` QStandardItem* self ```
 void q_standarditem_emit_data_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#emitDataChanged)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItem* self, void (*slot)() ```
 void q_standarditem_on_emit_data_changed(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#emitDataChanged)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItem* self ```
@@ -600,6 +637,8 @@ QStandardItem* q_standarditem_take_child2(void* self, int row, int column);
 /// ``` QStandardItem* self, int column, enum Qt__SortOrder order ```
 void q_standarditem_sort_children2(void* self, int column, int64_t order);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#dtor.QStandardItem)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStandardItem* self ```
@@ -630,7 +669,7 @@ QStandardItemModel* q_standarditemmodel_new4(int rows, int columns, void* parent
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QStandardItemModel* self ```
-QMetaObject* q_standarditemmodel_meta_object(void* self);
+const QMetaObject* q_standarditemmodel_meta_object(void* self);
 
 /// ``` QStandardItemModel* self, const char* param1 ```
 void* q_standarditemmodel_metacast(void* self, const char* param1);
@@ -663,11 +702,15 @@ void q_standarditemmodel_set_item_role_names(void* self, libqt_map /* of int to 
 /// ``` QStandardItemModel* self ```
 libqt_map /* of int to char* */ q_standarditemmodel_role_names(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#roleNames)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, libqt_map /* of int to char* */ (*slot)() ```
 void q_standarditemmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#roleNames)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self ```
@@ -678,11 +721,15 @@ libqt_map /* of int to char* */ q_standarditemmodel_qbase_role_names(void* self)
 /// ``` QStandardItemModel* self, int row, int column, QModelIndex* parent ```
 QModelIndex* q_standarditemmodel_index(void* self, int row, int column, void* parent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#index)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, QModelIndex* (*slot)(QStandardItemModel*, int, int, QModelIndex*) ```
 void q_standarditemmodel_on_index(void* self, QModelIndex* (*slot)(void*, int, int, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#index)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self, int row, int column, QModelIndex* parent ```
@@ -693,11 +740,15 @@ QModelIndex* q_standarditemmodel_qbase_index(void* self, int row, int column, vo
 /// ``` QStandardItemModel* self, QModelIndex* child ```
 QModelIndex* q_standarditemmodel_parent(void* self, void* child);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#parent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, QModelIndex* (*slot)(QStandardItemModel*, QModelIndex*) ```
 void q_standarditemmodel_on_parent(void* self, QModelIndex* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#parent)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self, QModelIndex* child ```
@@ -708,11 +759,15 @@ QModelIndex* q_standarditemmodel_qbase_parent(void* self, void* child);
 /// ``` QStandardItemModel* self, QModelIndex* parent ```
 int32_t q_standarditemmodel_row_count(void* self, void* parent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#rowCount)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, int32_t (*slot)(QStandardItemModel*, QModelIndex*) ```
 void q_standarditemmodel_on_row_count(void* self, int32_t (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#rowCount)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self, QModelIndex* parent ```
@@ -723,11 +778,15 @@ int32_t q_standarditemmodel_qbase_row_count(void* self, void* parent);
 /// ``` QStandardItemModel* self, QModelIndex* parent ```
 int32_t q_standarditemmodel_column_count(void* self, void* parent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#columnCount)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, int32_t (*slot)(QStandardItemModel*, QModelIndex*) ```
 void q_standarditemmodel_on_column_count(void* self, int32_t (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#columnCount)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self, QModelIndex* parent ```
@@ -738,11 +797,15 @@ int32_t q_standarditemmodel_qbase_column_count(void* self, void* parent);
 /// ``` QStandardItemModel* self, QModelIndex* parent ```
 bool q_standarditemmodel_has_children(void* self, void* parent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#hasChildren)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, bool (*slot)(QStandardItemModel*, QModelIndex*) ```
 void q_standarditemmodel_on_has_children(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#hasChildren)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self, QModelIndex* parent ```
@@ -753,11 +816,15 @@ bool q_standarditemmodel_qbase_has_children(void* self, void* parent);
 /// ``` QStandardItemModel* self, QModelIndex* index, int role ```
 QVariant* q_standarditemmodel_data(void* self, void* index, int role);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#data)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, QVariant* (*slot)(QStandardItemModel*, QModelIndex*, int) ```
 void q_standarditemmodel_on_data(void* self, QVariant* (*slot)(void*, void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#data)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self, QModelIndex* index, int role ```
@@ -768,11 +835,15 @@ QVariant* q_standarditemmodel_qbase_data(void* self, void* index, int role);
 /// ``` QStandardItemModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan ```
 void q_standarditemmodel_multi_data(void* self, void* index, void* roleDataSpan);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#multiData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, void (*slot)(QStandardItemModel*, QModelIndex*, QModelRoleDataSpan*) ```
 void q_standarditemmodel_on_multi_data(void* self, void (*slot)(void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#multiData)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan ```
@@ -783,11 +854,15 @@ void q_standarditemmodel_qbase_multi_data(void* self, void* index, void* roleDat
 /// ``` QStandardItemModel* self, QModelIndex* index, QVariant* value, int role ```
 bool q_standarditemmodel_set_data(void* self, void* index, void* value, int role);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#setData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, bool (*slot)(QStandardItemModel*, QModelIndex*, QVariant*, int) ```
 void q_standarditemmodel_on_set_data(void* self, bool (*slot)(void*, void*, void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#setData)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self, QModelIndex* index, QVariant* value, int role ```
@@ -798,11 +873,15 @@ bool q_standarditemmodel_qbase_set_data(void* self, void* index, void* value, in
 /// ``` QStandardItemModel* self, QModelIndex* index ```
 bool q_standarditemmodel_clear_item_data(void* self, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#clearItemData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, bool (*slot)(QStandardItemModel*, QModelIndex*) ```
 void q_standarditemmodel_on_clear_item_data(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#clearItemData)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self, QModelIndex* index ```
@@ -813,11 +892,15 @@ bool q_standarditemmodel_qbase_clear_item_data(void* self, void* index);
 /// ``` QStandardItemModel* self, int section, enum Qt__Orientation orientation, int role ```
 QVariant* q_standarditemmodel_header_data(void* self, int section, int64_t orientation, int role);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#headerData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, QVariant* (*slot)(QStandardItemModel*, int, enum Qt__Orientation, int) ```
 void q_standarditemmodel_on_header_data(void* self, QVariant* (*slot)(void*, int, int64_t, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#headerData)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self, int section, enum Qt__Orientation orientation, int role ```
@@ -828,11 +911,15 @@ QVariant* q_standarditemmodel_qbase_header_data(void* self, int section, int64_t
 /// ``` QStandardItemModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role ```
 bool q_standarditemmodel_set_header_data(void* self, int section, int64_t orientation, void* value, int role);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#setHeaderData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, bool (*slot)(QStandardItemModel*, int, enum Qt__Orientation, QVariant*, int) ```
 void q_standarditemmodel_on_set_header_data(void* self, bool (*slot)(void*, int, int64_t, void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#setHeaderData)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role ```
@@ -843,11 +930,15 @@ bool q_standarditemmodel_qbase_set_header_data(void* self, int section, int64_t 
 /// ``` QStandardItemModel* self, int row, int count, QModelIndex* parent ```
 bool q_standarditemmodel_insert_rows(void* self, int row, int count, void* parent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertRows)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, bool (*slot)(QStandardItemModel*, int, int, QModelIndex*) ```
 void q_standarditemmodel_on_insert_rows(void* self, bool (*slot)(void*, int, int, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertRows)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self, int row, int count, QModelIndex* parent ```
@@ -858,11 +949,15 @@ bool q_standarditemmodel_qbase_insert_rows(void* self, int row, int count, void*
 /// ``` QStandardItemModel* self, int column, int count, QModelIndex* parent ```
 bool q_standarditemmodel_insert_columns(void* self, int column, int count, void* parent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertColumns)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, bool (*slot)(QStandardItemModel*, int, int, QModelIndex*) ```
 void q_standarditemmodel_on_insert_columns(void* self, bool (*slot)(void*, int, int, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertColumns)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self, int column, int count, QModelIndex* parent ```
@@ -873,11 +968,15 @@ bool q_standarditemmodel_qbase_insert_columns(void* self, int column, int count,
 /// ``` QStandardItemModel* self, int row, int count, QModelIndex* parent ```
 bool q_standarditemmodel_remove_rows(void* self, int row, int count, void* parent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#removeRows)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, bool (*slot)(QStandardItemModel*, int, int, QModelIndex*) ```
 void q_standarditemmodel_on_remove_rows(void* self, bool (*slot)(void*, int, int, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#removeRows)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self, int row, int count, QModelIndex* parent ```
@@ -888,11 +987,15 @@ bool q_standarditemmodel_qbase_remove_rows(void* self, int row, int count, void*
 /// ``` QStandardItemModel* self, int column, int count, QModelIndex* parent ```
 bool q_standarditemmodel_remove_columns(void* self, int column, int count, void* parent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#removeColumns)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, bool (*slot)(QStandardItemModel*, int, int, QModelIndex*) ```
 void q_standarditemmodel_on_remove_columns(void* self, bool (*slot)(void*, int, int, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#removeColumns)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self, int column, int count, QModelIndex* parent ```
@@ -903,11 +1006,15 @@ bool q_standarditemmodel_qbase_remove_columns(void* self, int column, int count,
 /// ``` QStandardItemModel* self, QModelIndex* index ```
 int64_t q_standarditemmodel_flags(void* self, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#flags)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, int64_t (*slot)(QStandardItemModel*, QModelIndex*) ```
 void q_standarditemmodel_on_flags(void* self, int64_t (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#flags)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self, QModelIndex* index ```
@@ -918,11 +1025,15 @@ int64_t q_standarditemmodel_qbase_flags(void* self, void* index);
 /// ``` QStandardItemModel* self ```
 int64_t q_standarditemmodel_supported_drop_actions(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#supportedDropActions)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, int64_t (*slot)() ```
 void q_standarditemmodel_on_supported_drop_actions(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#supportedDropActions)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self ```
@@ -933,11 +1044,15 @@ int64_t q_standarditemmodel_qbase_supported_drop_actions(void* self);
 /// ``` QStandardItemModel* self, QModelIndex* index ```
 libqt_map /* of int to QVariant* */ q_standarditemmodel_item_data(void* self, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#itemData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, libqt_map /* of int to QVariant* */ (*slot)(QStandardItemModel*, QModelIndex*) ```
 void q_standarditemmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#itemData)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self, QModelIndex* index ```
@@ -948,11 +1063,15 @@ libqt_map /* of int to QVariant* */ q_standarditemmodel_qbase_item_data(void* se
 /// ``` QStandardItemModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ roles ```
 bool q_standarditemmodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#setItemData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, bool (*slot)(QStandardItemModel*, QModelIndex*, libqt_map /* of int to QVariant* */) ```
 void q_standarditemmodel_on_set_item_data(void* self, bool (*slot)(void*, void*, libqt_map /* of int to QVariant* */));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#setItemData)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ roles ```
@@ -968,11 +1087,15 @@ void q_standarditemmodel_clear(void* self);
 /// ``` QStandardItemModel* self, int column, enum Qt__SortOrder order ```
 void q_standarditemmodel_sort(void* self, int column, int64_t order);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#sort)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, void (*slot)(QStandardItemModel*, int, enum Qt__SortOrder) ```
 void q_standarditemmodel_on_sort(void* self, void (*slot)(void*, int, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#sort)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self, int column, enum Qt__SortOrder order ```
@@ -1050,13 +1173,13 @@ void q_standarditemmodel_set_column_count(void* self, int columns);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#appendRow)
 ///
-/// ``` QStandardItemModel* self, QStandardItem* items[] ```
-void q_standarditemmodel_append_row(void* self, void* items[]);
+/// ``` QStandardItemModel* self, libqt_list /* of QStandardItem* */ items ```
+void q_standarditemmodel_append_row(void* self, libqt_list items);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#appendColumn)
 ///
-/// ``` QStandardItemModel* self, QStandardItem* items[] ```
-void q_standarditemmodel_append_column(void* self, void* items[]);
+/// ``` QStandardItemModel* self, libqt_list /* of QStandardItem* */ items ```
+void q_standarditemmodel_append_column(void* self, libqt_list items);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#appendRow)
 ///
@@ -1065,13 +1188,13 @@ void q_standarditemmodel_append_row_with_item(void* self, void* item);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertRow)
 ///
-/// ``` QStandardItemModel* self, int row, QStandardItem* items[] ```
-void q_standarditemmodel_insert_row(void* self, int row, void* items[]);
+/// ``` QStandardItemModel* self, int row, libqt_list /* of QStandardItem* */ items ```
+void q_standarditemmodel_insert_row(void* self, int row, libqt_list items);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertColumn)
 ///
-/// ``` QStandardItemModel* self, int column, QStandardItem* items[] ```
-void q_standarditemmodel_insert_column(void* self, int column, void* items[]);
+/// ``` QStandardItemModel* self, int column, libqt_list /* of QStandardItem* */ items ```
+void q_standarditemmodel_insert_column(void* self, int column, libqt_list items);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertRow)
 ///
@@ -1116,7 +1239,7 @@ QStandardItem* q_standarditemmodel_take_vertical_header_item(void* self, int row
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#itemPrototype)
 ///
 /// ``` QStandardItemModel* self ```
-QStandardItem* q_standarditemmodel_item_prototype(void* self);
+const QStandardItem* q_standarditemmodel_item_prototype(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#setItemPrototype)
 ///
@@ -1143,11 +1266,15 @@ void q_standarditemmodel_set_sort_role(void* self, int role);
 /// ``` QStandardItemModel* self ```
 const char** q_standarditemmodel_mime_types(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#mimeTypes)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, const char** (*slot)() ```
 void q_standarditemmodel_on_mime_types(void* self, const char** (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#mimeTypes)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self ```
@@ -1155,29 +1282,37 @@ const char** q_standarditemmodel_qbase_mime_types(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#mimeData)
 ///
-/// ``` QStandardItemModel* self, QModelIndex* indexes[] ```
-QMimeData* q_standarditemmodel_mime_data(void* self, void* indexes[]);
+/// ``` QStandardItemModel* self, libqt_list /* of QModelIndex* */ indexes ```
+QMimeData* q_standarditemmodel_mime_data(void* self, libqt_list indexes);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#mimeData)
+///
 /// Allows for overriding the related default method
 ///
-/// ``` QStandardItemModel* self, QMimeData* (*slot)(QStandardItemModel*, QModelIndex*[]) ```
-void q_standarditemmodel_on_mime_data(void* self, QMimeData* (*slot)(void*, void*));
+/// ``` QStandardItemModel* self, QMimeData* (*slot)(QStandardItemModel*, libqt_list /* of QModelIndex* */ indexes ) ```
+void q_standarditemmodel_on_mime_data(void* self, QMimeData* (*slot)(void*, libqt_list));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#mimeData)
+///
 /// Base class method implementation
 ///
-/// ``` QStandardItemModel* self, QModelIndex* indexes[] ```
-QMimeData* q_standarditemmodel_qbase_mime_data(void* self, void* indexes[]);
+/// ``` QStandardItemModel* self, libqt_list /* of QModelIndex* */ indexes ```
+QMimeData* q_standarditemmodel_qbase_mime_data(void* self, libqt_list indexes);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#dropMimeData)
 ///
 /// ``` QStandardItemModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent ```
 bool q_standarditemmodel_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#dropMimeData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItemModel* self, bool (*slot)(QStandardItemModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*) ```
 void q_standarditemmodel_on_drop_mime_data(void* self, bool (*slot)(void*, void*, int64_t, int, int, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#dropMimeData)
+///
 /// Base class method implementation
 ///
 /// ``` QStandardItemModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent ```
@@ -1188,6 +1323,8 @@ bool q_standarditemmodel_qbase_drop_mime_data(void* self, void* data, int64_t ac
 /// ``` QStandardItemModel* self, QStandardItem* item ```
 void q_standarditemmodel_item_changed(void* self, void* item);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#itemChanged)
+///
 /// ``` QStandardItemModel* self, void (*slot)(QStandardItemModel*, QStandardItem*) ```
 void q_standarditemmodel_on_item_changed(void* self, void (*slot)(void*, void*));
 
@@ -1282,6 +1419,8 @@ void q_standarditemmodel_data_changed(void* self, void* topLeft, void* bottomRig
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+///
 /// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*) ```
 void q_standarditemmodel_on_data_changed(void* self, void (*slot)(void*, void*, void*));
 
@@ -1293,6 +1432,8 @@ void q_standarditemmodel_on_data_changed(void* self, void (*slot)(void*, void*, 
 void q_standarditemmodel_header_data_changed(void* self, int64_t orientation, int first, int last);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, enum Qt__Orientation, int, int) ```
 void q_standarditemmodel_on_header_data_changed(void* self, void (*slot)(void*, int64_t, int, int));
@@ -1306,6 +1447,8 @@ void q_standarditemmodel_layout_changed(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+///
 /// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*) ```
 void q_standarditemmodel_on_layout_changed(void* self, void (*slot)(void*));
 
@@ -1317,6 +1460,8 @@ void q_standarditemmodel_on_layout_changed(void* self, void (*slot)(void*));
 void q_standarditemmodel_layout_about_to_be_changed(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*) ```
 void q_standarditemmodel_on_layout_about_to_be_changed(void* self, void (*slot)(void*));
@@ -1353,61 +1498,71 @@ bool q_standarditemmodel_check_index2(void* self, void* index, int64_t options);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QStandardItemModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* roles[] ```
-void q_standarditemmodel_data_changed3(void* self, void* topLeft, void* bottomRight, int* roles[]);
+/// ``` QStandardItemModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles ```
+void q_standarditemmodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
 ///
-/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*, int*[]) ```
-void q_standarditemmodel_on_data_changed3(void* self, void (*slot)(void*, void*, void*, int*));
-
-/// Inherited from QAbstractItemModel
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
-///
-/// ``` QStandardItemModel* self, QPersistentModelIndex* parents[] ```
-void q_standarditemmodel_layout_changed1(void* self, void* parents[]);
-
-/// Inherited from QAbstractItemModel
-///
-/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, QPersistentModelIndex*[]) ```
-void q_standarditemmodel_on_layout_changed1(void* self, void (*slot)(void*, void*));
+/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
+void q_standarditemmodel_on_data_changed3(void* self, void (*slot)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QStandardItemModel* self, QPersistentModelIndex* parents[], enum QAbstractItemModel__LayoutChangeHint hint ```
-void q_standarditemmodel_layout_changed2(void* self, void* parents[], int64_t hint);
+/// ``` QStandardItemModel* self, libqt_list /* of QPersistentModelIndex* */ parents ```
+void q_standarditemmodel_layout_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
-/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, QPersistentModelIndex*[], enum QAbstractItemModel__LayoutChangeHint) ```
-void q_standarditemmodel_on_layout_changed2(void* self, void (*slot)(void*, void*, int64_t));
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+///
+/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+void q_standarditemmodel_on_layout_changed1(void* self, void (*slot)(void*, libqt_list));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+///
+/// ``` QStandardItemModel* self, libqt_list /* of QPersistentModelIndex* */ parents, enum QAbstractItemModel__LayoutChangeHint hint ```
+void q_standarditemmodel_layout_changed2(void* self, libqt_list parents, int64_t hint);
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+///
+/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+void q_standarditemmodel_on_layout_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QStandardItemModel* self, QPersistentModelIndex* parents[] ```
-void q_standarditemmodel_layout_about_to_be_changed1(void* self, void* parents[]);
-
-/// Inherited from QAbstractItemModel
-///
-/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, QPersistentModelIndex*[]) ```
-void q_standarditemmodel_on_layout_about_to_be_changed1(void* self, void (*slot)(void*, void*));
+/// ``` QStandardItemModel* self, libqt_list /* of QPersistentModelIndex* */ parents ```
+void q_standarditemmodel_layout_about_to_be_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QStandardItemModel* self, QPersistentModelIndex* parents[], enum QAbstractItemModel__LayoutChangeHint hint ```
-void q_standarditemmodel_layout_about_to_be_changed2(void* self, void* parents[], int64_t hint);
+/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+void q_standarditemmodel_on_layout_about_to_be_changed1(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
-/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, QPersistentModelIndex*[], enum QAbstractItemModel__LayoutChangeHint) ```
-void q_standarditemmodel_on_layout_about_to_be_changed2(void* self, void (*slot)(void*, void*, int64_t));
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+///
+/// ``` QStandardItemModel* self, libqt_list /* of QPersistentModelIndex* */ parents, enum QAbstractItemModel__LayoutChangeHint hint ```
+void q_standarditemmodel_layout_about_to_be_changed2(void* self, libqt_list parents, int64_t hint);
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+///
+/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+void q_standarditemmodel_on_layout_about_to_be_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QObject
 ///
@@ -1491,7 +1646,7 @@ void q_standarditemmodel_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QStandardItemModel* self ```
-libqt_list /* of QObject* */ q_standarditemmodel_children(void* self);
+const libqt_list /* of QObject* */ q_standarditemmodel_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1589,7 +1744,7 @@ QBindingStorage* q_standarditemmodel_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QStandardItemModel* self ```
-QBindingStorage* q_standarditemmodel_binding_storage2(void* self);
+const QBindingStorage* q_standarditemmodel_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -1599,6 +1754,8 @@ QBindingStorage* q_standarditemmodel_binding_storage2(void* self);
 void q_standarditemmodel_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QStandardItemModel* self, void (*slot)(QObject*) ```
 void q_standarditemmodel_on_destroyed(void* self, void (*slot)(void*));
@@ -1647,6 +1804,8 @@ void q_standarditemmodel_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QStandardItemModel* self, void (*slot)(QObject*, QObject*) ```
 void q_standarditemmodel_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -1661,12 +1820,16 @@ QModelIndex* q_standarditemmodel_sibling(void* self, int row, int column, void* 
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#sibling)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, int row, int column, QModelIndex* idx ```
 QModelIndex* q_standarditemmodel_qbase_sibling(void* self, int row, int column, void* idx);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#sibling)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1684,12 +1847,16 @@ bool q_standarditemmodel_can_drop_mime_data(void* self, void* data, int64_t acti
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#canDropMimeData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent ```
 bool q_standarditemmodel_qbase_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#canDropMimeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1707,12 +1874,16 @@ int64_t q_standarditemmodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self ```
 int64_t q_standarditemmodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1730,12 +1901,16 @@ bool q_standarditemmodel_move_rows(void* self, void* sourceParent, int sourceRow
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild ```
 bool q_standarditemmodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1753,12 +1928,16 @@ bool q_standarditemmodel_move_columns(void* self, void* sourceParent, int source
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild ```
 bool q_standarditemmodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1776,12 +1955,16 @@ void q_standarditemmodel_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#fetchMore)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QModelIndex* parent ```
 void q_standarditemmodel_qbase_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#fetchMore)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1799,12 +1982,16 @@ bool q_standarditemmodel_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#canFetchMore)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QModelIndex* parent ```
 bool q_standarditemmodel_qbase_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#canFetchMore)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1822,12 +2009,16 @@ QModelIndex* q_standarditemmodel_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#buddy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QModelIndex* index ```
 QModelIndex* q_standarditemmodel_qbase_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#buddy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1845,12 +2036,16 @@ libqt_list /* of QModelIndex* */ q_standarditemmodel_match(void* self, void* sta
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QModelIndex* start, int role, QVariant* value, int hits, int flags ```
 libqt_list /* of QModelIndex* */ q_standarditemmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1868,12 +2063,16 @@ QSize* q_standarditemmodel_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#span)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QModelIndex* index ```
 QSize* q_standarditemmodel_qbase_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#span)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1891,12 +2090,16 @@ bool q_standarditemmodel_submit(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#submit)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self ```
 bool q_standarditemmodel_qbase_submit(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#submit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1914,12 +2117,16 @@ void q_standarditemmodel_revert(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#revert)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self ```
 void q_standarditemmodel_qbase_revert(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#revert)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1937,12 +2144,16 @@ void q_standarditemmodel_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self ```
 void q_standarditemmodel_qbase_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1960,12 +2171,16 @@ bool q_standarditemmodel_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QEvent* event ```
 bool q_standarditemmodel_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1983,12 +2198,16 @@ bool q_standarditemmodel_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QObject* watched, QEvent* event ```
 bool q_standarditemmodel_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2006,12 +2225,16 @@ void q_standarditemmodel_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QTimerEvent* event ```
 void q_standarditemmodel_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2029,12 +2252,16 @@ void q_standarditemmodel_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QChildEvent* event ```
 void q_standarditemmodel_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2052,12 +2279,16 @@ void q_standarditemmodel_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QEvent* event ```
 void q_standarditemmodel_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2075,12 +2306,16 @@ void q_standarditemmodel_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QMetaMethod* signal ```
 void q_standarditemmodel_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2098,12 +2333,16 @@ void q_standarditemmodel_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QMetaMethod* signal ```
 void q_standarditemmodel_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2121,12 +2360,16 @@ QModelIndex* q_standarditemmodel_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, int row, int column ```
 QModelIndex* q_standarditemmodel_qbase_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2139,22 +2382,26 @@ void q_standarditemmodel_on_create_index(void* self, QModelIndex* (*slot)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStandardItemModel* self, QModelIndex* indexes[], QDataStream* stream ```
-void q_standarditemmodel_encode_data(void* self, void* indexes[], void* stream);
+/// ``` QStandardItemModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream ```
+void q_standarditemmodel_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStandardItemModel* self, QModelIndex* indexes[], QDataStream* stream ```
-void q_standarditemmodel_qbase_encode_data(void* self, void* indexes[], void* stream);
+/// ``` QStandardItemModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream ```
+void q_standarditemmodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStandardItemModel* self, void (*slot)(QStandardItemModel*, QModelIndex*[], QDataStream*) ```
-void q_standarditemmodel_on_encode_data(void* self, void (*slot)(void*, void*, void*));
+/// ``` QStandardItemModel* self, void (*slot)(QStandardItemModel*, libqt_list /* of QModelIndex* */ indexes , QDataStream*) ```
+void q_standarditemmodel_on_encode_data(void* self, void (*slot)(void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2167,12 +2414,16 @@ bool q_standarditemmodel_decode_data(void* self, int row, int column, void* pare
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, int row, int column, QModelIndex* parent, QDataStream* stream ```
 bool q_standarditemmodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2190,12 +2441,16 @@ void q_standarditemmodel_begin_insert_rows(void* self, void* parent, int first, 
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QModelIndex* parent, int first, int last ```
 void q_standarditemmodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2213,12 +2468,16 @@ void q_standarditemmodel_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self ```
 void q_standarditemmodel_qbase_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2236,12 +2495,16 @@ void q_standarditemmodel_begin_remove_rows(void* self, void* parent, int first, 
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QModelIndex* parent, int first, int last ```
 void q_standarditemmodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2259,12 +2522,16 @@ void q_standarditemmodel_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self ```
 void q_standarditemmodel_qbase_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2282,12 +2549,16 @@ bool q_standarditemmodel_begin_move_rows(void* self, void* sourceParent, int sou
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow ```
 bool q_standarditemmodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2305,12 +2576,16 @@ void q_standarditemmodel_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self ```
 void q_standarditemmodel_qbase_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2328,12 +2603,16 @@ void q_standarditemmodel_begin_insert_columns(void* self, void* parent, int firs
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QModelIndex* parent, int first, int last ```
 void q_standarditemmodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2351,12 +2630,16 @@ void q_standarditemmodel_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self ```
 void q_standarditemmodel_qbase_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2374,12 +2657,16 @@ void q_standarditemmodel_begin_remove_columns(void* self, void* parent, int firs
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QModelIndex* parent, int first, int last ```
 void q_standarditemmodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2397,12 +2684,16 @@ void q_standarditemmodel_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self ```
 void q_standarditemmodel_qbase_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2420,12 +2711,16 @@ bool q_standarditemmodel_begin_move_columns(void* self, void* sourceParent, int 
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn ```
 bool q_standarditemmodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2443,12 +2738,16 @@ void q_standarditemmodel_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self ```
 void q_standarditemmodel_qbase_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2466,12 +2765,16 @@ void q_standarditemmodel_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self ```
 void q_standarditemmodel_qbase_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2489,12 +2792,16 @@ void q_standarditemmodel_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self ```
 void q_standarditemmodel_qbase_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2512,12 +2819,16 @@ void q_standarditemmodel_change_persistent_index(void* self, void* from, void* t
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QModelIndex* from, QModelIndex* to ```
 void q_standarditemmodel_qbase_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2530,22 +2841,26 @@ void q_standarditemmodel_on_change_persistent_index(void* self, void (*slot)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStandardItemModel* self, QModelIndex* from[], QModelIndex* to[] ```
-void q_standarditemmodel_change_persistent_index_list(void* self, void* from[], void* to[]);
+/// ``` QStandardItemModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to ```
+void q_standarditemmodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStandardItemModel* self, QModelIndex* from[], QModelIndex* to[] ```
-void q_standarditemmodel_qbase_change_persistent_index_list(void* self, void* from[], void* to[]);
+/// ``` QStandardItemModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to ```
+void q_standarditemmodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStandardItemModel* self, void (*slot)(QStandardItemModel*, QModelIndex*[], QModelIndex*[]) ```
-void q_standarditemmodel_on_change_persistent_index_list(void* self, void (*slot)(void*, void*, void*));
+/// ``` QStandardItemModel* self, void (*slot)(QStandardItemModel*, libqt_list /* of QModelIndex* */ from , libqt_list /* of QModelIndex* */ to ) ```
+void q_standarditemmodel_on_change_persistent_index_list(void* self, void (*slot)(void*, libqt_list, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2558,12 +2873,16 @@ libqt_list /* of QModelIndex* */ q_standarditemmodel_persistent_index_list(void*
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self ```
 libqt_list /* of QModelIndex* */ q_standarditemmodel_qbase_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2581,12 +2900,16 @@ QObject* q_standarditemmodel_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self ```
 QObject* q_standarditemmodel_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2604,12 +2927,16 @@ int32_t q_standarditemmodel_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self ```
 int32_t q_standarditemmodel_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2627,12 +2954,16 @@ int32_t q_standarditemmodel_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, const char* signal ```
 int32_t q_standarditemmodel_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2650,6 +2981,8 @@ bool q_standarditemmodel_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, QMetaMethod* signal ```
@@ -2657,11 +2990,150 @@ bool q_standarditemmodel_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QStandardItemModel* self, bool (*slot)(QStandardItemModel*, QMetaMethod*) ```
 void q_standarditemmodel_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeInserted)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_standarditemmodel_on_rows_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsInserted)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_standarditemmodel_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeRemoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_standarditemmodel_on_rows_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsRemoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_standarditemmodel_on_rows_removed(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeInserted)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_standarditemmodel_on_columns_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsInserted)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_standarditemmodel_on_columns_inserted(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeRemoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_standarditemmodel_on_columns_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsRemoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_standarditemmodel_on_columns_removed(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelAboutToBeReset)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*) ```
+void q_standarditemmodel_on_model_about_to_be_reset(void* self, void (*slot)(void*));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelReset)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*) ```
+void q_standarditemmodel_on_model_reset(void* self, void (*slot)(void*));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeMoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+void q_standarditemmodel_on_rows_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsMoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+void q_standarditemmodel_on_rows_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeMoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+void q_standarditemmodel_on_columns_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsMoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QStandardItemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+void q_standarditemmodel_on_columns_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QStandardItemModel* self, void (*slot)(QObject*, const char*) ```
+void q_standarditemmodel_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#dtor.QStandardItemModel)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStandardItemModel* self ```

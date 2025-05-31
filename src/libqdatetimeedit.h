@@ -13,47 +13,22 @@
 #include "qtlibc.h"
 
 #include "libqabstractspinbox.h"
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
 #include "libqcalendar.h"
 #include "libqcalendarwidget.h"
-#include "libqcursor.h"
 #include "libqdatetime.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
 #include "libqlineedit.h"
-#include "libqlocale.h"
-#include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqscreen.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
 #include "libqstyleoption.h"
-#include "libqthread.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qdatetimeedit.html
 
@@ -100,7 +75,7 @@ QDateTimeEdit* q_datetimeedit_new8(void* t, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QDateTimeEdit* self ```
-QMetaObject* q_datetimeedit_meta_object(void* self);
+const QMetaObject* q_datetimeedit_meta_object(void* self);
 
 /// ``` QDateTimeEdit* self, const char* param1 ```
 void* q_datetimeedit_metacast(void* self, const char* param1);
@@ -343,11 +318,15 @@ void q_datetimeedit_set_time_spec(void* self, int64_t spec);
 /// ``` QDateTimeEdit* self ```
 QSize* q_datetimeedit_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDateTimeEdit* self, QSize* (*slot)() ```
 void q_datetimeedit_on_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QDateTimeEdit* self ```
@@ -358,11 +337,15 @@ QSize* q_datetimeedit_qbase_size_hint(void* self);
 /// ``` QDateTimeEdit* self ```
 void q_datetimeedit_clear(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#clear)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDateTimeEdit* self, void (*slot)() ```
 void q_datetimeedit_on_clear(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#clear)
+///
 /// Base class method implementation
 ///
 /// ``` QDateTimeEdit* self ```
@@ -373,11 +356,15 @@ void q_datetimeedit_qbase_clear(void* self);
 /// ``` QDateTimeEdit* self, int steps ```
 void q_datetimeedit_step_by(void* self, int steps);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#stepBy)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDateTimeEdit* self, void (*slot)(QDateTimeEdit*, int) ```
 void q_datetimeedit_on_step_by(void* self, void (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#stepBy)
+///
 /// Base class method implementation
 ///
 /// ``` QDateTimeEdit* self, int steps ```
@@ -388,11 +375,15 @@ void q_datetimeedit_qbase_step_by(void* self, int steps);
 /// ``` QDateTimeEdit* self, QEvent* event ```
 bool q_datetimeedit_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDateTimeEdit* self, bool (*slot)(QDateTimeEdit*, QEvent*) ```
 void q_datetimeedit_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QDateTimeEdit* self, QEvent* event ```
@@ -403,6 +394,8 @@ bool q_datetimeedit_qbase_event(void* self, void* event);
 /// ``` QDateTimeEdit* self, QDateTime* dateTime ```
 void q_datetimeedit_date_time_changed(void* self, void* dateTime);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeChanged)
+///
 /// ``` QDateTimeEdit* self, void (*slot)(QDateTimeEdit*, QDateTime*) ```
 void q_datetimeedit_on_date_time_changed(void* self, void (*slot)(void*, void*));
 
@@ -411,6 +404,8 @@ void q_datetimeedit_on_date_time_changed(void* self, void (*slot)(void*, void*))
 /// ``` QDateTimeEdit* self, QTime* time ```
 void q_datetimeedit_time_changed(void* self, void* time);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#timeChanged)
+///
 /// ``` QDateTimeEdit* self, void (*slot)(QDateTimeEdit*, QTime*) ```
 void q_datetimeedit_on_time_changed(void* self, void (*slot)(void*, void*));
 
@@ -419,6 +414,8 @@ void q_datetimeedit_on_time_changed(void* self, void (*slot)(void*, void*));
 /// ``` QDateTimeEdit* self, QDate* date ```
 void q_datetimeedit_date_changed(void* self, void* date);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateChanged)
+///
 /// ``` QDateTimeEdit* self, void (*slot)(QDateTimeEdit*, QDate*) ```
 void q_datetimeedit_on_date_changed(void* self, void (*slot)(void*, void*));
 
@@ -442,11 +439,15 @@ void q_datetimeedit_set_time(void* self, void* time);
 /// ``` QDateTimeEdit* self, QKeyEvent* event ```
 void q_datetimeedit_key_press_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#keyPressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDateTimeEdit* self, void (*slot)(QDateTimeEdit*, QKeyEvent*) ```
 void q_datetimeedit_on_key_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#keyPressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QDateTimeEdit* self, QKeyEvent* event ```
@@ -457,11 +458,15 @@ void q_datetimeedit_qbase_key_press_event(void* self, void* event);
 /// ``` QDateTimeEdit* self, QWheelEvent* event ```
 void q_datetimeedit_wheel_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#wheelEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDateTimeEdit* self, void (*slot)(QDateTimeEdit*, QWheelEvent*) ```
 void q_datetimeedit_on_wheel_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#wheelEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QDateTimeEdit* self, QWheelEvent* event ```
@@ -472,11 +477,15 @@ void q_datetimeedit_qbase_wheel_event(void* self, void* event);
 /// ``` QDateTimeEdit* self, QFocusEvent* event ```
 void q_datetimeedit_focus_in_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#focusInEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDateTimeEdit* self, void (*slot)(QDateTimeEdit*, QFocusEvent*) ```
 void q_datetimeedit_on_focus_in_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#focusInEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QDateTimeEdit* self, QFocusEvent* event ```
@@ -487,11 +496,15 @@ void q_datetimeedit_qbase_focus_in_event(void* self, void* event);
 /// ``` QDateTimeEdit* self, bool next ```
 bool q_datetimeedit_focus_next_prev_child(void* self, bool next);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#focusNextPrevChild)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDateTimeEdit* self, bool (*slot)(QDateTimeEdit*, bool) ```
 void q_datetimeedit_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#focusNextPrevChild)
+///
 /// Base class method implementation
 ///
 /// ``` QDateTimeEdit* self, bool next ```
@@ -502,11 +515,15 @@ bool q_datetimeedit_qbase_focus_next_prev_child(void* self, bool next);
 /// ``` QDateTimeEdit* self, const char* input, int* pos ```
 int64_t q_datetimeedit_validate(void* self, const char* input, int* pos);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#validate)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDateTimeEdit* self, int64_t (*slot)(QDateTimeEdit*, const char*, int*) ```
 void q_datetimeedit_on_validate(void* self, int64_t (*slot)(void*, const char*, int*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#validate)
+///
 /// Base class method implementation
 ///
 /// ``` QDateTimeEdit* self, const char* input, int* pos ```
@@ -517,11 +534,15 @@ int64_t q_datetimeedit_qbase_validate(void* self, const char* input, int* pos);
 /// ``` QDateTimeEdit* self, const char* input ```
 void q_datetimeedit_fixup(void* self, const char* input);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#fixup)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDateTimeEdit* self, void (*slot)(QDateTimeEdit*, const char*) ```
 void q_datetimeedit_on_fixup(void* self, void (*slot)(void*, const char*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#fixup)
+///
 /// Base class method implementation
 ///
 /// ``` QDateTimeEdit* self, const char* input ```
@@ -532,11 +553,15 @@ void q_datetimeedit_qbase_fixup(void* self, const char* input);
 /// ``` QDateTimeEdit* self, const char* text ```
 QDateTime* q_datetimeedit_date_time_from_text(void* self, const char* text);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeFromText)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDateTimeEdit* self, QDateTime* (*slot)(QDateTimeEdit*, const char*) ```
 void q_datetimeedit_on_date_time_from_text(void* self, QDateTime* (*slot)(void*, const char*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeFromText)
+///
 /// Base class method implementation
 ///
 /// ``` QDateTimeEdit* self, const char* text ```
@@ -547,11 +572,15 @@ QDateTime* q_datetimeedit_qbase_date_time_from_text(void* self, const char* text
 /// ``` QDateTimeEdit* self, QDateTime* dt ```
 const char* q_datetimeedit_text_from_date_time(void* self, void* dt);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#textFromDateTime)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDateTimeEdit* self, const char* (*slot)(QDateTimeEdit*, QDateTime*) ```
 void q_datetimeedit_on_text_from_date_time(void* self, const char* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#textFromDateTime)
+///
 /// Base class method implementation
 ///
 /// ``` QDateTimeEdit* self, QDateTime* dt ```
@@ -562,11 +591,15 @@ const char* q_datetimeedit_qbase_text_from_date_time(void* self, void* dt);
 /// ``` QDateTimeEdit* self ```
 int64_t q_datetimeedit_step_enabled(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#stepEnabled)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDateTimeEdit* self, int64_t (*slot)() ```
 void q_datetimeedit_on_step_enabled(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#stepEnabled)
+///
 /// Base class method implementation
 ///
 /// ``` QDateTimeEdit* self ```
@@ -577,11 +610,15 @@ int64_t q_datetimeedit_qbase_step_enabled(void* self);
 /// ``` QDateTimeEdit* self, QMouseEvent* event ```
 void q_datetimeedit_mouse_press_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#mousePressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDateTimeEdit* self, void (*slot)(QDateTimeEdit*, QMouseEvent*) ```
 void q_datetimeedit_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#mousePressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QDateTimeEdit* self, QMouseEvent* event ```
@@ -592,11 +629,15 @@ void q_datetimeedit_qbase_mouse_press_event(void* self, void* event);
 /// ``` QDateTimeEdit* self, QPaintEvent* event ```
 void q_datetimeedit_paint_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#paintEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDateTimeEdit* self, void (*slot)(QDateTimeEdit*, QPaintEvent*) ```
 void q_datetimeedit_on_paint_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#paintEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QDateTimeEdit* self, QPaintEvent* event ```
@@ -607,11 +648,15 @@ void q_datetimeedit_qbase_paint_event(void* self, void* event);
 /// ``` QDateTimeEdit* self, QStyleOptionSpinBox* option ```
 void q_datetimeedit_init_style_option(void* self, void* option);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#initStyleOption)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDateTimeEdit* self, void (*slot)(QDateTimeEdit*, QStyleOptionSpinBox*) ```
 void q_datetimeedit_on_init_style_option(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#initStyleOption)
+///
 /// Base class method implementation
 ///
 /// ``` QDateTimeEdit* self, QStyleOptionSpinBox* option ```
@@ -818,6 +863,8 @@ void q_datetimeedit_editing_finished(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#editingFinished)
+///
 /// ``` QDateTimeEdit* self, void (*slot)(QAbstractSpinBox*) ```
 void q_datetimeedit_on_editing_finished(void* self, void (*slot)(void*));
 
@@ -945,7 +992,7 @@ QRect* q_datetimeedit_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QDateTimeEdit* self ```
-QRect* q_datetimeedit_geometry(void* self);
+const QRect* q_datetimeedit_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1302,7 +1349,7 @@ QWidget* q_datetimeedit_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QDateTimeEdit* self ```
-QPalette* q_datetimeedit_palette(void* self);
+const QPalette* q_datetimeedit_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1344,7 +1391,7 @@ int64_t q_datetimeedit_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QDateTimeEdit* self ```
-QFont* q_datetimeedit_font(void* self);
+const QFont* q_datetimeedit_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2344,15 +2391,15 @@ void q_datetimeedit_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QDateTimeEdit* self, QAction* actions[] ```
-void q_datetimeedit_add_actions(void* self, void* actions[]);
+/// ``` QDateTimeEdit* self, libqt_list /* of QAction* */ actions ```
+void q_datetimeedit_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QDateTimeEdit* self, QAction* before, QAction* actions[] ```
-void q_datetimeedit_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QDateTimeEdit* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_datetimeedit_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2552,6 +2599,8 @@ void q_datetimeedit_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QDateTimeEdit* self, void (*slot)(QWidget*, const char*) ```
 void q_datetimeedit_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2563,6 +2612,8 @@ void q_datetimeedit_on_window_title_changed(void* self, void (*slot)(void*, cons
 void q_datetimeedit_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QDateTimeEdit* self, void (*slot)(QWidget*, QIcon*) ```
 void q_datetimeedit_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -2576,6 +2627,8 @@ void q_datetimeedit_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QDateTimeEdit* self, void (*slot)(QWidget*, const char*) ```
 void q_datetimeedit_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2587,6 +2640,8 @@ void q_datetimeedit_on_window_icon_text_changed(void* self, void (*slot)(void*, 
 void q_datetimeedit_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QDateTimeEdit* self, void (*slot)(QWidget*, QPoint*) ```
 void q_datetimeedit_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2792,7 +2847,7 @@ void q_datetimeedit_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QDateTimeEdit* self ```
-libqt_list /* of QObject* */ q_datetimeedit_children(void* self);
+const libqt_list /* of QObject* */ q_datetimeedit_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2883,7 +2938,7 @@ QBindingStorage* q_datetimeedit_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QDateTimeEdit* self ```
-QBindingStorage* q_datetimeedit_binding_storage2(void* self);
+const QBindingStorage* q_datetimeedit_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2893,6 +2948,8 @@ QBindingStorage* q_datetimeedit_binding_storage2(void* self);
 void q_datetimeedit_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QDateTimeEdit* self, void (*slot)(QObject*) ```
 void q_datetimeedit_on_destroyed(void* self, void (*slot)(void*));
@@ -2947,6 +3004,8 @@ QMetaObject__Connection* q_datetimeedit_connect4(void* self, void* sender, const
 void q_datetimeedit_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QDateTimeEdit* self, void (*slot)(QObject*, QObject*) ```
 void q_datetimeedit_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -3046,12 +3105,16 @@ QSize* q_datetimeedit_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self ```
 QSize* q_datetimeedit_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3069,12 +3132,16 @@ QVariant* q_datetimeedit_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_datetimeedit_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3092,12 +3159,16 @@ void q_datetimeedit_resize_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#resizeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QResizeEvent* event ```
 void q_datetimeedit_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3115,12 +3186,16 @@ void q_datetimeedit_key_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QKeyEvent* event ```
 void q_datetimeedit_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3138,12 +3213,16 @@ void q_datetimeedit_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QFocusEvent* event ```
 void q_datetimeedit_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3161,12 +3240,16 @@ void q_datetimeedit_context_menu_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QContextMenuEvent* event ```
 void q_datetimeedit_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3184,12 +3267,16 @@ void q_datetimeedit_change_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#changeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QEvent* event ```
 void q_datetimeedit_qbase_change_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3207,12 +3294,16 @@ void q_datetimeedit_close_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QCloseEvent* event ```
 void q_datetimeedit_qbase_close_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3230,12 +3321,16 @@ void q_datetimeedit_hide_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QHideEvent* event ```
 void q_datetimeedit_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3253,12 +3348,16 @@ void q_datetimeedit_mouse_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QMouseEvent* event ```
 void q_datetimeedit_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3276,12 +3375,16 @@ void q_datetimeedit_mouse_move_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QMouseEvent* event ```
 void q_datetimeedit_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3299,12 +3402,16 @@ void q_datetimeedit_timer_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QTimerEvent* event ```
 void q_datetimeedit_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3322,12 +3429,16 @@ void q_datetimeedit_show_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QShowEvent* event ```
 void q_datetimeedit_qbase_show_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3345,12 +3456,16 @@ int32_t q_datetimeedit_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self ```
 int32_t q_datetimeedit_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3368,12 +3483,16 @@ void q_datetimeedit_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, bool visible ```
 void q_datetimeedit_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3391,12 +3510,16 @@ int32_t q_datetimeedit_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, int param1 ```
 int32_t q_datetimeedit_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3414,12 +3537,16 @@ bool q_datetimeedit_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self ```
 bool q_datetimeedit_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3437,12 +3564,16 @@ QPaintEngine* q_datetimeedit_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self ```
 QPaintEngine* q_datetimeedit_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3460,12 +3591,16 @@ void q_datetimeedit_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QMouseEvent* event ```
 void q_datetimeedit_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3483,12 +3618,16 @@ void q_datetimeedit_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QEnterEvent* event ```
 void q_datetimeedit_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3506,12 +3645,16 @@ void q_datetimeedit_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QEvent* event ```
 void q_datetimeedit_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3529,12 +3672,16 @@ void q_datetimeedit_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QMoveEvent* event ```
 void q_datetimeedit_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3552,12 +3699,16 @@ void q_datetimeedit_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QTabletEvent* event ```
 void q_datetimeedit_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3575,12 +3726,16 @@ void q_datetimeedit_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QActionEvent* event ```
 void q_datetimeedit_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3598,12 +3753,16 @@ void q_datetimeedit_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QDragEnterEvent* event ```
 void q_datetimeedit_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3621,12 +3780,16 @@ void q_datetimeedit_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QDragMoveEvent* event ```
 void q_datetimeedit_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3644,12 +3807,16 @@ void q_datetimeedit_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QDragLeaveEvent* event ```
 void q_datetimeedit_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3667,12 +3834,16 @@ void q_datetimeedit_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QDropEvent* event ```
 void q_datetimeedit_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3690,12 +3861,16 @@ bool q_datetimeedit_native_event(void* self, const char* eventType, void* messag
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, const char* eventType, void* message, intptr_t* result ```
 bool q_datetimeedit_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3713,12 +3888,16 @@ int32_t q_datetimeedit_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_datetimeedit_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3736,12 +3915,16 @@ void q_datetimeedit_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QPainter* painter ```
 void q_datetimeedit_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3759,12 +3942,16 @@ QPaintDevice* q_datetimeedit_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QPoint* offset ```
 QPaintDevice* q_datetimeedit_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3782,12 +3969,16 @@ QPainter* q_datetimeedit_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self ```
 QPainter* q_datetimeedit_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3805,12 +3996,16 @@ void q_datetimeedit_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QInputMethodEvent* param1 ```
 void q_datetimeedit_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3828,12 +4023,16 @@ bool q_datetimeedit_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QObject* watched, QEvent* event ```
 bool q_datetimeedit_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3851,12 +4050,16 @@ void q_datetimeedit_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QChildEvent* event ```
 void q_datetimeedit_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3874,12 +4077,16 @@ void q_datetimeedit_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QEvent* event ```
 void q_datetimeedit_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3897,12 +4104,16 @@ void q_datetimeedit_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QMetaMethod* signal ```
 void q_datetimeedit_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3920,12 +4131,16 @@ void q_datetimeedit_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QMetaMethod* signal ```
 void q_datetimeedit_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3943,12 +4158,16 @@ QLineEdit* q_datetimeedit_line_edit(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#lineEdit)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self ```
 QLineEdit* q_datetimeedit_qbase_line_edit(void* self);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#lineEdit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3966,12 +4185,16 @@ void q_datetimeedit_set_line_edit(void* self, void* edit);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setLineEdit)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QLineEdit* edit ```
 void q_datetimeedit_qbase_set_line_edit(void* self, void* edit);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setLineEdit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3989,12 +4212,16 @@ void q_datetimeedit_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self ```
 void q_datetimeedit_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4012,12 +4239,16 @@ void q_datetimeedit_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self ```
 void q_datetimeedit_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4035,12 +4266,16 @@ void q_datetimeedit_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self ```
 void q_datetimeedit_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4058,12 +4293,16 @@ bool q_datetimeedit_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self ```
 bool q_datetimeedit_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4081,12 +4320,16 @@ bool q_datetimeedit_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self ```
 bool q_datetimeedit_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4104,12 +4347,16 @@ QObject* q_datetimeedit_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self ```
 QObject* q_datetimeedit_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4127,12 +4374,16 @@ int32_t q_datetimeedit_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self ```
 int32_t q_datetimeedit_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4150,12 +4401,16 @@ int32_t q_datetimeedit_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, const char* signal ```
 int32_t q_datetimeedit_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4173,6 +4428,8 @@ bool q_datetimeedit_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, QMetaMethod* signal ```
@@ -4180,11 +4437,24 @@ bool q_datetimeedit_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QDateTimeEdit* self, bool (*slot)(QDateTimeEdit*, QMetaMethod*) ```
 void q_datetimeedit_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QDateTimeEdit* self, void (*slot)(QObject*, const char*) ```
+void q_datetimeedit_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dtor.QDateTimeEdit)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QDateTimeEdit* self ```
@@ -4215,7 +4485,7 @@ QTimeEdit* q_timeedit_new4(void* time, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QTimeEdit* self ```
-QMetaObject* q_timeedit_meta_object(void* self);
+const QMetaObject* q_timeedit_meta_object(void* self);
 
 /// ``` QTimeEdit* self, const char* param1 ```
 void* q_timeedit_metacast(void* self, const char* param1);
@@ -4243,6 +4513,8 @@ const char* q_timeedit_tr(const char* s);
 /// ``` QTimeEdit* self, QTime* time ```
 void q_timeedit_user_time_changed(void* self, void* time);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimeedit.html#userTimeChanged)
+///
 /// ``` QTimeEdit* self, void (*slot)(QTimeEdit*, QTime*) ```
 void q_timeedit_on_user_time_changed(void* self, void (*slot)(void*, void*));
 
@@ -4566,6 +4838,8 @@ void q_timeedit_date_time_changed(void* self, void* dateTime);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeChanged)
+///
 /// ``` QTimeEdit* self, void (*slot)(QDateTimeEdit*, QDateTime*) ```
 void q_timeedit_on_date_time_changed(void* self, void (*slot)(void*, void*));
 
@@ -4578,6 +4852,8 @@ void q_timeedit_time_changed(void* self, void* time);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#timeChanged)
+///
 /// ``` QTimeEdit* self, void (*slot)(QDateTimeEdit*, QTime*) ```
 void q_timeedit_on_time_changed(void* self, void (*slot)(void*, void*));
 
@@ -4589,6 +4865,8 @@ void q_timeedit_on_time_changed(void* self, void (*slot)(void*, void*));
 void q_timeedit_date_changed(void* self, void* date);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateChanged)
 ///
 /// ``` QTimeEdit* self, void (*slot)(QDateTimeEdit*, QDate*) ```
 void q_timeedit_on_date_changed(void* self, void (*slot)(void*, void*));
@@ -4805,6 +5083,8 @@ void q_timeedit_editing_finished(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#editingFinished)
+///
 /// ``` QTimeEdit* self, void (*slot)(QAbstractSpinBox*) ```
 void q_timeedit_on_editing_finished(void* self, void (*slot)(void*));
 
@@ -4932,7 +5212,7 @@ QRect* q_timeedit_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QTimeEdit* self ```
-QRect* q_timeedit_geometry(void* self);
+const QRect* q_timeedit_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5289,7 +5569,7 @@ QWidget* q_timeedit_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QTimeEdit* self ```
-QPalette* q_timeedit_palette(void* self);
+const QPalette* q_timeedit_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5331,7 +5611,7 @@ int64_t q_timeedit_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QTimeEdit* self ```
-QFont* q_timeedit_font(void* self);
+const QFont* q_timeedit_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6331,15 +6611,15 @@ void q_timeedit_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QTimeEdit* self, QAction* actions[] ```
-void q_timeedit_add_actions(void* self, void* actions[]);
+/// ``` QTimeEdit* self, libqt_list /* of QAction* */ actions ```
+void q_timeedit_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QTimeEdit* self, QAction* before, QAction* actions[] ```
-void q_timeedit_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QTimeEdit* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_timeedit_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -6539,6 +6819,8 @@ void q_timeedit_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QTimeEdit* self, void (*slot)(QWidget*, const char*) ```
 void q_timeedit_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -6550,6 +6832,8 @@ void q_timeedit_on_window_title_changed(void* self, void (*slot)(void*, const ch
 void q_timeedit_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QTimeEdit* self, void (*slot)(QWidget*, QIcon*) ```
 void q_timeedit_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -6563,6 +6847,8 @@ void q_timeedit_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QTimeEdit* self, void (*slot)(QWidget*, const char*) ```
 void q_timeedit_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -6574,6 +6860,8 @@ void q_timeedit_on_window_icon_text_changed(void* self, void (*slot)(void*, cons
 void q_timeedit_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QTimeEdit* self, void (*slot)(QWidget*, QPoint*) ```
 void q_timeedit_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -6779,7 +7067,7 @@ void q_timeedit_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QTimeEdit* self ```
-libqt_list /* of QObject* */ q_timeedit_children(void* self);
+const libqt_list /* of QObject* */ q_timeedit_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -6870,7 +7158,7 @@ QBindingStorage* q_timeedit_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QTimeEdit* self ```
-QBindingStorage* q_timeedit_binding_storage2(void* self);
+const QBindingStorage* q_timeedit_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -6880,6 +7168,8 @@ QBindingStorage* q_timeedit_binding_storage2(void* self);
 void q_timeedit_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QTimeEdit* self, void (*slot)(QObject*) ```
 void q_timeedit_on_destroyed(void* self, void (*slot)(void*));
@@ -6934,6 +7224,8 @@ QMetaObject__Connection* q_timeedit_connect4(void* self, void* sender, const cha
 void q_timeedit_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QTimeEdit* self, void (*slot)(QObject*, QObject*) ```
 void q_timeedit_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -7033,12 +7325,16 @@ QSize* q_timeedit_size_hint(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#sizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self ```
 QSize* q_timeedit_qbase_size_hint(void* self);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7056,12 +7352,16 @@ void q_timeedit_clear(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#clear)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self ```
 void q_timeedit_qbase_clear(void* self);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#clear)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7079,12 +7379,16 @@ void q_timeedit_step_by(void* self, int steps);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#stepBy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, int steps ```
 void q_timeedit_qbase_step_by(void* self, int steps);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#stepBy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7102,12 +7406,16 @@ bool q_timeedit_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QEvent* event ```
 bool q_timeedit_qbase_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7125,12 +7433,16 @@ void q_timeedit_key_press_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QKeyEvent* event ```
 void q_timeedit_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7148,12 +7460,16 @@ void q_timeedit_wheel_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QWheelEvent* event ```
 void q_timeedit_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7171,12 +7487,16 @@ void q_timeedit_focus_in_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QFocusEvent* event ```
 void q_timeedit_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7194,12 +7514,16 @@ bool q_timeedit_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, bool next ```
 bool q_timeedit_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7217,12 +7541,16 @@ int64_t q_timeedit_validate(void* self, const char* input, int* pos);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#validate)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, const char* input, int* pos ```
 int64_t q_timeedit_qbase_validate(void* self, const char* input, int* pos);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#validate)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7240,12 +7568,16 @@ void q_timeedit_fixup(void* self, const char* input);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#fixup)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, const char* input ```
 void q_timeedit_qbase_fixup(void* self, const char* input);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#fixup)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7263,12 +7595,16 @@ QDateTime* q_timeedit_date_time_from_text(void* self, const char* text);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeFromText)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, const char* text ```
 QDateTime* q_timeedit_qbase_date_time_from_text(void* self, const char* text);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeFromText)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7286,12 +7622,16 @@ const char* q_timeedit_text_from_date_time(void* self, void* dt);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#textFromDateTime)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QDateTime* dt ```
 const char* q_timeedit_qbase_text_from_date_time(void* self, void* dt);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#textFromDateTime)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7309,12 +7649,16 @@ int64_t q_timeedit_step_enabled(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#stepEnabled)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self ```
 int64_t q_timeedit_qbase_step_enabled(void* self);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#stepEnabled)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7332,12 +7676,16 @@ void q_timeedit_mouse_press_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#mousePressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QMouseEvent* event ```
 void q_timeedit_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7355,12 +7703,16 @@ void q_timeedit_paint_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#paintEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QPaintEvent* event ```
 void q_timeedit_qbase_paint_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#paintEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7378,12 +7730,16 @@ void q_timeedit_init_style_option(void* self, void* option);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#initStyleOption)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QStyleOptionSpinBox* option ```
 void q_timeedit_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#initStyleOption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7401,12 +7757,16 @@ QSize* q_timeedit_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self ```
 QSize* q_timeedit_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7424,12 +7784,16 @@ QVariant* q_timeedit_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_timeedit_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7447,12 +7811,16 @@ void q_timeedit_resize_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#resizeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QResizeEvent* event ```
 void q_timeedit_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7470,12 +7838,16 @@ void q_timeedit_key_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QKeyEvent* event ```
 void q_timeedit_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7493,12 +7865,16 @@ void q_timeedit_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QFocusEvent* event ```
 void q_timeedit_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7516,12 +7892,16 @@ void q_timeedit_context_menu_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QContextMenuEvent* event ```
 void q_timeedit_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7539,12 +7919,16 @@ void q_timeedit_change_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#changeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QEvent* event ```
 void q_timeedit_qbase_change_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7562,12 +7946,16 @@ void q_timeedit_close_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QCloseEvent* event ```
 void q_timeedit_qbase_close_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7585,12 +7973,16 @@ void q_timeedit_hide_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QHideEvent* event ```
 void q_timeedit_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7608,12 +8000,16 @@ void q_timeedit_mouse_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QMouseEvent* event ```
 void q_timeedit_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7631,12 +8027,16 @@ void q_timeedit_mouse_move_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QMouseEvent* event ```
 void q_timeedit_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7654,12 +8054,16 @@ void q_timeedit_timer_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QTimerEvent* event ```
 void q_timeedit_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7677,12 +8081,16 @@ void q_timeedit_show_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QShowEvent* event ```
 void q_timeedit_qbase_show_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7700,12 +8108,16 @@ int32_t q_timeedit_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self ```
 int32_t q_timeedit_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7723,12 +8135,16 @@ void q_timeedit_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, bool visible ```
 void q_timeedit_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7746,12 +8162,16 @@ int32_t q_timeedit_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, int param1 ```
 int32_t q_timeedit_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7769,12 +8189,16 @@ bool q_timeedit_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self ```
 bool q_timeedit_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7792,12 +8216,16 @@ QPaintEngine* q_timeedit_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self ```
 QPaintEngine* q_timeedit_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7815,12 +8243,16 @@ void q_timeedit_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QMouseEvent* event ```
 void q_timeedit_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7838,12 +8270,16 @@ void q_timeedit_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QEnterEvent* event ```
 void q_timeedit_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7861,12 +8297,16 @@ void q_timeedit_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QEvent* event ```
 void q_timeedit_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7884,12 +8324,16 @@ void q_timeedit_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QMoveEvent* event ```
 void q_timeedit_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7907,12 +8351,16 @@ void q_timeedit_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QTabletEvent* event ```
 void q_timeedit_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7930,12 +8378,16 @@ void q_timeedit_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QActionEvent* event ```
 void q_timeedit_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7953,12 +8405,16 @@ void q_timeedit_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QDragEnterEvent* event ```
 void q_timeedit_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7976,12 +8432,16 @@ void q_timeedit_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QDragMoveEvent* event ```
 void q_timeedit_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7999,12 +8459,16 @@ void q_timeedit_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QDragLeaveEvent* event ```
 void q_timeedit_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8022,12 +8486,16 @@ void q_timeedit_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QDropEvent* event ```
 void q_timeedit_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8045,12 +8513,16 @@ bool q_timeedit_native_event(void* self, const char* eventType, void* message, i
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, const char* eventType, void* message, intptr_t* result ```
 bool q_timeedit_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8068,12 +8540,16 @@ int32_t q_timeedit_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_timeedit_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8091,12 +8567,16 @@ void q_timeedit_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QPainter* painter ```
 void q_timeedit_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8114,12 +8594,16 @@ QPaintDevice* q_timeedit_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QPoint* offset ```
 QPaintDevice* q_timeedit_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8137,12 +8621,16 @@ QPainter* q_timeedit_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self ```
 QPainter* q_timeedit_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8160,12 +8648,16 @@ void q_timeedit_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QInputMethodEvent* param1 ```
 void q_timeedit_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8183,12 +8675,16 @@ bool q_timeedit_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QObject* watched, QEvent* event ```
 bool q_timeedit_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8206,12 +8702,16 @@ void q_timeedit_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QChildEvent* event ```
 void q_timeedit_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8229,12 +8729,16 @@ void q_timeedit_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QEvent* event ```
 void q_timeedit_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8252,12 +8756,16 @@ void q_timeedit_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QMetaMethod* signal ```
 void q_timeedit_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8275,12 +8783,16 @@ void q_timeedit_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QMetaMethod* signal ```
 void q_timeedit_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8298,12 +8810,16 @@ QLineEdit* q_timeedit_line_edit(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#lineEdit)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self ```
 QLineEdit* q_timeedit_qbase_line_edit(void* self);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#lineEdit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8321,12 +8837,16 @@ void q_timeedit_set_line_edit(void* self, void* edit);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setLineEdit)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QLineEdit* edit ```
 void q_timeedit_qbase_set_line_edit(void* self, void* edit);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setLineEdit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8344,12 +8864,16 @@ void q_timeedit_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self ```
 void q_timeedit_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8367,12 +8891,16 @@ void q_timeedit_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self ```
 void q_timeedit_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8390,12 +8918,16 @@ void q_timeedit_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self ```
 void q_timeedit_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8413,12 +8945,16 @@ bool q_timeedit_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self ```
 bool q_timeedit_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8436,12 +8972,16 @@ bool q_timeedit_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self ```
 bool q_timeedit_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8459,12 +8999,16 @@ QObject* q_timeedit_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self ```
 QObject* q_timeedit_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8482,12 +9026,16 @@ int32_t q_timeedit_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self ```
 int32_t q_timeedit_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8505,12 +9053,16 @@ int32_t q_timeedit_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, const char* signal ```
 int32_t q_timeedit_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -8528,6 +9080,8 @@ bool q_timeedit_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, QMetaMethod* signal ```
@@ -8535,11 +9089,24 @@ bool q_timeedit_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QTimeEdit* self, bool (*slot)(QTimeEdit*, QMetaMethod*) ```
 void q_timeedit_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QTimeEdit* self, void (*slot)(QObject*, const char*) ```
+void q_timeedit_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimeedit.html#dtor.QTimeEdit)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTimeEdit* self ```
@@ -8570,7 +9137,7 @@ QDateEdit* q_dateedit_new4(void* date, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QDateEdit* self ```
-QMetaObject* q_dateedit_meta_object(void* self);
+const QMetaObject* q_dateedit_meta_object(void* self);
 
 /// ``` QDateEdit* self, const char* param1 ```
 void* q_dateedit_metacast(void* self, const char* param1);
@@ -8598,6 +9165,8 @@ const char* q_dateedit_tr(const char* s);
 /// ``` QDateEdit* self, QDate* date ```
 void q_dateedit_user_date_changed(void* self, void* date);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdateedit.html#userDateChanged)
+///
 /// ``` QDateEdit* self, void (*slot)(QDateEdit*, QDate*) ```
 void q_dateedit_on_user_date_changed(void* self, void (*slot)(void*, void*));
 
@@ -8921,6 +9490,8 @@ void q_dateedit_date_time_changed(void* self, void* dateTime);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeChanged)
+///
 /// ``` QDateEdit* self, void (*slot)(QDateTimeEdit*, QDateTime*) ```
 void q_dateedit_on_date_time_changed(void* self, void (*slot)(void*, void*));
 
@@ -8933,6 +9504,8 @@ void q_dateedit_time_changed(void* self, void* time);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#timeChanged)
+///
 /// ``` QDateEdit* self, void (*slot)(QDateTimeEdit*, QTime*) ```
 void q_dateedit_on_time_changed(void* self, void (*slot)(void*, void*));
 
@@ -8944,6 +9517,8 @@ void q_dateedit_on_time_changed(void* self, void (*slot)(void*, void*));
 void q_dateedit_date_changed(void* self, void* date);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateChanged)
 ///
 /// ``` QDateEdit* self, void (*slot)(QDateTimeEdit*, QDate*) ```
 void q_dateedit_on_date_changed(void* self, void (*slot)(void*, void*));
@@ -9160,6 +9735,8 @@ void q_dateedit_editing_finished(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#editingFinished)
+///
 /// ``` QDateEdit* self, void (*slot)(QAbstractSpinBox*) ```
 void q_dateedit_on_editing_finished(void* self, void (*slot)(void*));
 
@@ -9287,7 +9864,7 @@ QRect* q_dateedit_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QDateEdit* self ```
-QRect* q_dateedit_geometry(void* self);
+const QRect* q_dateedit_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -9644,7 +10221,7 @@ QWidget* q_dateedit_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QDateEdit* self ```
-QPalette* q_dateedit_palette(void* self);
+const QPalette* q_dateedit_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -9686,7 +10263,7 @@ int64_t q_dateedit_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QDateEdit* self ```
-QFont* q_dateedit_font(void* self);
+const QFont* q_dateedit_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -10686,15 +11263,15 @@ void q_dateedit_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QDateEdit* self, QAction* actions[] ```
-void q_dateedit_add_actions(void* self, void* actions[]);
+/// ``` QDateEdit* self, libqt_list /* of QAction* */ actions ```
+void q_dateedit_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QDateEdit* self, QAction* before, QAction* actions[] ```
-void q_dateedit_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QDateEdit* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_dateedit_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -10894,6 +11471,8 @@ void q_dateedit_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QDateEdit* self, void (*slot)(QWidget*, const char*) ```
 void q_dateedit_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -10905,6 +11484,8 @@ void q_dateedit_on_window_title_changed(void* self, void (*slot)(void*, const ch
 void q_dateedit_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QDateEdit* self, void (*slot)(QWidget*, QIcon*) ```
 void q_dateedit_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -10918,6 +11499,8 @@ void q_dateedit_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QDateEdit* self, void (*slot)(QWidget*, const char*) ```
 void q_dateedit_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -10929,6 +11512,8 @@ void q_dateedit_on_window_icon_text_changed(void* self, void (*slot)(void*, cons
 void q_dateedit_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QDateEdit* self, void (*slot)(QWidget*, QPoint*) ```
 void q_dateedit_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -11134,7 +11719,7 @@ void q_dateedit_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QDateEdit* self ```
-libqt_list /* of QObject* */ q_dateedit_children(void* self);
+const libqt_list /* of QObject* */ q_dateedit_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -11225,7 +11810,7 @@ QBindingStorage* q_dateedit_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QDateEdit* self ```
-QBindingStorage* q_dateedit_binding_storage2(void* self);
+const QBindingStorage* q_dateedit_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -11235,6 +11820,8 @@ QBindingStorage* q_dateedit_binding_storage2(void* self);
 void q_dateedit_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QDateEdit* self, void (*slot)(QObject*) ```
 void q_dateedit_on_destroyed(void* self, void (*slot)(void*));
@@ -11289,6 +11876,8 @@ QMetaObject__Connection* q_dateedit_connect4(void* self, void* sender, const cha
 void q_dateedit_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QDateEdit* self, void (*slot)(QObject*, QObject*) ```
 void q_dateedit_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -11388,12 +11977,16 @@ QSize* q_dateedit_size_hint(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#sizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self ```
 QSize* q_dateedit_qbase_size_hint(void* self);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11411,12 +12004,16 @@ void q_dateedit_clear(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#clear)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self ```
 void q_dateedit_qbase_clear(void* self);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#clear)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11434,12 +12031,16 @@ void q_dateedit_step_by(void* self, int steps);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#stepBy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, int steps ```
 void q_dateedit_qbase_step_by(void* self, int steps);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#stepBy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11457,12 +12058,16 @@ bool q_dateedit_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QEvent* event ```
 bool q_dateedit_qbase_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11480,12 +12085,16 @@ void q_dateedit_key_press_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QKeyEvent* event ```
 void q_dateedit_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11503,12 +12112,16 @@ void q_dateedit_wheel_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QWheelEvent* event ```
 void q_dateedit_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11526,12 +12139,16 @@ void q_dateedit_focus_in_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QFocusEvent* event ```
 void q_dateedit_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11549,12 +12166,16 @@ bool q_dateedit_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, bool next ```
 bool q_dateedit_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11572,12 +12193,16 @@ int64_t q_dateedit_validate(void* self, const char* input, int* pos);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#validate)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, const char* input, int* pos ```
 int64_t q_dateedit_qbase_validate(void* self, const char* input, int* pos);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#validate)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11595,12 +12220,16 @@ void q_dateedit_fixup(void* self, const char* input);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#fixup)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, const char* input ```
 void q_dateedit_qbase_fixup(void* self, const char* input);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#fixup)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11618,12 +12247,16 @@ QDateTime* q_dateedit_date_time_from_text(void* self, const char* text);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeFromText)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, const char* text ```
 QDateTime* q_dateedit_qbase_date_time_from_text(void* self, const char* text);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeFromText)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11641,12 +12274,16 @@ const char* q_dateedit_text_from_date_time(void* self, void* dt);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#textFromDateTime)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QDateTime* dt ```
 const char* q_dateedit_qbase_text_from_date_time(void* self, void* dt);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#textFromDateTime)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11664,12 +12301,16 @@ int64_t q_dateedit_step_enabled(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#stepEnabled)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self ```
 int64_t q_dateedit_qbase_step_enabled(void* self);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#stepEnabled)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11687,12 +12328,16 @@ void q_dateedit_mouse_press_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#mousePressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QMouseEvent* event ```
 void q_dateedit_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11710,12 +12355,16 @@ void q_dateedit_paint_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#paintEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QPaintEvent* event ```
 void q_dateedit_qbase_paint_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#paintEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11733,12 +12382,16 @@ void q_dateedit_init_style_option(void* self, void* option);
 
 /// Inherited from QDateTimeEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#initStyleOption)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QStyleOptionSpinBox* option ```
 void q_dateedit_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#initStyleOption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11756,12 +12409,16 @@ QSize* q_dateedit_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self ```
 QSize* q_dateedit_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11779,12 +12436,16 @@ QVariant* q_dateedit_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_dateedit_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11802,12 +12463,16 @@ void q_dateedit_resize_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#resizeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QResizeEvent* event ```
 void q_dateedit_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11825,12 +12490,16 @@ void q_dateedit_key_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QKeyEvent* event ```
 void q_dateedit_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11848,12 +12517,16 @@ void q_dateedit_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QFocusEvent* event ```
 void q_dateedit_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11871,12 +12544,16 @@ void q_dateedit_context_menu_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QContextMenuEvent* event ```
 void q_dateedit_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11894,12 +12571,16 @@ void q_dateedit_change_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#changeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QEvent* event ```
 void q_dateedit_qbase_change_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11917,12 +12598,16 @@ void q_dateedit_close_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QCloseEvent* event ```
 void q_dateedit_qbase_close_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11940,12 +12625,16 @@ void q_dateedit_hide_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QHideEvent* event ```
 void q_dateedit_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11963,12 +12652,16 @@ void q_dateedit_mouse_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QMouseEvent* event ```
 void q_dateedit_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -11986,12 +12679,16 @@ void q_dateedit_mouse_move_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QMouseEvent* event ```
 void q_dateedit_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12009,12 +12706,16 @@ void q_dateedit_timer_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QTimerEvent* event ```
 void q_dateedit_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12032,12 +12733,16 @@ void q_dateedit_show_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QShowEvent* event ```
 void q_dateedit_qbase_show_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12055,12 +12760,16 @@ int32_t q_dateedit_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self ```
 int32_t q_dateedit_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12078,12 +12787,16 @@ void q_dateedit_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, bool visible ```
 void q_dateedit_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12101,12 +12814,16 @@ int32_t q_dateedit_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, int param1 ```
 int32_t q_dateedit_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12124,12 +12841,16 @@ bool q_dateedit_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self ```
 bool q_dateedit_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12147,12 +12868,16 @@ QPaintEngine* q_dateedit_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self ```
 QPaintEngine* q_dateedit_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12170,12 +12895,16 @@ void q_dateedit_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QMouseEvent* event ```
 void q_dateedit_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12193,12 +12922,16 @@ void q_dateedit_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QEnterEvent* event ```
 void q_dateedit_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12216,12 +12949,16 @@ void q_dateedit_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QEvent* event ```
 void q_dateedit_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12239,12 +12976,16 @@ void q_dateedit_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QMoveEvent* event ```
 void q_dateedit_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12262,12 +13003,16 @@ void q_dateedit_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QTabletEvent* event ```
 void q_dateedit_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12285,12 +13030,16 @@ void q_dateedit_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QActionEvent* event ```
 void q_dateedit_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12308,12 +13057,16 @@ void q_dateedit_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QDragEnterEvent* event ```
 void q_dateedit_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12331,12 +13084,16 @@ void q_dateedit_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QDragMoveEvent* event ```
 void q_dateedit_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12354,12 +13111,16 @@ void q_dateedit_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QDragLeaveEvent* event ```
 void q_dateedit_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12377,12 +13138,16 @@ void q_dateedit_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QDropEvent* event ```
 void q_dateedit_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12400,12 +13165,16 @@ bool q_dateedit_native_event(void* self, const char* eventType, void* message, i
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, const char* eventType, void* message, intptr_t* result ```
 bool q_dateedit_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12423,12 +13192,16 @@ int32_t q_dateedit_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_dateedit_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12446,12 +13219,16 @@ void q_dateedit_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QPainter* painter ```
 void q_dateedit_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12469,12 +13246,16 @@ QPaintDevice* q_dateedit_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QPoint* offset ```
 QPaintDevice* q_dateedit_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12492,12 +13273,16 @@ QPainter* q_dateedit_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self ```
 QPainter* q_dateedit_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12515,12 +13300,16 @@ void q_dateedit_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QInputMethodEvent* param1 ```
 void q_dateedit_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12538,12 +13327,16 @@ bool q_dateedit_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QObject* watched, QEvent* event ```
 bool q_dateedit_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12561,12 +13354,16 @@ void q_dateedit_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QChildEvent* event ```
 void q_dateedit_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12584,12 +13381,16 @@ void q_dateedit_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QEvent* event ```
 void q_dateedit_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12607,12 +13408,16 @@ void q_dateedit_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QMetaMethod* signal ```
 void q_dateedit_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12630,12 +13435,16 @@ void q_dateedit_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QMetaMethod* signal ```
 void q_dateedit_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12653,12 +13462,16 @@ QLineEdit* q_dateedit_line_edit(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#lineEdit)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self ```
 QLineEdit* q_dateedit_qbase_line_edit(void* self);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#lineEdit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12676,12 +13489,16 @@ void q_dateedit_set_line_edit(void* self, void* edit);
 
 /// Inherited from QAbstractSpinBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setLineEdit)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QLineEdit* edit ```
 void q_dateedit_qbase_set_line_edit(void* self, void* edit);
 
 /// Inherited from QAbstractSpinBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setLineEdit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12699,12 +13516,16 @@ void q_dateedit_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self ```
 void q_dateedit_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12722,12 +13543,16 @@ void q_dateedit_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self ```
 void q_dateedit_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12745,12 +13570,16 @@ void q_dateedit_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self ```
 void q_dateedit_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12768,12 +13597,16 @@ bool q_dateedit_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self ```
 bool q_dateedit_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12791,12 +13624,16 @@ bool q_dateedit_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self ```
 bool q_dateedit_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12814,12 +13651,16 @@ QObject* q_dateedit_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self ```
 QObject* q_dateedit_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12837,12 +13678,16 @@ int32_t q_dateedit_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self ```
 int32_t q_dateedit_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12860,12 +13705,16 @@ int32_t q_dateedit_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, const char* signal ```
 int32_t q_dateedit_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -12883,6 +13732,8 @@ bool q_dateedit_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDateEdit* self, QMetaMethod* signal ```
@@ -12890,11 +13741,24 @@ bool q_dateedit_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QDateEdit* self, bool (*slot)(QDateEdit*, QMetaMethod*) ```
 void q_dateedit_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QDateEdit* self, void (*slot)(QObject*, const char*) ```
+void q_dateedit_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdateedit.html#dtor.QDateEdit)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QDateEdit* self ```

@@ -15,43 +15,18 @@
 #include "libqabstractbutton.h"
 #include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
-#include "libqbuttongroup.h"
-#include "libqcursor.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
-#include "libqlocale.h"
-#include "libqmargins.h"
 #include "libqmenu.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqscreen.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
 #include "libqstyleoption.h"
-#include "libqthread.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qtoolbutton.html
 
@@ -68,7 +43,7 @@ QToolButton* q_toolbutton_new2();
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QToolButton* self ```
-QMetaObject* q_toolbutton_meta_object(void* self);
+const QMetaObject* q_toolbutton_meta_object(void* self);
 
 /// ``` QToolButton* self, const char* param1 ```
 void* q_toolbutton_metacast(void* self, const char* param1);
@@ -96,11 +71,15 @@ const char* q_toolbutton_tr(const char* s);
 /// ``` QToolButton* self ```
 QSize* q_toolbutton_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QToolButton* self, QSize* (*slot)() ```
 void q_toolbutton_on_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QToolButton* self ```
@@ -111,11 +90,15 @@ QSize* q_toolbutton_qbase_size_hint(void* self);
 /// ``` QToolButton* self ```
 QSize* q_toolbutton_minimum_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#minimumSizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QToolButton* self, QSize* (*slot)() ```
 void q_toolbutton_on_minimum_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#minimumSizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QToolButton* self ```
@@ -191,6 +174,8 @@ void q_toolbutton_set_default_action(void* self, void* defaultAction);
 /// ``` QToolButton* self, QAction* param1 ```
 void q_toolbutton_triggered(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#triggered)
+///
 /// ``` QToolButton* self, void (*slot)(QToolButton*, QAction*) ```
 void q_toolbutton_on_triggered(void* self, void (*slot)(void*, void*));
 
@@ -199,11 +184,15 @@ void q_toolbutton_on_triggered(void* self, void (*slot)(void*, void*));
 /// ``` QToolButton* self, QEvent* e ```
 bool q_toolbutton_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QToolButton* self, bool (*slot)(QToolButton*, QEvent*) ```
 void q_toolbutton_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QToolButton* self, QEvent* e ```
@@ -214,11 +203,15 @@ bool q_toolbutton_qbase_event(void* self, void* e);
 /// ``` QToolButton* self, QMouseEvent* param1 ```
 void q_toolbutton_mouse_press_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#mousePressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QToolButton* self, void (*slot)(QToolButton*, QMouseEvent*) ```
 void q_toolbutton_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#mousePressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QToolButton* self, QMouseEvent* param1 ```
@@ -229,11 +222,15 @@ void q_toolbutton_qbase_mouse_press_event(void* self, void* param1);
 /// ``` QToolButton* self, QMouseEvent* param1 ```
 void q_toolbutton_mouse_release_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#mouseReleaseEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QToolButton* self, void (*slot)(QToolButton*, QMouseEvent*) ```
 void q_toolbutton_on_mouse_release_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#mouseReleaseEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QToolButton* self, QMouseEvent* param1 ```
@@ -244,11 +241,15 @@ void q_toolbutton_qbase_mouse_release_event(void* self, void* param1);
 /// ``` QToolButton* self, QPaintEvent* param1 ```
 void q_toolbutton_paint_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#paintEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QToolButton* self, void (*slot)(QToolButton*, QPaintEvent*) ```
 void q_toolbutton_on_paint_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#paintEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QToolButton* self, QPaintEvent* param1 ```
@@ -259,11 +260,15 @@ void q_toolbutton_qbase_paint_event(void* self, void* param1);
 /// ``` QToolButton* self, QActionEvent* param1 ```
 void q_toolbutton_action_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#actionEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QToolButton* self, void (*slot)(QToolButton*, QActionEvent*) ```
 void q_toolbutton_on_action_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#actionEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QToolButton* self, QActionEvent* param1 ```
@@ -274,11 +279,15 @@ void q_toolbutton_qbase_action_event(void* self, void* param1);
 /// ``` QToolButton* self, QEnterEvent* param1 ```
 void q_toolbutton_enter_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#enterEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QToolButton* self, void (*slot)(QToolButton*, QEnterEvent*) ```
 void q_toolbutton_on_enter_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#enterEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QToolButton* self, QEnterEvent* param1 ```
@@ -289,11 +298,15 @@ void q_toolbutton_qbase_enter_event(void* self, void* param1);
 /// ``` QToolButton* self, QEvent* param1 ```
 void q_toolbutton_leave_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#leaveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QToolButton* self, void (*slot)(QToolButton*, QEvent*) ```
 void q_toolbutton_on_leave_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#leaveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QToolButton* self, QEvent* param1 ```
@@ -304,11 +317,15 @@ void q_toolbutton_qbase_leave_event(void* self, void* param1);
 /// ``` QToolButton* self, QTimerEvent* param1 ```
 void q_toolbutton_timer_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#timerEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QToolButton* self, void (*slot)(QToolButton*, QTimerEvent*) ```
 void q_toolbutton_on_timer_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#timerEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QToolButton* self, QTimerEvent* param1 ```
@@ -319,11 +336,15 @@ void q_toolbutton_qbase_timer_event(void* self, void* param1);
 /// ``` QToolButton* self, QEvent* param1 ```
 void q_toolbutton_change_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#changeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QToolButton* self, void (*slot)(QToolButton*, QEvent*) ```
 void q_toolbutton_on_change_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#changeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QToolButton* self, QEvent* param1 ```
@@ -334,11 +355,15 @@ void q_toolbutton_qbase_change_event(void* self, void* param1);
 /// ``` QToolButton* self, QPoint* pos ```
 bool q_toolbutton_hit_button(void* self, void* pos);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#hitButton)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QToolButton* self, bool (*slot)(QToolButton*, QPoint*) ```
 void q_toolbutton_on_hit_button(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#hitButton)
+///
 /// Base class method implementation
 ///
 /// ``` QToolButton* self, QPoint* pos ```
@@ -349,11 +374,15 @@ bool q_toolbutton_qbase_hit_button(void* self, void* pos);
 /// ``` QToolButton* self ```
 void q_toolbutton_check_state_set(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#checkStateSet)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QToolButton* self, void (*slot)() ```
 void q_toolbutton_on_check_state_set(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#checkStateSet)
+///
 /// Base class method implementation
 ///
 /// ``` QToolButton* self ```
@@ -364,11 +393,15 @@ void q_toolbutton_qbase_check_state_set(void* self);
 /// ``` QToolButton* self ```
 void q_toolbutton_next_check_state(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#nextCheckState)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QToolButton* self, void (*slot)() ```
 void q_toolbutton_on_next_check_state(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#nextCheckState)
+///
 /// Base class method implementation
 ///
 /// ``` QToolButton* self ```
@@ -379,11 +412,15 @@ void q_toolbutton_qbase_next_check_state(void* self);
 /// ``` QToolButton* self, QStyleOptionToolButton* option ```
 void q_toolbutton_init_style_option(void* self, void* option);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#initStyleOption)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QToolButton* self, void (*slot)(QToolButton*, QStyleOptionToolButton*) ```
 void q_toolbutton_on_init_style_option(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#initStyleOption)
+///
 /// Base class method implementation
 ///
 /// ``` QToolButton* self, QStyleOptionToolButton* option ```
@@ -590,6 +627,8 @@ void q_toolbutton_pressed(void* self);
 
 /// Inherited from QAbstractButton
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#pressed)
+///
 /// ``` QToolButton* self, void (*slot)(QAbstractButton*) ```
 void q_toolbutton_on_pressed(void* self, void (*slot)(void*));
 
@@ -601,6 +640,8 @@ void q_toolbutton_on_pressed(void* self, void (*slot)(void*));
 void q_toolbutton_released(void* self);
 
 /// Inherited from QAbstractButton
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#released)
 ///
 /// ``` QToolButton* self, void (*slot)(QAbstractButton*) ```
 void q_toolbutton_on_released(void* self, void (*slot)(void*));
@@ -614,6 +655,8 @@ void q_toolbutton_clicked(void* self);
 
 /// Inherited from QAbstractButton
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
+///
 /// ``` QToolButton* self, void (*slot)(QAbstractButton*) ```
 void q_toolbutton_on_clicked(void* self, void (*slot)(void*));
 
@@ -626,6 +669,8 @@ void q_toolbutton_toggled(void* self, bool checked);
 
 /// Inherited from QAbstractButton
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#toggled)
+///
 /// ``` QToolButton* self, void (*slot)(QAbstractButton*, bool) ```
 void q_toolbutton_on_toggled(void* self, void (*slot)(void*, bool));
 
@@ -637,6 +682,8 @@ void q_toolbutton_on_toggled(void* self, void (*slot)(void*, bool));
 void q_toolbutton_clicked1(void* self, bool checked);
 
 /// Inherited from QAbstractButton
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
 /// ``` QToolButton* self, void (*slot)(QAbstractButton*, bool) ```
 void q_toolbutton_on_clicked1(void* self, void (*slot)(void*, bool));
@@ -765,7 +812,7 @@ QRect* q_toolbutton_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QToolButton* self ```
-QRect* q_toolbutton_geometry(void* self);
+const QRect* q_toolbutton_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1122,7 +1169,7 @@ QWidget* q_toolbutton_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QToolButton* self ```
-QPalette* q_toolbutton_palette(void* self);
+const QPalette* q_toolbutton_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1164,7 +1211,7 @@ int64_t q_toolbutton_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QToolButton* self ```
-QFont* q_toolbutton_font(void* self);
+const QFont* q_toolbutton_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2164,15 +2211,15 @@ void q_toolbutton_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QToolButton* self, QAction* actions[] ```
-void q_toolbutton_add_actions(void* self, void* actions[]);
+/// ``` QToolButton* self, libqt_list /* of QAction* */ actions ```
+void q_toolbutton_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QToolButton* self, QAction* before, QAction* actions[] ```
-void q_toolbutton_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QToolButton* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_toolbutton_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2372,6 +2419,8 @@ void q_toolbutton_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QToolButton* self, void (*slot)(QWidget*, const char*) ```
 void q_toolbutton_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2383,6 +2432,8 @@ void q_toolbutton_on_window_title_changed(void* self, void (*slot)(void*, const 
 void q_toolbutton_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QToolButton* self, void (*slot)(QWidget*, QIcon*) ```
 void q_toolbutton_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -2396,6 +2447,8 @@ void q_toolbutton_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QToolButton* self, void (*slot)(QWidget*, const char*) ```
 void q_toolbutton_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2407,6 +2460,8 @@ void q_toolbutton_on_window_icon_text_changed(void* self, void (*slot)(void*, co
 void q_toolbutton_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QToolButton* self, void (*slot)(QWidget*, QPoint*) ```
 void q_toolbutton_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2612,7 +2667,7 @@ void q_toolbutton_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QToolButton* self ```
-libqt_list /* of QObject* */ q_toolbutton_children(void* self);
+const libqt_list /* of QObject* */ q_toolbutton_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2703,7 +2758,7 @@ QBindingStorage* q_toolbutton_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QToolButton* self ```
-QBindingStorage* q_toolbutton_binding_storage2(void* self);
+const QBindingStorage* q_toolbutton_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2713,6 +2768,8 @@ QBindingStorage* q_toolbutton_binding_storage2(void* self);
 void q_toolbutton_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QToolButton* self, void (*slot)(QObject*) ```
 void q_toolbutton_on_destroyed(void* self, void (*slot)(void*));
@@ -2767,6 +2824,8 @@ QMetaObject__Connection* q_toolbutton_connect4(void* self, void* sender, const c
 void q_toolbutton_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QToolButton* self, void (*slot)(QObject*, QObject*) ```
 void q_toolbutton_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -2866,12 +2925,16 @@ void q_toolbutton_key_press_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QKeyEvent* e ```
 void q_toolbutton_qbase_key_press_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2889,12 +2952,16 @@ void q_toolbutton_key_release_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QKeyEvent* e ```
 void q_toolbutton_qbase_key_release_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2912,12 +2979,16 @@ void q_toolbutton_mouse_move_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QMouseEvent* e ```
 void q_toolbutton_qbase_mouse_move_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2935,12 +3006,16 @@ void q_toolbutton_focus_in_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QFocusEvent* e ```
 void q_toolbutton_qbase_focus_in_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2958,12 +3033,16 @@ void q_toolbutton_focus_out_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QFocusEvent* e ```
 void q_toolbutton_qbase_focus_out_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2981,12 +3060,16 @@ int32_t q_toolbutton_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self ```
 int32_t q_toolbutton_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3004,12 +3087,16 @@ void q_toolbutton_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, bool visible ```
 void q_toolbutton_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3027,12 +3114,16 @@ int32_t q_toolbutton_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, int param1 ```
 int32_t q_toolbutton_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3050,12 +3141,16 @@ bool q_toolbutton_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self ```
 bool q_toolbutton_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3073,12 +3168,16 @@ QPaintEngine* q_toolbutton_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self ```
 QPaintEngine* q_toolbutton_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3096,12 +3195,16 @@ void q_toolbutton_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QMouseEvent* event ```
 void q_toolbutton_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3119,12 +3222,16 @@ void q_toolbutton_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QWheelEvent* event ```
 void q_toolbutton_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3142,12 +3249,16 @@ void q_toolbutton_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QMoveEvent* event ```
 void q_toolbutton_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3165,12 +3276,16 @@ void q_toolbutton_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QResizeEvent* event ```
 void q_toolbutton_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3188,12 +3303,16 @@ void q_toolbutton_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QCloseEvent* event ```
 void q_toolbutton_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3211,12 +3330,16 @@ void q_toolbutton_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QContextMenuEvent* event ```
 void q_toolbutton_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3234,12 +3357,16 @@ void q_toolbutton_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QTabletEvent* event ```
 void q_toolbutton_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3257,12 +3384,16 @@ void q_toolbutton_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QDragEnterEvent* event ```
 void q_toolbutton_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3280,12 +3411,16 @@ void q_toolbutton_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QDragMoveEvent* event ```
 void q_toolbutton_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3303,12 +3438,16 @@ void q_toolbutton_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QDragLeaveEvent* event ```
 void q_toolbutton_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3326,12 +3465,16 @@ void q_toolbutton_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QDropEvent* event ```
 void q_toolbutton_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3349,12 +3492,16 @@ void q_toolbutton_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QShowEvent* event ```
 void q_toolbutton_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3372,12 +3519,16 @@ void q_toolbutton_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QHideEvent* event ```
 void q_toolbutton_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3395,12 +3546,16 @@ bool q_toolbutton_native_event(void* self, const char* eventType, void* message,
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, const char* eventType, void* message, intptr_t* result ```
 bool q_toolbutton_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3418,12 +3573,16 @@ int32_t q_toolbutton_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_toolbutton_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3441,12 +3600,16 @@ void q_toolbutton_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QPainter* painter ```
 void q_toolbutton_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3464,12 +3627,16 @@ QPaintDevice* q_toolbutton_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QPoint* offset ```
 QPaintDevice* q_toolbutton_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3487,12 +3654,16 @@ QPainter* q_toolbutton_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self ```
 QPainter* q_toolbutton_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3510,12 +3681,16 @@ void q_toolbutton_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QInputMethodEvent* param1 ```
 void q_toolbutton_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3533,12 +3708,16 @@ QVariant* q_toolbutton_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_toolbutton_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3556,12 +3735,16 @@ bool q_toolbutton_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, bool next ```
 bool q_toolbutton_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3579,12 +3762,16 @@ bool q_toolbutton_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QObject* watched, QEvent* event ```
 bool q_toolbutton_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3602,12 +3789,16 @@ void q_toolbutton_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QChildEvent* event ```
 void q_toolbutton_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3625,12 +3816,16 @@ void q_toolbutton_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QEvent* event ```
 void q_toolbutton_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3648,12 +3843,16 @@ void q_toolbutton_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QMetaMethod* signal ```
 void q_toolbutton_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3671,12 +3870,16 @@ void q_toolbutton_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QMetaMethod* signal ```
 void q_toolbutton_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3694,12 +3897,16 @@ void q_toolbutton_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self ```
 void q_toolbutton_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3717,12 +3924,16 @@ void q_toolbutton_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self ```
 void q_toolbutton_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3740,12 +3951,16 @@ void q_toolbutton_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self ```
 void q_toolbutton_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3763,12 +3978,16 @@ bool q_toolbutton_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self ```
 bool q_toolbutton_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3786,12 +4005,16 @@ bool q_toolbutton_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self ```
 bool q_toolbutton_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3809,12 +4032,16 @@ QObject* q_toolbutton_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self ```
 QObject* q_toolbutton_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3832,12 +4059,16 @@ int32_t q_toolbutton_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self ```
 int32_t q_toolbutton_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3855,12 +4086,16 @@ int32_t q_toolbutton_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, const char* signal ```
 int32_t q_toolbutton_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3878,6 +4113,8 @@ bool q_toolbutton_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolButton* self, QMetaMethod* signal ```
@@ -3885,11 +4122,24 @@ bool q_toolbutton_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QToolButton* self, bool (*slot)(QToolButton*, QMetaMethod*) ```
 void q_toolbutton_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QToolButton* self, void (*slot)(QObject*, const char*) ```
+void q_toolbutton_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#dtor.QToolButton)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QToolButton* self ```

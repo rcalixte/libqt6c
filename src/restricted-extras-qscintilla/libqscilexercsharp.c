@@ -1,5 +1,3 @@
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
 #include "../libqcolor.hpp"
 #include "../libqfont.hpp"
@@ -7,8 +5,6 @@
 #include "../libqobject.hpp"
 #include "../libqsettings.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "libqscilexer.hpp"
 #include "libqscilexercpp.hpp"
 #include "../libqcoreevent.hpp"
@@ -23,7 +19,7 @@ QsciLexerCSharp* q_scilexercsharp_new2(void* parent) {
     return QsciLexerCSharp_new2((QObject*)parent);
 }
 
-QMetaObject* q_scilexercsharp_meta_object(void* self) {
+const QMetaObject* q_scilexercsharp_meta_object(void* self) {
     return QsciLexerCSharp_MetaObject((QsciLexerCSharp*)self);
 }
 
@@ -267,8 +263,7 @@ const char* q_scilexercsharp_object_name(void* self) {
 }
 
 void q_scilexercsharp_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_scilexercsharp_is_widget_type(void* self) {
@@ -307,7 +302,7 @@ void q_scilexercsharp_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_scilexercsharp_children(void* self) {
+const libqt_list /* of QObject* */ q_scilexercsharp_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -374,7 +369,7 @@ QBindingStorage* q_scilexercsharp_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_scilexercsharp_binding_storage2(void* self) {
+const QBindingStorage* q_scilexercsharp_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -988,6 +983,10 @@ bool q_scilexercsharp_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_scilexercsharp_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QsciLexerCSharp_OnIsSignalConnected((QsciLexerCSharp*)self, (intptr_t)slot);
+}
+
+void q_scilexercsharp_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_scilexercsharp_delete(void* self) {

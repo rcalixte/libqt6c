@@ -319,12 +319,12 @@ float* q_matrix4x4_data(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#data)
 ///
 /// ``` QMatrix4x4* self ```
-float* q_matrix4x4_data2(void* self);
+const float* q_matrix4x4_data2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#constData)
 ///
 /// ``` QMatrix4x4* self ```
-float* q_matrix4x4_const_data(void* self);
+const float* q_matrix4x4_const_data(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#optimize)
 ///
@@ -366,6 +366,8 @@ void q_matrix4x4_viewport5(void* self, float left, float bottom, float width, fl
 /// ``` QMatrix4x4* self, float left, float bottom, float width, float height, float nearPlane, float farPlane ```
 void q_matrix4x4_viewport6(void* self, float left, float bottom, float width, float height, float nearPlane, float farPlane);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#dtor.QMatrix4x4)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMatrix4x4* self ```

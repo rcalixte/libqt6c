@@ -13,43 +13,18 @@
 #include "qtlibc.h"
 
 #include "libqabstractslider.h"
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
-#include "libqcursor.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
-#include "libqlocale.h"
-#include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqscreen.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
 #include "libqstyleoption.h"
-#include "libqthread.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qscrollbar.html
 
@@ -76,7 +51,7 @@ QScrollBar* q_scrollbar_new4(int64_t param1, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QScrollBar* self ```
-QMetaObject* q_scrollbar_meta_object(void* self);
+const QMetaObject* q_scrollbar_meta_object(void* self);
 
 /// ``` QScrollBar* self, const char* param1 ```
 void* q_scrollbar_metacast(void* self, const char* param1);
@@ -104,11 +79,15 @@ const char* q_scrollbar_tr(const char* s);
 /// ``` QScrollBar* self ```
 QSize* q_scrollbar_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QScrollBar* self, QSize* (*slot)() ```
 void q_scrollbar_on_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QScrollBar* self ```
@@ -119,11 +98,15 @@ QSize* q_scrollbar_qbase_size_hint(void* self);
 /// ``` QScrollBar* self, QEvent* event ```
 bool q_scrollbar_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QScrollBar* self, bool (*slot)(QScrollBar*, QEvent*) ```
 void q_scrollbar_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QScrollBar* self, QEvent* event ```
@@ -134,11 +117,15 @@ bool q_scrollbar_qbase_event(void* self, void* event);
 /// ``` QScrollBar* self, QWheelEvent* param1 ```
 void q_scrollbar_wheel_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#wheelEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QScrollBar* self, void (*slot)(QScrollBar*, QWheelEvent*) ```
 void q_scrollbar_on_wheel_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#wheelEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QScrollBar* self, QWheelEvent* param1 ```
@@ -149,11 +136,15 @@ void q_scrollbar_qbase_wheel_event(void* self, void* param1);
 /// ``` QScrollBar* self, QPaintEvent* param1 ```
 void q_scrollbar_paint_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#paintEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QScrollBar* self, void (*slot)(QScrollBar*, QPaintEvent*) ```
 void q_scrollbar_on_paint_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#paintEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QScrollBar* self, QPaintEvent* param1 ```
@@ -164,11 +155,15 @@ void q_scrollbar_qbase_paint_event(void* self, void* param1);
 /// ``` QScrollBar* self, QMouseEvent* param1 ```
 void q_scrollbar_mouse_press_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#mousePressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QScrollBar* self, void (*slot)(QScrollBar*, QMouseEvent*) ```
 void q_scrollbar_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#mousePressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QScrollBar* self, QMouseEvent* param1 ```
@@ -179,11 +174,15 @@ void q_scrollbar_qbase_mouse_press_event(void* self, void* param1);
 /// ``` QScrollBar* self, QMouseEvent* param1 ```
 void q_scrollbar_mouse_release_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#mouseReleaseEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QScrollBar* self, void (*slot)(QScrollBar*, QMouseEvent*) ```
 void q_scrollbar_on_mouse_release_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#mouseReleaseEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QScrollBar* self, QMouseEvent* param1 ```
@@ -194,11 +193,15 @@ void q_scrollbar_qbase_mouse_release_event(void* self, void* param1);
 /// ``` QScrollBar* self, QMouseEvent* param1 ```
 void q_scrollbar_mouse_move_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#mouseMoveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QScrollBar* self, void (*slot)(QScrollBar*, QMouseEvent*) ```
 void q_scrollbar_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#mouseMoveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QScrollBar* self, QMouseEvent* param1 ```
@@ -209,11 +212,15 @@ void q_scrollbar_qbase_mouse_move_event(void* self, void* param1);
 /// ``` QScrollBar* self, QHideEvent* param1 ```
 void q_scrollbar_hide_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#hideEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QScrollBar* self, void (*slot)(QScrollBar*, QHideEvent*) ```
 void q_scrollbar_on_hide_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#hideEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QScrollBar* self, QHideEvent* param1 ```
@@ -224,11 +231,15 @@ void q_scrollbar_qbase_hide_event(void* self, void* param1);
 /// ``` QScrollBar* self, enum QAbstractSlider__SliderChange change ```
 void q_scrollbar_slider_change(void* self, int64_t change);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#sliderChange)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QScrollBar* self, void (*slot)(QScrollBar*, enum QAbstractSlider__SliderChange) ```
 void q_scrollbar_on_slider_change(void* self, void (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#sliderChange)
+///
 /// Base class method implementation
 ///
 /// ``` QScrollBar* self, enum QAbstractSlider__SliderChange change ```
@@ -239,11 +250,15 @@ void q_scrollbar_qbase_slider_change(void* self, int64_t change);
 /// ``` QScrollBar* self, QContextMenuEvent* param1 ```
 void q_scrollbar_context_menu_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#contextMenuEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QScrollBar* self, void (*slot)(QScrollBar*, QContextMenuEvent*) ```
 void q_scrollbar_on_context_menu_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#contextMenuEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QScrollBar* self, QContextMenuEvent* param1 ```
@@ -254,11 +269,15 @@ void q_scrollbar_qbase_context_menu_event(void* self, void* param1);
 /// ``` QScrollBar* self, QStyleOptionSlider* option ```
 void q_scrollbar_init_style_option(void* self, void* option);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#initStyleOption)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QScrollBar* self, void (*slot)(QScrollBar*, QStyleOptionSlider*) ```
 void q_scrollbar_on_init_style_option(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#initStyleOption)
+///
 /// Base class method implementation
 ///
 /// ``` QScrollBar* self, QStyleOptionSlider* option ```
@@ -451,6 +470,8 @@ void q_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractSlider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#valueChanged)
+///
 /// ``` QScrollBar* self, void (*slot)(QAbstractSlider*, int) ```
 void q_scrollbar_on_value_changed(void* self, void (*slot)(void*, int));
 
@@ -462,6 +483,8 @@ void q_scrollbar_on_value_changed(void* self, void (*slot)(void*, int));
 void q_scrollbar_slider_pressed(void* self);
 
 /// Inherited from QAbstractSlider
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderPressed)
 ///
 /// ``` QScrollBar* self, void (*slot)(QAbstractSlider*) ```
 void q_scrollbar_on_slider_pressed(void* self, void (*slot)(void*));
@@ -475,6 +498,8 @@ void q_scrollbar_slider_moved(void* self, int position);
 
 /// Inherited from QAbstractSlider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderMoved)
+///
 /// ``` QScrollBar* self, void (*slot)(QAbstractSlider*, int) ```
 void q_scrollbar_on_slider_moved(void* self, void (*slot)(void*, int));
 
@@ -486,6 +511,8 @@ void q_scrollbar_on_slider_moved(void* self, void (*slot)(void*, int));
 void q_scrollbar_slider_released(void* self);
 
 /// Inherited from QAbstractSlider
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderReleased)
 ///
 /// ``` QScrollBar* self, void (*slot)(QAbstractSlider*) ```
 void q_scrollbar_on_slider_released(void* self, void (*slot)(void*));
@@ -499,6 +526,8 @@ void q_scrollbar_range_changed(void* self, int min, int max);
 
 /// Inherited from QAbstractSlider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#rangeChanged)
+///
 /// ``` QScrollBar* self, void (*slot)(QAbstractSlider*, int, int) ```
 void q_scrollbar_on_range_changed(void* self, void (*slot)(void*, int, int));
 
@@ -510,6 +539,8 @@ void q_scrollbar_on_range_changed(void* self, void (*slot)(void*, int, int));
 void q_scrollbar_action_triggered(void* self, int action);
 
 /// Inherited from QAbstractSlider
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#actionTriggered)
 ///
 /// ``` QScrollBar* self, void (*slot)(QAbstractSlider*, int) ```
 void q_scrollbar_on_action_triggered(void* self, void (*slot)(void*, int));
@@ -638,7 +669,7 @@ QRect* q_scrollbar_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QScrollBar* self ```
-QRect* q_scrollbar_geometry(void* self);
+const QRect* q_scrollbar_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -995,7 +1026,7 @@ QWidget* q_scrollbar_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QScrollBar* self ```
-QPalette* q_scrollbar_palette(void* self);
+const QPalette* q_scrollbar_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1037,7 +1068,7 @@ int64_t q_scrollbar_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QScrollBar* self ```
-QFont* q_scrollbar_font(void* self);
+const QFont* q_scrollbar_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2037,15 +2068,15 @@ void q_scrollbar_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QScrollBar* self, QAction* actions[] ```
-void q_scrollbar_add_actions(void* self, void* actions[]);
+/// ``` QScrollBar* self, libqt_list /* of QAction* */ actions ```
+void q_scrollbar_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QScrollBar* self, QAction* before, QAction* actions[] ```
-void q_scrollbar_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QScrollBar* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_scrollbar_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2245,6 +2276,8 @@ void q_scrollbar_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QScrollBar* self, void (*slot)(QWidget*, const char*) ```
 void q_scrollbar_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2256,6 +2289,8 @@ void q_scrollbar_on_window_title_changed(void* self, void (*slot)(void*, const c
 void q_scrollbar_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QScrollBar* self, void (*slot)(QWidget*, QIcon*) ```
 void q_scrollbar_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -2269,6 +2304,8 @@ void q_scrollbar_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QScrollBar* self, void (*slot)(QWidget*, const char*) ```
 void q_scrollbar_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2280,6 +2317,8 @@ void q_scrollbar_on_window_icon_text_changed(void* self, void (*slot)(void*, con
 void q_scrollbar_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QScrollBar* self, void (*slot)(QWidget*, QPoint*) ```
 void q_scrollbar_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2485,7 +2524,7 @@ void q_scrollbar_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QScrollBar* self ```
-libqt_list /* of QObject* */ q_scrollbar_children(void* self);
+const libqt_list /* of QObject* */ q_scrollbar_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2576,7 +2615,7 @@ QBindingStorage* q_scrollbar_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QScrollBar* self ```
-QBindingStorage* q_scrollbar_binding_storage2(void* self);
+const QBindingStorage* q_scrollbar_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2586,6 +2625,8 @@ QBindingStorage* q_scrollbar_binding_storage2(void* self);
 void q_scrollbar_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QScrollBar* self, void (*slot)(QObject*) ```
 void q_scrollbar_on_destroyed(void* self, void (*slot)(void*));
@@ -2640,6 +2681,8 @@ QMetaObject__Connection* q_scrollbar_connect4(void* self, void* sender, const ch
 void q_scrollbar_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QScrollBar* self, void (*slot)(QObject*, QObject*) ```
 void q_scrollbar_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -2739,12 +2782,16 @@ void q_scrollbar_key_press_event(void* self, void* ev);
 
 /// Inherited from QAbstractSlider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QKeyEvent* ev ```
 void q_scrollbar_qbase_key_press_event(void* self, void* ev);
 
 /// Inherited from QAbstractSlider
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2762,12 +2809,16 @@ void q_scrollbar_timer_event(void* self, void* param1);
 
 /// Inherited from QAbstractSlider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QTimerEvent* param1 ```
 void q_scrollbar_qbase_timer_event(void* self, void* param1);
 
 /// Inherited from QAbstractSlider
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2785,12 +2836,16 @@ void q_scrollbar_change_event(void* self, void* e);
 
 /// Inherited from QAbstractSlider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#changeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QEvent* e ```
 void q_scrollbar_qbase_change_event(void* self, void* e);
 
 /// Inherited from QAbstractSlider
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2808,12 +2863,16 @@ int32_t q_scrollbar_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self ```
 int32_t q_scrollbar_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2831,12 +2890,16 @@ void q_scrollbar_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, bool visible ```
 void q_scrollbar_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2854,12 +2917,16 @@ QSize* q_scrollbar_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self ```
 QSize* q_scrollbar_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2877,12 +2944,16 @@ int32_t q_scrollbar_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, int param1 ```
 int32_t q_scrollbar_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2900,12 +2971,16 @@ bool q_scrollbar_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self ```
 bool q_scrollbar_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2923,12 +2998,16 @@ QPaintEngine* q_scrollbar_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self ```
 QPaintEngine* q_scrollbar_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2946,12 +3025,16 @@ void q_scrollbar_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QMouseEvent* event ```
 void q_scrollbar_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2969,12 +3052,16 @@ void q_scrollbar_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QKeyEvent* event ```
 void q_scrollbar_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2992,12 +3079,16 @@ void q_scrollbar_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QFocusEvent* event ```
 void q_scrollbar_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3015,12 +3106,16 @@ void q_scrollbar_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QFocusEvent* event ```
 void q_scrollbar_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3038,12 +3133,16 @@ void q_scrollbar_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QEnterEvent* event ```
 void q_scrollbar_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3061,12 +3160,16 @@ void q_scrollbar_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QEvent* event ```
 void q_scrollbar_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3084,12 +3187,16 @@ void q_scrollbar_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QMoveEvent* event ```
 void q_scrollbar_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3107,12 +3214,16 @@ void q_scrollbar_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QResizeEvent* event ```
 void q_scrollbar_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3130,12 +3241,16 @@ void q_scrollbar_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QCloseEvent* event ```
 void q_scrollbar_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3153,12 +3268,16 @@ void q_scrollbar_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QTabletEvent* event ```
 void q_scrollbar_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3176,12 +3295,16 @@ void q_scrollbar_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QActionEvent* event ```
 void q_scrollbar_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3199,12 +3322,16 @@ void q_scrollbar_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QDragEnterEvent* event ```
 void q_scrollbar_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3222,12 +3349,16 @@ void q_scrollbar_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QDragMoveEvent* event ```
 void q_scrollbar_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3245,12 +3376,16 @@ void q_scrollbar_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QDragLeaveEvent* event ```
 void q_scrollbar_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3268,12 +3403,16 @@ void q_scrollbar_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QDropEvent* event ```
 void q_scrollbar_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3291,12 +3430,16 @@ void q_scrollbar_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QShowEvent* event ```
 void q_scrollbar_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3314,12 +3457,16 @@ bool q_scrollbar_native_event(void* self, const char* eventType, void* message, 
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, const char* eventType, void* message, intptr_t* result ```
 bool q_scrollbar_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3337,12 +3484,16 @@ int32_t q_scrollbar_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_scrollbar_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3360,12 +3511,16 @@ void q_scrollbar_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QPainter* painter ```
 void q_scrollbar_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3383,12 +3538,16 @@ QPaintDevice* q_scrollbar_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QPoint* offset ```
 QPaintDevice* q_scrollbar_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3406,12 +3565,16 @@ QPainter* q_scrollbar_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self ```
 QPainter* q_scrollbar_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3429,12 +3592,16 @@ void q_scrollbar_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QInputMethodEvent* param1 ```
 void q_scrollbar_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3452,12 +3619,16 @@ QVariant* q_scrollbar_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_scrollbar_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3475,12 +3646,16 @@ bool q_scrollbar_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, bool next ```
 bool q_scrollbar_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3498,12 +3673,16 @@ bool q_scrollbar_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QObject* watched, QEvent* event ```
 bool q_scrollbar_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3521,12 +3700,16 @@ void q_scrollbar_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QChildEvent* event ```
 void q_scrollbar_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3544,12 +3727,16 @@ void q_scrollbar_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QEvent* event ```
 void q_scrollbar_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3567,12 +3754,16 @@ void q_scrollbar_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QMetaMethod* signal ```
 void q_scrollbar_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3590,12 +3781,16 @@ void q_scrollbar_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QMetaMethod* signal ```
 void q_scrollbar_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3613,12 +3808,16 @@ void q_scrollbar_set_repeat_action(void* self, int64_t action);
 
 /// Inherited from QAbstractSlider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setRepeatAction)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, enum QAbstractSlider__SliderAction action ```
 void q_scrollbar_qbase_set_repeat_action(void* self, int64_t action);
 
 /// Inherited from QAbstractSlider
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setRepeatAction)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3636,12 +3835,16 @@ int64_t q_scrollbar_repeat_action(void* self);
 
 /// Inherited from QAbstractSlider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#repeatAction)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self ```
 int64_t q_scrollbar_qbase_repeat_action(void* self);
 
 /// Inherited from QAbstractSlider
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#repeatAction)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3659,12 +3862,16 @@ void q_scrollbar_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self ```
 void q_scrollbar_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3682,12 +3889,16 @@ void q_scrollbar_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self ```
 void q_scrollbar_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3705,12 +3916,16 @@ void q_scrollbar_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self ```
 void q_scrollbar_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3728,12 +3943,16 @@ bool q_scrollbar_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self ```
 bool q_scrollbar_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3751,12 +3970,16 @@ bool q_scrollbar_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self ```
 bool q_scrollbar_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3774,12 +3997,16 @@ QObject* q_scrollbar_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self ```
 QObject* q_scrollbar_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3797,12 +4024,16 @@ int32_t q_scrollbar_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self ```
 int32_t q_scrollbar_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3820,12 +4051,16 @@ int32_t q_scrollbar_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, const char* signal ```
 int32_t q_scrollbar_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3843,6 +4078,8 @@ bool q_scrollbar_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollBar* self, QMetaMethod* signal ```
@@ -3850,11 +4087,24 @@ bool q_scrollbar_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QScrollBar* self, bool (*slot)(QScrollBar*, QMetaMethod*) ```
 void q_scrollbar_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QScrollBar* self, void (*slot)(QObject*, const char*) ```
+void q_scrollbar_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#dtor.QScrollBar)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QScrollBar* self ```

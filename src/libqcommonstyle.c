@@ -1,6 +1,4 @@
-#include "libqanystringview.hpp"
 #include "libqapplication.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqfontmetrics.hpp"
 #include "libqicon.hpp"
@@ -15,8 +13,6 @@
 #include <string.h>
 #include "libqstyle.hpp"
 #include "libqstyleoption.hpp"
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqwidget.hpp"
 #include "libqcoreevent.hpp"
 #include "libqcommonstyle.hpp"
@@ -26,7 +22,7 @@ QCommonStyle* q_commonstyle_new() {
     return QCommonStyle_new();
 }
 
-QMetaObject* q_commonstyle_meta_object(void* self) {
+const QMetaObject* q_commonstyle_meta_object(void* self) {
     return QCommonStyle_MetaObject((QCommonStyle*)self);
 }
 
@@ -342,7 +338,7 @@ int32_t q_commonstyle_combined_layout_spacing(void* self, int64_t controls1, int
     return QStyle_CombinedLayoutSpacing((QStyle*)self, controls1, controls2, orientation);
 }
 
-QStyle* q_commonstyle_proxy(void* self) {
+const QStyle* q_commonstyle_proxy(void* self) {
     return QStyle_Proxy((QStyle*)self);
 }
 
@@ -370,8 +366,7 @@ const char* q_commonstyle_object_name(void* self) {
 }
 
 void q_commonstyle_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_commonstyle_is_widget_type(void* self) {
@@ -410,7 +405,7 @@ void q_commonstyle_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_commonstyle_children(void* self) {
+const libqt_list /* of QObject* */ q_commonstyle_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -477,7 +472,7 @@ QBindingStorage* q_commonstyle_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_commonstyle_binding_storage2(void* self) {
+const QBindingStorage* q_commonstyle_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -711,6 +706,10 @@ bool q_commonstyle_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_commonstyle_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QCommonStyle_OnIsSignalConnected((QCommonStyle*)self, (intptr_t)slot);
+}
+
+void q_commonstyle_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_commonstyle_delete(void* self) {

@@ -126,6 +126,7 @@ int QObject_QBaseReceivers(const QObject* self, const char* signal);
 bool QObject_IsSignalConnected(const QObject* self, QMetaMethod* signal);
 void QObject_OnIsSignalConnected(const QObject* self, intptr_t slot);
 bool QObject_QBaseIsSignalConnected(const QObject* self, QMetaMethod* signal);
+void QObject_Connect_ObjectNameChanged(QObject* self, intptr_t slot);
 void QObject_Delete(QObject* self);
 
 QSignalBlocker* QSignalBlocker_new(QObject* o);

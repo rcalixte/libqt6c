@@ -12,16 +12,12 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
 #include "libqaudiodevice.h"
-#include "../libqbindingstorage.h"
 #include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include <string.h>
-#include "../libqthread.h"
 #include "../libqurl.h"
-#include "../libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qsoundeffect.html
 
@@ -48,7 +44,7 @@ QSoundEffect* q_soundeffect_new4(void* audioDevice, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QSoundEffect* self ```
-QMetaObject* q_soundeffect_meta_object(void* self);
+const QMetaObject* q_soundeffect_meta_object(void* self);
 
 /// ``` QSoundEffect* self, const char* param1 ```
 void* q_soundeffect_metacast(void* self, const char* param1);
@@ -151,6 +147,8 @@ int64_t q_soundeffect_status(void* self);
 /// ``` QSoundEffect* self ```
 void q_soundeffect_source_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#sourceChanged)
+///
 /// ``` QSoundEffect* self, void (*slot)(QSoundEffect*) ```
 void q_soundeffect_on_source_changed(void* self, void (*slot)(void*));
 
@@ -159,6 +157,8 @@ void q_soundeffect_on_source_changed(void* self, void (*slot)(void*));
 /// ``` QSoundEffect* self ```
 void q_soundeffect_loop_count_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#loopCountChanged)
+///
 /// ``` QSoundEffect* self, void (*slot)(QSoundEffect*) ```
 void q_soundeffect_on_loop_count_changed(void* self, void (*slot)(void*));
 
@@ -167,6 +167,8 @@ void q_soundeffect_on_loop_count_changed(void* self, void (*slot)(void*));
 /// ``` QSoundEffect* self ```
 void q_soundeffect_loops_remaining_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#loopsRemainingChanged)
+///
 /// ``` QSoundEffect* self, void (*slot)(QSoundEffect*) ```
 void q_soundeffect_on_loops_remaining_changed(void* self, void (*slot)(void*));
 
@@ -175,6 +177,8 @@ void q_soundeffect_on_loops_remaining_changed(void* self, void (*slot)(void*));
 /// ``` QSoundEffect* self ```
 void q_soundeffect_volume_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#volumeChanged)
+///
 /// ``` QSoundEffect* self, void (*slot)(QSoundEffect*) ```
 void q_soundeffect_on_volume_changed(void* self, void (*slot)(void*));
 
@@ -183,6 +187,8 @@ void q_soundeffect_on_volume_changed(void* self, void (*slot)(void*));
 /// ``` QSoundEffect* self ```
 void q_soundeffect_muted_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#mutedChanged)
+///
 /// ``` QSoundEffect* self, void (*slot)(QSoundEffect*) ```
 void q_soundeffect_on_muted_changed(void* self, void (*slot)(void*));
 
@@ -191,6 +197,8 @@ void q_soundeffect_on_muted_changed(void* self, void (*slot)(void*));
 /// ``` QSoundEffect* self ```
 void q_soundeffect_loaded_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#loadedChanged)
+///
 /// ``` QSoundEffect* self, void (*slot)(QSoundEffect*) ```
 void q_soundeffect_on_loaded_changed(void* self, void (*slot)(void*));
 
@@ -199,6 +207,8 @@ void q_soundeffect_on_loaded_changed(void* self, void (*slot)(void*));
 /// ``` QSoundEffect* self ```
 void q_soundeffect_playing_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#playingChanged)
+///
 /// ``` QSoundEffect* self, void (*slot)(QSoundEffect*) ```
 void q_soundeffect_on_playing_changed(void* self, void (*slot)(void*));
 
@@ -207,6 +217,8 @@ void q_soundeffect_on_playing_changed(void* self, void (*slot)(void*));
 /// ``` QSoundEffect* self ```
 void q_soundeffect_status_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#statusChanged)
+///
 /// ``` QSoundEffect* self, void (*slot)(QSoundEffect*) ```
 void q_soundeffect_on_status_changed(void* self, void (*slot)(void*));
 
@@ -215,6 +227,8 @@ void q_soundeffect_on_status_changed(void* self, void (*slot)(void*));
 /// ``` QSoundEffect* self ```
 void q_soundeffect_audio_device_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#audioDeviceChanged)
+///
 /// ``` QSoundEffect* self, void (*slot)(QSoundEffect*) ```
 void q_soundeffect_on_audio_device_changed(void* self, void (*slot)(void*));
 
@@ -320,7 +334,7 @@ void q_soundeffect_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QSoundEffect* self ```
-libqt_list /* of QObject* */ q_soundeffect_children(void* self);
+const libqt_list /* of QObject* */ q_soundeffect_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -418,7 +432,7 @@ QBindingStorage* q_soundeffect_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QSoundEffect* self ```
-QBindingStorage* q_soundeffect_binding_storage2(void* self);
+const QBindingStorage* q_soundeffect_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -428,6 +442,8 @@ QBindingStorage* q_soundeffect_binding_storage2(void* self);
 void q_soundeffect_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QSoundEffect* self, void (*slot)(QObject*) ```
 void q_soundeffect_on_destroyed(void* self, void (*slot)(void*));
@@ -483,6 +499,8 @@ void q_soundeffect_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QSoundEffect* self, void (*slot)(QObject*, QObject*) ```
 void q_soundeffect_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -497,12 +515,16 @@ bool q_soundeffect_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSoundEffect* self, QEvent* event ```
 bool q_soundeffect_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -520,12 +542,16 @@ bool q_soundeffect_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSoundEffect* self, QObject* watched, QEvent* event ```
 bool q_soundeffect_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -543,12 +569,16 @@ void q_soundeffect_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSoundEffect* self, QTimerEvent* event ```
 void q_soundeffect_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -566,12 +596,16 @@ void q_soundeffect_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSoundEffect* self, QChildEvent* event ```
 void q_soundeffect_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -589,12 +623,16 @@ void q_soundeffect_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSoundEffect* self, QEvent* event ```
 void q_soundeffect_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -612,12 +650,16 @@ void q_soundeffect_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSoundEffect* self, QMetaMethod* signal ```
 void q_soundeffect_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -635,12 +677,16 @@ void q_soundeffect_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSoundEffect* self, QMetaMethod* signal ```
 void q_soundeffect_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -658,12 +704,16 @@ QObject* q_soundeffect_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSoundEffect* self ```
 QObject* q_soundeffect_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -681,12 +731,16 @@ int32_t q_soundeffect_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSoundEffect* self ```
 int32_t q_soundeffect_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -704,12 +758,16 @@ int32_t q_soundeffect_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSoundEffect* self, const char* signal ```
 int32_t q_soundeffect_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -727,6 +785,8 @@ bool q_soundeffect_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSoundEffect* self, QMetaMethod* signal ```
@@ -734,11 +794,24 @@ bool q_soundeffect_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QSoundEffect* self, bool (*slot)(QSoundEffect*, QMetaMethod*) ```
 void q_soundeffect_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QSoundEffect* self, void (*slot)(QObject*, const char*) ```
+void q_soundeffect_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#dtor.QSoundEffect)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSoundEffect* self ```

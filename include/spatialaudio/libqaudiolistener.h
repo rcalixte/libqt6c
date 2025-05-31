@@ -12,16 +12,11 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
 #include "libqaudioengine.h"
-#include "../libqbindingstorage.h"
 #include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include "../libqquaternion.h"
-#include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 #include "../libqvectornd.h"
 
 /// https://doc.qt.io/qt-6/qaudiolistener.html
@@ -61,7 +56,7 @@ QAudioEngine* q_audiolistener_engine(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QAudioListener* self ```
-QMetaObject* q_audiolistener_meta_object(void* self);
+const QMetaObject* q_audiolistener_meta_object(void* self);
 
 /// Inherited from QObject
 ///
@@ -157,7 +152,7 @@ void q_audiolistener_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QAudioListener* self ```
-libqt_list /* of QObject* */ q_audiolistener_children(void* self);
+const libqt_list /* of QObject* */ q_audiolistener_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -255,7 +250,7 @@ QBindingStorage* q_audiolistener_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QAudioListener* self ```
-QBindingStorage* q_audiolistener_binding_storage2(void* self);
+const QBindingStorage* q_audiolistener_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -265,6 +260,8 @@ QBindingStorage* q_audiolistener_binding_storage2(void* self);
 void q_audiolistener_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QAudioListener* self, void (*slot)(QObject*) ```
 void q_audiolistener_on_destroyed(void* self, void (*slot)(void*));
@@ -334,6 +331,8 @@ void q_audiolistener_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QAudioListener* self, void (*slot)(QObject*, QObject*) ```
 void q_audiolistener_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -348,12 +347,16 @@ int32_t q_audiolistener_metacall(void* self, int64_t param1, int param2, void* p
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#qt_metacall)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioListener* self, enum QMetaObject__Call param1, int param2, void* param3 ```
 int32_t q_audiolistener_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#qt_metacall)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -371,12 +374,16 @@ bool q_audiolistener_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioListener* self, QEvent* event ```
 bool q_audiolistener_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -394,12 +401,16 @@ bool q_audiolistener_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioListener* self, QObject* watched, QEvent* event ```
 bool q_audiolistener_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -417,12 +428,16 @@ void q_audiolistener_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioListener* self, QTimerEvent* event ```
 void q_audiolistener_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -440,12 +455,16 @@ void q_audiolistener_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioListener* self, QChildEvent* event ```
 void q_audiolistener_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -463,12 +482,16 @@ void q_audiolistener_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioListener* self, QEvent* event ```
 void q_audiolistener_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -486,12 +509,16 @@ void q_audiolistener_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioListener* self, QMetaMethod* signal ```
 void q_audiolistener_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -509,12 +536,16 @@ void q_audiolistener_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioListener* self, QMetaMethod* signal ```
 void q_audiolistener_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -532,12 +563,16 @@ QObject* q_audiolistener_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioListener* self ```
 QObject* q_audiolistener_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -555,12 +590,16 @@ int32_t q_audiolistener_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioListener* self ```
 int32_t q_audiolistener_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -578,12 +617,16 @@ int32_t q_audiolistener_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioListener* self, const char* signal ```
 int32_t q_audiolistener_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -601,6 +644,8 @@ bool q_audiolistener_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioListener* self, QMetaMethod* signal ```
@@ -608,11 +653,24 @@ bool q_audiolistener_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QAudioListener* self, bool (*slot)(QAudioListener*, QMetaMethod*) ```
 void q_audiolistener_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QAudioListener* self, void (*slot)(QObject*, const char*) ```
+void q_audiolistener_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaudiolistener.html#dtor.QAudioListener)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAudioListener* self ```

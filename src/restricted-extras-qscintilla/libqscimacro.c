@@ -1,11 +1,7 @@
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqscimacro.hpp"
 #include "libqscimacro.h"
@@ -18,7 +14,7 @@ QsciMacro* q_scimacro_new2(const char* asc, void* parent) {
     return QsciMacro_new2(qstring(asc), (QsciScintilla*)parent);
 }
 
-QMetaObject* q_scimacro_meta_object(void* self) {
+const QMetaObject* q_scimacro_meta_object(void* self) {
     return QsciMacro_MetaObject((QsciMacro*)self);
 }
 
@@ -118,8 +114,7 @@ const char* q_scimacro_object_name(void* self) {
 }
 
 void q_scimacro_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_scimacro_is_widget_type(void* self) {
@@ -158,7 +153,7 @@ void q_scimacro_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_scimacro_children(void* self) {
+const libqt_list /* of QObject* */ q_scimacro_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -225,7 +220,7 @@ QBindingStorage* q_scimacro_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_scimacro_binding_storage2(void* self) {
+const QBindingStorage* q_scimacro_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -399,6 +394,10 @@ bool q_scimacro_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_scimacro_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QsciMacro_OnIsSignalConnected((QsciMacro*)self, (intptr_t)slot);
+}
+
+void q_scimacro_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_scimacro_delete(void* self) {

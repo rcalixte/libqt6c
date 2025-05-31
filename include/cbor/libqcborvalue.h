@@ -51,6 +51,8 @@ void q_cborparsererror_move_assign(void* self, void* other);
 /// ``` QCborParserError* self ```
 const char* q_cborparsererror_error_string(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborparsererror.html#dtor.QCborParserError)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCborParserError* self ```
@@ -366,12 +368,12 @@ QCborMap* q_cborvalue_to_map_with_default_value(void* self, void* defaultValue);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#operator[])
 ///
 /// ``` QCborValue* self, const char* key ```
-QCborValue* q_cborvalue_operator_subscript(void* self, const char* key);
+const QCborValue* q_cborvalue_operator_subscript(void* self, const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#operator[])
 ///
 /// ``` QCborValue* self, long long key ```
-QCborValue* q_cborvalue_operator_subscript2(void* self, long long key);
+const QCborValue* q_cborvalue_operator_subscript2(void* self, long long key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#operator[])
 ///
@@ -548,6 +550,8 @@ void q_cborvalue_to_cbor2(void* self, void* writer, int64_t opt);
 /// ``` QCborValue* self, int opts ```
 const char* q_cborvalue_to_diagnostic_notation1(void* self, int64_t opts);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#dtor.QCborValue)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCborValue* self ```
@@ -758,12 +762,12 @@ QCborMap* q_cborvalueconstref_to_map_with_q_cbor_map(void* self, void* m);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#operator[])
 ///
 /// ``` QCborValueConstRef* self, const char* key ```
-QCborValue* q_cborvalueconstref_operator_subscript(void* self, const char* key);
+const QCborValue* q_cborvalueconstref_operator_subscript(void* self, const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#operator[])
 ///
 /// ``` QCborValueConstRef* self, long long key ```
-QCborValue* q_cborvalueconstref_operator_subscript2(void* self, long long key);
+const QCborValue* q_cborvalueconstref_operator_subscript2(void* self, long long key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#compare)
 ///
@@ -885,6 +889,8 @@ void q_cborvalueconstref_to_cbor2(void* self, void* writer, int64_t opt);
 /// ``` QCborValueConstRef* self, int opt ```
 const char* q_cborvalueconstref_to_diagnostic_notation1(void* self, int64_t opt);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#dtor.QCborValueConstRef)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCborValueConstRef* self ```
@@ -1120,12 +1126,12 @@ QCborMap* q_cborvalueref_to_map_with_q_cbor_map(void* self, void* m);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#operator[])
 ///
 /// ``` QCborValueRef* self, const char* key ```
-QCborValue* q_cborvalueref_operator_subscript3(void* self, const char* key);
+const QCborValue* q_cborvalueref_operator_subscript3(void* self, const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#operator[])
 ///
 /// ``` QCborValueRef* self, long long key ```
-QCborValue* q_cborvalueref_operator_subscript5(void* self, long long key);
+const QCborValue* q_cborvalueref_operator_subscript5(void* self, long long key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#compare)
 ///
@@ -1247,6 +1253,8 @@ void q_cborvalueref_to_cbor2(void* self, void* writer, int64_t opt);
 /// ``` QCborValueRef* self, int opt ```
 const char* q_cborvalueref_to_diagnostic_notation1(void* self, int64_t opt);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#dtor.QCborValueRef)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCborValueRef* self ```

@@ -15,30 +15,21 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QBoxLayout QBoxLayout;
 typedef struct QChildEvent QChildEvent;
 typedef struct QEvent QEvent;
 typedef struct QHBoxLayout QHBoxLayout;
 typedef struct QLayout QLayout;
 typedef struct QLayoutItem QLayoutItem;
-typedef struct QMargins QMargins;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QRect QRect;
 typedef struct QSize QSize;
 typedef struct QSpacerItem QSpacerItem;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
 typedef struct QVBoxLayout QVBoxLayout;
-typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
 
@@ -135,7 +126,6 @@ QRect* QBoxLayout_QBaseGeometry(const QBoxLayout* self);
 int QBoxLayout_IndexOf(const QBoxLayout* self, QWidget* param1);
 void QBoxLayout_OnIndexOf(const QBoxLayout* self, intptr_t slot);
 int QBoxLayout_QBaseIndexOf(const QBoxLayout* self, QWidget* param1);
-int QBoxLayout_IndexOfWithQLayoutItem(const QBoxLayout* self, QLayoutItem* param1);
 bool QBoxLayout_IsEmpty(const QBoxLayout* self);
 void QBoxLayout_OnIsEmpty(const QBoxLayout* self, intptr_t slot);
 bool QBoxLayout_QBaseIsEmpty(const QBoxLayout* self);
@@ -265,7 +255,6 @@ QRect* QHBoxLayout_QBaseGeometry(const QHBoxLayout* self);
 int QHBoxLayout_IndexOf(const QHBoxLayout* self, QWidget* param1);
 void QHBoxLayout_OnIndexOf(const QHBoxLayout* self, intptr_t slot);
 int QHBoxLayout_QBaseIndexOf(const QHBoxLayout* self, QWidget* param1);
-int QHBoxLayout_IndexOfWithQLayoutItem(const QHBoxLayout* self, QLayoutItem* param1);
 bool QHBoxLayout_IsEmpty(const QHBoxLayout* self);
 void QHBoxLayout_OnIsEmpty(const QHBoxLayout* self, intptr_t slot);
 bool QHBoxLayout_QBaseIsEmpty(const QHBoxLayout* self);
@@ -395,7 +384,6 @@ QRect* QVBoxLayout_QBaseGeometry(const QVBoxLayout* self);
 int QVBoxLayout_IndexOf(const QVBoxLayout* self, QWidget* param1);
 void QVBoxLayout_OnIndexOf(const QVBoxLayout* self, intptr_t slot);
 int QVBoxLayout_QBaseIndexOf(const QVBoxLayout* self, QWidget* param1);
-int QVBoxLayout_IndexOfWithQLayoutItem(const QVBoxLayout* self, QLayoutItem* param1);
 bool QVBoxLayout_IsEmpty(const QVBoxLayout* self);
 void QVBoxLayout_OnIsEmpty(const QVBoxLayout* self, intptr_t slot);
 bool QVBoxLayout_QBaseIsEmpty(const QVBoxLayout* self);

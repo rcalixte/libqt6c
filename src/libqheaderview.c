@@ -2,46 +2,23 @@
 #include "libqabstractitemmodel.hpp"
 #include "libqabstractitemview.hpp"
 #include "libqabstractscrollarea.hpp"
-#include "libqaction.hpp"
 #include "libqevent.hpp"
-#include "libqanystringview.hpp"
-#include "libqbackingstore.hpp"
-#include "libqbindingstorage.hpp"
-#include "libqbitmap.hpp"
-#include "libqcursor.hpp"
-#include "libqfont.hpp"
-#include "libqfontinfo.hpp"
-#include "libqfontmetrics.hpp"
 #include "libqframe.hpp"
-#include "libqgraphicseffect.hpp"
-#include "libqgraphicsproxywidget.hpp"
-#include "libqicon.hpp"
 #include "libqitemselectionmodel.hpp"
-#include "libqkeysequence.hpp"
-#include "libqlayout.hpp"
-#include "libqlocale.hpp"
 #include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
 #include "libqpainter.hpp"
-#include "libqpalette.hpp"
-#include "libqpixmap.hpp"
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
 #include "libqregion.hpp"
-#include "libqscreen.hpp"
-#include "libqscrollbar.hpp"
 #include "libqsize.hpp"
-#include "libqsizepolicy.hpp"
 #include <string.h>
-#include "libqstyle.hpp"
 #include "libqstyleoption.hpp"
-#include "libqthread.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqwindow.hpp"
 #include "libqcoreevent.hpp"
 #include "libqheaderview.hpp"
 #include "libqheaderview.h"
@@ -54,7 +31,7 @@ QHeaderView* q_headerview_new2(int64_t orientation, void* parent) {
     return QHeaderView_new2(orientation, (QWidget*)parent);
 }
 
-QMetaObject* q_headerview_meta_object(void* self) {
+const QMetaObject* q_headerview_meta_object(void* self) {
     return QHeaderView_MetaObject((QHeaderView*)self);
 }
 
@@ -744,32 +721,16 @@ void q_headerview_qbase_scroll_contents_by(void* self, int dx, int dy) {
     QHeaderView_QBaseScrollContentsBy((QHeaderView*)self, dx, dy);
 }
 
-void q_headerview_data_changed(void* self, void* topLeft, void* bottomRight, int* roles[]) {
-    size_t roles_len = 0;
-    while (roles[roles_len] != NULL) {
-        roles_len++;
-    }
-    libqt_list roles_list = {
-        .len = roles_len,
-        .data = {(int*)roles},
-    };
-    QHeaderView_DataChanged((QHeaderView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles_list);
+void q_headerview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles) {
+    QHeaderView_DataChanged((QHeaderView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_headerview_on_data_changed(void* self, void (*slot)(void*, void*, void*, int*)) {
+void q_headerview_on_data_changed(void* self, void (*slot)(void*, void*, void*, libqt_list)) {
     QHeaderView_OnDataChanged((QHeaderView*)self, (intptr_t)slot);
 }
 
-void q_headerview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, int* roles[]) {
-    size_t roles_len = 0;
-    while (roles[roles_len] != NULL) {
-        roles_len++;
-    }
-    libqt_list roles_list = {
-        .len = roles_len,
-        .data = {(int*)roles},
-    };
-    QHeaderView_QBaseDataChanged((QHeaderView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles_list);
+void q_headerview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles) {
+    QHeaderView_QBaseDataChanged((QHeaderView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
 void q_headerview_rows_inserted(void* self, void* parent, int start, int end) {
@@ -1379,7 +1340,7 @@ QRect* q_headerview_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_headerview_geometry(void* self) {
+const QRect* q_headerview_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -1583,7 +1544,7 @@ QWidget* q_headerview_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_headerview_palette(void* self) {
+const QPalette* q_headerview_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -1607,7 +1568,7 @@ int64_t q_headerview_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_headerview_font(void* self) {
+const QFont* q_headerview_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -2208,30 +2169,12 @@ void q_headerview_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_headerview_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_headerview_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_headerview_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_headerview_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_headerview_insert_action(void* self, void* before, void* action) {
@@ -2451,8 +2394,7 @@ const char* q_headerview_object_name(void* self) {
 }
 
 void q_headerview_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_headerview_is_widget_type(void* self) {
@@ -2491,7 +2433,7 @@ void q_headerview_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_headerview_children(void* self) {
+const libqt_list /* of QObject* */ q_headerview_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -2554,7 +2496,7 @@ QBindingStorage* q_headerview_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_headerview_binding_storage2(void* self) {
+const QBindingStorage* q_headerview_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -3690,6 +3632,10 @@ bool q_headerview_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_headerview_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QHeaderView_OnIsSignalConnected((QHeaderView*)self, (intptr_t)slot);
+}
+
+void q_headerview_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_headerview_delete(void* self) {

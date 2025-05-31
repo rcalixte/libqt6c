@@ -12,44 +12,19 @@
 
 #include "qtlibc.h"
 
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
-#include "libqcursor.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
 #include "libqframe.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
-#include "libqlocale.h"
-#include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqscreen.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
 #include "libqstyleoption.h"
-#include "libqthread.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qsplitter.html
 
@@ -76,7 +51,7 @@ QSplitter* q_splitter_new4(int64_t param1, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QSplitter* self ```
-QMetaObject* q_splitter_meta_object(void* self);
+const QMetaObject* q_splitter_meta_object(void* self);
 
 /// ``` QSplitter* self, const char* param1 ```
 void* q_splitter_metacast(void* self, const char* param1);
@@ -164,11 +139,15 @@ void q_splitter_refresh(void* self);
 /// ``` QSplitter* self ```
 QSize* q_splitter_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSplitter* self, QSize* (*slot)() ```
 void q_splitter_on_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QSplitter* self ```
@@ -179,11 +158,15 @@ QSize* q_splitter_qbase_size_hint(void* self);
 /// ``` QSplitter* self ```
 QSize* q_splitter_minimum_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#minimumSizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSplitter* self, QSize* (*slot)() ```
 void q_splitter_on_minimum_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#minimumSizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QSplitter* self ```
@@ -196,8 +179,8 @@ libqt_list /* of int */ q_splitter_sizes(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#setSizes)
 ///
-/// ``` QSplitter* self, int* list[] ```
-void q_splitter_set_sizes(void* self, int* list[]);
+/// ``` QSplitter* self, libqt_list /* of int */ list ```
+void q_splitter_set_sizes(void* self, libqt_list list);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#saveState)
 ///
@@ -254,6 +237,8 @@ void q_splitter_set_stretch_factor(void* self, int index, int stretch);
 /// ``` QSplitter* self, int pos, int index ```
 void q_splitter_splitter_moved(void* self, int pos, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#splitterMoved)
+///
 /// ``` QSplitter* self, void (*slot)(QSplitter*, int, int) ```
 void q_splitter_on_splitter_moved(void* self, void (*slot)(void*, int, int));
 
@@ -262,11 +247,15 @@ void q_splitter_on_splitter_moved(void* self, void (*slot)(void*, int, int));
 /// ``` QSplitter* self ```
 QSplitterHandle* q_splitter_create_handle(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#createHandle)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSplitter* self, QSplitterHandle* (*slot)() ```
 void q_splitter_on_create_handle(void* self, QSplitterHandle* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#createHandle)
+///
 /// Base class method implementation
 ///
 /// ``` QSplitter* self ```
@@ -277,11 +266,15 @@ QSplitterHandle* q_splitter_qbase_create_handle(void* self);
 /// ``` QSplitter* self, QChildEvent* param1 ```
 void q_splitter_child_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#childEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSplitter* self, void (*slot)(QSplitter*, QChildEvent*) ```
 void q_splitter_on_child_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#childEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QSplitter* self, QChildEvent* param1 ```
@@ -292,11 +285,15 @@ void q_splitter_qbase_child_event(void* self, void* param1);
 /// ``` QSplitter* self, QEvent* param1 ```
 bool q_splitter_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSplitter* self, bool (*slot)(QSplitter*, QEvent*) ```
 void q_splitter_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QSplitter* self, QEvent* param1 ```
@@ -307,11 +304,15 @@ bool q_splitter_qbase_event(void* self, void* param1);
 /// ``` QSplitter* self, QResizeEvent* param1 ```
 void q_splitter_resize_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#resizeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSplitter* self, void (*slot)(QSplitter*, QResizeEvent*) ```
 void q_splitter_on_resize_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#resizeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QSplitter* self, QResizeEvent* param1 ```
@@ -322,11 +323,15 @@ void q_splitter_qbase_resize_event(void* self, void* param1);
 /// ``` QSplitter* self, QEvent* param1 ```
 void q_splitter_change_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#changeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSplitter* self, void (*slot)(QSplitter*, QEvent*) ```
 void q_splitter_on_change_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#changeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QSplitter* self, QEvent* param1 ```
@@ -337,11 +342,15 @@ void q_splitter_qbase_change_event(void* self, void* param1);
 /// ``` QSplitter* self, int pos, int index ```
 void q_splitter_move_splitter(void* self, int pos, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#moveSplitter)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSplitter* self, void (*slot)(QSplitter*, int, int) ```
 void q_splitter_on_move_splitter(void* self, void (*slot)(void*, int, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#moveSplitter)
+///
 /// Base class method implementation
 ///
 /// ``` QSplitter* self, int pos, int index ```
@@ -352,11 +361,15 @@ void q_splitter_qbase_move_splitter(void* self, int pos, int index);
 /// ``` QSplitter* self, int position ```
 void q_splitter_set_rubber_band(void* self, int position);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#setRubberBand)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSplitter* self, void (*slot)(QSplitter*, int) ```
 void q_splitter_on_set_rubber_band(void* self, void (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#setRubberBand)
+///
 /// Base class method implementation
 ///
 /// ``` QSplitter* self, int position ```
@@ -367,11 +380,15 @@ void q_splitter_qbase_set_rubber_band(void* self, int position);
 /// ``` QSplitter* self, int param1, int param2 ```
 int32_t q_splitter_closest_legal_position(void* self, int param1, int param2);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#closestLegalPosition)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSplitter* self, int32_t (*slot)(QSplitter*, int, int) ```
 void q_splitter_on_closest_legal_position(void* self, int32_t (*slot)(void*, int, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#closestLegalPosition)
+///
 /// Base class method implementation
 ///
 /// ``` QSplitter* self, int param1, int param2 ```
@@ -607,7 +624,7 @@ QRect* q_splitter_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QSplitter* self ```
-QRect* q_splitter_geometry(void* self);
+const QRect* q_splitter_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -964,7 +981,7 @@ QWidget* q_splitter_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QSplitter* self ```
-QPalette* q_splitter_palette(void* self);
+const QPalette* q_splitter_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1006,7 +1023,7 @@ int64_t q_splitter_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QSplitter* self ```
-QFont* q_splitter_font(void* self);
+const QFont* q_splitter_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2006,15 +2023,15 @@ void q_splitter_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QSplitter* self, QAction* actions[] ```
-void q_splitter_add_actions(void* self, void* actions[]);
+/// ``` QSplitter* self, libqt_list /* of QAction* */ actions ```
+void q_splitter_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QSplitter* self, QAction* before, QAction* actions[] ```
-void q_splitter_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QSplitter* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_splitter_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2214,6 +2231,8 @@ void q_splitter_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QSplitter* self, void (*slot)(QWidget*, const char*) ```
 void q_splitter_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2225,6 +2244,8 @@ void q_splitter_on_window_title_changed(void* self, void (*slot)(void*, const ch
 void q_splitter_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QSplitter* self, void (*slot)(QWidget*, QIcon*) ```
 void q_splitter_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -2238,6 +2259,8 @@ void q_splitter_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QSplitter* self, void (*slot)(QWidget*, const char*) ```
 void q_splitter_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2249,6 +2272,8 @@ void q_splitter_on_window_icon_text_changed(void* self, void (*slot)(void*, cons
 void q_splitter_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QSplitter* self, void (*slot)(QWidget*, QPoint*) ```
 void q_splitter_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2454,7 +2479,7 @@ void q_splitter_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QSplitter* self ```
-libqt_list /* of QObject* */ q_splitter_children(void* self);
+const libqt_list /* of QObject* */ q_splitter_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2545,7 +2570,7 @@ QBindingStorage* q_splitter_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QSplitter* self ```
-QBindingStorage* q_splitter_binding_storage2(void* self);
+const QBindingStorage* q_splitter_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2555,6 +2580,8 @@ QBindingStorage* q_splitter_binding_storage2(void* self);
 void q_splitter_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QSplitter* self, void (*slot)(QObject*) ```
 void q_splitter_on_destroyed(void* self, void (*slot)(void*));
@@ -2609,6 +2636,8 @@ QMetaObject__Connection* q_splitter_connect4(void* self, void* sender, const cha
 void q_splitter_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QSplitter* self, void (*slot)(QObject*, QObject*) ```
 void q_splitter_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -2708,12 +2737,16 @@ void q_splitter_paint_event(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#paintEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QPaintEvent* param1 ```
 void q_splitter_qbase_paint_event(void* self, void* param1);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#paintEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2731,12 +2764,16 @@ void q_splitter_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QStyleOptionFrame* option ```
 void q_splitter_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2754,12 +2791,16 @@ int32_t q_splitter_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self ```
 int32_t q_splitter_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2777,12 +2818,16 @@ void q_splitter_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, bool visible ```
 void q_splitter_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2800,12 +2845,16 @@ int32_t q_splitter_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, int param1 ```
 int32_t q_splitter_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2823,12 +2872,16 @@ bool q_splitter_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self ```
 bool q_splitter_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2846,12 +2899,16 @@ QPaintEngine* q_splitter_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self ```
 QPaintEngine* q_splitter_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2869,12 +2926,16 @@ void q_splitter_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QMouseEvent* event ```
 void q_splitter_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2892,12 +2953,16 @@ void q_splitter_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QMouseEvent* event ```
 void q_splitter_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2915,12 +2980,16 @@ void q_splitter_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QMouseEvent* event ```
 void q_splitter_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2938,12 +3007,16 @@ void q_splitter_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QMouseEvent* event ```
 void q_splitter_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2961,12 +3034,16 @@ void q_splitter_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QWheelEvent* event ```
 void q_splitter_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2984,12 +3061,16 @@ void q_splitter_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QKeyEvent* event ```
 void q_splitter_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3007,12 +3088,16 @@ void q_splitter_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QKeyEvent* event ```
 void q_splitter_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3030,12 +3115,16 @@ void q_splitter_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QFocusEvent* event ```
 void q_splitter_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3053,12 +3142,16 @@ void q_splitter_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QFocusEvent* event ```
 void q_splitter_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3076,12 +3169,16 @@ void q_splitter_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QEnterEvent* event ```
 void q_splitter_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3099,12 +3196,16 @@ void q_splitter_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QEvent* event ```
 void q_splitter_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3122,12 +3223,16 @@ void q_splitter_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QMoveEvent* event ```
 void q_splitter_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3145,12 +3250,16 @@ void q_splitter_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QCloseEvent* event ```
 void q_splitter_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3168,12 +3277,16 @@ void q_splitter_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QContextMenuEvent* event ```
 void q_splitter_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3191,12 +3304,16 @@ void q_splitter_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QTabletEvent* event ```
 void q_splitter_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3214,12 +3331,16 @@ void q_splitter_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QActionEvent* event ```
 void q_splitter_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3237,12 +3358,16 @@ void q_splitter_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QDragEnterEvent* event ```
 void q_splitter_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3260,12 +3385,16 @@ void q_splitter_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QDragMoveEvent* event ```
 void q_splitter_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3283,12 +3412,16 @@ void q_splitter_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QDragLeaveEvent* event ```
 void q_splitter_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3306,12 +3439,16 @@ void q_splitter_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QDropEvent* event ```
 void q_splitter_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3329,12 +3466,16 @@ void q_splitter_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QShowEvent* event ```
 void q_splitter_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3352,12 +3493,16 @@ void q_splitter_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QHideEvent* event ```
 void q_splitter_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3375,12 +3520,16 @@ bool q_splitter_native_event(void* self, const char* eventType, void* message, i
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, const char* eventType, void* message, intptr_t* result ```
 bool q_splitter_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3398,12 +3547,16 @@ int32_t q_splitter_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_splitter_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3421,12 +3574,16 @@ void q_splitter_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QPainter* painter ```
 void q_splitter_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3444,12 +3601,16 @@ QPaintDevice* q_splitter_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QPoint* offset ```
 QPaintDevice* q_splitter_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3467,12 +3628,16 @@ QPainter* q_splitter_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self ```
 QPainter* q_splitter_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3490,12 +3655,16 @@ void q_splitter_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QInputMethodEvent* param1 ```
 void q_splitter_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3513,12 +3682,16 @@ QVariant* q_splitter_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_splitter_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3536,12 +3709,16 @@ bool q_splitter_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, bool next ```
 bool q_splitter_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3559,12 +3736,16 @@ bool q_splitter_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QObject* watched, QEvent* event ```
 bool q_splitter_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3582,12 +3763,16 @@ void q_splitter_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QTimerEvent* event ```
 void q_splitter_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3605,12 +3790,16 @@ void q_splitter_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QEvent* event ```
 void q_splitter_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3628,12 +3817,16 @@ void q_splitter_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QMetaMethod* signal ```
 void q_splitter_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3651,12 +3844,16 @@ void q_splitter_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QMetaMethod* signal ```
 void q_splitter_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3674,12 +3871,16 @@ void q_splitter_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QPainter* param1 ```
 void q_splitter_qbase_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3697,12 +3898,16 @@ void q_splitter_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self ```
 void q_splitter_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3720,12 +3925,16 @@ void q_splitter_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self ```
 void q_splitter_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3743,12 +3952,16 @@ void q_splitter_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self ```
 void q_splitter_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3766,12 +3979,16 @@ bool q_splitter_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self ```
 bool q_splitter_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3789,12 +4006,16 @@ bool q_splitter_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self ```
 bool q_splitter_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3812,12 +4033,16 @@ QObject* q_splitter_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self ```
 QObject* q_splitter_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3835,12 +4060,16 @@ int32_t q_splitter_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self ```
 int32_t q_splitter_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3858,12 +4087,16 @@ int32_t q_splitter_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, const char* signal ```
 int32_t q_splitter_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3881,6 +4114,8 @@ bool q_splitter_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitter* self, QMetaMethod* signal ```
@@ -3888,11 +4123,24 @@ bool q_splitter_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QSplitter* self, bool (*slot)(QSplitter*, QMetaMethod*) ```
 void q_splitter_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QSplitter* self, void (*slot)(QObject*, const char*) ```
+void q_splitter_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#dtor.QSplitter)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSplitter* self ```
@@ -3908,7 +4156,7 @@ QSplitterHandle* q_splitterhandle_new(int64_t o, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QSplitterHandle* self ```
-QMetaObject* q_splitterhandle_meta_object(void* self);
+const QMetaObject* q_splitterhandle_meta_object(void* self);
 
 /// ``` QSplitterHandle* self, const char* param1 ```
 void* q_splitterhandle_metacast(void* self, const char* param1);
@@ -3956,11 +4204,15 @@ QSplitter* q_splitterhandle_splitter(void* self);
 /// ``` QSplitterHandle* self ```
 QSize* q_splitterhandle_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSplitterHandle* self, QSize* (*slot)() ```
 void q_splitterhandle_on_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QSplitterHandle* self ```
@@ -3971,11 +4223,15 @@ QSize* q_splitterhandle_qbase_size_hint(void* self);
 /// ``` QSplitterHandle* self, QPaintEvent* param1 ```
 void q_splitterhandle_paint_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#paintEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSplitterHandle* self, void (*slot)(QSplitterHandle*, QPaintEvent*) ```
 void q_splitterhandle_on_paint_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#paintEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QSplitterHandle* self, QPaintEvent* param1 ```
@@ -3986,11 +4242,15 @@ void q_splitterhandle_qbase_paint_event(void* self, void* param1);
 /// ``` QSplitterHandle* self, QMouseEvent* param1 ```
 void q_splitterhandle_mouse_move_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#mouseMoveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSplitterHandle* self, void (*slot)(QSplitterHandle*, QMouseEvent*) ```
 void q_splitterhandle_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#mouseMoveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QSplitterHandle* self, QMouseEvent* param1 ```
@@ -4001,11 +4261,15 @@ void q_splitterhandle_qbase_mouse_move_event(void* self, void* param1);
 /// ``` QSplitterHandle* self, QMouseEvent* param1 ```
 void q_splitterhandle_mouse_press_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#mousePressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSplitterHandle* self, void (*slot)(QSplitterHandle*, QMouseEvent*) ```
 void q_splitterhandle_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#mousePressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QSplitterHandle* self, QMouseEvent* param1 ```
@@ -4016,11 +4280,15 @@ void q_splitterhandle_qbase_mouse_press_event(void* self, void* param1);
 /// ``` QSplitterHandle* self, QMouseEvent* param1 ```
 void q_splitterhandle_mouse_release_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#mouseReleaseEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSplitterHandle* self, void (*slot)(QSplitterHandle*, QMouseEvent*) ```
 void q_splitterhandle_on_mouse_release_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#mouseReleaseEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QSplitterHandle* self, QMouseEvent* param1 ```
@@ -4031,11 +4299,15 @@ void q_splitterhandle_qbase_mouse_release_event(void* self, void* param1);
 /// ``` QSplitterHandle* self, QResizeEvent* param1 ```
 void q_splitterhandle_resize_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#resizeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSplitterHandle* self, void (*slot)(QSplitterHandle*, QResizeEvent*) ```
 void q_splitterhandle_on_resize_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#resizeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QSplitterHandle* self, QResizeEvent* param1 ```
@@ -4046,11 +4318,15 @@ void q_splitterhandle_qbase_resize_event(void* self, void* param1);
 /// ``` QSplitterHandle* self, QEvent* param1 ```
 bool q_splitterhandle_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSplitterHandle* self, bool (*slot)(QSplitterHandle*, QEvent*) ```
 void q_splitterhandle_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QSplitterHandle* self, QEvent* param1 ```
@@ -4061,11 +4337,15 @@ bool q_splitterhandle_qbase_event(void* self, void* param1);
 /// ``` QSplitterHandle* self, int p ```
 void q_splitterhandle_move_splitter(void* self, int p);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#moveSplitter)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSplitterHandle* self, void (*slot)(QSplitterHandle*, int) ```
 void q_splitterhandle_on_move_splitter(void* self, void (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#moveSplitter)
+///
 /// Base class method implementation
 ///
 /// ``` QSplitterHandle* self, int p ```
@@ -4076,11 +4356,15 @@ void q_splitterhandle_qbase_move_splitter(void* self, int p);
 /// ``` QSplitterHandle* self, int p ```
 int32_t q_splitterhandle_closest_legal_position(void* self, int p);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#closestLegalPosition)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSplitterHandle* self, int32_t (*slot)(QSplitterHandle*, int) ```
 void q_splitterhandle_on_closest_legal_position(void* self, int32_t (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#closestLegalPosition)
+///
 /// Base class method implementation
 ///
 /// ``` QSplitterHandle* self, int p ```
@@ -4220,7 +4504,7 @@ QRect* q_splitterhandle_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QSplitterHandle* self ```
-QRect* q_splitterhandle_geometry(void* self);
+const QRect* q_splitterhandle_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4577,7 +4861,7 @@ QWidget* q_splitterhandle_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QSplitterHandle* self ```
-QPalette* q_splitterhandle_palette(void* self);
+const QPalette* q_splitterhandle_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4619,7 +4903,7 @@ int64_t q_splitterhandle_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QSplitterHandle* self ```
-QFont* q_splitterhandle_font(void* self);
+const QFont* q_splitterhandle_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5619,15 +5903,15 @@ void q_splitterhandle_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QSplitterHandle* self, QAction* actions[] ```
-void q_splitterhandle_add_actions(void* self, void* actions[]);
+/// ``` QSplitterHandle* self, libqt_list /* of QAction* */ actions ```
+void q_splitterhandle_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QSplitterHandle* self, QAction* before, QAction* actions[] ```
-void q_splitterhandle_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QSplitterHandle* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_splitterhandle_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -5827,6 +6111,8 @@ void q_splitterhandle_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QSplitterHandle* self, void (*slot)(QWidget*, const char*) ```
 void q_splitterhandle_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -5838,6 +6124,8 @@ void q_splitterhandle_on_window_title_changed(void* self, void (*slot)(void*, co
 void q_splitterhandle_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QSplitterHandle* self, void (*slot)(QWidget*, QIcon*) ```
 void q_splitterhandle_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -5851,6 +6139,8 @@ void q_splitterhandle_window_icon_text_changed(void* self, const char* iconText)
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QSplitterHandle* self, void (*slot)(QWidget*, const char*) ```
 void q_splitterhandle_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -5862,6 +6152,8 @@ void q_splitterhandle_on_window_icon_text_changed(void* self, void (*slot)(void*
 void q_splitterhandle_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QSplitterHandle* self, void (*slot)(QWidget*, QPoint*) ```
 void q_splitterhandle_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -6067,7 +6359,7 @@ void q_splitterhandle_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QSplitterHandle* self ```
-libqt_list /* of QObject* */ q_splitterhandle_children(void* self);
+const libqt_list /* of QObject* */ q_splitterhandle_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -6158,7 +6450,7 @@ QBindingStorage* q_splitterhandle_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QSplitterHandle* self ```
-QBindingStorage* q_splitterhandle_binding_storage2(void* self);
+const QBindingStorage* q_splitterhandle_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -6168,6 +6460,8 @@ QBindingStorage* q_splitterhandle_binding_storage2(void* self);
 void q_splitterhandle_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QSplitterHandle* self, void (*slot)(QObject*) ```
 void q_splitterhandle_on_destroyed(void* self, void (*slot)(void*));
@@ -6222,6 +6516,8 @@ QMetaObject__Connection* q_splitterhandle_connect4(void* self, void* sender, con
 void q_splitterhandle_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QSplitterHandle* self, void (*slot)(QObject*, QObject*) ```
 void q_splitterhandle_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -6321,12 +6617,16 @@ int32_t q_splitterhandle_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self ```
 int32_t q_splitterhandle_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6344,12 +6644,16 @@ void q_splitterhandle_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, bool visible ```
 void q_splitterhandle_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6367,12 +6671,16 @@ QSize* q_splitterhandle_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self ```
 QSize* q_splitterhandle_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6390,12 +6698,16 @@ int32_t q_splitterhandle_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, int param1 ```
 int32_t q_splitterhandle_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6413,12 +6725,16 @@ bool q_splitterhandle_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self ```
 bool q_splitterhandle_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6436,12 +6752,16 @@ QPaintEngine* q_splitterhandle_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self ```
 QPaintEngine* q_splitterhandle_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6459,12 +6779,16 @@ void q_splitterhandle_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QMouseEvent* event ```
 void q_splitterhandle_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6482,12 +6806,16 @@ void q_splitterhandle_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QWheelEvent* event ```
 void q_splitterhandle_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6505,12 +6833,16 @@ void q_splitterhandle_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QKeyEvent* event ```
 void q_splitterhandle_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6528,12 +6860,16 @@ void q_splitterhandle_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QKeyEvent* event ```
 void q_splitterhandle_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6551,12 +6887,16 @@ void q_splitterhandle_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QFocusEvent* event ```
 void q_splitterhandle_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6574,12 +6914,16 @@ void q_splitterhandle_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QFocusEvent* event ```
 void q_splitterhandle_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6597,12 +6941,16 @@ void q_splitterhandle_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QEnterEvent* event ```
 void q_splitterhandle_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6620,12 +6968,16 @@ void q_splitterhandle_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QEvent* event ```
 void q_splitterhandle_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6643,12 +6995,16 @@ void q_splitterhandle_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QMoveEvent* event ```
 void q_splitterhandle_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6666,12 +7022,16 @@ void q_splitterhandle_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QCloseEvent* event ```
 void q_splitterhandle_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6689,12 +7049,16 @@ void q_splitterhandle_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QContextMenuEvent* event ```
 void q_splitterhandle_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6712,12 +7076,16 @@ void q_splitterhandle_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QTabletEvent* event ```
 void q_splitterhandle_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6735,12 +7103,16 @@ void q_splitterhandle_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QActionEvent* event ```
 void q_splitterhandle_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6758,12 +7130,16 @@ void q_splitterhandle_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QDragEnterEvent* event ```
 void q_splitterhandle_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6781,12 +7157,16 @@ void q_splitterhandle_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QDragMoveEvent* event ```
 void q_splitterhandle_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6804,12 +7184,16 @@ void q_splitterhandle_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QDragLeaveEvent* event ```
 void q_splitterhandle_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6827,12 +7211,16 @@ void q_splitterhandle_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QDropEvent* event ```
 void q_splitterhandle_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6850,12 +7238,16 @@ void q_splitterhandle_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QShowEvent* event ```
 void q_splitterhandle_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6873,12 +7265,16 @@ void q_splitterhandle_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QHideEvent* event ```
 void q_splitterhandle_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6896,12 +7292,16 @@ bool q_splitterhandle_native_event(void* self, const char* eventType, void* mess
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, const char* eventType, void* message, intptr_t* result ```
 bool q_splitterhandle_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6919,12 +7319,16 @@ void q_splitterhandle_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QEvent* param1 ```
 void q_splitterhandle_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6942,12 +7346,16 @@ int32_t q_splitterhandle_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_splitterhandle_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6965,12 +7373,16 @@ void q_splitterhandle_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QPainter* painter ```
 void q_splitterhandle_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6988,12 +7400,16 @@ QPaintDevice* q_splitterhandle_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QPoint* offset ```
 QPaintDevice* q_splitterhandle_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7011,12 +7427,16 @@ QPainter* q_splitterhandle_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self ```
 QPainter* q_splitterhandle_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7034,12 +7454,16 @@ void q_splitterhandle_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QInputMethodEvent* param1 ```
 void q_splitterhandle_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7057,12 +7481,16 @@ QVariant* q_splitterhandle_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_splitterhandle_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7080,12 +7508,16 @@ bool q_splitterhandle_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, bool next ```
 bool q_splitterhandle_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7103,12 +7535,16 @@ bool q_splitterhandle_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QObject* watched, QEvent* event ```
 bool q_splitterhandle_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7126,12 +7562,16 @@ void q_splitterhandle_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QTimerEvent* event ```
 void q_splitterhandle_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7149,12 +7589,16 @@ void q_splitterhandle_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QChildEvent* event ```
 void q_splitterhandle_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7172,12 +7616,16 @@ void q_splitterhandle_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QEvent* event ```
 void q_splitterhandle_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7195,12 +7643,16 @@ void q_splitterhandle_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QMetaMethod* signal ```
 void q_splitterhandle_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7218,12 +7670,16 @@ void q_splitterhandle_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QMetaMethod* signal ```
 void q_splitterhandle_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7241,12 +7697,16 @@ void q_splitterhandle_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self ```
 void q_splitterhandle_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7264,12 +7724,16 @@ void q_splitterhandle_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self ```
 void q_splitterhandle_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7287,12 +7751,16 @@ void q_splitterhandle_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self ```
 void q_splitterhandle_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7310,12 +7778,16 @@ bool q_splitterhandle_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self ```
 bool q_splitterhandle_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7333,12 +7805,16 @@ bool q_splitterhandle_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self ```
 bool q_splitterhandle_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7356,12 +7832,16 @@ QObject* q_splitterhandle_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self ```
 QObject* q_splitterhandle_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7379,12 +7859,16 @@ int32_t q_splitterhandle_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self ```
 int32_t q_splitterhandle_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7402,12 +7886,16 @@ int32_t q_splitterhandle_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, const char* signal ```
 int32_t q_splitterhandle_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7425,6 +7913,8 @@ bool q_splitterhandle_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, QMetaMethod* signal ```
@@ -7432,11 +7922,24 @@ bool q_splitterhandle_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QSplitterHandle* self, bool (*slot)(QSplitterHandle*, QMetaMethod*) ```
 void q_splitterhandle_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QSplitterHandle* self, void (*slot)(QObject*, const char*) ```
+void q_splitterhandle_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#dtor.QSplitterHandle)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSplitterHandle* self ```

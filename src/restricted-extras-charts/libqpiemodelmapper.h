@@ -13,22 +13,17 @@
 #include "../qtlibc.h"
 
 #include "../libqabstractitemmodel.h"
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
-#include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include "libqpieseries.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
-/// https://doc.qt.io/qt-6/qpiemodelmapper.html
+/// https://doc.qt.io/qt-6/qpiemodelmapper-qtcharts.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QPieModelMapper* self ```
-QMetaObject* q_piemodelmapper_meta_object(void* self);
+const QMetaObject* q_piemodelmapper_meta_object(void* self);
 
 /// ``` QPieModelMapper* self, const char* param1 ```
 void* q_piemodelmapper_metacast(void* self, const char* param1);
@@ -147,7 +142,7 @@ void q_piemodelmapper_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QPieModelMapper* self ```
-libqt_list /* of QObject* */ q_piemodelmapper_children(void* self);
+const libqt_list /* of QObject* */ q_piemodelmapper_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -245,7 +240,7 @@ QBindingStorage* q_piemodelmapper_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QPieModelMapper* self ```
-QBindingStorage* q_piemodelmapper_binding_storage2(void* self);
+const QBindingStorage* q_piemodelmapper_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -255,6 +250,8 @@ QBindingStorage* q_piemodelmapper_binding_storage2(void* self);
 void q_piemodelmapper_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QPieModelMapper* self, void (*slot)(QObject*) ```
 void q_piemodelmapper_on_destroyed(void* self, void (*slot)(void*));
@@ -310,9 +307,22 @@ void q_piemodelmapper_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QPieModelMapper* self, void (*slot)(QObject*, QObject*) ```
 void q_piemodelmapper_on_destroyed1(void* self, void (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QPieModelMapper* self, void (*slot)(QObject*, const char*) ```
+void q_piemodelmapper_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper-qtcharts.html#dtor.QPieModelMapper)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPieModelMapper* self ```

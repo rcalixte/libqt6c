@@ -24,9 +24,8 @@
 #include "../printsupport/libqprintengine.h"
 #include "../printsupport/libqprinter.h"
 #include "../libqrect.h"
-#include <string.h>
 
-/// https://doc.qt.io/qt-6/qsciprinter.html
+/// https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html
 
 /// q_sciprinter_new constructs a new QsciPrinter object.
 ///
@@ -38,86 +37,106 @@ QsciPrinter* q_sciprinter_new();
 /// ``` enum QPrinter__PrinterMode mode ```
 QsciPrinter* q_sciprinter_new2(int64_t mode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciprinter.html#formatPage)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
 /// ``` QsciPrinter* self, QPainter* painter, bool drawing, QRect* area, int pagenr ```
 void q_sciprinter_format_page(void* self, void* painter, bool drawing, void* area, int pagenr);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciPrinter* self, void (*slot)(QsciPrinter*, QPainter*, bool, QRect*, int) ```
 void q_sciprinter_on_format_page(void* self, void (*slot)(void*, void*, bool, void*, int));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciPrinter* self, QPainter* painter, bool drawing, QRect* area, int pagenr ```
 void q_sciprinter_qbase_format_page(void* self, void* painter, bool drawing, void* area, int pagenr);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciprinter.html#magnification)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
 /// ``` QsciPrinter* self ```
 int32_t q_sciprinter_magnification(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciprinter.html#setMagnification)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
 /// ``` QsciPrinter* self, int magnification ```
 void q_sciprinter_set_magnification(void* self, int magnification);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciPrinter* self, void (*slot)(QsciPrinter*, int) ```
 void q_sciprinter_on_set_magnification(void* self, void (*slot)(void*, int));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciPrinter* self, int magnification ```
 void q_sciprinter_qbase_set_magnification(void* self, int magnification);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciprinter.html#printRange)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
 /// ``` QsciPrinter* self, QsciScintillaBase* qsb, QPainter* painter, int from, int to ```
 int32_t q_sciprinter_print_range(void* self, void* qsb, void* painter, int from, int to);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciPrinter* self, int32_t (*slot)(QsciPrinter*, QsciScintillaBase*, QPainter*, int, int) ```
 void q_sciprinter_on_print_range(void* self, int32_t (*slot)(void*, void*, void*, int, int));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciPrinter* self, QsciScintillaBase* qsb, QPainter* painter, int from, int to ```
 int32_t q_sciprinter_qbase_print_range(void* self, void* qsb, void* painter, int from, int to);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciprinter.html#printRange)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
 /// ``` QsciPrinter* self, QsciScintillaBase* qsb, int from, int to ```
 int32_t q_sciprinter_print_range2(void* self, void* qsb, int from, int to);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciPrinter* self, int32_t (*slot)(QsciPrinter*, QsciScintillaBase*, int, int) ```
 void q_sciprinter_on_print_range2(void* self, int32_t (*slot)(void*, void*, int, int));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciPrinter* self, QsciScintillaBase* qsb, int from, int to ```
 int32_t q_sciprinter_qbase_print_range2(void* self, void* qsb, int from, int to);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciprinter.html#wrapMode)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
 /// ``` QsciPrinter* self ```
 int64_t q_sciprinter_wrap_mode(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciprinter.html#setWrapMode)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
 /// ``` QsciPrinter* self, enum QsciScintilla__WrapMode wmode ```
 void q_sciprinter_set_wrap_mode(void* self, int64_t wmode);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciPrinter* self, void (*slot)(QsciPrinter*, enum QsciScintilla__WrapMode) ```
 void q_sciprinter_on_set_wrap_mode(void* self, void (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciPrinter* self, enum QsciScintilla__WrapMode wmode ```
@@ -568,12 +587,16 @@ int32_t q_sciprinter_dev_type(void* self);
 
 /// Inherited from QPrinter
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciPrinter* self ```
 int32_t q_sciprinter_qbase_dev_type(void* self);
 
 /// Inherited from QPrinter
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -591,12 +614,16 @@ bool q_sciprinter_new_page(void* self);
 
 /// Inherited from QPrinter
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#newPage)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciPrinter* self ```
 bool q_sciprinter_qbase_new_page(void* self);
 
 /// Inherited from QPrinter
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#newPage)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -614,12 +641,16 @@ QPaintEngine* q_sciprinter_paint_engine(void* self);
 
 /// Inherited from QPrinter
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciPrinter* self ```
 QPaintEngine* q_sciprinter_qbase_paint_engine(void* self);
 
 /// Inherited from QPrinter
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -637,12 +668,16 @@ int32_t q_sciprinter_metric(void* self, int64_t param1);
 
 /// Inherited from QPrinter
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciPrinter* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_sciprinter_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QPrinter
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -660,12 +695,16 @@ bool q_sciprinter_set_page_layout(void* self, void* pageLayout);
 
 /// Inherited from QPagedPaintDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagedpaintdevice.html#setPageLayout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciPrinter* self, QPageLayout* pageLayout ```
 bool q_sciprinter_qbase_set_page_layout(void* self, void* pageLayout);
 
 /// Inherited from QPagedPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagedpaintdevice.html#setPageLayout)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -683,12 +722,16 @@ bool q_sciprinter_set_page_size(void* self, void* pageSize);
 
 /// Inherited from QPagedPaintDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagedpaintdevice.html#setPageSize)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciPrinter* self, QPageSize* pageSize ```
 bool q_sciprinter_qbase_set_page_size(void* self, void* pageSize);
 
 /// Inherited from QPagedPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagedpaintdevice.html#setPageSize)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -706,12 +749,16 @@ bool q_sciprinter_set_page_orientation(void* self, int64_t orientation);
 
 /// Inherited from QPagedPaintDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagedpaintdevice.html#setPageOrientation)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciPrinter* self, enum QPageLayout__Orientation orientation ```
 bool q_sciprinter_qbase_set_page_orientation(void* self, int64_t orientation);
 
 /// Inherited from QPagedPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagedpaintdevice.html#setPageOrientation)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -729,12 +776,16 @@ bool q_sciprinter_set_page_margins(void* self, void* margins, int64_t units);
 
 /// Inherited from QPagedPaintDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagedpaintdevice.html#setPageMargins)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciPrinter* self, QMarginsF* margins, enum QPageLayout__Unit units ```
 bool q_sciprinter_qbase_set_page_margins(void* self, void* margins, int64_t units);
 
 /// Inherited from QPagedPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagedpaintdevice.html#setPageMargins)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -752,12 +803,16 @@ void q_sciprinter_set_page_ranges(void* self, void* ranges);
 
 /// Inherited from QPagedPaintDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagedpaintdevice.html#setPageRanges)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciPrinter* self, QPageRanges* ranges ```
 void q_sciprinter_qbase_set_page_ranges(void* self, void* ranges);
 
 /// Inherited from QPagedPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagedpaintdevice.html#setPageRanges)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -775,12 +830,16 @@ void q_sciprinter_init_painter(void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciPrinter* self, QPainter* painter ```
 void q_sciprinter_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -798,12 +857,16 @@ QPaintDevice* q_sciprinter_redirected(void* self, void* offset);
 
 /// Inherited from QPaintDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciPrinter* self, QPoint* offset ```
 QPaintDevice* q_sciprinter_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -821,12 +884,16 @@ QPainter* q_sciprinter_shared_painter(void* self);
 
 /// Inherited from QPaintDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciPrinter* self ```
 QPainter* q_sciprinter_qbase_shared_painter(void* self);
 
 /// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -844,6 +911,8 @@ void q_sciprinter_set_engines(void* self, void* printEngine, void* paintEngine);
 
 /// Inherited from QPrinter
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#setEngines)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciPrinter* self, QPrintEngine* printEngine, QPaintEngine* paintEngine ```
@@ -851,11 +920,15 @@ void q_sciprinter_qbase_set_engines(void* self, void* printEngine, void* paintEn
 
 /// Inherited from QPrinter
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#setEngines)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QsciPrinter* self, void (*slot)(QsciPrinter*, QPrintEngine*, QPaintEngine*) ```
 void q_sciprinter_on_set_engines(void* self, void (*slot)(void*, void*, void*));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QsciPrinter* self ```

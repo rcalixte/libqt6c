@@ -153,6 +153,8 @@ QPrinterInfo* q_printerinfo_default_printer();
 /// ``` const char* printerName ```
 QPrinterInfo* q_printerinfo_printer_info(const char* printerName);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#dtor.QPrinterInfo)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPrinterInfo* self ```

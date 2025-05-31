@@ -199,6 +199,8 @@ QPointF* q_vector2d_to_point_f(void* self);
 /// ``` QVector2D* self ```
 QVariant* q_vector2d_to_q_variant(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#dtor.QVector2D)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QVector2D* self ```
@@ -436,6 +438,8 @@ QPointF* q_vector3d_to_point_f(void* self);
 /// ``` QVector3D* self ```
 QVariant* q_vector3d_to_q_variant(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#dtor.QVector3D)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QVector3D* self ```
@@ -653,6 +657,8 @@ QPointF* q_vector4d_to_point_f(void* self);
 /// ``` QVector4D* self ```
 QVariant* q_vector4d_to_q_variant(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#dtor.QVector4D)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QVector4D* self ```

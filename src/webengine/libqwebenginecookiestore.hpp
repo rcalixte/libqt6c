@@ -16,26 +16,15 @@ extern "C" {
 
 #ifdef __cplusplus
 typedef QWebEngineCookieStore::FilterRequest FilterRequest;
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #if defined(WORKAROUND_INNER_CLASS_DEFINITION_QWebEngineCookieStore__FilterRequest)
 typedef QWebEngineCookieStore::FilterRequest QWebEngineCookieStore__FilterRequest;
 #endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
-typedef struct QChildEvent QChildEvent;
-typedef struct QEvent QEvent;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QNetworkCookie QNetworkCookie;
 typedef struct QObject QObject;
-typedef struct QThread QThread;
-typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
-typedef struct QVariant QVariant;
 typedef struct QWebEngineCookieStore QWebEngineCookieStore;
 typedef struct QWebEngineCookieStore__FilterRequest QWebEngineCookieStore__FilterRequest;
 #endif
@@ -57,8 +46,6 @@ libqt_string QWebEngineCookieStore_Tr2(const char* s, const char* c);
 libqt_string QWebEngineCookieStore_Tr3(const char* s, const char* c, int n);
 void QWebEngineCookieStore_SetCookie2(QWebEngineCookieStore* self, QNetworkCookie* cookie, QUrl* origin);
 void QWebEngineCookieStore_DeleteCookie2(QWebEngineCookieStore* self, QNetworkCookie* cookie, QUrl* origin);
-bool QWebEngineCookieStore_Event(QWebEngineCookieStore* self, QEvent* event);
-bool QWebEngineCookieStore_EventFilter(QWebEngineCookieStore* self, QObject* watched, QEvent* event);
 void QWebEngineCookieStore_Delete(QWebEngineCookieStore* self);
 
 #ifdef __cplusplus

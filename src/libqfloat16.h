@@ -69,6 +69,8 @@ int32_t q_qfloat16_fp_classify(void* self);
 /// ``` qfloat16* self ```
 bool q_qfloat16_is_normal(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfloat16.html#dtor.qfloat16)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` qfloat16* self ```

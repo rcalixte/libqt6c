@@ -72,6 +72,8 @@ const char* q_mediametadata_string_value(void* self, int64_t k);
 /// ``` enum QMediaMetaData__Key k ```
 const char* q_mediametadata_meta_data_key_to_string(int64_t k);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediametadata.html#dtor.QMediaMetaData)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMediaMetaData* self ```

@@ -12,42 +12,17 @@
 
 #include "qtlibc.h"
 
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
-#include "libqcursor.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
-#include "libqlocale.h"
-#include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqscreen.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
-#include "libqthread.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qstatusbar.html
 
@@ -64,7 +39,7 @@ QStatusBar* q_statusbar_new2();
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QStatusBar* self ```
-QMetaObject* q_statusbar_meta_object(void* self);
+const QMetaObject* q_statusbar_meta_object(void* self);
 
 /// ``` QStatusBar* self, const char* param1 ```
 void* q_statusbar_metacast(void* self, const char* param1);
@@ -142,6 +117,8 @@ void q_statusbar_clear_message(void* self);
 /// ``` QStatusBar* self, const char* text ```
 void q_statusbar_message_changed(void* self, const char* text);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatusbar.html#messageChanged)
+///
 /// ``` QStatusBar* self, void (*slot)(QStatusBar*, const char*) ```
 void q_statusbar_on_message_changed(void* self, void (*slot)(void*, const char*));
 
@@ -150,11 +127,15 @@ void q_statusbar_on_message_changed(void* self, void (*slot)(void*, const char*)
 /// ``` QStatusBar* self, QShowEvent* param1 ```
 void q_statusbar_show_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatusbar.html#showEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStatusBar* self, void (*slot)(QStatusBar*, QShowEvent*) ```
 void q_statusbar_on_show_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatusbar.html#showEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QStatusBar* self, QShowEvent* param1 ```
@@ -165,11 +146,15 @@ void q_statusbar_qbase_show_event(void* self, void* param1);
 /// ``` QStatusBar* self, QPaintEvent* param1 ```
 void q_statusbar_paint_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatusbar.html#paintEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStatusBar* self, void (*slot)(QStatusBar*, QPaintEvent*) ```
 void q_statusbar_on_paint_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatusbar.html#paintEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QStatusBar* self, QPaintEvent* param1 ```
@@ -180,11 +165,15 @@ void q_statusbar_qbase_paint_event(void* self, void* param1);
 /// ``` QStatusBar* self, QResizeEvent* param1 ```
 void q_statusbar_resize_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatusbar.html#resizeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStatusBar* self, void (*slot)(QStatusBar*, QResizeEvent*) ```
 void q_statusbar_on_resize_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatusbar.html#resizeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QStatusBar* self, QResizeEvent* param1 ```
@@ -195,11 +184,15 @@ void q_statusbar_qbase_resize_event(void* self, void* param1);
 /// ``` QStatusBar* self ```
 void q_statusbar_reformat(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatusbar.html#reformat)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStatusBar* self, void (*slot)() ```
 void q_statusbar_on_reformat(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatusbar.html#reformat)
+///
 /// Base class method implementation
 ///
 /// ``` QStatusBar* self ```
@@ -210,11 +203,15 @@ void q_statusbar_qbase_reformat(void* self);
 /// ``` QStatusBar* self ```
 void q_statusbar_hide_or_show(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatusbar.html#hideOrShow)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStatusBar* self, void (*slot)() ```
 void q_statusbar_on_hide_or_show(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatusbar.html#hideOrShow)
+///
 /// Base class method implementation
 ///
 /// ``` QStatusBar* self ```
@@ -225,11 +222,15 @@ void q_statusbar_qbase_hide_or_show(void* self);
 /// ``` QStatusBar* self, QEvent* param1 ```
 bool q_statusbar_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatusbar.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStatusBar* self, bool (*slot)(QStatusBar*, QEvent*) ```
 void q_statusbar_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatusbar.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QStatusBar* self, QEvent* param1 ```
@@ -394,7 +395,7 @@ QRect* q_statusbar_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QStatusBar* self ```
-QRect* q_statusbar_geometry(void* self);
+const QRect* q_statusbar_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -751,7 +752,7 @@ QWidget* q_statusbar_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QStatusBar* self ```
-QPalette* q_statusbar_palette(void* self);
+const QPalette* q_statusbar_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -793,7 +794,7 @@ int64_t q_statusbar_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QStatusBar* self ```
-QFont* q_statusbar_font(void* self);
+const QFont* q_statusbar_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1793,15 +1794,15 @@ void q_statusbar_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QStatusBar* self, QAction* actions[] ```
-void q_statusbar_add_actions(void* self, void* actions[]);
+/// ``` QStatusBar* self, libqt_list /* of QAction* */ actions ```
+void q_statusbar_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QStatusBar* self, QAction* before, QAction* actions[] ```
-void q_statusbar_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QStatusBar* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_statusbar_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2001,6 +2002,8 @@ void q_statusbar_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QStatusBar* self, void (*slot)(QWidget*, const char*) ```
 void q_statusbar_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2012,6 +2015,8 @@ void q_statusbar_on_window_title_changed(void* self, void (*slot)(void*, const c
 void q_statusbar_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QStatusBar* self, void (*slot)(QWidget*, QIcon*) ```
 void q_statusbar_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -2025,6 +2030,8 @@ void q_statusbar_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QStatusBar* self, void (*slot)(QWidget*, const char*) ```
 void q_statusbar_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2036,6 +2043,8 @@ void q_statusbar_on_window_icon_text_changed(void* self, void (*slot)(void*, con
 void q_statusbar_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QStatusBar* self, void (*slot)(QWidget*, QPoint*) ```
 void q_statusbar_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2241,7 +2250,7 @@ void q_statusbar_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QStatusBar* self ```
-libqt_list /* of QObject* */ q_statusbar_children(void* self);
+const libqt_list /* of QObject* */ q_statusbar_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2332,7 +2341,7 @@ QBindingStorage* q_statusbar_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QStatusBar* self ```
-QBindingStorage* q_statusbar_binding_storage2(void* self);
+const QBindingStorage* q_statusbar_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2342,6 +2351,8 @@ QBindingStorage* q_statusbar_binding_storage2(void* self);
 void q_statusbar_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QStatusBar* self, void (*slot)(QObject*) ```
 void q_statusbar_on_destroyed(void* self, void (*slot)(void*));
@@ -2396,6 +2407,8 @@ QMetaObject__Connection* q_statusbar_connect4(void* self, void* sender, const ch
 void q_statusbar_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QStatusBar* self, void (*slot)(QObject*, QObject*) ```
 void q_statusbar_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -2495,12 +2508,16 @@ int32_t q_statusbar_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self ```
 int32_t q_statusbar_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2518,12 +2535,16 @@ void q_statusbar_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, bool visible ```
 void q_statusbar_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2541,12 +2562,16 @@ QSize* q_statusbar_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self ```
 QSize* q_statusbar_qbase_size_hint(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2564,12 +2589,16 @@ QSize* q_statusbar_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self ```
 QSize* q_statusbar_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2587,12 +2616,16 @@ int32_t q_statusbar_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, int param1 ```
 int32_t q_statusbar_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2610,12 +2643,16 @@ bool q_statusbar_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self ```
 bool q_statusbar_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2633,12 +2670,16 @@ QPaintEngine* q_statusbar_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self ```
 QPaintEngine* q_statusbar_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2656,12 +2697,16 @@ void q_statusbar_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QMouseEvent* event ```
 void q_statusbar_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2679,12 +2724,16 @@ void q_statusbar_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QMouseEvent* event ```
 void q_statusbar_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2702,12 +2751,16 @@ void q_statusbar_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QMouseEvent* event ```
 void q_statusbar_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2725,12 +2778,16 @@ void q_statusbar_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QMouseEvent* event ```
 void q_statusbar_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2748,12 +2805,16 @@ void q_statusbar_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QWheelEvent* event ```
 void q_statusbar_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2771,12 +2832,16 @@ void q_statusbar_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QKeyEvent* event ```
 void q_statusbar_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2794,12 +2859,16 @@ void q_statusbar_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QKeyEvent* event ```
 void q_statusbar_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2817,12 +2886,16 @@ void q_statusbar_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QFocusEvent* event ```
 void q_statusbar_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2840,12 +2913,16 @@ void q_statusbar_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QFocusEvent* event ```
 void q_statusbar_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2863,12 +2940,16 @@ void q_statusbar_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QEnterEvent* event ```
 void q_statusbar_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2886,12 +2967,16 @@ void q_statusbar_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QEvent* event ```
 void q_statusbar_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2909,12 +2994,16 @@ void q_statusbar_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QMoveEvent* event ```
 void q_statusbar_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2932,12 +3021,16 @@ void q_statusbar_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QCloseEvent* event ```
 void q_statusbar_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2955,12 +3048,16 @@ void q_statusbar_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QContextMenuEvent* event ```
 void q_statusbar_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2978,12 +3075,16 @@ void q_statusbar_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QTabletEvent* event ```
 void q_statusbar_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3001,12 +3102,16 @@ void q_statusbar_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QActionEvent* event ```
 void q_statusbar_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3024,12 +3129,16 @@ void q_statusbar_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QDragEnterEvent* event ```
 void q_statusbar_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3047,12 +3156,16 @@ void q_statusbar_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QDragMoveEvent* event ```
 void q_statusbar_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3070,12 +3183,16 @@ void q_statusbar_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QDragLeaveEvent* event ```
 void q_statusbar_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3093,12 +3210,16 @@ void q_statusbar_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QDropEvent* event ```
 void q_statusbar_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3116,12 +3237,16 @@ void q_statusbar_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QHideEvent* event ```
 void q_statusbar_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3139,12 +3264,16 @@ bool q_statusbar_native_event(void* self, const char* eventType, void* message, 
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, const char* eventType, void* message, intptr_t* result ```
 bool q_statusbar_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3162,12 +3291,16 @@ void q_statusbar_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QEvent* param1 ```
 void q_statusbar_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3185,12 +3318,16 @@ int32_t q_statusbar_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_statusbar_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3208,12 +3345,16 @@ void q_statusbar_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QPainter* painter ```
 void q_statusbar_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3231,12 +3372,16 @@ QPaintDevice* q_statusbar_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QPoint* offset ```
 QPaintDevice* q_statusbar_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3254,12 +3399,16 @@ QPainter* q_statusbar_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self ```
 QPainter* q_statusbar_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3277,12 +3426,16 @@ void q_statusbar_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QInputMethodEvent* param1 ```
 void q_statusbar_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3300,12 +3453,16 @@ QVariant* q_statusbar_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_statusbar_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3323,12 +3480,16 @@ bool q_statusbar_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, bool next ```
 bool q_statusbar_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3346,12 +3507,16 @@ bool q_statusbar_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QObject* watched, QEvent* event ```
 bool q_statusbar_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3369,12 +3534,16 @@ void q_statusbar_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QTimerEvent* event ```
 void q_statusbar_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3392,12 +3561,16 @@ void q_statusbar_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QChildEvent* event ```
 void q_statusbar_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3415,12 +3588,16 @@ void q_statusbar_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QEvent* event ```
 void q_statusbar_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3438,12 +3615,16 @@ void q_statusbar_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QMetaMethod* signal ```
 void q_statusbar_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3461,12 +3642,16 @@ void q_statusbar_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QMetaMethod* signal ```
 void q_statusbar_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3484,12 +3669,16 @@ void q_statusbar_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self ```
 void q_statusbar_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3507,12 +3696,16 @@ void q_statusbar_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self ```
 void q_statusbar_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3530,12 +3723,16 @@ void q_statusbar_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self ```
 void q_statusbar_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3553,12 +3750,16 @@ bool q_statusbar_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self ```
 bool q_statusbar_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3576,12 +3777,16 @@ bool q_statusbar_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self ```
 bool q_statusbar_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3599,12 +3804,16 @@ QObject* q_statusbar_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self ```
 QObject* q_statusbar_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3622,12 +3831,16 @@ int32_t q_statusbar_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self ```
 int32_t q_statusbar_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3645,12 +3858,16 @@ int32_t q_statusbar_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, const char* signal ```
 int32_t q_statusbar_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3668,6 +3885,8 @@ bool q_statusbar_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusBar* self, QMetaMethod* signal ```
@@ -3675,11 +3894,24 @@ bool q_statusbar_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QStatusBar* self, bool (*slot)(QStatusBar*, QMetaMethod*) ```
 void q_statusbar_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QStatusBar* self, void (*slot)(QObject*, const char*) ```
+void q_statusbar_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatusbar.html#dtor.QStatusBar)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStatusBar* self ```

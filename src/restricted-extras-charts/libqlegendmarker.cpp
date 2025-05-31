@@ -1,24 +1,14 @@
 #include <QAbstractSeries>
-#include <QAnyStringView>
-#include <QBindingStorage>
 #include <QBrush>
-#include <QByteArray>
-#include <QChildEvent>
-#include <QEvent>
 #include <QFont>
 #include <QLegendMarker>
-#include <QList>
 #include <QMetaMethod>
 #include <QMetaObject>
-#define WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection
 #include <QObject>
 #include <QPen>
 #include <QString>
 #include <QByteArray>
 #include <cstring>
-#include <QThread>
-#include <QTimerEvent>
-#include <QVariant>
 #include <qlegendmarker.h>
 #include "libqlegendmarker.hpp"
 #include "libqlegendmarker.hxx"
@@ -242,14 +232,6 @@ libqt_string QLegendMarker_Tr3(const char* s, const char* c, int n) {
     memcpy(_str.data, _b.data(), _str.len);
     _str.data[_str.len] = '\0';
     return _str;
-}
-
-bool QLegendMarker_Event(QLegendMarker* self, QEvent* event) {
-    return self->event(event);
-}
-
-bool QLegendMarker_EventFilter(QLegendMarker* self, QObject* watched, QEvent* event) {
-    return self->eventFilter(watched, event);
 }
 
 void QLegendMarker_Delete(QLegendMarker* self) {

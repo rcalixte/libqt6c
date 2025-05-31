@@ -21,7 +21,7 @@ QJsonArray* q_jsonarray_from_string_list(const char* list[]) {
     for (size_t _i = 0; _i < list_len; ++_i) {
         list_qstr[_i] = qstring(list[_i]);
     }
-    libqt_list list_list = qstrlist(list_qstr, list_len);
+    libqt_list list_list = qlist(list_qstr, list_len);
     return QJsonArray_FromStringList(list_list);
 }
 
@@ -205,7 +205,7 @@ QJsonValueRef* q_jsonarray__iterator_operator_multiply(void* self) {
     return QJsonArray__iterator_OperatorMultiply((QJsonArray__iterator*)self);
 }
 
-QJsonValueConstRef* q_jsonarray__iterator_operator_minus_greater(void* self) {
+const QJsonValueConstRef* q_jsonarray__iterator_operator_minus_greater(void* self) {
     return QJsonArray__iterator_OperatorMinusGreater((QJsonArray__iterator*)self);
 }
 
@@ -329,11 +329,11 @@ void q_jsonarray__const_iterator_operator_assign(void* self, void* other) {
     QJsonArray__const_iterator_OperatorAssign((QJsonArray__const_iterator*)self, (QJsonArray__const_iterator*)other);
 }
 
-QJsonValueConstRef* q_jsonarray__const_iterator_operator_multiply(void* self) {
+const QJsonValueConstRef* q_jsonarray__const_iterator_operator_multiply(void* self) {
     return QJsonArray__const_iterator_OperatorMultiply((QJsonArray__const_iterator*)self);
 }
 
-QJsonValueConstRef* q_jsonarray__const_iterator_operator_minus_greater(void* self) {
+const QJsonValueConstRef* q_jsonarray__const_iterator_operator_minus_greater(void* self) {
     return QJsonArray__const_iterator_OperatorMinusGreater((QJsonArray__const_iterator*)self);
 }
 

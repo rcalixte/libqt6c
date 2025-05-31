@@ -1,40 +1,15 @@
-#include "libqaction.hpp"
 #include "libqevent.hpp"
-#include "libqanystringview.hpp"
-#include "libqbackingstore.hpp"
-#include "libqbindingstorage.hpp"
-#include "libqbitmap.hpp"
-#include "libqcursor.hpp"
 #include "libqdialog.hpp"
-#include "libqfont.hpp"
-#include "libqfontinfo.hpp"
-#include "libqfontmetrics.hpp"
-#include "libqgraphicseffect.hpp"
-#include "libqgraphicsproxywidget.hpp"
-#include "libqicon.hpp"
-#include "libqkeysequence.hpp"
-#include "libqlayout.hpp"
-#include "libqlocale.hpp"
-#include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
 #include "libqpainter.hpp"
-#include "libqpalette.hpp"
-#include "libqpixmap.hpp"
 #include "libqpoint.hpp"
-#include "libqrect.hpp"
-#include "libqregion.hpp"
-#include "libqscreen.hpp"
 #include "libqsize.hpp"
-#include "libqsizepolicy.hpp"
 #include <string.h>
-#include "libqstyle.hpp"
-#include "libqthread.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqwindow.hpp"
 #include "libqcoreevent.hpp"
 #include "libqinputdialog.hpp"
 #include "libqinputdialog.h"
@@ -51,7 +26,7 @@ QInputDialog* q_inputdialog_new3(void* parent, int64_t flags) {
     return QInputDialog_new3((QWidget*)parent, flags);
 }
 
-QMetaObject* q_inputdialog_meta_object(void* self) {
+const QMetaObject* q_inputdialog_meta_object(void* self) {
     return QInputDialog_MetaObject((QInputDialog*)self);
 }
 
@@ -146,7 +121,7 @@ void q_inputdialog_set_combo_box_items(void* self, const char* items[]) {
     for (size_t _i = 0; _i < items_len; ++_i) {
         items_qstr[_i] = qstring(items[_i]);
     }
-    libqt_list items_list = qstrlist(items_qstr, items_len);
+    libqt_list items_list = qlist(items_qstr, items_len);
     QInputDialog_SetComboBoxItems((QInputDialog*)self, items_list);
 }
 
@@ -314,7 +289,7 @@ const char* q_inputdialog_get_item(void* parent, const char* title, const char* 
     for (size_t _i = 0; _i < items_len; ++_i) {
         items_qstr[_i] = qstring(items[_i]);
     }
-    libqt_list items_list = qstrlist(items_qstr, items_len);
+    libqt_list items_list = qlist(items_qstr, items_len);
     libqt_string _str = QInputDialog_GetItem((QWidget*)parent, qstring(title), qstring(label), items_list);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -484,7 +459,7 @@ const char* q_inputdialog_get_item5(void* parent, const char* title, const char*
     for (size_t _i = 0; _i < items_len; ++_i) {
         items_qstr[_i] = qstring(items[_i]);
     }
-    libqt_list items_list = qstrlist(items_qstr, items_len);
+    libqt_list items_list = qlist(items_qstr, items_len);
     libqt_string _str = QInputDialog_GetItem5((QWidget*)parent, qstring(title), qstring(label), items_list, current);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -497,7 +472,7 @@ const char* q_inputdialog_get_item6(void* parent, const char* title, const char*
     for (size_t _i = 0; _i < items_len; ++_i) {
         items_qstr[_i] = qstring(items[_i]);
     }
-    libqt_list items_list = qstrlist(items_qstr, items_len);
+    libqt_list items_list = qlist(items_qstr, items_len);
     libqt_string _str = QInputDialog_GetItem6((QWidget*)parent, qstring(title), qstring(label), items_list, current, editable);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -510,7 +485,7 @@ const char* q_inputdialog_get_item7(void* parent, const char* title, const char*
     for (size_t _i = 0; _i < items_len; ++_i) {
         items_qstr[_i] = qstring(items[_i]);
     }
-    libqt_list items_list = qstrlist(items_qstr, items_len);
+    libqt_list items_list = qlist(items_qstr, items_len);
     libqt_string _str = QInputDialog_GetItem7((QWidget*)parent, qstring(title), qstring(label), items_list, current, editable, (bool*)ok);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -523,7 +498,7 @@ const char* q_inputdialog_get_item8(void* parent, const char* title, const char*
     for (size_t _i = 0; _i < items_len; ++_i) {
         items_qstr[_i] = qstring(items[_i]);
     }
-    libqt_list items_list = qstrlist(items_qstr, items_len);
+    libqt_list items_list = qlist(items_qstr, items_len);
     libqt_string _str = QInputDialog_GetItem8((QWidget*)parent, qstring(title), qstring(label), items_list, current, editable, (bool*)ok, flags);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -536,7 +511,7 @@ const char* q_inputdialog_get_item9(void* parent, const char* title, const char*
     for (size_t _i = 0; _i < items_len; ++_i) {
         items_qstr[_i] = qstring(items[_i]);
     }
-    libqt_list items_list = qstrlist(items_qstr, items_len);
+    libqt_list items_list = qlist(items_qstr, items_len);
     libqt_string _str = QInputDialog_GetItem9((QWidget*)parent, qstring(title), qstring(label), items_list, current, editable, (bool*)ok, flags, inputMethodHints);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -707,7 +682,7 @@ QRect* q_inputdialog_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_inputdialog_geometry(void* self) {
+const QRect* q_inputdialog_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -911,7 +886,7 @@ QWidget* q_inputdialog_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_inputdialog_palette(void* self) {
+const QPalette* q_inputdialog_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -935,7 +910,7 @@ int64_t q_inputdialog_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_inputdialog_font(void* self) {
+const QFont* q_inputdialog_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -1540,30 +1515,12 @@ void q_inputdialog_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_inputdialog_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_inputdialog_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_inputdialog_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_inputdialog_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_inputdialog_insert_action(void* self, void* before, void* action) {
@@ -1783,8 +1740,7 @@ const char* q_inputdialog_object_name(void* self) {
 }
 
 void q_inputdialog_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_inputdialog_is_widget_type(void* self) {
@@ -1823,7 +1779,7 @@ void q_inputdialog_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_inputdialog_children(void* self) {
+const libqt_list /* of QObject* */ q_inputdialog_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1886,7 +1842,7 @@ QBindingStorage* q_inputdialog_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_inputdialog_binding_storage2(void* self) {
+const QBindingStorage* q_inputdialog_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2672,6 +2628,10 @@ bool q_inputdialog_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_inputdialog_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QInputDialog_OnIsSignalConnected((QInputDialog*)self, (intptr_t)slot);
+}
+
+void q_inputdialog_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_inputdialog_delete(void* self) {

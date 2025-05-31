@@ -39,6 +39,8 @@ int32_t q_webenginefindtextresult_active_match(void* self);
 /// ``` QWebEngineFindTextResult* self, QWebEngineFindTextResult* other ```
 void q_webenginefindtextresult_operator_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefindtextresult.html#dtor.QWebEngineFindTextResult)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWebEngineFindTextResult* self ```

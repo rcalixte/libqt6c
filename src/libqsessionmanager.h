@@ -12,21 +12,16 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
-#include "libqevent.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qsessionmanager.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QSessionManager* self ```
-QMetaObject* q_sessionmanager_meta_object(void* self);
+const QMetaObject* q_sessionmanager_meta_object(void* self);
 
 /// ``` QSessionManager* self, const char* param1 ```
 void* q_sessionmanager_metacast(void* self, const char* param1);
@@ -225,7 +220,7 @@ void q_sessionmanager_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QSessionManager* self ```
-libqt_list /* of QObject* */ q_sessionmanager_children(void* self);
+const libqt_list /* of QObject* */ q_sessionmanager_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -323,7 +318,7 @@ QBindingStorage* q_sessionmanager_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QSessionManager* self ```
-QBindingStorage* q_sessionmanager_binding_storage2(void* self);
+const QBindingStorage* q_sessionmanager_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -333,6 +328,8 @@ QBindingStorage* q_sessionmanager_binding_storage2(void* self);
 void q_sessionmanager_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QSessionManager* self, void (*slot)(QObject*) ```
 void q_sessionmanager_on_destroyed(void* self, void (*slot)(void*));
@@ -388,8 +385,19 @@ void q_sessionmanager_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QSessionManager* self, void (*slot)(QObject*, QObject*) ```
 void q_sessionmanager_on_destroyed1(void* self, void (*slot)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QSessionManager* self, void (*slot)(QObject*, const char*) ```
+void q_sessionmanager_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qsessionmanager.html#types
 

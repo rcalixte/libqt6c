@@ -448,6 +448,8 @@ void q_textcursor_insert_markdown2(void* self, const char* markdown, int64_t fea
 /// ``` QTextCursor* self, QImage* image, const char* name ```
 void q_textcursor_insert_image2(void* self, void* image, const char* name);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#dtor.QTextCursor)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextCursor* self ```

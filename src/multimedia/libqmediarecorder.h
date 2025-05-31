@@ -12,8 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "../libqevent.h"
 #include "libqmediacapturesession.h"
 #include "libqmediaformat.h"
@@ -22,9 +20,7 @@
 #include "../libqobject.h"
 #include "../libqsize.h"
 #include <string.h>
-#include "../libqthread.h"
 #include "../libqurl.h"
-#include "../libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qmediarecorder.html
 
@@ -41,7 +37,7 @@ QMediaRecorder* q_mediarecorder_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QMediaRecorder* self ```
-QMetaObject* q_mediarecorder_meta_object(void* self);
+const QMetaObject* q_mediarecorder_meta_object(void* self);
 
 /// ``` QMediaRecorder* self, const char* param1 ```
 void* q_mediarecorder_metacast(void* self, const char* param1);
@@ -239,6 +235,8 @@ void q_mediarecorder_stop(void* self);
 /// ``` QMediaRecorder* self, enum QMediaRecorder__RecorderState state ```
 void q_mediarecorder_recorder_state_changed(void* self, int64_t state);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#recorderStateChanged)
+///
 /// ``` QMediaRecorder* self, void (*slot)(QMediaRecorder*, enum QMediaRecorder__RecorderState) ```
 void q_mediarecorder_on_recorder_state_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -247,6 +245,8 @@ void q_mediarecorder_on_recorder_state_changed(void* self, void (*slot)(void*, i
 /// ``` QMediaRecorder* self, long long duration ```
 void q_mediarecorder_duration_changed(void* self, long long duration);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#durationChanged)
+///
 /// ``` QMediaRecorder* self, void (*slot)(QMediaRecorder*, long long) ```
 void q_mediarecorder_on_duration_changed(void* self, void (*slot)(void*, long long));
 
@@ -255,6 +255,8 @@ void q_mediarecorder_on_duration_changed(void* self, void (*slot)(void*, long lo
 /// ``` QMediaRecorder* self, QUrl* location ```
 void q_mediarecorder_actual_location_changed(void* self, void* location);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#actualLocationChanged)
+///
 /// ``` QMediaRecorder* self, void (*slot)(QMediaRecorder*, QUrl*) ```
 void q_mediarecorder_on_actual_location_changed(void* self, void (*slot)(void*, void*));
 
@@ -263,6 +265,8 @@ void q_mediarecorder_on_actual_location_changed(void* self, void (*slot)(void*, 
 /// ``` QMediaRecorder* self ```
 void q_mediarecorder_encoder_settings_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#encoderSettingsChanged)
+///
 /// ``` QMediaRecorder* self, void (*slot)(QMediaRecorder*) ```
 void q_mediarecorder_on_encoder_settings_changed(void* self, void (*slot)(void*));
 
@@ -271,6 +275,8 @@ void q_mediarecorder_on_encoder_settings_changed(void* self, void (*slot)(void*)
 /// ``` QMediaRecorder* self, enum QMediaRecorder__Error errorVal, const char* errorString ```
 void q_mediarecorder_error_occurred(void* self, int64_t errorVal, const char* errorString);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#errorOccurred)
+///
 /// ``` QMediaRecorder* self, void (*slot)(QMediaRecorder*, enum QMediaRecorder__Error, const char*) ```
 void q_mediarecorder_on_error_occurred(void* self, void (*slot)(void*, int64_t, const char*));
 
@@ -279,6 +285,8 @@ void q_mediarecorder_on_error_occurred(void* self, void (*slot)(void*, int64_t, 
 /// ``` QMediaRecorder* self ```
 void q_mediarecorder_error_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#errorChanged)
+///
 /// ``` QMediaRecorder* self, void (*slot)(QMediaRecorder*) ```
 void q_mediarecorder_on_error_changed(void* self, void (*slot)(void*));
 
@@ -287,6 +295,8 @@ void q_mediarecorder_on_error_changed(void* self, void (*slot)(void*));
 /// ``` QMediaRecorder* self ```
 void q_mediarecorder_meta_data_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#metaDataChanged)
+///
 /// ``` QMediaRecorder* self, void (*slot)(QMediaRecorder*) ```
 void q_mediarecorder_on_meta_data_changed(void* self, void (*slot)(void*));
 
@@ -295,6 +305,8 @@ void q_mediarecorder_on_meta_data_changed(void* self, void (*slot)(void*));
 /// ``` QMediaRecorder* self ```
 void q_mediarecorder_media_format_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#mediaFormatChanged)
+///
 /// ``` QMediaRecorder* self, void (*slot)(QMediaRecorder*) ```
 void q_mediarecorder_on_media_format_changed(void* self, void (*slot)(void*));
 
@@ -303,6 +315,8 @@ void q_mediarecorder_on_media_format_changed(void* self, void (*slot)(void*));
 /// ``` QMediaRecorder* self ```
 void q_mediarecorder_encoding_mode_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#encodingModeChanged)
+///
 /// ``` QMediaRecorder* self, void (*slot)(QMediaRecorder*) ```
 void q_mediarecorder_on_encoding_mode_changed(void* self, void (*slot)(void*));
 
@@ -311,6 +325,8 @@ void q_mediarecorder_on_encoding_mode_changed(void* self, void (*slot)(void*));
 /// ``` QMediaRecorder* self ```
 void q_mediarecorder_quality_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#qualityChanged)
+///
 /// ``` QMediaRecorder* self, void (*slot)(QMediaRecorder*) ```
 void q_mediarecorder_on_quality_changed(void* self, void (*slot)(void*));
 
@@ -319,6 +335,8 @@ void q_mediarecorder_on_quality_changed(void* self, void (*slot)(void*));
 /// ``` QMediaRecorder* self ```
 void q_mediarecorder_video_resolution_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#videoResolutionChanged)
+///
 /// ``` QMediaRecorder* self, void (*slot)(QMediaRecorder*) ```
 void q_mediarecorder_on_video_resolution_changed(void* self, void (*slot)(void*));
 
@@ -327,6 +345,8 @@ void q_mediarecorder_on_video_resolution_changed(void* self, void (*slot)(void*)
 /// ``` QMediaRecorder* self ```
 void q_mediarecorder_video_frame_rate_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#videoFrameRateChanged)
+///
 /// ``` QMediaRecorder* self, void (*slot)(QMediaRecorder*) ```
 void q_mediarecorder_on_video_frame_rate_changed(void* self, void (*slot)(void*));
 
@@ -335,6 +355,8 @@ void q_mediarecorder_on_video_frame_rate_changed(void* self, void (*slot)(void*)
 /// ``` QMediaRecorder* self ```
 void q_mediarecorder_video_bit_rate_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#videoBitRateChanged)
+///
 /// ``` QMediaRecorder* self, void (*slot)(QMediaRecorder*) ```
 void q_mediarecorder_on_video_bit_rate_changed(void* self, void (*slot)(void*));
 
@@ -343,6 +365,8 @@ void q_mediarecorder_on_video_bit_rate_changed(void* self, void (*slot)(void*));
 /// ``` QMediaRecorder* self ```
 void q_mediarecorder_audio_bit_rate_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#audioBitRateChanged)
+///
 /// ``` QMediaRecorder* self, void (*slot)(QMediaRecorder*) ```
 void q_mediarecorder_on_audio_bit_rate_changed(void* self, void (*slot)(void*));
 
@@ -351,6 +375,8 @@ void q_mediarecorder_on_audio_bit_rate_changed(void* self, void (*slot)(void*));
 /// ``` QMediaRecorder* self ```
 void q_mediarecorder_audio_channel_count_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#audioChannelCountChanged)
+///
 /// ``` QMediaRecorder* self, void (*slot)(QMediaRecorder*) ```
 void q_mediarecorder_on_audio_channel_count_changed(void* self, void (*slot)(void*));
 
@@ -359,6 +385,8 @@ void q_mediarecorder_on_audio_channel_count_changed(void* self, void (*slot)(voi
 /// ``` QMediaRecorder* self ```
 void q_mediarecorder_audio_sample_rate_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#audioSampleRateChanged)
+///
 /// ``` QMediaRecorder* self, void (*slot)(QMediaRecorder*) ```
 void q_mediarecorder_on_audio_sample_rate_changed(void* self, void (*slot)(void*));
 
@@ -454,7 +482,7 @@ void q_mediarecorder_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QMediaRecorder* self ```
-libqt_list /* of QObject* */ q_mediarecorder_children(void* self);
+const libqt_list /* of QObject* */ q_mediarecorder_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -552,7 +580,7 @@ QBindingStorage* q_mediarecorder_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QMediaRecorder* self ```
-QBindingStorage* q_mediarecorder_binding_storage2(void* self);
+const QBindingStorage* q_mediarecorder_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -562,6 +590,8 @@ QBindingStorage* q_mediarecorder_binding_storage2(void* self);
 void q_mediarecorder_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QMediaRecorder* self, void (*slot)(QObject*) ```
 void q_mediarecorder_on_destroyed(void* self, void (*slot)(void*));
@@ -617,6 +647,8 @@ void q_mediarecorder_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QMediaRecorder* self, void (*slot)(QObject*, QObject*) ```
 void q_mediarecorder_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -631,12 +663,16 @@ bool q_mediarecorder_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaRecorder* self, QEvent* event ```
 bool q_mediarecorder_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -654,12 +690,16 @@ bool q_mediarecorder_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaRecorder* self, QObject* watched, QEvent* event ```
 bool q_mediarecorder_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -677,12 +717,16 @@ void q_mediarecorder_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaRecorder* self, QTimerEvent* event ```
 void q_mediarecorder_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -700,12 +744,16 @@ void q_mediarecorder_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaRecorder* self, QChildEvent* event ```
 void q_mediarecorder_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -723,12 +771,16 @@ void q_mediarecorder_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaRecorder* self, QEvent* event ```
 void q_mediarecorder_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -746,12 +798,16 @@ void q_mediarecorder_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaRecorder* self, QMetaMethod* signal ```
 void q_mediarecorder_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -769,12 +825,16 @@ void q_mediarecorder_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaRecorder* self, QMetaMethod* signal ```
 void q_mediarecorder_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -792,12 +852,16 @@ QObject* q_mediarecorder_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaRecorder* self ```
 QObject* q_mediarecorder_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -815,12 +879,16 @@ int32_t q_mediarecorder_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaRecorder* self ```
 int32_t q_mediarecorder_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -838,12 +906,16 @@ int32_t q_mediarecorder_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaRecorder* self, const char* signal ```
 int32_t q_mediarecorder_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -861,6 +933,8 @@ bool q_mediarecorder_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMediaRecorder* self, QMetaMethod* signal ```
@@ -868,11 +942,24 @@ bool q_mediarecorder_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QMediaRecorder* self, bool (*slot)(QMediaRecorder*, QMetaMethod*) ```
 void q_mediarecorder_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QMediaRecorder* self, void (*slot)(QObject*, const char*) ```
+void q_mediarecorder_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#dtor.QMediaRecorder)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMediaRecorder* self ```

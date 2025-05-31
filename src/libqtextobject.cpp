@@ -1,13 +1,9 @@
-#include <QAnyStringView>
-#include <QBindingStorage>
-#include <QByteArray>
 #include <QChildEvent>
 #include <QEvent>
 #include <QGlyphRun>
 #include <QList>
 #include <QMetaMethod>
 #include <QMetaObject>
-#define WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection
 #include <QObject>
 #include <QString>
 #include <QByteArray>
@@ -30,9 +26,7 @@
 #define WORKAROUND_INNER_CLASS_DEFINITION_QTextLayout__FormatRange
 #include <QTextList>
 #include <QTextObject>
-#include <QThread>
 #include <QTimerEvent>
-#include <QVariant>
 #include <qtextobject.h>
 #include "libqtextobject.hpp"
 #include "libqtextobject.hxx"
@@ -101,14 +95,6 @@ libqt_string QTextObject_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-bool QTextObject_Event(QTextObject* self, QEvent* event) {
-    return self->event(event);
-}
-
-bool QTextObject_EventFilter(QTextObject* self, QObject* watched, QEvent* event) {
-    return self->eventFilter(watched, event);
-}
-
 QMetaObject* QTextBlockGroup_MetaObject(const QTextBlockGroup* self) {
     return (QMetaObject*)self->metaObject();
 }
@@ -157,14 +143,6 @@ libqt_string QTextBlockGroup_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-bool QTextBlockGroup_Event(QTextBlockGroup* self, QEvent* event) {
-    return self->event(event);
-}
-
-bool QTextBlockGroup_EventFilter(QTextBlockGroup* self, QObject* watched, QEvent* event) {
-    return self->eventFilter(watched, event);
-}
-
 void QTextFrameLayoutData_OperatorAssign(QTextFrameLayoutData* self, QTextFrameLayoutData* param1) {
     self->operator=(*param1);
 }
@@ -186,27 +164,30 @@ void* QTextFrame_Metacast(QTextFrame* self, const char* param1) {
 }
 
 int QTextFrame_Metacall(QTextFrame* self, int param1, int param2, void** param3) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         return self->qt_metacall(static_cast<QMetaObject::Call>(param1), static_cast<int>(param2), param3);
     } else {
-        return self->qt_metacall(static_cast<QMetaObject::Call>(param1), static_cast<int>(param2), param3);
+        return ((VirtualQTextFrame*)self)->qt_metacall(static_cast<QMetaObject::Call>(param1), static_cast<int>(param2), param3);
     }
 }
 
 // Subclass method to allow providing a virtual method re-implementation
 void QTextFrame_OnMetacall(QTextFrame* self, intptr_t slot) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_Metacall_Callback(reinterpret_cast<VirtualQTextFrame::QTextFrame_Metacall_Callback>(slot));
     }
 }
 
 // Virtual base class handler implementation
 int QTextFrame_QBaseMetacall(QTextFrame* self, int param1, int param2, void** param3) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_Metacall_IsBase(true);
         return vqtextframe->qt_metacall(static_cast<QMetaObject::Call>(param1), static_cast<int>(param2), param3);
     } else {
-        return self->qt_metacall(static_cast<QMetaObject::Call>(param1), static_cast<int>(param2), param3);
+        return ((VirtualQTextFrame*)self)->qt_metacall(static_cast<QMetaObject::Call>(param1), static_cast<int>(param2), param3);
     }
 }
 
@@ -305,312 +286,348 @@ libqt_string QTextFrame_Tr3(const char* s, const char* c, int n) {
 
 // Derived class handler implementation
 bool QTextFrame_Event(QTextFrame* self, QEvent* event) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         return vqtextframe->event(event);
     } else {
-        return vqtextframe->event(event);
+        return self->QTextFrame::event(event);
     }
 }
 
 // Base class handler implementation
 bool QTextFrame_QBaseEvent(QTextFrame* self, QEvent* event) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_Event_IsBase(true);
         return vqtextframe->event(event);
     } else {
-        return vqtextframe->event(event);
+        return self->QTextFrame::event(event);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextFrame_OnEvent(QTextFrame* self, intptr_t slot) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_Event_Callback(reinterpret_cast<VirtualQTextFrame::QTextFrame_Event_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 bool QTextFrame_EventFilter(QTextFrame* self, QObject* watched, QEvent* event) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         return vqtextframe->eventFilter(watched, event);
     } else {
-        return vqtextframe->eventFilter(watched, event);
+        return self->QTextFrame::eventFilter(watched, event);
     }
 }
 
 // Base class handler implementation
 bool QTextFrame_QBaseEventFilter(QTextFrame* self, QObject* watched, QEvent* event) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_EventFilter_IsBase(true);
         return vqtextframe->eventFilter(watched, event);
     } else {
-        return vqtextframe->eventFilter(watched, event);
+        return self->QTextFrame::eventFilter(watched, event);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextFrame_OnEventFilter(QTextFrame* self, intptr_t slot) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_EventFilter_Callback(reinterpret_cast<VirtualQTextFrame::QTextFrame_EventFilter_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QTextFrame_TimerEvent(QTextFrame* self, QTimerEvent* event) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->timerEvent(event);
     } else {
-        vqtextframe->timerEvent(event);
+        ((VirtualQTextFrame*)self)->timerEvent(event);
     }
 }
 
 // Base class handler implementation
 void QTextFrame_QBaseTimerEvent(QTextFrame* self, QTimerEvent* event) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_TimerEvent_IsBase(true);
         vqtextframe->timerEvent(event);
     } else {
-        vqtextframe->timerEvent(event);
+        ((VirtualQTextFrame*)self)->timerEvent(event);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextFrame_OnTimerEvent(QTextFrame* self, intptr_t slot) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_TimerEvent_Callback(reinterpret_cast<VirtualQTextFrame::QTextFrame_TimerEvent_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QTextFrame_ChildEvent(QTextFrame* self, QChildEvent* event) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->childEvent(event);
     } else {
-        vqtextframe->childEvent(event);
+        ((VirtualQTextFrame*)self)->childEvent(event);
     }
 }
 
 // Base class handler implementation
 void QTextFrame_QBaseChildEvent(QTextFrame* self, QChildEvent* event) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_ChildEvent_IsBase(true);
         vqtextframe->childEvent(event);
     } else {
-        vqtextframe->childEvent(event);
+        ((VirtualQTextFrame*)self)->childEvent(event);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextFrame_OnChildEvent(QTextFrame* self, intptr_t slot) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_ChildEvent_Callback(reinterpret_cast<VirtualQTextFrame::QTextFrame_ChildEvent_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QTextFrame_CustomEvent(QTextFrame* self, QEvent* event) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->customEvent(event);
     } else {
-        vqtextframe->customEvent(event);
+        ((VirtualQTextFrame*)self)->customEvent(event);
     }
 }
 
 // Base class handler implementation
 void QTextFrame_QBaseCustomEvent(QTextFrame* self, QEvent* event) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_CustomEvent_IsBase(true);
         vqtextframe->customEvent(event);
     } else {
-        vqtextframe->customEvent(event);
+        ((VirtualQTextFrame*)self)->customEvent(event);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextFrame_OnCustomEvent(QTextFrame* self, intptr_t slot) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_CustomEvent_Callback(reinterpret_cast<VirtualQTextFrame::QTextFrame_CustomEvent_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QTextFrame_ConnectNotify(QTextFrame* self, QMetaMethod* signal) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->connectNotify(*signal);
     } else {
-        vqtextframe->connectNotify(*signal);
+        ((VirtualQTextFrame*)self)->connectNotify(*signal);
     }
 }
 
 // Base class handler implementation
 void QTextFrame_QBaseConnectNotify(QTextFrame* self, QMetaMethod* signal) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_ConnectNotify_IsBase(true);
         vqtextframe->connectNotify(*signal);
     } else {
-        vqtextframe->connectNotify(*signal);
+        ((VirtualQTextFrame*)self)->connectNotify(*signal);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextFrame_OnConnectNotify(QTextFrame* self, intptr_t slot) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_ConnectNotify_Callback(reinterpret_cast<VirtualQTextFrame::QTextFrame_ConnectNotify_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QTextFrame_DisconnectNotify(QTextFrame* self, QMetaMethod* signal) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->disconnectNotify(*signal);
     } else {
-        vqtextframe->disconnectNotify(*signal);
+        ((VirtualQTextFrame*)self)->disconnectNotify(*signal);
     }
 }
 
 // Base class handler implementation
 void QTextFrame_QBaseDisconnectNotify(QTextFrame* self, QMetaMethod* signal) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_DisconnectNotify_IsBase(true);
         vqtextframe->disconnectNotify(*signal);
     } else {
-        vqtextframe->disconnectNotify(*signal);
+        ((VirtualQTextFrame*)self)->disconnectNotify(*signal);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextFrame_OnDisconnectNotify(QTextFrame* self, intptr_t slot) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_DisconnectNotify_Callback(reinterpret_cast<VirtualQTextFrame::QTextFrame_DisconnectNotify_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QTextFrame_SetFormat(QTextFrame* self, QTextFormat* format) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setFormat(*format);
     } else {
-        vqtextframe->setFormat(*format);
+        ((VirtualQTextFrame*)self)->setFormat(*format);
     }
 }
 
 // Base class handler implementation
 void QTextFrame_QBaseSetFormat(QTextFrame* self, QTextFormat* format) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_SetFormat_IsBase(true);
         vqtextframe->setFormat(*format);
     } else {
-        vqtextframe->setFormat(*format);
+        ((VirtualQTextFrame*)self)->setFormat(*format);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextFrame_OnSetFormat(QTextFrame* self, intptr_t slot) {
-    if (auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self)) {
+    auto* vqtextframe = dynamic_cast<VirtualQTextFrame*>(self);
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_SetFormat_Callback(reinterpret_cast<VirtualQTextFrame::QTextFrame_SetFormat_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 QObject* QTextFrame_Sender(const QTextFrame* self) {
-    if (auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self))) {
+    auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self));
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         return vqtextframe->sender();
     } else {
-        return vqtextframe->sender();
+        return ((VirtualQTextFrame*)self)->sender();
     }
 }
 
 // Base class handler implementation
 QObject* QTextFrame_QBaseSender(const QTextFrame* self) {
-    if (auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self))) {
+    auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self));
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_Sender_IsBase(true);
         return vqtextframe->sender();
     } else {
-        return vqtextframe->sender();
+        return ((VirtualQTextFrame*)self)->sender();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextFrame_OnSender(const QTextFrame* self, intptr_t slot) {
-    if (auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self))) {
+    auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self));
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_Sender_Callback(reinterpret_cast<VirtualQTextFrame::QTextFrame_Sender_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 int QTextFrame_SenderSignalIndex(const QTextFrame* self) {
-    if (auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self))) {
+    auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self));
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         return vqtextframe->senderSignalIndex();
     } else {
-        return vqtextframe->senderSignalIndex();
+        return ((VirtualQTextFrame*)self)->senderSignalIndex();
     }
 }
 
 // Base class handler implementation
 int QTextFrame_QBaseSenderSignalIndex(const QTextFrame* self) {
-    if (auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self))) {
+    auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self));
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_SenderSignalIndex_IsBase(true);
         return vqtextframe->senderSignalIndex();
     } else {
-        return vqtextframe->senderSignalIndex();
+        return ((VirtualQTextFrame*)self)->senderSignalIndex();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextFrame_OnSenderSignalIndex(const QTextFrame* self, intptr_t slot) {
-    if (auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self))) {
+    auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self));
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_SenderSignalIndex_Callback(reinterpret_cast<VirtualQTextFrame::QTextFrame_SenderSignalIndex_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 int QTextFrame_Receivers(const QTextFrame* self, const char* signal) {
-    if (auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self))) {
+    auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self));
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         return vqtextframe->receivers(signal);
     } else {
-        return vqtextframe->receivers(signal);
+        return ((VirtualQTextFrame*)self)->receivers(signal);
     }
 }
 
 // Base class handler implementation
 int QTextFrame_QBaseReceivers(const QTextFrame* self, const char* signal) {
-    if (auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self))) {
+    auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self));
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_Receivers_IsBase(true);
         return vqtextframe->receivers(signal);
     } else {
-        return vqtextframe->receivers(signal);
+        return ((VirtualQTextFrame*)self)->receivers(signal);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextFrame_OnReceivers(const QTextFrame* self, intptr_t slot) {
-    if (auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self))) {
+    auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self));
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_Receivers_Callback(reinterpret_cast<VirtualQTextFrame::QTextFrame_Receivers_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 bool QTextFrame_IsSignalConnected(const QTextFrame* self, QMetaMethod* signal) {
-    if (auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self))) {
+    auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self));
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         return vqtextframe->isSignalConnected(*signal);
     } else {
-        return vqtextframe->isSignalConnected(*signal);
+        return ((VirtualQTextFrame*)self)->isSignalConnected(*signal);
     }
 }
 
 // Base class handler implementation
 bool QTextFrame_QBaseIsSignalConnected(const QTextFrame* self, QMetaMethod* signal) {
-    if (auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self))) {
+    auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self));
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_IsSignalConnected_IsBase(true);
         return vqtextframe->isSignalConnected(*signal);
     } else {
-        return vqtextframe->isSignalConnected(*signal);
+        return ((VirtualQTextFrame*)self)->isSignalConnected(*signal);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextFrame_OnIsSignalConnected(const QTextFrame* self, intptr_t slot) {
-    if (auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self))) {
+    auto* vqtextframe = const_cast<VirtualQTextFrame*>(dynamic_cast<const VirtualQTextFrame*>(self));
+    if (vqtextframe && vqtextframe->isVirtualQTextFrame) {
         vqtextframe->setQTextFrame_IsSignalConnected_Callback(reinterpret_cast<VirtualQTextFrame::QTextFrame_IsSignalConnected_Callback>(slot));
     }
 }

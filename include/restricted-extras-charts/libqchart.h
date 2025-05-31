@@ -14,22 +14,13 @@
 
 #include "libqabstractaxis.h"
 #include "libqabstractseries.h"
-#include "../libqaction.h"
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "../libqbrush.h"
 #include "../libqevent.h"
-#include "../libqcursor.h"
 #include "../libqeasingcurve.h"
 #include "../libqfont.h"
-#include "../libqgraphicseffect.h"
 #include "../libqgraphicsitem.h"
-#include "../libqgraphicslayout.h"
 #include "../libqgraphicslayoutitem.h"
-#include "../libqgraphicsscene.h"
-#include "../libqgraphicstransform.h"
 #include "../libqgraphicswidget.h"
-#include "../libqkeysequence.h"
 #include "libqlegend.h"
 #include "../libqlocale.h"
 #include "../libqmargins.h"
@@ -37,22 +28,16 @@
 #include "../libqobject.h"
 #include "../libqpainter.h"
 #include "../libqpainterpath.h"
-#include "../libqpalette.h"
 #include "../libqpen.h"
 #include "../libqpoint.h"
 #include "../libqrect.h"
-#include "../libqregion.h"
 #include "../libqsize.h"
-#include "../libqsizepolicy.h"
 #include <string.h>
-#include "../libqstyle.h"
 #include "../libqstyleoption.h"
-#include "../libqthread.h"
-#include "../libqtransform.h"
 #include "../libqvariant.h"
 #include "../libqwidget.h"
 
-/// https://doc.qt.io/qt-6/qchart.html
+/// https://doc.qt.io/qt-6/qchart-qtcharts.html
 
 /// q_chart_new constructs a new QChart object.
 ///
@@ -72,7 +57,7 @@ QChart* q_chart_new3(void* parent, int64_t wFlags);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QChart* self ```
-QMetaObject* q_chart_meta_object(void* self);
+const QMetaObject* q_chart_meta_object(void* self);
 
 /// ``` QChart* self, const char* param1 ```
 void* q_chart_metacast(void* self, const char* param1);
@@ -95,316 +80,318 @@ int32_t q_chart_qbase_metacall(void* self, int64_t param1, int param2, void* par
 /// ``` const char* s ```
 const char* q_chart_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#addSeries)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#addSeries)
 ///
 /// ``` QChart* self, QAbstractSeries* series ```
 void q_chart_add_series(void* self, void* series);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#removeSeries)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#removeSeries)
 ///
 /// ``` QChart* self, QAbstractSeries* series ```
 void q_chart_remove_series(void* self, void* series);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#removeAllSeries)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#removeAllSeries)
 ///
 /// ``` QChart* self ```
 void q_chart_remove_all_series(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#series)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#series)
 ///
 /// ``` QChart* self ```
 libqt_list /* of QAbstractSeries* */ q_chart_series(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setAxisX)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setAxisX)
 ///
 /// ``` QChart* self, QAbstractAxis* axis ```
 void q_chart_set_axis_x(void* self, void* axis);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setAxisY)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setAxisY)
 ///
 /// ``` QChart* self, QAbstractAxis* axis ```
 void q_chart_set_axis_y(void* self, void* axis);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#axisX)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#axisX)
 ///
 /// ``` QChart* self ```
 QAbstractAxis* q_chart_axis_x(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#axisY)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#axisY)
 ///
 /// ``` QChart* self ```
 QAbstractAxis* q_chart_axis_y(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#addAxis)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#addAxis)
 ///
 /// ``` QChart* self, QAbstractAxis* axis, int alignment ```
 void q_chart_add_axis(void* self, void* axis, int64_t alignment);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#removeAxis)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#removeAxis)
 ///
 /// ``` QChart* self, QAbstractAxis* axis ```
 void q_chart_remove_axis(void* self, void* axis);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#axes)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#axes)
 ///
 /// ``` QChart* self ```
 libqt_list /* of QAbstractAxis* */ q_chart_axes(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#createDefaultAxes)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#createDefaultAxes)
 ///
 /// ``` QChart* self ```
 void q_chart_create_default_axes(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setTheme)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setTheme)
 ///
 /// ``` QChart* self, enum QChart__ChartTheme theme ```
 void q_chart_set_theme(void* self, int64_t theme);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#theme)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#theme)
 ///
 /// ``` QChart* self ```
 int64_t q_chart_theme(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setTitle)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setTitle)
 ///
 /// ``` QChart* self, const char* title ```
 void q_chart_set_title(void* self, const char* title);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#title)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#title)
 ///
 /// ``` QChart* self ```
 const char* q_chart_title(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setTitleFont)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setTitleFont)
 ///
 /// ``` QChart* self, QFont* font ```
 void q_chart_set_title_font(void* self, void* font);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#titleFont)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#titleFont)
 ///
 /// ``` QChart* self ```
 QFont* q_chart_title_font(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setTitleBrush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setTitleBrush)
 ///
 /// ``` QChart* self, QBrush* brush ```
 void q_chart_set_title_brush(void* self, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#titleBrush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#titleBrush)
 ///
 /// ``` QChart* self ```
 QBrush* q_chart_title_brush(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setBackgroundBrush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setBackgroundBrush)
 ///
 /// ``` QChart* self, QBrush* brush ```
 void q_chart_set_background_brush(void* self, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#backgroundBrush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#backgroundBrush)
 ///
 /// ``` QChart* self ```
 QBrush* q_chart_background_brush(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setBackgroundPen)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setBackgroundPen)
 ///
 /// ``` QChart* self, QPen* pen ```
 void q_chart_set_background_pen(void* self, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#backgroundPen)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#backgroundPen)
 ///
 /// ``` QChart* self ```
 QPen* q_chart_background_pen(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setBackgroundVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setBackgroundVisible)
 ///
 /// ``` QChart* self ```
 void q_chart_set_background_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#isBackgroundVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#isBackgroundVisible)
 ///
 /// ``` QChart* self ```
 bool q_chart_is_background_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setDropShadowEnabled)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setDropShadowEnabled)
 ///
 /// ``` QChart* self ```
 void q_chart_set_drop_shadow_enabled(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#isDropShadowEnabled)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#isDropShadowEnabled)
 ///
 /// ``` QChart* self ```
 bool q_chart_is_drop_shadow_enabled(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setBackgroundRoundness)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setBackgroundRoundness)
 ///
 /// ``` QChart* self, double diameter ```
 void q_chart_set_background_roundness(void* self, double diameter);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#backgroundRoundness)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#backgroundRoundness)
 ///
 /// ``` QChart* self ```
 double q_chart_background_roundness(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setAnimationOptions)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setAnimationOptions)
 ///
 /// ``` QChart* self, int options ```
 void q_chart_set_animation_options(void* self, int64_t options);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#animationOptions)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#animationOptions)
 ///
 /// ``` QChart* self ```
 int64_t q_chart_animation_options(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setAnimationDuration)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setAnimationDuration)
 ///
 /// ``` QChart* self, int msecs ```
 void q_chart_set_animation_duration(void* self, int msecs);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#animationDuration)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#animationDuration)
 ///
 /// ``` QChart* self ```
 int32_t q_chart_animation_duration(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setAnimationEasingCurve)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setAnimationEasingCurve)
 ///
 /// ``` QChart* self, QEasingCurve* curve ```
 void q_chart_set_animation_easing_curve(void* self, void* curve);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#animationEasingCurve)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#animationEasingCurve)
 ///
 /// ``` QChart* self ```
 QEasingCurve* q_chart_animation_easing_curve(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#zoomIn)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#zoomIn)
 ///
 /// ``` QChart* self ```
 void q_chart_zoom_in(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#zoomOut)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#zoomOut)
 ///
 /// ``` QChart* self ```
 void q_chart_zoom_out(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#zoomIn)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#zoomIn)
 ///
 /// ``` QChart* self, QRectF* rect ```
 void q_chart_zoom_in_with_rect(void* self, void* rect);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#zoom)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#zoom)
 ///
 /// ``` QChart* self, double factor ```
 void q_chart_zoom(void* self, double factor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#zoomReset)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#zoomReset)
 ///
 /// ``` QChart* self ```
 void q_chart_zoom_reset(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#isZoomed)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#isZoomed)
 ///
 /// ``` QChart* self ```
 bool q_chart_is_zoomed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#scroll)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#scroll)
 ///
 /// ``` QChart* self, double dx, double dy ```
 void q_chart_scroll(void* self, double dx, double dy);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#legend)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#legend)
 ///
 /// ``` QChart* self ```
 QLegend* q_chart_legend(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setMargins)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setMargins)
 ///
 /// ``` QChart* self, QMargins* margins ```
 void q_chart_set_margins(void* self, void* margins);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#margins)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#margins)
 ///
 /// ``` QChart* self ```
 QMargins* q_chart_margins(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#plotArea)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#plotArea)
 ///
 /// ``` QChart* self ```
 QRectF* q_chart_plot_area(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setPlotArea)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setPlotArea)
 ///
 /// ``` QChart* self, QRectF* rect ```
 void q_chart_set_plot_area(void* self, void* rect);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setPlotAreaBackgroundBrush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setPlotAreaBackgroundBrush)
 ///
 /// ``` QChart* self, QBrush* brush ```
 void q_chart_set_plot_area_background_brush(void* self, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#plotAreaBackgroundBrush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#plotAreaBackgroundBrush)
 ///
 /// ``` QChart* self ```
 QBrush* q_chart_plot_area_background_brush(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setPlotAreaBackgroundPen)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setPlotAreaBackgroundPen)
 ///
 /// ``` QChart* self, QPen* pen ```
 void q_chart_set_plot_area_background_pen(void* self, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#plotAreaBackgroundPen)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#plotAreaBackgroundPen)
 ///
 /// ``` QChart* self ```
 QPen* q_chart_plot_area_background_pen(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setPlotAreaBackgroundVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setPlotAreaBackgroundVisible)
 ///
 /// ``` QChart* self ```
 void q_chart_set_plot_area_background_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#isPlotAreaBackgroundVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#isPlotAreaBackgroundVisible)
 ///
 /// ``` QChart* self ```
 bool q_chart_is_plot_area_background_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setLocalizeNumbers)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setLocalizeNumbers)
 ///
 /// ``` QChart* self, bool localize ```
 void q_chart_set_localize_numbers(void* self, bool localize);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#localizeNumbers)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#localizeNumbers)
 ///
 /// ``` QChart* self ```
 bool q_chart_localize_numbers(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setLocale)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setLocale)
 ///
 /// ``` QChart* self, QLocale* locale ```
 void q_chart_set_locale(void* self, void* locale);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#locale)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#locale)
 ///
 /// ``` QChart* self ```
 QLocale* q_chart_locale(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#mapToValue)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#mapToValue)
 ///
 /// ``` QChart* self, QPointF* position ```
 QPointF* q_chart_map_to_value(void* self, void* position);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#mapToPosition)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#mapToPosition)
 ///
 /// ``` QChart* self, QPointF* value ```
 QPointF* q_chart_map_to_position(void* self, void* value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#chartType)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#chartType)
 ///
 /// ``` QChart* self ```
 int64_t q_chart_chart_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#plotAreaChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#plotAreaChanged)
 ///
 /// ``` QChart* self, QRectF* plotArea ```
 void q_chart_plot_area_changed(void* self, void* plotArea);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#plotAreaChanged)
+///
 /// ``` QChart* self, void (*slot)(QChart*, QRectF*) ```
 void q_chart_on_plot_area_changed(void* self, void (*slot)(void*, void*));
 
@@ -418,57 +405,57 @@ const char* q_chart_tr2(const char* s, const char* c);
 /// ``` const char* s, const char* c, int n ```
 const char* q_chart_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setAxisX)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setAxisX)
 ///
 /// ``` QChart* self, QAbstractAxis* axis, QAbstractSeries* series ```
 void q_chart_set_axis_x2(void* self, void* axis, void* series);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setAxisY)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setAxisY)
 ///
 /// ``` QChart* self, QAbstractAxis* axis, QAbstractSeries* series ```
 void q_chart_set_axis_y2(void* self, void* axis, void* series);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#axisX)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#axisX)
 ///
 /// ``` QChart* self, QAbstractSeries* series ```
 QAbstractAxis* q_chart_axis_x1(void* self, void* series);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#axisY)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#axisY)
 ///
 /// ``` QChart* self, QAbstractSeries* series ```
 QAbstractAxis* q_chart_axis_y1(void* self, void* series);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#axes)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#axes)
 ///
 /// ``` QChart* self, int orientation ```
 libqt_list /* of QAbstractAxis* */ q_chart_axes1(void* self, int64_t orientation);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#axes)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#axes)
 ///
 /// ``` QChart* self, int orientation, QAbstractSeries* series ```
 libqt_list /* of QAbstractAxis* */ q_chart_axes2(void* self, int64_t orientation, void* series);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setBackgroundVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setBackgroundVisible)
 ///
 /// ``` QChart* self, bool visible ```
 void q_chart_set_background_visible1(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setDropShadowEnabled)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setDropShadowEnabled)
 ///
 /// ``` QChart* self, bool enabled ```
 void q_chart_set_drop_shadow_enabled1(void* self, bool enabled);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#setPlotAreaBackgroundVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setPlotAreaBackgroundVisible)
 ///
 /// ``` QChart* self, bool visible ```
 void q_chart_set_plot_area_background_visible1(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#mapToValue)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#mapToValue)
 ///
 /// ``` QChart* self, QPointF* position, QAbstractSeries* series ```
 QPointF* q_chart_map_to_value2(void* self, void* position, void* series);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#mapToPosition)
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#mapToPosition)
 ///
 /// ``` QChart* self, QPointF* value, QAbstractSeries* series ```
 QPointF* q_chart_map_to_position2(void* self, void* value, void* series);
@@ -771,15 +758,15 @@ void q_chart_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#addActions)
 ///
-/// ``` QChart* self, QAction* actions[] ```
-void q_chart_add_actions(void* self, void* actions[]);
+/// ``` QChart* self, libqt_list /* of QAction* */ actions ```
+void q_chart_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#insertActions)
 ///
-/// ``` QChart* self, QAction* before, QAction* actions[] ```
-void q_chart_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QChart* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_chart_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -825,6 +812,8 @@ void q_chart_geometry_changed(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#geometryChanged)
+///
 /// ``` QChart* self, void (*slot)(QGraphicsWidget*) ```
 void q_chart_on_geometry_changed(void* self, void (*slot)(void*));
 
@@ -836,6 +825,8 @@ void q_chart_on_geometry_changed(void* self, void (*slot)(void*));
 void q_chart_layout_changed(void* self);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#layoutChanged)
 ///
 /// ``` QChart* self, void (*slot)(QGraphicsWidget*) ```
 void q_chart_on_layout_changed(void* self, void (*slot)(void*));
@@ -898,6 +889,8 @@ void q_chart_parent_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#parentChanged)
+///
 /// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
 void q_chart_on_parent_changed(void* self, void (*slot)(void*));
 
@@ -909,6 +902,8 @@ void q_chart_on_parent_changed(void* self, void (*slot)(void*));
 void q_chart_opacity_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#opacityChanged)
 ///
 /// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
 void q_chart_on_opacity_changed(void* self, void (*slot)(void*));
@@ -922,6 +917,8 @@ void q_chart_visible_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#visibleChanged)
+///
 /// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
 void q_chart_on_visible_changed(void* self, void (*slot)(void*));
 
@@ -933,6 +930,8 @@ void q_chart_on_visible_changed(void* self, void (*slot)(void*));
 void q_chart_enabled_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#enabledChanged)
 ///
 /// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
 void q_chart_on_enabled_changed(void* self, void (*slot)(void*));
@@ -946,6 +945,8 @@ void q_chart_x_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#xChanged)
+///
 /// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
 void q_chart_on_x_changed(void* self, void (*slot)(void*));
 
@@ -957,6 +958,8 @@ void q_chart_on_x_changed(void* self, void (*slot)(void*));
 void q_chart_y_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#yChanged)
 ///
 /// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
 void q_chart_on_y_changed(void* self, void (*slot)(void*));
@@ -970,6 +973,8 @@ void q_chart_z_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#zChanged)
+///
 /// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
 void q_chart_on_z_changed(void* self, void (*slot)(void*));
 
@@ -981,6 +986,8 @@ void q_chart_on_z_changed(void* self, void (*slot)(void*));
 void q_chart_rotation_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#rotationChanged)
 ///
 /// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
 void q_chart_on_rotation_changed(void* self, void (*slot)(void*));
@@ -994,6 +1001,8 @@ void q_chart_scale_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#scaleChanged)
+///
 /// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
 void q_chart_on_scale_changed(void* self, void (*slot)(void*));
 
@@ -1005,6 +1014,8 @@ void q_chart_on_scale_changed(void* self, void (*slot)(void*));
 void q_chart_children_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#childrenChanged)
 ///
 /// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
 void q_chart_on_children_changed(void* self, void (*slot)(void*));
@@ -1018,6 +1029,8 @@ void q_chart_width_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#widthChanged)
+///
 /// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
 void q_chart_on_width_changed(void* self, void (*slot)(void*));
 
@@ -1029,6 +1042,8 @@ void q_chart_on_width_changed(void* self, void (*slot)(void*));
 void q_chart_height_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#heightChanged)
 ///
 /// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
 void q_chart_on_height_changed(void* self, void (*slot)(void*));
@@ -1122,7 +1137,7 @@ void q_chart_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QChart* self ```
-libqt_list /* of QObject* */ q_chart_children(void* self);
+const libqt_list /* of QObject* */ q_chart_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1220,7 +1235,7 @@ QBindingStorage* q_chart_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QChart* self ```
-QBindingStorage* q_chart_binding_storage2(void* self);
+const QBindingStorage* q_chart_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -1230,6 +1245,8 @@ QBindingStorage* q_chart_binding_storage2(void* self);
 void q_chart_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QChart* self, void (*slot)(QObject*) ```
 void q_chart_on_destroyed(void* self, void (*slot)(void*));
@@ -1284,6 +1301,8 @@ QMetaObject__Connection* q_chart_connect4(void* self, void* sender, const char* 
 void q_chart_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QChart* self, void (*slot)(QObject*, QObject*) ```
 void q_chart_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -1391,7 +1410,7 @@ QGraphicsObject* q_chart_to_graphics_object(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
 /// ``` QChart* self ```
-QGraphicsObject* q_chart_to_graphics_object2(void* self);
+const QGraphicsObject* q_chart_to_graphics_object2(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1936,8 +1955,8 @@ libqt_list /* of QGraphicsTransform* */ q_chart_transformations(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransformations)
 ///
-/// ``` QChart* self, QGraphicsTransform* transformations[] ```
-void q_chart_set_transformations(void* self, void* transformations[]);
+/// ``` QChart* self, libqt_list /* of QGraphicsTransform* */ transformations ```
+void q_chart_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2685,12 +2704,16 @@ void q_chart_set_geometry(void* self, void* rect);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setGeometry)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QRectF* rect ```
 void q_chart_qbase_set_geometry(void* self, void* rect);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setGeometry)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2708,12 +2731,16 @@ void q_chart_get_contents_margins(void* self, double* left, double* top, double*
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#getContentsMargins)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, double* left, double* top, double* right, double* bottom ```
 void q_chart_qbase_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#getContentsMargins)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2731,12 +2758,16 @@ int32_t q_chart_type(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#type)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self ```
 int32_t q_chart_qbase_type(void* self);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#type)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2754,12 +2785,16 @@ void q_chart_paint(void* self, void* painter, void* option, void* widget);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#paint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget ```
 void q_chart_qbase_paint(void* self, void* painter, void* option, void* widget);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#paint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2777,12 +2812,16 @@ void q_chart_paint_window_frame(void* self, void* painter, void* option, void* w
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#paintWindowFrame)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget ```
 void q_chart_qbase_paint_window_frame(void* self, void* painter, void* option, void* widget);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#paintWindowFrame)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2800,12 +2839,16 @@ QRectF* q_chart_bounding_rect(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#boundingRect)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self ```
 QRectF* q_chart_qbase_bounding_rect(void* self);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#boundingRect)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2823,12 +2866,16 @@ QPainterPath* q_chart_shape(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#shape)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self ```
 QPainterPath* q_chart_qbase_shape(void* self);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#shape)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2846,12 +2893,16 @@ void q_chart_init_style_option(void* self, void* option);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#initStyleOption)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QStyleOption* option ```
 void q_chart_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#initStyleOption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2869,12 +2920,16 @@ QSizeF* q_chart_size_hint(void* self, int64_t which, void* constraint);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#sizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, enum Qt__SizeHint which, QSizeF* constraint ```
 QSizeF* q_chart_qbase_size_hint(void* self, int64_t which, void* constraint);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2892,12 +2947,16 @@ void q_chart_update_geometry(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#updateGeometry)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self ```
 void q_chart_qbase_update_geometry(void* self);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#updateGeometry)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2915,12 +2974,16 @@ QVariant* q_chart_item_change(void* self, int64_t change, void* value);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#itemChange)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value ```
 QVariant* q_chart_qbase_item_change(void* self, int64_t change, void* value);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#itemChange)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2938,12 +3001,16 @@ QVariant* q_chart_property_change(void* self, const char* propertyName, void* va
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#propertyChange)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, const char* propertyName, QVariant* value ```
 QVariant* q_chart_qbase_property_change(void* self, const char* propertyName, void* value);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#propertyChange)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2961,12 +3028,16 @@ bool q_chart_scene_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#sceneEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QEvent* event ```
 bool q_chart_qbase_scene_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#sceneEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2984,12 +3055,16 @@ bool q_chart_window_frame_event(void* self, void* e);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QEvent* e ```
 bool q_chart_qbase_window_frame_event(void* self, void* e);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3007,12 +3082,16 @@ int64_t q_chart_window_frame_section_at(void* self, void* pos);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameSectionAt)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QPointF* pos ```
 int64_t q_chart_qbase_window_frame_section_at(void* self, void* pos);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameSectionAt)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3030,12 +3109,16 @@ bool q_chart_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QEvent* event ```
 bool q_chart_qbase_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3053,12 +3136,16 @@ void q_chart_change_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#changeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QEvent* event ```
 void q_chart_qbase_change_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3076,12 +3163,16 @@ void q_chart_close_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QCloseEvent* event ```
 void q_chart_qbase_close_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3099,12 +3190,16 @@ void q_chart_focus_in_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QFocusEvent* event ```
 void q_chart_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3122,12 +3217,16 @@ bool q_chart_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, bool next ```
 bool q_chart_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3145,12 +3244,16 @@ void q_chart_focus_out_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QFocusEvent* event ```
 void q_chart_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3168,12 +3271,16 @@ void q_chart_hide_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QHideEvent* event ```
 void q_chart_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3191,12 +3298,16 @@ void q_chart_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QGraphicsSceneMoveEvent* event ```
 void q_chart_qbase_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3214,12 +3325,16 @@ void q_chart_polish_event(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#polishEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self ```
 void q_chart_qbase_polish_event(void* self);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#polishEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3237,12 +3352,16 @@ void q_chart_resize_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#resizeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QGraphicsSceneResizeEvent* event ```
 void q_chart_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3260,12 +3379,16 @@ void q_chart_show_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QShowEvent* event ```
 void q_chart_qbase_show_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3283,12 +3406,16 @@ void q_chart_hover_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#hoverMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QGraphicsSceneHoverEvent* event ```
 void q_chart_qbase_hover_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#hoverMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3306,12 +3433,16 @@ void q_chart_hover_leave_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#hoverLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QGraphicsSceneHoverEvent* event ```
 void q_chart_qbase_hover_leave_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#hoverLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3329,12 +3460,16 @@ void q_chart_grab_mouse_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#grabMouseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QEvent* event ```
 void q_chart_qbase_grab_mouse_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#grabMouseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3352,12 +3487,16 @@ void q_chart_ungrab_mouse_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#ungrabMouseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QEvent* event ```
 void q_chart_qbase_ungrab_mouse_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#ungrabMouseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3375,12 +3514,16 @@ void q_chart_grab_keyboard_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#grabKeyboardEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QEvent* event ```
 void q_chart_qbase_grab_keyboard_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#grabKeyboardEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3398,12 +3541,16 @@ void q_chart_ungrab_keyboard_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#ungrabKeyboardEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QEvent* event ```
 void q_chart_qbase_ungrab_keyboard_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#ungrabKeyboardEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3421,12 +3568,16 @@ bool q_chart_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QObject* watched, QEvent* event ```
 bool q_chart_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3444,12 +3595,16 @@ void q_chart_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QTimerEvent* event ```
 void q_chart_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3467,12 +3622,16 @@ void q_chart_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QChildEvent* event ```
 void q_chart_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3490,12 +3649,16 @@ void q_chart_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QEvent* event ```
 void q_chart_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3513,12 +3676,16 @@ void q_chart_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QMetaMethod* signal ```
 void q_chart_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3536,12 +3703,16 @@ void q_chart_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QMetaMethod* signal ```
 void q_chart_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3559,12 +3730,16 @@ void q_chart_advance(void* self, int phase);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#advance)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, int phase ```
 void q_chart_qbase_advance(void* self, int phase);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#advance)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3582,12 +3757,16 @@ bool q_chart_contains(void* self, void* point);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#contains)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QPointF* point ```
 bool q_chart_qbase_contains(void* self, void* point);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#contains)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3605,12 +3784,16 @@ bool q_chart_collides_with_item(void* self, void* other, int64_t mode);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithItem)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode ```
 bool q_chart_qbase_collides_with_item(void* self, void* other, int64_t mode);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithItem)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3628,12 +3811,16 @@ bool q_chart_collides_with_path(void* self, void* path, int64_t mode);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QPainterPath* path, enum Qt__ItemSelectionMode mode ```
 bool q_chart_qbase_collides_with_path(void* self, void* path, int64_t mode);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3651,12 +3838,16 @@ bool q_chart_is_obscured_by(void* self, void* item);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscuredBy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QGraphicsItem* item ```
 bool q_chart_qbase_is_obscured_by(void* self, void* item);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscuredBy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3674,12 +3865,16 @@ QPainterPath* q_chart_opaque_area(void* self);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#opaqueArea)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self ```
 QPainterPath* q_chart_qbase_opaque_area(void* self);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#opaqueArea)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3697,12 +3892,16 @@ bool q_chart_scene_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QGraphicsItem* watched, QEvent* event ```
 bool q_chart_qbase_scene_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneEventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3720,12 +3919,16 @@ void q_chart_context_menu_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QGraphicsSceneContextMenuEvent* event ```
 void q_chart_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3743,12 +3946,16 @@ void q_chart_drag_enter_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QGraphicsSceneDragDropEvent* event ```
 void q_chart_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3766,12 +3973,16 @@ void q_chart_drag_leave_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QGraphicsSceneDragDropEvent* event ```
 void q_chart_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3789,12 +4000,16 @@ void q_chart_drag_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QGraphicsSceneDragDropEvent* event ```
 void q_chart_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3812,12 +4027,16 @@ void q_chart_drop_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QGraphicsSceneDragDropEvent* event ```
 void q_chart_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3835,12 +4054,16 @@ void q_chart_hover_enter_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QGraphicsSceneHoverEvent* event ```
 void q_chart_qbase_hover_enter_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#hoverEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3858,12 +4081,16 @@ void q_chart_key_press_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QKeyEvent* event ```
 void q_chart_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3881,12 +4108,16 @@ void q_chart_key_release_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QKeyEvent* event ```
 void q_chart_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3904,12 +4135,16 @@ void q_chart_mouse_press_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mousePressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QGraphicsSceneMouseEvent* event ```
 void q_chart_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3927,12 +4162,16 @@ void q_chart_mouse_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QGraphicsSceneMouseEvent* event ```
 void q_chart_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3950,12 +4189,16 @@ void q_chart_mouse_release_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QGraphicsSceneMouseEvent* event ```
 void q_chart_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3973,12 +4216,16 @@ void q_chart_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QGraphicsSceneMouseEvent* event ```
 void q_chart_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3996,12 +4243,16 @@ void q_chart_wheel_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QGraphicsSceneWheelEvent* event ```
 void q_chart_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4019,12 +4270,16 @@ void q_chart_input_method_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QInputMethodEvent* event ```
 void q_chart_qbase_input_method_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4042,12 +4297,16 @@ QVariant* q_chart_input_method_query(void* self, int64_t query);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, enum Qt__InputMethodQuery query ```
 QVariant* q_chart_qbase_input_method_query(void* self, int64_t query);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4065,12 +4324,16 @@ bool q_chart_supports_extension(void* self, int64_t extension);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#supportsExtension)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, enum QGraphicsItem__Extension extension ```
 bool q_chart_qbase_supports_extension(void* self, int64_t extension);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#supportsExtension)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4088,12 +4351,16 @@ void q_chart_set_extension(void* self, int64_t extension, void* variant);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setExtension)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, enum QGraphicsItem__Extension extension, QVariant* variant ```
 void q_chart_qbase_set_extension(void* self, int64_t extension, void* variant);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setExtension)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4111,12 +4378,16 @@ QVariant* q_chart_extension(void* self, void* variant);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#extension)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QVariant* variant ```
 QVariant* q_chart_qbase_extension(void* self, void* variant);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#extension)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4134,12 +4405,16 @@ bool q_chart_is_empty(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isEmpty)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self ```
 bool q_chart_qbase_is_empty(void* self);
 
 /// Inherited from QGraphicsLayoutItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isEmpty)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4157,12 +4432,16 @@ void q_chart_update_micro_focus(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self ```
 void q_chart_qbase_update_micro_focus(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4180,12 +4459,16 @@ QObject* q_chart_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self ```
 QObject* q_chart_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4203,12 +4486,16 @@ int32_t q_chart_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self ```
 int32_t q_chart_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4226,12 +4513,16 @@ int32_t q_chart_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, const char* signal ```
 int32_t q_chart_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4249,12 +4540,16 @@ bool q_chart_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QMetaMethod* signal ```
 bool q_chart_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4272,12 +4567,16 @@ void q_chart_add_to_index(void* self);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#addToIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self ```
 void q_chart_qbase_add_to_index(void* self);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#addToIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4295,12 +4594,16 @@ void q_chart_remove_from_index(void* self);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self ```
 void q_chart_qbase_remove_from_index(void* self);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#removeFromIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4318,12 +4621,16 @@ void q_chart_prepare_geometry_change(void* self);
 
 /// Inherited from QGraphicsItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#prepareGeometryChange)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self ```
 void q_chart_qbase_prepare_geometry_change(void* self);
 
 /// Inherited from QGraphicsItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#prepareGeometryChange)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4341,12 +4648,16 @@ void q_chart_set_graphics_item(void* self, void* item);
 
 /// Inherited from QGraphicsLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setGraphicsItem)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, QGraphicsItem* item ```
 void q_chart_qbase_set_graphics_item(void* self, void* item);
 
 /// Inherited from QGraphicsLayoutItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setGraphicsItem)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4364,6 +4675,8 @@ void q_chart_set_owned_by_layout(void* self, bool ownedByLayout);
 
 /// Inherited from QGraphicsLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setOwnedByLayout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QChart* self, bool ownedByLayout ```
@@ -4371,17 +4684,30 @@ void q_chart_qbase_set_owned_by_layout(void* self, bool ownedByLayout);
 
 /// Inherited from QGraphicsLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setOwnedByLayout)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QChart* self, void (*slot)(QChart*, bool) ```
 void q_chart_on_set_owned_by_layout(void* self, void (*slot)(void*, bool));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QChart* self, void (*slot)(QObject*, const char*) ```
+void q_chart_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#dtor.QChart)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QChart* self ```
 void q_chart_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qchart.html#types
+/// https://doc.qt.io/qt-6/qchart-qtcharts.html#types
 
 typedef enum {
     QCHART_CHARTTYPE_CHARTTYPEUNDEFINED = 0,

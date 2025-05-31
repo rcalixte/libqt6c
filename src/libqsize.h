@@ -161,6 +161,8 @@ QSize* q_size_operator_divide_assign(void* self, double c);
 /// ``` QSize* self ```
 QSizeF* q_size_to_size_f(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsize.html#dtor.QSize)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSize* self ```
@@ -318,6 +320,8 @@ QSizeF* q_sizef_operator_divide_assign(void* self, double c);
 /// ``` QSizeF* self ```
 QSize* q_sizef_to_size(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsizef.html#dtor.QSizeF)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSizeF* self ```

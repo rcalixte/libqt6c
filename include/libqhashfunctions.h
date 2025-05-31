@@ -64,6 +64,8 @@ void q_hashseed_set_deterministic_global_seed();
 ///
 void q_hashseed_reset_random_global_seed();
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhashseed.html#dtor.QHashSeed)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QHashSeed* self ```

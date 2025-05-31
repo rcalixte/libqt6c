@@ -12,15 +12,11 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
-#include "libqevent.h"
 #include "libqlocale.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqrect.h"
 #include <string.h>
-#include "libqthread.h"
 #include "libqtransform.h"
 #include "libqvariant.h"
 
@@ -29,7 +25,7 @@
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QInputMethod* self ```
-QMetaObject* q_inputmethod_meta_object(void* self);
+const QMetaObject* q_inputmethod_meta_object(void* self);
 
 /// ``` QInputMethod* self, const char* param1 ```
 void* q_inputmethod_metacast(void* self, const char* param1);
@@ -147,6 +143,8 @@ void q_inputmethod_invoke_action(void* self, int64_t a, int cursorPosition);
 /// ``` QInputMethod* self ```
 void q_inputmethod_cursor_rectangle_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#cursorRectangleChanged)
+///
 /// ``` QInputMethod* self, void (*slot)(QInputMethod*) ```
 void q_inputmethod_on_cursor_rectangle_changed(void* self, void (*slot)(void*));
 
@@ -155,6 +153,8 @@ void q_inputmethod_on_cursor_rectangle_changed(void* self, void (*slot)(void*));
 /// ``` QInputMethod* self ```
 void q_inputmethod_anchor_rectangle_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#anchorRectangleChanged)
+///
 /// ``` QInputMethod* self, void (*slot)(QInputMethod*) ```
 void q_inputmethod_on_anchor_rectangle_changed(void* self, void (*slot)(void*));
 
@@ -163,6 +163,8 @@ void q_inputmethod_on_anchor_rectangle_changed(void* self, void (*slot)(void*));
 /// ``` QInputMethod* self ```
 void q_inputmethod_keyboard_rectangle_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#keyboardRectangleChanged)
+///
 /// ``` QInputMethod* self, void (*slot)(QInputMethod*) ```
 void q_inputmethod_on_keyboard_rectangle_changed(void* self, void (*slot)(void*));
 
@@ -171,6 +173,8 @@ void q_inputmethod_on_keyboard_rectangle_changed(void* self, void (*slot)(void*)
 /// ``` QInputMethod* self ```
 void q_inputmethod_input_item_clip_rectangle_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#inputItemClipRectangleChanged)
+///
 /// ``` QInputMethod* self, void (*slot)(QInputMethod*) ```
 void q_inputmethod_on_input_item_clip_rectangle_changed(void* self, void (*slot)(void*));
 
@@ -179,6 +183,8 @@ void q_inputmethod_on_input_item_clip_rectangle_changed(void* self, void (*slot)
 /// ``` QInputMethod* self ```
 void q_inputmethod_visible_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#visibleChanged)
+///
 /// ``` QInputMethod* self, void (*slot)(QInputMethod*) ```
 void q_inputmethod_on_visible_changed(void* self, void (*slot)(void*));
 
@@ -187,6 +193,8 @@ void q_inputmethod_on_visible_changed(void* self, void (*slot)(void*));
 /// ``` QInputMethod* self ```
 void q_inputmethod_animating_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#animatingChanged)
+///
 /// ``` QInputMethod* self, void (*slot)(QInputMethod*) ```
 void q_inputmethod_on_animating_changed(void* self, void (*slot)(void*));
 
@@ -195,6 +203,8 @@ void q_inputmethod_on_animating_changed(void* self, void (*slot)(void*));
 /// ``` QInputMethod* self ```
 void q_inputmethod_locale_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#localeChanged)
+///
 /// ``` QInputMethod* self, void (*slot)(QInputMethod*) ```
 void q_inputmethod_on_locale_changed(void* self, void (*slot)(void*));
 
@@ -203,6 +213,8 @@ void q_inputmethod_on_locale_changed(void* self, void (*slot)(void*));
 /// ``` QInputMethod* self, enum Qt__LayoutDirection newDirection ```
 void q_inputmethod_input_direction_changed(void* self, int64_t newDirection);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#inputDirectionChanged)
+///
 /// ``` QInputMethod* self, void (*slot)(QInputMethod*, enum Qt__LayoutDirection) ```
 void q_inputmethod_on_input_direction_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -312,7 +324,7 @@ void q_inputmethod_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QInputMethod* self ```
-libqt_list /* of QObject* */ q_inputmethod_children(void* self);
+const libqt_list /* of QObject* */ q_inputmethod_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -410,7 +422,7 @@ QBindingStorage* q_inputmethod_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QInputMethod* self ```
-QBindingStorage* q_inputmethod_binding_storage2(void* self);
+const QBindingStorage* q_inputmethod_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -420,6 +432,8 @@ QBindingStorage* q_inputmethod_binding_storage2(void* self);
 void q_inputmethod_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QInputMethod* self, void (*slot)(QObject*) ```
 void q_inputmethod_on_destroyed(void* self, void (*slot)(void*));
@@ -475,8 +489,19 @@ void q_inputmethod_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QInputMethod* self, void (*slot)(QObject*, QObject*) ```
 void q_inputmethod_on_destroyed1(void* self, void (*slot)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QInputMethod* self, void (*slot)(QObject*, const char*) ```
+void q_inputmethod_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qinputmethod.html#types
 

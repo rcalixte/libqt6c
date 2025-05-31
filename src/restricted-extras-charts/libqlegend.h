@@ -13,49 +13,28 @@
 #include "../qtlibc.h"
 
 #include "libqabstractseries.h"
-#include "../libqaction.h"
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "../libqbrush.h"
-#include "../libqevent.h"
 #include "../libqcolor.h"
-#include "../libqcursor.h"
 #include "../libqfont.h"
-#include "../libqgraphicseffect.h"
 #include "../libqgraphicsitem.h"
-#include "../libqgraphicslayout.h"
 #include "../libqgraphicslayoutitem.h"
-#include "../libqgraphicsscene.h"
-#include "../libqgraphicstransform.h"
 #include "../libqgraphicswidget.h"
-#include "../libqkeysequence.h"
+#include "../libqevent.h"
 #include "libqlegendmarker.h"
-#include "../libqmargins.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include "../libqpainter.h"
-#include "../libqpainterpath.h"
-#include "../libqpalette.h"
 #include "../libqpen.h"
-#include "../libqpoint.h"
-#include "../libqrect.h"
-#include "../libqregion.h"
-#include "../libqsize.h"
-#include "../libqsizepolicy.h"
 #include <string.h>
-#include "../libqstyle.h"
 #include "../libqstyleoption.h"
-#include "../libqthread.h"
-#include "../libqtransform.h"
-#include "../libqvariant.h"
 #include "../libqwidget.h"
 
-/// https://doc.qt.io/qt-6/qlegend.html
+/// https://doc.qt.io/qt-6/qlegend-qtcharts.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QLegend* self ```
-QMetaObject* q_legend_meta_object(void* self);
+const QMetaObject* q_legend_meta_object(void* self);
 
 /// ``` QLegend* self, const char* param1 ```
 void* q_legend_metacast(void* self, const char* param1);
@@ -68,238 +47,258 @@ int32_t q_legend_metacall(void* self, int64_t param1, int param2, void* param3);
 /// ``` const char* s ```
 const char* q_legend_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#paint)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#paint)
 ///
 /// ``` QLegend* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget ```
 void q_legend_paint(void* self, void* painter, void* option, void* widget);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#setBrush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#setBrush)
 ///
 /// ``` QLegend* self, QBrush* brush ```
 void q_legend_set_brush(void* self, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#brush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#brush)
 ///
 /// ``` QLegend* self ```
 QBrush* q_legend_brush(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#setColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#setColor)
 ///
 /// ``` QLegend* self, QColor* color ```
 void q_legend_set_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#color)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#color)
 ///
 /// ``` QLegend* self ```
 QColor* q_legend_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#setPen)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#setPen)
 ///
 /// ``` QLegend* self, QPen* pen ```
 void q_legend_set_pen(void* self, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#pen)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#pen)
 ///
 /// ``` QLegend* self ```
 QPen* q_legend_pen(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#setBorderColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#setBorderColor)
 ///
 /// ``` QLegend* self, QColor* color ```
 void q_legend_set_border_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#borderColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#borderColor)
 ///
 /// ``` QLegend* self ```
 QColor* q_legend_border_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#setFont)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#setFont)
 ///
 /// ``` QLegend* self, QFont* font ```
 void q_legend_set_font(void* self, void* font);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#font)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#font)
 ///
 /// ``` QLegend* self ```
 QFont* q_legend_font(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#setLabelBrush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#setLabelBrush)
 ///
 /// ``` QLegend* self, QBrush* brush ```
 void q_legend_set_label_brush(void* self, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#labelBrush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#labelBrush)
 ///
 /// ``` QLegend* self ```
 QBrush* q_legend_label_brush(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#setLabelColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#setLabelColor)
 ///
 /// ``` QLegend* self, QColor* color ```
 void q_legend_set_label_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#labelColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#labelColor)
 ///
 /// ``` QLegend* self ```
 QColor* q_legend_label_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#setAlignment)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#setAlignment)
 ///
 /// ``` QLegend* self, int alignment ```
 void q_legend_set_alignment(void* self, int64_t alignment);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#alignment)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#alignment)
 ///
 /// ``` QLegend* self ```
 int64_t q_legend_alignment(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#detachFromChart)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#detachFromChart)
 ///
 /// ``` QLegend* self ```
 void q_legend_detach_from_chart(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#attachToChart)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#attachToChart)
 ///
 /// ``` QLegend* self ```
 void q_legend_attach_to_chart(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#isAttachedToChart)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#isAttachedToChart)
 ///
 /// ``` QLegend* self ```
 bool q_legend_is_attached_to_chart(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#setBackgroundVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#setBackgroundVisible)
 ///
 /// ``` QLegend* self ```
 void q_legend_set_background_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#isBackgroundVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#isBackgroundVisible)
 ///
 /// ``` QLegend* self ```
 bool q_legend_is_background_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#markers)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#markers)
 ///
 /// ``` QLegend* self ```
 libqt_list /* of QLegendMarker* */ q_legend_markers(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#reverseMarkers)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#reverseMarkers)
 ///
 /// ``` QLegend* self ```
 bool q_legend_reverse_markers(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#setReverseMarkers)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#setReverseMarkers)
 ///
 /// ``` QLegend* self ```
 void q_legend_set_reverse_markers(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#showToolTips)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#showToolTips)
 ///
 /// ``` QLegend* self ```
 bool q_legend_show_tool_tips(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#setShowToolTips)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#setShowToolTips)
 ///
 /// ``` QLegend* self, bool show ```
 void q_legend_set_show_tool_tips(void* self, bool show);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#isInteractive)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#isInteractive)
 ///
 /// ``` QLegend* self ```
 bool q_legend_is_interactive(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#setInteractive)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#setInteractive)
 ///
 /// ``` QLegend* self, bool interactive ```
 void q_legend_set_interactive(void* self, bool interactive);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#markerShape)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#markerShape)
 ///
 /// ``` QLegend* self ```
 int64_t q_legend_marker_shape(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#setMarkerShape)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#setMarkerShape)
 ///
 /// ``` QLegend* self, enum QLegend__MarkerShape shape ```
 void q_legend_set_marker_shape(void* self, int64_t shape);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#backgroundVisibleChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#backgroundVisibleChanged)
 ///
 /// ``` QLegend* self, bool visible ```
 void q_legend_background_visible_changed(void* self, bool visible);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#backgroundVisibleChanged)
+///
 /// ``` QLegend* self, void (*slot)(QLegend*, bool) ```
 void q_legend_on_background_visible_changed(void* self, void (*slot)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#colorChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#colorChanged)
 ///
 /// ``` QLegend* self, QColor* color ```
 void q_legend_color_changed(void* self, void* color);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#colorChanged)
+///
 /// ``` QLegend* self, void (*slot)(QLegend*, QColor*) ```
 void q_legend_on_color_changed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#borderColorChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#borderColorChanged)
 ///
 /// ``` QLegend* self, QColor* color ```
 void q_legend_border_color_changed(void* self, void* color);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#borderColorChanged)
+///
 /// ``` QLegend* self, void (*slot)(QLegend*, QColor*) ```
 void q_legend_on_border_color_changed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#fontChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#fontChanged)
 ///
 /// ``` QLegend* self, QFont* font ```
 void q_legend_font_changed(void* self, void* font);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#fontChanged)
+///
 /// ``` QLegend* self, void (*slot)(QLegend*, QFont*) ```
 void q_legend_on_font_changed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#labelColorChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#labelColorChanged)
 ///
 /// ``` QLegend* self, QColor* color ```
 void q_legend_label_color_changed(void* self, void* color);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#labelColorChanged)
+///
 /// ``` QLegend* self, void (*slot)(QLegend*, QColor*) ```
 void q_legend_on_label_color_changed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#reverseMarkersChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#reverseMarkersChanged)
 ///
 /// ``` QLegend* self, bool reverseMarkers ```
 void q_legend_reverse_markers_changed(void* self, bool reverseMarkers);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#reverseMarkersChanged)
+///
 /// ``` QLegend* self, void (*slot)(QLegend*, bool) ```
 void q_legend_on_reverse_markers_changed(void* self, void (*slot)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#showToolTipsChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#showToolTipsChanged)
 ///
 /// ``` QLegend* self, bool showToolTips ```
 void q_legend_show_tool_tips_changed(void* self, bool showToolTips);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#showToolTipsChanged)
+///
 /// ``` QLegend* self, void (*slot)(QLegend*, bool) ```
 void q_legend_on_show_tool_tips_changed(void* self, void (*slot)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#markerShapeChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#markerShapeChanged)
 ///
 /// ``` QLegend* self, enum QLegend__MarkerShape shape ```
 void q_legend_marker_shape_changed(void* self, int64_t shape);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#markerShapeChanged)
+///
 /// ``` QLegend* self, void (*slot)(QLegend*, enum QLegend__MarkerShape) ```
 void q_legend_on_marker_shape_changed(void* self, void (*slot)(void*, int64_t));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#attachedToChartChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#attachedToChartChanged)
 ///
 /// ``` QLegend* self, bool attachedToChart ```
 void q_legend_attached_to_chart_changed(void* self, bool attachedToChart);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#attachedToChartChanged)
+///
 /// ``` QLegend* self, void (*slot)(QLegend*, bool) ```
 void q_legend_on_attached_to_chart_changed(void* self, void (*slot)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#interactiveChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#interactiveChanged)
 ///
 /// ``` QLegend* self, bool interactive ```
 void q_legend_interactive_changed(void* self, bool interactive);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#interactiveChanged)
+///
 /// ``` QLegend* self, void (*slot)(QLegend*, bool) ```
 void q_legend_on_interactive_changed(void* self, void (*slot)(void*, bool));
 
@@ -313,17 +312,17 @@ const char* q_legend_tr2(const char* s, const char* c);
 /// ``` const char* s, const char* c, int n ```
 const char* q_legend_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#setBackgroundVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#setBackgroundVisible)
 ///
 /// ``` QLegend* self, bool visible ```
 void q_legend_set_background_visible1(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#markers)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#markers)
 ///
 /// ``` QLegend* self, QAbstractSeries* series ```
 libqt_list /* of QLegendMarker* */ q_legend_markers1(void* self, void* series);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegend.html#setReverseMarkers)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#setReverseMarkers)
 ///
 /// ``` QLegend* self, bool reverseMarkers ```
 void q_legend_set_reverse_markers1(void* self, bool reverseMarkers);
@@ -626,15 +625,15 @@ void q_legend_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#addActions)
 ///
-/// ``` QLegend* self, QAction* actions[] ```
-void q_legend_add_actions(void* self, void* actions[]);
+/// ``` QLegend* self, libqt_list /* of QAction* */ actions ```
+void q_legend_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#insertActions)
 ///
-/// ``` QLegend* self, QAction* before, QAction* actions[] ```
-void q_legend_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QLegend* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_legend_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -708,6 +707,8 @@ void q_legend_geometry_changed(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#geometryChanged)
+///
 /// ``` QLegend* self, void (*slot)(QGraphicsWidget*) ```
 void q_legend_on_geometry_changed(void* self, void (*slot)(void*));
 
@@ -719,6 +720,8 @@ void q_legend_on_geometry_changed(void* self, void (*slot)(void*));
 void q_legend_layout_changed(void* self);
 
 /// Inherited from QGraphicsWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#layoutChanged)
 ///
 /// ``` QLegend* self, void (*slot)(QGraphicsWidget*) ```
 void q_legend_on_layout_changed(void* self, void (*slot)(void*));
@@ -781,6 +784,8 @@ void q_legend_parent_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#parentChanged)
+///
 /// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
 void q_legend_on_parent_changed(void* self, void (*slot)(void*));
 
@@ -792,6 +797,8 @@ void q_legend_on_parent_changed(void* self, void (*slot)(void*));
 void q_legend_opacity_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#opacityChanged)
 ///
 /// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
 void q_legend_on_opacity_changed(void* self, void (*slot)(void*));
@@ -805,6 +812,8 @@ void q_legend_visible_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#visibleChanged)
+///
 /// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
 void q_legend_on_visible_changed(void* self, void (*slot)(void*));
 
@@ -816,6 +825,8 @@ void q_legend_on_visible_changed(void* self, void (*slot)(void*));
 void q_legend_enabled_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#enabledChanged)
 ///
 /// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
 void q_legend_on_enabled_changed(void* self, void (*slot)(void*));
@@ -829,6 +840,8 @@ void q_legend_x_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#xChanged)
+///
 /// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
 void q_legend_on_x_changed(void* self, void (*slot)(void*));
 
@@ -840,6 +853,8 @@ void q_legend_on_x_changed(void* self, void (*slot)(void*));
 void q_legend_y_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#yChanged)
 ///
 /// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
 void q_legend_on_y_changed(void* self, void (*slot)(void*));
@@ -853,6 +868,8 @@ void q_legend_z_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#zChanged)
+///
 /// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
 void q_legend_on_z_changed(void* self, void (*slot)(void*));
 
@@ -864,6 +881,8 @@ void q_legend_on_z_changed(void* self, void (*slot)(void*));
 void q_legend_rotation_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#rotationChanged)
 ///
 /// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
 void q_legend_on_rotation_changed(void* self, void (*slot)(void*));
@@ -877,6 +896,8 @@ void q_legend_scale_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#scaleChanged)
+///
 /// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
 void q_legend_on_scale_changed(void* self, void (*slot)(void*));
 
@@ -888,6 +909,8 @@ void q_legend_on_scale_changed(void* self, void (*slot)(void*));
 void q_legend_children_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#childrenChanged)
 ///
 /// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
 void q_legend_on_children_changed(void* self, void (*slot)(void*));
@@ -901,6 +924,8 @@ void q_legend_width_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#widthChanged)
+///
 /// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
 void q_legend_on_width_changed(void* self, void (*slot)(void*));
 
@@ -912,6 +937,8 @@ void q_legend_on_width_changed(void* self, void (*slot)(void*));
 void q_legend_height_changed(void* self);
 
 /// Inherited from QGraphicsObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#heightChanged)
 ///
 /// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
 void q_legend_on_height_changed(void* self, void (*slot)(void*));
@@ -1012,7 +1039,7 @@ void q_legend_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QLegend* self ```
-libqt_list /* of QObject* */ q_legend_children(void* self);
+const libqt_list /* of QObject* */ q_legend_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1110,7 +1137,7 @@ QBindingStorage* q_legend_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QLegend* self ```
-QBindingStorage* q_legend_binding_storage2(void* self);
+const QBindingStorage* q_legend_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -1120,6 +1147,8 @@ QBindingStorage* q_legend_binding_storage2(void* self);
 void q_legend_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QLegend* self, void (*slot)(QObject*) ```
 void q_legend_on_destroyed(void* self, void (*slot)(void*));
@@ -1174,6 +1203,8 @@ QMetaObject__Connection* q_legend_connect4(void* self, void* sender, const char*
 void q_legend_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QLegend* self, void (*slot)(QObject*, QObject*) ```
 void q_legend_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -1281,7 +1312,7 @@ QGraphicsObject* q_legend_to_graphics_object(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
 /// ``` QLegend* self ```
-QGraphicsObject* q_legend_to_graphics_object2(void* self);
+const QGraphicsObject* q_legend_to_graphics_object2(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1826,8 +1857,8 @@ libqt_list /* of QGraphicsTransform* */ q_legend_transformations(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransformations)
 ///
-/// ``` QLegend* self, QGraphicsTransform* transformations[] ```
-void q_legend_set_transformations(void* self, void* transformations[]);
+/// ``` QLegend* self, libqt_list /* of QGraphicsTransform* */ transformations ```
+void q_legend_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2620,12 +2651,23 @@ void q_legend_set_size_policy3(void* self, int64_t hPolicy, int64_t vPolicy, int
 /// ``` QLegend* self, enum Qt__SizeHint which, QSizeF* constraint ```
 QSizeF* q_legend_effective_size_hint2(void* self, int64_t which, void* constraint);
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QLegend* self, void (*slot)(QObject*, const char*) ```
+void q_legend_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#dtor.QLegend)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QLegend* self ```
 void q_legend_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qlegend.html#types
+/// https://doc.qt.io/qt-6/qlegend-qtcharts.html#types
 
 typedef enum {
     QLEGEND_MARKERSHAPE_MARKERSHAPEDEFAULT = 0,

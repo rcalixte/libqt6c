@@ -13,14 +13,10 @@
 #include "qtlibc.h"
 
 #include "libqabstractitemmodel.h"
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qitemselectionrange.html
 
@@ -82,12 +78,12 @@ int32_t q_itemselectionrange_height(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionrange.html#topLeft)
 ///
 /// ``` QItemSelectionRange* self ```
-QPersistentModelIndex* q_itemselectionrange_top_left(void* self);
+const QPersistentModelIndex* q_itemselectionrange_top_left(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionrange.html#bottomRight)
 ///
 /// ``` QItemSelectionRange* self ```
-QPersistentModelIndex* q_itemselectionrange_bottom_right(void* self);
+const QPersistentModelIndex* q_itemselectionrange_bottom_right(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionrange.html#parent)
 ///
@@ -97,7 +93,7 @@ QModelIndex* q_itemselectionrange_parent(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionrange.html#model)
 ///
 /// ``` QItemSelectionRange* self ```
-QAbstractItemModel* q_itemselectionrange_model(void* self);
+const QAbstractItemModel* q_itemselectionrange_model(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionrange.html#contains)
 ///
@@ -144,6 +140,8 @@ bool q_itemselectionrange_is_empty(void* self);
 /// ``` QItemSelectionRange* self ```
 libqt_list /* of QModelIndex* */ q_itemselectionrange_indexes(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionrange.html#dtor.QItemSelectionRange)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QItemSelectionRange* self ```
@@ -169,7 +167,7 @@ QItemSelectionModel* q_itemselectionmodel_new3(void* model);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QItemSelectionModel* self ```
-QMetaObject* q_itemselectionmodel_meta_object(void* self);
+const QMetaObject* q_itemselectionmodel_meta_object(void* self);
 
 /// ``` QItemSelectionModel* self, const char* param1 ```
 void* q_itemselectionmodel_metacast(void* self, const char* param1);
@@ -245,12 +243,12 @@ libqt_list /* of QModelIndex* */ q_itemselectionmodel_selected_columns(void* sel
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#selection)
 ///
 /// ``` QItemSelectionModel* self ```
-QItemSelection* q_itemselectionmodel_selection(void* self);
+const QItemSelection* q_itemselectionmodel_selection(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#model)
 ///
 /// ``` QItemSelectionModel* self ```
-QAbstractItemModel* q_itemselectionmodel_model(void* self);
+const QAbstractItemModel* q_itemselectionmodel_model(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#model)
 ///
@@ -267,11 +265,15 @@ void q_itemselectionmodel_set_model(void* self, void* model);
 /// ``` QItemSelectionModel* self, QModelIndex* index, int command ```
 void q_itemselectionmodel_set_current_index(void* self, void* index, int64_t command);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#setCurrentIndex)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemSelectionModel* self, void (*slot)(QItemSelectionModel*, QModelIndex*, int) ```
 void q_itemselectionmodel_on_set_current_index(void* self, void (*slot)(void*, void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#setCurrentIndex)
+///
 /// Base class method implementation
 ///
 /// ``` QItemSelectionModel* self, QModelIndex* index, int command ```
@@ -282,11 +284,15 @@ void q_itemselectionmodel_qbase_set_current_index(void* self, void* index, int64
 /// ``` QItemSelectionModel* self, QModelIndex* index, int command ```
 void q_itemselectionmodel_select(void* self, void* index, int64_t command);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#select)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemSelectionModel* self, void (*slot)(QItemSelectionModel*, QModelIndex*, int) ```
 void q_itemselectionmodel_on_select(void* self, void (*slot)(void*, void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#select)
+///
 /// Base class method implementation
 ///
 /// ``` QItemSelectionModel* self, QModelIndex* index, int command ```
@@ -297,11 +303,15 @@ void q_itemselectionmodel_qbase_select(void* self, void* index, int64_t command)
 /// ``` QItemSelectionModel* self, QItemSelection* selection, int command ```
 void q_itemselectionmodel_select2(void* self, void* selection, int64_t command);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#select)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemSelectionModel* self, void (*slot)(QItemSelectionModel*, QItemSelection*, int) ```
 void q_itemselectionmodel_on_select2(void* self, void (*slot)(void*, void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#select)
+///
 /// Base class method implementation
 ///
 /// ``` QItemSelectionModel* self, QItemSelection* selection, int command ```
@@ -312,11 +322,15 @@ void q_itemselectionmodel_qbase_select2(void* self, void* selection, int64_t com
 /// ``` QItemSelectionModel* self ```
 void q_itemselectionmodel_clear(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#clear)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemSelectionModel* self, void (*slot)() ```
 void q_itemselectionmodel_on_clear(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#clear)
+///
 /// Base class method implementation
 ///
 /// ``` QItemSelectionModel* self ```
@@ -327,11 +341,15 @@ void q_itemselectionmodel_qbase_clear(void* self);
 /// ``` QItemSelectionModel* self ```
 void q_itemselectionmodel_reset(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#reset)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemSelectionModel* self, void (*slot)() ```
 void q_itemselectionmodel_on_reset(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#reset)
+///
 /// Base class method implementation
 ///
 /// ``` QItemSelectionModel* self ```
@@ -347,11 +365,15 @@ void q_itemselectionmodel_clear_selection(void* self);
 /// ``` QItemSelectionModel* self ```
 void q_itemselectionmodel_clear_current_index(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#clearCurrentIndex)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemSelectionModel* self, void (*slot)() ```
 void q_itemselectionmodel_on_clear_current_index(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#clearCurrentIndex)
+///
 /// Base class method implementation
 ///
 /// ``` QItemSelectionModel* self ```
@@ -362,6 +384,8 @@ void q_itemselectionmodel_qbase_clear_current_index(void* self);
 /// ``` QItemSelectionModel* self, QItemSelection* selected, QItemSelection* deselected ```
 void q_itemselectionmodel_selection_changed(void* self, void* selected, void* deselected);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#selectionChanged)
+///
 /// ``` QItemSelectionModel* self, void (*slot)(QItemSelectionModel*, QItemSelection*, QItemSelection*) ```
 void q_itemselectionmodel_on_selection_changed(void* self, void (*slot)(void*, void*, void*));
 
@@ -370,6 +394,8 @@ void q_itemselectionmodel_on_selection_changed(void* self, void (*slot)(void*, v
 /// ``` QItemSelectionModel* self, QModelIndex* current, QModelIndex* previous ```
 void q_itemselectionmodel_current_changed(void* self, void* current, void* previous);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#currentChanged)
+///
 /// ``` QItemSelectionModel* self, void (*slot)(QItemSelectionModel*, QModelIndex*, QModelIndex*) ```
 void q_itemselectionmodel_on_current_changed(void* self, void (*slot)(void*, void*, void*));
 
@@ -378,6 +404,8 @@ void q_itemselectionmodel_on_current_changed(void* self, void (*slot)(void*, voi
 /// ``` QItemSelectionModel* self, QModelIndex* current, QModelIndex* previous ```
 void q_itemselectionmodel_current_row_changed(void* self, void* current, void* previous);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#currentRowChanged)
+///
 /// ``` QItemSelectionModel* self, void (*slot)(QItemSelectionModel*, QModelIndex*, QModelIndex*) ```
 void q_itemselectionmodel_on_current_row_changed(void* self, void (*slot)(void*, void*, void*));
 
@@ -386,6 +414,8 @@ void q_itemselectionmodel_on_current_row_changed(void* self, void (*slot)(void*,
 /// ``` QItemSelectionModel* self, QModelIndex* current, QModelIndex* previous ```
 void q_itemselectionmodel_current_column_changed(void* self, void* current, void* previous);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#currentColumnChanged)
+///
 /// ``` QItemSelectionModel* self, void (*slot)(QItemSelectionModel*, QModelIndex*, QModelIndex*) ```
 void q_itemselectionmodel_on_current_column_changed(void* self, void (*slot)(void*, void*, void*));
 
@@ -394,6 +424,8 @@ void q_itemselectionmodel_on_current_column_changed(void* self, void (*slot)(voi
 /// ``` QItemSelectionModel* self, QAbstractItemModel* model ```
 void q_itemselectionmodel_model_changed(void* self, void* model);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#modelChanged)
+///
 /// ``` QItemSelectionModel* self, void (*slot)(QItemSelectionModel*, QAbstractItemModel*) ```
 void q_itemselectionmodel_on_model_changed(void* self, void (*slot)(void*, void*));
 
@@ -402,11 +434,15 @@ void q_itemselectionmodel_on_model_changed(void* self, void (*slot)(void*, void*
 /// ``` QItemSelectionModel* self, QItemSelection* newSelection, QItemSelection* oldSelection ```
 void q_itemselectionmodel_emit_selection_changed(void* self, void* newSelection, void* oldSelection);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#emitSelectionChanged)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemSelectionModel* self, void (*slot)(QItemSelectionModel*, QItemSelection*, QItemSelection*) ```
 void q_itemselectionmodel_on_emit_selection_changed(void* self, void (*slot)(void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#emitSelectionChanged)
+///
 /// Base class method implementation
 ///
 /// ``` QItemSelectionModel* self, QItemSelection* newSelection, QItemSelection* oldSelection ```
@@ -534,7 +570,7 @@ void q_itemselectionmodel_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QItemSelectionModel* self ```
-libqt_list /* of QObject* */ q_itemselectionmodel_children(void* self);
+const libqt_list /* of QObject* */ q_itemselectionmodel_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -632,7 +668,7 @@ QBindingStorage* q_itemselectionmodel_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QItemSelectionModel* self ```
-QBindingStorage* q_itemselectionmodel_binding_storage2(void* self);
+const QBindingStorage* q_itemselectionmodel_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -642,6 +678,8 @@ QBindingStorage* q_itemselectionmodel_binding_storage2(void* self);
 void q_itemselectionmodel_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QItemSelectionModel* self, void (*slot)(QObject*) ```
 void q_itemselectionmodel_on_destroyed(void* self, void (*slot)(void*));
@@ -697,6 +735,8 @@ void q_itemselectionmodel_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QItemSelectionModel* self, void (*slot)(QObject*, QObject*) ```
 void q_itemselectionmodel_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -711,12 +751,16 @@ bool q_itemselectionmodel_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemSelectionModel* self, QEvent* event ```
 bool q_itemselectionmodel_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -734,12 +778,16 @@ bool q_itemselectionmodel_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemSelectionModel* self, QObject* watched, QEvent* event ```
 bool q_itemselectionmodel_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -757,12 +805,16 @@ void q_itemselectionmodel_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemSelectionModel* self, QTimerEvent* event ```
 void q_itemselectionmodel_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -780,12 +832,16 @@ void q_itemselectionmodel_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemSelectionModel* self, QChildEvent* event ```
 void q_itemselectionmodel_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -803,12 +859,16 @@ void q_itemselectionmodel_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemSelectionModel* self, QEvent* event ```
 void q_itemselectionmodel_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -826,12 +886,16 @@ void q_itemselectionmodel_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemSelectionModel* self, QMetaMethod* signal ```
 void q_itemselectionmodel_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -849,12 +913,16 @@ void q_itemselectionmodel_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemSelectionModel* self, QMetaMethod* signal ```
 void q_itemselectionmodel_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -872,12 +940,16 @@ QObject* q_itemselectionmodel_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemSelectionModel* self ```
 QObject* q_itemselectionmodel_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -895,12 +967,16 @@ int32_t q_itemselectionmodel_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemSelectionModel* self ```
 int32_t q_itemselectionmodel_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -918,12 +994,16 @@ int32_t q_itemselectionmodel_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemSelectionModel* self, const char* signal ```
 int32_t q_itemselectionmodel_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -941,6 +1021,8 @@ bool q_itemselectionmodel_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemSelectionModel* self, QMetaMethod* signal ```
@@ -948,11 +1030,24 @@ bool q_itemselectionmodel_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QItemSelectionModel* self, bool (*slot)(QItemSelectionModel*, QMetaMethod*) ```
 void q_itemselectionmodel_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QItemSelectionModel* self, void (*slot)(QObject*, const char*) ```
+void q_itemselectionmodel_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#dtor.QItemSelectionModel)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QItemSelectionModel* self ```
@@ -1000,6 +1095,8 @@ void q_itemselection_merge(void* self, void* other, int64_t command);
 /// ``` QItemSelectionRange* range, QItemSelectionRange* other, QItemSelection* result ```
 void q_itemselection_split(void* range, void* other, void* result);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemselection.html#dtor.QItemSelection)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QItemSelection* self ```

@@ -12,19 +12,13 @@
 
 #include "../qtlibc.h"
 
-#include "../libqabstractitemmodel.h"
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "libqcandlestickmodelmapper.h"
-#include "libqcandlestickseries.h"
 #include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
-/// https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html
+/// https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html
 
 /// q_hcandlestickmodelmapper_new constructs a new QHCandlestickModelMapper object.
 ///
@@ -39,7 +33,7 @@ QHCandlestickModelMapper* q_hcandlestickmodelmapper_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QHCandlestickModelMapper* self ```
-QMetaObject* q_hcandlestickmodelmapper_meta_object(void* self);
+const QMetaObject* q_hcandlestickmodelmapper_meta_object(void* self);
 
 /// ``` QHCandlestickModelMapper* self, const char* param1 ```
 void* q_hcandlestickmodelmapper_metacast(void* self, const char* param1);
@@ -62,144 +56,162 @@ int32_t q_hcandlestickmodelmapper_qbase_metacall(void* self, int64_t param1, int
 /// ``` const char* s ```
 const char* q_hcandlestickmodelmapper_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#orientation)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#orientation)
 ///
 /// ``` QHCandlestickModelMapper* self ```
 int64_t q_hcandlestickmodelmapper_orientation(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#orientation)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHCandlestickModelMapper* self, int64_t (*slot)() ```
 void q_hcandlestickmodelmapper_on_orientation(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#orientation)
+///
 /// Base class method implementation
 ///
 /// ``` QHCandlestickModelMapper* self ```
 int64_t q_hcandlestickmodelmapper_qbase_orientation(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#setTimestampColumn)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#setTimestampColumn)
 ///
 /// ``` QHCandlestickModelMapper* self, int timestampColumn ```
 void q_hcandlestickmodelmapper_set_timestamp_column(void* self, int timestampColumn);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#timestampColumn)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#timestampColumn)
 ///
 /// ``` QHCandlestickModelMapper* self ```
 int32_t q_hcandlestickmodelmapper_timestamp_column(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#setOpenColumn)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#setOpenColumn)
 ///
 /// ``` QHCandlestickModelMapper* self, int openColumn ```
 void q_hcandlestickmodelmapper_set_open_column(void* self, int openColumn);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#openColumn)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#openColumn)
 ///
 /// ``` QHCandlestickModelMapper* self ```
 int32_t q_hcandlestickmodelmapper_open_column(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#setHighColumn)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#setHighColumn)
 ///
 /// ``` QHCandlestickModelMapper* self, int highColumn ```
 void q_hcandlestickmodelmapper_set_high_column(void* self, int highColumn);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#highColumn)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#highColumn)
 ///
 /// ``` QHCandlestickModelMapper* self ```
 int32_t q_hcandlestickmodelmapper_high_column(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#setLowColumn)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#setLowColumn)
 ///
 /// ``` QHCandlestickModelMapper* self, int lowColumn ```
 void q_hcandlestickmodelmapper_set_low_column(void* self, int lowColumn);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#lowColumn)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#lowColumn)
 ///
 /// ``` QHCandlestickModelMapper* self ```
 int32_t q_hcandlestickmodelmapper_low_column(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#setCloseColumn)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#setCloseColumn)
 ///
 /// ``` QHCandlestickModelMapper* self, int closeColumn ```
 void q_hcandlestickmodelmapper_set_close_column(void* self, int closeColumn);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#closeColumn)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#closeColumn)
 ///
 /// ``` QHCandlestickModelMapper* self ```
 int32_t q_hcandlestickmodelmapper_close_column(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#setFirstSetRow)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#setFirstSetRow)
 ///
 /// ``` QHCandlestickModelMapper* self, int firstSetRow ```
 void q_hcandlestickmodelmapper_set_first_set_row(void* self, int firstSetRow);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#firstSetRow)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#firstSetRow)
 ///
 /// ``` QHCandlestickModelMapper* self ```
 int32_t q_hcandlestickmodelmapper_first_set_row(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#setLastSetRow)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#setLastSetRow)
 ///
 /// ``` QHCandlestickModelMapper* self, int lastSetRow ```
 void q_hcandlestickmodelmapper_set_last_set_row(void* self, int lastSetRow);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#lastSetRow)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#lastSetRow)
 ///
 /// ``` QHCandlestickModelMapper* self ```
 int32_t q_hcandlestickmodelmapper_last_set_row(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#timestampColumnChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#timestampColumnChanged)
 ///
 /// ``` QHCandlestickModelMapper* self ```
 void q_hcandlestickmodelmapper_timestamp_column_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#timestampColumnChanged)
+///
 /// ``` QHCandlestickModelMapper* self, void (*slot)(QHCandlestickModelMapper*) ```
 void q_hcandlestickmodelmapper_on_timestamp_column_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#openColumnChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#openColumnChanged)
 ///
 /// ``` QHCandlestickModelMapper* self ```
 void q_hcandlestickmodelmapper_open_column_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#openColumnChanged)
+///
 /// ``` QHCandlestickModelMapper* self, void (*slot)(QHCandlestickModelMapper*) ```
 void q_hcandlestickmodelmapper_on_open_column_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#highColumnChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#highColumnChanged)
 ///
 /// ``` QHCandlestickModelMapper* self ```
 void q_hcandlestickmodelmapper_high_column_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#highColumnChanged)
+///
 /// ``` QHCandlestickModelMapper* self, void (*slot)(QHCandlestickModelMapper*) ```
 void q_hcandlestickmodelmapper_on_high_column_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#lowColumnChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#lowColumnChanged)
 ///
 /// ``` QHCandlestickModelMapper* self ```
 void q_hcandlestickmodelmapper_low_column_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#lowColumnChanged)
+///
 /// ``` QHCandlestickModelMapper* self, void (*slot)(QHCandlestickModelMapper*) ```
 void q_hcandlestickmodelmapper_on_low_column_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#closeColumnChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#closeColumnChanged)
 ///
 /// ``` QHCandlestickModelMapper* self ```
 void q_hcandlestickmodelmapper_close_column_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#closeColumnChanged)
+///
 /// ``` QHCandlestickModelMapper* self, void (*slot)(QHCandlestickModelMapper*) ```
 void q_hcandlestickmodelmapper_on_close_column_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#firstSetRowChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#firstSetRowChanged)
 ///
 /// ``` QHCandlestickModelMapper* self ```
 void q_hcandlestickmodelmapper_first_set_row_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#firstSetRowChanged)
+///
 /// ``` QHCandlestickModelMapper* self, void (*slot)(QHCandlestickModelMapper*) ```
 void q_hcandlestickmodelmapper_on_first_set_row_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper.html#lastSetRowChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#lastSetRowChanged)
 ///
 /// ``` QHCandlestickModelMapper* self ```
 void q_hcandlestickmodelmapper_last_set_row_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#lastSetRowChanged)
+///
 /// ``` QHCandlestickModelMapper* self, void (*slot)(QHCandlestickModelMapper*) ```
 void q_hcandlestickmodelmapper_on_last_set_row_changed(void* self, void (*slot)(void*));
 
@@ -250,6 +262,8 @@ void q_hcandlestickmodelmapper_model_replaced(void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#modelReplaced)
+///
 /// ``` QHCandlestickModelMapper* self, void (*slot)(QCandlestickModelMapper*) ```
 void q_hcandlestickmodelmapper_on_model_replaced(void* self, void (*slot)(void*));
 
@@ -261,6 +275,8 @@ void q_hcandlestickmodelmapper_on_model_replaced(void* self, void (*slot)(void*)
 void q_hcandlestickmodelmapper_series_replaced(void* self);
 
 /// Inherited from QCandlestickModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#seriesReplaced)
 ///
 /// ``` QHCandlestickModelMapper* self, void (*slot)(QCandlestickModelMapper*) ```
 void q_hcandlestickmodelmapper_on_series_replaced(void* self, void (*slot)(void*));
@@ -347,7 +363,7 @@ void q_hcandlestickmodelmapper_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QHCandlestickModelMapper* self ```
-libqt_list /* of QObject* */ q_hcandlestickmodelmapper_children(void* self);
+const libqt_list /* of QObject* */ q_hcandlestickmodelmapper_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -445,7 +461,7 @@ QBindingStorage* q_hcandlestickmodelmapper_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QHCandlestickModelMapper* self ```
-QBindingStorage* q_hcandlestickmodelmapper_binding_storage2(void* self);
+const QBindingStorage* q_hcandlestickmodelmapper_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -455,6 +471,8 @@ QBindingStorage* q_hcandlestickmodelmapper_binding_storage2(void* self);
 void q_hcandlestickmodelmapper_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QHCandlestickModelMapper* self, void (*slot)(QObject*) ```
 void q_hcandlestickmodelmapper_on_destroyed(void* self, void (*slot)(void*));
@@ -510,6 +528,8 @@ void q_hcandlestickmodelmapper_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QHCandlestickModelMapper* self, void (*slot)(QObject*, QObject*) ```
 void q_hcandlestickmodelmapper_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -524,12 +544,16 @@ bool q_hcandlestickmodelmapper_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self, QEvent* event ```
 bool q_hcandlestickmodelmapper_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -547,12 +571,16 @@ bool q_hcandlestickmodelmapper_event_filter(void* self, void* watched, void* eve
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self, QObject* watched, QEvent* event ```
 bool q_hcandlestickmodelmapper_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -570,12 +598,16 @@ void q_hcandlestickmodelmapper_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self, QTimerEvent* event ```
 void q_hcandlestickmodelmapper_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -593,12 +625,16 @@ void q_hcandlestickmodelmapper_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self, QChildEvent* event ```
 void q_hcandlestickmodelmapper_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -616,12 +652,16 @@ void q_hcandlestickmodelmapper_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self, QEvent* event ```
 void q_hcandlestickmodelmapper_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -639,12 +679,16 @@ void q_hcandlestickmodelmapper_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self, QMetaMethod* signal ```
 void q_hcandlestickmodelmapper_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -662,12 +706,16 @@ void q_hcandlestickmodelmapper_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self, QMetaMethod* signal ```
 void q_hcandlestickmodelmapper_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -685,12 +733,16 @@ void q_hcandlestickmodelmapper_set_timestamp(void* self, int timestamp);
 
 /// Inherited from QCandlestickModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#setTimestamp)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self, int timestamp ```
 void q_hcandlestickmodelmapper_qbase_set_timestamp(void* self, int timestamp);
 
 /// Inherited from QCandlestickModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#setTimestamp)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -708,12 +760,16 @@ int32_t q_hcandlestickmodelmapper_timestamp(void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#timestamp)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self ```
 int32_t q_hcandlestickmodelmapper_qbase_timestamp(void* self);
 
 /// Inherited from QCandlestickModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#timestamp)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -731,12 +787,16 @@ void q_hcandlestickmodelmapper_set_open(void* self, int open);
 
 /// Inherited from QCandlestickModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#setOpen)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self, int open ```
 void q_hcandlestickmodelmapper_qbase_set_open(void* self, int open);
 
 /// Inherited from QCandlestickModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#setOpen)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -754,12 +814,16 @@ int32_t q_hcandlestickmodelmapper_open(void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#open)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self ```
 int32_t q_hcandlestickmodelmapper_qbase_open(void* self);
 
 /// Inherited from QCandlestickModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#open)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -777,12 +841,16 @@ void q_hcandlestickmodelmapper_set_high(void* self, int high);
 
 /// Inherited from QCandlestickModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#setHigh)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self, int high ```
 void q_hcandlestickmodelmapper_qbase_set_high(void* self, int high);
 
 /// Inherited from QCandlestickModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#setHigh)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -800,12 +868,16 @@ int32_t q_hcandlestickmodelmapper_high(void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#high)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self ```
 int32_t q_hcandlestickmodelmapper_qbase_high(void* self);
 
 /// Inherited from QCandlestickModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#high)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -823,12 +895,16 @@ void q_hcandlestickmodelmapper_set_low(void* self, int low);
 
 /// Inherited from QCandlestickModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#setLow)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self, int low ```
 void q_hcandlestickmodelmapper_qbase_set_low(void* self, int low);
 
 /// Inherited from QCandlestickModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#setLow)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -846,12 +922,16 @@ int32_t q_hcandlestickmodelmapper_low(void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#low)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self ```
 int32_t q_hcandlestickmodelmapper_qbase_low(void* self);
 
 /// Inherited from QCandlestickModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#low)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -869,12 +949,16 @@ void q_hcandlestickmodelmapper_set_close(void* self, int close);
 
 /// Inherited from QCandlestickModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#setClose)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self, int close ```
 void q_hcandlestickmodelmapper_qbase_set_close(void* self, int close);
 
 /// Inherited from QCandlestickModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#setClose)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -892,12 +976,16 @@ int32_t q_hcandlestickmodelmapper_close(void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#close)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self ```
 int32_t q_hcandlestickmodelmapper_qbase_close(void* self);
 
 /// Inherited from QCandlestickModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#close)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -915,12 +1003,16 @@ void q_hcandlestickmodelmapper_set_first_set_section(void* self, int firstSetSec
 
 /// Inherited from QCandlestickModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#setFirstSetSection)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self, int firstSetSection ```
 void q_hcandlestickmodelmapper_qbase_set_first_set_section(void* self, int firstSetSection);
 
 /// Inherited from QCandlestickModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#setFirstSetSection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -938,12 +1030,16 @@ int32_t q_hcandlestickmodelmapper_first_set_section(void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#firstSetSection)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self ```
 int32_t q_hcandlestickmodelmapper_qbase_first_set_section(void* self);
 
 /// Inherited from QCandlestickModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#firstSetSection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -961,12 +1057,16 @@ void q_hcandlestickmodelmapper_set_last_set_section(void* self, int lastSetSecti
 
 /// Inherited from QCandlestickModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#setLastSetSection)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self, int lastSetSection ```
 void q_hcandlestickmodelmapper_qbase_set_last_set_section(void* self, int lastSetSection);
 
 /// Inherited from QCandlestickModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#setLastSetSection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -984,12 +1084,16 @@ int32_t q_hcandlestickmodelmapper_last_set_section(void* self);
 
 /// Inherited from QCandlestickModelMapper
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#lastSetSection)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self ```
 int32_t q_hcandlestickmodelmapper_qbase_last_set_section(void* self);
 
 /// Inherited from QCandlestickModelMapper
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#lastSetSection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1007,12 +1111,16 @@ QObject* q_hcandlestickmodelmapper_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self ```
 QObject* q_hcandlestickmodelmapper_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1030,12 +1138,16 @@ int32_t q_hcandlestickmodelmapper_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self ```
 int32_t q_hcandlestickmodelmapper_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1053,12 +1165,16 @@ int32_t q_hcandlestickmodelmapper_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self, const char* signal ```
 int32_t q_hcandlestickmodelmapper_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1076,6 +1192,8 @@ bool q_hcandlestickmodelmapper_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self, QMetaMethod* signal ```
@@ -1083,11 +1201,24 @@ bool q_hcandlestickmodelmapper_qbase_is_signal_connected(void* self, void* signa
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QHCandlestickModelMapper* self, bool (*slot)(QHCandlestickModelMapper*, QMetaMethod*) ```
 void q_hcandlestickmodelmapper_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QHCandlestickModelMapper* self, void (*slot)(QObject*, const char*) ```
+void q_hcandlestickmodelmapper_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#dtor.QHCandlestickModelMapper)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QHCandlestickModelMapper* self ```

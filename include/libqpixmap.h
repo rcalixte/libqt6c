@@ -90,11 +90,15 @@ bool q_pixmap_is_null(void* self);
 /// ``` QPixmap* self ```
 int32_t q_pixmap_dev_type(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#devType)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPixmap* self, int32_t (*slot)() ```
 void q_pixmap_on_dev_type(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#devType)
+///
 /// Base class method implementation
 ///
 /// ``` QPixmap* self ```
@@ -300,11 +304,15 @@ bool q_pixmap_is_q_bitmap(void* self);
 /// ``` QPixmap* self ```
 QPaintEngine* q_pixmap_paint_engine(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#paintEngine)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPixmap* self, QPaintEngine* (*slot)() ```
 void q_pixmap_on_paint_engine(void* self, QPaintEngine* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#paintEngine)
+///
 /// Base class method implementation
 ///
 /// ``` QPixmap* self ```
@@ -320,11 +328,15 @@ bool q_pixmap_operator_not(void* self);
 /// ``` QPixmap* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_pixmap_metric(void* self, int64_t param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#metric)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPixmap* self, int32_t (*slot)(QPixmap*, enum QPaintDevice__PaintDeviceMetric) ```
 void q_pixmap_on_metric(void* self, int32_t (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#metric)
+///
 /// Base class method implementation
 ///
 /// ``` QPixmap* self, enum QPaintDevice__PaintDeviceMetric param1 ```
@@ -541,12 +553,16 @@ void q_pixmap_init_painter(void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPixmap* self, QPainter* painter ```
 void q_pixmap_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -564,12 +580,16 @@ QPaintDevice* q_pixmap_redirected(void* self, void* offset);
 
 /// Inherited from QPaintDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPixmap* self, QPoint* offset ```
 QPaintDevice* q_pixmap_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -587,6 +607,8 @@ QPainter* q_pixmap_shared_painter(void* self);
 
 /// Inherited from QPaintDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPixmap* self ```
@@ -594,11 +616,15 @@ QPainter* q_pixmap_qbase_shared_painter(void* self);
 
 /// Inherited from QPaintDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#sharedPainter)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QPixmap* self, QPainter* (*slot)() ```
 void q_pixmap_on_shared_painter(void* self, QPainter* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#dtor.QPixmap)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPixmap* self ```

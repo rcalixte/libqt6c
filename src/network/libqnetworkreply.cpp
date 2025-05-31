@@ -1,14 +1,9 @@
-#include <QAnyStringView>
-#include <QBindingStorage>
 #include <QByteArray>
-#include <QChildEvent>
-#include <QEvent>
 #include <QIODevice>
 #include <QIODeviceBase>
 #include <QList>
 #include <QMetaMethod>
 #include <QMetaObject>
-#define WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QNetworkRequest>
@@ -20,8 +15,6 @@
 #include <QString>
 #include <QByteArray>
 #include <cstring>
-#include <QThread>
-#include <QTimerEvent>
 #include <QUrl>
 #include <QVariant>
 #include <qnetworkreply.h>
@@ -378,58 +371,6 @@ libqt_string QNetworkReply_Tr3(const char* s, const char* c, int n) {
     memcpy(_str.data, _b.data(), _str.len);
     _str.data[_str.len] = '\0';
     return _str;
-}
-
-bool QNetworkReply_Open(QNetworkReply* self, int mode) {
-    return self->open(static_cast<QIODeviceBase::OpenMode>(mode));
-}
-
-long long QNetworkReply_Pos(const QNetworkReply* self) {
-    return static_cast<long long>(self->pos());
-}
-
-long long QNetworkReply_Size(const QNetworkReply* self) {
-    return static_cast<long long>(self->size());
-}
-
-bool QNetworkReply_Seek(QNetworkReply* self, long long pos) {
-    return self->seek(static_cast<qint64>(pos));
-}
-
-bool QNetworkReply_AtEnd(const QNetworkReply* self) {
-    return self->atEnd();
-}
-
-bool QNetworkReply_Reset(QNetworkReply* self) {
-    return self->reset();
-}
-
-long long QNetworkReply_BytesAvailable(const QNetworkReply* self) {
-    return static_cast<long long>(self->bytesAvailable());
-}
-
-long long QNetworkReply_BytesToWrite(const QNetworkReply* self) {
-    return static_cast<long long>(self->bytesToWrite());
-}
-
-bool QNetworkReply_CanReadLine(const QNetworkReply* self) {
-    return self->canReadLine();
-}
-
-bool QNetworkReply_WaitForReadyRead(QNetworkReply* self, int msecs) {
-    return self->waitForReadyRead(static_cast<int>(msecs));
-}
-
-bool QNetworkReply_WaitForBytesWritten(QNetworkReply* self, int msecs) {
-    return self->waitForBytesWritten(static_cast<int>(msecs));
-}
-
-bool QNetworkReply_Event(QNetworkReply* self, QEvent* event) {
-    return self->event(event);
-}
-
-bool QNetworkReply_EventFilter(QNetworkReply* self, QObject* watched, QEvent* event) {
-    return self->eventFilter(watched, event);
 }
 
 void QNetworkReply_Delete(QNetworkReply* self) {

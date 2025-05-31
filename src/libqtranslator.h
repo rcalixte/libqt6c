@@ -12,15 +12,11 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqlocale.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qtranslator.html
 
@@ -37,7 +33,7 @@ QTranslator* q_translator_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QTranslator* self ```
-QMetaObject* q_translator_meta_object(void* self);
+const QMetaObject* q_translator_meta_object(void* self);
 
 /// ``` QTranslator* self, const char* param1 ```
 void* q_translator_metacast(void* self, const char* param1);
@@ -65,11 +61,15 @@ const char* q_translator_tr(const char* s);
 /// ``` QTranslator* self, const char* context, const char* sourceText, const char* disambiguation, int n ```
 const char* q_translator_translate(void* self, const char* context, const char* sourceText, const char* disambiguation, int n);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtranslator.html#translate)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTranslator* self, const char* (*slot)(QTranslator*, const char*, const char*, const char*, int) ```
 void q_translator_on_translate(void* self, const char* (*slot)(void*, const char*, const char*, const char*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtranslator.html#translate)
+///
 /// Base class method implementation
 ///
 /// ``` QTranslator* self, const char* context, const char* sourceText, const char* disambiguation, int n ```
@@ -80,11 +80,15 @@ const char* q_translator_qbase_translate(void* self, const char* context, const 
 /// ``` QTranslator* self ```
 bool q_translator_is_empty(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtranslator.html#isEmpty)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTranslator* self, bool (*slot)() ```
 void q_translator_on_is_empty(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtranslator.html#isEmpty)
+///
 /// Base class method implementation
 ///
 /// ``` QTranslator* self ```
@@ -242,7 +246,7 @@ void q_translator_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QTranslator* self ```
-libqt_list /* of QObject* */ q_translator_children(void* self);
+const libqt_list /* of QObject* */ q_translator_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -340,7 +344,7 @@ QBindingStorage* q_translator_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QTranslator* self ```
-QBindingStorage* q_translator_binding_storage2(void* self);
+const QBindingStorage* q_translator_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -350,6 +354,8 @@ QBindingStorage* q_translator_binding_storage2(void* self);
 void q_translator_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QTranslator* self, void (*slot)(QObject*) ```
 void q_translator_on_destroyed(void* self, void (*slot)(void*));
@@ -405,6 +411,8 @@ void q_translator_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QTranslator* self, void (*slot)(QObject*, QObject*) ```
 void q_translator_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -419,12 +427,16 @@ bool q_translator_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTranslator* self, QEvent* event ```
 bool q_translator_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -442,12 +454,16 @@ bool q_translator_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTranslator* self, QObject* watched, QEvent* event ```
 bool q_translator_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -465,12 +481,16 @@ void q_translator_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTranslator* self, QTimerEvent* event ```
 void q_translator_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -488,12 +508,16 @@ void q_translator_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTranslator* self, QChildEvent* event ```
 void q_translator_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -511,12 +535,16 @@ void q_translator_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTranslator* self, QEvent* event ```
 void q_translator_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -534,12 +562,16 @@ void q_translator_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTranslator* self, QMetaMethod* signal ```
 void q_translator_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -557,12 +589,16 @@ void q_translator_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTranslator* self, QMetaMethod* signal ```
 void q_translator_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -580,12 +616,16 @@ QObject* q_translator_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTranslator* self ```
 QObject* q_translator_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -603,12 +643,16 @@ int32_t q_translator_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTranslator* self ```
 int32_t q_translator_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -626,12 +670,16 @@ int32_t q_translator_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTranslator* self, const char* signal ```
 int32_t q_translator_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -649,6 +697,8 @@ bool q_translator_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTranslator* self, QMetaMethod* signal ```
@@ -656,11 +706,24 @@ bool q_translator_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QTranslator* self, bool (*slot)(QTranslator*, QMetaMethod*) ```
 void q_translator_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QTranslator* self, void (*slot)(QObject*, const char*) ```
+void q_translator_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtranslator.html#dtor.QTranslator)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTranslator* self ```

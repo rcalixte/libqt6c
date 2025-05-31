@@ -12,16 +12,12 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqjsonobject.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqplugin.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qpluginloader.html
 
@@ -48,7 +44,7 @@ QPluginLoader* q_pluginloader_new4(const char* fileName, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QPluginLoader* self ```
-QMetaObject* q_pluginloader_meta_object(void* self);
+const QMetaObject* q_pluginloader_meta_object(void* self);
 
 /// ``` QPluginLoader* self, const char* param1 ```
 void* q_pluginloader_metacast(void* self, const char* param1);
@@ -223,7 +219,7 @@ void q_pluginloader_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QPluginLoader* self ```
-libqt_list /* of QObject* */ q_pluginloader_children(void* self);
+const libqt_list /* of QObject* */ q_pluginloader_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -321,7 +317,7 @@ QBindingStorage* q_pluginloader_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QPluginLoader* self ```
-QBindingStorage* q_pluginloader_binding_storage2(void* self);
+const QBindingStorage* q_pluginloader_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -331,6 +327,8 @@ QBindingStorage* q_pluginloader_binding_storage2(void* self);
 void q_pluginloader_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QPluginLoader* self, void (*slot)(QObject*) ```
 void q_pluginloader_on_destroyed(void* self, void (*slot)(void*));
@@ -386,6 +384,8 @@ void q_pluginloader_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QPluginLoader* self, void (*slot)(QObject*, QObject*) ```
 void q_pluginloader_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -400,12 +400,16 @@ bool q_pluginloader_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPluginLoader* self, QEvent* event ```
 bool q_pluginloader_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -423,12 +427,16 @@ bool q_pluginloader_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPluginLoader* self, QObject* watched, QEvent* event ```
 bool q_pluginloader_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -446,12 +454,16 @@ void q_pluginloader_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPluginLoader* self, QTimerEvent* event ```
 void q_pluginloader_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -469,12 +481,16 @@ void q_pluginloader_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPluginLoader* self, QChildEvent* event ```
 void q_pluginloader_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -492,12 +508,16 @@ void q_pluginloader_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPluginLoader* self, QEvent* event ```
 void q_pluginloader_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -515,12 +535,16 @@ void q_pluginloader_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPluginLoader* self, QMetaMethod* signal ```
 void q_pluginloader_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -538,12 +562,16 @@ void q_pluginloader_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPluginLoader* self, QMetaMethod* signal ```
 void q_pluginloader_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -561,12 +589,16 @@ QObject* q_pluginloader_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPluginLoader* self ```
 QObject* q_pluginloader_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -584,12 +616,16 @@ int32_t q_pluginloader_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPluginLoader* self ```
 int32_t q_pluginloader_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -607,12 +643,16 @@ int32_t q_pluginloader_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPluginLoader* self, const char* signal ```
 int32_t q_pluginloader_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -630,6 +670,8 @@ bool q_pluginloader_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPluginLoader* self, QMetaMethod* signal ```
@@ -637,11 +679,24 @@ bool q_pluginloader_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QPluginLoader* self, bool (*slot)(QPluginLoader*, QMetaMethod*) ```
 void q_pluginloader_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QPluginLoader* self, void (*slot)(QObject*, const char*) ```
+void q_pluginloader_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpluginloader.html#dtor.QPluginLoader)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPluginLoader* self ```

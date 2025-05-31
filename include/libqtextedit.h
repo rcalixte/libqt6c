@@ -13,24 +13,10 @@
 #include "qtlibc.h"
 
 #include "libqabstractscrollarea.h"
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
 #include "libqcolor.h"
-#include "libqcursor.h"
 #include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
 #include "libqframe.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
-#include "libqlocale.h"
 #include "libqmargins.h"
 #include "libqmenu.h"
 #include "libqmetaobject.h"
@@ -40,27 +26,18 @@
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
 #include "libqrect.h"
-#include "libqregion.h"
 #include "libqregularexpression.h"
-#include "libqscreen.h"
-#include "libqscrollbar.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
 #include "libqstyleoption.h"
 #include "libqtextformat.h"
 #include "libqtextcursor.h"
 #include "libqtextdocument.h"
-#include "libqthread.h"
 #include "libqurl.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qtextedit.html
 
@@ -87,7 +64,7 @@ QTextEdit* q_textedit_new4(const char* text, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QTextEdit* self ```
-QMetaObject* q_textedit_meta_object(void* self);
+const QMetaObject* q_textedit_meta_object(void* self);
 
 /// ``` QTextEdit* self, const char* param1 ```
 void* q_textedit_metacast(void* self, const char* param1);
@@ -325,11 +302,15 @@ void q_textedit_ensure_cursor_visible(void* self);
 /// ``` QTextEdit* self, int typeVal, QUrl* name ```
 QVariant* q_textedit_load_resource(void* self, int typeVal, void* name);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#loadResource)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, QVariant* (*slot)(QTextEdit*, int, QUrl*) ```
 void q_textedit_on_load_resource(void* self, QVariant* (*slot)(void*, int, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#loadResource)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, int typeVal, QUrl* name ```
@@ -407,8 +388,8 @@ void q_textedit_set_accept_rich_text(void* self, bool accept);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setExtraSelections)
 ///
-/// ``` QTextEdit* self, QTextEdit__ExtraSelection* selections[] ```
-void q_textedit_set_extra_selections(void* self, void* selections[]);
+/// ``` QTextEdit* self, libqt_list /* of QTextEdit__ExtraSelection* */ selections ```
+void q_textedit_set_extra_selections(void* self, libqt_list selections);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#extraSelections)
 ///
@@ -435,11 +416,15 @@ void q_textedit_print(void* self, void* printer);
 /// ``` QTextEdit* self, enum Qt__InputMethodQuery property ```
 QVariant* q_textedit_input_method_query(void* self, int64_t property);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#inputMethodQuery)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, QVariant* (*slot)(QTextEdit*, enum Qt__InputMethodQuery) ```
 void q_textedit_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#inputMethodQuery)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, enum Qt__InputMethodQuery property ```
@@ -585,6 +570,8 @@ void q_textedit_zoom_out(void* self);
 /// ``` QTextEdit* self ```
 void q_textedit_text_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#textChanged)
+///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*) ```
 void q_textedit_on_text_changed(void* self, void (*slot)(void*));
 
@@ -593,6 +580,8 @@ void q_textedit_on_text_changed(void* self, void (*slot)(void*));
 /// ``` QTextEdit* self, bool b ```
 void q_textedit_undo_available(void* self, bool b);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#undoAvailable)
+///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, bool) ```
 void q_textedit_on_undo_available(void* self, void (*slot)(void*, bool));
 
@@ -601,6 +590,8 @@ void q_textedit_on_undo_available(void* self, void (*slot)(void*, bool));
 /// ``` QTextEdit* self, bool b ```
 void q_textedit_redo_available(void* self, bool b);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#redoAvailable)
+///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, bool) ```
 void q_textedit_on_redo_available(void* self, void (*slot)(void*, bool));
 
@@ -609,6 +600,8 @@ void q_textedit_on_redo_available(void* self, void (*slot)(void*, bool));
 /// ``` QTextEdit* self, QTextCharFormat* format ```
 void q_textedit_current_char_format_changed(void* self, void* format);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#currentCharFormatChanged)
+///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QTextCharFormat*) ```
 void q_textedit_on_current_char_format_changed(void* self, void (*slot)(void*, void*));
 
@@ -617,6 +610,8 @@ void q_textedit_on_current_char_format_changed(void* self, void (*slot)(void*, v
 /// ``` QTextEdit* self, bool b ```
 void q_textedit_copy_available(void* self, bool b);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#copyAvailable)
+///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, bool) ```
 void q_textedit_on_copy_available(void* self, void (*slot)(void*, bool));
 
@@ -625,6 +620,8 @@ void q_textedit_on_copy_available(void* self, void (*slot)(void*, bool));
 /// ``` QTextEdit* self ```
 void q_textedit_selection_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#selectionChanged)
+///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*) ```
 void q_textedit_on_selection_changed(void* self, void (*slot)(void*));
 
@@ -633,6 +630,8 @@ void q_textedit_on_selection_changed(void* self, void (*slot)(void*));
 /// ``` QTextEdit* self ```
 void q_textedit_cursor_position_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#cursorPositionChanged)
+///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*) ```
 void q_textedit_on_cursor_position_changed(void* self, void (*slot)(void*));
 
@@ -641,11 +640,15 @@ void q_textedit_on_cursor_position_changed(void* self, void (*slot)(void*));
 /// ``` QTextEdit* self, QEvent* e ```
 bool q_textedit_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, bool (*slot)(QTextEdit*, QEvent*) ```
 void q_textedit_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QEvent* e ```
@@ -656,11 +659,15 @@ bool q_textedit_qbase_event(void* self, void* e);
 /// ``` QTextEdit* self, QTimerEvent* e ```
 void q_textedit_timer_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#timerEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QTimerEvent*) ```
 void q_textedit_on_timer_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#timerEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QTimerEvent* e ```
@@ -671,11 +678,15 @@ void q_textedit_qbase_timer_event(void* self, void* e);
 /// ``` QTextEdit* self, QKeyEvent* e ```
 void q_textedit_key_press_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#keyPressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QKeyEvent*) ```
 void q_textedit_on_key_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#keyPressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QKeyEvent* e ```
@@ -686,11 +697,15 @@ void q_textedit_qbase_key_press_event(void* self, void* e);
 /// ``` QTextEdit* self, QKeyEvent* e ```
 void q_textedit_key_release_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#keyReleaseEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QKeyEvent*) ```
 void q_textedit_on_key_release_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#keyReleaseEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QKeyEvent* e ```
@@ -701,11 +716,15 @@ void q_textedit_qbase_key_release_event(void* self, void* e);
 /// ``` QTextEdit* self, QResizeEvent* e ```
 void q_textedit_resize_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#resizeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QResizeEvent*) ```
 void q_textedit_on_resize_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#resizeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QResizeEvent* e ```
@@ -716,11 +735,15 @@ void q_textedit_qbase_resize_event(void* self, void* e);
 /// ``` QTextEdit* self, QPaintEvent* e ```
 void q_textedit_paint_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#paintEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QPaintEvent*) ```
 void q_textedit_on_paint_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#paintEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QPaintEvent* e ```
@@ -731,11 +754,15 @@ void q_textedit_qbase_paint_event(void* self, void* e);
 /// ``` QTextEdit* self, QMouseEvent* e ```
 void q_textedit_mouse_press_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#mousePressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QMouseEvent*) ```
 void q_textedit_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#mousePressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QMouseEvent* e ```
@@ -746,11 +773,15 @@ void q_textedit_qbase_mouse_press_event(void* self, void* e);
 /// ``` QTextEdit* self, QMouseEvent* e ```
 void q_textedit_mouse_move_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#mouseMoveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QMouseEvent*) ```
 void q_textedit_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#mouseMoveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QMouseEvent* e ```
@@ -761,11 +792,15 @@ void q_textedit_qbase_mouse_move_event(void* self, void* e);
 /// ``` QTextEdit* self, QMouseEvent* e ```
 void q_textedit_mouse_release_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#mouseReleaseEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QMouseEvent*) ```
 void q_textedit_on_mouse_release_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#mouseReleaseEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QMouseEvent* e ```
@@ -776,11 +811,15 @@ void q_textedit_qbase_mouse_release_event(void* self, void* e);
 /// ``` QTextEdit* self, QMouseEvent* e ```
 void q_textedit_mouse_double_click_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#mouseDoubleClickEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QMouseEvent*) ```
 void q_textedit_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#mouseDoubleClickEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QMouseEvent* e ```
@@ -791,11 +830,15 @@ void q_textedit_qbase_mouse_double_click_event(void* self, void* e);
 /// ``` QTextEdit* self, bool next ```
 bool q_textedit_focus_next_prev_child(void* self, bool next);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#focusNextPrevChild)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, bool (*slot)(QTextEdit*, bool) ```
 void q_textedit_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#focusNextPrevChild)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, bool next ```
@@ -806,11 +849,15 @@ bool q_textedit_qbase_focus_next_prev_child(void* self, bool next);
 /// ``` QTextEdit* self, QContextMenuEvent* e ```
 void q_textedit_context_menu_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#contextMenuEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QContextMenuEvent*) ```
 void q_textedit_on_context_menu_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#contextMenuEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QContextMenuEvent* e ```
@@ -821,11 +868,15 @@ void q_textedit_qbase_context_menu_event(void* self, void* e);
 /// ``` QTextEdit* self, QDragEnterEvent* e ```
 void q_textedit_drag_enter_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#dragEnterEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QDragEnterEvent*) ```
 void q_textedit_on_drag_enter_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#dragEnterEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QDragEnterEvent* e ```
@@ -836,11 +887,15 @@ void q_textedit_qbase_drag_enter_event(void* self, void* e);
 /// ``` QTextEdit* self, QDragLeaveEvent* e ```
 void q_textedit_drag_leave_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#dragLeaveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QDragLeaveEvent*) ```
 void q_textedit_on_drag_leave_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#dragLeaveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QDragLeaveEvent* e ```
@@ -851,11 +906,15 @@ void q_textedit_qbase_drag_leave_event(void* self, void* e);
 /// ``` QTextEdit* self, QDragMoveEvent* e ```
 void q_textedit_drag_move_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#dragMoveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QDragMoveEvent*) ```
 void q_textedit_on_drag_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#dragMoveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QDragMoveEvent* e ```
@@ -866,11 +925,15 @@ void q_textedit_qbase_drag_move_event(void* self, void* e);
 /// ``` QTextEdit* self, QDropEvent* e ```
 void q_textedit_drop_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#dropEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QDropEvent*) ```
 void q_textedit_on_drop_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#dropEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QDropEvent* e ```
@@ -881,11 +944,15 @@ void q_textedit_qbase_drop_event(void* self, void* e);
 /// ``` QTextEdit* self, QFocusEvent* e ```
 void q_textedit_focus_in_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#focusInEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QFocusEvent*) ```
 void q_textedit_on_focus_in_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#focusInEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QFocusEvent* e ```
@@ -896,11 +963,15 @@ void q_textedit_qbase_focus_in_event(void* self, void* e);
 /// ``` QTextEdit* self, QFocusEvent* e ```
 void q_textedit_focus_out_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#focusOutEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QFocusEvent*) ```
 void q_textedit_on_focus_out_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#focusOutEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QFocusEvent* e ```
@@ -911,11 +982,15 @@ void q_textedit_qbase_focus_out_event(void* self, void* e);
 /// ``` QTextEdit* self, QShowEvent* param1 ```
 void q_textedit_show_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#showEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QShowEvent*) ```
 void q_textedit_on_show_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#showEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QShowEvent* param1 ```
@@ -926,11 +1001,15 @@ void q_textedit_qbase_show_event(void* self, void* param1);
 /// ``` QTextEdit* self, QEvent* e ```
 void q_textedit_change_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#changeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QEvent*) ```
 void q_textedit_on_change_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#changeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QEvent* e ```
@@ -941,11 +1020,15 @@ void q_textedit_qbase_change_event(void* self, void* e);
 /// ``` QTextEdit* self, QWheelEvent* e ```
 void q_textedit_wheel_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#wheelEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QWheelEvent*) ```
 void q_textedit_on_wheel_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#wheelEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QWheelEvent* e ```
@@ -956,11 +1039,15 @@ void q_textedit_qbase_wheel_event(void* self, void* e);
 /// ``` QTextEdit* self ```
 QMimeData* q_textedit_create_mime_data_from_selection(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#createMimeDataFromSelection)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, QMimeData* (*slot)() ```
 void q_textedit_on_create_mime_data_from_selection(void* self, QMimeData* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#createMimeDataFromSelection)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self ```
@@ -971,11 +1058,15 @@ QMimeData* q_textedit_qbase_create_mime_data_from_selection(void* self);
 /// ``` QTextEdit* self, QMimeData* source ```
 bool q_textedit_can_insert_from_mime_data(void* self, void* source);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#canInsertFromMimeData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, bool (*slot)(QTextEdit*, QMimeData*) ```
 void q_textedit_on_can_insert_from_mime_data(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#canInsertFromMimeData)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QMimeData* source ```
@@ -986,11 +1077,15 @@ bool q_textedit_qbase_can_insert_from_mime_data(void* self, void* source);
 /// ``` QTextEdit* self, QMimeData* source ```
 void q_textedit_insert_from_mime_data(void* self, void* source);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#insertFromMimeData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QMimeData*) ```
 void q_textedit_on_insert_from_mime_data(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#insertFromMimeData)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QMimeData* source ```
@@ -1001,11 +1096,15 @@ void q_textedit_qbase_insert_from_mime_data(void* self, void* source);
 /// ``` QTextEdit* self, QInputMethodEvent* param1 ```
 void q_textedit_input_method_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#inputMethodEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QInputMethodEvent*) ```
 void q_textedit_on_input_method_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#inputMethodEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QInputMethodEvent* param1 ```
@@ -1016,11 +1115,15 @@ void q_textedit_qbase_input_method_event(void* self, void* param1);
 /// ``` QTextEdit* self, int dx, int dy ```
 void q_textedit_scroll_contents_by(void* self, int dx, int dy);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#scrollContentsBy)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, int, int) ```
 void q_textedit_on_scroll_contents_by(void* self, void (*slot)(void*, int, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#scrollContentsBy)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, int dx, int dy ```
@@ -1031,11 +1134,15 @@ void q_textedit_qbase_scroll_contents_by(void* self, int dx, int dy);
 /// ``` QTextEdit* self, QTextCursor* cursor ```
 void q_textedit_do_set_text_cursor(void* self, void* cursor);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#doSetTextCursor)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, QTextCursor*) ```
 void q_textedit_on_do_set_text_cursor(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#doSetTextCursor)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, QTextCursor* cursor ```
@@ -1046,11 +1153,15 @@ void q_textedit_qbase_do_set_text_cursor(void* self, void* cursor);
 /// ``` QTextEdit* self, float range ```
 void q_textedit_zoom_in_f(void* self, float range);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#zoomInF)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextEdit* self, void (*slot)(QTextEdit*, float) ```
 void q_textedit_on_zoom_in_f(void* self, void (*slot)(void*, float));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#zoomInF)
+///
 /// Base class method implementation
 ///
 /// ``` QTextEdit* self, float range ```
@@ -1430,7 +1541,7 @@ QRect* q_textedit_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QTextEdit* self ```
-QRect* q_textedit_geometry(void* self);
+const QRect* q_textedit_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1787,7 +1898,7 @@ QWidget* q_textedit_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QTextEdit* self ```
-QPalette* q_textedit_palette(void* self);
+const QPalette* q_textedit_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1829,7 +1940,7 @@ int64_t q_textedit_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QTextEdit* self ```
-QFont* q_textedit_font(void* self);
+const QFont* q_textedit_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2829,15 +2940,15 @@ void q_textedit_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QTextEdit* self, QAction* actions[] ```
-void q_textedit_add_actions(void* self, void* actions[]);
+/// ``` QTextEdit* self, libqt_list /* of QAction* */ actions ```
+void q_textedit_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QTextEdit* self, QAction* before, QAction* actions[] ```
-void q_textedit_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QTextEdit* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_textedit_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3030,6 +3141,8 @@ void q_textedit_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QTextEdit* self, void (*slot)(QWidget*, const char*) ```
 void q_textedit_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -3041,6 +3154,8 @@ void q_textedit_on_window_title_changed(void* self, void (*slot)(void*, const ch
 void q_textedit_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QTextEdit* self, void (*slot)(QWidget*, QIcon*) ```
 void q_textedit_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -3054,6 +3169,8 @@ void q_textedit_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QTextEdit* self, void (*slot)(QWidget*, const char*) ```
 void q_textedit_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -3065,6 +3182,8 @@ void q_textedit_on_window_icon_text_changed(void* self, void (*slot)(void*, cons
 void q_textedit_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QTextEdit* self, void (*slot)(QWidget*, QPoint*) ```
 void q_textedit_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -3270,7 +3389,7 @@ void q_textedit_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QTextEdit* self ```
-libqt_list /* of QObject* */ q_textedit_children(void* self);
+const libqt_list /* of QObject* */ q_textedit_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -3361,7 +3480,7 @@ QBindingStorage* q_textedit_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QTextEdit* self ```
-QBindingStorage* q_textedit_binding_storage2(void* self);
+const QBindingStorage* q_textedit_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -3371,6 +3490,8 @@ QBindingStorage* q_textedit_binding_storage2(void* self);
 void q_textedit_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QTextEdit* self, void (*slot)(QObject*) ```
 void q_textedit_on_destroyed(void* self, void (*slot)(void*));
@@ -3425,6 +3546,8 @@ QMetaObject__Connection* q_textedit_connect4(void* self, void* sender, const cha
 void q_textedit_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QTextEdit* self, void (*slot)(QObject*, QObject*) ```
 void q_textedit_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -3524,12 +3647,16 @@ QSize* q_textedit_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self ```
 QSize* q_textedit_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3547,12 +3674,16 @@ QSize* q_textedit_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self ```
 QSize* q_textedit_qbase_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3570,12 +3701,16 @@ void q_textedit_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, QWidget* viewport ```
 void q_textedit_qbase_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3593,12 +3728,16 @@ bool q_textedit_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, QObject* param1, QEvent* param2 ```
 bool q_textedit_qbase_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3616,12 +3755,16 @@ bool q_textedit_viewport_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, QEvent* param1 ```
 bool q_textedit_qbase_viewport_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3639,12 +3782,16 @@ QSize* q_textedit_viewport_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self ```
 QSize* q_textedit_qbase_viewport_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3662,12 +3809,16 @@ void q_textedit_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, QStyleOptionFrame* option ```
 void q_textedit_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3685,12 +3836,16 @@ int32_t q_textedit_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self ```
 int32_t q_textedit_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3708,12 +3863,16 @@ void q_textedit_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, bool visible ```
 void q_textedit_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3731,12 +3890,16 @@ int32_t q_textedit_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, int param1 ```
 int32_t q_textedit_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3754,12 +3917,16 @@ bool q_textedit_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self ```
 bool q_textedit_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3777,12 +3944,16 @@ QPaintEngine* q_textedit_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self ```
 QPaintEngine* q_textedit_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3800,12 +3971,16 @@ void q_textedit_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, QEnterEvent* event ```
 void q_textedit_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3823,12 +3998,16 @@ void q_textedit_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, QEvent* event ```
 void q_textedit_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3846,12 +4025,16 @@ void q_textedit_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, QMoveEvent* event ```
 void q_textedit_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3869,12 +4052,16 @@ void q_textedit_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, QCloseEvent* event ```
 void q_textedit_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3892,12 +4079,16 @@ void q_textedit_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, QTabletEvent* event ```
 void q_textedit_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3915,12 +4106,16 @@ void q_textedit_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, QActionEvent* event ```
 void q_textedit_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3938,12 +4133,16 @@ void q_textedit_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, QHideEvent* event ```
 void q_textedit_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3961,12 +4160,16 @@ bool q_textedit_native_event(void* self, const char* eventType, void* message, i
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, const char* eventType, void* message, intptr_t* result ```
 bool q_textedit_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3984,12 +4187,16 @@ int32_t q_textedit_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_textedit_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4007,12 +4214,16 @@ void q_textedit_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, QPainter* painter ```
 void q_textedit_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4030,12 +4241,16 @@ QPaintDevice* q_textedit_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, QPoint* offset ```
 QPaintDevice* q_textedit_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4053,12 +4268,16 @@ QPainter* q_textedit_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self ```
 QPainter* q_textedit_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4076,12 +4295,16 @@ void q_textedit_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, QChildEvent* event ```
 void q_textedit_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4099,12 +4322,16 @@ void q_textedit_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, QEvent* event ```
 void q_textedit_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4122,12 +4349,16 @@ void q_textedit_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, QMetaMethod* signal ```
 void q_textedit_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4145,12 +4376,16 @@ void q_textedit_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, QMetaMethod* signal ```
 void q_textedit_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4168,12 +4403,16 @@ void q_textedit_set_viewport_margins(void* self, int left, int top, int right, i
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, int left, int top, int right, int bottom ```
 void q_textedit_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4191,12 +4430,16 @@ QMargins* q_textedit_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self ```
 QMargins* q_textedit_qbase_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4214,12 +4457,16 @@ void q_textedit_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, QPainter* param1 ```
 void q_textedit_qbase_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4237,12 +4484,16 @@ void q_textedit_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self ```
 void q_textedit_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4260,12 +4511,16 @@ void q_textedit_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self ```
 void q_textedit_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4283,12 +4538,16 @@ void q_textedit_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self ```
 void q_textedit_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4306,12 +4565,16 @@ bool q_textedit_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self ```
 bool q_textedit_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4329,12 +4592,16 @@ bool q_textedit_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self ```
 bool q_textedit_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4352,12 +4619,16 @@ QObject* q_textedit_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self ```
 QObject* q_textedit_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4375,12 +4646,16 @@ int32_t q_textedit_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self ```
 int32_t q_textedit_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4398,12 +4673,16 @@ int32_t q_textedit_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, const char* signal ```
 int32_t q_textedit_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4421,6 +4700,8 @@ bool q_textedit_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextEdit* self, QMetaMethod* signal ```
@@ -4428,11 +4709,24 @@ bool q_textedit_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QTextEdit* self, bool (*slot)(QTextEdit*, QMetaMethod*) ```
 void q_textedit_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QTextEdit* self, void (*slot)(QObject*, const char*) ```
+void q_textedit_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#dtor.QTextEdit)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextEdit* self ```
@@ -4450,6 +4744,8 @@ QTextEdit__ExtraSelection* q_textedit__extraselection_new(void* param1);
 /// ``` QTextEdit__ExtraSelection* self, QTextEdit__ExtraSelection* param1 ```
 void q_textedit__extraselection_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit::extraselection.html#dtor.QTextEdit::ExtraSelection)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextEdit__ExtraSelection* self ```

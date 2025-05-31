@@ -15,22 +15,11 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
-typedef struct QChildEvent QChildEvent;
-typedef struct QEvent QEvent;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
-typedef struct QThread QThread;
-typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
-typedef struct QVariant QVariant;
 typedef struct QWebEngineDownloadRequest QWebEngineDownloadRequest;
 typedef struct QWebEnginePage QWebEnginePage;
 #endif
@@ -92,8 +81,6 @@ void QWebEngineDownloadRequest_DownloadFileNameChanged(QWebEngineDownloadRequest
 void QWebEngineDownloadRequest_Connect_DownloadFileNameChanged(QWebEngineDownloadRequest* self, intptr_t slot);
 libqt_string QWebEngineDownloadRequest_Tr2(const char* s, const char* c);
 libqt_string QWebEngineDownloadRequest_Tr3(const char* s, const char* c, int n);
-bool QWebEngineDownloadRequest_Event(QWebEngineDownloadRequest* self, QEvent* event);
-bool QWebEngineDownloadRequest_EventFilter(QWebEngineDownloadRequest* self, QObject* watched, QEvent* event);
 void QWebEngineDownloadRequest_Delete(QWebEngineDownloadRequest* self);
 
 #ifdef __cplusplus

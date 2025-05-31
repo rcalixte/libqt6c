@@ -12,43 +12,18 @@
 
 #include "qtlibc.h"
 
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
-#include "libqcursor.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
-#include "libqlocale.h"
-#include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqscreen.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
 #include "libqstyleoption.h"
-#include "libqthread.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qgroupbox.html
 
@@ -75,7 +50,7 @@ QGroupBox* q_groupbox_new4(const char* title, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QGroupBox* self ```
-QMetaObject* q_groupbox_meta_object(void* self);
+const QMetaObject* q_groupbox_meta_object(void* self);
 
 /// ``` QGroupBox* self, const char* param1 ```
 void* q_groupbox_metacast(void* self, const char* param1);
@@ -123,11 +98,15 @@ void q_groupbox_set_alignment(void* self, int alignment);
 /// ``` QGroupBox* self ```
 QSize* q_groupbox_minimum_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#minimumSizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGroupBox* self, QSize* (*slot)() ```
 void q_groupbox_on_minimum_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#minimumSizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QGroupBox* self ```
@@ -168,6 +147,8 @@ void q_groupbox_set_checked(void* self, bool checked);
 /// ``` QGroupBox* self ```
 void q_groupbox_clicked(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#clicked)
+///
 /// ``` QGroupBox* self, void (*slot)(QGroupBox*) ```
 void q_groupbox_on_clicked(void* self, void (*slot)(void*));
 
@@ -176,6 +157,8 @@ void q_groupbox_on_clicked(void* self, void (*slot)(void*));
 /// ``` QGroupBox* self, bool param1 ```
 void q_groupbox_toggled(void* self, bool param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#toggled)
+///
 /// ``` QGroupBox* self, void (*slot)(QGroupBox*, bool) ```
 void q_groupbox_on_toggled(void* self, void (*slot)(void*, bool));
 
@@ -184,11 +167,15 @@ void q_groupbox_on_toggled(void* self, void (*slot)(void*, bool));
 /// ``` QGroupBox* self, QEvent* event ```
 bool q_groupbox_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGroupBox* self, bool (*slot)(QGroupBox*, QEvent*) ```
 void q_groupbox_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QGroupBox* self, QEvent* event ```
@@ -199,11 +186,15 @@ bool q_groupbox_qbase_event(void* self, void* event);
 /// ``` QGroupBox* self, QChildEvent* event ```
 void q_groupbox_child_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#childEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGroupBox* self, void (*slot)(QGroupBox*, QChildEvent*) ```
 void q_groupbox_on_child_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#childEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGroupBox* self, QChildEvent* event ```
@@ -214,11 +205,15 @@ void q_groupbox_qbase_child_event(void* self, void* event);
 /// ``` QGroupBox* self, QResizeEvent* event ```
 void q_groupbox_resize_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#resizeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGroupBox* self, void (*slot)(QGroupBox*, QResizeEvent*) ```
 void q_groupbox_on_resize_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#resizeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGroupBox* self, QResizeEvent* event ```
@@ -229,11 +224,15 @@ void q_groupbox_qbase_resize_event(void* self, void* event);
 /// ``` QGroupBox* self, QPaintEvent* event ```
 void q_groupbox_paint_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#paintEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGroupBox* self, void (*slot)(QGroupBox*, QPaintEvent*) ```
 void q_groupbox_on_paint_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#paintEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGroupBox* self, QPaintEvent* event ```
@@ -244,11 +243,15 @@ void q_groupbox_qbase_paint_event(void* self, void* event);
 /// ``` QGroupBox* self, QFocusEvent* event ```
 void q_groupbox_focus_in_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#focusInEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGroupBox* self, void (*slot)(QGroupBox*, QFocusEvent*) ```
 void q_groupbox_on_focus_in_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#focusInEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGroupBox* self, QFocusEvent* event ```
@@ -259,11 +262,15 @@ void q_groupbox_qbase_focus_in_event(void* self, void* event);
 /// ``` QGroupBox* self, QEvent* event ```
 void q_groupbox_change_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#changeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGroupBox* self, void (*slot)(QGroupBox*, QEvent*) ```
 void q_groupbox_on_change_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#changeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGroupBox* self, QEvent* event ```
@@ -274,11 +281,15 @@ void q_groupbox_qbase_change_event(void* self, void* event);
 /// ``` QGroupBox* self, QMouseEvent* event ```
 void q_groupbox_mouse_press_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#mousePressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGroupBox* self, void (*slot)(QGroupBox*, QMouseEvent*) ```
 void q_groupbox_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#mousePressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGroupBox* self, QMouseEvent* event ```
@@ -289,11 +300,15 @@ void q_groupbox_qbase_mouse_press_event(void* self, void* event);
 /// ``` QGroupBox* self, QMouseEvent* event ```
 void q_groupbox_mouse_move_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#mouseMoveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGroupBox* self, void (*slot)(QGroupBox*, QMouseEvent*) ```
 void q_groupbox_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#mouseMoveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGroupBox* self, QMouseEvent* event ```
@@ -304,11 +319,15 @@ void q_groupbox_qbase_mouse_move_event(void* self, void* event);
 /// ``` QGroupBox* self, QMouseEvent* event ```
 void q_groupbox_mouse_release_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#mouseReleaseEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGroupBox* self, void (*slot)(QGroupBox*, QMouseEvent*) ```
 void q_groupbox_on_mouse_release_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#mouseReleaseEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QGroupBox* self, QMouseEvent* event ```
@@ -319,11 +338,15 @@ void q_groupbox_qbase_mouse_release_event(void* self, void* event);
 /// ``` QGroupBox* self, QStyleOptionGroupBox* option ```
 void q_groupbox_init_style_option(void* self, void* option);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#initStyleOption)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGroupBox* self, void (*slot)(QGroupBox*, QStyleOptionGroupBox*) ```
 void q_groupbox_on_init_style_option(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#initStyleOption)
+///
 /// Base class method implementation
 ///
 /// ``` QGroupBox* self, QStyleOptionGroupBox* option ```
@@ -344,6 +367,8 @@ const char* q_groupbox_tr3(const char* s, const char* c, int n);
 /// ``` QGroupBox* self, bool checked ```
 void q_groupbox_clicked1(void* self, bool checked);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#clicked)
+///
 /// ``` QGroupBox* self, void (*slot)(QGroupBox*, bool) ```
 void q_groupbox_on_clicked1(void* self, void (*slot)(void*, bool));
 
@@ -471,7 +496,7 @@ QRect* q_groupbox_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QGroupBox* self ```
-QRect* q_groupbox_geometry(void* self);
+const QRect* q_groupbox_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -828,7 +853,7 @@ QWidget* q_groupbox_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QGroupBox* self ```
-QPalette* q_groupbox_palette(void* self);
+const QPalette* q_groupbox_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -870,7 +895,7 @@ int64_t q_groupbox_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QGroupBox* self ```
-QFont* q_groupbox_font(void* self);
+const QFont* q_groupbox_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1870,15 +1895,15 @@ void q_groupbox_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QGroupBox* self, QAction* actions[] ```
-void q_groupbox_add_actions(void* self, void* actions[]);
+/// ``` QGroupBox* self, libqt_list /* of QAction* */ actions ```
+void q_groupbox_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QGroupBox* self, QAction* before, QAction* actions[] ```
-void q_groupbox_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QGroupBox* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_groupbox_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2078,6 +2103,8 @@ void q_groupbox_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QGroupBox* self, void (*slot)(QWidget*, const char*) ```
 void q_groupbox_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2089,6 +2116,8 @@ void q_groupbox_on_window_title_changed(void* self, void (*slot)(void*, const ch
 void q_groupbox_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QGroupBox* self, void (*slot)(QWidget*, QIcon*) ```
 void q_groupbox_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -2102,6 +2131,8 @@ void q_groupbox_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QGroupBox* self, void (*slot)(QWidget*, const char*) ```
 void q_groupbox_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2113,6 +2144,8 @@ void q_groupbox_on_window_icon_text_changed(void* self, void (*slot)(void*, cons
 void q_groupbox_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QGroupBox* self, void (*slot)(QWidget*, QPoint*) ```
 void q_groupbox_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2318,7 +2351,7 @@ void q_groupbox_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QGroupBox* self ```
-libqt_list /* of QObject* */ q_groupbox_children(void* self);
+const libqt_list /* of QObject* */ q_groupbox_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2409,7 +2442,7 @@ QBindingStorage* q_groupbox_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QGroupBox* self ```
-QBindingStorage* q_groupbox_binding_storage2(void* self);
+const QBindingStorage* q_groupbox_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2419,6 +2452,8 @@ QBindingStorage* q_groupbox_binding_storage2(void* self);
 void q_groupbox_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QGroupBox* self, void (*slot)(QObject*) ```
 void q_groupbox_on_destroyed(void* self, void (*slot)(void*));
@@ -2473,6 +2508,8 @@ QMetaObject__Connection* q_groupbox_connect4(void* self, void* sender, const cha
 void q_groupbox_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QGroupBox* self, void (*slot)(QObject*, QObject*) ```
 void q_groupbox_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -2572,12 +2609,16 @@ int32_t q_groupbox_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self ```
 int32_t q_groupbox_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2595,12 +2636,16 @@ void q_groupbox_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, bool visible ```
 void q_groupbox_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2618,12 +2663,16 @@ QSize* q_groupbox_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self ```
 QSize* q_groupbox_qbase_size_hint(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2641,12 +2690,16 @@ int32_t q_groupbox_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, int param1 ```
 int32_t q_groupbox_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2664,12 +2717,16 @@ bool q_groupbox_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self ```
 bool q_groupbox_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2687,12 +2744,16 @@ QPaintEngine* q_groupbox_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self ```
 QPaintEngine* q_groupbox_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2710,12 +2771,16 @@ void q_groupbox_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QMouseEvent* event ```
 void q_groupbox_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2733,12 +2798,16 @@ void q_groupbox_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QWheelEvent* event ```
 void q_groupbox_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2756,12 +2825,16 @@ void q_groupbox_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QKeyEvent* event ```
 void q_groupbox_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2779,12 +2852,16 @@ void q_groupbox_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QKeyEvent* event ```
 void q_groupbox_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2802,12 +2879,16 @@ void q_groupbox_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QFocusEvent* event ```
 void q_groupbox_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2825,12 +2906,16 @@ void q_groupbox_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QEnterEvent* event ```
 void q_groupbox_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2848,12 +2933,16 @@ void q_groupbox_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QEvent* event ```
 void q_groupbox_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2871,12 +2960,16 @@ void q_groupbox_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QMoveEvent* event ```
 void q_groupbox_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2894,12 +2987,16 @@ void q_groupbox_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QCloseEvent* event ```
 void q_groupbox_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2917,12 +3014,16 @@ void q_groupbox_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QContextMenuEvent* event ```
 void q_groupbox_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2940,12 +3041,16 @@ void q_groupbox_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QTabletEvent* event ```
 void q_groupbox_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2963,12 +3068,16 @@ void q_groupbox_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QActionEvent* event ```
 void q_groupbox_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2986,12 +3095,16 @@ void q_groupbox_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QDragEnterEvent* event ```
 void q_groupbox_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3009,12 +3122,16 @@ void q_groupbox_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QDragMoveEvent* event ```
 void q_groupbox_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3032,12 +3149,16 @@ void q_groupbox_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QDragLeaveEvent* event ```
 void q_groupbox_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3055,12 +3176,16 @@ void q_groupbox_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QDropEvent* event ```
 void q_groupbox_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3078,12 +3203,16 @@ void q_groupbox_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QShowEvent* event ```
 void q_groupbox_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3101,12 +3230,16 @@ void q_groupbox_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QHideEvent* event ```
 void q_groupbox_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3124,12 +3257,16 @@ bool q_groupbox_native_event(void* self, const char* eventType, void* message, i
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, const char* eventType, void* message, intptr_t* result ```
 bool q_groupbox_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3147,12 +3284,16 @@ int32_t q_groupbox_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_groupbox_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3170,12 +3311,16 @@ void q_groupbox_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QPainter* painter ```
 void q_groupbox_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3193,12 +3338,16 @@ QPaintDevice* q_groupbox_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QPoint* offset ```
 QPaintDevice* q_groupbox_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3216,12 +3365,16 @@ QPainter* q_groupbox_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self ```
 QPainter* q_groupbox_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3239,12 +3392,16 @@ void q_groupbox_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QInputMethodEvent* param1 ```
 void q_groupbox_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3262,12 +3419,16 @@ QVariant* q_groupbox_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_groupbox_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3285,12 +3446,16 @@ bool q_groupbox_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, bool next ```
 bool q_groupbox_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3308,12 +3473,16 @@ bool q_groupbox_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QObject* watched, QEvent* event ```
 bool q_groupbox_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3331,12 +3500,16 @@ void q_groupbox_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QTimerEvent* event ```
 void q_groupbox_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3354,12 +3527,16 @@ void q_groupbox_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QEvent* event ```
 void q_groupbox_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3377,12 +3554,16 @@ void q_groupbox_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QMetaMethod* signal ```
 void q_groupbox_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3400,12 +3581,16 @@ void q_groupbox_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QMetaMethod* signal ```
 void q_groupbox_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3423,12 +3608,16 @@ void q_groupbox_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self ```
 void q_groupbox_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3446,12 +3635,16 @@ void q_groupbox_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self ```
 void q_groupbox_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3469,12 +3662,16 @@ void q_groupbox_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self ```
 void q_groupbox_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3492,12 +3689,16 @@ bool q_groupbox_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self ```
 bool q_groupbox_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3515,12 +3716,16 @@ bool q_groupbox_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self ```
 bool q_groupbox_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3538,12 +3743,16 @@ QObject* q_groupbox_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self ```
 QObject* q_groupbox_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3561,12 +3770,16 @@ int32_t q_groupbox_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self ```
 int32_t q_groupbox_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3584,12 +3797,16 @@ int32_t q_groupbox_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, const char* signal ```
 int32_t q_groupbox_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3607,6 +3824,8 @@ bool q_groupbox_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGroupBox* self, QMetaMethod* signal ```
@@ -3614,11 +3833,24 @@ bool q_groupbox_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QGroupBox* self, bool (*slot)(QGroupBox*, QMetaMethod*) ```
 void q_groupbox_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QGroupBox* self, void (*slot)(QObject*, const char*) ```
+void q_groupbox_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#dtor.QGroupBox)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGroupBox* self ```

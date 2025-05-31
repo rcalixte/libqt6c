@@ -1,16 +1,8 @@
 #include "libqabstractaxis.hpp"
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
-#include "../libqbrush.hpp"
 #include "../libqevent.hpp"
-#include "../libqcolor.hpp"
-#include "../libqfont.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
-#include "../libqpen.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqbarcategoryaxis.hpp"
 #include "libqbarcategoryaxis.h"
@@ -23,7 +15,7 @@ QBarCategoryAxis* q_barcategoryaxis_new2(void* parent) {
     return QBarCategoryAxis_new2((QObject*)parent);
 }
 
-QMetaObject* q_barcategoryaxis_meta_object(void* self) {
+const QMetaObject* q_barcategoryaxis_meta_object(void* self) {
     return QBarCategoryAxis_MetaObject((QBarCategoryAxis*)self);
 }
 
@@ -68,7 +60,7 @@ void q_barcategoryaxis_append(void* self, const char* categories[]) {
     for (size_t _i = 0; _i < categories_len; ++_i) {
         categories_qstr[_i] = qstring(categories[_i]);
     }
-    libqt_list categories_list = qstrlist(categories_qstr, categories_len);
+    libqt_list categories_list = qlist(categories_qstr, categories_len);
     QBarCategoryAxis_Append((QBarCategoryAxis*)self, categories_list);
 }
 
@@ -98,7 +90,7 @@ void q_barcategoryaxis_set_categories(void* self, const char* categories[]) {
     for (size_t _i = 0; _i < categories_len; ++_i) {
         categories_qstr[_i] = qstring(categories[_i]);
     }
-    libqt_list categories_list = qstrlist(categories_qstr, categories_len);
+    libqt_list categories_list = qlist(categories_qstr, categories_len);
     QBarCategoryAxis_SetCategories((QBarCategoryAxis*)self, categories_list);
 }
 
@@ -718,8 +710,7 @@ const char* q_barcategoryaxis_object_name(void* self) {
 }
 
 void q_barcategoryaxis_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_barcategoryaxis_is_widget_type(void* self) {
@@ -758,7 +749,7 @@ void q_barcategoryaxis_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_barcategoryaxis_children(void* self) {
+const libqt_list /* of QObject* */ q_barcategoryaxis_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -825,7 +816,7 @@ QBindingStorage* q_barcategoryaxis_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_barcategoryaxis_binding_storage2(void* self) {
+const QBindingStorage* q_barcategoryaxis_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -999,6 +990,10 @@ bool q_barcategoryaxis_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_barcategoryaxis_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QBarCategoryAxis_OnIsSignalConnected((QBarCategoryAxis*)self, (intptr_t)slot);
+}
+
+void q_barcategoryaxis_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_barcategoryaxis_delete(void* self) {

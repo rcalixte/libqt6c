@@ -14,21 +14,16 @@
 
 #include "libqabstractbarseries.h"
 #include "../libqabstractitemmodel.h"
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
-#include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
-/// https://doc.qt.io/qt-6/qbarmodelmapper.html
+/// https://doc.qt.io/qt-6/qbarmodelmapper-qtcharts.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QBarModelMapper* self ```
-QMetaObject* q_barmodelmapper_meta_object(void* self);
+const QMetaObject* q_barmodelmapper_meta_object(void* self);
 
 /// ``` QBarModelMapper* self, const char* param1 ```
 void* q_barmodelmapper_metacast(void* self, const char* param1);
@@ -147,7 +142,7 @@ void q_barmodelmapper_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QBarModelMapper* self ```
-libqt_list /* of QObject* */ q_barmodelmapper_children(void* self);
+const libqt_list /* of QObject* */ q_barmodelmapper_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -245,7 +240,7 @@ QBindingStorage* q_barmodelmapper_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QBarModelMapper* self ```
-QBindingStorage* q_barmodelmapper_binding_storage2(void* self);
+const QBindingStorage* q_barmodelmapper_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -255,6 +250,8 @@ QBindingStorage* q_barmodelmapper_binding_storage2(void* self);
 void q_barmodelmapper_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QBarModelMapper* self, void (*slot)(QObject*) ```
 void q_barmodelmapper_on_destroyed(void* self, void (*slot)(void*));
@@ -310,9 +307,22 @@ void q_barmodelmapper_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QBarModelMapper* self, void (*slot)(QObject*, QObject*) ```
 void q_barmodelmapper_on_destroyed1(void* self, void (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QBarModelMapper* self, void (*slot)(QObject*, const char*) ```
+void q_barmodelmapper_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarmodelmapper-qtcharts.html#dtor.QBarModelMapper)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QBarModelMapper* self ```

@@ -13,25 +13,10 @@
 #include "../qtlibc.h"
 
 #include "../libqabstractscrollarea.h"
-#include "../libqaction.h"
 #include "../libqevent.h"
-#include "../libqanystringview.h"
-#include "../libqbackingstore.h"
-#include "../libqbindingstorage.h"
-#include "../libqbitmap.h"
 #include "../libqcolor.h"
-#include "../libqcursor.h"
-#include "../libqfont.h"
-#include "../libqfontinfo.h"
-#include "../libqfontmetrics.h"
 #include "../libqframe.h"
-#include "../libqgraphicseffect.h"
-#include "../libqgraphicsproxywidget.h"
-#include "../libqicon.h"
 #include "../libqimage.h"
-#include "../libqkeysequence.h"
-#include "../libqlayout.h"
-#include "../libqlocale.h"
 #include "../libqmargins.h"
 #include "../libqmetaobject.h"
 #include "../libqmimedata.h"
@@ -39,25 +24,18 @@
 #include "../libqpaintdevice.h"
 #include "../libqpaintengine.h"
 #include "../libqpainter.h"
-#include "../libqpalette.h"
 #include "../libqpixmap.h"
 #include "../libqpoint.h"
 #include "../libqrect.h"
-#include "../libqregion.h"
-#include "../libqscreen.h"
 #include "../libqscrollbar.h"
 #include "../libqsize.h"
-#include "../libqsizepolicy.h"
 #include <string.h>
-#include "../libqstyle.h"
 #include "../libqstyleoption.h"
-#include "../libqthread.h"
 #include "../libqurl.h"
 #include "../libqvariant.h"
 #include "../libqwidget.h"
-#include "../libqwindow.h"
 
-/// https://doc.qt.io/qt-6/qsciscintillabase.html
+/// https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html
 
 /// q_sciscintillabase_new constructs a new QsciScintillaBase object.
 ///
@@ -72,7 +50,7 @@ QsciScintillaBase* q_sciscintillabase_new2();
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QsciScintillaBase* self ```
-QMetaObject* q_sciscintillabase_meta_object(void* self);
+const QMetaObject* q_sciscintillabase_meta_object(void* self);
 
 /// ``` QsciScintillaBase* self, const char* param1 ```
 void* q_sciscintillabase_metacast(void* self, const char* param1);
@@ -95,688 +73,708 @@ int32_t q_sciscintillabase_qbase_metacall(void* self, int64_t param1, int param2
 /// ``` const char* s ```
 const char* q_sciscintillabase_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#pool)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 ///
 QsciScintillaBase* q_sciscintillabase_pool();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#replaceHorizontalScrollBar)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, QScrollBar* scrollBar ```
 void q_sciscintillabase_replace_horizontal_scroll_bar(void* self, void* scrollBar);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#replaceVerticalScrollBar)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, QScrollBar* scrollBar ```
 void q_sciscintillabase_replace_vertical_scroll_bar(void* self, void* scrollBar);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SendScintilla)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, uint32_t msg ```
 int64_t q_sciscintillabase_send_scintilla(void* self, uint32_t msg);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SendScintilla)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, uint32_t msg, uint64_t wParam, void* lParam ```
 int64_t q_sciscintillabase_send_scintilla2(void* self, uint32_t msg, uint64_t wParam, void* lParam);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SendScintilla)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, uint32_t msg, uintptr_t wParam, const char* lParam ```
 int64_t q_sciscintillabase_send_scintilla3(void* self, uint32_t msg, uintptr_t wParam, const char* lParam);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SendScintilla)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, uint32_t msg, const char* lParam ```
 int64_t q_sciscintillabase_send_scintilla4(void* self, uint32_t msg, const char* lParam);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SendScintilla)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, uint32_t msg, const char* wParam, const char* lParam ```
 int64_t q_sciscintillabase_send_scintilla5(void* self, uint32_t msg, const char* wParam, const char* lParam);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SendScintilla)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, uint32_t msg, int64_t wParam ```
 int64_t q_sciscintillabase_send_scintilla6(void* self, uint32_t msg, int64_t wParam);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SendScintilla)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, uint32_t msg, int wParam ```
 int64_t q_sciscintillabase_send_scintilla7(void* self, uint32_t msg, int wParam);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SendScintilla)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, uint32_t msg, int64_t cpMin, int64_t cpMax, char* lpstrText ```
 int64_t q_sciscintillabase_send_scintilla8(void* self, uint32_t msg, int64_t cpMin, int64_t cpMax, char* lpstrText);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SendScintilla)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, uint32_t msg, uint64_t wParam, QColor* col ```
 int64_t q_sciscintillabase_send_scintilla9(void* self, uint32_t msg, uint64_t wParam, void* col);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SendScintilla)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, uint32_t msg, QColor* col ```
 int64_t q_sciscintillabase_send_scintilla10(void* self, uint32_t msg, void* col);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SendScintilla)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, uint32_t msg, uint64_t wParam, QPainter* hdc, QRect* rc, int64_t cpMin, int64_t cpMax ```
 int64_t q_sciscintillabase_send_scintilla11(void* self, uint32_t msg, uint64_t wParam, void* hdc, void* rc, int64_t cpMin, int64_t cpMax);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SendScintilla)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, uint32_t msg, uint64_t wParam, QPixmap* lParam ```
 int64_t q_sciscintillabase_send_scintilla12(void* self, uint32_t msg, uint64_t wParam, void* lParam);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SendScintilla)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, uint32_t msg, uint64_t wParam, QImage* lParam ```
 int64_t q_sciscintillabase_send_scintilla13(void* self, uint32_t msg, uint64_t wParam, void* lParam);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SendScintillaPtrResult)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, uint32_t msg ```
 void* q_sciscintillabase_send_scintilla_ptr_result(void* self, uint32_t msg);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#commandKey)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` int qt_key, int* modifiers ```
 int32_t q_sciscintillabase_command_key(int qt_key, int* modifiers);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#QSCN_SELCHANGED)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, bool yes ```
 void q_sciscintillabase_q_s_c_n__s_e_l_c_h_a_n_g_e_d(void* self, bool yes);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, bool) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_AUTOCCANCELLED)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self ```
 void q_sciscintillabase_s_c_n__a_u_t_o_c_c_a_n_c_e_l_l_e_d(void* self);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_AUTOCCHARDELETED)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self ```
 void q_sciscintillabase_s_c_n__a_u_t_o_c_c_h_a_r_d_e_l_e_t_e_d(void* self);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_AUTOCCOMPLETED)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, const char* selection, int position, int ch, int method ```
 void q_sciscintillabase_s_c_n__a_u_t_o_c_c_o_m_p_l_e_t_e_d(void* self, const char* selection, int position, int ch, int method);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, const char*, int, int, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_AUTOCSELECTION)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, const char* selection, int position, int ch, int method ```
 void q_sciscintillabase_s_c_n__a_u_t_o_c_s_e_l_e_c_t_i_o_n(void* self, const char* selection, int position, int ch, int method);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, const char*, int, int, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_AUTOCSELECTION)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, const char* selection, int position ```
 void q_sciscintillabase_s_c_n__a_u_t_o_c_s_e_l_e_c_t_i_o_n2(void* self, const char* selection, int position);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, const char*, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_AUTOCSELECTIONCHANGE)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, const char* selection, int id, int position ```
 void q_sciscintillabase_s_c_n__a_u_t_o_c_s_e_l_e_c_t_i_o_n_c_h_a_n_g_e(void* self, const char* selection, int id, int position);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, const char*, int, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCEN_CHANGE)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self ```
 void q_sciscintillabase_s_c_e_n__c_h_a_n_g_e(void* self);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_CALLTIPCLICK)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, int direction ```
 void q_sciscintillabase_s_c_n__c_a_l_l_t_i_p_c_l_i_c_k(void* self, int direction);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_CHARADDED)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, int charadded ```
 void q_sciscintillabase_s_c_n__c_h_a_r_a_d_d_e_d(void* self, int charadded);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_DOUBLECLICK)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, int position, int line, int modifiers ```
 void q_sciscintillabase_s_c_n__d_o_u_b_l_e_c_l_i_c_k(void* self, int position, int line, int modifiers);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, int, int, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_DWELLEND)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, int position, int x, int y ```
 void q_sciscintillabase_s_c_n__d_w_e_l_l_e_n_d(void* self, int position, int x, int y);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, int, int, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_DWELLSTART)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, int position, int x, int y ```
 void q_sciscintillabase_s_c_n__d_w_e_l_l_s_t_a_r_t(void* self, int position, int x, int y);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, int, int, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_FOCUSIN)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self ```
 void q_sciscintillabase_s_c_n__f_o_c_u_s_i_n(void* self);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_FOCUSOUT)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self ```
 void q_sciscintillabase_s_c_n__f_o_c_u_s_o_u_t(void* self);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_HOTSPOTCLICK)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, int position, int modifiers ```
 void q_sciscintillabase_s_c_n__h_o_t_s_p_o_t_c_l_i_c_k(void* self, int position, int modifiers);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, int, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_HOTSPOTDOUBLECLICK)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, int position, int modifiers ```
 void q_sciscintillabase_s_c_n__h_o_t_s_p_o_t_d_o_u_b_l_e_c_l_i_c_k(void* self, int position, int modifiers);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, int, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_HOTSPOTRELEASECLICK)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, int position, int modifiers ```
 void q_sciscintillabase_s_c_n__h_o_t_s_p_o_t_r_e_l_e_a_s_e_c_l_i_c_k(void* self, int position, int modifiers);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, int, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_INDICATORCLICK)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, int position, int modifiers ```
 void q_sciscintillabase_s_c_n__i_n_d_i_c_a_t_o_r_c_l_i_c_k(void* self, int position, int modifiers);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, int, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_INDICATORRELEASE)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, int position, int modifiers ```
 void q_sciscintillabase_s_c_n__i_n_d_i_c_a_t_o_r_r_e_l_e_a_s_e(void* self, int position, int modifiers);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, int, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_MACRORECORD)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, uint32_t param1, uint64_t param2, void* param3 ```
 void q_sciscintillabase_s_c_n__m_a_c_r_o_r_e_c_o_r_d(void* self, uint32_t param1, uint64_t param2, void* param3);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, uint32_t, uint64_t, void*) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_MARGINCLICK)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, int position, int modifiers, int margin ```
 void q_sciscintillabase_s_c_n__m_a_r_g_i_n_c_l_i_c_k(void* self, int position, int modifiers, int margin);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, int, int, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_MARGINRIGHTCLICK)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, int position, int modifiers, int margin ```
 void q_sciscintillabase_s_c_n__m_a_r_g_i_n_r_i_g_h_t_c_l_i_c_k(void* self, int position, int modifiers, int margin);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, int, int, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_MODIFIED)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, int param1, int param2, const char* param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10 ```
 void q_sciscintillabase_s_c_n__m_o_d_i_f_i_e_d(void* self, int param1, int param2, const char* param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, int, int, const char*, int, int, int, int, int, int, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_MODIFYATTEMPTRO)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self ```
 void q_sciscintillabase_s_c_n__m_o_d_i_f_y_a_t_t_e_m_p_t_r_o(void* self);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_NEEDSHOWN)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, int param1, int param2 ```
 void q_sciscintillabase_s_c_n__n_e_e_d_s_h_o_w_n(void* self, int param1, int param2);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, int, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_PAINTED)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self ```
 void q_sciscintillabase_s_c_n__p_a_i_n_t_e_d(void* self);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_SAVEPOINTLEFT)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self ```
 void q_sciscintillabase_s_c_n__s_a_v_e_p_o_i_n_t_l_e_f_t(void* self);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_SAVEPOINTREACHED)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self ```
 void q_sciscintillabase_s_c_n__s_a_v_e_p_o_i_n_t_r_e_a_c_h_e_d(void* self);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_STYLENEEDED)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, int position ```
 void q_sciscintillabase_s_c_n__s_t_y_l_e_n_e_e_d_e_d(void* self, int position);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_URIDROPPED)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, QUrl* url ```
 void q_sciscintillabase_s_c_n__u_r_i_d_r_o_p_p_e_d(void* self, void* url);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, QUrl*) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_UPDATEUI)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, int updated ```
 void q_sciscintillabase_s_c_n__u_p_d_a_t_e_u_i(void* self, int updated);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_USERLISTSELECTION)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, const char* selection, int id, int ch, int method, int position ```
 void q_sciscintillabase_s_c_n__u_s_e_r_l_i_s_t_s_e_l_e_c_t_i_o_n(void* self, const char* selection, int id, int ch, int method, int position);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, const char*, int, int, int, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_USERLISTSELECTION)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, const char* selection, int id, int ch, int method ```
 void q_sciscintillabase_s_c_n__u_s_e_r_l_i_s_t_s_e_l_e_c_t_i_o_n2(void* self, const char* selection, int id, int ch, int method);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, const char*, int, int, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_USERLISTSELECTION)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, const char* selection, int id ```
 void q_sciscintillabase_s_c_n__u_s_e_r_l_i_s_t_s_e_l_e_c_t_i_o_n3(void* self, const char* selection, int id);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, const char*, int) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SCN_ZOOM)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self ```
 void q_sciscintillabase_s_c_n__z_o_o_m(void* self);
 
-/// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*) ```
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#canInsertFromMimeData)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, QMimeData* source ```
 bool q_sciscintillabase_can_insert_from_mime_data(void* self, void* source);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, bool (*slot)(QsciScintillaBase*, QMimeData*) ```
 void q_sciscintillabase_on_can_insert_from_mime_data(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, QMimeData* source ```
 bool q_sciscintillabase_qbase_can_insert_from_mime_data(void* self, void* source);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#fromMimeData)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, QMimeData* source, bool* rectangular ```
 char* q_sciscintillabase_from_mime_data(void* self, void* source, bool* rectangular);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, char* (*slot)(QsciScintillaBase*, QMimeData*, bool*) ```
 void q_sciscintillabase_on_from_mime_data(void* self, char* (*slot)(void*, void*, bool*));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, QMimeData* source, bool* rectangular ```
 char* q_sciscintillabase_qbase_from_mime_data(void* self, void* source, bool* rectangular);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#toMimeData)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, const char* text, bool rectangular ```
 QMimeData* q_sciscintillabase_to_mime_data(void* self, const char* text, bool rectangular);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, QMimeData* (*slot)(QsciScintillaBase*, const char*, bool) ```
 void q_sciscintillabase_on_to_mime_data(void* self, QMimeData* (*slot)(void*, const char*, bool));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, const char* text, bool rectangular ```
 QMimeData* q_sciscintillabase_qbase_to_mime_data(void* self, const char* text, bool rectangular);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#changeEvent)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, QEvent* e ```
 void q_sciscintillabase_change_event(void* self, void* e);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, QEvent*) ```
 void q_sciscintillabase_on_change_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, QEvent* e ```
 void q_sciscintillabase_qbase_change_event(void* self, void* e);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#contextMenuEvent)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, QContextMenuEvent* e ```
 void q_sciscintillabase_context_menu_event(void* self, void* e);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, QContextMenuEvent*) ```
 void q_sciscintillabase_on_context_menu_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, QContextMenuEvent* e ```
 void q_sciscintillabase_qbase_context_menu_event(void* self, void* e);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#dragEnterEvent)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, QDragEnterEvent* e ```
 void q_sciscintillabase_drag_enter_event(void* self, void* e);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, QDragEnterEvent*) ```
 void q_sciscintillabase_on_drag_enter_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, QDragEnterEvent* e ```
 void q_sciscintillabase_qbase_drag_enter_event(void* self, void* e);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#dragLeaveEvent)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, QDragLeaveEvent* e ```
 void q_sciscintillabase_drag_leave_event(void* self, void* e);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, QDragLeaveEvent*) ```
 void q_sciscintillabase_on_drag_leave_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, QDragLeaveEvent* e ```
 void q_sciscintillabase_qbase_drag_leave_event(void* self, void* e);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#dragMoveEvent)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, QDragMoveEvent* e ```
 void q_sciscintillabase_drag_move_event(void* self, void* e);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, QDragMoveEvent*) ```
 void q_sciscintillabase_on_drag_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, QDragMoveEvent* e ```
 void q_sciscintillabase_qbase_drag_move_event(void* self, void* e);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#dropEvent)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, QDropEvent* e ```
 void q_sciscintillabase_drop_event(void* self, void* e);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, QDropEvent*) ```
 void q_sciscintillabase_on_drop_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, QDropEvent* e ```
 void q_sciscintillabase_qbase_drop_event(void* self, void* e);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#focusInEvent)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, QFocusEvent* e ```
 void q_sciscintillabase_focus_in_event(void* self, void* e);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, QFocusEvent*) ```
 void q_sciscintillabase_on_focus_in_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, QFocusEvent* e ```
 void q_sciscintillabase_qbase_focus_in_event(void* self, void* e);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#focusOutEvent)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, QFocusEvent* e ```
 void q_sciscintillabase_focus_out_event(void* self, void* e);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, QFocusEvent*) ```
 void q_sciscintillabase_on_focus_out_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, QFocusEvent* e ```
 void q_sciscintillabase_qbase_focus_out_event(void* self, void* e);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#focusNextPrevChild)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, bool next ```
 bool q_sciscintillabase_focus_next_prev_child(void* self, bool next);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, bool (*slot)(QsciScintillaBase*, bool) ```
 void q_sciscintillabase_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, bool next ```
 bool q_sciscintillabase_qbase_focus_next_prev_child(void* self, bool next);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#keyPressEvent)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, QKeyEvent* e ```
 void q_sciscintillabase_key_press_event(void* self, void* e);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, QKeyEvent*) ```
 void q_sciscintillabase_on_key_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, QKeyEvent* e ```
 void q_sciscintillabase_qbase_key_press_event(void* self, void* e);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#inputMethodEvent)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, QInputMethodEvent* event ```
 void q_sciscintillabase_input_method_event(void* self, void* event);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, QInputMethodEvent*) ```
 void q_sciscintillabase_on_input_method_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, QInputMethodEvent* event ```
 void q_sciscintillabase_qbase_input_method_event(void* self, void* event);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#mouseDoubleClickEvent)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, QMouseEvent* e ```
 void q_sciscintillabase_mouse_double_click_event(void* self, void* e);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, QMouseEvent*) ```
 void q_sciscintillabase_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, QMouseEvent* e ```
 void q_sciscintillabase_qbase_mouse_double_click_event(void* self, void* e);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#mouseMoveEvent)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, QMouseEvent* e ```
 void q_sciscintillabase_mouse_move_event(void* self, void* e);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, QMouseEvent*) ```
 void q_sciscintillabase_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, QMouseEvent* e ```
 void q_sciscintillabase_qbase_mouse_move_event(void* self, void* e);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#mousePressEvent)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, QMouseEvent* e ```
 void q_sciscintillabase_mouse_press_event(void* self, void* e);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, QMouseEvent*) ```
 void q_sciscintillabase_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, QMouseEvent* e ```
 void q_sciscintillabase_qbase_mouse_press_event(void* self, void* e);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#mouseReleaseEvent)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, QMouseEvent* e ```
 void q_sciscintillabase_mouse_release_event(void* self, void* e);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, QMouseEvent*) ```
 void q_sciscintillabase_on_mouse_release_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, QMouseEvent* e ```
 void q_sciscintillabase_qbase_mouse_release_event(void* self, void* e);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#paintEvent)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, QPaintEvent* e ```
 void q_sciscintillabase_paint_event(void* self, void* e);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, QPaintEvent*) ```
 void q_sciscintillabase_on_paint_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, QPaintEvent* e ```
 void q_sciscintillabase_qbase_paint_event(void* self, void* e);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#resizeEvent)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, QResizeEvent* e ```
 void q_sciscintillabase_resize_event(void* self, void* e);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, QResizeEvent*) ```
 void q_sciscintillabase_on_resize_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, QResizeEvent* e ```
 void q_sciscintillabase_qbase_resize_event(void* self, void* e);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#scrollContentsBy)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, int dx, int dy ```
 void q_sciscintillabase_scroll_contents_by(void* self, int dx, int dy);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, void (*slot)(QsciScintillaBase*, int, int) ```
 void q_sciscintillabase_on_scroll_contents_by(void* self, void (*slot)(void*, int, int));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, int dx, int dy ```
 void q_sciscintillabase_qbase_scroll_contents_by(void* self, int dx, int dy);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#setScrollBars)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self ```
 void q_sciscintillabase_set_scroll_bars(void* self);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, void (*slot)() ```
 void q_sciscintillabase_on_set_scroll_bars(void* self, void (*slot)());
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self ```
 void q_sciscintillabase_qbase_set_scroll_bars(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#contextMenuNeeded)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, int x, int y ```
 bool q_sciscintillabase_context_menu_needed(void* self, int x, int y);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciScintillaBase* self, bool (*slot)(QsciScintillaBase*, int, int) ```
 void q_sciscintillabase_on_context_menu_needed(void* self, bool (*slot)(void*, int, int));
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciScintillaBase* self, int x, int y ```
@@ -792,12 +790,12 @@ const char* q_sciscintillabase_tr2(const char* s, const char* c);
 /// ``` const char* s, const char* c, int n ```
 const char* q_sciscintillabase_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SendScintilla)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, uint32_t msg, uint64_t wParam ```
 int64_t q_sciscintillabase_send_scintilla22(void* self, uint32_t msg, uint64_t wParam);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsciscintillabase.html#SendScintilla)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// ``` QsciScintillaBase* self, uint32_t msg, uint64_t wParam, int64_t lParam ```
 int64_t q_sciscintillabase_send_scintilla32(void* self, uint32_t msg, uint64_t wParam, int64_t lParam);
@@ -1136,7 +1134,7 @@ QRect* q_sciscintillabase_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QsciScintillaBase* self ```
-QRect* q_sciscintillabase_geometry(void* self);
+const QRect* q_sciscintillabase_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1493,7 +1491,7 @@ QWidget* q_sciscintillabase_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QsciScintillaBase* self ```
-QPalette* q_sciscintillabase_palette(void* self);
+const QPalette* q_sciscintillabase_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1535,7 +1533,7 @@ int64_t q_sciscintillabase_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QsciScintillaBase* self ```
-QFont* q_sciscintillabase_font(void* self);
+const QFont* q_sciscintillabase_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2535,15 +2533,15 @@ void q_sciscintillabase_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QsciScintillaBase* self, QAction* actions[] ```
-void q_sciscintillabase_add_actions(void* self, void* actions[]);
+/// ``` QsciScintillaBase* self, libqt_list /* of QAction* */ actions ```
+void q_sciscintillabase_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QsciScintillaBase* self, QAction* before, QAction* actions[] ```
-void q_sciscintillabase_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QsciScintillaBase* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_sciscintillabase_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2743,6 +2741,8 @@ void q_sciscintillabase_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QsciScintillaBase* self, void (*slot)(QWidget*, const char*) ```
 void q_sciscintillabase_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2754,6 +2754,8 @@ void q_sciscintillabase_on_window_title_changed(void* self, void (*slot)(void*, 
 void q_sciscintillabase_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QsciScintillaBase* self, void (*slot)(QWidget*, QIcon*) ```
 void q_sciscintillabase_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -2767,6 +2769,8 @@ void q_sciscintillabase_window_icon_text_changed(void* self, const char* iconTex
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QsciScintillaBase* self, void (*slot)(QWidget*, const char*) ```
 void q_sciscintillabase_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2778,6 +2782,8 @@ void q_sciscintillabase_on_window_icon_text_changed(void* self, void (*slot)(voi
 void q_sciscintillabase_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QsciScintillaBase* self, void (*slot)(QWidget*, QPoint*) ```
 void q_sciscintillabase_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2983,7 +2989,7 @@ void q_sciscintillabase_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QsciScintillaBase* self ```
-libqt_list /* of QObject* */ q_sciscintillabase_children(void* self);
+const libqt_list /* of QObject* */ q_sciscintillabase_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -3074,7 +3080,7 @@ QBindingStorage* q_sciscintillabase_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QsciScintillaBase* self ```
-QBindingStorage* q_sciscintillabase_binding_storage2(void* self);
+const QBindingStorage* q_sciscintillabase_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -3084,6 +3090,8 @@ QBindingStorage* q_sciscintillabase_binding_storage2(void* self);
 void q_sciscintillabase_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QsciScintillaBase* self, void (*slot)(QObject*) ```
 void q_sciscintillabase_on_destroyed(void* self, void (*slot)(void*));
@@ -3138,6 +3146,8 @@ QMetaObject__Connection* q_sciscintillabase_connect4(void* self, void* sender, c
 void q_sciscintillabase_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QsciScintillaBase* self, void (*slot)(QObject*, QObject*) ```
 void q_sciscintillabase_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -3237,12 +3247,16 @@ QSize* q_sciscintillabase_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self ```
 QSize* q_sciscintillabase_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3260,12 +3274,16 @@ QSize* q_sciscintillabase_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self ```
 QSize* q_sciscintillabase_qbase_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3283,12 +3301,16 @@ void q_sciscintillabase_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QWidget* viewport ```
 void q_sciscintillabase_qbase_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3306,12 +3328,16 @@ bool q_sciscintillabase_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QObject* param1, QEvent* param2 ```
 bool q_sciscintillabase_qbase_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3329,12 +3355,16 @@ bool q_sciscintillabase_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QEvent* param1 ```
 bool q_sciscintillabase_qbase_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3352,12 +3382,16 @@ bool q_sciscintillabase_viewport_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QEvent* param1 ```
 bool q_sciscintillabase_qbase_viewport_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3375,12 +3409,16 @@ void q_sciscintillabase_wheel_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QWheelEvent* param1 ```
 void q_sciscintillabase_qbase_wheel_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3398,12 +3436,16 @@ QSize* q_sciscintillabase_viewport_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self ```
 QSize* q_sciscintillabase_qbase_viewport_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3421,12 +3463,16 @@ void q_sciscintillabase_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QStyleOptionFrame* option ```
 void q_sciscintillabase_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3444,12 +3490,16 @@ int32_t q_sciscintillabase_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self ```
 int32_t q_sciscintillabase_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3467,12 +3517,16 @@ void q_sciscintillabase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, bool visible ```
 void q_sciscintillabase_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3490,12 +3544,16 @@ int32_t q_sciscintillabase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, int param1 ```
 int32_t q_sciscintillabase_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3513,12 +3571,16 @@ bool q_sciscintillabase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self ```
 bool q_sciscintillabase_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3536,12 +3598,16 @@ QPaintEngine* q_sciscintillabase_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self ```
 QPaintEngine* q_sciscintillabase_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3559,12 +3625,16 @@ void q_sciscintillabase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QKeyEvent* event ```
 void q_sciscintillabase_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3582,12 +3652,16 @@ void q_sciscintillabase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QEnterEvent* event ```
 void q_sciscintillabase_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3605,12 +3679,16 @@ void q_sciscintillabase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QEvent* event ```
 void q_sciscintillabase_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3628,12 +3706,16 @@ void q_sciscintillabase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QMoveEvent* event ```
 void q_sciscintillabase_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3651,12 +3733,16 @@ void q_sciscintillabase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QCloseEvent* event ```
 void q_sciscintillabase_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3674,12 +3760,16 @@ void q_sciscintillabase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QTabletEvent* event ```
 void q_sciscintillabase_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3697,12 +3787,16 @@ void q_sciscintillabase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QActionEvent* event ```
 void q_sciscintillabase_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3720,12 +3814,16 @@ void q_sciscintillabase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QShowEvent* event ```
 void q_sciscintillabase_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3743,12 +3841,16 @@ void q_sciscintillabase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QHideEvent* event ```
 void q_sciscintillabase_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3766,12 +3868,16 @@ bool q_sciscintillabase_native_event(void* self, const char* eventType, void* me
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, const char* eventType, void* message, intptr_t* result ```
 bool q_sciscintillabase_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3789,12 +3895,16 @@ int32_t q_sciscintillabase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_sciscintillabase_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3812,12 +3922,16 @@ void q_sciscintillabase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QPainter* painter ```
 void q_sciscintillabase_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3835,12 +3949,16 @@ QPaintDevice* q_sciscintillabase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QPoint* offset ```
 QPaintDevice* q_sciscintillabase_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3858,6 +3976,8 @@ QPainter* q_sciscintillabase_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self ```
@@ -3865,10 +3985,39 @@ QPainter* q_sciscintillabase_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QPainter* (*slot)() ```
 void q_sciscintillabase_on_shared_painter(void* self, QPainter* (*slot)());
+
+/// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciScintillaBase* self, enum Qt__InputMethodQuery param1 ```
+QVariant* q_sciscintillabase_input_method_query(void* self, int64_t param1);
+
+/// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciScintillaBase* self, enum Qt__InputMethodQuery param1 ```
+QVariant* q_sciscintillabase_qbase_input_method_query(void* self, int64_t param1);
+
+/// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciScintillaBase* self, QVariant* (*slot)(QsciScintillaBase*, enum Qt__InputMethodQuery) ```
+void q_sciscintillabase_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
 
 /// Inherited from QObject
 ///
@@ -3881,12 +4030,16 @@ void q_sciscintillabase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QTimerEvent* event ```
 void q_sciscintillabase_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3904,12 +4057,16 @@ void q_sciscintillabase_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QChildEvent* event ```
 void q_sciscintillabase_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3927,12 +4084,16 @@ void q_sciscintillabase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QEvent* event ```
 void q_sciscintillabase_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3950,12 +4111,16 @@ void q_sciscintillabase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QMetaMethod* signal ```
 void q_sciscintillabase_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3973,12 +4138,16 @@ void q_sciscintillabase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QMetaMethod* signal ```
 void q_sciscintillabase_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3996,12 +4165,16 @@ void q_sciscintillabase_set_viewport_margins(void* self, int left, int top, int 
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, int left, int top, int right, int bottom ```
 void q_sciscintillabase_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4019,12 +4192,16 @@ QMargins* q_sciscintillabase_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self ```
 QMargins* q_sciscintillabase_qbase_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4042,12 +4219,16 @@ void q_sciscintillabase_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QPainter* param1 ```
 void q_sciscintillabase_qbase_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4065,12 +4246,16 @@ void q_sciscintillabase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self ```
 void q_sciscintillabase_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4088,12 +4273,16 @@ void q_sciscintillabase_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self ```
 void q_sciscintillabase_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4111,12 +4300,16 @@ void q_sciscintillabase_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self ```
 void q_sciscintillabase_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4134,12 +4327,16 @@ bool q_sciscintillabase_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self ```
 bool q_sciscintillabase_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4157,12 +4354,16 @@ bool q_sciscintillabase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self ```
 bool q_sciscintillabase_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4180,12 +4381,16 @@ QObject* q_sciscintillabase_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self ```
 QObject* q_sciscintillabase_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4203,12 +4408,16 @@ int32_t q_sciscintillabase_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self ```
 int32_t q_sciscintillabase_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4226,12 +4435,16 @@ int32_t q_sciscintillabase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, const char* signal ```
 int32_t q_sciscintillabase_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4249,6 +4462,8 @@ bool q_sciscintillabase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, QMetaMethod* signal ```
@@ -4256,17 +4471,28 @@ bool q_sciscintillabase_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QsciScintillaBase* self, bool (*slot)(QsciScintillaBase*, QMetaMethod*) ```
 void q_sciscintillabase_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QsciScintillaBase* self, void (*slot)(QObject*, const char*) ```
+void q_sciscintillabase_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QsciScintillaBase* self ```
 void q_sciscintillabase_delete(void* self);
-
-/// https://doc.qt.io/qt-6/qsciscintillabase.html#types
 
 typedef enum {
     QSCISCINTILLABASE__SCI_START = 2000,

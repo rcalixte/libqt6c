@@ -14,8 +14,6 @@
 
 #include "libqabstractfileiconprovider.h"
 #include "libqabstractitemmodel.h"
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqdatastream.h"
 #include "libqdatetime.h"
@@ -27,7 +25,6 @@
 #include "libqobject.h"
 #include "libqsize.h"
 #include <string.h>
-#include "libqthread.h"
 #include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qfilesystemmodel.html
@@ -45,7 +42,7 @@ QFileSystemModel* q_filesystemmodel_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QFileSystemModel* self ```
-QMetaObject* q_filesystemmodel_meta_object(void* self);
+const QMetaObject* q_filesystemmodel_meta_object(void* self);
 
 /// ``` QFileSystemModel* self, const char* param1 ```
 void* q_filesystemmodel_metacast(void* self, const char* param1);
@@ -73,6 +70,8 @@ const char* q_filesystemmodel_tr(const char* s);
 /// ``` QFileSystemModel* self, const char* newPath ```
 void q_filesystemmodel_root_path_changed(void* self, const char* newPath);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#rootPathChanged)
+///
 /// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, const char*) ```
 void q_filesystemmodel_on_root_path_changed(void* self, void (*slot)(void*, const char*));
 
@@ -81,6 +80,8 @@ void q_filesystemmodel_on_root_path_changed(void* self, void (*slot)(void*, cons
 /// ``` QFileSystemModel* self, const char* path, const char* oldName, const char* newName ```
 void q_filesystemmodel_file_renamed(void* self, const char* path, const char* oldName, const char* newName);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#fileRenamed)
+///
 /// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, const char*, const char*, const char*) ```
 void q_filesystemmodel_on_file_renamed(void* self, void (*slot)(void*, const char*, const char*, const char*));
 
@@ -89,6 +90,8 @@ void q_filesystemmodel_on_file_renamed(void* self, void (*slot)(void*, const cha
 /// ``` QFileSystemModel* self, const char* path ```
 void q_filesystemmodel_directory_loaded(void* self, const char* path);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#directoryLoaded)
+///
 /// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, const char*) ```
 void q_filesystemmodel_on_directory_loaded(void* self, void (*slot)(void*, const char*));
 
@@ -97,11 +100,15 @@ void q_filesystemmodel_on_directory_loaded(void* self, void (*slot)(void*, const
 /// ``` QFileSystemModel* self, int row, int column, QModelIndex* parent ```
 QModelIndex* q_filesystemmodel_index(void* self, int row, int column, void* parent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#index)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileSystemModel* self, QModelIndex* (*slot)(QFileSystemModel*, int, int, QModelIndex*) ```
 void q_filesystemmodel_on_index(void* self, QModelIndex* (*slot)(void*, int, int, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#index)
+///
 /// Base class method implementation
 ///
 /// ``` QFileSystemModel* self, int row, int column, QModelIndex* parent ```
@@ -117,11 +124,15 @@ QModelIndex* q_filesystemmodel_index_with_path(void* self, const char* path);
 /// ``` QFileSystemModel* self, QModelIndex* child ```
 QModelIndex* q_filesystemmodel_parent(void* self, void* child);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#parent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileSystemModel* self, QModelIndex* (*slot)(QFileSystemModel*, QModelIndex*) ```
 void q_filesystemmodel_on_parent(void* self, QModelIndex* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#parent)
+///
 /// Base class method implementation
 ///
 /// ``` QFileSystemModel* self, QModelIndex* child ```
@@ -132,11 +143,15 @@ QModelIndex* q_filesystemmodel_qbase_parent(void* self, void* child);
 /// ``` QFileSystemModel* self, int row, int column, QModelIndex* idx ```
 QModelIndex* q_filesystemmodel_sibling(void* self, int row, int column, void* idx);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#sibling)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileSystemModel* self, QModelIndex* (*slot)(QFileSystemModel*, int, int, QModelIndex*) ```
 void q_filesystemmodel_on_sibling(void* self, QModelIndex* (*slot)(void*, int, int, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#sibling)
+///
 /// Base class method implementation
 ///
 /// ``` QFileSystemModel* self, int row, int column, QModelIndex* idx ```
@@ -147,11 +162,15 @@ QModelIndex* q_filesystemmodel_qbase_sibling(void* self, int row, int column, vo
 /// ``` QFileSystemModel* self, QModelIndex* parent ```
 bool q_filesystemmodel_has_children(void* self, void* parent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#hasChildren)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileSystemModel* self, bool (*slot)(QFileSystemModel*, QModelIndex*) ```
 void q_filesystemmodel_on_has_children(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#hasChildren)
+///
 /// Base class method implementation
 ///
 /// ``` QFileSystemModel* self, QModelIndex* parent ```
@@ -162,11 +181,15 @@ bool q_filesystemmodel_qbase_has_children(void* self, void* parent);
 /// ``` QFileSystemModel* self, QModelIndex* parent ```
 bool q_filesystemmodel_can_fetch_more(void* self, void* parent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#canFetchMore)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileSystemModel* self, bool (*slot)(QFileSystemModel*, QModelIndex*) ```
 void q_filesystemmodel_on_can_fetch_more(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#canFetchMore)
+///
 /// Base class method implementation
 ///
 /// ``` QFileSystemModel* self, QModelIndex* parent ```
@@ -177,11 +200,15 @@ bool q_filesystemmodel_qbase_can_fetch_more(void* self, void* parent);
 /// ``` QFileSystemModel* self, QModelIndex* parent ```
 void q_filesystemmodel_fetch_more(void* self, void* parent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#fetchMore)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, QModelIndex*) ```
 void q_filesystemmodel_on_fetch_more(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#fetchMore)
+///
 /// Base class method implementation
 ///
 /// ``` QFileSystemModel* self, QModelIndex* parent ```
@@ -192,11 +219,15 @@ void q_filesystemmodel_qbase_fetch_more(void* self, void* parent);
 /// ``` QFileSystemModel* self, QModelIndex* parent ```
 int32_t q_filesystemmodel_row_count(void* self, void* parent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#rowCount)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileSystemModel* self, int32_t (*slot)(QFileSystemModel*, QModelIndex*) ```
 void q_filesystemmodel_on_row_count(void* self, int32_t (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#rowCount)
+///
 /// Base class method implementation
 ///
 /// ``` QFileSystemModel* self, QModelIndex* parent ```
@@ -207,11 +238,15 @@ int32_t q_filesystemmodel_qbase_row_count(void* self, void* parent);
 /// ``` QFileSystemModel* self, QModelIndex* parent ```
 int32_t q_filesystemmodel_column_count(void* self, void* parent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#columnCount)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileSystemModel* self, int32_t (*slot)(QFileSystemModel*, QModelIndex*) ```
 void q_filesystemmodel_on_column_count(void* self, int32_t (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#columnCount)
+///
 /// Base class method implementation
 ///
 /// ``` QFileSystemModel* self, QModelIndex* parent ```
@@ -227,11 +262,15 @@ QVariant* q_filesystemmodel_my_computer(void* self);
 /// ``` QFileSystemModel* self, QModelIndex* index, int role ```
 QVariant* q_filesystemmodel_data(void* self, void* index, int role);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#data)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileSystemModel* self, QVariant* (*slot)(QFileSystemModel*, QModelIndex*, int) ```
 void q_filesystemmodel_on_data(void* self, QVariant* (*slot)(void*, void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#data)
+///
 /// Base class method implementation
 ///
 /// ``` QFileSystemModel* self, QModelIndex* index, int role ```
@@ -242,11 +281,15 @@ QVariant* q_filesystemmodel_qbase_data(void* self, void* index, int role);
 /// ``` QFileSystemModel* self, QModelIndex* index, QVariant* value, int role ```
 bool q_filesystemmodel_set_data(void* self, void* index, void* value, int role);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#setData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileSystemModel* self, bool (*slot)(QFileSystemModel*, QModelIndex*, QVariant*, int) ```
 void q_filesystemmodel_on_set_data(void* self, bool (*slot)(void*, void*, void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#setData)
+///
 /// Base class method implementation
 ///
 /// ``` QFileSystemModel* self, QModelIndex* index, QVariant* value, int role ```
@@ -257,11 +300,15 @@ bool q_filesystemmodel_qbase_set_data(void* self, void* index, void* value, int 
 /// ``` QFileSystemModel* self, int section, enum Qt__Orientation orientation, int role ```
 QVariant* q_filesystemmodel_header_data(void* self, int section, int64_t orientation, int role);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#headerData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileSystemModel* self, QVariant* (*slot)(QFileSystemModel*, int, enum Qt__Orientation, int) ```
 void q_filesystemmodel_on_header_data(void* self, QVariant* (*slot)(void*, int, int64_t, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#headerData)
+///
 /// Base class method implementation
 ///
 /// ``` QFileSystemModel* self, int section, enum Qt__Orientation orientation, int role ```
@@ -272,11 +319,15 @@ QVariant* q_filesystemmodel_qbase_header_data(void* self, int section, int64_t o
 /// ``` QFileSystemModel* self, QModelIndex* index ```
 int64_t q_filesystemmodel_flags(void* self, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#flags)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileSystemModel* self, int64_t (*slot)(QFileSystemModel*, QModelIndex*) ```
 void q_filesystemmodel_on_flags(void* self, int64_t (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#flags)
+///
 /// Base class method implementation
 ///
 /// ``` QFileSystemModel* self, QModelIndex* index ```
@@ -287,11 +338,15 @@ int64_t q_filesystemmodel_qbase_flags(void* self, void* index);
 /// ``` QFileSystemModel* self, int column, enum Qt__SortOrder order ```
 void q_filesystemmodel_sort(void* self, int column, int64_t order);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#sort)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, int, enum Qt__SortOrder) ```
 void q_filesystemmodel_on_sort(void* self, void (*slot)(void*, int, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#sort)
+///
 /// Base class method implementation
 ///
 /// ``` QFileSystemModel* self, int column, enum Qt__SortOrder order ```
@@ -302,11 +357,15 @@ void q_filesystemmodel_qbase_sort(void* self, int column, int64_t order);
 /// ``` QFileSystemModel* self ```
 const char** q_filesystemmodel_mime_types(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#mimeTypes)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileSystemModel* self, const char** (*slot)() ```
 void q_filesystemmodel_on_mime_types(void* self, const char** (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#mimeTypes)
+///
 /// Base class method implementation
 ///
 /// ``` QFileSystemModel* self ```
@@ -314,29 +373,37 @@ const char** q_filesystemmodel_qbase_mime_types(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#mimeData)
 ///
-/// ``` QFileSystemModel* self, QModelIndex* indexes[] ```
-QMimeData* q_filesystemmodel_mime_data(void* self, void* indexes[]);
+/// ``` QFileSystemModel* self, libqt_list /* of QModelIndex* */ indexes ```
+QMimeData* q_filesystemmodel_mime_data(void* self, libqt_list indexes);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#mimeData)
+///
 /// Allows for overriding the related default method
 ///
-/// ``` QFileSystemModel* self, QMimeData* (*slot)(QFileSystemModel*, QModelIndex*[]) ```
-void q_filesystemmodel_on_mime_data(void* self, QMimeData* (*slot)(void*, void*));
+/// ``` QFileSystemModel* self, QMimeData* (*slot)(QFileSystemModel*, libqt_list /* of QModelIndex* */ indexes ) ```
+void q_filesystemmodel_on_mime_data(void* self, QMimeData* (*slot)(void*, libqt_list));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#mimeData)
+///
 /// Base class method implementation
 ///
-/// ``` QFileSystemModel* self, QModelIndex* indexes[] ```
-QMimeData* q_filesystemmodel_qbase_mime_data(void* self, void* indexes[]);
+/// ``` QFileSystemModel* self, libqt_list /* of QModelIndex* */ indexes ```
+QMimeData* q_filesystemmodel_qbase_mime_data(void* self, libqt_list indexes);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#dropMimeData)
 ///
 /// ``` QFileSystemModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent ```
 bool q_filesystemmodel_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#dropMimeData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileSystemModel* self, bool (*slot)(QFileSystemModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*) ```
 void q_filesystemmodel_on_drop_mime_data(void* self, bool (*slot)(void*, void*, int64_t, int, int, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#dropMimeData)
+///
 /// Base class method implementation
 ///
 /// ``` QFileSystemModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent ```
@@ -347,11 +414,15 @@ bool q_filesystemmodel_qbase_drop_mime_data(void* self, void* data, int64_t acti
 /// ``` QFileSystemModel* self ```
 int64_t q_filesystemmodel_supported_drop_actions(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#supportedDropActions)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileSystemModel* self, int64_t (*slot)() ```
 void q_filesystemmodel_on_supported_drop_actions(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#supportedDropActions)
+///
 /// Base class method implementation
 ///
 /// ``` QFileSystemModel* self ```
@@ -362,11 +433,15 @@ int64_t q_filesystemmodel_qbase_supported_drop_actions(void* self);
 /// ``` QFileSystemModel* self ```
 libqt_map /* of int to char* */ q_filesystemmodel_role_names(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#roleNames)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileSystemModel* self, libqt_map /* of int to char* */ (*slot)() ```
 void q_filesystemmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#roleNames)
+///
 /// Base class method implementation
 ///
 /// ``` QFileSystemModel* self ```
@@ -532,11 +607,15 @@ bool q_filesystemmodel_remove(void* self, void* index);
 /// ``` QFileSystemModel* self, QTimerEvent* event ```
 void q_filesystemmodel_timer_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#timerEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, QTimerEvent*) ```
 void q_filesystemmodel_on_timer_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#timerEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QFileSystemModel* self, QTimerEvent* event ```
@@ -547,11 +626,15 @@ void q_filesystemmodel_qbase_timer_event(void* self, void* event);
 /// ``` QFileSystemModel* self, QEvent* event ```
 bool q_filesystemmodel_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileSystemModel* self, bool (*slot)(QFileSystemModel*, QEvent*) ```
 void q_filesystemmodel_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QFileSystemModel* self, QEvent* event ```
@@ -647,6 +730,8 @@ void q_filesystemmodel_data_changed(void* self, void* topLeft, void* bottomRight
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
+///
 /// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*) ```
 void q_filesystemmodel_on_data_changed(void* self, void (*slot)(void*, void*, void*));
 
@@ -658,6 +743,8 @@ void q_filesystemmodel_on_data_changed(void* self, void (*slot)(void*, void*, vo
 void q_filesystemmodel_header_data_changed(void* self, int64_t orientation, int first, int last);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, enum Qt__Orientation, int, int) ```
 void q_filesystemmodel_on_header_data_changed(void* self, void (*slot)(void*, int64_t, int, int));
@@ -671,6 +758,8 @@ void q_filesystemmodel_layout_changed(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+///
 /// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*) ```
 void q_filesystemmodel_on_layout_changed(void* self, void (*slot)(void*));
 
@@ -682,6 +771,8 @@ void q_filesystemmodel_on_layout_changed(void* self, void (*slot)(void*));
 void q_filesystemmodel_layout_about_to_be_changed(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*) ```
 void q_filesystemmodel_on_layout_about_to_be_changed(void* self, void (*slot)(void*));
@@ -732,61 +823,71 @@ bool q_filesystemmodel_check_index2(void* self, void* index, int64_t options);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QFileSystemModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* roles[] ```
-void q_filesystemmodel_data_changed3(void* self, void* topLeft, void* bottomRight, int* roles[]);
+/// ``` QFileSystemModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles ```
+void q_filesystemmodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*, int*[]) ```
-void q_filesystemmodel_on_data_changed3(void* self, void (*slot)(void*, void*, void*, int*));
-
-/// Inherited from QAbstractItemModel
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
-///
-/// ``` QFileSystemModel* self, QPersistentModelIndex* parents[] ```
-void q_filesystemmodel_layout_changed1(void* self, void* parents[]);
-
-/// Inherited from QAbstractItemModel
-///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QPersistentModelIndex*[]) ```
-void q_filesystemmodel_on_layout_changed1(void* self, void (*slot)(void*, void*));
+/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
+void q_filesystemmodel_on_data_changed3(void* self, void (*slot)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QFileSystemModel* self, QPersistentModelIndex* parents[], enum QAbstractItemModel__LayoutChangeHint hint ```
-void q_filesystemmodel_layout_changed2(void* self, void* parents[], int64_t hint);
+/// ``` QFileSystemModel* self, libqt_list /* of QPersistentModelIndex* */ parents ```
+void q_filesystemmodel_layout_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QPersistentModelIndex*[], enum QAbstractItemModel__LayoutChangeHint) ```
-void q_filesystemmodel_on_layout_changed2(void* self, void (*slot)(void*, void*, int64_t));
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+///
+/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+void q_filesystemmodel_on_layout_changed1(void* self, void (*slot)(void*, libqt_list));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+///
+/// ``` QFileSystemModel* self, libqt_list /* of QPersistentModelIndex* */ parents, enum QAbstractItemModel__LayoutChangeHint hint ```
+void q_filesystemmodel_layout_changed2(void* self, libqt_list parents, int64_t hint);
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
+///
+/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+void q_filesystemmodel_on_layout_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QFileSystemModel* self, QPersistentModelIndex* parents[] ```
-void q_filesystemmodel_layout_about_to_be_changed1(void* self, void* parents[]);
-
-/// Inherited from QAbstractItemModel
-///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QPersistentModelIndex*[]) ```
-void q_filesystemmodel_on_layout_about_to_be_changed1(void* self, void (*slot)(void*, void*));
+/// ``` QFileSystemModel* self, libqt_list /* of QPersistentModelIndex* */ parents ```
+void q_filesystemmodel_layout_about_to_be_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QFileSystemModel* self, QPersistentModelIndex* parents[], enum QAbstractItemModel__LayoutChangeHint hint ```
-void q_filesystemmodel_layout_about_to_be_changed2(void* self, void* parents[], int64_t hint);
+/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+void q_filesystemmodel_on_layout_about_to_be_changed1(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QPersistentModelIndex*[], enum QAbstractItemModel__LayoutChangeHint) ```
-void q_filesystemmodel_on_layout_about_to_be_changed2(void* self, void (*slot)(void*, void*, int64_t));
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+///
+/// ``` QFileSystemModel* self, libqt_list /* of QPersistentModelIndex* */ parents, enum QAbstractItemModel__LayoutChangeHint hint ```
+void q_filesystemmodel_layout_about_to_be_changed2(void* self, libqt_list parents, int64_t hint);
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
+///
+/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+void q_filesystemmodel_on_layout_about_to_be_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QObject
 ///
@@ -870,7 +971,7 @@ void q_filesystemmodel_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QFileSystemModel* self ```
-libqt_list /* of QObject* */ q_filesystemmodel_children(void* self);
+const libqt_list /* of QObject* */ q_filesystemmodel_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -968,7 +1069,7 @@ QBindingStorage* q_filesystemmodel_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QFileSystemModel* self ```
-QBindingStorage* q_filesystemmodel_binding_storage2(void* self);
+const QBindingStorage* q_filesystemmodel_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -978,6 +1079,8 @@ QBindingStorage* q_filesystemmodel_binding_storage2(void* self);
 void q_filesystemmodel_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QFileSystemModel* self, void (*slot)(QObject*) ```
 void q_filesystemmodel_on_destroyed(void* self, void (*slot)(void*));
@@ -1026,6 +1129,8 @@ void q_filesystemmodel_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QFileSystemModel* self, void (*slot)(QObject*, QObject*) ```
 void q_filesystemmodel_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -1040,12 +1145,16 @@ bool q_filesystemmodel_set_header_data(void* self, int section, int64_t orientat
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#setHeaderData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role ```
 bool q_filesystemmodel_qbase_set_header_data(void* self, int section, int64_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#setHeaderData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1063,12 +1172,16 @@ libqt_map /* of int to QVariant* */ q_filesystemmodel_item_data(void* self, void
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#itemData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QModelIndex* index ```
 libqt_map /* of int to QVariant* */ q_filesystemmodel_qbase_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#itemData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1086,12 +1199,16 @@ bool q_filesystemmodel_set_item_data(void* self, void* index, libqt_map /* of in
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#setItemData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ roles ```
 bool q_filesystemmodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#setItemData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1109,12 +1226,16 @@ bool q_filesystemmodel_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#clearItemData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QModelIndex* index ```
 bool q_filesystemmodel_qbase_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#clearItemData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1132,12 +1253,16 @@ bool q_filesystemmodel_can_drop_mime_data(void* self, void* data, int64_t action
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#canDropMimeData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent ```
 bool q_filesystemmodel_qbase_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#canDropMimeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1155,12 +1280,16 @@ int64_t q_filesystemmodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self ```
 int64_t q_filesystemmodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1178,12 +1307,16 @@ bool q_filesystemmodel_insert_rows(void* self, int row, int count, void* parent)
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, int row, int count, QModelIndex* parent ```
 bool q_filesystemmodel_qbase_insert_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1201,12 +1334,16 @@ bool q_filesystemmodel_insert_columns(void* self, int column, int count, void* p
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, int column, int count, QModelIndex* parent ```
 bool q_filesystemmodel_qbase_insert_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1224,12 +1361,16 @@ bool q_filesystemmodel_remove_rows(void* self, int row, int count, void* parent)
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, int row, int count, QModelIndex* parent ```
 bool q_filesystemmodel_qbase_remove_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1247,12 +1388,16 @@ bool q_filesystemmodel_remove_columns(void* self, int column, int count, void* p
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumns)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, int column, int count, QModelIndex* parent ```
 bool q_filesystemmodel_qbase_remove_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1270,12 +1415,16 @@ bool q_filesystemmodel_move_rows(void* self, void* sourceParent, int sourceRow, 
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild ```
 bool q_filesystemmodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1293,12 +1442,16 @@ bool q_filesystemmodel_move_columns(void* self, void* sourceParent, int sourceCo
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild ```
 bool q_filesystemmodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1316,12 +1469,16 @@ QModelIndex* q_filesystemmodel_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#buddy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QModelIndex* index ```
 QModelIndex* q_filesystemmodel_qbase_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#buddy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1339,12 +1496,16 @@ libqt_list /* of QModelIndex* */ q_filesystemmodel_match(void* self, void* start
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QModelIndex* start, int role, QVariant* value, int hits, int flags ```
 libqt_list /* of QModelIndex* */ q_filesystemmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1362,12 +1523,16 @@ QSize* q_filesystemmodel_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#span)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QModelIndex* index ```
 QSize* q_filesystemmodel_qbase_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#span)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1385,12 +1550,16 @@ void q_filesystemmodel_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan ```
 void q_filesystemmodel_qbase_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1408,12 +1577,16 @@ bool q_filesystemmodel_submit(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#submit)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self ```
 bool q_filesystemmodel_qbase_submit(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#submit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1431,12 +1604,16 @@ void q_filesystemmodel_revert(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#revert)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self ```
 void q_filesystemmodel_qbase_revert(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#revert)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1454,12 +1631,16 @@ void q_filesystemmodel_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self ```
 void q_filesystemmodel_qbase_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1477,12 +1658,16 @@ bool q_filesystemmodel_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QObject* watched, QEvent* event ```
 bool q_filesystemmodel_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1500,12 +1685,16 @@ void q_filesystemmodel_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QChildEvent* event ```
 void q_filesystemmodel_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1523,12 +1712,16 @@ void q_filesystemmodel_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QEvent* event ```
 void q_filesystemmodel_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1546,12 +1739,16 @@ void q_filesystemmodel_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QMetaMethod* signal ```
 void q_filesystemmodel_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1569,12 +1766,16 @@ void q_filesystemmodel_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QMetaMethod* signal ```
 void q_filesystemmodel_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1592,12 +1793,16 @@ QModelIndex* q_filesystemmodel_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, int row, int column ```
 QModelIndex* q_filesystemmodel_qbase_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1610,22 +1815,26 @@ void q_filesystemmodel_on_create_index(void* self, QModelIndex* (*slot)(void*, i
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFileSystemModel* self, QModelIndex* indexes[], QDataStream* stream ```
-void q_filesystemmodel_encode_data(void* self, void* indexes[], void* stream);
+/// ``` QFileSystemModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream ```
+void q_filesystemmodel_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFileSystemModel* self, QModelIndex* indexes[], QDataStream* stream ```
-void q_filesystemmodel_qbase_encode_data(void* self, void* indexes[], void* stream);
+/// ``` QFileSystemModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream ```
+void q_filesystemmodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, QModelIndex*[], QDataStream*) ```
-void q_filesystemmodel_on_encode_data(void* self, void (*slot)(void*, void*, void*));
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, libqt_list /* of QModelIndex* */ indexes , QDataStream*) ```
+void q_filesystemmodel_on_encode_data(void* self, void (*slot)(void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1638,12 +1847,16 @@ bool q_filesystemmodel_decode_data(void* self, int row, int column, void* parent
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, int row, int column, QModelIndex* parent, QDataStream* stream ```
 bool q_filesystemmodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1661,12 +1874,16 @@ void q_filesystemmodel_begin_insert_rows(void* self, void* parent, int first, in
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QModelIndex* parent, int first, int last ```
 void q_filesystemmodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1684,12 +1901,16 @@ void q_filesystemmodel_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self ```
 void q_filesystemmodel_qbase_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1707,12 +1928,16 @@ void q_filesystemmodel_begin_remove_rows(void* self, void* parent, int first, in
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QModelIndex* parent, int first, int last ```
 void q_filesystemmodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1730,12 +1955,16 @@ void q_filesystemmodel_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self ```
 void q_filesystemmodel_qbase_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1753,12 +1982,16 @@ bool q_filesystemmodel_begin_move_rows(void* self, void* sourceParent, int sourc
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow ```
 bool q_filesystemmodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1776,12 +2009,16 @@ void q_filesystemmodel_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self ```
 void q_filesystemmodel_qbase_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1799,12 +2036,16 @@ void q_filesystemmodel_begin_insert_columns(void* self, void* parent, int first,
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QModelIndex* parent, int first, int last ```
 void q_filesystemmodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1822,12 +2063,16 @@ void q_filesystemmodel_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self ```
 void q_filesystemmodel_qbase_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1845,12 +2090,16 @@ void q_filesystemmodel_begin_remove_columns(void* self, void* parent, int first,
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QModelIndex* parent, int first, int last ```
 void q_filesystemmodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1868,12 +2117,16 @@ void q_filesystemmodel_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self ```
 void q_filesystemmodel_qbase_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1891,12 +2144,16 @@ bool q_filesystemmodel_begin_move_columns(void* self, void* sourceParent, int so
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn ```
 bool q_filesystemmodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1914,12 +2171,16 @@ void q_filesystemmodel_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self ```
 void q_filesystemmodel_qbase_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1937,12 +2198,16 @@ void q_filesystemmodel_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self ```
 void q_filesystemmodel_qbase_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1960,12 +2225,16 @@ void q_filesystemmodel_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self ```
 void q_filesystemmodel_qbase_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1983,12 +2252,16 @@ void q_filesystemmodel_change_persistent_index(void* self, void* from, void* to)
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QModelIndex* from, QModelIndex* to ```
 void q_filesystemmodel_qbase_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2001,22 +2274,26 @@ void q_filesystemmodel_on_change_persistent_index(void* self, void (*slot)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFileSystemModel* self, QModelIndex* from[], QModelIndex* to[] ```
-void q_filesystemmodel_change_persistent_index_list(void* self, void* from[], void* to[]);
+/// ``` QFileSystemModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to ```
+void q_filesystemmodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFileSystemModel* self, QModelIndex* from[], QModelIndex* to[] ```
-void q_filesystemmodel_qbase_change_persistent_index_list(void* self, void* from[], void* to[]);
+/// ``` QFileSystemModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to ```
+void q_filesystemmodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, QModelIndex*[], QModelIndex*[]) ```
-void q_filesystemmodel_on_change_persistent_index_list(void* self, void (*slot)(void*, void*, void*));
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, libqt_list /* of QModelIndex* */ from , libqt_list /* of QModelIndex* */ to ) ```
+void q_filesystemmodel_on_change_persistent_index_list(void* self, void (*slot)(void*, libqt_list, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2029,12 +2306,16 @@ libqt_list /* of QModelIndex* */ q_filesystemmodel_persistent_index_list(void* s
 
 /// Inherited from QAbstractItemModel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self ```
 libqt_list /* of QModelIndex* */ q_filesystemmodel_qbase_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2052,12 +2333,16 @@ QObject* q_filesystemmodel_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self ```
 QObject* q_filesystemmodel_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2075,12 +2360,16 @@ int32_t q_filesystemmodel_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self ```
 int32_t q_filesystemmodel_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2098,12 +2387,16 @@ int32_t q_filesystemmodel_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, const char* signal ```
 int32_t q_filesystemmodel_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2121,6 +2414,8 @@ bool q_filesystemmodel_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, QMetaMethod* signal ```
@@ -2128,11 +2423,150 @@ bool q_filesystemmodel_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QFileSystemModel* self, bool (*slot)(QFileSystemModel*, QMetaMethod*) ```
 void q_filesystemmodel_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeInserted)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_filesystemmodel_on_rows_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsInserted)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_filesystemmodel_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeRemoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_filesystemmodel_on_rows_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsRemoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_filesystemmodel_on_rows_removed(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeInserted)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_filesystemmodel_on_columns_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsInserted)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_filesystemmodel_on_columns_inserted(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeRemoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_filesystemmodel_on_columns_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsRemoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+void q_filesystemmodel_on_columns_removed(void* self, void (*slot)(void*, void*, int, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelAboutToBeReset)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*) ```
+void q_filesystemmodel_on_model_about_to_be_reset(void* self, void (*slot)(void*));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#modelReset)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*) ```
+void q_filesystemmodel_on_model_reset(void* self, void (*slot)(void*));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsAboutToBeMoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+void q_filesystemmodel_on_rows_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#rowsMoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+void q_filesystemmodel_on_rows_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsAboutToBeMoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+void q_filesystemmodel_on_columns_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+
+/// Inherited from QAbstractItemModel
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnsMoved)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+void q_filesystemmodel_on_columns_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFileSystemModel* self, void (*slot)(QObject*, const char*) ```
+void q_filesystemmodel_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#dtor.QFileSystemModel)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QFileSystemModel* self ```

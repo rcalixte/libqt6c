@@ -1,9 +1,5 @@
-#include "libqabstractaxis.hpp"
 #include "libqabstractseries.hpp"
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqbrush.hpp"
-#include "libqchart.hpp"
 #include "../libqevent.hpp"
 #include "../libqcolor.hpp"
 #include "../libqfont.hpp"
@@ -13,8 +9,6 @@
 #include "../libqpen.hpp"
 #include "../libqpoint.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqareaseries.hpp"
 #include "libqareaseries.h"
@@ -35,7 +29,7 @@ QAreaSeries* q_areaseries_new4(void* upperSeries, void* lowerSeries) {
     return QAreaSeries_new4((QLineSeries*)upperSeries, (QLineSeries*)lowerSeries);
 }
 
-QMetaObject* q_areaseries_meta_object(void* self) {
+const QMetaObject* q_areaseries_meta_object(void* self) {
     return QAreaSeries_MetaObject((QAreaSeries*)self);
 }
 
@@ -411,8 +405,7 @@ const char* q_areaseries_object_name(void* self) {
 }
 
 void q_areaseries_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_areaseries_is_widget_type(void* self) {
@@ -451,7 +444,7 @@ void q_areaseries_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_areaseries_children(void* self) {
+const libqt_list /* of QObject* */ q_areaseries_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -518,7 +511,7 @@ QBindingStorage* q_areaseries_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_areaseries_binding_storage2(void* self) {
+const QBindingStorage* q_areaseries_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -692,6 +685,10 @@ bool q_areaseries_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_areaseries_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QAreaSeries_OnIsSignalConnected((QAreaSeries*)self, (intptr_t)slot);
+}
+
+void q_areaseries_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_areaseries_delete(void* self) {

@@ -93,7 +93,7 @@ const char* q_standardpaths_find_executable2(const char* executableName, const c
     for (size_t _i = 0; _i < paths_len; ++_i) {
         paths_qstr[_i] = qstring(paths[_i]);
     }
-    libqt_list paths_list = qstrlist(paths_qstr, paths_len);
+    libqt_list paths_list = qlist(paths_qstr, paths_len);
     libqt_string _str = QStandardPaths_FindExecutable2(qstring(executableName), paths_list);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

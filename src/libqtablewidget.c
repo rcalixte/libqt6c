@@ -1,52 +1,30 @@
 #include "libqabstractitemdelegate.hpp"
-#include "libqabstractitemmodel.hpp"
 #include "libqabstractitemview.hpp"
 #include "libqabstractscrollarea.hpp"
-#include "libqaction.hpp"
 #include "libqevent.hpp"
-#include "libqanystringview.hpp"
-#include "libqbackingstore.hpp"
-#include "libqbindingstorage.hpp"
-#include "libqbitmap.hpp"
 #include "libqbrush.hpp"
-#include "libqcursor.hpp"
 #include "libqdatastream.hpp"
 #include "libqfont.hpp"
-#include "libqfontinfo.hpp"
-#include "libqfontmetrics.hpp"
 #include "libqframe.hpp"
-#include "libqgraphicseffect.hpp"
-#include "libqgraphicsproxywidget.hpp"
-#include "libqheaderview.hpp"
 #include "libqicon.hpp"
 #include "libqitemselectionmodel.hpp"
-#include "libqkeysequence.hpp"
-#include "libqlayout.hpp"
-#include "libqlocale.hpp"
 #include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
 #include "libqmimedata.hpp"
+#include "libqabstractitemmodel.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
 #include "libqpainter.hpp"
-#include "libqpalette.hpp"
-#include "libqpixmap.hpp"
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
 #include "libqregion.hpp"
-#include "libqscreen.hpp"
-#include "libqscrollbar.hpp"
 #include "libqsize.hpp"
-#include "libqsizepolicy.hpp"
 #include <string.h>
-#include "libqstyle.hpp"
 #include "libqstyleoption.hpp"
 #include "libqtableview.hpp"
-#include "libqthread.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqwindow.hpp"
 #include "libqcoreevent.hpp"
 #include "libqtablewidget.hpp"
 #include "libqtablewidget.h"
@@ -367,7 +345,7 @@ QTableWidget* q_tablewidget_new4(int rows, int columns, void* parent) {
     return QTableWidget_new4(rows, columns, (QWidget*)parent);
 }
 
-QMetaObject* q_tablewidget_meta_object(void* self) {
+const QMetaObject* q_tablewidget_meta_object(void* self) {
     return QTableWidget_MetaObject((QTableWidget*)self);
 }
 
@@ -473,7 +451,7 @@ void q_tablewidget_set_vertical_header_labels(void* self, const char* labels[]) 
     for (size_t _i = 0; _i < labels_len; ++_i) {
         labels_qstr[_i] = qstring(labels[_i]);
     }
-    libqt_list labels_list = qstrlist(labels_qstr, labels_len);
+    libqt_list labels_list = qlist(labels_qstr, labels_len);
     QTableWidget_SetVerticalHeaderLabels((QTableWidget*)self, labels_list);
 }
 
@@ -483,7 +461,7 @@ void q_tablewidget_set_horizontal_header_labels(void* self, const char* labels[]
     for (size_t _i = 0; _i < labels_len; ++_i) {
         labels_qstr[_i] = qstring(labels[_i]);
     }
-    libqt_list labels_list = qstrlist(labels_qstr, labels_len);
+    libqt_list labels_list = qlist(labels_qstr, labels_len);
     QTableWidget_SetHorizontalHeaderLabels((QTableWidget*)self, labels_list);
 }
 
@@ -594,7 +572,7 @@ QRect* q_tablewidget_visual_item_rect(void* self, void* item) {
     return QTableWidget_VisualItemRect((QTableWidget*)self, (QTableWidgetItem*)item);
 }
 
-QTableWidgetItem* q_tablewidget_item_prototype(void* self) {
+const QTableWidgetItem* q_tablewidget_item_prototype(void* self) {
     return QTableWidget_ItemPrototype((QTableWidget*)self);
 }
 
@@ -794,34 +772,16 @@ const char** q_tablewidget_qbase_mime_types(void* self) {
     return _ret;
 }
 
-QMimeData* q_tablewidget_mime_data(void* self, void* items[]) {
-    QTableWidgetItem** items_arr = (QTableWidgetItem**)items;
-    size_t items_len = 0;
-    while (items_arr[items_len] != NULL) {
-        items_len++;
-    }
-    libqt_list items_list = {
-        .len = items_len,
-        .data = {(QTableWidgetItem*)items},
-    };
-    return QTableWidget_MimeData((QTableWidget*)self, items_list);
+QMimeData* q_tablewidget_mime_data(void* self, libqt_list items) {
+    return QTableWidget_MimeData((QTableWidget*)self, items);
 }
 
-void q_tablewidget_on_mime_data(void* self, QMimeData* (*slot)(void*, void*)) {
+void q_tablewidget_on_mime_data(void* self, QMimeData* (*slot)(void*, libqt_list)) {
     QTableWidget_OnMimeData((QTableWidget*)self, (intptr_t)slot);
 }
 
-QMimeData* q_tablewidget_qbase_mime_data(void* self, void* items[]) {
-    QTableWidgetItem** items_arr = (QTableWidgetItem**)items;
-    size_t items_len = 0;
-    while (items_arr[items_len] != NULL) {
-        items_len++;
-    }
-    libqt_list items_list = {
-        .len = items_len,
-        .data = {(QTableWidgetItem*)items},
-    };
-    return QTableWidget_QBaseMimeData((QTableWidget*)self, items_list);
+QMimeData* q_tablewidget_qbase_mime_data(void* self, libqt_list items) {
+    return QTableWidget_QBaseMimeData((QTableWidget*)self, items);
 }
 
 bool q_tablewidget_drop_mime_data(void* self, int row, int column, void* data, int64_t action) {
@@ -1511,7 +1471,7 @@ QRect* q_tablewidget_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_tablewidget_geometry(void* self) {
+const QRect* q_tablewidget_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -1715,7 +1675,7 @@ QWidget* q_tablewidget_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_tablewidget_palette(void* self) {
+const QPalette* q_tablewidget_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -1739,7 +1699,7 @@ int64_t q_tablewidget_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_tablewidget_font(void* self) {
+const QFont* q_tablewidget_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -2340,30 +2300,12 @@ void q_tablewidget_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_tablewidget_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_tablewidget_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_tablewidget_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_tablewidget_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_tablewidget_insert_action(void* self, void* before, void* action) {
@@ -2583,8 +2525,7 @@ const char* q_tablewidget_object_name(void* self) {
 }
 
 void q_tablewidget_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_tablewidget_is_widget_type(void* self) {
@@ -2623,7 +2564,7 @@ void q_tablewidget_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_tablewidget_children(void* self) {
+const libqt_list /* of QObject* */ q_tablewidget_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -2686,7 +2627,7 @@ QBindingStorage* q_tablewidget_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_tablewidget_binding_storage2(void* self) {
+const QBindingStorage* q_tablewidget_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -3140,31 +3081,15 @@ void q_tablewidget_on_select_all(void* self, void (*slot)()) {
     QTableWidget_OnSelectAll((QTableWidget*)self, (intptr_t)slot);
 }
 
-void q_tablewidget_data_changed(void* self, void* topLeft, void* bottomRight, int* roles[]) {
-    size_t roles_len = 0;
-    while (roles[roles_len] != NULL) {
-        roles_len++;
-    }
-    libqt_list roles_list = {
-        .len = roles_len,
-        .data = {(int*)roles},
-    };
-    QTableWidget_DataChanged((QTableWidget*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles_list);
+void q_tablewidget_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles) {
+    QTableWidget_DataChanged((QTableWidget*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_tablewidget_qbase_data_changed(void* self, void* topLeft, void* bottomRight, int* roles[]) {
-    size_t roles_len = 0;
-    while (roles[roles_len] != NULL) {
-        roles_len++;
-    }
-    libqt_list roles_list = {
-        .len = roles_len,
-        .data = {(int*)roles},
-    };
-    QTableWidget_QBaseDataChanged((QTableWidget*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles_list);
+void q_tablewidget_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles) {
+    QTableWidget_QBaseDataChanged((QTableWidget*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_tablewidget_on_data_changed(void* self, void (*slot)(void*, void*, void*, int*)) {
+void q_tablewidget_on_data_changed(void* self, void (*slot)(void*, void*, void*, libqt_list)) {
     QTableWidget_OnDataChanged((QTableWidget*)self, (intptr_t)slot);
 }
 
@@ -4198,6 +4123,10 @@ bool q_tablewidget_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_tablewidget_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QTableWidget_OnIsSignalConnected((QTableWidget*)self, (intptr_t)slot);
+}
+
+void q_tablewidget_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_tablewidget_delete(void* self) {

@@ -386,6 +386,8 @@ void q_painterpath_add_rounded_rect4(void* self, void* rect, double xRadius, dou
 /// ``` QPainterPath* self, double x, double y, double w, double h, double xRadius, double yRadius, enum Qt__SizeMode mode ```
 void q_painterpath_add_rounded_rect7(void* self, double x, double y, double w, double h, double xRadius, double yRadius, int64_t mode);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#dtor.QPainterPath)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPainterPath* self ```
@@ -460,8 +462,8 @@ void q_painterpathstroker_set_dash_pattern(void* self, int64_t dashPattern);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpathstroker.html#setDashPattern)
 ///
-/// ``` QPainterPathStroker* self, double* dashPattern[] ```
-void q_painterpathstroker_set_dash_pattern_with_dash_pattern(void* self, double* dashPattern[]);
+/// ``` QPainterPathStroker* self, libqt_list /* of double */ dashPattern ```
+void q_painterpathstroker_set_dash_pattern_with_dash_pattern(void* self, libqt_list dashPattern);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpathstroker.html#dashPattern)
 ///
@@ -483,6 +485,8 @@ double q_painterpathstroker_dash_offset(void* self);
 /// ``` QPainterPathStroker* self, QPainterPath* path ```
 QPainterPath* q_painterpathstroker_create_stroke(void* self, void* path);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpathstroker.html#dtor.QPainterPathStroker)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPainterPathStroker* self ```
@@ -520,6 +524,8 @@ bool q_painterpath__element_operator_equal(void* self, void* e);
 /// ``` QPainterPath__Element* self, QPainterPath__Element* e ```
 bool q_painterpath__element_operator_not_equal(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath::element.html#dtor.QPainterPath::Element)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPainterPath__Element* self ```

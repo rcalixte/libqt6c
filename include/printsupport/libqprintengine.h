@@ -51,6 +51,8 @@ int64_t q_printengine_printer_state(void* self);
 /// ``` QPrintEngine* self, QPrintEngine* param1 ```
 void q_printengine_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#dtor.QPrintEngine)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPrintEngine* self ```

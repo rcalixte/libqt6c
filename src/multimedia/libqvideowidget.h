@@ -12,43 +12,18 @@
 
 #include "../qtlibc.h"
 
-#include "../libqaction.h"
 #include "../libqevent.h"
-#include "../libqanystringview.h"
-#include "../libqbackingstore.h"
-#include "../libqbindingstorage.h"
-#include "../libqbitmap.h"
-#include "../libqcursor.h"
-#include "../libqfont.h"
-#include "../libqfontinfo.h"
-#include "../libqfontmetrics.h"
-#include "../libqgraphicseffect.h"
-#include "../libqgraphicsproxywidget.h"
-#include "../libqicon.h"
-#include "../libqkeysequence.h"
-#include "../libqlayout.h"
-#include "../libqlocale.h"
-#include "../libqmargins.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include "../libqpaintdevice.h"
 #include "../libqpaintengine.h"
 #include "../libqpainter.h"
-#include "../libqpalette.h"
-#include "../libqpixmap.h"
 #include "../libqpoint.h"
-#include "../libqrect.h"
-#include "../libqregion.h"
-#include "../libqscreen.h"
 #include "../libqsize.h"
-#include "../libqsizepolicy.h"
 #include <string.h>
-#include "../libqstyle.h"
-#include "../libqthread.h"
 #include "../libqvariant.h"
 #include "libqvideosink.h"
 #include "../libqwidget.h"
-#include "../libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qvideowidget.html
 
@@ -65,7 +40,7 @@ QVideoWidget* q_videowidget_new2();
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QVideoWidget* self ```
-QMetaObject* q_videowidget_meta_object(void* self);
+const QMetaObject* q_videowidget_meta_object(void* self);
 
 /// ``` QVideoWidget* self, const char* param1 ```
 void* q_videowidget_metacast(void* self, const char* param1);
@@ -103,11 +78,15 @@ int64_t q_videowidget_aspect_ratio_mode(void* self);
 /// ``` QVideoWidget* self ```
 QSize* q_videowidget_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideowidget.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QVideoWidget* self, QSize* (*slot)() ```
 void q_videowidget_on_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideowidget.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QVideoWidget* self ```
@@ -128,6 +107,8 @@ void q_videowidget_set_aspect_ratio_mode(void* self, int64_t mode);
 /// ``` QVideoWidget* self, bool fullScreen ```
 void q_videowidget_full_screen_changed(void* self, bool fullScreen);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideowidget.html#fullScreenChanged)
+///
 /// ``` QVideoWidget* self, void (*slot)(QVideoWidget*, bool) ```
 void q_videowidget_on_full_screen_changed(void* self, void (*slot)(void*, bool));
 
@@ -136,6 +117,8 @@ void q_videowidget_on_full_screen_changed(void* self, void (*slot)(void*, bool))
 /// ``` QVideoWidget* self, enum Qt__AspectRatioMode mode ```
 void q_videowidget_aspect_ratio_mode_changed(void* self, int64_t mode);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideowidget.html#aspectRatioModeChanged)
+///
 /// ``` QVideoWidget* self, void (*slot)(QVideoWidget*, enum Qt__AspectRatioMode) ```
 void q_videowidget_on_aspect_ratio_mode_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -144,11 +127,15 @@ void q_videowidget_on_aspect_ratio_mode_changed(void* self, void (*slot)(void*, 
 /// ``` QVideoWidget* self, QEvent* event ```
 bool q_videowidget_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideowidget.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QVideoWidget* self, bool (*slot)(QVideoWidget*, QEvent*) ```
 void q_videowidget_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideowidget.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QVideoWidget* self, QEvent* event ```
@@ -159,11 +146,15 @@ bool q_videowidget_qbase_event(void* self, void* event);
 /// ``` QVideoWidget* self, QShowEvent* event ```
 void q_videowidget_show_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideowidget.html#showEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QVideoWidget* self, void (*slot)(QVideoWidget*, QShowEvent*) ```
 void q_videowidget_on_show_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideowidget.html#showEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QVideoWidget* self, QShowEvent* event ```
@@ -174,11 +165,15 @@ void q_videowidget_qbase_show_event(void* self, void* event);
 /// ``` QVideoWidget* self, QHideEvent* event ```
 void q_videowidget_hide_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideowidget.html#hideEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QVideoWidget* self, void (*slot)(QVideoWidget*, QHideEvent*) ```
 void q_videowidget_on_hide_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideowidget.html#hideEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QVideoWidget* self, QHideEvent* event ```
@@ -189,11 +184,15 @@ void q_videowidget_qbase_hide_event(void* self, void* event);
 /// ``` QVideoWidget* self, QResizeEvent* event ```
 void q_videowidget_resize_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideowidget.html#resizeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QVideoWidget* self, void (*slot)(QVideoWidget*, QResizeEvent*) ```
 void q_videowidget_on_resize_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideowidget.html#resizeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QVideoWidget* self, QResizeEvent* event ```
@@ -204,11 +203,15 @@ void q_videowidget_qbase_resize_event(void* self, void* event);
 /// ``` QVideoWidget* self, QMoveEvent* event ```
 void q_videowidget_move_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideowidget.html#moveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QVideoWidget* self, void (*slot)(QVideoWidget*, QMoveEvent*) ```
 void q_videowidget_on_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideowidget.html#moveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QVideoWidget* self, QMoveEvent* event ```
@@ -348,7 +351,7 @@ QRect* q_videowidget_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QVideoWidget* self ```
-QRect* q_videowidget_geometry(void* self);
+const QRect* q_videowidget_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -705,7 +708,7 @@ QWidget* q_videowidget_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QVideoWidget* self ```
-QPalette* q_videowidget_palette(void* self);
+const QPalette* q_videowidget_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -747,7 +750,7 @@ int64_t q_videowidget_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QVideoWidget* self ```
-QFont* q_videowidget_font(void* self);
+const QFont* q_videowidget_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1747,15 +1750,15 @@ void q_videowidget_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QVideoWidget* self, QAction* actions[] ```
-void q_videowidget_add_actions(void* self, void* actions[]);
+/// ``` QVideoWidget* self, libqt_list /* of QAction* */ actions ```
+void q_videowidget_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QVideoWidget* self, QAction* before, QAction* actions[] ```
-void q_videowidget_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QVideoWidget* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_videowidget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -1955,6 +1958,8 @@ void q_videowidget_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QVideoWidget* self, void (*slot)(QWidget*, const char*) ```
 void q_videowidget_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -1966,6 +1971,8 @@ void q_videowidget_on_window_title_changed(void* self, void (*slot)(void*, const
 void q_videowidget_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QVideoWidget* self, void (*slot)(QWidget*, QIcon*) ```
 void q_videowidget_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -1979,6 +1986,8 @@ void q_videowidget_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QVideoWidget* self, void (*slot)(QWidget*, const char*) ```
 void q_videowidget_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -1990,6 +1999,8 @@ void q_videowidget_on_window_icon_text_changed(void* self, void (*slot)(void*, c
 void q_videowidget_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QVideoWidget* self, void (*slot)(QWidget*, QPoint*) ```
 void q_videowidget_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2195,7 +2206,7 @@ void q_videowidget_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QVideoWidget* self ```
-libqt_list /* of QObject* */ q_videowidget_children(void* self);
+const libqt_list /* of QObject* */ q_videowidget_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2286,7 +2297,7 @@ QBindingStorage* q_videowidget_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QVideoWidget* self ```
-QBindingStorage* q_videowidget_binding_storage2(void* self);
+const QBindingStorage* q_videowidget_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2296,6 +2307,8 @@ QBindingStorage* q_videowidget_binding_storage2(void* self);
 void q_videowidget_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QVideoWidget* self, void (*slot)(QObject*) ```
 void q_videowidget_on_destroyed(void* self, void (*slot)(void*));
@@ -2350,6 +2363,8 @@ QMetaObject__Connection* q_videowidget_connect4(void* self, void* sender, const 
 void q_videowidget_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QVideoWidget* self, void (*slot)(QObject*, QObject*) ```
 void q_videowidget_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -2449,12 +2464,16 @@ int32_t q_videowidget_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self ```
 int32_t q_videowidget_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2472,12 +2491,16 @@ void q_videowidget_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, bool visible ```
 void q_videowidget_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2495,12 +2518,16 @@ QSize* q_videowidget_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self ```
 QSize* q_videowidget_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2518,12 +2545,16 @@ int32_t q_videowidget_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, int param1 ```
 int32_t q_videowidget_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2541,12 +2572,16 @@ bool q_videowidget_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self ```
 bool q_videowidget_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2564,12 +2599,16 @@ QPaintEngine* q_videowidget_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self ```
 QPaintEngine* q_videowidget_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2587,12 +2626,16 @@ void q_videowidget_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QMouseEvent* event ```
 void q_videowidget_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2610,12 +2653,16 @@ void q_videowidget_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QMouseEvent* event ```
 void q_videowidget_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2633,12 +2680,16 @@ void q_videowidget_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QMouseEvent* event ```
 void q_videowidget_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2656,12 +2707,16 @@ void q_videowidget_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QMouseEvent* event ```
 void q_videowidget_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2679,12 +2734,16 @@ void q_videowidget_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QWheelEvent* event ```
 void q_videowidget_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2702,12 +2761,16 @@ void q_videowidget_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QKeyEvent* event ```
 void q_videowidget_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2725,12 +2788,16 @@ void q_videowidget_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QKeyEvent* event ```
 void q_videowidget_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2748,12 +2815,16 @@ void q_videowidget_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QFocusEvent* event ```
 void q_videowidget_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2771,12 +2842,16 @@ void q_videowidget_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QFocusEvent* event ```
 void q_videowidget_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2794,12 +2869,16 @@ void q_videowidget_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QEnterEvent* event ```
 void q_videowidget_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2817,12 +2896,16 @@ void q_videowidget_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QEvent* event ```
 void q_videowidget_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2840,12 +2923,16 @@ void q_videowidget_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QPaintEvent* event ```
 void q_videowidget_qbase_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2863,12 +2950,16 @@ void q_videowidget_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QCloseEvent* event ```
 void q_videowidget_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2886,12 +2977,16 @@ void q_videowidget_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QContextMenuEvent* event ```
 void q_videowidget_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2909,12 +3004,16 @@ void q_videowidget_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QTabletEvent* event ```
 void q_videowidget_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2932,12 +3031,16 @@ void q_videowidget_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QActionEvent* event ```
 void q_videowidget_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2955,12 +3058,16 @@ void q_videowidget_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QDragEnterEvent* event ```
 void q_videowidget_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2978,12 +3085,16 @@ void q_videowidget_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QDragMoveEvent* event ```
 void q_videowidget_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3001,12 +3112,16 @@ void q_videowidget_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QDragLeaveEvent* event ```
 void q_videowidget_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3024,12 +3139,16 @@ void q_videowidget_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QDropEvent* event ```
 void q_videowidget_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3047,12 +3166,16 @@ bool q_videowidget_native_event(void* self, const char* eventType, void* message
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, const char* eventType, void* message, intptr_t* result ```
 bool q_videowidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3070,12 +3193,16 @@ void q_videowidget_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QEvent* param1 ```
 void q_videowidget_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3093,12 +3220,16 @@ int32_t q_videowidget_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_videowidget_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3116,12 +3247,16 @@ void q_videowidget_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QPainter* painter ```
 void q_videowidget_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3139,12 +3274,16 @@ QPaintDevice* q_videowidget_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QPoint* offset ```
 QPaintDevice* q_videowidget_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3162,12 +3301,16 @@ QPainter* q_videowidget_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self ```
 QPainter* q_videowidget_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3185,12 +3328,16 @@ void q_videowidget_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QInputMethodEvent* param1 ```
 void q_videowidget_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3208,12 +3355,16 @@ QVariant* q_videowidget_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_videowidget_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3231,12 +3382,16 @@ bool q_videowidget_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, bool next ```
 bool q_videowidget_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3254,12 +3409,16 @@ bool q_videowidget_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QObject* watched, QEvent* event ```
 bool q_videowidget_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3277,12 +3436,16 @@ void q_videowidget_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QTimerEvent* event ```
 void q_videowidget_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3300,12 +3463,16 @@ void q_videowidget_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QChildEvent* event ```
 void q_videowidget_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3323,12 +3490,16 @@ void q_videowidget_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QEvent* event ```
 void q_videowidget_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3346,12 +3517,16 @@ void q_videowidget_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QMetaMethod* signal ```
 void q_videowidget_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3369,12 +3544,16 @@ void q_videowidget_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QMetaMethod* signal ```
 void q_videowidget_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3392,12 +3571,16 @@ void q_videowidget_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self ```
 void q_videowidget_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3415,12 +3598,16 @@ void q_videowidget_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self ```
 void q_videowidget_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3438,12 +3625,16 @@ void q_videowidget_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self ```
 void q_videowidget_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3461,12 +3652,16 @@ bool q_videowidget_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self ```
 bool q_videowidget_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3484,12 +3679,16 @@ bool q_videowidget_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self ```
 bool q_videowidget_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3507,12 +3706,16 @@ QObject* q_videowidget_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self ```
 QObject* q_videowidget_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3530,12 +3733,16 @@ int32_t q_videowidget_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self ```
 int32_t q_videowidget_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3553,12 +3760,16 @@ int32_t q_videowidget_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, const char* signal ```
 int32_t q_videowidget_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3576,6 +3787,8 @@ bool q_videowidget_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, QMetaMethod* signal ```
@@ -3583,11 +3796,24 @@ bool q_videowidget_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QVideoWidget* self, bool (*slot)(QVideoWidget*, QMetaMethod*) ```
 void q_videowidget_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QVideoWidget* self, void (*slot)(QObject*, const char*) ```
+void q_videowidget_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideowidget.html#dtor.QVideoWidget)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QVideoWidget* self ```

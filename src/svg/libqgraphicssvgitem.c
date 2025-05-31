@@ -1,25 +1,15 @@
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
-#include "../libqcursor.hpp"
-#include "../libqgraphicseffect.hpp"
 #include "../libqgraphicsitem.hpp"
-#include "../libqgraphicsscene.hpp"
-#include "../libqgraphicstransform.hpp"
-#include "../libqgraphicswidget.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include "../libqpainter.hpp"
 #include "../libqpainterpath.hpp"
 #include "../libqpoint.hpp"
 #include "../libqrect.hpp"
-#include "../libqregion.hpp"
 #include "../libqsize.hpp"
 #include <string.h>
 #include "../libqstyleoption.hpp"
 #include "libqsvgrenderer.hpp"
-#include "../libqthread.hpp"
-#include "../libqtransform.hpp"
 #include "../libqvariant.hpp"
 #include "../libqwidget.hpp"
 #include "../libqcoreevent.hpp"
@@ -42,7 +32,7 @@ QGraphicsSvgItem* q_graphicssvgitem_new4(const char* fileName, void* parentItem)
     return QGraphicsSvgItem_new4(qstring(fileName), (QGraphicsItem*)parentItem);
 }
 
-QMetaObject* q_graphicssvgitem_meta_object(void* self) {
+const QMetaObject* q_graphicssvgitem_meta_object(void* self) {
     return QGraphicsSvgItem_MetaObject((QGraphicsSvgItem*)self);
 }
 
@@ -270,8 +260,7 @@ const char* q_graphicssvgitem_object_name(void* self) {
 }
 
 void q_graphicssvgitem_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_graphicssvgitem_is_widget_type(void* self) {
@@ -310,7 +299,7 @@ void q_graphicssvgitem_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_graphicssvgitem_children(void* self) {
+const libqt_list /* of QObject* */ q_graphicssvgitem_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -377,7 +366,7 @@ QBindingStorage* q_graphicssvgitem_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_graphicssvgitem_binding_storage2(void* self) {
+const QBindingStorage* q_graphicssvgitem_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -478,7 +467,7 @@ QGraphicsObject* q_graphicssvgitem_to_graphics_object(void* self) {
     return QGraphicsItem_ToGraphicsObject((QGraphicsItem*)self);
 }
 
-QGraphicsObject* q_graphicssvgitem_to_graphics_object2(void* self) {
+const QGraphicsObject* q_graphicssvgitem_to_graphics_object2(void* self) {
     return QGraphicsItem_ToGraphicsObject2((QGraphicsItem*)self);
 }
 
@@ -794,17 +783,8 @@ libqt_list /* of QGraphicsTransform* */ q_graphicssvgitem_transformations(void* 
     return _arr;
 }
 
-void q_graphicssvgitem_set_transformations(void* self, void* transformations[]) {
-    QGraphicsTransform** transformations_arr = (QGraphicsTransform**)transformations;
-    size_t transformations_len = 0;
-    while (transformations_arr[transformations_len] != NULL) {
-        transformations_len++;
-    }
-    libqt_list transformations_list = {
-        .len = transformations_len,
-        .data = {(QGraphicsTransform*)transformations},
-    };
-    QGraphicsItem_SetTransformations((QGraphicsItem*)self, transformations_list);
+void q_graphicssvgitem_set_transformations(void* self, libqt_list transformations) {
+    QGraphicsItem_SetTransformations((QGraphicsItem*)self, transformations);
 }
 
 QPointF* q_graphicssvgitem_transform_origin_point(void* self) {
@@ -1659,6 +1639,10 @@ void q_graphicssvgitem_qbase_prepare_geometry_change(void* self) {
 
 void q_graphicssvgitem_on_prepare_geometry_change(void* self, void (*slot)()) {
     QGraphicsSvgItem_OnPrepareGeometryChange((QGraphicsSvgItem*)self, (intptr_t)slot);
+}
+
+void q_graphicssvgitem_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_graphicssvgitem_delete(void* self) {

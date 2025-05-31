@@ -355,16 +355,8 @@ void q_painterpathstroker_set_dash_pattern(void* self, int64_t dashPattern) {
     QPainterPathStroker_SetDashPattern((QPainterPathStroker*)self, dashPattern);
 }
 
-void q_painterpathstroker_set_dash_pattern_with_dash_pattern(void* self, double* dashPattern[]) {
-    size_t dashPattern_len = 0;
-    while (dashPattern[dashPattern_len] != NULL) {
-        dashPattern_len++;
-    }
-    libqt_list dashPattern_list = {
-        .len = dashPattern_len,
-        .data = {(double*)dashPattern},
-    };
-    QPainterPathStroker_SetDashPatternWithDashPattern((QPainterPathStroker*)self, dashPattern_list);
+void q_painterpathstroker_set_dash_pattern_with_dash_pattern(void* self, libqt_list dashPattern) {
+    QPainterPathStroker_SetDashPatternWithDashPattern((QPainterPathStroker*)self, dashPattern);
 }
 
 libqt_list /* of double */ q_painterpathstroker_dash_pattern(void* self) {

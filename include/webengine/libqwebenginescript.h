@@ -107,6 +107,8 @@ bool q_webenginescript_operator_not_equal(void* self, void* other);
 /// ``` QWebEngineScript* self, QWebEngineScript* other ```
 void q_webenginescript_swap(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#dtor.QWebEngineScript)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWebEngineScript* self ```

@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqiodevice.h"
 #include "libqimage.h"
@@ -22,7 +20,6 @@
 #include "libqrect.h"
 #include "libqsize.h"
 #include <string.h>
-#include "libqthread.h"
 #include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qimageiohandler.html
@@ -62,11 +59,15 @@ char* q_imageiohandler_format(void* self);
 /// ``` QImageIOHandler* self ```
 bool q_imageiohandler_can_read(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#canRead)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImageIOHandler* self, bool (*slot)() ```
 void q_imageiohandler_on_can_read(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#canRead)
+///
 /// Base class method implementation
 ///
 /// ``` QImageIOHandler* self ```
@@ -77,11 +78,15 @@ bool q_imageiohandler_qbase_can_read(void* self);
 /// ``` QImageIOHandler* self, QImage* image ```
 bool q_imageiohandler_read(void* self, void* image);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#read)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImageIOHandler* self, bool (*slot)(QImageIOHandler*, QImage*) ```
 void q_imageiohandler_on_read(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#read)
+///
 /// Base class method implementation
 ///
 /// ``` QImageIOHandler* self, QImage* image ```
@@ -92,11 +97,15 @@ bool q_imageiohandler_qbase_read(void* self, void* image);
 /// ``` QImageIOHandler* self, QImage* image ```
 bool q_imageiohandler_write(void* self, void* image);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#write)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImageIOHandler* self, bool (*slot)(QImageIOHandler*, QImage*) ```
 void q_imageiohandler_on_write(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#write)
+///
 /// Base class method implementation
 ///
 /// ``` QImageIOHandler* self, QImage* image ```
@@ -107,11 +116,15 @@ bool q_imageiohandler_qbase_write(void* self, void* image);
 /// ``` QImageIOHandler* self, enum QImageIOHandler__ImageOption option ```
 QVariant* q_imageiohandler_option(void* self, int64_t option);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#option)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImageIOHandler* self, QVariant* (*slot)(QImageIOHandler*, enum QImageIOHandler__ImageOption) ```
 void q_imageiohandler_on_option(void* self, QVariant* (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#option)
+///
 /// Base class method implementation
 ///
 /// ``` QImageIOHandler* self, enum QImageIOHandler__ImageOption option ```
@@ -122,11 +135,15 @@ QVariant* q_imageiohandler_qbase_option(void* self, int64_t option);
 /// ``` QImageIOHandler* self, enum QImageIOHandler__ImageOption option, QVariant* value ```
 void q_imageiohandler_set_option(void* self, int64_t option, void* value);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#setOption)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImageIOHandler* self, void (*slot)(QImageIOHandler*, enum QImageIOHandler__ImageOption, QVariant*) ```
 void q_imageiohandler_on_set_option(void* self, void (*slot)(void*, int64_t, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#setOption)
+///
 /// Base class method implementation
 ///
 /// ``` QImageIOHandler* self, enum QImageIOHandler__ImageOption option, QVariant* value ```
@@ -137,11 +154,15 @@ void q_imageiohandler_qbase_set_option(void* self, int64_t option, void* value);
 /// ``` QImageIOHandler* self, enum QImageIOHandler__ImageOption option ```
 bool q_imageiohandler_supports_option(void* self, int64_t option);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#supportsOption)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImageIOHandler* self, bool (*slot)(QImageIOHandler*, enum QImageIOHandler__ImageOption) ```
 void q_imageiohandler_on_supports_option(void* self, bool (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#supportsOption)
+///
 /// Base class method implementation
 ///
 /// ``` QImageIOHandler* self, enum QImageIOHandler__ImageOption option ```
@@ -152,11 +173,15 @@ bool q_imageiohandler_qbase_supports_option(void* self, int64_t option);
 /// ``` QImageIOHandler* self ```
 bool q_imageiohandler_jump_to_next_image(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#jumpToNextImage)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImageIOHandler* self, bool (*slot)() ```
 void q_imageiohandler_on_jump_to_next_image(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#jumpToNextImage)
+///
 /// Base class method implementation
 ///
 /// ``` QImageIOHandler* self ```
@@ -167,11 +192,15 @@ bool q_imageiohandler_qbase_jump_to_next_image(void* self);
 /// ``` QImageIOHandler* self, int imageNumber ```
 bool q_imageiohandler_jump_to_image(void* self, int imageNumber);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#jumpToImage)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImageIOHandler* self, bool (*slot)(QImageIOHandler*, int) ```
 void q_imageiohandler_on_jump_to_image(void* self, bool (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#jumpToImage)
+///
 /// Base class method implementation
 ///
 /// ``` QImageIOHandler* self, int imageNumber ```
@@ -182,11 +211,15 @@ bool q_imageiohandler_qbase_jump_to_image(void* self, int imageNumber);
 /// ``` QImageIOHandler* self ```
 int32_t q_imageiohandler_loop_count(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#loopCount)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImageIOHandler* self, int32_t (*slot)() ```
 void q_imageiohandler_on_loop_count(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#loopCount)
+///
 /// Base class method implementation
 ///
 /// ``` QImageIOHandler* self ```
@@ -197,11 +230,15 @@ int32_t q_imageiohandler_qbase_loop_count(void* self);
 /// ``` QImageIOHandler* self ```
 int32_t q_imageiohandler_image_count(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#imageCount)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImageIOHandler* self, int32_t (*slot)() ```
 void q_imageiohandler_on_image_count(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#imageCount)
+///
 /// Base class method implementation
 ///
 /// ``` QImageIOHandler* self ```
@@ -212,11 +249,15 @@ int32_t q_imageiohandler_qbase_image_count(void* self);
 /// ``` QImageIOHandler* self ```
 int32_t q_imageiohandler_next_image_delay(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#nextImageDelay)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImageIOHandler* self, int32_t (*slot)() ```
 void q_imageiohandler_on_next_image_delay(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#nextImageDelay)
+///
 /// Base class method implementation
 ///
 /// ``` QImageIOHandler* self ```
@@ -227,11 +268,15 @@ int32_t q_imageiohandler_qbase_next_image_delay(void* self);
 /// ``` QImageIOHandler* self ```
 int32_t q_imageiohandler_current_image_number(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#currentImageNumber)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImageIOHandler* self, int32_t (*slot)() ```
 void q_imageiohandler_on_current_image_number(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#currentImageNumber)
+///
 /// Base class method implementation
 ///
 /// ``` QImageIOHandler* self ```
@@ -242,11 +287,15 @@ int32_t q_imageiohandler_qbase_current_image_number(void* self);
 /// ``` QImageIOHandler* self ```
 QRect* q_imageiohandler_current_image_rect(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#currentImageRect)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImageIOHandler* self, QRect* (*slot)() ```
 void q_imageiohandler_on_current_image_rect(void* self, QRect* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#currentImageRect)
+///
 /// Base class method implementation
 ///
 /// ``` QImageIOHandler* self ```
@@ -257,6 +306,8 @@ QRect* q_imageiohandler_qbase_current_image_rect(void* self);
 /// ``` QSize* size, enum QImage__Format format, QImage* image ```
 bool q_imageiohandler_allocate_image(void* size, int64_t format, void* image);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageiohandler.html#dtor.QImageIOHandler)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QImageIOHandler* self ```
@@ -277,7 +328,7 @@ QImageIOPlugin* q_imageioplugin_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QImageIOPlugin* self ```
-QMetaObject* q_imageioplugin_meta_object(void* self);
+const QMetaObject* q_imageioplugin_meta_object(void* self);
 
 /// ``` QImageIOPlugin* self, const char* param1 ```
 void* q_imageioplugin_metacast(void* self, const char* param1);
@@ -305,11 +356,15 @@ const char* q_imageioplugin_tr(const char* s);
 /// ``` QImageIOPlugin* self, QIODevice* device, const char* format ```
 int64_t q_imageioplugin_capabilities(void* self, void* device, const char* format);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageioplugin.html#capabilities)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImageIOPlugin* self, int64_t (*slot)(QImageIOPlugin*, QIODevice*, const char*) ```
 void q_imageioplugin_on_capabilities(void* self, int64_t (*slot)(void*, void*, const char*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageioplugin.html#capabilities)
+///
 /// Base class method implementation
 ///
 /// ``` QImageIOPlugin* self, QIODevice* device, const char* format ```
@@ -320,11 +375,15 @@ int64_t q_imageioplugin_qbase_capabilities(void* self, void* device, const char*
 /// ``` QImageIOPlugin* self, QIODevice* device, const char* format ```
 QImageIOHandler* q_imageioplugin_create(void* self, void* device, const char* format);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageioplugin.html#create)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImageIOPlugin* self, QImageIOHandler* (*slot)(QImageIOPlugin*, QIODevice*, const char*) ```
 void q_imageioplugin_on_create(void* self, QImageIOHandler* (*slot)(void*, void*, const char*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageioplugin.html#create)
+///
 /// Base class method implementation
 ///
 /// ``` QImageIOPlugin* self, QIODevice* device, const char* format ```
@@ -422,7 +481,7 @@ void q_imageioplugin_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QImageIOPlugin* self ```
-libqt_list /* of QObject* */ q_imageioplugin_children(void* self);
+const libqt_list /* of QObject* */ q_imageioplugin_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -520,7 +579,7 @@ QBindingStorage* q_imageioplugin_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QImageIOPlugin* self ```
-QBindingStorage* q_imageioplugin_binding_storage2(void* self);
+const QBindingStorage* q_imageioplugin_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -530,6 +589,8 @@ QBindingStorage* q_imageioplugin_binding_storage2(void* self);
 void q_imageioplugin_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QImageIOPlugin* self, void (*slot)(QObject*) ```
 void q_imageioplugin_on_destroyed(void* self, void (*slot)(void*));
@@ -585,6 +646,8 @@ void q_imageioplugin_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QImageIOPlugin* self, void (*slot)(QObject*, QObject*) ```
 void q_imageioplugin_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -599,12 +662,16 @@ bool q_imageioplugin_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageIOPlugin* self, QEvent* event ```
 bool q_imageioplugin_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -622,12 +689,16 @@ bool q_imageioplugin_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageIOPlugin* self, QObject* watched, QEvent* event ```
 bool q_imageioplugin_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -645,12 +716,16 @@ void q_imageioplugin_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageIOPlugin* self, QTimerEvent* event ```
 void q_imageioplugin_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -668,12 +743,16 @@ void q_imageioplugin_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageIOPlugin* self, QChildEvent* event ```
 void q_imageioplugin_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -691,12 +770,16 @@ void q_imageioplugin_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageIOPlugin* self, QEvent* event ```
 void q_imageioplugin_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -714,12 +797,16 @@ void q_imageioplugin_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageIOPlugin* self, QMetaMethod* signal ```
 void q_imageioplugin_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -737,12 +824,16 @@ void q_imageioplugin_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageIOPlugin* self, QMetaMethod* signal ```
 void q_imageioplugin_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -760,12 +851,16 @@ QObject* q_imageioplugin_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageIOPlugin* self ```
 QObject* q_imageioplugin_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -783,12 +878,16 @@ int32_t q_imageioplugin_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageIOPlugin* self ```
 int32_t q_imageioplugin_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -806,12 +905,16 @@ int32_t q_imageioplugin_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageIOPlugin* self, const char* signal ```
 int32_t q_imageioplugin_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -829,6 +932,8 @@ bool q_imageioplugin_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImageIOPlugin* self, QMetaMethod* signal ```
@@ -836,11 +941,24 @@ bool q_imageioplugin_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QImageIOPlugin* self, bool (*slot)(QImageIOPlugin*, QMetaMethod*) ```
 void q_imageioplugin_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QImageIOPlugin* self, void (*slot)(QObject*, const char*) ```
+void q_imageioplugin_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qimageioplugin.html#dtor.QImageIOPlugin)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QImageIOPlugin* self ```

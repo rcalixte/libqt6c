@@ -272,6 +272,8 @@ void q_datastream_abort_transaction(void* self);
 /// ``` QDataStream* self ```
 bool q_datastream_is_device_transaction_started(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatastream.html#dtor.QDataStream)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QDataStream* self ```

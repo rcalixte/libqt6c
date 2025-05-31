@@ -15,25 +15,17 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
 typedef struct QAbstractEventDispatcher QAbstractEventDispatcher;
 typedef struct QAbstractNativeEventFilter QAbstractNativeEventFilter;
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QCoreApplication QCoreApplication;
 typedef struct QEvent QEvent;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
 typedef struct QTranslator QTranslator;
-typedef struct QVariant QVariant;
 #endif
 
 QCoreApplication* QCoreApplication_new(int* argc, char** argv);
@@ -145,6 +137,7 @@ int QCoreApplication_QBaseReceivers(const QCoreApplication* self, const char* si
 bool QCoreApplication_IsSignalConnected(const QCoreApplication* self, QMetaMethod* signal);
 void QCoreApplication_OnIsSignalConnected(const QCoreApplication* self, intptr_t slot);
 bool QCoreApplication_QBaseIsSignalConnected(const QCoreApplication* self, QMetaMethod* signal);
+void QCoreApplication_Connect_AboutToQuit(QCoreApplication* self, intptr_t slot);
 void QCoreApplication_Delete(QCoreApplication* self);
 
 #ifdef __cplusplus

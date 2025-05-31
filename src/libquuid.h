@@ -153,6 +153,8 @@ const char* q_uuid_to_string1(void* self, int64_t mode);
 /// ``` QUuid* self, enum QUuid__StringFormat mode ```
 char* q_uuid_to_byte_array1(void* self, int64_t mode);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#dtor.QUuid)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QUuid* self ```

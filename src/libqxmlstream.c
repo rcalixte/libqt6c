@@ -264,17 +264,8 @@ void q_xmlstreamreader_add_extra_namespace_declaration(void* self, void* extraNa
     QXmlStreamReader_AddExtraNamespaceDeclaration((QXmlStreamReader*)self, (QXmlStreamNamespaceDeclaration*)extraNamespaceDeclaraction);
 }
 
-void q_xmlstreamreader_add_extra_namespace_declarations(void* self, void* extraNamespaceDeclaractions[]) {
-    QXmlStreamNamespaceDeclaration** extraNamespaceDeclaractions_arr = (QXmlStreamNamespaceDeclaration**)extraNamespaceDeclaractions;
-    size_t extraNamespaceDeclaractions_len = 0;
-    while (extraNamespaceDeclaractions_arr[extraNamespaceDeclaractions_len] != NULL) {
-        extraNamespaceDeclaractions_len++;
-    }
-    libqt_list extraNamespaceDeclaractions_list = {
-        .len = extraNamespaceDeclaractions_len,
-        .data = {(QXmlStreamNamespaceDeclaration*)extraNamespaceDeclaractions},
-    };
-    QXmlStreamReader_AddExtraNamespaceDeclarations((QXmlStreamReader*)self, extraNamespaceDeclaractions_list);
+void q_xmlstreamreader_add_extra_namespace_declarations(void* self, libqt_list extraNamespaceDeclaractions) {
+    QXmlStreamReader_AddExtraNamespaceDeclarations((QXmlStreamReader*)self, extraNamespaceDeclaractions);
 }
 
 libqt_list /* of QXmlStreamNotationDeclaration* */ q_xmlstreamreader_notation_declarations(void* self) {

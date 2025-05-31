@@ -344,156 +344,174 @@ void QPixmap_Scroll4(QPixmap* self, int dx, int dy, QRect* rect, QRegion* expose
 
 // Derived class handler implementation
 int QPixmap_DevType(const QPixmap* self) {
-    if (auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self))) {
+    auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self));
+    if (vqpixmap && vqpixmap->isVirtualQPixmap) {
         return vqpixmap->devType();
     } else {
-        return vqpixmap->devType();
+        return self->QPixmap::devType();
     }
 }
 
 // Base class handler implementation
 int QPixmap_QBaseDevType(const QPixmap* self) {
-    if (auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self))) {
+    auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self));
+    if (vqpixmap && vqpixmap->isVirtualQPixmap) {
         vqpixmap->setQPixmap_DevType_IsBase(true);
         return vqpixmap->devType();
     } else {
-        return vqpixmap->devType();
+        return self->QPixmap::devType();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QPixmap_OnDevType(const QPixmap* self, intptr_t slot) {
-    if (auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self))) {
+    auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self));
+    if (vqpixmap && vqpixmap->isVirtualQPixmap) {
         vqpixmap->setQPixmap_DevType_Callback(reinterpret_cast<VirtualQPixmap::QPixmap_DevType_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 QPaintEngine* QPixmap_PaintEngine(const QPixmap* self) {
-    if (auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self))) {
+    auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self));
+    if (vqpixmap && vqpixmap->isVirtualQPixmap) {
         return vqpixmap->paintEngine();
     } else {
-        return vqpixmap->paintEngine();
+        return self->QPixmap::paintEngine();
     }
 }
 
 // Base class handler implementation
 QPaintEngine* QPixmap_QBasePaintEngine(const QPixmap* self) {
-    if (auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self))) {
+    auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self));
+    if (vqpixmap && vqpixmap->isVirtualQPixmap) {
         vqpixmap->setQPixmap_PaintEngine_IsBase(true);
         return vqpixmap->paintEngine();
     } else {
-        return vqpixmap->paintEngine();
+        return self->QPixmap::paintEngine();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QPixmap_OnPaintEngine(const QPixmap* self, intptr_t slot) {
-    if (auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self))) {
+    auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self));
+    if (vqpixmap && vqpixmap->isVirtualQPixmap) {
         vqpixmap->setQPixmap_PaintEngine_Callback(reinterpret_cast<VirtualQPixmap::QPixmap_PaintEngine_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 int QPixmap_Metric(const QPixmap* self, int param1) {
-    if (auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self))) {
+    auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self));
+    if (vqpixmap && vqpixmap->isVirtualQPixmap) {
         return vqpixmap->metric(static_cast<QPaintDevice::PaintDeviceMetric>(param1));
     } else {
-        return vqpixmap->metric(static_cast<QPaintDevice::PaintDeviceMetric>(param1));
+        return ((VirtualQPixmap*)self)->metric(static_cast<QPaintDevice::PaintDeviceMetric>(param1));
     }
 }
 
 // Base class handler implementation
 int QPixmap_QBaseMetric(const QPixmap* self, int param1) {
-    if (auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self))) {
+    auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self));
+    if (vqpixmap && vqpixmap->isVirtualQPixmap) {
         vqpixmap->setQPixmap_Metric_IsBase(true);
         return vqpixmap->metric(static_cast<QPaintDevice::PaintDeviceMetric>(param1));
     } else {
-        return vqpixmap->metric(static_cast<QPaintDevice::PaintDeviceMetric>(param1));
+        return ((VirtualQPixmap*)self)->metric(static_cast<QPaintDevice::PaintDeviceMetric>(param1));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QPixmap_OnMetric(const QPixmap* self, intptr_t slot) {
-    if (auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self))) {
+    auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self));
+    if (vqpixmap && vqpixmap->isVirtualQPixmap) {
         vqpixmap->setQPixmap_Metric_Callback(reinterpret_cast<VirtualQPixmap::QPixmap_Metric_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QPixmap_InitPainter(const QPixmap* self, QPainter* painter) {
-    if (auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self))) {
+    auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self));
+    if (vqpixmap && vqpixmap->isVirtualQPixmap) {
         vqpixmap->initPainter(painter);
     } else {
-        vqpixmap->initPainter(painter);
+        ((VirtualQPixmap*)self)->initPainter(painter);
     }
 }
 
 // Base class handler implementation
 void QPixmap_QBaseInitPainter(const QPixmap* self, QPainter* painter) {
-    if (auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self))) {
+    auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self));
+    if (vqpixmap && vqpixmap->isVirtualQPixmap) {
         vqpixmap->setQPixmap_InitPainter_IsBase(true);
         vqpixmap->initPainter(painter);
     } else {
-        vqpixmap->initPainter(painter);
+        ((VirtualQPixmap*)self)->initPainter(painter);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QPixmap_OnInitPainter(const QPixmap* self, intptr_t slot) {
-    if (auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self))) {
+    auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self));
+    if (vqpixmap && vqpixmap->isVirtualQPixmap) {
         vqpixmap->setQPixmap_InitPainter_Callback(reinterpret_cast<VirtualQPixmap::QPixmap_InitPainter_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 QPaintDevice* QPixmap_Redirected(const QPixmap* self, QPoint* offset) {
-    if (auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self))) {
+    auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self));
+    if (vqpixmap && vqpixmap->isVirtualQPixmap) {
         return vqpixmap->redirected(offset);
     } else {
-        return vqpixmap->redirected(offset);
+        return ((VirtualQPixmap*)self)->redirected(offset);
     }
 }
 
 // Base class handler implementation
 QPaintDevice* QPixmap_QBaseRedirected(const QPixmap* self, QPoint* offset) {
-    if (auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self))) {
+    auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self));
+    if (vqpixmap && vqpixmap->isVirtualQPixmap) {
         vqpixmap->setQPixmap_Redirected_IsBase(true);
         return vqpixmap->redirected(offset);
     } else {
-        return vqpixmap->redirected(offset);
+        return ((VirtualQPixmap*)self)->redirected(offset);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QPixmap_OnRedirected(const QPixmap* self, intptr_t slot) {
-    if (auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self))) {
+    auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self));
+    if (vqpixmap && vqpixmap->isVirtualQPixmap) {
         vqpixmap->setQPixmap_Redirected_Callback(reinterpret_cast<VirtualQPixmap::QPixmap_Redirected_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 QPainter* QPixmap_SharedPainter(const QPixmap* self) {
-    if (auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self))) {
+    auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self));
+    if (vqpixmap && vqpixmap->isVirtualQPixmap) {
         return vqpixmap->sharedPainter();
     } else {
-        return vqpixmap->sharedPainter();
+        return ((VirtualQPixmap*)self)->sharedPainter();
     }
 }
 
 // Base class handler implementation
 QPainter* QPixmap_QBaseSharedPainter(const QPixmap* self) {
-    if (auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self))) {
+    auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self));
+    if (vqpixmap && vqpixmap->isVirtualQPixmap) {
         vqpixmap->setQPixmap_SharedPainter_IsBase(true);
         return vqpixmap->sharedPainter();
     } else {
-        return vqpixmap->sharedPainter();
+        return ((VirtualQPixmap*)self)->sharedPainter();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QPixmap_OnSharedPainter(const QPixmap* self, intptr_t slot) {
-    if (auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self))) {
+    auto* vqpixmap = const_cast<VirtualQPixmap*>(dynamic_cast<const VirtualQPixmap*>(self));
+    if (vqpixmap && vqpixmap->isVirtualQPixmap) {
         vqpixmap->setQPixmap_SharedPainter_Callback(reinterpret_cast<VirtualQPixmap::QPixmap_SharedPainter_Callback>(slot));
     }
 }

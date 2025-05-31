@@ -183,6 +183,8 @@ QJsonObject__iterator* q_jsonobject_insert(void* self, const char* key, void* va
 /// ``` QJsonObject* self ```
 bool q_jsonobject_empty(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject.html#dtor.QJsonObject)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QJsonObject* self ```
@@ -233,7 +235,7 @@ QJsonValueRef* q_jsonobject__iterator_operator_multiply(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject__iterator.html#operator->)
 ///
 /// ``` QJsonObject__iterator* self ```
-QJsonValueConstRef* q_jsonobject__iterator_operator_minus_greater(void* self);
+const QJsonValueConstRef* q_jsonobject__iterator_operator_minus_greater(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject__iterator.html#operator->)
 ///
@@ -350,6 +352,8 @@ bool q_jsonobject__iterator_operator_greater_with_other(void* self, void* other)
 /// ``` QJsonObject__iterator* self, QJsonObject__const_iterator* other ```
 bool q_jsonobject__iterator_operator_greater_or_equal_with_other(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject::iterator.html#dtor.QJsonObject::iterator)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QJsonObject__iterator* self ```
@@ -400,12 +404,12 @@ QJsonValueConstRef* q_jsonobject__const_iterator_value(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject__const_iterator.html#operator*)
 ///
 /// ``` QJsonObject__const_iterator* self ```
-QJsonValueConstRef* q_jsonobject__const_iterator_operator_multiply(void* self);
+const QJsonValueConstRef* q_jsonobject__const_iterator_operator_multiply(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject__const_iterator.html#operator->)
 ///
 /// ``` QJsonObject__const_iterator* self ```
-QJsonValueConstRef* q_jsonobject__const_iterator_operator_minus_greater(void* self);
+const QJsonValueConstRef* q_jsonobject__const_iterator_operator_minus_greater(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject__const_iterator.html#operator[])
 ///
@@ -517,6 +521,8 @@ bool q_jsonobject__const_iterator_operator_greater_with_other(void* self, void* 
 /// ``` QJsonObject__const_iterator* self, QJsonObject__iterator* other ```
 bool q_jsonobject__const_iterator_operator_greater_or_equal_with_other(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject::const_iterator.html#dtor.QJsonObject::const_iterator)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QJsonObject__const_iterator* self ```

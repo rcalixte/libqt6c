@@ -58,7 +58,7 @@ int64_t q_metatype_type_flags(int typeVal) {
     return QMetaType_TypeFlags(typeVal);
 }
 
-QMetaObject* q_metatype_meta_object_for_type(int typeVal) {
+const QMetaObject* q_metatype_meta_object_for_type(int typeVal) {
     return QMetaType_MetaObjectForType(typeVal);
 }
 
@@ -106,7 +106,7 @@ int64_t q_metatype_flags(void* self) {
     return QMetaType_Flags((QMetaType*)self);
 }
 
-QMetaObject* q_metatype_meta_object(void* self) {
+const QMetaObject* q_metatype_meta_object(void* self) {
     return QMetaType_MetaObject((QMetaType*)self);
 }
 

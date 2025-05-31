@@ -1,24 +1,14 @@
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
-#include "../libqcursor.hpp"
-#include "../libqgraphicseffect.hpp"
 #include "../libqgraphicsitem.hpp"
-#include "../libqgraphicsscene.hpp"
-#include "../libqgraphicstransform.hpp"
-#include "../libqgraphicswidget.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include "../libqpainter.hpp"
 #include "../libqpainterpath.hpp"
 #include "../libqpoint.hpp"
 #include "../libqrect.hpp"
-#include "../libqregion.hpp"
 #include "../libqsize.hpp"
 #include <string.h>
 #include "../libqstyleoption.hpp"
-#include "../libqthread.hpp"
-#include "../libqtransform.hpp"
 #include "../libqvariant.hpp"
 #include "libqvideosink.hpp"
 #include "../libqwidget.hpp"
@@ -34,7 +24,7 @@ QGraphicsVideoItem* q_graphicsvideoitem_new2(void* parent) {
     return QGraphicsVideoItem_new2((QGraphicsItem*)parent);
 }
 
-QMetaObject* q_graphicsvideoitem_meta_object(void* self) {
+const QMetaObject* q_graphicsvideoitem_meta_object(void* self) {
     return QGraphicsVideoItem_MetaObject((QGraphicsVideoItem*)self);
 }
 
@@ -291,8 +281,7 @@ const char* q_graphicsvideoitem_object_name(void* self) {
 }
 
 void q_graphicsvideoitem_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_graphicsvideoitem_is_widget_type(void* self) {
@@ -331,7 +320,7 @@ void q_graphicsvideoitem_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_graphicsvideoitem_children(void* self) {
+const libqt_list /* of QObject* */ q_graphicsvideoitem_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -398,7 +387,7 @@ QBindingStorage* q_graphicsvideoitem_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_graphicsvideoitem_binding_storage2(void* self) {
+const QBindingStorage* q_graphicsvideoitem_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -499,7 +488,7 @@ QGraphicsObject* q_graphicsvideoitem_to_graphics_object(void* self) {
     return QGraphicsItem_ToGraphicsObject((QGraphicsItem*)self);
 }
 
-QGraphicsObject* q_graphicsvideoitem_to_graphics_object2(void* self) {
+const QGraphicsObject* q_graphicsvideoitem_to_graphics_object2(void* self) {
     return QGraphicsItem_ToGraphicsObject2((QGraphicsItem*)self);
 }
 
@@ -815,17 +804,8 @@ libqt_list /* of QGraphicsTransform* */ q_graphicsvideoitem_transformations(void
     return _arr;
 }
 
-void q_graphicsvideoitem_set_transformations(void* self, void* transformations[]) {
-    QGraphicsTransform** transformations_arr = (QGraphicsTransform**)transformations;
-    size_t transformations_len = 0;
-    while (transformations_arr[transformations_len] != NULL) {
-        transformations_len++;
-    }
-    libqt_list transformations_list = {
-        .len = transformations_len,
-        .data = {(QGraphicsTransform*)transformations},
-    };
-    QGraphicsItem_SetTransformations((QGraphicsItem*)self, transformations_list);
+void q_graphicsvideoitem_set_transformations(void* self, libqt_list transformations) {
+    QGraphicsItem_SetTransformations((QGraphicsItem*)self, transformations);
 }
 
 QPointF* q_graphicsvideoitem_transform_origin_point(void* self) {
@@ -1656,6 +1636,10 @@ void q_graphicsvideoitem_qbase_prepare_geometry_change(void* self) {
 
 void q_graphicsvideoitem_on_prepare_geometry_change(void* self, void (*slot)()) {
     QGraphicsVideoItem_OnPrepareGeometryChange((QGraphicsVideoItem*)self, (intptr_t)slot);
+}
+
+void q_graphicsvideoitem_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_graphicsvideoitem_delete(void* self) {

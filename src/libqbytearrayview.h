@@ -409,6 +409,8 @@ int64_t q_bytearrayview_last_index_of22(void* self, char ch, int64_t from);
 /// ``` QByteArrayView* self, const char* a, enum Qt__CaseSensitivity cs ```
 int32_t q_bytearrayview_compare2(void* self, const char* a, int64_t cs);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#dtor.QByteArrayView)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QByteArrayView* self ```

@@ -21,6 +21,8 @@
 ///
 unsigned char q_pluginmetadata_arch_requirements();
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpluginmetadata.html#dtor.QPluginMetaData)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPluginMetaData* self ```
@@ -53,6 +55,8 @@ void q_staticplugin_move_assign(void* self, void* other);
 /// ``` QStaticPlugin* self ```
 QJsonObject* q_staticplugin_meta_data(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstaticplugin.html#dtor.QStaticPlugin)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStaticPlugin* self ```
@@ -85,6 +89,8 @@ void q_pluginmetadata__header_copy_assign(void* self, void* other);
 /// ``` QPluginMetaData__Header* self, QPluginMetaData__Header* other ```
 void q_pluginmetadata__header_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpluginmetadata::header.html#dtor.QPluginMetaData::Header)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPluginMetaData__Header* self ```
@@ -117,6 +123,8 @@ void q_pluginmetadata__magicheader_copy_assign(void* self, void* other);
 /// ``` QPluginMetaData__MagicHeader* self, QPluginMetaData__MagicHeader* other ```
 void q_pluginmetadata__magicheader_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpluginmetadata::magicheader.html#dtor.QPluginMetaData::MagicHeader)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPluginMetaData__MagicHeader* self ```
@@ -154,6 +162,8 @@ void q_pluginmetadata__elfnoteheader_copy_assign(void* self, void* other);
 /// ``` QPluginMetaData__ElfNoteHeader* self, QPluginMetaData__ElfNoteHeader* other ```
 void q_pluginmetadata__elfnoteheader_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpluginmetadata::elfnoteheader.html#dtor.QPluginMetaData::ElfNoteHeader)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPluginMetaData__ElfNoteHeader* self ```

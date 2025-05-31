@@ -12,44 +12,19 @@
 
 #include "../qtlibc.h"
 
-#include "../libqaction.h"
 #include "../libqevent.h"
-#include "../libqanystringview.h"
-#include "../libqbackingstore.h"
-#include "../libqbindingstorage.h"
-#include "../libqbitmap.h"
-#include "../libqcursor.h"
 #include "../libqdialog.h"
-#include "../libqfont.h"
-#include "../libqfontinfo.h"
-#include "../libqfontmetrics.h"
-#include "../libqgraphicseffect.h"
-#include "../libqgraphicsproxywidget.h"
-#include "../libqicon.h"
-#include "../libqkeysequence.h"
-#include "../libqlayout.h"
-#include "../libqlocale.h"
-#include "../libqmargins.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include "../libqpaintdevice.h"
 #include "../libqpaintengine.h"
 #include "../libqpainter.h"
-#include "../libqpalette.h"
-#include "../libqpixmap.h"
 #include "../libqpoint.h"
 #include "libqprinter.h"
-#include "../libqrect.h"
-#include "../libqregion.h"
-#include "../libqscreen.h"
 #include "../libqsize.h"
-#include "../libqsizepolicy.h"
 #include <string.h>
-#include "../libqstyle.h"
-#include "../libqthread.h"
 #include "../libqvariant.h"
 #include "../libqwidget.h"
-#include "../libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qpagesetupdialog.html
 
@@ -76,7 +51,7 @@ QPageSetupDialog* q_pagesetupdialog_new4(void* printer, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QPageSetupDialog* self ```
-QMetaObject* q_pagesetupdialog_meta_object(void* self);
+const QMetaObject* q_pagesetupdialog_meta_object(void* self);
 
 /// ``` QPageSetupDialog* self, const char* param1 ```
 void* q_pagesetupdialog_metacast(void* self, const char* param1);
@@ -104,11 +79,15 @@ const char* q_pagesetupdialog_tr(const char* s);
 /// ``` QPageSetupDialog* self ```
 int32_t q_pagesetupdialog_exec(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagesetupdialog.html#exec)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPageSetupDialog* self, int32_t (*slot)() ```
 void q_pagesetupdialog_on_exec(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagesetupdialog.html#exec)
+///
 /// Base class method implementation
 ///
 /// ``` QPageSetupDialog* self ```
@@ -119,11 +98,15 @@ int32_t q_pagesetupdialog_qbase_exec(void* self);
 /// ``` QPageSetupDialog* self, int result ```
 void q_pagesetupdialog_done(void* self, int result);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagesetupdialog.html#done)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPageSetupDialog* self, void (*slot)(QPageSetupDialog*, int) ```
 void q_pagesetupdialog_on_done(void* self, void (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagesetupdialog.html#done)
+///
 /// Base class method implementation
 ///
 /// ``` QPageSetupDialog* self, int result ```
@@ -188,6 +171,8 @@ void q_pagesetupdialog_finished(void* self, int result);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
+///
 /// ``` QPageSetupDialog* self, void (*slot)(QDialog*, int) ```
 void q_pagesetupdialog_on_finished(void* self, void (*slot)(void*, int));
 
@@ -200,6 +185,8 @@ void q_pagesetupdialog_accepted(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
+///
 /// ``` QPageSetupDialog* self, void (*slot)(QDialog*) ```
 void q_pagesetupdialog_on_accepted(void* self, void (*slot)(void*));
 
@@ -211,6 +198,8 @@ void q_pagesetupdialog_on_accepted(void* self, void (*slot)(void*));
 void q_pagesetupdialog_rejected(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
 /// ``` QPageSetupDialog* self, void (*slot)(QDialog*) ```
 void q_pagesetupdialog_on_rejected(void* self, void (*slot)(void*));
@@ -339,7 +328,7 @@ QRect* q_pagesetupdialog_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QPageSetupDialog* self ```
-QRect* q_pagesetupdialog_geometry(void* self);
+const QRect* q_pagesetupdialog_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -696,7 +685,7 @@ QWidget* q_pagesetupdialog_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QPageSetupDialog* self ```
-QPalette* q_pagesetupdialog_palette(void* self);
+const QPalette* q_pagesetupdialog_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -738,7 +727,7 @@ int64_t q_pagesetupdialog_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QPageSetupDialog* self ```
-QFont* q_pagesetupdialog_font(void* self);
+const QFont* q_pagesetupdialog_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1738,15 +1727,15 @@ void q_pagesetupdialog_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QPageSetupDialog* self, QAction* actions[] ```
-void q_pagesetupdialog_add_actions(void* self, void* actions[]);
+/// ``` QPageSetupDialog* self, libqt_list /* of QAction* */ actions ```
+void q_pagesetupdialog_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QPageSetupDialog* self, QAction* before, QAction* actions[] ```
-void q_pagesetupdialog_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QPageSetupDialog* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_pagesetupdialog_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -1946,6 +1935,8 @@ void q_pagesetupdialog_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QPageSetupDialog* self, void (*slot)(QWidget*, const char*) ```
 void q_pagesetupdialog_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -1957,6 +1948,8 @@ void q_pagesetupdialog_on_window_title_changed(void* self, void (*slot)(void*, c
 void q_pagesetupdialog_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QPageSetupDialog* self, void (*slot)(QWidget*, QIcon*) ```
 void q_pagesetupdialog_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -1970,6 +1963,8 @@ void q_pagesetupdialog_window_icon_text_changed(void* self, const char* iconText
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QPageSetupDialog* self, void (*slot)(QWidget*, const char*) ```
 void q_pagesetupdialog_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -1981,6 +1976,8 @@ void q_pagesetupdialog_on_window_icon_text_changed(void* self, void (*slot)(void
 void q_pagesetupdialog_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QPageSetupDialog* self, void (*slot)(QWidget*, QPoint*) ```
 void q_pagesetupdialog_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2186,7 +2183,7 @@ void q_pagesetupdialog_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QPageSetupDialog* self ```
-libqt_list /* of QObject* */ q_pagesetupdialog_children(void* self);
+const libqt_list /* of QObject* */ q_pagesetupdialog_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2277,7 +2274,7 @@ QBindingStorage* q_pagesetupdialog_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QPageSetupDialog* self ```
-QBindingStorage* q_pagesetupdialog_binding_storage2(void* self);
+const QBindingStorage* q_pagesetupdialog_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2287,6 +2284,8 @@ QBindingStorage* q_pagesetupdialog_binding_storage2(void* self);
 void q_pagesetupdialog_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QPageSetupDialog* self, void (*slot)(QObject*) ```
 void q_pagesetupdialog_on_destroyed(void* self, void (*slot)(void*));
@@ -2341,6 +2340,8 @@ QMetaObject__Connection* q_pagesetupdialog_connect4(void* self, void* sender, co
 void q_pagesetupdialog_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QPageSetupDialog* self, void (*slot)(QObject*, QObject*) ```
 void q_pagesetupdialog_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -2440,12 +2441,16 @@ void q_pagesetupdialog_set_visible(void* self, bool visible);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, bool visible ```
 void q_pagesetupdialog_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2463,12 +2468,16 @@ QSize* q_pagesetupdialog_size_hint(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#sizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self ```
 QSize* q_pagesetupdialog_qbase_size_hint(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2486,12 +2495,16 @@ QSize* q_pagesetupdialog_minimum_size_hint(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self ```
 QSize* q_pagesetupdialog_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2509,12 +2522,16 @@ void q_pagesetupdialog_open(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#open)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self ```
 void q_pagesetupdialog_qbase_open(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#open)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2532,12 +2549,16 @@ void q_pagesetupdialog_accept(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accept)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self ```
 void q_pagesetupdialog_qbase_accept(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accept)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2555,12 +2576,16 @@ void q_pagesetupdialog_reject(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#reject)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self ```
 void q_pagesetupdialog_qbase_reject(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#reject)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2578,12 +2603,16 @@ void q_pagesetupdialog_key_press_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QKeyEvent* param1 ```
 void q_pagesetupdialog_qbase_key_press_event(void* self, void* param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2601,12 +2630,16 @@ void q_pagesetupdialog_close_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QCloseEvent* param1 ```
 void q_pagesetupdialog_qbase_close_event(void* self, void* param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2624,12 +2657,16 @@ void q_pagesetupdialog_show_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QShowEvent* param1 ```
 void q_pagesetupdialog_qbase_show_event(void* self, void* param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2647,12 +2684,16 @@ void q_pagesetupdialog_resize_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QResizeEvent* param1 ```
 void q_pagesetupdialog_qbase_resize_event(void* self, void* param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2670,12 +2711,16 @@ void q_pagesetupdialog_context_menu_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QContextMenuEvent* param1 ```
 void q_pagesetupdialog_qbase_context_menu_event(void* self, void* param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2693,12 +2738,16 @@ bool q_pagesetupdialog_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QObject* param1, QEvent* param2 ```
 bool q_pagesetupdialog_qbase_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2716,12 +2765,16 @@ int32_t q_pagesetupdialog_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self ```
 int32_t q_pagesetupdialog_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2739,12 +2792,16 @@ int32_t q_pagesetupdialog_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, int param1 ```
 int32_t q_pagesetupdialog_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2762,12 +2819,16 @@ bool q_pagesetupdialog_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self ```
 bool q_pagesetupdialog_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2785,12 +2846,16 @@ QPaintEngine* q_pagesetupdialog_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self ```
 QPaintEngine* q_pagesetupdialog_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2808,12 +2873,16 @@ bool q_pagesetupdialog_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QEvent* event ```
 bool q_pagesetupdialog_qbase_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2831,12 +2900,16 @@ void q_pagesetupdialog_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QMouseEvent* event ```
 void q_pagesetupdialog_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2854,12 +2927,16 @@ void q_pagesetupdialog_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QMouseEvent* event ```
 void q_pagesetupdialog_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2877,12 +2954,16 @@ void q_pagesetupdialog_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QMouseEvent* event ```
 void q_pagesetupdialog_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2900,12 +2981,16 @@ void q_pagesetupdialog_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QMouseEvent* event ```
 void q_pagesetupdialog_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2923,12 +3008,16 @@ void q_pagesetupdialog_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QWheelEvent* event ```
 void q_pagesetupdialog_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2946,12 +3035,16 @@ void q_pagesetupdialog_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QKeyEvent* event ```
 void q_pagesetupdialog_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2969,12 +3062,16 @@ void q_pagesetupdialog_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QFocusEvent* event ```
 void q_pagesetupdialog_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2992,12 +3089,16 @@ void q_pagesetupdialog_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QFocusEvent* event ```
 void q_pagesetupdialog_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3015,12 +3116,16 @@ void q_pagesetupdialog_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QEnterEvent* event ```
 void q_pagesetupdialog_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3038,12 +3143,16 @@ void q_pagesetupdialog_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QEvent* event ```
 void q_pagesetupdialog_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3061,12 +3170,16 @@ void q_pagesetupdialog_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QPaintEvent* event ```
 void q_pagesetupdialog_qbase_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3084,12 +3197,16 @@ void q_pagesetupdialog_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QMoveEvent* event ```
 void q_pagesetupdialog_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3107,12 +3224,16 @@ void q_pagesetupdialog_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QTabletEvent* event ```
 void q_pagesetupdialog_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3130,12 +3251,16 @@ void q_pagesetupdialog_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QActionEvent* event ```
 void q_pagesetupdialog_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3153,12 +3278,16 @@ void q_pagesetupdialog_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QDragEnterEvent* event ```
 void q_pagesetupdialog_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3176,12 +3305,16 @@ void q_pagesetupdialog_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QDragMoveEvent* event ```
 void q_pagesetupdialog_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3199,12 +3332,16 @@ void q_pagesetupdialog_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QDragLeaveEvent* event ```
 void q_pagesetupdialog_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3222,12 +3359,16 @@ void q_pagesetupdialog_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QDropEvent* event ```
 void q_pagesetupdialog_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3245,12 +3386,16 @@ void q_pagesetupdialog_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QHideEvent* event ```
 void q_pagesetupdialog_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3268,12 +3413,16 @@ bool q_pagesetupdialog_native_event(void* self, const char* eventType, void* mes
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, const char* eventType, void* message, intptr_t* result ```
 bool q_pagesetupdialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3291,12 +3440,16 @@ void q_pagesetupdialog_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QEvent* param1 ```
 void q_pagesetupdialog_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3314,12 +3467,16 @@ int32_t q_pagesetupdialog_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_pagesetupdialog_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3337,12 +3494,16 @@ void q_pagesetupdialog_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QPainter* painter ```
 void q_pagesetupdialog_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3360,12 +3521,16 @@ QPaintDevice* q_pagesetupdialog_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QPoint* offset ```
 QPaintDevice* q_pagesetupdialog_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3383,12 +3548,16 @@ QPainter* q_pagesetupdialog_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self ```
 QPainter* q_pagesetupdialog_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3406,12 +3575,16 @@ void q_pagesetupdialog_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QInputMethodEvent* param1 ```
 void q_pagesetupdialog_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3429,12 +3602,16 @@ QVariant* q_pagesetupdialog_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_pagesetupdialog_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3452,12 +3629,16 @@ bool q_pagesetupdialog_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, bool next ```
 bool q_pagesetupdialog_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3475,12 +3656,16 @@ void q_pagesetupdialog_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QTimerEvent* event ```
 void q_pagesetupdialog_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3498,12 +3683,16 @@ void q_pagesetupdialog_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QChildEvent* event ```
 void q_pagesetupdialog_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3521,12 +3710,16 @@ void q_pagesetupdialog_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QEvent* event ```
 void q_pagesetupdialog_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3544,12 +3737,16 @@ void q_pagesetupdialog_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QMetaMethod* signal ```
 void q_pagesetupdialog_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3567,12 +3764,16 @@ void q_pagesetupdialog_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QMetaMethod* signal ```
 void q_pagesetupdialog_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3590,12 +3791,16 @@ void q_pagesetupdialog_adjust_position(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QWidget* param1 ```
 void q_pagesetupdialog_qbase_adjust_position(void* self, void* param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3613,12 +3818,16 @@ void q_pagesetupdialog_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self ```
 void q_pagesetupdialog_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3636,12 +3845,16 @@ void q_pagesetupdialog_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self ```
 void q_pagesetupdialog_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3659,12 +3872,16 @@ void q_pagesetupdialog_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self ```
 void q_pagesetupdialog_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3682,12 +3899,16 @@ bool q_pagesetupdialog_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self ```
 bool q_pagesetupdialog_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3705,12 +3926,16 @@ bool q_pagesetupdialog_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self ```
 bool q_pagesetupdialog_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3728,12 +3953,16 @@ QObject* q_pagesetupdialog_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self ```
 QObject* q_pagesetupdialog_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3751,12 +3980,16 @@ int32_t q_pagesetupdialog_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self ```
 int32_t q_pagesetupdialog_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3774,12 +4007,16 @@ int32_t q_pagesetupdialog_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, const char* signal ```
 int32_t q_pagesetupdialog_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3797,6 +4034,8 @@ bool q_pagesetupdialog_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, QMetaMethod* signal ```
@@ -3804,11 +4043,24 @@ bool q_pagesetupdialog_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QPageSetupDialog* self, bool (*slot)(QPageSetupDialog*, QMetaMethod*) ```
 void q_pagesetupdialog_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QPageSetupDialog* self, void (*slot)(QObject*, const char*) ```
+void q_pagesetupdialog_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagesetupdialog.html#dtor.QPageSetupDialog)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPageSetupDialog* self ```

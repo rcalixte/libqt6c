@@ -671,163 +671,182 @@ libqt_string QImage_Text1(const QImage* self, libqt_string key) {
 
 // Derived class handler implementation
 int QImage_DevType(const QImage* self) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         return vqimage->devType();
     } else {
-        return vqimage->devType();
+        return self->QImage::devType();
     }
 }
 
 // Base class handler implementation
 int QImage_QBaseDevType(const QImage* self) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_DevType_IsBase(true);
         return vqimage->devType();
     } else {
-        return vqimage->devType();
+        return self->QImage::devType();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QImage_OnDevType(const QImage* self, intptr_t slot) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_DevType_Callback(reinterpret_cast<VirtualQImage::QImage_DevType_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 QPaintEngine* QImage_PaintEngine(const QImage* self) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         return vqimage->paintEngine();
     } else {
-        return vqimage->paintEngine();
+        return self->QImage::paintEngine();
     }
 }
 
 // Base class handler implementation
 QPaintEngine* QImage_QBasePaintEngine(const QImage* self) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_PaintEngine_IsBase(true);
         return vqimage->paintEngine();
     } else {
-        return vqimage->paintEngine();
+        return self->QImage::paintEngine();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QImage_OnPaintEngine(const QImage* self, intptr_t slot) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_PaintEngine_Callback(reinterpret_cast<VirtualQImage::QImage_PaintEngine_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 int QImage_Metric(const QImage* self, int metric) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         return vqimage->metric(static_cast<QPaintDevice::PaintDeviceMetric>(metric));
     } else {
-        return vqimage->metric(static_cast<QPaintDevice::PaintDeviceMetric>(metric));
+        return ((VirtualQImage*)self)->metric(static_cast<QPaintDevice::PaintDeviceMetric>(metric));
     }
 }
 
 // Base class handler implementation
 int QImage_QBaseMetric(const QImage* self, int metric) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_Metric_IsBase(true);
         return vqimage->metric(static_cast<QPaintDevice::PaintDeviceMetric>(metric));
     } else {
-        return vqimage->metric(static_cast<QPaintDevice::PaintDeviceMetric>(metric));
+        return ((VirtualQImage*)self)->metric(static_cast<QPaintDevice::PaintDeviceMetric>(metric));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QImage_OnMetric(const QImage* self, intptr_t slot) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_Metric_Callback(reinterpret_cast<VirtualQImage::QImage_Metric_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QImage_InitPainter(const QImage* self, QPainter* painter) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->initPainter(painter);
     } else {
-        vqimage->initPainter(painter);
+        ((VirtualQImage*)self)->initPainter(painter);
     }
 }
 
 // Base class handler implementation
 void QImage_QBaseInitPainter(const QImage* self, QPainter* painter) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_InitPainter_IsBase(true);
         vqimage->initPainter(painter);
     } else {
-        vqimage->initPainter(painter);
+        ((VirtualQImage*)self)->initPainter(painter);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QImage_OnInitPainter(const QImage* self, intptr_t slot) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_InitPainter_Callback(reinterpret_cast<VirtualQImage::QImage_InitPainter_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 QPaintDevice* QImage_Redirected(const QImage* self, QPoint* offset) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         return vqimage->redirected(offset);
     } else {
-        return vqimage->redirected(offset);
+        return ((VirtualQImage*)self)->redirected(offset);
     }
 }
 
 // Base class handler implementation
 QPaintDevice* QImage_QBaseRedirected(const QImage* self, QPoint* offset) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_Redirected_IsBase(true);
         return vqimage->redirected(offset);
     } else {
-        return vqimage->redirected(offset);
+        return ((VirtualQImage*)self)->redirected(offset);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QImage_OnRedirected(const QImage* self, intptr_t slot) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_Redirected_Callback(reinterpret_cast<VirtualQImage::QImage_Redirected_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 QPainter* QImage_SharedPainter(const QImage* self) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         return vqimage->sharedPainter();
     } else {
-        return vqimage->sharedPainter();
+        return ((VirtualQImage*)self)->sharedPainter();
     }
 }
 
 // Base class handler implementation
 QPainter* QImage_QBaseSharedPainter(const QImage* self) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_SharedPainter_IsBase(true);
         return vqimage->sharedPainter();
     } else {
-        return vqimage->sharedPainter();
+        return ((VirtualQImage*)self)->sharedPainter();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QImage_OnSharedPainter(const QImage* self, intptr_t slot) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_SharedPainter_Callback(reinterpret_cast<VirtualQImage::QImage_SharedPainter_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 QImage* QImage_MirroredHelper(const QImage* self, bool horizontal, bool vertical) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         return new QImage(vqimage->mirrored_helper(horizontal, vertical));
     }
     return {};
@@ -835,7 +854,8 @@ QImage* QImage_MirroredHelper(const QImage* self, bool horizontal, bool vertical
 
 // Base class handler implementation
 QImage* QImage_QBaseMirroredHelper(const QImage* self, bool horizontal, bool vertical) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_MirroredHelper_IsBase(true);
         return new QImage(vqimage->mirrored_helper(horizontal, vertical));
     }
@@ -844,14 +864,16 @@ QImage* QImage_QBaseMirroredHelper(const QImage* self, bool horizontal, bool ver
 
 // Auxiliary method to allow providing re-implementation
 void QImage_OnMirroredHelper(const QImage* self, intptr_t slot) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_MirroredHelper_Callback(reinterpret_cast<VirtualQImage::QImage_MirroredHelper_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 QImage* QImage_RgbSwappedHelper(const QImage* self) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         return new QImage(vqimage->rgbSwapped_helper());
     }
     return {};
@@ -859,7 +881,8 @@ QImage* QImage_RgbSwappedHelper(const QImage* self) {
 
 // Base class handler implementation
 QImage* QImage_QBaseRgbSwappedHelper(const QImage* self) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_RgbSwappedHelper_IsBase(true);
         return new QImage(vqimage->rgbSwapped_helper());
     }
@@ -868,66 +891,74 @@ QImage* QImage_QBaseRgbSwappedHelper(const QImage* self) {
 
 // Auxiliary method to allow providing re-implementation
 void QImage_OnRgbSwappedHelper(const QImage* self, intptr_t slot) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_RgbSwappedHelper_Callback(reinterpret_cast<VirtualQImage::QImage_RgbSwappedHelper_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QImage_MirroredInplace(QImage* self, bool horizontal, bool vertical) {
-    if (auto* vqimage = dynamic_cast<VirtualQImage*>(self)) {
+    auto* vqimage = dynamic_cast<VirtualQImage*>(self);
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->mirrored_inplace(horizontal, vertical);
     } else {
-        vqimage->mirrored_inplace(horizontal, vertical);
+        ((VirtualQImage*)self)->mirrored_inplace(horizontal, vertical);
     }
 }
 
 // Base class handler implementation
 void QImage_QBaseMirroredInplace(QImage* self, bool horizontal, bool vertical) {
-    if (auto* vqimage = dynamic_cast<VirtualQImage*>(self)) {
+    auto* vqimage = dynamic_cast<VirtualQImage*>(self);
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_MirroredInplace_IsBase(true);
         vqimage->mirrored_inplace(horizontal, vertical);
     } else {
-        vqimage->mirrored_inplace(horizontal, vertical);
+        ((VirtualQImage*)self)->mirrored_inplace(horizontal, vertical);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QImage_OnMirroredInplace(QImage* self, intptr_t slot) {
-    if (auto* vqimage = dynamic_cast<VirtualQImage*>(self)) {
+    auto* vqimage = dynamic_cast<VirtualQImage*>(self);
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_MirroredInplace_Callback(reinterpret_cast<VirtualQImage::QImage_MirroredInplace_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QImage_RgbSwappedInplace(QImage* self) {
-    if (auto* vqimage = dynamic_cast<VirtualQImage*>(self)) {
+    auto* vqimage = dynamic_cast<VirtualQImage*>(self);
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->rgbSwapped_inplace();
     } else {
-        vqimage->rgbSwapped_inplace();
+        ((VirtualQImage*)self)->rgbSwapped_inplace();
     }
 }
 
 // Base class handler implementation
 void QImage_QBaseRgbSwappedInplace(QImage* self) {
-    if (auto* vqimage = dynamic_cast<VirtualQImage*>(self)) {
+    auto* vqimage = dynamic_cast<VirtualQImage*>(self);
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_RgbSwappedInplace_IsBase(true);
         vqimage->rgbSwapped_inplace();
     } else {
-        vqimage->rgbSwapped_inplace();
+        ((VirtualQImage*)self)->rgbSwapped_inplace();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QImage_OnRgbSwappedInplace(QImage* self, intptr_t slot) {
-    if (auto* vqimage = dynamic_cast<VirtualQImage*>(self)) {
+    auto* vqimage = dynamic_cast<VirtualQImage*>(self);
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_RgbSwappedInplace_Callback(reinterpret_cast<VirtualQImage::QImage_RgbSwappedInplace_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 QImage* QImage_ConvertToFormatHelper(const QImage* self, int format, int flags) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         return new QImage(vqimage->convertToFormat_helper(static_cast<QImage::Format>(format), static_cast<Qt::ImageConversionFlags>(flags)));
     }
     return {};
@@ -935,7 +966,8 @@ QImage* QImage_ConvertToFormatHelper(const QImage* self, int format, int flags) 
 
 // Base class handler implementation
 QImage* QImage_QBaseConvertToFormatHelper(const QImage* self, int format, int flags) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_ConvertToFormatHelper_IsBase(true);
         return new QImage(vqimage->convertToFormat_helper(static_cast<QImage::Format>(format), static_cast<Qt::ImageConversionFlags>(flags)));
     }
@@ -944,40 +976,45 @@ QImage* QImage_QBaseConvertToFormatHelper(const QImage* self, int format, int fl
 
 // Auxiliary method to allow providing re-implementation
 void QImage_OnConvertToFormatHelper(const QImage* self, intptr_t slot) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_ConvertToFormatHelper_Callback(reinterpret_cast<VirtualQImage::QImage_ConvertToFormatHelper_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 bool QImage_ConvertToFormatInplace(QImage* self, int format, int flags) {
-    if (auto* vqimage = dynamic_cast<VirtualQImage*>(self)) {
+    auto* vqimage = dynamic_cast<VirtualQImage*>(self);
+    if (vqimage && vqimage->isVirtualQImage) {
         return vqimage->convertToFormat_inplace(static_cast<QImage::Format>(format), static_cast<Qt::ImageConversionFlags>(flags));
     } else {
-        return vqimage->convertToFormat_inplace(static_cast<QImage::Format>(format), static_cast<Qt::ImageConversionFlags>(flags));
+        return ((VirtualQImage*)self)->convertToFormat_inplace(static_cast<QImage::Format>(format), static_cast<Qt::ImageConversionFlags>(flags));
     }
 }
 
 // Base class handler implementation
 bool QImage_QBaseConvertToFormatInplace(QImage* self, int format, int flags) {
-    if (auto* vqimage = dynamic_cast<VirtualQImage*>(self)) {
+    auto* vqimage = dynamic_cast<VirtualQImage*>(self);
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_ConvertToFormatInplace_IsBase(true);
         return vqimage->convertToFormat_inplace(static_cast<QImage::Format>(format), static_cast<Qt::ImageConversionFlags>(flags));
     } else {
-        return vqimage->convertToFormat_inplace(static_cast<QImage::Format>(format), static_cast<Qt::ImageConversionFlags>(flags));
+        return ((VirtualQImage*)self)->convertToFormat_inplace(static_cast<QImage::Format>(format), static_cast<Qt::ImageConversionFlags>(flags));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QImage_OnConvertToFormatInplace(QImage* self, intptr_t slot) {
-    if (auto* vqimage = dynamic_cast<VirtualQImage*>(self)) {
+    auto* vqimage = dynamic_cast<VirtualQImage*>(self);
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_ConvertToFormatInplace_Callback(reinterpret_cast<VirtualQImage::QImage_ConvertToFormatInplace_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 QImage* QImage_SmoothScaled(const QImage* self, int w, int h) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         return new QImage(vqimage->smoothScaled(static_cast<int>(w), static_cast<int>(h)));
     }
     return {};
@@ -985,7 +1022,8 @@ QImage* QImage_SmoothScaled(const QImage* self, int w, int h) {
 
 // Base class handler implementation
 QImage* QImage_QBaseSmoothScaled(const QImage* self, int w, int h) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_SmoothScaled_IsBase(true);
         return new QImage(vqimage->smoothScaled(static_cast<int>(w), static_cast<int>(h)));
     }
@@ -994,59 +1032,66 @@ QImage* QImage_QBaseSmoothScaled(const QImage* self, int w, int h) {
 
 // Auxiliary method to allow providing re-implementation
 void QImage_OnSmoothScaled(const QImage* self, intptr_t slot) {
-    if (auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self))) {
+    auto* vqimage = const_cast<VirtualQImage*>(dynamic_cast<const VirtualQImage*>(self));
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_SmoothScaled_Callback(reinterpret_cast<VirtualQImage::QImage_SmoothScaled_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QImage_DetachMetadata(QImage* self) {
-    if (auto* vqimage = dynamic_cast<VirtualQImage*>(self)) {
+    auto* vqimage = dynamic_cast<VirtualQImage*>(self);
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->detachMetadata();
     } else {
-        vqimage->detachMetadata();
+        ((VirtualQImage*)self)->detachMetadata();
     }
 }
 
 // Base class handler implementation
 void QImage_QBaseDetachMetadata(QImage* self) {
-    if (auto* vqimage = dynamic_cast<VirtualQImage*>(self)) {
+    auto* vqimage = dynamic_cast<VirtualQImage*>(self);
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_DetachMetadata_IsBase(true);
         vqimage->detachMetadata();
     } else {
-        vqimage->detachMetadata();
+        ((VirtualQImage*)self)->detachMetadata();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QImage_OnDetachMetadata(QImage* self, intptr_t slot) {
-    if (auto* vqimage = dynamic_cast<VirtualQImage*>(self)) {
+    auto* vqimage = dynamic_cast<VirtualQImage*>(self);
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_DetachMetadata_Callback(reinterpret_cast<VirtualQImage::QImage_DetachMetadata_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QImage_DetachMetadata1(QImage* self, bool invalidateCache) {
-    if (auto* vqimage = dynamic_cast<VirtualQImage*>(self)) {
+    auto* vqimage = dynamic_cast<VirtualQImage*>(self);
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->detachMetadata(invalidateCache);
     } else {
-        vqimage->detachMetadata(invalidateCache);
+        ((VirtualQImage*)self)->detachMetadata(invalidateCache);
     }
 }
 
 // Base class handler implementation
 void QImage_QBaseDetachMetadata1(QImage* self, bool invalidateCache) {
-    if (auto* vqimage = dynamic_cast<VirtualQImage*>(self)) {
+    auto* vqimage = dynamic_cast<VirtualQImage*>(self);
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_DetachMetadata1_IsBase(true);
         vqimage->detachMetadata(invalidateCache);
     } else {
-        vqimage->detachMetadata(invalidateCache);
+        ((VirtualQImage*)self)->detachMetadata(invalidateCache);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QImage_OnDetachMetadata1(QImage* self, intptr_t slot) {
-    if (auto* vqimage = dynamic_cast<VirtualQImage*>(self)) {
+    auto* vqimage = dynamic_cast<VirtualQImage*>(self);
+    if (vqimage && vqimage->isVirtualQImage) {
         vqimage->setQImage_DetachMetadata1_Callback(reinterpret_cast<VirtualQImage::QImage_DetachMetadata1_Callback>(slot));
     }
 }

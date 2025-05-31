@@ -15,8 +15,6 @@
 #include "libqabstractitemdelegate.h"
 #include "libqabstractitemmodel.h"
 #include "libqabstractitemview.h"
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqfont.h"
 #include "libqitemeditorfactory.h"
@@ -28,7 +26,6 @@
 #include "libqsize.h"
 #include <string.h>
 #include "libqstyleoption.h"
-#include "libqthread.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
 
@@ -47,7 +44,7 @@ QItemDelegate* q_itemdelegate_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QItemDelegate* self ```
-QMetaObject* q_itemdelegate_meta_object(void* self);
+const QMetaObject* q_itemdelegate_meta_object(void* self);
 
 /// ``` QItemDelegate* self, const char* param1 ```
 void* q_itemdelegate_metacast(void* self, const char* param1);
@@ -85,11 +82,15 @@ void q_itemdelegate_set_clipping(void* self, bool clip);
 /// ``` QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index ```
 void q_itemdelegate_paint(void* self, void* painter, void* option, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#paint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemDelegate* self, void (*slot)(QItemDelegate*, QPainter*, QStyleOptionViewItem*, QModelIndex*) ```
 void q_itemdelegate_on_paint(void* self, void (*slot)(void*, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#paint)
+///
 /// Base class method implementation
 ///
 /// ``` QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index ```
@@ -100,11 +101,15 @@ void q_itemdelegate_qbase_paint(void* self, void* painter, void* option, void* i
 /// ``` QItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index ```
 QSize* q_itemdelegate_size_hint(void* self, void* option, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemDelegate* self, QSize* (*slot)(QItemDelegate*, QStyleOptionViewItem*, QModelIndex*) ```
 void q_itemdelegate_on_size_hint(void* self, QSize* (*slot)(void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index ```
@@ -115,11 +120,15 @@ QSize* q_itemdelegate_qbase_size_hint(void* self, void* option, void* index);
 /// ``` QItemDelegate* self, QWidget* parent, QStyleOptionViewItem* option, QModelIndex* index ```
 QWidget* q_itemdelegate_create_editor(void* self, void* parent, void* option, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#createEditor)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemDelegate* self, QWidget* (*slot)(QItemDelegate*, QWidget*, QStyleOptionViewItem*, QModelIndex*) ```
 void q_itemdelegate_on_create_editor(void* self, QWidget* (*slot)(void*, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#createEditor)
+///
 /// Base class method implementation
 ///
 /// ``` QItemDelegate* self, QWidget* parent, QStyleOptionViewItem* option, QModelIndex* index ```
@@ -130,11 +139,15 @@ QWidget* q_itemdelegate_qbase_create_editor(void* self, void* parent, void* opti
 /// ``` QItemDelegate* self, QWidget* editor, QModelIndex* index ```
 void q_itemdelegate_set_editor_data(void* self, void* editor, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#setEditorData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemDelegate* self, void (*slot)(QItemDelegate*, QWidget*, QModelIndex*) ```
 void q_itemdelegate_on_set_editor_data(void* self, void (*slot)(void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#setEditorData)
+///
 /// Base class method implementation
 ///
 /// ``` QItemDelegate* self, QWidget* editor, QModelIndex* index ```
@@ -145,11 +158,15 @@ void q_itemdelegate_qbase_set_editor_data(void* self, void* editor, void* index)
 /// ``` QItemDelegate* self, QWidget* editor, QAbstractItemModel* model, QModelIndex* index ```
 void q_itemdelegate_set_model_data(void* self, void* editor, void* model, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#setModelData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemDelegate* self, void (*slot)(QItemDelegate*, QWidget*, QAbstractItemModel*, QModelIndex*) ```
 void q_itemdelegate_on_set_model_data(void* self, void (*slot)(void*, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#setModelData)
+///
 /// Base class method implementation
 ///
 /// ``` QItemDelegate* self, QWidget* editor, QAbstractItemModel* model, QModelIndex* index ```
@@ -160,11 +177,15 @@ void q_itemdelegate_qbase_set_model_data(void* self, void* editor, void* model, 
 /// ``` QItemDelegate* self, QWidget* editor, QStyleOptionViewItem* option, QModelIndex* index ```
 void q_itemdelegate_update_editor_geometry(void* self, void* editor, void* option, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#updateEditorGeometry)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemDelegate* self, void (*slot)(QItemDelegate*, QWidget*, QStyleOptionViewItem*, QModelIndex*) ```
 void q_itemdelegate_on_update_editor_geometry(void* self, void (*slot)(void*, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#updateEditorGeometry)
+///
 /// Base class method implementation
 ///
 /// ``` QItemDelegate* self, QWidget* editor, QStyleOptionViewItem* option, QModelIndex* index ```
@@ -185,11 +206,15 @@ void q_itemdelegate_set_item_editor_factory(void* self, void* factory);
 /// ``` QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect, const char* text ```
 void q_itemdelegate_draw_display(void* self, void* painter, void* option, void* rect, const char* text);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#drawDisplay)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemDelegate* self, void (*slot)(QItemDelegate*, QPainter*, QStyleOptionViewItem*, QRect*, const char*) ```
 void q_itemdelegate_on_draw_display(void* self, void (*slot)(void*, void*, void*, void*, const char*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#drawDisplay)
+///
 /// Base class method implementation
 ///
 /// ``` QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect, const char* text ```
@@ -200,11 +225,15 @@ void q_itemdelegate_qbase_draw_display(void* self, void* painter, void* option, 
 /// ``` QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect, QPixmap* pixmap ```
 void q_itemdelegate_draw_decoration(void* self, void* painter, void* option, void* rect, void* pixmap);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#drawDecoration)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemDelegate* self, void (*slot)(QItemDelegate*, QPainter*, QStyleOptionViewItem*, QRect*, QPixmap*) ```
 void q_itemdelegate_on_draw_decoration(void* self, void (*slot)(void*, void*, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#drawDecoration)
+///
 /// Base class method implementation
 ///
 /// ``` QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect, QPixmap* pixmap ```
@@ -215,11 +244,15 @@ void q_itemdelegate_qbase_draw_decoration(void* self, void* painter, void* optio
 /// ``` QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect ```
 void q_itemdelegate_draw_focus(void* self, void* painter, void* option, void* rect);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#drawFocus)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemDelegate* self, void (*slot)(QItemDelegate*, QPainter*, QStyleOptionViewItem*, QRect*) ```
 void q_itemdelegate_on_draw_focus(void* self, void (*slot)(void*, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#drawFocus)
+///
 /// Base class method implementation
 ///
 /// ``` QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect ```
@@ -230,11 +263,15 @@ void q_itemdelegate_qbase_draw_focus(void* self, void* painter, void* option, vo
 /// ``` QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect, enum Qt__CheckState state ```
 void q_itemdelegate_draw_check(void* self, void* painter, void* option, void* rect, int64_t state);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#drawCheck)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemDelegate* self, void (*slot)(QItemDelegate*, QPainter*, QStyleOptionViewItem*, QRect*, enum Qt__CheckState) ```
 void q_itemdelegate_on_draw_check(void* self, void (*slot)(void*, void*, void*, void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#drawCheck)
+///
 /// Base class method implementation
 ///
 /// ``` QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect, enum Qt__CheckState state ```
@@ -245,11 +282,15 @@ void q_itemdelegate_qbase_draw_check(void* self, void* painter, void* option, vo
 /// ``` QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index ```
 void q_itemdelegate_draw_background(void* self, void* painter, void* option, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#drawBackground)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemDelegate* self, void (*slot)(QItemDelegate*, QPainter*, QStyleOptionViewItem*, QModelIndex*) ```
 void q_itemdelegate_on_draw_background(void* self, void (*slot)(void*, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#drawBackground)
+///
 /// Base class method implementation
 ///
 /// ``` QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index ```
@@ -260,11 +301,15 @@ void q_itemdelegate_qbase_draw_background(void* self, void* painter, void* optio
 /// ``` QItemDelegate* self, QStyleOptionViewItem* option, QRect* checkRect, QRect* iconRect, QRect* textRect, bool hint ```
 void q_itemdelegate_do_layout(void* self, void* option, void* checkRect, void* iconRect, void* textRect, bool hint);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#doLayout)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemDelegate* self, void (*slot)(QItemDelegate*, QStyleOptionViewItem*, QRect*, QRect*, QRect*, bool) ```
 void q_itemdelegate_on_do_layout(void* self, void (*slot)(void*, void*, void*, void*, void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#doLayout)
+///
 /// Base class method implementation
 ///
 /// ``` QItemDelegate* self, QStyleOptionViewItem* option, QRect* checkRect, QRect* iconRect, QRect* textRect, bool hint ```
@@ -275,11 +320,15 @@ void q_itemdelegate_qbase_do_layout(void* self, void* option, void* checkRect, v
 /// ``` QItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index, int role ```
 QRect* q_itemdelegate_rect(void* self, void* option, void* index, int role);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#rect)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemDelegate* self, QRect* (*slot)(QItemDelegate*, QStyleOptionViewItem*, QModelIndex*, int) ```
 void q_itemdelegate_on_rect(void* self, QRect* (*slot)(void*, void*, void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#rect)
+///
 /// Base class method implementation
 ///
 /// ``` QItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index, int role ```
@@ -290,11 +339,15 @@ QRect* q_itemdelegate_qbase_rect(void* self, void* option, void* index, int role
 /// ``` QItemDelegate* self, QObject* object, QEvent* event ```
 bool q_itemdelegate_event_filter(void* self, void* object, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#eventFilter)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemDelegate* self, bool (*slot)(QItemDelegate*, QObject*, QEvent*) ```
 void q_itemdelegate_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#eventFilter)
+///
 /// Base class method implementation
 ///
 /// ``` QItemDelegate* self, QObject* object, QEvent* event ```
@@ -305,11 +358,15 @@ bool q_itemdelegate_qbase_event_filter(void* self, void* object, void* event);
 /// ``` QItemDelegate* self, QEvent* event, QAbstractItemModel* model, QStyleOptionViewItem* option, QModelIndex* index ```
 bool q_itemdelegate_editor_event(void* self, void* event, void* model, void* option, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#editorEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemDelegate* self, bool (*slot)(QItemDelegate*, QEvent*, QAbstractItemModel*, QStyleOptionViewItem*, QModelIndex*) ```
 void q_itemdelegate_on_editor_event(void* self, bool (*slot)(void*, void*, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#editorEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QItemDelegate* self, QEvent* event, QAbstractItemModel* model, QStyleOptionViewItem* option, QModelIndex* index ```
@@ -320,11 +377,15 @@ bool q_itemdelegate_qbase_editor_event(void* self, void* event, void* model, voi
 /// ``` QItemDelegate* self, QModelIndex* index, QStyleOptionViewItem* option ```
 QStyleOptionViewItem* q_itemdelegate_set_options(void* self, void* index, void* option);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#setOptions)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemDelegate* self, QStyleOptionViewItem* (*slot)(QItemDelegate*, QModelIndex*, QStyleOptionViewItem*) ```
 void q_itemdelegate_on_set_options(void* self, QStyleOptionViewItem* (*slot)(void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#setOptions)
+///
 /// Base class method implementation
 ///
 /// ``` QItemDelegate* self, QModelIndex* index, QStyleOptionViewItem* option ```
@@ -335,11 +396,15 @@ QStyleOptionViewItem* q_itemdelegate_qbase_set_options(void* self, void* index, 
 /// ``` QItemDelegate* self, QStyleOptionViewItem* option, QVariant* variant ```
 QPixmap* q_itemdelegate_decoration(void* self, void* option, void* variant);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#decoration)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemDelegate* self, QPixmap* (*slot)(QItemDelegate*, QStyleOptionViewItem*, QVariant*) ```
 void q_itemdelegate_on_decoration(void* self, QPixmap* (*slot)(void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#decoration)
+///
 /// Base class method implementation
 ///
 /// ``` QItemDelegate* self, QStyleOptionViewItem* option, QVariant* variant ```
@@ -350,11 +415,15 @@ QPixmap* q_itemdelegate_qbase_decoration(void* self, void* option, void* variant
 /// ``` QItemDelegate* self, QStyleOptionViewItem* option, QRect* bounding, QVariant* variant ```
 QRect* q_itemdelegate_do_check(void* self, void* option, void* bounding, void* variant);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#doCheck)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemDelegate* self, QRect* (*slot)(QItemDelegate*, QStyleOptionViewItem*, QRect*, QVariant*) ```
 void q_itemdelegate_on_do_check(void* self, QRect* (*slot)(void*, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#doCheck)
+///
 /// Base class method implementation
 ///
 /// ``` QItemDelegate* self, QStyleOptionViewItem* option, QRect* bounding, QVariant* variant ```
@@ -365,11 +434,15 @@ QRect* q_itemdelegate_qbase_do_check(void* self, void* option, void* bounding, v
 /// ``` QItemDelegate* self, QPainter* painter, QRect* rect, QFont* font, const char* text ```
 QRect* q_itemdelegate_text_rectangle(void* self, void* painter, void* rect, void* font, const char* text);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#textRectangle)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QItemDelegate* self, QRect* (*slot)(QItemDelegate*, QPainter*, QRect*, QFont*, const char*) ```
 void q_itemdelegate_on_text_rectangle(void* self, QRect* (*slot)(void*, void*, void*, void*, const char*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#textRectangle)
+///
 /// Base class method implementation
 ///
 /// ``` QItemDelegate* self, QPainter* painter, QRect* rect, QFont* font, const char* text ```
@@ -394,6 +467,8 @@ void q_itemdelegate_commit_data(void* self, void* editor);
 
 /// Inherited from QAbstractItemDelegate
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#commitData)
+///
 /// ``` QItemDelegate* self, void (*slot)(QAbstractItemDelegate*, QWidget*) ```
 void q_itemdelegate_on_commit_data(void* self, void (*slot)(void*, void*));
 
@@ -405,6 +480,8 @@ void q_itemdelegate_on_commit_data(void* self, void (*slot)(void*, void*));
 void q_itemdelegate_close_editor(void* self, void* editor);
 
 /// Inherited from QAbstractItemDelegate
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#closeEditor)
 ///
 /// ``` QItemDelegate* self, void (*slot)(QAbstractItemDelegate*, QWidget*) ```
 void q_itemdelegate_on_close_editor(void* self, void (*slot)(void*, void*));
@@ -418,6 +495,8 @@ void q_itemdelegate_size_hint_changed(void* self, void* param1);
 
 /// Inherited from QAbstractItemDelegate
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHintChanged)
+///
 /// ``` QItemDelegate* self, void (*slot)(QAbstractItemDelegate*, QModelIndex*) ```
 void q_itemdelegate_on_size_hint_changed(void* self, void (*slot)(void*, void*));
 
@@ -429,6 +508,8 @@ void q_itemdelegate_on_size_hint_changed(void* self, void (*slot)(void*, void*))
 void q_itemdelegate_close_editor2(void* self, void* editor, int64_t hint);
 
 /// Inherited from QAbstractItemDelegate
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#closeEditor)
 ///
 /// ``` QItemDelegate* self, void (*slot)(QAbstractItemDelegate*, QWidget*, enum QAbstractItemDelegate__EndEditHint) ```
 void q_itemdelegate_on_close_editor2(void* self, void (*slot)(void*, void*, int64_t));
@@ -515,7 +596,7 @@ void q_itemdelegate_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QItemDelegate* self ```
-libqt_list /* of QObject* */ q_itemdelegate_children(void* self);
+const libqt_list /* of QObject* */ q_itemdelegate_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -613,7 +694,7 @@ QBindingStorage* q_itemdelegate_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QItemDelegate* self ```
-QBindingStorage* q_itemdelegate_binding_storage2(void* self);
+const QBindingStorage* q_itemdelegate_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -623,6 +704,8 @@ QBindingStorage* q_itemdelegate_binding_storage2(void* self);
 void q_itemdelegate_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QItemDelegate* self, void (*slot)(QObject*) ```
 void q_itemdelegate_on_destroyed(void* self, void (*slot)(void*));
@@ -678,6 +761,8 @@ void q_itemdelegate_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QItemDelegate* self, void (*slot)(QObject*, QObject*) ```
 void q_itemdelegate_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -692,12 +777,16 @@ void q_itemdelegate_destroy_editor(void* self, void* editor, void* index);
 
 /// Inherited from QAbstractItemDelegate
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#destroyEditor)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemDelegate* self, QWidget* editor, QModelIndex* index ```
 void q_itemdelegate_qbase_destroy_editor(void* self, void* editor, void* index);
 
 /// Inherited from QAbstractItemDelegate
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#destroyEditor)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -715,12 +804,16 @@ bool q_itemdelegate_help_event(void* self, void* event, void* view, void* option
 
 /// Inherited from QAbstractItemDelegate
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#helpEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemDelegate* self, QHelpEvent* event, QAbstractItemView* view, QStyleOptionViewItem* option, QModelIndex* index ```
 bool q_itemdelegate_qbase_help_event(void* self, void* event, void* view, void* option, void* index);
 
 /// Inherited from QAbstractItemDelegate
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#helpEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -738,12 +831,16 @@ libqt_list /* of int */ q_itemdelegate_painting_roles(void* self);
 
 /// Inherited from QAbstractItemDelegate
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paintingRoles)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemDelegate* self ```
 libqt_list /* of int */ q_itemdelegate_qbase_painting_roles(void* self);
 
 /// Inherited from QAbstractItemDelegate
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paintingRoles)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -761,12 +858,16 @@ bool q_itemdelegate_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemDelegate* self, QEvent* event ```
 bool q_itemdelegate_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -784,12 +885,16 @@ void q_itemdelegate_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemDelegate* self, QTimerEvent* event ```
 void q_itemdelegate_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -807,12 +912,16 @@ void q_itemdelegate_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemDelegate* self, QChildEvent* event ```
 void q_itemdelegate_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -830,12 +939,16 @@ void q_itemdelegate_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemDelegate* self, QEvent* event ```
 void q_itemdelegate_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -853,12 +966,16 @@ void q_itemdelegate_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemDelegate* self, QMetaMethod* signal ```
 void q_itemdelegate_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -876,12 +993,16 @@ void q_itemdelegate_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemDelegate* self, QMetaMethod* signal ```
 void q_itemdelegate_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -899,12 +1020,16 @@ QObject* q_itemdelegate_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemDelegate* self ```
 QObject* q_itemdelegate_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -922,12 +1047,16 @@ int32_t q_itemdelegate_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemDelegate* self ```
 int32_t q_itemdelegate_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -945,12 +1074,16 @@ int32_t q_itemdelegate_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemDelegate* self, const char* signal ```
 int32_t q_itemdelegate_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -968,6 +1101,8 @@ bool q_itemdelegate_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QItemDelegate* self, QMetaMethod* signal ```
@@ -975,11 +1110,24 @@ bool q_itemdelegate_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QItemDelegate* self, bool (*slot)(QItemDelegate*, QMetaMethod*) ```
 void q_itemdelegate_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QItemDelegate* self, void (*slot)(QObject*, const char*) ```
+void q_itemdelegate_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#dtor.QItemDelegate)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QItemDelegate* self ```

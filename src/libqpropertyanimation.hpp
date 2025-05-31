@@ -15,23 +15,14 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
 typedef struct QAbstractAnimation QAbstractAnimation;
-typedef struct QAnimationGroup QAnimationGroup;
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
-typedef struct QEasingCurve QEasingCurve;
 typedef struct QEvent QEvent;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QPropertyAnimation QPropertyAnimation;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 typedef struct QVariantAnimation QVariantAnimation;
@@ -68,6 +59,9 @@ int QPropertyAnimation_QBaseDuration(const QPropertyAnimation* self);
 void QPropertyAnimation_UpdateCurrentTime(QPropertyAnimation* self, int param1);
 void QPropertyAnimation_OnUpdateCurrentTime(QPropertyAnimation* self, intptr_t slot);
 void QPropertyAnimation_QBaseUpdateCurrentTime(QPropertyAnimation* self, int param1);
+QVariant* QPropertyAnimation_Interpolated(const QPropertyAnimation* self, QVariant* from, QVariant* to, double progress);
+void QPropertyAnimation_OnInterpolated(const QPropertyAnimation* self, intptr_t slot);
+QVariant* QPropertyAnimation_QBaseInterpolated(const QPropertyAnimation* self, QVariant* from, QVariant* to, double progress);
 void QPropertyAnimation_UpdateDirection(QPropertyAnimation* self, int direction);
 void QPropertyAnimation_OnUpdateDirection(QPropertyAnimation* self, intptr_t slot);
 void QPropertyAnimation_QBaseUpdateDirection(QPropertyAnimation* self, int direction);
@@ -89,9 +83,6 @@ void QPropertyAnimation_QBaseConnectNotify(QPropertyAnimation* self, QMetaMethod
 void QPropertyAnimation_DisconnectNotify(QPropertyAnimation* self, QMetaMethod* signal);
 void QPropertyAnimation_OnDisconnectNotify(QPropertyAnimation* self, intptr_t slot);
 void QPropertyAnimation_QBaseDisconnectNotify(QPropertyAnimation* self, QMetaMethod* signal);
-QVariant* QPropertyAnimation_Interpolated(const QPropertyAnimation* self, QVariant* from, QVariant* to, double progress);
-void QPropertyAnimation_OnInterpolated(const QPropertyAnimation* self, intptr_t slot);
-QVariant* QPropertyAnimation_QBaseInterpolated(const QPropertyAnimation* self, QVariant* from, QVariant* to, double progress);
 QObject* QPropertyAnimation_Sender(const QPropertyAnimation* self);
 void QPropertyAnimation_OnSender(const QPropertyAnimation* self, intptr_t slot);
 QObject* QPropertyAnimation_QBaseSender(const QPropertyAnimation* self);

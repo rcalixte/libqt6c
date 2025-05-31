@@ -1,7 +1,3 @@
-#include "libqabstracteventdispatcher.hpp"
-#include "libqabstractnativeeventfilter.hpp"
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqclipboard.hpp"
 #include "libqcoreapplication.hpp"
@@ -17,9 +13,6 @@
 #include "libqsessionmanager.hpp"
 #include <string.h>
 #include "libqstylehints.hpp"
-#include "libqthread.hpp"
-#include "libqtranslator.hpp"
-#include "libqvariant.hpp"
 #include "libqwindow.hpp"
 #include "libqcoreevent.hpp"
 #include "libqguiapplication.hpp"
@@ -33,7 +26,7 @@ QGuiApplication* q_guiapplication_new2(int* argc, char* argv[], int param3) {
     return QGuiApplication_new2(argc, argv, param3);
 }
 
-QMetaObject* q_guiapplication_meta_object(void* self) {
+const QMetaObject* q_guiapplication_meta_object(void* self) {
     return QGuiApplication_MetaObject((QGuiApplication*)self);
 }
 
@@ -574,7 +567,7 @@ void q_guiapplication_set_library_paths(const char* libraryPaths[]) {
     for (size_t _i = 0; _i < libraryPaths_len; ++_i) {
         libraryPaths_qstr[_i] = qstring(libraryPaths[_i]);
     }
-    libqt_list libraryPaths_list = qstrlist(libraryPaths_qstr, libraryPaths_len);
+    libqt_list libraryPaths_list = qlist(libraryPaths_qstr, libraryPaths_len);
     QCoreApplication_SetLibraryPaths(libraryPaths_list);
 }
 
@@ -729,8 +722,7 @@ const char* q_guiapplication_object_name(void* self) {
 }
 
 void q_guiapplication_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_guiapplication_is_widget_type(void* self) {
@@ -769,7 +761,7 @@ void q_guiapplication_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_guiapplication_children(void* self) {
+const libqt_list /* of QObject* */ q_guiapplication_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -836,7 +828,7 @@ QBindingStorage* q_guiapplication_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_guiapplication_binding_storage2(void* self) {
+const QBindingStorage* q_guiapplication_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -998,6 +990,14 @@ bool q_guiapplication_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_guiapplication_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QGuiApplication_OnIsSignalConnected((QGuiApplication*)self, (intptr_t)slot);
+}
+
+void q_guiapplication_on_about_to_quit(void* self, void (*slot)(void*)) {
+    QCoreApplication_Connect_AboutToQuit((QCoreApplication*)self, (intptr_t)slot);
+}
+
+void q_guiapplication_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_guiapplication_delete(void* self) {

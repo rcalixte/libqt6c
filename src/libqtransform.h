@@ -336,6 +336,8 @@ QTransform* q_transform_rotate2(void* self, double a, int64_t axis);
 /// ``` QTransform* self, double a, enum Qt__Axis axis ```
 QTransform* q_transform_rotate_radians2(void* self, double a, int64_t axis);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#dtor.QTransform)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTransform* self ```

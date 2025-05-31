@@ -12,44 +12,19 @@
 
 #include "qtlibc.h"
 
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
-#include "libqcursor.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
 #include "libqlineedit.h"
-#include "libqlocale.h"
-#include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqscreen.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
 #include "libqstyleoption.h"
-#include "libqthread.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qabstractspinbox.html
 
@@ -66,7 +41,7 @@ QAbstractSpinBox* q_abstractspinbox_new2();
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QAbstractSpinBox* self ```
-QMetaObject* q_abstractspinbox_meta_object(void* self);
+const QMetaObject* q_abstractspinbox_meta_object(void* self);
 
 /// ``` QAbstractSpinBox* self, const char* param1 ```
 void* q_abstractspinbox_metacast(void* self, const char* param1);
@@ -204,11 +179,15 @@ bool q_abstractspinbox_is_group_separator_shown(void* self);
 /// ``` QAbstractSpinBox* self ```
 QSize* q_abstractspinbox_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, QSize* (*slot)() ```
 void q_abstractspinbox_on_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self ```
@@ -219,11 +198,15 @@ QSize* q_abstractspinbox_qbase_size_hint(void* self);
 /// ``` QAbstractSpinBox* self ```
 QSize* q_abstractspinbox_minimum_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#minimumSizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, QSize* (*slot)() ```
 void q_abstractspinbox_on_minimum_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#minimumSizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self ```
@@ -239,11 +222,15 @@ void q_abstractspinbox_interpret_text(void* self);
 /// ``` QAbstractSpinBox* self, QEvent* event ```
 bool q_abstractspinbox_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, bool (*slot)(QAbstractSpinBox*, QEvent*) ```
 void q_abstractspinbox_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, QEvent* event ```
@@ -254,11 +241,15 @@ bool q_abstractspinbox_qbase_event(void* self, void* event);
 /// ``` QAbstractSpinBox* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_abstractspinbox_input_method_query(void* self, int64_t param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#inputMethodQuery)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, QVariant* (*slot)(QAbstractSpinBox*, enum Qt__InputMethodQuery) ```
 void q_abstractspinbox_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#inputMethodQuery)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, enum Qt__InputMethodQuery param1 ```
@@ -269,11 +260,15 @@ QVariant* q_abstractspinbox_qbase_input_method_query(void* self, int64_t param1)
 /// ``` QAbstractSpinBox* self, const char* input, int* pos ```
 int64_t q_abstractspinbox_validate(void* self, const char* input, int* pos);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#validate)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, int64_t (*slot)(QAbstractSpinBox*, const char*, int*) ```
 void q_abstractspinbox_on_validate(void* self, int64_t (*slot)(void*, const char*, int*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#validate)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, const char* input, int* pos ```
@@ -284,11 +279,15 @@ int64_t q_abstractspinbox_qbase_validate(void* self, const char* input, int* pos
 /// ``` QAbstractSpinBox* self, const char* input ```
 void q_abstractspinbox_fixup(void* self, const char* input);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#fixup)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QAbstractSpinBox*, const char*) ```
 void q_abstractspinbox_on_fixup(void* self, void (*slot)(void*, const char*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#fixup)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, const char* input ```
@@ -299,11 +298,15 @@ void q_abstractspinbox_qbase_fixup(void* self, const char* input);
 /// ``` QAbstractSpinBox* self, int steps ```
 void q_abstractspinbox_step_by(void* self, int steps);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#stepBy)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QAbstractSpinBox*, int) ```
 void q_abstractspinbox_on_step_by(void* self, void (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#stepBy)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, int steps ```
@@ -329,11 +332,15 @@ void q_abstractspinbox_select_all(void* self);
 /// ``` QAbstractSpinBox* self ```
 void q_abstractspinbox_clear(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#clear)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)() ```
 void q_abstractspinbox_on_clear(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#clear)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self ```
@@ -344,11 +351,15 @@ void q_abstractspinbox_qbase_clear(void* self);
 /// ``` QAbstractSpinBox* self, QResizeEvent* event ```
 void q_abstractspinbox_resize_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#resizeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QAbstractSpinBox*, QResizeEvent*) ```
 void q_abstractspinbox_on_resize_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#resizeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, QResizeEvent* event ```
@@ -359,11 +370,15 @@ void q_abstractspinbox_qbase_resize_event(void* self, void* event);
 /// ``` QAbstractSpinBox* self, QKeyEvent* event ```
 void q_abstractspinbox_key_press_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#keyPressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QAbstractSpinBox*, QKeyEvent*) ```
 void q_abstractspinbox_on_key_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#keyPressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, QKeyEvent* event ```
@@ -374,11 +389,15 @@ void q_abstractspinbox_qbase_key_press_event(void* self, void* event);
 /// ``` QAbstractSpinBox* self, QKeyEvent* event ```
 void q_abstractspinbox_key_release_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#keyReleaseEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QAbstractSpinBox*, QKeyEvent*) ```
 void q_abstractspinbox_on_key_release_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#keyReleaseEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, QKeyEvent* event ```
@@ -389,11 +408,15 @@ void q_abstractspinbox_qbase_key_release_event(void* self, void* event);
 /// ``` QAbstractSpinBox* self, QWheelEvent* event ```
 void q_abstractspinbox_wheel_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#wheelEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QAbstractSpinBox*, QWheelEvent*) ```
 void q_abstractspinbox_on_wheel_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#wheelEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, QWheelEvent* event ```
@@ -404,11 +427,15 @@ void q_abstractspinbox_qbase_wheel_event(void* self, void* event);
 /// ``` QAbstractSpinBox* self, QFocusEvent* event ```
 void q_abstractspinbox_focus_in_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#focusInEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QAbstractSpinBox*, QFocusEvent*) ```
 void q_abstractspinbox_on_focus_in_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#focusInEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, QFocusEvent* event ```
@@ -419,11 +446,15 @@ void q_abstractspinbox_qbase_focus_in_event(void* self, void* event);
 /// ``` QAbstractSpinBox* self, QFocusEvent* event ```
 void q_abstractspinbox_focus_out_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#focusOutEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QAbstractSpinBox*, QFocusEvent*) ```
 void q_abstractspinbox_on_focus_out_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#focusOutEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, QFocusEvent* event ```
@@ -434,11 +465,15 @@ void q_abstractspinbox_qbase_focus_out_event(void* self, void* event);
 /// ``` QAbstractSpinBox* self, QContextMenuEvent* event ```
 void q_abstractspinbox_context_menu_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#contextMenuEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QAbstractSpinBox*, QContextMenuEvent*) ```
 void q_abstractspinbox_on_context_menu_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#contextMenuEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, QContextMenuEvent* event ```
@@ -449,11 +484,15 @@ void q_abstractspinbox_qbase_context_menu_event(void* self, void* event);
 /// ``` QAbstractSpinBox* self, QEvent* event ```
 void q_abstractspinbox_change_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#changeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QAbstractSpinBox*, QEvent*) ```
 void q_abstractspinbox_on_change_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#changeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, QEvent* event ```
@@ -464,11 +503,15 @@ void q_abstractspinbox_qbase_change_event(void* self, void* event);
 /// ``` QAbstractSpinBox* self, QCloseEvent* event ```
 void q_abstractspinbox_close_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#closeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QAbstractSpinBox*, QCloseEvent*) ```
 void q_abstractspinbox_on_close_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#closeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, QCloseEvent* event ```
@@ -479,11 +522,15 @@ void q_abstractspinbox_qbase_close_event(void* self, void* event);
 /// ``` QAbstractSpinBox* self, QHideEvent* event ```
 void q_abstractspinbox_hide_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#hideEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QAbstractSpinBox*, QHideEvent*) ```
 void q_abstractspinbox_on_hide_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#hideEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, QHideEvent* event ```
@@ -494,11 +541,15 @@ void q_abstractspinbox_qbase_hide_event(void* self, void* event);
 /// ``` QAbstractSpinBox* self, QMouseEvent* event ```
 void q_abstractspinbox_mouse_press_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mousePressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QAbstractSpinBox*, QMouseEvent*) ```
 void q_abstractspinbox_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mousePressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, QMouseEvent* event ```
@@ -509,11 +560,15 @@ void q_abstractspinbox_qbase_mouse_press_event(void* self, void* event);
 /// ``` QAbstractSpinBox* self, QMouseEvent* event ```
 void q_abstractspinbox_mouse_release_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseReleaseEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QAbstractSpinBox*, QMouseEvent*) ```
 void q_abstractspinbox_on_mouse_release_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseReleaseEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, QMouseEvent* event ```
@@ -524,11 +579,15 @@ void q_abstractspinbox_qbase_mouse_release_event(void* self, void* event);
 /// ``` QAbstractSpinBox* self, QMouseEvent* event ```
 void q_abstractspinbox_mouse_move_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseMoveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QAbstractSpinBox*, QMouseEvent*) ```
 void q_abstractspinbox_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseMoveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, QMouseEvent* event ```
@@ -539,11 +598,15 @@ void q_abstractspinbox_qbase_mouse_move_event(void* self, void* event);
 /// ``` QAbstractSpinBox* self, QTimerEvent* event ```
 void q_abstractspinbox_timer_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#timerEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QAbstractSpinBox*, QTimerEvent*) ```
 void q_abstractspinbox_on_timer_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#timerEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, QTimerEvent* event ```
@@ -554,11 +617,15 @@ void q_abstractspinbox_qbase_timer_event(void* self, void* event);
 /// ``` QAbstractSpinBox* self, QPaintEvent* event ```
 void q_abstractspinbox_paint_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#paintEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QAbstractSpinBox*, QPaintEvent*) ```
 void q_abstractspinbox_on_paint_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#paintEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, QPaintEvent* event ```
@@ -569,11 +636,15 @@ void q_abstractspinbox_qbase_paint_event(void* self, void* event);
 /// ``` QAbstractSpinBox* self, QShowEvent* event ```
 void q_abstractspinbox_show_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#showEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QAbstractSpinBox*, QShowEvent*) ```
 void q_abstractspinbox_on_show_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#showEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, QShowEvent* event ```
@@ -584,11 +655,15 @@ void q_abstractspinbox_qbase_show_event(void* self, void* event);
 /// ``` QAbstractSpinBox* self, QStyleOptionSpinBox* option ```
 void q_abstractspinbox_init_style_option(void* self, void* option);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#initStyleOption)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QAbstractSpinBox*, QStyleOptionSpinBox*) ```
 void q_abstractspinbox_on_init_style_option(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#initStyleOption)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, QStyleOptionSpinBox* option ```
@@ -599,11 +674,15 @@ void q_abstractspinbox_qbase_init_style_option(void* self, void* option);
 /// ``` QAbstractSpinBox* self ```
 QLineEdit* q_abstractspinbox_line_edit(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#lineEdit)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, QLineEdit* (*slot)() ```
 void q_abstractspinbox_on_line_edit(void* self, QLineEdit* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#lineEdit)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self ```
@@ -614,11 +693,15 @@ QLineEdit* q_abstractspinbox_qbase_line_edit(void* self);
 /// ``` QAbstractSpinBox* self, QLineEdit* edit ```
 void q_abstractspinbox_set_line_edit(void* self, void* edit);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setLineEdit)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QAbstractSpinBox*, QLineEdit*) ```
 void q_abstractspinbox_on_set_line_edit(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setLineEdit)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self, QLineEdit* edit ```
@@ -629,11 +712,15 @@ void q_abstractspinbox_qbase_set_line_edit(void* self, void* edit);
 /// ``` QAbstractSpinBox* self ```
 int64_t q_abstractspinbox_step_enabled(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#stepEnabled)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSpinBox* self, int64_t (*slot)() ```
 void q_abstractspinbox_on_step_enabled(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#stepEnabled)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSpinBox* self ```
@@ -644,6 +731,8 @@ int64_t q_abstractspinbox_qbase_step_enabled(void* self);
 /// ``` QAbstractSpinBox* self ```
 void q_abstractspinbox_editing_finished(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#editingFinished)
+///
 /// ``` QAbstractSpinBox* self, void (*slot)(QAbstractSpinBox*) ```
 void q_abstractspinbox_on_editing_finished(void* self, void (*slot)(void*));
 
@@ -781,7 +870,7 @@ QRect* q_abstractspinbox_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QAbstractSpinBox* self ```
-QRect* q_abstractspinbox_geometry(void* self);
+const QRect* q_abstractspinbox_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1138,7 +1227,7 @@ QWidget* q_abstractspinbox_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QAbstractSpinBox* self ```
-QPalette* q_abstractspinbox_palette(void* self);
+const QPalette* q_abstractspinbox_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1180,7 +1269,7 @@ int64_t q_abstractspinbox_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QAbstractSpinBox* self ```
-QFont* q_abstractspinbox_font(void* self);
+const QFont* q_abstractspinbox_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2180,15 +2269,15 @@ void q_abstractspinbox_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QAbstractSpinBox* self, QAction* actions[] ```
-void q_abstractspinbox_add_actions(void* self, void* actions[]);
+/// ``` QAbstractSpinBox* self, libqt_list /* of QAction* */ actions ```
+void q_abstractspinbox_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QAbstractSpinBox* self, QAction* before, QAction* actions[] ```
-void q_abstractspinbox_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QAbstractSpinBox* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_abstractspinbox_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2388,6 +2477,8 @@ void q_abstractspinbox_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QAbstractSpinBox* self, void (*slot)(QWidget*, const char*) ```
 void q_abstractspinbox_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2399,6 +2490,8 @@ void q_abstractspinbox_on_window_title_changed(void* self, void (*slot)(void*, c
 void q_abstractspinbox_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QWidget*, QIcon*) ```
 void q_abstractspinbox_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -2412,6 +2505,8 @@ void q_abstractspinbox_window_icon_text_changed(void* self, const char* iconText
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QAbstractSpinBox* self, void (*slot)(QWidget*, const char*) ```
 void q_abstractspinbox_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2423,6 +2518,8 @@ void q_abstractspinbox_on_window_icon_text_changed(void* self, void (*slot)(void
 void q_abstractspinbox_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QWidget*, QPoint*) ```
 void q_abstractspinbox_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2628,7 +2725,7 @@ void q_abstractspinbox_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QAbstractSpinBox* self ```
-libqt_list /* of QObject* */ q_abstractspinbox_children(void* self);
+const libqt_list /* of QObject* */ q_abstractspinbox_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2719,7 +2816,7 @@ QBindingStorage* q_abstractspinbox_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QAbstractSpinBox* self ```
-QBindingStorage* q_abstractspinbox_binding_storage2(void* self);
+const QBindingStorage* q_abstractspinbox_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2729,6 +2826,8 @@ QBindingStorage* q_abstractspinbox_binding_storage2(void* self);
 void q_abstractspinbox_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QObject*) ```
 void q_abstractspinbox_on_destroyed(void* self, void (*slot)(void*));
@@ -2783,6 +2882,8 @@ QMetaObject__Connection* q_abstractspinbox_connect4(void* self, void* sender, co
 void q_abstractspinbox_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QAbstractSpinBox* self, void (*slot)(QObject*, QObject*) ```
 void q_abstractspinbox_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -2882,12 +2983,16 @@ int32_t q_abstractspinbox_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self ```
 int32_t q_abstractspinbox_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2905,12 +3010,16 @@ void q_abstractspinbox_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, bool visible ```
 void q_abstractspinbox_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2928,12 +3037,16 @@ int32_t q_abstractspinbox_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, int param1 ```
 int32_t q_abstractspinbox_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2951,12 +3064,16 @@ bool q_abstractspinbox_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self ```
 bool q_abstractspinbox_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2974,12 +3091,16 @@ QPaintEngine* q_abstractspinbox_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self ```
 QPaintEngine* q_abstractspinbox_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2997,12 +3118,16 @@ void q_abstractspinbox_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, QMouseEvent* event ```
 void q_abstractspinbox_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3020,12 +3145,16 @@ void q_abstractspinbox_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, QEnterEvent* event ```
 void q_abstractspinbox_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3043,12 +3172,16 @@ void q_abstractspinbox_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, QEvent* event ```
 void q_abstractspinbox_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3066,12 +3199,16 @@ void q_abstractspinbox_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, QMoveEvent* event ```
 void q_abstractspinbox_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3089,12 +3226,16 @@ void q_abstractspinbox_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, QTabletEvent* event ```
 void q_abstractspinbox_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3112,12 +3253,16 @@ void q_abstractspinbox_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, QActionEvent* event ```
 void q_abstractspinbox_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3135,12 +3280,16 @@ void q_abstractspinbox_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, QDragEnterEvent* event ```
 void q_abstractspinbox_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3158,12 +3307,16 @@ void q_abstractspinbox_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, QDragMoveEvent* event ```
 void q_abstractspinbox_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3181,12 +3334,16 @@ void q_abstractspinbox_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, QDragLeaveEvent* event ```
 void q_abstractspinbox_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3204,12 +3361,16 @@ void q_abstractspinbox_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, QDropEvent* event ```
 void q_abstractspinbox_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3227,12 +3388,16 @@ bool q_abstractspinbox_native_event(void* self, const char* eventType, void* mes
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, const char* eventType, void* message, intptr_t* result ```
 bool q_abstractspinbox_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3250,12 +3415,16 @@ int32_t q_abstractspinbox_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_abstractspinbox_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3273,12 +3442,16 @@ void q_abstractspinbox_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, QPainter* painter ```
 void q_abstractspinbox_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3296,12 +3469,16 @@ QPaintDevice* q_abstractspinbox_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, QPoint* offset ```
 QPaintDevice* q_abstractspinbox_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3319,12 +3496,16 @@ QPainter* q_abstractspinbox_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self ```
 QPainter* q_abstractspinbox_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3342,12 +3523,16 @@ void q_abstractspinbox_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, QInputMethodEvent* param1 ```
 void q_abstractspinbox_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3365,12 +3550,16 @@ bool q_abstractspinbox_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, bool next ```
 bool q_abstractspinbox_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3388,12 +3577,16 @@ bool q_abstractspinbox_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, QObject* watched, QEvent* event ```
 bool q_abstractspinbox_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3411,12 +3604,16 @@ void q_abstractspinbox_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, QChildEvent* event ```
 void q_abstractspinbox_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3434,12 +3631,16 @@ void q_abstractspinbox_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, QEvent* event ```
 void q_abstractspinbox_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3457,12 +3658,16 @@ void q_abstractspinbox_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, QMetaMethod* signal ```
 void q_abstractspinbox_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3480,12 +3685,16 @@ void q_abstractspinbox_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, QMetaMethod* signal ```
 void q_abstractspinbox_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3503,12 +3712,16 @@ void q_abstractspinbox_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self ```
 void q_abstractspinbox_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3526,12 +3739,16 @@ void q_abstractspinbox_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self ```
 void q_abstractspinbox_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3549,12 +3766,16 @@ void q_abstractspinbox_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self ```
 void q_abstractspinbox_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3572,12 +3793,16 @@ bool q_abstractspinbox_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self ```
 bool q_abstractspinbox_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3595,12 +3820,16 @@ bool q_abstractspinbox_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self ```
 bool q_abstractspinbox_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3618,12 +3847,16 @@ QObject* q_abstractspinbox_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self ```
 QObject* q_abstractspinbox_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3641,12 +3874,16 @@ int32_t q_abstractspinbox_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self ```
 int32_t q_abstractspinbox_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3664,12 +3901,16 @@ int32_t q_abstractspinbox_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, const char* signal ```
 int32_t q_abstractspinbox_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3687,6 +3928,8 @@ bool q_abstractspinbox_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, QMetaMethod* signal ```
@@ -3694,11 +3937,24 @@ bool q_abstractspinbox_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QAbstractSpinBox* self, bool (*slot)(QAbstractSpinBox*, QMetaMethod*) ```
 void q_abstractspinbox_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QAbstractSpinBox* self, void (*slot)(QObject*, const char*) ```
+void q_abstractspinbox_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#dtor.QAbstractSpinBox)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAbstractSpinBox* self ```

@@ -168,6 +168,8 @@ libqt_list /* of QNetworkCookie* */ q_networkcookie_parse_cookies(const char* co
 /// ``` QNetworkCookie* self, enum QNetworkCookie__RawForm form ```
 char* q_networkcookie_to_raw_form1(void* self, int64_t form);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#dtor.QNetworkCookie)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QNetworkCookie* self ```

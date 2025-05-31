@@ -136,6 +136,8 @@ QNetworkDatagram* q_networkdatagram_make_reply(void* self, const char* payload);
 /// ``` QNetworkDatagram* self, QHostAddress* address, unsigned short port ```
 void q_networkdatagram_set_sender2(void* self, void* address, unsigned short port);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdatagram.html#dtor.QNetworkDatagram)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QNetworkDatagram* self ```

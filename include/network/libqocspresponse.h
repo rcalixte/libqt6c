@@ -56,6 +56,8 @@ QSslCertificate* q_ocspresponse_subject(void* self);
 /// ``` QOcspResponse* self, QOcspResponse* other ```
 void q_ocspresponse_swap(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#dtor.QOcspResponse)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QOcspResponse* self ```

@@ -1,24 +1,17 @@
 #include <QAbstractNetworkCache>
-#include <QAnyStringView>
-#include <QBindingStorage>
 #include <QByteArray>
-#include <QChildEvent>
 #include <QDateTime>
-#include <QEvent>
 #include <QIODevice>
 #include <QList>
 #include <QMap>
 #include <QMetaMethod>
 #include <QMetaObject>
-#define WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection
 #include <QNetworkCacheMetaData>
 #include <QObject>
 #include <QPair>
 #include <QString>
 #include <QByteArray>
 #include <cstring>
-#include <QThread>
-#include <QTimerEvent>
 #include <QUrl>
 #include <QVariant>
 #include <qabstractnetworkcache.h>
@@ -103,8 +96,10 @@ void QNetworkCacheMetaData_SetRawHeaders(QNetworkCacheMetaData* self, libqt_list
         QPair<QByteArray, QByteArray> headers_arr_i_QPair;
         libqt_string* headers_arr_i_first = static_cast<libqt_string*>(headers_arr[i].first);
         libqt_string* headers_arr_i_second = static_cast<libqt_string*>(headers_arr[i].second);
-        headers_arr_i_QPair.first = QByteArray::fromRawData(headers_arr_i_first->data, headers_arr_i_first->len);
-        headers_arr_i_QPair.second = QByteArray::fromRawData(headers_arr_i_second->data, headers_arr_i_second->len);
+        QByteArray headers_arr_i_first_0_QByteArray(headers_arr_i_first[0].data, headers_arr_i_first[0].len);
+        QByteArray headers_arr_i_second_0_QByteArray(headers_arr_i_second[0].data, headers_arr_i_second[0].len);
+        headers_arr_i_QPair.first = headers_arr_i_first_0_QByteArray;
+        headers_arr_i_QPair.second = headers_arr_i_second_0_QByteArray;
         headers_QList.push_back(headers_arr_i_QPair);
     }
     self->setRawHeaders(headers_QList);
@@ -245,14 +240,6 @@ libqt_string QAbstractNetworkCache_Tr3(const char* s, const char* c, int n) {
     memcpy(_str.data, _b.data(), _str.len);
     _str.data[_str.len] = '\0';
     return _str;
-}
-
-bool QAbstractNetworkCache_Event(QAbstractNetworkCache* self, QEvent* event) {
-    return self->event(event);
-}
-
-bool QAbstractNetworkCache_EventFilter(QAbstractNetworkCache* self, QObject* watched, QEvent* event) {
-    return self->eventFilter(watched, event);
 }
 
 void QAbstractNetworkCache_Delete(QAbstractNetworkCache* self) {

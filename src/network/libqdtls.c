@@ -1,5 +1,3 @@
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
 #include "libqhostaddress.hpp"
 #include "../libqmetaobject.hpp"
@@ -9,9 +7,7 @@
 #include "libqsslerror.hpp"
 #include "libqsslpresharedkeyauthenticator.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
 #include "libqudpsocket.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqdtls.hpp"
 #include "libqdtls.h"
@@ -24,7 +20,7 @@ QDtlsClientVerifier* q_dtlsclientverifier_new2(void* parent) {
     return QDtlsClientVerifier_new2((QObject*)parent);
 }
 
-QMetaObject* q_dtlsclientverifier_meta_object(void* self) {
+const QMetaObject* q_dtlsclientverifier_meta_object(void* self) {
     return QDtlsClientVerifier_MetaObject((QDtlsClientVerifier*)self);
 }
 
@@ -103,8 +99,7 @@ const char* q_dtlsclientverifier_object_name(void* self) {
 }
 
 void q_dtlsclientverifier_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_dtlsclientverifier_is_widget_type(void* self) {
@@ -143,7 +138,7 @@ void q_dtlsclientverifier_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_dtlsclientverifier_children(void* self) {
+const libqt_list /* of QObject* */ q_dtlsclientverifier_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -210,7 +205,7 @@ QBindingStorage* q_dtlsclientverifier_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_dtlsclientverifier_binding_storage2(void* self) {
+const QBindingStorage* q_dtlsclientverifier_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -386,6 +381,10 @@ void q_dtlsclientverifier_on_is_signal_connected(void* self, bool (*slot)(void*,
     QDtlsClientVerifier_OnIsSignalConnected((QDtlsClientVerifier*)self, (intptr_t)slot);
 }
 
+void q_dtlsclientverifier_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
 void q_dtlsclientverifier_delete(void* self) {
     QDtlsClientVerifier_Delete((QDtlsClientVerifier*)(self));
 }
@@ -398,7 +397,7 @@ QDtls* q_dtls_new2(int64_t mode, void* parent) {
     return QDtls_new2(mode, (QObject*)parent);
 }
 
-QMetaObject* q_dtls_meta_object(void* self) {
+const QMetaObject* q_dtls_meta_object(void* self) {
     return QDtls_MetaObject((QDtls*)self);
 }
 
@@ -539,17 +538,8 @@ libqt_list /* of QSslError* */ q_dtls_peer_verification_errors(void* self) {
     return _arr;
 }
 
-void q_dtls_ignore_verification_errors(void* self, void* errorsToIgnore[]) {
-    QSslError** errorsToIgnore_arr = (QSslError**)errorsToIgnore;
-    size_t errorsToIgnore_len = 0;
-    while (errorsToIgnore_arr[errorsToIgnore_len] != NULL) {
-        errorsToIgnore_len++;
-    }
-    libqt_list errorsToIgnore_list = {
-        .len = errorsToIgnore_len,
-        .data = {(QSslError*)errorsToIgnore},
-    };
-    QDtls_IgnoreVerificationErrors((QDtls*)self, errorsToIgnore_list);
+void q_dtls_ignore_verification_errors(void* self, libqt_list errorsToIgnore) {
+    QDtls_IgnoreVerificationErrors((QDtls*)self, errorsToIgnore);
 }
 
 void q_dtls_psk_required(void* self, void* authenticator) {
@@ -598,8 +588,7 @@ const char* q_dtls_object_name(void* self) {
 }
 
 void q_dtls_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_dtls_is_widget_type(void* self) {
@@ -638,7 +627,7 @@ void q_dtls_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_dtls_children(void* self) {
+const libqt_list /* of QObject* */ q_dtls_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -705,7 +694,7 @@ QBindingStorage* q_dtls_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_dtls_binding_storage2(void* self) {
+const QBindingStorage* q_dtls_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -879,6 +868,10 @@ bool q_dtls_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_dtls_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QDtls_OnIsSignalConnected((QDtls*)self, (intptr_t)slot);
+}
+
+void q_dtls_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_dtls_delete(void* self) {

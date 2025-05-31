@@ -12,16 +12,12 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
-/// https://doc.qt.io/qt-6/qscimacro.html
+/// https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html
 
 /// q_scimacro_new constructs a new QsciMacro object.
 ///
@@ -36,7 +32,7 @@ QsciMacro* q_scimacro_new2(const char* asc, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QsciMacro* self ```
-QMetaObject* q_scimacro_meta_object(void* self);
+const QMetaObject* q_scimacro_meta_object(void* self);
 
 /// ``` QsciMacro* self, const char* param1 ```
 void* q_scimacro_metacast(void* self, const char* param1);
@@ -59,61 +55,73 @@ int32_t q_scimacro_qbase_metacall(void* self, int64_t param1, int param2, void* 
 /// ``` const char* s ```
 const char* q_scimacro_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscimacro.html#clear)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)
 ///
 /// ``` QsciMacro* self ```
 void q_scimacro_clear(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscimacro.html#load)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)
 ///
 /// ``` QsciMacro* self, const char* asc ```
 bool q_scimacro_load(void* self, const char* asc);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscimacro.html#save)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)
 ///
 /// ``` QsciMacro* self ```
 const char* q_scimacro_save(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscimacro.html#play)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)
 ///
 /// ``` QsciMacro* self ```
 void q_scimacro_play(void* self);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciMacro* self, void (*slot)() ```
 void q_scimacro_on_play(void* self, void (*slot)());
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciMacro* self ```
 void q_scimacro_qbase_play(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscimacro.html#startRecording)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)
 ///
 /// ``` QsciMacro* self ```
 void q_scimacro_start_recording(void* self);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciMacro* self, void (*slot)() ```
 void q_scimacro_on_start_recording(void* self, void (*slot)());
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciMacro* self ```
 void q_scimacro_qbase_start_recording(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscimacro.html#endRecording)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)
 ///
 /// ``` QsciMacro* self ```
 void q_scimacro_end_recording(void* self);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciMacro* self, void (*slot)() ```
 void q_scimacro_on_end_recording(void* self, void (*slot)());
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)
+///
 /// Base class method implementation
 ///
 /// ``` QsciMacro* self ```
@@ -211,7 +219,7 @@ void q_scimacro_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QsciMacro* self ```
-libqt_list /* of QObject* */ q_scimacro_children(void* self);
+const libqt_list /* of QObject* */ q_scimacro_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -309,7 +317,7 @@ QBindingStorage* q_scimacro_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QsciMacro* self ```
-QBindingStorage* q_scimacro_binding_storage2(void* self);
+const QBindingStorage* q_scimacro_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -319,6 +327,8 @@ QBindingStorage* q_scimacro_binding_storage2(void* self);
 void q_scimacro_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QsciMacro* self, void (*slot)(QObject*) ```
 void q_scimacro_on_destroyed(void* self, void (*slot)(void*));
@@ -374,6 +384,8 @@ void q_scimacro_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QsciMacro* self, void (*slot)(QObject*, QObject*) ```
 void q_scimacro_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -388,12 +400,16 @@ bool q_scimacro_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciMacro* self, QEvent* event ```
 bool q_scimacro_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -411,12 +427,16 @@ bool q_scimacro_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciMacro* self, QObject* watched, QEvent* event ```
 bool q_scimacro_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -434,12 +454,16 @@ void q_scimacro_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciMacro* self, QTimerEvent* event ```
 void q_scimacro_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -457,12 +481,16 @@ void q_scimacro_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciMacro* self, QChildEvent* event ```
 void q_scimacro_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -480,12 +508,16 @@ void q_scimacro_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciMacro* self, QEvent* event ```
 void q_scimacro_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -503,12 +535,16 @@ void q_scimacro_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciMacro* self, QMetaMethod* signal ```
 void q_scimacro_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -526,12 +562,16 @@ void q_scimacro_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciMacro* self, QMetaMethod* signal ```
 void q_scimacro_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -549,12 +589,16 @@ QObject* q_scimacro_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciMacro* self ```
 QObject* q_scimacro_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -572,12 +616,16 @@ int32_t q_scimacro_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciMacro* self ```
 int32_t q_scimacro_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -595,12 +643,16 @@ int32_t q_scimacro_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciMacro* self, const char* signal ```
 int32_t q_scimacro_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -618,6 +670,8 @@ bool q_scimacro_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciMacro* self, QMetaMethod* signal ```
@@ -625,11 +679,24 @@ bool q_scimacro_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QsciMacro* self, bool (*slot)(QsciMacro*, QMetaMethod*) ```
 void q_scimacro_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QsciMacro* self, void (*slot)(QObject*, const char*) ```
+void q_scimacro_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QsciMacro* self ```

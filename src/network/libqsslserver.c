@@ -1,9 +1,5 @@
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
-#include "libqhostaddress.hpp"
 #include "../libqmetaobject.hpp"
-#include "libqnetworkproxy.hpp"
 #include "../libqobject.hpp"
 #include "libqsslconfiguration.hpp"
 #include "libqsslerror.hpp"
@@ -12,8 +8,6 @@
 #include <string.h>
 #include "libqtcpserver.hpp"
 #include "libqtcpsocket.hpp"
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqsslserver.hpp"
 #include "libqsslserver.h"
@@ -26,7 +20,7 @@ QSslServer* q_sslserver_new2(void* parent) {
     return QSslServer_new2((QObject*)parent);
 }
 
-QMetaObject* q_sslserver_meta_object(void* self) {
+const QMetaObject* q_sslserver_meta_object(void* self) {
     return QSslServer_MetaObject((QSslServer*)self);
 }
 
@@ -69,20 +63,11 @@ int32_t q_sslserver_handshake_timeout(void* self) {
     return QSslServer_HandshakeTimeout((QSslServer*)self);
 }
 
-void q_sslserver_ssl_errors(void* self, void* socket, void* errors[]) {
-    QSslError** errors_arr = (QSslError**)errors;
-    size_t errors_len = 0;
-    while (errors_arr[errors_len] != NULL) {
-        errors_len++;
-    }
-    libqt_list errors_list = {
-        .len = errors_len,
-        .data = {(QSslError*)errors},
-    };
-    QSslServer_SslErrors((QSslServer*)self, (QSslSocket*)socket, errors_list);
+void q_sslserver_ssl_errors(void* self, void* socket, libqt_list errors) {
+    QSslServer_SslErrors((QSslServer*)self, (QSslSocket*)socket, errors);
 }
 
-void q_sslserver_on_ssl_errors(void* self, void (*slot)(void*, void*, void*)) {
+void q_sslserver_on_ssl_errors(void* self, void (*slot)(void*, void*, libqt_list)) {
     QSslServer_Connect_SslErrors((QSslServer*)self, (intptr_t)slot);
 }
 
@@ -283,8 +268,7 @@ const char* q_sslserver_object_name(void* self) {
 }
 
 void q_sslserver_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_sslserver_is_widget_type(void* self) {
@@ -323,7 +307,7 @@ void q_sslserver_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_sslserver_children(void* self) {
+const libqt_list /* of QObject* */ q_sslserver_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -390,7 +374,7 @@ QBindingStorage* q_sslserver_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_sslserver_binding_storage2(void* self) {
+const QBindingStorage* q_sslserver_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -600,6 +584,14 @@ bool q_sslserver_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_sslserver_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QSslServer_OnIsSignalConnected((QSslServer*)self, (intptr_t)slot);
+}
+
+void q_sslserver_on_pending_connection_available(void* self, void (*slot)(void*)) {
+    QTcpServer_Connect_PendingConnectionAvailable((QTcpServer*)self, (intptr_t)slot);
+}
+
+void q_sslserver_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_sslserver_delete(void* self) {

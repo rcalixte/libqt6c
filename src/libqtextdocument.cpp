@@ -1,8 +1,5 @@
 #include <QAbstractTextDocumentLayout>
 #include <QAbstractUndoItem>
-#include <QAnyStringView>
-#include <QBindingStorage>
-#include <QByteArray>
 #include <QChar>
 #include <QChildEvent>
 #include <QEvent>
@@ -10,7 +7,6 @@
 #include <QList>
 #include <QMetaMethod>
 #include <QMetaObject>
-#define WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection
 #include <QObject>
 #include <QPagedPaintDevice>
 #include <QPainter>
@@ -27,7 +23,6 @@
 #include <QTextFrame>
 #include <QTextObject>
 #include <QTextOption>
-#include <QThread>
 #include <QTimerEvent>
 #include <QUrl>
 #include <QVariant>
@@ -78,27 +73,30 @@ void* QTextDocument_Metacast(QTextDocument* self, const char* param1) {
 }
 
 int QTextDocument_Metacall(QTextDocument* self, int param1, int param2, void** param3) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         return self->qt_metacall(static_cast<QMetaObject::Call>(param1), static_cast<int>(param2), param3);
     } else {
-        return self->qt_metacall(static_cast<QMetaObject::Call>(param1), static_cast<int>(param2), param3);
+        return ((VirtualQTextDocument*)self)->qt_metacall(static_cast<QMetaObject::Call>(param1), static_cast<int>(param2), param3);
     }
 }
 
 // Subclass method to allow providing a virtual method re-implementation
 void QTextDocument_OnMetacall(QTextDocument* self, intptr_t slot) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_Metacall_Callback(reinterpret_cast<VirtualQTextDocument::QTextDocument_Metacall_Callback>(slot));
     }
 }
 
 // Virtual base class handler implementation
 int QTextDocument_QBaseMetacall(QTextDocument* self, int param1, int param2, void** param3) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_Metacall_IsBase(true);
         return vqtextdocument->qt_metacall(static_cast<QMetaObject::Call>(param1), static_cast<int>(param2), param3);
     } else {
-        return self->qt_metacall(static_cast<QMetaObject::Call>(param1), static_cast<int>(param2), param3);
+        return ((VirtualQTextDocument*)self)->qt_metacall(static_cast<QMetaObject::Call>(param1), static_cast<int>(param2), param3);
     }
 }
 
@@ -735,59 +733,66 @@ void QTextDocument_SetModified1(QTextDocument* self, bool m) {
 
 // Derived class handler implementation
 void QTextDocument_Clear(QTextDocument* self) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->clear();
     } else {
-        vqtextdocument->clear();
+        self->QTextDocument::clear();
     }
 }
 
 // Base class handler implementation
 void QTextDocument_QBaseClear(QTextDocument* self) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_Clear_IsBase(true);
         vqtextdocument->clear();
     } else {
-        vqtextdocument->clear();
+        self->QTextDocument::clear();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextDocument_OnClear(QTextDocument* self, intptr_t slot) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_Clear_Callback(reinterpret_cast<VirtualQTextDocument::QTextDocument_Clear_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 QTextObject* QTextDocument_CreateObject(QTextDocument* self, QTextFormat* f) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         return vqtextdocument->createObject(*f);
     } else {
-        return vqtextdocument->createObject(*f);
+        return ((VirtualQTextDocument*)self)->createObject(*f);
     }
 }
 
 // Base class handler implementation
 QTextObject* QTextDocument_QBaseCreateObject(QTextDocument* self, QTextFormat* f) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_CreateObject_IsBase(true);
         return vqtextdocument->createObject(*f);
     } else {
-        return vqtextdocument->createObject(*f);
+        return ((VirtualQTextDocument*)self)->createObject(*f);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextDocument_OnCreateObject(QTextDocument* self, intptr_t slot) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_CreateObject_Callback(reinterpret_cast<VirtualQTextDocument::QTextDocument_CreateObject_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 QVariant* QTextDocument_LoadResource(QTextDocument* self, int typeVal, QUrl* name) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         return new QVariant(vqtextdocument->loadResource(static_cast<int>(typeVal), *name));
     }
     return {};
@@ -795,7 +800,8 @@ QVariant* QTextDocument_LoadResource(QTextDocument* self, int typeVal, QUrl* nam
 
 // Base class handler implementation
 QVariant* QTextDocument_QBaseLoadResource(QTextDocument* self, int typeVal, QUrl* name) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_LoadResource_IsBase(true);
         return new QVariant(vqtextdocument->loadResource(static_cast<int>(typeVal), *name));
     }
@@ -804,293 +810,327 @@ QVariant* QTextDocument_QBaseLoadResource(QTextDocument* self, int typeVal, QUrl
 
 // Auxiliary method to allow providing re-implementation
 void QTextDocument_OnLoadResource(QTextDocument* self, intptr_t slot) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_LoadResource_Callback(reinterpret_cast<VirtualQTextDocument::QTextDocument_LoadResource_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 bool QTextDocument_Event(QTextDocument* self, QEvent* event) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         return vqtextdocument->event(event);
     } else {
-        return vqtextdocument->event(event);
+        return self->QTextDocument::event(event);
     }
 }
 
 // Base class handler implementation
 bool QTextDocument_QBaseEvent(QTextDocument* self, QEvent* event) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_Event_IsBase(true);
         return vqtextdocument->event(event);
     } else {
-        return vqtextdocument->event(event);
+        return self->QTextDocument::event(event);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextDocument_OnEvent(QTextDocument* self, intptr_t slot) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_Event_Callback(reinterpret_cast<VirtualQTextDocument::QTextDocument_Event_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 bool QTextDocument_EventFilter(QTextDocument* self, QObject* watched, QEvent* event) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         return vqtextdocument->eventFilter(watched, event);
     } else {
-        return vqtextdocument->eventFilter(watched, event);
+        return self->QTextDocument::eventFilter(watched, event);
     }
 }
 
 // Base class handler implementation
 bool QTextDocument_QBaseEventFilter(QTextDocument* self, QObject* watched, QEvent* event) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_EventFilter_IsBase(true);
         return vqtextdocument->eventFilter(watched, event);
     } else {
-        return vqtextdocument->eventFilter(watched, event);
+        return self->QTextDocument::eventFilter(watched, event);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextDocument_OnEventFilter(QTextDocument* self, intptr_t slot) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_EventFilter_Callback(reinterpret_cast<VirtualQTextDocument::QTextDocument_EventFilter_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QTextDocument_TimerEvent(QTextDocument* self, QTimerEvent* event) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->timerEvent(event);
     } else {
-        vqtextdocument->timerEvent(event);
+        ((VirtualQTextDocument*)self)->timerEvent(event);
     }
 }
 
 // Base class handler implementation
 void QTextDocument_QBaseTimerEvent(QTextDocument* self, QTimerEvent* event) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_TimerEvent_IsBase(true);
         vqtextdocument->timerEvent(event);
     } else {
-        vqtextdocument->timerEvent(event);
+        ((VirtualQTextDocument*)self)->timerEvent(event);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextDocument_OnTimerEvent(QTextDocument* self, intptr_t slot) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_TimerEvent_Callback(reinterpret_cast<VirtualQTextDocument::QTextDocument_TimerEvent_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QTextDocument_ChildEvent(QTextDocument* self, QChildEvent* event) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->childEvent(event);
     } else {
-        vqtextdocument->childEvent(event);
+        ((VirtualQTextDocument*)self)->childEvent(event);
     }
 }
 
 // Base class handler implementation
 void QTextDocument_QBaseChildEvent(QTextDocument* self, QChildEvent* event) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_ChildEvent_IsBase(true);
         vqtextdocument->childEvent(event);
     } else {
-        vqtextdocument->childEvent(event);
+        ((VirtualQTextDocument*)self)->childEvent(event);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextDocument_OnChildEvent(QTextDocument* self, intptr_t slot) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_ChildEvent_Callback(reinterpret_cast<VirtualQTextDocument::QTextDocument_ChildEvent_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QTextDocument_CustomEvent(QTextDocument* self, QEvent* event) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->customEvent(event);
     } else {
-        vqtextdocument->customEvent(event);
+        ((VirtualQTextDocument*)self)->customEvent(event);
     }
 }
 
 // Base class handler implementation
 void QTextDocument_QBaseCustomEvent(QTextDocument* self, QEvent* event) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_CustomEvent_IsBase(true);
         vqtextdocument->customEvent(event);
     } else {
-        vqtextdocument->customEvent(event);
+        ((VirtualQTextDocument*)self)->customEvent(event);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextDocument_OnCustomEvent(QTextDocument* self, intptr_t slot) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_CustomEvent_Callback(reinterpret_cast<VirtualQTextDocument::QTextDocument_CustomEvent_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QTextDocument_ConnectNotify(QTextDocument* self, QMetaMethod* signal) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->connectNotify(*signal);
     } else {
-        vqtextdocument->connectNotify(*signal);
+        ((VirtualQTextDocument*)self)->connectNotify(*signal);
     }
 }
 
 // Base class handler implementation
 void QTextDocument_QBaseConnectNotify(QTextDocument* self, QMetaMethod* signal) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_ConnectNotify_IsBase(true);
         vqtextdocument->connectNotify(*signal);
     } else {
-        vqtextdocument->connectNotify(*signal);
+        ((VirtualQTextDocument*)self)->connectNotify(*signal);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextDocument_OnConnectNotify(QTextDocument* self, intptr_t slot) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_ConnectNotify_Callback(reinterpret_cast<VirtualQTextDocument::QTextDocument_ConnectNotify_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QTextDocument_DisconnectNotify(QTextDocument* self, QMetaMethod* signal) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->disconnectNotify(*signal);
     } else {
-        vqtextdocument->disconnectNotify(*signal);
+        ((VirtualQTextDocument*)self)->disconnectNotify(*signal);
     }
 }
 
 // Base class handler implementation
 void QTextDocument_QBaseDisconnectNotify(QTextDocument* self, QMetaMethod* signal) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_DisconnectNotify_IsBase(true);
         vqtextdocument->disconnectNotify(*signal);
     } else {
-        vqtextdocument->disconnectNotify(*signal);
+        ((VirtualQTextDocument*)self)->disconnectNotify(*signal);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextDocument_OnDisconnectNotify(QTextDocument* self, intptr_t slot) {
-    if (auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self)) {
+    auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_DisconnectNotify_Callback(reinterpret_cast<VirtualQTextDocument::QTextDocument_DisconnectNotify_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 QObject* QTextDocument_Sender(const QTextDocument* self) {
-    if (auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self))) {
+    auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self));
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         return vqtextdocument->sender();
     } else {
-        return vqtextdocument->sender();
+        return ((VirtualQTextDocument*)self)->sender();
     }
 }
 
 // Base class handler implementation
 QObject* QTextDocument_QBaseSender(const QTextDocument* self) {
-    if (auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self))) {
+    auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self));
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_Sender_IsBase(true);
         return vqtextdocument->sender();
     } else {
-        return vqtextdocument->sender();
+        return ((VirtualQTextDocument*)self)->sender();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextDocument_OnSender(const QTextDocument* self, intptr_t slot) {
-    if (auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self))) {
+    auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self));
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_Sender_Callback(reinterpret_cast<VirtualQTextDocument::QTextDocument_Sender_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 int QTextDocument_SenderSignalIndex(const QTextDocument* self) {
-    if (auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self))) {
+    auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self));
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         return vqtextdocument->senderSignalIndex();
     } else {
-        return vqtextdocument->senderSignalIndex();
+        return ((VirtualQTextDocument*)self)->senderSignalIndex();
     }
 }
 
 // Base class handler implementation
 int QTextDocument_QBaseSenderSignalIndex(const QTextDocument* self) {
-    if (auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self))) {
+    auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self));
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_SenderSignalIndex_IsBase(true);
         return vqtextdocument->senderSignalIndex();
     } else {
-        return vqtextdocument->senderSignalIndex();
+        return ((VirtualQTextDocument*)self)->senderSignalIndex();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextDocument_OnSenderSignalIndex(const QTextDocument* self, intptr_t slot) {
-    if (auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self))) {
+    auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self));
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_SenderSignalIndex_Callback(reinterpret_cast<VirtualQTextDocument::QTextDocument_SenderSignalIndex_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 int QTextDocument_Receivers(const QTextDocument* self, const char* signal) {
-    if (auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self))) {
+    auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self));
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         return vqtextdocument->receivers(signal);
     } else {
-        return vqtextdocument->receivers(signal);
+        return ((VirtualQTextDocument*)self)->receivers(signal);
     }
 }
 
 // Base class handler implementation
 int QTextDocument_QBaseReceivers(const QTextDocument* self, const char* signal) {
-    if (auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self))) {
+    auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self));
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_Receivers_IsBase(true);
         return vqtextdocument->receivers(signal);
     } else {
-        return vqtextdocument->receivers(signal);
+        return ((VirtualQTextDocument*)self)->receivers(signal);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextDocument_OnReceivers(const QTextDocument* self, intptr_t slot) {
-    if (auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self))) {
+    auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self));
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_Receivers_Callback(reinterpret_cast<VirtualQTextDocument::QTextDocument_Receivers_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 bool QTextDocument_IsSignalConnected(const QTextDocument* self, QMetaMethod* signal) {
-    if (auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self))) {
+    auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self));
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         return vqtextdocument->isSignalConnected(*signal);
     } else {
-        return vqtextdocument->isSignalConnected(*signal);
+        return ((VirtualQTextDocument*)self)->isSignalConnected(*signal);
     }
 }
 
 // Base class handler implementation
 bool QTextDocument_QBaseIsSignalConnected(const QTextDocument* self, QMetaMethod* signal) {
-    if (auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self))) {
+    auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self));
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_IsSignalConnected_IsBase(true);
         return vqtextdocument->isSignalConnected(*signal);
     } else {
-        return vqtextdocument->isSignalConnected(*signal);
+        return ((VirtualQTextDocument*)self)->isSignalConnected(*signal);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QTextDocument_OnIsSignalConnected(const QTextDocument* self, intptr_t slot) {
-    if (auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self))) {
+    auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self));
+    if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_IsSignalConnected_Callback(reinterpret_cast<VirtualQTextDocument::QTextDocument_IsSignalConnected_Callback>(slot));
     }
 }

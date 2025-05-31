@@ -1,23 +1,8 @@
 #include "../libqabstractscrollarea.hpp"
-#include "../libqaction.hpp"
 #include "../libqevent.hpp"
-#include "../libqanystringview.hpp"
-#include "../libqbackingstore.hpp"
-#include "../libqbindingstorage.hpp"
-#include "../libqbitmap.hpp"
 #include "../libqcolor.hpp"
-#include "../libqcursor.hpp"
-#include "../libqfont.hpp"
-#include "../libqfontinfo.hpp"
-#include "../libqfontmetrics.hpp"
 #include "../libqframe.hpp"
-#include "../libqgraphicseffect.hpp"
-#include "../libqgraphicsproxywidget.hpp"
-#include "../libqicon.hpp"
 #include "../libqimage.hpp"
-#include "../libqkeysequence.hpp"
-#include "../libqlayout.hpp"
-#include "../libqlocale.hpp"
 #include "../libqmargins.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqmimedata.hpp"
@@ -25,23 +10,16 @@
 #include "../libqpaintdevice.hpp"
 #include "../libqpaintengine.hpp"
 #include "../libqpainter.hpp"
-#include "../libqpalette.hpp"
 #include "../libqpixmap.hpp"
 #include "../libqpoint.hpp"
 #include "../libqrect.hpp"
-#include "../libqregion.hpp"
-#include "../libqscreen.hpp"
 #include "../libqscrollbar.hpp"
 #include "../libqsize.hpp"
-#include "../libqsizepolicy.hpp"
 #include <string.h>
-#include "../libqstyle.hpp"
 #include "../libqstyleoption.hpp"
-#include "../libqthread.hpp"
 #include "../libqurl.hpp"
 #include "../libqvariant.hpp"
 #include "../libqwidget.hpp"
-#include "../libqwindow.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqsciscintillabase.hpp"
 #include "libqsciscintillabase.h"
@@ -54,7 +32,7 @@ QsciScintillaBase* q_sciscintillabase_new2() {
     return QsciScintillaBase_new2();
 }
 
-QMetaObject* q_sciscintillabase_meta_object(void* self) {
+const QMetaObject* q_sciscintillabase_meta_object(void* self) {
     return QsciScintillaBase_MetaObject((QsciScintillaBase*)self);
 }
 
@@ -790,7 +768,7 @@ QRect* q_sciscintillabase_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_sciscintillabase_geometry(void* self) {
+const QRect* q_sciscintillabase_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -994,7 +972,7 @@ QWidget* q_sciscintillabase_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_sciscintillabase_palette(void* self) {
+const QPalette* q_sciscintillabase_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -1018,7 +996,7 @@ int64_t q_sciscintillabase_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_sciscintillabase_font(void* self) {
+const QFont* q_sciscintillabase_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -1623,30 +1601,12 @@ void q_sciscintillabase_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_sciscintillabase_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_sciscintillabase_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_sciscintillabase_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_sciscintillabase_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_sciscintillabase_insert_action(void* self, void* before, void* action) {
@@ -1866,8 +1826,7 @@ const char* q_sciscintillabase_object_name(void* self) {
 }
 
 void q_sciscintillabase_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_sciscintillabase_is_widget_type(void* self) {
@@ -1906,7 +1865,7 @@ void q_sciscintillabase_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_sciscintillabase_children(void* self) {
+const libqt_list /* of QObject* */ q_sciscintillabase_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1969,7 +1928,7 @@ QBindingStorage* q_sciscintillabase_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_sciscintillabase_binding_storage2(void* self) {
+const QBindingStorage* q_sciscintillabase_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2397,6 +2356,18 @@ void q_sciscintillabase_on_shared_painter(void* self, QPainter* (*slot)()) {
     QsciScintillaBase_OnSharedPainter((QsciScintillaBase*)self, (intptr_t)slot);
 }
 
+QVariant* q_sciscintillabase_input_method_query(void* self, int64_t param1) {
+    return QsciScintillaBase_InputMethodQuery((QsciScintillaBase*)self, param1);
+}
+
+QVariant* q_sciscintillabase_qbase_input_method_query(void* self, int64_t param1) {
+    return QsciScintillaBase_QBaseInputMethodQuery((QsciScintillaBase*)self, param1);
+}
+
+void q_sciscintillabase_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
+    QsciScintillaBase_OnInputMethodQuery((QsciScintillaBase*)self, (intptr_t)slot);
+}
+
 void q_sciscintillabase_timer_event(void* self, void* event) {
     QsciScintillaBase_TimerEvent((QsciScintillaBase*)self, (QTimerEvent*)event);
 }
@@ -2599,6 +2570,10 @@ bool q_sciscintillabase_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_sciscintillabase_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QsciScintillaBase_OnIsSignalConnected((QsciScintillaBase*)self, (intptr_t)slot);
+}
+
+void q_sciscintillabase_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_sciscintillabase_delete(void* self) {

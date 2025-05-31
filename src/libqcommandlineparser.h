@@ -45,8 +45,8 @@ bool q_commandlineparser_add_option(void* self, void* commandLineOption);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineparser.html#addOptions)
 ///
-/// ``` QCommandLineParser* self, QCommandLineOption* options[] ```
-bool q_commandlineparser_add_options(void* self, void* options[]);
+/// ``` QCommandLineParser* self, libqt_list /* of QCommandLineOption* */ options ```
+bool q_commandlineparser_add_options(void* self, libqt_list options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineparser.html#addVersionOption)
 ///
@@ -178,6 +178,8 @@ void q_commandlineparser_add_positional_argument3(void* self, const char* name, 
 /// ``` QCommandLineParser* self, int exitCode ```
 void q_commandlineparser_show_help1(void* self, int exitCode);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineparser.html#dtor.QCommandLineParser)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCommandLineParser* self ```

@@ -15,23 +15,16 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
 typedef struct QAbstractEventDispatcher QAbstractEventDispatcher;
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QDeadlineTimer QDeadlineTimer;
 typedef struct QEvent QEvent;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
 #endif
 
 #ifdef __cplusplus
@@ -116,6 +109,8 @@ int QThread_QBaseReceivers(const QThread* self, const char* signal);
 bool QThread_IsSignalConnected(const QThread* self, QMetaMethod* signal);
 void QThread_OnIsSignalConnected(const QThread* self, intptr_t slot);
 bool QThread_QBaseIsSignalConnected(const QThread* self, QMetaMethod* signal);
+void QThread_Connect_Started(QThread* self, intptr_t slot);
+void QThread_Connect_Finished(QThread* self, intptr_t slot);
 void QThread_Delete(QThread* self);
 
 #ifdef __cplusplus

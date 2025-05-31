@@ -15,23 +15,15 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QEvent QEvent;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QSocketDescriptor QSocketDescriptor;
 typedef struct QSocketNotifier QSocketNotifier;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
 #endif
 
 #ifdef __cplusplus
@@ -93,6 +85,7 @@ int QSocketNotifier_QBaseReceivers(const QSocketNotifier* self, const char* sign
 bool QSocketNotifier_IsSignalConnected(const QSocketNotifier* self, QMetaMethod* signal);
 void QSocketNotifier_OnIsSignalConnected(const QSocketNotifier* self, intptr_t slot);
 bool QSocketNotifier_QBaseIsSignalConnected(const QSocketNotifier* self, QMetaMethod* signal);
+void QSocketNotifier_Connect_Activated(QSocketNotifier* self, intptr_t slot);
 void QSocketNotifier_Delete(QSocketNotifier* self);
 
 QSocketDescriptor* QSocketDescriptor_new(QSocketDescriptor* other);

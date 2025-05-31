@@ -1,28 +1,11 @@
-#include "libqbrush.hpp"
-#include "libqcolor.hpp"
-#include "libqfont.hpp"
-#include "libqfontinfo.hpp"
-#include "libqfontmetrics.hpp"
-#include "libqglyphrun.hpp"
-#include "libqimage.hpp"
-#include "libqline.hpp"
 #include "libqpaintdevice.hpp"
-#include "libqpaintengine.hpp"
 #include "libqpainter.hpp"
-#include "libqpainterpath.hpp"
 #include "libqpalette.hpp"
-#include "libqpen.hpp"
-#include "libqpicture.hpp"
 #include "libqpixmap.hpp"
-#include "libqpoint.hpp"
 #include "libqrect.hpp"
-#include "libqregion.hpp"
-#include "libqstatictext.hpp"
 #include <string.h>
 #include "libqstyle.hpp"
 #include "libqstyleoption.hpp"
-#include "libqtextoption.hpp"
-#include "libqtransform.hpp"
 #include "libqwidget.hpp"
 #include "libqstylepainter.hpp"
 #include "libqstylepainter.h"
@@ -95,7 +78,7 @@ int64_t q_stylepainter_composition_mode(void* self) {
     return QPainter_CompositionMode((QPainter*)self);
 }
 
-QFont* q_stylepainter_font(void* self) {
+const QFont* q_stylepainter_font(void* self) {
     return QPainter_Font((QPainter*)self);
 }
 
@@ -123,7 +106,7 @@ void q_stylepainter_set_pen_with_style(void* self, int64_t style) {
     QPainter_SetPenWithStyle((QPainter*)self, style);
 }
 
-QPen* q_stylepainter_pen(void* self) {
+const QPen* q_stylepainter_pen(void* self) {
     return QPainter_Pen((QPainter*)self);
 }
 
@@ -135,7 +118,7 @@ void q_stylepainter_set_brush_with_style(void* self, int64_t style) {
     QPainter_SetBrushWithStyle((QPainter*)self, style);
 }
 
-QBrush* q_stylepainter_brush(void* self) {
+const QBrush* q_stylepainter_brush(void* self) {
     return QPainter_Brush((QPainter*)self);
 }
 
@@ -167,7 +150,7 @@ void q_stylepainter_set_background(void* self, void* bg) {
     QPainter_SetBackground((QPainter*)self, (QBrush*)bg);
 }
 
-QBrush* q_stylepainter_background(void* self) {
+const QBrush* q_stylepainter_background(void* self) {
     return QPainter_Background((QPainter*)self);
 }
 
@@ -231,11 +214,11 @@ void q_stylepainter_set_transform(void* self, void* transform) {
     QPainter_SetTransform((QPainter*)self, (QTransform*)transform);
 }
 
-QTransform* q_stylepainter_transform(void* self) {
+const QTransform* q_stylepainter_transform(void* self) {
     return QPainter_Transform((QPainter*)self);
 }
 
-QTransform* q_stylepainter_device_transform(void* self) {
+const QTransform* q_stylepainter_device_transform(void* self) {
     return QPainter_DeviceTransform((QPainter*)self);
 }
 
@@ -247,7 +230,7 @@ void q_stylepainter_set_world_transform(void* self, void* matrix) {
     QPainter_SetWorldTransform((QPainter*)self, (QTransform*)matrix);
 }
 
-QTransform* q_stylepainter_world_transform(void* self) {
+const QTransform* q_stylepainter_world_transform(void* self) {
     return QPainter_WorldTransform((QPainter*)self);
 }
 
@@ -375,68 +358,32 @@ void q_stylepainter_draw_lines(void* self, void* lines, int lineCount) {
     QPainter_DrawLines((QPainter*)self, (QLineF*)lines, lineCount);
 }
 
-void q_stylepainter_draw_lines_with_lines(void* self, void* lines[]) {
-    QLineF** lines_arr = (QLineF**)lines;
-    size_t lines_len = 0;
-    while (lines_arr[lines_len] != NULL) {
-        lines_len++;
-    }
-    libqt_list lines_list = {
-        .len = lines_len,
-        .data = {(QLineF*)lines},
-    };
-    QPainter_DrawLinesWithLines((QPainter*)self, lines_list);
+void q_stylepainter_draw_lines_with_lines(void* self, libqt_list lines) {
+    QPainter_DrawLinesWithLines((QPainter*)self, lines);
 }
 
 void q_stylepainter_draw_lines2(void* self, void* pointPairs, int lineCount) {
     QPainter_DrawLines2((QPainter*)self, (QPointF*)pointPairs, lineCount);
 }
 
-void q_stylepainter_draw_lines_with_point_pairs(void* self, void* pointPairs[]) {
-    QPointF** pointPairs_arr = (QPointF**)pointPairs;
-    size_t pointPairs_len = 0;
-    while (pointPairs_arr[pointPairs_len] != NULL) {
-        pointPairs_len++;
-    }
-    libqt_list pointPairs_list = {
-        .len = pointPairs_len,
-        .data = {(QPointF*)pointPairs},
-    };
-    QPainter_DrawLinesWithPointPairs((QPainter*)self, pointPairs_list);
+void q_stylepainter_draw_lines_with_point_pairs(void* self, libqt_list pointPairs) {
+    QPainter_DrawLinesWithPointPairs((QPainter*)self, pointPairs);
 }
 
 void q_stylepainter_draw_lines3(void* self, void* lines, int lineCount) {
     QPainter_DrawLines3((QPainter*)self, (QLine*)lines, lineCount);
 }
 
-void q_stylepainter_draw_lines4(void* self, void* lines[]) {
-    QLine** lines_arr = (QLine**)lines;
-    size_t lines_len = 0;
-    while (lines_arr[lines_len] != NULL) {
-        lines_len++;
-    }
-    libqt_list lines_list = {
-        .len = lines_len,
-        .data = {(QLine*)lines},
-    };
-    QPainter_DrawLines4((QPainter*)self, lines_list);
+void q_stylepainter_draw_lines4(void* self, libqt_list lines) {
+    QPainter_DrawLines4((QPainter*)self, lines);
 }
 
 void q_stylepainter_draw_lines5(void* self, void* pointPairs, int lineCount) {
     QPainter_DrawLines5((QPainter*)self, (QPoint*)pointPairs, lineCount);
 }
 
-void q_stylepainter_draw_lines6(void* self, void* pointPairs[]) {
-    QPoint** pointPairs_arr = (QPoint**)pointPairs;
-    size_t pointPairs_len = 0;
-    while (pointPairs_arr[pointPairs_len] != NULL) {
-        pointPairs_len++;
-    }
-    libqt_list pointPairs_list = {
-        .len = pointPairs_len,
-        .data = {(QPoint*)pointPairs},
-    };
-    QPainter_DrawLines6((QPainter*)self, pointPairs_list);
+void q_stylepainter_draw_lines6(void* self, libqt_list pointPairs) {
+    QPainter_DrawLines6((QPainter*)self, pointPairs);
 }
 
 void q_stylepainter_draw_rect(void* self, void* rect) {
@@ -455,34 +402,16 @@ void q_stylepainter_draw_rects(void* self, void* rects, int rectCount) {
     QPainter_DrawRects((QPainter*)self, (QRectF*)rects, rectCount);
 }
 
-void q_stylepainter_draw_rects_with_rectangles(void* self, void* rectangles[]) {
-    QRectF** rectangles_arr = (QRectF**)rectangles;
-    size_t rectangles_len = 0;
-    while (rectangles_arr[rectangles_len] != NULL) {
-        rectangles_len++;
-    }
-    libqt_list rectangles_list = {
-        .len = rectangles_len,
-        .data = {(QRectF*)rectangles},
-    };
-    QPainter_DrawRectsWithRectangles((QPainter*)self, rectangles_list);
+void q_stylepainter_draw_rects_with_rectangles(void* self, libqt_list rectangles) {
+    QPainter_DrawRectsWithRectangles((QPainter*)self, rectangles);
 }
 
 void q_stylepainter_draw_rects2(void* self, void* rects, int rectCount) {
     QPainter_DrawRects2((QPainter*)self, (QRect*)rects, rectCount);
 }
 
-void q_stylepainter_draw_rects3(void* self, void* rectangles[]) {
-    QRect** rectangles_arr = (QRect**)rectangles;
-    size_t rectangles_len = 0;
-    while (rectangles_arr[rectangles_len] != NULL) {
-        rectangles_len++;
-    }
-    libqt_list rectangles_list = {
-        .len = rectangles_len,
-        .data = {(QRect*)rectangles},
-    };
-    QPainter_DrawRects3((QPainter*)self, rectangles_list);
+void q_stylepainter_draw_rects3(void* self, libqt_list rectangles) {
+    QPainter_DrawRects3((QPainter*)self, rectangles);
 }
 
 void q_stylepainter_draw_ellipse(void* self, void* r) {

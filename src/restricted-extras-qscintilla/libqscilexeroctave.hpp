@@ -15,25 +15,16 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QColor QColor;
 typedef struct QEvent QEvent;
 typedef struct QFont QFont;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QSettings QSettings;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
-typedef struct QsciAbstractAPIs QsciAbstractAPIs;
 typedef struct QsciLexer QsciLexer;
 typedef struct QsciLexerMatlab QsciLexerMatlab;
 typedef struct QsciLexerOctave QsciLexerOctave;
@@ -95,6 +86,9 @@ int QsciLexerOctave_QBaseIndentationGuideView(const QsciLexerOctave* self);
 int QsciLexerOctave_DefaultStyle(const QsciLexerOctave* self);
 void QsciLexerOctave_OnDefaultStyle(const QsciLexerOctave* self, intptr_t slot);
 int QsciLexerOctave_QBaseDefaultStyle(const QsciLexerOctave* self);
+libqt_string QsciLexerOctave_Description(const QsciLexerOctave* self, int style);
+void QsciLexerOctave_OnDescription(const QsciLexerOctave* self, intptr_t slot);
+libqt_string QsciLexerOctave_QBaseDescription(const QsciLexerOctave* self, int style);
 QColor* QsciLexerOctave_Paper(const QsciLexerOctave* self, int style);
 void QsciLexerOctave_OnPaper(const QsciLexerOctave* self, intptr_t slot);
 QColor* QsciLexerOctave_QBasePaper(const QsciLexerOctave* self, int style);
@@ -140,6 +134,9 @@ void QsciLexerOctave_QBaseSetPaper(QsciLexerOctave* self, QColor* c, int style);
 bool QsciLexerOctave_ReadProperties(QsciLexerOctave* self, QSettings* qs, libqt_string prefix);
 void QsciLexerOctave_OnReadProperties(QsciLexerOctave* self, intptr_t slot);
 bool QsciLexerOctave_QBaseReadProperties(QsciLexerOctave* self, QSettings* qs, libqt_string prefix);
+bool QsciLexerOctave_WriteProperties(const QsciLexerOctave* self, QSettings* qs, libqt_string prefix);
+void QsciLexerOctave_OnWriteProperties(const QsciLexerOctave* self, intptr_t slot);
+bool QsciLexerOctave_QBaseWriteProperties(const QsciLexerOctave* self, QSettings* qs, libqt_string prefix);
 bool QsciLexerOctave_Event(QsciLexerOctave* self, QEvent* event);
 void QsciLexerOctave_OnEvent(QsciLexerOctave* self, intptr_t slot);
 bool QsciLexerOctave_QBaseEvent(QsciLexerOctave* self, QEvent* event);
@@ -161,12 +158,6 @@ void QsciLexerOctave_QBaseConnectNotify(QsciLexerOctave* self, QMetaMethod* sign
 void QsciLexerOctave_DisconnectNotify(QsciLexerOctave* self, QMetaMethod* signal);
 void QsciLexerOctave_OnDisconnectNotify(QsciLexerOctave* self, intptr_t slot);
 void QsciLexerOctave_QBaseDisconnectNotify(QsciLexerOctave* self, QMetaMethod* signal);
-libqt_string QsciLexerOctave_Description(const QsciLexerOctave* self, int style);
-void QsciLexerOctave_OnDescription(const QsciLexerOctave* self, intptr_t slot);
-libqt_string QsciLexerOctave_QBaseDescription(const QsciLexerOctave* self, int style);
-bool QsciLexerOctave_WriteProperties(const QsciLexerOctave* self, QSettings* qs, libqt_string prefix);
-void QsciLexerOctave_OnWriteProperties(const QsciLexerOctave* self, intptr_t slot);
-bool QsciLexerOctave_QBaseWriteProperties(const QsciLexerOctave* self, QSettings* qs, libqt_string prefix);
 QObject* QsciLexerOctave_Sender(const QsciLexerOctave* self);
 void QsciLexerOctave_OnSender(const QsciLexerOctave* self, intptr_t slot);
 QObject* QsciLexerOctave_QBaseSender(const QsciLexerOctave* self);

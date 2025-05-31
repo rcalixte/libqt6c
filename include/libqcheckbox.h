@@ -13,44 +13,18 @@
 #include "qtlibc.h"
 
 #include "libqabstractbutton.h"
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
-#include "libqbuttongroup.h"
-#include "libqcursor.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
-#include "libqlocale.h"
-#include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqscreen.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
 #include "libqstyleoption.h"
-#include "libqthread.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qcheckbox.html
 
@@ -77,7 +51,7 @@ QCheckBox* q_checkbox_new4(const char* text, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QCheckBox* self ```
-QMetaObject* q_checkbox_meta_object(void* self);
+const QMetaObject* q_checkbox_meta_object(void* self);
 
 /// ``` QCheckBox* self, const char* param1 ```
 void* q_checkbox_metacast(void* self, const char* param1);
@@ -105,11 +79,15 @@ const char* q_checkbox_tr(const char* s);
 /// ``` QCheckBox* self ```
 QSize* q_checkbox_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QCheckBox* self, QSize* (*slot)() ```
 void q_checkbox_on_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QCheckBox* self ```
@@ -120,11 +98,15 @@ QSize* q_checkbox_qbase_size_hint(void* self);
 /// ``` QCheckBox* self ```
 QSize* q_checkbox_minimum_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#minimumSizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QCheckBox* self, QSize* (*slot)() ```
 void q_checkbox_on_minimum_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#minimumSizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QCheckBox* self ```
@@ -155,6 +137,8 @@ void q_checkbox_set_check_state(void* self, int64_t state);
 /// ``` QCheckBox* self, int param1 ```
 void q_checkbox_state_changed(void* self, int param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#stateChanged)
+///
 /// ``` QCheckBox* self, void (*slot)(QCheckBox*, int) ```
 void q_checkbox_on_state_changed(void* self, void (*slot)(void*, int));
 
@@ -163,11 +147,15 @@ void q_checkbox_on_state_changed(void* self, void (*slot)(void*, int));
 /// ``` QCheckBox* self, QEvent* e ```
 bool q_checkbox_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QCheckBox* self, bool (*slot)(QCheckBox*, QEvent*) ```
 void q_checkbox_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QCheckBox* self, QEvent* e ```
@@ -178,11 +166,15 @@ bool q_checkbox_qbase_event(void* self, void* e);
 /// ``` QCheckBox* self, QPoint* pos ```
 bool q_checkbox_hit_button(void* self, void* pos);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#hitButton)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QCheckBox* self, bool (*slot)(QCheckBox*, QPoint*) ```
 void q_checkbox_on_hit_button(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#hitButton)
+///
 /// Base class method implementation
 ///
 /// ``` QCheckBox* self, QPoint* pos ```
@@ -193,11 +185,15 @@ bool q_checkbox_qbase_hit_button(void* self, void* pos);
 /// ``` QCheckBox* self ```
 void q_checkbox_check_state_set(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#checkStateSet)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QCheckBox* self, void (*slot)() ```
 void q_checkbox_on_check_state_set(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#checkStateSet)
+///
 /// Base class method implementation
 ///
 /// ``` QCheckBox* self ```
@@ -208,11 +204,15 @@ void q_checkbox_qbase_check_state_set(void* self);
 /// ``` QCheckBox* self ```
 void q_checkbox_next_check_state(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#nextCheckState)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QCheckBox* self, void (*slot)() ```
 void q_checkbox_on_next_check_state(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#nextCheckState)
+///
 /// Base class method implementation
 ///
 /// ``` QCheckBox* self ```
@@ -223,11 +223,15 @@ void q_checkbox_qbase_next_check_state(void* self);
 /// ``` QCheckBox* self, QPaintEvent* param1 ```
 void q_checkbox_paint_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#paintEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QCheckBox* self, void (*slot)(QCheckBox*, QPaintEvent*) ```
 void q_checkbox_on_paint_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#paintEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QCheckBox* self, QPaintEvent* param1 ```
@@ -238,11 +242,15 @@ void q_checkbox_qbase_paint_event(void* self, void* param1);
 /// ``` QCheckBox* self, QMouseEvent* param1 ```
 void q_checkbox_mouse_move_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#mouseMoveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QCheckBox* self, void (*slot)(QCheckBox*, QMouseEvent*) ```
 void q_checkbox_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#mouseMoveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QCheckBox* self, QMouseEvent* param1 ```
@@ -253,11 +261,15 @@ void q_checkbox_qbase_mouse_move_event(void* self, void* param1);
 /// ``` QCheckBox* self, QStyleOptionButton* option ```
 void q_checkbox_init_style_option(void* self, void* option);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#initStyleOption)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QCheckBox* self, void (*slot)(QCheckBox*, QStyleOptionButton*) ```
 void q_checkbox_on_init_style_option(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#initStyleOption)
+///
 /// Base class method implementation
 ///
 /// ``` QCheckBox* self, QStyleOptionButton* option ```
@@ -469,6 +481,8 @@ void q_checkbox_pressed(void* self);
 
 /// Inherited from QAbstractButton
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#pressed)
+///
 /// ``` QCheckBox* self, void (*slot)(QAbstractButton*) ```
 void q_checkbox_on_pressed(void* self, void (*slot)(void*));
 
@@ -480,6 +494,8 @@ void q_checkbox_on_pressed(void* self, void (*slot)(void*));
 void q_checkbox_released(void* self);
 
 /// Inherited from QAbstractButton
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#released)
 ///
 /// ``` QCheckBox* self, void (*slot)(QAbstractButton*) ```
 void q_checkbox_on_released(void* self, void (*slot)(void*));
@@ -493,6 +509,8 @@ void q_checkbox_clicked(void* self);
 
 /// Inherited from QAbstractButton
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
+///
 /// ``` QCheckBox* self, void (*slot)(QAbstractButton*) ```
 void q_checkbox_on_clicked(void* self, void (*slot)(void*));
 
@@ -505,6 +523,8 @@ void q_checkbox_toggled(void* self, bool checked);
 
 /// Inherited from QAbstractButton
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#toggled)
+///
 /// ``` QCheckBox* self, void (*slot)(QAbstractButton*, bool) ```
 void q_checkbox_on_toggled(void* self, void (*slot)(void*, bool));
 
@@ -516,6 +536,8 @@ void q_checkbox_on_toggled(void* self, void (*slot)(void*, bool));
 void q_checkbox_clicked1(void* self, bool checked);
 
 /// Inherited from QAbstractButton
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
 /// ``` QCheckBox* self, void (*slot)(QAbstractButton*, bool) ```
 void q_checkbox_on_clicked1(void* self, void (*slot)(void*, bool));
@@ -644,7 +666,7 @@ QRect* q_checkbox_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QCheckBox* self ```
-QRect* q_checkbox_geometry(void* self);
+const QRect* q_checkbox_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1001,7 +1023,7 @@ QWidget* q_checkbox_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QCheckBox* self ```
-QPalette* q_checkbox_palette(void* self);
+const QPalette* q_checkbox_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1043,7 +1065,7 @@ int64_t q_checkbox_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QCheckBox* self ```
-QFont* q_checkbox_font(void* self);
+const QFont* q_checkbox_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2043,15 +2065,15 @@ void q_checkbox_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QCheckBox* self, QAction* actions[] ```
-void q_checkbox_add_actions(void* self, void* actions[]);
+/// ``` QCheckBox* self, libqt_list /* of QAction* */ actions ```
+void q_checkbox_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QCheckBox* self, QAction* before, QAction* actions[] ```
-void q_checkbox_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QCheckBox* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_checkbox_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2251,6 +2273,8 @@ void q_checkbox_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QCheckBox* self, void (*slot)(QWidget*, const char*) ```
 void q_checkbox_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2262,6 +2286,8 @@ void q_checkbox_on_window_title_changed(void* self, void (*slot)(void*, const ch
 void q_checkbox_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QCheckBox* self, void (*slot)(QWidget*, QIcon*) ```
 void q_checkbox_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -2275,6 +2301,8 @@ void q_checkbox_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QCheckBox* self, void (*slot)(QWidget*, const char*) ```
 void q_checkbox_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2286,6 +2314,8 @@ void q_checkbox_on_window_icon_text_changed(void* self, void (*slot)(void*, cons
 void q_checkbox_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QCheckBox* self, void (*slot)(QWidget*, QPoint*) ```
 void q_checkbox_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2491,7 +2521,7 @@ void q_checkbox_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QCheckBox* self ```
-libqt_list /* of QObject* */ q_checkbox_children(void* self);
+const libqt_list /* of QObject* */ q_checkbox_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2582,7 +2612,7 @@ QBindingStorage* q_checkbox_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QCheckBox* self ```
-QBindingStorage* q_checkbox_binding_storage2(void* self);
+const QBindingStorage* q_checkbox_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2592,6 +2622,8 @@ QBindingStorage* q_checkbox_binding_storage2(void* self);
 void q_checkbox_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QCheckBox* self, void (*slot)(QObject*) ```
 void q_checkbox_on_destroyed(void* self, void (*slot)(void*));
@@ -2646,6 +2678,8 @@ QMetaObject__Connection* q_checkbox_connect4(void* self, void* sender, const cha
 void q_checkbox_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QCheckBox* self, void (*slot)(QObject*, QObject*) ```
 void q_checkbox_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -2745,12 +2779,16 @@ void q_checkbox_key_press_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QKeyEvent* e ```
 void q_checkbox_qbase_key_press_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2768,12 +2806,16 @@ void q_checkbox_key_release_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QKeyEvent* e ```
 void q_checkbox_qbase_key_release_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2791,12 +2833,16 @@ void q_checkbox_mouse_press_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#mousePressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QMouseEvent* e ```
 void q_checkbox_qbase_mouse_press_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2814,12 +2860,16 @@ void q_checkbox_mouse_release_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#mouseReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QMouseEvent* e ```
 void q_checkbox_qbase_mouse_release_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2837,12 +2887,16 @@ void q_checkbox_focus_in_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QFocusEvent* e ```
 void q_checkbox_qbase_focus_in_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2860,12 +2914,16 @@ void q_checkbox_focus_out_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QFocusEvent* e ```
 void q_checkbox_qbase_focus_out_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2883,12 +2941,16 @@ void q_checkbox_change_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#changeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QEvent* e ```
 void q_checkbox_qbase_change_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2906,12 +2968,16 @@ void q_checkbox_timer_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QTimerEvent* e ```
 void q_checkbox_qbase_timer_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2929,12 +2995,16 @@ int32_t q_checkbox_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self ```
 int32_t q_checkbox_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2952,12 +3022,16 @@ void q_checkbox_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, bool visible ```
 void q_checkbox_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2975,12 +3049,16 @@ int32_t q_checkbox_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, int param1 ```
 int32_t q_checkbox_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2998,12 +3076,16 @@ bool q_checkbox_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self ```
 bool q_checkbox_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3021,12 +3103,16 @@ QPaintEngine* q_checkbox_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self ```
 QPaintEngine* q_checkbox_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3044,12 +3130,16 @@ void q_checkbox_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QMouseEvent* event ```
 void q_checkbox_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3067,12 +3157,16 @@ void q_checkbox_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QWheelEvent* event ```
 void q_checkbox_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3090,12 +3184,16 @@ void q_checkbox_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QEnterEvent* event ```
 void q_checkbox_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3113,12 +3211,16 @@ void q_checkbox_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QEvent* event ```
 void q_checkbox_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3136,12 +3238,16 @@ void q_checkbox_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QMoveEvent* event ```
 void q_checkbox_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3159,12 +3265,16 @@ void q_checkbox_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QResizeEvent* event ```
 void q_checkbox_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3182,12 +3292,16 @@ void q_checkbox_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QCloseEvent* event ```
 void q_checkbox_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3205,12 +3319,16 @@ void q_checkbox_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QContextMenuEvent* event ```
 void q_checkbox_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3228,12 +3346,16 @@ void q_checkbox_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QTabletEvent* event ```
 void q_checkbox_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3251,12 +3373,16 @@ void q_checkbox_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QActionEvent* event ```
 void q_checkbox_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3274,12 +3400,16 @@ void q_checkbox_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QDragEnterEvent* event ```
 void q_checkbox_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3297,12 +3427,16 @@ void q_checkbox_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QDragMoveEvent* event ```
 void q_checkbox_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3320,12 +3454,16 @@ void q_checkbox_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QDragLeaveEvent* event ```
 void q_checkbox_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3343,12 +3481,16 @@ void q_checkbox_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QDropEvent* event ```
 void q_checkbox_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3366,12 +3508,16 @@ void q_checkbox_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QShowEvent* event ```
 void q_checkbox_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3389,12 +3535,16 @@ void q_checkbox_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QHideEvent* event ```
 void q_checkbox_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3412,12 +3562,16 @@ bool q_checkbox_native_event(void* self, const char* eventType, void* message, i
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, const char* eventType, void* message, intptr_t* result ```
 bool q_checkbox_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3435,12 +3589,16 @@ int32_t q_checkbox_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_checkbox_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3458,12 +3616,16 @@ void q_checkbox_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QPainter* painter ```
 void q_checkbox_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3481,12 +3643,16 @@ QPaintDevice* q_checkbox_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QPoint* offset ```
 QPaintDevice* q_checkbox_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3504,12 +3670,16 @@ QPainter* q_checkbox_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self ```
 QPainter* q_checkbox_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3527,12 +3697,16 @@ void q_checkbox_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QInputMethodEvent* param1 ```
 void q_checkbox_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3550,12 +3724,16 @@ QVariant* q_checkbox_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_checkbox_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3573,12 +3751,16 @@ bool q_checkbox_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, bool next ```
 bool q_checkbox_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3596,12 +3778,16 @@ bool q_checkbox_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QObject* watched, QEvent* event ```
 bool q_checkbox_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3619,12 +3805,16 @@ void q_checkbox_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QChildEvent* event ```
 void q_checkbox_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3642,12 +3832,16 @@ void q_checkbox_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QEvent* event ```
 void q_checkbox_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3665,12 +3859,16 @@ void q_checkbox_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QMetaMethod* signal ```
 void q_checkbox_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3688,12 +3886,16 @@ void q_checkbox_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QMetaMethod* signal ```
 void q_checkbox_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3711,12 +3913,16 @@ void q_checkbox_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self ```
 void q_checkbox_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3734,12 +3940,16 @@ void q_checkbox_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self ```
 void q_checkbox_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3757,12 +3967,16 @@ void q_checkbox_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self ```
 void q_checkbox_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3780,12 +3994,16 @@ bool q_checkbox_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self ```
 bool q_checkbox_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3803,12 +4021,16 @@ bool q_checkbox_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self ```
 bool q_checkbox_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3826,12 +4048,16 @@ QObject* q_checkbox_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self ```
 QObject* q_checkbox_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3849,12 +4075,16 @@ int32_t q_checkbox_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self ```
 int32_t q_checkbox_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3872,12 +4102,16 @@ int32_t q_checkbox_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, const char* signal ```
 int32_t q_checkbox_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3895,6 +4129,8 @@ bool q_checkbox_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCheckBox* self, QMetaMethod* signal ```
@@ -3902,11 +4138,24 @@ bool q_checkbox_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QCheckBox* self, bool (*slot)(QCheckBox*, QMetaMethod*) ```
 void q_checkbox_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QCheckBox* self, void (*slot)(QObject*, const char*) ```
+void q_checkbox_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#dtor.QCheckBox)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCheckBox* self ```

@@ -34,6 +34,8 @@ void* q_threadstoragedata_set(void* self, void* p);
 /// ``` void* param1 ```
 void q_threadstoragedata_finish(void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qthreadstoragedata.html#dtor.QThreadStorageData)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QThreadStorageData* self ```

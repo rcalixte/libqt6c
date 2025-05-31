@@ -1,23 +1,16 @@
 #include <QAbstractEventDispatcher>
 #define WORKAROUND_INNER_CLASS_DEFINITION_QAbstractEventDispatcher__TimerInfo
 #include <QAbstractNativeEventFilter>
-#include <QAnyStringView>
-#include <QBindingStorage>
 #include <QByteArray>
-#include <QChildEvent>
-#include <QEvent>
 #include <QList>
 #include <QMetaMethod>
 #include <QMetaObject>
-#define WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection
 #include <QObject>
 #include <QSocketNotifier>
 #include <QString>
 #include <QByteArray>
 #include <cstring>
 #include <QThread>
-#include <QTimerEvent>
-#include <QVariant>
 #include <qabstracteventdispatcher.h>
 #include "libqabstracteventdispatcher.hpp"
 #include "libqabstracteventdispatcher.hxx"
@@ -172,14 +165,6 @@ libqt_string QAbstractEventDispatcher_Tr3(const char* s, const char* c, int n) {
 
 QAbstractEventDispatcher* QAbstractEventDispatcher_Instance1(QThread* thread) {
     return QAbstractEventDispatcher::instance(thread);
-}
-
-bool QAbstractEventDispatcher_Event(QAbstractEventDispatcher* self, QEvent* event) {
-    return self->event(event);
-}
-
-bool QAbstractEventDispatcher_EventFilter(QAbstractEventDispatcher* self, QObject* watched, QEvent* event) {
-    return self->eventFilter(watched, event);
 }
 
 void QAbstractEventDispatcher_Delete(QAbstractEventDispatcher* self) {

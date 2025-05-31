@@ -1,5 +1,3 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
@@ -8,8 +6,6 @@
 #include <string.h>
 #include "libqsurface.hpp"
 #include "libqsurfaceformat.hpp"
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqcoreevent.hpp"
 #include "libqoffscreensurface.hpp"
 #include "libqoffscreensurface.h"
@@ -26,7 +22,7 @@ QOffscreenSurface* q_offscreensurface_new3(void* screen, void* parent) {
     return QOffscreenSurface_new3((QScreen*)screen, (QObject*)parent);
 }
 
-QMetaObject* q_offscreensurface_meta_object(void* self) {
+const QMetaObject* q_offscreensurface_meta_object(void* self) {
     return QOffscreenSurface_MetaObject((QOffscreenSurface*)self);
 }
 
@@ -159,8 +155,7 @@ const char* q_offscreensurface_object_name(void* self) {
 }
 
 void q_offscreensurface_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_offscreensurface_is_widget_type(void* self) {
@@ -199,7 +194,7 @@ void q_offscreensurface_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_offscreensurface_children(void* self) {
+const libqt_list /* of QObject* */ q_offscreensurface_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -266,7 +261,7 @@ QBindingStorage* q_offscreensurface_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_offscreensurface_binding_storage2(void* self) {
+const QBindingStorage* q_offscreensurface_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -448,6 +443,10 @@ bool q_offscreensurface_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_offscreensurface_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QOffscreenSurface_OnIsSignalConnected((QOffscreenSurface*)self, (intptr_t)slot);
+}
+
+void q_offscreensurface_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_offscreensurface_delete(void* self) {

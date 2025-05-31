@@ -1,13 +1,9 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqiodevice.hpp"
 #include "libqiodevicebase.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include <string.h>
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqcoreevent.hpp"
 #include "libqprocess.hpp"
 #include "libqprocess.h"
@@ -126,7 +122,7 @@ QProcess* q_process_new2(void* parent) {
     return QProcess_new2((QObject*)parent);
 }
 
-QMetaObject* q_process_meta_object(void* self) {
+const QMetaObject* q_process_meta_object(void* self) {
     return QProcess_MetaObject((QProcess*)self);
 }
 
@@ -212,7 +208,7 @@ void q_process_set_arguments(void* self, const char* arguments[]) {
     for (size_t _i = 0; _i < arguments_len; ++_i) {
         arguments_qstr[_i] = qstring(arguments[_i]);
     }
-    libqt_list arguments_list = qstrlist(arguments_qstr, arguments_len);
+    libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
     QProcess_SetArguments((QProcess*)self, arguments_list);
 }
 
@@ -281,7 +277,7 @@ void q_process_set_environment(void* self, const char* environment[]) {
     for (size_t _i = 0; _i < environment_len; ++_i) {
         environment_qstr[_i] = qstring(environment[_i]);
     }
-    libqt_list environment_list = qstrlist(environment_qstr, environment_len);
+    libqt_list environment_list = qlist(environment_qstr, environment_len);
     QProcess_SetEnvironment((QProcess*)self, environment_list);
 }
 
@@ -518,7 +514,7 @@ void q_process_start22(void* self, const char* program, const char* arguments[])
     for (size_t _i = 0; _i < arguments_len; ++_i) {
         arguments_qstr[_i] = qstring(arguments[_i]);
     }
-    libqt_list arguments_list = qstrlist(arguments_qstr, arguments_len);
+    libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
     QProcess_Start22((QProcess*)self, qstring(program), arguments_list);
 }
 
@@ -528,7 +524,7 @@ void q_process_start3(void* self, const char* program, const char* arguments[], 
     for (size_t _i = 0; _i < arguments_len; ++_i) {
         arguments_qstr[_i] = qstring(arguments[_i]);
     }
-    libqt_list arguments_list = qstrlist(arguments_qstr, arguments_len);
+    libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
     QProcess_Start3((QProcess*)self, qstring(program), arguments_list, mode);
 }
 
@@ -566,7 +562,7 @@ int32_t q_process_execute2(const char* program, const char* arguments[]) {
     for (size_t _i = 0; _i < arguments_len; ++_i) {
         arguments_qstr[_i] = qstring(arguments[_i]);
     }
-    libqt_list arguments_list = qstrlist(arguments_qstr, arguments_len);
+    libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
     return QProcess_Execute2(qstring(program), arguments_list);
 }
 
@@ -576,7 +572,7 @@ bool q_process_start_detached2(const char* program, const char* arguments[]) {
     for (size_t _i = 0; _i < arguments_len; ++_i) {
         arguments_qstr[_i] = qstring(arguments[_i]);
     }
-    libqt_list arguments_list = qstrlist(arguments_qstr, arguments_len);
+    libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
     return QProcess_StartDetached2(qstring(program), arguments_list);
 }
 
@@ -586,7 +582,7 @@ bool q_process_start_detached3(const char* program, const char* arguments[], con
     for (size_t _i = 0; _i < arguments_len; ++_i) {
         arguments_qstr[_i] = qstring(arguments[_i]);
     }
-    libqt_list arguments_list = qstrlist(arguments_qstr, arguments_len);
+    libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
     return QProcess_StartDetached3(qstring(program), arguments_list, qstring(workingDirectory));
 }
 
@@ -596,7 +592,7 @@ bool q_process_start_detached4(const char* program, const char* arguments[], con
     for (size_t _i = 0; _i < arguments_len; ++_i) {
         arguments_qstr[_i] = qstring(arguments[_i]);
     }
-    libqt_list arguments_list = qstrlist(arguments_qstr, arguments_len);
+    libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
     return QProcess_StartDetached4(qstring(program), arguments_list, qstring(workingDirectory), pid);
 }
 
@@ -810,8 +806,7 @@ const char* q_process_object_name(void* self) {
 }
 
 void q_process_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_process_is_widget_type(void* self) {
@@ -850,7 +845,7 @@ void q_process_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_process_children(void* self) {
+const libqt_list /* of QObject* */ q_process_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -917,7 +912,7 @@ QBindingStorage* q_process_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_process_binding_storage2(void* self) {
+const QBindingStorage* q_process_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1223,6 +1218,26 @@ bool q_process_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_process_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QProcess_OnIsSignalConnected((QProcess*)self, (intptr_t)slot);
+}
+
+void q_process_on_started(void* self, void (*slot)(void*)) {
+    QProcess_Connect_Started((QProcess*)self, (intptr_t)slot);
+}
+
+void q_process_on_state_changed(void* self, void (*slot)(void*, int64_t)) {
+    QProcess_Connect_StateChanged((QProcess*)self, (intptr_t)slot);
+}
+
+void q_process_on_ready_read_standard_output(void* self, void (*slot)(void*)) {
+    QProcess_Connect_ReadyReadStandardOutput((QProcess*)self, (intptr_t)slot);
+}
+
+void q_process_on_ready_read_standard_error(void* self, void (*slot)(void*)) {
+    QProcess_Connect_ReadyReadStandardError((QProcess*)self, (intptr_t)slot);
+}
+
+void q_process_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_process_delete(void* self) {

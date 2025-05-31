@@ -15,14 +15,7 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAbstractEventDispatcher QAbstractEventDispatcher;
-typedef struct QAbstractNativeEventFilter QAbstractNativeEventFilter;
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QClipboard QClipboard;
 typedef struct QCoreApplication QCoreApplication;
@@ -34,17 +27,13 @@ typedef struct QIcon QIcon;
 typedef struct QInputMethod QInputMethod;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QPalette QPalette;
 typedef struct QPoint QPoint;
 typedef struct QScreen QScreen;
 typedef struct QSessionManager QSessionManager;
 typedef struct QStyleHints QStyleHints;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QTranslator QTranslator;
-typedef struct QVariant QVariant;
 typedef struct QWindow QWindow;
 #endif
 

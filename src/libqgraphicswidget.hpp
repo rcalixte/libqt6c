@@ -15,26 +15,17 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
 typedef struct QAction QAction;
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QCloseEvent QCloseEvent;
-typedef struct QCursor QCursor;
 typedef struct QEvent QEvent;
 typedef struct QFocusEvent QFocusEvent;
 typedef struct QFont QFont;
-typedef struct QGraphicsEffect QGraphicsEffect;
 typedef struct QGraphicsItem QGraphicsItem;
-typedef struct QGraphicsItemGroup QGraphicsItemGroup;
 typedef struct QGraphicsLayout QGraphicsLayout;
 typedef struct QGraphicsLayoutItem QGraphicsLayoutItem;
 typedef struct QGraphicsObject QGraphicsObject;
-typedef struct QGraphicsScene QGraphicsScene;
 typedef struct QGraphicsSceneContextMenuEvent QGraphicsSceneContextMenuEvent;
 typedef struct QGraphicsSceneDragDropEvent QGraphicsSceneDragDropEvent;
 typedef struct QGraphicsSceneHoverEvent QGraphicsSceneHoverEvent;
@@ -42,7 +33,6 @@ typedef struct QGraphicsSceneMouseEvent QGraphicsSceneMouseEvent;
 typedef struct QGraphicsSceneMoveEvent QGraphicsSceneMoveEvent;
 typedef struct QGraphicsSceneResizeEvent QGraphicsSceneResizeEvent;
 typedef struct QGraphicsSceneWheelEvent QGraphicsSceneWheelEvent;
-typedef struct QGraphicsTransform QGraphicsTransform;
 typedef struct QGraphicsWidget QGraphicsWidget;
 typedef struct QHideEvent QHideEvent;
 typedef struct QInputMethodEvent QInputMethodEvent;
@@ -51,24 +41,18 @@ typedef struct QKeySequence QKeySequence;
 typedef struct QMarginsF QMarginsF;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QPainter QPainter;
 typedef struct QPainterPath QPainterPath;
 typedef struct QPalette QPalette;
 typedef struct QPointF QPointF;
 typedef struct QRectF QRectF;
-typedef struct QRegion QRegion;
 typedef struct QShowEvent QShowEvent;
-typedef struct QSize QSize;
 typedef struct QSizeF QSizeF;
-typedef struct QSizePolicy QSizePolicy;
 typedef struct QStyle QStyle;
 typedef struct QStyleOption QStyleOption;
 typedef struct QStyleOptionGraphicsItem QStyleOptionGraphicsItem;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QTransform QTransform;
 typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
@@ -319,21 +303,21 @@ void QGraphicsWidget_QBaseWheelEvent(QGraphicsWidget* self, QGraphicsSceneWheelE
 void QGraphicsWidget_InputMethodEvent(QGraphicsWidget* self, QInputMethodEvent* event);
 void QGraphicsWidget_OnInputMethodEvent(QGraphicsWidget* self, intptr_t slot);
 void QGraphicsWidget_QBaseInputMethodEvent(QGraphicsWidget* self, QInputMethodEvent* event);
-void QGraphicsWidget_SetExtension(QGraphicsWidget* self, int extension, QVariant* variant);
-void QGraphicsWidget_OnSetExtension(QGraphicsWidget* self, intptr_t slot);
-void QGraphicsWidget_QBaseSetExtension(QGraphicsWidget* self, int extension, QVariant* variant);
-bool QGraphicsWidget_IsEmpty(const QGraphicsWidget* self);
-void QGraphicsWidget_OnIsEmpty(const QGraphicsWidget* self, intptr_t slot);
-bool QGraphicsWidget_QBaseIsEmpty(const QGraphicsWidget* self);
 QVariant* QGraphicsWidget_InputMethodQuery(const QGraphicsWidget* self, int query);
 void QGraphicsWidget_OnInputMethodQuery(const QGraphicsWidget* self, intptr_t slot);
 QVariant* QGraphicsWidget_QBaseInputMethodQuery(const QGraphicsWidget* self, int query);
 bool QGraphicsWidget_SupportsExtension(const QGraphicsWidget* self, int extension);
 void QGraphicsWidget_OnSupportsExtension(const QGraphicsWidget* self, intptr_t slot);
 bool QGraphicsWidget_QBaseSupportsExtension(const QGraphicsWidget* self, int extension);
+void QGraphicsWidget_SetExtension(QGraphicsWidget* self, int extension, QVariant* variant);
+void QGraphicsWidget_OnSetExtension(QGraphicsWidget* self, intptr_t slot);
+void QGraphicsWidget_QBaseSetExtension(QGraphicsWidget* self, int extension, QVariant* variant);
 QVariant* QGraphicsWidget_Extension(const QGraphicsWidget* self, QVariant* variant);
 void QGraphicsWidget_OnExtension(const QGraphicsWidget* self, intptr_t slot);
 QVariant* QGraphicsWidget_QBaseExtension(const QGraphicsWidget* self, QVariant* variant);
+bool QGraphicsWidget_IsEmpty(const QGraphicsWidget* self);
+void QGraphicsWidget_OnIsEmpty(const QGraphicsWidget* self, intptr_t slot);
+bool QGraphicsWidget_QBaseIsEmpty(const QGraphicsWidget* self);
 void QGraphicsWidget_UpdateMicroFocus(QGraphicsWidget* self);
 void QGraphicsWidget_OnUpdateMicroFocus(QGraphicsWidget* self, intptr_t slot);
 void QGraphicsWidget_QBaseUpdateMicroFocus(QGraphicsWidget* self);

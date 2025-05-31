@@ -94,6 +94,8 @@ void q_webengineurlscheme_register_scheme(void* scheme);
 /// ``` const char* name ```
 QWebEngineUrlScheme* q_webengineurlscheme_scheme_by_name(const char* name);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlscheme.html#dtor.QWebEngineUrlScheme)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWebEngineUrlScheme* self ```

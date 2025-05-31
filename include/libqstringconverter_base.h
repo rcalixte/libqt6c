@@ -63,6 +63,8 @@ void q_stringconverterbase__state_clear(void* self);
 /// ``` QStringConverterBase__State* self ```
 void q_stringconverterbase__state_reset(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase::state.html#dtor.QStringConverterBase::State)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStringConverterBase__State* self ```

@@ -151,6 +151,8 @@ bool q_cborstreamwriter_end_map(void* self);
 /// ``` QCborStreamWriter* self, const char* str, int64_t size ```
 void q_cborstreamwriter_append22(void* self, const char* str, int64_t size);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamwriter.html#dtor.QCborStreamWriter)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCborStreamWriter* self ```

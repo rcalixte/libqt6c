@@ -1,16 +1,10 @@
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
-#include "libqhostaddress.hpp"
 #include "../libqmetaobject.hpp"
-#include "libqnetworkproxy.hpp"
 #include "../libqobject.hpp"
 #include "libqsctpsocket.hpp"
 #include <string.h>
 #include "libqtcpserver.hpp"
 #include "libqtcpsocket.hpp"
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqsctpserver.hpp"
 #include "libqsctpserver.h"
@@ -23,7 +17,7 @@ QSctpServer* q_sctpserver_new2(void* parent) {
     return QSctpServer_new2((QObject*)parent);
 }
 
-QMetaObject* q_sctpserver_meta_object(void* self) {
+const QMetaObject* q_sctpserver_meta_object(void* self) {
     return QSctpServer_MetaObject((QSctpServer*)self);
 }
 
@@ -203,8 +197,7 @@ const char* q_sctpserver_object_name(void* self) {
 }
 
 void q_sctpserver_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_sctpserver_is_widget_type(void* self) {
@@ -243,7 +236,7 @@ void q_sctpserver_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_sctpserver_children(void* self) {
+const libqt_list /* of QObject* */ q_sctpserver_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -310,7 +303,7 @@ QBindingStorage* q_sctpserver_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_sctpserver_binding_storage2(void* self) {
+const QBindingStorage* q_sctpserver_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -520,6 +513,14 @@ bool q_sctpserver_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_sctpserver_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QSctpServer_OnIsSignalConnected((QSctpServer*)self, (intptr_t)slot);
+}
+
+void q_sctpserver_on_pending_connection_available(void* self, void (*slot)(void*)) {
+    QTcpServer_Connect_PendingConnectionAvailable((QTcpServer*)self, (intptr_t)slot);
+}
+
+void q_sctpserver_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_sctpserver_delete(void* self) {

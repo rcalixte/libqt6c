@@ -47,6 +47,8 @@ const char** q_stylefactory_keys();
 /// ``` const char* param1 ```
 QStyle* q_stylefactory_create(const char* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylefactory.html#dtor.QStyleFactory)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleFactory* self ```

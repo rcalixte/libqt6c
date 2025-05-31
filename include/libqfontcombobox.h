@@ -12,50 +12,21 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractitemdelegate.h"
 #include "libqabstractitemmodel.h"
-#include "libqabstractitemview.h"
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
 #include "libqcombobox.h"
-#include "libqcompleter.h"
-#include "libqcursor.h"
 #include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
-#include "libqlineedit.h"
-#include "libqlocale.h"
-#include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqscreen.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
 #include "libqstyleoption.h"
-#include "libqthread.h"
-#include "libqvalidator.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qfontcombobox.html
 
@@ -72,7 +43,7 @@ QFontComboBox* q_fontcombobox_new2();
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QFontComboBox* self ```
-QMetaObject* q_fontcombobox_meta_object(void* self);
+const QMetaObject* q_fontcombobox_meta_object(void* self);
 
 /// ``` QFontComboBox* self, const char* param1 ```
 void* q_fontcombobox_metacast(void* self, const char* param1);
@@ -125,11 +96,15 @@ QFont* q_fontcombobox_current_font(void* self);
 /// ``` QFontComboBox* self ```
 QSize* q_fontcombobox_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontcombobox.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFontComboBox* self, QSize* (*slot)() ```
 void q_fontcombobox_on_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontcombobox.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QFontComboBox* self ```
@@ -170,6 +145,8 @@ void q_fontcombobox_set_current_font(void* self, void* f);
 /// ``` QFontComboBox* self, QFont* f ```
 void q_fontcombobox_current_font_changed(void* self, void* f);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontcombobox.html#currentFontChanged)
+///
 /// ``` QFontComboBox* self, void (*slot)(QFontComboBox*, QFont*) ```
 void q_fontcombobox_on_current_font_changed(void* self, void (*slot)(void*, void*));
 
@@ -178,11 +155,15 @@ void q_fontcombobox_on_current_font_changed(void* self, void (*slot)(void*, void
 /// ``` QFontComboBox* self, QEvent* e ```
 bool q_fontcombobox_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontcombobox.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFontComboBox* self, bool (*slot)(QFontComboBox*, QEvent*) ```
 void q_fontcombobox_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontcombobox.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QFontComboBox* self, QEvent* e ```
@@ -385,7 +366,7 @@ void q_fontcombobox_set_validator(void* self, void* v);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#validator)
 ///
 /// ``` QFontComboBox* self ```
-QValidator* q_fontcombobox_validator(void* self);
+const QValidator* q_fontcombobox_validator(void* self);
 
 /// Inherited from QComboBox
 ///
@@ -634,6 +615,8 @@ void q_fontcombobox_edit_text_changed(void* self, const char* param1);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#editTextChanged)
+///
 /// ``` QFontComboBox* self, void (*slot)(QComboBox*, const char*) ```
 void q_fontcombobox_on_edit_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -645,6 +628,8 @@ void q_fontcombobox_on_edit_text_changed(void* self, void (*slot)(void*, const c
 void q_fontcombobox_activated(void* self, int index);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#activated)
 ///
 /// ``` QFontComboBox* self, void (*slot)(QComboBox*, int) ```
 void q_fontcombobox_on_activated(void* self, void (*slot)(void*, int));
@@ -658,6 +643,8 @@ void q_fontcombobox_text_activated(void* self, const char* param1);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#textActivated)
+///
 /// ``` QFontComboBox* self, void (*slot)(QComboBox*, const char*) ```
 void q_fontcombobox_on_text_activated(void* self, void (*slot)(void*, const char*));
 
@@ -669,6 +656,8 @@ void q_fontcombobox_on_text_activated(void* self, void (*slot)(void*, const char
 void q_fontcombobox_highlighted(void* self, int index);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#highlighted)
 ///
 /// ``` QFontComboBox* self, void (*slot)(QComboBox*, int) ```
 void q_fontcombobox_on_highlighted(void* self, void (*slot)(void*, int));
@@ -682,6 +671,8 @@ void q_fontcombobox_text_highlighted(void* self, const char* param1);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#textHighlighted)
+///
 /// ``` QFontComboBox* self, void (*slot)(QComboBox*, const char*) ```
 void q_fontcombobox_on_text_highlighted(void* self, void (*slot)(void*, const char*));
 
@@ -694,6 +685,8 @@ void q_fontcombobox_current_index_changed(void* self, int index);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#currentIndexChanged)
+///
 /// ``` QFontComboBox* self, void (*slot)(QComboBox*, int) ```
 void q_fontcombobox_on_current_index_changed(void* self, void (*slot)(void*, int));
 
@@ -705,6 +698,8 @@ void q_fontcombobox_on_current_index_changed(void* self, void (*slot)(void*, int
 void q_fontcombobox_current_text_changed(void* self, const char* param1);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#currentTextChanged)
 ///
 /// ``` QFontComboBox* self, void (*slot)(QComboBox*, const char*) ```
 void q_fontcombobox_on_current_text_changed(void* self, void (*slot)(void*, const char*));
@@ -903,7 +898,7 @@ QRect* q_fontcombobox_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QFontComboBox* self ```
-QRect* q_fontcombobox_geometry(void* self);
+const QRect* q_fontcombobox_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1260,7 +1255,7 @@ QWidget* q_fontcombobox_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QFontComboBox* self ```
-QPalette* q_fontcombobox_palette(void* self);
+const QPalette* q_fontcombobox_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1302,7 +1297,7 @@ int64_t q_fontcombobox_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QFontComboBox* self ```
-QFont* q_fontcombobox_font(void* self);
+const QFont* q_fontcombobox_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2302,15 +2297,15 @@ void q_fontcombobox_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QFontComboBox* self, QAction* actions[] ```
-void q_fontcombobox_add_actions(void* self, void* actions[]);
+/// ``` QFontComboBox* self, libqt_list /* of QAction* */ actions ```
+void q_fontcombobox_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QFontComboBox* self, QAction* before, QAction* actions[] ```
-void q_fontcombobox_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QFontComboBox* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_fontcombobox_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2510,6 +2505,8 @@ void q_fontcombobox_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QFontComboBox* self, void (*slot)(QWidget*, const char*) ```
 void q_fontcombobox_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2521,6 +2518,8 @@ void q_fontcombobox_on_window_title_changed(void* self, void (*slot)(void*, cons
 void q_fontcombobox_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QFontComboBox* self, void (*slot)(QWidget*, QIcon*) ```
 void q_fontcombobox_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -2534,6 +2533,8 @@ void q_fontcombobox_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QFontComboBox* self, void (*slot)(QWidget*, const char*) ```
 void q_fontcombobox_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2545,6 +2546,8 @@ void q_fontcombobox_on_window_icon_text_changed(void* self, void (*slot)(void*, 
 void q_fontcombobox_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QFontComboBox* self, void (*slot)(QWidget*, QPoint*) ```
 void q_fontcombobox_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2750,7 +2753,7 @@ void q_fontcombobox_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QFontComboBox* self ```
-libqt_list /* of QObject* */ q_fontcombobox_children(void* self);
+const libqt_list /* of QObject* */ q_fontcombobox_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2841,7 +2844,7 @@ QBindingStorage* q_fontcombobox_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QFontComboBox* self ```
-QBindingStorage* q_fontcombobox_binding_storage2(void* self);
+const QBindingStorage* q_fontcombobox_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2851,6 +2854,8 @@ QBindingStorage* q_fontcombobox_binding_storage2(void* self);
 void q_fontcombobox_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QFontComboBox* self, void (*slot)(QObject*) ```
 void q_fontcombobox_on_destroyed(void* self, void (*slot)(void*));
@@ -2905,6 +2910,8 @@ QMetaObject__Connection* q_fontcombobox_connect4(void* self, void* sender, const
 void q_fontcombobox_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QFontComboBox* self, void (*slot)(QObject*, QObject*) ```
 void q_fontcombobox_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -3004,12 +3011,16 @@ void q_fontcombobox_set_model(void* self, void* model);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#setModel)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QAbstractItemModel* model ```
 void q_fontcombobox_qbase_set_model(void* self, void* model);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#setModel)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3027,12 +3038,16 @@ QSize* q_fontcombobox_minimum_size_hint(void* self);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self ```
 QSize* q_fontcombobox_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3050,12 +3065,16 @@ void q_fontcombobox_show_popup(void* self);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#showPopup)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self ```
 void q_fontcombobox_qbase_show_popup(void* self);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#showPopup)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3073,12 +3092,16 @@ void q_fontcombobox_hide_popup(void* self);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#hidePopup)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self ```
 void q_fontcombobox_qbase_hide_popup(void* self);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#hidePopup)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3096,12 +3119,16 @@ QVariant* q_fontcombobox_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_fontcombobox_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3119,12 +3146,16 @@ void q_fontcombobox_focus_in_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QFocusEvent* e ```
 void q_fontcombobox_qbase_focus_in_event(void* self, void* e);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3142,12 +3173,16 @@ void q_fontcombobox_focus_out_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QFocusEvent* e ```
 void q_fontcombobox_qbase_focus_out_event(void* self, void* e);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3165,12 +3200,16 @@ void q_fontcombobox_change_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#changeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QEvent* e ```
 void q_fontcombobox_qbase_change_event(void* self, void* e);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3188,12 +3227,16 @@ void q_fontcombobox_resize_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#resizeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QResizeEvent* e ```
 void q_fontcombobox_qbase_resize_event(void* self, void* e);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3211,12 +3254,16 @@ void q_fontcombobox_paint_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#paintEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QPaintEvent* e ```
 void q_fontcombobox_qbase_paint_event(void* self, void* e);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#paintEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3234,12 +3281,16 @@ void q_fontcombobox_show_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QShowEvent* e ```
 void q_fontcombobox_qbase_show_event(void* self, void* e);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3257,12 +3308,16 @@ void q_fontcombobox_hide_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QHideEvent* e ```
 void q_fontcombobox_qbase_hide_event(void* self, void* e);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3280,12 +3335,16 @@ void q_fontcombobox_mouse_press_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#mousePressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QMouseEvent* e ```
 void q_fontcombobox_qbase_mouse_press_event(void* self, void* e);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3303,12 +3362,16 @@ void q_fontcombobox_mouse_release_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#mouseReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QMouseEvent* e ```
 void q_fontcombobox_qbase_mouse_release_event(void* self, void* e);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3326,12 +3389,16 @@ void q_fontcombobox_key_press_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QKeyEvent* e ```
 void q_fontcombobox_qbase_key_press_event(void* self, void* e);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3349,12 +3416,16 @@ void q_fontcombobox_key_release_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QKeyEvent* e ```
 void q_fontcombobox_qbase_key_release_event(void* self, void* e);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3372,12 +3443,16 @@ void q_fontcombobox_wheel_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QWheelEvent* e ```
 void q_fontcombobox_qbase_wheel_event(void* self, void* e);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3395,12 +3470,16 @@ void q_fontcombobox_context_menu_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QContextMenuEvent* e ```
 void q_fontcombobox_qbase_context_menu_event(void* self, void* e);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3418,12 +3497,16 @@ void q_fontcombobox_input_method_event(void* self, void* param1);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QInputMethodEvent* param1 ```
 void q_fontcombobox_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3441,12 +3524,16 @@ void q_fontcombobox_init_style_option(void* self, void* option);
 
 /// Inherited from QComboBox
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#initStyleOption)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QStyleOptionComboBox* option ```
 void q_fontcombobox_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QComboBox
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#initStyleOption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3464,12 +3551,16 @@ int32_t q_fontcombobox_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self ```
 int32_t q_fontcombobox_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3487,12 +3578,16 @@ void q_fontcombobox_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, bool visible ```
 void q_fontcombobox_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3510,12 +3605,16 @@ int32_t q_fontcombobox_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, int param1 ```
 int32_t q_fontcombobox_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3533,12 +3632,16 @@ bool q_fontcombobox_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self ```
 bool q_fontcombobox_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3556,12 +3659,16 @@ QPaintEngine* q_fontcombobox_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self ```
 QPaintEngine* q_fontcombobox_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3579,12 +3686,16 @@ void q_fontcombobox_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QMouseEvent* event ```
 void q_fontcombobox_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3602,12 +3713,16 @@ void q_fontcombobox_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QMouseEvent* event ```
 void q_fontcombobox_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3625,12 +3740,16 @@ void q_fontcombobox_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QEnterEvent* event ```
 void q_fontcombobox_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3648,12 +3767,16 @@ void q_fontcombobox_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QEvent* event ```
 void q_fontcombobox_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3671,12 +3794,16 @@ void q_fontcombobox_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QMoveEvent* event ```
 void q_fontcombobox_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3694,12 +3821,16 @@ void q_fontcombobox_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QCloseEvent* event ```
 void q_fontcombobox_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3717,12 +3848,16 @@ void q_fontcombobox_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QTabletEvent* event ```
 void q_fontcombobox_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3740,12 +3875,16 @@ void q_fontcombobox_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QActionEvent* event ```
 void q_fontcombobox_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3763,12 +3902,16 @@ void q_fontcombobox_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QDragEnterEvent* event ```
 void q_fontcombobox_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3786,12 +3929,16 @@ void q_fontcombobox_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QDragMoveEvent* event ```
 void q_fontcombobox_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3809,12 +3956,16 @@ void q_fontcombobox_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QDragLeaveEvent* event ```
 void q_fontcombobox_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3832,12 +3983,16 @@ void q_fontcombobox_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QDropEvent* event ```
 void q_fontcombobox_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3855,12 +4010,16 @@ bool q_fontcombobox_native_event(void* self, const char* eventType, void* messag
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, const char* eventType, void* message, intptr_t* result ```
 bool q_fontcombobox_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3878,12 +4037,16 @@ int32_t q_fontcombobox_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_fontcombobox_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3901,12 +4064,16 @@ void q_fontcombobox_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QPainter* painter ```
 void q_fontcombobox_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3924,12 +4091,16 @@ QPaintDevice* q_fontcombobox_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QPoint* offset ```
 QPaintDevice* q_fontcombobox_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3947,12 +4118,16 @@ QPainter* q_fontcombobox_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self ```
 QPainter* q_fontcombobox_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3970,12 +4145,16 @@ bool q_fontcombobox_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, bool next ```
 bool q_fontcombobox_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3993,12 +4172,16 @@ bool q_fontcombobox_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QObject* watched, QEvent* event ```
 bool q_fontcombobox_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4016,12 +4199,16 @@ void q_fontcombobox_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QTimerEvent* event ```
 void q_fontcombobox_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4039,12 +4226,16 @@ void q_fontcombobox_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QChildEvent* event ```
 void q_fontcombobox_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4062,12 +4253,16 @@ void q_fontcombobox_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QEvent* event ```
 void q_fontcombobox_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4085,12 +4280,16 @@ void q_fontcombobox_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QMetaMethod* signal ```
 void q_fontcombobox_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4108,12 +4307,16 @@ void q_fontcombobox_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QMetaMethod* signal ```
 void q_fontcombobox_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4131,12 +4334,16 @@ void q_fontcombobox_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self ```
 void q_fontcombobox_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4154,12 +4361,16 @@ void q_fontcombobox_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self ```
 void q_fontcombobox_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4177,12 +4388,16 @@ void q_fontcombobox_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self ```
 void q_fontcombobox_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4200,12 +4415,16 @@ bool q_fontcombobox_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self ```
 bool q_fontcombobox_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4223,12 +4442,16 @@ bool q_fontcombobox_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self ```
 bool q_fontcombobox_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4246,12 +4469,16 @@ QObject* q_fontcombobox_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self ```
 QObject* q_fontcombobox_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4269,12 +4496,16 @@ int32_t q_fontcombobox_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self ```
 int32_t q_fontcombobox_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4292,12 +4523,16 @@ int32_t q_fontcombobox_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, const char* signal ```
 int32_t q_fontcombobox_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4315,6 +4550,8 @@ bool q_fontcombobox_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, QMetaMethod* signal ```
@@ -4322,11 +4559,24 @@ bool q_fontcombobox_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QFontComboBox* self, bool (*slot)(QFontComboBox*, QMetaMethod*) ```
 void q_fontcombobox_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFontComboBox* self, void (*slot)(QObject*, const char*) ```
+void q_fontcombobox_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontcombobox.html#dtor.QFontComboBox)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QFontComboBox* self ```

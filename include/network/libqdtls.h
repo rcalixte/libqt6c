@@ -12,8 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "../libqevent.h"
 #include "libqhostaddress.h"
 #include "../libqmetaobject.h"
@@ -23,9 +21,7 @@
 #include "libqsslerror.h"
 #include "libqsslpresharedkeyauthenticator.h"
 #include <string.h>
-#include "../libqthread.h"
 #include "libqudpsocket.h"
-#include "../libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qdtlsclientverifier.html
 
@@ -42,7 +38,7 @@ QDtlsClientVerifier* q_dtlsclientverifier_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QDtlsClientVerifier* self ```
-QMetaObject* q_dtlsclientverifier_meta_object(void* self);
+const QMetaObject* q_dtlsclientverifier_meta_object(void* self);
 
 /// ``` QDtlsClientVerifier* self, const char* param1 ```
 void* q_dtlsclientverifier_metacast(void* self, const char* param1);
@@ -187,7 +183,7 @@ void q_dtlsclientverifier_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QDtlsClientVerifier* self ```
-libqt_list /* of QObject* */ q_dtlsclientverifier_children(void* self);
+const libqt_list /* of QObject* */ q_dtlsclientverifier_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -285,7 +281,7 @@ QBindingStorage* q_dtlsclientverifier_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QDtlsClientVerifier* self ```
-QBindingStorage* q_dtlsclientverifier_binding_storage2(void* self);
+const QBindingStorage* q_dtlsclientverifier_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -295,6 +291,8 @@ QBindingStorage* q_dtlsclientverifier_binding_storage2(void* self);
 void q_dtlsclientverifier_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QDtlsClientVerifier* self, void (*slot)(QObject*) ```
 void q_dtlsclientverifier_on_destroyed(void* self, void (*slot)(void*));
@@ -350,6 +348,8 @@ void q_dtlsclientverifier_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QDtlsClientVerifier* self, void (*slot)(QObject*, QObject*) ```
 void q_dtlsclientverifier_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -364,12 +364,16 @@ bool q_dtlsclientverifier_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtlsClientVerifier* self, QEvent* event ```
 bool q_dtlsclientverifier_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -387,12 +391,16 @@ bool q_dtlsclientverifier_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtlsClientVerifier* self, QObject* watched, QEvent* event ```
 bool q_dtlsclientverifier_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -410,12 +418,16 @@ void q_dtlsclientverifier_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtlsClientVerifier* self, QTimerEvent* event ```
 void q_dtlsclientverifier_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -433,12 +445,16 @@ void q_dtlsclientverifier_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtlsClientVerifier* self, QChildEvent* event ```
 void q_dtlsclientverifier_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -456,12 +472,16 @@ void q_dtlsclientverifier_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtlsClientVerifier* self, QEvent* event ```
 void q_dtlsclientverifier_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -479,12 +499,16 @@ void q_dtlsclientverifier_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtlsClientVerifier* self, QMetaMethod* signal ```
 void q_dtlsclientverifier_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -502,12 +526,16 @@ void q_dtlsclientverifier_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtlsClientVerifier* self, QMetaMethod* signal ```
 void q_dtlsclientverifier_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -525,12 +553,16 @@ QObject* q_dtlsclientverifier_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtlsClientVerifier* self ```
 QObject* q_dtlsclientverifier_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -548,12 +580,16 @@ int32_t q_dtlsclientverifier_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtlsClientVerifier* self ```
 int32_t q_dtlsclientverifier_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -571,12 +607,16 @@ int32_t q_dtlsclientverifier_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtlsClientVerifier* self, const char* signal ```
 int32_t q_dtlsclientverifier_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -594,6 +634,8 @@ bool q_dtlsclientverifier_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtlsClientVerifier* self, QMetaMethod* signal ```
@@ -601,11 +643,24 @@ bool q_dtlsclientverifier_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QDtlsClientVerifier* self, bool (*slot)(QDtlsClientVerifier*, QMetaMethod*) ```
 void q_dtlsclientverifier_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QDtlsClientVerifier* self, void (*slot)(QObject*, const char*) ```
+void q_dtlsclientverifier_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdtlsclientverifier.html#dtor.QDtlsClientVerifier)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QDtlsClientVerifier* self ```
@@ -626,7 +681,7 @@ QDtls* q_dtls_new2(int64_t mode, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QDtls* self ```
-QMetaObject* q_dtls_meta_object(void* self);
+const QMetaObject* q_dtls_meta_object(void* self);
 
 /// ``` QDtls* self, const char* param1 ```
 void* q_dtls_metacast(void* self, const char* param1);
@@ -781,14 +836,16 @@ libqt_list /* of QSslError* */ q_dtls_peer_verification_errors(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdtls.html#ignoreVerificationErrors)
 ///
-/// ``` QDtls* self, QSslError* errorsToIgnore[] ```
-void q_dtls_ignore_verification_errors(void* self, void* errorsToIgnore[]);
+/// ``` QDtls* self, libqt_list /* of QSslError* */ errorsToIgnore ```
+void q_dtls_ignore_verification_errors(void* self, libqt_list errorsToIgnore);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdtls.html#pskRequired)
 ///
 /// ``` QDtls* self, QSslPreSharedKeyAuthenticator* authenticator ```
 void q_dtls_psk_required(void* self, void* authenticator);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdtls.html#pskRequired)
+///
 /// ``` QDtls* self, void (*slot)(QDtls*, QSslPreSharedKeyAuthenticator*) ```
 void q_dtls_on_psk_required(void* self, void (*slot)(void*, void*));
 
@@ -797,6 +854,8 @@ void q_dtls_on_psk_required(void* self, void (*slot)(void*, void*));
 /// ``` QDtls* self ```
 void q_dtls_handshake_timeout(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdtls.html#handshakeTimeout)
+///
 /// ``` QDtls* self, void (*slot)(QDtls*) ```
 void q_dtls_on_handshake_timeout(void* self, void (*slot)(void*));
 
@@ -902,7 +961,7 @@ void q_dtls_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QDtls* self ```
-libqt_list /* of QObject* */ q_dtls_children(void* self);
+const libqt_list /* of QObject* */ q_dtls_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1000,7 +1059,7 @@ QBindingStorage* q_dtls_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QDtls* self ```
-QBindingStorage* q_dtls_binding_storage2(void* self);
+const QBindingStorage* q_dtls_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -1010,6 +1069,8 @@ QBindingStorage* q_dtls_binding_storage2(void* self);
 void q_dtls_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QDtls* self, void (*slot)(QObject*) ```
 void q_dtls_on_destroyed(void* self, void (*slot)(void*));
@@ -1065,6 +1126,8 @@ void q_dtls_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QDtls* self, void (*slot)(QObject*, QObject*) ```
 void q_dtls_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -1079,12 +1142,16 @@ bool q_dtls_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtls* self, QEvent* event ```
 bool q_dtls_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1102,12 +1169,16 @@ bool q_dtls_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtls* self, QObject* watched, QEvent* event ```
 bool q_dtls_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1125,12 +1196,16 @@ void q_dtls_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtls* self, QTimerEvent* event ```
 void q_dtls_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1148,12 +1223,16 @@ void q_dtls_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtls* self, QChildEvent* event ```
 void q_dtls_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1171,12 +1250,16 @@ void q_dtls_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtls* self, QEvent* event ```
 void q_dtls_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1194,12 +1277,16 @@ void q_dtls_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtls* self, QMetaMethod* signal ```
 void q_dtls_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1217,12 +1304,16 @@ void q_dtls_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtls* self, QMetaMethod* signal ```
 void q_dtls_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1240,12 +1331,16 @@ QObject* q_dtls_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtls* self ```
 QObject* q_dtls_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1263,12 +1358,16 @@ int32_t q_dtls_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtls* self ```
 int32_t q_dtls_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1286,12 +1385,16 @@ int32_t q_dtls_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtls* self, const char* signal ```
 int32_t q_dtls_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1309,6 +1412,8 @@ bool q_dtls_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDtls* self, QMetaMethod* signal ```
@@ -1316,11 +1421,24 @@ bool q_dtls_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QDtls* self, bool (*slot)(QDtls*, QMetaMethod*) ```
 void q_dtls_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QDtls* self, void (*slot)(QObject*, const char*) ```
+void q_dtls_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdtls.html#dtor.QDtls)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QDtls* self ```
@@ -1348,6 +1466,8 @@ QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparamet
 /// ``` QDtlsClientVerifier__GeneratorParameters* self, QDtlsClientVerifier__GeneratorParameters* param1 ```
 void q_dtlsclientverifier__generatorparameters_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdtlsclientverifier::generatorparameters.html#dtor.QDtlsClientVerifier::GeneratorParameters)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QDtlsClientVerifier__GeneratorParameters* self ```

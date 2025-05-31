@@ -69,6 +69,8 @@ char* q_sslpresharedkeyauthenticator_pre_shared_key(void* self);
 /// ``` QSslPreSharedKeyAuthenticator* self ```
 int32_t q_sslpresharedkeyauthenticator_maximum_pre_shared_key_length(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslpresharedkeyauthenticator.html#dtor.QSslPreSharedKeyAuthenticator)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSslPreSharedKeyAuthenticator* self ```

@@ -13,44 +13,19 @@
 #include "../qtlibc.h"
 
 #include "libqabstractprintdialog.h"
-#include "../libqaction.h"
 #include "../libqevent.h"
-#include "../libqanystringview.h"
-#include "../libqbackingstore.h"
-#include "../libqbindingstorage.h"
-#include "../libqbitmap.h"
-#include "../libqcursor.h"
 #include "../libqdialog.h"
-#include "../libqfont.h"
-#include "../libqfontinfo.h"
-#include "../libqfontmetrics.h"
-#include "../libqgraphicseffect.h"
-#include "../libqgraphicsproxywidget.h"
-#include "../libqicon.h"
-#include "../libqkeysequence.h"
-#include "../libqlayout.h"
-#include "../libqlocale.h"
-#include "../libqmargins.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include "../libqpaintdevice.h"
 #include "../libqpaintengine.h"
 #include "../libqpainter.h"
-#include "../libqpalette.h"
-#include "../libqpixmap.h"
 #include "../libqpoint.h"
 #include "libqprinter.h"
-#include "../libqrect.h"
-#include "../libqregion.h"
-#include "../libqscreen.h"
 #include "../libqsize.h"
-#include "../libqsizepolicy.h"
 #include <string.h>
-#include "../libqstyle.h"
-#include "../libqthread.h"
 #include "../libqvariant.h"
 #include "../libqwidget.h"
-#include "../libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qprintdialog.html
 
@@ -77,7 +52,7 @@ QPrintDialog* q_printdialog_new4(void* printer, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QPrintDialog* self ```
-QMetaObject* q_printdialog_meta_object(void* self);
+const QMetaObject* q_printdialog_meta_object(void* self);
 
 /// ``` QPrintDialog* self, const char* param1 ```
 void* q_printdialog_metacast(void* self, const char* param1);
@@ -105,11 +80,15 @@ const char* q_printdialog_tr(const char* s);
 /// ``` QPrintDialog* self ```
 int32_t q_printdialog_exec(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprintdialog.html#exec)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPrintDialog* self, int32_t (*slot)() ```
 void q_printdialog_on_exec(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprintdialog.html#exec)
+///
 /// Base class method implementation
 ///
 /// ``` QPrintDialog* self ```
@@ -120,11 +99,15 @@ int32_t q_printdialog_qbase_exec(void* self);
 /// ``` QPrintDialog* self ```
 void q_printdialog_accept(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprintdialog.html#accept)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPrintDialog* self, void (*slot)() ```
 void q_printdialog_on_accept(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprintdialog.html#accept)
+///
 /// Base class method implementation
 ///
 /// ``` QPrintDialog* self ```
@@ -135,11 +118,15 @@ void q_printdialog_qbase_accept(void* self);
 /// ``` QPrintDialog* self, int result ```
 void q_printdialog_done(void* self, int result);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprintdialog.html#done)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPrintDialog* self, void (*slot)(QPrintDialog*, int) ```
 void q_printdialog_on_done(void* self, void (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprintdialog.html#done)
+///
 /// Base class method implementation
 ///
 /// ``` QPrintDialog* self, int result ```
@@ -170,11 +157,15 @@ int64_t q_printdialog_options(void* self);
 /// ``` QPrintDialog* self, bool visible ```
 void q_printdialog_set_visible(void* self, bool visible);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprintdialog.html#setVisible)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPrintDialog* self, void (*slot)(QPrintDialog*, bool) ```
 void q_printdialog_on_set_visible(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprintdialog.html#setVisible)
+///
 /// Base class method implementation
 ///
 /// ``` QPrintDialog* self, bool visible ```
@@ -184,8 +175,6 @@ void q_printdialog_qbase_set_visible(void* self, bool visible);
 ///
 /// ``` QPrintDialog* self, QPrinter* printer ```
 void q_printdialog_accepted(void* self, void* printer);
-
-/// ``` QPrintDialog* self, void (*slot)(QPrintDialog*, QPrinter*) ```
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -206,8 +195,8 @@ void q_printdialog_set_option2(void* self, int64_t option, bool on);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractprintdialog.html#setOptionTabs)
 ///
-/// ``` QPrintDialog* self, QWidget* tabs[] ```
-void q_printdialog_set_option_tabs(void* self, void* tabs[]);
+/// ``` QPrintDialog* self, libqt_list /* of QWidget* */ tabs ```
+void q_printdialog_set_option_tabs(void* self, libqt_list tabs);
 
 /// Inherited from QAbstractPrintDialog
 ///
@@ -316,6 +305,8 @@ void q_printdialog_finished(void* self, int result);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
+///
 /// ``` QPrintDialog* self, void (*slot)(QDialog*, int) ```
 void q_printdialog_on_finished(void* self, void (*slot)(void*, int));
 
@@ -327,6 +318,8 @@ void q_printdialog_on_finished(void* self, void (*slot)(void*, int));
 void q_printdialog_rejected(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
 /// ``` QPrintDialog* self, void (*slot)(QDialog*) ```
 void q_printdialog_on_rejected(void* self, void (*slot)(void*));
@@ -455,7 +448,7 @@ QRect* q_printdialog_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QPrintDialog* self ```
-QRect* q_printdialog_geometry(void* self);
+const QRect* q_printdialog_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -812,7 +805,7 @@ QWidget* q_printdialog_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QPrintDialog* self ```
-QPalette* q_printdialog_palette(void* self);
+const QPalette* q_printdialog_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -854,7 +847,7 @@ int64_t q_printdialog_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QPrintDialog* self ```
-QFont* q_printdialog_font(void* self);
+const QFont* q_printdialog_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1854,15 +1847,15 @@ void q_printdialog_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QPrintDialog* self, QAction* actions[] ```
-void q_printdialog_add_actions(void* self, void* actions[]);
+/// ``` QPrintDialog* self, libqt_list /* of QAction* */ actions ```
+void q_printdialog_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QPrintDialog* self, QAction* before, QAction* actions[] ```
-void q_printdialog_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QPrintDialog* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_printdialog_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2062,6 +2055,8 @@ void q_printdialog_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QPrintDialog* self, void (*slot)(QWidget*, const char*) ```
 void q_printdialog_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2073,6 +2068,8 @@ void q_printdialog_on_window_title_changed(void* self, void (*slot)(void*, const
 void q_printdialog_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QPrintDialog* self, void (*slot)(QWidget*, QIcon*) ```
 void q_printdialog_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -2086,6 +2083,8 @@ void q_printdialog_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QPrintDialog* self, void (*slot)(QWidget*, const char*) ```
 void q_printdialog_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2097,6 +2096,8 @@ void q_printdialog_on_window_icon_text_changed(void* self, void (*slot)(void*, c
 void q_printdialog_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QPrintDialog* self, void (*slot)(QWidget*, QPoint*) ```
 void q_printdialog_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2302,7 +2303,7 @@ void q_printdialog_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QPrintDialog* self ```
-libqt_list /* of QObject* */ q_printdialog_children(void* self);
+const libqt_list /* of QObject* */ q_printdialog_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2393,7 +2394,7 @@ QBindingStorage* q_printdialog_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QPrintDialog* self ```
-QBindingStorage* q_printdialog_binding_storage2(void* self);
+const QBindingStorage* q_printdialog_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2403,6 +2404,8 @@ QBindingStorage* q_printdialog_binding_storage2(void* self);
 void q_printdialog_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QPrintDialog* self, void (*slot)(QObject*) ```
 void q_printdialog_on_destroyed(void* self, void (*slot)(void*));
@@ -2457,6 +2460,8 @@ QMetaObject__Connection* q_printdialog_connect4(void* self, void* sender, const 
 void q_printdialog_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QPrintDialog* self, void (*slot)(QObject*, QObject*) ```
 void q_printdialog_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -2556,12 +2561,16 @@ QSize* q_printdialog_size_hint(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#sizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self ```
 QSize* q_printdialog_qbase_size_hint(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2579,12 +2588,16 @@ QSize* q_printdialog_minimum_size_hint(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self ```
 QSize* q_printdialog_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2602,12 +2615,16 @@ void q_printdialog_open(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#open)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self ```
 void q_printdialog_qbase_open(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#open)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2625,12 +2642,16 @@ void q_printdialog_reject(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#reject)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self ```
 void q_printdialog_qbase_reject(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#reject)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2648,12 +2669,16 @@ void q_printdialog_key_press_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QKeyEvent* param1 ```
 void q_printdialog_qbase_key_press_event(void* self, void* param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2671,12 +2696,16 @@ void q_printdialog_close_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QCloseEvent* param1 ```
 void q_printdialog_qbase_close_event(void* self, void* param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2694,12 +2723,16 @@ void q_printdialog_show_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QShowEvent* param1 ```
 void q_printdialog_qbase_show_event(void* self, void* param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2717,12 +2750,16 @@ void q_printdialog_resize_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QResizeEvent* param1 ```
 void q_printdialog_qbase_resize_event(void* self, void* param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2740,12 +2777,16 @@ void q_printdialog_context_menu_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QContextMenuEvent* param1 ```
 void q_printdialog_qbase_context_menu_event(void* self, void* param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2763,12 +2804,16 @@ bool q_printdialog_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QObject* param1, QEvent* param2 ```
 bool q_printdialog_qbase_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2786,12 +2831,16 @@ int32_t q_printdialog_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self ```
 int32_t q_printdialog_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2809,12 +2858,16 @@ int32_t q_printdialog_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, int param1 ```
 int32_t q_printdialog_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2832,12 +2885,16 @@ bool q_printdialog_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self ```
 bool q_printdialog_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2855,12 +2912,16 @@ QPaintEngine* q_printdialog_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self ```
 QPaintEngine* q_printdialog_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2878,12 +2939,16 @@ bool q_printdialog_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QEvent* event ```
 bool q_printdialog_qbase_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2901,12 +2966,16 @@ void q_printdialog_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QMouseEvent* event ```
 void q_printdialog_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2924,12 +2993,16 @@ void q_printdialog_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QMouseEvent* event ```
 void q_printdialog_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2947,12 +3020,16 @@ void q_printdialog_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QMouseEvent* event ```
 void q_printdialog_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2970,12 +3047,16 @@ void q_printdialog_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QMouseEvent* event ```
 void q_printdialog_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2993,12 +3074,16 @@ void q_printdialog_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QWheelEvent* event ```
 void q_printdialog_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3016,12 +3101,16 @@ void q_printdialog_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QKeyEvent* event ```
 void q_printdialog_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3039,12 +3128,16 @@ void q_printdialog_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QFocusEvent* event ```
 void q_printdialog_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3062,12 +3155,16 @@ void q_printdialog_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QFocusEvent* event ```
 void q_printdialog_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3085,12 +3182,16 @@ void q_printdialog_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QEnterEvent* event ```
 void q_printdialog_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3108,12 +3209,16 @@ void q_printdialog_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QEvent* event ```
 void q_printdialog_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3131,12 +3236,16 @@ void q_printdialog_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QPaintEvent* event ```
 void q_printdialog_qbase_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3154,12 +3263,16 @@ void q_printdialog_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QMoveEvent* event ```
 void q_printdialog_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3177,12 +3290,16 @@ void q_printdialog_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QTabletEvent* event ```
 void q_printdialog_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3200,12 +3317,16 @@ void q_printdialog_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QActionEvent* event ```
 void q_printdialog_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3223,12 +3344,16 @@ void q_printdialog_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QDragEnterEvent* event ```
 void q_printdialog_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3246,12 +3371,16 @@ void q_printdialog_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QDragMoveEvent* event ```
 void q_printdialog_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3269,12 +3398,16 @@ void q_printdialog_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QDragLeaveEvent* event ```
 void q_printdialog_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3292,12 +3425,16 @@ void q_printdialog_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QDropEvent* event ```
 void q_printdialog_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3315,12 +3452,16 @@ void q_printdialog_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QHideEvent* event ```
 void q_printdialog_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3338,12 +3479,16 @@ bool q_printdialog_native_event(void* self, const char* eventType, void* message
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, const char* eventType, void* message, intptr_t* result ```
 bool q_printdialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3361,12 +3506,16 @@ void q_printdialog_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QEvent* param1 ```
 void q_printdialog_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3384,12 +3533,16 @@ int32_t q_printdialog_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_printdialog_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3407,12 +3560,16 @@ void q_printdialog_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QPainter* painter ```
 void q_printdialog_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3430,12 +3587,16 @@ QPaintDevice* q_printdialog_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QPoint* offset ```
 QPaintDevice* q_printdialog_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3453,12 +3614,16 @@ QPainter* q_printdialog_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self ```
 QPainter* q_printdialog_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3476,12 +3641,16 @@ void q_printdialog_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QInputMethodEvent* param1 ```
 void q_printdialog_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3499,12 +3668,16 @@ QVariant* q_printdialog_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_printdialog_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3522,12 +3695,16 @@ bool q_printdialog_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, bool next ```
 bool q_printdialog_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3545,12 +3722,16 @@ void q_printdialog_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QTimerEvent* event ```
 void q_printdialog_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3568,12 +3749,16 @@ void q_printdialog_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QChildEvent* event ```
 void q_printdialog_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3591,12 +3776,16 @@ void q_printdialog_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QEvent* event ```
 void q_printdialog_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3614,12 +3803,16 @@ void q_printdialog_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QMetaMethod* signal ```
 void q_printdialog_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3637,12 +3830,16 @@ void q_printdialog_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QMetaMethod* signal ```
 void q_printdialog_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3660,12 +3857,16 @@ void q_printdialog_adjust_position(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QWidget* param1 ```
 void q_printdialog_qbase_adjust_position(void* self, void* param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3683,12 +3884,16 @@ void q_printdialog_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self ```
 void q_printdialog_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3706,12 +3911,16 @@ void q_printdialog_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self ```
 void q_printdialog_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3729,12 +3938,16 @@ void q_printdialog_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self ```
 void q_printdialog_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3752,12 +3965,16 @@ bool q_printdialog_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self ```
 bool q_printdialog_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3775,12 +3992,16 @@ bool q_printdialog_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self ```
 bool q_printdialog_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3798,12 +4019,16 @@ QObject* q_printdialog_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self ```
 QObject* q_printdialog_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3821,12 +4046,16 @@ int32_t q_printdialog_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self ```
 int32_t q_printdialog_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3844,12 +4073,16 @@ int32_t q_printdialog_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, const char* signal ```
 int32_t q_printdialog_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3867,6 +4100,8 @@ bool q_printdialog_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, QMetaMethod* signal ```
@@ -3874,11 +4109,24 @@ bool q_printdialog_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QPrintDialog* self, bool (*slot)(QPrintDialog*, QMetaMethod*) ```
 void q_printdialog_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QPrintDialog* self, void (*slot)(QObject*, const char*) ```
+void q_printdialog_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprintdialog.html#dtor.QPrintDialog)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPrintDialog* self ```

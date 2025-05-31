@@ -116,6 +116,8 @@ bool q_mimetype_inherits(void* self, const char* mimeTypeName);
 /// ``` QMimeType* self ```
 const char* q_mimetype_filter_string(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#dtor.QMimeType)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMimeType* self ```

@@ -15,23 +15,12 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
-typedef struct QChildEvent QChildEvent;
-typedef struct QEvent QEvent;
 typedef struct QImage QImage;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
-typedef struct QThread QThread;
-typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
-typedef struct QVariant QVariant;
 typedef struct QWebEngineNotification QWebEngineNotification;
 #endif
 
@@ -54,8 +43,6 @@ void QWebEngineNotification_Closed(QWebEngineNotification* self);
 void QWebEngineNotification_Connect_Closed(QWebEngineNotification* self, intptr_t slot);
 libqt_string QWebEngineNotification_Tr2(const char* s, const char* c);
 libqt_string QWebEngineNotification_Tr3(const char* s, const char* c, int n);
-bool QWebEngineNotification_Event(QWebEngineNotification* self, QEvent* event);
-bool QWebEngineNotification_EventFilter(QWebEngineNotification* self, QObject* watched, QEvent* event);
 void QWebEngineNotification_Delete(QWebEngineNotification* self);
 
 #ifdef __cplusplus

@@ -15,19 +15,13 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QEvent QEvent;
 typedef struct QIODevice QIODevice;
 typedef struct QMarginsF QMarginsF;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QPageLayout QPageLayout;
 typedef struct QPageRanges QPageRanges;
@@ -38,9 +32,7 @@ typedef struct QPaintEngine QPaintEngine;
 typedef struct QPainter QPainter;
 typedef struct QPdfWriter QPdfWriter;
 typedef struct QPoint QPoint;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
 #endif
 
 QPdfWriter* QPdfWriter_new(libqt_string filename);

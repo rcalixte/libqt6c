@@ -1,5 +1,3 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqbrush.hpp"
 #include "libqevent.hpp"
 #include "libqfont.hpp"
@@ -19,7 +17,6 @@
 #include "libqrect.hpp"
 #include <string.h>
 #include "libqstyle.hpp"
-#include "libqthread.hpp"
 #include "libqtransform.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
@@ -51,7 +48,7 @@ QGraphicsScene* q_graphicsscene_new6(double x, double y, double width, double he
     return QGraphicsScene_new6(x, y, width, height, (QObject*)parent);
 }
 
-QMetaObject* q_graphicsscene_meta_object(void* self) {
+const QMetaObject* q_graphicsscene_meta_object(void* self) {
     return QGraphicsScene_MetaObject((QGraphicsScene*)self);
 }
 
@@ -177,17 +174,8 @@ void q_graphicsscene_set_selection_area_with_path(void* self, void* path) {
     QGraphicsScene_SetSelectionAreaWithPath((QGraphicsScene*)self, (QPainterPath*)path);
 }
 
-QGraphicsItemGroup* q_graphicsscene_create_item_group(void* self, void* items[]) {
-    QGraphicsItem** items_arr = (QGraphicsItem**)items;
-    size_t items_len = 0;
-    while (items_arr[items_len] != NULL) {
-        items_len++;
-    }
-    libqt_list items_list = {
-        .len = items_len,
-        .data = {(QGraphicsItem*)items},
-    };
-    return QGraphicsScene_CreateItemGroup((QGraphicsScene*)self, items_list);
+QGraphicsItemGroup* q_graphicsscene_create_item_group(void* self, libqt_list items) {
+    return QGraphicsScene_CreateItemGroup((QGraphicsScene*)self, items);
 }
 
 void q_graphicsscene_destroy_item_group(void* self, void* group) {
@@ -655,20 +643,11 @@ bool q_graphicsscene_qbase_focus_next_prev_child(void* self, bool next) {
     return QGraphicsScene_QBaseFocusNextPrevChild((QGraphicsScene*)self, next);
 }
 
-void q_graphicsscene_changed(void* self, void* region[]) {
-    QRectF** region_arr = (QRectF**)region;
-    size_t region_len = 0;
-    while (region_arr[region_len] != NULL) {
-        region_len++;
-    }
-    libqt_list region_list = {
-        .len = region_len,
-        .data = {(QRectF*)region},
-    };
-    QGraphicsScene_Changed((QGraphicsScene*)self, region_list);
+void q_graphicsscene_changed(void* self, libqt_list region) {
+    QGraphicsScene_Changed((QGraphicsScene*)self, region);
 }
 
-void q_graphicsscene_on_changed(void* self, void (*slot)(void*, void*)) {
+void q_graphicsscene_on_changed(void* self, void (*slot)(void*, libqt_list)) {
     QGraphicsScene_Connect_Changed((QGraphicsScene*)self, (intptr_t)slot);
 }
 
@@ -886,8 +865,7 @@ const char* q_graphicsscene_object_name(void* self) {
 }
 
 void q_graphicsscene_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_graphicsscene_is_widget_type(void* self) {
@@ -926,7 +904,7 @@ void q_graphicsscene_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_graphicsscene_children(void* self) {
+const libqt_list /* of QObject* */ q_graphicsscene_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -993,7 +971,7 @@ QBindingStorage* q_graphicsscene_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_graphicsscene_binding_storage2(void* self) {
+const QBindingStorage* q_graphicsscene_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1143,6 +1121,10 @@ bool q_graphicsscene_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_graphicsscene_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QGraphicsScene_OnIsSignalConnected((QGraphicsScene*)self, (intptr_t)slot);
+}
+
+void q_graphicsscene_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_graphicsscene_delete(void* self) {

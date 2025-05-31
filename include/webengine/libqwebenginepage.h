@@ -13,9 +13,7 @@
 #include "../qtlibc.h"
 
 #include "../libqaction.h"
-#include "../libqanystringview.h"
 #include "../network/libqauthenticator.h"
-#include "../libqbindingstorage.h"
 #include "../libqevent.h"
 #include "../libqcolor.h"
 #include "../libqicon.h"
@@ -27,9 +25,7 @@
 #include "../libqrect.h"
 #include "../libqsize.h"
 #include <string.h>
-#include "../libqthread.h"
 #include "../libqurl.h"
-#include "../libqvariant.h"
 #include "../webchannel/libqwebchannel.h"
 #include "libqwebenginecertificateerror.h"
 #include "libqwebengineclientcertificateselection.h"
@@ -73,7 +69,7 @@ QWebEnginePage* q_webenginepage_new4(void* profile, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QWebEnginePage* self ```
-QMetaObject* q_webenginepage_meta_object(void* self);
+const QMetaObject* q_webenginepage_meta_object(void* self);
 
 /// ``` QWebEnginePage* self, const char* param1 ```
 void* q_webenginepage_metacast(void* self, const char* param1);
@@ -126,11 +122,15 @@ QAction* q_webenginepage_action(void* self, int64_t action);
 /// ``` QWebEnginePage* self, enum QWebEnginePage__WebAction action, bool checked ```
 void q_webenginepage_trigger_action(void* self, int64_t action, bool checked);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#triggerAction)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, enum QWebEnginePage__WebAction, bool) ```
 void q_webenginepage_on_trigger_action(void* self, void (*slot)(void*, int64_t, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#triggerAction)
+///
 /// Base class method implementation
 ///
 /// ``` QWebEnginePage* self, enum QWebEnginePage__WebAction action, bool checked ```
@@ -146,11 +146,15 @@ void q_webenginepage_replace_misspelled_word(void* self, const char* replacement
 /// ``` QWebEnginePage* self, QEvent* param1 ```
 bool q_webenginepage_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWebEnginePage* self, bool (*slot)(QWebEnginePage*, QEvent*) ```
 void q_webenginepage_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QWebEnginePage* self, QEvent* param1 ```
@@ -361,6 +365,8 @@ void q_webenginepage_accept_as_new_window(void* self, void* request);
 /// ``` QWebEnginePage* self ```
 void q_webenginepage_load_started(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#loadStarted)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*) ```
 void q_webenginepage_on_load_started(void* self, void (*slot)(void*));
 
@@ -369,6 +375,8 @@ void q_webenginepage_on_load_started(void* self, void (*slot)(void*));
 /// ``` QWebEnginePage* self, int progress ```
 void q_webenginepage_load_progress(void* self, int progress);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#loadProgress)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, int) ```
 void q_webenginepage_on_load_progress(void* self, void (*slot)(void*, int));
 
@@ -377,6 +385,8 @@ void q_webenginepage_on_load_progress(void* self, void (*slot)(void*, int));
 /// ``` QWebEnginePage* self, bool ok ```
 void q_webenginepage_load_finished(void* self, bool ok);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#loadFinished)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, bool) ```
 void q_webenginepage_on_load_finished(void* self, void (*slot)(void*, bool));
 
@@ -385,6 +395,8 @@ void q_webenginepage_on_load_finished(void* self, void (*slot)(void*, bool));
 /// ``` QWebEnginePage* self, QWebEngineLoadingInfo* loadingInfo ```
 void q_webenginepage_loading_changed(void* self, void* loadingInfo);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#loadingChanged)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, QWebEngineLoadingInfo*) ```
 void q_webenginepage_on_loading_changed(void* self, void (*slot)(void*, void*));
 
@@ -393,6 +405,8 @@ void q_webenginepage_on_loading_changed(void* self, void (*slot)(void*, void*));
 /// ``` QWebEnginePage* self, const char* url ```
 void q_webenginepage_link_hovered(void* self, const char* url);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#linkHovered)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, const char*) ```
 void q_webenginepage_on_link_hovered(void* self, void (*slot)(void*, const char*));
 
@@ -401,6 +415,8 @@ void q_webenginepage_on_link_hovered(void* self, void (*slot)(void*, const char*
 /// ``` QWebEnginePage* self ```
 void q_webenginepage_selection_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#selectionChanged)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*) ```
 void q_webenginepage_on_selection_changed(void* self, void (*slot)(void*));
 
@@ -409,6 +425,8 @@ void q_webenginepage_on_selection_changed(void* self, void (*slot)(void*));
 /// ``` QWebEnginePage* self, QRect* geom ```
 void q_webenginepage_geometry_change_requested(void* self, void* geom);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#geometryChangeRequested)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, QRect*) ```
 void q_webenginepage_on_geometry_change_requested(void* self, void (*slot)(void*, void*));
 
@@ -417,6 +435,8 @@ void q_webenginepage_on_geometry_change_requested(void* self, void (*slot)(void*
 /// ``` QWebEnginePage* self ```
 void q_webenginepage_window_close_requested(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#windowCloseRequested)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*) ```
 void q_webenginepage_on_window_close_requested(void* self, void (*slot)(void*));
 
@@ -425,6 +445,8 @@ void q_webenginepage_on_window_close_requested(void* self, void (*slot)(void*));
 /// ``` QWebEnginePage* self, QUrl* securityOrigin, enum QWebEnginePage__Feature feature ```
 void q_webenginepage_feature_permission_requested(void* self, void* securityOrigin, int64_t feature);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#featurePermissionRequested)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, QUrl*, enum QWebEnginePage__Feature) ```
 void q_webenginepage_on_feature_permission_requested(void* self, void (*slot)(void*, void*, int64_t));
 
@@ -433,6 +455,8 @@ void q_webenginepage_on_feature_permission_requested(void* self, void (*slot)(vo
 /// ``` QWebEnginePage* self, QUrl* securityOrigin, enum QWebEnginePage__Feature feature ```
 void q_webenginepage_feature_permission_request_canceled(void* self, void* securityOrigin, int64_t feature);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#featurePermissionRequestCanceled)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, QUrl*, enum QWebEnginePage__Feature) ```
 void q_webenginepage_on_feature_permission_request_canceled(void* self, void (*slot)(void*, void*, int64_t));
 
@@ -441,6 +465,8 @@ void q_webenginepage_on_feature_permission_request_canceled(void* self, void (*s
 /// ``` QWebEnginePage* self, QWebEngineFullScreenRequest* fullScreenRequest ```
 void q_webenginepage_full_screen_requested(void* self, void* fullScreenRequest);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#fullScreenRequested)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, QWebEngineFullScreenRequest*) ```
 void q_webenginepage_on_full_screen_requested(void* self, void (*slot)(void*, void*));
 
@@ -449,6 +475,8 @@ void q_webenginepage_on_full_screen_requested(void* self, void (*slot)(void*, vo
 /// ``` QWebEnginePage* self, QWebEngineQuotaRequest* quotaRequest ```
 void q_webenginepage_quota_requested(void* self, void* quotaRequest);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#quotaRequested)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, QWebEngineQuotaRequest*) ```
 void q_webenginepage_on_quota_requested(void* self, void (*slot)(void*, void*));
 
@@ -457,6 +485,8 @@ void q_webenginepage_on_quota_requested(void* self, void (*slot)(void*, void*));
 /// ``` QWebEnginePage* self, QWebEngineRegisterProtocolHandlerRequest* request ```
 void q_webenginepage_register_protocol_handler_requested(void* self, void* request);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#registerProtocolHandlerRequested)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, QWebEngineRegisterProtocolHandlerRequest*) ```
 void q_webenginepage_on_register_protocol_handler_requested(void* self, void (*slot)(void*, void*));
 
@@ -465,6 +495,8 @@ void q_webenginepage_on_register_protocol_handler_requested(void* self, void (*s
 /// ``` QWebEnginePage* self, QWebEngineFileSystemAccessRequest* request ```
 void q_webenginepage_file_system_access_requested(void* self, void* request);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#fileSystemAccessRequested)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, QWebEngineFileSystemAccessRequest*) ```
 void q_webenginepage_on_file_system_access_requested(void* self, void (*slot)(void*, void*));
 
@@ -473,6 +505,8 @@ void q_webenginepage_on_file_system_access_requested(void* self, void (*slot)(vo
 /// ``` QWebEnginePage* self, QWebEngineClientCertificateSelection* clientCertSelection ```
 void q_webenginepage_select_client_certificate(void* self, void* clientCertSelection);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#selectClientCertificate)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, QWebEngineClientCertificateSelection*) ```
 void q_webenginepage_on_select_client_certificate(void* self, void (*slot)(void*, void*));
 
@@ -481,6 +515,8 @@ void q_webenginepage_on_select_client_certificate(void* self, void (*slot)(void*
 /// ``` QWebEnginePage* self, QUrl* requestUrl, QAuthenticator* authenticator ```
 void q_webenginepage_authentication_required(void* self, void* requestUrl, void* authenticator);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#authenticationRequired)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, QUrl*, QAuthenticator*) ```
 void q_webenginepage_on_authentication_required(void* self, void (*slot)(void*, void*, void*));
 
@@ -489,6 +525,8 @@ void q_webenginepage_on_authentication_required(void* self, void (*slot)(void*, 
 /// ``` QWebEnginePage* self, QUrl* requestUrl, QAuthenticator* authenticator, const char* proxyHost ```
 void q_webenginepage_proxy_authentication_required(void* self, void* requestUrl, void* authenticator, const char* proxyHost);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#proxyAuthenticationRequired)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, QUrl*, QAuthenticator*, const char*) ```
 void q_webenginepage_on_proxy_authentication_required(void* self, void (*slot)(void*, void*, void*, const char*));
 
@@ -497,6 +535,8 @@ void q_webenginepage_on_proxy_authentication_required(void* self, void (*slot)(v
 /// ``` QWebEnginePage* self, enum QWebEnginePage__RenderProcessTerminationStatus terminationStatus, int exitCode ```
 void q_webenginepage_render_process_terminated(void* self, int64_t terminationStatus, int exitCode);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#renderProcessTerminated)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, enum QWebEnginePage__RenderProcessTerminationStatus, int) ```
 void q_webenginepage_on_render_process_terminated(void* self, void (*slot)(void*, int64_t, int));
 
@@ -505,6 +545,8 @@ void q_webenginepage_on_render_process_terminated(void* self, void (*slot)(void*
 /// ``` QWebEnginePage* self, QWebEngineCertificateError* certificateError ```
 void q_webenginepage_certificate_error(void* self, void* certificateError);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#certificateError)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, QWebEngineCertificateError*) ```
 void q_webenginepage_on_certificate_error(void* self, void (*slot)(void*, void*));
 
@@ -513,6 +555,8 @@ void q_webenginepage_on_certificate_error(void* self, void (*slot)(void*, void*)
 /// ``` QWebEnginePage* self, QWebEngineNavigationRequest* request ```
 void q_webenginepage_navigation_requested(void* self, void* request);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#navigationRequested)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, QWebEngineNavigationRequest*) ```
 void q_webenginepage_on_navigation_requested(void* self, void (*slot)(void*, void*));
 
@@ -521,6 +565,8 @@ void q_webenginepage_on_navigation_requested(void* self, void (*slot)(void*, voi
 /// ``` QWebEnginePage* self, QWebEngineNewWindowRequest* request ```
 void q_webenginepage_new_window_requested(void* self, void* request);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#newWindowRequested)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, QWebEngineNewWindowRequest*) ```
 void q_webenginepage_on_new_window_requested(void* self, void (*slot)(void*, void*));
 
@@ -529,6 +575,8 @@ void q_webenginepage_on_new_window_requested(void* self, void (*slot)(void*, voi
 /// ``` QWebEnginePage* self, const char* title ```
 void q_webenginepage_title_changed(void* self, const char* title);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#titleChanged)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, const char*) ```
 void q_webenginepage_on_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -537,6 +585,8 @@ void q_webenginepage_on_title_changed(void* self, void (*slot)(void*, const char
 /// ``` QWebEnginePage* self, QUrl* url ```
 void q_webenginepage_url_changed(void* self, void* url);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#urlChanged)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, QUrl*) ```
 void q_webenginepage_on_url_changed(void* self, void (*slot)(void*, void*));
 
@@ -545,6 +595,8 @@ void q_webenginepage_on_url_changed(void* self, void (*slot)(void*, void*));
 /// ``` QWebEnginePage* self, QUrl* url ```
 void q_webenginepage_icon_url_changed(void* self, void* url);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#iconUrlChanged)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, QUrl*) ```
 void q_webenginepage_on_icon_url_changed(void* self, void (*slot)(void*, void*));
 
@@ -553,6 +605,8 @@ void q_webenginepage_on_icon_url_changed(void* self, void (*slot)(void*, void*))
 /// ``` QWebEnginePage* self, QIcon* icon ```
 void q_webenginepage_icon_changed(void* self, void* icon);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#iconChanged)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, QIcon*) ```
 void q_webenginepage_on_icon_changed(void* self, void (*slot)(void*, void*));
 
@@ -561,6 +615,8 @@ void q_webenginepage_on_icon_changed(void* self, void (*slot)(void*, void*));
 /// ``` QWebEnginePage* self, QPointF* position ```
 void q_webenginepage_scroll_position_changed(void* self, void* position);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#scrollPositionChanged)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, QPointF*) ```
 void q_webenginepage_on_scroll_position_changed(void* self, void (*slot)(void*, void*));
 
@@ -569,6 +625,8 @@ void q_webenginepage_on_scroll_position_changed(void* self, void (*slot)(void*, 
 /// ``` QWebEnginePage* self, QSizeF* size ```
 void q_webenginepage_contents_size_changed(void* self, void* size);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#contentsSizeChanged)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, QSizeF*) ```
 void q_webenginepage_on_contents_size_changed(void* self, void (*slot)(void*, void*));
 
@@ -577,6 +635,8 @@ void q_webenginepage_on_contents_size_changed(void* self, void (*slot)(void*, vo
 /// ``` QWebEnginePage* self, bool muted ```
 void q_webenginepage_audio_muted_changed(void* self, bool muted);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#audioMutedChanged)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, bool) ```
 void q_webenginepage_on_audio_muted_changed(void* self, void (*slot)(void*, bool));
 
@@ -585,6 +645,8 @@ void q_webenginepage_on_audio_muted_changed(void* self, void (*slot)(void*, bool
 /// ``` QWebEnginePage* self, bool recentlyAudible ```
 void q_webenginepage_recently_audible_changed(void* self, bool recentlyAudible);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#recentlyAudibleChanged)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, bool) ```
 void q_webenginepage_on_recently_audible_changed(void* self, void (*slot)(void*, bool));
 
@@ -593,6 +655,8 @@ void q_webenginepage_on_recently_audible_changed(void* self, void (*slot)(void*,
 /// ``` QWebEnginePage* self, long long pid ```
 void q_webenginepage_render_process_pid_changed(void* self, long long pid);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#renderProcessPidChanged)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, long long) ```
 void q_webenginepage_on_render_process_pid_changed(void* self, void (*slot)(void*, long long));
 
@@ -601,6 +665,8 @@ void q_webenginepage_on_render_process_pid_changed(void* self, void (*slot)(void
 /// ``` QWebEnginePage* self, const char* filePath, bool success ```
 void q_webenginepage_pdf_printing_finished(void* self, const char* filePath, bool success);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#pdfPrintingFinished)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, const char*, bool) ```
 void q_webenginepage_on_pdf_printing_finished(void* self, void (*slot)(void*, const char*, bool));
 
@@ -609,6 +675,8 @@ void q_webenginepage_on_pdf_printing_finished(void* self, void (*slot)(void*, co
 /// ``` QWebEnginePage* self ```
 void q_webenginepage_print_requested(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#printRequested)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*) ```
 void q_webenginepage_on_print_requested(void* self, void (*slot)(void*));
 
@@ -617,6 +685,8 @@ void q_webenginepage_on_print_requested(void* self, void (*slot)(void*));
 /// ``` QWebEnginePage* self, bool visible ```
 void q_webenginepage_visible_changed(void* self, bool visible);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#visibleChanged)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, bool) ```
 void q_webenginepage_on_visible_changed(void* self, void (*slot)(void*, bool));
 
@@ -625,6 +695,8 @@ void q_webenginepage_on_visible_changed(void* self, void (*slot)(void*, bool));
 /// ``` QWebEnginePage* self, enum QWebEnginePage__LifecycleState state ```
 void q_webenginepage_lifecycle_state_changed(void* self, int64_t state);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#lifecycleStateChanged)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, enum QWebEnginePage__LifecycleState) ```
 void q_webenginepage_on_lifecycle_state_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -633,6 +705,8 @@ void q_webenginepage_on_lifecycle_state_changed(void* self, void (*slot)(void*, 
 /// ``` QWebEnginePage* self, enum QWebEnginePage__LifecycleState state ```
 void q_webenginepage_recommended_state_changed(void* self, int64_t state);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#recommendedStateChanged)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, enum QWebEnginePage__LifecycleState) ```
 void q_webenginepage_on_recommended_state_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -641,6 +715,8 @@ void q_webenginepage_on_recommended_state_changed(void* self, void (*slot)(void*
 /// ``` QWebEnginePage* self, QWebEngineFindTextResult* result ```
 void q_webenginepage_find_text_finished(void* self, void* result);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#findTextFinished)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, QWebEngineFindTextResult*) ```
 void q_webenginepage_on_find_text_finished(void* self, void (*slot)(void*, void*));
 
@@ -649,6 +725,8 @@ void q_webenginepage_on_find_text_finished(void* self, void (*slot)(void*, void*
 /// ``` QWebEnginePage* self ```
 void q_webenginepage_q_about_to_delete(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#_q_aboutToDelete)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*) ```
 void q_webenginepage_on_q_about_to_delete(void* self, void (*slot)(void*));
 
@@ -657,11 +735,15 @@ void q_webenginepage_on_q_about_to_delete(void* self, void (*slot)(void*));
 /// ``` QWebEnginePage* self, enum QWebEnginePage__WebWindowType typeVal ```
 QWebEnginePage* q_webenginepage_create_window(void* self, int64_t typeVal);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#createWindow)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWebEnginePage* self, QWebEnginePage* (*slot)(QWebEnginePage*, enum QWebEnginePage__WebWindowType) ```
 void q_webenginepage_on_create_window(void* self, QWebEnginePage* (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#createWindow)
+///
 /// Base class method implementation
 ///
 /// ``` QWebEnginePage* self, enum QWebEnginePage__WebWindowType typeVal ```
@@ -672,11 +754,15 @@ QWebEnginePage* q_webenginepage_qbase_create_window(void* self, int64_t typeVal)
 /// ``` QWebEnginePage* self, enum QWebEnginePage__FileSelectionMode mode, const char* oldFiles[], const char* acceptedMimeTypes[] ```
 const char** q_webenginepage_choose_files(void* self, int64_t mode, const char* oldFiles[], const char* acceptedMimeTypes[]);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#chooseFiles)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWebEnginePage* self, const char** (*slot)(QWebEnginePage*, enum QWebEnginePage__FileSelectionMode, const char*[], const char*[]) ```
 void q_webenginepage_on_choose_files(void* self, const char** (*slot)(void*, int64_t, const char*, const char*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#chooseFiles)
+///
 /// Base class method implementation
 ///
 /// ``` QWebEnginePage* self, enum QWebEnginePage__FileSelectionMode mode, const char* oldFiles[], const char* acceptedMimeTypes[] ```
@@ -687,11 +773,15 @@ const char** q_webenginepage_qbase_choose_files(void* self, int64_t mode, const 
 /// ``` QWebEnginePage* self, QUrl* securityOrigin, const char* msg ```
 void q_webenginepage_java_script_alert(void* self, void* securityOrigin, const char* msg);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#javaScriptAlert)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, QUrl*, const char*) ```
 void q_webenginepage_on_java_script_alert(void* self, void (*slot)(void*, void*, const char*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#javaScriptAlert)
+///
 /// Base class method implementation
 ///
 /// ``` QWebEnginePage* self, QUrl* securityOrigin, const char* msg ```
@@ -702,11 +792,15 @@ void q_webenginepage_qbase_java_script_alert(void* self, void* securityOrigin, c
 /// ``` QWebEnginePage* self, QUrl* securityOrigin, const char* msg ```
 bool q_webenginepage_java_script_confirm(void* self, void* securityOrigin, const char* msg);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#javaScriptConfirm)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWebEnginePage* self, bool (*slot)(QWebEnginePage*, QUrl*, const char*) ```
 void q_webenginepage_on_java_script_confirm(void* self, bool (*slot)(void*, void*, const char*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#javaScriptConfirm)
+///
 /// Base class method implementation
 ///
 /// ``` QWebEnginePage* self, QUrl* securityOrigin, const char* msg ```
@@ -717,11 +811,15 @@ bool q_webenginepage_qbase_java_script_confirm(void* self, void* securityOrigin,
 /// ``` QWebEnginePage* self, enum QWebEnginePage__JavaScriptConsoleMessageLevel level, const char* message, int lineNumber, const char* sourceID ```
 void q_webenginepage_java_script_console_message(void* self, int64_t level, const char* message, int lineNumber, const char* sourceID);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#javaScriptConsoleMessage)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWebEnginePage* self, void (*slot)(QWebEnginePage*, enum QWebEnginePage__JavaScriptConsoleMessageLevel, const char*, int, const char*) ```
 void q_webenginepage_on_java_script_console_message(void* self, void (*slot)(void*, int64_t, const char*, int, const char*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#javaScriptConsoleMessage)
+///
 /// Base class method implementation
 ///
 /// ``` QWebEnginePage* self, enum QWebEnginePage__JavaScriptConsoleMessageLevel level, const char* message, int lineNumber, const char* sourceID ```
@@ -732,11 +830,15 @@ void q_webenginepage_qbase_java_script_console_message(void* self, int64_t level
 /// ``` QWebEnginePage* self, QUrl* url, enum QWebEnginePage__NavigationType typeVal, bool isMainFrame ```
 bool q_webenginepage_accept_navigation_request(void* self, void* url, int64_t typeVal, bool isMainFrame);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#acceptNavigationRequest)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWebEnginePage* self, bool (*slot)(QWebEnginePage*, QUrl*, enum QWebEnginePage__NavigationType, bool) ```
 void q_webenginepage_on_accept_navigation_request(void* self, bool (*slot)(void*, void*, int64_t, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#acceptNavigationRequest)
+///
 /// Base class method implementation
 ///
 /// ``` QWebEnginePage* self, QUrl* url, enum QWebEnginePage__NavigationType typeVal, bool isMainFrame ```
@@ -874,7 +976,7 @@ void q_webenginepage_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QWebEnginePage* self ```
-libqt_list /* of QObject* */ q_webenginepage_children(void* self);
+const libqt_list /* of QObject* */ q_webenginepage_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -972,7 +1074,7 @@ QBindingStorage* q_webenginepage_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QWebEnginePage* self ```
-QBindingStorage* q_webenginepage_binding_storage2(void* self);
+const QBindingStorage* q_webenginepage_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -982,6 +1084,8 @@ QBindingStorage* q_webenginepage_binding_storage2(void* self);
 void q_webenginepage_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QWebEnginePage* self, void (*slot)(QObject*) ```
 void q_webenginepage_on_destroyed(void* self, void (*slot)(void*));
@@ -1037,6 +1141,8 @@ void q_webenginepage_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QWebEnginePage* self, void (*slot)(QObject*, QObject*) ```
 void q_webenginepage_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -1051,12 +1157,16 @@ bool q_webenginepage_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWebEnginePage* self, QObject* watched, QEvent* event ```
 bool q_webenginepage_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1074,12 +1184,16 @@ void q_webenginepage_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWebEnginePage* self, QTimerEvent* event ```
 void q_webenginepage_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1097,12 +1211,16 @@ void q_webenginepage_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWebEnginePage* self, QChildEvent* event ```
 void q_webenginepage_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1120,12 +1238,16 @@ void q_webenginepage_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWebEnginePage* self, QEvent* event ```
 void q_webenginepage_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1143,12 +1265,16 @@ void q_webenginepage_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWebEnginePage* self, QMetaMethod* signal ```
 void q_webenginepage_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1166,12 +1292,16 @@ void q_webenginepage_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWebEnginePage* self, QMetaMethod* signal ```
 void q_webenginepage_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1189,12 +1319,16 @@ QObject* q_webenginepage_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWebEnginePage* self ```
 QObject* q_webenginepage_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1212,12 +1346,16 @@ int32_t q_webenginepage_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWebEnginePage* self ```
 int32_t q_webenginepage_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1235,12 +1373,16 @@ int32_t q_webenginepage_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWebEnginePage* self, const char* signal ```
 int32_t q_webenginepage_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1258,6 +1400,8 @@ bool q_webenginepage_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWebEnginePage* self, QMetaMethod* signal ```
@@ -1265,11 +1409,24 @@ bool q_webenginepage_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QWebEnginePage* self, bool (*slot)(QWebEnginePage*, QMetaMethod*) ```
 void q_webenginepage_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEnginePage* self, void (*slot)(QObject*, const char*) ```
+void q_webenginepage_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#dtor.QWebEnginePage)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWebEnginePage* self ```

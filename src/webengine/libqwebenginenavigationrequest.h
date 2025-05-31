@@ -12,22 +12,17 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
-#include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include <string.h>
-#include "../libqthread.h"
 #include "../libqurl.h"
-#include "../libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qwebenginenavigationrequest.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QWebEngineNavigationRequest* self ```
-QMetaObject* q_webenginenavigationrequest_meta_object(void* self);
+const QMetaObject* q_webenginenavigationrequest_meta_object(void* self);
 
 /// ``` QWebEngineNavigationRequest* self, const char* param1 ```
 void* q_webenginenavigationrequest_metacast(void* self, const char* param1);
@@ -70,6 +65,8 @@ void q_webenginenavigationrequest_reject(void* self);
 /// ``` QWebEngineNavigationRequest* self ```
 void q_webenginenavigationrequest_action_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#actionChanged)
+///
 /// ``` QWebEngineNavigationRequest* self, void (*slot)(QWebEngineNavigationRequest*) ```
 void q_webenginenavigationrequest_on_action_changed(void* self, void (*slot)(void*));
 
@@ -179,7 +176,7 @@ void q_webenginenavigationrequest_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QWebEngineNavigationRequest* self ```
-libqt_list /* of QObject* */ q_webenginenavigationrequest_children(void* self);
+const libqt_list /* of QObject* */ q_webenginenavigationrequest_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -277,7 +274,7 @@ QBindingStorage* q_webenginenavigationrequest_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QWebEngineNavigationRequest* self ```
-QBindingStorage* q_webenginenavigationrequest_binding_storage2(void* self);
+const QBindingStorage* q_webenginenavigationrequest_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -287,6 +284,8 @@ QBindingStorage* q_webenginenavigationrequest_binding_storage2(void* self);
 void q_webenginenavigationrequest_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QWebEngineNavigationRequest* self, void (*slot)(QObject*) ```
 void q_webenginenavigationrequest_on_destroyed(void* self, void (*slot)(void*));
@@ -342,9 +341,22 @@ void q_webenginenavigationrequest_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QWebEngineNavigationRequest* self, void (*slot)(QObject*, QObject*) ```
 void q_webenginenavigationrequest_on_destroyed1(void* self, void (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineNavigationRequest* self, void (*slot)(QObject*, const char*) ```
+void q_webenginenavigationrequest_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#dtor.QWebEngineNavigationRequest)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWebEngineNavigationRequest* self ```

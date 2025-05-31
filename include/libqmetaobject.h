@@ -153,7 +153,7 @@ bool q_metamethod_is_const(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#enclosingMetaObject)
 ///
 /// ``` QMetaMethod* self ```
-QMetaObject* q_metamethod_enclosing_meta_object(void* self);
+const QMetaObject* q_metamethod_enclosing_meta_object(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -490,6 +490,8 @@ bool q_metamethod_invoke_on_gadget102(void* self, void* gadget, void* val0, void
 /// ``` QMetaMethod* self, void* gadget, QGenericArgument* val0, QGenericArgument* val1, QGenericArgument* val2, QGenericArgument* val3, QGenericArgument* val4, QGenericArgument* val5, QGenericArgument* val6, QGenericArgument* val7, QGenericArgument* val8, QGenericArgument* val9 ```
 bool q_metamethod_invoke_on_gadget112(void* self, void* gadget, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#dtor.QMetaMethod)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMetaMethod* self ```
@@ -590,7 +592,7 @@ char* q_metaenum_value_to_keys(void* self, int value);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaenum.html#enclosingMetaObject)
 ///
 /// ``` QMetaEnum* self ```
-QMetaObject* q_metaenum_enclosing_meta_object(void* self);
+const QMetaObject* q_metaenum_enclosing_meta_object(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaenum.html#isValid)
 ///
@@ -607,6 +609,8 @@ int32_t q_metaenum_key_to_value2(void* self, const char* key, bool* ok);
 /// ``` QMetaEnum* self, const char* keys, bool* ok ```
 int32_t q_metaenum_keys_to_value2(void* self, const char* keys, bool* ok);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaenum.html#dtor.QMetaEnum)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMetaEnum* self ```
@@ -822,8 +826,10 @@ bool q_metaproperty_is_valid(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaproperty.html#enclosingMetaObject)
 ///
 /// ``` QMetaProperty* self ```
-QMetaObject* q_metaproperty_enclosing_meta_object(void* self);
+const QMetaObject* q_metaproperty_enclosing_meta_object(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaproperty.html#dtor.QMetaProperty)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMetaProperty* self ```
@@ -869,8 +875,10 @@ const char* q_metaclassinfo_value(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaclassinfo.html#enclosingMetaObject)
 ///
 /// ``` QMetaClassInfo* self ```
-QMetaObject* q_metaclassinfo_enclosing_meta_object(void* self);
+const QMetaObject* q_metaclassinfo_enclosing_meta_object(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaclassinfo.html#dtor.QMetaClassInfo)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMetaClassInfo* self ```

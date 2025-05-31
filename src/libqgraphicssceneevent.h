@@ -126,12 +126,16 @@ void q_graphicssceneevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsSceneEvent* self, bool accepted ```
 void q_graphicssceneevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -149,6 +153,8 @@ QEvent* q_graphicssceneevent_clone(void* self);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsSceneEvent* self ```
@@ -156,11 +162,15 @@ QEvent* q_graphicssceneevent_qbase_clone(void* self);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QGraphicsSceneEvent* self, QEvent* (*slot)() ```
 void q_graphicssceneevent_on_clone(void* self, QEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicssceneevent.html#dtor.QGraphicsSceneEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGraphicsSceneEvent* self ```
@@ -427,12 +437,16 @@ void q_graphicsscenemouseevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsSceneMouseEvent* self, bool accepted ```
 void q_graphicsscenemouseevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -450,6 +464,8 @@ QEvent* q_graphicsscenemouseevent_clone(void* self);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsSceneMouseEvent* self ```
@@ -457,11 +473,15 @@ QEvent* q_graphicsscenemouseevent_qbase_clone(void* self);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QGraphicsSceneMouseEvent* self, QEvent* (*slot)() ```
 void q_graphicsscenemouseevent_on_clone(void* self, QEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#dtor.QGraphicsSceneMouseEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGraphicsSceneMouseEvent* self ```
@@ -688,12 +708,16 @@ void q_graphicsscenewheelevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsSceneWheelEvent* self, bool accepted ```
 void q_graphicsscenewheelevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -711,6 +735,8 @@ QEvent* q_graphicsscenewheelevent_clone(void* self);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsSceneWheelEvent* self ```
@@ -718,11 +744,15 @@ QEvent* q_graphicsscenewheelevent_qbase_clone(void* self);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QGraphicsSceneWheelEvent* self, QEvent* (*slot)() ```
 void q_graphicsscenewheelevent_on_clone(void* self, QEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#dtor.QGraphicsSceneWheelEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGraphicsSceneWheelEvent* self ```
@@ -899,12 +929,16 @@ void q_graphicsscenecontextmenuevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsSceneContextMenuEvent* self, bool accepted ```
 void q_graphicsscenecontextmenuevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -922,6 +956,8 @@ QEvent* q_graphicsscenecontextmenuevent_clone(void* self);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsSceneContextMenuEvent* self ```
@@ -929,11 +965,15 @@ QEvent* q_graphicsscenecontextmenuevent_qbase_clone(void* self);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QGraphicsSceneContextMenuEvent* self, QEvent* (*slot)() ```
 void q_graphicsscenecontextmenuevent_on_clone(void* self, QEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenecontextmenuevent.html#dtor.QGraphicsSceneContextMenuEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGraphicsSceneContextMenuEvent* self ```
@@ -1130,12 +1170,16 @@ void q_graphicsscenehoverevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsSceneHoverEvent* self, bool accepted ```
 void q_graphicsscenehoverevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1153,6 +1197,8 @@ QEvent* q_graphicsscenehoverevent_clone(void* self);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsSceneHoverEvent* self ```
@@ -1160,11 +1206,15 @@ QEvent* q_graphicsscenehoverevent_qbase_clone(void* self);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QGraphicsSceneHoverEvent* self, QEvent* (*slot)() ```
 void q_graphicsscenehoverevent_on_clone(void* self, QEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenehoverevent.html#dtor.QGraphicsSceneHoverEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGraphicsSceneHoverEvent* self ```
@@ -1311,12 +1361,16 @@ void q_graphicsscenehelpevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsSceneHelpEvent* self, bool accepted ```
 void q_graphicsscenehelpevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1334,6 +1388,8 @@ QEvent* q_graphicsscenehelpevent_clone(void* self);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsSceneHelpEvent* self ```
@@ -1341,11 +1397,15 @@ QEvent* q_graphicsscenehelpevent_qbase_clone(void* self);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QGraphicsSceneHelpEvent* self, QEvent* (*slot)() ```
 void q_graphicsscenehelpevent_on_clone(void* self, QEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenehelpevent.html#dtor.QGraphicsSceneHelpEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGraphicsSceneHelpEvent* self ```
@@ -1461,7 +1521,7 @@ void q_graphicsscenedragdropevent_set_source(void* self, void* source);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#mimeData)
 ///
 /// ``` QGraphicsSceneDragDropEvent* self ```
-QMimeData* q_graphicsscenedragdropevent_mime_data(void* self);
+const QMimeData* q_graphicsscenedragdropevent_mime_data(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#setMimeData)
 ///
@@ -1577,12 +1637,16 @@ void q_graphicsscenedragdropevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsSceneDragDropEvent* self, bool accepted ```
 void q_graphicsscenedragdropevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1600,6 +1664,8 @@ QEvent* q_graphicsscenedragdropevent_clone(void* self);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsSceneDragDropEvent* self ```
@@ -1607,11 +1673,15 @@ QEvent* q_graphicsscenedragdropevent_qbase_clone(void* self);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QGraphicsSceneDragDropEvent* self, QEvent* (*slot)() ```
 void q_graphicsscenedragdropevent_on_clone(void* self, QEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#dtor.QGraphicsSceneDragDropEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGraphicsSceneDragDropEvent* self ```
@@ -1753,12 +1823,16 @@ void q_graphicssceneresizeevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsSceneResizeEvent* self, bool accepted ```
 void q_graphicssceneresizeevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1776,6 +1850,8 @@ QEvent* q_graphicssceneresizeevent_clone(void* self);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsSceneResizeEvent* self ```
@@ -1783,11 +1859,15 @@ QEvent* q_graphicssceneresizeevent_qbase_clone(void* self);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QGraphicsSceneResizeEvent* self, QEvent* (*slot)() ```
 void q_graphicssceneresizeevent_on_clone(void* self, QEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicssceneresizeevent.html#dtor.QGraphicsSceneResizeEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGraphicsSceneResizeEvent* self ```
@@ -1929,12 +2009,16 @@ void q_graphicsscenemoveevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsSceneMoveEvent* self, bool accepted ```
 void q_graphicsscenemoveevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1952,6 +2036,8 @@ QEvent* q_graphicsscenemoveevent_clone(void* self);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsSceneMoveEvent* self ```
@@ -1959,11 +2045,15 @@ QEvent* q_graphicsscenemoveevent_qbase_clone(void* self);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QGraphicsSceneMoveEvent* self, QEvent* (*slot)() ```
 void q_graphicsscenemoveevent_on_clone(void* self, QEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenemoveevent.html#dtor.QGraphicsSceneMoveEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGraphicsSceneMoveEvent* self ```

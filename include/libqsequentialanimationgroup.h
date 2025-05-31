@@ -14,15 +14,11 @@
 
 #include "libqabstractanimation.h"
 #include "libqanimationgroup.h"
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpauseanimation.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qsequentialanimationgroup.html
 
@@ -39,7 +35,7 @@ QSequentialAnimationGroup* q_sequentialanimationgroup_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QSequentialAnimationGroup* self ```
-QMetaObject* q_sequentialanimationgroup_meta_object(void* self);
+const QMetaObject* q_sequentialanimationgroup_meta_object(void* self);
 
 /// ``` QSequentialAnimationGroup* self, const char* param1 ```
 void* q_sequentialanimationgroup_metacast(void* self, const char* param1);
@@ -82,11 +78,15 @@ QAbstractAnimation* q_sequentialanimationgroup_current_animation(void* self);
 /// ``` QSequentialAnimationGroup* self ```
 int32_t q_sequentialanimationgroup_duration(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsequentialanimationgroup.html#duration)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSequentialAnimationGroup* self, int32_t (*slot)() ```
 void q_sequentialanimationgroup_on_duration(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsequentialanimationgroup.html#duration)
+///
 /// Base class method implementation
 ///
 /// ``` QSequentialAnimationGroup* self ```
@@ -97,6 +97,8 @@ int32_t q_sequentialanimationgroup_qbase_duration(void* self);
 /// ``` QSequentialAnimationGroup* self, QAbstractAnimation* current ```
 void q_sequentialanimationgroup_current_animation_changed(void* self, void* current);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsequentialanimationgroup.html#currentAnimationChanged)
+///
 /// ``` QSequentialAnimationGroup* self, void (*slot)(QSequentialAnimationGroup*, QAbstractAnimation*) ```
 void q_sequentialanimationgroup_on_current_animation_changed(void* self, void (*slot)(void*, void*));
 
@@ -105,11 +107,15 @@ void q_sequentialanimationgroup_on_current_animation_changed(void* self, void (*
 /// ``` QSequentialAnimationGroup* self, QEvent* event ```
 bool q_sequentialanimationgroup_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsequentialanimationgroup.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSequentialAnimationGroup* self, bool (*slot)(QSequentialAnimationGroup*, QEvent*) ```
 void q_sequentialanimationgroup_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsequentialanimationgroup.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QSequentialAnimationGroup* self, QEvent* event ```
@@ -120,11 +126,15 @@ bool q_sequentialanimationgroup_qbase_event(void* self, void* event);
 /// ``` QSequentialAnimationGroup* self, int param1 ```
 void q_sequentialanimationgroup_update_current_time(void* self, int param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsequentialanimationgroup.html#updateCurrentTime)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSequentialAnimationGroup* self, void (*slot)(QSequentialAnimationGroup*, int) ```
 void q_sequentialanimationgroup_on_update_current_time(void* self, void (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsequentialanimationgroup.html#updateCurrentTime)
+///
 /// Base class method implementation
 ///
 /// ``` QSequentialAnimationGroup* self, int param1 ```
@@ -135,11 +145,15 @@ void q_sequentialanimationgroup_qbase_update_current_time(void* self, int param1
 /// ``` QSequentialAnimationGroup* self, enum QAbstractAnimation__State newState, enum QAbstractAnimation__State oldState ```
 void q_sequentialanimationgroup_update_state(void* self, int64_t newState, int64_t oldState);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsequentialanimationgroup.html#updateState)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSequentialAnimationGroup* self, void (*slot)(QSequentialAnimationGroup*, enum QAbstractAnimation__State, enum QAbstractAnimation__State) ```
 void q_sequentialanimationgroup_on_update_state(void* self, void (*slot)(void*, int64_t, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsequentialanimationgroup.html#updateState)
+///
 /// Base class method implementation
 ///
 /// ``` QSequentialAnimationGroup* self, enum QAbstractAnimation__State newState, enum QAbstractAnimation__State oldState ```
@@ -150,11 +164,15 @@ void q_sequentialanimationgroup_qbase_update_state(void* self, int64_t newState,
 /// ``` QSequentialAnimationGroup* self, enum QAbstractAnimation__Direction direction ```
 void q_sequentialanimationgroup_update_direction(void* self, int64_t direction);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsequentialanimationgroup.html#updateDirection)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSequentialAnimationGroup* self, void (*slot)(QSequentialAnimationGroup*, enum QAbstractAnimation__Direction) ```
 void q_sequentialanimationgroup_on_update_direction(void* self, void (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsequentialanimationgroup.html#updateDirection)
+///
 /// Base class method implementation
 ///
 /// ``` QSequentialAnimationGroup* self, enum QAbstractAnimation__Direction direction ```
@@ -305,6 +323,8 @@ void q_sequentialanimationgroup_finished(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#finished)
+///
 /// ``` QSequentialAnimationGroup* self, void (*slot)(QAbstractAnimation*) ```
 void q_sequentialanimationgroup_on_finished(void* self, void (*slot)(void*));
 
@@ -316,6 +336,8 @@ void q_sequentialanimationgroup_on_finished(void* self, void (*slot)(void*));
 void q_sequentialanimationgroup_state_changed(void* self, int64_t newState, int64_t oldState);
 
 /// Inherited from QAbstractAnimation
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#stateChanged)
 ///
 /// ``` QSequentialAnimationGroup* self, void (*slot)(QAbstractAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State) ```
 void q_sequentialanimationgroup_on_state_changed(void* self, void (*slot)(void*, int64_t, int64_t));
@@ -329,6 +351,8 @@ void q_sequentialanimationgroup_current_loop_changed(void* self, int currentLoop
 
 /// Inherited from QAbstractAnimation
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#currentLoopChanged)
+///
 /// ``` QSequentialAnimationGroup* self, void (*slot)(QAbstractAnimation*, int) ```
 void q_sequentialanimationgroup_on_current_loop_changed(void* self, void (*slot)(void*, int));
 
@@ -340,6 +364,8 @@ void q_sequentialanimationgroup_on_current_loop_changed(void* self, void (*slot)
 void q_sequentialanimationgroup_direction_changed(void* self, int64_t param1);
 
 /// Inherited from QAbstractAnimation
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#directionChanged)
 ///
 /// ``` QSequentialAnimationGroup* self, void (*slot)(QAbstractAnimation*, enum QAbstractAnimation__Direction) ```
 void q_sequentialanimationgroup_on_direction_changed(void* self, void (*slot)(void*, int64_t));
@@ -475,7 +501,7 @@ void q_sequentialanimationgroup_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QSequentialAnimationGroup* self ```
-libqt_list /* of QObject* */ q_sequentialanimationgroup_children(void* self);
+const libqt_list /* of QObject* */ q_sequentialanimationgroup_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -573,7 +599,7 @@ QBindingStorage* q_sequentialanimationgroup_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QSequentialAnimationGroup* self ```
-QBindingStorage* q_sequentialanimationgroup_binding_storage2(void* self);
+const QBindingStorage* q_sequentialanimationgroup_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -583,6 +609,8 @@ QBindingStorage* q_sequentialanimationgroup_binding_storage2(void* self);
 void q_sequentialanimationgroup_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QSequentialAnimationGroup* self, void (*slot)(QObject*) ```
 void q_sequentialanimationgroup_on_destroyed(void* self, void (*slot)(void*));
@@ -638,6 +666,8 @@ void q_sequentialanimationgroup_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QSequentialAnimationGroup* self, void (*slot)(QObject*, QObject*) ```
 void q_sequentialanimationgroup_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -652,12 +682,16 @@ bool q_sequentialanimationgroup_event_filter(void* self, void* watched, void* ev
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSequentialAnimationGroup* self, QObject* watched, QEvent* event ```
 bool q_sequentialanimationgroup_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -675,12 +709,16 @@ void q_sequentialanimationgroup_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSequentialAnimationGroup* self, QTimerEvent* event ```
 void q_sequentialanimationgroup_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -698,12 +736,16 @@ void q_sequentialanimationgroup_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSequentialAnimationGroup* self, QChildEvent* event ```
 void q_sequentialanimationgroup_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -721,12 +763,16 @@ void q_sequentialanimationgroup_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSequentialAnimationGroup* self, QEvent* event ```
 void q_sequentialanimationgroup_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -744,12 +790,16 @@ void q_sequentialanimationgroup_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSequentialAnimationGroup* self, QMetaMethod* signal ```
 void q_sequentialanimationgroup_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -767,12 +817,16 @@ void q_sequentialanimationgroup_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSequentialAnimationGroup* self, QMetaMethod* signal ```
 void q_sequentialanimationgroup_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -790,12 +844,16 @@ QObject* q_sequentialanimationgroup_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSequentialAnimationGroup* self ```
 QObject* q_sequentialanimationgroup_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -813,12 +871,16 @@ int32_t q_sequentialanimationgroup_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSequentialAnimationGroup* self ```
 int32_t q_sequentialanimationgroup_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -836,12 +898,16 @@ int32_t q_sequentialanimationgroup_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSequentialAnimationGroup* self, const char* signal ```
 int32_t q_sequentialanimationgroup_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -859,6 +925,8 @@ bool q_sequentialanimationgroup_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSequentialAnimationGroup* self, QMetaMethod* signal ```
@@ -866,11 +934,24 @@ bool q_sequentialanimationgroup_qbase_is_signal_connected(void* self, void* sign
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QSequentialAnimationGroup* self, bool (*slot)(QSequentialAnimationGroup*, QMetaMethod*) ```
 void q_sequentialanimationgroup_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QSequentialAnimationGroup* self, void (*slot)(QObject*, const char*) ```
+void q_sequentialanimationgroup_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsequentialanimationgroup.html#dtor.QSequentialAnimationGroup)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSequentialAnimationGroup* self ```

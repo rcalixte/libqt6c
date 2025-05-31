@@ -36,6 +36,8 @@ void q_untypedpropertydata_copy_assign(void* self, void* other);
 /// ``` QUntypedPropertyData* self, QUntypedPropertyData* other ```
 void q_untypedpropertydata_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/quntypedpropertydata.html#dtor.QUntypedPropertyData)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QUntypedPropertyData* self ```

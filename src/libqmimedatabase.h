@@ -90,6 +90,8 @@ QMimeType* q_mimedatabase_mime_type_for_file2(void* self, const char* fileName, 
 /// ``` QMimeDatabase* self, QFileInfo* fileInfo, enum QMimeDatabase__MatchMode mode ```
 QMimeType* q_mimedatabase_mime_type_for_file22(void* self, void* fileInfo, int64_t mode);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmimedatabase.html#dtor.QMimeDatabase)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMimeDatabase* self ```

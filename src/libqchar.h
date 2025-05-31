@@ -51,6 +51,8 @@ void q_latin1char_move_assign(void* self, void* other);
 /// ``` QLatin1Char* self ```
 char q_latin1char_to_latin1(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlatin1char.html#dtor.QLatin1Char)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QLatin1Char* self ```
@@ -328,6 +330,8 @@ void q_char_set_row(void* self, unsigned char arow);
 ///
 int64_t q_char_current_unicode_version();
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#dtor.QChar)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QChar* self ```

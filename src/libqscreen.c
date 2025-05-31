@@ -1,6 +1,3 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
-#include "libqevent.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqpixmap.hpp"
@@ -8,14 +5,11 @@
 #include "libqrect.hpp"
 #include "libqsize.hpp"
 #include <string.h>
-#include "libqthread.hpp"
 #include "libqtransform.hpp"
-#include "libqvariant.hpp"
-#include "libqcoreevent.hpp"
 #include "libqscreen.hpp"
 #include "libqscreen.h"
 
-QMetaObject* q_screen_meta_object(void* self) {
+const QMetaObject* q_screen_meta_object(void* self) {
     return QScreen_MetaObject((QScreen*)self);
 }
 
@@ -301,8 +295,7 @@ const char* q_screen_object_name(void* self) {
 }
 
 void q_screen_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_screen_is_widget_type(void* self) {
@@ -341,7 +334,7 @@ void q_screen_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_screen_children(void* self) {
+const libqt_list /* of QObject* */ q_screen_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -408,7 +401,7 @@ QBindingStorage* q_screen_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_screen_binding_storage2(void* self) {
+const QBindingStorage* q_screen_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -450,6 +443,10 @@ void q_screen_destroyed1(void* self, void* param1) {
 
 void q_screen_on_destroyed1(void* self, void (*slot)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+}
+
+void q_screen_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_screen_delete(void* self) {

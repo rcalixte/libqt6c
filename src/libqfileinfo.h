@@ -334,6 +334,8 @@ void q_fileinfo_set_caching(void* self, bool on);
 /// ``` QFileInfo* self ```
 void q_fileinfo_stat(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#dtor.QFileInfo)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QFileInfo* self ```

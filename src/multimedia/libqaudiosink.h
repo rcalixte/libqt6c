@@ -12,17 +12,13 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
 #include "libqaudiodevice.h"
 #include "libqaudioformat.h"
-#include "../libqbindingstorage.h"
 #include "../libqevent.h"
 #include "../libqiodevice.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qaudiosink.html
 
@@ -59,7 +55,7 @@ QAudioSink* q_audiosink_new6(void* audioDeviceInfo, void* format, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QAudioSink* self ```
-QMetaObject* q_audiosink_meta_object(void* self);
+const QMetaObject* q_audiosink_meta_object(void* self);
 
 /// ``` QAudioSink* self, const char* param1 ```
 void* q_audiosink_metacast(void* self, const char* param1);
@@ -172,6 +168,8 @@ double q_audiosink_volume(void* self);
 /// ``` QAudioSink* self, enum QAudio__State state ```
 void q_audiosink_state_changed(void* self, int64_t state);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosink.html#stateChanged)
+///
 /// ``` QAudioSink* self, void (*slot)(QAudioSink*, enum QAudio__State) ```
 void q_audiosink_on_state_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -267,7 +265,7 @@ void q_audiosink_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QAudioSink* self ```
-libqt_list /* of QObject* */ q_audiosink_children(void* self);
+const libqt_list /* of QObject* */ q_audiosink_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -365,7 +363,7 @@ QBindingStorage* q_audiosink_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QAudioSink* self ```
-QBindingStorage* q_audiosink_binding_storage2(void* self);
+const QBindingStorage* q_audiosink_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -375,6 +373,8 @@ QBindingStorage* q_audiosink_binding_storage2(void* self);
 void q_audiosink_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QAudioSink* self, void (*slot)(QObject*) ```
 void q_audiosink_on_destroyed(void* self, void (*slot)(void*));
@@ -430,6 +430,8 @@ void q_audiosink_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QAudioSink* self, void (*slot)(QObject*, QObject*) ```
 void q_audiosink_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -444,12 +446,16 @@ bool q_audiosink_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioSink* self, QEvent* event ```
 bool q_audiosink_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -467,12 +473,16 @@ bool q_audiosink_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioSink* self, QObject* watched, QEvent* event ```
 bool q_audiosink_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -490,12 +500,16 @@ void q_audiosink_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioSink* self, QTimerEvent* event ```
 void q_audiosink_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -513,12 +527,16 @@ void q_audiosink_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioSink* self, QChildEvent* event ```
 void q_audiosink_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -536,12 +554,16 @@ void q_audiosink_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioSink* self, QEvent* event ```
 void q_audiosink_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -559,12 +581,16 @@ void q_audiosink_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioSink* self, QMetaMethod* signal ```
 void q_audiosink_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -582,12 +608,16 @@ void q_audiosink_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioSink* self, QMetaMethod* signal ```
 void q_audiosink_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -605,12 +635,16 @@ QObject* q_audiosink_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioSink* self ```
 QObject* q_audiosink_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -628,12 +662,16 @@ int32_t q_audiosink_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioSink* self ```
 int32_t q_audiosink_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -651,12 +689,16 @@ int32_t q_audiosink_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioSink* self, const char* signal ```
 int32_t q_audiosink_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -674,6 +716,8 @@ bool q_audiosink_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioSink* self, QMetaMethod* signal ```
@@ -681,11 +725,24 @@ bool q_audiosink_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QAudioSink* self, bool (*slot)(QAudioSink*, QMetaMethod*) ```
 void q_audiosink_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QAudioSink* self, void (*slot)(QObject*, const char*) ```
+void q_audiosink_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaudiosink.html#dtor.QAudioSink)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAudioSink* self ```

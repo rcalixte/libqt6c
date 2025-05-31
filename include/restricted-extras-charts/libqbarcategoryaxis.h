@@ -13,20 +13,12 @@
 #include "../qtlibc.h"
 
 #include "libqabstractaxis.h"
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
-#include "../libqbrush.h"
 #include "../libqevent.h"
-#include "../libqcolor.h"
-#include "../libqfont.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
-#include "../libqpen.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
-/// https://doc.qt.io/qt-6/qbarcategoryaxis.html
+/// https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html
 
 /// q_barcategoryaxis_new constructs a new QBarCategoryAxis object.
 ///
@@ -41,7 +33,7 @@ QBarCategoryAxis* q_barcategoryaxis_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QBarCategoryAxis* self ```
-QMetaObject* q_barcategoryaxis_meta_object(void* self);
+const QMetaObject* q_barcategoryaxis_meta_object(void* self);
 
 /// ``` QBarCategoryAxis* self, const char* param1 ```
 void* q_barcategoryaxis_metacast(void* self, const char* param1);
@@ -64,133 +56,147 @@ int32_t q_barcategoryaxis_qbase_metacall(void* self, int64_t param1, int param2,
 /// ``` const char* s ```
 const char* q_barcategoryaxis_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis.html#type)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#type)
 ///
 /// ``` QBarCategoryAxis* self ```
 int64_t q_barcategoryaxis_type(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#type)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QBarCategoryAxis* self, int64_t (*slot)() ```
 void q_barcategoryaxis_on_type(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#type)
+///
 /// Base class method implementation
 ///
 /// ``` QBarCategoryAxis* self ```
 int64_t q_barcategoryaxis_qbase_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis.html#append)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#append)
 ///
 /// ``` QBarCategoryAxis* self, const char* categories[] ```
 void q_barcategoryaxis_append(void* self, const char* categories[]);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis.html#append)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#append)
 ///
 /// ``` QBarCategoryAxis* self, const char* category ```
 void q_barcategoryaxis_append_with_category(void* self, const char* category);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis.html#remove)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#remove)
 ///
 /// ``` QBarCategoryAxis* self, const char* category ```
 void q_barcategoryaxis_remove(void* self, const char* category);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis.html#insert)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#insert)
 ///
 /// ``` QBarCategoryAxis* self, int index, const char* category ```
 void q_barcategoryaxis_insert(void* self, int index, const char* category);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis.html#replace)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#replace)
 ///
 /// ``` QBarCategoryAxis* self, const char* oldCategory, const char* newCategory ```
 void q_barcategoryaxis_replace(void* self, const char* oldCategory, const char* newCategory);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis.html#clear)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#clear)
 ///
 /// ``` QBarCategoryAxis* self ```
 void q_barcategoryaxis_clear(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis.html#setCategories)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#setCategories)
 ///
 /// ``` QBarCategoryAxis* self, const char* categories[] ```
 void q_barcategoryaxis_set_categories(void* self, const char* categories[]);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis.html#categories)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#categories)
 ///
 /// ``` QBarCategoryAxis* self ```
 const char** q_barcategoryaxis_categories(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis.html#count)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#count)
 ///
 /// ``` QBarCategoryAxis* self ```
 int32_t q_barcategoryaxis_count(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis.html#at)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#at)
 ///
 /// ``` QBarCategoryAxis* self, int index ```
 const char* q_barcategoryaxis_at(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis.html#setMin)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#setMin)
 ///
 /// ``` QBarCategoryAxis* self, const char* minCategory ```
 void q_barcategoryaxis_set_min(void* self, const char* minCategory);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis.html#min)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#min)
 ///
 /// ``` QBarCategoryAxis* self ```
 const char* q_barcategoryaxis_min(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis.html#setMax)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#setMax)
 ///
 /// ``` QBarCategoryAxis* self, const char* maxCategory ```
 void q_barcategoryaxis_set_max(void* self, const char* maxCategory);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis.html#max)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#max)
 ///
 /// ``` QBarCategoryAxis* self ```
 const char* q_barcategoryaxis_max(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis.html#setRange)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#setRange)
 ///
 /// ``` QBarCategoryAxis* self, const char* minCategory, const char* maxCategory ```
 void q_barcategoryaxis_set_range(void* self, const char* minCategory, const char* maxCategory);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis.html#categoriesChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#categoriesChanged)
 ///
 /// ``` QBarCategoryAxis* self ```
 void q_barcategoryaxis_categories_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#categoriesChanged)
+///
 /// ``` QBarCategoryAxis* self, void (*slot)(QBarCategoryAxis*) ```
 void q_barcategoryaxis_on_categories_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis.html#minChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#minChanged)
 ///
 /// ``` QBarCategoryAxis* self, const char* min ```
 void q_barcategoryaxis_min_changed(void* self, const char* min);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#minChanged)
+///
 /// ``` QBarCategoryAxis* self, void (*slot)(QBarCategoryAxis*, const char*) ```
 void q_barcategoryaxis_on_min_changed(void* self, void (*slot)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis.html#maxChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#maxChanged)
 ///
 /// ``` QBarCategoryAxis* self, const char* max ```
 void q_barcategoryaxis_max_changed(void* self, const char* max);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#maxChanged)
+///
 /// ``` QBarCategoryAxis* self, void (*slot)(QBarCategoryAxis*, const char*) ```
 void q_barcategoryaxis_on_max_changed(void* self, void (*slot)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis.html#rangeChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#rangeChanged)
 ///
 /// ``` QBarCategoryAxis* self, const char* min, const char* max ```
 void q_barcategoryaxis_range_changed(void* self, const char* min, const char* max);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#rangeChanged)
+///
 /// ``` QBarCategoryAxis* self, void (*slot)(QBarCategoryAxis*, const char*, const char*) ```
 void q_barcategoryaxis_on_range_changed(void* self, void (*slot)(void*, const char*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis.html#countChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#countChanged)
 ///
 /// ``` QBarCategoryAxis* self ```
 void q_barcategoryaxis_count_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#countChanged)
+///
 /// ``` QBarCategoryAxis* self, void (*slot)(QBarCategoryAxis*) ```
 void q_barcategoryaxis_on_count_changed(void* self, void (*slot)(void*));
 
@@ -626,6 +632,8 @@ void q_barcategoryaxis_visible_changed(void* self, bool visible);
 
 /// Inherited from QAbstractAxis
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#visibleChanged)
+///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
 void q_barcategoryaxis_on_visible_changed(void* self, void (*slot)(void*, bool));
 
@@ -637,6 +645,8 @@ void q_barcategoryaxis_on_visible_changed(void* self, void (*slot)(void*, bool))
 void q_barcategoryaxis_line_pen_changed(void* self, void* pen);
 
 /// Inherited from QAbstractAxis
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#linePenChanged)
 ///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, QPen*) ```
 void q_barcategoryaxis_on_line_pen_changed(void* self, void (*slot)(void*, void*));
@@ -650,6 +660,8 @@ void q_barcategoryaxis_line_visible_changed(void* self, bool visible);
 
 /// Inherited from QAbstractAxis
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#lineVisibleChanged)
+///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
 void q_barcategoryaxis_on_line_visible_changed(void* self, void (*slot)(void*, bool));
 
@@ -661,6 +673,8 @@ void q_barcategoryaxis_on_line_visible_changed(void* self, void (*slot)(void*, b
 void q_barcategoryaxis_labels_visible_changed(void* self, bool visible);
 
 /// Inherited from QAbstractAxis
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsVisibleChanged)
 ///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
 void q_barcategoryaxis_on_labels_visible_changed(void* self, void (*slot)(void*, bool));
@@ -674,6 +688,8 @@ void q_barcategoryaxis_labels_brush_changed(void* self, void* brush);
 
 /// Inherited from QAbstractAxis
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsBrushChanged)
+///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, QBrush*) ```
 void q_barcategoryaxis_on_labels_brush_changed(void* self, void (*slot)(void*, void*));
 
@@ -685,6 +701,8 @@ void q_barcategoryaxis_on_labels_brush_changed(void* self, void (*slot)(void*, v
 void q_barcategoryaxis_labels_font_changed(void* self, void* pen);
 
 /// Inherited from QAbstractAxis
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsFontChanged)
 ///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, QFont*) ```
 void q_barcategoryaxis_on_labels_font_changed(void* self, void (*slot)(void*, void*));
@@ -698,6 +716,8 @@ void q_barcategoryaxis_labels_angle_changed(void* self, int angle);
 
 /// Inherited from QAbstractAxis
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsAngleChanged)
+///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, int) ```
 void q_barcategoryaxis_on_labels_angle_changed(void* self, void (*slot)(void*, int));
 
@@ -709,6 +729,8 @@ void q_barcategoryaxis_on_labels_angle_changed(void* self, void (*slot)(void*, i
 void q_barcategoryaxis_grid_line_pen_changed(void* self, void* pen);
 
 /// Inherited from QAbstractAxis
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridLinePenChanged)
 ///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, QPen*) ```
 void q_barcategoryaxis_on_grid_line_pen_changed(void* self, void (*slot)(void*, void*));
@@ -722,6 +744,8 @@ void q_barcategoryaxis_grid_visible_changed(void* self, bool visible);
 
 /// Inherited from QAbstractAxis
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridVisibleChanged)
+///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
 void q_barcategoryaxis_on_grid_visible_changed(void* self, void (*slot)(void*, bool));
 
@@ -733,6 +757,8 @@ void q_barcategoryaxis_on_grid_visible_changed(void* self, void (*slot)(void*, b
 void q_barcategoryaxis_minor_grid_visible_changed(void* self, bool visible);
 
 /// Inherited from QAbstractAxis
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridVisibleChanged)
 ///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
 void q_barcategoryaxis_on_minor_grid_visible_changed(void* self, void (*slot)(void*, bool));
@@ -746,6 +772,8 @@ void q_barcategoryaxis_minor_grid_line_pen_changed(void* self, void* pen);
 
 /// Inherited from QAbstractAxis
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLinePenChanged)
+///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, QPen*) ```
 void q_barcategoryaxis_on_minor_grid_line_pen_changed(void* self, void (*slot)(void*, void*));
 
@@ -757,6 +785,8 @@ void q_barcategoryaxis_on_minor_grid_line_pen_changed(void* self, void (*slot)(v
 void q_barcategoryaxis_grid_line_color_changed(void* self, void* color);
 
 /// Inherited from QAbstractAxis
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridLineColorChanged)
 ///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
 void q_barcategoryaxis_on_grid_line_color_changed(void* self, void (*slot)(void*, void*));
@@ -770,6 +800,8 @@ void q_barcategoryaxis_minor_grid_line_color_changed(void* self, void* color);
 
 /// Inherited from QAbstractAxis
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLineColorChanged)
+///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
 void q_barcategoryaxis_on_minor_grid_line_color_changed(void* self, void (*slot)(void*, void*));
 
@@ -781,6 +813,8 @@ void q_barcategoryaxis_on_minor_grid_line_color_changed(void* self, void (*slot)
 void q_barcategoryaxis_color_changed(void* self, void* color);
 
 /// Inherited from QAbstractAxis
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#colorChanged)
 ///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
 void q_barcategoryaxis_on_color_changed(void* self, void (*slot)(void*, void*));
@@ -794,6 +828,8 @@ void q_barcategoryaxis_labels_color_changed(void* self, void* color);
 
 /// Inherited from QAbstractAxis
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsColorChanged)
+///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
 void q_barcategoryaxis_on_labels_color_changed(void* self, void (*slot)(void*, void*));
 
@@ -805,6 +841,8 @@ void q_barcategoryaxis_on_labels_color_changed(void* self, void (*slot)(void*, v
 void q_barcategoryaxis_title_text_changed(void* self, const char* title);
 
 /// Inherited from QAbstractAxis
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleTextChanged)
 ///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, const char*) ```
 void q_barcategoryaxis_on_title_text_changed(void* self, void (*slot)(void*, const char*));
@@ -818,6 +856,8 @@ void q_barcategoryaxis_title_brush_changed(void* self, void* brush);
 
 /// Inherited from QAbstractAxis
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleBrushChanged)
+///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, QBrush*) ```
 void q_barcategoryaxis_on_title_brush_changed(void* self, void (*slot)(void*, void*));
 
@@ -829,6 +869,8 @@ void q_barcategoryaxis_on_title_brush_changed(void* self, void (*slot)(void*, vo
 void q_barcategoryaxis_title_visible_changed(void* self, bool visible);
 
 /// Inherited from QAbstractAxis
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleVisibleChanged)
 ///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
 void q_barcategoryaxis_on_title_visible_changed(void* self, void (*slot)(void*, bool));
@@ -842,6 +884,8 @@ void q_barcategoryaxis_title_font_changed(void* self, void* font);
 
 /// Inherited from QAbstractAxis
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleFontChanged)
+///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, QFont*) ```
 void q_barcategoryaxis_on_title_font_changed(void* self, void (*slot)(void*, void*));
 
@@ -853,6 +897,8 @@ void q_barcategoryaxis_on_title_font_changed(void* self, void (*slot)(void*, voi
 void q_barcategoryaxis_shades_visible_changed(void* self, bool visible);
 
 /// Inherited from QAbstractAxis
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesVisibleChanged)
 ///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
 void q_barcategoryaxis_on_shades_visible_changed(void* self, void (*slot)(void*, bool));
@@ -866,6 +912,8 @@ void q_barcategoryaxis_shades_color_changed(void* self, void* color);
 
 /// Inherited from QAbstractAxis
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesColorChanged)
+///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
 void q_barcategoryaxis_on_shades_color_changed(void* self, void (*slot)(void*, void*));
 
@@ -877,6 +925,8 @@ void q_barcategoryaxis_on_shades_color_changed(void* self, void (*slot)(void*, v
 void q_barcategoryaxis_shades_border_color_changed(void* self, void* color);
 
 /// Inherited from QAbstractAxis
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBorderColorChanged)
 ///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
 void q_barcategoryaxis_on_shades_border_color_changed(void* self, void (*slot)(void*, void*));
@@ -890,6 +940,8 @@ void q_barcategoryaxis_shades_pen_changed(void* self, void* pen);
 
 /// Inherited from QAbstractAxis
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesPenChanged)
+///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, QPen*) ```
 void q_barcategoryaxis_on_shades_pen_changed(void* self, void (*slot)(void*, void*));
 
@@ -901,6 +953,8 @@ void q_barcategoryaxis_on_shades_pen_changed(void* self, void (*slot)(void*, voi
 void q_barcategoryaxis_shades_brush_changed(void* self, void* brush);
 
 /// Inherited from QAbstractAxis
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBrushChanged)
 ///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, QBrush*) ```
 void q_barcategoryaxis_on_shades_brush_changed(void* self, void (*slot)(void*, void*));
@@ -914,6 +968,8 @@ void q_barcategoryaxis_reverse_changed(void* self, bool reverse);
 
 /// Inherited from QAbstractAxis
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#reverseChanged)
+///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
 void q_barcategoryaxis_on_reverse_changed(void* self, void (*slot)(void*, bool));
 
@@ -925,6 +981,8 @@ void q_barcategoryaxis_on_reverse_changed(void* self, void (*slot)(void*, bool))
 void q_barcategoryaxis_labels_editable_changed(void* self, bool editable);
 
 /// Inherited from QAbstractAxis
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsEditableChanged)
 ///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
 void q_barcategoryaxis_on_labels_editable_changed(void* self, void (*slot)(void*, bool));
@@ -938,6 +996,8 @@ void q_barcategoryaxis_labels_truncated_changed(void* self, bool labelsTruncated
 
 /// Inherited from QAbstractAxis
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsTruncatedChanged)
+///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
 void q_barcategoryaxis_on_labels_truncated_changed(void* self, void (*slot)(void*, bool));
 
@@ -949,6 +1009,8 @@ void q_barcategoryaxis_on_labels_truncated_changed(void* self, void (*slot)(void
 void q_barcategoryaxis_truncate_labels_changed(void* self, bool truncateLabels);
 
 /// Inherited from QAbstractAxis
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#truncateLabelsChanged)
 ///
 /// ``` QBarCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
 void q_barcategoryaxis_on_truncate_labels_changed(void* self, void (*slot)(void*, bool));
@@ -1105,7 +1167,7 @@ void q_barcategoryaxis_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QBarCategoryAxis* self ```
-libqt_list /* of QObject* */ q_barcategoryaxis_children(void* self);
+const libqt_list /* of QObject* */ q_barcategoryaxis_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1203,7 +1265,7 @@ QBindingStorage* q_barcategoryaxis_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QBarCategoryAxis* self ```
-QBindingStorage* q_barcategoryaxis_binding_storage2(void* self);
+const QBindingStorage* q_barcategoryaxis_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -1213,6 +1275,8 @@ QBindingStorage* q_barcategoryaxis_binding_storage2(void* self);
 void q_barcategoryaxis_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QBarCategoryAxis* self, void (*slot)(QObject*) ```
 void q_barcategoryaxis_on_destroyed(void* self, void (*slot)(void*));
@@ -1268,6 +1332,8 @@ void q_barcategoryaxis_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QBarCategoryAxis* self, void (*slot)(QObject*, QObject*) ```
 void q_barcategoryaxis_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -1282,12 +1348,16 @@ bool q_barcategoryaxis_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarCategoryAxis* self, QEvent* event ```
 bool q_barcategoryaxis_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1305,12 +1375,16 @@ bool q_barcategoryaxis_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarCategoryAxis* self, QObject* watched, QEvent* event ```
 bool q_barcategoryaxis_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1328,12 +1402,16 @@ void q_barcategoryaxis_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarCategoryAxis* self, QTimerEvent* event ```
 void q_barcategoryaxis_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1351,12 +1429,16 @@ void q_barcategoryaxis_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarCategoryAxis* self, QChildEvent* event ```
 void q_barcategoryaxis_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1374,12 +1456,16 @@ void q_barcategoryaxis_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarCategoryAxis* self, QEvent* event ```
 void q_barcategoryaxis_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1397,12 +1483,16 @@ void q_barcategoryaxis_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarCategoryAxis* self, QMetaMethod* signal ```
 void q_barcategoryaxis_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1420,12 +1510,16 @@ void q_barcategoryaxis_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarCategoryAxis* self, QMetaMethod* signal ```
 void q_barcategoryaxis_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1443,12 +1537,16 @@ QObject* q_barcategoryaxis_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarCategoryAxis* self ```
 QObject* q_barcategoryaxis_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1466,12 +1564,16 @@ int32_t q_barcategoryaxis_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarCategoryAxis* self ```
 int32_t q_barcategoryaxis_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1489,12 +1591,16 @@ int32_t q_barcategoryaxis_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarCategoryAxis* self, const char* signal ```
 int32_t q_barcategoryaxis_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1512,6 +1618,8 @@ bool q_barcategoryaxis_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBarCategoryAxis* self, QMetaMethod* signal ```
@@ -1519,11 +1627,24 @@ bool q_barcategoryaxis_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QBarCategoryAxis* self, bool (*slot)(QBarCategoryAxis*, QMetaMethod*) ```
 void q_barcategoryaxis_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QBarCategoryAxis* self, void (*slot)(QObject*, const char*) ```
+void q_barcategoryaxis_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#dtor.QBarCategoryAxis)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QBarCategoryAxis* self ```

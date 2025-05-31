@@ -59,6 +59,8 @@ libqt_pair /* tuple of QArrayData* and void* */ q_arraydata_reallocate_unaligned
 /// ``` QArrayData* data, int64_t objectSize, int64_t alignment ```
 void q_arraydata_deallocate(void* data, int64_t objectSize, int64_t alignment);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#dtor.QArrayData)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QArrayData* self ```

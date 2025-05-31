@@ -39,17 +39,8 @@ libqt_list /* of QHostAddress* */ q_hostinfo_addresses(void* self) {
     return _arr;
 }
 
-void q_hostinfo_set_addresses(void* self, void* addresses[]) {
-    QHostAddress** addresses_arr = (QHostAddress**)addresses;
-    size_t addresses_len = 0;
-    while (addresses_arr[addresses_len] != NULL) {
-        addresses_len++;
-    }
-    libqt_list addresses_list = {
-        .len = addresses_len,
-        .data = {(QHostAddress*)addresses},
-    };
-    QHostInfo_SetAddresses((QHostInfo*)self, addresses_list);
+void q_hostinfo_set_addresses(void* self, libqt_list addresses) {
+    QHostInfo_SetAddresses((QHostInfo*)self, addresses);
 }
 
 int64_t q_hostinfo_error(void* self) {
