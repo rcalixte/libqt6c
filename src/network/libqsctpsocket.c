@@ -1,18 +1,13 @@
 #include "libqabstractsocket.hpp"
-#include "../libqanystringview.hpp"
-#include "libqauthenticator.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
 #include "libqhostaddress.hpp"
 #include "../libqiodevice.hpp"
 #include "../libqiodevicebase.hpp"
 #include "../libqmetaobject.hpp"
 #include "libqnetworkdatagram.hpp"
-#include "libqnetworkproxy.hpp"
 #include "../libqobject.hpp"
 #include <string.h>
 #include "libqtcpsocket.hpp"
-#include "../libqthread.hpp"
 #include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqsctpsocket.hpp"
@@ -26,7 +21,7 @@ QSctpSocket* q_sctpsocket_new2(void* parent) {
     return QSctpSocket_new2((QObject*)parent);
 }
 
-QMetaObject* q_sctpsocket_meta_object(void* self) {
+const QMetaObject* q_sctpsocket_meta_object(void* self) {
     return QSctpSocket_MetaObject((QSctpSocket*)self);
 }
 
@@ -487,8 +482,7 @@ const char* q_sctpsocket_object_name(void* self) {
 }
 
 void q_sctpsocket_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_sctpsocket_is_widget_type(void* self) {
@@ -527,7 +521,7 @@ void q_sctpsocket_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_sctpsocket_children(void* self) {
+const libqt_list /* of QObject* */ q_sctpsocket_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -594,7 +588,7 @@ QBindingStorage* q_sctpsocket_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_sctpsocket_binding_storage2(void* self) {
+const QBindingStorage* q_sctpsocket_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1164,6 +1158,10 @@ bool q_sctpsocket_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_sctpsocket_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QSctpSocket_OnIsSignalConnected((QSctpSocket*)self, (intptr_t)slot);
+}
+
+void q_sctpsocket_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_sctpsocket_delete(void* self) {

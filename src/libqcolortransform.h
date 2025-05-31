@@ -57,6 +57,8 @@ QRgba64* q_colortransform_map_with_rgba64(void* self, void* rgba64);
 /// ``` QColorTransform* self, QColor* color ```
 QColor* q_colortransform_map_with_color(void* self, void* color);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolortransform.html#dtor.QColorTransform)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QColorTransform* self ```

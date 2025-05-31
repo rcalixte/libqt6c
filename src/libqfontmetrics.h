@@ -257,6 +257,8 @@ QSize* q_fontmetrics_size4(void* self, int flags, const char* str, int tabstops,
 /// ``` QFontMetrics* self, const char* text, enum Qt__TextElideMode mode, int width, int flags ```
 const char* q_fontmetrics_elided_text4(void* self, const char* text, int64_t mode, int width, int flags);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontmetrics.html#dtor.QFontMetrics)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QFontMetrics* self ```
@@ -494,6 +496,8 @@ QSizeF* q_fontmetricsf_size4(void* self, int flags, const char* str, int tabstop
 /// ``` QFontMetricsF* self, const char* text, enum Qt__TextElideMode mode, double width, int flags ```
 const char* q_fontmetricsf_elided_text4(void* self, const char* text, int64_t mode, double width, int flags);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontmetricsf.html#dtor.QFontMetricsF)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QFontMetricsF* self ```

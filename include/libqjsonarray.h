@@ -227,6 +227,8 @@ void q_jsonarray_pop_back(void* self);
 /// ``` QJsonArray* self ```
 bool q_jsonarray_empty(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonarray.html#dtor.QJsonArray)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QJsonArray* self ```
@@ -267,7 +269,7 @@ QJsonValueRef* q_jsonarray__iterator_operator_multiply(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonarray__iterator.html#operator->)
 ///
 /// ``` QJsonArray__iterator* self ```
-QJsonValueConstRef* q_jsonarray__iterator_operator_minus_greater(void* self);
+const QJsonValueConstRef* q_jsonarray__iterator_operator_minus_greater(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonarray__iterator.html#operator->)
 ///
@@ -384,6 +386,8 @@ QJsonArray__iterator* q_jsonarray__iterator_operator_minus(void* self, int64_t j
 /// ``` QJsonArray__iterator* self, QJsonArray__iterator* j ```
 int64_t q_jsonarray__iterator_operator_minus_with_q_json_arrayiterator(void* self, void* j);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonarray::iterator.html#dtor.QJsonArray::iterator)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QJsonArray__iterator* self ```
@@ -424,12 +428,12 @@ void q_jsonarray__const_iterator_operator_assign(void* self, void* other);
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonarray__const_iterator.html#operator*)
 ///
 /// ``` QJsonArray__const_iterator* self ```
-QJsonValueConstRef* q_jsonarray__const_iterator_operator_multiply(void* self);
+const QJsonValueConstRef* q_jsonarray__const_iterator_operator_multiply(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonarray__const_iterator.html#operator->)
 ///
 /// ``` QJsonArray__const_iterator* self ```
-QJsonValueConstRef* q_jsonarray__const_iterator_operator_minus_greater(void* self);
+const QJsonValueConstRef* q_jsonarray__const_iterator_operator_minus_greater(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonarray__const_iterator.html#operator[])
 ///
@@ -511,6 +515,8 @@ QJsonArray__const_iterator* q_jsonarray__const_iterator_operator_minus(void* sel
 /// ``` QJsonArray__const_iterator* self, QJsonArray__const_iterator* j ```
 int64_t q_jsonarray__const_iterator_operator_minus_with_q_json_arrayconst_iterator(void* self, void* j);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonarray::const_iterator.html#dtor.QJsonArray::const_iterator)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QJsonArray__const_iterator* self ```

@@ -70,8 +70,7 @@ void q_color_move_assign(void* self, void* other) {
 }
 
 QColor* q_color_from_string(char* name) {
-    libqt_strview name_strview = qstrview(name);
-    return QColor_FromString((QAnyStringView*)&name_strview);
+    return QColor_FromString(name);
 }
 
 void q_color_operator_assign(void* self, int64_t color) {
@@ -456,8 +455,7 @@ bool q_color_is_valid_color(const char* name) {
 }
 
 bool q_color_is_valid_color_name(char* param1) {
-    libqt_strview param1_strview = qstrview(param1);
-    return QColor_IsValidColorName((QAnyStringView*)&param1_strview);
+    return QColor_IsValidColorName(param1);
 }
 
 const char* q_color_name1(void* self, int64_t format) {

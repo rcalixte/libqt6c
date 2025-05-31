@@ -1,23 +1,14 @@
 #include <QAbstractAxis>
-#include <QAnyStringView>
-#include <QBindingStorage>
 #include <QBrush>
-#include <QByteArray>
-#include <QChildEvent>
 #include <QColor>
-#include <QEvent>
 #include <QFont>
-#include <QList>
 #include <QMetaMethod>
 #include <QMetaObject>
-#define WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection
 #include <QObject>
 #include <QPen>
 #include <QString>
 #include <QByteArray>
 #include <cstring>
-#include <QThread>
-#include <QTimerEvent>
 #include <QVariant>
 #include <qabstractaxis.h>
 #include "libqabstractaxis.hpp"
@@ -737,14 +728,6 @@ void QAbstractAxis_SetLabelsEditable1(QAbstractAxis* self, bool editable) {
 
 void QAbstractAxis_SetTruncateLabels1(QAbstractAxis* self, bool truncateLabels) {
     self->setTruncateLabels(truncateLabels);
-}
-
-bool QAbstractAxis_Event(QAbstractAxis* self, QEvent* event) {
-    return self->event(event);
-}
-
-bool QAbstractAxis_EventFilter(QAbstractAxis* self, QObject* watched, QEvent* event) {
-    return self->eventFilter(watched, event);
 }
 
 void QAbstractAxis_Delete(QAbstractAxis* self) {

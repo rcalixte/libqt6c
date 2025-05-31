@@ -1,14 +1,10 @@
 #include "libqabstractbarseries.hpp"
 #include "../libqabstractitemmodel.hpp"
-#include "../libqanystringview.hpp"
 #include "libqbarmodelmapper.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqvbarmodelmapper.hpp"
 #include "libqvbarmodelmapper.h"
@@ -21,7 +17,7 @@ QVBarModelMapper* q_vbarmodelmapper_new2(void* parent) {
     return QVBarModelMapper_new2((QObject*)parent);
 }
 
-QMetaObject* q_vbarmodelmapper_meta_object(void* self) {
+const QMetaObject* q_vbarmodelmapper_meta_object(void* self) {
     return QVBarModelMapper_MetaObject((QVBarModelMapper*)self);
 }
 
@@ -166,8 +162,7 @@ const char* q_vbarmodelmapper_object_name(void* self) {
 }
 
 void q_vbarmodelmapper_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_vbarmodelmapper_is_widget_type(void* self) {
@@ -206,7 +201,7 @@ void q_vbarmodelmapper_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_vbarmodelmapper_children(void* self) {
+const libqt_list /* of QObject* */ q_vbarmodelmapper_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -273,7 +268,7 @@ QBindingStorage* q_vbarmodelmapper_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_vbarmodelmapper_binding_storage2(void* self) {
+const QBindingStorage* q_vbarmodelmapper_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -567,6 +562,10 @@ bool q_vbarmodelmapper_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_vbarmodelmapper_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QVBarModelMapper_OnIsSignalConnected((QVBarModelMapper*)self, (intptr_t)slot);
+}
+
+void q_vbarmodelmapper_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_vbarmodelmapper_delete(void* self) {

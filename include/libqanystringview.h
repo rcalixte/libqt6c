@@ -75,7 +75,7 @@ int64_t q_anystringview_size(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qanystringview.html#data)
 ///
 /// ``` QAnyStringView* self ```
-void* q_anystringview_data(void* self);
+const void* q_anystringview_data(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanystringview.html#compare)
 ///
@@ -127,6 +127,8 @@ int64_t q_anystringview_length(void* self);
 /// ``` char* lhs, char* rhs, enum Qt__CaseSensitivity cs ```
 int32_t q_anystringview_compare3(char* lhs, char* rhs, int64_t cs);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qanystringview.html#dtor.QAnyStringView)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAnyStringView* self ```

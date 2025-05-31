@@ -1,11 +1,11 @@
 #include "libqnamespace.hpp"
 #include "libqnamespace.h"
 
-Disambiguated_t* q_disambiguated_t_new(Disambiguated_t* other) {
+Disambiguated_t* q_disambiguated_t_new(void* other) {
     return Disambiguated_t_new((Disambiguated_t*)other);
 }
 
-Disambiguated_t* q_disambiguated_t_new2(Disambiguated_t* other) {
+Disambiguated_t* q_disambiguated_t_new2(void* other) {
     return Disambiguated_t_new2((Disambiguated_t*)other);
 }
 
@@ -13,7 +13,7 @@ Disambiguated_t* q_disambiguated_t_new3() {
     return Disambiguated_t_new3();
 }
 
-Disambiguated_t* q_disambiguated_t_new4(Disambiguated_t* param1) {
+Disambiguated_t* q_disambiguated_t_new4(void* param1) {
     return Disambiguated_t_new4((Disambiguated_t*)param1);
 }
 

@@ -1,5 +1,3 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqbrush.hpp"
 #include "libqevent.hpp"
 #include "libqcolor.hpp"
@@ -10,8 +8,6 @@
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
 #include <string.h>
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqcoreevent.hpp"
 #include "libqgraphicseffect.hpp"
 #include "libqgraphicseffect.h"
@@ -24,7 +20,7 @@ QGraphicsEffect* q_graphicseffect_new2(void* parent) {
     return QGraphicsEffect_new2((QObject*)parent);
 }
 
-QMetaObject* q_graphicseffect_meta_object(void* self) {
+const QMetaObject* q_graphicseffect_meta_object(void* self) {
     return QGraphicsEffect_MetaObject((QGraphicsEffect*)self);
 }
 
@@ -241,8 +237,7 @@ const char* q_graphicseffect_object_name(void* self) {
 }
 
 void q_graphicseffect_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_graphicseffect_is_widget_type(void* self) {
@@ -281,7 +276,7 @@ void q_graphicseffect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_graphicseffect_children(void* self) {
+const libqt_list /* of QObject* */ q_graphicseffect_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -348,7 +343,7 @@ QBindingStorage* q_graphicseffect_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_graphicseffect_binding_storage2(void* self) {
+const QBindingStorage* q_graphicseffect_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -524,6 +519,10 @@ void q_graphicseffect_on_is_signal_connected(void* self, bool (*slot)(void*, voi
     QGraphicsEffect_OnIsSignalConnected((QGraphicsEffect*)self, (intptr_t)slot);
 }
 
+void q_graphicseffect_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
 void q_graphicseffect_delete(void* self) {
     QGraphicsEffect_Delete((QGraphicsEffect*)(self));
 }
@@ -536,7 +535,7 @@ QGraphicsColorizeEffect* q_graphicscolorizeeffect_new2(void* parent) {
     return QGraphicsColorizeEffect_new2((QObject*)parent);
 }
 
-QMetaObject* q_graphicscolorizeeffect_meta_object(void* self) {
+const QMetaObject* q_graphicscolorizeeffect_meta_object(void* self) {
     return QGraphicsColorizeEffect_MetaObject((QGraphicsColorizeEffect*)self);
 }
 
@@ -653,8 +652,7 @@ const char* q_graphicscolorizeeffect_object_name(void* self) {
 }
 
 void q_graphicscolorizeeffect_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_graphicscolorizeeffect_is_widget_type(void* self) {
@@ -693,7 +691,7 @@ void q_graphicscolorizeeffect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_graphicscolorizeeffect_children(void* self) {
+const libqt_list /* of QObject* */ q_graphicscolorizeeffect_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -760,7 +758,7 @@ QBindingStorage* q_graphicscolorizeeffect_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_graphicscolorizeeffect_binding_storage2(void* self) {
+const QBindingStorage* q_graphicscolorizeeffect_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1020,6 +1018,10 @@ void q_graphicscolorizeeffect_on_is_signal_connected(void* self, bool (*slot)(vo
     QGraphicsColorizeEffect_OnIsSignalConnected((QGraphicsColorizeEffect*)self, (intptr_t)slot);
 }
 
+void q_graphicscolorizeeffect_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
 void q_graphicscolorizeeffect_delete(void* self) {
     QGraphicsColorizeEffect_Delete((QGraphicsColorizeEffect*)(self));
 }
@@ -1032,7 +1034,7 @@ QGraphicsBlurEffect* q_graphicsblureffect_new2(void* parent) {
     return QGraphicsBlurEffect_new2((QObject*)parent);
 }
 
-QMetaObject* q_graphicsblureffect_meta_object(void* self) {
+const QMetaObject* q_graphicsblureffect_meta_object(void* self) {
     return QGraphicsBlurEffect_MetaObject((QGraphicsBlurEffect*)self);
 }
 
@@ -1161,8 +1163,7 @@ const char* q_graphicsblureffect_object_name(void* self) {
 }
 
 void q_graphicsblureffect_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_graphicsblureffect_is_widget_type(void* self) {
@@ -1201,7 +1202,7 @@ void q_graphicsblureffect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_graphicsblureffect_children(void* self) {
+const libqt_list /* of QObject* */ q_graphicsblureffect_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1268,7 +1269,7 @@ QBindingStorage* q_graphicsblureffect_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_graphicsblureffect_binding_storage2(void* self) {
+const QBindingStorage* q_graphicsblureffect_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1516,6 +1517,10 @@ void q_graphicsblureffect_on_is_signal_connected(void* self, bool (*slot)(void*,
     QGraphicsBlurEffect_OnIsSignalConnected((QGraphicsBlurEffect*)self, (intptr_t)slot);
 }
 
+void q_graphicsblureffect_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
 void q_graphicsblureffect_delete(void* self) {
     QGraphicsBlurEffect_Delete((QGraphicsBlurEffect*)(self));
 }
@@ -1528,7 +1533,7 @@ QGraphicsDropShadowEffect* q_graphicsdropshadoweffect_new2(void* parent) {
     return QGraphicsDropShadowEffect_new2((QObject*)parent);
 }
 
-QMetaObject* q_graphicsdropshadoweffect_meta_object(void* self) {
+const QMetaObject* q_graphicsdropshadoweffect_meta_object(void* self) {
     return QGraphicsDropShadowEffect_MetaObject((QGraphicsDropShadowEffect*)self);
 }
 
@@ -1697,8 +1702,7 @@ const char* q_graphicsdropshadoweffect_object_name(void* self) {
 }
 
 void q_graphicsdropshadoweffect_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_graphicsdropshadoweffect_is_widget_type(void* self) {
@@ -1737,7 +1741,7 @@ void q_graphicsdropshadoweffect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_graphicsdropshadoweffect_children(void* self) {
+const libqt_list /* of QObject* */ q_graphicsdropshadoweffect_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1804,7 +1808,7 @@ QBindingStorage* q_graphicsdropshadoweffect_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_graphicsdropshadoweffect_binding_storage2(void* self) {
+const QBindingStorage* q_graphicsdropshadoweffect_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2052,6 +2056,10 @@ void q_graphicsdropshadoweffect_on_is_signal_connected(void* self, bool (*slot)(
     QGraphicsDropShadowEffect_OnIsSignalConnected((QGraphicsDropShadowEffect*)self, (intptr_t)slot);
 }
 
+void q_graphicsdropshadoweffect_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
 void q_graphicsdropshadoweffect_delete(void* self) {
     QGraphicsDropShadowEffect_Delete((QGraphicsDropShadowEffect*)(self));
 }
@@ -2064,7 +2072,7 @@ QGraphicsOpacityEffect* q_graphicsopacityeffect_new2(void* parent) {
     return QGraphicsOpacityEffect_new2((QObject*)parent);
 }
 
-QMetaObject* q_graphicsopacityeffect_meta_object(void* self) {
+const QMetaObject* q_graphicsopacityeffect_meta_object(void* self) {
     return QGraphicsOpacityEffect_MetaObject((QGraphicsOpacityEffect*)self);
 }
 
@@ -2181,8 +2189,7 @@ const char* q_graphicsopacityeffect_object_name(void* self) {
 }
 
 void q_graphicsopacityeffect_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_graphicsopacityeffect_is_widget_type(void* self) {
@@ -2221,7 +2228,7 @@ void q_graphicsopacityeffect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_graphicsopacityeffect_children(void* self) {
+const libqt_list /* of QObject* */ q_graphicsopacityeffect_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -2288,7 +2295,7 @@ QBindingStorage* q_graphicsopacityeffect_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_graphicsopacityeffect_binding_storage2(void* self) {
+const QBindingStorage* q_graphicsopacityeffect_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2546,6 +2553,10 @@ bool q_graphicsopacityeffect_qbase_is_signal_connected(void* self, void* signal)
 
 void q_graphicsopacityeffect_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QGraphicsOpacityEffect_OnIsSignalConnected((QGraphicsOpacityEffect*)self, (intptr_t)slot);
+}
+
+void q_graphicsopacityeffect_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_graphicsopacityeffect_delete(void* self) {

@@ -15,25 +15,16 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QColor QColor;
 typedef struct QEvent QEvent;
 typedef struct QFont QFont;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QSettings QSettings;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
-typedef struct QsciAbstractAPIs QsciAbstractAPIs;
 typedef struct QsciLexer QsciLexer;
 typedef struct QsciLexerDiff QsciLexerDiff;
 typedef struct QsciScintilla QsciScintilla;
@@ -141,6 +132,9 @@ void QsciLexerDiff_QBaseSetPaper(QsciLexerDiff* self, QColor* c, int style);
 bool QsciLexerDiff_ReadProperties(QsciLexerDiff* self, QSettings* qs, libqt_string prefix);
 void QsciLexerDiff_OnReadProperties(QsciLexerDiff* self, intptr_t slot);
 bool QsciLexerDiff_QBaseReadProperties(QsciLexerDiff* self, QSettings* qs, libqt_string prefix);
+bool QsciLexerDiff_WriteProperties(const QsciLexerDiff* self, QSettings* qs, libqt_string prefix);
+void QsciLexerDiff_OnWriteProperties(const QsciLexerDiff* self, intptr_t slot);
+bool QsciLexerDiff_QBaseWriteProperties(const QsciLexerDiff* self, QSettings* qs, libqt_string prefix);
 bool QsciLexerDiff_Event(QsciLexerDiff* self, QEvent* event);
 void QsciLexerDiff_OnEvent(QsciLexerDiff* self, intptr_t slot);
 bool QsciLexerDiff_QBaseEvent(QsciLexerDiff* self, QEvent* event);
@@ -162,9 +156,6 @@ void QsciLexerDiff_QBaseConnectNotify(QsciLexerDiff* self, QMetaMethod* signal);
 void QsciLexerDiff_DisconnectNotify(QsciLexerDiff* self, QMetaMethod* signal);
 void QsciLexerDiff_OnDisconnectNotify(QsciLexerDiff* self, intptr_t slot);
 void QsciLexerDiff_QBaseDisconnectNotify(QsciLexerDiff* self, QMetaMethod* signal);
-bool QsciLexerDiff_WriteProperties(const QsciLexerDiff* self, QSettings* qs, libqt_string prefix);
-void QsciLexerDiff_OnWriteProperties(const QsciLexerDiff* self, intptr_t slot);
-bool QsciLexerDiff_QBaseWriteProperties(const QsciLexerDiff* self, QSettings* qs, libqt_string prefix);
 QObject* QsciLexerDiff_Sender(const QsciLexerDiff* self);
 void QsciLexerDiff_OnSender(const QsciLexerDiff* self, intptr_t slot);
 QObject* QsciLexerDiff_QBaseSender(const QsciLexerDiff* self);

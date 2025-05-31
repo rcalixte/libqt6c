@@ -79,7 +79,7 @@ int64_t q_painter_composition_mode(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#font)
 ///
 /// ``` QPainter* self ```
-QFont* q_painter_font(void* self);
+const QFont* q_painter_font(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setFont)
 ///
@@ -114,7 +114,7 @@ void q_painter_set_pen_with_style(void* self, int64_t style);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#pen)
 ///
 /// ``` QPainter* self ```
-QPen* q_painter_pen(void* self);
+const QPen* q_painter_pen(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setBrush)
 ///
@@ -129,7 +129,7 @@ void q_painter_set_brush_with_style(void* self, int64_t style);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#brush)
 ///
 /// ``` QPainter* self ```
-QBrush* q_painter_brush(void* self);
+const QBrush* q_painter_brush(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setBackgroundMode)
 ///
@@ -169,7 +169,7 @@ void q_painter_set_background(void* self, void* bg);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#background)
 ///
 /// ``` QPainter* self ```
-QBrush* q_painter_background(void* self);
+const QBrush* q_painter_background(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#opacity)
 ///
@@ -249,12 +249,12 @@ void q_painter_set_transform(void* self, void* transform);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#transform)
 ///
 /// ``` QPainter* self ```
-QTransform* q_painter_transform(void* self);
+const QTransform* q_painter_transform(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#deviceTransform)
 ///
 /// ``` QPainter* self ```
-QTransform* q_painter_device_transform(void* self);
+const QTransform* q_painter_device_transform(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#resetTransform)
 ///
@@ -269,7 +269,7 @@ void q_painter_set_world_transform(void* self, void* matrix);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#worldTransform)
 ///
 /// ``` QPainter* self ```
-QTransform* q_painter_world_transform(void* self);
+const QTransform* q_painter_world_transform(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#combinedTransform)
 ///
@@ -428,8 +428,8 @@ void q_painter_draw_lines(void* self, void* lines, int lineCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
-/// ``` QPainter* self, QLineF* lines[] ```
-void q_painter_draw_lines_with_lines(void* self, void* lines[]);
+/// ``` QPainter* self, libqt_list /* of QLineF* */ lines ```
+void q_painter_draw_lines_with_lines(void* self, libqt_list lines);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
@@ -438,8 +438,8 @@ void q_painter_draw_lines2(void* self, void* pointPairs, int lineCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
-/// ``` QPainter* self, QPointF* pointPairs[] ```
-void q_painter_draw_lines_with_point_pairs(void* self, void* pointPairs[]);
+/// ``` QPainter* self, libqt_list /* of QPointF* */ pointPairs ```
+void q_painter_draw_lines_with_point_pairs(void* self, libqt_list pointPairs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
@@ -448,8 +448,8 @@ void q_painter_draw_lines3(void* self, void* lines, int lineCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
-/// ``` QPainter* self, QLine* lines[] ```
-void q_painter_draw_lines4(void* self, void* lines[]);
+/// ``` QPainter* self, libqt_list /* of QLine* */ lines ```
+void q_painter_draw_lines4(void* self, libqt_list lines);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
@@ -458,8 +458,8 @@ void q_painter_draw_lines5(void* self, void* pointPairs, int lineCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
-/// ``` QPainter* self, QPoint* pointPairs[] ```
-void q_painter_draw_lines6(void* self, void* pointPairs[]);
+/// ``` QPainter* self, libqt_list /* of QPoint* */ pointPairs ```
+void q_painter_draw_lines6(void* self, libqt_list pointPairs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRect)
 ///
@@ -483,8 +483,8 @@ void q_painter_draw_rects(void* self, void* rects, int rectCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRects)
 ///
-/// ``` QPainter* self, QRectF* rectangles[] ```
-void q_painter_draw_rects_with_rectangles(void* self, void* rectangles[]);
+/// ``` QPainter* self, libqt_list /* of QRectF* */ rectangles ```
+void q_painter_draw_rects_with_rectangles(void* self, libqt_list rectangles);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRects)
 ///
@@ -493,8 +493,8 @@ void q_painter_draw_rects2(void* self, void* rects, int rectCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRects)
 ///
-/// ``` QPainter* self, QRect* rectangles[] ```
-void q_painter_draw_rects3(void* self, void* rectangles[]);
+/// ``` QPainter* self, libqt_list /* of QRect* */ rectangles ```
+void q_painter_draw_rects3(void* self, libqt_list rectangles);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawEllipse)
 ///
@@ -1141,6 +1141,8 @@ void q_painter_set_render_hint2(void* self, int64_t hint, bool on);
 /// ``` QPainter* self, int hints, bool on ```
 void q_painter_set_render_hints2(void* self, int64_t hints, bool on);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#dtor.QPainter)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPainter* self ```
@@ -1173,6 +1175,8 @@ QPainter__PixmapFragment* q_painter__pixmapfragment_create5(void* pos, void* sou
 /// ``` QPointF* pos, QRectF* sourceRect, double scaleX, double scaleY, double rotation, double opacity ```
 QPainter__PixmapFragment* q_painter__pixmapfragment_create6(void* pos, void* sourceRect, double scaleX, double scaleY, double rotation, double opacity);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter::pixmapfragment.html#dtor.QPainter::PixmapFragment)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPainter__PixmapFragment* self ```

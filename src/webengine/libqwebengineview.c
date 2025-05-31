@@ -1,20 +1,6 @@
 #include "../libqaction.hpp"
 #include "../libqevent.hpp"
-#include "../libqanystringview.hpp"
-#include "../libqbackingstore.hpp"
-#include "../libqbindingstorage.hpp"
-#include "../libqbitmap.hpp"
-#include "../libqcursor.hpp"
-#include "../libqfont.hpp"
-#include "../libqfontinfo.hpp"
-#include "../libqfontmetrics.hpp"
-#include "../libqgraphicseffect.hpp"
-#include "../libqgraphicsproxywidget.hpp"
 #include "../libqicon.hpp"
-#include "../libqkeysequence.hpp"
-#include "../libqlayout.hpp"
-#include "../libqlocale.hpp"
-#include "../libqmargins.hpp"
 #include "../libqmenu.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
@@ -23,18 +9,10 @@
 #include "../libqpaintdevice.hpp"
 #include "../libqpaintengine.hpp"
 #include "../libqpainter.hpp"
-#include "../libqpalette.hpp"
-#include "../libqpixmap.hpp"
 #include "../libqpoint.hpp"
 #include "../printsupport/libqprinter.hpp"
-#include "../libqrect.hpp"
-#include "../libqregion.hpp"
-#include "../libqscreen.hpp"
 #include "../libqsize.hpp"
-#include "../libqsizepolicy.hpp"
 #include <string.h>
-#include "../libqstyle.hpp"
-#include "../libqthread.hpp"
 #include "../libqurl.hpp"
 #include "../libqvariant.hpp"
 #include "libqwebenginecontextmenurequest.hpp"
@@ -44,7 +22,6 @@
 #include "libqwebengineprofile.hpp"
 #include "libqwebenginesettings.hpp"
 #include "../libqwidget.hpp"
-#include "../libqwindow.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqwebengineview.hpp"
 #include "libqwebengineview.h"
@@ -73,7 +50,7 @@ QWebEngineView* q_webengineview_new6(void* page, void* parent) {
     return QWebEngineView_new6((QWebEnginePage*)page, (QWidget*)parent);
 }
 
-QMetaObject* q_webengineview_meta_object(void* self) {
+const QMetaObject* q_webengineview_meta_object(void* self) {
     return QWebEngineView_MetaObject((QWebEngineView*)self);
 }
 
@@ -552,7 +529,7 @@ QRect* q_webengineview_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_webengineview_geometry(void* self) {
+const QRect* q_webengineview_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -756,7 +733,7 @@ QWidget* q_webengineview_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_webengineview_palette(void* self) {
+const QPalette* q_webengineview_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -780,7 +757,7 @@ int64_t q_webengineview_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_webengineview_font(void* self) {
+const QFont* q_webengineview_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -1385,30 +1362,12 @@ void q_webengineview_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_webengineview_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_webengineview_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_webengineview_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_webengineview_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_webengineview_insert_action(void* self, void* before, void* action) {
@@ -1628,8 +1587,7 @@ const char* q_webengineview_object_name(void* self) {
 }
 
 void q_webengineview_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_webengineview_is_widget_type(void* self) {
@@ -1668,7 +1626,7 @@ void q_webengineview_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_webengineview_children(void* self) {
+const libqt_list /* of QObject* */ q_webengineview_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1731,7 +1689,7 @@ QBindingStorage* q_webengineview_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_webengineview_binding_storage2(void* self) {
+const QBindingStorage* q_webengineview_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2373,6 +2331,10 @@ bool q_webengineview_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_webengineview_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QWebEngineView_OnIsSignalConnected((QWebEngineView*)self, (intptr_t)slot);
+}
+
+void q_webengineview_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_webengineview_delete(void* self) {

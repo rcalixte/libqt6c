@@ -59,8 +59,8 @@ libqt_list /* of QHostAddress* */ q_hostinfo_addresses(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#setAddresses)
 ///
-/// ``` QHostInfo* self, QHostAddress* addresses[] ```
-void q_hostinfo_set_addresses(void* self, void* addresses[]);
+/// ``` QHostInfo* self, libqt_list /* of QHostAddress* */ addresses ```
+void q_hostinfo_set_addresses(void* self, libqt_list addresses);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#error)
 ///
@@ -112,6 +112,8 @@ const char* q_hostinfo_local_host_name();
 ///
 const char* q_hostinfo_local_domain_name();
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#dtor.QHostInfo)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QHostInfo* self ```

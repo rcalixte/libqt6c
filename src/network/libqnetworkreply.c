@@ -1,6 +1,3 @@
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
-#include "../libqevent.hpp"
 #include "../libqiodevice.hpp"
 #include "../libqiodevicebase.hpp"
 #include "../libqmetaobject.hpp"
@@ -11,14 +8,12 @@
 #include "libqsslerror.hpp"
 #include "libqsslpresharedkeyauthenticator.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
 #include "../libqurl.hpp"
 #include "../libqvariant.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqnetworkreply.hpp"
 #include "libqnetworkreply.h"
 
-QMetaObject* q_networkreply_meta_object(void* self) {
+const QMetaObject* q_networkreply_meta_object(void* self) {
     return QNetworkReply_MetaObject((QNetworkReply*)self);
 }
 
@@ -110,7 +105,7 @@ char* q_networkreply_raw_header(void* self, const char* headerName) {
     return _ret;
 }
 
-libqt_list /* of libqt_pair  tuple of char* and char*  */ q_networkreply_raw_header_pairs(void* self) {
+const libqt_list /* of libqt_pair  tuple of char* and char*  */ q_networkreply_raw_header_pairs(void* self) {
     libqt_list _arr = QNetworkReply_RawHeaderPairs((QNetworkReply*)self);
     return _arr;
 }
@@ -127,17 +122,8 @@ void q_networkreply_set_ssl_configuration(void* self, void* configuration) {
     QNetworkReply_SetSslConfiguration((QNetworkReply*)self, (QSslConfiguration*)configuration);
 }
 
-void q_networkreply_ignore_ssl_errors(void* self, void* errors[]) {
-    QSslError** errors_arr = (QSslError**)errors;
-    size_t errors_len = 0;
-    while (errors_arr[errors_len] != NULL) {
-        errors_len++;
-    }
-    libqt_list errors_list = {
-        .len = errors_len,
-        .data = {(QSslError*)errors},
-    };
-    QNetworkReply_IgnoreSslErrors((QNetworkReply*)self, errors_list);
+void q_networkreply_ignore_ssl_errors(void* self, libqt_list errors) {
+    QNetworkReply_IgnoreSslErrors((QNetworkReply*)self, errors);
 }
 
 void q_networkreply_abort(void* self) {
@@ -196,20 +182,11 @@ void q_networkreply_on_encrypted(void* self, void (*slot)(void*)) {
     QNetworkReply_Connect_Encrypted((QNetworkReply*)self, (intptr_t)slot);
 }
 
-void q_networkreply_ssl_errors(void* self, void* errors[]) {
-    QSslError** errors_arr = (QSslError**)errors;
-    size_t errors_len = 0;
-    while (errors_arr[errors_len] != NULL) {
-        errors_len++;
-    }
-    libqt_list errors_list = {
-        .len = errors_len,
-        .data = {(QSslError*)errors},
-    };
-    QNetworkReply_SslErrors((QNetworkReply*)self, errors_list);
+void q_networkreply_ssl_errors(void* self, libqt_list errors) {
+    QNetworkReply_SslErrors((QNetworkReply*)self, errors);
 }
 
-void q_networkreply_on_ssl_errors(void* self, void (*slot)(void*, void*)) {
+void q_networkreply_on_ssl_errors(void* self, void (*slot)(void*, libqt_list)) {
     QNetworkReply_Connect_SslErrors((QNetworkReply*)self, (intptr_t)slot);
 }
 
@@ -521,8 +498,7 @@ const char* q_networkreply_object_name(void* self) {
 }
 
 void q_networkreply_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_networkreply_is_widget_type(void* self) {
@@ -561,7 +537,7 @@ void q_networkreply_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_networkreply_children(void* self) {
+const libqt_list /* of QObject* */ q_networkreply_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -628,7 +604,7 @@ QBindingStorage* q_networkreply_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_networkreply_binding_storage2(void* self) {
+const QBindingStorage* q_networkreply_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -670,6 +646,10 @@ void q_networkreply_destroyed1(void* self, void* param1) {
 
 void q_networkreply_on_destroyed1(void* self, void (*slot)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+}
+
+void q_networkreply_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_networkreply_delete(void* self) {

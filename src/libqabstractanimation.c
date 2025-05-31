@@ -1,12 +1,8 @@
 #include "libqanimationgroup.hpp"
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include <string.h>
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqcoreevent.hpp"
 #include "libqabstractanimation.hpp"
 #include "libqabstractanimation.h"
@@ -19,7 +15,7 @@ QAbstractAnimation* q_abstractanimation_new2(void* parent) {
     return QAbstractAnimation_new2((QObject*)parent);
 }
 
-QMetaObject* q_abstractanimation_meta_object(void* self) {
+const QMetaObject* q_abstractanimation_meta_object(void* self) {
     return QAbstractAnimation_MetaObject((QAbstractAnimation*)self);
 }
 
@@ -228,8 +224,7 @@ const char* q_abstractanimation_object_name(void* self) {
 }
 
 void q_abstractanimation_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_abstractanimation_is_widget_type(void* self) {
@@ -268,7 +263,7 @@ void q_abstractanimation_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_abstractanimation_children(void* self) {
+const libqt_list /* of QObject* */ q_abstractanimation_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -335,7 +330,7 @@ QBindingStorage* q_abstractanimation_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_abstractanimation_binding_storage2(void* self) {
+const QBindingStorage* q_abstractanimation_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -499,6 +494,10 @@ void q_abstractanimation_on_is_signal_connected(void* self, bool (*slot)(void*, 
     QAbstractAnimation_OnIsSignalConnected((QAbstractAnimation*)self, (intptr_t)slot);
 }
 
+void q_abstractanimation_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
 void q_abstractanimation_delete(void* self) {
     QAbstractAnimation_Delete((QAbstractAnimation*)(self));
 }
@@ -511,7 +510,7 @@ QAnimationDriver* q_animationdriver_new2(void* parent) {
     return QAnimationDriver_new2((QObject*)parent);
 }
 
-QMetaObject* q_animationdriver_meta_object(void* self) {
+const QMetaObject* q_animationdriver_meta_object(void* self) {
     return QAnimationDriver_MetaObject((QAnimationDriver*)self);
 }
 
@@ -648,8 +647,7 @@ const char* q_animationdriver_object_name(void* self) {
 }
 
 void q_animationdriver_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_animationdriver_is_widget_type(void* self) {
@@ -688,7 +686,7 @@ void q_animationdriver_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_animationdriver_children(void* self) {
+const libqt_list /* of QObject* */ q_animationdriver_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -755,7 +753,7 @@ QBindingStorage* q_animationdriver_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_animationdriver_binding_storage2(void* self) {
+const QBindingStorage* q_animationdriver_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -929,6 +927,10 @@ bool q_animationdriver_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_animationdriver_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QAnimationDriver_OnIsSignalConnected((QAnimationDriver*)self, (intptr_t)slot);
+}
+
+void q_animationdriver_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_animationdriver_delete(void* self) {

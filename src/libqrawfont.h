@@ -105,13 +105,13 @@ libqt_list /* of uint32_t */ q_rawfont_glyph_indexes_for_string(void* self, cons
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#advancesForGlyphIndexes)
 ///
-/// ``` QRawFont* self, unsigned int* glyphIndexes[] ```
-libqt_list /* of QPointF* */ q_rawfont_advances_for_glyph_indexes(void* self, unsigned int* glyphIndexes[]);
+/// ``` QRawFont* self, libqt_list /* of uint32_t */ glyphIndexes ```
+libqt_list /* of QPointF* */ q_rawfont_advances_for_glyph_indexes(void* self, libqt_list glyphIndexes);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#advancesForGlyphIndexes)
 ///
-/// ``` QRawFont* self, unsigned int* glyphIndexes[], int layoutFlags ```
-libqt_list /* of QPointF* */ q_rawfont_advances_for_glyph_indexes2(void* self, unsigned int* glyphIndexes[], int64_t layoutFlags);
+/// ``` QRawFont* self, libqt_list /* of uint32_t */ glyphIndexes, int layoutFlags ```
+libqt_list /* of QPointF* */ q_rawfont_advances_for_glyph_indexes2(void* self, libqt_list glyphIndexes, int64_t layoutFlags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#glyphIndexesForChars)
 ///
@@ -258,6 +258,8 @@ QImage* q_rawfont_alpha_map_for_glyph3(void* self, uint32_t glyphIndex, int64_t 
 /// ``` QFont* font, enum QFontDatabase__WritingSystem writingSystem ```
 QRawFont* q_rawfont_from_font2(void* font, int64_t writingSystem);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#dtor.QRawFont)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QRawFont* self ```

@@ -12,19 +12,14 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqlayout.h"
 #include "libqlayoutitem.h"
-#include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqrect.h"
 #include "libqsize.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 #include "libqwidget.h"
 
 /// https://doc.qt.io/qt-6/qstackedlayout.html
@@ -47,7 +42,7 @@ QStackedLayout* q_stackedlayout_new3(void* parentLayout);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QStackedLayout* self ```
-QMetaObject* q_stackedlayout_meta_object(void* self);
+const QMetaObject* q_stackedlayout_meta_object(void* self);
 
 /// ``` QStackedLayout* self, const char* param1 ```
 void* q_stackedlayout_metacast(void* self, const char* param1);
@@ -100,11 +95,15 @@ QWidget* q_stackedlayout_widget(void* self, int param1);
 /// ``` QStackedLayout* self ```
 int32_t q_stackedlayout_count(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstackedlayout.html#count)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStackedLayout* self, int32_t (*slot)() ```
 void q_stackedlayout_on_count(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstackedlayout.html#count)
+///
 /// Base class method implementation
 ///
 /// ``` QStackedLayout* self ```
@@ -125,11 +124,15 @@ void q_stackedlayout_set_stacking_mode(void* self, int64_t stackingMode);
 /// ``` QStackedLayout* self, QLayoutItem* item ```
 void q_stackedlayout_add_item(void* self, void* item);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstackedlayout.html#addItem)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStackedLayout* self, void (*slot)(QStackedLayout*, QLayoutItem*) ```
 void q_stackedlayout_on_add_item(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstackedlayout.html#addItem)
+///
 /// Base class method implementation
 ///
 /// ``` QStackedLayout* self, QLayoutItem* item ```
@@ -140,11 +143,15 @@ void q_stackedlayout_qbase_add_item(void* self, void* item);
 /// ``` QStackedLayout* self ```
 QSize* q_stackedlayout_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstackedlayout.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStackedLayout* self, QSize* (*slot)() ```
 void q_stackedlayout_on_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstackedlayout.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QStackedLayout* self ```
@@ -155,11 +162,15 @@ QSize* q_stackedlayout_qbase_size_hint(void* self);
 /// ``` QStackedLayout* self ```
 QSize* q_stackedlayout_minimum_size(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstackedlayout.html#minimumSize)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStackedLayout* self, QSize* (*slot)() ```
 void q_stackedlayout_on_minimum_size(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstackedlayout.html#minimumSize)
+///
 /// Base class method implementation
 ///
 /// ``` QStackedLayout* self ```
@@ -170,11 +181,15 @@ QSize* q_stackedlayout_qbase_minimum_size(void* self);
 /// ``` QStackedLayout* self, int param1 ```
 QLayoutItem* q_stackedlayout_item_at(void* self, int param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstackedlayout.html#itemAt)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStackedLayout* self, QLayoutItem* (*slot)(QStackedLayout*, int) ```
 void q_stackedlayout_on_item_at(void* self, QLayoutItem* (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstackedlayout.html#itemAt)
+///
 /// Base class method implementation
 ///
 /// ``` QStackedLayout* self, int param1 ```
@@ -185,11 +200,15 @@ QLayoutItem* q_stackedlayout_qbase_item_at(void* self, int param1);
 /// ``` QStackedLayout* self, int param1 ```
 QLayoutItem* q_stackedlayout_take_at(void* self, int param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstackedlayout.html#takeAt)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStackedLayout* self, QLayoutItem* (*slot)(QStackedLayout*, int) ```
 void q_stackedlayout_on_take_at(void* self, QLayoutItem* (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstackedlayout.html#takeAt)
+///
 /// Base class method implementation
 ///
 /// ``` QStackedLayout* self, int param1 ```
@@ -200,11 +219,15 @@ QLayoutItem* q_stackedlayout_qbase_take_at(void* self, int param1);
 /// ``` QStackedLayout* self, QRect* rect ```
 void q_stackedlayout_set_geometry(void* self, void* rect);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstackedlayout.html#setGeometry)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStackedLayout* self, void (*slot)(QStackedLayout*, QRect*) ```
 void q_stackedlayout_on_set_geometry(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstackedlayout.html#setGeometry)
+///
 /// Base class method implementation
 ///
 /// ``` QStackedLayout* self, QRect* rect ```
@@ -215,11 +238,15 @@ void q_stackedlayout_qbase_set_geometry(void* self, void* rect);
 /// ``` QStackedLayout* self ```
 bool q_stackedlayout_has_height_for_width(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstackedlayout.html#hasHeightForWidth)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStackedLayout* self, bool (*slot)() ```
 void q_stackedlayout_on_has_height_for_width(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstackedlayout.html#hasHeightForWidth)
+///
 /// Base class method implementation
 ///
 /// ``` QStackedLayout* self ```
@@ -230,11 +257,15 @@ bool q_stackedlayout_qbase_has_height_for_width(void* self);
 /// ``` QStackedLayout* self, int width ```
 int32_t q_stackedlayout_height_for_width(void* self, int width);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstackedlayout.html#heightForWidth)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStackedLayout* self, int32_t (*slot)(QStackedLayout*, int) ```
 void q_stackedlayout_on_height_for_width(void* self, int32_t (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstackedlayout.html#heightForWidth)
+///
 /// Base class method implementation
 ///
 /// ``` QStackedLayout* self, int width ```
@@ -245,6 +276,8 @@ int32_t q_stackedlayout_qbase_height_for_width(void* self, int width);
 /// ``` QStackedLayout* self, int index ```
 void q_stackedlayout_widget_removed(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstackedlayout.html#widgetRemoved)
+///
 /// ``` QStackedLayout* self, void (*slot)(QStackedLayout*, int) ```
 void q_stackedlayout_on_widget_removed(void* self, void (*slot)(void*, int));
 
@@ -253,6 +286,8 @@ void q_stackedlayout_on_widget_removed(void* self, void (*slot)(void*, int));
 /// ``` QStackedLayout* self, int index ```
 void q_stackedlayout_current_changed(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstackedlayout.html#currentChanged)
+///
 /// ``` QStackedLayout* self, void (*slot)(QStackedLayout*, int) ```
 void q_stackedlayout_on_current_changed(void* self, void (*slot)(void*, int));
 
@@ -404,12 +439,16 @@ int32_t q_stackedlayout_index_of_with_q_layout_item(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#indexOf)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, int32_t (*slot)(QLayout*, QLayoutItem*) ```
 void q_stackedlayout_on_index_of_with_q_layout_item(void* self, int32_t (*slot)(void*, void*));
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#indexOf)
 ///
 /// Base class method implementation
 ///
@@ -554,7 +593,7 @@ void q_stackedlayout_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QStackedLayout* self ```
-libqt_list /* of QObject* */ q_stackedlayout_children(void* self);
+const libqt_list /* of QObject* */ q_stackedlayout_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -652,7 +691,7 @@ QBindingStorage* q_stackedlayout_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QStackedLayout* self ```
-QBindingStorage* q_stackedlayout_binding_storage2(void* self);
+const QBindingStorage* q_stackedlayout_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -662,6 +701,8 @@ QBindingStorage* q_stackedlayout_binding_storage2(void* self);
 void q_stackedlayout_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QStackedLayout* self, void (*slot)(QObject*) ```
 void q_stackedlayout_on_destroyed(void* self, void (*slot)(void*));
@@ -717,6 +758,8 @@ void q_stackedlayout_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QStackedLayout* self, void (*slot)(QObject*, QObject*) ```
 void q_stackedlayout_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -738,12 +781,16 @@ int32_t q_stackedlayout_spacing(void* self);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#spacing)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self ```
 int32_t q_stackedlayout_qbase_spacing(void* self);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#spacing)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -761,12 +808,16 @@ void q_stackedlayout_set_spacing(void* self, int spacing);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#setSpacing)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self, int spacing ```
 void q_stackedlayout_qbase_set_spacing(void* self, int spacing);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#setSpacing)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -784,12 +835,16 @@ void q_stackedlayout_invalidate(void* self);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#invalidate)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self ```
 void q_stackedlayout_qbase_invalidate(void* self);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#invalidate)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -807,12 +862,16 @@ QRect* q_stackedlayout_geometry(void* self);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#geometry)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self ```
 QRect* q_stackedlayout_qbase_geometry(void* self);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#geometry)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -830,12 +889,16 @@ int64_t q_stackedlayout_expanding_directions(void* self);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#expandingDirections)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self ```
 int64_t q_stackedlayout_qbase_expanding_directions(void* self);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#expandingDirections)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -853,12 +916,16 @@ QSize* q_stackedlayout_maximum_size(void* self);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#maximumSize)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self ```
 QSize* q_stackedlayout_qbase_maximum_size(void* self);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#maximumSize)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -876,12 +943,16 @@ int32_t q_stackedlayout_index_of(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#indexOf)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self, QWidget* param1 ```
 int32_t q_stackedlayout_qbase_index_of(void* self, void* param1);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#indexOf)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -899,12 +970,16 @@ bool q_stackedlayout_is_empty(void* self);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#isEmpty)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self ```
 bool q_stackedlayout_qbase_is_empty(void* self);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#isEmpty)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -922,12 +997,16 @@ int64_t q_stackedlayout_control_types(void* self);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#controlTypes)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self ```
 int64_t q_stackedlayout_qbase_control_types(void* self);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#controlTypes)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -945,12 +1024,16 @@ QLayoutItem* q_stackedlayout_replace_widget(void* self, void* from, void* to, in
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#replaceWidget)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self, QWidget* from, QWidget* to, int options ```
 QLayoutItem* q_stackedlayout_qbase_replace_widget(void* self, void* from, void* to, int64_t options);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#replaceWidget)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -968,12 +1051,16 @@ QLayout* q_stackedlayout_layout(void* self);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#layout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self ```
 QLayout* q_stackedlayout_qbase_layout(void* self);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#layout)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -991,12 +1078,16 @@ void q_stackedlayout_child_event(void* self, void* e);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self, QChildEvent* e ```
 void q_stackedlayout_qbase_child_event(void* self, void* e);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1014,12 +1105,16 @@ bool q_stackedlayout_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self, QEvent* event ```
 bool q_stackedlayout_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1037,12 +1132,16 @@ bool q_stackedlayout_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self, QObject* watched, QEvent* event ```
 bool q_stackedlayout_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1060,12 +1159,16 @@ void q_stackedlayout_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self, QTimerEvent* event ```
 void q_stackedlayout_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1083,12 +1186,16 @@ void q_stackedlayout_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self, QEvent* event ```
 void q_stackedlayout_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1106,12 +1213,16 @@ void q_stackedlayout_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self, QMetaMethod* signal ```
 void q_stackedlayout_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1129,12 +1240,16 @@ void q_stackedlayout_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self, QMetaMethod* signal ```
 void q_stackedlayout_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1152,12 +1267,16 @@ int32_t q_stackedlayout_minimum_height_for_width(void* self, int param1);
 
 /// Inherited from QLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#minimumHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self, int param1 ```
 int32_t q_stackedlayout_qbase_minimum_height_for_width(void* self, int param1);
 
 /// Inherited from QLayoutItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#minimumHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1175,12 +1294,16 @@ QSpacerItem* q_stackedlayout_spacer_item(void* self);
 
 /// Inherited from QLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#spacerItem)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self ```
 QSpacerItem* q_stackedlayout_qbase_spacer_item(void* self);
 
 /// Inherited from QLayoutItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#spacerItem)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1198,12 +1321,16 @@ void q_stackedlayout_widget_event(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#widgetEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self, QEvent* param1 ```
 void q_stackedlayout_qbase_widget_event(void* self, void* param1);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#widgetEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1221,12 +1348,16 @@ void q_stackedlayout_add_child_layout(void* self, void* l);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#addChildLayout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self, QLayout* l ```
 void q_stackedlayout_qbase_add_child_layout(void* self, void* l);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#addChildLayout)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1244,12 +1375,16 @@ void q_stackedlayout_add_child_widget(void* self, void* w);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#addChildWidget)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self, QWidget* w ```
 void q_stackedlayout_qbase_add_child_widget(void* self, void* w);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#addChildWidget)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1267,12 +1402,16 @@ bool q_stackedlayout_adopt_layout(void* self, void* layout);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#adoptLayout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self, QLayout* layout ```
 bool q_stackedlayout_qbase_adopt_layout(void* self, void* layout);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#adoptLayout)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1290,12 +1429,16 @@ QRect* q_stackedlayout_alignment_rect(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#alignmentRect)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self, QRect* param1 ```
 QRect* q_stackedlayout_qbase_alignment_rect(void* self, void* param1);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#alignmentRect)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1313,12 +1456,16 @@ QObject* q_stackedlayout_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self ```
 QObject* q_stackedlayout_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1336,12 +1483,16 @@ int32_t q_stackedlayout_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self ```
 int32_t q_stackedlayout_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1359,12 +1510,16 @@ int32_t q_stackedlayout_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self, const char* signal ```
 int32_t q_stackedlayout_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1382,6 +1537,8 @@ bool q_stackedlayout_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStackedLayout* self, QMetaMethod* signal ```
@@ -1389,11 +1546,24 @@ bool q_stackedlayout_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QStackedLayout* self, bool (*slot)(QStackedLayout*, QMetaMethod*) ```
 void q_stackedlayout_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QStackedLayout* self, void (*slot)(QObject*, const char*) ```
+void q_stackedlayout_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstackedlayout.html#dtor.QStackedLayout)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStackedLayout* self ```

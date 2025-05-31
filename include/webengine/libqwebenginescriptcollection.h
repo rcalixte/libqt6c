@@ -44,8 +44,8 @@ void q_webenginescriptcollection_insert(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescriptcollection.html#insert)
 ///
-/// ``` QWebEngineScriptCollection* self, QWebEngineScript* list[] ```
-void q_webenginescriptcollection_insert_with_list(void* self, void* list[]);
+/// ``` QWebEngineScriptCollection* self, libqt_list /* of QWebEngineScript* */ list ```
+void q_webenginescriptcollection_insert_with_list(void* self, libqt_list list);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescriptcollection.html#remove)
 ///
@@ -62,6 +62,8 @@ void q_webenginescriptcollection_clear(void* self);
 /// ``` QWebEngineScriptCollection* self ```
 libqt_list /* of QWebEngineScript* */ q_webenginescriptcollection_to_list(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescriptcollection.html#dtor.QWebEngineScriptCollection)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWebEngineScriptCollection* self ```

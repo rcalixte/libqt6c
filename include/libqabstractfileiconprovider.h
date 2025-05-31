@@ -28,11 +28,15 @@ QAbstractFileIconProvider* q_abstractfileiconprovider_new();
 /// ``` QAbstractFileIconProvider* self, enum QAbstractFileIconProvider__IconType param1 ```
 QIcon* q_abstractfileiconprovider_icon(void* self, int64_t param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractFileIconProvider* self, QIcon* (*slot)(QAbstractFileIconProvider*, enum QAbstractFileIconProvider__IconType) ```
 void q_abstractfileiconprovider_on_icon(void* self, QIcon* (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractFileIconProvider* self, enum QAbstractFileIconProvider__IconType param1 ```
@@ -43,11 +47,15 @@ QIcon* q_abstractfileiconprovider_qbase_icon(void* self, int64_t param1);
 /// ``` QAbstractFileIconProvider* self, QFileInfo* param1 ```
 QIcon* q_abstractfileiconprovider_icon_with_q_file_info(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractFileIconProvider* self, QIcon* (*slot)(QAbstractFileIconProvider*, QFileInfo*) ```
 void q_abstractfileiconprovider_on_icon_with_q_file_info(void* self, QIcon* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractFileIconProvider* self, QFileInfo* param1 ```
@@ -58,11 +66,15 @@ QIcon* q_abstractfileiconprovider_qbase_icon_with_q_file_info(void* self, void* 
 /// ``` QAbstractFileIconProvider* self, QFileInfo* param1 ```
 const char* q_abstractfileiconprovider_type(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#type)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractFileIconProvider* self, const char* (*slot)(QAbstractFileIconProvider*, QFileInfo*) ```
 void q_abstractfileiconprovider_on_type(void* self, const char* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#type)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractFileIconProvider* self, QFileInfo* param1 ```
@@ -73,11 +85,15 @@ const char* q_abstractfileiconprovider_qbase_type(void* self, void* param1);
 /// ``` QAbstractFileIconProvider* self, int options ```
 void q_abstractfileiconprovider_set_options(void* self, int64_t options);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#setOptions)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractFileIconProvider* self, void (*slot)(QAbstractFileIconProvider*, int) ```
 void q_abstractfileiconprovider_on_set_options(void* self, void (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#setOptions)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractFileIconProvider* self, int options ```
@@ -88,16 +104,22 @@ void q_abstractfileiconprovider_qbase_set_options(void* self, int64_t options);
 /// ``` QAbstractFileIconProvider* self ```
 int64_t q_abstractfileiconprovider_options(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#options)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractFileIconProvider* self, int64_t (*slot)() ```
 void q_abstractfileiconprovider_on_options(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#options)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractFileIconProvider* self ```
 int64_t q_abstractfileiconprovider_qbase_options(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#dtor.QAbstractFileIconProvider)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAbstractFileIconProvider* self ```

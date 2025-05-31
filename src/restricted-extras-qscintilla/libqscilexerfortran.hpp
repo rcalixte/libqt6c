@@ -15,25 +15,16 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QColor QColor;
 typedef struct QEvent QEvent;
 typedef struct QFont QFont;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QSettings QSettings;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
-typedef struct QsciAbstractAPIs QsciAbstractAPIs;
 typedef struct QsciLexer QsciLexer;
 typedef struct QsciLexerFortran QsciLexerFortran;
 typedef struct QsciLexerFortran77 QsciLexerFortran77;
@@ -77,6 +68,9 @@ const char* QsciLexerFortran_QBaseBlockStart(const QsciLexerFortran* self, int* 
 const char* QsciLexerFortran_BlockStartKeyword(const QsciLexerFortran* self, int* style);
 void QsciLexerFortran_OnBlockStartKeyword(const QsciLexerFortran* self, intptr_t slot);
 const char* QsciLexerFortran_QBaseBlockStartKeyword(const QsciLexerFortran* self, int* style);
+int QsciLexerFortran_BraceStyle(const QsciLexerFortran* self);
+void QsciLexerFortran_OnBraceStyle(const QsciLexerFortran* self, intptr_t slot);
+int QsciLexerFortran_QBaseBraceStyle(const QsciLexerFortran* self);
 bool QsciLexerFortran_CaseSensitive(const QsciLexerFortran* self);
 void QsciLexerFortran_OnCaseSensitive(const QsciLexerFortran* self, intptr_t slot);
 bool QsciLexerFortran_QBaseCaseSensitive(const QsciLexerFortran* self);
@@ -95,12 +89,18 @@ int QsciLexerFortran_QBaseIndentationGuideView(const QsciLexerFortran* self);
 int QsciLexerFortran_DefaultStyle(const QsciLexerFortran* self);
 void QsciLexerFortran_OnDefaultStyle(const QsciLexerFortran* self, intptr_t slot);
 int QsciLexerFortran_QBaseDefaultStyle(const QsciLexerFortran* self);
+libqt_string QsciLexerFortran_Description(const QsciLexerFortran* self, int style);
+void QsciLexerFortran_OnDescription(const QsciLexerFortran* self, intptr_t slot);
+libqt_string QsciLexerFortran_QBaseDescription(const QsciLexerFortran* self, int style);
 QColor* QsciLexerFortran_Paper(const QsciLexerFortran* self, int style);
 void QsciLexerFortran_OnPaper(const QsciLexerFortran* self, intptr_t slot);
 QColor* QsciLexerFortran_QBasePaper(const QsciLexerFortran* self, int style);
 QColor* QsciLexerFortran_DefaultColorWithStyle(const QsciLexerFortran* self, int style);
 void QsciLexerFortran_OnDefaultColorWithStyle(const QsciLexerFortran* self, intptr_t slot);
 QColor* QsciLexerFortran_QBaseDefaultColorWithStyle(const QsciLexerFortran* self, int style);
+bool QsciLexerFortran_DefaultEolFill(const QsciLexerFortran* self, int style);
+void QsciLexerFortran_OnDefaultEolFill(const QsciLexerFortran* self, intptr_t slot);
+bool QsciLexerFortran_QBaseDefaultEolFill(const QsciLexerFortran* self, int style);
 QFont* QsciLexerFortran_DefaultFontWithStyle(const QsciLexerFortran* self, int style);
 void QsciLexerFortran_OnDefaultFontWithStyle(const QsciLexerFortran* self, intptr_t slot);
 QFont* QsciLexerFortran_QBaseDefaultFontWithStyle(const QsciLexerFortran* self, int style);
@@ -110,6 +110,9 @@ QColor* QsciLexerFortran_QBaseDefaultPaperWithStyle(const QsciLexerFortran* self
 void QsciLexerFortran_SetEditor(QsciLexerFortran* self, QsciScintilla* editor);
 void QsciLexerFortran_OnSetEditor(QsciLexerFortran* self, intptr_t slot);
 void QsciLexerFortran_QBaseSetEditor(QsciLexerFortran* self, QsciScintilla* editor);
+void QsciLexerFortran_RefreshProperties(QsciLexerFortran* self);
+void QsciLexerFortran_OnRefreshProperties(QsciLexerFortran* self, intptr_t slot);
+void QsciLexerFortran_QBaseRefreshProperties(QsciLexerFortran* self);
 int QsciLexerFortran_StyleBitsNeeded(const QsciLexerFortran* self);
 void QsciLexerFortran_OnStyleBitsNeeded(const QsciLexerFortran* self, intptr_t slot);
 int QsciLexerFortran_QBaseStyleBitsNeeded(const QsciLexerFortran* self);
@@ -131,6 +134,12 @@ void QsciLexerFortran_QBaseSetFont(QsciLexerFortran* self, QFont* f, int style);
 void QsciLexerFortran_SetPaper(QsciLexerFortran* self, QColor* c, int style);
 void QsciLexerFortran_OnSetPaper(QsciLexerFortran* self, intptr_t slot);
 void QsciLexerFortran_QBaseSetPaper(QsciLexerFortran* self, QColor* c, int style);
+bool QsciLexerFortran_ReadProperties(QsciLexerFortran* self, QSettings* qs, libqt_string prefix);
+void QsciLexerFortran_OnReadProperties(QsciLexerFortran* self, intptr_t slot);
+bool QsciLexerFortran_QBaseReadProperties(QsciLexerFortran* self, QSettings* qs, libqt_string prefix);
+bool QsciLexerFortran_WriteProperties(const QsciLexerFortran* self, QSettings* qs, libqt_string prefix);
+void QsciLexerFortran_OnWriteProperties(const QsciLexerFortran* self, intptr_t slot);
+bool QsciLexerFortran_QBaseWriteProperties(const QsciLexerFortran* self, QSettings* qs, libqt_string prefix);
 bool QsciLexerFortran_Event(QsciLexerFortran* self, QEvent* event);
 void QsciLexerFortran_OnEvent(QsciLexerFortran* self, intptr_t slot);
 bool QsciLexerFortran_QBaseEvent(QsciLexerFortran* self, QEvent* event);
@@ -152,24 +161,6 @@ void QsciLexerFortran_QBaseConnectNotify(QsciLexerFortran* self, QMetaMethod* si
 void QsciLexerFortran_DisconnectNotify(QsciLexerFortran* self, QMetaMethod* signal);
 void QsciLexerFortran_OnDisconnectNotify(QsciLexerFortran* self, intptr_t slot);
 void QsciLexerFortran_QBaseDisconnectNotify(QsciLexerFortran* self, QMetaMethod* signal);
-int QsciLexerFortran_BraceStyle(const QsciLexerFortran* self);
-void QsciLexerFortran_OnBraceStyle(const QsciLexerFortran* self, intptr_t slot);
-int QsciLexerFortran_QBaseBraceStyle(const QsciLexerFortran* self);
-libqt_string QsciLexerFortran_Description(const QsciLexerFortran* self, int style);
-void QsciLexerFortran_OnDescription(const QsciLexerFortran* self, intptr_t slot);
-libqt_string QsciLexerFortran_QBaseDescription(const QsciLexerFortran* self, int style);
-bool QsciLexerFortran_DefaultEolFill(const QsciLexerFortran* self, int style);
-void QsciLexerFortran_OnDefaultEolFill(const QsciLexerFortran* self, intptr_t slot);
-bool QsciLexerFortran_QBaseDefaultEolFill(const QsciLexerFortran* self, int style);
-void QsciLexerFortran_RefreshProperties(QsciLexerFortran* self);
-void QsciLexerFortran_OnRefreshProperties(QsciLexerFortran* self, intptr_t slot);
-void QsciLexerFortran_QBaseRefreshProperties(QsciLexerFortran* self);
-bool QsciLexerFortran_ReadProperties(QsciLexerFortran* self, QSettings* qs, libqt_string prefix);
-void QsciLexerFortran_OnReadProperties(QsciLexerFortran* self, intptr_t slot);
-bool QsciLexerFortran_QBaseReadProperties(QsciLexerFortran* self, QSettings* qs, libqt_string prefix);
-bool QsciLexerFortran_WriteProperties(const QsciLexerFortran* self, QSettings* qs, libqt_string prefix);
-void QsciLexerFortran_OnWriteProperties(const QsciLexerFortran* self, intptr_t slot);
-bool QsciLexerFortran_QBaseWriteProperties(const QsciLexerFortran* self, QSettings* qs, libqt_string prefix);
 QObject* QsciLexerFortran_Sender(const QsciLexerFortran* self);
 void QsciLexerFortran_OnSender(const QsciLexerFortran* self, intptr_t slot);
 QObject* QsciLexerFortran_QBaseSender(const QsciLexerFortran* self);

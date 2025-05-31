@@ -168,6 +168,8 @@ const char* q_urlquery_query_item_value2(void* self, const char* key, int64_t en
 /// ``` QUrlQuery* self, const char* key, uint32_t encoding ```
 const char** q_urlquery_all_query_item_values2(void* self, const char* key, int64_t encoding);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qurlquery.html#dtor.QUrlQuery)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QUrlQuery* self ```

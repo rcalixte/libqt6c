@@ -1,41 +1,17 @@
 #include "libqabstractbutton.hpp"
-#include "libqaction.hpp"
 #include "libqevent.hpp"
-#include "libqanystringview.hpp"
-#include "libqbackingstore.hpp"
-#include "libqbindingstorage.hpp"
-#include "libqbitmap.hpp"
-#include "libqcursor.hpp"
 #include "libqdialog.hpp"
-#include "libqfont.hpp"
-#include "libqfontinfo.hpp"
-#include "libqfontmetrics.hpp"
-#include "libqgraphicseffect.hpp"
-#include "libqgraphicsproxywidget.hpp"
-#include "libqicon.hpp"
-#include "libqkeysequence.hpp"
-#include "libqlayout.hpp"
-#include "libqlocale.hpp"
-#include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
 #include "libqpainter.hpp"
-#include "libqpalette.hpp"
 #include "libqpixmap.hpp"
 #include "libqpoint.hpp"
-#include "libqrect.hpp"
-#include "libqregion.hpp"
-#include "libqscreen.hpp"
 #include "libqsize.hpp"
-#include "libqsizepolicy.hpp"
 #include <string.h>
-#include "libqstyle.hpp"
-#include "libqthread.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqwindow.hpp"
 #include "libqcoreevent.hpp"
 #include "libqwizard.hpp"
 #include "libqwizard.h"
@@ -52,7 +28,7 @@ QWizard* q_wizard_new3(void* parent, int64_t flags) {
     return QWizard_new3((QWidget*)parent, flags);
 }
 
-QMetaObject* q_wizard_meta_object(void* self) {
+const QMetaObject* q_wizard_meta_object(void* self) {
     return QWizard_MetaObject((QWizard*)self);
 }
 
@@ -192,16 +168,8 @@ const char* q_wizard_button_text(void* self, int64_t which) {
     return _ret;
 }
 
-void q_wizard_set_button_layout(void* self, int* layout[]) {
-    size_t layout_len = 0;
-    while (layout[layout_len] != NULL) {
-        layout_len++;
-    }
-    libqt_list layout_list = {
-        .len = layout_len,
-        .data = {(int*)layout},
-    };
-    QWizard_SetButtonLayout((QWizard*)self, layout_list);
+void q_wizard_set_button_layout(void* self, libqt_list layout) {
+    QWizard_SetButtonLayout((QWizard*)self, layout);
 }
 
 void q_wizard_set_button(void* self, int64_t which, void* button) {
@@ -530,7 +498,7 @@ QRect* q_wizard_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_wizard_geometry(void* self) {
+const QRect* q_wizard_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -734,7 +702,7 @@ QWidget* q_wizard_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_wizard_palette(void* self) {
+const QPalette* q_wizard_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -758,7 +726,7 @@ int64_t q_wizard_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_wizard_font(void* self) {
+const QFont* q_wizard_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -1363,30 +1331,12 @@ void q_wizard_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_wizard_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_wizard_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_wizard_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_wizard_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_wizard_insert_action(void* self, void* before, void* action) {
@@ -1606,8 +1556,7 @@ const char* q_wizard_object_name(void* self) {
 }
 
 void q_wizard_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_wizard_is_widget_type(void* self) {
@@ -1646,7 +1595,7 @@ void q_wizard_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_wizard_children(void* self) {
+const libqt_list /* of QObject* */ q_wizard_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1709,7 +1658,7 @@ QBindingStorage* q_wizard_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_wizard_binding_storage2(void* self) {
+const QBindingStorage* q_wizard_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2473,6 +2422,10 @@ void q_wizard_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QWizard_OnIsSignalConnected((QWizard*)self, (intptr_t)slot);
 }
 
+void q_wizard_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
 void q_wizard_delete(void* self) {
     QWizard_Delete((QWizard*)(self));
 }
@@ -2485,7 +2438,7 @@ QWizardPage* q_wizardpage_new2() {
     return QWizardPage_new2();
 }
 
-QMetaObject* q_wizardpage_meta_object(void* self) {
+const QMetaObject* q_wizardpage_meta_object(void* self) {
     return QWizardPage_MetaObject((QWizardPage*)self);
 }
 
@@ -2791,7 +2744,7 @@ QRect* q_wizardpage_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_wizardpage_geometry(void* self) {
+const QRect* q_wizardpage_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -2995,7 +2948,7 @@ QWidget* q_wizardpage_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_wizardpage_palette(void* self) {
+const QPalette* q_wizardpage_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -3019,7 +2972,7 @@ int64_t q_wizardpage_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_wizardpage_font(void* self) {
+const QFont* q_wizardpage_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -3624,30 +3577,12 @@ void q_wizardpage_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_wizardpage_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_wizardpage_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_wizardpage_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_wizardpage_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_wizardpage_insert_action(void* self, void* before, void* action) {
@@ -3867,8 +3802,7 @@ const char* q_wizardpage_object_name(void* self) {
 }
 
 void q_wizardpage_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_wizardpage_is_widget_type(void* self) {
@@ -3907,7 +3841,7 @@ void q_wizardpage_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_wizardpage_children(void* self) {
+const libqt_list /* of QObject* */ q_wizardpage_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -3970,7 +3904,7 @@ QBindingStorage* q_wizardpage_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_wizardpage_binding_storage2(void* self) {
+const QBindingStorage* q_wizardpage_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -4732,6 +4666,10 @@ bool q_wizardpage_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_wizardpage_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QWizardPage_OnIsSignalConnected((QWizardPage*)self, (intptr_t)slot);
+}
+
+void q_wizardpage_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_wizardpage_delete(void* self) {

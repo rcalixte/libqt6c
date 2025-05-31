@@ -12,23 +12,7 @@
 
 #include "qtlibc.h"
 
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
-#include "libqcursor.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
-#include "libqlocale.h"
-#include "libqmargins.h"
 #include "libqmdiarea.h"
 #include "libqmenu.h"
 #include "libqmetaobject.h"
@@ -36,20 +20,11 @@
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqscreen.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
-#include "libqthread.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qmdisubwindow.html
 
@@ -71,7 +46,7 @@ QMdiSubWindow* q_mdisubwindow_new3(void* parent, int64_t flags);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QMdiSubWindow* self ```
-QMetaObject* q_mdisubwindow_meta_object(void* self);
+const QMetaObject* q_mdisubwindow_meta_object(void* self);
 
 /// ``` QMdiSubWindow* self, const char* param1 ```
 void* q_mdisubwindow_metacast(void* self, const char* param1);
@@ -99,11 +74,15 @@ const char* q_mdisubwindow_tr(const char* s);
 /// ``` QMdiSubWindow* self ```
 QSize* q_mdisubwindow_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, QSize* (*slot)() ```
 void q_mdisubwindow_on_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self ```
@@ -114,11 +93,15 @@ QSize* q_mdisubwindow_qbase_size_hint(void* self);
 /// ``` QMdiSubWindow* self ```
 QSize* q_mdisubwindow_minimum_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#minimumSizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, QSize* (*slot)() ```
 void q_mdisubwindow_on_minimum_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#minimumSizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self ```
@@ -199,6 +182,8 @@ QMdiArea* q_mdisubwindow_mdi_area(void* self);
 /// ``` QMdiSubWindow* self, int oldState, int newState ```
 void q_mdisubwindow_window_state_changed(void* self, int64_t oldState, int64_t newState);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#windowStateChanged)
+///
 /// ``` QMdiSubWindow* self, void (*slot)(QMdiSubWindow*, int, int) ```
 void q_mdisubwindow_on_window_state_changed(void* self, void (*slot)(void*, int64_t, int64_t));
 
@@ -207,6 +192,8 @@ void q_mdisubwindow_on_window_state_changed(void* self, void (*slot)(void*, int6
 /// ``` QMdiSubWindow* self ```
 void q_mdisubwindow_about_to_activate(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#aboutToActivate)
+///
 /// ``` QMdiSubWindow* self, void (*slot)(QMdiSubWindow*) ```
 void q_mdisubwindow_on_about_to_activate(void* self, void (*slot)(void*));
 
@@ -225,11 +212,15 @@ void q_mdisubwindow_show_shaded(void* self);
 /// ``` QMdiSubWindow* self, QObject* object, QEvent* event ```
 bool q_mdisubwindow_event_filter(void* self, void* object, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#eventFilter)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, bool (*slot)(QMdiSubWindow*, QObject*, QEvent*) ```
 void q_mdisubwindow_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#eventFilter)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self, QObject* object, QEvent* event ```
@@ -240,11 +231,15 @@ bool q_mdisubwindow_qbase_event_filter(void* self, void* object, void* event);
 /// ``` QMdiSubWindow* self, QEvent* event ```
 bool q_mdisubwindow_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, bool (*slot)(QMdiSubWindow*, QEvent*) ```
 void q_mdisubwindow_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self, QEvent* event ```
@@ -255,11 +250,15 @@ bool q_mdisubwindow_qbase_event(void* self, void* event);
 /// ``` QMdiSubWindow* self, QShowEvent* showEvent ```
 void q_mdisubwindow_show_event(void* self, void* showEvent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#showEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QMdiSubWindow*, QShowEvent*) ```
 void q_mdisubwindow_on_show_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#showEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self, QShowEvent* showEvent ```
@@ -270,11 +269,15 @@ void q_mdisubwindow_qbase_show_event(void* self, void* showEvent);
 /// ``` QMdiSubWindow* self, QHideEvent* hideEvent ```
 void q_mdisubwindow_hide_event(void* self, void* hideEvent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#hideEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QMdiSubWindow*, QHideEvent*) ```
 void q_mdisubwindow_on_hide_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#hideEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self, QHideEvent* hideEvent ```
@@ -285,11 +288,15 @@ void q_mdisubwindow_qbase_hide_event(void* self, void* hideEvent);
 /// ``` QMdiSubWindow* self, QEvent* changeEvent ```
 void q_mdisubwindow_change_event(void* self, void* changeEvent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#changeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QMdiSubWindow*, QEvent*) ```
 void q_mdisubwindow_on_change_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#changeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self, QEvent* changeEvent ```
@@ -300,11 +307,15 @@ void q_mdisubwindow_qbase_change_event(void* self, void* changeEvent);
 /// ``` QMdiSubWindow* self, QCloseEvent* closeEvent ```
 void q_mdisubwindow_close_event(void* self, void* closeEvent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#closeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QMdiSubWindow*, QCloseEvent*) ```
 void q_mdisubwindow_on_close_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#closeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self, QCloseEvent* closeEvent ```
@@ -315,11 +326,15 @@ void q_mdisubwindow_qbase_close_event(void* self, void* closeEvent);
 /// ``` QMdiSubWindow* self, QEvent* leaveEvent ```
 void q_mdisubwindow_leave_event(void* self, void* leaveEvent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#leaveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QMdiSubWindow*, QEvent*) ```
 void q_mdisubwindow_on_leave_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#leaveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self, QEvent* leaveEvent ```
@@ -330,11 +345,15 @@ void q_mdisubwindow_qbase_leave_event(void* self, void* leaveEvent);
 /// ``` QMdiSubWindow* self, QResizeEvent* resizeEvent ```
 void q_mdisubwindow_resize_event(void* self, void* resizeEvent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#resizeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QMdiSubWindow*, QResizeEvent*) ```
 void q_mdisubwindow_on_resize_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#resizeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self, QResizeEvent* resizeEvent ```
@@ -345,11 +364,15 @@ void q_mdisubwindow_qbase_resize_event(void* self, void* resizeEvent);
 /// ``` QMdiSubWindow* self, QTimerEvent* timerEvent ```
 void q_mdisubwindow_timer_event(void* self, void* timerEvent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#timerEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QMdiSubWindow*, QTimerEvent*) ```
 void q_mdisubwindow_on_timer_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#timerEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self, QTimerEvent* timerEvent ```
@@ -360,11 +383,15 @@ void q_mdisubwindow_qbase_timer_event(void* self, void* timerEvent);
 /// ``` QMdiSubWindow* self, QMoveEvent* moveEvent ```
 void q_mdisubwindow_move_event(void* self, void* moveEvent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#moveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QMdiSubWindow*, QMoveEvent*) ```
 void q_mdisubwindow_on_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#moveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self, QMoveEvent* moveEvent ```
@@ -375,11 +402,15 @@ void q_mdisubwindow_qbase_move_event(void* self, void* moveEvent);
 /// ``` QMdiSubWindow* self, QPaintEvent* paintEvent ```
 void q_mdisubwindow_paint_event(void* self, void* paintEvent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#paintEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QMdiSubWindow*, QPaintEvent*) ```
 void q_mdisubwindow_on_paint_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#paintEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self, QPaintEvent* paintEvent ```
@@ -390,11 +421,15 @@ void q_mdisubwindow_qbase_paint_event(void* self, void* paintEvent);
 /// ``` QMdiSubWindow* self, QMouseEvent* mouseEvent ```
 void q_mdisubwindow_mouse_press_event(void* self, void* mouseEvent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#mousePressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QMdiSubWindow*, QMouseEvent*) ```
 void q_mdisubwindow_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#mousePressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self, QMouseEvent* mouseEvent ```
@@ -405,11 +440,15 @@ void q_mdisubwindow_qbase_mouse_press_event(void* self, void* mouseEvent);
 /// ``` QMdiSubWindow* self, QMouseEvent* mouseEvent ```
 void q_mdisubwindow_mouse_double_click_event(void* self, void* mouseEvent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#mouseDoubleClickEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QMdiSubWindow*, QMouseEvent*) ```
 void q_mdisubwindow_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#mouseDoubleClickEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self, QMouseEvent* mouseEvent ```
@@ -420,11 +459,15 @@ void q_mdisubwindow_qbase_mouse_double_click_event(void* self, void* mouseEvent)
 /// ``` QMdiSubWindow* self, QMouseEvent* mouseEvent ```
 void q_mdisubwindow_mouse_release_event(void* self, void* mouseEvent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#mouseReleaseEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QMdiSubWindow*, QMouseEvent*) ```
 void q_mdisubwindow_on_mouse_release_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#mouseReleaseEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self, QMouseEvent* mouseEvent ```
@@ -435,11 +478,15 @@ void q_mdisubwindow_qbase_mouse_release_event(void* self, void* mouseEvent);
 /// ``` QMdiSubWindow* self, QMouseEvent* mouseEvent ```
 void q_mdisubwindow_mouse_move_event(void* self, void* mouseEvent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#mouseMoveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QMdiSubWindow*, QMouseEvent*) ```
 void q_mdisubwindow_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#mouseMoveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self, QMouseEvent* mouseEvent ```
@@ -450,11 +497,15 @@ void q_mdisubwindow_qbase_mouse_move_event(void* self, void* mouseEvent);
 /// ``` QMdiSubWindow* self, QKeyEvent* keyEvent ```
 void q_mdisubwindow_key_press_event(void* self, void* keyEvent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#keyPressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QMdiSubWindow*, QKeyEvent*) ```
 void q_mdisubwindow_on_key_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#keyPressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self, QKeyEvent* keyEvent ```
@@ -465,11 +516,15 @@ void q_mdisubwindow_qbase_key_press_event(void* self, void* keyEvent);
 /// ``` QMdiSubWindow* self, QContextMenuEvent* contextMenuEvent ```
 void q_mdisubwindow_context_menu_event(void* self, void* contextMenuEvent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#contextMenuEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QMdiSubWindow*, QContextMenuEvent*) ```
 void q_mdisubwindow_on_context_menu_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#contextMenuEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self, QContextMenuEvent* contextMenuEvent ```
@@ -480,11 +535,15 @@ void q_mdisubwindow_qbase_context_menu_event(void* self, void* contextMenuEvent)
 /// ``` QMdiSubWindow* self, QFocusEvent* focusInEvent ```
 void q_mdisubwindow_focus_in_event(void* self, void* focusInEvent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#focusInEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QMdiSubWindow*, QFocusEvent*) ```
 void q_mdisubwindow_on_focus_in_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#focusInEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self, QFocusEvent* focusInEvent ```
@@ -495,11 +554,15 @@ void q_mdisubwindow_qbase_focus_in_event(void* self, void* focusInEvent);
 /// ``` QMdiSubWindow* self, QFocusEvent* focusOutEvent ```
 void q_mdisubwindow_focus_out_event(void* self, void* focusOutEvent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#focusOutEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QMdiSubWindow*, QFocusEvent*) ```
 void q_mdisubwindow_on_focus_out_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#focusOutEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self, QFocusEvent* focusOutEvent ```
@@ -510,11 +573,15 @@ void q_mdisubwindow_qbase_focus_out_event(void* self, void* focusOutEvent);
 /// ``` QMdiSubWindow* self, QChildEvent* childEvent ```
 void q_mdisubwindow_child_event(void* self, void* childEvent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#childEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QMdiSubWindow*, QChildEvent*) ```
 void q_mdisubwindow_on_child_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#childEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QMdiSubWindow* self, QChildEvent* childEvent ```
@@ -659,7 +726,7 @@ QRect* q_mdisubwindow_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QMdiSubWindow* self ```
-QRect* q_mdisubwindow_geometry(void* self);
+const QRect* q_mdisubwindow_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1016,7 +1083,7 @@ QWidget* q_mdisubwindow_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QMdiSubWindow* self ```
-QPalette* q_mdisubwindow_palette(void* self);
+const QPalette* q_mdisubwindow_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1058,7 +1125,7 @@ int64_t q_mdisubwindow_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QMdiSubWindow* self ```
-QFont* q_mdisubwindow_font(void* self);
+const QFont* q_mdisubwindow_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2058,15 +2125,15 @@ void q_mdisubwindow_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QMdiSubWindow* self, QAction* actions[] ```
-void q_mdisubwindow_add_actions(void* self, void* actions[]);
+/// ``` QMdiSubWindow* self, libqt_list /* of QAction* */ actions ```
+void q_mdisubwindow_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QMdiSubWindow* self, QAction* before, QAction* actions[] ```
-void q_mdisubwindow_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QMdiSubWindow* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_mdisubwindow_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2266,6 +2333,8 @@ void q_mdisubwindow_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QMdiSubWindow* self, void (*slot)(QWidget*, const char*) ```
 void q_mdisubwindow_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2277,6 +2346,8 @@ void q_mdisubwindow_on_window_title_changed(void* self, void (*slot)(void*, cons
 void q_mdisubwindow_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QWidget*, QIcon*) ```
 void q_mdisubwindow_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -2290,6 +2361,8 @@ void q_mdisubwindow_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QMdiSubWindow* self, void (*slot)(QWidget*, const char*) ```
 void q_mdisubwindow_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2301,6 +2374,8 @@ void q_mdisubwindow_on_window_icon_text_changed(void* self, void (*slot)(void*, 
 void q_mdisubwindow_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QWidget*, QPoint*) ```
 void q_mdisubwindow_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2506,7 +2581,7 @@ void q_mdisubwindow_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QMdiSubWindow* self ```
-libqt_list /* of QObject* */ q_mdisubwindow_children(void* self);
+const libqt_list /* of QObject* */ q_mdisubwindow_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2597,7 +2672,7 @@ QBindingStorage* q_mdisubwindow_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QMdiSubWindow* self ```
-QBindingStorage* q_mdisubwindow_binding_storage2(void* self);
+const QBindingStorage* q_mdisubwindow_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2607,6 +2682,8 @@ QBindingStorage* q_mdisubwindow_binding_storage2(void* self);
 void q_mdisubwindow_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QObject*) ```
 void q_mdisubwindow_on_destroyed(void* self, void (*slot)(void*));
@@ -2661,6 +2738,8 @@ QMetaObject__Connection* q_mdisubwindow_connect4(void* self, void* sender, const
 void q_mdisubwindow_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QMdiSubWindow* self, void (*slot)(QObject*, QObject*) ```
 void q_mdisubwindow_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -2760,12 +2839,16 @@ int32_t q_mdisubwindow_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self ```
 int32_t q_mdisubwindow_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2783,12 +2866,16 @@ void q_mdisubwindow_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, bool visible ```
 void q_mdisubwindow_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2806,12 +2893,16 @@ int32_t q_mdisubwindow_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, int param1 ```
 int32_t q_mdisubwindow_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2829,12 +2920,16 @@ bool q_mdisubwindow_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self ```
 bool q_mdisubwindow_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2852,12 +2947,16 @@ QPaintEngine* q_mdisubwindow_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self ```
 QPaintEngine* q_mdisubwindow_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2875,12 +2974,16 @@ void q_mdisubwindow_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, QWheelEvent* event ```
 void q_mdisubwindow_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2898,12 +3001,16 @@ void q_mdisubwindow_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, QKeyEvent* event ```
 void q_mdisubwindow_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2921,12 +3028,16 @@ void q_mdisubwindow_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, QEnterEvent* event ```
 void q_mdisubwindow_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2944,12 +3055,16 @@ void q_mdisubwindow_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, QTabletEvent* event ```
 void q_mdisubwindow_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2967,12 +3082,16 @@ void q_mdisubwindow_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, QActionEvent* event ```
 void q_mdisubwindow_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2990,12 +3109,16 @@ void q_mdisubwindow_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, QDragEnterEvent* event ```
 void q_mdisubwindow_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3013,12 +3136,16 @@ void q_mdisubwindow_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, QDragMoveEvent* event ```
 void q_mdisubwindow_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3036,12 +3163,16 @@ void q_mdisubwindow_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, QDragLeaveEvent* event ```
 void q_mdisubwindow_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3059,12 +3190,16 @@ void q_mdisubwindow_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, QDropEvent* event ```
 void q_mdisubwindow_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3082,12 +3217,16 @@ bool q_mdisubwindow_native_event(void* self, const char* eventType, void* messag
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, const char* eventType, void* message, intptr_t* result ```
 bool q_mdisubwindow_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3105,12 +3244,16 @@ int32_t q_mdisubwindow_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_mdisubwindow_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3128,12 +3271,16 @@ void q_mdisubwindow_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, QPainter* painter ```
 void q_mdisubwindow_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3151,12 +3298,16 @@ QPaintDevice* q_mdisubwindow_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, QPoint* offset ```
 QPaintDevice* q_mdisubwindow_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3174,12 +3325,16 @@ QPainter* q_mdisubwindow_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self ```
 QPainter* q_mdisubwindow_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3197,12 +3352,16 @@ void q_mdisubwindow_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, QInputMethodEvent* param1 ```
 void q_mdisubwindow_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3220,12 +3379,16 @@ QVariant* q_mdisubwindow_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_mdisubwindow_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3243,12 +3406,16 @@ bool q_mdisubwindow_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, bool next ```
 bool q_mdisubwindow_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3266,12 +3433,16 @@ void q_mdisubwindow_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, QEvent* event ```
 void q_mdisubwindow_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3289,12 +3460,16 @@ void q_mdisubwindow_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, QMetaMethod* signal ```
 void q_mdisubwindow_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3312,12 +3487,16 @@ void q_mdisubwindow_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, QMetaMethod* signal ```
 void q_mdisubwindow_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3335,12 +3514,16 @@ void q_mdisubwindow_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self ```
 void q_mdisubwindow_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3358,12 +3541,16 @@ void q_mdisubwindow_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self ```
 void q_mdisubwindow_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3381,12 +3568,16 @@ void q_mdisubwindow_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self ```
 void q_mdisubwindow_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3404,12 +3595,16 @@ bool q_mdisubwindow_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self ```
 bool q_mdisubwindow_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3427,12 +3622,16 @@ bool q_mdisubwindow_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self ```
 bool q_mdisubwindow_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3450,12 +3649,16 @@ QObject* q_mdisubwindow_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self ```
 QObject* q_mdisubwindow_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3473,12 +3676,16 @@ int32_t q_mdisubwindow_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self ```
 int32_t q_mdisubwindow_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3496,12 +3703,16 @@ int32_t q_mdisubwindow_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, const char* signal ```
 int32_t q_mdisubwindow_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3519,6 +3730,8 @@ bool q_mdisubwindow_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, QMetaMethod* signal ```
@@ -3526,11 +3739,24 @@ bool q_mdisubwindow_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QMdiSubWindow* self, bool (*slot)(QMdiSubWindow*, QMetaMethod*) ```
 void q_mdisubwindow_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QMdiSubWindow* self, void (*slot)(QObject*, const char*) ```
+void q_mdisubwindow_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmdisubwindow.html#dtor.QMdiSubWindow)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMdiSubWindow* self ```

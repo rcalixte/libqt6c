@@ -15,24 +15,14 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
 typedef struct QAbstractNetworkCache QAbstractNetworkCache;
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
-typedef struct QChildEvent QChildEvent;
 typedef struct QDateTime QDateTime;
-typedef struct QEvent QEvent;
 typedef struct QIODevice QIODevice;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QNetworkCacheMetaData QNetworkCacheMetaData;
 typedef struct QObject QObject;
-typedef struct QThread QThread;
-typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 typedef struct QVariant QVariant;
 #endif
@@ -81,8 +71,6 @@ void QAbstractNetworkCache_Insert(QAbstractNetworkCache* self, QIODevice* device
 void QAbstractNetworkCache_Clear(QAbstractNetworkCache* self);
 libqt_string QAbstractNetworkCache_Tr2(const char* s, const char* c);
 libqt_string QAbstractNetworkCache_Tr3(const char* s, const char* c, int n);
-bool QAbstractNetworkCache_Event(QAbstractNetworkCache* self, QEvent* event);
-bool QAbstractNetworkCache_EventFilter(QAbstractNetworkCache* self, QObject* watched, QEvent* event);
 void QAbstractNetworkCache_Delete(QAbstractNetworkCache* self);
 
 #ifdef __cplusplus

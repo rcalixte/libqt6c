@@ -47,6 +47,8 @@ void q_webengineclientcertificateselection_select_none(void* self);
 /// ``` QWebEngineClientCertificateSelection* self ```
 libqt_list /* of QSslCertificate* */ q_webengineclientcertificateselection_certificates(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineclientcertificateselection.html#dtor.QWebEngineClientCertificateSelection)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWebEngineClientCertificateSelection* self ```

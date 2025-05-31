@@ -1,21 +1,12 @@
-#include "libqabstractaxis.hpp"
 #include "libqabstractseries.hpp"
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqbrush.hpp"
-#include "libqchart.hpp"
 #include "../libqevent.hpp"
 #include "../libqcolor.hpp"
-#include "../libqfont.hpp"
-#include "../libqimage.hpp"
 #include "libqlineseries.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include "../libqpen.hpp"
-#include "../libqpoint.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "libqxyseries.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqsplineseries.hpp"
@@ -29,7 +20,7 @@ QSplineSeries* q_splineseries_new2(void* parent) {
     return QSplineSeries_new2((QObject*)parent);
 }
 
-QMetaObject* q_splineseries_meta_object(void* self) {
+const QMetaObject* q_splineseries_meta_object(void* self) {
     return QSplineSeries_MetaObject((QSplineSeries*)self);
 }
 
@@ -90,17 +81,8 @@ void q_splineseries_append_with_point(void* self, void* point) {
     QXYSeries_AppendWithPoint((QXYSeries*)self, (QPointF*)point);
 }
 
-void q_splineseries_append_with_points(void* self, void* points[]) {
-    QPointF** points_arr = (QPointF**)points;
-    size_t points_len = 0;
-    while (points_arr[points_len] != NULL) {
-        points_len++;
-    }
-    libqt_list points_list = {
-        .len = points_len,
-        .data = {(QPointF*)points},
-    };
-    QXYSeries_AppendWithPoints((QXYSeries*)self, points_list);
+void q_splineseries_append_with_points(void* self, libqt_list points) {
+    QXYSeries_AppendWithPoints((QXYSeries*)self, points);
 }
 
 void q_splineseries_replace(void* self, double oldX, double oldY, double newX, double newY) {
@@ -157,7 +139,7 @@ libqt_list /* of QPointF* */ q_splineseries_points_vector(void* self) {
     return _arr;
 }
 
-QPointF* q_splineseries_at(void* self, int index) {
+const QPointF* q_splineseries_at(void* self, int index) {
     return QXYSeries_At((QXYSeries*)self, index);
 }
 
@@ -165,17 +147,8 @@ QXYSeries* q_splineseries_operator_shift_left(void* self, void* point) {
     return QXYSeries_OperatorShiftLeft((QXYSeries*)self, (QPointF*)point);
 }
 
-QXYSeries* q_splineseries_operator_shift_left_with_points(void* self, void* points[]) {
-    QPointF** points_arr = (QPointF**)points;
-    size_t points_len = 0;
-    while (points_arr[points_len] != NULL) {
-        points_len++;
-    }
-    libqt_list points_list = {
-        .len = points_len,
-        .data = {(QPointF*)points},
-    };
-    return QXYSeries_OperatorShiftLeftWithPoints((QXYSeries*)self, points_list);
+QXYSeries* q_splineseries_operator_shift_left_with_points(void* self, libqt_list points) {
+    return QXYSeries_OperatorShiftLeftWithPoints((QXYSeries*)self, points);
 }
 
 QPen* q_splineseries_pen(void* self) {
@@ -245,17 +218,8 @@ bool q_splineseries_point_labels_clipping(void* self) {
     return QXYSeries_PointLabelsClipping((QXYSeries*)self);
 }
 
-void q_splineseries_replace_with_points(void* self, void* points[]) {
-    QPointF** points_arr = (QPointF**)points;
-    size_t points_len = 0;
-    while (points_arr[points_len] != NULL) {
-        points_len++;
-    }
-    libqt_list points_list = {
-        .len = points_len,
-        .data = {(QPointF*)points},
-    };
-    QXYSeries_ReplaceWithPoints((QXYSeries*)self, points_list);
+void q_splineseries_replace_with_points(void* self, libqt_list points) {
+    QXYSeries_ReplaceWithPoints((QXYSeries*)self, points);
 }
 
 bool q_splineseries_is_point_selected(void* self, int index) {
@@ -282,40 +246,16 @@ void q_splineseries_deselect_all_points(void* self) {
     QXYSeries_DeselectAllPoints((QXYSeries*)self);
 }
 
-void q_splineseries_select_points(void* self, int* indexes[]) {
-    size_t indexes_len = 0;
-    while (indexes[indexes_len] != NULL) {
-        indexes_len++;
-    }
-    libqt_list indexes_list = {
-        .len = indexes_len,
-        .data = {(int*)indexes},
-    };
-    QXYSeries_SelectPoints((QXYSeries*)self, indexes_list);
+void q_splineseries_select_points(void* self, libqt_list indexes) {
+    QXYSeries_SelectPoints((QXYSeries*)self, indexes);
 }
 
-void q_splineseries_deselect_points(void* self, int* indexes[]) {
-    size_t indexes_len = 0;
-    while (indexes[indexes_len] != NULL) {
-        indexes_len++;
-    }
-    libqt_list indexes_list = {
-        .len = indexes_len,
-        .data = {(int*)indexes},
-    };
-    QXYSeries_DeselectPoints((QXYSeries*)self, indexes_list);
+void q_splineseries_deselect_points(void* self, libqt_list indexes) {
+    QXYSeries_DeselectPoints((QXYSeries*)self, indexes);
 }
 
-void q_splineseries_toggle_selection(void* self, int* indexes[]) {
-    size_t indexes_len = 0;
-    while (indexes[indexes_len] != NULL) {
-        indexes_len++;
-    }
-    libqt_list indexes_list = {
-        .len = indexes_len,
-        .data = {(int*)indexes},
-    };
-    QXYSeries_ToggleSelection((QXYSeries*)self, indexes_list);
+void q_splineseries_toggle_selection(void* self, libqt_list indexes) {
+    QXYSeries_ToggleSelection((QXYSeries*)self, indexes);
 }
 
 libqt_list /* of int */ q_splineseries_selected_points(void* self) {
@@ -327,7 +267,7 @@ void q_splineseries_set_light_marker(void* self, void* lightMarker) {
     QXYSeries_SetLightMarker((QXYSeries*)self, (QImage*)lightMarker);
 }
 
-QImage* q_splineseries_light_marker(void* self) {
+const QImage* q_splineseries_light_marker(void* self) {
     return QXYSeries_LightMarker((QXYSeries*)self);
 }
 
@@ -335,7 +275,7 @@ void q_splineseries_set_selected_light_marker(void* self, void* selectedLightMar
     QXYSeries_SetSelectedLightMarker((QXYSeries*)self, (QImage*)selectedLightMarker);
 }
 
-QImage* q_splineseries_selected_light_marker(void* self) {
+const QImage* q_splineseries_selected_light_marker(void* self) {
     return QXYSeries_SelectedLightMarker((QXYSeries*)self);
 }
 
@@ -411,28 +351,12 @@ libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ q_splineseries_poi
     return QXYSeries_PointsConfiguration((QXYSeries*)self);
 }
 
-void q_splineseries_size_by(void* self, double* sourceData[], double minSize, double maxSize) {
-    size_t sourceData_len = 0;
-    while (sourceData[sourceData_len] != NULL) {
-        sourceData_len++;
-    }
-    libqt_list sourceData_list = {
-        .len = sourceData_len,
-        .data = {(double*)sourceData},
-    };
-    QXYSeries_SizeBy((QXYSeries*)self, sourceData_list, minSize, maxSize);
+void q_splineseries_size_by(void* self, libqt_list sourceData, double minSize, double maxSize) {
+    QXYSeries_SizeBy((QXYSeries*)self, sourceData, minSize, maxSize);
 }
 
-void q_splineseries_color_by(void* self, double* sourceData[]) {
-    size_t sourceData_len = 0;
-    while (sourceData[sourceData_len] != NULL) {
-        sourceData_len++;
-    }
-    libqt_list sourceData_list = {
-        .len = sourceData_len,
-        .data = {(double*)sourceData},
-    };
-    QXYSeries_ColorBy((QXYSeries*)self, sourceData_list);
+void q_splineseries_color_by(void* self, libqt_list sourceData) {
+    QXYSeries_ColorBy((QXYSeries*)self, sourceData);
 }
 
 void q_splineseries_clicked(void* self, void* point) {
@@ -659,16 +583,8 @@ void q_splineseries_set_best_fit_line_visible1(void* self, bool visible) {
     QXYSeries_SetBestFitLineVisible1((QXYSeries*)self, visible);
 }
 
-void q_splineseries_color_by2(void* self, double* sourceData[], void* gradient) {
-    size_t sourceData_len = 0;
-    while (sourceData[sourceData_len] != NULL) {
-        sourceData_len++;
-    }
-    libqt_list sourceData_list = {
-        .len = sourceData_len,
-        .data = {(double*)sourceData},
-    };
-    QXYSeries_ColorBy2((QXYSeries*)self, sourceData_list, (QLinearGradient*)gradient);
+void q_splineseries_color_by2(void* self, libqt_list sourceData, void* gradient) {
+    QXYSeries_ColorBy2((QXYSeries*)self, sourceData, (QLinearGradient*)gradient);
 }
 
 void q_splineseries_set_name(void* self, const char* name) {
@@ -779,8 +695,7 @@ const char* q_splineseries_object_name(void* self) {
 }
 
 void q_splineseries_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_splineseries_is_widget_type(void* self) {
@@ -819,7 +734,7 @@ void q_splineseries_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_splineseries_children(void* self) {
+const libqt_list /* of QObject* */ q_splineseries_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -886,7 +801,7 @@ QBindingStorage* q_splineseries_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_splineseries_binding_storage2(void* self) {
+const QBindingStorage* q_splineseries_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1108,6 +1023,10 @@ bool q_splineseries_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_splineseries_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QSplineSeries_OnIsSignalConnected((QSplineSeries*)self, (intptr_t)slot);
+}
+
+void q_splineseries_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_splineseries_delete(void* self) {

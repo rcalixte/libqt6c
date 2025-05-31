@@ -1,21 +1,12 @@
-#include <QAnyStringView>
-#include <QBindingStorage>
 #include <QByteArray>
-#include <QChildEvent>
-#include <QEvent>
 #include <QIODevice>
-#include <QList>
 #include <QMetaMethod>
 #include <QMetaObject>
-#define WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection
 #include <QObject>
 #include <QString>
 #include <QByteArray>
 #include <cstring>
-#include <QThread>
-#include <QTimerEvent>
 #include <QUrl>
-#include <QVariant>
 #include <QWebEngineUrlRequestJob>
 #include <qwebengineurlrequestjob.h>
 #include "libqwebengineurlrequestjob.hpp"
@@ -98,14 +89,6 @@ libqt_string QWebEngineUrlRequestJob_Tr3(const char* s, const char* c, int n) {
     memcpy(_str.data, _b.data(), _str.len);
     _str.data[_str.len] = '\0';
     return _str;
-}
-
-bool QWebEngineUrlRequestJob_Event(QWebEngineUrlRequestJob* self, QEvent* event) {
-    return self->event(event);
-}
-
-bool QWebEngineUrlRequestJob_EventFilter(QWebEngineUrlRequestJob* self, QObject* watched, QEvent* event) {
-    return self->eventFilter(watched, event);
 }
 
 void QWebEngineUrlRequestJob_Delete(QWebEngineUrlRequestJob* self) {

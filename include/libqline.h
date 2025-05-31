@@ -161,6 +161,8 @@ bool q_line_operator_not_equal(void* self, void* d);
 /// ``` QLine* self ```
 QLineF* q_line_to_line_f(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qline.html#dtor.QLine)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QLine* self ```
@@ -373,6 +375,8 @@ QLine* q_linef_to_line(void* self);
 /// ``` QLineF* self, QLineF* l, QPointF* intersectionPoint ```
 int64_t q_linef_intersects2(void* self, void* l, void* intersectionPoint);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlinef.html#dtor.QLineF)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QLineF* self ```

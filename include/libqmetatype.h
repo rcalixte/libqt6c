@@ -88,7 +88,7 @@ int64_t q_metatype_type_flags(int typeVal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#metaObjectForType)
 ///
 /// ``` int typeVal ```
-QMetaObject* q_metatype_meta_object_for_type(int typeVal);
+const QMetaObject* q_metatype_meta_object_for_type(int typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#create)
 ///
@@ -148,7 +148,7 @@ int64_t q_metatype_flags(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QMetaType* self ```
-QMetaObject* q_metatype_meta_object(void* self);
+const QMetaObject* q_metatype_meta_object(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#name)
 ///
@@ -325,6 +325,8 @@ void* q_metatype_create1(void* self, void* copyVal);
 /// ``` QMetaType* self, void* where, void* copyVal ```
 void* q_metatype_construct2(void* self, void* where, void* copyVal);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#dtor.QMetaType)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMetaType* self ```

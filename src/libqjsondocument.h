@@ -45,6 +45,8 @@ void q_jsonparseerror_move_assign(void* self, void* other);
 /// ``` QJsonParseError* self ```
 const char* q_jsonparseerror_error_string(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonparseerror.html#dtor.QJsonParseError)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QJsonParseError* self ```
@@ -140,12 +142,12 @@ void q_jsondocument_set_array(void* self, void* array);
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#operator[])
 ///
 /// ``` QJsonDocument* self, const char* key ```
-QJsonValue* q_jsondocument_operator_subscript(void* self, const char* key);
+const QJsonValue* q_jsondocument_operator_subscript(void* self, const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#operator[])
 ///
 /// ``` QJsonDocument* self, int64_t i ```
-QJsonValue* q_jsondocument_operator_subscript_with_qsizetype(void* self, int64_t i);
+const QJsonValue* q_jsondocument_operator_subscript_with_qsizetype(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#operator==)
 ///
@@ -172,6 +174,8 @@ QJsonDocument* q_jsondocument_from_json2(const char* json, void* errorVal);
 /// ``` QJsonDocument* self, enum QJsonDocument__JsonFormat format ```
 char* q_jsondocument_to_json1(void* self, int64_t format);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#dtor.QJsonDocument)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QJsonDocument* self ```

@@ -15,46 +15,30 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
-typedef struct QCursor QCursor;
 typedef struct QEvent QEvent;
 typedef struct QFocusEvent QFocusEvent;
-typedef struct QGraphicsEffect QGraphicsEffect;
 typedef struct QGraphicsItem QGraphicsItem;
-typedef struct QGraphicsItemGroup QGraphicsItemGroup;
 typedef struct QGraphicsObject QGraphicsObject;
-typedef struct QGraphicsScene QGraphicsScene;
 typedef struct QGraphicsSceneContextMenuEvent QGraphicsSceneContextMenuEvent;
 typedef struct QGraphicsSceneDragDropEvent QGraphicsSceneDragDropEvent;
 typedef struct QGraphicsSceneHoverEvent QGraphicsSceneHoverEvent;
 typedef struct QGraphicsSceneMouseEvent QGraphicsSceneMouseEvent;
 typedef struct QGraphicsSceneWheelEvent QGraphicsSceneWheelEvent;
-typedef struct QGraphicsTransform QGraphicsTransform;
 typedef struct QGraphicsVideoItem QGraphicsVideoItem;
-typedef struct QGraphicsWidget QGraphicsWidget;
 typedef struct QInputMethodEvent QInputMethodEvent;
 typedef struct QKeyEvent QKeyEvent;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QPainter QPainter;
 typedef struct QPainterPath QPainterPath;
 typedef struct QPointF QPointF;
 typedef struct QRectF QRectF;
-typedef struct QRegion QRegion;
-typedef struct QSize QSize;
 typedef struct QSizeF QSizeF;
 typedef struct QStyleOptionGraphicsItem QStyleOptionGraphicsItem;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QTransform QTransform;
 typedef struct QVariant QVariant;
 typedef struct QVideoSink QVideoSink;
 typedef struct QWidget QWidget;
@@ -194,15 +178,15 @@ void QGraphicsVideoItem_QBaseWheelEvent(QGraphicsVideoItem* self, QGraphicsScene
 void QGraphicsVideoItem_InputMethodEvent(QGraphicsVideoItem* self, QInputMethodEvent* event);
 void QGraphicsVideoItem_OnInputMethodEvent(QGraphicsVideoItem* self, intptr_t slot);
 void QGraphicsVideoItem_QBaseInputMethodEvent(QGraphicsVideoItem* self, QInputMethodEvent* event);
-void QGraphicsVideoItem_SetExtension(QGraphicsVideoItem* self, int extension, QVariant* variant);
-void QGraphicsVideoItem_OnSetExtension(QGraphicsVideoItem* self, intptr_t slot);
-void QGraphicsVideoItem_QBaseSetExtension(QGraphicsVideoItem* self, int extension, QVariant* variant);
 QVariant* QGraphicsVideoItem_InputMethodQuery(const QGraphicsVideoItem* self, int query);
 void QGraphicsVideoItem_OnInputMethodQuery(const QGraphicsVideoItem* self, intptr_t slot);
 QVariant* QGraphicsVideoItem_QBaseInputMethodQuery(const QGraphicsVideoItem* self, int query);
 bool QGraphicsVideoItem_SupportsExtension(const QGraphicsVideoItem* self, int extension);
 void QGraphicsVideoItem_OnSupportsExtension(const QGraphicsVideoItem* self, intptr_t slot);
 bool QGraphicsVideoItem_QBaseSupportsExtension(const QGraphicsVideoItem* self, int extension);
+void QGraphicsVideoItem_SetExtension(QGraphicsVideoItem* self, int extension, QVariant* variant);
+void QGraphicsVideoItem_OnSetExtension(QGraphicsVideoItem* self, intptr_t slot);
+void QGraphicsVideoItem_QBaseSetExtension(QGraphicsVideoItem* self, int extension, QVariant* variant);
 QVariant* QGraphicsVideoItem_Extension(const QGraphicsVideoItem* self, QVariant* variant);
 void QGraphicsVideoItem_OnExtension(const QGraphicsVideoItem* self, intptr_t slot);
 QVariant* QGraphicsVideoItem_QBaseExtension(const QGraphicsVideoItem* self, QVariant* variant);

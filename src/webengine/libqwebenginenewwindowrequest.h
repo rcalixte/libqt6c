@@ -12,16 +12,11 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
-#include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include "../libqrect.h"
 #include <string.h>
-#include "../libqthread.h"
 #include "../libqurl.h"
-#include "../libqvariant.h"
 #include "libqwebenginepage.h"
 
 /// https://doc.qt.io/qt-6/qwebenginenewwindowrequest.html
@@ -29,7 +24,7 @@
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QWebEngineNewWindowRequest* self ```
-QMetaObject* q_webenginenewwindowrequest_meta_object(void* self);
+const QMetaObject* q_webenginenewwindowrequest_meta_object(void* self);
 
 /// ``` QWebEngineNewWindowRequest* self, const char* param1 ```
 void* q_webenginenewwindowrequest_metacast(void* self, const char* param1);
@@ -173,7 +168,7 @@ void q_webenginenewwindowrequest_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QWebEngineNewWindowRequest* self ```
-libqt_list /* of QObject* */ q_webenginenewwindowrequest_children(void* self);
+const libqt_list /* of QObject* */ q_webenginenewwindowrequest_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -271,7 +266,7 @@ QBindingStorage* q_webenginenewwindowrequest_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QWebEngineNewWindowRequest* self ```
-QBindingStorage* q_webenginenewwindowrequest_binding_storage2(void* self);
+const QBindingStorage* q_webenginenewwindowrequest_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -281,6 +276,8 @@ QBindingStorage* q_webenginenewwindowrequest_binding_storage2(void* self);
 void q_webenginenewwindowrequest_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QWebEngineNewWindowRequest* self, void (*slot)(QObject*) ```
 void q_webenginenewwindowrequest_on_destroyed(void* self, void (*slot)(void*));
@@ -336,9 +333,22 @@ void q_webenginenewwindowrequest_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QWebEngineNewWindowRequest* self, void (*slot)(QObject*, QObject*) ```
 void q_webenginenewwindowrequest_on_destroyed1(void* self, void (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineNewWindowRequest* self, void (*slot)(QObject*, const char*) ```
+void q_webenginenewwindowrequest_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenewwindowrequest.html#dtor.QWebEngineNewWindowRequest)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWebEngineNewWindowRequest* self ```

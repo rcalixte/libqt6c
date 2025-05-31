@@ -139,7 +139,7 @@ void q_brush_set_texture_image(void* self, void* image);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbrush.html#color)
 ///
 /// ``` QBrush* self ```
-QColor* q_brush_color(void* self);
+const QColor* q_brush_color(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbrush.html#setColor)
 ///
@@ -154,7 +154,7 @@ void q_brush_set_color_with_color(void* self, int64_t color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbrush.html#gradient)
 ///
 /// ``` QBrush* self ```
-QGradient* q_brush_gradient(void* self);
+const QGradient* q_brush_gradient(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbrush.html#isOpaque)
 ///
@@ -176,6 +176,8 @@ bool q_brush_operator_not_equal(void* self, void* b);
 /// ``` QBrush* self ```
 bool q_brush_is_detached(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbrush.html#dtor.QBrush)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QBrush* self ```
@@ -193,6 +195,8 @@ QBrushData* q_brushdata_new(void* param1);
 /// ``` QBrushData* self, QBrushData* param1 ```
 void q_brushdata_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbrushdata.html#dtor.QBrushData)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QBrushData* self ```
@@ -270,6 +274,8 @@ bool q_gradient_operator_equal(void* self, void* gradient);
 /// ``` QGradient* self, QGradient* other ```
 bool q_gradient_operator_not_equal(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgradient.html#dtor.QGradient)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGradient* self ```
@@ -404,6 +410,8 @@ bool q_lineargradient_operator_equal(void* self, void* gradient);
 /// ``` QLinearGradient* self, QGradient* other ```
 bool q_lineargradient_operator_not_equal(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlineargradient.html#dtor.QLinearGradient)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QLinearGradient* self ```
@@ -588,6 +596,8 @@ bool q_radialgradient_operator_equal(void* self, void* gradient);
 /// ``` QRadialGradient* self, QGradient* other ```
 bool q_radialgradient_operator_not_equal(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qradialgradient.html#dtor.QRadialGradient)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QRadialGradient* self ```
@@ -717,6 +727,8 @@ bool q_conicalgradient_operator_equal(void* self, void* gradient);
 /// ``` QConicalGradient* self, QGradient* other ```
 bool q_conicalgradient_operator_not_equal(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qconicalgradient.html#dtor.QConicalGradient)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QConicalGradient* self ```
@@ -729,6 +741,8 @@ void q_conicalgradient_delete(void* self);
 /// ``` QGradient__QGradientData* param1 ```
 QGradient__QGradientData* q_gradient__qgradientdata_new(void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgradient::qgradientdata.html#dtor.QGradient::QGradientData)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGradient__QGradientData* self ```

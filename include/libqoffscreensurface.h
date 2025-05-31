@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
@@ -22,8 +20,6 @@
 #include <string.h>
 #include "libqsurface.h"
 #include "libqsurfaceformat.h"
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qoffscreensurface.html
 
@@ -45,7 +41,7 @@ QOffscreenSurface* q_offscreensurface_new3(void* screen, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QOffscreenSurface* self ```
-QMetaObject* q_offscreensurface_meta_object(void* self);
+const QMetaObject* q_offscreensurface_meta_object(void* self);
 
 /// ``` QOffscreenSurface* self, const char* param1 ```
 void* q_offscreensurface_metacast(void* self, const char* param1);
@@ -73,11 +69,15 @@ const char* q_offscreensurface_tr(const char* s);
 /// ``` QOffscreenSurface* self ```
 int64_t q_offscreensurface_surface_type(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qoffscreensurface.html#surfaceType)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QOffscreenSurface* self, int64_t (*slot)() ```
 void q_offscreensurface_on_surface_type(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qoffscreensurface.html#surfaceType)
+///
 /// Base class method implementation
 ///
 /// ``` QOffscreenSurface* self ```
@@ -108,11 +108,15 @@ void q_offscreensurface_set_format(void* self, void* format);
 /// ``` QOffscreenSurface* self ```
 QSurfaceFormat* q_offscreensurface_format(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qoffscreensurface.html#format)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QOffscreenSurface* self, QSurfaceFormat* (*slot)() ```
 void q_offscreensurface_on_format(void* self, QSurfaceFormat* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qoffscreensurface.html#format)
+///
 /// Base class method implementation
 ///
 /// ``` QOffscreenSurface* self ```
@@ -128,11 +132,15 @@ QSurfaceFormat* q_offscreensurface_requested_format(void* self);
 /// ``` QOffscreenSurface* self ```
 QSize* q_offscreensurface_size(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qoffscreensurface.html#size)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QOffscreenSurface* self, QSize* (*slot)() ```
 void q_offscreensurface_on_size(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qoffscreensurface.html#size)
+///
 /// Base class method implementation
 ///
 /// ``` QOffscreenSurface* self ```
@@ -153,11 +161,15 @@ void q_offscreensurface_set_screen(void* self, void* screen);
 /// ``` QOffscreenSurface* self, const char* name, int revision ```
 void* q_offscreensurface_resolve_interface(void* self, const char* name, int revision);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qoffscreensurface.html#resolveInterface)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QOffscreenSurface* self, void* (*slot)(QOffscreenSurface*, const char*, int) ```
 void q_offscreensurface_on_resolve_interface(void* self, void* (*slot)(void*, const char*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qoffscreensurface.html#resolveInterface)
+///
 /// Base class method implementation
 ///
 /// ``` QOffscreenSurface* self, const char* name, int revision ```
@@ -168,6 +180,8 @@ void* q_offscreensurface_qbase_resolve_interface(void* self, const char* name, i
 /// ``` QOffscreenSurface* self, QScreen* screen ```
 void q_offscreensurface_screen_changed(void* self, void* screen);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qoffscreensurface.html#screenChanged)
+///
 /// ``` QOffscreenSurface* self, void (*slot)(QOffscreenSurface*, QScreen*) ```
 void q_offscreensurface_on_screen_changed(void* self, void (*slot)(void*, void*));
 
@@ -263,7 +277,7 @@ void q_offscreensurface_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QOffscreenSurface* self ```
-libqt_list /* of QObject* */ q_offscreensurface_children(void* self);
+const libqt_list /* of QObject* */ q_offscreensurface_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -361,7 +375,7 @@ QBindingStorage* q_offscreensurface_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QOffscreenSurface* self ```
-QBindingStorage* q_offscreensurface_binding_storage2(void* self);
+const QBindingStorage* q_offscreensurface_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -371,6 +385,8 @@ QBindingStorage* q_offscreensurface_binding_storage2(void* self);
 void q_offscreensurface_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QOffscreenSurface* self, void (*slot)(QObject*) ```
 void q_offscreensurface_on_destroyed(void* self, void (*slot)(void*));
@@ -426,6 +442,8 @@ void q_offscreensurface_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QOffscreenSurface* self, void (*slot)(QObject*, QObject*) ```
 void q_offscreensurface_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -454,12 +472,16 @@ bool q_offscreensurface_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QOffscreenSurface* self, QEvent* event ```
 bool q_offscreensurface_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -477,12 +499,16 @@ bool q_offscreensurface_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QOffscreenSurface* self, QObject* watched, QEvent* event ```
 bool q_offscreensurface_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -500,12 +526,16 @@ void q_offscreensurface_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QOffscreenSurface* self, QTimerEvent* event ```
 void q_offscreensurface_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -523,12 +553,16 @@ void q_offscreensurface_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QOffscreenSurface* self, QChildEvent* event ```
 void q_offscreensurface_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -546,12 +580,16 @@ void q_offscreensurface_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QOffscreenSurface* self, QEvent* event ```
 void q_offscreensurface_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -569,12 +607,16 @@ void q_offscreensurface_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QOffscreenSurface* self, QMetaMethod* signal ```
 void q_offscreensurface_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -592,12 +634,16 @@ void q_offscreensurface_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QOffscreenSurface* self, QMetaMethod* signal ```
 void q_offscreensurface_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -615,12 +661,16 @@ QObject* q_offscreensurface_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QOffscreenSurface* self ```
 QObject* q_offscreensurface_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -638,12 +688,16 @@ int32_t q_offscreensurface_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QOffscreenSurface* self ```
 int32_t q_offscreensurface_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -661,12 +715,16 @@ int32_t q_offscreensurface_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QOffscreenSurface* self, const char* signal ```
 int32_t q_offscreensurface_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -684,6 +742,8 @@ bool q_offscreensurface_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QOffscreenSurface* self, QMetaMethod* signal ```
@@ -691,11 +751,24 @@ bool q_offscreensurface_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QOffscreenSurface* self, bool (*slot)(QOffscreenSurface*, QMetaMethod*) ```
 void q_offscreensurface_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QOffscreenSurface* self, void (*slot)(QObject*, const char*) ```
+void q_offscreensurface_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qoffscreensurface.html#dtor.QOffscreenSurface)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QOffscreenSurface* self ```

@@ -309,8 +309,8 @@ const char** q_url_idn_whitelist();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#toStringList)
 ///
-/// ``` QUrl* uris[] ```
-const char** q_url_to_string_list(void* uris[]);
+/// ``` libqt_list /* of QUrl* */ uris ```
+const char** q_url_to_string_list(libqt_list uris);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#fromStringList)
 ///
@@ -457,6 +457,8 @@ char* q_url_to_ace2(const char* domain, int64_t options);
 /// ``` const char* uris[], enum QUrl__ParsingMode mode ```
 libqt_list /* of QUrl* */ q_url_from_string_list2(const char* uris[], int64_t mode);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#dtor.QUrl)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QUrl* self ```

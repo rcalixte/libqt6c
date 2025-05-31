@@ -1,11 +1,8 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqmetaobject.hpp"
 #include "libqmetatype.hpp"
 #include "libqobject.hpp"
 #include <string.h>
-#include "libqthread.hpp"
 #include "libqurl.hpp"
 #include "libqvariant.hpp"
 #include "libqcoreevent.hpp"
@@ -16,7 +13,7 @@ QMimeData* q_mimedata_new() {
     return QMimeData_new();
 }
 
-QMetaObject* q_mimedata_meta_object(void* self) {
+const QMetaObject* q_mimedata_meta_object(void* self) {
     return QMimeData_MetaObject((QMimeData*)self);
 }
 
@@ -48,17 +45,8 @@ libqt_list /* of QUrl* */ q_mimedata_urls(void* self) {
     return _arr;
 }
 
-void q_mimedata_set_urls(void* self, void* urls[]) {
-    QUrl** urls_arr = (QUrl**)urls;
-    size_t urls_len = 0;
-    while (urls_arr[urls_len] != NULL) {
-        urls_len++;
-    }
-    libqt_list urls_list = {
-        .len = urls_len,
-        .data = {(QUrl*)urls},
-    };
-    QMimeData_SetUrls((QMimeData*)self, urls_list);
+void q_mimedata_set_urls(void* self, libqt_list urls) {
+    QMimeData_SetUrls((QMimeData*)self, urls);
 }
 
 bool q_mimedata_has_urls(void* self) {
@@ -216,8 +204,7 @@ const char* q_mimedata_object_name(void* self) {
 }
 
 void q_mimedata_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_mimedata_is_widget_type(void* self) {
@@ -256,7 +243,7 @@ void q_mimedata_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_mimedata_children(void* self) {
+const libqt_list /* of QObject* */ q_mimedata_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -323,7 +310,7 @@ QBindingStorage* q_mimedata_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_mimedata_binding_storage2(void* self) {
+const QBindingStorage* q_mimedata_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -497,6 +484,10 @@ bool q_mimedata_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_mimedata_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QMimeData_OnIsSignalConnected((QMimeData*)self, (intptr_t)slot);
+}
+
+void q_mimedata_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_mimedata_delete(void* self) {

@@ -1,20 +1,7 @@
 #include "libqaction.hpp"
 #include "libqevent.hpp"
-#include "libqanystringview.hpp"
-#include "libqbackingstore.hpp"
-#include "libqbindingstorage.hpp"
-#include "libqbitmap.hpp"
 #include "libqcompleter.hpp"
-#include "libqcursor.hpp"
-#include "libqfont.hpp"
-#include "libqfontinfo.hpp"
-#include "libqfontmetrics.hpp"
-#include "libqgraphicseffect.hpp"
-#include "libqgraphicsproxywidget.hpp"
 #include "libqicon.hpp"
-#include "libqkeysequence.hpp"
-#include "libqlayout.hpp"
-#include "libqlocale.hpp"
 #include "libqmargins.hpp"
 #include "libqmenu.hpp"
 #include "libqmetaobject.hpp"
@@ -22,22 +9,14 @@
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
 #include "libqpainter.hpp"
-#include "libqpalette.hpp"
-#include "libqpixmap.hpp"
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
-#include "libqregion.hpp"
-#include "libqscreen.hpp"
 #include "libqsize.hpp"
-#include "libqsizepolicy.hpp"
 #include <string.h>
-#include "libqstyle.hpp"
 #include "libqstyleoption.hpp"
-#include "libqthread.hpp"
 #include "libqvalidator.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqwindow.hpp"
 #include "libqcoreevent.hpp"
 #include "libqlineedit.hpp"
 #include "libqlineedit.h"
@@ -58,7 +37,7 @@ QLineEdit* q_lineedit_new4(const char* param1, void* parent) {
     return QLineEdit_new4(qstring(param1), (QWidget*)parent);
 }
 
-QMetaObject* q_lineedit_meta_object(void* self) {
+const QMetaObject* q_lineedit_meta_object(void* self) {
     return QLineEdit_MetaObject((QLineEdit*)self);
 }
 
@@ -154,7 +133,7 @@ void q_lineedit_set_validator(void* self, void* validator) {
     QLineEdit_SetValidator((QLineEdit*)self, (QValidator*)validator);
 }
 
-QValidator* q_lineedit_validator(void* self) {
+const QValidator* q_lineedit_validator(void* self) {
     return QLineEdit_Validator((QLineEdit*)self);
 }
 
@@ -782,7 +761,7 @@ QRect* q_lineedit_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_lineedit_geometry(void* self) {
+const QRect* q_lineedit_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -986,7 +965,7 @@ QWidget* q_lineedit_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_lineedit_palette(void* self) {
+const QPalette* q_lineedit_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -1010,7 +989,7 @@ int64_t q_lineedit_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_lineedit_font(void* self) {
+const QFont* q_lineedit_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -1611,30 +1590,12 @@ void q_lineedit_set_accept_drops(void* self, bool on) {
     QWidget_SetAcceptDrops((QWidget*)self, on);
 }
 
-void q_lineedit_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_lineedit_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_lineedit_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_lineedit_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_lineedit_insert_action(void* self, void* before, void* action) {
@@ -1850,8 +1811,7 @@ const char* q_lineedit_object_name(void* self) {
 }
 
 void q_lineedit_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_lineedit_is_widget_type(void* self) {
@@ -1890,7 +1850,7 @@ void q_lineedit_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_lineedit_children(void* self) {
+const libqt_list /* of QObject* */ q_lineedit_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1953,7 +1913,7 @@ QBindingStorage* q_lineedit_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_lineedit_binding_storage2(void* self) {
+const QBindingStorage* q_lineedit_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2463,6 +2423,10 @@ bool q_lineedit_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_lineedit_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QLineEdit_OnIsSignalConnected((QLineEdit*)self, (intptr_t)slot);
+}
+
+void q_lineedit_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_lineedit_delete(void* self) {

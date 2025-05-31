@@ -15,23 +15,13 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
 typedef struct QAbstractButton QAbstractButton;
-typedef struct QAction QAction;
 typedef struct QActionEvent QActionEvent;
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBackingStore QBackingStore;
-typedef struct QBindingStorage QBindingStorage;
-typedef struct QBitmap QBitmap;
-typedef struct QButtonGroup QButtonGroup;
 typedef struct QChildEvent QChildEvent;
 typedef struct QCloseEvent QCloseEvent;
 typedef struct QCommandLinkButton QCommandLinkButton;
 typedef struct QContextMenuEvent QContextMenuEvent;
-typedef struct QCursor QCursor;
 typedef struct QDragEnterEvent QDragEnterEvent;
 typedef struct QDragLeaveEvent QDragLeaveEvent;
 typedef struct QDragMoveEvent QDragMoveEvent;
@@ -39,23 +29,11 @@ typedef struct QDropEvent QDropEvent;
 typedef struct QEnterEvent QEnterEvent;
 typedef struct QEvent QEvent;
 typedef struct QFocusEvent QFocusEvent;
-typedef struct QFont QFont;
-typedef struct QFontInfo QFontInfo;
-typedef struct QFontMetrics QFontMetrics;
-typedef struct QGraphicsEffect QGraphicsEffect;
-typedef struct QGraphicsProxyWidget QGraphicsProxyWidget;
 typedef struct QHideEvent QHideEvent;
-typedef struct QIcon QIcon;
 typedef struct QInputMethodEvent QInputMethodEvent;
 typedef struct QKeyEvent QKeyEvent;
-typedef struct QKeySequence QKeySequence;
-typedef struct QLayout QLayout;
-typedef struct QLocale QLocale;
-typedef struct QMargins QMargins;
-typedef struct QMenu QMenu;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QMouseEvent QMouseEvent;
 typedef struct QMoveEvent QMoveEvent;
 typedef struct QObject QObject;
@@ -63,27 +41,17 @@ typedef struct QPaintDevice QPaintDevice;
 typedef struct QPaintEngine QPaintEngine;
 typedef struct QPaintEvent QPaintEvent;
 typedef struct QPainter QPainter;
-typedef struct QPalette QPalette;
-typedef struct QPixmap QPixmap;
 typedef struct QPoint QPoint;
-typedef struct QPointF QPointF;
 typedef struct QPushButton QPushButton;
-typedef struct QRect QRect;
-typedef struct QRegion QRegion;
 typedef struct QResizeEvent QResizeEvent;
-typedef struct QScreen QScreen;
 typedef struct QShowEvent QShowEvent;
 typedef struct QSize QSize;
-typedef struct QSizePolicy QSizePolicy;
-typedef struct QStyle QStyle;
 typedef struct QStyleOptionButton QStyleOptionButton;
 typedef struct QTabletEvent QTabletEvent;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
-typedef struct QWindow QWindow;
 #endif
 
 QCommandLinkButton* QCommandLinkButton_new(QWidget* parent);
@@ -132,6 +100,9 @@ void QCommandLinkButton_QBaseFocusOutEvent(QCommandLinkButton* self, QFocusEvent
 void QCommandLinkButton_MouseMoveEvent(QCommandLinkButton* self, QMouseEvent* param1);
 void QCommandLinkButton_OnMouseMoveEvent(QCommandLinkButton* self, intptr_t slot);
 void QCommandLinkButton_QBaseMouseMoveEvent(QCommandLinkButton* self, QMouseEvent* param1);
+bool QCommandLinkButton_HitButton(const QCommandLinkButton* self, QPoint* pos);
+void QCommandLinkButton_OnHitButton(const QCommandLinkButton* self, intptr_t slot);
+bool QCommandLinkButton_QBaseHitButton(const QCommandLinkButton* self, QPoint* pos);
 void QCommandLinkButton_CheckStateSet(QCommandLinkButton* self);
 void QCommandLinkButton_OnCheckStateSet(QCommandLinkButton* self, intptr_t slot);
 void QCommandLinkButton_QBaseCheckStateSet(QCommandLinkButton* self);
@@ -216,6 +187,18 @@ void QCommandLinkButton_QBaseHideEvent(QCommandLinkButton* self, QHideEvent* eve
 bool QCommandLinkButton_NativeEvent(QCommandLinkButton* self, libqt_string eventType, void* message, intptr_t* result);
 void QCommandLinkButton_OnNativeEvent(QCommandLinkButton* self, intptr_t slot);
 bool QCommandLinkButton_QBaseNativeEvent(QCommandLinkButton* self, libqt_string eventType, void* message, intptr_t* result);
+int QCommandLinkButton_Metric(const QCommandLinkButton* self, int param1);
+void QCommandLinkButton_OnMetric(const QCommandLinkButton* self, intptr_t slot);
+int QCommandLinkButton_QBaseMetric(const QCommandLinkButton* self, int param1);
+void QCommandLinkButton_InitPainter(const QCommandLinkButton* self, QPainter* painter);
+void QCommandLinkButton_OnInitPainter(const QCommandLinkButton* self, intptr_t slot);
+void QCommandLinkButton_QBaseInitPainter(const QCommandLinkButton* self, QPainter* painter);
+QPaintDevice* QCommandLinkButton_Redirected(const QCommandLinkButton* self, QPoint* offset);
+void QCommandLinkButton_OnRedirected(const QCommandLinkButton* self, intptr_t slot);
+QPaintDevice* QCommandLinkButton_QBaseRedirected(const QCommandLinkButton* self, QPoint* offset);
+QPainter* QCommandLinkButton_SharedPainter(const QCommandLinkButton* self);
+void QCommandLinkButton_OnSharedPainter(const QCommandLinkButton* self, intptr_t slot);
+QPainter* QCommandLinkButton_QBaseSharedPainter(const QCommandLinkButton* self);
 void QCommandLinkButton_InputMethodEvent(QCommandLinkButton* self, QInputMethodEvent* param1);
 void QCommandLinkButton_OnInputMethodEvent(QCommandLinkButton* self, intptr_t slot);
 void QCommandLinkButton_QBaseInputMethodEvent(QCommandLinkButton* self, QInputMethodEvent* param1);
@@ -240,21 +223,6 @@ void QCommandLinkButton_QBaseConnectNotify(QCommandLinkButton* self, QMetaMethod
 void QCommandLinkButton_DisconnectNotify(QCommandLinkButton* self, QMetaMethod* signal);
 void QCommandLinkButton_OnDisconnectNotify(QCommandLinkButton* self, intptr_t slot);
 void QCommandLinkButton_QBaseDisconnectNotify(QCommandLinkButton* self, QMetaMethod* signal);
-bool QCommandLinkButton_HitButton(const QCommandLinkButton* self, QPoint* pos);
-void QCommandLinkButton_OnHitButton(const QCommandLinkButton* self, intptr_t slot);
-bool QCommandLinkButton_QBaseHitButton(const QCommandLinkButton* self, QPoint* pos);
-int QCommandLinkButton_Metric(const QCommandLinkButton* self, int param1);
-void QCommandLinkButton_OnMetric(const QCommandLinkButton* self, intptr_t slot);
-int QCommandLinkButton_QBaseMetric(const QCommandLinkButton* self, int param1);
-void QCommandLinkButton_InitPainter(const QCommandLinkButton* self, QPainter* painter);
-void QCommandLinkButton_OnInitPainter(const QCommandLinkButton* self, intptr_t slot);
-void QCommandLinkButton_QBaseInitPainter(const QCommandLinkButton* self, QPainter* painter);
-QPaintDevice* QCommandLinkButton_Redirected(const QCommandLinkButton* self, QPoint* offset);
-void QCommandLinkButton_OnRedirected(const QCommandLinkButton* self, intptr_t slot);
-QPaintDevice* QCommandLinkButton_QBaseRedirected(const QCommandLinkButton* self, QPoint* offset);
-QPainter* QCommandLinkButton_SharedPainter(const QCommandLinkButton* self);
-void QCommandLinkButton_OnSharedPainter(const QCommandLinkButton* self, intptr_t slot);
-QPainter* QCommandLinkButton_QBaseSharedPainter(const QCommandLinkButton* self);
 void QCommandLinkButton_UpdateMicroFocus(QCommandLinkButton* self);
 void QCommandLinkButton_OnUpdateMicroFocus(QCommandLinkButton* self, intptr_t slot);
 void QCommandLinkButton_QBaseUpdateMicroFocus(QCommandLinkButton* self);

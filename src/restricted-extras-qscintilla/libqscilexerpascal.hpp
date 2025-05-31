@@ -15,25 +15,16 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QColor QColor;
 typedef struct QEvent QEvent;
 typedef struct QFont QFont;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QSettings QSettings;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
-typedef struct QsciAbstractAPIs QsciAbstractAPIs;
 typedef struct QsciLexer QsciLexer;
 typedef struct QsciLexerPascal QsciLexerPascal;
 typedef struct QsciScintilla QsciScintilla;
@@ -146,6 +137,9 @@ void QsciLexerPascal_QBaseSetPaper(QsciLexerPascal* self, QColor* c, int style);
 bool QsciLexerPascal_ReadProperties(QsciLexerPascal* self, QSettings* qs, libqt_string prefix);
 void QsciLexerPascal_OnReadProperties(QsciLexerPascal* self, intptr_t slot);
 bool QsciLexerPascal_QBaseReadProperties(QsciLexerPascal* self, QSettings* qs, libqt_string prefix);
+bool QsciLexerPascal_WriteProperties(const QsciLexerPascal* self, QSettings* qs, libqt_string prefix);
+void QsciLexerPascal_OnWriteProperties(const QsciLexerPascal* self, intptr_t slot);
+bool QsciLexerPascal_QBaseWriteProperties(const QsciLexerPascal* self, QSettings* qs, libqt_string prefix);
 bool QsciLexerPascal_Event(QsciLexerPascal* self, QEvent* event);
 void QsciLexerPascal_OnEvent(QsciLexerPascal* self, intptr_t slot);
 bool QsciLexerPascal_QBaseEvent(QsciLexerPascal* self, QEvent* event);
@@ -167,9 +161,6 @@ void QsciLexerPascal_QBaseConnectNotify(QsciLexerPascal* self, QMetaMethod* sign
 void QsciLexerPascal_DisconnectNotify(QsciLexerPascal* self, QMetaMethod* signal);
 void QsciLexerPascal_OnDisconnectNotify(QsciLexerPascal* self, intptr_t slot);
 void QsciLexerPascal_QBaseDisconnectNotify(QsciLexerPascal* self, QMetaMethod* signal);
-bool QsciLexerPascal_WriteProperties(const QsciLexerPascal* self, QSettings* qs, libqt_string prefix);
-void QsciLexerPascal_OnWriteProperties(const QsciLexerPascal* self, intptr_t slot);
-bool QsciLexerPascal_QBaseWriteProperties(const QsciLexerPascal* self, QSettings* qs, libqt_string prefix);
 QObject* QsciLexerPascal_Sender(const QsciLexerPascal* self);
 void QsciLexerPascal_OnSender(const QsciLexerPascal* self, intptr_t slot);
 QObject* QsciLexerPascal_QBaseSender(const QsciLexerPascal* self);

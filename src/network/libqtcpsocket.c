@@ -1,16 +1,11 @@
 #include "libqabstractsocket.hpp"
-#include "../libqanystringview.hpp"
-#include "libqauthenticator.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
 #include "libqhostaddress.hpp"
 #include "../libqiodevice.hpp"
 #include "../libqiodevicebase.hpp"
 #include "../libqmetaobject.hpp"
-#include "libqnetworkproxy.hpp"
 #include "../libqobject.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
 #include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqtcpsocket.hpp"
@@ -24,7 +19,7 @@ QTcpSocket* q_tcpsocket_new2(void* parent) {
     return QTcpSocket_new2((QObject*)parent);
 }
 
-QMetaObject* q_tcpsocket_meta_object(void* self) {
+const QMetaObject* q_tcpsocket_meta_object(void* self) {
     return QTcpSocket_MetaObject((QTcpSocket*)self);
 }
 
@@ -421,8 +416,7 @@ const char* q_tcpsocket_object_name(void* self) {
 }
 
 void q_tcpsocket_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_tcpsocket_is_widget_type(void* self) {
@@ -461,7 +455,7 @@ void q_tcpsocket_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_tcpsocket_children(void* self) {
+const libqt_list /* of QObject* */ q_tcpsocket_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -528,7 +522,7 @@ QBindingStorage* q_tcpsocket_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_tcpsocket_binding_storage2(void* self) {
+const QBindingStorage* q_tcpsocket_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1134,6 +1128,10 @@ bool q_tcpsocket_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_tcpsocket_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QTcpSocket_OnIsSignalConnected((QTcpSocket*)self, (intptr_t)slot);
+}
+
+void q_tcpsocket_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_tcpsocket_delete(void* self) {

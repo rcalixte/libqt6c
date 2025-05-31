@@ -105,7 +105,7 @@ const char* q_metaobject_class_name(void* self) {
     return QMetaObject_ClassName((QMetaObject*)self);
 }
 
-QMetaObject* q_metaobject_super_class(void* self) {
+const QMetaObject* q_metaobject_super_class(void* self) {
     return QMetaObject_SuperClass((QMetaObject*)self);
 }
 
@@ -117,7 +117,7 @@ QObject* q_metaobject_cast(void* self, void* obj) {
     return QMetaObject_Cast((QMetaObject*)self, (QObject*)obj);
 }
 
-QObject* q_metaobject_cast_with_obj(void* self, void* obj) {
+const QObject* q_metaobject_cast_with_obj(void* self, void* obj) {
     return QMetaObject_CastWithObj((QMetaObject*)self, (QObject*)obj);
 }
 
@@ -549,11 +549,11 @@ QMetaObject__SuperData* q_metaobject__superdata_new3(void* param1) {
     return QMetaObject__SuperData_new3((QMetaObject__SuperData*)param1);
 }
 
-QMetaObject* q_metaobject__superdata_operator_minus_greater(void* self) {
+const QMetaObject* q_metaobject__superdata_operator_minus_greater(void* self) {
     return QMetaObject__SuperData_OperatorMinusGreater((QMetaObject__SuperData*)self);
 }
 
-QMetaObject* q_metaobject__superdata_to_const_q_meta_object_multiply(void* self) {
+const QMetaObject* q_metaobject__superdata_to_const_q_meta_object_multiply(void* self) {
     return QMetaObject__SuperData_ToConstQMetaObjectMultiply((QMetaObject__SuperData*)self);
 }
 

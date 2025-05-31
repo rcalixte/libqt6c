@@ -38,6 +38,8 @@ void q_collatorsortkey_swap(void* self, void* other);
 /// ``` QCollatorSortKey* self, QCollatorSortKey* key ```
 int32_t q_collatorsortkey_compare(void* self, void* key);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcollatorsortkey.html#dtor.QCollatorSortKey)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCollatorSortKey* self ```
@@ -130,6 +132,8 @@ bool q_collator_operator_call(void* self, const char* s1, const char* s2);
 /// ``` QCollator* self, const char* stringVal ```
 QCollatorSortKey* q_collator_sort_key(void* self, const char* stringVal);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcollator.html#dtor.QCollator)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCollator* self ```

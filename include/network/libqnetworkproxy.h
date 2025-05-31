@@ -148,6 +148,8 @@ QUrl* q_networkproxyquery_url(void* self);
 /// ``` QNetworkProxyQuery* self, QUrl* url ```
 void q_networkproxyquery_set_url(void* self, void* url);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxyquery.html#dtor.QNetworkProxyQuery)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QNetworkProxyQuery* self ```
@@ -320,6 +322,8 @@ char* q_networkproxy_raw_header(void* self, const char* headerName);
 /// ``` QNetworkProxy* self, const char* headerName, const char* value ```
 void q_networkproxy_set_raw_header(void* self, const char* headerName, const char* value);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxy.html#dtor.QNetworkProxy)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QNetworkProxy* self ```
@@ -337,11 +341,15 @@ QNetworkProxyFactory* q_networkproxyfactory_new();
 /// ``` QNetworkProxyFactory* self, QNetworkProxyQuery* query ```
 libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_query_proxy(void* self, void* query);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxyfactory.html#queryProxy)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QNetworkProxyFactory* self, libqt_list /* of QNetworkProxy* */ (*slot)(QNetworkProxyFactory*, QNetworkProxyQuery*) ```
 void q_networkproxyfactory_on_query_proxy(void* self, libqt_list /* of QNetworkProxy* */ (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxyfactory.html#queryProxy)
+///
 /// Base class method implementation
 ///
 /// ``` QNetworkProxyFactory* self, QNetworkProxyQuery* query ```
@@ -382,6 +390,8 @@ void q_networkproxyfactory_operator_assign(void* self, void* param1);
 /// ``` QNetworkProxyQuery* query ```
 libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_system_proxy_for_query1(void* query);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxyfactory.html#dtor.QNetworkProxyFactory)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QNetworkProxyFactory* self ```

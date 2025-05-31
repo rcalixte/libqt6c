@@ -54,6 +54,8 @@ void q_tilerules_copy_assign(void* self, void* other);
 /// ``` QTileRules* self, QTileRules* other ```
 void q_tilerules_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtilerules.html#dtor.QTileRules)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTileRules* self ```

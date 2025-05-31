@@ -12,16 +12,12 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include "libqpdflink.h"
 #include "../libqpoint.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qpdfpagenavigator.html
 
@@ -38,7 +34,7 @@ QPdfPageNavigator* q_pdfpagenavigator_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QPdfPageNavigator* self ```
-QMetaObject* q_pdfpagenavigator_meta_object(void* self);
+const QMetaObject* q_pdfpagenavigator_meta_object(void* self);
 
 /// ``` QPdfPageNavigator* self, const char* param1 ```
 void* q_pdfpagenavigator_metacast(void* self, const char* param1);
@@ -121,6 +117,8 @@ void q_pdfpagenavigator_back(void* self);
 /// ``` QPdfPageNavigator* self, int page ```
 void q_pdfpagenavigator_current_page_changed(void* self, int page);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagenavigator.html#currentPageChanged)
+///
 /// ``` QPdfPageNavigator* self, void (*slot)(QPdfPageNavigator*, int) ```
 void q_pdfpagenavigator_on_current_page_changed(void* self, void (*slot)(void*, int));
 
@@ -129,6 +127,8 @@ void q_pdfpagenavigator_on_current_page_changed(void* self, void (*slot)(void*, 
 /// ``` QPdfPageNavigator* self, QPointF* location ```
 void q_pdfpagenavigator_current_location_changed(void* self, void* location);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagenavigator.html#currentLocationChanged)
+///
 /// ``` QPdfPageNavigator* self, void (*slot)(QPdfPageNavigator*, QPointF*) ```
 void q_pdfpagenavigator_on_current_location_changed(void* self, void (*slot)(void*, void*));
 
@@ -137,6 +137,8 @@ void q_pdfpagenavigator_on_current_location_changed(void* self, void (*slot)(voi
 /// ``` QPdfPageNavigator* self, double zoom ```
 void q_pdfpagenavigator_current_zoom_changed(void* self, double zoom);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagenavigator.html#currentZoomChanged)
+///
 /// ``` QPdfPageNavigator* self, void (*slot)(QPdfPageNavigator*, double) ```
 void q_pdfpagenavigator_on_current_zoom_changed(void* self, void (*slot)(void*, double));
 
@@ -145,6 +147,8 @@ void q_pdfpagenavigator_on_current_zoom_changed(void* self, void (*slot)(void*, 
 /// ``` QPdfPageNavigator* self, bool available ```
 void q_pdfpagenavigator_back_available_changed(void* self, bool available);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagenavigator.html#backAvailableChanged)
+///
 /// ``` QPdfPageNavigator* self, void (*slot)(QPdfPageNavigator*, bool) ```
 void q_pdfpagenavigator_on_back_available_changed(void* self, void (*slot)(void*, bool));
 
@@ -153,6 +157,8 @@ void q_pdfpagenavigator_on_back_available_changed(void* self, void (*slot)(void*
 /// ``` QPdfPageNavigator* self, bool available ```
 void q_pdfpagenavigator_forward_available_changed(void* self, bool available);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagenavigator.html#forwardAvailableChanged)
+///
 /// ``` QPdfPageNavigator* self, void (*slot)(QPdfPageNavigator*, bool) ```
 void q_pdfpagenavigator_on_forward_available_changed(void* self, void (*slot)(void*, bool));
 
@@ -161,6 +167,8 @@ void q_pdfpagenavigator_on_forward_available_changed(void* self, void (*slot)(vo
 /// ``` QPdfPageNavigator* self, QPdfLink* current ```
 void q_pdfpagenavigator_jumped(void* self, void* current);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagenavigator.html#jumped)
+///
 /// ``` QPdfPageNavigator* self, void (*slot)(QPdfPageNavigator*, QPdfLink*) ```
 void q_pdfpagenavigator_on_jumped(void* self, void (*slot)(void*, void*));
 
@@ -169,11 +177,15 @@ void q_pdfpagenavigator_on_jumped(void* self, void (*slot)(void*, void*));
 /// ``` QPdfPageNavigator* self ```
 QPdfLink* q_pdfpagenavigator_current_link(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagenavigator.html#currentLink)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPdfPageNavigator* self, QPdfLink* (*slot)() ```
 void q_pdfpagenavigator_on_current_link(void* self, QPdfLink* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagenavigator.html#currentLink)
+///
 /// Base class method implementation
 ///
 /// ``` QPdfPageNavigator* self ```
@@ -276,7 +288,7 @@ void q_pdfpagenavigator_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QPdfPageNavigator* self ```
-libqt_list /* of QObject* */ q_pdfpagenavigator_children(void* self);
+const libqt_list /* of QObject* */ q_pdfpagenavigator_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -374,7 +386,7 @@ QBindingStorage* q_pdfpagenavigator_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QPdfPageNavigator* self ```
-QBindingStorage* q_pdfpagenavigator_binding_storage2(void* self);
+const QBindingStorage* q_pdfpagenavigator_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -384,6 +396,8 @@ QBindingStorage* q_pdfpagenavigator_binding_storage2(void* self);
 void q_pdfpagenavigator_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QPdfPageNavigator* self, void (*slot)(QObject*) ```
 void q_pdfpagenavigator_on_destroyed(void* self, void (*slot)(void*));
@@ -439,6 +453,8 @@ void q_pdfpagenavigator_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QPdfPageNavigator* self, void (*slot)(QObject*, QObject*) ```
 void q_pdfpagenavigator_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -453,12 +469,16 @@ bool q_pdfpagenavigator_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageNavigator* self, QEvent* event ```
 bool q_pdfpagenavigator_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -476,12 +496,16 @@ bool q_pdfpagenavigator_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageNavigator* self, QObject* watched, QEvent* event ```
 bool q_pdfpagenavigator_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -499,12 +523,16 @@ void q_pdfpagenavigator_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageNavigator* self, QTimerEvent* event ```
 void q_pdfpagenavigator_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -522,12 +550,16 @@ void q_pdfpagenavigator_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageNavigator* self, QChildEvent* event ```
 void q_pdfpagenavigator_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -545,12 +577,16 @@ void q_pdfpagenavigator_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageNavigator* self, QEvent* event ```
 void q_pdfpagenavigator_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -568,12 +604,16 @@ void q_pdfpagenavigator_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageNavigator* self, QMetaMethod* signal ```
 void q_pdfpagenavigator_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -591,12 +631,16 @@ void q_pdfpagenavigator_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageNavigator* self, QMetaMethod* signal ```
 void q_pdfpagenavigator_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -614,12 +658,16 @@ QObject* q_pdfpagenavigator_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageNavigator* self ```
 QObject* q_pdfpagenavigator_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -637,12 +685,16 @@ int32_t q_pdfpagenavigator_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageNavigator* self ```
 int32_t q_pdfpagenavigator_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -660,12 +712,16 @@ int32_t q_pdfpagenavigator_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageNavigator* self, const char* signal ```
 int32_t q_pdfpagenavigator_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -683,6 +739,8 @@ bool q_pdfpagenavigator_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageNavigator* self, QMetaMethod* signal ```
@@ -690,11 +748,24 @@ bool q_pdfpagenavigator_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QPdfPageNavigator* self, bool (*slot)(QPdfPageNavigator*, QMetaMethod*) ```
 void q_pdfpagenavigator_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QPdfPageNavigator* self, void (*slot)(QObject*, const char*) ```
+void q_pdfpagenavigator_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagenavigator.html#dtor.QPdfPageNavigator)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPdfPageNavigator* self ```

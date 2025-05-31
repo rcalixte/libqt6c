@@ -12,9 +12,7 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
 #include "libqapplication.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqfontmetrics.h"
 #include "libqicon.h"
@@ -28,8 +26,6 @@
 #include "libqsize.h"
 #include <string.h>
 #include "libqstyleoption.h"
-#include "libqthread.h"
-#include "libqvariant.h"
 #include "libqwidget.h"
 
 /// https://doc.qt.io/qt-6/qstyle.html
@@ -42,7 +38,7 @@ QStyle* q_style_new();
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QStyle* self ```
-QMetaObject* q_style_meta_object(void* self);
+const QMetaObject* q_style_meta_object(void* self);
 
 /// ``` QStyle* self, const char* param1 ```
 void* q_style_metacast(void* self, const char* param1);
@@ -75,11 +71,15 @@ const char* q_style_name(void* self);
 /// ``` QStyle* self, QWidget* widget ```
 void q_style_polish(void* self, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, void (*slot)(QStyle*, QWidget*) ```
 void q_style_on_polish(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, QWidget* widget ```
@@ -90,11 +90,15 @@ void q_style_qbase_polish(void* self, void* widget);
 /// ``` QStyle* self, QWidget* widget ```
 void q_style_unpolish(void* self, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#unpolish)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, void (*slot)(QStyle*, QWidget*) ```
 void q_style_on_unpolish(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#unpolish)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, QWidget* widget ```
@@ -105,11 +109,15 @@ void q_style_qbase_unpolish(void* self, void* widget);
 /// ``` QStyle* self, QApplication* application ```
 void q_style_polish_with_application(void* self, void* application);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, void (*slot)(QStyle*, QApplication*) ```
 void q_style_on_polish_with_application(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, QApplication* application ```
@@ -120,11 +128,15 @@ void q_style_qbase_polish_with_application(void* self, void* application);
 /// ``` QStyle* self, QApplication* application ```
 void q_style_unpolish_with_application(void* self, void* application);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#unpolish)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, void (*slot)(QStyle*, QApplication*) ```
 void q_style_on_unpolish_with_application(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#unpolish)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, QApplication* application ```
@@ -135,11 +147,15 @@ void q_style_qbase_unpolish_with_application(void* self, void* application);
 /// ``` QStyle* self, QPalette* palette ```
 void q_style_polish_with_palette(void* self, void* palette);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, void (*slot)(QStyle*, QPalette*) ```
 void q_style_on_polish_with_palette(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, QPalette* palette ```
@@ -150,11 +166,15 @@ void q_style_qbase_polish_with_palette(void* self, void* palette);
 /// ``` QStyle* self, QFontMetrics* fm, QRect* r, int flags, bool enabled, const char* text ```
 QRect* q_style_item_text_rect(void* self, void* fm, void* r, int flags, bool enabled, const char* text);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#itemTextRect)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, QRect* (*slot)(QStyle*, QFontMetrics*, QRect*, int, bool, const char*) ```
 void q_style_on_item_text_rect(void* self, QRect* (*slot)(void*, void*, void*, int, bool, const char*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#itemTextRect)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, QFontMetrics* fm, QRect* r, int flags, bool enabled, const char* text ```
@@ -165,11 +185,15 @@ QRect* q_style_qbase_item_text_rect(void* self, void* fm, void* r, int flags, bo
 /// ``` QStyle* self, QRect* r, int flags, QPixmap* pixmap ```
 QRect* q_style_item_pixmap_rect(void* self, void* r, int flags, void* pixmap);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#itemPixmapRect)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, QRect* (*slot)(QStyle*, QRect*, int, QPixmap*) ```
 void q_style_on_item_pixmap_rect(void* self, QRect* (*slot)(void*, void*, int, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#itemPixmapRect)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, QRect* r, int flags, QPixmap* pixmap ```
@@ -180,11 +204,15 @@ QRect* q_style_qbase_item_pixmap_rect(void* self, void* r, int flags, void* pixm
 /// ``` QStyle* self, QPainter* painter, QRect* rect, int flags, QPalette* pal, bool enabled, const char* text, enum QPalette__ColorRole textRole ```
 void q_style_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int64_t textRole);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawItemText)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, void (*slot)(QStyle*, QPainter*, QRect*, int, QPalette*, bool, const char*, enum QPalette__ColorRole) ```
 void q_style_on_draw_item_text(void* self, void (*slot)(void*, void*, void*, int, void*, bool, const char*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawItemText)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, QPainter* painter, QRect* rect, int flags, QPalette* pal, bool enabled, const char* text, enum QPalette__ColorRole textRole ```
@@ -195,11 +223,15 @@ void q_style_qbase_draw_item_text(void* self, void* painter, void* rect, int fla
 /// ``` QStyle* self, QPainter* painter, QRect* rect, int alignment, QPixmap* pixmap ```
 void q_style_draw_item_pixmap(void* self, void* painter, void* rect, int alignment, void* pixmap);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawItemPixmap)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, void (*slot)(QStyle*, QPainter*, QRect*, int, QPixmap*) ```
 void q_style_on_draw_item_pixmap(void* self, void (*slot)(void*, void*, void*, int, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawItemPixmap)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, QPainter* painter, QRect* rect, int alignment, QPixmap* pixmap ```
@@ -210,11 +242,15 @@ void q_style_qbase_draw_item_pixmap(void* self, void* painter, void* rect, int a
 /// ``` QStyle* self ```
 QPalette* q_style_standard_palette(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#standardPalette)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, QPalette* (*slot)() ```
 void q_style_on_standard_palette(void* self, QPalette* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#standardPalette)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self ```
@@ -225,11 +261,15 @@ QPalette* q_style_qbase_standard_palette(void* self);
 /// ``` QStyle* self, enum QStyle__PrimitiveElement pe, QStyleOption* opt, QPainter* p, QWidget* w ```
 void q_style_draw_primitive(void* self, int64_t pe, void* opt, void* p, void* w);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawPrimitive)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, void (*slot)(QStyle*, enum QStyle__PrimitiveElement, QStyleOption*, QPainter*, QWidget*) ```
 void q_style_on_draw_primitive(void* self, void (*slot)(void*, int64_t, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawPrimitive)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, enum QStyle__PrimitiveElement pe, QStyleOption* opt, QPainter* p, QWidget* w ```
@@ -240,11 +280,15 @@ void q_style_qbase_draw_primitive(void* self, int64_t pe, void* opt, void* p, vo
 /// ``` QStyle* self, enum QStyle__ControlElement element, QStyleOption* opt, QPainter* p, QWidget* w ```
 void q_style_draw_control(void* self, int64_t element, void* opt, void* p, void* w);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawControl)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, void (*slot)(QStyle*, enum QStyle__ControlElement, QStyleOption*, QPainter*, QWidget*) ```
 void q_style_on_draw_control(void* self, void (*slot)(void*, int64_t, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawControl)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, enum QStyle__ControlElement element, QStyleOption* opt, QPainter* p, QWidget* w ```
@@ -255,11 +299,15 @@ void q_style_qbase_draw_control(void* self, int64_t element, void* opt, void* p,
 /// ``` QStyle* self, enum QStyle__SubElement subElement, QStyleOption* option, QWidget* widget ```
 QRect* q_style_sub_element_rect(void* self, int64_t subElement, void* option, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#subElementRect)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, QRect* (*slot)(QStyle*, enum QStyle__SubElement, QStyleOption*, QWidget*) ```
 void q_style_on_sub_element_rect(void* self, QRect* (*slot)(void*, int64_t, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#subElementRect)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, enum QStyle__SubElement subElement, QStyleOption* option, QWidget* widget ```
@@ -270,11 +318,15 @@ QRect* q_style_qbase_sub_element_rect(void* self, int64_t subElement, void* opti
 /// ``` QStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, QPainter* p, QWidget* widget ```
 void q_style_draw_complex_control(void* self, int64_t cc, void* opt, void* p, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawComplexControl)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, void (*slot)(QStyle*, enum QStyle__ComplexControl, QStyleOptionComplex*, QPainter*, QWidget*) ```
 void q_style_on_draw_complex_control(void* self, void (*slot)(void*, int64_t, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawComplexControl)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, QPainter* p, QWidget* widget ```
@@ -285,11 +337,15 @@ void q_style_qbase_draw_complex_control(void* self, int64_t cc, void* opt, void*
 /// ``` QStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, QPoint* pt, QWidget* widget ```
 int64_t q_style_hit_test_complex_control(void* self, int64_t cc, void* opt, void* pt, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#hitTestComplexControl)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, int64_t (*slot)(QStyle*, enum QStyle__ComplexControl, QStyleOptionComplex*, QPoint*, QWidget*) ```
 void q_style_on_hit_test_complex_control(void* self, int64_t (*slot)(void*, int64_t, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#hitTestComplexControl)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, QPoint* pt, QWidget* widget ```
@@ -300,11 +356,15 @@ int64_t q_style_qbase_hit_test_complex_control(void* self, int64_t cc, void* opt
 /// ``` QStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, enum QStyle__SubControl sc, QWidget* widget ```
 QRect* q_style_sub_control_rect(void* self, int64_t cc, void* opt, int64_t sc, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#subControlRect)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, QRect* (*slot)(QStyle*, enum QStyle__ComplexControl, QStyleOptionComplex*, enum QStyle__SubControl, QWidget*) ```
 void q_style_on_sub_control_rect(void* self, QRect* (*slot)(void*, int64_t, void*, int64_t, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#subControlRect)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, enum QStyle__SubControl sc, QWidget* widget ```
@@ -315,11 +375,15 @@ QRect* q_style_qbase_sub_control_rect(void* self, int64_t cc, void* opt, int64_t
 /// ``` QStyle* self, enum QStyle__PixelMetric metric, QStyleOption* option, QWidget* widget ```
 int32_t q_style_pixel_metric(void* self, int64_t metric, void* option, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#pixelMetric)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, int32_t (*slot)(QStyle*, enum QStyle__PixelMetric, QStyleOption*, QWidget*) ```
 void q_style_on_pixel_metric(void* self, int32_t (*slot)(void*, int64_t, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#pixelMetric)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, enum QStyle__PixelMetric metric, QStyleOption* option, QWidget* widget ```
@@ -330,11 +394,15 @@ int32_t q_style_qbase_pixel_metric(void* self, int64_t metric, void* option, voi
 /// ``` QStyle* self, enum QStyle__ContentsType ct, QStyleOption* opt, QSize* contentsSize, QWidget* w ```
 QSize* q_style_size_from_contents(void* self, int64_t ct, void* opt, void* contentsSize, void* w);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#sizeFromContents)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, QSize* (*slot)(QStyle*, enum QStyle__ContentsType, QStyleOption*, QSize*, QWidget*) ```
 void q_style_on_size_from_contents(void* self, QSize* (*slot)(void*, int64_t, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#sizeFromContents)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, enum QStyle__ContentsType ct, QStyleOption* opt, QSize* contentsSize, QWidget* w ```
@@ -345,11 +413,15 @@ QSize* q_style_qbase_size_from_contents(void* self, int64_t ct, void* opt, void*
 /// ``` QStyle* self, enum QStyle__StyleHint stylehint, QStyleOption* opt, QWidget* widget, QStyleHintReturn* returnData ```
 int32_t q_style_style_hint(void* self, int64_t stylehint, void* opt, void* widget, void* returnData);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#styleHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, int32_t (*slot)(QStyle*, enum QStyle__StyleHint, QStyleOption*, QWidget*, QStyleHintReturn*) ```
 void q_style_on_style_hint(void* self, int32_t (*slot)(void*, int64_t, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#styleHint)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, enum QStyle__StyleHint stylehint, QStyleOption* opt, QWidget* widget, QStyleHintReturn* returnData ```
@@ -360,11 +432,15 @@ int32_t q_style_qbase_style_hint(void* self, int64_t stylehint, void* opt, void*
 /// ``` QStyle* self, enum QStyle__StandardPixmap standardPixmap, QStyleOption* opt, QWidget* widget ```
 QPixmap* q_style_standard_pixmap(void* self, int64_t standardPixmap, void* opt, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#standardPixmap)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, QPixmap* (*slot)(QStyle*, enum QStyle__StandardPixmap, QStyleOption*, QWidget*) ```
 void q_style_on_standard_pixmap(void* self, QPixmap* (*slot)(void*, int64_t, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#standardPixmap)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, enum QStyle__StandardPixmap standardPixmap, QStyleOption* opt, QWidget* widget ```
@@ -375,11 +451,15 @@ QPixmap* q_style_qbase_standard_pixmap(void* self, int64_t standardPixmap, void*
 /// ``` QStyle* self, enum QStyle__StandardPixmap standardIcon, QStyleOption* option, QWidget* widget ```
 QIcon* q_style_standard_icon(void* self, int64_t standardIcon, void* option, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#standardIcon)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, QIcon* (*slot)(QStyle*, enum QStyle__StandardPixmap, QStyleOption*, QWidget*) ```
 void q_style_on_standard_icon(void* self, QIcon* (*slot)(void*, int64_t, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#standardIcon)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, enum QStyle__StandardPixmap standardIcon, QStyleOption* option, QWidget* widget ```
@@ -390,11 +470,15 @@ QIcon* q_style_qbase_standard_icon(void* self, int64_t standardIcon, void* optio
 /// ``` QStyle* self, enum QIcon__Mode iconMode, QPixmap* pixmap, QStyleOption* opt ```
 QPixmap* q_style_generated_icon_pixmap(void* self, int64_t iconMode, void* pixmap, void* opt);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#generatedIconPixmap)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, QPixmap* (*slot)(QStyle*, enum QIcon__Mode, QPixmap*, QStyleOption*) ```
 void q_style_on_generated_icon_pixmap(void* self, QPixmap* (*slot)(void*, int64_t, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#generatedIconPixmap)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, enum QIcon__Mode iconMode, QPixmap* pixmap, QStyleOption* opt ```
@@ -435,11 +519,15 @@ QRect* q_style_aligned_rect(int64_t direction, int64_t alignment, void* size, vo
 /// ``` QStyle* self, enum QSizePolicy__ControlType control1, enum QSizePolicy__ControlType control2, enum Qt__Orientation orientation, QStyleOption* option, QWidget* widget ```
 int32_t q_style_layout_spacing(void* self, int64_t control1, int64_t control2, int64_t orientation, void* option, void* widget);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#layoutSpacing)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, int32_t (*slot)(QStyle*, enum QSizePolicy__ControlType, enum QSizePolicy__ControlType, enum Qt__Orientation, QStyleOption*, QWidget*) ```
 void q_style_on_layout_spacing(void* self, int32_t (*slot)(void*, int64_t, int64_t, int64_t, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#layoutSpacing)
+///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, enum QSizePolicy__ControlType control1, enum QSizePolicy__ControlType control2, enum Qt__Orientation orientation, QStyleOption* option, QWidget* widget ```
@@ -453,7 +541,7 @@ int32_t q_style_combined_layout_spacing(void* self, int64_t controls1, int64_t c
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#proxy)
 ///
 /// ``` QStyle* self ```
-QStyle* q_style_proxy(void* self);
+const QStyle* q_style_proxy(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -567,7 +655,7 @@ void q_style_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QStyle* self ```
-libqt_list /* of QObject* */ q_style_children(void* self);
+const libqt_list /* of QObject* */ q_style_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -665,7 +753,7 @@ QBindingStorage* q_style_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QStyle* self ```
-QBindingStorage* q_style_binding_storage2(void* self);
+const QBindingStorage* q_style_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -675,6 +763,8 @@ QBindingStorage* q_style_binding_storage2(void* self);
 void q_style_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QStyle* self, void (*slot)(QObject*) ```
 void q_style_on_destroyed(void* self, void (*slot)(void*));
@@ -730,6 +820,8 @@ void q_style_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QStyle* self, void (*slot)(QObject*, QObject*) ```
 void q_style_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -744,12 +836,16 @@ bool q_style_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStyle* self, QEvent* event ```
 bool q_style_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -767,12 +863,16 @@ bool q_style_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStyle* self, QObject* watched, QEvent* event ```
 bool q_style_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -790,12 +890,16 @@ void q_style_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStyle* self, QTimerEvent* event ```
 void q_style_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -813,12 +917,16 @@ void q_style_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStyle* self, QChildEvent* event ```
 void q_style_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -836,12 +944,16 @@ void q_style_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStyle* self, QEvent* event ```
 void q_style_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -859,12 +971,16 @@ void q_style_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStyle* self, QMetaMethod* signal ```
 void q_style_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -882,12 +998,16 @@ void q_style_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStyle* self, QMetaMethod* signal ```
 void q_style_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -905,12 +1025,16 @@ QObject* q_style_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStyle* self ```
 QObject* q_style_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -928,12 +1052,16 @@ int32_t q_style_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStyle* self ```
 int32_t q_style_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -951,12 +1079,16 @@ int32_t q_style_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStyle* self, const char* signal ```
 int32_t q_style_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -974,6 +1106,8 @@ bool q_style_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStyle* self, QMetaMethod* signal ```
@@ -981,11 +1115,24 @@ bool q_style_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QStyle* self, bool (*slot)(QStyle*, QMetaMethod*) ```
 void q_style_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QStyle* self, void (*slot)(QObject*, const char*) ```
+void q_style_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#dtor.QStyle)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyle* self ```

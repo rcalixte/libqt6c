@@ -98,6 +98,8 @@ QFileInfo* q_diriterator_file_info(void* self);
 /// ``` QDirIterator* self ```
 const char* q_diriterator_path(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdiriterator.html#dtor.QDirIterator)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QDirIterator* self ```

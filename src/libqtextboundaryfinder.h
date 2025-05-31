@@ -107,6 +107,8 @@ bool q_textboundaryfinder_is_at_boundary(void* self);
 /// ``` QTextBoundaryFinder* self ```
 int64_t q_textboundaryfinder_boundary_reasons(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextboundaryfinder.html#dtor.QTextBoundaryFinder)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextBoundaryFinder* self ```

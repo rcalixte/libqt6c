@@ -96,6 +96,8 @@ long long q_audiobuffer_duration(void* self);
 /// ``` QAudioBuffer* self ```
 long long q_audiobuffer_start_time(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaudiobuffer.html#dtor.QAudioBuffer)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAudioBuffer* self ```

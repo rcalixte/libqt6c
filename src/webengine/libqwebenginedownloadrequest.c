@@ -1,18 +1,12 @@
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
-#include "../libqevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
 #include "../libqurl.hpp"
-#include "../libqvariant.hpp"
 #include "libqwebenginepage.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqwebenginedownloadrequest.hpp"
 #include "libqwebenginedownloadrequest.h"
 
-QMetaObject* q_webenginedownloadrequest_meta_object(void* self) {
+const QMetaObject* q_webenginedownloadrequest_meta_object(void* self) {
     return QWebEngineDownloadRequest_MetaObject((QWebEngineDownloadRequest*)self);
 }
 
@@ -240,8 +234,7 @@ const char* q_webenginedownloadrequest_object_name(void* self) {
 }
 
 void q_webenginedownloadrequest_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_webenginedownloadrequest_is_widget_type(void* self) {
@@ -280,7 +273,7 @@ void q_webenginedownloadrequest_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_webenginedownloadrequest_children(void* self) {
+const libqt_list /* of QObject* */ q_webenginedownloadrequest_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -347,7 +340,7 @@ QBindingStorage* q_webenginedownloadrequest_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_webenginedownloadrequest_binding_storage2(void* self) {
+const QBindingStorage* q_webenginedownloadrequest_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -389,6 +382,10 @@ void q_webenginedownloadrequest_destroyed1(void* self, void* param1) {
 
 void q_webenginedownloadrequest_on_destroyed1(void* self, void (*slot)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+}
+
+void q_webenginedownloadrequest_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_webenginedownloadrequest_delete(void* self) {

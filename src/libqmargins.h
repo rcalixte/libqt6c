@@ -139,6 +139,8 @@ QMargins* q_margins_operator_divide_assign_with_double(void* self, double param1
 /// ``` QMargins* self ```
 QMarginsF* q_margins_to_margins_f(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmargins.html#dtor.QMargins)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMargins* self ```
@@ -266,6 +268,8 @@ QMarginsF* q_marginsf_operator_divide_assign(void* self, double divisor);
 /// ``` QMarginsF* self ```
 QMargins* q_marginsf_to_margins(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmarginsf.html#dtor.QMarginsF)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMarginsF* self ```

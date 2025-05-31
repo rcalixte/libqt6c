@@ -166,6 +166,8 @@ void q_sizepolicy_transpose(void* self);
 /// ``` QSizePolicy* self ```
 QSizePolicy* q_sizepolicy_transposed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#dtor.QSizePolicy)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSizePolicy* self ```

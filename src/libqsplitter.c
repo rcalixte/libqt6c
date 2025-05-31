@@ -1,41 +1,16 @@
-#include "libqaction.hpp"
 #include "libqevent.hpp"
-#include "libqanystringview.hpp"
-#include "libqbackingstore.hpp"
-#include "libqbindingstorage.hpp"
-#include "libqbitmap.hpp"
-#include "libqcursor.hpp"
-#include "libqfont.hpp"
-#include "libqfontinfo.hpp"
-#include "libqfontmetrics.hpp"
 #include "libqframe.hpp"
-#include "libqgraphicseffect.hpp"
-#include "libqgraphicsproxywidget.hpp"
-#include "libqicon.hpp"
-#include "libqkeysequence.hpp"
-#include "libqlayout.hpp"
-#include "libqlocale.hpp"
-#include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
 #include "libqpainter.hpp"
-#include "libqpalette.hpp"
-#include "libqpixmap.hpp"
 #include "libqpoint.hpp"
-#include "libqrect.hpp"
-#include "libqregion.hpp"
-#include "libqscreen.hpp"
 #include "libqsize.hpp"
-#include "libqsizepolicy.hpp"
 #include <string.h>
-#include "libqstyle.hpp"
 #include "libqstyleoption.hpp"
-#include "libqthread.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqwindow.hpp"
 #include "libqcoreevent.hpp"
 #include "libqsplitter.hpp"
 #include "libqsplitter.h"
@@ -56,7 +31,7 @@ QSplitter* q_splitter_new4(int64_t param1, void* parent) {
     return QSplitter_new4(param1, (QWidget*)parent);
 }
 
-QMetaObject* q_splitter_meta_object(void* self) {
+const QMetaObject* q_splitter_meta_object(void* self) {
     return QSplitter_MetaObject((QSplitter*)self);
 }
 
@@ -160,16 +135,8 @@ libqt_list /* of int */ q_splitter_sizes(void* self) {
     return _arr;
 }
 
-void q_splitter_set_sizes(void* self, int* list[]) {
-    size_t list_len = 0;
-    while (list[list_len] != NULL) {
-        list_len++;
-    }
-    libqt_list list_list = {
-        .len = list_len,
-        .data = {(int*)list},
-    };
-    QSplitter_SetSizes((QSplitter*)self, list_list);
+void q_splitter_set_sizes(void* self, libqt_list list) {
+    QSplitter_SetSizes((QSplitter*)self, list);
 }
 
 char* q_splitter_save_state(void* self) {
@@ -457,7 +424,7 @@ QRect* q_splitter_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_splitter_geometry(void* self) {
+const QRect* q_splitter_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -661,7 +628,7 @@ QWidget* q_splitter_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_splitter_palette(void* self) {
+const QPalette* q_splitter_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -685,7 +652,7 @@ int64_t q_splitter_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_splitter_font(void* self) {
+const QFont* q_splitter_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -1290,30 +1257,12 @@ void q_splitter_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_splitter_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_splitter_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_splitter_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_splitter_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_splitter_insert_action(void* self, void* before, void* action) {
@@ -1533,8 +1482,7 @@ const char* q_splitter_object_name(void* self) {
 }
 
 void q_splitter_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_splitter_is_widget_type(void* self) {
@@ -1573,7 +1521,7 @@ void q_splitter_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_splitter_children(void* self) {
+const libqt_list /* of QObject* */ q_splitter_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1636,7 +1584,7 @@ QBindingStorage* q_splitter_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_splitter_binding_storage2(void* self) {
+const QBindingStorage* q_splitter_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2352,6 +2300,10 @@ void q_splitter_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QSplitter_OnIsSignalConnected((QSplitter*)self, (intptr_t)slot);
 }
 
+void q_splitter_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
 void q_splitter_delete(void* self) {
     QSplitter_Delete((QSplitter*)(self));
 }
@@ -2360,7 +2312,7 @@ QSplitterHandle* q_splitterhandle_new(int64_t o, void* parent) {
     return QSplitterHandle_new(o, (QSplitter*)parent);
 }
 
-QMetaObject* q_splitterhandle_meta_object(void* self) {
+const QMetaObject* q_splitterhandle_meta_object(void* self) {
     return QSplitterHandle_MetaObject((QSplitterHandle*)self);
 }
 
@@ -2593,7 +2545,7 @@ QRect* q_splitterhandle_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_splitterhandle_geometry(void* self) {
+const QRect* q_splitterhandle_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -2797,7 +2749,7 @@ QWidget* q_splitterhandle_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_splitterhandle_palette(void* self) {
+const QPalette* q_splitterhandle_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -2821,7 +2773,7 @@ int64_t q_splitterhandle_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_splitterhandle_font(void* self) {
+const QFont* q_splitterhandle_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -3426,30 +3378,12 @@ void q_splitterhandle_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_splitterhandle_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_splitterhandle_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_splitterhandle_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_splitterhandle_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_splitterhandle_insert_action(void* self, void* before, void* action) {
@@ -3669,8 +3603,7 @@ const char* q_splitterhandle_object_name(void* self) {
 }
 
 void q_splitterhandle_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_splitterhandle_is_widget_type(void* self) {
@@ -3709,7 +3642,7 @@ void q_splitterhandle_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_splitterhandle_children(void* self) {
+const libqt_list /* of QObject* */ q_splitterhandle_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -3772,7 +3705,7 @@ QBindingStorage* q_splitterhandle_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_splitterhandle_binding_storage2(void* self) {
+const QBindingStorage* q_splitterhandle_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -4450,6 +4383,10 @@ bool q_splitterhandle_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_splitterhandle_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QSplitterHandle_OnIsSignalConnected((QSplitterHandle*)self, (intptr_t)slot);
+}
+
+void q_splitterhandle_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_splitterhandle_delete(void* self) {

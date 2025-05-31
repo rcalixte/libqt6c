@@ -125,6 +125,8 @@ void q_statictext_prepare1(void* self, void* matrix);
 /// ``` QStaticText* self, QTransform* matrix, QFont* font ```
 void q_statictext_prepare2(void* self, void* matrix, void* font);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#dtor.QStaticText)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStaticText* self ```

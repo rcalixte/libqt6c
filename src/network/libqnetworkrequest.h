@@ -196,6 +196,8 @@ QVariant* q_networkrequest_attribute2(void* self, int64_t code, void* defaultVal
 /// ``` QNetworkRequest* self, int timeout ```
 void q_networkrequest_set_transfer_timeout1(void* self, int timeout);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#dtor.QNetworkRequest)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QNetworkRequest* self ```

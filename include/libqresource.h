@@ -76,7 +76,7 @@ long long q_resource_size(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#data)
 ///
 /// ``` QResource* self ```
-unsigned char* q_resource_data(void* self);
+const unsigned char* q_resource_data(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#uncompressedSize)
 ///
@@ -133,6 +133,8 @@ bool q_resource_register_resource22(unsigned char* rccData, const char* resource
 /// ``` unsigned char* rccData, const char* resourceRoot ```
 bool q_resource_unregister_resource22(unsigned char* rccData, const char* resourceRoot);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#dtor.QResource)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QResource* self ```

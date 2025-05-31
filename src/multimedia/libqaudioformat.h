@@ -144,6 +144,8 @@ float q_audioformat_normalized_sample_value(void* self, void* sample);
 /// ``` int channelCount ```
 int64_t q_audioformat_default_channel_config_for_channel_count(int channelCount);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaudioformat.html#dtor.QAudioFormat)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAudioFormat* self ```

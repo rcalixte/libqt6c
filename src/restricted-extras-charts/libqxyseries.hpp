@@ -15,30 +15,18 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAbstractAxis QAbstractAxis;
 typedef struct QAbstractSeries QAbstractSeries;
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QBrush QBrush;
-typedef struct QChart QChart;
-typedef struct QChildEvent QChildEvent;
 typedef struct QColor QColor;
-typedef struct QEvent QEvent;
 typedef struct QFont QFont;
 typedef struct QImage QImage;
 typedef struct QLinearGradient QLinearGradient;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QPen QPen;
 typedef struct QPointF QPointF;
-typedef struct QThread QThread;
-typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 typedef struct QXYSeries QXYSeries;
 #endif
@@ -186,9 +174,6 @@ void QXYSeries_SetPointLabelsVisible1(QXYSeries* self, bool visible);
 void QXYSeries_SetPointLabelsClipping1(QXYSeries* self, bool enabled);
 void QXYSeries_SetBestFitLineVisible1(QXYSeries* self, bool visible);
 void QXYSeries_ColorBy2(QXYSeries* self, libqt_list /* of double */ sourceData, QLinearGradient* gradient);
-int QXYSeries_Type(const QXYSeries* self);
-bool QXYSeries_Event(QXYSeries* self, QEvent* event);
-bool QXYSeries_EventFilter(QXYSeries* self, QObject* watched, QEvent* event);
 void QXYSeries_Delete(QXYSeries* self);
 
 #ifdef __cplusplus

@@ -15,24 +15,15 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
 typedef struct QAbstractItemDelegate QAbstractItemDelegate;
 typedef struct QAbstractItemModel QAbstractItemModel;
 typedef struct QAbstractItemView QAbstractItemView;
 typedef struct QAbstractScrollArea QAbstractScrollArea;
-typedef struct QAction QAction;
 typedef struct QActionEvent QActionEvent;
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBackingStore QBackingStore;
-typedef struct QBindingStorage QBindingStorage;
-typedef struct QBitmap QBitmap;
 typedef struct QChildEvent QChildEvent;
 typedef struct QCloseEvent QCloseEvent;
 typedef struct QContextMenuEvent QContextMenuEvent;
-typedef struct QCursor QCursor;
 typedef struct QDragEnterEvent QDragEnterEvent;
 typedef struct QDragLeaveEvent QDragLeaveEvent;
 typedef struct QDragMoveEvent QDragMoveEvent;
@@ -40,25 +31,15 @@ typedef struct QDropEvent QDropEvent;
 typedef struct QEnterEvent QEnterEvent;
 typedef struct QEvent QEvent;
 typedef struct QFocusEvent QFocusEvent;
-typedef struct QFont QFont;
-typedef struct QFontInfo QFontInfo;
-typedef struct QFontMetrics QFontMetrics;
 typedef struct QFrame QFrame;
-typedef struct QGraphicsEffect QGraphicsEffect;
-typedef struct QGraphicsProxyWidget QGraphicsProxyWidget;
 typedef struct QHideEvent QHideEvent;
-typedef struct QIcon QIcon;
 typedef struct QInputMethodEvent QInputMethodEvent;
 typedef struct QItemSelection QItemSelection;
 typedef struct QItemSelectionModel QItemSelectionModel;
 typedef struct QKeyEvent QKeyEvent;
-typedef struct QKeySequence QKeySequence;
-typedef struct QLayout QLayout;
-typedef struct QLocale QLocale;
 typedef struct QMargins QMargins;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QModelIndex QModelIndex;
 typedef struct QMouseEvent QMouseEvent;
 typedef struct QMoveEvent QMoveEvent;
@@ -67,28 +48,19 @@ typedef struct QPaintDevice QPaintDevice;
 typedef struct QPaintEngine QPaintEngine;
 typedef struct QPaintEvent QPaintEvent;
 typedef struct QPainter QPainter;
-typedef struct QPalette QPalette;
-typedef struct QPixmap QPixmap;
 typedef struct QPoint QPoint;
-typedef struct QPointF QPointF;
 typedef struct QRect QRect;
 typedef struct QRegion QRegion;
 typedef struct QResizeEvent QResizeEvent;
-typedef struct QScreen QScreen;
-typedef struct QScrollBar QScrollBar;
 typedef struct QShowEvent QShowEvent;
 typedef struct QSize QSize;
-typedef struct QSizePolicy QSizePolicy;
-typedef struct QStyle QStyle;
 typedef struct QStyleOptionFrame QStyleOptionFrame;
 typedef struct QStyleOptionViewItem QStyleOptionViewItem;
 typedef struct QTabletEvent QTabletEvent;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
-typedef struct QWindow QWindow;
 #endif
 
 #ifdef __cplusplus
@@ -394,6 +366,9 @@ void QAbstractItemView_QBaseScrollContentsBy(QAbstractItemView* self, int dx, in
 void QAbstractItemView_ChangeEvent(QAbstractItemView* self, QEvent* param1);
 void QAbstractItemView_OnChangeEvent(QAbstractItemView* self, intptr_t slot);
 void QAbstractItemView_QBaseChangeEvent(QAbstractItemView* self, QEvent* param1);
+void QAbstractItemView_InitStyleOption(const QAbstractItemView* self, QStyleOptionFrame* option);
+void QAbstractItemView_OnInitStyleOption(const QAbstractItemView* self, intptr_t slot);
+void QAbstractItemView_QBaseInitStyleOption(const QAbstractItemView* self, QStyleOptionFrame* option);
 int QAbstractItemView_DevType(const QAbstractItemView* self);
 void QAbstractItemView_OnDevType(const QAbstractItemView* self, intptr_t slot);
 int QAbstractItemView_QBaseDevType(const QAbstractItemView* self);
@@ -439,21 +414,6 @@ void QAbstractItemView_QBaseHideEvent(QAbstractItemView* self, QHideEvent* event
 bool QAbstractItemView_NativeEvent(QAbstractItemView* self, libqt_string eventType, void* message, intptr_t* result);
 void QAbstractItemView_OnNativeEvent(QAbstractItemView* self, intptr_t slot);
 bool QAbstractItemView_QBaseNativeEvent(QAbstractItemView* self, libqt_string eventType, void* message, intptr_t* result);
-void QAbstractItemView_ChildEvent(QAbstractItemView* self, QChildEvent* event);
-void QAbstractItemView_OnChildEvent(QAbstractItemView* self, intptr_t slot);
-void QAbstractItemView_QBaseChildEvent(QAbstractItemView* self, QChildEvent* event);
-void QAbstractItemView_CustomEvent(QAbstractItemView* self, QEvent* event);
-void QAbstractItemView_OnCustomEvent(QAbstractItemView* self, intptr_t slot);
-void QAbstractItemView_QBaseCustomEvent(QAbstractItemView* self, QEvent* event);
-void QAbstractItemView_ConnectNotify(QAbstractItemView* self, QMetaMethod* signal);
-void QAbstractItemView_OnConnectNotify(QAbstractItemView* self, intptr_t slot);
-void QAbstractItemView_QBaseConnectNotify(QAbstractItemView* self, QMetaMethod* signal);
-void QAbstractItemView_DisconnectNotify(QAbstractItemView* self, QMetaMethod* signal);
-void QAbstractItemView_OnDisconnectNotify(QAbstractItemView* self, intptr_t slot);
-void QAbstractItemView_QBaseDisconnectNotify(QAbstractItemView* self, QMetaMethod* signal);
-void QAbstractItemView_InitStyleOption(const QAbstractItemView* self, QStyleOptionFrame* option);
-void QAbstractItemView_OnInitStyleOption(const QAbstractItemView* self, intptr_t slot);
-void QAbstractItemView_QBaseInitStyleOption(const QAbstractItemView* self, QStyleOptionFrame* option);
 int QAbstractItemView_Metric(const QAbstractItemView* self, int param1);
 void QAbstractItemView_OnMetric(const QAbstractItemView* self, intptr_t slot);
 int QAbstractItemView_QBaseMetric(const QAbstractItemView* self, int param1);
@@ -466,6 +426,18 @@ QPaintDevice* QAbstractItemView_QBaseRedirected(const QAbstractItemView* self, Q
 QPainter* QAbstractItemView_SharedPainter(const QAbstractItemView* self);
 void QAbstractItemView_OnSharedPainter(const QAbstractItemView* self, intptr_t slot);
 QPainter* QAbstractItemView_QBaseSharedPainter(const QAbstractItemView* self);
+void QAbstractItemView_ChildEvent(QAbstractItemView* self, QChildEvent* event);
+void QAbstractItemView_OnChildEvent(QAbstractItemView* self, intptr_t slot);
+void QAbstractItemView_QBaseChildEvent(QAbstractItemView* self, QChildEvent* event);
+void QAbstractItemView_CustomEvent(QAbstractItemView* self, QEvent* event);
+void QAbstractItemView_OnCustomEvent(QAbstractItemView* self, intptr_t slot);
+void QAbstractItemView_QBaseCustomEvent(QAbstractItemView* self, QEvent* event);
+void QAbstractItemView_ConnectNotify(QAbstractItemView* self, QMetaMethod* signal);
+void QAbstractItemView_OnConnectNotify(QAbstractItemView* self, intptr_t slot);
+void QAbstractItemView_QBaseConnectNotify(QAbstractItemView* self, QMetaMethod* signal);
+void QAbstractItemView_DisconnectNotify(QAbstractItemView* self, QMetaMethod* signal);
+void QAbstractItemView_OnDisconnectNotify(QAbstractItemView* self, intptr_t slot);
+void QAbstractItemView_QBaseDisconnectNotify(QAbstractItemView* self, QMetaMethod* signal);
 int QAbstractItemView_State(const QAbstractItemView* self);
 void QAbstractItemView_OnState(const QAbstractItemView* self, intptr_t slot);
 int QAbstractItemView_QBaseState(const QAbstractItemView* self);

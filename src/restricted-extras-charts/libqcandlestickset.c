@@ -1,13 +1,9 @@
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqbrush.hpp"
 #include "../libqevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include "../libqpen.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqcandlestickset.hpp"
 #include "libqcandlestickset.h"
@@ -36,7 +32,7 @@ QCandlestickSet* q_candlestickset_new6(double open, double high, double low, dou
     return QCandlestickSet_new6(open, high, low, close, timestamp, (QObject*)parent);
 }
 
-QMetaObject* q_candlestickset_meta_object(void* self) {
+const QMetaObject* q_candlestickset_meta_object(void* self) {
     return QCandlestickSet_MetaObject((QCandlestickSet*)self);
 }
 
@@ -237,8 +233,7 @@ const char* q_candlestickset_object_name(void* self) {
 }
 
 void q_candlestickset_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_candlestickset_is_widget_type(void* self) {
@@ -277,7 +272,7 @@ void q_candlestickset_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_candlestickset_children(void* self) {
+const libqt_list /* of QObject* */ q_candlestickset_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -344,7 +339,7 @@ QBindingStorage* q_candlestickset_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_candlestickset_binding_storage2(void* self) {
+const QBindingStorage* q_candlestickset_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -518,6 +513,10 @@ bool q_candlestickset_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_candlestickset_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QCandlestickSet_OnIsSignalConnected((QCandlestickSet*)self, (intptr_t)slot);
+}
+
+void q_candlestickset_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_candlestickset_delete(void* self) {

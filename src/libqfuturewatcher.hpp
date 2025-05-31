@@ -15,22 +15,12 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
-typedef struct QChildEvent QChildEvent;
 typedef struct QEvent QEvent;
 typedef struct QFutureWatcherBase QFutureWatcherBase;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
-typedef struct QThread QThread;
-typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
 #endif
 
 QMetaObject* QFutureWatcherBase_MetaObject(const QFutureWatcherBase* self);
@@ -85,7 +75,6 @@ void QFutureWatcherBase_Pause(QFutureWatcherBase* self);
 void QFutureWatcherBase_TogglePaused(QFutureWatcherBase* self);
 libqt_string QFutureWatcherBase_Tr2(const char* s, const char* c);
 libqt_string QFutureWatcherBase_Tr3(const char* s, const char* c, int n);
-bool QFutureWatcherBase_EventFilter(QFutureWatcherBase* self, QObject* watched, QEvent* event);
 void QFutureWatcherBase_Delete(QFutureWatcherBase* self);
 
 #ifdef __cplusplus

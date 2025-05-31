@@ -185,7 +185,7 @@ QJsonValueRef* q_jsonobject__iterator_operator_multiply(void* self) {
     return QJsonObject__iterator_OperatorMultiply((QJsonObject__iterator*)self);
 }
 
-QJsonValueConstRef* q_jsonobject__iterator_operator_minus_greater(void* self) {
+const QJsonValueConstRef* q_jsonobject__iterator_operator_minus_greater(void* self) {
     return QJsonObject__iterator_OperatorMinusGreater((QJsonObject__iterator*)self);
 }
 
@@ -320,11 +320,11 @@ QJsonValueConstRef* q_jsonobject__const_iterator_value(void* self) {
     return QJsonObject__const_iterator_Value((QJsonObject__const_iterator*)self);
 }
 
-QJsonValueConstRef* q_jsonobject__const_iterator_operator_multiply(void* self) {
+const QJsonValueConstRef* q_jsonobject__const_iterator_operator_multiply(void* self) {
     return QJsonObject__const_iterator_OperatorMultiply((QJsonObject__const_iterator*)self);
 }
 
-QJsonValueConstRef* q_jsonobject__const_iterator_operator_minus_greater(void* self) {
+const QJsonValueConstRef* q_jsonobject__const_iterator_operator_minus_greater(void* self) {
     return QJsonObject__const_iterator_OperatorMinusGreater((QJsonObject__const_iterator*)self);
 }
 

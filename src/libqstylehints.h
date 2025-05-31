@@ -12,22 +12,17 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqchar.h"
-#include "libqevent.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qstylehints.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QStyleHints* self ```
-QMetaObject* q_stylehints_meta_object(void* self);
+const QMetaObject* q_stylehints_meta_object(void* self);
 
 /// ``` QStyleHints* self, const char* param1 ```
 void* q_stylehints_metacast(void* self, const char* param1);
@@ -215,6 +210,8 @@ int32_t q_stylehints_mouse_quick_selection_threshold(void* self);
 /// ``` QStyleHints* self, int cursorFlashTime ```
 void q_stylehints_cursor_flash_time_changed(void* self, int cursorFlashTime);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#cursorFlashTimeChanged)
+///
 /// ``` QStyleHints* self, void (*slot)(QStyleHints*, int) ```
 void q_stylehints_on_cursor_flash_time_changed(void* self, void (*slot)(void*, int));
 
@@ -223,6 +220,8 @@ void q_stylehints_on_cursor_flash_time_changed(void* self, void (*slot)(void*, i
 /// ``` QStyleHints* self, int keyboardInputInterval ```
 void q_stylehints_keyboard_input_interval_changed(void* self, int keyboardInputInterval);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#keyboardInputIntervalChanged)
+///
 /// ``` QStyleHints* self, void (*slot)(QStyleHints*, int) ```
 void q_stylehints_on_keyboard_input_interval_changed(void* self, void (*slot)(void*, int));
 
@@ -231,6 +230,8 @@ void q_stylehints_on_keyboard_input_interval_changed(void* self, void (*slot)(vo
 /// ``` QStyleHints* self, int mouseDoubleClickInterval ```
 void q_stylehints_mouse_double_click_interval_changed(void* self, int mouseDoubleClickInterval);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#mouseDoubleClickIntervalChanged)
+///
 /// ``` QStyleHints* self, void (*slot)(QStyleHints*, int) ```
 void q_stylehints_on_mouse_double_click_interval_changed(void* self, void (*slot)(void*, int));
 
@@ -239,6 +240,8 @@ void q_stylehints_on_mouse_double_click_interval_changed(void* self, void (*slot
 /// ``` QStyleHints* self, int mousePressAndHoldInterval ```
 void q_stylehints_mouse_press_and_hold_interval_changed(void* self, int mousePressAndHoldInterval);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#mousePressAndHoldIntervalChanged)
+///
 /// ``` QStyleHints* self, void (*slot)(QStyleHints*, int) ```
 void q_stylehints_on_mouse_press_and_hold_interval_changed(void* self, void (*slot)(void*, int));
 
@@ -247,6 +250,8 @@ void q_stylehints_on_mouse_press_and_hold_interval_changed(void* self, void (*sl
 /// ``` QStyleHints* self, int startDragDistance ```
 void q_stylehints_start_drag_distance_changed(void* self, int startDragDistance);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#startDragDistanceChanged)
+///
 /// ``` QStyleHints* self, void (*slot)(QStyleHints*, int) ```
 void q_stylehints_on_start_drag_distance_changed(void* self, void (*slot)(void*, int));
 
@@ -255,6 +260,8 @@ void q_stylehints_on_start_drag_distance_changed(void* self, void (*slot)(void*,
 /// ``` QStyleHints* self, int startDragTime ```
 void q_stylehints_start_drag_time_changed(void* self, int startDragTime);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#startDragTimeChanged)
+///
 /// ``` QStyleHints* self, void (*slot)(QStyleHints*, int) ```
 void q_stylehints_on_start_drag_time_changed(void* self, void (*slot)(void*, int));
 
@@ -263,6 +270,8 @@ void q_stylehints_on_start_drag_time_changed(void* self, void (*slot)(void*, int
 /// ``` QStyleHints* self, enum Qt__TabFocusBehavior tabFocusBehavior ```
 void q_stylehints_tab_focus_behavior_changed(void* self, int64_t tabFocusBehavior);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#tabFocusBehaviorChanged)
+///
 /// ``` QStyleHints* self, void (*slot)(QStyleHints*, enum Qt__TabFocusBehavior) ```
 void q_stylehints_on_tab_focus_behavior_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -271,6 +280,8 @@ void q_stylehints_on_tab_focus_behavior_changed(void* self, void (*slot)(void*, 
 /// ``` QStyleHints* self, bool useHoverEffects ```
 void q_stylehints_use_hover_effects_changed(void* self, bool useHoverEffects);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#useHoverEffectsChanged)
+///
 /// ``` QStyleHints* self, void (*slot)(QStyleHints*, bool) ```
 void q_stylehints_on_use_hover_effects_changed(void* self, void (*slot)(void*, bool));
 
@@ -279,6 +290,8 @@ void q_stylehints_on_use_hover_effects_changed(void* self, void (*slot)(void*, b
 /// ``` QStyleHints* self, bool param1 ```
 void q_stylehints_show_shortcuts_in_context_menus_changed(void* self, bool param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#showShortcutsInContextMenusChanged)
+///
 /// ``` QStyleHints* self, void (*slot)(QStyleHints*, bool) ```
 void q_stylehints_on_show_shortcuts_in_context_menus_changed(void* self, void (*slot)(void*, bool));
 
@@ -287,6 +300,8 @@ void q_stylehints_on_show_shortcuts_in_context_menus_changed(void* self, void (*
 /// ``` QStyleHints* self, int scrollLines ```
 void q_stylehints_wheel_scroll_lines_changed(void* self, int scrollLines);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#wheelScrollLinesChanged)
+///
 /// ``` QStyleHints* self, void (*slot)(QStyleHints*, int) ```
 void q_stylehints_on_wheel_scroll_lines_changed(void* self, void (*slot)(void*, int));
 
@@ -295,6 +310,8 @@ void q_stylehints_on_wheel_scroll_lines_changed(void* self, void (*slot)(void*, 
 /// ``` QStyleHints* self, int threshold ```
 void q_stylehints_mouse_quick_selection_threshold_changed(void* self, int threshold);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#mouseQuickSelectionThresholdChanged)
+///
 /// ``` QStyleHints* self, void (*slot)(QStyleHints*, int) ```
 void q_stylehints_on_mouse_quick_selection_threshold_changed(void* self, void (*slot)(void*, int));
 
@@ -404,7 +421,7 @@ void q_stylehints_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QStyleHints* self ```
-libqt_list /* of QObject* */ q_stylehints_children(void* self);
+const libqt_list /* of QObject* */ q_stylehints_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -502,7 +519,7 @@ QBindingStorage* q_stylehints_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QStyleHints* self ```
-QBindingStorage* q_stylehints_binding_storage2(void* self);
+const QBindingStorage* q_stylehints_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -512,6 +529,8 @@ QBindingStorage* q_stylehints_binding_storage2(void* self);
 void q_stylehints_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QStyleHints* self, void (*slot)(QObject*) ```
 void q_stylehints_on_destroyed(void* self, void (*slot)(void*));
@@ -567,9 +586,22 @@ void q_stylehints_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QStyleHints* self, void (*slot)(QObject*, QObject*) ```
 void q_stylehints_on_destroyed1(void* self, void (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QStyleHints* self, void (*slot)(QObject*, const char*) ```
+void q_stylehints_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#dtor.QStyleHints)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStyleHints* self ```

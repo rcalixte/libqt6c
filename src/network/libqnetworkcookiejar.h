@@ -12,16 +12,12 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "libqnetworkcookie.h"
 #include "../libqobject.h"
 #include <string.h>
-#include "../libqthread.h"
 #include "../libqurl.h"
-#include "../libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qnetworkcookiejar.html
 
@@ -38,7 +34,7 @@ QNetworkCookieJar* q_networkcookiejar_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QNetworkCookieJar* self ```
-QMetaObject* q_networkcookiejar_meta_object(void* self);
+const QMetaObject* q_networkcookiejar_meta_object(void* self);
 
 /// ``` QNetworkCookieJar* self, const char* param1 ```
 void* q_networkcookiejar_metacast(void* self, const char* param1);
@@ -66,11 +62,15 @@ const char* q_networkcookiejar_tr(const char* s);
 /// ``` QNetworkCookieJar* self, QUrl* url ```
 libqt_list /* of QNetworkCookie* */ q_networkcookiejar_cookies_for_url(void* self, void* url);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#cookiesForUrl)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QNetworkCookieJar* self, libqt_list /* of QNetworkCookie* */ (*slot)(QNetworkCookieJar*, QUrl*) ```
 void q_networkcookiejar_on_cookies_for_url(void* self, libqt_list /* of QNetworkCookie* */ (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#cookiesForUrl)
+///
 /// Base class method implementation
 ///
 /// ``` QNetworkCookieJar* self, QUrl* url ```
@@ -78,29 +78,37 @@ libqt_list /* of QNetworkCookie* */ q_networkcookiejar_qbase_cookies_for_url(voi
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#setCookiesFromUrl)
 ///
-/// ``` QNetworkCookieJar* self, QNetworkCookie* cookieList[], QUrl* url ```
-bool q_networkcookiejar_set_cookies_from_url(void* self, void* cookieList[], void* url);
+/// ``` QNetworkCookieJar* self, libqt_list /* of QNetworkCookie* */ cookieList, QUrl* url ```
+bool q_networkcookiejar_set_cookies_from_url(void* self, libqt_list cookieList, void* url);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#setCookiesFromUrl)
+///
 /// Allows for overriding the related default method
 ///
-/// ``` QNetworkCookieJar* self, bool (*slot)(QNetworkCookieJar*, QNetworkCookie*[], QUrl*) ```
-void q_networkcookiejar_on_set_cookies_from_url(void* self, bool (*slot)(void*, void*, void*));
+/// ``` QNetworkCookieJar* self, bool (*slot)(QNetworkCookieJar*, libqt_list /* of QNetworkCookie* */ cookieList , QUrl*) ```
+void q_networkcookiejar_on_set_cookies_from_url(void* self, bool (*slot)(void*, libqt_list, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#setCookiesFromUrl)
+///
 /// Base class method implementation
 ///
-/// ``` QNetworkCookieJar* self, QNetworkCookie* cookieList[], QUrl* url ```
-bool q_networkcookiejar_qbase_set_cookies_from_url(void* self, void* cookieList[], void* url);
+/// ``` QNetworkCookieJar* self, libqt_list /* of QNetworkCookie* */ cookieList, QUrl* url ```
+bool q_networkcookiejar_qbase_set_cookies_from_url(void* self, libqt_list cookieList, void* url);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#insertCookie)
 ///
 /// ``` QNetworkCookieJar* self, QNetworkCookie* cookie ```
 bool q_networkcookiejar_insert_cookie(void* self, void* cookie);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#insertCookie)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QNetworkCookieJar* self, bool (*slot)(QNetworkCookieJar*, QNetworkCookie*) ```
 void q_networkcookiejar_on_insert_cookie(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#insertCookie)
+///
 /// Base class method implementation
 ///
 /// ``` QNetworkCookieJar* self, QNetworkCookie* cookie ```
@@ -111,11 +119,15 @@ bool q_networkcookiejar_qbase_insert_cookie(void* self, void* cookie);
 /// ``` QNetworkCookieJar* self, QNetworkCookie* cookie ```
 bool q_networkcookiejar_update_cookie(void* self, void* cookie);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#updateCookie)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QNetworkCookieJar* self, bool (*slot)(QNetworkCookieJar*, QNetworkCookie*) ```
 void q_networkcookiejar_on_update_cookie(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#updateCookie)
+///
 /// Base class method implementation
 ///
 /// ``` QNetworkCookieJar* self, QNetworkCookie* cookie ```
@@ -126,11 +138,15 @@ bool q_networkcookiejar_qbase_update_cookie(void* self, void* cookie);
 /// ``` QNetworkCookieJar* self, QNetworkCookie* cookie ```
 bool q_networkcookiejar_delete_cookie(void* self, void* cookie);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#deleteCookie)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QNetworkCookieJar* self, bool (*slot)(QNetworkCookieJar*, QNetworkCookie*) ```
 void q_networkcookiejar_on_delete_cookie(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#deleteCookie)
+///
 /// Base class method implementation
 ///
 /// ``` QNetworkCookieJar* self, QNetworkCookie* cookie ```
@@ -141,11 +157,15 @@ bool q_networkcookiejar_qbase_delete_cookie(void* self, void* cookie);
 /// ``` QNetworkCookieJar* self ```
 libqt_list /* of QNetworkCookie* */ q_networkcookiejar_all_cookies(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#allCookies)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QNetworkCookieJar* self, libqt_list /* of QNetworkCookie* */ (*slot)() ```
 void q_networkcookiejar_on_all_cookies(void* self, libqt_list /* of QNetworkCookie* */ (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#allCookies)
+///
 /// Base class method implementation
 ///
 /// ``` QNetworkCookieJar* self ```
@@ -153,29 +173,37 @@ libqt_list /* of QNetworkCookie* */ q_networkcookiejar_qbase_all_cookies(void* s
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#setAllCookies)
 ///
-/// ``` QNetworkCookieJar* self, QNetworkCookie* cookieList[] ```
-void q_networkcookiejar_set_all_cookies(void* self, void* cookieList[]);
+/// ``` QNetworkCookieJar* self, libqt_list /* of QNetworkCookie* */ cookieList ```
+void q_networkcookiejar_set_all_cookies(void* self, libqt_list cookieList);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#setAllCookies)
+///
 /// Allows for overriding the related default method
 ///
-/// ``` QNetworkCookieJar* self, void (*slot)(QNetworkCookieJar*, QNetworkCookie*[]) ```
-void q_networkcookiejar_on_set_all_cookies(void* self, void (*slot)(void*, void*));
+/// ``` QNetworkCookieJar* self, void (*slot)(QNetworkCookieJar*, libqt_list /* of QNetworkCookie* */ cookieList ) ```
+void q_networkcookiejar_on_set_all_cookies(void* self, void (*slot)(void*, libqt_list));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#setAllCookies)
+///
 /// Base class method implementation
 ///
-/// ``` QNetworkCookieJar* self, QNetworkCookie* cookieList[] ```
-void q_networkcookiejar_qbase_set_all_cookies(void* self, void* cookieList[]);
+/// ``` QNetworkCookieJar* self, libqt_list /* of QNetworkCookie* */ cookieList ```
+void q_networkcookiejar_qbase_set_all_cookies(void* self, libqt_list cookieList);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#validateCookie)
 ///
 /// ``` QNetworkCookieJar* self, QNetworkCookie* cookie, QUrl* url ```
 bool q_networkcookiejar_validate_cookie(void* self, void* cookie, void* url);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#validateCookie)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QNetworkCookieJar* self, bool (*slot)(QNetworkCookieJar*, QNetworkCookie*, QUrl*) ```
 void q_networkcookiejar_on_validate_cookie(void* self, bool (*slot)(void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#validateCookie)
+///
 /// Base class method implementation
 ///
 /// ``` QNetworkCookieJar* self, QNetworkCookie* cookie, QUrl* url ```
@@ -273,7 +301,7 @@ void q_networkcookiejar_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QNetworkCookieJar* self ```
-libqt_list /* of QObject* */ q_networkcookiejar_children(void* self);
+const libqt_list /* of QObject* */ q_networkcookiejar_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -371,7 +399,7 @@ QBindingStorage* q_networkcookiejar_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QNetworkCookieJar* self ```
-QBindingStorage* q_networkcookiejar_binding_storage2(void* self);
+const QBindingStorage* q_networkcookiejar_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -381,6 +409,8 @@ QBindingStorage* q_networkcookiejar_binding_storage2(void* self);
 void q_networkcookiejar_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QNetworkCookieJar* self, void (*slot)(QObject*) ```
 void q_networkcookiejar_on_destroyed(void* self, void (*slot)(void*));
@@ -436,6 +466,8 @@ void q_networkcookiejar_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QNetworkCookieJar* self, void (*slot)(QObject*, QObject*) ```
 void q_networkcookiejar_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -450,12 +482,16 @@ bool q_networkcookiejar_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QNetworkCookieJar* self, QEvent* event ```
 bool q_networkcookiejar_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -473,12 +509,16 @@ bool q_networkcookiejar_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QNetworkCookieJar* self, QObject* watched, QEvent* event ```
 bool q_networkcookiejar_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -496,12 +536,16 @@ void q_networkcookiejar_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QNetworkCookieJar* self, QTimerEvent* event ```
 void q_networkcookiejar_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -519,12 +563,16 @@ void q_networkcookiejar_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QNetworkCookieJar* self, QChildEvent* event ```
 void q_networkcookiejar_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -542,12 +590,16 @@ void q_networkcookiejar_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QNetworkCookieJar* self, QEvent* event ```
 void q_networkcookiejar_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -565,12 +617,16 @@ void q_networkcookiejar_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QNetworkCookieJar* self, QMetaMethod* signal ```
 void q_networkcookiejar_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -588,12 +644,16 @@ void q_networkcookiejar_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QNetworkCookieJar* self, QMetaMethod* signal ```
 void q_networkcookiejar_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -611,12 +671,16 @@ QObject* q_networkcookiejar_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QNetworkCookieJar* self ```
 QObject* q_networkcookiejar_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -634,12 +698,16 @@ int32_t q_networkcookiejar_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QNetworkCookieJar* self ```
 int32_t q_networkcookiejar_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -657,12 +725,16 @@ int32_t q_networkcookiejar_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QNetworkCookieJar* self, const char* signal ```
 int32_t q_networkcookiejar_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -680,6 +752,8 @@ bool q_networkcookiejar_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QNetworkCookieJar* self, QMetaMethod* signal ```
@@ -687,11 +761,24 @@ bool q_networkcookiejar_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QNetworkCookieJar* self, bool (*slot)(QNetworkCookieJar*, QMetaMethod*) ```
 void q_networkcookiejar_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QNetworkCookieJar* self, void (*slot)(QObject*, const char*) ```
+void q_networkcookiejar_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#dtor.QNetworkCookieJar)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QNetworkCookieJar* self ```

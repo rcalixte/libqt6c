@@ -1,11 +1,7 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include <string.h>
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqcoreevent.hpp"
 #include "libqfilesystemwatcher.hpp"
 #include "libqfilesystemwatcher.h"
@@ -20,7 +16,7 @@ QFileSystemWatcher* q_filesystemwatcher_new2(const char* paths[]) {
     for (size_t _i = 0; _i < paths_len; ++_i) {
         paths_qstr[_i] = qstring(paths[_i]);
     }
-    libqt_list paths_list = qstrlist(paths_qstr, paths_len);
+    libqt_list paths_list = qlist(paths_qstr, paths_len);
 
     return QFileSystemWatcher_new2(paths_list);
 }
@@ -35,12 +31,12 @@ QFileSystemWatcher* q_filesystemwatcher_new4(const char* paths[], void* parent) 
     for (size_t _i = 0; _i < paths_len; ++_i) {
         paths_qstr[_i] = qstring(paths[_i]);
     }
-    libqt_list paths_list = qstrlist(paths_qstr, paths_len);
+    libqt_list paths_list = qlist(paths_qstr, paths_len);
 
     return QFileSystemWatcher_new4(paths_list, (QObject*)parent);
 }
 
-QMetaObject* q_filesystemwatcher_meta_object(void* self) {
+const QMetaObject* q_filesystemwatcher_meta_object(void* self) {
     return QFileSystemWatcher_MetaObject((QFileSystemWatcher*)self);
 }
 
@@ -77,7 +73,7 @@ const char** q_filesystemwatcher_add_paths(void* self, const char* files[]) {
     for (size_t _i = 0; _i < files_len; ++_i) {
         files_qstr[_i] = qstring(files[_i]);
     }
-    libqt_list files_list = qstrlist(files_qstr, files_len);
+    libqt_list files_list = qlist(files_qstr, files_len);
     libqt_list _arr = QFileSystemWatcher_AddPaths((QFileSystemWatcher*)self, files_list);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -101,7 +97,7 @@ const char** q_filesystemwatcher_remove_paths(void* self, const char* files[]) {
     for (size_t _i = 0; _i < files_len; ++_i) {
         files_qstr[_i] = qstring(files[_i]);
     }
-    libqt_list files_list = qstrlist(files_qstr, files_len);
+    libqt_list files_list = qlist(files_qstr, files_len);
     libqt_list _arr = QFileSystemWatcher_RemovePaths((QFileSystemWatcher*)self, files_list);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -165,8 +161,7 @@ const char* q_filesystemwatcher_object_name(void* self) {
 }
 
 void q_filesystemwatcher_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_filesystemwatcher_is_widget_type(void* self) {
@@ -205,7 +200,7 @@ void q_filesystemwatcher_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_filesystemwatcher_children(void* self) {
+const libqt_list /* of QObject* */ q_filesystemwatcher_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -272,7 +267,7 @@ QBindingStorage* q_filesystemwatcher_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_filesystemwatcher_binding_storage2(void* self) {
+const QBindingStorage* q_filesystemwatcher_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -446,6 +441,18 @@ bool q_filesystemwatcher_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_filesystemwatcher_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QFileSystemWatcher_OnIsSignalConnected((QFileSystemWatcher*)self, (intptr_t)slot);
+}
+
+void q_filesystemwatcher_on_file_changed(void* self, void (*slot)(void*, const char*)) {
+    QFileSystemWatcher_Connect_FileChanged((QFileSystemWatcher*)self, (intptr_t)slot);
+}
+
+void q_filesystemwatcher_on_directory_changed(void* self, void (*slot)(void*, const char*)) {
+    QFileSystemWatcher_Connect_DirectoryChanged((QFileSystemWatcher*)self, (intptr_t)slot);
+}
+
+void q_filesystemwatcher_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_filesystemwatcher_delete(void* self) {

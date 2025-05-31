@@ -208,6 +208,8 @@ int64_t q_pagesize_id22(void* pointSize, int64_t matchPolicy);
 /// ``` QSizeF* size, enum QPageSize__Unit units, enum QPageSize__SizeMatchPolicy matchPolicy ```
 int64_t q_pagesize_id3(void* size, int64_t units, int64_t matchPolicy);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagesize.html#dtor.QPageSize)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPageSize* self ```

@@ -14,14 +14,10 @@
 
 #include "libqabstractitemdelegate.h"
 #include "libqabstractitemmodel.h"
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 #include "libqwidget.h"
 
 /// https://doc.qt.io/qt-6/qdatawidgetmapper.html
@@ -39,7 +35,7 @@ QDataWidgetMapper* q_datawidgetmapper_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QDataWidgetMapper* self ```
-QMetaObject* q_datawidgetmapper_meta_object(void* self);
+const QMetaObject* q_datawidgetmapper_meta_object(void* self);
 
 /// ``` QDataWidgetMapper* self, const char* param1 ```
 void* q_datawidgetmapper_metacast(void* self, const char* param1);
@@ -187,11 +183,15 @@ void q_datawidgetmapper_to_previous(void* self);
 /// ``` QDataWidgetMapper* self, int index ```
 void q_datawidgetmapper_set_current_index(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setCurrentIndex)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDataWidgetMapper* self, void (*slot)(QDataWidgetMapper*, int) ```
 void q_datawidgetmapper_on_set_current_index(void* self, void (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setCurrentIndex)
+///
 /// Base class method implementation
 ///
 /// ``` QDataWidgetMapper* self, int index ```
@@ -207,6 +207,8 @@ void q_datawidgetmapper_set_current_model_index(void* self, void* index);
 /// ``` QDataWidgetMapper* self, int index ```
 void q_datawidgetmapper_current_index_changed(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#currentIndexChanged)
+///
 /// ``` QDataWidgetMapper* self, void (*slot)(QDataWidgetMapper*, int) ```
 void q_datawidgetmapper_on_current_index_changed(void* self, void (*slot)(void*, int));
 
@@ -302,7 +304,7 @@ void q_datawidgetmapper_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QDataWidgetMapper* self ```
-libqt_list /* of QObject* */ q_datawidgetmapper_children(void* self);
+const libqt_list /* of QObject* */ q_datawidgetmapper_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -400,7 +402,7 @@ QBindingStorage* q_datawidgetmapper_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QDataWidgetMapper* self ```
-QBindingStorage* q_datawidgetmapper_binding_storage2(void* self);
+const QBindingStorage* q_datawidgetmapper_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -410,6 +412,8 @@ QBindingStorage* q_datawidgetmapper_binding_storage2(void* self);
 void q_datawidgetmapper_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QDataWidgetMapper* self, void (*slot)(QObject*) ```
 void q_datawidgetmapper_on_destroyed(void* self, void (*slot)(void*));
@@ -465,6 +469,8 @@ void q_datawidgetmapper_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QDataWidgetMapper* self, void (*slot)(QObject*, QObject*) ```
 void q_datawidgetmapper_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -479,12 +485,16 @@ bool q_datawidgetmapper_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDataWidgetMapper* self, QEvent* event ```
 bool q_datawidgetmapper_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -502,12 +512,16 @@ bool q_datawidgetmapper_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDataWidgetMapper* self, QObject* watched, QEvent* event ```
 bool q_datawidgetmapper_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -525,12 +539,16 @@ void q_datawidgetmapper_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDataWidgetMapper* self, QTimerEvent* event ```
 void q_datawidgetmapper_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -548,12 +566,16 @@ void q_datawidgetmapper_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDataWidgetMapper* self, QChildEvent* event ```
 void q_datawidgetmapper_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -571,12 +593,16 @@ void q_datawidgetmapper_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDataWidgetMapper* self, QEvent* event ```
 void q_datawidgetmapper_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -594,12 +620,16 @@ void q_datawidgetmapper_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDataWidgetMapper* self, QMetaMethod* signal ```
 void q_datawidgetmapper_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -617,12 +647,16 @@ void q_datawidgetmapper_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDataWidgetMapper* self, QMetaMethod* signal ```
 void q_datawidgetmapper_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -640,12 +674,16 @@ QObject* q_datawidgetmapper_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDataWidgetMapper* self ```
 QObject* q_datawidgetmapper_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -663,12 +701,16 @@ int32_t q_datawidgetmapper_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDataWidgetMapper* self ```
 int32_t q_datawidgetmapper_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -686,12 +728,16 @@ int32_t q_datawidgetmapper_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDataWidgetMapper* self, const char* signal ```
 int32_t q_datawidgetmapper_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -709,6 +755,8 @@ bool q_datawidgetmapper_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDataWidgetMapper* self, QMetaMethod* signal ```
@@ -716,11 +764,24 @@ bool q_datawidgetmapper_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QDataWidgetMapper* self, bool (*slot)(QDataWidgetMapper*, QMetaMethod*) ```
 void q_datawidgetmapper_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QDataWidgetMapper* self, void (*slot)(QObject*, const char*) ```
+void q_datawidgetmapper_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#dtor.QDataWidgetMapper)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QDataWidgetMapper* self ```

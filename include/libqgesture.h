@@ -12,15 +12,11 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpoint.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 #include "libqwidget.h"
 
 /// https://doc.qt.io/qt-6/qgesture.html
@@ -38,7 +34,7 @@ QGesture* q_gesture_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QGesture* self ```
-QMetaObject* q_gesture_meta_object(void* self);
+const QMetaObject* q_gesture_meta_object(void* self);
 
 /// ``` QGesture* self, const char* param1 ```
 void* q_gesture_metacast(void* self, const char* param1);
@@ -193,7 +189,7 @@ void q_gesture_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QGesture* self ```
-libqt_list /* of QObject* */ q_gesture_children(void* self);
+const libqt_list /* of QObject* */ q_gesture_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -291,7 +287,7 @@ QBindingStorage* q_gesture_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QGesture* self ```
-QBindingStorage* q_gesture_binding_storage2(void* self);
+const QBindingStorage* q_gesture_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -301,6 +297,8 @@ QBindingStorage* q_gesture_binding_storage2(void* self);
 void q_gesture_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QGesture* self, void (*slot)(QObject*) ```
 void q_gesture_on_destroyed(void* self, void (*slot)(void*));
@@ -356,6 +354,8 @@ void q_gesture_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QGesture* self, void (*slot)(QObject*, QObject*) ```
 void q_gesture_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -370,12 +370,16 @@ bool q_gesture_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGesture* self, QEvent* event ```
 bool q_gesture_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -393,12 +397,16 @@ bool q_gesture_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGesture* self, QObject* watched, QEvent* event ```
 bool q_gesture_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -416,12 +424,16 @@ void q_gesture_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGesture* self, QTimerEvent* event ```
 void q_gesture_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -439,12 +451,16 @@ void q_gesture_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGesture* self, QChildEvent* event ```
 void q_gesture_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -462,12 +478,16 @@ void q_gesture_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGesture* self, QEvent* event ```
 void q_gesture_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -485,12 +505,16 @@ void q_gesture_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGesture* self, QMetaMethod* signal ```
 void q_gesture_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -508,12 +532,16 @@ void q_gesture_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGesture* self, QMetaMethod* signal ```
 void q_gesture_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -531,12 +559,16 @@ QObject* q_gesture_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGesture* self ```
 QObject* q_gesture_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -554,12 +586,16 @@ int32_t q_gesture_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGesture* self ```
 int32_t q_gesture_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -577,12 +613,16 @@ int32_t q_gesture_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGesture* self, const char* signal ```
 int32_t q_gesture_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -600,6 +640,8 @@ bool q_gesture_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGesture* self, QMetaMethod* signal ```
@@ -607,11 +649,24 @@ bool q_gesture_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QGesture* self, bool (*slot)(QGesture*, QMetaMethod*) ```
 void q_gesture_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QGesture* self, void (*slot)(QObject*, const char*) ```
+void q_gesture_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qgesture.html#dtor.QGesture)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGesture* self ```
@@ -632,7 +687,7 @@ QPanGesture* q_pangesture_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QPanGesture* self ```
-QMetaObject* q_pangesture_meta_object(void* self);
+const QMetaObject* q_pangesture_meta_object(void* self);
 
 /// ``` QPanGesture* self, const char* param1 ```
 void* q_pangesture_metacast(void* self, const char* param1);
@@ -838,7 +893,7 @@ void q_pangesture_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QPanGesture* self ```
-libqt_list /* of QObject* */ q_pangesture_children(void* self);
+const libqt_list /* of QObject* */ q_pangesture_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -936,7 +991,7 @@ QBindingStorage* q_pangesture_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QPanGesture* self ```
-QBindingStorage* q_pangesture_binding_storage2(void* self);
+const QBindingStorage* q_pangesture_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -946,6 +1001,8 @@ QBindingStorage* q_pangesture_binding_storage2(void* self);
 void q_pangesture_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QPanGesture* self, void (*slot)(QObject*) ```
 void q_pangesture_on_destroyed(void* self, void (*slot)(void*));
@@ -1001,6 +1058,8 @@ void q_pangesture_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QPanGesture* self, void (*slot)(QObject*, QObject*) ```
 void q_pangesture_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -1015,12 +1074,16 @@ bool q_pangesture_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPanGesture* self, QEvent* event ```
 bool q_pangesture_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1038,12 +1101,16 @@ bool q_pangesture_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPanGesture* self, QObject* watched, QEvent* event ```
 bool q_pangesture_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1061,12 +1128,16 @@ void q_pangesture_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPanGesture* self, QTimerEvent* event ```
 void q_pangesture_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1084,12 +1155,16 @@ void q_pangesture_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPanGesture* self, QChildEvent* event ```
 void q_pangesture_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1107,12 +1182,16 @@ void q_pangesture_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPanGesture* self, QEvent* event ```
 void q_pangesture_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1130,12 +1209,16 @@ void q_pangesture_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPanGesture* self, QMetaMethod* signal ```
 void q_pangesture_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1153,12 +1236,16 @@ void q_pangesture_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPanGesture* self, QMetaMethod* signal ```
 void q_pangesture_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1176,12 +1263,16 @@ QObject* q_pangesture_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPanGesture* self ```
 QObject* q_pangesture_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1199,12 +1290,16 @@ int32_t q_pangesture_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPanGesture* self ```
 int32_t q_pangesture_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1222,12 +1317,16 @@ int32_t q_pangesture_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPanGesture* self, const char* signal ```
 int32_t q_pangesture_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1245,6 +1344,8 @@ bool q_pangesture_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPanGesture* self, QMetaMethod* signal ```
@@ -1252,11 +1353,24 @@ bool q_pangesture_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QPanGesture* self, bool (*slot)(QPanGesture*, QMetaMethod*) ```
 void q_pangesture_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QPanGesture* self, void (*slot)(QObject*, const char*) ```
+void q_pangesture_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpangesture.html#dtor.QPanGesture)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPanGesture* self ```
@@ -1277,7 +1391,7 @@ QPinchGesture* q_pinchgesture_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QPinchGesture* self ```
-QMetaObject* q_pinchgesture_meta_object(void* self);
+const QMetaObject* q_pinchgesture_meta_object(void* self);
 
 /// ``` QPinchGesture* self, const char* param1 ```
 void* q_pinchgesture_metacast(void* self, const char* param1);
@@ -1558,7 +1672,7 @@ void q_pinchgesture_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QPinchGesture* self ```
-libqt_list /* of QObject* */ q_pinchgesture_children(void* self);
+const libqt_list /* of QObject* */ q_pinchgesture_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1656,7 +1770,7 @@ QBindingStorage* q_pinchgesture_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QPinchGesture* self ```
-QBindingStorage* q_pinchgesture_binding_storage2(void* self);
+const QBindingStorage* q_pinchgesture_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -1666,6 +1780,8 @@ QBindingStorage* q_pinchgesture_binding_storage2(void* self);
 void q_pinchgesture_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QPinchGesture* self, void (*slot)(QObject*) ```
 void q_pinchgesture_on_destroyed(void* self, void (*slot)(void*));
@@ -1721,6 +1837,8 @@ void q_pinchgesture_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QPinchGesture* self, void (*slot)(QObject*, QObject*) ```
 void q_pinchgesture_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -1735,12 +1853,16 @@ bool q_pinchgesture_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPinchGesture* self, QEvent* event ```
 bool q_pinchgesture_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1758,12 +1880,16 @@ bool q_pinchgesture_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPinchGesture* self, QObject* watched, QEvent* event ```
 bool q_pinchgesture_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1781,12 +1907,16 @@ void q_pinchgesture_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPinchGesture* self, QTimerEvent* event ```
 void q_pinchgesture_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1804,12 +1934,16 @@ void q_pinchgesture_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPinchGesture* self, QChildEvent* event ```
 void q_pinchgesture_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1827,12 +1961,16 @@ void q_pinchgesture_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPinchGesture* self, QEvent* event ```
 void q_pinchgesture_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1850,12 +1988,16 @@ void q_pinchgesture_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPinchGesture* self, QMetaMethod* signal ```
 void q_pinchgesture_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1873,12 +2015,16 @@ void q_pinchgesture_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPinchGesture* self, QMetaMethod* signal ```
 void q_pinchgesture_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1896,12 +2042,16 @@ QObject* q_pinchgesture_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPinchGesture* self ```
 QObject* q_pinchgesture_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1919,12 +2069,16 @@ int32_t q_pinchgesture_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPinchGesture* self ```
 int32_t q_pinchgesture_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1942,12 +2096,16 @@ int32_t q_pinchgesture_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPinchGesture* self, const char* signal ```
 int32_t q_pinchgesture_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1965,6 +2123,8 @@ bool q_pinchgesture_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPinchGesture* self, QMetaMethod* signal ```
@@ -1972,11 +2132,24 @@ bool q_pinchgesture_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QPinchGesture* self, bool (*slot)(QPinchGesture*, QMetaMethod*) ```
 void q_pinchgesture_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QPinchGesture* self, void (*slot)(QObject*, const char*) ```
+void q_pinchgesture_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpinchgesture.html#dtor.QPinchGesture)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPinchGesture* self ```
@@ -1997,7 +2170,7 @@ QSwipeGesture* q_swipegesture_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QSwipeGesture* self ```
-QMetaObject* q_swipegesture_meta_object(void* self);
+const QMetaObject* q_swipegesture_meta_object(void* self);
 
 /// ``` QSwipeGesture* self, const char* param1 ```
 void* q_swipegesture_metacast(void* self, const char* param1);
@@ -2188,7 +2361,7 @@ void q_swipegesture_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QSwipeGesture* self ```
-libqt_list /* of QObject* */ q_swipegesture_children(void* self);
+const libqt_list /* of QObject* */ q_swipegesture_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2286,7 +2459,7 @@ QBindingStorage* q_swipegesture_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QSwipeGesture* self ```
-QBindingStorage* q_swipegesture_binding_storage2(void* self);
+const QBindingStorage* q_swipegesture_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2296,6 +2469,8 @@ QBindingStorage* q_swipegesture_binding_storage2(void* self);
 void q_swipegesture_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QSwipeGesture* self, void (*slot)(QObject*) ```
 void q_swipegesture_on_destroyed(void* self, void (*slot)(void*));
@@ -2351,6 +2526,8 @@ void q_swipegesture_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QSwipeGesture* self, void (*slot)(QObject*, QObject*) ```
 void q_swipegesture_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -2365,12 +2542,16 @@ bool q_swipegesture_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSwipeGesture* self, QEvent* event ```
 bool q_swipegesture_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2388,12 +2569,16 @@ bool q_swipegesture_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSwipeGesture* self, QObject* watched, QEvent* event ```
 bool q_swipegesture_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2411,12 +2596,16 @@ void q_swipegesture_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSwipeGesture* self, QTimerEvent* event ```
 void q_swipegesture_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2434,12 +2623,16 @@ void q_swipegesture_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSwipeGesture* self, QChildEvent* event ```
 void q_swipegesture_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2457,12 +2650,16 @@ void q_swipegesture_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSwipeGesture* self, QEvent* event ```
 void q_swipegesture_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2480,12 +2677,16 @@ void q_swipegesture_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSwipeGesture* self, QMetaMethod* signal ```
 void q_swipegesture_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2503,12 +2704,16 @@ void q_swipegesture_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSwipeGesture* self, QMetaMethod* signal ```
 void q_swipegesture_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2526,12 +2731,16 @@ QObject* q_swipegesture_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSwipeGesture* self ```
 QObject* q_swipegesture_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2549,12 +2758,16 @@ int32_t q_swipegesture_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSwipeGesture* self ```
 int32_t q_swipegesture_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2572,12 +2785,16 @@ int32_t q_swipegesture_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSwipeGesture* self, const char* signal ```
 int32_t q_swipegesture_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2595,6 +2812,8 @@ bool q_swipegesture_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSwipeGesture* self, QMetaMethod* signal ```
@@ -2602,11 +2821,24 @@ bool q_swipegesture_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QSwipeGesture* self, bool (*slot)(QSwipeGesture*, QMetaMethod*) ```
 void q_swipegesture_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QSwipeGesture* self, void (*slot)(QObject*, const char*) ```
+void q_swipegesture_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qswipegesture.html#dtor.QSwipeGesture)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSwipeGesture* self ```
@@ -2627,7 +2859,7 @@ QTapGesture* q_tapgesture_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QTapGesture* self ```
-QMetaObject* q_tapgesture_meta_object(void* self);
+const QMetaObject* q_tapgesture_meta_object(void* self);
 
 /// ``` QTapGesture* self, const char* param1 ```
 void* q_tapgesture_metacast(void* self, const char* param1);
@@ -2808,7 +3040,7 @@ void q_tapgesture_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QTapGesture* self ```
-libqt_list /* of QObject* */ q_tapgesture_children(void* self);
+const libqt_list /* of QObject* */ q_tapgesture_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2906,7 +3138,7 @@ QBindingStorage* q_tapgesture_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QTapGesture* self ```
-QBindingStorage* q_tapgesture_binding_storage2(void* self);
+const QBindingStorage* q_tapgesture_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2916,6 +3148,8 @@ QBindingStorage* q_tapgesture_binding_storage2(void* self);
 void q_tapgesture_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QTapGesture* self, void (*slot)(QObject*) ```
 void q_tapgesture_on_destroyed(void* self, void (*slot)(void*));
@@ -2971,6 +3205,8 @@ void q_tapgesture_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QTapGesture* self, void (*slot)(QObject*, QObject*) ```
 void q_tapgesture_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -2985,12 +3221,16 @@ bool q_tapgesture_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapGesture* self, QEvent* event ```
 bool q_tapgesture_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3008,12 +3248,16 @@ bool q_tapgesture_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapGesture* self, QObject* watched, QEvent* event ```
 bool q_tapgesture_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3031,12 +3275,16 @@ void q_tapgesture_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapGesture* self, QTimerEvent* event ```
 void q_tapgesture_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3054,12 +3302,16 @@ void q_tapgesture_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapGesture* self, QChildEvent* event ```
 void q_tapgesture_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3077,12 +3329,16 @@ void q_tapgesture_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapGesture* self, QEvent* event ```
 void q_tapgesture_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3100,12 +3356,16 @@ void q_tapgesture_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapGesture* self, QMetaMethod* signal ```
 void q_tapgesture_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3123,12 +3383,16 @@ void q_tapgesture_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapGesture* self, QMetaMethod* signal ```
 void q_tapgesture_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3146,12 +3410,16 @@ QObject* q_tapgesture_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapGesture* self ```
 QObject* q_tapgesture_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3169,12 +3437,16 @@ int32_t q_tapgesture_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapGesture* self ```
 int32_t q_tapgesture_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3192,12 +3464,16 @@ int32_t q_tapgesture_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapGesture* self, const char* signal ```
 int32_t q_tapgesture_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3215,6 +3491,8 @@ bool q_tapgesture_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapGesture* self, QMetaMethod* signal ```
@@ -3222,11 +3500,24 @@ bool q_tapgesture_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QTapGesture* self, bool (*slot)(QTapGesture*, QMetaMethod*) ```
 void q_tapgesture_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QTapGesture* self, void (*slot)(QObject*, const char*) ```
+void q_tapgesture_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtapgesture.html#dtor.QTapGesture)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTapGesture* self ```
@@ -3247,7 +3538,7 @@ QTapAndHoldGesture* q_tapandholdgesture_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QTapAndHoldGesture* self ```
-QMetaObject* q_tapandholdgesture_meta_object(void* self);
+const QMetaObject* q_tapandholdgesture_meta_object(void* self);
 
 /// ``` QTapAndHoldGesture* self, const char* param1 ```
 void* q_tapandholdgesture_metacast(void* self, const char* param1);
@@ -3438,7 +3729,7 @@ void q_tapandholdgesture_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QTapAndHoldGesture* self ```
-libqt_list /* of QObject* */ q_tapandholdgesture_children(void* self);
+const libqt_list /* of QObject* */ q_tapandholdgesture_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -3536,7 +3827,7 @@ QBindingStorage* q_tapandholdgesture_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QTapAndHoldGesture* self ```
-QBindingStorage* q_tapandholdgesture_binding_storage2(void* self);
+const QBindingStorage* q_tapandholdgesture_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -3546,6 +3837,8 @@ QBindingStorage* q_tapandholdgesture_binding_storage2(void* self);
 void q_tapandholdgesture_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QTapAndHoldGesture* self, void (*slot)(QObject*) ```
 void q_tapandholdgesture_on_destroyed(void* self, void (*slot)(void*));
@@ -3601,6 +3894,8 @@ void q_tapandholdgesture_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QTapAndHoldGesture* self, void (*slot)(QObject*, QObject*) ```
 void q_tapandholdgesture_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -3615,12 +3910,16 @@ bool q_tapandholdgesture_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapAndHoldGesture* self, QEvent* event ```
 bool q_tapandholdgesture_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3638,12 +3937,16 @@ bool q_tapandholdgesture_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapAndHoldGesture* self, QObject* watched, QEvent* event ```
 bool q_tapandholdgesture_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3661,12 +3964,16 @@ void q_tapandholdgesture_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapAndHoldGesture* self, QTimerEvent* event ```
 void q_tapandholdgesture_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3684,12 +3991,16 @@ void q_tapandholdgesture_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapAndHoldGesture* self, QChildEvent* event ```
 void q_tapandholdgesture_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3707,12 +4018,16 @@ void q_tapandholdgesture_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapAndHoldGesture* self, QEvent* event ```
 void q_tapandholdgesture_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3730,12 +4045,16 @@ void q_tapandholdgesture_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapAndHoldGesture* self, QMetaMethod* signal ```
 void q_tapandholdgesture_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3753,12 +4072,16 @@ void q_tapandholdgesture_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapAndHoldGesture* self, QMetaMethod* signal ```
 void q_tapandholdgesture_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3776,12 +4099,16 @@ QObject* q_tapandholdgesture_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapAndHoldGesture* self ```
 QObject* q_tapandholdgesture_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3799,12 +4126,16 @@ int32_t q_tapandholdgesture_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapAndHoldGesture* self ```
 int32_t q_tapandholdgesture_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3822,12 +4153,16 @@ int32_t q_tapandholdgesture_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapAndHoldGesture* self, const char* signal ```
 int32_t q_tapandholdgesture_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3845,6 +4180,8 @@ bool q_tapandholdgesture_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTapAndHoldGesture* self, QMetaMethod* signal ```
@@ -3852,11 +4189,24 @@ bool q_tapandholdgesture_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QTapAndHoldGesture* self, bool (*slot)(QTapAndHoldGesture*, QMetaMethod*) ```
 void q_tapandholdgesture_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QTapAndHoldGesture* self, void (*slot)(QObject*, const char*) ```
+void q_tapandholdgesture_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtapandholdgesture.html#dtor.QTapAndHoldGesture)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTapAndHoldGesture* self ```
@@ -3866,8 +4216,8 @@ void q_tapandholdgesture_delete(void* self);
 
 /// q_gestureevent_new constructs a new QGestureEvent object.
 ///
-/// ``` QGesture* gestures[] ```
-QGestureEvent* q_gestureevent_new(void* gestures[]);
+/// ``` libqt_list /* of QGesture* */ gestures ```
+QGestureEvent* q_gestureevent_new(libqt_list gestures);
 
 /// q_gestureevent_new2 constructs a new QGestureEvent object.
 ///
@@ -4009,6 +4359,8 @@ QEvent* q_gestureevent_clone(void* self);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGestureEvent* self ```
@@ -4016,11 +4368,15 @@ QEvent* q_gestureevent_qbase_clone(void* self);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QGestureEvent* self, QEvent* (*slot)() ```
 void q_gestureevent_on_clone(void* self, QEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgestureevent.html#dtor.QGestureEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGestureEvent* self ```

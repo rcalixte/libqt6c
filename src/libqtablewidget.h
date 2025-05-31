@@ -13,54 +13,32 @@
 #include "qtlibc.h"
 
 #include "libqabstractitemdelegate.h"
-#include "libqabstractitemmodel.h"
 #include "libqabstractitemview.h"
 #include "libqabstractscrollarea.h"
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
 #include "libqbrush.h"
-#include "libqcursor.h"
 #include "libqdatastream.h"
 #include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
 #include "libqframe.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqheaderview.h"
 #include "libqicon.h"
 #include "libqitemselectionmodel.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
-#include "libqlocale.h"
 #include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqmimedata.h"
+#include "libqabstractitemmodel.h"
 #include "libqobject.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
 #include "libqrect.h"
 #include "libqregion.h"
-#include "libqscreen.h"
-#include "libqscrollbar.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
 #include "libqstyleoption.h"
 #include "libqtableview.h"
-#include "libqthread.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qtablewidgetselectionrange.html
 
@@ -124,6 +102,8 @@ int32_t q_tablewidgetselectionrange_row_count(void* self);
 /// ``` QTableWidgetSelectionRange* self ```
 int32_t q_tablewidgetselectionrange_column_count(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetselectionrange.html#dtor.QTableWidgetSelectionRange)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTableWidgetSelectionRange* self ```
@@ -171,11 +151,15 @@ QTableWidgetItem* q_tablewidgetitem_new7(void* icon, const char* text, int typeV
 /// ``` QTableWidgetItem* self ```
 QTableWidgetItem* q_tablewidgetitem_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTableWidgetItem* self, QTableWidgetItem* (*slot)() ```
 void q_tablewidgetitem_on_clone(void* self, QTableWidgetItem* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QTableWidgetItem* self ```
@@ -341,11 +325,15 @@ void q_tablewidgetitem_set_size_hint(void* self, void* size);
 /// ``` QTableWidgetItem* self, int role ```
 QVariant* q_tablewidgetitem_data(void* self, int role);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#data)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTableWidgetItem* self, QVariant* (*slot)(QTableWidgetItem*, int) ```
 void q_tablewidgetitem_on_data(void* self, QVariant* (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#data)
+///
 /// Base class method implementation
 ///
 /// ``` QTableWidgetItem* self, int role ```
@@ -356,11 +344,15 @@ QVariant* q_tablewidgetitem_qbase_data(void* self, int role);
 /// ``` QTableWidgetItem* self, int role, QVariant* value ```
 void q_tablewidgetitem_set_data(void* self, int role, void* value);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#setData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTableWidgetItem* self, void (*slot)(QTableWidgetItem*, int, QVariant*) ```
 void q_tablewidgetitem_on_set_data(void* self, void (*slot)(void*, int, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#setData)
+///
 /// Base class method implementation
 ///
 /// ``` QTableWidgetItem* self, int role, QVariant* value ```
@@ -371,11 +363,15 @@ void q_tablewidgetitem_qbase_set_data(void* self, int role, void* value);
 /// ``` QTableWidgetItem* self, QTableWidgetItem* other ```
 bool q_tablewidgetitem_operator_lesser(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#operator<)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTableWidgetItem* self, bool (*slot)(QTableWidgetItem*, QTableWidgetItem*) ```
 void q_tablewidgetitem_on_operator_lesser(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#operator<)
+///
 /// Base class method implementation
 ///
 /// ``` QTableWidgetItem* self, QTableWidgetItem* other ```
@@ -386,11 +382,15 @@ bool q_tablewidgetitem_qbase_operator_lesser(void* self, void* other);
 /// ``` QTableWidgetItem* self, QDataStream* in ```
 void q_tablewidgetitem_read(void* self, void* in);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#read)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTableWidgetItem* self, void (*slot)(QTableWidgetItem*, QDataStream*) ```
 void q_tablewidgetitem_on_read(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#read)
+///
 /// Base class method implementation
 ///
 /// ``` QTableWidgetItem* self, QDataStream* in ```
@@ -401,11 +401,15 @@ void q_tablewidgetitem_qbase_read(void* self, void* in);
 /// ``` QTableWidgetItem* self, QDataStream* out ```
 void q_tablewidgetitem_write(void* self, void* out);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#write)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTableWidgetItem* self, void (*slot)(QTableWidgetItem*, QDataStream*) ```
 void q_tablewidgetitem_on_write(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#write)
+///
 /// Base class method implementation
 ///
 /// ``` QTableWidgetItem* self, QDataStream* out ```
@@ -421,6 +425,8 @@ void q_tablewidgetitem_operator_assign(void* self, void* other);
 /// ``` QTableWidgetItem* self ```
 int32_t q_tablewidgetitem_type(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#dtor.QTableWidgetItem)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTableWidgetItem* self ```
@@ -451,7 +457,7 @@ QTableWidget* q_tablewidget_new4(int rows, int columns, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QTableWidget* self ```
-QMetaObject* q_tablewidget_meta_object(void* self);
+const QMetaObject* q_tablewidget_meta_object(void* self);
 
 /// ``` QTableWidget* self, const char* param1 ```
 void* q_tablewidget_metacast(void* self, const char* param1);
@@ -707,7 +713,7 @@ QRect* q_tablewidget_visual_item_rect(void* self, void* item);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#itemPrototype)
 ///
 /// ``` QTableWidget* self ```
-QTableWidgetItem* q_tablewidget_item_prototype(void* self);
+const QTableWidgetItem* q_tablewidget_item_prototype(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#setItemPrototype)
 ///
@@ -754,6 +760,8 @@ void q_tablewidget_clear_contents(void* self);
 /// ``` QTableWidget* self, QTableWidgetItem* item ```
 void q_tablewidget_item_pressed(void* self, void* item);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#itemPressed)
+///
 /// ``` QTableWidget* self, void (*slot)(QTableWidget*, QTableWidgetItem*) ```
 void q_tablewidget_on_item_pressed(void* self, void (*slot)(void*, void*));
 
@@ -762,6 +770,8 @@ void q_tablewidget_on_item_pressed(void* self, void (*slot)(void*, void*));
 /// ``` QTableWidget* self, QTableWidgetItem* item ```
 void q_tablewidget_item_clicked(void* self, void* item);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#itemClicked)
+///
 /// ``` QTableWidget* self, void (*slot)(QTableWidget*, QTableWidgetItem*) ```
 void q_tablewidget_on_item_clicked(void* self, void (*slot)(void*, void*));
 
@@ -770,6 +780,8 @@ void q_tablewidget_on_item_clicked(void* self, void (*slot)(void*, void*));
 /// ``` QTableWidget* self, QTableWidgetItem* item ```
 void q_tablewidget_item_double_clicked(void* self, void* item);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#itemDoubleClicked)
+///
 /// ``` QTableWidget* self, void (*slot)(QTableWidget*, QTableWidgetItem*) ```
 void q_tablewidget_on_item_double_clicked(void* self, void (*slot)(void*, void*));
 
@@ -778,6 +790,8 @@ void q_tablewidget_on_item_double_clicked(void* self, void (*slot)(void*, void*)
 /// ``` QTableWidget* self, QTableWidgetItem* item ```
 void q_tablewidget_item_activated(void* self, void* item);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#itemActivated)
+///
 /// ``` QTableWidget* self, void (*slot)(QTableWidget*, QTableWidgetItem*) ```
 void q_tablewidget_on_item_activated(void* self, void (*slot)(void*, void*));
 
@@ -786,6 +800,8 @@ void q_tablewidget_on_item_activated(void* self, void (*slot)(void*, void*));
 /// ``` QTableWidget* self, QTableWidgetItem* item ```
 void q_tablewidget_item_entered(void* self, void* item);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#itemEntered)
+///
 /// ``` QTableWidget* self, void (*slot)(QTableWidget*, QTableWidgetItem*) ```
 void q_tablewidget_on_item_entered(void* self, void (*slot)(void*, void*));
 
@@ -794,6 +810,8 @@ void q_tablewidget_on_item_entered(void* self, void (*slot)(void*, void*));
 /// ``` QTableWidget* self, QTableWidgetItem* item ```
 void q_tablewidget_item_changed(void* self, void* item);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#itemChanged)
+///
 /// ``` QTableWidget* self, void (*slot)(QTableWidget*, QTableWidgetItem*) ```
 void q_tablewidget_on_item_changed(void* self, void (*slot)(void*, void*));
 
@@ -802,6 +820,8 @@ void q_tablewidget_on_item_changed(void* self, void (*slot)(void*, void*));
 /// ``` QTableWidget* self, QTableWidgetItem* current, QTableWidgetItem* previous ```
 void q_tablewidget_current_item_changed(void* self, void* current, void* previous);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#currentItemChanged)
+///
 /// ``` QTableWidget* self, void (*slot)(QTableWidget*, QTableWidgetItem*, QTableWidgetItem*) ```
 void q_tablewidget_on_current_item_changed(void* self, void (*slot)(void*, void*, void*));
 
@@ -810,6 +830,8 @@ void q_tablewidget_on_current_item_changed(void* self, void (*slot)(void*, void*
 /// ``` QTableWidget* self ```
 void q_tablewidget_item_selection_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#itemSelectionChanged)
+///
 /// ``` QTableWidget* self, void (*slot)(QTableWidget*) ```
 void q_tablewidget_on_item_selection_changed(void* self, void (*slot)(void*));
 
@@ -818,6 +840,8 @@ void q_tablewidget_on_item_selection_changed(void* self, void (*slot)(void*));
 /// ``` QTableWidget* self, int row, int column ```
 void q_tablewidget_cell_pressed(void* self, int row, int column);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#cellPressed)
+///
 /// ``` QTableWidget* self, void (*slot)(QTableWidget*, int, int) ```
 void q_tablewidget_on_cell_pressed(void* self, void (*slot)(void*, int, int));
 
@@ -826,6 +850,8 @@ void q_tablewidget_on_cell_pressed(void* self, void (*slot)(void*, int, int));
 /// ``` QTableWidget* self, int row, int column ```
 void q_tablewidget_cell_clicked(void* self, int row, int column);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#cellClicked)
+///
 /// ``` QTableWidget* self, void (*slot)(QTableWidget*, int, int) ```
 void q_tablewidget_on_cell_clicked(void* self, void (*slot)(void*, int, int));
 
@@ -834,6 +860,8 @@ void q_tablewidget_on_cell_clicked(void* self, void (*slot)(void*, int, int));
 /// ``` QTableWidget* self, int row, int column ```
 void q_tablewidget_cell_double_clicked(void* self, int row, int column);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#cellDoubleClicked)
+///
 /// ``` QTableWidget* self, void (*slot)(QTableWidget*, int, int) ```
 void q_tablewidget_on_cell_double_clicked(void* self, void (*slot)(void*, int, int));
 
@@ -842,6 +870,8 @@ void q_tablewidget_on_cell_double_clicked(void* self, void (*slot)(void*, int, i
 /// ``` QTableWidget* self, int row, int column ```
 void q_tablewidget_cell_activated(void* self, int row, int column);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#cellActivated)
+///
 /// ``` QTableWidget* self, void (*slot)(QTableWidget*, int, int) ```
 void q_tablewidget_on_cell_activated(void* self, void (*slot)(void*, int, int));
 
@@ -850,6 +880,8 @@ void q_tablewidget_on_cell_activated(void* self, void (*slot)(void*, int, int));
 /// ``` QTableWidget* self, int row, int column ```
 void q_tablewidget_cell_entered(void* self, int row, int column);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#cellEntered)
+///
 /// ``` QTableWidget* self, void (*slot)(QTableWidget*, int, int) ```
 void q_tablewidget_on_cell_entered(void* self, void (*slot)(void*, int, int));
 
@@ -858,6 +890,8 @@ void q_tablewidget_on_cell_entered(void* self, void (*slot)(void*, int, int));
 /// ``` QTableWidget* self, int row, int column ```
 void q_tablewidget_cell_changed(void* self, int row, int column);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#cellChanged)
+///
 /// ``` QTableWidget* self, void (*slot)(QTableWidget*, int, int) ```
 void q_tablewidget_on_cell_changed(void* self, void (*slot)(void*, int, int));
 
@@ -866,6 +900,8 @@ void q_tablewidget_on_cell_changed(void* self, void (*slot)(void*, int, int));
 /// ``` QTableWidget* self, int currentRow, int currentColumn, int previousRow, int previousColumn ```
 void q_tablewidget_current_cell_changed(void* self, int currentRow, int currentColumn, int previousRow, int previousColumn);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#currentCellChanged)
+///
 /// ``` QTableWidget* self, void (*slot)(QTableWidget*, int, int, int, int) ```
 void q_tablewidget_on_current_cell_changed(void* self, void (*slot)(void*, int, int, int, int));
 
@@ -874,11 +910,15 @@ void q_tablewidget_on_current_cell_changed(void* self, void (*slot)(void*, int, 
 /// ``` QTableWidget* self, QEvent* e ```
 bool q_tablewidget_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTableWidget* self, bool (*slot)(QTableWidget*, QEvent*) ```
 void q_tablewidget_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QTableWidget* self, QEvent* e ```
@@ -889,11 +929,15 @@ bool q_tablewidget_qbase_event(void* self, void* e);
 /// ``` QTableWidget* self ```
 const char** q_tablewidget_mime_types(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#mimeTypes)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTableWidget* self, const char** (*slot)() ```
 void q_tablewidget_on_mime_types(void* self, const char** (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#mimeTypes)
+///
 /// Base class method implementation
 ///
 /// ``` QTableWidget* self ```
@@ -901,29 +945,37 @@ const char** q_tablewidget_qbase_mime_types(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#mimeData)
 ///
-/// ``` QTableWidget* self, QTableWidgetItem* items[] ```
-QMimeData* q_tablewidget_mime_data(void* self, void* items[]);
+/// ``` QTableWidget* self, libqt_list /* of QTableWidgetItem* */ items ```
+QMimeData* q_tablewidget_mime_data(void* self, libqt_list items);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#mimeData)
+///
 /// Allows for overriding the related default method
 ///
-/// ``` QTableWidget* self, QMimeData* (*slot)(QTableWidget*, QTableWidgetItem*[]) ```
-void q_tablewidget_on_mime_data(void* self, QMimeData* (*slot)(void*, void*));
+/// ``` QTableWidget* self, QMimeData* (*slot)(QTableWidget*, libqt_list /* of QTableWidgetItem* */ items ) ```
+void q_tablewidget_on_mime_data(void* self, QMimeData* (*slot)(void*, libqt_list));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#mimeData)
+///
 /// Base class method implementation
 ///
-/// ``` QTableWidget* self, QTableWidgetItem* items[] ```
-QMimeData* q_tablewidget_qbase_mime_data(void* self, void* items[]);
+/// ``` QTableWidget* self, libqt_list /* of QTableWidgetItem* */ items ```
+QMimeData* q_tablewidget_qbase_mime_data(void* self, libqt_list items);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#dropMimeData)
 ///
 /// ``` QTableWidget* self, int row, int column, QMimeData* data, enum Qt__DropAction action ```
 bool q_tablewidget_drop_mime_data(void* self, int row, int column, void* data, int64_t action);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#dropMimeData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTableWidget* self, bool (*slot)(QTableWidget*, int, int, QMimeData*, enum Qt__DropAction) ```
 void q_tablewidget_on_drop_mime_data(void* self, bool (*slot)(void*, int, int, void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#dropMimeData)
+///
 /// Base class method implementation
 ///
 /// ``` QTableWidget* self, int row, int column, QMimeData* data, enum Qt__DropAction action ```
@@ -934,11 +986,15 @@ bool q_tablewidget_qbase_drop_mime_data(void* self, int row, int column, void* d
 /// ``` QTableWidget* self ```
 int64_t q_tablewidget_supported_drop_actions(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#supportedDropActions)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTableWidget* self, int64_t (*slot)() ```
 void q_tablewidget_on_supported_drop_actions(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#supportedDropActions)
+///
 /// Base class method implementation
 ///
 /// ``` QTableWidget* self ```
@@ -949,11 +1005,15 @@ int64_t q_tablewidget_qbase_supported_drop_actions(void* self);
 /// ``` QTableWidget* self, QDropEvent* event ```
 void q_tablewidget_drop_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#dropEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTableWidget* self, void (*slot)(QTableWidget*, QDropEvent*) ```
 void q_tablewidget_on_drop_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#dropEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTableWidget* self, QDropEvent* event ```
@@ -988,12 +1048,16 @@ void q_tablewidget_set_model(void* self, void* model);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#setModel)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTableView* self, void (*slot)(QTableView*, QAbstractItemModel*) ```
 void q_tablewidget_on_set_model(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#setModel)
 ///
 /// Base class method implementation
 ///
@@ -1660,6 +1724,8 @@ void q_tablewidget_pressed(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#pressed)
+///
 /// ``` QTableWidget* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
 void q_tablewidget_on_pressed(void* self, void (*slot)(void*, void*));
 
@@ -1671,6 +1737,8 @@ void q_tablewidget_on_pressed(void* self, void (*slot)(void*, void*));
 void q_tablewidget_clicked(void* self, void* index);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#clicked)
 ///
 /// ``` QTableWidget* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
 void q_tablewidget_on_clicked(void* self, void (*slot)(void*, void*));
@@ -1684,6 +1752,8 @@ void q_tablewidget_double_clicked(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doubleClicked)
+///
 /// ``` QTableWidget* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
 void q_tablewidget_on_double_clicked(void* self, void (*slot)(void*, void*));
 
@@ -1695,6 +1765,8 @@ void q_tablewidget_on_double_clicked(void* self, void (*slot)(void*, void*));
 void q_tablewidget_activated(void* self, void* index);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#activated)
 ///
 /// ``` QTableWidget* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
 void q_tablewidget_on_activated(void* self, void (*slot)(void*, void*));
@@ -1708,6 +1780,8 @@ void q_tablewidget_entered(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#entered)
+///
 /// ``` QTableWidget* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
 void q_tablewidget_on_entered(void* self, void (*slot)(void*, void*));
 
@@ -1720,6 +1794,8 @@ void q_tablewidget_viewport_entered(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportEntered)
+///
 /// ``` QTableWidget* self, void (*slot)(QAbstractItemView*) ```
 void q_tablewidget_on_viewport_entered(void* self, void (*slot)(void*));
 
@@ -1731,6 +1807,8 @@ void q_tablewidget_on_viewport_entered(void* self, void (*slot)(void*));
 void q_tablewidget_icon_size_changed(void* self, void* size);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#iconSizeChanged)
 ///
 /// ``` QTableWidget* self, void (*slot)(QAbstractItemView*, QSize*) ```
 void q_tablewidget_on_icon_size_changed(void* self, void (*slot)(void*, void*));
@@ -2069,7 +2147,7 @@ QRect* q_tablewidget_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QTableWidget* self ```
-QRect* q_tablewidget_geometry(void* self);
+const QRect* q_tablewidget_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2426,7 +2504,7 @@ QWidget* q_tablewidget_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QTableWidget* self ```
-QPalette* q_tablewidget_palette(void* self);
+const QPalette* q_tablewidget_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2468,7 +2546,7 @@ int64_t q_tablewidget_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QTableWidget* self ```
-QFont* q_tablewidget_font(void* self);
+const QFont* q_tablewidget_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3461,15 +3539,15 @@ void q_tablewidget_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QTableWidget* self, QAction* actions[] ```
-void q_tablewidget_add_actions(void* self, void* actions[]);
+/// ``` QTableWidget* self, libqt_list /* of QAction* */ actions ```
+void q_tablewidget_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QTableWidget* self, QAction* before, QAction* actions[] ```
-void q_tablewidget_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QTableWidget* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_tablewidget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3669,6 +3747,8 @@ void q_tablewidget_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QTableWidget* self, void (*slot)(QWidget*, const char*) ```
 void q_tablewidget_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -3680,6 +3760,8 @@ void q_tablewidget_on_window_title_changed(void* self, void (*slot)(void*, const
 void q_tablewidget_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QTableWidget* self, void (*slot)(QWidget*, QIcon*) ```
 void q_tablewidget_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -3693,6 +3775,8 @@ void q_tablewidget_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QTableWidget* self, void (*slot)(QWidget*, const char*) ```
 void q_tablewidget_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -3704,6 +3788,8 @@ void q_tablewidget_on_window_icon_text_changed(void* self, void (*slot)(void*, c
 void q_tablewidget_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QTableWidget* self, void (*slot)(QWidget*, QPoint*) ```
 void q_tablewidget_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -3909,7 +3995,7 @@ void q_tablewidget_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QTableWidget* self ```
-libqt_list /* of QObject* */ q_tablewidget_children(void* self);
+const libqt_list /* of QObject* */ q_tablewidget_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4000,7 +4086,7 @@ QBindingStorage* q_tablewidget_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QTableWidget* self ```
-QBindingStorage* q_tablewidget_binding_storage2(void* self);
+const QBindingStorage* q_tablewidget_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -4010,6 +4096,8 @@ QBindingStorage* q_tablewidget_binding_storage2(void* self);
 void q_tablewidget_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QTableWidget* self, void (*slot)(QObject*) ```
 void q_tablewidget_on_destroyed(void* self, void (*slot)(void*));
@@ -4064,6 +4152,8 @@ QMetaObject__Connection* q_tablewidget_connect4(void* self, void* sender, const 
 void q_tablewidget_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QTableWidget* self, void (*slot)(QObject*, QObject*) ```
 void q_tablewidget_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -4163,12 +4253,16 @@ void q_tablewidget_set_root_index(void* self, void* index);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#setRootIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QModelIndex* index ```
 void q_tablewidget_qbase_set_root_index(void* self, void* index);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#setRootIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4186,12 +4280,16 @@ void q_tablewidget_set_selection_model(void* self, void* selectionModel);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#setSelectionModel)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QItemSelectionModel* selectionModel ```
 void q_tablewidget_qbase_set_selection_model(void* self, void* selectionModel);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#setSelectionModel)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4209,12 +4307,16 @@ void q_tablewidget_do_items_layout(void* self);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#doItemsLayout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 void q_tablewidget_qbase_do_items_layout(void* self);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#doItemsLayout)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4232,12 +4334,16 @@ QRect* q_tablewidget_visual_rect(void* self, void* index);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#visualRect)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QModelIndex* index ```
 QRect* q_tablewidget_qbase_visual_rect(void* self, void* index);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#visualRect)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4255,12 +4361,16 @@ void q_tablewidget_scroll_to(void* self, void* index, int64_t hint);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#scrollTo)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QModelIndex* index, enum QAbstractItemView__ScrollHint hint ```
 void q_tablewidget_qbase_scroll_to(void* self, void* index, int64_t hint);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#scrollTo)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4278,12 +4388,16 @@ QModelIndex* q_tablewidget_index_at(void* self, void* p);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#indexAt)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QPoint* p ```
 QModelIndex* q_tablewidget_qbase_index_at(void* self, void* p);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#indexAt)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4301,12 +4415,16 @@ void q_tablewidget_scroll_contents_by(void* self, int dx, int dy);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#scrollContentsBy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, int dx, int dy ```
 void q_tablewidget_qbase_scroll_contents_by(void* self, int dx, int dy);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#scrollContentsBy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4324,12 +4442,16 @@ void q_tablewidget_init_view_item_option(void* self, void* option);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#initViewItemOption)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QStyleOptionViewItem* option ```
 void q_tablewidget_qbase_init_view_item_option(void* self, void* option);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#initViewItemOption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4347,12 +4469,16 @@ void q_tablewidget_paint_event(void* self, void* e);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#paintEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QPaintEvent* e ```
 void q_tablewidget_qbase_paint_event(void* self, void* e);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#paintEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4370,12 +4496,16 @@ void q_tablewidget_timer_event(void* self, void* event);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QTimerEvent* event ```
 void q_tablewidget_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4393,12 +4523,16 @@ int32_t q_tablewidget_horizontal_offset(void* self);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#horizontalOffset)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 int32_t q_tablewidget_qbase_horizontal_offset(void* self);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#horizontalOffset)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4416,12 +4550,16 @@ int32_t q_tablewidget_vertical_offset(void* self);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#verticalOffset)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 int32_t q_tablewidget_qbase_vertical_offset(void* self);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#verticalOffset)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4439,12 +4577,16 @@ QModelIndex* q_tablewidget_move_cursor(void* self, int64_t cursorAction, int64_t
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#moveCursor)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, enum QAbstractItemView__CursorAction cursorAction, int modifiers ```
 QModelIndex* q_tablewidget_qbase_move_cursor(void* self, int64_t cursorAction, int64_t modifiers);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#moveCursor)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4462,12 +4604,16 @@ void q_tablewidget_set_selection(void* self, void* rect, int64_t command);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#setSelection)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QRect* rect, int command ```
 void q_tablewidget_qbase_set_selection(void* self, void* rect, int64_t command);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#setSelection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4485,12 +4631,16 @@ QRegion* q_tablewidget_visual_region_for_selection(void* self, void* selection);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#visualRegionForSelection)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QItemSelection* selection ```
 QRegion* q_tablewidget_qbase_visual_region_for_selection(void* self, void* selection);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#visualRegionForSelection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4508,12 +4658,16 @@ libqt_list /* of QModelIndex* */ q_tablewidget_selected_indexes(void* self);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#selectedIndexes)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 libqt_list /* of QModelIndex* */ q_tablewidget_qbase_selected_indexes(void* self);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#selectedIndexes)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4531,12 +4685,16 @@ void q_tablewidget_update_geometries(void* self);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#updateGeometries)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 void q_tablewidget_qbase_update_geometries(void* self);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#updateGeometries)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4554,12 +4712,16 @@ QSize* q_tablewidget_viewport_size_hint(void* self);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#viewportSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 QSize* q_tablewidget_qbase_viewport_size_hint(void* self);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#viewportSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4577,12 +4739,16 @@ int32_t q_tablewidget_size_hint_for_row(void* self, int row);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#sizeHintForRow)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, int row ```
 int32_t q_tablewidget_qbase_size_hint_for_row(void* self, int row);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#sizeHintForRow)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4600,12 +4766,16 @@ int32_t q_tablewidget_size_hint_for_column(void* self, int column);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#sizeHintForColumn)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, int column ```
 int32_t q_tablewidget_qbase_size_hint_for_column(void* self, int column);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#sizeHintForColumn)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4623,12 +4793,16 @@ void q_tablewidget_vertical_scrollbar_action(void* self, int action);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#verticalScrollbarAction)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, int action ```
 void q_tablewidget_qbase_vertical_scrollbar_action(void* self, int action);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#verticalScrollbarAction)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4646,12 +4820,16 @@ void q_tablewidget_horizontal_scrollbar_action(void* self, int action);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#horizontalScrollbarAction)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, int action ```
 void q_tablewidget_qbase_horizontal_scrollbar_action(void* self, int action);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#horizontalScrollbarAction)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4669,12 +4847,16 @@ bool q_tablewidget_is_index_hidden(void* self, void* index);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#isIndexHidden)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QModelIndex* index ```
 bool q_tablewidget_qbase_is_index_hidden(void* self, void* index);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#isIndexHidden)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4692,12 +4874,16 @@ void q_tablewidget_selection_changed(void* self, void* selected, void* deselecte
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#selectionChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QItemSelection* selected, QItemSelection* deselected ```
 void q_tablewidget_qbase_selection_changed(void* self, void* selected, void* deselected);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#selectionChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4715,12 +4901,16 @@ void q_tablewidget_current_changed(void* self, void* current, void* previous);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#currentChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QModelIndex* current, QModelIndex* previous ```
 void q_tablewidget_qbase_current_changed(void* self, void* current, void* previous);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#currentChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4738,12 +4928,16 @@ void q_tablewidget_keyboard_search(void* self, const char* search);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#keyboardSearch)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, const char* search ```
 void q_tablewidget_qbase_keyboard_search(void* self, const char* search);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#keyboardSearch)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4761,12 +4955,16 @@ QAbstractItemDelegate* q_tablewidget_item_delegate_for_index(void* self, void* i
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QModelIndex* index ```
 QAbstractItemDelegate* q_tablewidget_qbase_item_delegate_for_index(void* self, void* index);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4784,12 +4982,16 @@ QVariant* q_tablewidget_input_method_query(void* self, int64_t query);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, enum Qt__InputMethodQuery query ```
 QVariant* q_tablewidget_qbase_input_method_query(void* self, int64_t query);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4807,12 +5009,16 @@ void q_tablewidget_reset(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#reset)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 void q_tablewidget_qbase_reset(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#reset)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4830,12 +5036,16 @@ void q_tablewidget_select_all(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectAll)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 void q_tablewidget_qbase_select_all(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectAll)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4848,22 +5058,26 @@ void q_tablewidget_on_select_all(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTableWidget* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* roles[] ```
-void q_tablewidget_data_changed(void* self, void* topLeft, void* bottomRight, int* roles[]);
+/// ``` QTableWidget* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles ```
+void q_tablewidget_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dataChanged)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTableWidget* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* roles[] ```
-void q_tablewidget_qbase_data_changed(void* self, void* topLeft, void* bottomRight, int* roles[]);
+/// ``` QTableWidget* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles ```
+void q_tablewidget_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dataChanged)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTableWidget* self, void (*slot)(QTableWidget*, QModelIndex*, QModelIndex*, int*[]) ```
-void q_tablewidget_on_data_changed(void* self, void (*slot)(void*, void*, void*, int*));
+/// ``` QTableWidget* self, void (*slot)(QTableWidget*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
+void q_tablewidget_on_data_changed(void* self, void (*slot)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4876,12 +5090,16 @@ void q_tablewidget_rows_inserted(void* self, void* parent, int start, int end);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#rowsInserted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QModelIndex* parent, int start, int end ```
 void q_tablewidget_qbase_rows_inserted(void* self, void* parent, int start, int end);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#rowsInserted)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4899,12 +5117,16 @@ void q_tablewidget_rows_about_to_be_removed(void* self, void* parent, int start,
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#rowsAboutToBeRemoved)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QModelIndex* parent, int start, int end ```
 void q_tablewidget_qbase_rows_about_to_be_removed(void* self, void* parent, int start, int end);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#rowsAboutToBeRemoved)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4922,12 +5144,16 @@ void q_tablewidget_update_editor_data(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 void q_tablewidget_qbase_update_editor_data(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4945,12 +5171,16 @@ void q_tablewidget_update_editor_geometries(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorGeometries)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 void q_tablewidget_qbase_update_editor_geometries(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorGeometries)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4968,12 +5198,16 @@ void q_tablewidget_vertical_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollbarValueChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, int value ```
 void q_tablewidget_qbase_vertical_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollbarValueChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4991,12 +5225,16 @@ void q_tablewidget_horizontal_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollbarValueChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, int value ```
 void q_tablewidget_qbase_horizontal_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollbarValueChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5014,12 +5252,16 @@ void q_tablewidget_close_editor(void* self, void* editor, int64_t hint);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#closeEditor)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QWidget* editor, enum QAbstractItemDelegate__EndEditHint hint ```
 void q_tablewidget_qbase_close_editor(void* self, void* editor, int64_t hint);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#closeEditor)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5037,12 +5279,16 @@ void q_tablewidget_commit_data(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#commitData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QWidget* editor ```
 void q_tablewidget_qbase_commit_data(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#commitData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5060,12 +5306,16 @@ void q_tablewidget_editor_destroyed(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#editorDestroyed)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QObject* editor ```
 void q_tablewidget_qbase_editor_destroyed(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#editorDestroyed)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5083,12 +5333,16 @@ bool q_tablewidget_edit2(void* self, void* index, int64_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#edit)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QModelIndex* index, enum QAbstractItemView__EditTrigger trigger, QEvent* event ```
 bool q_tablewidget_qbase_edit2(void* self, void* index, int64_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#edit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5106,12 +5360,16 @@ int64_t q_tablewidget_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectionCommand)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QModelIndex* index, QEvent* event ```
 int64_t q_tablewidget_qbase_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectionCommand)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5129,12 +5387,16 @@ void q_tablewidget_start_drag(void* self, int64_t supportedActions);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#startDrag)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, int supportedActions ```
 void q_tablewidget_qbase_start_drag(void* self, int64_t supportedActions);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#startDrag)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5152,12 +5414,16 @@ bool q_tablewidget_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, bool next ```
 bool q_tablewidget_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5175,12 +5441,16 @@ bool q_tablewidget_viewport_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QEvent* event ```
 bool q_tablewidget_qbase_viewport_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5198,12 +5468,16 @@ void q_tablewidget_mouse_press_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#mousePressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QMouseEvent* event ```
 void q_tablewidget_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5221,12 +5495,16 @@ void q_tablewidget_mouse_move_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QMouseEvent* event ```
 void q_tablewidget_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5244,12 +5522,16 @@ void q_tablewidget_mouse_release_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#mouseReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QMouseEvent* event ```
 void q_tablewidget_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5267,12 +5549,16 @@ void q_tablewidget_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QMouseEvent* event ```
 void q_tablewidget_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5290,12 +5576,16 @@ void q_tablewidget_drag_enter_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QDragEnterEvent* event ```
 void q_tablewidget_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5313,12 +5603,16 @@ void q_tablewidget_drag_move_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QDragMoveEvent* event ```
 void q_tablewidget_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5336,12 +5630,16 @@ void q_tablewidget_drag_leave_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QDragLeaveEvent* event ```
 void q_tablewidget_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5359,12 +5657,16 @@ void q_tablewidget_focus_in_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QFocusEvent* event ```
 void q_tablewidget_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5382,12 +5684,16 @@ void q_tablewidget_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QFocusEvent* event ```
 void q_tablewidget_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5405,12 +5711,16 @@ void q_tablewidget_key_press_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QKeyEvent* event ```
 void q_tablewidget_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5428,12 +5738,16 @@ void q_tablewidget_resize_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#resizeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QResizeEvent* event ```
 void q_tablewidget_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5451,12 +5765,16 @@ void q_tablewidget_input_method_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QInputMethodEvent* event ```
 void q_tablewidget_qbase_input_method_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5474,12 +5792,16 @@ bool q_tablewidget_event_filter(void* self, void* object, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QObject* object, QEvent* event ```
 bool q_tablewidget_qbase_event_filter(void* self, void* object, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5497,12 +5819,16 @@ QSize* q_tablewidget_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 QSize* q_tablewidget_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5520,12 +5846,16 @@ QSize* q_tablewidget_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 QSize* q_tablewidget_qbase_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5543,12 +5873,16 @@ void q_tablewidget_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QWidget* viewport ```
 void q_tablewidget_qbase_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5566,12 +5900,16 @@ void q_tablewidget_wheel_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QWheelEvent* param1 ```
 void q_tablewidget_qbase_wheel_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5589,12 +5927,16 @@ void q_tablewidget_context_menu_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QContextMenuEvent* param1 ```
 void q_tablewidget_qbase_context_menu_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5612,12 +5954,16 @@ void q_tablewidget_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#changeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QEvent* param1 ```
 void q_tablewidget_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5635,12 +5981,16 @@ void q_tablewidget_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QStyleOptionFrame* option ```
 void q_tablewidget_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5658,12 +6008,16 @@ int32_t q_tablewidget_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 int32_t q_tablewidget_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5681,12 +6035,16 @@ void q_tablewidget_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, bool visible ```
 void q_tablewidget_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5704,12 +6062,16 @@ int32_t q_tablewidget_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, int param1 ```
 int32_t q_tablewidget_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5727,12 +6089,16 @@ bool q_tablewidget_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 bool q_tablewidget_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5750,12 +6116,16 @@ QPaintEngine* q_tablewidget_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 QPaintEngine* q_tablewidget_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5773,12 +6143,16 @@ void q_tablewidget_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QKeyEvent* event ```
 void q_tablewidget_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5796,12 +6170,16 @@ void q_tablewidget_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QEnterEvent* event ```
 void q_tablewidget_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5819,12 +6197,16 @@ void q_tablewidget_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QEvent* event ```
 void q_tablewidget_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5842,12 +6224,16 @@ void q_tablewidget_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QMoveEvent* event ```
 void q_tablewidget_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5865,12 +6251,16 @@ void q_tablewidget_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QCloseEvent* event ```
 void q_tablewidget_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5888,12 +6278,16 @@ void q_tablewidget_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QTabletEvent* event ```
 void q_tablewidget_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5911,12 +6305,16 @@ void q_tablewidget_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QActionEvent* event ```
 void q_tablewidget_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5934,12 +6332,16 @@ void q_tablewidget_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QShowEvent* event ```
 void q_tablewidget_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5957,12 +6359,16 @@ void q_tablewidget_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QHideEvent* event ```
 void q_tablewidget_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5980,12 +6386,16 @@ bool q_tablewidget_native_event(void* self, const char* eventType, void* message
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, const char* eventType, void* message, intptr_t* result ```
 bool q_tablewidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6003,12 +6413,16 @@ int32_t q_tablewidget_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_tablewidget_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6026,12 +6440,16 @@ void q_tablewidget_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QPainter* painter ```
 void q_tablewidget_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6049,12 +6467,16 @@ QPaintDevice* q_tablewidget_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QPoint* offset ```
 QPaintDevice* q_tablewidget_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6072,12 +6494,16 @@ QPainter* q_tablewidget_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 QPainter* q_tablewidget_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6095,12 +6521,16 @@ void q_tablewidget_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QChildEvent* event ```
 void q_tablewidget_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6118,12 +6548,16 @@ void q_tablewidget_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QEvent* event ```
 void q_tablewidget_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6141,12 +6575,16 @@ void q_tablewidget_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QMetaMethod* signal ```
 void q_tablewidget_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6164,12 +6602,16 @@ void q_tablewidget_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QMetaMethod* signal ```
 void q_tablewidget_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6187,12 +6629,16 @@ void q_tablewidget_row_moved(void* self, int row, int oldIndex, int newIndex);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#rowMoved)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, int row, int oldIndex, int newIndex ```
 void q_tablewidget_qbase_row_moved(void* self, int row, int oldIndex, int newIndex);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#rowMoved)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6210,12 +6656,16 @@ void q_tablewidget_column_moved(void* self, int column, int oldIndex, int newInd
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#columnMoved)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, int column, int oldIndex, int newIndex ```
 void q_tablewidget_qbase_column_moved(void* self, int column, int oldIndex, int newIndex);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#columnMoved)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6233,12 +6683,16 @@ void q_tablewidget_row_resized(void* self, int row, int oldHeight, int newHeight
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#rowResized)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, int row, int oldHeight, int newHeight ```
 void q_tablewidget_qbase_row_resized(void* self, int row, int oldHeight, int newHeight);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#rowResized)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6256,12 +6710,16 @@ void q_tablewidget_column_resized(void* self, int column, int oldWidth, int newW
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#columnResized)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, int column, int oldWidth, int newWidth ```
 void q_tablewidget_qbase_column_resized(void* self, int column, int oldWidth, int newWidth);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#columnResized)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6279,12 +6737,16 @@ void q_tablewidget_row_count_changed(void* self, int oldCount, int newCount);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#rowCountChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, int oldCount, int newCount ```
 void q_tablewidget_qbase_row_count_changed(void* self, int oldCount, int newCount);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#rowCountChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6302,12 +6764,16 @@ void q_tablewidget_column_count_changed(void* self, int oldCount, int newCount);
 
 /// Inherited from QTableView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#columnCountChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, int oldCount, int newCount ```
 void q_tablewidget_qbase_column_count_changed(void* self, int oldCount, int newCount);
 
 /// Inherited from QTableView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#columnCountChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6325,12 +6791,16 @@ int64_t q_tablewidget_state(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#state)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 int64_t q_tablewidget_qbase_state(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#state)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6348,12 +6818,16 @@ void q_tablewidget_set_state(void* self, int64_t state);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setState)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, enum QAbstractItemView__State state ```
 void q_tablewidget_qbase_set_state(void* self, int64_t state);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setState)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6371,12 +6845,16 @@ void q_tablewidget_schedule_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#scheduleDelayedItemsLayout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 void q_tablewidget_qbase_schedule_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#scheduleDelayedItemsLayout)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6394,12 +6872,16 @@ void q_tablewidget_execute_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#executeDelayedItemsLayout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 void q_tablewidget_qbase_execute_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#executeDelayedItemsLayout)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6417,12 +6899,16 @@ void q_tablewidget_set_dirty_region(void* self, void* region);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setDirtyRegion)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QRegion* region ```
 void q_tablewidget_qbase_set_dirty_region(void* self, void* region);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setDirtyRegion)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6440,12 +6926,16 @@ void q_tablewidget_scroll_dirty_region(void* self, int dx, int dy);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#scrollDirtyRegion)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, int dx, int dy ```
 void q_tablewidget_qbase_scroll_dirty_region(void* self, int dx, int dy);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#scrollDirtyRegion)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6463,12 +6953,16 @@ QPoint* q_tablewidget_dirty_region_offset(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dirtyRegionOffset)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 QPoint* q_tablewidget_qbase_dirty_region_offset(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dirtyRegionOffset)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6486,12 +6980,16 @@ void q_tablewidget_start_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#startAutoScroll)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 void q_tablewidget_qbase_start_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#startAutoScroll)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6509,12 +7007,16 @@ void q_tablewidget_stop_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#stopAutoScroll)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 void q_tablewidget_qbase_stop_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#stopAutoScroll)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6532,12 +7034,16 @@ void q_tablewidget_do_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doAutoScroll)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 void q_tablewidget_qbase_do_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doAutoScroll)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6555,12 +7061,16 @@ int64_t q_tablewidget_drop_indicator_position(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dropIndicatorPosition)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 int64_t q_tablewidget_qbase_drop_indicator_position(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dropIndicatorPosition)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6578,12 +7088,16 @@ void q_tablewidget_set_viewport_margins(void* self, int left, int top, int right
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, int left, int top, int right, int bottom ```
 void q_tablewidget_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6601,12 +7115,16 @@ QMargins* q_tablewidget_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 QMargins* q_tablewidget_qbase_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6624,12 +7142,16 @@ void q_tablewidget_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QPainter* param1 ```
 void q_tablewidget_qbase_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6647,12 +7169,16 @@ void q_tablewidget_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 void q_tablewidget_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6670,12 +7196,16 @@ void q_tablewidget_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 void q_tablewidget_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6693,12 +7223,16 @@ void q_tablewidget_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 void q_tablewidget_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6716,12 +7250,16 @@ bool q_tablewidget_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 bool q_tablewidget_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6739,12 +7277,16 @@ bool q_tablewidget_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 bool q_tablewidget_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6762,12 +7304,16 @@ QObject* q_tablewidget_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 QObject* q_tablewidget_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6785,12 +7331,16 @@ int32_t q_tablewidget_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self ```
 int32_t q_tablewidget_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6808,12 +7358,16 @@ int32_t q_tablewidget_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, const char* signal ```
 int32_t q_tablewidget_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6831,6 +7385,8 @@ bool q_tablewidget_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTableWidget* self, QMetaMethod* signal ```
@@ -6838,11 +7394,24 @@ bool q_tablewidget_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QTableWidget* self, bool (*slot)(QTableWidget*, QMetaMethod*) ```
 void q_tablewidget_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QTableWidget* self, void (*slot)(QObject*, const char*) ```
+void q_tablewidget_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#dtor.QTableWidget)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTableWidget* self ```

@@ -12,19 +12,14 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqlayout.h"
 #include "libqlayoutitem.h"
-#include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqrect.h"
 #include "libqsize.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 #include "libqwidget.h"
 
 /// https://doc.qt.io/qt-6/qformlayout.html
@@ -42,7 +37,7 @@ QFormLayout* q_formlayout_new2();
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QFormLayout* self ```
-QMetaObject* q_formlayout_meta_object(void* self);
+const QMetaObject* q_formlayout_meta_object(void* self);
 
 /// ``` QFormLayout* self, const char* param1 ```
 void* q_formlayout_metacast(void* self, const char* param1);
@@ -130,11 +125,15 @@ int32_t q_formlayout_vertical_spacing(void* self);
 /// ``` QFormLayout* self ```
 int32_t q_formlayout_spacing(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#spacing)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFormLayout* self, int32_t (*slot)() ```
 void q_formlayout_on_spacing(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#spacing)
+///
 /// Base class method implementation
 ///
 /// ``` QFormLayout* self ```
@@ -145,11 +144,15 @@ int32_t q_formlayout_qbase_spacing(void* self);
 /// ``` QFormLayout* self, int spacing ```
 void q_formlayout_set_spacing(void* self, int spacing);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#setSpacing)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFormLayout* self, void (*slot)(QFormLayout*, int) ```
 void q_formlayout_on_set_spacing(void* self, void (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#setSpacing)
+///
 /// Base class method implementation
 ///
 /// ``` QFormLayout* self, int spacing ```
@@ -310,11 +313,15 @@ QWidget* q_formlayout_label_for_field_with_field(void* self, void* field);
 /// ``` QFormLayout* self, QLayoutItem* item ```
 void q_formlayout_add_item(void* self, void* item);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#addItem)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFormLayout* self, void (*slot)(QFormLayout*, QLayoutItem*) ```
 void q_formlayout_on_add_item(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#addItem)
+///
 /// Base class method implementation
 ///
 /// ``` QFormLayout* self, QLayoutItem* item ```
@@ -325,11 +332,15 @@ void q_formlayout_qbase_add_item(void* self, void* item);
 /// ``` QFormLayout* self, int index ```
 QLayoutItem* q_formlayout_item_at_with_index(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#itemAt)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFormLayout* self, QLayoutItem* (*slot)(QFormLayout*, int) ```
 void q_formlayout_on_item_at_with_index(void* self, QLayoutItem* (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#itemAt)
+///
 /// Base class method implementation
 ///
 /// ``` QFormLayout* self, int index ```
@@ -340,11 +351,15 @@ QLayoutItem* q_formlayout_qbase_item_at_with_index(void* self, int index);
 /// ``` QFormLayout* self, int index ```
 QLayoutItem* q_formlayout_take_at(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#takeAt)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFormLayout* self, QLayoutItem* (*slot)(QFormLayout*, int) ```
 void q_formlayout_on_take_at(void* self, QLayoutItem* (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#takeAt)
+///
 /// Base class method implementation
 ///
 /// ``` QFormLayout* self, int index ```
@@ -355,11 +370,15 @@ QLayoutItem* q_formlayout_qbase_take_at(void* self, int index);
 /// ``` QFormLayout* self, QRect* rect ```
 void q_formlayout_set_geometry(void* self, void* rect);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#setGeometry)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFormLayout* self, void (*slot)(QFormLayout*, QRect*) ```
 void q_formlayout_on_set_geometry(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#setGeometry)
+///
 /// Base class method implementation
 ///
 /// ``` QFormLayout* self, QRect* rect ```
@@ -370,11 +389,15 @@ void q_formlayout_qbase_set_geometry(void* self, void* rect);
 /// ``` QFormLayout* self ```
 QSize* q_formlayout_minimum_size(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#minimumSize)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFormLayout* self, QSize* (*slot)() ```
 void q_formlayout_on_minimum_size(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#minimumSize)
+///
 /// Base class method implementation
 ///
 /// ``` QFormLayout* self ```
@@ -385,11 +408,15 @@ QSize* q_formlayout_qbase_minimum_size(void* self);
 /// ``` QFormLayout* self ```
 QSize* q_formlayout_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFormLayout* self, QSize* (*slot)() ```
 void q_formlayout_on_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QFormLayout* self ```
@@ -400,11 +427,15 @@ QSize* q_formlayout_qbase_size_hint(void* self);
 /// ``` QFormLayout* self ```
 void q_formlayout_invalidate(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#invalidate)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFormLayout* self, void (*slot)() ```
 void q_formlayout_on_invalidate(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#invalidate)
+///
 /// Base class method implementation
 ///
 /// ``` QFormLayout* self ```
@@ -415,11 +446,15 @@ void q_formlayout_qbase_invalidate(void* self);
 /// ``` QFormLayout* self ```
 bool q_formlayout_has_height_for_width(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#hasHeightForWidth)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFormLayout* self, bool (*slot)() ```
 void q_formlayout_on_has_height_for_width(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#hasHeightForWidth)
+///
 /// Base class method implementation
 ///
 /// ``` QFormLayout* self ```
@@ -430,11 +465,15 @@ bool q_formlayout_qbase_has_height_for_width(void* self);
 /// ``` QFormLayout* self, int width ```
 int32_t q_formlayout_height_for_width(void* self, int width);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#heightForWidth)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFormLayout* self, int32_t (*slot)(QFormLayout*, int) ```
 void q_formlayout_on_height_for_width(void* self, int32_t (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#heightForWidth)
+///
 /// Base class method implementation
 ///
 /// ``` QFormLayout* self, int width ```
@@ -445,11 +484,15 @@ int32_t q_formlayout_qbase_height_for_width(void* self, int width);
 /// ``` QFormLayout* self ```
 int64_t q_formlayout_expanding_directions(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#expandingDirections)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFormLayout* self, int64_t (*slot)() ```
 void q_formlayout_on_expanding_directions(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#expandingDirections)
+///
 /// Base class method implementation
 ///
 /// ``` QFormLayout* self ```
@@ -460,11 +503,15 @@ int64_t q_formlayout_qbase_expanding_directions(void* self);
 /// ``` QFormLayout* self ```
 int32_t q_formlayout_count(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#count)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFormLayout* self, int32_t (*slot)() ```
 void q_formlayout_on_count(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#count)
+///
 /// Base class method implementation
 ///
 /// ``` QFormLayout* self ```
@@ -620,12 +667,16 @@ int32_t q_formlayout_index_of_with_q_layout_item(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#indexOf)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, int32_t (*slot)(QLayout*, QLayoutItem*) ```
 void q_formlayout_on_index_of_with_q_layout_item(void* self, int32_t (*slot)(void*, void*));
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#indexOf)
 ///
 /// Base class method implementation
 ///
@@ -770,7 +821,7 @@ void q_formlayout_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QFormLayout* self ```
-libqt_list /* of QObject* */ q_formlayout_children(void* self);
+const libqt_list /* of QObject* */ q_formlayout_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -868,7 +919,7 @@ QBindingStorage* q_formlayout_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QFormLayout* self ```
-QBindingStorage* q_formlayout_binding_storage2(void* self);
+const QBindingStorage* q_formlayout_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -878,6 +929,8 @@ QBindingStorage* q_formlayout_binding_storage2(void* self);
 void q_formlayout_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QFormLayout* self, void (*slot)(QObject*) ```
 void q_formlayout_on_destroyed(void* self, void (*slot)(void*));
@@ -933,6 +986,8 @@ void q_formlayout_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QFormLayout* self, void (*slot)(QObject*, QObject*) ```
 void q_formlayout_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -954,12 +1009,16 @@ QRect* q_formlayout_geometry(void* self);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#geometry)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self ```
 QRect* q_formlayout_qbase_geometry(void* self);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#geometry)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -977,12 +1036,16 @@ QSize* q_formlayout_maximum_size(void* self);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#maximumSize)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self ```
 QSize* q_formlayout_qbase_maximum_size(void* self);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#maximumSize)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1000,12 +1063,16 @@ int32_t q_formlayout_index_of(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#indexOf)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self, QWidget* param1 ```
 int32_t q_formlayout_qbase_index_of(void* self, void* param1);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#indexOf)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1023,12 +1090,16 @@ bool q_formlayout_is_empty(void* self);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#isEmpty)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self ```
 bool q_formlayout_qbase_is_empty(void* self);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#isEmpty)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1046,12 +1117,16 @@ int64_t q_formlayout_control_types(void* self);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#controlTypes)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self ```
 int64_t q_formlayout_qbase_control_types(void* self);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#controlTypes)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1069,12 +1144,16 @@ QLayoutItem* q_formlayout_replace_widget(void* self, void* from, void* to, int64
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#replaceWidget)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self, QWidget* from, QWidget* to, int options ```
 QLayoutItem* q_formlayout_qbase_replace_widget(void* self, void* from, void* to, int64_t options);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#replaceWidget)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1092,12 +1171,16 @@ QLayout* q_formlayout_layout(void* self);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#layout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self ```
 QLayout* q_formlayout_qbase_layout(void* self);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#layout)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1115,12 +1198,16 @@ void q_formlayout_child_event(void* self, void* e);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self, QChildEvent* e ```
 void q_formlayout_qbase_child_event(void* self, void* e);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1138,12 +1225,16 @@ bool q_formlayout_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self, QEvent* event ```
 bool q_formlayout_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1161,12 +1252,16 @@ bool q_formlayout_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self, QObject* watched, QEvent* event ```
 bool q_formlayout_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1184,12 +1279,16 @@ void q_formlayout_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self, QTimerEvent* event ```
 void q_formlayout_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1207,12 +1306,16 @@ void q_formlayout_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self, QEvent* event ```
 void q_formlayout_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1230,12 +1333,16 @@ void q_formlayout_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self, QMetaMethod* signal ```
 void q_formlayout_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1253,12 +1360,16 @@ void q_formlayout_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self, QMetaMethod* signal ```
 void q_formlayout_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1276,12 +1387,16 @@ int32_t q_formlayout_minimum_height_for_width(void* self, int param1);
 
 /// Inherited from QLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#minimumHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self, int param1 ```
 int32_t q_formlayout_qbase_minimum_height_for_width(void* self, int param1);
 
 /// Inherited from QLayoutItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#minimumHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1299,12 +1414,16 @@ QWidget* q_formlayout_widget(void* self);
 
 /// Inherited from QLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#widget)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self ```
 QWidget* q_formlayout_qbase_widget(void* self);
 
 /// Inherited from QLayoutItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#widget)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1322,12 +1441,16 @@ QSpacerItem* q_formlayout_spacer_item(void* self);
 
 /// Inherited from QLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#spacerItem)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self ```
 QSpacerItem* q_formlayout_qbase_spacer_item(void* self);
 
 /// Inherited from QLayoutItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#spacerItem)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1345,12 +1468,16 @@ void q_formlayout_widget_event(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#widgetEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self, QEvent* param1 ```
 void q_formlayout_qbase_widget_event(void* self, void* param1);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#widgetEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1368,12 +1495,16 @@ void q_formlayout_add_child_layout(void* self, void* l);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#addChildLayout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self, QLayout* l ```
 void q_formlayout_qbase_add_child_layout(void* self, void* l);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#addChildLayout)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1391,12 +1522,16 @@ void q_formlayout_add_child_widget(void* self, void* w);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#addChildWidget)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self, QWidget* w ```
 void q_formlayout_qbase_add_child_widget(void* self, void* w);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#addChildWidget)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1414,12 +1549,16 @@ bool q_formlayout_adopt_layout(void* self, void* layout);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#adoptLayout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self, QLayout* layout ```
 bool q_formlayout_qbase_adopt_layout(void* self, void* layout);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#adoptLayout)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1437,12 +1576,16 @@ QRect* q_formlayout_alignment_rect(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#alignmentRect)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self, QRect* param1 ```
 QRect* q_formlayout_qbase_alignment_rect(void* self, void* param1);
 
 /// Inherited from QLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#alignmentRect)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1460,12 +1603,16 @@ QObject* q_formlayout_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self ```
 QObject* q_formlayout_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1483,12 +1630,16 @@ int32_t q_formlayout_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self ```
 int32_t q_formlayout_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1506,12 +1657,16 @@ int32_t q_formlayout_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self, const char* signal ```
 int32_t q_formlayout_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1529,6 +1684,8 @@ bool q_formlayout_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFormLayout* self, QMetaMethod* signal ```
@@ -1536,11 +1693,24 @@ bool q_formlayout_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QFormLayout* self, bool (*slot)(QFormLayout*, QMetaMethod*) ```
 void q_formlayout_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFormLayout* self, void (*slot)(QObject*, const char*) ```
+void q_formlayout_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#dtor.QFormLayout)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QFormLayout* self ```

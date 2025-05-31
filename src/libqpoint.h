@@ -124,6 +124,8 @@ int32_t q_point_dot_product(void* p1, void* p2);
 /// ``` QPoint* self ```
 QPointF* q_point_to_point_f(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#dtor.QPoint)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPoint* self ```
@@ -236,6 +238,8 @@ double q_pointf_dot_product(void* p1, void* p2);
 /// ``` QPointF* self ```
 QPoint* q_pointf_to_point(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#dtor.QPointF)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPointF* self ```

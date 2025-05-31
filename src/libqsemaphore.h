@@ -69,6 +69,8 @@ bool q_semaphore_try_acquire1(void* self, int n);
 /// ``` QSemaphore* self, int n ```
 void q_semaphore_release1(void* self, int n);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsemaphore.html#dtor.QSemaphore)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSemaphore* self ```
@@ -116,6 +118,8 @@ QSemaphore* q_semaphorereleaser_semaphore(void* self);
 /// ``` QSemaphoreReleaser* self ```
 QSemaphore* q_semaphorereleaser_cancel(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsemaphorereleaser.html#dtor.QSemaphoreReleaser)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSemaphoreReleaser* self ```

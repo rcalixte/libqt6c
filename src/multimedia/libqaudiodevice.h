@@ -112,6 +112,8 @@ libqt_list /* of int64_t */ q_audiodevice_supported_sample_formats(void* self);
 /// ``` QAudioDevice* self ```
 int64_t q_audiodevice_channel_configuration(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaudiodevice.html#dtor.QAudioDevice)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAudioDevice* self ```

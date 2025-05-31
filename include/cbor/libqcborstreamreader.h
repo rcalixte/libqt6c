@@ -292,6 +292,8 @@ long long q_cborstreamreader_to_integer(void* self);
 /// ``` QCborStreamReader* self, int maxRecursion ```
 bool q_cborstreamreader_next1(void* self, int maxRecursion);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamreader.html#dtor.QCborStreamReader)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCborStreamReader* self ```

@@ -174,6 +174,8 @@ QRandomGenerator* q_randomgenerator_securely_seeded();
 /// ``` QRandomGenerator* self, uint32_t s ```
 void q_randomgenerator_seed1(void* self, uint32_t s);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#dtor.QRandomGenerator)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QRandomGenerator* self ```
@@ -382,6 +384,8 @@ void q_randomgenerator64_seed(void* self);
 /// ``` QRandomGenerator64* self, uint32_t s ```
 void q_randomgenerator64_seed1(void* self, uint32_t s);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator64.html#dtor.QRandomGenerator64)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QRandomGenerator64* self ```

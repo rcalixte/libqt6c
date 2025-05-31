@@ -12,46 +12,21 @@
 
 #include "qtlibc.h"
 
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
-#include "libqcursor.h"
 #include "libqdialog.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
 #include "libqlabel.h"
-#include "libqlayout.h"
-#include "libqlocale.h"
-#include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
 #include "libqprogressbar.h"
 #include "libqpushbutton.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqscreen.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
-#include "libqthread.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qprogressdialog.html
 
@@ -88,7 +63,7 @@ QProgressDialog* q_progressdialog_new6(const char* labelText, const char* cancel
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QProgressDialog* self ```
-QMetaObject* q_progressdialog_meta_object(void* self);
+const QMetaObject* q_progressdialog_meta_object(void* self);
 
 /// ``` QProgressDialog* self, const char* param1 ```
 void* q_progressdialog_metacast(void* self, const char* param1);
@@ -151,11 +126,15 @@ int32_t q_progressdialog_value(void* self);
 /// ``` QProgressDialog* self ```
 QSize* q_progressdialog_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprogressdialog.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProgressDialog* self, QSize* (*slot)() ```
 void q_progressdialog_on_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprogressdialog.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QProgressDialog* self ```
@@ -241,6 +220,8 @@ void q_progressdialog_set_minimum_duration(void* self, int ms);
 /// ``` QProgressDialog* self ```
 void q_progressdialog_canceled(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprogressdialog.html#canceled)
+///
 /// ``` QProgressDialog* self, void (*slot)(QProgressDialog*) ```
 void q_progressdialog_on_canceled(void* self, void (*slot)(void*));
 
@@ -249,11 +230,15 @@ void q_progressdialog_on_canceled(void* self, void (*slot)(void*));
 /// ``` QProgressDialog* self, QResizeEvent* event ```
 void q_progressdialog_resize_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprogressdialog.html#resizeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProgressDialog* self, void (*slot)(QProgressDialog*, QResizeEvent*) ```
 void q_progressdialog_on_resize_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprogressdialog.html#resizeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QProgressDialog* self, QResizeEvent* event ```
@@ -264,11 +249,15 @@ void q_progressdialog_qbase_resize_event(void* self, void* event);
 /// ``` QProgressDialog* self, QCloseEvent* event ```
 void q_progressdialog_close_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprogressdialog.html#closeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProgressDialog* self, void (*slot)(QProgressDialog*, QCloseEvent*) ```
 void q_progressdialog_on_close_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprogressdialog.html#closeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QProgressDialog* self, QCloseEvent* event ```
@@ -279,11 +268,15 @@ void q_progressdialog_qbase_close_event(void* self, void* event);
 /// ``` QProgressDialog* self, QEvent* event ```
 void q_progressdialog_change_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprogressdialog.html#changeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProgressDialog* self, void (*slot)(QProgressDialog*, QEvent*) ```
 void q_progressdialog_on_change_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprogressdialog.html#changeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QProgressDialog* self, QEvent* event ```
@@ -294,11 +287,15 @@ void q_progressdialog_qbase_change_event(void* self, void* event);
 /// ``` QProgressDialog* self, QShowEvent* event ```
 void q_progressdialog_show_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprogressdialog.html#showEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProgressDialog* self, void (*slot)(QProgressDialog*, QShowEvent*) ```
 void q_progressdialog_on_show_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprogressdialog.html#showEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QProgressDialog* self, QShowEvent* event ```
@@ -309,11 +306,15 @@ void q_progressdialog_qbase_show_event(void* self, void* event);
 /// ``` QProgressDialog* self ```
 void q_progressdialog_force_show(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprogressdialog.html#forceShow)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProgressDialog* self, void (*slot)() ```
 void q_progressdialog_on_force_show(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprogressdialog.html#forceShow)
+///
 /// Base class method implementation
 ///
 /// ``` QProgressDialog* self ```
@@ -373,6 +374,8 @@ void q_progressdialog_finished(void* self, int result);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
+///
 /// ``` QProgressDialog* self, void (*slot)(QDialog*, int) ```
 void q_progressdialog_on_finished(void* self, void (*slot)(void*, int));
 
@@ -385,6 +388,8 @@ void q_progressdialog_accepted(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
+///
 /// ``` QProgressDialog* self, void (*slot)(QDialog*) ```
 void q_progressdialog_on_accepted(void* self, void (*slot)(void*));
 
@@ -396,6 +401,8 @@ void q_progressdialog_on_accepted(void* self, void (*slot)(void*));
 void q_progressdialog_rejected(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
 /// ``` QProgressDialog* self, void (*slot)(QDialog*) ```
 void q_progressdialog_on_rejected(void* self, void (*slot)(void*));
@@ -524,7 +531,7 @@ QRect* q_progressdialog_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QProgressDialog* self ```
-QRect* q_progressdialog_geometry(void* self);
+const QRect* q_progressdialog_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -881,7 +888,7 @@ QWidget* q_progressdialog_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QProgressDialog* self ```
-QPalette* q_progressdialog_palette(void* self);
+const QPalette* q_progressdialog_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -923,7 +930,7 @@ int64_t q_progressdialog_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QProgressDialog* self ```
-QFont* q_progressdialog_font(void* self);
+const QFont* q_progressdialog_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1923,15 +1930,15 @@ void q_progressdialog_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QProgressDialog* self, QAction* actions[] ```
-void q_progressdialog_add_actions(void* self, void* actions[]);
+/// ``` QProgressDialog* self, libqt_list /* of QAction* */ actions ```
+void q_progressdialog_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QProgressDialog* self, QAction* before, QAction* actions[] ```
-void q_progressdialog_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QProgressDialog* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_progressdialog_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2131,6 +2138,8 @@ void q_progressdialog_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QProgressDialog* self, void (*slot)(QWidget*, const char*) ```
 void q_progressdialog_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2142,6 +2151,8 @@ void q_progressdialog_on_window_title_changed(void* self, void (*slot)(void*, co
 void q_progressdialog_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QProgressDialog* self, void (*slot)(QWidget*, QIcon*) ```
 void q_progressdialog_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -2155,6 +2166,8 @@ void q_progressdialog_window_icon_text_changed(void* self, const char* iconText)
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QProgressDialog* self, void (*slot)(QWidget*, const char*) ```
 void q_progressdialog_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2166,6 +2179,8 @@ void q_progressdialog_on_window_icon_text_changed(void* self, void (*slot)(void*
 void q_progressdialog_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QProgressDialog* self, void (*slot)(QWidget*, QPoint*) ```
 void q_progressdialog_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2371,7 +2386,7 @@ void q_progressdialog_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QProgressDialog* self ```
-libqt_list /* of QObject* */ q_progressdialog_children(void* self);
+const libqt_list /* of QObject* */ q_progressdialog_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2462,7 +2477,7 @@ QBindingStorage* q_progressdialog_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QProgressDialog* self ```
-QBindingStorage* q_progressdialog_binding_storage2(void* self);
+const QBindingStorage* q_progressdialog_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2472,6 +2487,8 @@ QBindingStorage* q_progressdialog_binding_storage2(void* self);
 void q_progressdialog_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QProgressDialog* self, void (*slot)(QObject*) ```
 void q_progressdialog_on_destroyed(void* self, void (*slot)(void*));
@@ -2526,6 +2543,8 @@ QMetaObject__Connection* q_progressdialog_connect4(void* self, void* sender, con
 void q_progressdialog_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QProgressDialog* self, void (*slot)(QObject*, QObject*) ```
 void q_progressdialog_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -2625,12 +2644,16 @@ void q_progressdialog_set_visible(void* self, bool visible);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, bool visible ```
 void q_progressdialog_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2648,12 +2671,16 @@ QSize* q_progressdialog_minimum_size_hint(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self ```
 QSize* q_progressdialog_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2671,12 +2698,16 @@ void q_progressdialog_open(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#open)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self ```
 void q_progressdialog_qbase_open(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#open)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2694,12 +2725,16 @@ int32_t q_progressdialog_exec(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#exec)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self ```
 int32_t q_progressdialog_qbase_exec(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#exec)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2717,12 +2752,16 @@ void q_progressdialog_done(void* self, int param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#done)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, int param1 ```
 void q_progressdialog_qbase_done(void* self, int param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#done)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2740,12 +2779,16 @@ void q_progressdialog_accept(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accept)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self ```
 void q_progressdialog_qbase_accept(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accept)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2763,12 +2806,16 @@ void q_progressdialog_reject(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#reject)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self ```
 void q_progressdialog_qbase_reject(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#reject)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2786,12 +2833,16 @@ void q_progressdialog_key_press_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QKeyEvent* param1 ```
 void q_progressdialog_qbase_key_press_event(void* self, void* param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2809,12 +2860,16 @@ void q_progressdialog_context_menu_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QContextMenuEvent* param1 ```
 void q_progressdialog_qbase_context_menu_event(void* self, void* param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2832,12 +2887,16 @@ bool q_progressdialog_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QObject* param1, QEvent* param2 ```
 bool q_progressdialog_qbase_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2855,12 +2914,16 @@ int32_t q_progressdialog_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self ```
 int32_t q_progressdialog_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2878,12 +2941,16 @@ int32_t q_progressdialog_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, int param1 ```
 int32_t q_progressdialog_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2901,12 +2968,16 @@ bool q_progressdialog_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self ```
 bool q_progressdialog_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2924,12 +2995,16 @@ QPaintEngine* q_progressdialog_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self ```
 QPaintEngine* q_progressdialog_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2947,12 +3022,16 @@ bool q_progressdialog_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QEvent* event ```
 bool q_progressdialog_qbase_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2970,12 +3049,16 @@ void q_progressdialog_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QMouseEvent* event ```
 void q_progressdialog_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2993,12 +3076,16 @@ void q_progressdialog_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QMouseEvent* event ```
 void q_progressdialog_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3016,12 +3103,16 @@ void q_progressdialog_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QMouseEvent* event ```
 void q_progressdialog_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3039,12 +3130,16 @@ void q_progressdialog_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QMouseEvent* event ```
 void q_progressdialog_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3062,12 +3157,16 @@ void q_progressdialog_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QWheelEvent* event ```
 void q_progressdialog_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3085,12 +3184,16 @@ void q_progressdialog_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QKeyEvent* event ```
 void q_progressdialog_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3108,12 +3211,16 @@ void q_progressdialog_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QFocusEvent* event ```
 void q_progressdialog_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3131,12 +3238,16 @@ void q_progressdialog_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QFocusEvent* event ```
 void q_progressdialog_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3154,12 +3265,16 @@ void q_progressdialog_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QEnterEvent* event ```
 void q_progressdialog_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3177,12 +3292,16 @@ void q_progressdialog_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QEvent* event ```
 void q_progressdialog_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3200,12 +3319,16 @@ void q_progressdialog_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QPaintEvent* event ```
 void q_progressdialog_qbase_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3223,12 +3346,16 @@ void q_progressdialog_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QMoveEvent* event ```
 void q_progressdialog_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3246,12 +3373,16 @@ void q_progressdialog_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QTabletEvent* event ```
 void q_progressdialog_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3269,12 +3400,16 @@ void q_progressdialog_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QActionEvent* event ```
 void q_progressdialog_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3292,12 +3427,16 @@ void q_progressdialog_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QDragEnterEvent* event ```
 void q_progressdialog_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3315,12 +3454,16 @@ void q_progressdialog_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QDragMoveEvent* event ```
 void q_progressdialog_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3338,12 +3481,16 @@ void q_progressdialog_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QDragLeaveEvent* event ```
 void q_progressdialog_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3361,12 +3508,16 @@ void q_progressdialog_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QDropEvent* event ```
 void q_progressdialog_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3384,12 +3535,16 @@ void q_progressdialog_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QHideEvent* event ```
 void q_progressdialog_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3407,12 +3562,16 @@ bool q_progressdialog_native_event(void* self, const char* eventType, void* mess
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, const char* eventType, void* message, intptr_t* result ```
 bool q_progressdialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3430,12 +3589,16 @@ int32_t q_progressdialog_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_progressdialog_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3453,12 +3616,16 @@ void q_progressdialog_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QPainter* painter ```
 void q_progressdialog_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3476,12 +3643,16 @@ QPaintDevice* q_progressdialog_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QPoint* offset ```
 QPaintDevice* q_progressdialog_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3499,12 +3670,16 @@ QPainter* q_progressdialog_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self ```
 QPainter* q_progressdialog_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3522,12 +3697,16 @@ void q_progressdialog_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QInputMethodEvent* param1 ```
 void q_progressdialog_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3545,12 +3724,16 @@ QVariant* q_progressdialog_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_progressdialog_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3568,12 +3751,16 @@ bool q_progressdialog_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, bool next ```
 bool q_progressdialog_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3591,12 +3778,16 @@ void q_progressdialog_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QTimerEvent* event ```
 void q_progressdialog_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3614,12 +3805,16 @@ void q_progressdialog_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QChildEvent* event ```
 void q_progressdialog_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3637,12 +3832,16 @@ void q_progressdialog_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QEvent* event ```
 void q_progressdialog_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3660,12 +3859,16 @@ void q_progressdialog_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QMetaMethod* signal ```
 void q_progressdialog_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3683,12 +3886,16 @@ void q_progressdialog_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QMetaMethod* signal ```
 void q_progressdialog_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3706,12 +3913,16 @@ void q_progressdialog_adjust_position(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QWidget* param1 ```
 void q_progressdialog_qbase_adjust_position(void* self, void* param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3729,12 +3940,16 @@ void q_progressdialog_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self ```
 void q_progressdialog_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3752,12 +3967,16 @@ void q_progressdialog_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self ```
 void q_progressdialog_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3775,12 +3994,16 @@ void q_progressdialog_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self ```
 void q_progressdialog_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3798,12 +4021,16 @@ bool q_progressdialog_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self ```
 bool q_progressdialog_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3821,12 +4048,16 @@ bool q_progressdialog_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self ```
 bool q_progressdialog_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3844,12 +4075,16 @@ QObject* q_progressdialog_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self ```
 QObject* q_progressdialog_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3867,12 +4102,16 @@ int32_t q_progressdialog_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self ```
 int32_t q_progressdialog_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3890,12 +4129,16 @@ int32_t q_progressdialog_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, const char* signal ```
 int32_t q_progressdialog_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3913,6 +4156,8 @@ bool q_progressdialog_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, QMetaMethod* signal ```
@@ -3920,11 +4165,24 @@ bool q_progressdialog_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QProgressDialog* self, bool (*slot)(QProgressDialog*, QMetaMethod*) ```
 void q_progressdialog_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QProgressDialog* self, void (*slot)(QObject*, const char*) ```
+void q_progressdialog_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprogressdialog.html#dtor.QProgressDialog)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QProgressDialog* self ```

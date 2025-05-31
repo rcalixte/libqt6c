@@ -16,7 +16,7 @@
 #include "../libqfont.h"
 #include <string.h>
 
-/// https://doc.qt.io/qt-6/qscistyle.html
+/// https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html
 
 /// q_scistyle_new constructs a new QsciStyle object.
 ///
@@ -43,122 +43,122 @@ QsciStyle* q_scistyle_new4(int style);
 /// ``` int style, const char* description, QColor* color, QColor* paper, QFont* font, bool eolFill ```
 QsciStyle* q_scistyle_new5(int style, const char* description, void* color, void* paper, void* font, bool eolFill);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#apply)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self, QsciScintillaBase* sci ```
 void q_scistyle_apply(void* self, void* sci);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#setStyle)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self, int style ```
 void q_scistyle_set_style(void* self, int style);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#style)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self ```
 int32_t q_scistyle_style(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#setDescription)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self, const char* description ```
 void q_scistyle_set_description(void* self, const char* description);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#description)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self ```
 const char* q_scistyle_description(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#setColor)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self, QColor* color ```
 void q_scistyle_set_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#color)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self ```
 QColor* q_scistyle_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#setPaper)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self, QColor* paper ```
 void q_scistyle_set_paper(void* self, void* paper);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#paper)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self ```
 QColor* q_scistyle_paper(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#setFont)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self, QFont* font ```
 void q_scistyle_set_font(void* self, void* font);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#font)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self ```
 QFont* q_scistyle_font(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#setEolFill)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self, bool fill ```
 void q_scistyle_set_eol_fill(void* self, bool fill);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#eolFill)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self ```
 bool q_scistyle_eol_fill(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#setTextCase)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self, enum QsciStyle__TextCase text_case ```
 void q_scistyle_set_text_case(void* self, int64_t text_case);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#textCase)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self ```
 int64_t q_scistyle_text_case(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#setVisible)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self, bool visible ```
 void q_scistyle_set_visible(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#visible)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self ```
 bool q_scistyle_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#setChangeable)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self, bool changeable ```
 void q_scistyle_set_changeable(void* self, bool changeable);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#changeable)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self ```
 bool q_scistyle_changeable(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#setHotspot)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self, bool hotspot ```
 void q_scistyle_set_hotspot(void* self, bool hotspot);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#hotspot)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self ```
 bool q_scistyle_hotspot(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscistyle.html#refresh)
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// ``` QsciStyle* self ```
 void q_scistyle_refresh(void* self);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QsciStyle* self ```
 void q_scistyle_delete(void* self);
-
-/// https://doc.qt.io/qt-6/qscistyle.html#types
 
 typedef enum {
     QSCISTYLE_TEXTCASE_ORIGINALCASE = 0,

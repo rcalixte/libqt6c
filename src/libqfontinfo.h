@@ -117,6 +117,8 @@ int32_t q_fontinfo_legacy_weight(void* self);
 /// ``` QFontInfo* self ```
 bool q_fontinfo_exact_match(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#dtor.QFontInfo)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QFontInfo* self ```

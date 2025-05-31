@@ -25,7 +25,7 @@ QObject* q_object_new2(void* parent) {
     return QObject_new2((QObject*)parent);
 }
 
-QMetaObject* q_object_meta_object(void* self) {
+const QMetaObject* q_object_meta_object(void* self) {
     return QObject_MetaObject((QObject*)self);
 }
 
@@ -84,8 +84,7 @@ const char* q_object_object_name(void* self) {
 }
 
 void q_object_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_object_is_widget_type(void* self) {
@@ -124,7 +123,7 @@ void q_object_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_object_children(void* self) {
+const libqt_list /* of QObject* */ q_object_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -191,7 +190,7 @@ QBindingStorage* q_object_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_object_binding_storage2(void* self) {
+const QBindingStorage* q_object_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -355,6 +354,10 @@ void q_object_destroyed1(void* self, void* param1) {
 
 void q_object_on_destroyed1(void* self, void (*slot)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+}
+
+void q_object_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_object_delete(void* self) {

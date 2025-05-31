@@ -12,9 +12,7 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
 #include "libqauthenticator.h"
-#include "../libqbindingstorage.h"
 #include "../libqevent.h"
 #include "libqhostaddress.h"
 #include "../libqiodevice.h"
@@ -23,7 +21,6 @@
 #include "libqnetworkproxy.h"
 #include "../libqobject.h"
 #include <string.h>
-#include "../libqthread.h"
 #include "../libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qabstractsocket.html
@@ -36,7 +33,7 @@ QAbstractSocket* q_abstractsocket_new(int64_t socketType, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QAbstractSocket* self ```
-QMetaObject* q_abstractsocket_meta_object(void* self);
+const QMetaObject* q_abstractsocket_meta_object(void* self);
 
 /// ``` QAbstractSocket* self, const char* param1 ```
 void* q_abstractsocket_metacast(void* self, const char* param1);
@@ -64,11 +61,15 @@ const char* q_abstractsocket_tr(const char* s);
 /// ``` QAbstractSocket* self ```
 void q_abstractsocket_resume(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#resume)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, void (*slot)() ```
 void q_abstractsocket_on_resume(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#resume)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self ```
@@ -89,11 +90,15 @@ void q_abstractsocket_set_pause_mode(void* self, int64_t pauseMode);
 /// ``` QAbstractSocket* self, QHostAddress* address, unsigned short port, int mode ```
 bool q_abstractsocket_bind(void* self, void* address, unsigned short port, int64_t mode);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#bind)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, bool (*slot)(QAbstractSocket*, QHostAddress*, unsigned short, int) ```
 void q_abstractsocket_on_bind(void* self, bool (*slot)(void*, void*, unsigned short, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#bind)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self, QHostAddress* address, unsigned short port, int mode ```
@@ -109,11 +114,15 @@ bool q_abstractsocket_bind2(void* self);
 /// ``` QAbstractSocket* self, const char* hostName, unsigned short port, int mode, enum QAbstractSocket__NetworkLayerProtocol protocol ```
 void q_abstractsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int64_t protocol);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#connectToHost)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*, const char*, unsigned short, int, enum QAbstractSocket__NetworkLayerProtocol) ```
 void q_abstractsocket_on_connect_to_host(void* self, void (*slot)(void*, const char*, unsigned short, int64_t, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#connectToHost)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self, const char* hostName, unsigned short port, int mode, enum QAbstractSocket__NetworkLayerProtocol protocol ```
@@ -129,11 +138,15 @@ void q_abstractsocket_connect_to_host2(void* self, void* address, unsigned short
 /// ``` QAbstractSocket* self ```
 void q_abstractsocket_disconnect_from_host(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#disconnectFromHost)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, void (*slot)() ```
 void q_abstractsocket_on_disconnect_from_host(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#disconnectFromHost)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self ```
@@ -149,11 +162,15 @@ bool q_abstractsocket_is_valid(void* self);
 /// ``` QAbstractSocket* self ```
 long long q_abstractsocket_bytes_available(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#bytesAvailable)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, long long (*slot)() ```
 void q_abstractsocket_on_bytes_available(void* self, long long (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#bytesAvailable)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self ```
@@ -164,11 +181,15 @@ long long q_abstractsocket_qbase_bytes_available(void* self);
 /// ``` QAbstractSocket* self ```
 long long q_abstractsocket_bytes_to_write(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#bytesToWrite)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, long long (*slot)() ```
 void q_abstractsocket_on_bytes_to_write(void* self, long long (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#bytesToWrite)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self ```
@@ -209,11 +230,15 @@ long long q_abstractsocket_read_buffer_size(void* self);
 /// ``` QAbstractSocket* self, long long size ```
 void q_abstractsocket_set_read_buffer_size(void* self, long long size);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setReadBufferSize)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*, long long) ```
 void q_abstractsocket_on_set_read_buffer_size(void* self, void (*slot)(void*, long long));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setReadBufferSize)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self, long long size ```
@@ -229,11 +254,15 @@ void q_abstractsocket_abort(void* self);
 /// ``` QAbstractSocket* self ```
 intptr_t q_abstractsocket_socket_descriptor(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#socketDescriptor)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, intptr_t (*slot)() ```
 void q_abstractsocket_on_socket_descriptor(void* self, intptr_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#socketDescriptor)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self ```
@@ -244,11 +273,15 @@ intptr_t q_abstractsocket_qbase_socket_descriptor(void* self);
 /// ``` QAbstractSocket* self, intptr_t socketDescriptor, enum QAbstractSocket__SocketState state, int openMode ```
 bool q_abstractsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int64_t state, int64_t openMode);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketDescriptor)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, bool (*slot)(QAbstractSocket*, intptr_t, enum QAbstractSocket__SocketState, int) ```
 void q_abstractsocket_on_set_socket_descriptor(void* self, bool (*slot)(void*, intptr_t, int64_t, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketDescriptor)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self, intptr_t socketDescriptor, enum QAbstractSocket__SocketState state, int openMode ```
@@ -259,11 +292,15 @@ bool q_abstractsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDes
 /// ``` QAbstractSocket* self, enum QAbstractSocket__SocketOption option, QVariant* value ```
 void q_abstractsocket_set_socket_option(void* self, int64_t option, void* value);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketOption)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*, enum QAbstractSocket__SocketOption, QVariant*) ```
 void q_abstractsocket_on_set_socket_option(void* self, void (*slot)(void*, int64_t, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketOption)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self, enum QAbstractSocket__SocketOption option, QVariant* value ```
@@ -274,11 +311,15 @@ void q_abstractsocket_qbase_set_socket_option(void* self, int64_t option, void* 
 /// ``` QAbstractSocket* self, enum QAbstractSocket__SocketOption option ```
 QVariant* q_abstractsocket_socket_option(void* self, int64_t option);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#socketOption)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, QVariant* (*slot)(QAbstractSocket*, enum QAbstractSocket__SocketOption) ```
 void q_abstractsocket_on_socket_option(void* self, QVariant* (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#socketOption)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self, enum QAbstractSocket__SocketOption option ```
@@ -304,11 +345,15 @@ int64_t q_abstractsocket_error(void* self);
 /// ``` QAbstractSocket* self ```
 void q_abstractsocket_close(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#close)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, void (*slot)() ```
 void q_abstractsocket_on_close(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#close)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self ```
@@ -319,11 +364,15 @@ void q_abstractsocket_qbase_close(void* self);
 /// ``` QAbstractSocket* self ```
 bool q_abstractsocket_is_sequential(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#isSequential)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, bool (*slot)() ```
 void q_abstractsocket_on_is_sequential(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#isSequential)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self ```
@@ -339,11 +388,15 @@ bool q_abstractsocket_flush(void* self);
 /// ``` QAbstractSocket* self, int msecs ```
 bool q_abstractsocket_wait_for_connected(void* self, int msecs);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#waitForConnected)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, bool (*slot)(QAbstractSocket*, int) ```
 void q_abstractsocket_on_wait_for_connected(void* self, bool (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#waitForConnected)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self, int msecs ```
@@ -354,11 +407,15 @@ bool q_abstractsocket_qbase_wait_for_connected(void* self, int msecs);
 /// ``` QAbstractSocket* self, int msecs ```
 bool q_abstractsocket_wait_for_ready_read(void* self, int msecs);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#waitForReadyRead)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, bool (*slot)(QAbstractSocket*, int) ```
 void q_abstractsocket_on_wait_for_ready_read(void* self, bool (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#waitForReadyRead)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self, int msecs ```
@@ -369,11 +426,15 @@ bool q_abstractsocket_qbase_wait_for_ready_read(void* self, int msecs);
 /// ``` QAbstractSocket* self, int msecs ```
 bool q_abstractsocket_wait_for_bytes_written(void* self, int msecs);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#waitForBytesWritten)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, bool (*slot)(QAbstractSocket*, int) ```
 void q_abstractsocket_on_wait_for_bytes_written(void* self, bool (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#waitForBytesWritten)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self, int msecs ```
@@ -384,11 +445,15 @@ bool q_abstractsocket_qbase_wait_for_bytes_written(void* self, int msecs);
 /// ``` QAbstractSocket* self, int msecs ```
 bool q_abstractsocket_wait_for_disconnected(void* self, int msecs);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#waitForDisconnected)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, bool (*slot)(QAbstractSocket*, int) ```
 void q_abstractsocket_on_wait_for_disconnected(void* self, bool (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#waitForDisconnected)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self, int msecs ```
@@ -419,6 +484,8 @@ void q_abstractsocket_set_protocol_tag(void* self, const char* tag);
 /// ``` QAbstractSocket* self ```
 void q_abstractsocket_host_found(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#hostFound)
+///
 /// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*) ```
 void q_abstractsocket_on_host_found(void* self, void (*slot)(void*));
 
@@ -427,6 +494,8 @@ void q_abstractsocket_on_host_found(void* self, void (*slot)(void*));
 /// ``` QAbstractSocket* self ```
 void q_abstractsocket_connected(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#connected)
+///
 /// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*) ```
 void q_abstractsocket_on_connected(void* self, void (*slot)(void*));
 
@@ -435,6 +504,8 @@ void q_abstractsocket_on_connected(void* self, void (*slot)(void*));
 /// ``` QAbstractSocket* self ```
 void q_abstractsocket_disconnected(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#disconnected)
+///
 /// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*) ```
 void q_abstractsocket_on_disconnected(void* self, void (*slot)(void*));
 
@@ -443,6 +514,8 @@ void q_abstractsocket_on_disconnected(void* self, void (*slot)(void*));
 /// ``` QAbstractSocket* self, enum QAbstractSocket__SocketState param1 ```
 void q_abstractsocket_state_changed(void* self, int64_t param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#stateChanged)
+///
 /// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*, enum QAbstractSocket__SocketState) ```
 void q_abstractsocket_on_state_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -451,6 +524,8 @@ void q_abstractsocket_on_state_changed(void* self, void (*slot)(void*, int64_t))
 /// ``` QAbstractSocket* self, enum QAbstractSocket__SocketError param1 ```
 void q_abstractsocket_error_occurred(void* self, int64_t param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#errorOccurred)
+///
 /// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*, enum QAbstractSocket__SocketError) ```
 void q_abstractsocket_on_error_occurred(void* self, void (*slot)(void*, int64_t));
 
@@ -459,6 +534,8 @@ void q_abstractsocket_on_error_occurred(void* self, void (*slot)(void*, int64_t)
 /// ``` QAbstractSocket* self, QNetworkProxy* proxy, QAuthenticator* authenticator ```
 void q_abstractsocket_proxy_authentication_required(void* self, void* proxy, void* authenticator);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#proxyAuthenticationRequired)
+///
 /// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*, QNetworkProxy*, QAuthenticator*) ```
 void q_abstractsocket_on_proxy_authentication_required(void* self, void (*slot)(void*, void*, void*));
 
@@ -467,11 +544,15 @@ void q_abstractsocket_on_proxy_authentication_required(void* self, void (*slot)(
 /// ``` QAbstractSocket* self, char* data, long long maxlen ```
 long long q_abstractsocket_read_data(void* self, char* data, long long maxlen);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#readData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, long long (*slot)(QAbstractSocket*, char*, long long) ```
 void q_abstractsocket_on_read_data(void* self, long long (*slot)(void*, char*, long long));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#readData)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self, char* data, long long maxlen ```
@@ -482,11 +563,15 @@ long long q_abstractsocket_qbase_read_data(void* self, char* data, long long max
 /// ``` QAbstractSocket* self, char* data, long long maxlen ```
 long long q_abstractsocket_read_line_data(void* self, char* data, long long maxlen);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#readLineData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, long long (*slot)(QAbstractSocket*, char*, long long) ```
 void q_abstractsocket_on_read_line_data(void* self, long long (*slot)(void*, char*, long long));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#readLineData)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self, char* data, long long maxlen ```
@@ -497,11 +582,15 @@ long long q_abstractsocket_qbase_read_line_data(void* self, char* data, long lon
 /// ``` QAbstractSocket* self, long long maxSize ```
 long long q_abstractsocket_skip_data(void* self, long long maxSize);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#skipData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, long long (*slot)(QAbstractSocket*, long long) ```
 void q_abstractsocket_on_skip_data(void* self, long long (*slot)(void*, long long));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#skipData)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self, long long maxSize ```
@@ -512,11 +601,15 @@ long long q_abstractsocket_qbase_skip_data(void* self, long long maxSize);
 /// ``` QAbstractSocket* self, const char* data, long long lenVal ```
 long long q_abstractsocket_write_data(void* self, const char* data, long long lenVal);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#writeData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, long long (*slot)(QAbstractSocket*, const char*, long long) ```
 void q_abstractsocket_on_write_data(void* self, long long (*slot)(void*, const char*, long long));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#writeData)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self, const char* data, long long lenVal ```
@@ -527,11 +620,15 @@ long long q_abstractsocket_qbase_write_data(void* self, const char* data, long l
 /// ``` QAbstractSocket* self, enum QAbstractSocket__SocketState state ```
 void q_abstractsocket_set_socket_state(void* self, int64_t state);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketState)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*, enum QAbstractSocket__SocketState) ```
 void q_abstractsocket_on_set_socket_state(void* self, void (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketState)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self, enum QAbstractSocket__SocketState state ```
@@ -542,11 +639,15 @@ void q_abstractsocket_qbase_set_socket_state(void* self, int64_t state);
 /// ``` QAbstractSocket* self, enum QAbstractSocket__SocketError socketError ```
 void q_abstractsocket_set_socket_error(void* self, int64_t socketError);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketError)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*, enum QAbstractSocket__SocketError) ```
 void q_abstractsocket_on_set_socket_error(void* self, void (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketError)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self, enum QAbstractSocket__SocketError socketError ```
@@ -557,11 +658,15 @@ void q_abstractsocket_qbase_set_socket_error(void* self, int64_t socketError);
 /// ``` QAbstractSocket* self, unsigned short port ```
 void q_abstractsocket_set_local_port(void* self, unsigned short port);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setLocalPort)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*, unsigned short) ```
 void q_abstractsocket_on_set_local_port(void* self, void (*slot)(void*, unsigned short));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setLocalPort)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self, unsigned short port ```
@@ -572,11 +677,15 @@ void q_abstractsocket_qbase_set_local_port(void* self, unsigned short port);
 /// ``` QAbstractSocket* self, QHostAddress* address ```
 void q_abstractsocket_set_local_address(void* self, void* address);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setLocalAddress)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*, QHostAddress*) ```
 void q_abstractsocket_on_set_local_address(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setLocalAddress)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self, QHostAddress* address ```
@@ -587,11 +696,15 @@ void q_abstractsocket_qbase_set_local_address(void* self, void* address);
 /// ``` QAbstractSocket* self, unsigned short port ```
 void q_abstractsocket_set_peer_port(void* self, unsigned short port);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setPeerPort)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*, unsigned short) ```
 void q_abstractsocket_on_set_peer_port(void* self, void (*slot)(void*, unsigned short));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setPeerPort)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self, unsigned short port ```
@@ -602,11 +715,15 @@ void q_abstractsocket_qbase_set_peer_port(void* self, unsigned short port);
 /// ``` QAbstractSocket* self, QHostAddress* address ```
 void q_abstractsocket_set_peer_address(void* self, void* address);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setPeerAddress)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*, QHostAddress*) ```
 void q_abstractsocket_on_set_peer_address(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setPeerAddress)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self, QHostAddress* address ```
@@ -617,11 +734,15 @@ void q_abstractsocket_qbase_set_peer_address(void* self, void* address);
 /// ``` QAbstractSocket* self, const char* name ```
 void q_abstractsocket_set_peer_name(void* self, const char* name);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setPeerName)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*, const char*) ```
 void q_abstractsocket_on_set_peer_name(void* self, void (*slot)(void*, const char*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setPeerName)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractSocket* self, const char* name ```
@@ -878,6 +999,8 @@ void q_abstractsocket_ready_read(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
+///
 /// ``` QAbstractSocket* self, void (*slot)(QIODevice*) ```
 void q_abstractsocket_on_ready_read(void* self, void (*slot)(void*));
 
@@ -889,6 +1012,8 @@ void q_abstractsocket_on_ready_read(void* self, void (*slot)(void*));
 void q_abstractsocket_channel_ready_read(void* self, int channel);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
 /// ``` QAbstractSocket* self, void (*slot)(QIODevice*, int) ```
 void q_abstractsocket_on_channel_ready_read(void* self, void (*slot)(void*, int));
@@ -902,6 +1027,8 @@ void q_abstractsocket_bytes_written(void* self, long long bytes);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
+///
 /// ``` QAbstractSocket* self, void (*slot)(QIODevice*, long long) ```
 void q_abstractsocket_on_bytes_written(void* self, void (*slot)(void*, long long));
 
@@ -913,6 +1040,8 @@ void q_abstractsocket_on_bytes_written(void* self, void (*slot)(void*, long long
 void q_abstractsocket_channel_bytes_written(void* self, int channel, long long bytes);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// ``` QAbstractSocket* self, void (*slot)(QIODevice*, int, long long) ```
 void q_abstractsocket_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long));
@@ -926,6 +1055,8 @@ void q_abstractsocket_about_to_close(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
+///
 /// ``` QAbstractSocket* self, void (*slot)(QIODevice*) ```
 void q_abstractsocket_on_about_to_close(void* self, void (*slot)(void*));
 
@@ -937,6 +1068,8 @@ void q_abstractsocket_on_about_to_close(void* self, void (*slot)(void*));
 void q_abstractsocket_read_channel_finished(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
 /// ``` QAbstractSocket* self, void (*slot)(QIODevice*) ```
 void q_abstractsocket_on_read_channel_finished(void* self, void (*slot)(void*));
@@ -1030,7 +1163,7 @@ void q_abstractsocket_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QAbstractSocket* self ```
-libqt_list /* of QObject* */ q_abstractsocket_children(void* self);
+const libqt_list /* of QObject* */ q_abstractsocket_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1128,7 +1261,7 @@ QBindingStorage* q_abstractsocket_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QAbstractSocket* self ```
-QBindingStorage* q_abstractsocket_binding_storage2(void* self);
+const QBindingStorage* q_abstractsocket_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -1138,6 +1271,8 @@ QBindingStorage* q_abstractsocket_binding_storage2(void* self);
 void q_abstractsocket_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QAbstractSocket* self, void (*slot)(QObject*) ```
 void q_abstractsocket_on_destroyed(void* self, void (*slot)(void*));
@@ -1193,6 +1328,8 @@ void q_abstractsocket_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QAbstractSocket* self, void (*slot)(QObject*, QObject*) ```
 void q_abstractsocket_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -1207,12 +1344,16 @@ bool q_abstractsocket_open(void* self, int64_t mode);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#open)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSocket* self, int mode ```
 bool q_abstractsocket_qbase_open(void* self, int64_t mode);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#open)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1230,12 +1371,16 @@ long long q_abstractsocket_pos(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#pos)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSocket* self ```
 long long q_abstractsocket_qbase_pos(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#pos)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1253,12 +1398,16 @@ long long q_abstractsocket_size(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#size)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSocket* self ```
 long long q_abstractsocket_qbase_size(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#size)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1276,12 +1425,16 @@ bool q_abstractsocket_seek(void* self, long long pos);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#seek)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSocket* self, long long pos ```
 bool q_abstractsocket_qbase_seek(void* self, long long pos);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#seek)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1299,12 +1452,16 @@ bool q_abstractsocket_at_end(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#atEnd)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSocket* self ```
 bool q_abstractsocket_qbase_at_end(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#atEnd)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1322,12 +1479,16 @@ bool q_abstractsocket_reset(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#reset)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSocket* self ```
 bool q_abstractsocket_qbase_reset(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#reset)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1345,12 +1506,16 @@ bool q_abstractsocket_can_read_line(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#canReadLine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSocket* self ```
 bool q_abstractsocket_qbase_can_read_line(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#canReadLine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1368,12 +1533,16 @@ bool q_abstractsocket_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSocket* self, QEvent* event ```
 bool q_abstractsocket_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1391,12 +1560,16 @@ bool q_abstractsocket_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSocket* self, QObject* watched, QEvent* event ```
 bool q_abstractsocket_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1414,12 +1587,16 @@ void q_abstractsocket_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSocket* self, QTimerEvent* event ```
 void q_abstractsocket_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1437,12 +1614,16 @@ void q_abstractsocket_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSocket* self, QChildEvent* event ```
 void q_abstractsocket_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1460,12 +1641,16 @@ void q_abstractsocket_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSocket* self, QEvent* event ```
 void q_abstractsocket_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1483,12 +1668,16 @@ void q_abstractsocket_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSocket* self, QMetaMethod* signal ```
 void q_abstractsocket_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1506,12 +1695,16 @@ void q_abstractsocket_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSocket* self, QMetaMethod* signal ```
 void q_abstractsocket_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1529,12 +1722,16 @@ void q_abstractsocket_set_open_mode(void* self, int64_t openMode);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setOpenMode)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSocket* self, int openMode ```
 void q_abstractsocket_qbase_set_open_mode(void* self, int64_t openMode);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setOpenMode)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1552,12 +1749,16 @@ void q_abstractsocket_set_error_string(void* self, const char* errorString);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSocket* self, const char* errorString ```
 void q_abstractsocket_qbase_set_error_string(void* self, const char* errorString);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1575,12 +1776,16 @@ QObject* q_abstractsocket_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSocket* self ```
 QObject* q_abstractsocket_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1598,12 +1803,16 @@ int32_t q_abstractsocket_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSocket* self ```
 int32_t q_abstractsocket_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1621,12 +1830,16 @@ int32_t q_abstractsocket_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSocket* self, const char* signal ```
 int32_t q_abstractsocket_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1644,6 +1857,8 @@ bool q_abstractsocket_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractSocket* self, QMetaMethod* signal ```
@@ -1651,11 +1866,24 @@ bool q_abstractsocket_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QAbstractSocket* self, bool (*slot)(QAbstractSocket*, QMetaMethod*) ```
 void q_abstractsocket_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QAbstractSocket* self, void (*slot)(QObject*, const char*) ```
+void q_abstractsocket_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#dtor.QAbstractSocket)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAbstractSocket* self ```

@@ -4,15 +4,11 @@
 #include "libqanystringview.h"
 
 QAnyStringView* q_anystringview_new(const char* other) {
-    libqt_strview other_strview = qstrview(other);
-
-    return QAnyStringView_new((QAnyStringView*)&other_strview);
+    return QAnyStringView_new(other);
 }
 
 QAnyStringView* q_anystringview_new2(char* other) {
-    libqt_strview other_strview = qstrview(other);
-
-    return QAnyStringView_new2((QAnyStringView*)&other_strview);
+    return QAnyStringView_new2(other);
 }
 
 QAnyStringView* q_anystringview_new3() {
@@ -32,9 +28,7 @@ QAnyStringView* q_anystringview_new6(void* c) {
 }
 
 QAnyStringView* q_anystringview_new7(const char* param1) {
-    libqt_strview param1_strview = qstrview(param1);
-
-    return QAnyStringView_new7((QAnyStringView*)&param1_strview);
+    return QAnyStringView_new7(param1);
 }
 
 void q_anystringview_copy_assign(void* self, void* other) {
@@ -56,20 +50,16 @@ int64_t q_anystringview_size(void* self) {
     return QAnyStringView_Size((QAnyStringView*)self);
 }
 
-void* q_anystringview_data(void* self) {
+const void* q_anystringview_data(void* self) {
     return QAnyStringView_Data((QAnyStringView*)self);
 }
 
 int32_t q_anystringview_compare(char* lhs, char* rhs) {
-    libqt_strview lhs_strview = qstrview(lhs);
-    libqt_strview rhs_strview = qstrview(rhs);
-    return QAnyStringView_Compare((QAnyStringView*)&lhs_strview, (QAnyStringView*)&rhs_strview);
+    return QAnyStringView_Compare(lhs, rhs);
 }
 
 bool q_anystringview_equal(char* lhs, char* rhs) {
-    libqt_strview lhs_strview = qstrview(lhs);
-    libqt_strview rhs_strview = qstrview(rhs);
-    return QAnyStringView_Equal((QAnyStringView*)&lhs_strview, (QAnyStringView*)&rhs_strview);
+    return QAnyStringView_Equal(lhs, rhs);
 }
 
 QChar* q_anystringview_front(void* self) {
@@ -101,9 +91,7 @@ int64_t q_anystringview_length(void* self) {
 }
 
 int32_t q_anystringview_compare3(char* lhs, char* rhs, int64_t cs) {
-    libqt_strview lhs_strview = qstrview(lhs);
-    libqt_strview rhs_strview = qstrview(rhs);
-    return QAnyStringView_Compare3((QAnyStringView*)&lhs_strview, (QAnyStringView*)&rhs_strview, cs);
+    return QAnyStringView_Compare3(lhs, rhs, cs);
 }
 
 void q_anystringview_delete(void* self) {

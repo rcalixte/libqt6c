@@ -1,45 +1,20 @@
 #include "libqabstractspinbox.hpp"
-#include "libqaction.hpp"
 #include "libqevent.hpp"
-#include "libqanystringview.hpp"
-#include "libqbackingstore.hpp"
-#include "libqbindingstorage.hpp"
-#include "libqbitmap.hpp"
 #include "libqcalendar.hpp"
 #include "libqcalendarwidget.hpp"
-#include "libqcursor.hpp"
 #include "libqdatetime.hpp"
-#include "libqfont.hpp"
-#include "libqfontinfo.hpp"
-#include "libqfontmetrics.hpp"
-#include "libqgraphicseffect.hpp"
-#include "libqgraphicsproxywidget.hpp"
-#include "libqicon.hpp"
-#include "libqkeysequence.hpp"
-#include "libqlayout.hpp"
 #include "libqlineedit.hpp"
-#include "libqlocale.hpp"
-#include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
 #include "libqpainter.hpp"
-#include "libqpalette.hpp"
-#include "libqpixmap.hpp"
 #include "libqpoint.hpp"
-#include "libqrect.hpp"
-#include "libqregion.hpp"
-#include "libqscreen.hpp"
 #include "libqsize.hpp"
-#include "libqsizepolicy.hpp"
 #include <string.h>
-#include "libqstyle.hpp"
 #include "libqstyleoption.hpp"
-#include "libqthread.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqwindow.hpp"
 #include "libqcoreevent.hpp"
 #include "libqdatetimeedit.hpp"
 #include "libqdatetimeedit.h"
@@ -76,7 +51,7 @@ QDateTimeEdit* q_datetimeedit_new8(void* t, void* parent) {
     return QDateTimeEdit_new8((QTime*)t, (QWidget*)parent);
 }
 
-QMetaObject* q_datetimeedit_meta_object(void* self) {
+const QMetaObject* q_datetimeedit_meta_object(void* self) {
     return QDateTimeEdit_MetaObject((QDateTimeEdit*)self);
 }
 
@@ -715,7 +690,7 @@ QRect* q_datetimeedit_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_datetimeedit_geometry(void* self) {
+const QRect* q_datetimeedit_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -919,7 +894,7 @@ QWidget* q_datetimeedit_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_datetimeedit_palette(void* self) {
+const QPalette* q_datetimeedit_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -943,7 +918,7 @@ int64_t q_datetimeedit_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_datetimeedit_font(void* self) {
+const QFont* q_datetimeedit_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -1548,30 +1523,12 @@ void q_datetimeedit_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_datetimeedit_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_datetimeedit_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_datetimeedit_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_datetimeedit_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_datetimeedit_insert_action(void* self, void* before, void* action) {
@@ -1791,8 +1748,7 @@ const char* q_datetimeedit_object_name(void* self) {
 }
 
 void q_datetimeedit_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_datetimeedit_is_widget_type(void* self) {
@@ -1831,7 +1787,7 @@ void q_datetimeedit_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_datetimeedit_children(void* self) {
+const libqt_list /* of QObject* */ q_datetimeedit_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1894,7 +1850,7 @@ QBindingStorage* q_datetimeedit_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_datetimeedit_binding_storage2(void* self) {
+const QBindingStorage* q_datetimeedit_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2586,6 +2542,10 @@ void q_datetimeedit_on_is_signal_connected(void* self, bool (*slot)(void*, void*
     QDateTimeEdit_OnIsSignalConnected((QDateTimeEdit*)self, (intptr_t)slot);
 }
 
+void q_datetimeedit_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
 void q_datetimeedit_delete(void* self) {
     QDateTimeEdit_Delete((QDateTimeEdit*)(self));
 }
@@ -2606,7 +2566,7 @@ QTimeEdit* q_timeedit_new4(void* time, void* parent) {
     return QTimeEdit_new4((QTime*)time, (QWidget*)parent);
 }
 
-QMetaObject* q_timeedit_meta_object(void* self) {
+const QMetaObject* q_timeedit_meta_object(void* self) {
     return QTimeEdit_MetaObject((QTimeEdit*)self);
 }
 
@@ -3055,7 +3015,7 @@ QRect* q_timeedit_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_timeedit_geometry(void* self) {
+const QRect* q_timeedit_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -3259,7 +3219,7 @@ QWidget* q_timeedit_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_timeedit_palette(void* self) {
+const QPalette* q_timeedit_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -3283,7 +3243,7 @@ int64_t q_timeedit_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_timeedit_font(void* self) {
+const QFont* q_timeedit_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -3888,30 +3848,12 @@ void q_timeedit_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_timeedit_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_timeedit_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_timeedit_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_timeedit_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_timeedit_insert_action(void* self, void* before, void* action) {
@@ -4131,8 +4073,7 @@ const char* q_timeedit_object_name(void* self) {
 }
 
 void q_timeedit_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_timeedit_is_widget_type(void* self) {
@@ -4171,7 +4112,7 @@ void q_timeedit_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_timeedit_children(void* self) {
+const libqt_list /* of QObject* */ q_timeedit_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -4234,7 +4175,7 @@ QBindingStorage* q_timeedit_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_timeedit_binding_storage2(void* self) {
+const QBindingStorage* q_timeedit_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -5124,6 +5065,10 @@ void q_timeedit_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QTimeEdit_OnIsSignalConnected((QTimeEdit*)self, (intptr_t)slot);
 }
 
+void q_timeedit_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
 void q_timeedit_delete(void* self) {
     QTimeEdit_Delete((QTimeEdit*)(self));
 }
@@ -5144,7 +5089,7 @@ QDateEdit* q_dateedit_new4(void* date, void* parent) {
     return QDateEdit_new4((QDate*)date, (QWidget*)parent);
 }
 
-QMetaObject* q_dateedit_meta_object(void* self) {
+const QMetaObject* q_dateedit_meta_object(void* self) {
     return QDateEdit_MetaObject((QDateEdit*)self);
 }
 
@@ -5593,7 +5538,7 @@ QRect* q_dateedit_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_dateedit_geometry(void* self) {
+const QRect* q_dateedit_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -5797,7 +5742,7 @@ QWidget* q_dateedit_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_dateedit_palette(void* self) {
+const QPalette* q_dateedit_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -5821,7 +5766,7 @@ int64_t q_dateedit_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_dateedit_font(void* self) {
+const QFont* q_dateedit_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -6426,30 +6371,12 @@ void q_dateedit_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_dateedit_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_dateedit_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_dateedit_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_dateedit_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_dateedit_insert_action(void* self, void* before, void* action) {
@@ -6669,8 +6596,7 @@ const char* q_dateedit_object_name(void* self) {
 }
 
 void q_dateedit_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_dateedit_is_widget_type(void* self) {
@@ -6709,7 +6635,7 @@ void q_dateedit_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_dateedit_children(void* self) {
+const libqt_list /* of QObject* */ q_dateedit_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -6772,7 +6698,7 @@ QBindingStorage* q_dateedit_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_dateedit_binding_storage2(void* self) {
+const QBindingStorage* q_dateedit_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -7660,6 +7586,10 @@ bool q_dateedit_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_dateedit_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QDateEdit_OnIsSignalConnected((QDateEdit*)self, (intptr_t)slot);
+}
+
+void q_dateedit_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_dateedit_delete(void* self) {

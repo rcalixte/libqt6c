@@ -22,7 +22,7 @@ QDirIterator* q_diriterator_new4(const char* path, const char* nameFilters[]) {
     for (size_t _i = 0; _i < nameFilters_len; ++_i) {
         nameFilters_qstr[_i] = qstring(nameFilters[_i]);
     }
-    libqt_list nameFilters_list = qstrlist(nameFilters_qstr, nameFilters_len);
+    libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
 
     return QDirIterator_new4(qstring(path), nameFilters_list);
 }
@@ -45,7 +45,7 @@ QDirIterator* q_diriterator_new8(const char* path, const char* nameFilters[], in
     for (size_t _i = 0; _i < nameFilters_len; ++_i) {
         nameFilters_qstr[_i] = qstring(nameFilters[_i]);
     }
-    libqt_list nameFilters_list = qstrlist(nameFilters_qstr, nameFilters_len);
+    libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
 
     return QDirIterator_new8(qstring(path), nameFilters_list, filters);
 }
@@ -56,7 +56,7 @@ QDirIterator* q_diriterator_new9(const char* path, const char* nameFilters[], in
     for (size_t _i = 0; _i < nameFilters_len; ++_i) {
         nameFilters_qstr[_i] = qstring(nameFilters[_i]);
     }
-    libqt_list nameFilters_list = qstrlist(nameFilters_qstr, nameFilters_len);
+    libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
 
     return QDirIterator_new9(qstring(path), nameFilters_list, filters, flags);
 }

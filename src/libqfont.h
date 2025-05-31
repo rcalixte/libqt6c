@@ -433,6 +433,8 @@ int32_t q_font_legacy_weight(void* self);
 /// ``` QFont* self, enum QFont__StyleHint param1, enum QFont__StyleStrategy param2 ```
 void q_font_set_style_hint2(void* self, int64_t param1, int64_t param2);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#dtor.QFont)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QFont* self ```

@@ -1,14 +1,10 @@
-#include "../libqanystringview.hpp"
 #include "libqaudiodevice.hpp"
 #include "libqaudioformat.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
 #include "../libqiodevice.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqaudiosink.hpp"
 #include "libqaudiosink.h"
@@ -37,7 +33,7 @@ QAudioSink* q_audiosink_new6(void* audioDeviceInfo, void* format, void* parent) 
     return QAudioSink_new6((QAudioDevice*)audioDeviceInfo, (QAudioFormat*)format, (QObject*)parent);
 }
 
-QMetaObject* q_audiosink_meta_object(void* self) {
+const QMetaObject* q_audiosink_meta_object(void* self) {
     return QAudioSink_MetaObject((QAudioSink*)self);
 }
 
@@ -162,8 +158,7 @@ const char* q_audiosink_object_name(void* self) {
 }
 
 void q_audiosink_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_audiosink_is_widget_type(void* self) {
@@ -202,7 +197,7 @@ void q_audiosink_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_audiosink_children(void* self) {
+const libqt_list /* of QObject* */ q_audiosink_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -269,7 +264,7 @@ QBindingStorage* q_audiosink_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_audiosink_binding_storage2(void* self) {
+const QBindingStorage* q_audiosink_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -443,6 +438,10 @@ bool q_audiosink_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_audiosink_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QAudioSink_OnIsSignalConnected((QAudioSink*)self, (intptr_t)slot);
+}
+
+void q_audiosink_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_audiosink_delete(void* self) {

@@ -1,12 +1,8 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqmatrix4x4.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include <string.h>
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqvectornd.hpp"
 #include "libqcoreevent.hpp"
 #include "libqgraphicstransform.hpp"
@@ -20,7 +16,7 @@ QGraphicsTransform* q_graphicstransform_new2(void* parent) {
     return QGraphicsTransform_new2((QObject*)parent);
 }
 
-QMetaObject* q_graphicstransform_meta_object(void* self) {
+const QMetaObject* q_graphicstransform_meta_object(void* self) {
     return QGraphicsTransform_MetaObject((QGraphicsTransform*)self);
 }
 
@@ -93,8 +89,7 @@ const char* q_graphicstransform_object_name(void* self) {
 }
 
 void q_graphicstransform_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_graphicstransform_is_widget_type(void* self) {
@@ -133,7 +128,7 @@ void q_graphicstransform_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_graphicstransform_children(void* self) {
+const libqt_list /* of QObject* */ q_graphicstransform_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -200,7 +195,7 @@ QBindingStorage* q_graphicstransform_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_graphicstransform_binding_storage2(void* self) {
+const QBindingStorage* q_graphicstransform_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -376,6 +371,10 @@ void q_graphicstransform_on_is_signal_connected(void* self, bool (*slot)(void*, 
     QGraphicsTransform_OnIsSignalConnected((QGraphicsTransform*)self, (intptr_t)slot);
 }
 
+void q_graphicstransform_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
 void q_graphicstransform_delete(void* self) {
     QGraphicsTransform_Delete((QGraphicsTransform*)(self));
 }
@@ -388,7 +387,7 @@ QGraphicsScale* q_graphicsscale_new2(void* parent) {
     return QGraphicsScale_new2((QObject*)parent);
 }
 
-QMetaObject* q_graphicsscale_meta_object(void* self) {
+const QMetaObject* q_graphicsscale_meta_object(void* self) {
     return QGraphicsScale_MetaObject((QGraphicsScale*)self);
 }
 
@@ -521,8 +520,7 @@ const char* q_graphicsscale_object_name(void* self) {
 }
 
 void q_graphicsscale_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_graphicsscale_is_widget_type(void* self) {
@@ -561,7 +559,7 @@ void q_graphicsscale_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_graphicsscale_children(void* self) {
+const libqt_list /* of QObject* */ q_graphicsscale_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -628,7 +626,7 @@ QBindingStorage* q_graphicsscale_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_graphicsscale_binding_storage2(void* self) {
+const QBindingStorage* q_graphicsscale_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -816,6 +814,10 @@ void q_graphicsscale_on_is_signal_connected(void* self, bool (*slot)(void*, void
     QGraphicsScale_OnIsSignalConnected((QGraphicsScale*)self, (intptr_t)slot);
 }
 
+void q_graphicsscale_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
 void q_graphicsscale_delete(void* self) {
     QGraphicsScale_Delete((QGraphicsScale*)(self));
 }
@@ -828,7 +830,7 @@ QGraphicsRotation* q_graphicsrotation_new2(void* parent) {
     return QGraphicsRotation_new2((QObject*)parent);
 }
 
-QMetaObject* q_graphicsrotation_meta_object(void* self) {
+const QMetaObject* q_graphicsrotation_meta_object(void* self) {
     return QGraphicsRotation_MetaObject((QGraphicsRotation*)self);
 }
 
@@ -941,8 +943,7 @@ const char* q_graphicsrotation_object_name(void* self) {
 }
 
 void q_graphicsrotation_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_graphicsrotation_is_widget_type(void* self) {
@@ -981,7 +982,7 @@ void q_graphicsrotation_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_graphicsrotation_children(void* self) {
+const libqt_list /* of QObject* */ q_graphicsrotation_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1048,7 +1049,7 @@ QBindingStorage* q_graphicsrotation_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_graphicsrotation_binding_storage2(void* self) {
+const QBindingStorage* q_graphicsrotation_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1234,6 +1235,10 @@ bool q_graphicsrotation_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_graphicsrotation_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QGraphicsRotation_OnIsSignalConnected((QGraphicsRotation*)self, (intptr_t)slot);
+}
+
+void q_graphicsrotation_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_graphicsrotation_delete(void* self) {

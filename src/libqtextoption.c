@@ -58,16 +58,8 @@ double q_textoption_tab_stop_distance(void* self) {
     return QTextOption_TabStopDistance((QTextOption*)self);
 }
 
-void q_textoption_set_tab_array(void* self, double* tabStops[]) {
-    size_t tabStops_len = 0;
-    while (tabStops[tabStops_len] != NULL) {
-        tabStops_len++;
-    }
-    libqt_list tabStops_list = {
-        .len = tabStops_len,
-        .data = {(double*)tabStops},
-    };
-    QTextOption_SetTabArray((QTextOption*)self, tabStops_list);
+void q_textoption_set_tab_array(void* self, libqt_list tabStops) {
+    QTextOption_SetTabArray((QTextOption*)self, tabStops);
 }
 
 libqt_list /* of double */ q_textoption_tab_array(void* self) {
@@ -75,17 +67,8 @@ libqt_list /* of double */ q_textoption_tab_array(void* self) {
     return _arr;
 }
 
-void q_textoption_set_tabs(void* self, void* tabStops[]) {
-    QTextOption__Tab** tabStops_arr = (QTextOption__Tab**)tabStops;
-    size_t tabStops_len = 0;
-    while (tabStops_arr[tabStops_len] != NULL) {
-        tabStops_len++;
-    }
-    libqt_list tabStops_list = {
-        .len = tabStops_len,
-        .data = {(QTextOption__Tab*)tabStops},
-    };
-    QTextOption_SetTabs((QTextOption*)self, tabStops_list);
+void q_textoption_set_tabs(void* self, libqt_list tabStops) {
+    QTextOption_SetTabs((QTextOption*)self, tabStops);
 }
 
 libqt_list /* of QTextOption__Tab* */ q_textoption_tabs(void* self) {

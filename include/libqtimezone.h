@@ -233,6 +233,8 @@ const char* q_timezone_display_name22(void* self, int64_t timeType, int64_t name
 /// ``` QTimeZone* self, enum QTimeZone__TimeType timeType, enum QTimeZone__NameType nameType, QLocale* locale ```
 const char* q_timezone_display_name32(void* self, int64_t timeType, int64_t nameType, void* locale);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone.html#dtor.QTimeZone)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTimeZone* self ```
@@ -250,6 +252,8 @@ QTimeZone__OffsetData* q_timezone__offsetdata_new(void* param1);
 /// ``` QTimeZone__OffsetData* self, QTimeZone__OffsetData* param1 ```
 void q_timezone__offsetdata_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone::offsetdata.html#dtor.QTimeZone::OffsetData)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTimeZone__OffsetData* self ```

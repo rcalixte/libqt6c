@@ -12,24 +12,16 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractseries.h"
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
-#include "../libqbrush.h"
 #include "../libqevent.h"
-#include "../libqfont.h"
 #include "libqlegend.h"
 #include "libqlegendmarker.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
-#include "../libqpen.h"
 #include "libqpieseries.h"
 #include "libqpieslice.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
-/// https://doc.qt.io/qt-6/qpielegendmarker.html
+/// https://doc.qt.io/qt-6/qpielegendmarker-qtcharts.html
 
 /// q_pielegendmarker_new constructs a new QPieLegendMarker object.
 ///
@@ -44,7 +36,7 @@ QPieLegendMarker* q_pielegendmarker_new2(void* series, void* slice, void* legend
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QPieLegendMarker* self ```
-QMetaObject* q_pielegendmarker_meta_object(void* self);
+const QMetaObject* q_pielegendmarker_meta_object(void* self);
 
 /// ``` QPieLegendMarker* self, const char* param1 ```
 void* q_pielegendmarker_metacast(void* self, const char* param1);
@@ -67,37 +59,45 @@ int32_t q_pielegendmarker_qbase_metacall(void* self, int64_t param1, int param2,
 /// ``` const char* s ```
 const char* q_pielegendmarker_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpielegendmarker.html#type)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpielegendmarker-qtcharts.html#type)
 ///
 /// ``` QPieLegendMarker* self ```
 int64_t q_pielegendmarker_type(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpielegendmarker-qtcharts.html#type)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPieLegendMarker* self, int64_t (*slot)() ```
 void q_pielegendmarker_on_type(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpielegendmarker-qtcharts.html#type)
+///
 /// Base class method implementation
 ///
 /// ``` QPieLegendMarker* self ```
 int64_t q_pielegendmarker_qbase_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpielegendmarker.html#series)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpielegendmarker-qtcharts.html#series)
 ///
 /// ``` QPieLegendMarker* self ```
 QPieSeries* q_pielegendmarker_series(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpielegendmarker-qtcharts.html#series)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPieLegendMarker* self, QPieSeries* (*slot)() ```
 void q_pielegendmarker_on_series(void* self, QPieSeries* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpielegendmarker-qtcharts.html#series)
+///
 /// Base class method implementation
 ///
 /// ``` QPieLegendMarker* self ```
 QPieSeries* q_pielegendmarker_qbase_series(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpielegendmarker.html#slice)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpielegendmarker-qtcharts.html#slice)
 ///
 /// ``` QPieLegendMarker* self ```
 QPieSlice* q_pielegendmarker_slice(void* self);
@@ -219,6 +219,8 @@ void q_pielegendmarker_clicked(void* self);
 
 /// Inherited from QLegendMarker
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#clicked)
+///
 /// ``` QPieLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_pielegendmarker_on_clicked(void* self, void (*slot)(void*));
 
@@ -230,6 +232,8 @@ void q_pielegendmarker_on_clicked(void* self, void (*slot)(void*));
 void q_pielegendmarker_hovered(void* self, bool status);
 
 /// Inherited from QLegendMarker
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#hovered)
 ///
 /// ``` QPieLegendMarker* self, void (*slot)(QLegendMarker*, bool) ```
 void q_pielegendmarker_on_hovered(void* self, void (*slot)(void*, bool));
@@ -243,6 +247,8 @@ void q_pielegendmarker_label_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelChanged)
+///
 /// ``` QPieLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_pielegendmarker_on_label_changed(void* self, void (*slot)(void*));
 
@@ -254,6 +260,8 @@ void q_pielegendmarker_on_label_changed(void* self, void (*slot)(void*));
 void q_pielegendmarker_label_brush_changed(void* self);
 
 /// Inherited from QLegendMarker
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelBrushChanged)
 ///
 /// ``` QPieLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_pielegendmarker_on_label_brush_changed(void* self, void (*slot)(void*));
@@ -267,6 +275,8 @@ void q_pielegendmarker_font_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#fontChanged)
+///
 /// ``` QPieLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_pielegendmarker_on_font_changed(void* self, void (*slot)(void*));
 
@@ -278,6 +288,8 @@ void q_pielegendmarker_on_font_changed(void* self, void (*slot)(void*));
 void q_pielegendmarker_pen_changed(void* self);
 
 /// Inherited from QLegendMarker
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#penChanged)
 ///
 /// ``` QPieLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_pielegendmarker_on_pen_changed(void* self, void (*slot)(void*));
@@ -291,6 +303,8 @@ void q_pielegendmarker_brush_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#brushChanged)
+///
 /// ``` QPieLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_pielegendmarker_on_brush_changed(void* self, void (*slot)(void*));
 
@@ -303,6 +317,8 @@ void q_pielegendmarker_visible_changed(void* self);
 
 /// Inherited from QLegendMarker
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#visibleChanged)
+///
 /// ``` QPieLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_pielegendmarker_on_visible_changed(void* self, void (*slot)(void*));
 
@@ -314,6 +330,8 @@ void q_pielegendmarker_on_visible_changed(void* self, void (*slot)(void*));
 void q_pielegendmarker_shape_changed(void* self);
 
 /// Inherited from QLegendMarker
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#shapeChanged)
 ///
 /// ``` QPieLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_pielegendmarker_on_shape_changed(void* self, void (*slot)(void*));
@@ -400,7 +418,7 @@ void q_pielegendmarker_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QPieLegendMarker* self ```
-libqt_list /* of QObject* */ q_pielegendmarker_children(void* self);
+const libqt_list /* of QObject* */ q_pielegendmarker_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -498,7 +516,7 @@ QBindingStorage* q_pielegendmarker_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QPieLegendMarker* self ```
-QBindingStorage* q_pielegendmarker_binding_storage2(void* self);
+const QBindingStorage* q_pielegendmarker_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -508,6 +526,8 @@ QBindingStorage* q_pielegendmarker_binding_storage2(void* self);
 void q_pielegendmarker_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QPieLegendMarker* self, void (*slot)(QObject*) ```
 void q_pielegendmarker_on_destroyed(void* self, void (*slot)(void*));
@@ -563,6 +583,8 @@ void q_pielegendmarker_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QPieLegendMarker* self, void (*slot)(QObject*, QObject*) ```
 void q_pielegendmarker_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -577,12 +599,16 @@ bool q_pielegendmarker_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieLegendMarker* self, QEvent* event ```
 bool q_pielegendmarker_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -600,12 +626,16 @@ bool q_pielegendmarker_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieLegendMarker* self, QObject* watched, QEvent* event ```
 bool q_pielegendmarker_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -623,12 +653,16 @@ void q_pielegendmarker_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieLegendMarker* self, QTimerEvent* event ```
 void q_pielegendmarker_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -646,12 +680,16 @@ void q_pielegendmarker_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieLegendMarker* self, QChildEvent* event ```
 void q_pielegendmarker_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -669,12 +707,16 @@ void q_pielegendmarker_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieLegendMarker* self, QEvent* event ```
 void q_pielegendmarker_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -692,12 +734,16 @@ void q_pielegendmarker_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieLegendMarker* self, QMetaMethod* signal ```
 void q_pielegendmarker_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -715,12 +761,16 @@ void q_pielegendmarker_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieLegendMarker* self, QMetaMethod* signal ```
 void q_pielegendmarker_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -738,12 +788,16 @@ QObject* q_pielegendmarker_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieLegendMarker* self ```
 QObject* q_pielegendmarker_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -761,12 +815,16 @@ int32_t q_pielegendmarker_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieLegendMarker* self ```
 int32_t q_pielegendmarker_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -784,12 +842,16 @@ int32_t q_pielegendmarker_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieLegendMarker* self, const char* signal ```
 int32_t q_pielegendmarker_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -807,6 +869,8 @@ bool q_pielegendmarker_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieLegendMarker* self, QMetaMethod* signal ```
@@ -814,11 +878,24 @@ bool q_pielegendmarker_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QPieLegendMarker* self, bool (*slot)(QPieLegendMarker*, QMetaMethod*) ```
 void q_pielegendmarker_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QPieLegendMarker* self, void (*slot)(QObject*, const char*) ```
+void q_pielegendmarker_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpielegendmarker-qtcharts.html#dtor.QPieLegendMarker)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPieLegendMarker* self ```

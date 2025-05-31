@@ -28,7 +28,6 @@ typedef struct QPoint QPoint;
 typedef struct QPrintEngine QPrintEngine;
 typedef struct QPrinter QPrinter;
 typedef struct QRect QRect;
-typedef struct QRectF QRectF;
 typedef struct QsciPrinter QsciPrinter;
 typedef struct QsciScintillaBase QsciScintillaBase;
 #endif
@@ -61,6 +60,9 @@ bool QsciPrinter_QBaseNewPage(QsciPrinter* self);
 QPaintEngine* QsciPrinter_PaintEngine(const QsciPrinter* self);
 void QsciPrinter_OnPaintEngine(const QsciPrinter* self, intptr_t slot);
 QPaintEngine* QsciPrinter_QBasePaintEngine(const QsciPrinter* self);
+int QsciPrinter_Metric(const QsciPrinter* self, int param1);
+void QsciPrinter_OnMetric(const QsciPrinter* self, intptr_t slot);
+int QsciPrinter_QBaseMetric(const QsciPrinter* self, int param1);
 bool QsciPrinter_SetPageLayout(QsciPrinter* self, QPageLayout* pageLayout);
 void QsciPrinter_OnSetPageLayout(QsciPrinter* self, intptr_t slot);
 bool QsciPrinter_QBaseSetPageLayout(QsciPrinter* self, QPageLayout* pageLayout);
@@ -76,9 +78,6 @@ bool QsciPrinter_QBaseSetPageMargins(QsciPrinter* self, QMarginsF* margins, int 
 void QsciPrinter_SetPageRanges(QsciPrinter* self, QPageRanges* ranges);
 void QsciPrinter_OnSetPageRanges(QsciPrinter* self, intptr_t slot);
 void QsciPrinter_QBaseSetPageRanges(QsciPrinter* self, QPageRanges* ranges);
-int QsciPrinter_Metric(const QsciPrinter* self, int param1);
-void QsciPrinter_OnMetric(const QsciPrinter* self, intptr_t slot);
-int QsciPrinter_QBaseMetric(const QsciPrinter* self, int param1);
 void QsciPrinter_InitPainter(const QsciPrinter* self, QPainter* painter);
 void QsciPrinter_OnInitPainter(const QsciPrinter* self, intptr_t slot);
 void QsciPrinter_QBaseInitPainter(const QsciPrinter* self, QPainter* painter);

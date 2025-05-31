@@ -1,5 +1,3 @@
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqbrush.hpp"
 #include "../libqevent.hpp"
 #include "../libqcolor.hpp"
@@ -8,8 +6,6 @@
 #include "../libqobject.hpp"
 #include "../libqpen.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqbarset.hpp"
 #include "libqbarset.h"
@@ -22,7 +18,7 @@ QBarSet* q_barset_new2(const char* label, void* parent) {
     return QBarSet_new2(qstring(label), (QObject*)parent);
 }
 
-QMetaObject* q_barset_meta_object(void* self) {
+const QMetaObject* q_barset_meta_object(void* self) {
     return QBarSet_MetaObject((QBarSet*)self);
 }
 
@@ -64,16 +60,8 @@ void q_barset_append(void* self, double value) {
     QBarSet_Append((QBarSet*)self, value);
 }
 
-void q_barset_append_with_values(void* self, double* values[]) {
-    size_t values_len = 0;
-    while (values[values_len] != NULL) {
-        values_len++;
-    }
-    libqt_list values_list = {
-        .len = values_len,
-        .data = {(double*)values},
-    };
-    QBarSet_AppendWithValues((QBarSet*)self, values_list);
+void q_barset_append_with_values(void* self, libqt_list values) {
+    QBarSet_AppendWithValues((QBarSet*)self, values);
 }
 
 QBarSet* q_barset_operator_shift_left(void* self, double* value) {
@@ -196,40 +184,16 @@ void q_barset_deselect_all_bars(void* self) {
     QBarSet_DeselectAllBars((QBarSet*)self);
 }
 
-void q_barset_select_bars(void* self, int* indexes[]) {
-    size_t indexes_len = 0;
-    while (indexes[indexes_len] != NULL) {
-        indexes_len++;
-    }
-    libqt_list indexes_list = {
-        .len = indexes_len,
-        .data = {(int*)indexes},
-    };
-    QBarSet_SelectBars((QBarSet*)self, indexes_list);
+void q_barset_select_bars(void* self, libqt_list indexes) {
+    QBarSet_SelectBars((QBarSet*)self, indexes);
 }
 
-void q_barset_deselect_bars(void* self, int* indexes[]) {
-    size_t indexes_len = 0;
-    while (indexes[indexes_len] != NULL) {
-        indexes_len++;
-    }
-    libqt_list indexes_list = {
-        .len = indexes_len,
-        .data = {(int*)indexes},
-    };
-    QBarSet_DeselectBars((QBarSet*)self, indexes_list);
+void q_barset_deselect_bars(void* self, libqt_list indexes) {
+    QBarSet_DeselectBars((QBarSet*)self, indexes);
 }
 
-void q_barset_toggle_selection(void* self, int* indexes[]) {
-    size_t indexes_len = 0;
-    while (indexes[indexes_len] != NULL) {
-        indexes_len++;
-    }
-    libqt_list indexes_list = {
-        .len = indexes_len,
-        .data = {(int*)indexes},
-    };
-    QBarSet_ToggleSelection((QBarSet*)self, indexes_list);
+void q_barset_toggle_selection(void* self, libqt_list indexes) {
+    QBarSet_ToggleSelection((QBarSet*)self, indexes);
 }
 
 libqt_list /* of int */ q_barset_selected_bars(void* self) {
@@ -373,19 +337,11 @@ void q_barset_on_value_changed(void* self, void (*slot)(void*, int)) {
     QBarSet_Connect_ValueChanged((QBarSet*)self, (intptr_t)slot);
 }
 
-void q_barset_selected_bars_changed(void* self, int* indexes[]) {
-    size_t indexes_len = 0;
-    while (indexes[indexes_len] != NULL) {
-        indexes_len++;
-    }
-    libqt_list indexes_list = {
-        .len = indexes_len,
-        .data = {(int*)indexes},
-    };
-    QBarSet_SelectedBarsChanged((QBarSet*)self, indexes_list);
+void q_barset_selected_bars_changed(void* self, libqt_list indexes) {
+    QBarSet_SelectedBarsChanged((QBarSet*)self, indexes);
 }
 
-void q_barset_on_selected_bars_changed(void* self, void (*slot)(void*, int*)) {
+void q_barset_on_selected_bars_changed(void* self, void (*slot)(void*, libqt_list)) {
     QBarSet_Connect_SelectedBarsChanged((QBarSet*)self, (intptr_t)slot);
 }
 
@@ -415,8 +371,7 @@ const char* q_barset_object_name(void* self) {
 }
 
 void q_barset_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_barset_is_widget_type(void* self) {
@@ -455,7 +410,7 @@ void q_barset_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_barset_children(void* self) {
+const libqt_list /* of QObject* */ q_barset_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -522,7 +477,7 @@ QBindingStorage* q_barset_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_barset_binding_storage2(void* self) {
+const QBindingStorage* q_barset_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -696,6 +651,10 @@ bool q_barset_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_barset_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QBarSet_OnIsSignalConnected((QBarSet*)self, (intptr_t)slot);
+}
+
+void q_barset_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_barset_delete(void* self) {

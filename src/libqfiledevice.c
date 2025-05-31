@@ -1,19 +1,13 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
-#include "libqevent.hpp"
 #include "libqdatetime.hpp"
 #include "libqiodevice.hpp"
 #include "libqiodevicebase.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include <string.h>
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
-#include "libqcoreevent.hpp"
 #include "libqfiledevice.hpp"
 #include "libqfiledevice.h"
 
-QMetaObject* q_filedevice_meta_object(void* self) {
+const QMetaObject* q_filedevice_meta_object(void* self) {
     return QFileDevice_MetaObject((QFileDevice*)self);
 }
 
@@ -363,8 +357,7 @@ const char* q_filedevice_object_name(void* self) {
 }
 
 void q_filedevice_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_filedevice_is_widget_type(void* self) {
@@ -403,7 +396,7 @@ void q_filedevice_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_filedevice_children(void* self) {
+const libqt_list /* of QObject* */ q_filedevice_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -470,7 +463,7 @@ QBindingStorage* q_filedevice_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_filedevice_binding_storage2(void* self) {
+const QBindingStorage* q_filedevice_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -512,6 +505,10 @@ void q_filedevice_destroyed1(void* self, void* param1) {
 
 void q_filedevice_on_destroyed1(void* self, void (*slot)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+}
+
+void q_filedevice_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_filedevice_delete(void* self) {

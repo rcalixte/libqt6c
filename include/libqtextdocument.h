@@ -13,8 +13,6 @@
 #include "qtlibc.h"
 
 #include "libqabstracttextdocumentlayout.h"
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqchar.h"
 #include "libqevent.h"
 #include "libqfont.h"
@@ -30,7 +28,6 @@
 #include "libqtextcursor.h"
 #include "libqtextformat.h"
 #include "libqtextoption.h"
-#include "libqthread.h"
 #include "libqurl.h"
 #include "libqvariant.h"
 
@@ -51,6 +48,8 @@ void q_abstractundoitem_redo(void* self);
 /// ``` QAbstractUndoItem* self, QAbstractUndoItem* param1 ```
 void q_abstractundoitem_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractundoitem.html#dtor.QAbstractUndoItem)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAbstractUndoItem* self ```
@@ -81,7 +80,7 @@ QTextDocument* q_textdocument_new4(const char* text, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QTextDocument* self ```
-QMetaObject* q_textdocument_meta_object(void* self);
+const QMetaObject* q_textdocument_meta_object(void* self);
 
 /// ``` QTextDocument* self, const char* param1 ```
 void* q_textdocument_metacast(void* self, const char* param1);
@@ -119,11 +118,15 @@ bool q_textdocument_is_empty(void* self);
 /// ``` QTextDocument* self ```
 void q_textdocument_clear(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#clear)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextDocument* self, void (*slot)() ```
 void q_textdocument_on_clear(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#clear)
+///
 /// Base class method implementation
 ///
 /// ``` QTextDocument* self ```
@@ -539,6 +542,8 @@ void q_textdocument_set_default_cursor_move_style(void* self, int64_t style);
 /// ``` QTextDocument* self, int from, int charsRemoved, int charsAdded ```
 void q_textdocument_contents_change(void* self, int from, int charsRemoved, int charsAdded);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#contentsChange)
+///
 /// ``` QTextDocument* self, void (*slot)(QTextDocument*, int, int, int) ```
 void q_textdocument_on_contents_change(void* self, void (*slot)(void*, int, int, int));
 
@@ -547,6 +552,8 @@ void q_textdocument_on_contents_change(void* self, void (*slot)(void*, int, int,
 /// ``` QTextDocument* self ```
 void q_textdocument_contents_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#contentsChanged)
+///
 /// ``` QTextDocument* self, void (*slot)(QTextDocument*) ```
 void q_textdocument_on_contents_changed(void* self, void (*slot)(void*));
 
@@ -555,6 +562,8 @@ void q_textdocument_on_contents_changed(void* self, void (*slot)(void*));
 /// ``` QTextDocument* self, bool param1 ```
 void q_textdocument_undo_available(void* self, bool param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#undoAvailable)
+///
 /// ``` QTextDocument* self, void (*slot)(QTextDocument*, bool) ```
 void q_textdocument_on_undo_available(void* self, void (*slot)(void*, bool));
 
@@ -563,6 +572,8 @@ void q_textdocument_on_undo_available(void* self, void (*slot)(void*, bool));
 /// ``` QTextDocument* self, bool param1 ```
 void q_textdocument_redo_available(void* self, bool param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#redoAvailable)
+///
 /// ``` QTextDocument* self, void (*slot)(QTextDocument*, bool) ```
 void q_textdocument_on_redo_available(void* self, void (*slot)(void*, bool));
 
@@ -571,6 +582,8 @@ void q_textdocument_on_redo_available(void* self, void (*slot)(void*, bool));
 /// ``` QTextDocument* self ```
 void q_textdocument_undo_command_added(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#undoCommandAdded)
+///
 /// ``` QTextDocument* self, void (*slot)(QTextDocument*) ```
 void q_textdocument_on_undo_command_added(void* self, void (*slot)(void*));
 
@@ -579,6 +592,8 @@ void q_textdocument_on_undo_command_added(void* self, void (*slot)(void*));
 /// ``` QTextDocument* self, bool m ```
 void q_textdocument_modification_changed(void* self, bool m);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#modificationChanged)
+///
 /// ``` QTextDocument* self, void (*slot)(QTextDocument*, bool) ```
 void q_textdocument_on_modification_changed(void* self, void (*slot)(void*, bool));
 
@@ -587,6 +602,8 @@ void q_textdocument_on_modification_changed(void* self, void (*slot)(void*, bool
 /// ``` QTextDocument* self, QTextCursor* cursor ```
 void q_textdocument_cursor_position_changed(void* self, void* cursor);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#cursorPositionChanged)
+///
 /// ``` QTextDocument* self, void (*slot)(QTextDocument*, QTextCursor*) ```
 void q_textdocument_on_cursor_position_changed(void* self, void (*slot)(void*, void*));
 
@@ -595,6 +612,8 @@ void q_textdocument_on_cursor_position_changed(void* self, void (*slot)(void*, v
 /// ``` QTextDocument* self, int newBlockCount ```
 void q_textdocument_block_count_changed(void* self, int newBlockCount);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#blockCountChanged)
+///
 /// ``` QTextDocument* self, void (*slot)(QTextDocument*, int) ```
 void q_textdocument_on_block_count_changed(void* self, void (*slot)(void*, int));
 
@@ -603,6 +622,8 @@ void q_textdocument_on_block_count_changed(void* self, void (*slot)(void*, int))
 /// ``` QTextDocument* self, QUrl* url ```
 void q_textdocument_base_url_changed(void* self, void* url);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#baseUrlChanged)
+///
 /// ``` QTextDocument* self, void (*slot)(QTextDocument*, QUrl*) ```
 void q_textdocument_on_base_url_changed(void* self, void (*slot)(void*, void*));
 
@@ -611,6 +632,8 @@ void q_textdocument_on_base_url_changed(void* self, void (*slot)(void*, void*));
 /// ``` QTextDocument* self ```
 void q_textdocument_document_layout_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#documentLayoutChanged)
+///
 /// ``` QTextDocument* self, void (*slot)(QTextDocument*) ```
 void q_textdocument_on_document_layout_changed(void* self, void (*slot)(void*));
 
@@ -639,11 +662,15 @@ void q_textdocument_set_modified(void* self);
 /// ``` QTextDocument* self, QTextFormat* f ```
 QTextObject* q_textdocument_create_object(void* self, void* f);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#createObject)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextDocument* self, QTextObject* (*slot)(QTextDocument*, QTextFormat*) ```
 void q_textdocument_on_create_object(void* self, QTextObject* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#createObject)
+///
 /// Base class method implementation
 ///
 /// ``` QTextDocument* self, QTextFormat* f ```
@@ -654,11 +681,15 @@ QTextObject* q_textdocument_qbase_create_object(void* self, void* f);
 /// ``` QTextDocument* self, int typeVal, QUrl* name ```
 QVariant* q_textdocument_load_resource(void* self, int typeVal, void* name);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#loadResource)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextDocument* self, QVariant* (*slot)(QTextDocument*, int, QUrl*) ```
 void q_textdocument_on_load_resource(void* self, QVariant* (*slot)(void*, int, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#loadResource)
+///
 /// Base class method implementation
 ///
 /// ``` QTextDocument* self, int typeVal, QUrl* name ```
@@ -816,7 +847,7 @@ void q_textdocument_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QTextDocument* self ```
-libqt_list /* of QObject* */ q_textdocument_children(void* self);
+const libqt_list /* of QObject* */ q_textdocument_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -914,7 +945,7 @@ QBindingStorage* q_textdocument_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QTextDocument* self ```
-QBindingStorage* q_textdocument_binding_storage2(void* self);
+const QBindingStorage* q_textdocument_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -924,6 +955,8 @@ QBindingStorage* q_textdocument_binding_storage2(void* self);
 void q_textdocument_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QTextDocument* self, void (*slot)(QObject*) ```
 void q_textdocument_on_destroyed(void* self, void (*slot)(void*));
@@ -979,6 +1012,8 @@ void q_textdocument_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QTextDocument* self, void (*slot)(QObject*, QObject*) ```
 void q_textdocument_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -993,12 +1028,16 @@ bool q_textdocument_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextDocument* self, QEvent* event ```
 bool q_textdocument_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1016,12 +1055,16 @@ bool q_textdocument_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextDocument* self, QObject* watched, QEvent* event ```
 bool q_textdocument_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1039,12 +1082,16 @@ void q_textdocument_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextDocument* self, QTimerEvent* event ```
 void q_textdocument_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1062,12 +1109,16 @@ void q_textdocument_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextDocument* self, QChildEvent* event ```
 void q_textdocument_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1085,12 +1136,16 @@ void q_textdocument_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextDocument* self, QEvent* event ```
 void q_textdocument_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1108,12 +1163,16 @@ void q_textdocument_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextDocument* self, QMetaMethod* signal ```
 void q_textdocument_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1131,12 +1190,16 @@ void q_textdocument_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextDocument* self, QMetaMethod* signal ```
 void q_textdocument_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1154,12 +1217,16 @@ QObject* q_textdocument_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextDocument* self ```
 QObject* q_textdocument_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1177,12 +1244,16 @@ int32_t q_textdocument_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextDocument* self ```
 int32_t q_textdocument_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1200,12 +1271,16 @@ int32_t q_textdocument_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextDocument* self, const char* signal ```
 int32_t q_textdocument_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1223,6 +1298,8 @@ bool q_textdocument_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextDocument* self, QMetaMethod* signal ```
@@ -1230,11 +1307,24 @@ bool q_textdocument_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QTextDocument* self, bool (*slot)(QTextDocument*, QMetaMethod*) ```
 void q_textdocument_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QTextDocument* self, void (*slot)(QObject*, const char*) ```
+void q_textdocument_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#dtor.QTextDocument)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextDocument* self ```

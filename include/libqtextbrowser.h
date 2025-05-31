@@ -13,55 +13,24 @@
 #include "qtlibc.h"
 
 #include "libqabstractscrollarea.h"
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
-#include "libqcolor.h"
-#include "libqcursor.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
 #include "libqframe.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
-#include "libqlocale.h"
 #include "libqmargins.h"
-#include "libqmenu.h"
 #include "libqmetaobject.h"
 #include "libqmimedata.h"
 #include "libqobject.h"
-#include "libqpagedpaintdevice.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqregularexpression.h"
-#include "libqscreen.h"
-#include "libqscrollbar.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
 #include "libqstyleoption.h"
-#include "libqtextformat.h"
 #include "libqtextcursor.h"
-#include "libqtextdocument.h"
 #include "libqtextedit.h"
-#include "libqthread.h"
 #include "libqurl.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qtextbrowser.html
 
@@ -78,7 +47,7 @@ QTextBrowser* q_textbrowser_new2();
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QTextBrowser* self ```
-QMetaObject* q_textbrowser_meta_object(void* self);
+const QMetaObject* q_textbrowser_meta_object(void* self);
 
 /// ``` QTextBrowser* self, const char* param1 ```
 void* q_textbrowser_metacast(void* self, const char* param1);
@@ -126,11 +95,15 @@ void q_textbrowser_set_search_paths(void* self, const char* paths[]);
 /// ``` QTextBrowser* self, int typeVal, QUrl* name ```
 QVariant* q_textbrowser_load_resource(void* self, int typeVal, void* name);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#loadResource)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextBrowser* self, QVariant* (*slot)(QTextBrowser*, int, QUrl*) ```
 void q_textbrowser_on_load_resource(void* self, QVariant* (*slot)(void*, int, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#loadResource)
+///
 /// Base class method implementation
 ///
 /// ``` QTextBrowser* self, int typeVal, QUrl* name ```
@@ -201,11 +174,15 @@ void q_textbrowser_set_source(void* self, void* name);
 /// ``` QTextBrowser* self ```
 void q_textbrowser_backward(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#backward)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextBrowser* self, void (*slot)() ```
 void q_textbrowser_on_backward(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#backward)
+///
 /// Base class method implementation
 ///
 /// ``` QTextBrowser* self ```
@@ -216,11 +193,15 @@ void q_textbrowser_qbase_backward(void* self);
 /// ``` QTextBrowser* self ```
 void q_textbrowser_forward(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#forward)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextBrowser* self, void (*slot)() ```
 void q_textbrowser_on_forward(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#forward)
+///
 /// Base class method implementation
 ///
 /// ``` QTextBrowser* self ```
@@ -231,11 +212,15 @@ void q_textbrowser_qbase_forward(void* self);
 /// ``` QTextBrowser* self ```
 void q_textbrowser_home(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#home)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextBrowser* self, void (*slot)() ```
 void q_textbrowser_on_home(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#home)
+///
 /// Base class method implementation
 ///
 /// ``` QTextBrowser* self ```
@@ -246,11 +231,15 @@ void q_textbrowser_qbase_home(void* self);
 /// ``` QTextBrowser* self ```
 void q_textbrowser_reload(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#reload)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextBrowser* self, void (*slot)() ```
 void q_textbrowser_on_reload(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#reload)
+///
 /// Base class method implementation
 ///
 /// ``` QTextBrowser* self ```
@@ -261,6 +250,8 @@ void q_textbrowser_qbase_reload(void* self);
 /// ``` QTextBrowser* self, bool param1 ```
 void q_textbrowser_backward_available(void* self, bool param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#backwardAvailable)
+///
 /// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, bool) ```
 void q_textbrowser_on_backward_available(void* self, void (*slot)(void*, bool));
 
@@ -269,6 +260,8 @@ void q_textbrowser_on_backward_available(void* self, void (*slot)(void*, bool));
 /// ``` QTextBrowser* self, bool param1 ```
 void q_textbrowser_forward_available(void* self, bool param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#forwardAvailable)
+///
 /// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, bool) ```
 void q_textbrowser_on_forward_available(void* self, void (*slot)(void*, bool));
 
@@ -277,6 +270,8 @@ void q_textbrowser_on_forward_available(void* self, void (*slot)(void*, bool));
 /// ``` QTextBrowser* self ```
 void q_textbrowser_history_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#historyChanged)
+///
 /// ``` QTextBrowser* self, void (*slot)(QTextBrowser*) ```
 void q_textbrowser_on_history_changed(void* self, void (*slot)(void*));
 
@@ -285,6 +280,8 @@ void q_textbrowser_on_history_changed(void* self, void (*slot)(void*));
 /// ``` QTextBrowser* self, QUrl* param1 ```
 void q_textbrowser_source_changed(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#sourceChanged)
+///
 /// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QUrl*) ```
 void q_textbrowser_on_source_changed(void* self, void (*slot)(void*, void*));
 
@@ -293,6 +290,8 @@ void q_textbrowser_on_source_changed(void* self, void (*slot)(void*, void*));
 /// ``` QTextBrowser* self, QUrl* param1 ```
 void q_textbrowser_highlighted(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#highlighted)
+///
 /// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QUrl*) ```
 void q_textbrowser_on_highlighted(void* self, void (*slot)(void*, void*));
 
@@ -301,6 +300,8 @@ void q_textbrowser_on_highlighted(void* self, void (*slot)(void*, void*));
 /// ``` QTextBrowser* self, QUrl* param1 ```
 void q_textbrowser_anchor_clicked(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#anchorClicked)
+///
 /// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QUrl*) ```
 void q_textbrowser_on_anchor_clicked(void* self, void (*slot)(void*, void*));
 
@@ -309,11 +310,15 @@ void q_textbrowser_on_anchor_clicked(void* self, void (*slot)(void*, void*));
 /// ``` QTextBrowser* self, QEvent* e ```
 bool q_textbrowser_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextBrowser* self, bool (*slot)(QTextBrowser*, QEvent*) ```
 void q_textbrowser_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QTextBrowser* self, QEvent* e ```
@@ -324,11 +329,15 @@ bool q_textbrowser_qbase_event(void* self, void* e);
 /// ``` QTextBrowser* self, QKeyEvent* ev ```
 void q_textbrowser_key_press_event(void* self, void* ev);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#keyPressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QKeyEvent*) ```
 void q_textbrowser_on_key_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#keyPressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextBrowser* self, QKeyEvent* ev ```
@@ -339,11 +348,15 @@ void q_textbrowser_qbase_key_press_event(void* self, void* ev);
 /// ``` QTextBrowser* self, QMouseEvent* ev ```
 void q_textbrowser_mouse_move_event(void* self, void* ev);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#mouseMoveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QMouseEvent*) ```
 void q_textbrowser_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#mouseMoveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextBrowser* self, QMouseEvent* ev ```
@@ -354,11 +367,15 @@ void q_textbrowser_qbase_mouse_move_event(void* self, void* ev);
 /// ``` QTextBrowser* self, QMouseEvent* ev ```
 void q_textbrowser_mouse_press_event(void* self, void* ev);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#mousePressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QMouseEvent*) ```
 void q_textbrowser_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#mousePressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextBrowser* self, QMouseEvent* ev ```
@@ -369,11 +386,15 @@ void q_textbrowser_qbase_mouse_press_event(void* self, void* ev);
 /// ``` QTextBrowser* self, QMouseEvent* ev ```
 void q_textbrowser_mouse_release_event(void* self, void* ev);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#mouseReleaseEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QMouseEvent*) ```
 void q_textbrowser_on_mouse_release_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#mouseReleaseEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextBrowser* self, QMouseEvent* ev ```
@@ -384,11 +405,15 @@ void q_textbrowser_qbase_mouse_release_event(void* self, void* ev);
 /// ``` QTextBrowser* self, QFocusEvent* ev ```
 void q_textbrowser_focus_out_event(void* self, void* ev);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#focusOutEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QFocusEvent*) ```
 void q_textbrowser_on_focus_out_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#focusOutEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextBrowser* self, QFocusEvent* ev ```
@@ -399,11 +424,15 @@ void q_textbrowser_qbase_focus_out_event(void* self, void* ev);
 /// ``` QTextBrowser* self, bool next ```
 bool q_textbrowser_focus_next_prev_child(void* self, bool next);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#focusNextPrevChild)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextBrowser* self, bool (*slot)(QTextBrowser*, bool) ```
 void q_textbrowser_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#focusNextPrevChild)
+///
 /// Base class method implementation
 ///
 /// ``` QTextBrowser* self, bool next ```
@@ -414,11 +443,15 @@ bool q_textbrowser_qbase_focus_next_prev_child(void* self, bool next);
 /// ``` QTextBrowser* self, QPaintEvent* e ```
 void q_textbrowser_paint_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#paintEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QPaintEvent*) ```
 void q_textbrowser_on_paint_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#paintEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTextBrowser* self, QPaintEvent* e ```
@@ -429,11 +462,15 @@ void q_textbrowser_qbase_paint_event(void* self, void* e);
 /// ``` QTextBrowser* self, QUrl* name, enum QTextDocument__ResourceType typeVal ```
 void q_textbrowser_do_set_source(void* self, void* name, int64_t typeVal);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#doSetSource)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QUrl*, enum QTextDocument__ResourceType) ```
 void q_textbrowser_on_do_set_source(void* self, void (*slot)(void*, void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#doSetSource)
+///
 /// Base class method implementation
 ///
 /// ``` QTextBrowser* self, QUrl* name, enum QTextDocument__ResourceType typeVal ```
@@ -850,8 +887,8 @@ void q_textbrowser_set_accept_rich_text(void* self, bool accept);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setExtraSelections)
 ///
-/// ``` QTextBrowser* self, QTextEdit__ExtraSelection* selections[] ```
-void q_textbrowser_set_extra_selections(void* self, void* selections[]);
+/// ``` QTextBrowser* self, libqt_list /* of QTextEdit__ExtraSelection* */ selections ```
+void q_textbrowser_set_extra_selections(void* self, libqt_list selections);
 
 /// Inherited from QTextEdit
 ///
@@ -1079,6 +1116,8 @@ void q_textbrowser_text_changed(void* self);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#textChanged)
+///
 /// ``` QTextBrowser* self, void (*slot)(QTextEdit*) ```
 void q_textbrowser_on_text_changed(void* self, void (*slot)(void*));
 
@@ -1090,6 +1129,8 @@ void q_textbrowser_on_text_changed(void* self, void (*slot)(void*));
 void q_textbrowser_undo_available(void* self, bool b);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#undoAvailable)
 ///
 /// ``` QTextBrowser* self, void (*slot)(QTextEdit*, bool) ```
 void q_textbrowser_on_undo_available(void* self, void (*slot)(void*, bool));
@@ -1103,6 +1144,8 @@ void q_textbrowser_redo_available(void* self, bool b);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#redoAvailable)
+///
 /// ``` QTextBrowser* self, void (*slot)(QTextEdit*, bool) ```
 void q_textbrowser_on_redo_available(void* self, void (*slot)(void*, bool));
 
@@ -1114,6 +1157,8 @@ void q_textbrowser_on_redo_available(void* self, void (*slot)(void*, bool));
 void q_textbrowser_current_char_format_changed(void* self, void* format);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#currentCharFormatChanged)
 ///
 /// ``` QTextBrowser* self, void (*slot)(QTextEdit*, QTextCharFormat*) ```
 void q_textbrowser_on_current_char_format_changed(void* self, void (*slot)(void*, void*));
@@ -1127,6 +1172,8 @@ void q_textbrowser_copy_available(void* self, bool b);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#copyAvailable)
+///
 /// ``` QTextBrowser* self, void (*slot)(QTextEdit*, bool) ```
 void q_textbrowser_on_copy_available(void* self, void (*slot)(void*, bool));
 
@@ -1139,6 +1186,8 @@ void q_textbrowser_selection_changed(void* self);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#selectionChanged)
+///
 /// ``` QTextBrowser* self, void (*slot)(QTextEdit*) ```
 void q_textbrowser_on_selection_changed(void* self, void (*slot)(void*));
 
@@ -1150,6 +1199,8 @@ void q_textbrowser_on_selection_changed(void* self, void (*slot)(void*));
 void q_textbrowser_cursor_position_changed(void* self);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#cursorPositionChanged)
 ///
 /// ``` QTextBrowser* self, void (*slot)(QTextEdit*) ```
 void q_textbrowser_on_cursor_position_changed(void* self, void (*slot)(void*));
@@ -1530,7 +1581,7 @@ QRect* q_textbrowser_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QTextBrowser* self ```
-QRect* q_textbrowser_geometry(void* self);
+const QRect* q_textbrowser_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1887,7 +1938,7 @@ QWidget* q_textbrowser_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QTextBrowser* self ```
-QPalette* q_textbrowser_palette(void* self);
+const QPalette* q_textbrowser_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1929,7 +1980,7 @@ int64_t q_textbrowser_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QTextBrowser* self ```
-QFont* q_textbrowser_font(void* self);
+const QFont* q_textbrowser_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2929,15 +2980,15 @@ void q_textbrowser_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QTextBrowser* self, QAction* actions[] ```
-void q_textbrowser_add_actions(void* self, void* actions[]);
+/// ``` QTextBrowser* self, libqt_list /* of QAction* */ actions ```
+void q_textbrowser_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QTextBrowser* self, QAction* before, QAction* actions[] ```
-void q_textbrowser_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QTextBrowser* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_textbrowser_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3130,6 +3181,8 @@ void q_textbrowser_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QTextBrowser* self, void (*slot)(QWidget*, const char*) ```
 void q_textbrowser_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -3141,6 +3194,8 @@ void q_textbrowser_on_window_title_changed(void* self, void (*slot)(void*, const
 void q_textbrowser_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QTextBrowser* self, void (*slot)(QWidget*, QIcon*) ```
 void q_textbrowser_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -3154,6 +3209,8 @@ void q_textbrowser_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QTextBrowser* self, void (*slot)(QWidget*, const char*) ```
 void q_textbrowser_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -3165,6 +3222,8 @@ void q_textbrowser_on_window_icon_text_changed(void* self, void (*slot)(void*, c
 void q_textbrowser_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QTextBrowser* self, void (*slot)(QWidget*, QPoint*) ```
 void q_textbrowser_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -3370,7 +3429,7 @@ void q_textbrowser_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QTextBrowser* self ```
-libqt_list /* of QObject* */ q_textbrowser_children(void* self);
+const libqt_list /* of QObject* */ q_textbrowser_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -3461,7 +3520,7 @@ QBindingStorage* q_textbrowser_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QTextBrowser* self ```
-QBindingStorage* q_textbrowser_binding_storage2(void* self);
+const QBindingStorage* q_textbrowser_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -3471,6 +3530,8 @@ QBindingStorage* q_textbrowser_binding_storage2(void* self);
 void q_textbrowser_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QTextBrowser* self, void (*slot)(QObject*) ```
 void q_textbrowser_on_destroyed(void* self, void (*slot)(void*));
@@ -3525,6 +3586,8 @@ QMetaObject__Connection* q_textbrowser_connect4(void* self, void* sender, const 
 void q_textbrowser_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QTextBrowser* self, void (*slot)(QObject*, QObject*) ```
 void q_textbrowser_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -3624,12 +3687,16 @@ QVariant* q_textbrowser_input_method_query(void* self, int64_t property);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, enum Qt__InputMethodQuery property ```
 QVariant* q_textbrowser_qbase_input_method_query(void* self, int64_t property);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3647,12 +3714,16 @@ void q_textbrowser_timer_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QTimerEvent* e ```
 void q_textbrowser_qbase_timer_event(void* self, void* e);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3670,12 +3741,16 @@ void q_textbrowser_key_release_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QKeyEvent* e ```
 void q_textbrowser_qbase_key_release_event(void* self, void* e);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3693,12 +3768,16 @@ void q_textbrowser_resize_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#resizeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QResizeEvent* e ```
 void q_textbrowser_qbase_resize_event(void* self, void* e);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3716,12 +3795,16 @@ void q_textbrowser_mouse_double_click_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QMouseEvent* e ```
 void q_textbrowser_qbase_mouse_double_click_event(void* self, void* e);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3739,12 +3822,16 @@ void q_textbrowser_context_menu_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QContextMenuEvent* e ```
 void q_textbrowser_qbase_context_menu_event(void* self, void* e);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3762,12 +3849,16 @@ void q_textbrowser_drag_enter_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QDragEnterEvent* e ```
 void q_textbrowser_qbase_drag_enter_event(void* self, void* e);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3785,12 +3876,16 @@ void q_textbrowser_drag_leave_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QDragLeaveEvent* e ```
 void q_textbrowser_qbase_drag_leave_event(void* self, void* e);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3808,12 +3903,16 @@ void q_textbrowser_drag_move_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QDragMoveEvent* e ```
 void q_textbrowser_qbase_drag_move_event(void* self, void* e);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3831,12 +3930,16 @@ void q_textbrowser_drop_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QDropEvent* e ```
 void q_textbrowser_qbase_drop_event(void* self, void* e);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3854,12 +3957,16 @@ void q_textbrowser_focus_in_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QFocusEvent* e ```
 void q_textbrowser_qbase_focus_in_event(void* self, void* e);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3877,12 +3984,16 @@ void q_textbrowser_show_event(void* self, void* param1);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QShowEvent* param1 ```
 void q_textbrowser_qbase_show_event(void* self, void* param1);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3900,12 +4011,16 @@ void q_textbrowser_change_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#changeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QEvent* e ```
 void q_textbrowser_qbase_change_event(void* self, void* e);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3923,12 +4038,16 @@ void q_textbrowser_wheel_event(void* self, void* e);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QWheelEvent* e ```
 void q_textbrowser_qbase_wheel_event(void* self, void* e);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3946,12 +4065,16 @@ QMimeData* q_textbrowser_create_mime_data_from_selection(void* self);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#createMimeDataFromSelection)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self ```
 QMimeData* q_textbrowser_qbase_create_mime_data_from_selection(void* self);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#createMimeDataFromSelection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3969,12 +4092,16 @@ bool q_textbrowser_can_insert_from_mime_data(void* self, void* source);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#canInsertFromMimeData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QMimeData* source ```
 bool q_textbrowser_qbase_can_insert_from_mime_data(void* self, void* source);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#canInsertFromMimeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3992,12 +4119,16 @@ void q_textbrowser_insert_from_mime_data(void* self, void* source);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#insertFromMimeData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QMimeData* source ```
 void q_textbrowser_qbase_insert_from_mime_data(void* self, void* source);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#insertFromMimeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4015,12 +4146,16 @@ void q_textbrowser_input_method_event(void* self, void* param1);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QInputMethodEvent* param1 ```
 void q_textbrowser_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4038,12 +4173,16 @@ void q_textbrowser_scroll_contents_by(void* self, int dx, int dy);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#scrollContentsBy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, int dx, int dy ```
 void q_textbrowser_qbase_scroll_contents_by(void* self, int dx, int dy);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#scrollContentsBy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4061,12 +4200,16 @@ void q_textbrowser_do_set_text_cursor(void* self, void* cursor);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#doSetTextCursor)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QTextCursor* cursor ```
 void q_textbrowser_qbase_do_set_text_cursor(void* self, void* cursor);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#doSetTextCursor)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4084,12 +4227,16 @@ QSize* q_textbrowser_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self ```
 QSize* q_textbrowser_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4107,12 +4254,16 @@ QSize* q_textbrowser_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self ```
 QSize* q_textbrowser_qbase_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4130,12 +4281,16 @@ void q_textbrowser_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QWidget* viewport ```
 void q_textbrowser_qbase_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4153,12 +4308,16 @@ bool q_textbrowser_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QObject* param1, QEvent* param2 ```
 bool q_textbrowser_qbase_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4176,12 +4335,16 @@ bool q_textbrowser_viewport_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QEvent* param1 ```
 bool q_textbrowser_qbase_viewport_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4199,12 +4362,16 @@ QSize* q_textbrowser_viewport_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self ```
 QSize* q_textbrowser_qbase_viewport_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4222,12 +4389,16 @@ void q_textbrowser_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QStyleOptionFrame* option ```
 void q_textbrowser_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4245,12 +4416,16 @@ int32_t q_textbrowser_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self ```
 int32_t q_textbrowser_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4268,12 +4443,16 @@ void q_textbrowser_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, bool visible ```
 void q_textbrowser_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4291,12 +4470,16 @@ int32_t q_textbrowser_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, int param1 ```
 int32_t q_textbrowser_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4314,12 +4497,16 @@ bool q_textbrowser_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self ```
 bool q_textbrowser_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4337,12 +4524,16 @@ QPaintEngine* q_textbrowser_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self ```
 QPaintEngine* q_textbrowser_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4360,12 +4551,16 @@ void q_textbrowser_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QEnterEvent* event ```
 void q_textbrowser_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4383,12 +4578,16 @@ void q_textbrowser_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QEvent* event ```
 void q_textbrowser_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4406,12 +4605,16 @@ void q_textbrowser_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QMoveEvent* event ```
 void q_textbrowser_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4429,12 +4632,16 @@ void q_textbrowser_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QCloseEvent* event ```
 void q_textbrowser_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4452,12 +4659,16 @@ void q_textbrowser_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QTabletEvent* event ```
 void q_textbrowser_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4475,12 +4686,16 @@ void q_textbrowser_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QActionEvent* event ```
 void q_textbrowser_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4498,12 +4713,16 @@ void q_textbrowser_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QHideEvent* event ```
 void q_textbrowser_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4521,12 +4740,16 @@ bool q_textbrowser_native_event(void* self, const char* eventType, void* message
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, const char* eventType, void* message, intptr_t* result ```
 bool q_textbrowser_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4544,12 +4767,16 @@ int32_t q_textbrowser_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_textbrowser_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4567,12 +4794,16 @@ void q_textbrowser_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QPainter* painter ```
 void q_textbrowser_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4590,12 +4821,16 @@ QPaintDevice* q_textbrowser_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QPoint* offset ```
 QPaintDevice* q_textbrowser_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4613,12 +4848,16 @@ QPainter* q_textbrowser_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self ```
 QPainter* q_textbrowser_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4636,12 +4875,16 @@ void q_textbrowser_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QChildEvent* event ```
 void q_textbrowser_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4659,12 +4902,16 @@ void q_textbrowser_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QEvent* event ```
 void q_textbrowser_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4682,12 +4929,16 @@ void q_textbrowser_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QMetaMethod* signal ```
 void q_textbrowser_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4705,12 +4956,16 @@ void q_textbrowser_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QMetaMethod* signal ```
 void q_textbrowser_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4728,12 +4983,16 @@ void q_textbrowser_zoom_in_f(void* self, float range);
 
 /// Inherited from QTextEdit
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#zoomInF)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, float range ```
 void q_textbrowser_qbase_zoom_in_f(void* self, float range);
 
 /// Inherited from QTextEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#zoomInF)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4751,12 +5010,16 @@ void q_textbrowser_set_viewport_margins(void* self, int left, int top, int right
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, int left, int top, int right, int bottom ```
 void q_textbrowser_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4774,12 +5037,16 @@ QMargins* q_textbrowser_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self ```
 QMargins* q_textbrowser_qbase_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4797,12 +5064,16 @@ void q_textbrowser_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QPainter* param1 ```
 void q_textbrowser_qbase_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4820,12 +5091,16 @@ void q_textbrowser_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self ```
 void q_textbrowser_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4843,12 +5118,16 @@ void q_textbrowser_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self ```
 void q_textbrowser_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4866,12 +5145,16 @@ void q_textbrowser_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self ```
 void q_textbrowser_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4889,12 +5172,16 @@ bool q_textbrowser_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self ```
 bool q_textbrowser_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4912,12 +5199,16 @@ bool q_textbrowser_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self ```
 bool q_textbrowser_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4935,12 +5226,16 @@ QObject* q_textbrowser_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self ```
 QObject* q_textbrowser_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4958,12 +5253,16 @@ int32_t q_textbrowser_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self ```
 int32_t q_textbrowser_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4981,12 +5280,16 @@ int32_t q_textbrowser_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, const char* signal ```
 int32_t q_textbrowser_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5004,6 +5307,8 @@ bool q_textbrowser_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, QMetaMethod* signal ```
@@ -5011,11 +5316,24 @@ bool q_textbrowser_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QTextBrowser* self, bool (*slot)(QTextBrowser*, QMetaMethod*) ```
 void q_textbrowser_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QTextBrowser* self, void (*slot)(QObject*, const char*) ```
+void q_textbrowser_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#dtor.QTextBrowser)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextBrowser* self ```

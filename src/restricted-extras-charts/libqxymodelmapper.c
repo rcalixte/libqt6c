@@ -1,18 +1,12 @@
 #include "../libqabstractitemmodel.hpp"
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
-#include "../libqevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "libqxyseries.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqxymodelmapper.hpp"
 #include "libqxymodelmapper.h"
 
-QMetaObject* q_xymodelmapper_meta_object(void* self) {
+const QMetaObject* q_xymodelmapper_meta_object(void* self) {
     return QXYModelMapper_MetaObject((QXYModelMapper*)self);
 }
 
@@ -61,8 +55,7 @@ const char* q_xymodelmapper_object_name(void* self) {
 }
 
 void q_xymodelmapper_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_xymodelmapper_is_widget_type(void* self) {
@@ -101,7 +94,7 @@ void q_xymodelmapper_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_xymodelmapper_children(void* self) {
+const libqt_list /* of QObject* */ q_xymodelmapper_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -168,7 +161,7 @@ QBindingStorage* q_xymodelmapper_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_xymodelmapper_binding_storage2(void* self) {
+const QBindingStorage* q_xymodelmapper_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -210,6 +203,10 @@ void q_xymodelmapper_destroyed1(void* self, void* param1) {
 
 void q_xymodelmapper_on_destroyed1(void* self, void (*slot)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+}
+
+void q_xymodelmapper_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_xymodelmapper_delete(void* self) {

@@ -1,5 +1,3 @@
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
 #include "../libqcolor.hpp"
 #include "../libqfont.hpp"
@@ -7,8 +5,6 @@
 #include "../libqobject.hpp"
 #include "../libqsettings.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "libqscilexer.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqscilexerpo.hpp"
@@ -22,7 +18,7 @@ QsciLexerPO* q_scilexerpo_new2(void* parent) {
     return QsciLexerPO_new2((QObject*)parent);
 }
 
-QMetaObject* q_scilexerpo_meta_object(void* self) {
+const QMetaObject* q_scilexerpo_meta_object(void* self) {
     return QsciLexerPO_MetaObject((QsciLexerPO*)self);
 }
 
@@ -242,8 +238,7 @@ const char* q_scilexerpo_object_name(void* self) {
 }
 
 void q_scilexerpo_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_scilexerpo_is_widget_type(void* self) {
@@ -282,7 +277,7 @@ void q_scilexerpo_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_scilexerpo_children(void* self) {
+const libqt_list /* of QObject* */ q_scilexerpo_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -349,7 +344,7 @@ QBindingStorage* q_scilexerpo_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_scilexerpo_binding_storage2(void* self) {
+const QBindingStorage* q_scilexerpo_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -879,6 +874,10 @@ bool q_scilexerpo_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_scilexerpo_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QsciLexerPO_OnIsSignalConnected((QsciLexerPO*)self, (intptr_t)slot);
+}
+
+void q_scilexerpo_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_scilexerpo_delete(void* self) {

@@ -15,25 +15,16 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QColor QColor;
 typedef struct QEvent QEvent;
 typedef struct QFont QFont;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QSettings QSettings;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
-typedef struct QsciAbstractAPIs QsciAbstractAPIs;
 typedef struct QsciLexer QsciLexer;
 typedef struct QsciLexerCoffeeScript QsciLexerCoffeeScript;
 typedef struct QsciScintilla QsciScintilla;
@@ -138,6 +129,9 @@ void QsciLexerCoffeeScript_QBaseSetPaper(QsciLexerCoffeeScript* self, QColor* c,
 bool QsciLexerCoffeeScript_ReadProperties(QsciLexerCoffeeScript* self, QSettings* qs, libqt_string prefix);
 void QsciLexerCoffeeScript_OnReadProperties(QsciLexerCoffeeScript* self, intptr_t slot);
 bool QsciLexerCoffeeScript_QBaseReadProperties(QsciLexerCoffeeScript* self, QSettings* qs, libqt_string prefix);
+bool QsciLexerCoffeeScript_WriteProperties(const QsciLexerCoffeeScript* self, QSettings* qs, libqt_string prefix);
+void QsciLexerCoffeeScript_OnWriteProperties(const QsciLexerCoffeeScript* self, intptr_t slot);
+bool QsciLexerCoffeeScript_QBaseWriteProperties(const QsciLexerCoffeeScript* self, QSettings* qs, libqt_string prefix);
 bool QsciLexerCoffeeScript_Event(QsciLexerCoffeeScript* self, QEvent* event);
 void QsciLexerCoffeeScript_OnEvent(QsciLexerCoffeeScript* self, intptr_t slot);
 bool QsciLexerCoffeeScript_QBaseEvent(QsciLexerCoffeeScript* self, QEvent* event);
@@ -159,9 +153,6 @@ void QsciLexerCoffeeScript_QBaseConnectNotify(QsciLexerCoffeeScript* self, QMeta
 void QsciLexerCoffeeScript_DisconnectNotify(QsciLexerCoffeeScript* self, QMetaMethod* signal);
 void QsciLexerCoffeeScript_OnDisconnectNotify(QsciLexerCoffeeScript* self, intptr_t slot);
 void QsciLexerCoffeeScript_QBaseDisconnectNotify(QsciLexerCoffeeScript* self, QMetaMethod* signal);
-bool QsciLexerCoffeeScript_WriteProperties(const QsciLexerCoffeeScript* self, QSettings* qs, libqt_string prefix);
-void QsciLexerCoffeeScript_OnWriteProperties(const QsciLexerCoffeeScript* self, intptr_t slot);
-bool QsciLexerCoffeeScript_QBaseWriteProperties(const QsciLexerCoffeeScript* self, QSettings* qs, libqt_string prefix);
 QObject* QsciLexerCoffeeScript_Sender(const QsciLexerCoffeeScript* self);
 void QsciLexerCoffeeScript_OnSender(const QsciLexerCoffeeScript* self, intptr_t slot);
 QObject* QsciLexerCoffeeScript_QBaseSender(const QsciLexerCoffeeScript* self);

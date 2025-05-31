@@ -1,26 +1,15 @@
 #include "libqaccessible.hpp"
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
-#include "libqcursor.hpp"
-#include "libqicon.hpp"
-#include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpaintdevicewindow.hpp"
-#include "libqpaintengine.hpp"
 #include "libqpainter.hpp"
 #include "libqpoint.hpp"
-#include "libqrect.hpp"
-#include "libqregion.hpp"
-#include "libqscreen.hpp"
 #include "libqsize.hpp"
 #include <string.h>
 #include "libqsurface.hpp"
 #include "libqsurfaceformat.hpp"
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqwindow.hpp"
 #include "libqcoreevent.hpp"
 #include "libqrasterwindow.hpp"
@@ -34,7 +23,7 @@ QRasterWindow* q_rasterwindow_new2(void* parent) {
     return QRasterWindow_new2((QWindow*)parent);
 }
 
-QMetaObject* q_rasterwindow_meta_object(void* self) {
+const QMetaObject* q_rasterwindow_meta_object(void* self) {
     return QRasterWindow_MetaObject((QRasterWindow*)self);
 }
 
@@ -705,8 +694,7 @@ const char* q_rasterwindow_object_name(void* self) {
 }
 
 void q_rasterwindow_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_rasterwindow_is_widget_type(void* self) {
@@ -745,7 +733,7 @@ void q_rasterwindow_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_rasterwindow_children(void* self) {
+const libqt_list /* of QObject* */ q_rasterwindow_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -808,7 +796,7 @@ QBindingStorage* q_rasterwindow_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_rasterwindow_binding_storage2(void* self) {
+const QBindingStorage* q_rasterwindow_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1370,6 +1358,10 @@ bool q_rasterwindow_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_rasterwindow_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QRasterWindow_OnIsSignalConnected((QRasterWindow*)self, (intptr_t)slot);
+}
+
+void q_rasterwindow_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_rasterwindow_delete(void* self) {

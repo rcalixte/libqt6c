@@ -14,23 +14,8 @@
 
 #include "libqabstractscrollarea.h"
 #include "libqabstracttextdocumentlayout.h"
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
-#include "libqcursor.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
 #include "libqframe.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
-#include "libqlocale.h"
 #include "libqmargins.h"
 #include "libqmenu.h"
 #include "libqmetaobject.h"
@@ -40,29 +25,20 @@
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
 #include "libqrect.h"
-#include "libqregion.h"
 #include "libqregularexpression.h"
-#include "libqscreen.h"
-#include "libqscrollbar.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
 #include "libqstyleoption.h"
 #include "libqtextobject.h"
 #include "libqtextformat.h"
 #include "libqtextcursor.h"
 #include "libqtextdocument.h"
 #include "libqtextlayout.h"
-#include "libqthread.h"
 #include "libqurl.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qplaintextedit.html
 
@@ -89,7 +65,7 @@ QPlainTextEdit* q_plaintextedit_new4(const char* text, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QPlainTextEdit* self ```
-QMetaObject* q_plaintextedit_meta_object(void* self);
+const QMetaObject* q_plaintextedit_meta_object(void* self);
 
 /// ``` QPlainTextEdit* self, const char* param1 ```
 void* q_plaintextedit_metacast(void* self, const char* param1);
@@ -282,11 +258,15 @@ void q_plaintextedit_ensure_cursor_visible(void* self);
 /// ``` QPlainTextEdit* self, int typeVal, QUrl* name ```
 QVariant* q_plaintextedit_load_resource(void* self, int typeVal, void* name);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#loadResource)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, QVariant* (*slot)(QPlainTextEdit*, int, QUrl*) ```
 void q_plaintextedit_on_load_resource(void* self, QVariant* (*slot)(void*, int, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#loadResource)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, int typeVal, QUrl* name ```
@@ -354,8 +334,8 @@ void q_plaintextedit_set_cursor_width(void* self, int width);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#setExtraSelections)
 ///
-/// ``` QPlainTextEdit* self, QTextEdit__ExtraSelection* selections[] ```
-void q_plaintextedit_set_extra_selections(void* self, void* selections[]);
+/// ``` QPlainTextEdit* self, libqt_list /* of QTextEdit__ExtraSelection* */ selections ```
+void q_plaintextedit_set_extra_selections(void* self, libqt_list selections);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#extraSelections)
 ///
@@ -387,11 +367,15 @@ int32_t q_plaintextedit_block_count(void* self);
 /// ``` QPlainTextEdit* self, enum Qt__InputMethodQuery property ```
 QVariant* q_plaintextedit_input_method_query(void* self, int64_t property);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#inputMethodQuery)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, QVariant* (*slot)(QPlainTextEdit*, enum Qt__InputMethodQuery) ```
 void q_plaintextedit_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#inputMethodQuery)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, enum Qt__InputMethodQuery property ```
@@ -477,6 +461,8 @@ void q_plaintextedit_zoom_out(void* self);
 /// ``` QPlainTextEdit* self ```
 void q_plaintextedit_text_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#textChanged)
+///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*) ```
 void q_plaintextedit_on_text_changed(void* self, void (*slot)(void*));
 
@@ -485,6 +471,8 @@ void q_plaintextedit_on_text_changed(void* self, void (*slot)(void*));
 /// ``` QPlainTextEdit* self, bool b ```
 void q_plaintextedit_undo_available(void* self, bool b);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#undoAvailable)
+///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, bool) ```
 void q_plaintextedit_on_undo_available(void* self, void (*slot)(void*, bool));
 
@@ -493,6 +481,8 @@ void q_plaintextedit_on_undo_available(void* self, void (*slot)(void*, bool));
 /// ``` QPlainTextEdit* self, bool b ```
 void q_plaintextedit_redo_available(void* self, bool b);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#redoAvailable)
+///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, bool) ```
 void q_plaintextedit_on_redo_available(void* self, void (*slot)(void*, bool));
 
@@ -501,6 +491,8 @@ void q_plaintextedit_on_redo_available(void* self, void (*slot)(void*, bool));
 /// ``` QPlainTextEdit* self, bool b ```
 void q_plaintextedit_copy_available(void* self, bool b);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#copyAvailable)
+///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, bool) ```
 void q_plaintextedit_on_copy_available(void* self, void (*slot)(void*, bool));
 
@@ -509,6 +501,8 @@ void q_plaintextedit_on_copy_available(void* self, void (*slot)(void*, bool));
 /// ``` QPlainTextEdit* self ```
 void q_plaintextedit_selection_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#selectionChanged)
+///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*) ```
 void q_plaintextedit_on_selection_changed(void* self, void (*slot)(void*));
 
@@ -517,6 +511,8 @@ void q_plaintextedit_on_selection_changed(void* self, void (*slot)(void*));
 /// ``` QPlainTextEdit* self ```
 void q_plaintextedit_cursor_position_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#cursorPositionChanged)
+///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*) ```
 void q_plaintextedit_on_cursor_position_changed(void* self, void (*slot)(void*));
 
@@ -525,6 +521,8 @@ void q_plaintextedit_on_cursor_position_changed(void* self, void (*slot)(void*))
 /// ``` QPlainTextEdit* self, QRect* rect, int dy ```
 void q_plaintextedit_update_request(void* self, void* rect, int dy);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#updateRequest)
+///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QRect*, int) ```
 void q_plaintextedit_on_update_request(void* self, void (*slot)(void*, void*, int));
 
@@ -533,6 +531,8 @@ void q_plaintextedit_on_update_request(void* self, void (*slot)(void*, void*, in
 /// ``` QPlainTextEdit* self, int newBlockCount ```
 void q_plaintextedit_block_count_changed(void* self, int newBlockCount);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#blockCountChanged)
+///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, int) ```
 void q_plaintextedit_on_block_count_changed(void* self, void (*slot)(void*, int));
 
@@ -541,6 +541,8 @@ void q_plaintextedit_on_block_count_changed(void* self, void (*slot)(void*, int)
 /// ``` QPlainTextEdit* self, bool param1 ```
 void q_plaintextedit_modification_changed(void* self, bool param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#modificationChanged)
+///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, bool) ```
 void q_plaintextedit_on_modification_changed(void* self, void (*slot)(void*, bool));
 
@@ -549,11 +551,15 @@ void q_plaintextedit_on_modification_changed(void* self, void (*slot)(void*, boo
 /// ``` QPlainTextEdit* self, QEvent* e ```
 bool q_plaintextedit_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, bool (*slot)(QPlainTextEdit*, QEvent*) ```
 void q_plaintextedit_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QEvent* e ```
@@ -564,11 +570,15 @@ bool q_plaintextedit_qbase_event(void* self, void* e);
 /// ``` QPlainTextEdit* self, QTimerEvent* e ```
 void q_plaintextedit_timer_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#timerEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QTimerEvent*) ```
 void q_plaintextedit_on_timer_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#timerEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QTimerEvent* e ```
@@ -579,11 +589,15 @@ void q_plaintextedit_qbase_timer_event(void* self, void* e);
 /// ``` QPlainTextEdit* self, QKeyEvent* e ```
 void q_plaintextedit_key_press_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#keyPressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QKeyEvent*) ```
 void q_plaintextedit_on_key_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#keyPressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QKeyEvent* e ```
@@ -594,11 +608,15 @@ void q_plaintextedit_qbase_key_press_event(void* self, void* e);
 /// ``` QPlainTextEdit* self, QKeyEvent* e ```
 void q_plaintextedit_key_release_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#keyReleaseEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QKeyEvent*) ```
 void q_plaintextedit_on_key_release_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#keyReleaseEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QKeyEvent* e ```
@@ -609,11 +627,15 @@ void q_plaintextedit_qbase_key_release_event(void* self, void* e);
 /// ``` QPlainTextEdit* self, QResizeEvent* e ```
 void q_plaintextedit_resize_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#resizeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QResizeEvent*) ```
 void q_plaintextedit_on_resize_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#resizeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QResizeEvent* e ```
@@ -624,11 +646,15 @@ void q_plaintextedit_qbase_resize_event(void* self, void* e);
 /// ``` QPlainTextEdit* self, QPaintEvent* e ```
 void q_plaintextedit_paint_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#paintEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QPaintEvent*) ```
 void q_plaintextedit_on_paint_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#paintEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QPaintEvent* e ```
@@ -639,11 +665,15 @@ void q_plaintextedit_qbase_paint_event(void* self, void* e);
 /// ``` QPlainTextEdit* self, QMouseEvent* e ```
 void q_plaintextedit_mouse_press_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#mousePressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QMouseEvent*) ```
 void q_plaintextedit_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#mousePressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QMouseEvent* e ```
@@ -654,11 +684,15 @@ void q_plaintextedit_qbase_mouse_press_event(void* self, void* e);
 /// ``` QPlainTextEdit* self, QMouseEvent* e ```
 void q_plaintextedit_mouse_move_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#mouseMoveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QMouseEvent*) ```
 void q_plaintextedit_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#mouseMoveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QMouseEvent* e ```
@@ -669,11 +703,15 @@ void q_plaintextedit_qbase_mouse_move_event(void* self, void* e);
 /// ``` QPlainTextEdit* self, QMouseEvent* e ```
 void q_plaintextedit_mouse_release_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#mouseReleaseEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QMouseEvent*) ```
 void q_plaintextedit_on_mouse_release_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#mouseReleaseEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QMouseEvent* e ```
@@ -684,11 +722,15 @@ void q_plaintextedit_qbase_mouse_release_event(void* self, void* e);
 /// ``` QPlainTextEdit* self, QMouseEvent* e ```
 void q_plaintextedit_mouse_double_click_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#mouseDoubleClickEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QMouseEvent*) ```
 void q_plaintextedit_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#mouseDoubleClickEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QMouseEvent* e ```
@@ -699,11 +741,15 @@ void q_plaintextedit_qbase_mouse_double_click_event(void* self, void* e);
 /// ``` QPlainTextEdit* self, bool next ```
 bool q_plaintextedit_focus_next_prev_child(void* self, bool next);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#focusNextPrevChild)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, bool (*slot)(QPlainTextEdit*, bool) ```
 void q_plaintextedit_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#focusNextPrevChild)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, bool next ```
@@ -714,11 +760,15 @@ bool q_plaintextedit_qbase_focus_next_prev_child(void* self, bool next);
 /// ``` QPlainTextEdit* self, QContextMenuEvent* e ```
 void q_plaintextedit_context_menu_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#contextMenuEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QContextMenuEvent*) ```
 void q_plaintextedit_on_context_menu_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#contextMenuEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QContextMenuEvent* e ```
@@ -729,11 +779,15 @@ void q_plaintextedit_qbase_context_menu_event(void* self, void* e);
 /// ``` QPlainTextEdit* self, QDragEnterEvent* e ```
 void q_plaintextedit_drag_enter_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#dragEnterEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QDragEnterEvent*) ```
 void q_plaintextedit_on_drag_enter_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#dragEnterEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QDragEnterEvent* e ```
@@ -744,11 +798,15 @@ void q_plaintextedit_qbase_drag_enter_event(void* self, void* e);
 /// ``` QPlainTextEdit* self, QDragLeaveEvent* e ```
 void q_plaintextedit_drag_leave_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#dragLeaveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QDragLeaveEvent*) ```
 void q_plaintextedit_on_drag_leave_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#dragLeaveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QDragLeaveEvent* e ```
@@ -759,11 +817,15 @@ void q_plaintextedit_qbase_drag_leave_event(void* self, void* e);
 /// ``` QPlainTextEdit* self, QDragMoveEvent* e ```
 void q_plaintextedit_drag_move_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#dragMoveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QDragMoveEvent*) ```
 void q_plaintextedit_on_drag_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#dragMoveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QDragMoveEvent* e ```
@@ -774,11 +836,15 @@ void q_plaintextedit_qbase_drag_move_event(void* self, void* e);
 /// ``` QPlainTextEdit* self, QDropEvent* e ```
 void q_plaintextedit_drop_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#dropEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QDropEvent*) ```
 void q_plaintextedit_on_drop_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#dropEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QDropEvent* e ```
@@ -789,11 +855,15 @@ void q_plaintextedit_qbase_drop_event(void* self, void* e);
 /// ``` QPlainTextEdit* self, QFocusEvent* e ```
 void q_plaintextedit_focus_in_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#focusInEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QFocusEvent*) ```
 void q_plaintextedit_on_focus_in_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#focusInEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QFocusEvent* e ```
@@ -804,11 +874,15 @@ void q_plaintextedit_qbase_focus_in_event(void* self, void* e);
 /// ``` QPlainTextEdit* self, QFocusEvent* e ```
 void q_plaintextedit_focus_out_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#focusOutEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QFocusEvent*) ```
 void q_plaintextedit_on_focus_out_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#focusOutEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QFocusEvent* e ```
@@ -819,11 +893,15 @@ void q_plaintextedit_qbase_focus_out_event(void* self, void* e);
 /// ``` QPlainTextEdit* self, QShowEvent* param1 ```
 void q_plaintextedit_show_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#showEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QShowEvent*) ```
 void q_plaintextedit_on_show_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#showEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QShowEvent* param1 ```
@@ -834,11 +912,15 @@ void q_plaintextedit_qbase_show_event(void* self, void* param1);
 /// ``` QPlainTextEdit* self, QEvent* e ```
 void q_plaintextedit_change_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#changeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QEvent*) ```
 void q_plaintextedit_on_change_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#changeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QEvent* e ```
@@ -849,11 +931,15 @@ void q_plaintextedit_qbase_change_event(void* self, void* e);
 /// ``` QPlainTextEdit* self, QWheelEvent* e ```
 void q_plaintextedit_wheel_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#wheelEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QWheelEvent*) ```
 void q_plaintextedit_on_wheel_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#wheelEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QWheelEvent* e ```
@@ -864,11 +950,15 @@ void q_plaintextedit_qbase_wheel_event(void* self, void* e);
 /// ``` QPlainTextEdit* self ```
 QMimeData* q_plaintextedit_create_mime_data_from_selection(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#createMimeDataFromSelection)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, QMimeData* (*slot)() ```
 void q_plaintextedit_on_create_mime_data_from_selection(void* self, QMimeData* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#createMimeDataFromSelection)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self ```
@@ -879,11 +969,15 @@ QMimeData* q_plaintextedit_qbase_create_mime_data_from_selection(void* self);
 /// ``` QPlainTextEdit* self, QMimeData* source ```
 bool q_plaintextedit_can_insert_from_mime_data(void* self, void* source);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#canInsertFromMimeData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, bool (*slot)(QPlainTextEdit*, QMimeData*) ```
 void q_plaintextedit_on_can_insert_from_mime_data(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#canInsertFromMimeData)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QMimeData* source ```
@@ -894,11 +988,15 @@ bool q_plaintextedit_qbase_can_insert_from_mime_data(void* self, void* source);
 /// ``` QPlainTextEdit* self, QMimeData* source ```
 void q_plaintextedit_insert_from_mime_data(void* self, void* source);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#insertFromMimeData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QMimeData*) ```
 void q_plaintextedit_on_insert_from_mime_data(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#insertFromMimeData)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QMimeData* source ```
@@ -909,11 +1007,15 @@ void q_plaintextedit_qbase_insert_from_mime_data(void* self, void* source);
 /// ``` QPlainTextEdit* self, QInputMethodEvent* param1 ```
 void q_plaintextedit_input_method_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#inputMethodEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QInputMethodEvent*) ```
 void q_plaintextedit_on_input_method_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#inputMethodEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QInputMethodEvent* param1 ```
@@ -924,11 +1026,15 @@ void q_plaintextedit_qbase_input_method_event(void* self, void* param1);
 /// ``` QPlainTextEdit* self, int dx, int dy ```
 void q_plaintextedit_scroll_contents_by(void* self, int dx, int dy);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#scrollContentsBy)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, int, int) ```
 void q_plaintextedit_on_scroll_contents_by(void* self, void (*slot)(void*, int, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#scrollContentsBy)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, int dx, int dy ```
@@ -939,11 +1045,15 @@ void q_plaintextedit_qbase_scroll_contents_by(void* self, int dx, int dy);
 /// ``` QPlainTextEdit* self, QTextCursor* cursor ```
 void q_plaintextedit_do_set_text_cursor(void* self, void* cursor);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#doSetTextCursor)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QTextCursor*) ```
 void q_plaintextedit_on_do_set_text_cursor(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#doSetTextCursor)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QTextCursor* cursor ```
@@ -954,11 +1064,15 @@ void q_plaintextedit_qbase_do_set_text_cursor(void* self, void* cursor);
 /// ``` QPlainTextEdit* self ```
 QTextBlock* q_plaintextedit_first_visible_block(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#firstVisibleBlock)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, QTextBlock* (*slot)() ```
 void q_plaintextedit_on_first_visible_block(void* self, QTextBlock* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#firstVisibleBlock)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self ```
@@ -969,11 +1083,15 @@ QTextBlock* q_plaintextedit_qbase_first_visible_block(void* self);
 /// ``` QPlainTextEdit* self ```
 QPointF* q_plaintextedit_content_offset(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#contentOffset)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, QPointF* (*slot)() ```
 void q_plaintextedit_on_content_offset(void* self, QPointF* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#contentOffset)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self ```
@@ -984,11 +1102,15 @@ QPointF* q_plaintextedit_qbase_content_offset(void* self);
 /// ``` QPlainTextEdit* self, QTextBlock* block ```
 QRectF* q_plaintextedit_block_bounding_rect(void* self, void* block);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#blockBoundingRect)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, QRectF* (*slot)(QPlainTextEdit*, QTextBlock*) ```
 void q_plaintextedit_on_block_bounding_rect(void* self, QRectF* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#blockBoundingRect)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QTextBlock* block ```
@@ -999,11 +1121,15 @@ QRectF* q_plaintextedit_qbase_block_bounding_rect(void* self, void* block);
 /// ``` QPlainTextEdit* self, QTextBlock* block ```
 QRectF* q_plaintextedit_block_bounding_geometry(void* self, void* block);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#blockBoundingGeometry)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, QRectF* (*slot)(QPlainTextEdit*, QTextBlock*) ```
 void q_plaintextedit_on_block_bounding_geometry(void* self, QRectF* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#blockBoundingGeometry)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, QTextBlock* block ```
@@ -1014,11 +1140,15 @@ QRectF* q_plaintextedit_qbase_block_bounding_geometry(void* self, void* block);
 /// ``` QPlainTextEdit* self ```
 QAbstractTextDocumentLayout__PaintContext* q_plaintextedit_get_paint_context(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#getPaintContext)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, QAbstractTextDocumentLayout__PaintContext* (*slot)() ```
 void q_plaintextedit_on_get_paint_context(void* self, QAbstractTextDocumentLayout__PaintContext* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#getPaintContext)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self ```
@@ -1029,11 +1159,15 @@ QAbstractTextDocumentLayout__PaintContext* q_plaintextedit_qbase_get_paint_conte
 /// ``` QPlainTextEdit* self, float range ```
 void q_plaintextedit_zoom_in_f(void* self, float range);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#zoomInF)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, float) ```
 void q_plaintextedit_on_zoom_in_f(void* self, void (*slot)(void*, float));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#zoomInF)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextEdit* self, float range ```
@@ -1408,7 +1542,7 @@ QRect* q_plaintextedit_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QPlainTextEdit* self ```
-QRect* q_plaintextedit_geometry(void* self);
+const QRect* q_plaintextedit_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1765,7 +1899,7 @@ QWidget* q_plaintextedit_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QPlainTextEdit* self ```
-QPalette* q_plaintextedit_palette(void* self);
+const QPalette* q_plaintextedit_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1807,7 +1941,7 @@ int64_t q_plaintextedit_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QPlainTextEdit* self ```
-QFont* q_plaintextedit_font(void* self);
+const QFont* q_plaintextedit_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2807,15 +2941,15 @@ void q_plaintextedit_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QPlainTextEdit* self, QAction* actions[] ```
-void q_plaintextedit_add_actions(void* self, void* actions[]);
+/// ``` QPlainTextEdit* self, libqt_list /* of QAction* */ actions ```
+void q_plaintextedit_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QPlainTextEdit* self, QAction* before, QAction* actions[] ```
-void q_plaintextedit_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QPlainTextEdit* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_plaintextedit_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -3008,6 +3142,8 @@ void q_plaintextedit_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QPlainTextEdit* self, void (*slot)(QWidget*, const char*) ```
 void q_plaintextedit_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -3019,6 +3155,8 @@ void q_plaintextedit_on_window_title_changed(void* self, void (*slot)(void*, con
 void q_plaintextedit_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QWidget*, QIcon*) ```
 void q_plaintextedit_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -3032,6 +3170,8 @@ void q_plaintextedit_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QPlainTextEdit* self, void (*slot)(QWidget*, const char*) ```
 void q_plaintextedit_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -3043,6 +3183,8 @@ void q_plaintextedit_on_window_icon_text_changed(void* self, void (*slot)(void*,
 void q_plaintextedit_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QWidget*, QPoint*) ```
 void q_plaintextedit_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -3248,7 +3390,7 @@ void q_plaintextedit_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QPlainTextEdit* self ```
-libqt_list /* of QObject* */ q_plaintextedit_children(void* self);
+const libqt_list /* of QObject* */ q_plaintextedit_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -3339,7 +3481,7 @@ QBindingStorage* q_plaintextedit_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QPlainTextEdit* self ```
-QBindingStorage* q_plaintextedit_binding_storage2(void* self);
+const QBindingStorage* q_plaintextedit_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -3349,6 +3491,8 @@ QBindingStorage* q_plaintextedit_binding_storage2(void* self);
 void q_plaintextedit_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QObject*) ```
 void q_plaintextedit_on_destroyed(void* self, void (*slot)(void*));
@@ -3403,6 +3547,8 @@ QMetaObject__Connection* q_plaintextedit_connect4(void* self, void* sender, cons
 void q_plaintextedit_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QPlainTextEdit* self, void (*slot)(QObject*, QObject*) ```
 void q_plaintextedit_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -3502,12 +3648,16 @@ QSize* q_plaintextedit_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self ```
 QSize* q_plaintextedit_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3525,12 +3675,16 @@ QSize* q_plaintextedit_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self ```
 QSize* q_plaintextedit_qbase_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3548,12 +3702,16 @@ void q_plaintextedit_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, QWidget* viewport ```
 void q_plaintextedit_qbase_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3571,12 +3729,16 @@ bool q_plaintextedit_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, QObject* param1, QEvent* param2 ```
 bool q_plaintextedit_qbase_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3594,12 +3756,16 @@ bool q_plaintextedit_viewport_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, QEvent* param1 ```
 bool q_plaintextedit_qbase_viewport_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3617,12 +3783,16 @@ QSize* q_plaintextedit_viewport_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self ```
 QSize* q_plaintextedit_qbase_viewport_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3640,12 +3810,16 @@ void q_plaintextedit_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, QStyleOptionFrame* option ```
 void q_plaintextedit_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3663,12 +3837,16 @@ int32_t q_plaintextedit_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self ```
 int32_t q_plaintextedit_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3686,12 +3864,16 @@ void q_plaintextedit_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, bool visible ```
 void q_plaintextedit_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3709,12 +3891,16 @@ int32_t q_plaintextedit_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, int param1 ```
 int32_t q_plaintextedit_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3732,12 +3918,16 @@ bool q_plaintextedit_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self ```
 bool q_plaintextedit_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3755,12 +3945,16 @@ QPaintEngine* q_plaintextedit_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self ```
 QPaintEngine* q_plaintextedit_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3778,12 +3972,16 @@ void q_plaintextedit_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, QEnterEvent* event ```
 void q_plaintextedit_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3801,12 +3999,16 @@ void q_plaintextedit_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, QEvent* event ```
 void q_plaintextedit_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3824,12 +4026,16 @@ void q_plaintextedit_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, QMoveEvent* event ```
 void q_plaintextedit_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3847,12 +4053,16 @@ void q_plaintextedit_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, QCloseEvent* event ```
 void q_plaintextedit_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3870,12 +4080,16 @@ void q_plaintextedit_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, QTabletEvent* event ```
 void q_plaintextedit_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3893,12 +4107,16 @@ void q_plaintextedit_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, QActionEvent* event ```
 void q_plaintextedit_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3916,12 +4134,16 @@ void q_plaintextedit_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, QHideEvent* event ```
 void q_plaintextedit_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3939,12 +4161,16 @@ bool q_plaintextedit_native_event(void* self, const char* eventType, void* messa
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, const char* eventType, void* message, intptr_t* result ```
 bool q_plaintextedit_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3962,12 +4188,16 @@ int32_t q_plaintextedit_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_plaintextedit_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3985,12 +4215,16 @@ void q_plaintextedit_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, QPainter* painter ```
 void q_plaintextedit_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4008,12 +4242,16 @@ QPaintDevice* q_plaintextedit_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, QPoint* offset ```
 QPaintDevice* q_plaintextedit_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4031,12 +4269,16 @@ QPainter* q_plaintextedit_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self ```
 QPainter* q_plaintextedit_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4054,12 +4296,16 @@ void q_plaintextedit_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, QChildEvent* event ```
 void q_plaintextedit_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4077,12 +4323,16 @@ void q_plaintextedit_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, QEvent* event ```
 void q_plaintextedit_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4100,12 +4350,16 @@ void q_plaintextedit_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, QMetaMethod* signal ```
 void q_plaintextedit_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4123,12 +4377,16 @@ void q_plaintextedit_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, QMetaMethod* signal ```
 void q_plaintextedit_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4146,12 +4404,16 @@ void q_plaintextedit_set_viewport_margins(void* self, int left, int top, int rig
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, int left, int top, int right, int bottom ```
 void q_plaintextedit_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4169,12 +4431,16 @@ QMargins* q_plaintextedit_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self ```
 QMargins* q_plaintextedit_qbase_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4192,12 +4458,16 @@ void q_plaintextedit_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, QPainter* param1 ```
 void q_plaintextedit_qbase_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4215,12 +4485,16 @@ void q_plaintextedit_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self ```
 void q_plaintextedit_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4238,12 +4512,16 @@ void q_plaintextedit_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self ```
 void q_plaintextedit_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4261,12 +4539,16 @@ void q_plaintextedit_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self ```
 void q_plaintextedit_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4284,12 +4566,16 @@ bool q_plaintextedit_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self ```
 bool q_plaintextedit_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4307,12 +4593,16 @@ bool q_plaintextedit_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self ```
 bool q_plaintextedit_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4330,12 +4620,16 @@ QObject* q_plaintextedit_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self ```
 QObject* q_plaintextedit_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4353,12 +4647,16 @@ int32_t q_plaintextedit_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self ```
 int32_t q_plaintextedit_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4376,12 +4674,16 @@ int32_t q_plaintextedit_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, const char* signal ```
 int32_t q_plaintextedit_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4399,6 +4701,8 @@ bool q_plaintextedit_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, QMetaMethod* signal ```
@@ -4406,11 +4710,24 @@ bool q_plaintextedit_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QPlainTextEdit* self, bool (*slot)(QPlainTextEdit*, QMetaMethod*) ```
 void q_plaintextedit_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QPlainTextEdit* self, void (*slot)(QObject*, const char*) ```
+void q_plaintextedit_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#dtor.QPlainTextEdit)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPlainTextEdit* self ```
@@ -4426,7 +4743,7 @@ QPlainTextDocumentLayout* q_plaintextdocumentlayout_new(void* document);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QPlainTextDocumentLayout* self ```
-QMetaObject* q_plaintextdocumentlayout_meta_object(void* self);
+const QMetaObject* q_plaintextdocumentlayout_meta_object(void* self);
 
 /// ``` QPlainTextDocumentLayout* self, const char* param1 ```
 void* q_plaintextdocumentlayout_metacast(void* self, const char* param1);
@@ -4454,11 +4771,15 @@ const char* q_plaintextdocumentlayout_tr(const char* s);
 /// ``` QPlainTextDocumentLayout* self, QPainter* param1, QAbstractTextDocumentLayout__PaintContext* param2 ```
 void q_plaintextdocumentlayout_draw(void* self, void* param1, void* param2);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#draw)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextDocumentLayout* self, void (*slot)(QPlainTextDocumentLayout*, QPainter*, QAbstractTextDocumentLayout__PaintContext*) ```
 void q_plaintextdocumentlayout_on_draw(void* self, void (*slot)(void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#draw)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextDocumentLayout* self, QPainter* param1, QAbstractTextDocumentLayout__PaintContext* param2 ```
@@ -4469,11 +4790,15 @@ void q_plaintextdocumentlayout_qbase_draw(void* self, void* param1, void* param2
 /// ``` QPlainTextDocumentLayout* self, QPointF* param1, enum Qt__HitTestAccuracy param2 ```
 int32_t q_plaintextdocumentlayout_hit_test(void* self, void* param1, int64_t param2);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#hitTest)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextDocumentLayout* self, int32_t (*slot)(QPlainTextDocumentLayout*, QPointF*, enum Qt__HitTestAccuracy) ```
 void q_plaintextdocumentlayout_on_hit_test(void* self, int32_t (*slot)(void*, void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#hitTest)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextDocumentLayout* self, QPointF* param1, enum Qt__HitTestAccuracy param2 ```
@@ -4484,11 +4809,15 @@ int32_t q_plaintextdocumentlayout_qbase_hit_test(void* self, void* param1, int64
 /// ``` QPlainTextDocumentLayout* self ```
 int32_t q_plaintextdocumentlayout_page_count(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#pageCount)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextDocumentLayout* self, int32_t (*slot)() ```
 void q_plaintextdocumentlayout_on_page_count(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#pageCount)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextDocumentLayout* self ```
@@ -4499,11 +4828,15 @@ int32_t q_plaintextdocumentlayout_qbase_page_count(void* self);
 /// ``` QPlainTextDocumentLayout* self ```
 QSizeF* q_plaintextdocumentlayout_document_size(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#documentSize)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextDocumentLayout* self, QSizeF* (*slot)() ```
 void q_plaintextdocumentlayout_on_document_size(void* self, QSizeF* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#documentSize)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextDocumentLayout* self ```
@@ -4514,11 +4847,15 @@ QSizeF* q_plaintextdocumentlayout_qbase_document_size(void* self);
 /// ``` QPlainTextDocumentLayout* self, QTextFrame* param1 ```
 QRectF* q_plaintextdocumentlayout_frame_bounding_rect(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#frameBoundingRect)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextDocumentLayout* self, QRectF* (*slot)(QPlainTextDocumentLayout*, QTextFrame*) ```
 void q_plaintextdocumentlayout_on_frame_bounding_rect(void* self, QRectF* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#frameBoundingRect)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextDocumentLayout* self, QTextFrame* param1 ```
@@ -4529,11 +4866,15 @@ QRectF* q_plaintextdocumentlayout_qbase_frame_bounding_rect(void* self, void* pa
 /// ``` QPlainTextDocumentLayout* self, QTextBlock* block ```
 QRectF* q_plaintextdocumentlayout_block_bounding_rect(void* self, void* block);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#blockBoundingRect)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextDocumentLayout* self, QRectF* (*slot)(QPlainTextDocumentLayout*, QTextBlock*) ```
 void q_plaintextdocumentlayout_on_block_bounding_rect(void* self, QRectF* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#blockBoundingRect)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextDocumentLayout* self, QTextBlock* block ```
@@ -4564,11 +4905,15 @@ void q_plaintextdocumentlayout_request_update(void* self);
 /// ``` QPlainTextDocumentLayout* self, int from, int param2, int charsAdded ```
 void q_plaintextdocumentlayout_document_changed(void* self, int from, int param2, int charsAdded);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#documentChanged)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlainTextDocumentLayout* self, void (*slot)(QPlainTextDocumentLayout*, int, int, int) ```
 void q_plaintextdocumentlayout_on_document_changed(void* self, void (*slot)(void*, int, int, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#documentChanged)
+///
 /// Base class method implementation
 ///
 /// ``` QPlainTextDocumentLayout* self, int from, int param2, int charsAdded ```
@@ -4663,6 +5008,8 @@ void q_plaintextdocumentlayout_update(void* self);
 
 /// Inherited from QAbstractTextDocumentLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#update)
+///
 /// ``` QPlainTextDocumentLayout* self, void (*slot)(QAbstractTextDocumentLayout*) ```
 void q_plaintextdocumentlayout_on_update(void* self, void (*slot)(void*));
 
@@ -4674,6 +5021,8 @@ void q_plaintextdocumentlayout_on_update(void* self, void (*slot)(void*));
 void q_plaintextdocumentlayout_update_block(void* self, void* block);
 
 /// Inherited from QAbstractTextDocumentLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#updateBlock)
 ///
 /// ``` QPlainTextDocumentLayout* self, void (*slot)(QAbstractTextDocumentLayout*, QTextBlock*) ```
 void q_plaintextdocumentlayout_on_update_block(void* self, void (*slot)(void*, void*));
@@ -4687,6 +5036,8 @@ void q_plaintextdocumentlayout_document_size_changed(void* self, void* newSize);
 
 /// Inherited from QAbstractTextDocumentLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#documentSizeChanged)
+///
 /// ``` QPlainTextDocumentLayout* self, void (*slot)(QAbstractTextDocumentLayout*, QSizeF*) ```
 void q_plaintextdocumentlayout_on_document_size_changed(void* self, void (*slot)(void*, void*));
 
@@ -4698,6 +5049,8 @@ void q_plaintextdocumentlayout_on_document_size_changed(void* self, void (*slot)
 void q_plaintextdocumentlayout_page_count_changed(void* self, int newPages);
 
 /// Inherited from QAbstractTextDocumentLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#pageCountChanged)
 ///
 /// ``` QPlainTextDocumentLayout* self, void (*slot)(QAbstractTextDocumentLayout*, int) ```
 void q_plaintextdocumentlayout_on_page_count_changed(void* self, void (*slot)(void*, int));
@@ -4717,6 +5070,8 @@ void q_plaintextdocumentlayout_unregister_handler2(void* self, int objectType, v
 void q_plaintextdocumentlayout_update1(void* self, void* param1);
 
 /// Inherited from QAbstractTextDocumentLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#update)
 ///
 /// ``` QPlainTextDocumentLayout* self, void (*slot)(QAbstractTextDocumentLayout*, QRectF*) ```
 void q_plaintextdocumentlayout_on_update1(void* self, void (*slot)(void*, void*));
@@ -4803,7 +5158,7 @@ void q_plaintextdocumentlayout_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QPlainTextDocumentLayout* self ```
-libqt_list /* of QObject* */ q_plaintextdocumentlayout_children(void* self);
+const libqt_list /* of QObject* */ q_plaintextdocumentlayout_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -4901,7 +5256,7 @@ QBindingStorage* q_plaintextdocumentlayout_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QPlainTextDocumentLayout* self ```
-QBindingStorage* q_plaintextdocumentlayout_binding_storage2(void* self);
+const QBindingStorage* q_plaintextdocumentlayout_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -4911,6 +5266,8 @@ QBindingStorage* q_plaintextdocumentlayout_binding_storage2(void* self);
 void q_plaintextdocumentlayout_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QPlainTextDocumentLayout* self, void (*slot)(QObject*) ```
 void q_plaintextdocumentlayout_on_destroyed(void* self, void (*slot)(void*));
@@ -4966,6 +5323,8 @@ void q_plaintextdocumentlayout_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QPlainTextDocumentLayout* self, void (*slot)(QObject*, QObject*) ```
 void q_plaintextdocumentlayout_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -4980,12 +5339,16 @@ void q_plaintextdocumentlayout_resize_inline_object(void* self, void* item, int 
 
 /// Inherited from QAbstractTextDocumentLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#resizeInlineObject)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextDocumentLayout* self, QTextInlineObject* item, int posInDocument, QTextFormat* format ```
 void q_plaintextdocumentlayout_qbase_resize_inline_object(void* self, void* item, int posInDocument, void* format);
 
 /// Inherited from QAbstractTextDocumentLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#resizeInlineObject)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5003,12 +5366,16 @@ void q_plaintextdocumentlayout_position_inline_object(void* self, void* item, in
 
 /// Inherited from QAbstractTextDocumentLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#positionInlineObject)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextDocumentLayout* self, QTextInlineObject* item, int posInDocument, QTextFormat* format ```
 void q_plaintextdocumentlayout_qbase_position_inline_object(void* self, void* item, int posInDocument, void* format);
 
 /// Inherited from QAbstractTextDocumentLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#positionInlineObject)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5026,12 +5393,16 @@ void q_plaintextdocumentlayout_draw_inline_object(void* self, void* painter, voi
 
 /// Inherited from QAbstractTextDocumentLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#drawInlineObject)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextDocumentLayout* self, QPainter* painter, QRectF* rect, QTextInlineObject* object, int posInDocument, QTextFormat* format ```
 void q_plaintextdocumentlayout_qbase_draw_inline_object(void* self, void* painter, void* rect, void* object, int posInDocument, void* format);
 
 /// Inherited from QAbstractTextDocumentLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#drawInlineObject)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5049,12 +5420,16 @@ bool q_plaintextdocumentlayout_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextDocumentLayout* self, QEvent* event ```
 bool q_plaintextdocumentlayout_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5072,12 +5447,16 @@ bool q_plaintextdocumentlayout_event_filter(void* self, void* watched, void* eve
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextDocumentLayout* self, QObject* watched, QEvent* event ```
 bool q_plaintextdocumentlayout_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5095,12 +5474,16 @@ void q_plaintextdocumentlayout_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextDocumentLayout* self, QTimerEvent* event ```
 void q_plaintextdocumentlayout_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5118,12 +5501,16 @@ void q_plaintextdocumentlayout_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextDocumentLayout* self, QChildEvent* event ```
 void q_plaintextdocumentlayout_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5141,12 +5528,16 @@ void q_plaintextdocumentlayout_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextDocumentLayout* self, QEvent* event ```
 void q_plaintextdocumentlayout_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5164,12 +5555,16 @@ void q_plaintextdocumentlayout_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextDocumentLayout* self, QMetaMethod* signal ```
 void q_plaintextdocumentlayout_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5187,12 +5582,16 @@ void q_plaintextdocumentlayout_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextDocumentLayout* self, QMetaMethod* signal ```
 void q_plaintextdocumentlayout_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5210,12 +5609,16 @@ int32_t q_plaintextdocumentlayout_format_index(void* self, int pos);
 
 /// Inherited from QAbstractTextDocumentLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#formatIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextDocumentLayout* self, int pos ```
 int32_t q_plaintextdocumentlayout_qbase_format_index(void* self, int pos);
 
 /// Inherited from QAbstractTextDocumentLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#formatIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5233,12 +5636,16 @@ QTextCharFormat* q_plaintextdocumentlayout_format(void* self, int pos);
 
 /// Inherited from QAbstractTextDocumentLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#format)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextDocumentLayout* self, int pos ```
 QTextCharFormat* q_plaintextdocumentlayout_qbase_format(void* self, int pos);
 
 /// Inherited from QAbstractTextDocumentLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#format)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5256,12 +5663,16 @@ QObject* q_plaintextdocumentlayout_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextDocumentLayout* self ```
 QObject* q_plaintextdocumentlayout_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5279,12 +5690,16 @@ int32_t q_plaintextdocumentlayout_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextDocumentLayout* self ```
 int32_t q_plaintextdocumentlayout_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5302,12 +5717,16 @@ int32_t q_plaintextdocumentlayout_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextDocumentLayout* self, const char* signal ```
 int32_t q_plaintextdocumentlayout_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5325,6 +5744,8 @@ bool q_plaintextdocumentlayout_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlainTextDocumentLayout* self, QMetaMethod* signal ```
@@ -5332,11 +5753,24 @@ bool q_plaintextdocumentlayout_qbase_is_signal_connected(void* self, void* signa
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QPlainTextDocumentLayout* self, bool (*slot)(QPlainTextDocumentLayout*, QMetaMethod*) ```
 void q_plaintextdocumentlayout_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QPlainTextDocumentLayout* self, void (*slot)(QObject*, const char*) ```
+void q_plaintextdocumentlayout_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#dtor.QPlainTextDocumentLayout)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPlainTextDocumentLayout* self ```

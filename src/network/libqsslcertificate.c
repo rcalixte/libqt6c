@@ -235,17 +235,8 @@ libqt_list /* of QSslCertificate* */ q_sslcertificate_from_data(const char* data
     return _arr;
 }
 
-libqt_list /* of QSslError* */ q_sslcertificate_verify(void* certificateChain[]) {
-    QSslCertificate** certificateChain_arr = (QSslCertificate**)certificateChain;
-    size_t certificateChain_len = 0;
-    while (certificateChain_arr[certificateChain_len] != NULL) {
-        certificateChain_len++;
-    }
-    libqt_list certificateChain_list = {
-        .len = certificateChain_len,
-        .data = {(QSslCertificate*)certificateChain},
-    };
-    libqt_list _arr = QSslCertificate_Verify(certificateChain_list);
+libqt_list /* of QSslError* */ q_sslcertificate_verify(libqt_list certificateChain) {
+    libqt_list _arr = QSslCertificate_Verify(certificateChain);
     return _arr;
 }
 
@@ -284,44 +275,17 @@ libqt_list /* of QSslCertificate* */ q_sslcertificate_from_data2(const char* dat
     return _arr;
 }
 
-libqt_list /* of QSslError* */ q_sslcertificate_verify2(void* certificateChain[], const char* hostName) {
-    QSslCertificate** certificateChain_arr = (QSslCertificate**)certificateChain;
-    size_t certificateChain_len = 0;
-    while (certificateChain_arr[certificateChain_len] != NULL) {
-        certificateChain_len++;
-    }
-    libqt_list certificateChain_list = {
-        .len = certificateChain_len,
-        .data = {(QSslCertificate*)certificateChain},
-    };
-    libqt_list _arr = QSslCertificate_Verify2(certificateChain_list, qstring(hostName));
+libqt_list /* of QSslError* */ q_sslcertificate_verify2(libqt_list certificateChain, const char* hostName) {
+    libqt_list _arr = QSslCertificate_Verify2(certificateChain, qstring(hostName));
     return _arr;
 }
 
-bool q_sslcertificate_import_pkcs124(void* device, void* key, void* cert, void* caCertificates[]) {
-    QSslCertificate** caCertificates_arr = (QSslCertificate**)caCertificates;
-    size_t caCertificates_len = 0;
-    while (caCertificates_arr[caCertificates_len] != NULL) {
-        caCertificates_len++;
-    }
-    libqt_list caCertificates_list = {
-        .len = caCertificates_len,
-        .data = {(QSslCertificate*)caCertificates},
-    };
-    return QSslCertificate_ImportPkcs124((QIODevice*)device, (QSslKey*)key, (QSslCertificate*)cert, caCertificates_list);
+bool q_sslcertificate_import_pkcs124(void* device, void* key, void* cert, libqt_list caCertificates) {
+    return QSslCertificate_ImportPkcs124((QIODevice*)device, (QSslKey*)key, (QSslCertificate*)cert, caCertificates);
 }
 
-bool q_sslcertificate_import_pkcs125(void* device, void* key, void* cert, void* caCertificates[], const char* passPhrase) {
-    QSslCertificate** caCertificates_arr = (QSslCertificate**)caCertificates;
-    size_t caCertificates_len = 0;
-    while (caCertificates_arr[caCertificates_len] != NULL) {
-        caCertificates_len++;
-    }
-    libqt_list caCertificates_list = {
-        .len = caCertificates_len,
-        .data = {(QSslCertificate*)caCertificates},
-    };
-    return QSslCertificate_ImportPkcs125((QIODevice*)device, (QSslKey*)key, (QSslCertificate*)cert, caCertificates_list, qstring(passPhrase));
+bool q_sslcertificate_import_pkcs125(void* device, void* key, void* cert, libqt_list caCertificates, const char* passPhrase) {
+    return QSslCertificate_ImportPkcs125((QIODevice*)device, (QSslKey*)key, (QSslCertificate*)cert, caCertificates, qstring(passPhrase));
 }
 
 void q_sslcertificate_delete(void* self) {

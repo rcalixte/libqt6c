@@ -15,13 +15,7 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
-typedef struct QChildEvent QChildEvent;
 typedef struct QEvent QEvent;
 typedef struct QGraphicsAnchor QGraphicsAnchor;
 typedef struct QGraphicsAnchorLayout QGraphicsAnchorLayout;
@@ -30,14 +24,9 @@ typedef struct QGraphicsLayout QGraphicsLayout;
 typedef struct QGraphicsLayoutItem QGraphicsLayoutItem;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QRectF QRectF;
 typedef struct QSizeF QSizeF;
-typedef struct QSizePolicy QSizePolicy;
-typedef struct QThread QThread;
-typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
 #endif
 
 QMetaObject* QGraphicsAnchor_MetaObject(const QGraphicsAnchor* self);
@@ -51,8 +40,6 @@ void QGraphicsAnchor_SetSizePolicy(QGraphicsAnchor* self, int policy);
 int QGraphicsAnchor_SizePolicy(const QGraphicsAnchor* self);
 libqt_string QGraphicsAnchor_Tr2(const char* s, const char* c);
 libqt_string QGraphicsAnchor_Tr3(const char* s, const char* c, int n);
-bool QGraphicsAnchor_Event(QGraphicsAnchor* self, QEvent* event);
-bool QGraphicsAnchor_EventFilter(QGraphicsAnchor* self, QObject* watched, QEvent* event);
 void QGraphicsAnchor_Delete(QGraphicsAnchor* self);
 
 QGraphicsAnchorLayout* QGraphicsAnchorLayout_new();

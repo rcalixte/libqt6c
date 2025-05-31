@@ -243,11 +243,11 @@ float* q_matrix4x4_data(void* self) {
     return (float*)QMatrix4x4_Data((QMatrix4x4*)self);
 }
 
-float* q_matrix4x4_data2(void* self) {
+const float* q_matrix4x4_data2(void* self) {
     return (float*)QMatrix4x4_Data2((QMatrix4x4*)self);
 }
 
-float* q_matrix4x4_const_data(void* self) {
+const float* q_matrix4x4_const_data(void* self) {
     return (float*)QMatrix4x4_ConstData((QMatrix4x4*)self);
 }
 

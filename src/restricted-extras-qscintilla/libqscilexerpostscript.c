@@ -1,5 +1,3 @@
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
 #include "../libqcolor.hpp"
 #include "../libqfont.hpp"
@@ -7,8 +5,6 @@
 #include "../libqobject.hpp"
 #include "../libqsettings.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "libqscilexer.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqscilexerpostscript.hpp"
@@ -22,7 +18,7 @@ QsciLexerPostScript* q_scilexerpostscript_new2(void* parent) {
     return QsciLexerPostScript_new2((QObject*)parent);
 }
 
-QMetaObject* q_scilexerpostscript_meta_object(void* self) {
+const QMetaObject* q_scilexerpostscript_meta_object(void* self) {
     return QsciLexerPostScript_MetaObject((QsciLexerPostScript*)self);
 }
 
@@ -282,8 +278,7 @@ const char* q_scilexerpostscript_object_name(void* self) {
 }
 
 void q_scilexerpostscript_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_scilexerpostscript_is_widget_type(void* self) {
@@ -322,7 +317,7 @@ void q_scilexerpostscript_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_scilexerpostscript_children(void* self) {
+const libqt_list /* of QObject* */ q_scilexerpostscript_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -389,7 +384,7 @@ QBindingStorage* q_scilexerpostscript_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_scilexerpostscript_binding_storage2(void* self) {
+const QBindingStorage* q_scilexerpostscript_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -895,6 +890,10 @@ bool q_scilexerpostscript_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_scilexerpostscript_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QsciLexerPostScript_OnIsSignalConnected((QsciLexerPostScript*)self, (intptr_t)slot);
+}
+
+void q_scilexerpostscript_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_scilexerpostscript_delete(void* self) {

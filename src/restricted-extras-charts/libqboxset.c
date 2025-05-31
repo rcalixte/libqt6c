@@ -1,13 +1,9 @@
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqbrush.hpp"
 #include "../libqevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include "../libqpen.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqboxset.hpp"
 #include "libqboxset.h"
@@ -36,7 +32,7 @@ QBoxSet* q_boxset_new6(double le, double lq, double m, double uq, double ue, con
     return QBoxSet_new6(le, lq, m, uq, ue, qstring(label), (QObject*)parent);
 }
 
-QMetaObject* q_boxset_meta_object(void* self) {
+const QMetaObject* q_boxset_meta_object(void* self) {
     return QBoxSet_MetaObject((QBoxSet*)self);
 }
 
@@ -67,16 +63,8 @@ void q_boxset_append(void* self, double value) {
     QBoxSet_Append((QBoxSet*)self, value);
 }
 
-void q_boxset_append_with_values(void* self, double* values[]) {
-    size_t values_len = 0;
-    while (values[values_len] != NULL) {
-        values_len++;
-    }
-    libqt_list values_list = {
-        .len = values_len,
-        .data = {(double*)values},
-    };
-    QBoxSet_AppendWithValues((QBoxSet*)self, values_list);
+void q_boxset_append_with_values(void* self, libqt_list values) {
+    QBoxSet_AppendWithValues((QBoxSet*)self, values);
 }
 
 void q_boxset_clear(void* self) {
@@ -232,8 +220,7 @@ const char* q_boxset_object_name(void* self) {
 }
 
 void q_boxset_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_boxset_is_widget_type(void* self) {
@@ -272,7 +259,7 @@ void q_boxset_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_boxset_children(void* self) {
+const libqt_list /* of QObject* */ q_boxset_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -339,7 +326,7 @@ QBindingStorage* q_boxset_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_boxset_binding_storage2(void* self) {
+const QBindingStorage* q_boxset_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -513,6 +500,10 @@ bool q_boxset_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_boxset_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QBoxSet_OnIsSignalConnected((QBoxSet*)self, (intptr_t)slot);
+}
+
+void q_boxset_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_boxset_delete(void* self) {

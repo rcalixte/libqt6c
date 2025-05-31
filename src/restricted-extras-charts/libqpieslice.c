@@ -1,5 +1,3 @@
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqbrush.hpp"
 #include "../libqevent.hpp"
 #include "../libqcolor.hpp"
@@ -9,8 +7,6 @@
 #include "../libqpen.hpp"
 #include "libqpieseries.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqpieslice.hpp"
 #include "libqpieslice.h"
@@ -31,7 +27,7 @@ QPieSlice* q_pieslice_new4(const char* label, double value, void* parent) {
     return QPieSlice_new4(qstring(label), value, (QObject*)parent);
 }
 
-QMetaObject* q_pieslice_meta_object(void* self) {
+const QMetaObject* q_pieslice_meta_object(void* self) {
     return QPieSlice_MetaObject((QPieSlice*)self);
 }
 
@@ -379,8 +375,7 @@ const char* q_pieslice_object_name(void* self) {
 }
 
 void q_pieslice_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_pieslice_is_widget_type(void* self) {
@@ -419,7 +414,7 @@ void q_pieslice_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_pieslice_children(void* self) {
+const libqt_list /* of QObject* */ q_pieslice_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -486,7 +481,7 @@ QBindingStorage* q_pieslice_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_pieslice_binding_storage2(void* self) {
+const QBindingStorage* q_pieslice_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -660,6 +655,10 @@ bool q_pieslice_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_pieslice_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QPieSlice_OnIsSignalConnected((QPieSlice*)self, (intptr_t)slot);
+}
+
+void q_pieslice_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_pieslice_delete(void* self) {

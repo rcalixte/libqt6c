@@ -12,8 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "libqcameradevice.h"
 #include "../libqevent.h"
 #include "libqmediacapturesession.h"
@@ -21,8 +19,6 @@
 #include "../libqobject.h"
 #include "../libqpoint.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qcamera.html
 
@@ -59,7 +55,7 @@ QCamera* q_camera_new6(int64_t position, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QCamera* self ```
-QMetaObject* q_camera_meta_object(void* self);
+const QMetaObject* q_camera_meta_object(void* self);
 
 /// ``` QCamera* self, const char* param1 ```
 void* q_camera_metacast(void* self, const char* param1);
@@ -362,6 +358,8 @@ void q_camera_set_color_temperature(void* self, int colorTemperature);
 /// ``` QCamera* self, bool param1 ```
 void q_camera_active_changed(void* self, bool param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#activeChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*, bool) ```
 void q_camera_on_active_changed(void* self, void (*slot)(void*, bool));
 
@@ -370,6 +368,8 @@ void q_camera_on_active_changed(void* self, void (*slot)(void*, bool));
 /// ``` QCamera* self ```
 void q_camera_error_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#errorChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*) ```
 void q_camera_on_error_changed(void* self, void (*slot)(void*));
 
@@ -378,6 +378,8 @@ void q_camera_on_error_changed(void* self, void (*slot)(void*));
 /// ``` QCamera* self, enum QCamera__Error errorVal, const char* errorString ```
 void q_camera_error_occurred(void* self, int64_t errorVal, const char* errorString);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#errorOccurred)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*, enum QCamera__Error, const char*) ```
 void q_camera_on_error_occurred(void* self, void (*slot)(void*, int64_t, const char*));
 
@@ -386,6 +388,8 @@ void q_camera_on_error_occurred(void* self, void (*slot)(void*, int64_t, const c
 /// ``` QCamera* self ```
 void q_camera_camera_device_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#cameraDeviceChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*) ```
 void q_camera_on_camera_device_changed(void* self, void (*slot)(void*));
 
@@ -394,6 +398,8 @@ void q_camera_on_camera_device_changed(void* self, void (*slot)(void*));
 /// ``` QCamera* self ```
 void q_camera_camera_format_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#cameraFormatChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*) ```
 void q_camera_on_camera_format_changed(void* self, void (*slot)(void*));
 
@@ -402,6 +408,8 @@ void q_camera_on_camera_format_changed(void* self, void (*slot)(void*));
 /// ``` QCamera* self ```
 void q_camera_supported_features_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#supportedFeaturesChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*) ```
 void q_camera_on_supported_features_changed(void* self, void (*slot)(void*));
 
@@ -410,6 +418,8 @@ void q_camera_on_supported_features_changed(void* self, void (*slot)(void*));
 /// ``` QCamera* self ```
 void q_camera_focus_mode_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#focusModeChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*) ```
 void q_camera_on_focus_mode_changed(void* self, void (*slot)(void*));
 
@@ -418,6 +428,8 @@ void q_camera_on_focus_mode_changed(void* self, void (*slot)(void*));
 /// ``` QCamera* self, float param1 ```
 void q_camera_zoom_factor_changed(void* self, float param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#zoomFactorChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*, float) ```
 void q_camera_on_zoom_factor_changed(void* self, void (*slot)(void*, float));
 
@@ -426,6 +438,8 @@ void q_camera_on_zoom_factor_changed(void* self, void (*slot)(void*, float));
 /// ``` QCamera* self, float param1 ```
 void q_camera_minimum_zoom_factor_changed(void* self, float param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#minimumZoomFactorChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*, float) ```
 void q_camera_on_minimum_zoom_factor_changed(void* self, void (*slot)(void*, float));
 
@@ -434,6 +448,8 @@ void q_camera_on_minimum_zoom_factor_changed(void* self, void (*slot)(void*, flo
 /// ``` QCamera* self, float param1 ```
 void q_camera_maximum_zoom_factor_changed(void* self, float param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#maximumZoomFactorChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*, float) ```
 void q_camera_on_maximum_zoom_factor_changed(void* self, void (*slot)(void*, float));
 
@@ -442,6 +458,8 @@ void q_camera_on_maximum_zoom_factor_changed(void* self, void (*slot)(void*, flo
 /// ``` QCamera* self, float param1 ```
 void q_camera_focus_distance_changed(void* self, float param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#focusDistanceChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*, float) ```
 void q_camera_on_focus_distance_changed(void* self, void (*slot)(void*, float));
 
@@ -450,6 +468,8 @@ void q_camera_on_focus_distance_changed(void* self, void (*slot)(void*, float));
 /// ``` QCamera* self ```
 void q_camera_focus_point_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#focusPointChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*) ```
 void q_camera_on_focus_point_changed(void* self, void (*slot)(void*));
 
@@ -458,6 +478,8 @@ void q_camera_on_focus_point_changed(void* self, void (*slot)(void*));
 /// ``` QCamera* self ```
 void q_camera_custom_focus_point_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#customFocusPointChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*) ```
 void q_camera_on_custom_focus_point_changed(void* self, void (*slot)(void*));
 
@@ -466,6 +488,8 @@ void q_camera_on_custom_focus_point_changed(void* self, void (*slot)(void*));
 /// ``` QCamera* self, bool param1 ```
 void q_camera_flash_ready(void* self, bool param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#flashReady)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*, bool) ```
 void q_camera_on_flash_ready(void* self, void (*slot)(void*, bool));
 
@@ -474,6 +498,8 @@ void q_camera_on_flash_ready(void* self, void (*slot)(void*, bool));
 /// ``` QCamera* self ```
 void q_camera_flash_mode_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#flashModeChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*) ```
 void q_camera_on_flash_mode_changed(void* self, void (*slot)(void*));
 
@@ -482,6 +508,8 @@ void q_camera_on_flash_mode_changed(void* self, void (*slot)(void*));
 /// ``` QCamera* self ```
 void q_camera_torch_mode_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#torchModeChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*) ```
 void q_camera_on_torch_mode_changed(void* self, void (*slot)(void*));
 
@@ -490,6 +518,8 @@ void q_camera_on_torch_mode_changed(void* self, void (*slot)(void*));
 /// ``` QCamera* self, float speed ```
 void q_camera_exposure_time_changed(void* self, float speed);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#exposureTimeChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*, float) ```
 void q_camera_on_exposure_time_changed(void* self, void (*slot)(void*, float));
 
@@ -498,6 +528,8 @@ void q_camera_on_exposure_time_changed(void* self, void (*slot)(void*, float));
 /// ``` QCamera* self, float speed ```
 void q_camera_manual_exposure_time_changed(void* self, float speed);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#manualExposureTimeChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*, float) ```
 void q_camera_on_manual_exposure_time_changed(void* self, void (*slot)(void*, float));
 
@@ -506,6 +538,8 @@ void q_camera_on_manual_exposure_time_changed(void* self, void (*slot)(void*, fl
 /// ``` QCamera* self, int param1 ```
 void q_camera_iso_sensitivity_changed(void* self, int param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#isoSensitivityChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*, int) ```
 void q_camera_on_iso_sensitivity_changed(void* self, void (*slot)(void*, int));
 
@@ -514,6 +548,8 @@ void q_camera_on_iso_sensitivity_changed(void* self, void (*slot)(void*, int));
 /// ``` QCamera* self, int param1 ```
 void q_camera_manual_iso_sensitivity_changed(void* self, int param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#manualIsoSensitivityChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*, int) ```
 void q_camera_on_manual_iso_sensitivity_changed(void* self, void (*slot)(void*, int));
 
@@ -522,6 +558,8 @@ void q_camera_on_manual_iso_sensitivity_changed(void* self, void (*slot)(void*, 
 /// ``` QCamera* self, float param1 ```
 void q_camera_exposure_compensation_changed(void* self, float param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#exposureCompensationChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*, float) ```
 void q_camera_on_exposure_compensation_changed(void* self, void (*slot)(void*, float));
 
@@ -530,6 +568,8 @@ void q_camera_on_exposure_compensation_changed(void* self, void (*slot)(void*, f
 /// ``` QCamera* self ```
 void q_camera_exposure_mode_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#exposureModeChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*) ```
 void q_camera_on_exposure_mode_changed(void* self, void (*slot)(void*));
 
@@ -538,6 +578,8 @@ void q_camera_on_exposure_mode_changed(void* self, void (*slot)(void*));
 /// ``` QCamera* self ```
 void q_camera_white_balance_mode_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#whiteBalanceModeChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*) ```
 void q_camera_on_white_balance_mode_changed(void* self, void (*slot)(void*));
 
@@ -546,6 +588,8 @@ void q_camera_on_white_balance_mode_changed(void* self, void (*slot)(void*));
 /// ``` QCamera* self ```
 void q_camera_color_temperature_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#colorTemperatureChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*) ```
 void q_camera_on_color_temperature_changed(void* self, void (*slot)(void*));
 
@@ -554,6 +598,8 @@ void q_camera_on_color_temperature_changed(void* self, void (*slot)(void*));
 /// ``` QCamera* self ```
 void q_camera_brightness_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#brightnessChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*) ```
 void q_camera_on_brightness_changed(void* self, void (*slot)(void*));
 
@@ -562,6 +608,8 @@ void q_camera_on_brightness_changed(void* self, void (*slot)(void*));
 /// ``` QCamera* self ```
 void q_camera_contrast_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#contrastChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*) ```
 void q_camera_on_contrast_changed(void* self, void (*slot)(void*));
 
@@ -570,6 +618,8 @@ void q_camera_on_contrast_changed(void* self, void (*slot)(void*));
 /// ``` QCamera* self ```
 void q_camera_saturation_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#saturationChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*) ```
 void q_camera_on_saturation_changed(void* self, void (*slot)(void*));
 
@@ -578,6 +628,8 @@ void q_camera_on_saturation_changed(void* self, void (*slot)(void*));
 /// ``` QCamera* self ```
 void q_camera_hue_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#hueChanged)
+///
 /// ``` QCamera* self, void (*slot)(QCamera*) ```
 void q_camera_on_hue_changed(void* self, void (*slot)(void*));
 
@@ -673,7 +725,7 @@ void q_camera_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QCamera* self ```
-libqt_list /* of QObject* */ q_camera_children(void* self);
+const libqt_list /* of QObject* */ q_camera_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -771,7 +823,7 @@ QBindingStorage* q_camera_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QCamera* self ```
-QBindingStorage* q_camera_binding_storage2(void* self);
+const QBindingStorage* q_camera_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -781,6 +833,8 @@ QBindingStorage* q_camera_binding_storage2(void* self);
 void q_camera_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QCamera* self, void (*slot)(QObject*) ```
 void q_camera_on_destroyed(void* self, void (*slot)(void*));
@@ -836,6 +890,8 @@ void q_camera_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QCamera* self, void (*slot)(QObject*, QObject*) ```
 void q_camera_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -850,12 +906,16 @@ bool q_camera_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCamera* self, QEvent* event ```
 bool q_camera_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -873,12 +933,16 @@ bool q_camera_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCamera* self, QObject* watched, QEvent* event ```
 bool q_camera_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -896,12 +960,16 @@ void q_camera_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCamera* self, QTimerEvent* event ```
 void q_camera_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -919,12 +987,16 @@ void q_camera_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCamera* self, QChildEvent* event ```
 void q_camera_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -942,12 +1014,16 @@ void q_camera_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCamera* self, QEvent* event ```
 void q_camera_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -965,12 +1041,16 @@ void q_camera_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCamera* self, QMetaMethod* signal ```
 void q_camera_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -988,12 +1068,16 @@ void q_camera_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCamera* self, QMetaMethod* signal ```
 void q_camera_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1011,12 +1095,16 @@ QObject* q_camera_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCamera* self ```
 QObject* q_camera_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1034,12 +1122,16 @@ int32_t q_camera_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCamera* self ```
 int32_t q_camera_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1057,12 +1149,16 @@ int32_t q_camera_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCamera* self, const char* signal ```
 int32_t q_camera_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1080,6 +1176,8 @@ bool q_camera_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCamera* self, QMetaMethod* signal ```
@@ -1087,11 +1185,24 @@ bool q_camera_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QCamera* self, bool (*slot)(QCamera*, QMetaMethod*) ```
 void q_camera_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QCamera* self, void (*slot)(QObject*, const char*) ```
+void q_camera_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#dtor.QCamera)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCamera* self ```

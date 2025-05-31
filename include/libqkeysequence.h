@@ -110,8 +110,8 @@ libqt_list /* of QKeySequence* */ q_keysequence_list_from_string(const char* str
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#listToString)
 ///
-/// ``` QKeySequence* list[] ```
-const char* q_keysequence_list_to_string(void* list[]);
+/// ``` libqt_list /* of QKeySequence* */ list ```
+const char* q_keysequence_list_to_string(libqt_list list);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#matches)
 ///
@@ -200,9 +200,11 @@ libqt_list /* of QKeySequence* */ q_keysequence_list_from_string2(const char* st
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#listToString)
 ///
-/// ``` QKeySequence* list[], enum QKeySequence__SequenceFormat format ```
-const char* q_keysequence_list_to_string2(void* list[], int64_t format);
+/// ``` libqt_list /* of QKeySequence* */ list, enum QKeySequence__SequenceFormat format ```
+const char* q_keysequence_list_to_string2(libqt_list list, int64_t format);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#dtor.QKeySequence)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QKeySequence* self ```

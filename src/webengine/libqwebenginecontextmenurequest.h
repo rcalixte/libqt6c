@@ -12,23 +12,18 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
-#include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include "../libqpoint.h"
 #include <string.h>
-#include "../libqthread.h"
 #include "../libqurl.h"
-#include "../libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QWebEngineContextMenuRequest* self ```
-QMetaObject* q_webenginecontextmenurequest_meta_object(void* self);
+const QMetaObject* q_webenginecontextmenurequest_meta_object(void* self);
 
 /// ``` QWebEngineContextMenuRequest* self, const char* param1 ```
 void* q_webenginecontextmenurequest_metacast(void* self, const char* param1);
@@ -212,7 +207,7 @@ void q_webenginecontextmenurequest_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QWebEngineContextMenuRequest* self ```
-libqt_list /* of QObject* */ q_webenginecontextmenurequest_children(void* self);
+const libqt_list /* of QObject* */ q_webenginecontextmenurequest_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -310,7 +305,7 @@ QBindingStorage* q_webenginecontextmenurequest_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QWebEngineContextMenuRequest* self ```
-QBindingStorage* q_webenginecontextmenurequest_binding_storage2(void* self);
+const QBindingStorage* q_webenginecontextmenurequest_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -320,6 +315,8 @@ QBindingStorage* q_webenginecontextmenurequest_binding_storage2(void* self);
 void q_webenginecontextmenurequest_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QWebEngineContextMenuRequest* self, void (*slot)(QObject*) ```
 void q_webenginecontextmenurequest_on_destroyed(void* self, void (*slot)(void*));
@@ -375,9 +372,22 @@ void q_webenginecontextmenurequest_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QWebEngineContextMenuRequest* self, void (*slot)(QObject*, QObject*) ```
 void q_webenginecontextmenurequest_on_destroyed1(void* self, void (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineContextMenuRequest* self, void (*slot)(QObject*, const char*) ```
+void q_webenginecontextmenurequest_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#dtor.QWebEngineContextMenuRequest)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWebEngineContextMenuRequest* self ```

@@ -1,24 +1,13 @@
-#include <QAbstractAxis>
 #include <QAbstractBarSeries>
 #include <QAbstractSeries>
-#include <QAnyStringView>
 #include <QBarSet>
-#include <QBindingStorage>
-#include <QByteArray>
-#include <QChart>
-#include <QChildEvent>
-#include <QEvent>
 #include <QList>
 #include <QMetaMethod>
 #include <QMetaObject>
-#define WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection
 #include <QObject>
 #include <QString>
 #include <QByteArray>
 #include <cstring>
-#include <QThread>
-#include <QTimerEvent>
-#include <QVariant>
 #include <qabstractbarseries.h>
 #include "libqabstractbarseries.hpp"
 #include "libqabstractbarseries.hxx"
@@ -376,18 +365,6 @@ libqt_string QAbstractBarSeries_Tr3(const char* s, const char* c, int n) {
 
 void QAbstractBarSeries_SetLabelsVisible1(QAbstractBarSeries* self, bool visible) {
     self->setLabelsVisible(visible);
-}
-
-int QAbstractBarSeries_Type(const QAbstractBarSeries* self) {
-    return static_cast<int>(self->type());
-}
-
-bool QAbstractBarSeries_Event(QAbstractBarSeries* self, QEvent* event) {
-    return self->event(event);
-}
-
-bool QAbstractBarSeries_EventFilter(QAbstractBarSeries* self, QObject* watched, QEvent* event) {
-    return self->eventFilter(watched, event);
 }
 
 void QAbstractBarSeries_Delete(QAbstractBarSeries* self) {

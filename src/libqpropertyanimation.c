@@ -1,13 +1,8 @@
 #include "libqabstractanimation.hpp"
-#include "libqanimationgroup.hpp"
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
-#include "libqeasingcurve.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include <string.h>
-#include "libqthread.hpp"
 #include "libqvariant.hpp"
 #include "libqvariantanimation.hpp"
 #include "libqcoreevent.hpp"
@@ -30,7 +25,7 @@ QPropertyAnimation* q_propertyanimation_new4(void* target, const char* propertyN
     return QPropertyAnimation_new4((QObject*)target, qstring(propertyName), (QObject*)parent);
 }
 
-QMetaObject* q_propertyanimation_meta_object(void* self) {
+const QMetaObject* q_propertyanimation_meta_object(void* self) {
     return QPropertyAnimation_MetaObject((QPropertyAnimation*)self);
 }
 
@@ -291,8 +286,7 @@ const char* q_propertyanimation_object_name(void* self) {
 }
 
 void q_propertyanimation_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_propertyanimation_is_widget_type(void* self) {
@@ -331,7 +325,7 @@ void q_propertyanimation_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_propertyanimation_children(void* self) {
+const libqt_list /* of QObject* */ q_propertyanimation_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -398,7 +392,7 @@ QBindingStorage* q_propertyanimation_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_propertyanimation_binding_storage2(void* self) {
+const QBindingStorage* q_propertyanimation_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -608,6 +602,10 @@ bool q_propertyanimation_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_propertyanimation_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QPropertyAnimation_OnIsSignalConnected((QPropertyAnimation*)self, (intptr_t)slot);
+}
+
+void q_propertyanimation_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_propertyanimation_delete(void* self) {

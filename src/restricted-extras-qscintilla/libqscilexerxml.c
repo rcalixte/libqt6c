@@ -1,5 +1,3 @@
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
 #include "../libqcolor.hpp"
 #include "../libqfont.hpp"
@@ -7,8 +5,6 @@
 #include "../libqobject.hpp"
 #include "../libqsettings.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "libqscilexer.hpp"
 #include "libqscilexerhtml.hpp"
 #include "../libqcoreevent.hpp"
@@ -23,7 +19,7 @@ QsciLexerXML* q_scilexerxml_new2(void* parent) {
     return QsciLexerXML_new2((QObject*)parent);
 }
 
-QMetaObject* q_scilexerxml_meta_object(void* self) {
+const QMetaObject* q_scilexerxml_meta_object(void* self) {
     return QsciLexerXML_MetaObject((QsciLexerXML*)self);
 }
 
@@ -264,8 +260,7 @@ const char* q_scilexerxml_object_name(void* self) {
 }
 
 void q_scilexerxml_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_scilexerxml_is_widget_type(void* self) {
@@ -304,7 +299,7 @@ void q_scilexerxml_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_scilexerxml_children(void* self) {
+const libqt_list /* of QObject* */ q_scilexerxml_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -371,7 +366,7 @@ QBindingStorage* q_scilexerxml_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_scilexerxml_binding_storage2(void* self) {
+const QBindingStorage* q_scilexerxml_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -931,6 +926,10 @@ bool q_scilexerxml_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_scilexerxml_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QsciLexerXML_OnIsSignalConnected((QsciLexerXML*)self, (intptr_t)slot);
+}
+
+void q_scilexerxml_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_scilexerxml_delete(void* self) {

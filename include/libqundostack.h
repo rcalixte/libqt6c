@@ -13,14 +13,10 @@
 #include "qtlibc.h"
 
 #include "libqaction.h"
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qundocommand.html
 
@@ -49,11 +45,15 @@ QUndoCommand* q_undocommand_new4(const char* text, void* parent);
 /// ``` QUndoCommand* self ```
 void q_undocommand_undo(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundocommand.html#undo)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QUndoCommand* self, void (*slot)() ```
 void q_undocommand_on_undo(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundocommand.html#undo)
+///
 /// Base class method implementation
 ///
 /// ``` QUndoCommand* self ```
@@ -64,11 +64,15 @@ void q_undocommand_qbase_undo(void* self);
 /// ``` QUndoCommand* self ```
 void q_undocommand_redo(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundocommand.html#redo)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QUndoCommand* self, void (*slot)() ```
 void q_undocommand_on_redo(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundocommand.html#redo)
+///
 /// Base class method implementation
 ///
 /// ``` QUndoCommand* self ```
@@ -104,11 +108,15 @@ void q_undocommand_set_obsolete(void* self, bool obsolete);
 /// ``` QUndoCommand* self ```
 int32_t q_undocommand_id(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundocommand.html#id)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QUndoCommand* self, int32_t (*slot)() ```
 void q_undocommand_on_id(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundocommand.html#id)
+///
 /// Base class method implementation
 ///
 /// ``` QUndoCommand* self ```
@@ -119,11 +127,15 @@ int32_t q_undocommand_qbase_id(void* self);
 /// ``` QUndoCommand* self, QUndoCommand* other ```
 bool q_undocommand_merge_with(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundocommand.html#mergeWith)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QUndoCommand* self, bool (*slot)(QUndoCommand*, QUndoCommand*) ```
 void q_undocommand_on_merge_with(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundocommand.html#mergeWith)
+///
 /// Base class method implementation
 ///
 /// ``` QUndoCommand* self, QUndoCommand* other ```
@@ -137,8 +149,10 @@ int32_t q_undocommand_child_count(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qundocommand.html#child)
 ///
 /// ``` QUndoCommand* self, int index ```
-QUndoCommand* q_undocommand_child(void* self, int index);
+const QUndoCommand* q_undocommand_child(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundocommand.html#dtor.QUndoCommand)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QUndoCommand* self ```
@@ -159,7 +173,7 @@ QUndoStack* q_undostack_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QUndoStack* self ```
-QMetaObject* q_undostack_meta_object(void* self);
+const QMetaObject* q_undostack_meta_object(void* self);
 
 /// ``` QUndoStack* self, const char* param1 ```
 void* q_undostack_metacast(void* self, const char* param1);
@@ -275,7 +289,7 @@ int32_t q_undostack_undo_limit(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qundostack.html#command)
 ///
 /// ``` QUndoStack* self, int index ```
-QUndoCommand* q_undostack_command(void* self, int index);
+const QUndoCommand* q_undostack_command(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundostack.html#setClean)
 ///
@@ -312,6 +326,8 @@ void q_undostack_set_active(void* self);
 /// ``` QUndoStack* self, int idx ```
 void q_undostack_index_changed(void* self, int idx);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundostack.html#indexChanged)
+///
 /// ``` QUndoStack* self, void (*slot)(QUndoStack*, int) ```
 void q_undostack_on_index_changed(void* self, void (*slot)(void*, int));
 
@@ -320,6 +336,8 @@ void q_undostack_on_index_changed(void* self, void (*slot)(void*, int));
 /// ``` QUndoStack* self, bool clean ```
 void q_undostack_clean_changed(void* self, bool clean);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundostack.html#cleanChanged)
+///
 /// ``` QUndoStack* self, void (*slot)(QUndoStack*, bool) ```
 void q_undostack_on_clean_changed(void* self, void (*slot)(void*, bool));
 
@@ -328,6 +346,8 @@ void q_undostack_on_clean_changed(void* self, void (*slot)(void*, bool));
 /// ``` QUndoStack* self, bool canUndo ```
 void q_undostack_can_undo_changed(void* self, bool canUndo);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundostack.html#canUndoChanged)
+///
 /// ``` QUndoStack* self, void (*slot)(QUndoStack*, bool) ```
 void q_undostack_on_can_undo_changed(void* self, void (*slot)(void*, bool));
 
@@ -336,6 +356,8 @@ void q_undostack_on_can_undo_changed(void* self, void (*slot)(void*, bool));
 /// ``` QUndoStack* self, bool canRedo ```
 void q_undostack_can_redo_changed(void* self, bool canRedo);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundostack.html#canRedoChanged)
+///
 /// ``` QUndoStack* self, void (*slot)(QUndoStack*, bool) ```
 void q_undostack_on_can_redo_changed(void* self, void (*slot)(void*, bool));
 
@@ -344,6 +366,8 @@ void q_undostack_on_can_redo_changed(void* self, void (*slot)(void*, bool));
 /// ``` QUndoStack* self, const char* undoText ```
 void q_undostack_undo_text_changed(void* self, const char* undoText);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundostack.html#undoTextChanged)
+///
 /// ``` QUndoStack* self, void (*slot)(QUndoStack*, const char*) ```
 void q_undostack_on_undo_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -352,6 +376,8 @@ void q_undostack_on_undo_text_changed(void* self, void (*slot)(void*, const char
 /// ``` QUndoStack* self, const char* redoText ```
 void q_undostack_redo_text_changed(void* self, const char* redoText);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundostack.html#redoTextChanged)
+///
 /// ``` QUndoStack* self, void (*slot)(QUndoStack*, const char*) ```
 void q_undostack_on_redo_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -462,7 +488,7 @@ void q_undostack_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QUndoStack* self ```
-libqt_list /* of QObject* */ q_undostack_children(void* self);
+const libqt_list /* of QObject* */ q_undostack_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -560,7 +586,7 @@ QBindingStorage* q_undostack_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QUndoStack* self ```
-QBindingStorage* q_undostack_binding_storage2(void* self);
+const QBindingStorage* q_undostack_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -570,6 +596,8 @@ QBindingStorage* q_undostack_binding_storage2(void* self);
 void q_undostack_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QUndoStack* self, void (*slot)(QObject*) ```
 void q_undostack_on_destroyed(void* self, void (*slot)(void*));
@@ -625,6 +653,8 @@ void q_undostack_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QUndoStack* self, void (*slot)(QObject*, QObject*) ```
 void q_undostack_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -639,12 +669,16 @@ bool q_undostack_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoStack* self, QEvent* event ```
 bool q_undostack_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -662,12 +696,16 @@ bool q_undostack_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoStack* self, QObject* watched, QEvent* event ```
 bool q_undostack_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -685,12 +723,16 @@ void q_undostack_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoStack* self, QTimerEvent* event ```
 void q_undostack_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -708,12 +750,16 @@ void q_undostack_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoStack* self, QChildEvent* event ```
 void q_undostack_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -731,12 +777,16 @@ void q_undostack_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoStack* self, QEvent* event ```
 void q_undostack_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -754,12 +804,16 @@ void q_undostack_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoStack* self, QMetaMethod* signal ```
 void q_undostack_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -777,12 +831,16 @@ void q_undostack_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoStack* self, QMetaMethod* signal ```
 void q_undostack_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -800,12 +858,16 @@ QObject* q_undostack_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoStack* self ```
 QObject* q_undostack_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -823,12 +885,16 @@ int32_t q_undostack_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoStack* self ```
 int32_t q_undostack_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -846,12 +912,16 @@ int32_t q_undostack_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoStack* self, const char* signal ```
 int32_t q_undostack_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -869,6 +939,8 @@ bool q_undostack_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoStack* self, QMetaMethod* signal ```
@@ -876,11 +948,24 @@ bool q_undostack_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QUndoStack* self, bool (*slot)(QUndoStack*, QMetaMethod*) ```
 void q_undostack_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QUndoStack* self, void (*slot)(QObject*, const char*) ```
+void q_undostack_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qundostack.html#dtor.QUndoStack)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QUndoStack* self ```

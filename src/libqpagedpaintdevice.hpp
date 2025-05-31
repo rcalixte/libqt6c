@@ -22,7 +22,6 @@ typedef struct QPageRanges QPageRanges;
 typedef struct QPageSize QPageSize;
 typedef struct QPagedPaintDevice QPagedPaintDevice;
 typedef struct QPaintDevice QPaintDevice;
-typedef struct QPaintEngine QPaintEngine;
 #endif
 
 #ifdef __cplusplus
@@ -39,8 +38,6 @@ bool QPagedPaintDevice_SetPageMargins(QPagedPaintDevice* self, QMarginsF* margin
 QPageLayout* QPagedPaintDevice_PageLayout(const QPagedPaintDevice* self);
 void QPagedPaintDevice_SetPageRanges(QPagedPaintDevice* self, QPageRanges* ranges);
 QPageRanges* QPagedPaintDevice_PageRanges(const QPagedPaintDevice* self);
-int QPagedPaintDevice_DevType(const QPagedPaintDevice* self);
-QPaintEngine* QPagedPaintDevice_PaintEngine(const QPagedPaintDevice* self);
 void QPagedPaintDevice_Delete(QPagedPaintDevice* self);
 
 #ifdef __cplusplus

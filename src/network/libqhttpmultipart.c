@@ -1,11 +1,8 @@
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
 #include "../libqiodevice.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
 #include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqhttpmultipart.hpp"
@@ -71,7 +68,7 @@ QHttpMultiPart* q_httpmultipart_new4(int64_t contentType, void* parent) {
     return QHttpMultiPart_new4(contentType, (QObject*)parent);
 }
 
-QMetaObject* q_httpmultipart_meta_object(void* self) {
+const QMetaObject* q_httpmultipart_meta_object(void* self) {
     return QHttpMultiPart_MetaObject((QHttpMultiPart*)self);
 }
 
@@ -139,8 +136,7 @@ const char* q_httpmultipart_object_name(void* self) {
 }
 
 void q_httpmultipart_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_httpmultipart_is_widget_type(void* self) {
@@ -179,7 +175,7 @@ void q_httpmultipart_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_httpmultipart_children(void* self) {
+const libqt_list /* of QObject* */ q_httpmultipart_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -246,7 +242,7 @@ QBindingStorage* q_httpmultipart_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_httpmultipart_binding_storage2(void* self) {
+const QBindingStorage* q_httpmultipart_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -420,6 +416,10 @@ bool q_httpmultipart_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_httpmultipart_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QHttpMultiPart_OnIsSignalConnected((QHttpMultiPart*)self, (intptr_t)slot);
+}
+
+void q_httpmultipart_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_httpmultipart_delete(void* self) {

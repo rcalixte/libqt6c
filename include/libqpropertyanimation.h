@@ -13,15 +13,10 @@
 #include "qtlibc.h"
 
 #include "libqabstractanimation.h"
-#include "libqanimationgroup.h"
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
-#include "libqeasingcurve.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
-#include "libqthread.h"
 #include "libqvariant.h"
 #include "libqvariantanimation.h"
 
@@ -50,7 +45,7 @@ QPropertyAnimation* q_propertyanimation_new4(void* target, const char* propertyN
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QPropertyAnimation* self ```
-QMetaObject* q_propertyanimation_meta_object(void* self);
+const QMetaObject* q_propertyanimation_meta_object(void* self);
 
 /// ``` QPropertyAnimation* self, const char* param1 ```
 void* q_propertyanimation_metacast(void* self, const char* param1);
@@ -98,11 +93,15 @@ void q_propertyanimation_set_property_name(void* self, const char* propertyName)
 /// ``` QPropertyAnimation* self, QEvent* event ```
 bool q_propertyanimation_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertyanimation.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPropertyAnimation* self, bool (*slot)(QPropertyAnimation*, QEvent*) ```
 void q_propertyanimation_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertyanimation.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QPropertyAnimation* self, QEvent* event ```
@@ -113,11 +112,15 @@ bool q_propertyanimation_qbase_event(void* self, void* event);
 /// ``` QPropertyAnimation* self, QVariant* value ```
 void q_propertyanimation_update_current_value(void* self, void* value);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertyanimation.html#updateCurrentValue)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPropertyAnimation* self, void (*slot)(QPropertyAnimation*, QVariant*) ```
 void q_propertyanimation_on_update_current_value(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertyanimation.html#updateCurrentValue)
+///
 /// Base class method implementation
 ///
 /// ``` QPropertyAnimation* self, QVariant* value ```
@@ -128,11 +131,15 @@ void q_propertyanimation_qbase_update_current_value(void* self, void* value);
 /// ``` QPropertyAnimation* self, enum QAbstractAnimation__State newState, enum QAbstractAnimation__State oldState ```
 void q_propertyanimation_update_state(void* self, int64_t newState, int64_t oldState);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertyanimation.html#updateState)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPropertyAnimation* self, void (*slot)(QPropertyAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State) ```
 void q_propertyanimation_on_update_state(void* self, void (*slot)(void*, int64_t, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertyanimation.html#updateState)
+///
 /// Base class method implementation
 ///
 /// ``` QPropertyAnimation* self, enum QAbstractAnimation__State newState, enum QAbstractAnimation__State oldState ```
@@ -241,6 +248,8 @@ void q_propertyanimation_value_changed(void* self, void* value);
 
 /// Inherited from QVariantAnimation
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#valueChanged)
+///
 /// ``` QPropertyAnimation* self, void (*slot)(QVariantAnimation*, QVariant*) ```
 void q_propertyanimation_on_value_changed(void* self, void (*slot)(void*, void*));
 
@@ -323,6 +332,8 @@ void q_propertyanimation_finished(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#finished)
+///
 /// ``` QPropertyAnimation* self, void (*slot)(QAbstractAnimation*) ```
 void q_propertyanimation_on_finished(void* self, void (*slot)(void*));
 
@@ -334,6 +345,8 @@ void q_propertyanimation_on_finished(void* self, void (*slot)(void*));
 void q_propertyanimation_state_changed(void* self, int64_t newState, int64_t oldState);
 
 /// Inherited from QAbstractAnimation
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#stateChanged)
 ///
 /// ``` QPropertyAnimation* self, void (*slot)(QAbstractAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State) ```
 void q_propertyanimation_on_state_changed(void* self, void (*slot)(void*, int64_t, int64_t));
@@ -347,6 +360,8 @@ void q_propertyanimation_current_loop_changed(void* self, int currentLoop);
 
 /// Inherited from QAbstractAnimation
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#currentLoopChanged)
+///
 /// ``` QPropertyAnimation* self, void (*slot)(QAbstractAnimation*, int) ```
 void q_propertyanimation_on_current_loop_changed(void* self, void (*slot)(void*, int));
 
@@ -358,6 +373,8 @@ void q_propertyanimation_on_current_loop_changed(void* self, void (*slot)(void*,
 void q_propertyanimation_direction_changed(void* self, int64_t param1);
 
 /// Inherited from QAbstractAnimation
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#directionChanged)
 ///
 /// ``` QPropertyAnimation* self, void (*slot)(QAbstractAnimation*, enum QAbstractAnimation__Direction) ```
 void q_propertyanimation_on_direction_changed(void* self, void (*slot)(void*, int64_t));
@@ -493,7 +510,7 @@ void q_propertyanimation_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QPropertyAnimation* self ```
-libqt_list /* of QObject* */ q_propertyanimation_children(void* self);
+const libqt_list /* of QObject* */ q_propertyanimation_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -591,7 +608,7 @@ QBindingStorage* q_propertyanimation_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QPropertyAnimation* self ```
-QBindingStorage* q_propertyanimation_binding_storage2(void* self);
+const QBindingStorage* q_propertyanimation_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -601,6 +618,8 @@ QBindingStorage* q_propertyanimation_binding_storage2(void* self);
 void q_propertyanimation_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QPropertyAnimation* self, void (*slot)(QObject*) ```
 void q_propertyanimation_on_destroyed(void* self, void (*slot)(void*));
@@ -656,6 +675,8 @@ void q_propertyanimation_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QPropertyAnimation* self, void (*slot)(QObject*, QObject*) ```
 void q_propertyanimation_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -670,12 +691,16 @@ int32_t q_propertyanimation_duration(void* self);
 
 /// Inherited from QVariantAnimation
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#duration)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPropertyAnimation* self ```
 int32_t q_propertyanimation_qbase_duration(void* self);
 
 /// Inherited from QVariantAnimation
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#duration)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -693,12 +718,16 @@ void q_propertyanimation_update_current_time(void* self, int param1);
 
 /// Inherited from QVariantAnimation
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#updateCurrentTime)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPropertyAnimation* self, int param1 ```
 void q_propertyanimation_qbase_update_current_time(void* self, int param1);
 
 /// Inherited from QVariantAnimation
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#updateCurrentTime)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -716,12 +745,16 @@ QVariant* q_propertyanimation_interpolated(void* self, void* from, void* to, dou
 
 /// Inherited from QVariantAnimation
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#interpolated)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPropertyAnimation* self, QVariant* from, QVariant* to, double progress ```
 QVariant* q_propertyanimation_qbase_interpolated(void* self, void* from, void* to, double progress);
 
 /// Inherited from QVariantAnimation
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#interpolated)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -739,12 +772,16 @@ void q_propertyanimation_update_direction(void* self, int64_t direction);
 
 /// Inherited from QAbstractAnimation
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#updateDirection)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPropertyAnimation* self, enum QAbstractAnimation__Direction direction ```
 void q_propertyanimation_qbase_update_direction(void* self, int64_t direction);
 
 /// Inherited from QAbstractAnimation
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#updateDirection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -762,12 +799,16 @@ bool q_propertyanimation_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPropertyAnimation* self, QObject* watched, QEvent* event ```
 bool q_propertyanimation_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -785,12 +826,16 @@ void q_propertyanimation_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPropertyAnimation* self, QTimerEvent* event ```
 void q_propertyanimation_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -808,12 +853,16 @@ void q_propertyanimation_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPropertyAnimation* self, QChildEvent* event ```
 void q_propertyanimation_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -831,12 +880,16 @@ void q_propertyanimation_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPropertyAnimation* self, QEvent* event ```
 void q_propertyanimation_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -854,12 +907,16 @@ void q_propertyanimation_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPropertyAnimation* self, QMetaMethod* signal ```
 void q_propertyanimation_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -877,12 +934,16 @@ void q_propertyanimation_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPropertyAnimation* self, QMetaMethod* signal ```
 void q_propertyanimation_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -900,12 +961,16 @@ QObject* q_propertyanimation_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPropertyAnimation* self ```
 QObject* q_propertyanimation_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -923,12 +988,16 @@ int32_t q_propertyanimation_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPropertyAnimation* self ```
 int32_t q_propertyanimation_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -946,12 +1015,16 @@ int32_t q_propertyanimation_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPropertyAnimation* self, const char* signal ```
 int32_t q_propertyanimation_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -969,6 +1042,8 @@ bool q_propertyanimation_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPropertyAnimation* self, QMetaMethod* signal ```
@@ -976,11 +1051,24 @@ bool q_propertyanimation_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QPropertyAnimation* self, bool (*slot)(QPropertyAnimation*, QMetaMethod*) ```
 void q_propertyanimation_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QPropertyAnimation* self, void (*slot)(QObject*, const char*) ```
+void q_propertyanimation_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertyanimation.html#dtor.QPropertyAnimation)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPropertyAnimation* self ```

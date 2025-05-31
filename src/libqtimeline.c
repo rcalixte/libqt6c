@@ -1,12 +1,8 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqeasingcurve.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include <string.h>
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqcoreevent.hpp"
 #include "libqtimeline.hpp"
 #include "libqtimeline.h"
@@ -23,7 +19,7 @@ QTimeLine* q_timeline_new3(int duration, void* parent) {
     return QTimeLine_new3(duration, (QObject*)parent);
 }
 
-QMetaObject* q_timeline_meta_object(void* self) {
+const QMetaObject* q_timeline_meta_object(void* self) {
     return QTimeLine_MetaObject((QTimeLine*)self);
 }
 
@@ -200,8 +196,7 @@ const char* q_timeline_object_name(void* self) {
 }
 
 void q_timeline_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_timeline_is_widget_type(void* self) {
@@ -240,7 +235,7 @@ void q_timeline_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_timeline_children(void* self) {
+const libqt_list /* of QObject* */ q_timeline_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -307,7 +302,7 @@ QBindingStorage* q_timeline_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_timeline_binding_storage2(void* self) {
+const QBindingStorage* q_timeline_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -469,6 +464,26 @@ bool q_timeline_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_timeline_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QTimeLine_OnIsSignalConnected((QTimeLine*)self, (intptr_t)slot);
+}
+
+void q_timeline_on_value_changed(void* self, void (*slot)(void*, double)) {
+    QTimeLine_Connect_ValueChanged((QTimeLine*)self, (intptr_t)slot);
+}
+
+void q_timeline_on_frame_changed(void* self, void (*slot)(void*, int)) {
+    QTimeLine_Connect_FrameChanged((QTimeLine*)self, (intptr_t)slot);
+}
+
+void q_timeline_on_state_changed(void* self, void (*slot)(void*, int64_t)) {
+    QTimeLine_Connect_StateChanged((QTimeLine*)self, (intptr_t)slot);
+}
+
+void q_timeline_on_finished(void* self, void (*slot)(void*)) {
+    QTimeLine_Connect_Finished((QTimeLine*)self, (intptr_t)slot);
+}
+
+void q_timeline_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_timeline_delete(void* self) {

@@ -7,17 +7,8 @@ QVersionNumber* q_versionnumber_new() {
     return QVersionNumber_new();
 }
 
-QVersionNumber* q_versionnumber_new2(int* seg[]) {
-    size_t seg_len = 0;
-    while (seg[seg_len] != NULL) {
-        seg_len++;
-    }
-    libqt_list seg_list = {
-        .len = seg_len,
-        .data = {(int*)seg},
-    };
-
-    return QVersionNumber_new2(seg_list);
+QVersionNumber* q_versionnumber_new2(libqt_list seg) {
+    return QVersionNumber_new2(seg);
 }
 
 QVersionNumber* q_versionnumber_new3(int maj) {
@@ -93,13 +84,11 @@ const char* q_versionnumber_to_string(void* self) {
 }
 
 QVersionNumber* q_versionnumber_from_string(char* stringVal) {
-    libqt_strview stringVal_strview = qstrview(stringVal);
-    return QVersionNumber_FromString((QAnyStringView*)&stringVal_strview);
+    return QVersionNumber_FromString(stringVal);
 }
 
 QVersionNumber* q_versionnumber_from_string2(char* stringVal, int64_t* suffixIndex) {
-    libqt_strview stringVal_strview = qstrview(stringVal);
-    return QVersionNumber_FromString2((QAnyStringView*)&stringVal_strview, suffixIndex);
+    return QVersionNumber_FromString2(stringVal, suffixIndex);
 }
 
 void q_versionnumber_delete(void* self) {

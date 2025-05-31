@@ -49,19 +49,19 @@ bool q_region_is_null(void* self) {
     return QRegion_IsNull((QRegion*)self);
 }
 
-QRect* q_region_begin(void* self) {
+const QRect* q_region_begin(void* self) {
     return QRegion_Begin((QRegion*)self);
 }
 
-QRect* q_region_cbegin(void* self) {
+const QRect* q_region_cbegin(void* self) {
     return QRegion_Cbegin((QRegion*)self);
 }
 
-QRect* q_region_end(void* self) {
+const QRect* q_region_end(void* self) {
     return QRegion_End((QRegion*)self);
 }
 
-QRect* q_region_cend(void* self) {
+const QRect* q_region_cend(void* self) {
     return QRegion_Cend((QRegion*)self);
 }
 

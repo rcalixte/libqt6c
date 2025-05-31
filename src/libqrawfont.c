@@ -80,29 +80,13 @@ libqt_list /* of uint32_t */ q_rawfont_glyph_indexes_for_string(void* self, cons
     return _arr;
 }
 
-libqt_list /* of QPointF* */ q_rawfont_advances_for_glyph_indexes(void* self, unsigned int* glyphIndexes[]) {
-    size_t glyphIndexes_len = 0;
-    while (glyphIndexes[glyphIndexes_len] != NULL) {
-        glyphIndexes_len++;
-    }
-    libqt_list glyphIndexes_list = {
-        .len = glyphIndexes_len,
-        .data = {(unsigned int*)glyphIndexes},
-    };
-    libqt_list _arr = QRawFont_AdvancesForGlyphIndexes((QRawFont*)self, glyphIndexes_list);
+libqt_list /* of QPointF* */ q_rawfont_advances_for_glyph_indexes(void* self, libqt_list glyphIndexes) {
+    libqt_list _arr = QRawFont_AdvancesForGlyphIndexes((QRawFont*)self, glyphIndexes);
     return _arr;
 }
 
-libqt_list /* of QPointF* */ q_rawfont_advances_for_glyph_indexes2(void* self, unsigned int* glyphIndexes[], int64_t layoutFlags) {
-    size_t glyphIndexes_len = 0;
-    while (glyphIndexes[glyphIndexes_len] != NULL) {
-        glyphIndexes_len++;
-    }
-    libqt_list glyphIndexes_list = {
-        .len = glyphIndexes_len,
-        .data = {(unsigned int*)glyphIndexes},
-    };
-    libqt_list _arr = QRawFont_AdvancesForGlyphIndexes2((QRawFont*)self, glyphIndexes_list, layoutFlags);
+libqt_list /* of QPointF* */ q_rawfont_advances_for_glyph_indexes2(void* self, libqt_list glyphIndexes, int64_t layoutFlags) {
+    libqt_list _arr = QRawFont_AdvancesForGlyphIndexes2((QRawFont*)self, glyphIndexes, layoutFlags);
     return _arr;
 }
 

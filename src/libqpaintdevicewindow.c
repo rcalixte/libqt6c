@@ -1,30 +1,17 @@
-#include "libqaccessible.hpp"
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
-#include "libqcursor.hpp"
-#include "libqicon.hpp"
-#include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
-#include "libqpaintengine.hpp"
-#include "libqpoint.hpp"
 #include "libqrect.hpp"
 #include "libqregion.hpp"
-#include "libqscreen.hpp"
-#include "libqsize.hpp"
 #include <string.h>
 #include "libqsurface.hpp"
-#include "libqsurfaceformat.hpp"
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqwindow.hpp"
 #include "libqcoreevent.hpp"
 #include "libqpaintdevicewindow.hpp"
 #include "libqpaintdevicewindow.h"
 
-QMetaObject* q_paintdevicewindow_meta_object(void* self) {
+const QMetaObject* q_paintdevicewindow_meta_object(void* self) {
     return QPaintDeviceWindow_MetaObject((QPaintDeviceWindow*)self);
 }
 
@@ -687,8 +674,7 @@ const char* q_paintdevicewindow_object_name(void* self) {
 }
 
 void q_paintdevicewindow_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_paintdevicewindow_is_widget_type(void* self) {
@@ -727,7 +713,7 @@ void q_paintdevicewindow_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_paintdevicewindow_children(void* self) {
+const libqt_list /* of QObject* */ q_paintdevicewindow_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -790,7 +776,7 @@ QBindingStorage* q_paintdevicewindow_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_paintdevicewindow_binding_storage2(void* self) {
+const QBindingStorage* q_paintdevicewindow_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -888,6 +874,10 @@ int32_t q_paintdevicewindow_depth(void* self) {
 
 double q_paintdevicewindow_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
+}
+
+void q_paintdevicewindow_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_paintdevicewindow_delete(void* self) {

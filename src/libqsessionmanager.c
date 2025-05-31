@@ -1,16 +1,10 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
-#include "libqevent.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include <string.h>
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
-#include "libqcoreevent.hpp"
 #include "libqsessionmanager.hpp"
 #include "libqsessionmanager.h"
 
-QMetaObject* q_sessionmanager_meta_object(void* self) {
+const QMetaObject* q_sessionmanager_meta_object(void* self) {
     return QSessionManager_MetaObject((QSessionManager*)self);
 }
 
@@ -73,7 +67,7 @@ void q_sessionmanager_set_restart_command(void* self, const char* restartCommand
     for (size_t _i = 0; _i < restartCommand_len; ++_i) {
         restartCommand_qstr[_i] = qstring(restartCommand[_i]);
     }
-    libqt_list restartCommand_list = qstrlist(restartCommand_qstr, restartCommand_len);
+    libqt_list restartCommand_list = qlist(restartCommand_qstr, restartCommand_len);
     QSessionManager_SetRestartCommand((QSessionManager*)self, restartCommand_list);
 }
 
@@ -97,7 +91,7 @@ void q_sessionmanager_set_discard_command(void* self, const char* discardCommand
     for (size_t _i = 0; _i < discardCommand_len; ++_i) {
         discardCommand_qstr[_i] = qstring(discardCommand[_i]);
     }
-    libqt_list discardCommand_list = qstrlist(discardCommand_qstr, discardCommand_len);
+    libqt_list discardCommand_list = qlist(discardCommand_qstr, discardCommand_len);
     QSessionManager_SetDiscardCommand((QSessionManager*)self, discardCommand_list);
 }
 
@@ -125,7 +119,7 @@ void q_sessionmanager_set_manager_property2(void* self, const char* name, const 
     for (size_t _i = 0; _i < value_len; ++_i) {
         value_qstr[_i] = qstring(value[_i]);
     }
-    libqt_list value_list = qstrlist(value_qstr, value_len);
+    libqt_list value_list = qlist(value_qstr, value_len);
     QSessionManager_SetManagerProperty2((QSessionManager*)self, qstring(name), value_list);
 }
 
@@ -167,8 +161,7 @@ const char* q_sessionmanager_object_name(void* self) {
 }
 
 void q_sessionmanager_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_sessionmanager_is_widget_type(void* self) {
@@ -207,7 +200,7 @@ void q_sessionmanager_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_sessionmanager_children(void* self) {
+const libqt_list /* of QObject* */ q_sessionmanager_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -274,7 +267,7 @@ QBindingStorage* q_sessionmanager_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_sessionmanager_binding_storage2(void* self) {
+const QBindingStorage* q_sessionmanager_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -316,4 +309,8 @@ void q_sessionmanager_destroyed1(void* self, void* param1) {
 
 void q_sessionmanager_on_destroyed1(void* self, void (*slot)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+}
+
+void q_sessionmanager_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }

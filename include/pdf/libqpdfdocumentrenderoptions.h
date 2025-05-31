@@ -87,6 +87,8 @@ QSize* q_pdfdocumentrenderoptions_scaled_size(void* self);
 /// ``` QPdfDocumentRenderOptions* self, QSize* s ```
 void q_pdfdocumentrenderoptions_set_scaled_size(void* self, void* s);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#dtor.QPdfDocumentRenderOptions)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPdfDocumentRenderOptions* self ```

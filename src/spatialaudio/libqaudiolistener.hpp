@@ -15,24 +15,15 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
 typedef struct QAudioEngine QAudioEngine;
 typedef struct QAudioListener QAudioListener;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QEvent QEvent;
 typedef struct QMetaMethod QMetaMethod;
-typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QQuaternion QQuaternion;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
 typedef struct QVector3D QVector3D;
 #endif
 
@@ -42,8 +33,6 @@ QVector3D* QAudioListener_Position(const QAudioListener* self);
 void QAudioListener_SetRotation(QAudioListener* self, QQuaternion* q);
 QQuaternion* QAudioListener_Rotation(const QAudioListener* self);
 QAudioEngine* QAudioListener_Engine(const QAudioListener* self);
-QMetaObject* QAudioListener_MetaObject(const QAudioListener* self);
-void* QAudioListener_Metacast(QAudioListener* self, const char* param1);
 int QAudioListener_Metacall(QAudioListener* self, int param1, int param2, void** param3);
 void QAudioListener_OnMetacall(QAudioListener* self, intptr_t slot);
 int QAudioListener_QBaseMetacall(QAudioListener* self, int param1, int param2, void** param3);

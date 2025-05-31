@@ -1,13 +1,6 @@
-#include <QAbstractAxis>
 #include <QAbstractSeries>
-#include <QAnyStringView>
-#include <QBindingStorage>
 #include <QBrush>
-#include <QByteArray>
-#include <QChart>
-#include <QChildEvent>
 #include <QColor>
-#include <QEvent>
 #include <QFont>
 #include <QImage>
 #include <QLinearGradient>
@@ -15,7 +8,6 @@
 #include <QMap>
 #include <QMetaMethod>
 #include <QMetaObject>
-#define WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection
 #include <QObject>
 #include <QPair>
 #include <QPen>
@@ -23,8 +15,6 @@
 #include <QString>
 #include <QByteArray>
 #include <cstring>
-#include <QThread>
-#include <QTimerEvent>
 #include <QVariant>
 #include <QXYSeries>
 #include <qxyseries.h>
@@ -954,18 +944,6 @@ void QXYSeries_ColorBy2(QXYSeries* self, libqt_list /* of double */ sourceData, 
         sourceData_QList.push_back(static_cast<double>(sourceData_arr[i]));
     }
     self->colorBy(sourceData_QList, *gradient);
-}
-
-int QXYSeries_Type(const QXYSeries* self) {
-    return static_cast<int>(self->type());
-}
-
-bool QXYSeries_Event(QXYSeries* self, QEvent* event) {
-    return self->event(event);
-}
-
-bool QXYSeries_EventFilter(QXYSeries* self, QObject* watched, QEvent* event) {
-    return self->eventFilter(watched, event);
 }
 
 void QXYSeries_Delete(QXYSeries* self) {

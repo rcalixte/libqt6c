@@ -15,22 +15,14 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QEvent QEvent;
 typedef struct QFileSystemWatcher QFileSystemWatcher;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
 #endif
 
 QFileSystemWatcher* QFileSystemWatcher_new();
@@ -84,6 +76,8 @@ int QFileSystemWatcher_QBaseReceivers(const QFileSystemWatcher* self, const char
 bool QFileSystemWatcher_IsSignalConnected(const QFileSystemWatcher* self, QMetaMethod* signal);
 void QFileSystemWatcher_OnIsSignalConnected(const QFileSystemWatcher* self, intptr_t slot);
 bool QFileSystemWatcher_QBaseIsSignalConnected(const QFileSystemWatcher* self, QMetaMethod* signal);
+void QFileSystemWatcher_Connect_FileChanged(QFileSystemWatcher* self, intptr_t slot);
+void QFileSystemWatcher_Connect_DirectoryChanged(QFileSystemWatcher* self, intptr_t slot);
 void QFileSystemWatcher_Delete(QFileSystemWatcher* self);
 
 #ifdef __cplusplus

@@ -12,44 +12,19 @@
 
 #include "qtlibc.h"
 
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
-#include "libqcursor.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
 #include "libqframe.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
-#include "libqlocale.h"
-#include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqscreen.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
 #include "libqstyleoption.h"
-#include "libqthread.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qlcdnumber.html
 
@@ -76,7 +51,7 @@ QLCDNumber* q_lcdnumber_new4(uint32_t numDigits, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QLCDNumber* self ```
-QMetaObject* q_lcdnumber_meta_object(void* self);
+const QMetaObject* q_lcdnumber_meta_object(void* self);
 
 /// ``` QLCDNumber* self, const char* param1 ```
 void* q_lcdnumber_metacast(void* self, const char* param1);
@@ -159,11 +134,15 @@ int32_t q_lcdnumber_int_value(void* self);
 /// ``` QLCDNumber* self ```
 QSize* q_lcdnumber_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLCDNumber* self, QSize* (*slot)() ```
 void q_lcdnumber_on_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QLCDNumber* self ```
@@ -214,6 +193,8 @@ void q_lcdnumber_set_small_decimal_point(void* self, bool smallDecimalPoint);
 /// ``` QLCDNumber* self ```
 void q_lcdnumber_overflow(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#overflow)
+///
 /// ``` QLCDNumber* self, void (*slot)(QLCDNumber*) ```
 void q_lcdnumber_on_overflow(void* self, void (*slot)(void*));
 
@@ -222,11 +203,15 @@ void q_lcdnumber_on_overflow(void* self, void (*slot)(void*));
 /// ``` QLCDNumber* self, QEvent* e ```
 bool q_lcdnumber_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLCDNumber* self, bool (*slot)(QLCDNumber*, QEvent*) ```
 void q_lcdnumber_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QLCDNumber* self, QEvent* e ```
@@ -237,11 +222,15 @@ bool q_lcdnumber_qbase_event(void* self, void* e);
 /// ``` QLCDNumber* self, QPaintEvent* param1 ```
 void q_lcdnumber_paint_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#paintEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QPaintEvent*) ```
 void q_lcdnumber_on_paint_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#paintEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QLCDNumber* self, QPaintEvent* param1 ```
@@ -472,7 +461,7 @@ QRect* q_lcdnumber_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QLCDNumber* self ```
-QRect* q_lcdnumber_geometry(void* self);
+const QRect* q_lcdnumber_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -829,7 +818,7 @@ QWidget* q_lcdnumber_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QLCDNumber* self ```
-QPalette* q_lcdnumber_palette(void* self);
+const QPalette* q_lcdnumber_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -871,7 +860,7 @@ int64_t q_lcdnumber_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QLCDNumber* self ```
-QFont* q_lcdnumber_font(void* self);
+const QFont* q_lcdnumber_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1871,15 +1860,15 @@ void q_lcdnumber_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QLCDNumber* self, QAction* actions[] ```
-void q_lcdnumber_add_actions(void* self, void* actions[]);
+/// ``` QLCDNumber* self, libqt_list /* of QAction* */ actions ```
+void q_lcdnumber_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QLCDNumber* self, QAction* before, QAction* actions[] ```
-void q_lcdnumber_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QLCDNumber* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_lcdnumber_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2079,6 +2068,8 @@ void q_lcdnumber_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QLCDNumber* self, void (*slot)(QWidget*, const char*) ```
 void q_lcdnumber_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2090,6 +2081,8 @@ void q_lcdnumber_on_window_title_changed(void* self, void (*slot)(void*, const c
 void q_lcdnumber_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QLCDNumber* self, void (*slot)(QWidget*, QIcon*) ```
 void q_lcdnumber_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -2103,6 +2096,8 @@ void q_lcdnumber_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QLCDNumber* self, void (*slot)(QWidget*, const char*) ```
 void q_lcdnumber_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2114,6 +2109,8 @@ void q_lcdnumber_on_window_icon_text_changed(void* self, void (*slot)(void*, con
 void q_lcdnumber_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QLCDNumber* self, void (*slot)(QWidget*, QPoint*) ```
 void q_lcdnumber_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2319,7 +2316,7 @@ void q_lcdnumber_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QLCDNumber* self ```
-libqt_list /* of QObject* */ q_lcdnumber_children(void* self);
+const libqt_list /* of QObject* */ q_lcdnumber_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2410,7 +2407,7 @@ QBindingStorage* q_lcdnumber_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QLCDNumber* self ```
-QBindingStorage* q_lcdnumber_binding_storage2(void* self);
+const QBindingStorage* q_lcdnumber_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2420,6 +2417,8 @@ QBindingStorage* q_lcdnumber_binding_storage2(void* self);
 void q_lcdnumber_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QLCDNumber* self, void (*slot)(QObject*) ```
 void q_lcdnumber_on_destroyed(void* self, void (*slot)(void*));
@@ -2474,6 +2473,8 @@ QMetaObject__Connection* q_lcdnumber_connect4(void* self, void* sender, const ch
 void q_lcdnumber_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QLCDNumber* self, void (*slot)(QObject*, QObject*) ```
 void q_lcdnumber_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -2573,12 +2574,16 @@ void q_lcdnumber_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#changeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QEvent* param1 ```
 void q_lcdnumber_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2596,12 +2601,16 @@ void q_lcdnumber_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QStyleOptionFrame* option ```
 void q_lcdnumber_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2619,12 +2628,16 @@ int32_t q_lcdnumber_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self ```
 int32_t q_lcdnumber_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2642,12 +2655,16 @@ void q_lcdnumber_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, bool visible ```
 void q_lcdnumber_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2665,12 +2682,16 @@ QSize* q_lcdnumber_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self ```
 QSize* q_lcdnumber_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2688,12 +2709,16 @@ int32_t q_lcdnumber_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, int param1 ```
 int32_t q_lcdnumber_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2711,12 +2736,16 @@ bool q_lcdnumber_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self ```
 bool q_lcdnumber_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2734,12 +2763,16 @@ QPaintEngine* q_lcdnumber_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self ```
 QPaintEngine* q_lcdnumber_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2757,12 +2790,16 @@ void q_lcdnumber_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QMouseEvent* event ```
 void q_lcdnumber_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2780,12 +2817,16 @@ void q_lcdnumber_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QMouseEvent* event ```
 void q_lcdnumber_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2803,12 +2844,16 @@ void q_lcdnumber_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QMouseEvent* event ```
 void q_lcdnumber_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2826,12 +2871,16 @@ void q_lcdnumber_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QMouseEvent* event ```
 void q_lcdnumber_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2849,12 +2898,16 @@ void q_lcdnumber_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QWheelEvent* event ```
 void q_lcdnumber_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2872,12 +2925,16 @@ void q_lcdnumber_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QKeyEvent* event ```
 void q_lcdnumber_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2895,12 +2952,16 @@ void q_lcdnumber_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QKeyEvent* event ```
 void q_lcdnumber_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2918,12 +2979,16 @@ void q_lcdnumber_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QFocusEvent* event ```
 void q_lcdnumber_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2941,12 +3006,16 @@ void q_lcdnumber_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QFocusEvent* event ```
 void q_lcdnumber_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2964,12 +3033,16 @@ void q_lcdnumber_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QEnterEvent* event ```
 void q_lcdnumber_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2987,12 +3060,16 @@ void q_lcdnumber_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QEvent* event ```
 void q_lcdnumber_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3010,12 +3087,16 @@ void q_lcdnumber_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QMoveEvent* event ```
 void q_lcdnumber_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3033,12 +3114,16 @@ void q_lcdnumber_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QResizeEvent* event ```
 void q_lcdnumber_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3056,12 +3141,16 @@ void q_lcdnumber_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QCloseEvent* event ```
 void q_lcdnumber_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3079,12 +3168,16 @@ void q_lcdnumber_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QContextMenuEvent* event ```
 void q_lcdnumber_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3102,12 +3195,16 @@ void q_lcdnumber_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QTabletEvent* event ```
 void q_lcdnumber_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3125,12 +3222,16 @@ void q_lcdnumber_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QActionEvent* event ```
 void q_lcdnumber_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3148,12 +3249,16 @@ void q_lcdnumber_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QDragEnterEvent* event ```
 void q_lcdnumber_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3171,12 +3276,16 @@ void q_lcdnumber_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QDragMoveEvent* event ```
 void q_lcdnumber_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3194,12 +3303,16 @@ void q_lcdnumber_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QDragLeaveEvent* event ```
 void q_lcdnumber_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3217,12 +3330,16 @@ void q_lcdnumber_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QDropEvent* event ```
 void q_lcdnumber_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3240,12 +3357,16 @@ void q_lcdnumber_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QShowEvent* event ```
 void q_lcdnumber_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3263,12 +3384,16 @@ void q_lcdnumber_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QHideEvent* event ```
 void q_lcdnumber_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3286,12 +3411,16 @@ bool q_lcdnumber_native_event(void* self, const char* eventType, void* message, 
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, const char* eventType, void* message, intptr_t* result ```
 bool q_lcdnumber_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3309,12 +3438,16 @@ int32_t q_lcdnumber_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_lcdnumber_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3332,12 +3465,16 @@ void q_lcdnumber_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QPainter* painter ```
 void q_lcdnumber_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3355,12 +3492,16 @@ QPaintDevice* q_lcdnumber_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QPoint* offset ```
 QPaintDevice* q_lcdnumber_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3378,12 +3519,16 @@ QPainter* q_lcdnumber_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self ```
 QPainter* q_lcdnumber_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3401,12 +3546,16 @@ void q_lcdnumber_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QInputMethodEvent* param1 ```
 void q_lcdnumber_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3424,12 +3573,16 @@ QVariant* q_lcdnumber_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_lcdnumber_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3447,12 +3600,16 @@ bool q_lcdnumber_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, bool next ```
 bool q_lcdnumber_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3470,12 +3627,16 @@ bool q_lcdnumber_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QObject* watched, QEvent* event ```
 bool q_lcdnumber_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3493,12 +3654,16 @@ void q_lcdnumber_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QTimerEvent* event ```
 void q_lcdnumber_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3516,12 +3681,16 @@ void q_lcdnumber_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QChildEvent* event ```
 void q_lcdnumber_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3539,12 +3708,16 @@ void q_lcdnumber_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QEvent* event ```
 void q_lcdnumber_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3562,12 +3735,16 @@ void q_lcdnumber_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QMetaMethod* signal ```
 void q_lcdnumber_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3585,12 +3762,16 @@ void q_lcdnumber_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QMetaMethod* signal ```
 void q_lcdnumber_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3608,12 +3789,16 @@ void q_lcdnumber_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QPainter* param1 ```
 void q_lcdnumber_qbase_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3631,12 +3816,16 @@ void q_lcdnumber_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self ```
 void q_lcdnumber_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3654,12 +3843,16 @@ void q_lcdnumber_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self ```
 void q_lcdnumber_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3677,12 +3870,16 @@ void q_lcdnumber_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self ```
 void q_lcdnumber_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3700,12 +3897,16 @@ bool q_lcdnumber_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self ```
 bool q_lcdnumber_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3723,12 +3924,16 @@ bool q_lcdnumber_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self ```
 bool q_lcdnumber_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3746,12 +3951,16 @@ QObject* q_lcdnumber_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self ```
 QObject* q_lcdnumber_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3769,12 +3978,16 @@ int32_t q_lcdnumber_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self ```
 int32_t q_lcdnumber_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3792,12 +4005,16 @@ int32_t q_lcdnumber_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, const char* signal ```
 int32_t q_lcdnumber_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3815,6 +4032,8 @@ bool q_lcdnumber_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, QMetaMethod* signal ```
@@ -3822,11 +4041,24 @@ bool q_lcdnumber_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QLCDNumber* self, bool (*slot)(QLCDNumber*, QMetaMethod*) ```
 void q_lcdnumber_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QLCDNumber* self, void (*slot)(QObject*, const char*) ```
+void q_lcdnumber_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#dtor.QLCDNumber)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QLCDNumber* self ```

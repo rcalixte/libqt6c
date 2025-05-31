@@ -13,24 +13,19 @@
 #include "../qtlibc.h"
 
 #include "libqabstractseries.h"
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "../libqbrush.h"
-#include "../libqevent.h"
 #include "../libqfont.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include "../libqpen.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
-/// https://doc.qt.io/qt-6/qlegendmarker.html
+/// https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QLegendMarker* self ```
-QMetaObject* q_legendmarker_meta_object(void* self);
+const QMetaObject* q_legendmarker_meta_object(void* self);
 
 /// ``` QLegendMarker* self, const char* param1 ```
 void* q_legendmarker_metacast(void* self, const char* param1);
@@ -43,155 +38,173 @@ int32_t q_legendmarker_metacall(void* self, int64_t param1, int param2, void* pa
 /// ``` const char* s ```
 const char* q_legendmarker_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#type)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#type)
 ///
 /// ``` QLegendMarker* self ```
 int64_t q_legendmarker_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#label)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#label)
 ///
 /// ``` QLegendMarker* self ```
 const char* q_legendmarker_label(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#setLabel)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#setLabel)
 ///
 /// ``` QLegendMarker* self, const char* label ```
 void q_legendmarker_set_label(void* self, const char* label);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelBrush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#labelBrush)
 ///
 /// ``` QLegendMarker* self ```
 QBrush* q_legendmarker_label_brush(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#setLabelBrush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#setLabelBrush)
 ///
 /// ``` QLegendMarker* self, QBrush* brush ```
 void q_legendmarker_set_label_brush(void* self, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#font)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#font)
 ///
 /// ``` QLegendMarker* self ```
 QFont* q_legendmarker_font(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#setFont)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#setFont)
 ///
 /// ``` QLegendMarker* self, QFont* font ```
 void q_legendmarker_set_font(void* self, void* font);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#pen)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#pen)
 ///
 /// ``` QLegendMarker* self ```
 QPen* q_legendmarker_pen(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#setPen)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#setPen)
 ///
 /// ``` QLegendMarker* self, QPen* pen ```
 void q_legendmarker_set_pen(void* self, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#brush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#brush)
 ///
 /// ``` QLegendMarker* self ```
 QBrush* q_legendmarker_brush(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#setBrush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#setBrush)
 ///
 /// ``` QLegendMarker* self, QBrush* brush ```
 void q_legendmarker_set_brush(void* self, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#isVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#isVisible)
 ///
 /// ``` QLegendMarker* self ```
 bool q_legendmarker_is_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#setVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#setVisible)
 ///
 /// ``` QLegendMarker* self, bool visible ```
 void q_legendmarker_set_visible(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#shape)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#shape)
 ///
 /// ``` QLegendMarker* self ```
 int64_t q_legendmarker_shape(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#setShape)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#setShape)
 ///
 /// ``` QLegendMarker* self, enum QLegend__MarkerShape shape ```
 void q_legendmarker_set_shape(void* self, int64_t shape);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#series)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#series)
 ///
 /// ``` QLegendMarker* self ```
 QAbstractSeries* q_legendmarker_series(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#clicked)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#clicked)
 ///
 /// ``` QLegendMarker* self ```
 void q_legendmarker_clicked(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#clicked)
+///
 /// ``` QLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_legendmarker_on_clicked(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#hovered)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#hovered)
 ///
 /// ``` QLegendMarker* self, bool status ```
 void q_legendmarker_hovered(void* self, bool status);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#hovered)
+///
 /// ``` QLegendMarker* self, void (*slot)(QLegendMarker*, bool) ```
 void q_legendmarker_on_hovered(void* self, void (*slot)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#labelChanged)
 ///
 /// ``` QLegendMarker* self ```
 void q_legendmarker_label_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#labelChanged)
+///
 /// ``` QLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_legendmarker_on_label_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelBrushChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#labelBrushChanged)
 ///
 /// ``` QLegendMarker* self ```
 void q_legendmarker_label_brush_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#labelBrushChanged)
+///
 /// ``` QLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_legendmarker_on_label_brush_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#fontChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#fontChanged)
 ///
 /// ``` QLegendMarker* self ```
 void q_legendmarker_font_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#fontChanged)
+///
 /// ``` QLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_legendmarker_on_font_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#penChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#penChanged)
 ///
 /// ``` QLegendMarker* self ```
 void q_legendmarker_pen_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#penChanged)
+///
 /// ``` QLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_legendmarker_on_pen_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#brushChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#brushChanged)
 ///
 /// ``` QLegendMarker* self ```
 void q_legendmarker_brush_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#brushChanged)
+///
 /// ``` QLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_legendmarker_on_brush_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#visibleChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#visibleChanged)
 ///
 /// ``` QLegendMarker* self ```
 void q_legendmarker_visible_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#visibleChanged)
+///
 /// ``` QLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_legendmarker_on_visible_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#shapeChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#shapeChanged)
 ///
 /// ``` QLegendMarker* self ```
 void q_legendmarker_shape_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#shapeChanged)
+///
 /// ``` QLegendMarker* self, void (*slot)(QLegendMarker*) ```
 void q_legendmarker_on_shape_changed(void* self, void (*slot)(void*));
 
@@ -301,7 +314,7 @@ void q_legendmarker_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QLegendMarker* self ```
-libqt_list /* of QObject* */ q_legendmarker_children(void* self);
+const libqt_list /* of QObject* */ q_legendmarker_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -399,7 +412,7 @@ QBindingStorage* q_legendmarker_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QLegendMarker* self ```
-QBindingStorage* q_legendmarker_binding_storage2(void* self);
+const QBindingStorage* q_legendmarker_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -409,6 +422,8 @@ QBindingStorage* q_legendmarker_binding_storage2(void* self);
 void q_legendmarker_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QLegendMarker* self, void (*slot)(QObject*) ```
 void q_legendmarker_on_destroyed(void* self, void (*slot)(void*));
@@ -464,15 +479,28 @@ void q_legendmarker_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QLegendMarker* self, void (*slot)(QObject*, QObject*) ```
 void q_legendmarker_on_destroyed1(void* self, void (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QLegendMarker* self, void (*slot)(QObject*, const char*) ```
+void q_legendmarker_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#dtor.QLegendMarker)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QLegendMarker* self ```
 void q_legendmarker_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qlegendmarker.html#types
+/// https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#types
 
 typedef enum {
     QLEGENDMARKER_LEGENDMARKERTYPE_LEGENDMARKERTYPEAREA = 0,

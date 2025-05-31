@@ -18,12 +18,7 @@ extern "C" {
 #if defined(WORKAROUND_INNER_CLASS_DEFINITION_QDtlsClientVerifier__GeneratorParameters)
 typedef QDtlsClientVerifier::GeneratorParameters QDtlsClientVerifier__GeneratorParameters;
 #endif
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QDtls QDtls;
 typedef struct QDtlsClientVerifier QDtlsClientVerifier;
@@ -32,16 +27,13 @@ typedef struct QEvent QEvent;
 typedef struct QHostAddress QHostAddress;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QSslCipher QSslCipher;
 typedef struct QSslConfiguration QSslConfiguration;
 typedef struct QSslError QSslError;
 typedef struct QSslPreSharedKeyAuthenticator QSslPreSharedKeyAuthenticator;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
 typedef struct QUdpSocket QUdpSocket;
-typedef struct QVariant QVariant;
 #endif
 
 #ifdef __cplusplus

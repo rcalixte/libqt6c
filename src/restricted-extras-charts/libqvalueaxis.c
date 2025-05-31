@@ -1,16 +1,8 @@
 #include "libqabstractaxis.hpp"
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
-#include "../libqbrush.hpp"
 #include "../libqevent.hpp"
-#include "../libqcolor.hpp"
-#include "../libqfont.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
-#include "../libqpen.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqvalueaxis.hpp"
 #include "libqvalueaxis.h"
@@ -23,7 +15,7 @@ QValueAxis* q_valueaxis_new2(void* parent) {
     return QValueAxis_new2((QObject*)parent);
 }
 
-QMetaObject* q_valueaxis_meta_object(void* self) {
+const QMetaObject* q_valueaxis_meta_object(void* self) {
     return QValueAxis_MetaObject((QValueAxis*)self);
 }
 
@@ -734,8 +726,7 @@ const char* q_valueaxis_object_name(void* self) {
 }
 
 void q_valueaxis_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_valueaxis_is_widget_type(void* self) {
@@ -774,7 +765,7 @@ void q_valueaxis_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_valueaxis_children(void* self) {
+const libqt_list /* of QObject* */ q_valueaxis_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -841,7 +832,7 @@ QBindingStorage* q_valueaxis_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_valueaxis_binding_storage2(void* self) {
+const QBindingStorage* q_valueaxis_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1015,6 +1006,10 @@ bool q_valueaxis_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_valueaxis_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QValueAxis_OnIsSignalConnected((QValueAxis*)self, (intptr_t)slot);
+}
+
+void q_valueaxis_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_valueaxis_delete(void* self) {

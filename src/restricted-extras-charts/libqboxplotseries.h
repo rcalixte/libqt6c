@@ -12,22 +12,16 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractaxis.h"
 #include "libqabstractseries.h"
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "libqboxset.h"
 #include "../libqbrush.h"
-#include "libqchart.h"
 #include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include "../libqpen.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
-/// https://doc.qt.io/qt-6/qboxplotseries.html
+/// https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html
 
 /// q_boxplotseries_new constructs a new QBoxPlotSeries object.
 ///
@@ -42,7 +36,7 @@ QBoxPlotSeries* q_boxplotseries_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QBoxPlotSeries* self ```
-QMetaObject* q_boxplotseries_meta_object(void* self);
+const QMetaObject* q_boxplotseries_meta_object(void* self);
 
 /// ``` QBoxPlotSeries* self, const char* param1 ```
 void* q_boxplotseries_metacast(void* self, const char* param1);
@@ -65,196 +59,224 @@ int32_t q_boxplotseries_qbase_metacall(void* self, int64_t param1, int param2, v
 /// ``` const char* s ```
 const char* q_boxplotseries_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#append)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#append)
 ///
 /// ``` QBoxPlotSeries* self, QBoxSet* box ```
 bool q_boxplotseries_append(void* self, void* box);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#remove)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#remove)
 ///
 /// ``` QBoxPlotSeries* self, QBoxSet* box ```
 bool q_boxplotseries_remove(void* self, void* box);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#take)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#take)
 ///
 /// ``` QBoxPlotSeries* self, QBoxSet* box ```
 bool q_boxplotseries_take(void* self, void* box);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#append)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#append)
 ///
-/// ``` QBoxPlotSeries* self, QBoxSet* boxes[] ```
-bool q_boxplotseries_append_with_boxes(void* self, void* boxes[]);
+/// ``` QBoxPlotSeries* self, libqt_list /* of QBoxSet* */ boxes ```
+bool q_boxplotseries_append_with_boxes(void* self, libqt_list boxes);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#insert)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#insert)
 ///
 /// ``` QBoxPlotSeries* self, int index, QBoxSet* box ```
 bool q_boxplotseries_insert(void* self, int index, void* box);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#count)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#count)
 ///
 /// ``` QBoxPlotSeries* self ```
 int32_t q_boxplotseries_count(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#boxSets)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#boxSets)
 ///
 /// ``` QBoxPlotSeries* self ```
 libqt_list /* of QBoxSet* */ q_boxplotseries_box_sets(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#clear)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#clear)
 ///
 /// ``` QBoxPlotSeries* self ```
 void q_boxplotseries_clear(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#type)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#type)
 ///
 /// ``` QBoxPlotSeries* self ```
 int64_t q_boxplotseries_type(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#type)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QBoxPlotSeries* self, int64_t (*slot)() ```
 void q_boxplotseries_on_type(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#type)
+///
 /// Base class method implementation
 ///
 /// ``` QBoxPlotSeries* self ```
 int64_t q_boxplotseries_qbase_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#setBoxOutlineVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#setBoxOutlineVisible)
 ///
 /// ``` QBoxPlotSeries* self, bool visible ```
 void q_boxplotseries_set_box_outline_visible(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#boxOutlineVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#boxOutlineVisible)
 ///
 /// ``` QBoxPlotSeries* self ```
 bool q_boxplotseries_box_outline_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#setBoxWidth)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#setBoxWidth)
 ///
 /// ``` QBoxPlotSeries* self, double width ```
 void q_boxplotseries_set_box_width(void* self, double width);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#boxWidth)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#boxWidth)
 ///
 /// ``` QBoxPlotSeries* self ```
 double q_boxplotseries_box_width(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#setBrush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#setBrush)
 ///
 /// ``` QBoxPlotSeries* self, QBrush* brush ```
 void q_boxplotseries_set_brush(void* self, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#brush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#brush)
 ///
 /// ``` QBoxPlotSeries* self ```
 QBrush* q_boxplotseries_brush(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#setPen)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#setPen)
 ///
 /// ``` QBoxPlotSeries* self, QPen* pen ```
 void q_boxplotseries_set_pen(void* self, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#pen)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#pen)
 ///
 /// ``` QBoxPlotSeries* self ```
 QPen* q_boxplotseries_pen(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#clicked)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#clicked)
 ///
 /// ``` QBoxPlotSeries* self, QBoxSet* boxset ```
 void q_boxplotseries_clicked(void* self, void* boxset);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#clicked)
+///
 /// ``` QBoxPlotSeries* self, void (*slot)(QBoxPlotSeries*, QBoxSet*) ```
 void q_boxplotseries_on_clicked(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#hovered)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#hovered)
 ///
 /// ``` QBoxPlotSeries* self, bool status, QBoxSet* boxset ```
 void q_boxplotseries_hovered(void* self, bool status, void* boxset);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#hovered)
+///
 /// ``` QBoxPlotSeries* self, void (*slot)(QBoxPlotSeries*, bool, QBoxSet*) ```
 void q_boxplotseries_on_hovered(void* self, void (*slot)(void*, bool, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#pressed)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#pressed)
 ///
 /// ``` QBoxPlotSeries* self, QBoxSet* boxset ```
 void q_boxplotseries_pressed(void* self, void* boxset);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#pressed)
+///
 /// ``` QBoxPlotSeries* self, void (*slot)(QBoxPlotSeries*, QBoxSet*) ```
 void q_boxplotseries_on_pressed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#released)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#released)
 ///
 /// ``` QBoxPlotSeries* self, QBoxSet* boxset ```
 void q_boxplotseries_released(void* self, void* boxset);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#released)
+///
 /// ``` QBoxPlotSeries* self, void (*slot)(QBoxPlotSeries*, QBoxSet*) ```
 void q_boxplotseries_on_released(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#doubleClicked)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#doubleClicked)
 ///
 /// ``` QBoxPlotSeries* self, QBoxSet* boxset ```
 void q_boxplotseries_double_clicked(void* self, void* boxset);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#doubleClicked)
+///
 /// ``` QBoxPlotSeries* self, void (*slot)(QBoxPlotSeries*, QBoxSet*) ```
 void q_boxplotseries_on_double_clicked(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#countChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#countChanged)
 ///
 /// ``` QBoxPlotSeries* self ```
 void q_boxplotseries_count_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#countChanged)
+///
 /// ``` QBoxPlotSeries* self, void (*slot)(QBoxPlotSeries*) ```
 void q_boxplotseries_on_count_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#penChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#penChanged)
 ///
 /// ``` QBoxPlotSeries* self ```
 void q_boxplotseries_pen_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#penChanged)
+///
 /// ``` QBoxPlotSeries* self, void (*slot)(QBoxPlotSeries*) ```
 void q_boxplotseries_on_pen_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#brushChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#brushChanged)
 ///
 /// ``` QBoxPlotSeries* self ```
 void q_boxplotseries_brush_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#brushChanged)
+///
 /// ``` QBoxPlotSeries* self, void (*slot)(QBoxPlotSeries*) ```
 void q_boxplotseries_on_brush_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#boxOutlineVisibilityChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#boxOutlineVisibilityChanged)
 ///
 /// ``` QBoxPlotSeries* self ```
 void q_boxplotseries_box_outline_visibility_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#boxOutlineVisibilityChanged)
+///
 /// ``` QBoxPlotSeries* self, void (*slot)(QBoxPlotSeries*) ```
 void q_boxplotseries_on_box_outline_visibility_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#boxWidthChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#boxWidthChanged)
 ///
 /// ``` QBoxPlotSeries* self ```
 void q_boxplotseries_box_width_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#boxWidthChanged)
+///
 /// ``` QBoxPlotSeries* self, void (*slot)(QBoxPlotSeries*) ```
 void q_boxplotseries_on_box_width_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#boxsetsAdded)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#boxsetsAdded)
 ///
-/// ``` QBoxPlotSeries* self, QBoxSet* sets[] ```
-void q_boxplotseries_boxsets_added(void* self, void* sets[]);
+/// ``` QBoxPlotSeries* self, libqt_list /* of QBoxSet* */ sets ```
+void q_boxplotseries_boxsets_added(void* self, libqt_list sets);
 
-/// ``` QBoxPlotSeries* self, void (*slot)(QBoxPlotSeries*, QBoxSet*[]) ```
-void q_boxplotseries_on_boxsets_added(void* self, void (*slot)(void*, void*));
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries.html#boxsetsRemoved)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#boxsetsAdded)
 ///
-/// ``` QBoxPlotSeries* self, QBoxSet* sets[] ```
-void q_boxplotseries_boxsets_removed(void* self, void* sets[]);
+/// ``` QBoxPlotSeries* self, void (*slot)(QBoxPlotSeries*, libqt_list /* of QBoxSet* */ sets ) ```
+void q_boxplotseries_on_boxsets_added(void* self, void (*slot)(void*, libqt_list));
 
-/// ``` QBoxPlotSeries* self, void (*slot)(QBoxPlotSeries*, QBoxSet*[]) ```
-void q_boxplotseries_on_boxsets_removed(void* self, void (*slot)(void*, void*));
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#boxsetsRemoved)
+///
+/// ``` QBoxPlotSeries* self, libqt_list /* of QBoxSet* */ sets ```
+void q_boxplotseries_boxsets_removed(void* self, libqt_list sets);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#boxsetsRemoved)
+///
+/// ``` QBoxPlotSeries* self, void (*slot)(QBoxPlotSeries*, libqt_list /* of QBoxSet* */ sets ) ```
+void q_boxplotseries_on_boxsets_removed(void* self, void (*slot)(void*, libqt_list));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -373,6 +395,8 @@ void q_boxplotseries_name_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
+///
 /// ``` QBoxPlotSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_boxplotseries_on_name_changed(void* self, void (*slot)(void*));
 
@@ -384,6 +408,8 @@ void q_boxplotseries_on_name_changed(void* self, void (*slot)(void*));
 void q_boxplotseries_visible_changed(void* self);
 
 /// Inherited from QAbstractSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
 /// ``` QBoxPlotSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_boxplotseries_on_visible_changed(void* self, void (*slot)(void*));
@@ -397,6 +423,8 @@ void q_boxplotseries_opacity_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
+///
 /// ``` QBoxPlotSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_boxplotseries_on_opacity_changed(void* self, void (*slot)(void*));
 
@@ -408,6 +436,8 @@ void q_boxplotseries_on_opacity_changed(void* self, void (*slot)(void*));
 void q_boxplotseries_use_open_g_l_changed(void* self);
 
 /// Inherited from QAbstractSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
 /// ``` QBoxPlotSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_boxplotseries_on_use_open_g_l_changed(void* self, void (*slot)(void*));
@@ -508,7 +538,7 @@ void q_boxplotseries_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QBoxPlotSeries* self ```
-libqt_list /* of QObject* */ q_boxplotseries_children(void* self);
+const libqt_list /* of QObject* */ q_boxplotseries_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -606,7 +636,7 @@ QBindingStorage* q_boxplotseries_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QBoxPlotSeries* self ```
-QBindingStorage* q_boxplotseries_binding_storage2(void* self);
+const QBindingStorage* q_boxplotseries_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -616,6 +646,8 @@ QBindingStorage* q_boxplotseries_binding_storage2(void* self);
 void q_boxplotseries_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QBoxPlotSeries* self, void (*slot)(QObject*) ```
 void q_boxplotseries_on_destroyed(void* self, void (*slot)(void*));
@@ -671,6 +703,8 @@ void q_boxplotseries_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QBoxPlotSeries* self, void (*slot)(QObject*, QObject*) ```
 void q_boxplotseries_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -685,12 +719,16 @@ bool q_boxplotseries_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBoxPlotSeries* self, QEvent* event ```
 bool q_boxplotseries_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -708,12 +746,16 @@ bool q_boxplotseries_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBoxPlotSeries* self, QObject* watched, QEvent* event ```
 bool q_boxplotseries_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -731,12 +773,16 @@ void q_boxplotseries_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBoxPlotSeries* self, QTimerEvent* event ```
 void q_boxplotseries_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -754,12 +800,16 @@ void q_boxplotseries_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBoxPlotSeries* self, QChildEvent* event ```
 void q_boxplotseries_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -777,12 +827,16 @@ void q_boxplotseries_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBoxPlotSeries* self, QEvent* event ```
 void q_boxplotseries_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -800,12 +854,16 @@ void q_boxplotseries_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBoxPlotSeries* self, QMetaMethod* signal ```
 void q_boxplotseries_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -823,12 +881,16 @@ void q_boxplotseries_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBoxPlotSeries* self, QMetaMethod* signal ```
 void q_boxplotseries_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -846,12 +908,16 @@ QObject* q_boxplotseries_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBoxPlotSeries* self ```
 QObject* q_boxplotseries_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -869,12 +935,16 @@ int32_t q_boxplotseries_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBoxPlotSeries* self ```
 int32_t q_boxplotseries_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -892,12 +962,16 @@ int32_t q_boxplotseries_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBoxPlotSeries* self, const char* signal ```
 int32_t q_boxplotseries_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -915,6 +989,8 @@ bool q_boxplotseries_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QBoxPlotSeries* self, QMetaMethod* signal ```
@@ -922,11 +998,24 @@ bool q_boxplotseries_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QBoxPlotSeries* self, bool (*slot)(QBoxPlotSeries*, QMetaMethod*) ```
 void q_boxplotseries_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QBoxPlotSeries* self, void (*slot)(QObject*, const char*) ```
+void q_boxplotseries_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#dtor.QBoxPlotSeries)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QBoxPlotSeries* self ```

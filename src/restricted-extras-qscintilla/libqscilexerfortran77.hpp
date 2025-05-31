@@ -15,25 +15,16 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QColor QColor;
 typedef struct QEvent QEvent;
 typedef struct QFont QFont;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QSettings QSettings;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
-typedef struct QsciAbstractAPIs QsciAbstractAPIs;
 typedef struct QsciLexer QsciLexer;
 typedef struct QsciLexerFortran77 QsciLexerFortran77;
 typedef struct QsciScintilla QsciScintilla;
@@ -141,6 +132,9 @@ void QsciLexerFortran77_QBaseSetPaper(QsciLexerFortran77* self, QColor* c, int s
 bool QsciLexerFortran77_ReadProperties(QsciLexerFortran77* self, QSettings* qs, libqt_string prefix);
 void QsciLexerFortran77_OnReadProperties(QsciLexerFortran77* self, intptr_t slot);
 bool QsciLexerFortran77_QBaseReadProperties(QsciLexerFortran77* self, QSettings* qs, libqt_string prefix);
+bool QsciLexerFortran77_WriteProperties(const QsciLexerFortran77* self, QSettings* qs, libqt_string prefix);
+void QsciLexerFortran77_OnWriteProperties(const QsciLexerFortran77* self, intptr_t slot);
+bool QsciLexerFortran77_QBaseWriteProperties(const QsciLexerFortran77* self, QSettings* qs, libqt_string prefix);
 bool QsciLexerFortran77_Event(QsciLexerFortran77* self, QEvent* event);
 void QsciLexerFortran77_OnEvent(QsciLexerFortran77* self, intptr_t slot);
 bool QsciLexerFortran77_QBaseEvent(QsciLexerFortran77* self, QEvent* event);
@@ -162,9 +156,6 @@ void QsciLexerFortran77_QBaseConnectNotify(QsciLexerFortran77* self, QMetaMethod
 void QsciLexerFortran77_DisconnectNotify(QsciLexerFortran77* self, QMetaMethod* signal);
 void QsciLexerFortran77_OnDisconnectNotify(QsciLexerFortran77* self, intptr_t slot);
 void QsciLexerFortran77_QBaseDisconnectNotify(QsciLexerFortran77* self, QMetaMethod* signal);
-bool QsciLexerFortran77_WriteProperties(const QsciLexerFortran77* self, QSettings* qs, libqt_string prefix);
-void QsciLexerFortran77_OnWriteProperties(const QsciLexerFortran77* self, intptr_t slot);
-bool QsciLexerFortran77_QBaseWriteProperties(const QsciLexerFortran77* self, QSettings* qs, libqt_string prefix);
 QObject* QsciLexerFortran77_Sender(const QsciLexerFortran77* self);
 void QsciLexerFortran77_OnSender(const QsciLexerFortran77* self, intptr_t slot);
 QObject* QsciLexerFortran77_QBaseSender(const QsciLexerFortran77* self);

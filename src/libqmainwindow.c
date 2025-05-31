@@ -1,21 +1,5 @@
-#include "libqaction.hpp"
 #include "libqevent.hpp"
-#include "libqanystringview.hpp"
-#include "libqbackingstore.hpp"
-#include "libqbindingstorage.hpp"
-#include "libqbitmap.hpp"
-#include "libqcursor.hpp"
 #include "libqdockwidget.hpp"
-#include "libqfont.hpp"
-#include "libqfontinfo.hpp"
-#include "libqfontmetrics.hpp"
-#include "libqgraphicseffect.hpp"
-#include "libqgraphicsproxywidget.hpp"
-#include "libqicon.hpp"
-#include "libqkeysequence.hpp"
-#include "libqlayout.hpp"
-#include "libqlocale.hpp"
-#include "libqmargins.hpp"
 #include "libqmenu.hpp"
 #include "libqmenubar.hpp"
 #include "libqmetaobject.hpp"
@@ -23,22 +7,13 @@
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
 #include "libqpainter.hpp"
-#include "libqpalette.hpp"
-#include "libqpixmap.hpp"
 #include "libqpoint.hpp"
-#include "libqrect.hpp"
-#include "libqregion.hpp"
-#include "libqscreen.hpp"
 #include "libqsize.hpp"
-#include "libqsizepolicy.hpp"
 #include "libqstatusbar.hpp"
 #include <string.h>
-#include "libqstyle.hpp"
-#include "libqthread.hpp"
 #include "libqtoolbar.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqwindow.hpp"
 #include "libqcoreevent.hpp"
 #include "libqmainwindow.hpp"
 #include "libqmainwindow.h"
@@ -55,7 +30,7 @@ QMainWindow* q_mainwindow_new3(void* parent, int64_t flags) {
     return QMainWindow_new3((QWidget*)parent, flags);
 }
 
-QMetaObject* q_mainwindow_meta_object(void* self) {
+const QMetaObject* q_mainwindow_meta_object(void* self) {
     return QMainWindow_MetaObject((QMainWindow*)self);
 }
 
@@ -263,25 +238,8 @@ int64_t q_mainwindow_dock_widget_area(void* self, void* dockwidget) {
     return QMainWindow_DockWidgetArea((QMainWindow*)self, (QDockWidget*)dockwidget);
 }
 
-void q_mainwindow_resize_docks(void* self, void* docks[], int* sizes[], int64_t orientation) {
-    QDockWidget** docks_arr = (QDockWidget**)docks;
-    size_t docks_len = 0;
-    while (docks_arr[docks_len] != NULL) {
-        docks_len++;
-    }
-    libqt_list docks_list = {
-        .len = docks_len,
-        .data = {(QDockWidget*)docks},
-    };
-    size_t sizes_len = 0;
-    while (sizes[sizes_len] != NULL) {
-        sizes_len++;
-    }
-    libqt_list sizes_list = {
-        .len = sizes_len,
-        .data = {(int*)sizes},
-    };
-    QMainWindow_ResizeDocks((QMainWindow*)self, docks_list, sizes_list, orientation);
+void q_mainwindow_resize_docks(void* self, libqt_list docks, libqt_list sizes, int64_t orientation) {
+    QMainWindow_ResizeDocks((QMainWindow*)self, docks, sizes, orientation);
 }
 
 char* q_mainwindow_save_state(void* self) {
@@ -464,7 +422,7 @@ QRect* q_mainwindow_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_mainwindow_geometry(void* self) {
+const QRect* q_mainwindow_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -668,7 +626,7 @@ QWidget* q_mainwindow_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_mainwindow_palette(void* self) {
+const QPalette* q_mainwindow_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -692,7 +650,7 @@ int64_t q_mainwindow_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_mainwindow_font(void* self) {
+const QFont* q_mainwindow_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -1297,30 +1255,12 @@ void q_mainwindow_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_mainwindow_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_mainwindow_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_mainwindow_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_mainwindow_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_mainwindow_insert_action(void* self, void* before, void* action) {
@@ -1540,8 +1480,7 @@ const char* q_mainwindow_object_name(void* self) {
 }
 
 void q_mainwindow_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_mainwindow_is_widget_type(void* self) {
@@ -1580,7 +1519,7 @@ void q_mainwindow_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_mainwindow_children(void* self) {
+const libqt_list /* of QObject* */ q_mainwindow_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1643,7 +1582,7 @@ QBindingStorage* q_mainwindow_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_mainwindow_binding_storage2(void* self) {
+const QBindingStorage* q_mainwindow_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2381,6 +2320,10 @@ bool q_mainwindow_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_mainwindow_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QMainWindow_OnIsSignalConnected((QMainWindow*)self, (intptr_t)slot);
+}
+
+void q_mainwindow_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_mainwindow_delete(void* self) {

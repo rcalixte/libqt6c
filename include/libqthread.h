@@ -13,14 +13,11 @@
 #include "qtlibc.h"
 
 #include "libqabstracteventdispatcher.h"
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqdeadlinetimer.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qthread.html
 
@@ -37,7 +34,7 @@ QThread* q_thread_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QThread* self ```
-QMetaObject* q_thread_meta_object(void* self);
+const QMetaObject* q_thread_meta_object(void* self);
 
 /// ``` QThread* self, const char* param1 ```
 void* q_thread_metacast(void* self, const char* param1);
@@ -135,11 +132,15 @@ void q_thread_set_event_dispatcher(void* self, void* eventDispatcher);
 /// ``` QThread* self, QEvent* event ```
 bool q_thread_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QThread* self, bool (*slot)(QThread*, QEvent*) ```
 void q_thread_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QThread* self, QEvent* event ```
@@ -200,11 +201,15 @@ void q_thread_usleep(uint64_t param1);
 /// ``` QThread* self ```
 void q_thread_run(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#run)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QThread* self, void (*slot)() ```
 void q_thread_on_run(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#run)
+///
 /// Base class method implementation
 ///
 /// ``` QThread* self ```
@@ -215,11 +220,15 @@ void q_thread_qbase_run(void* self);
 /// ``` QThread* self ```
 int32_t q_thread_exec(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#exec)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QThread* self, int32_t (*slot)() ```
 void q_thread_on_exec(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#exec)
+///
 /// Base class method implementation
 ///
 /// ``` QThread* self ```
@@ -332,7 +341,7 @@ void q_thread_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QThread* self ```
-libqt_list /* of QObject* */ q_thread_children(void* self);
+const libqt_list /* of QObject* */ q_thread_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -430,7 +439,7 @@ QBindingStorage* q_thread_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QThread* self ```
-QBindingStorage* q_thread_binding_storage2(void* self);
+const QBindingStorage* q_thread_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -440,6 +449,8 @@ QBindingStorage* q_thread_binding_storage2(void* self);
 void q_thread_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QThread* self, void (*slot)(QObject*) ```
 void q_thread_on_destroyed(void* self, void (*slot)(void*));
@@ -495,6 +506,8 @@ void q_thread_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QThread* self, void (*slot)(QObject*, QObject*) ```
 void q_thread_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -509,12 +522,16 @@ bool q_thread_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QThread* self, QObject* watched, QEvent* event ```
 bool q_thread_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -532,12 +549,16 @@ void q_thread_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QThread* self, QTimerEvent* event ```
 void q_thread_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -555,12 +576,16 @@ void q_thread_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QThread* self, QChildEvent* event ```
 void q_thread_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -578,12 +603,16 @@ void q_thread_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QThread* self, QEvent* event ```
 void q_thread_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -601,12 +630,16 @@ void q_thread_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QThread* self, QMetaMethod* signal ```
 void q_thread_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -624,12 +657,16 @@ void q_thread_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QThread* self, QMetaMethod* signal ```
 void q_thread_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -647,12 +684,16 @@ QObject* q_thread_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QThread* self ```
 QObject* q_thread_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -670,12 +711,16 @@ int32_t q_thread_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QThread* self ```
 int32_t q_thread_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -693,12 +738,16 @@ int32_t q_thread_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QThread* self, const char* signal ```
 int32_t q_thread_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -716,6 +765,8 @@ bool q_thread_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QThread* self, QMetaMethod* signal ```
@@ -723,11 +774,38 @@ bool q_thread_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QThread* self, bool (*slot)(QThread*, QMetaMethod*) ```
 void q_thread_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#started)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QThread* self, void (*slot)(QThread*) ```
+void q_thread_on_started(void* self, void (*slot)(void*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#finished)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QThread* self, void (*slot)(QThread*) ```
+void q_thread_on_finished(void* self, void (*slot)(void*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QThread* self, void (*slot)(QObject*, const char*) ```
+void q_thread_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#dtor.QThread)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QThread* self ```

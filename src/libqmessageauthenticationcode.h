@@ -61,6 +61,8 @@ char* q_messageauthenticationcode_result(void* self);
 /// ``` const char* message, const char* key, enum QCryptographicHash__Algorithm method ```
 char* q_messageauthenticationcode_hash(const char* message, const char* key, int64_t method);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#dtor.QMessageAuthenticationCode)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMessageAuthenticationCode* self ```

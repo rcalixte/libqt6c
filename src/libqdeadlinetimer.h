@@ -194,6 +194,8 @@ void q_deadlinetimer_set_precise_deadline3(void* self, long long secs, long long
 /// ``` enum Qt__TimerType timerType ```
 QDeadlineTimer* q_deadlinetimer_current1(int64_t timerType);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdeadlinetimer.html#dtor.QDeadlineTimer)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QDeadlineTimer* self ```

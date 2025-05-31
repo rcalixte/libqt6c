@@ -166,6 +166,8 @@ QRegularExpressionMatchIterator* q_regularexpression_global_match4(void* self, c
 /// ``` const char* str, int options ```
 const char* q_regularexpression_wildcard_to_regular_expression2(const char* str, int64_t options);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#dtor.QRegularExpression)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QRegularExpression* self ```
@@ -303,6 +305,8 @@ int64_t q_regularexpressionmatch_captured_length1(void* self, int nth);
 /// ``` QRegularExpressionMatch* self, int nth ```
 int64_t q_regularexpressionmatch_captured_end1(void* self, int nth);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#dtor.QRegularExpressionMatch)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QRegularExpressionMatch* self ```
@@ -365,6 +369,8 @@ int64_t q_regularexpressionmatchiterator_match_type(void* self);
 /// ``` QRegularExpressionMatchIterator* self ```
 int64_t q_regularexpressionmatchiterator_match_options(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#dtor.QRegularExpressionMatchIterator)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QRegularExpressionMatchIterator* self ```

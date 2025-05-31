@@ -101,6 +101,8 @@ const char* q_sslcipher_protocol_string(void* self);
 /// ``` QSslCipher* self ```
 int64_t q_sslcipher_protocol(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslcipher.html#dtor.QSslCipher)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSslCipher* self ```

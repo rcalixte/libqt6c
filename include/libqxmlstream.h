@@ -57,6 +57,8 @@ bool q_xmlstreamattribute_operator_not_equal(void* self, void* other);
 /// ``` QXmlStreamAttribute* self, QXmlStreamAttribute* param1 ```
 void q_xmlstreamattribute_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamattribute.html#dtor.QXmlStreamAttribute)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QXmlStreamAttribute* self ```
@@ -84,6 +86,8 @@ bool q_xmlstreamnamespacedeclaration_operator_equal(void* self, void* other);
 /// ``` QXmlStreamNamespaceDeclaration* self, QXmlStreamNamespaceDeclaration* other ```
 bool q_xmlstreamnamespacedeclaration_operator_not_equal(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamnamespacedeclaration.html#dtor.QXmlStreamNamespaceDeclaration)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QXmlStreamNamespaceDeclaration* self ```
@@ -106,6 +110,8 @@ bool q_xmlstreamnotationdeclaration_operator_equal(void* self, void* other);
 /// ``` QXmlStreamNotationDeclaration* self, QXmlStreamNotationDeclaration* other ```
 bool q_xmlstreamnotationdeclaration_operator_not_equal(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamnotationdeclaration.html#dtor.QXmlStreamNotationDeclaration)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QXmlStreamNotationDeclaration* self ```
@@ -128,6 +134,8 @@ bool q_xmlstreamentitydeclaration_operator_equal(void* self, void* other);
 /// ``` QXmlStreamEntityDeclaration* self, QXmlStreamEntityDeclaration* other ```
 bool q_xmlstreamentitydeclaration_operator_not_equal(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamentitydeclaration.html#dtor.QXmlStreamEntityDeclaration)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QXmlStreamEntityDeclaration* self ```
@@ -145,6 +153,8 @@ const char* q_xmlstreamentityresolver_resolve_entity(void* self, const char* pub
 /// ``` QXmlStreamEntityResolver* self, const char* name ```
 const char* q_xmlstreamentityresolver_resolve_undeclared_entity(void* self, const char* name);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamentityresolver.html#dtor.QXmlStreamEntityResolver)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QXmlStreamEntityResolver* self ```
@@ -339,8 +349,8 @@ void q_xmlstreamreader_add_extra_namespace_declaration(void* self, void* extraNa
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamreader.html#addExtraNamespaceDeclarations)
 ///
-/// ``` QXmlStreamReader* self, QXmlStreamNamespaceDeclaration* extraNamespaceDeclaractions[] ```
-void q_xmlstreamreader_add_extra_namespace_declarations(void* self, void* extraNamespaceDeclaractions[]);
+/// ``` QXmlStreamReader* self, libqt_list /* of QXmlStreamNamespaceDeclaration* */ extraNamespaceDeclaractions ```
+void q_xmlstreamreader_add_extra_namespace_declarations(void* self, libqt_list extraNamespaceDeclaractions);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamreader.html#notationDeclarations)
 ///
@@ -402,6 +412,8 @@ const char* q_xmlstreamreader_read_element_text1(void* self, int64_t behaviour);
 /// ``` QXmlStreamReader* self, const char* message ```
 void q_xmlstreamreader_raise_error1(void* self, const char* message);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamreader.html#dtor.QXmlStreamReader)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QXmlStreamReader* self ```
@@ -579,6 +591,8 @@ void q_xmlstreamwriter_write_namespace2(void* self, const char* namespaceUri, co
 /// ``` QXmlStreamWriter* self, const char* target, const char* data ```
 void q_xmlstreamwriter_write_processing_instruction2(void* self, const char* target, const char* data);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#dtor.QXmlStreamWriter)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QXmlStreamWriter* self ```

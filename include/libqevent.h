@@ -48,11 +48,15 @@ QInputEvent* q_inputevent_new2(int64_t typeVal, void* m_dev, int64_t modifiers);
 /// ``` QInputEvent* self ```
 QInputEvent* q_inputevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QInputEvent* self, QInputEvent* (*slot)() ```
 void q_inputevent_on_clone(void* self, QInputEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QInputEvent* self ```
@@ -61,7 +65,7 @@ QInputEvent* q_inputevent_qbase_clone(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
 /// ``` QInputEvent* self ```
-QInputDevice* q_inputevent_device(void* self);
+const QInputDevice* q_inputevent_device(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#deviceType)
 ///
@@ -88,11 +92,15 @@ uint64_t q_inputevent_timestamp(void* self);
 /// ``` QInputEvent* self, uint64_t timestamp ```
 void q_inputevent_set_timestamp(void* self, uint64_t timestamp);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#setTimestamp)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QInputEvent* self, void (*slot)(QInputEvent*, uint64_t) ```
 void q_inputevent_on_set_timestamp(void* self, void (*slot)(void*, uint64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#setTimestamp)
+///
 /// Base class method implementation
 ///
 /// ``` QInputEvent* self, uint64_t timestamp ```
@@ -179,6 +187,8 @@ void q_inputevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QInputEvent* self, bool accepted ```
@@ -186,11 +196,15 @@ void q_inputevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QInputEvent* self, void (*slot)(QInputEvent*, bool) ```
 void q_inputevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#dtor.QInputEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QInputEvent* self ```
@@ -210,19 +224,23 @@ QPointerEvent* q_pointerevent_new2(int64_t typeVal, void* dev, int64_t modifiers
 
 /// q_pointerevent_new3 constructs a new QPointerEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QPointingDevice* dev, int modifiers, QEventPoint* points[] ```
-QPointerEvent* q_pointerevent_new3(int64_t typeVal, void* dev, int64_t modifiers, void* points[]);
+/// ``` enum QEvent__Type typeVal, QPointingDevice* dev, int modifiers, libqt_list /* of QEventPoint* */ points ```
+QPointerEvent* q_pointerevent_new3(int64_t typeVal, void* dev, int64_t modifiers, libqt_list points);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#clone)
 ///
 /// ``` QPointerEvent* self ```
 QPointerEvent* q_pointerevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPointerEvent* self, QPointerEvent* (*slot)() ```
 void q_pointerevent_on_clone(void* self, QPointerEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QPointerEvent* self ```
@@ -231,7 +249,7 @@ QPointerEvent* q_pointerevent_qbase_clone(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointingDevice)
 ///
 /// ``` QPointerEvent* self ```
-QPointingDevice* q_pointerevent_pointing_device(void* self);
+const QPointingDevice* q_pointerevent_pointing_device(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointerType)
 ///
@@ -243,11 +261,15 @@ int64_t q_pointerevent_pointer_type(void* self);
 /// ``` QPointerEvent* self, uint64_t timestamp ```
 void q_pointerevent_set_timestamp(void* self, uint64_t timestamp);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPointerEvent* self, void (*slot)(QPointerEvent*, uint64_t) ```
 void q_pointerevent_on_set_timestamp(void* self, void (*slot)(void*, uint64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
+///
 /// Base class method implementation
 ///
 /// ``` QPointerEvent* self, uint64_t timestamp ```
@@ -266,7 +288,7 @@ QEventPoint* q_pointerevent_point(void* self, int64_t i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
 /// ``` QPointerEvent* self ```
-libqt_list /* of QEventPoint* */ q_pointerevent_points(void* self);
+const libqt_list /* of QEventPoint* */ q_pointerevent_points(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointById)
 ///
@@ -283,11 +305,15 @@ bool q_pointerevent_all_points_grabbed(void* self);
 /// ``` QPointerEvent* self ```
 bool q_pointerevent_is_begin_event(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#isBeginEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPointerEvent* self, bool (*slot)() ```
 void q_pointerevent_on_is_begin_event(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#isBeginEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPointerEvent* self ```
@@ -298,11 +324,15 @@ bool q_pointerevent_qbase_is_begin_event(void* self);
 /// ``` QPointerEvent* self ```
 bool q_pointerevent_is_update_event(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#isUpdateEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPointerEvent* self, bool (*slot)() ```
 void q_pointerevent_on_is_update_event(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#isUpdateEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPointerEvent* self ```
@@ -313,11 +343,15 @@ bool q_pointerevent_qbase_is_update_event(void* self);
 /// ``` QPointerEvent* self ```
 bool q_pointerevent_is_end_event(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#isEndEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPointerEvent* self, bool (*slot)() ```
 void q_pointerevent_on_is_end_event(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#isEndEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QPointerEvent* self ```
@@ -333,11 +367,15 @@ bool q_pointerevent_all_points_accepted(void* self);
 /// ``` QPointerEvent* self, bool accepted ```
 void q_pointerevent_set_accepted(void* self, bool accepted);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setAccepted)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPointerEvent* self, void (*slot)(QPointerEvent*, bool) ```
 void q_pointerevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setAccepted)
+///
 /// Base class method implementation
 ///
 /// ``` QPointerEvent* self, bool accepted ```
@@ -373,7 +411,7 @@ bool q_pointerevent_remove_passive_grabber(void* self, void* point, void* grabbe
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
 /// ``` QPointerEvent* self ```
-QInputDevice* q_pointerevent_device(void* self);
+const QInputDevice* q_pointerevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -473,12 +511,19 @@ int32_t q_pointerevent_register_event_type();
 /// ``` int hint ```
 int32_t q_pointerevent_register_event_type1(int hint);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#dtor.QPointerEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPointerEvent* self ```
 void q_pointerevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qsinglepointevent.html
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#clone)
+///
+/// ``` QSinglePointEvent* self ```
+QSinglePointEvent* q_singlepointevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#button)
 ///
@@ -535,7 +580,7 @@ void q_singlepointevent_set_exclusive_point_grabber(void* self, void* exclusiveG
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointingDevice)
 ///
 /// ``` QSinglePointEvent* self ```
-QPointingDevice* q_singlepointevent_pointing_device(void* self);
+const QPointingDevice* q_singlepointevent_pointing_device(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -570,7 +615,7 @@ QEventPoint* q_singlepointevent_point(void* self, int64_t i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
 /// ``` QSinglePointEvent* self ```
-libqt_list /* of QEventPoint* */ q_singlepointevent_points(void* self);
+const libqt_list /* of QEventPoint* */ q_singlepointevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -640,7 +685,7 @@ bool q_singlepointevent_remove_passive_grabber(void* self, void* point, void* gr
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
 /// ``` QSinglePointEvent* self ```
-QInputDevice* q_singlepointevent_device(void* self);
+const QInputDevice* q_singlepointevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -740,6 +785,8 @@ int32_t q_singlepointevent_register_event_type();
 /// ``` int hint ```
 int32_t q_singlepointevent_register_event_type1(int hint);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#dtor.QSinglePointEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSinglePointEvent* self ```
@@ -762,11 +809,15 @@ QEnterEvent* q_enterevent_new2(void* localPos, void* scenePos, void* globalPos, 
 /// ``` QEnterEvent* self ```
 QEnterEvent* q_enterevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qenterevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QEnterEvent* self, QEnterEvent* (*slot)() ```
 void q_enterevent_on_clone(void* self, QEnterEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qenterevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QEnterEvent* self ```
@@ -871,7 +922,7 @@ void q_enterevent_set_exclusive_point_grabber(void* self, void* exclusiveGrabber
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointingDevice)
 ///
 /// ``` QEnterEvent* self ```
-QPointingDevice* q_enterevent_pointing_device(void* self);
+const QPointingDevice* q_enterevent_pointing_device(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -899,7 +950,7 @@ QEventPoint* q_enterevent_point(void* self, int64_t i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
 /// ``` QEnterEvent* self ```
-libqt_list /* of QEventPoint* */ q_enterevent_points(void* self);
+const libqt_list /* of QEventPoint* */ q_enterevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -962,7 +1013,7 @@ bool q_enterevent_remove_passive_grabber(void* self, void* point, void* grabber)
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
 /// ``` QEnterEvent* self ```
-QInputDevice* q_enterevent_device(void* self);
+const QInputDevice* q_enterevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -1073,12 +1124,16 @@ bool q_enterevent_is_begin_event(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isBeginEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QEnterEvent* self ```
 bool q_enterevent_qbase_is_begin_event(void* self);
 
 /// Inherited from QSinglePointEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isBeginEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1096,12 +1151,16 @@ bool q_enterevent_is_update_event(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isUpdateEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QEnterEvent* self ```
 bool q_enterevent_qbase_is_update_event(void* self);
 
 /// Inherited from QSinglePointEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isUpdateEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1119,12 +1178,16 @@ bool q_enterevent_is_end_event(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isEndEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QEnterEvent* self ```
 bool q_enterevent_qbase_is_end_event(void* self);
 
 /// Inherited from QSinglePointEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isEndEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1142,12 +1205,16 @@ void q_enterevent_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QEnterEvent* self, uint64_t timestamp ```
 void q_enterevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1165,6 +1232,8 @@ void q_enterevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QEnterEvent* self, bool accepted ```
@@ -1172,11 +1241,15 @@ void q_enterevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QEnterEvent* self, void (*slot)(QEnterEvent*, bool) ```
 void q_enterevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qenterevent.html#dtor.QEnterEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QEnterEvent* self ```
@@ -1229,11 +1302,15 @@ QMouseEvent* q_mouseevent_new8(int64_t typeVal, void* localPos, void* scenePos, 
 /// ``` QMouseEvent* self ```
 QMouseEvent* q_mouseevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmouseevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMouseEvent* self, QMouseEvent* (*slot)() ```
 void q_mouseevent_on_clone(void* self, QMouseEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmouseevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QMouseEvent* self ```
@@ -1348,7 +1425,7 @@ void q_mouseevent_set_exclusive_point_grabber(void* self, void* exclusiveGrabber
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointingDevice)
 ///
 /// ``` QMouseEvent* self ```
-QPointingDevice* q_mouseevent_pointing_device(void* self);
+const QPointingDevice* q_mouseevent_pointing_device(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -1376,7 +1453,7 @@ QEventPoint* q_mouseevent_point(void* self, int64_t i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
 /// ``` QMouseEvent* self ```
-libqt_list /* of QEventPoint* */ q_mouseevent_points(void* self);
+const libqt_list /* of QEventPoint* */ q_mouseevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -1439,7 +1516,7 @@ bool q_mouseevent_remove_passive_grabber(void* self, void* point, void* grabber)
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
 /// ``` QMouseEvent* self ```
-QInputDevice* q_mouseevent_device(void* self);
+const QInputDevice* q_mouseevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -1550,12 +1627,16 @@ bool q_mouseevent_is_begin_event(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isBeginEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMouseEvent* self ```
 bool q_mouseevent_qbase_is_begin_event(void* self);
 
 /// Inherited from QSinglePointEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isBeginEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1573,12 +1654,16 @@ bool q_mouseevent_is_update_event(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isUpdateEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMouseEvent* self ```
 bool q_mouseevent_qbase_is_update_event(void* self);
 
 /// Inherited from QSinglePointEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isUpdateEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1596,12 +1681,16 @@ bool q_mouseevent_is_end_event(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isEndEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMouseEvent* self ```
 bool q_mouseevent_qbase_is_end_event(void* self);
 
 /// Inherited from QSinglePointEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isEndEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1619,12 +1708,16 @@ void q_mouseevent_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMouseEvent* self, uint64_t timestamp ```
 void q_mouseevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1642,6 +1735,8 @@ void q_mouseevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMouseEvent* self, bool accepted ```
@@ -1649,11 +1744,15 @@ void q_mouseevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QMouseEvent* self, void (*slot)(QMouseEvent*, bool) ```
 void q_mouseevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmouseevent.html#dtor.QMouseEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMouseEvent* self ```
@@ -1696,11 +1795,15 @@ QHoverEvent* q_hoverevent_new6(int64_t typeVal, void* pos, void* oldPos, int64_t
 /// ``` QHoverEvent* self ```
 QHoverEvent* q_hoverevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhoverevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHoverEvent* self, QHoverEvent* (*slot)() ```
 void q_hoverevent_on_clone(void* self, QHoverEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhoverevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QHoverEvent* self ```
@@ -1721,11 +1824,15 @@ QPointF* q_hoverevent_pos_f(void* self);
 /// ``` QHoverEvent* self ```
 bool q_hoverevent_is_update_event(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhoverevent.html#isUpdateEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHoverEvent* self, bool (*slot)() ```
 void q_hoverevent_on_is_update_event(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhoverevent.html#isUpdateEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QHoverEvent* self ```
@@ -1795,7 +1902,7 @@ void q_hoverevent_set_exclusive_point_grabber(void* self, void* exclusiveGrabber
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointingDevice)
 ///
 /// ``` QHoverEvent* self ```
-QPointingDevice* q_hoverevent_pointing_device(void* self);
+const QPointingDevice* q_hoverevent_pointing_device(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -1823,7 +1930,7 @@ QEventPoint* q_hoverevent_point(void* self, int64_t i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
 /// ``` QHoverEvent* self ```
-libqt_list /* of QEventPoint* */ q_hoverevent_points(void* self);
+const libqt_list /* of QEventPoint* */ q_hoverevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -1886,7 +1993,7 @@ bool q_hoverevent_remove_passive_grabber(void* self, void* point, void* grabber)
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
 /// ``` QHoverEvent* self ```
-QInputDevice* q_hoverevent_device(void* self);
+const QInputDevice* q_hoverevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -1997,12 +2104,16 @@ bool q_hoverevent_is_begin_event(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isBeginEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHoverEvent* self ```
 bool q_hoverevent_qbase_is_begin_event(void* self);
 
 /// Inherited from QSinglePointEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isBeginEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2020,12 +2131,16 @@ bool q_hoverevent_is_end_event(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isEndEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHoverEvent* self ```
 bool q_hoverevent_qbase_is_end_event(void* self);
 
 /// Inherited from QSinglePointEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isEndEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2043,12 +2158,16 @@ void q_hoverevent_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHoverEvent* self, uint64_t timestamp ```
 void q_hoverevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2066,6 +2185,8 @@ void q_hoverevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHoverEvent* self, bool accepted ```
@@ -2073,11 +2194,15 @@ void q_hoverevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QHoverEvent* self, void (*slot)(QHoverEvent*, bool) ```
 void q_hoverevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhoverevent.html#dtor.QHoverEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QHoverEvent* self ```
@@ -2105,11 +2230,15 @@ QWheelEvent* q_wheelevent_new3(void* pos, void* globalPos, void* pixelDelta, voi
 /// ``` QWheelEvent* self ```
 QWheelEvent* q_wheelevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWheelEvent* self, QWheelEvent* (*slot)() ```
 void q_wheelevent_on_clone(void* self, QWheelEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QWheelEvent* self ```
@@ -2150,11 +2279,15 @@ bool q_wheelevent_has_pixel_delta(void* self);
 /// ``` QWheelEvent* self ```
 bool q_wheelevent_is_begin_event(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#isBeginEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWheelEvent* self, bool (*slot)() ```
 void q_wheelevent_on_is_begin_event(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#isBeginEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWheelEvent* self ```
@@ -2165,11 +2298,15 @@ bool q_wheelevent_qbase_is_begin_event(void* self);
 /// ``` QWheelEvent* self ```
 bool q_wheelevent_is_update_event(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#isUpdateEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWheelEvent* self, bool (*slot)() ```
 void q_wheelevent_on_is_update_event(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#isUpdateEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWheelEvent* self ```
@@ -2180,11 +2317,15 @@ bool q_wheelevent_qbase_is_update_event(void* self);
 /// ``` QWheelEvent* self ```
 bool q_wheelevent_is_end_event(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#isEndEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWheelEvent* self, bool (*slot)() ```
 void q_wheelevent_on_is_end_event(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#isEndEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QWheelEvent* self ```
@@ -2249,7 +2390,7 @@ void q_wheelevent_set_exclusive_point_grabber(void* self, void* exclusiveGrabber
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointingDevice)
 ///
 /// ``` QWheelEvent* self ```
-QPointingDevice* q_wheelevent_pointing_device(void* self);
+const QPointingDevice* q_wheelevent_pointing_device(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -2277,7 +2418,7 @@ QEventPoint* q_wheelevent_point(void* self, int64_t i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
 /// ``` QWheelEvent* self ```
-libqt_list /* of QEventPoint* */ q_wheelevent_points(void* self);
+const libqt_list /* of QEventPoint* */ q_wheelevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -2340,7 +2481,7 @@ bool q_wheelevent_remove_passive_grabber(void* self, void* point, void* grabber)
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
 /// ``` QWheelEvent* self ```
-QInputDevice* q_wheelevent_device(void* self);
+const QInputDevice* q_wheelevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -2451,12 +2592,16 @@ void q_wheelevent_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWheelEvent* self, uint64_t timestamp ```
 void q_wheelevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2474,6 +2619,8 @@ void q_wheelevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWheelEvent* self, bool accepted ```
@@ -2481,11 +2628,15 @@ void q_wheelevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QWheelEvent* self, void (*slot)(QWheelEvent*, bool) ```
 void q_wheelevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#dtor.QWheelEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWheelEvent* self ```
@@ -2503,11 +2654,15 @@ QTabletEvent* q_tabletevent_new(int64_t t, void* device, void* pos, void* global
 /// ``` QTabletEvent* self ```
 QTabletEvent* q_tabletevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTabletEvent* self, QTabletEvent* (*slot)() ```
 void q_tabletevent_on_clone(void* self, QTabletEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QTabletEvent* self ```
@@ -2526,12 +2681,12 @@ QPoint* q_tabletevent_global_pos(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#posF)
 ///
 /// ``` QTabletEvent* self ```
-QPointF* q_tabletevent_pos_f(void* self);
+const QPointF* q_tabletevent_pos_f(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#globalPosF)
 ///
 /// ``` QTabletEvent* self ```
-QPointF* q_tabletevent_global_pos_f(void* self);
+const QPointF* q_tabletevent_global_pos_f(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#x)
 ///
@@ -2652,7 +2807,7 @@ void q_tabletevent_set_exclusive_point_grabber(void* self, void* exclusiveGrabbe
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointingDevice)
 ///
 /// ``` QTabletEvent* self ```
-QPointingDevice* q_tabletevent_pointing_device(void* self);
+const QPointingDevice* q_tabletevent_pointing_device(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -2680,7 +2835,7 @@ QEventPoint* q_tabletevent_point(void* self, int64_t i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
 /// ``` QTabletEvent* self ```
-libqt_list /* of QEventPoint* */ q_tabletevent_points(void* self);
+const libqt_list /* of QEventPoint* */ q_tabletevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -2743,7 +2898,7 @@ bool q_tabletevent_remove_passive_grabber(void* self, void* point, void* grabber
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
 /// ``` QTabletEvent* self ```
-QInputDevice* q_tabletevent_device(void* self);
+const QInputDevice* q_tabletevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -2854,12 +3009,16 @@ bool q_tabletevent_is_begin_event(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isBeginEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTabletEvent* self ```
 bool q_tabletevent_qbase_is_begin_event(void* self);
 
 /// Inherited from QSinglePointEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isBeginEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2877,12 +3036,16 @@ bool q_tabletevent_is_update_event(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isUpdateEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTabletEvent* self ```
 bool q_tabletevent_qbase_is_update_event(void* self);
 
 /// Inherited from QSinglePointEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isUpdateEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2900,12 +3063,16 @@ bool q_tabletevent_is_end_event(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isEndEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTabletEvent* self ```
 bool q_tabletevent_qbase_is_end_event(void* self);
 
 /// Inherited from QSinglePointEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isEndEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2923,12 +3090,16 @@ void q_tabletevent_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTabletEvent* self, uint64_t timestamp ```
 void q_tabletevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2946,6 +3117,8 @@ void q_tabletevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTabletEvent* self, bool accepted ```
@@ -2953,11 +3126,15 @@ void q_tabletevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QTabletEvent* self, void (*slot)(QTabletEvent*, bool) ```
 void q_tabletevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#dtor.QTabletEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTabletEvent* self ```
@@ -2985,11 +3162,15 @@ QNativeGestureEvent* q_nativegestureevent_new3(int64_t typeVal, void* dev, int f
 /// ``` QNativeGestureEvent* self ```
 QNativeGestureEvent* q_nativegestureevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnativegestureevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QNativeGestureEvent* self, QNativeGestureEvent* (*slot)() ```
 void q_nativegestureevent_on_clone(void* self, QNativeGestureEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnativegestureevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QNativeGestureEvent* self ```
@@ -3018,12 +3199,12 @@ QPointF* q_nativegestureevent_delta(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qnativegestureevent.html#pos)
 ///
 /// ``` QNativeGestureEvent* self ```
-QPoint* q_nativegestureevent_pos(void* self);
+const QPoint* q_nativegestureevent_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnativegestureevent.html#globalPos)
 ///
 /// ``` QNativeGestureEvent* self ```
-QPoint* q_nativegestureevent_global_pos(void* self);
+const QPoint* q_nativegestureevent_global_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnativegestureevent.html#localPos)
 ///
@@ -3094,7 +3275,7 @@ void q_nativegestureevent_set_exclusive_point_grabber(void* self, void* exclusiv
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointingDevice)
 ///
 /// ``` QNativeGestureEvent* self ```
-QPointingDevice* q_nativegestureevent_pointing_device(void* self);
+const QPointingDevice* q_nativegestureevent_pointing_device(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -3122,7 +3303,7 @@ QEventPoint* q_nativegestureevent_point(void* self, int64_t i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
 /// ``` QNativeGestureEvent* self ```
-libqt_list /* of QEventPoint* */ q_nativegestureevent_points(void* self);
+const libqt_list /* of QEventPoint* */ q_nativegestureevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -3185,7 +3366,7 @@ bool q_nativegestureevent_remove_passive_grabber(void* self, void* point, void* 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
 /// ``` QNativeGestureEvent* self ```
-QInputDevice* q_nativegestureevent_device(void* self);
+const QInputDevice* q_nativegestureevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -3296,12 +3477,16 @@ bool q_nativegestureevent_is_begin_event(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isBeginEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QNativeGestureEvent* self ```
 bool q_nativegestureevent_qbase_is_begin_event(void* self);
 
 /// Inherited from QSinglePointEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isBeginEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3319,12 +3504,16 @@ bool q_nativegestureevent_is_update_event(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isUpdateEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QNativeGestureEvent* self ```
 bool q_nativegestureevent_qbase_is_update_event(void* self);
 
 /// Inherited from QSinglePointEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isUpdateEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3342,12 +3531,16 @@ bool q_nativegestureevent_is_end_event(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isEndEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QNativeGestureEvent* self ```
 bool q_nativegestureevent_qbase_is_end_event(void* self);
 
 /// Inherited from QSinglePointEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isEndEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3365,12 +3558,16 @@ void q_nativegestureevent_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QNativeGestureEvent* self, uint64_t timestamp ```
 void q_nativegestureevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3388,6 +3585,8 @@ void q_nativegestureevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QNativeGestureEvent* self, bool accepted ```
@@ -3395,11 +3594,15 @@ void q_nativegestureevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QNativeGestureEvent* self, void (*slot)(QNativeGestureEvent*, bool) ```
 void q_nativegestureevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnativegestureevent.html#dtor.QNativeGestureEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QNativeGestureEvent* self ```
@@ -3457,11 +3660,15 @@ QKeyEvent* q_keyevent_new9(int64_t typeVal, int key, int64_t modifiers, uint32_t
 /// ``` QKeyEvent* self ```
 QKeyEvent* q_keyevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeyevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QKeyEvent* self, QKeyEvent* (*slot)() ```
 void q_keyevent_on_clone(void* self, QKeyEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeyevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QKeyEvent* self ```
@@ -3522,7 +3729,7 @@ uint32_t q_keyevent_native_modifiers(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
 /// ``` QKeyEvent* self ```
-QInputDevice* q_keyevent_device(void* self);
+const QInputDevice* q_keyevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -3626,12 +3833,16 @@ void q_keyevent_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QInputEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#setTimestamp)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QKeyEvent* self, uint64_t timestamp ```
 void q_keyevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QInputEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#setTimestamp)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3649,6 +3860,8 @@ void q_keyevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QKeyEvent* self, bool accepted ```
@@ -3656,11 +3869,15 @@ void q_keyevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QKeyEvent* self, void (*slot)(QKeyEvent*, bool) ```
 void q_keyevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeyevent.html#dtor.QKeyEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QKeyEvent* self ```
@@ -3683,11 +3900,15 @@ QFocusEvent* q_focusevent_new2(int64_t typeVal, int64_t reason);
 /// ``` QFocusEvent* self ```
 QFocusEvent* q_focusevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfocusevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFocusEvent* self, QFocusEvent* (*slot)() ```
 void q_focusevent_on_clone(void* self, QFocusEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfocusevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QFocusEvent* self ```
@@ -3789,6 +4010,8 @@ void q_focusevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFocusEvent* self, bool accepted ```
@@ -3796,11 +4019,15 @@ void q_focusevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QFocusEvent* self, void (*slot)(QFocusEvent*, bool) ```
 void q_focusevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfocusevent.html#dtor.QFocusEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QFocusEvent* self ```
@@ -3823,11 +4050,15 @@ QPaintEvent* q_paintevent_new2(void* paintRect);
 /// ``` QPaintEvent* self ```
 QPaintEvent* q_paintevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPaintEvent* self, QPaintEvent* (*slot)() ```
 void q_paintevent_on_clone(void* self, QPaintEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QPaintEvent* self ```
@@ -3836,12 +4067,12 @@ QPaintEvent* q_paintevent_qbase_clone(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintevent.html#rect)
 ///
 /// ``` QPaintEvent* self ```
-QRect* q_paintevent_rect(void* self);
+const QRect* q_paintevent_rect(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintevent.html#region)
 ///
 /// ``` QPaintEvent* self ```
-QRegion* q_paintevent_region(void* self);
+const QRegion* q_paintevent_region(void* self);
 
 /// Inherited from QEvent
 ///
@@ -3924,6 +4155,8 @@ void q_paintevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPaintEvent* self, bool accepted ```
@@ -3931,11 +4164,15 @@ void q_paintevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QPaintEvent* self, void (*slot)(QPaintEvent*, bool) ```
 void q_paintevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintevent.html#dtor.QPaintEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPaintEvent* self ```
@@ -3953,11 +4190,15 @@ QMoveEvent* q_moveevent_new(void* pos, void* oldPos);
 /// ``` QMoveEvent* self ```
 QMoveEvent* q_moveevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmoveevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QMoveEvent* self, QMoveEvent* (*slot)() ```
 void q_moveevent_on_clone(void* self, QMoveEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmoveevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QMoveEvent* self ```
@@ -3966,12 +4207,12 @@ QMoveEvent* q_moveevent_qbase_clone(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmoveevent.html#pos)
 ///
 /// ``` QMoveEvent* self ```
-QPoint* q_moveevent_pos(void* self);
+const QPoint* q_moveevent_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmoveevent.html#oldPos)
 ///
 /// ``` QMoveEvent* self ```
-QPoint* q_moveevent_old_pos(void* self);
+const QPoint* q_moveevent_old_pos(void* self);
 
 /// Inherited from QEvent
 ///
@@ -4054,6 +4295,8 @@ void q_moveevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QMoveEvent* self, bool accepted ```
@@ -4061,11 +4304,15 @@ void q_moveevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QMoveEvent* self, void (*slot)(QMoveEvent*, bool) ```
 void q_moveevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmoveevent.html#dtor.QMoveEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMoveEvent* self ```
@@ -4083,11 +4330,15 @@ QExposeEvent* q_exposeevent_new(void* m_region);
 /// ``` QExposeEvent* self ```
 QExposeEvent* q_exposeevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qexposeevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QExposeEvent* self, QExposeEvent* (*slot)() ```
 void q_exposeevent_on_clone(void* self, QExposeEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qexposeevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QExposeEvent* self ```
@@ -4096,7 +4347,7 @@ QExposeEvent* q_exposeevent_qbase_clone(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qexposeevent.html#region)
 ///
 /// ``` QExposeEvent* self ```
-QRegion* q_exposeevent_region(void* self);
+const QRegion* q_exposeevent_region(void* self);
 
 /// Inherited from QEvent
 ///
@@ -4179,6 +4430,8 @@ void q_exposeevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QExposeEvent* self, bool accepted ```
@@ -4186,11 +4439,15 @@ void q_exposeevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QExposeEvent* self, void (*slot)(QExposeEvent*, bool) ```
 void q_exposeevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qexposeevent.html#dtor.QExposeEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QExposeEvent* self ```
@@ -4208,11 +4465,15 @@ QPlatformSurfaceEvent* q_platformsurfaceevent_new(int64_t surfaceEventType);
 /// ``` QPlatformSurfaceEvent* self ```
 QPlatformSurfaceEvent* q_platformsurfaceevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplatformsurfaceevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPlatformSurfaceEvent* self, QPlatformSurfaceEvent* (*slot)() ```
 void q_platformsurfaceevent_on_clone(void* self, QPlatformSurfaceEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplatformsurfaceevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QPlatformSurfaceEvent* self ```
@@ -4304,6 +4565,8 @@ void q_platformsurfaceevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPlatformSurfaceEvent* self, bool accepted ```
@@ -4311,11 +4574,15 @@ void q_platformsurfaceevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QPlatformSurfaceEvent* self, void (*slot)(QPlatformSurfaceEvent*, bool) ```
 void q_platformsurfaceevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qplatformsurfaceevent.html#dtor.QPlatformSurfaceEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPlatformSurfaceEvent* self ```
@@ -4333,11 +4600,15 @@ QResizeEvent* q_resizeevent_new(void* size, void* oldSize);
 /// ``` QResizeEvent* self ```
 QResizeEvent* q_resizeevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qresizeevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QResizeEvent* self, QResizeEvent* (*slot)() ```
 void q_resizeevent_on_clone(void* self, QResizeEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qresizeevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QResizeEvent* self ```
@@ -4346,12 +4617,12 @@ QResizeEvent* q_resizeevent_qbase_clone(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qresizeevent.html#size)
 ///
 /// ``` QResizeEvent* self ```
-QSize* q_resizeevent_size(void* self);
+const QSize* q_resizeevent_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qresizeevent.html#oldSize)
 ///
 /// ``` QResizeEvent* self ```
-QSize* q_resizeevent_old_size(void* self);
+const QSize* q_resizeevent_old_size(void* self);
 
 /// Inherited from QEvent
 ///
@@ -4434,6 +4705,8 @@ void q_resizeevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QResizeEvent* self, bool accepted ```
@@ -4441,11 +4714,15 @@ void q_resizeevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QResizeEvent* self, void (*slot)(QResizeEvent*, bool) ```
 void q_resizeevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qresizeevent.html#dtor.QResizeEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QResizeEvent* self ```
@@ -4463,11 +4740,15 @@ QCloseEvent* q_closeevent_new();
 /// ``` QCloseEvent* self ```
 QCloseEvent* q_closeevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcloseevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QCloseEvent* self, QCloseEvent* (*slot)() ```
 void q_closeevent_on_clone(void* self, QCloseEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcloseevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QCloseEvent* self ```
@@ -4554,6 +4835,8 @@ void q_closeevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCloseEvent* self, bool accepted ```
@@ -4561,11 +4844,15 @@ void q_closeevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QCloseEvent* self, void (*slot)(QCloseEvent*, bool) ```
 void q_closeevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcloseevent.html#dtor.QCloseEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCloseEvent* self ```
@@ -4583,11 +4870,15 @@ QIconDragEvent* q_icondragevent_new();
 /// ``` QIconDragEvent* self ```
 QIconDragEvent* q_icondragevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qicondragevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QIconDragEvent* self, QIconDragEvent* (*slot)() ```
 void q_icondragevent_on_clone(void* self, QIconDragEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qicondragevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QIconDragEvent* self ```
@@ -4674,6 +4965,8 @@ void q_icondragevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QIconDragEvent* self, bool accepted ```
@@ -4681,11 +4974,15 @@ void q_icondragevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QIconDragEvent* self, void (*slot)(QIconDragEvent*, bool) ```
 void q_icondragevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qicondragevent.html#dtor.QIconDragEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QIconDragEvent* self ```
@@ -4703,11 +5000,15 @@ QShowEvent* q_showevent_new();
 /// ``` QShowEvent* self ```
 QShowEvent* q_showevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qshowevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QShowEvent* self, QShowEvent* (*slot)() ```
 void q_showevent_on_clone(void* self, QShowEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qshowevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QShowEvent* self ```
@@ -4794,6 +5095,8 @@ void q_showevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QShowEvent* self, bool accepted ```
@@ -4801,11 +5104,15 @@ void q_showevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QShowEvent* self, void (*slot)(QShowEvent*, bool) ```
 void q_showevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qshowevent.html#dtor.QShowEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QShowEvent* self ```
@@ -4823,11 +5130,15 @@ QHideEvent* q_hideevent_new();
 /// ``` QHideEvent* self ```
 QHideEvent* q_hideevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhideevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHideEvent* self, QHideEvent* (*slot)() ```
 void q_hideevent_on_clone(void* self, QHideEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhideevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QHideEvent* self ```
@@ -4914,6 +5225,8 @@ void q_hideevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHideEvent* self, bool accepted ```
@@ -4921,11 +5234,15 @@ void q_hideevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QHideEvent* self, void (*slot)(QHideEvent*, bool) ```
 void q_hideevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhideevent.html#dtor.QHideEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QHideEvent* self ```
@@ -4953,11 +5270,15 @@ QContextMenuEvent* q_contextmenuevent_new3(int64_t reason, void* pos, void* glob
 /// ``` QContextMenuEvent* self ```
 QContextMenuEvent* q_contextmenuevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcontextmenuevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QContextMenuEvent* self, QContextMenuEvent* (*slot)() ```
 void q_contextmenuevent_on_clone(void* self, QContextMenuEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcontextmenuevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QContextMenuEvent* self ```
@@ -4986,12 +5307,12 @@ int32_t q_contextmenuevent_global_y(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontextmenuevent.html#pos)
 ///
 /// ``` QContextMenuEvent* self ```
-QPoint* q_contextmenuevent_pos(void* self);
+const QPoint* q_contextmenuevent_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontextmenuevent.html#globalPos)
 ///
 /// ``` QContextMenuEvent* self ```
-QPoint* q_contextmenuevent_global_pos(void* self);
+const QPoint* q_contextmenuevent_global_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontextmenuevent.html#reason)
 ///
@@ -5003,7 +5324,7 @@ int64_t q_contextmenuevent_reason(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
 /// ``` QContextMenuEvent* self ```
-QInputDevice* q_contextmenuevent_device(void* self);
+const QInputDevice* q_contextmenuevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -5114,12 +5435,16 @@ void q_contextmenuevent_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QInputEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#setTimestamp)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QContextMenuEvent* self, uint64_t timestamp ```
 void q_contextmenuevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QInputEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#setTimestamp)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5137,6 +5462,8 @@ void q_contextmenuevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QContextMenuEvent* self, bool accepted ```
@@ -5144,11 +5471,15 @@ void q_contextmenuevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QContextMenuEvent* self, void (*slot)(QContextMenuEvent*, bool) ```
 void q_contextmenuevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcontextmenuevent.html#dtor.QContextMenuEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QContextMenuEvent* self ```
@@ -5163,19 +5494,23 @@ QInputMethodEvent* q_inputmethodevent_new();
 
 /// q_inputmethodevent_new2 constructs a new QInputMethodEvent object.
 ///
-/// ``` const char* preeditText, QInputMethodEvent__Attribute* attributes[] ```
-QInputMethodEvent* q_inputmethodevent_new2(const char* preeditText, void* attributes[]);
+/// ``` const char* preeditText, libqt_list /* of QInputMethodEvent__Attribute* */ attributes ```
+QInputMethodEvent* q_inputmethodevent_new2(const char* preeditText, libqt_list attributes);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent.html#clone)
 ///
 /// ``` QInputMethodEvent* self ```
 QInputMethodEvent* q_inputmethodevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QInputMethodEvent* self, QInputMethodEvent* (*slot)() ```
 void q_inputmethodevent_on_clone(void* self, QInputMethodEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QInputMethodEvent* self ```
@@ -5189,7 +5524,7 @@ void q_inputmethodevent_set_commit_string(void* self, const char* commitString);
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent.html#attributes)
 ///
 /// ``` QInputMethodEvent* self ```
-libqt_list /* of QInputMethodEvent__Attribute* */ q_inputmethodevent_attributes(void* self);
+const libqt_list /* of QInputMethodEvent__Attribute* */ q_inputmethodevent_attributes(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent.html#preeditString)
 ///
@@ -5302,6 +5637,8 @@ void q_inputmethodevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QInputMethodEvent* self, bool accepted ```
@@ -5309,11 +5646,15 @@ void q_inputmethodevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QInputMethodEvent* self, void (*slot)(QInputMethodEvent*, bool) ```
 void q_inputmethodevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent.html#dtor.QInputMethodEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QInputMethodEvent* self ```
@@ -5331,11 +5672,15 @@ QInputMethodQueryEvent* q_inputmethodqueryevent_new(int64_t queries);
 /// ``` QInputMethodQueryEvent* self ```
 QInputMethodQueryEvent* q_inputmethodqueryevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodqueryevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QInputMethodQueryEvent* self, QInputMethodQueryEvent* (*slot)() ```
 void q_inputmethodqueryevent_on_clone(void* self, QInputMethodQueryEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodqueryevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QInputMethodQueryEvent* self ```
@@ -5437,6 +5782,8 @@ void q_inputmethodqueryevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QInputMethodQueryEvent* self, bool accepted ```
@@ -5444,11 +5791,15 @@ void q_inputmethodqueryevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QInputMethodQueryEvent* self, void (*slot)(QInputMethodQueryEvent*, bool) ```
 void q_inputmethodqueryevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodqueryevent.html#dtor.QInputMethodQueryEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QInputMethodQueryEvent* self ```
@@ -5471,11 +5822,15 @@ QDropEvent* q_dropevent_new2(void* pos, int64_t actions, void* data, int64_t but
 /// ``` QDropEvent* self ```
 QDropEvent* q_dropevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDropEvent* self, QDropEvent* (*slot)() ```
 void q_dropevent_on_clone(void* self, QDropEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QDropEvent* self ```
@@ -5549,7 +5904,7 @@ QObject* q_dropevent_source(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#mimeData)
 ///
 /// ``` QDropEvent* self ```
-QMimeData* q_dropevent_mime_data(void* self);
+const QMimeData* q_dropevent_mime_data(void* self);
 
 /// Inherited from QEvent
 ///
@@ -5632,6 +5987,8 @@ void q_dropevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDropEvent* self, bool accepted ```
@@ -5639,11 +5996,15 @@ void q_dropevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QDropEvent* self, void (*slot)(QDropEvent*, bool) ```
 void q_dropevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#dtor.QDropEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QDropEvent* self ```
@@ -5666,11 +6027,15 @@ QDragMoveEvent* q_dragmoveevent_new2(void* pos, int64_t actions, void* data, int
 /// ``` QDragMoveEvent* self ```
 QDragMoveEvent* q_dragmoveevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDragMoveEvent* self, QDragMoveEvent* (*slot)() ```
 void q_dragmoveevent_on_clone(void* self, QDragMoveEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QDragMoveEvent* self ```
@@ -5797,7 +6162,7 @@ QObject* q_dragmoveevent_source(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#mimeData)
 ///
 /// ``` QDragMoveEvent* self ```
-QMimeData* q_dragmoveevent_mime_data(void* self);
+const QMimeData* q_dragmoveevent_mime_data(void* self);
 
 /// Inherited from QEvent
 ///
@@ -5866,6 +6231,8 @@ void q_dragmoveevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDragMoveEvent* self, bool accepted ```
@@ -5873,11 +6240,15 @@ void q_dragmoveevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QDragMoveEvent* self, void (*slot)(QDragMoveEvent*, bool) ```
 void q_dragmoveevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#dtor.QDragMoveEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QDragMoveEvent* self ```
@@ -5895,11 +6266,15 @@ QDragEnterEvent* q_dragenterevent_new(void* pos, int64_t actions, void* data, in
 /// ``` QDragEnterEvent* self ```
 QDragEnterEvent* q_dragenterevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdragenterevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDragEnterEvent* self, QDragEnterEvent* (*slot)() ```
 void q_dragenterevent_on_clone(void* self, QDragEnterEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdragenterevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QDragEnterEvent* self ```
@@ -6036,7 +6411,7 @@ QObject* q_dragenterevent_source(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#mimeData)
 ///
 /// ``` QDragEnterEvent* self ```
-QMimeData* q_dragenterevent_mime_data(void* self);
+const QMimeData* q_dragenterevent_mime_data(void* self);
 
 /// Inherited from QEvent
 ///
@@ -6105,6 +6480,8 @@ void q_dragenterevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDragEnterEvent* self, bool accepted ```
@@ -6112,11 +6489,15 @@ void q_dragenterevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QDragEnterEvent* self, void (*slot)(QDragEnterEvent*, bool) ```
 void q_dragenterevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdragenterevent.html#dtor.QDragEnterEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QDragEnterEvent* self ```
@@ -6134,11 +6515,15 @@ QDragLeaveEvent* q_dragleaveevent_new();
 /// ``` QDragLeaveEvent* self ```
 QDragLeaveEvent* q_dragleaveevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdragleaveevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDragLeaveEvent* self, QDragLeaveEvent* (*slot)() ```
 void q_dragleaveevent_on_clone(void* self, QDragLeaveEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdragleaveevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QDragLeaveEvent* self ```
@@ -6225,6 +6610,8 @@ void q_dragleaveevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDragLeaveEvent* self, bool accepted ```
@@ -6232,11 +6619,15 @@ void q_dragleaveevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QDragLeaveEvent* self, void (*slot)(QDragLeaveEvent*, bool) ```
 void q_dragleaveevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdragleaveevent.html#dtor.QDragLeaveEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QDragLeaveEvent* self ```
@@ -6254,11 +6645,15 @@ QHelpEvent* q_helpevent_new(int64_t typeVal, void* pos, void* globalPos);
 /// ``` QHelpEvent* self ```
 QHelpEvent* q_helpevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhelpevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QHelpEvent* self, QHelpEvent* (*slot)() ```
 void q_helpevent_on_clone(void* self, QHelpEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhelpevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QHelpEvent* self ```
@@ -6287,12 +6682,12 @@ int32_t q_helpevent_global_y(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qhelpevent.html#pos)
 ///
 /// ``` QHelpEvent* self ```
-QPoint* q_helpevent_pos(void* self);
+const QPoint* q_helpevent_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhelpevent.html#globalPos)
 ///
 /// ``` QHelpEvent* self ```
-QPoint* q_helpevent_global_pos(void* self);
+const QPoint* q_helpevent_global_pos(void* self);
 
 /// Inherited from QEvent
 ///
@@ -6375,6 +6770,8 @@ void q_helpevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QHelpEvent* self, bool accepted ```
@@ -6382,11 +6779,15 @@ void q_helpevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QHelpEvent* self, void (*slot)(QHelpEvent*, bool) ```
 void q_helpevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhelpevent.html#dtor.QHelpEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QHelpEvent* self ```
@@ -6404,11 +6805,15 @@ QStatusTipEvent* q_statustipevent_new(const char* tip);
 /// ``` QStatusTipEvent* self ```
 QStatusTipEvent* q_statustipevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatustipevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QStatusTipEvent* self, QStatusTipEvent* (*slot)() ```
 void q_statustipevent_on_clone(void* self, QStatusTipEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatustipevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QStatusTipEvent* self ```
@@ -6500,6 +6905,8 @@ void q_statustipevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QStatusTipEvent* self, bool accepted ```
@@ -6507,11 +6914,15 @@ void q_statustipevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QStatusTipEvent* self, void (*slot)(QStatusTipEvent*, bool) ```
 void q_statustipevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatustipevent.html#dtor.QStatusTipEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStatusTipEvent* self ```
@@ -6529,11 +6940,15 @@ QWhatsThisClickedEvent* q_whatsthisclickedevent_new(const char* href);
 /// ``` QWhatsThisClickedEvent* self ```
 QWhatsThisClickedEvent* q_whatsthisclickedevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwhatsthisclickedevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWhatsThisClickedEvent* self, QWhatsThisClickedEvent* (*slot)() ```
 void q_whatsthisclickedevent_on_clone(void* self, QWhatsThisClickedEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwhatsthisclickedevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QWhatsThisClickedEvent* self ```
@@ -6625,6 +7040,8 @@ void q_whatsthisclickedevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWhatsThisClickedEvent* self, bool accepted ```
@@ -6632,11 +7049,15 @@ void q_whatsthisclickedevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QWhatsThisClickedEvent* self, void (*slot)(QWhatsThisClickedEvent*, bool) ```
 void q_whatsthisclickedevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwhatsthisclickedevent.html#dtor.QWhatsThisClickedEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWhatsThisClickedEvent* self ```
@@ -6659,11 +7080,15 @@ QActionEvent* q_actionevent_new2(int typeVal, void* action, void* before);
 /// ``` QActionEvent* self ```
 QActionEvent* q_actionevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qactionevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QActionEvent* self, QActionEvent* (*slot)() ```
 void q_actionevent_on_clone(void* self, QActionEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qactionevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QActionEvent* self ```
@@ -6760,6 +7185,8 @@ void q_actionevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QActionEvent* self, bool accepted ```
@@ -6767,11 +7194,15 @@ void q_actionevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QActionEvent* self, void (*slot)(QActionEvent*, bool) ```
 void q_actionevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qactionevent.html#dtor.QActionEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QActionEvent* self ```
@@ -6794,11 +7225,15 @@ QFileOpenEvent* q_fileopenevent_new2(void* url);
 /// ``` QFileOpenEvent* self ```
 QFileOpenEvent* q_fileopenevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfileopenevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileOpenEvent* self, QFileOpenEvent* (*slot)() ```
 void q_fileopenevent_on_clone(void* self, QFileOpenEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfileopenevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QFileOpenEvent* self ```
@@ -6900,6 +7335,8 @@ void q_fileopenevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileOpenEvent* self, bool accepted ```
@@ -6907,11 +7344,15 @@ void q_fileopenevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QFileOpenEvent* self, void (*slot)(QFileOpenEvent*, bool) ```
 void q_fileopenevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfileopenevent.html#dtor.QFileOpenEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QFileOpenEvent* self ```
@@ -6929,11 +7370,15 @@ QToolBarChangeEvent* q_toolbarchangeevent_new(bool t);
 /// ``` QToolBarChangeEvent* self ```
 QToolBarChangeEvent* q_toolbarchangeevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbarchangeevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QToolBarChangeEvent* self, QToolBarChangeEvent* (*slot)() ```
 void q_toolbarchangeevent_on_clone(void* self, QToolBarChangeEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbarchangeevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QToolBarChangeEvent* self ```
@@ -7025,6 +7470,8 @@ void q_toolbarchangeevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QToolBarChangeEvent* self, bool accepted ```
@@ -7032,11 +7479,15 @@ void q_toolbarchangeevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QToolBarChangeEvent* self, void (*slot)(QToolBarChangeEvent*, bool) ```
 void q_toolbarchangeevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtoolbarchangeevent.html#dtor.QToolBarChangeEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QToolBarChangeEvent* self ```
@@ -7059,11 +7510,15 @@ QShortcutEvent* q_shortcutevent_new2(void* key, int id, bool ambiguous);
 /// ``` QShortcutEvent* self ```
 QShortcutEvent* q_shortcutevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qshortcutevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QShortcutEvent* self, QShortcutEvent* (*slot)() ```
 void q_shortcutevent_on_clone(void* self, QShortcutEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qshortcutevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QShortcutEvent* self ```
@@ -7072,7 +7527,7 @@ QShortcutEvent* q_shortcutevent_qbase_clone(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qshortcutevent.html#key)
 ///
 /// ``` QShortcutEvent* self ```
-QKeySequence* q_shortcutevent_key(void* self);
+const QKeySequence* q_shortcutevent_key(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qshortcutevent.html#shortcutId)
 ///
@@ -7165,6 +7620,8 @@ void q_shortcutevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QShortcutEvent* self, bool accepted ```
@@ -7172,11 +7629,15 @@ void q_shortcutevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QShortcutEvent* self, void (*slot)(QShortcutEvent*, bool) ```
 void q_shortcutevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qshortcutevent.html#dtor.QShortcutEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QShortcutEvent* self ```
@@ -7199,11 +7660,15 @@ QWindowStateChangeEvent* q_windowstatechangeevent_new2(int64_t oldState, bool is
 /// ``` QWindowStateChangeEvent* self ```
 QWindowStateChangeEvent* q_windowstatechangeevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindowstatechangeevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QWindowStateChangeEvent* self, QWindowStateChangeEvent* (*slot)() ```
 void q_windowstatechangeevent_on_clone(void* self, QWindowStateChangeEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindowstatechangeevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QWindowStateChangeEvent* self ```
@@ -7300,6 +7765,8 @@ void q_windowstatechangeevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QWindowStateChangeEvent* self, bool accepted ```
@@ -7307,11 +7774,15 @@ void q_windowstatechangeevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QWindowStateChangeEvent* self, void (*slot)(QWindowStateChangeEvent*, bool) ```
 void q_windowstatechangeevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwindowstatechangeevent.html#dtor.QWindowStateChangeEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWindowStateChangeEvent* self ```
@@ -7341,24 +7812,28 @@ QTouchEvent* q_touchevent_new4(int64_t eventType, void* device, int64_t modifier
 
 /// q_touchevent_new5 constructs a new QTouchEvent object.
 ///
-/// ``` enum QEvent__Type eventType, QPointingDevice* device, int modifiers, QEventPoint* touchPoints[] ```
-QTouchEvent* q_touchevent_new5(int64_t eventType, void* device, int64_t modifiers, void* touchPoints[]);
+/// ``` enum QEvent__Type eventType, QPointingDevice* device, int modifiers, libqt_list /* of QEventPoint* */ touchPoints ```
+QTouchEvent* q_touchevent_new5(int64_t eventType, void* device, int64_t modifiers, libqt_list touchPoints);
 
 /// q_touchevent_new6 constructs a new QTouchEvent object.
 ///
-/// ``` enum QEvent__Type eventType, QPointingDevice* device, int modifiers, uint8_t touchPointStates, QEventPoint* touchPoints[] ```
-QTouchEvent* q_touchevent_new6(int64_t eventType, void* device, int64_t modifiers, int64_t touchPointStates, void* touchPoints[]);
+/// ``` enum QEvent__Type eventType, QPointingDevice* device, int modifiers, uint8_t touchPointStates, libqt_list /* of QEventPoint* */ touchPoints ```
+QTouchEvent* q_touchevent_new6(int64_t eventType, void* device, int64_t modifiers, int64_t touchPointStates, libqt_list touchPoints);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#clone)
 ///
 /// ``` QTouchEvent* self ```
 QTouchEvent* q_touchevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTouchEvent* self, QTouchEvent* (*slot)() ```
 void q_touchevent_on_clone(void* self, QTouchEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QTouchEvent* self ```
@@ -7377,18 +7852,22 @@ int64_t q_touchevent_touch_point_states(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#touchPoints)
 ///
 /// ``` QTouchEvent* self ```
-libqt_list /* of QEventPoint* */ q_touchevent_touch_points(void* self);
+const libqt_list /* of QEventPoint* */ q_touchevent_touch_points(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#isBeginEvent)
 ///
 /// ``` QTouchEvent* self ```
 bool q_touchevent_is_begin_event(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#isBeginEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTouchEvent* self, bool (*slot)() ```
 void q_touchevent_on_is_begin_event(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#isBeginEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTouchEvent* self ```
@@ -7399,11 +7878,15 @@ bool q_touchevent_qbase_is_begin_event(void* self);
 /// ``` QTouchEvent* self ```
 bool q_touchevent_is_update_event(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#isUpdateEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTouchEvent* self, bool (*slot)() ```
 void q_touchevent_on_is_update_event(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#isUpdateEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTouchEvent* self ```
@@ -7414,11 +7897,15 @@ bool q_touchevent_qbase_is_update_event(void* self);
 /// ``` QTouchEvent* self ```
 bool q_touchevent_is_end_event(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#isEndEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTouchEvent* self, bool (*slot)() ```
 void q_touchevent_on_is_end_event(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#isEndEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QTouchEvent* self ```
@@ -7429,7 +7916,7 @@ bool q_touchevent_qbase_is_end_event(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointingDevice)
 ///
 /// ``` QTouchEvent* self ```
-QPointingDevice* q_touchevent_pointing_device(void* self);
+const QPointingDevice* q_touchevent_pointing_device(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -7457,7 +7944,7 @@ QEventPoint* q_touchevent_point(void* self, int64_t i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
 /// ``` QTouchEvent* self ```
-libqt_list /* of QEventPoint* */ q_touchevent_points(void* self);
+const libqt_list /* of QEventPoint* */ q_touchevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -7520,7 +8007,7 @@ bool q_touchevent_remove_passive_grabber(void* self, void* point, void* grabber)
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
 /// ``` QTouchEvent* self ```
-QInputDevice* q_touchevent_device(void* self);
+const QInputDevice* q_touchevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -7631,12 +8118,16 @@ void q_touchevent_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTouchEvent* self, uint64_t timestamp ```
 void q_touchevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7654,6 +8145,8 @@ void q_touchevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTouchEvent* self, bool accepted ```
@@ -7661,11 +8154,15 @@ void q_touchevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QTouchEvent* self, void (*slot)(QTouchEvent*, bool) ```
 void q_touchevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#dtor.QTouchEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTouchEvent* self ```
@@ -7683,11 +8180,15 @@ QScrollPrepareEvent* q_scrollprepareevent_new(void* startPos);
 /// ``` QScrollPrepareEvent* self ```
 QScrollPrepareEvent* q_scrollprepareevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollprepareevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QScrollPrepareEvent* self, QScrollPrepareEvent* (*slot)() ```
 void q_scrollprepareevent_on_clone(void* self, QScrollPrepareEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollprepareevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QScrollPrepareEvent* self ```
@@ -7809,6 +8310,8 @@ void q_scrollprepareevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollPrepareEvent* self, bool accepted ```
@@ -7816,11 +8319,15 @@ void q_scrollprepareevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QScrollPrepareEvent* self, void (*slot)(QScrollPrepareEvent*, bool) ```
 void q_scrollprepareevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollprepareevent.html#dtor.QScrollPrepareEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QScrollPrepareEvent* self ```
@@ -7838,11 +8345,15 @@ QScrollEvent* q_scrollevent_new(void* contentPos, void* overshoot, int64_t scrol
 /// ``` QScrollEvent* self ```
 QScrollEvent* q_scrollevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QScrollEvent* self, QScrollEvent* (*slot)() ```
 void q_scrollevent_on_clone(void* self, QScrollEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QScrollEvent* self ```
@@ -7944,6 +8455,8 @@ void q_scrollevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScrollEvent* self, bool accepted ```
@@ -7951,11 +8464,15 @@ void q_scrollevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QScrollEvent* self, void (*slot)(QScrollEvent*, bool) ```
 void q_scrollevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollevent.html#dtor.QScrollEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QScrollEvent* self ```
@@ -7973,11 +8490,15 @@ QScreenOrientationChangeEvent* q_screenorientationchangeevent_new(void* screen, 
 /// ``` QScreenOrientationChangeEvent* self ```
 QScreenOrientationChangeEvent* q_screenorientationchangeevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscreenorientationchangeevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QScreenOrientationChangeEvent* self, QScreenOrientationChangeEvent* (*slot)() ```
 void q_screenorientationchangeevent_on_clone(void* self, QScreenOrientationChangeEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscreenorientationchangeevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QScreenOrientationChangeEvent* self ```
@@ -8074,6 +8595,8 @@ void q_screenorientationchangeevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QScreenOrientationChangeEvent* self, bool accepted ```
@@ -8081,11 +8604,15 @@ void q_screenorientationchangeevent_qbase_set_accepted(void* self, bool accepted
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QScreenOrientationChangeEvent* self, void (*slot)(QScreenOrientationChangeEvent*, bool) ```
 void q_screenorientationchangeevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscreenorientationchangeevent.html#dtor.QScreenOrientationChangeEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QScreenOrientationChangeEvent* self ```
@@ -8103,11 +8630,15 @@ QApplicationStateChangeEvent* q_applicationstatechangeevent_new(int64_t state);
 /// ``` QApplicationStateChangeEvent* self ```
 QApplicationStateChangeEvent* q_applicationstatechangeevent_clone(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qapplicationstatechangeevent.html#clone)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QApplicationStateChangeEvent* self, QApplicationStateChangeEvent* (*slot)() ```
 void q_applicationstatechangeevent_on_clone(void* self, QApplicationStateChangeEvent* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qapplicationstatechangeevent.html#clone)
+///
 /// Base class method implementation
 ///
 /// ``` QApplicationStateChangeEvent* self ```
@@ -8199,6 +8730,8 @@ void q_applicationstatechangeevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QApplicationStateChangeEvent* self, bool accepted ```
@@ -8206,11 +8739,15 @@ void q_applicationstatechangeevent_qbase_set_accepted(void* self, bool accepted)
 
 /// Inherited from QEvent
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QApplicationStateChangeEvent* self, void (*slot)(QApplicationStateChangeEvent*, bool) ```
 void q_applicationstatechangeevent_on_set_accepted(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qapplicationstatechangeevent.html#dtor.QApplicationStateChangeEvent)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QApplicationStateChangeEvent* self ```
@@ -8238,6 +8775,8 @@ QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new3(void* param1);
 /// ``` QInputMethodEvent__Attribute* self, QInputMethodEvent__Attribute* param1 ```
 void q_inputmethodevent__attribute_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent::attribute.html#dtor.QInputMethodEvent::Attribute)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QInputMethodEvent__Attribute* self ```

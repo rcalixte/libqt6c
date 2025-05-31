@@ -15,25 +15,16 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QColor QColor;
 typedef struct QEvent QEvent;
 typedef struct QFont QFont;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QSettings QSettings;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
-typedef struct QsciAbstractAPIs QsciAbstractAPIs;
 typedef struct QsciLexer QsciLexer;
 typedef struct QsciLexerD QsciLexerD;
 typedef struct QsciScintilla QsciScintilla;
@@ -142,6 +133,9 @@ void QsciLexerD_QBaseSetPaper(QsciLexerD* self, QColor* c, int style);
 bool QsciLexerD_ReadProperties(QsciLexerD* self, QSettings* qs, libqt_string prefix);
 void QsciLexerD_OnReadProperties(QsciLexerD* self, intptr_t slot);
 bool QsciLexerD_QBaseReadProperties(QsciLexerD* self, QSettings* qs, libqt_string prefix);
+bool QsciLexerD_WriteProperties(const QsciLexerD* self, QSettings* qs, libqt_string prefix);
+void QsciLexerD_OnWriteProperties(const QsciLexerD* self, intptr_t slot);
+bool QsciLexerD_QBaseWriteProperties(const QsciLexerD* self, QSettings* qs, libqt_string prefix);
 bool QsciLexerD_Event(QsciLexerD* self, QEvent* event);
 void QsciLexerD_OnEvent(QsciLexerD* self, intptr_t slot);
 bool QsciLexerD_QBaseEvent(QsciLexerD* self, QEvent* event);
@@ -163,9 +157,6 @@ void QsciLexerD_QBaseConnectNotify(QsciLexerD* self, QMetaMethod* signal);
 void QsciLexerD_DisconnectNotify(QsciLexerD* self, QMetaMethod* signal);
 void QsciLexerD_OnDisconnectNotify(QsciLexerD* self, intptr_t slot);
 void QsciLexerD_QBaseDisconnectNotify(QsciLexerD* self, QMetaMethod* signal);
-bool QsciLexerD_WriteProperties(const QsciLexerD* self, QSettings* qs, libqt_string prefix);
-void QsciLexerD_OnWriteProperties(const QsciLexerD* self, intptr_t slot);
-bool QsciLexerD_QBaseWriteProperties(const QsciLexerD* self, QSettings* qs, libqt_string prefix);
 QObject* QsciLexerD_Sender(const QsciLexerD* self);
 void QsciLexerD_OnSender(const QsciLexerD* self, intptr_t slot);
 QObject* QsciLexerD_QBaseSender(const QsciLexerD* self);

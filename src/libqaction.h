@@ -13,8 +13,6 @@
 #include "qtlibc.h"
 
 #include "libqactiongroup.h"
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqfont.h"
 #include "libqicon.h"
@@ -22,7 +20,6 @@
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
-#include "libqthread.h"
 #include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qaction.html
@@ -60,7 +57,7 @@ QAction* q_action_new6(void* icon, const char* text, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QAction* self ```
-QMetaObject* q_action_meta_object(void* self);
+const QMetaObject* q_action_meta_object(void* self);
 
 /// ``` QAction* self, const char* param1 ```
 void* q_action_metacast(void* self, const char* param1);
@@ -190,8 +187,8 @@ QKeySequence* q_action_shortcut(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///
-/// ``` QAction* self, QKeySequence* shortcuts[] ```
-void q_action_set_shortcuts(void* self, void* shortcuts[]);
+/// ``` QAction* self, libqt_list /* of QKeySequence* */ shortcuts ```
+void q_action_set_shortcuts(void* self, libqt_list shortcuts);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///
@@ -313,11 +310,15 @@ bool q_action_show_status_text(void* self);
 /// ``` QAction* self, QEvent* param1 ```
 bool q_action_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAction* self, bool (*slot)(QAction*, QEvent*) ```
 void q_action_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QAction* self, QEvent* param1 ```
@@ -368,6 +369,8 @@ void q_action_set_visible(void* self, bool visible);
 /// ``` QAction* self ```
 void q_action_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#changed)
+///
 /// ``` QAction* self, void (*slot)(QAction*) ```
 void q_action_on_changed(void* self, void (*slot)(void*));
 
@@ -376,6 +379,8 @@ void q_action_on_changed(void* self, void (*slot)(void*));
 /// ``` QAction* self, bool enabled ```
 void q_action_enabled_changed(void* self, bool enabled);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
+///
 /// ``` QAction* self, void (*slot)(QAction*, bool) ```
 void q_action_on_enabled_changed(void* self, void (*slot)(void*, bool));
 
@@ -384,6 +389,8 @@ void q_action_on_enabled_changed(void* self, void (*slot)(void*, bool));
 /// ``` QAction* self, bool checkable ```
 void q_action_checkable_changed(void* self, bool checkable);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
+///
 /// ``` QAction* self, void (*slot)(QAction*, bool) ```
 void q_action_on_checkable_changed(void* self, void (*slot)(void*, bool));
 
@@ -392,6 +399,8 @@ void q_action_on_checkable_changed(void* self, void (*slot)(void*, bool));
 /// ``` QAction* self ```
 void q_action_visible_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
+///
 /// ``` QAction* self, void (*slot)(QAction*) ```
 void q_action_on_visible_changed(void* self, void (*slot)(void*));
 
@@ -400,6 +409,8 @@ void q_action_on_visible_changed(void* self, void (*slot)(void*));
 /// ``` QAction* self ```
 void q_action_triggered(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
+///
 /// ``` QAction* self, void (*slot)(QAction*) ```
 void q_action_on_triggered(void* self, void (*slot)(void*));
 
@@ -408,6 +419,8 @@ void q_action_on_triggered(void* self, void (*slot)(void*));
 /// ``` QAction* self ```
 void q_action_hovered(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hovered)
+///
 /// ``` QAction* self, void (*slot)(QAction*) ```
 void q_action_on_hovered(void* self, void (*slot)(void*));
 
@@ -416,6 +429,8 @@ void q_action_on_hovered(void* self, void (*slot)(void*));
 /// ``` QAction* self, bool param1 ```
 void q_action_toggled(void* self, bool param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggled)
+///
 /// ``` QAction* self, void (*slot)(QAction*, bool) ```
 void q_action_on_toggled(void* self, void (*slot)(void*, bool));
 
@@ -439,6 +454,8 @@ bool q_action_show_status_text1(void* self, void* object);
 /// ``` QAction* self, bool checked ```
 void q_action_triggered1(void* self, bool checked);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
+///
 /// ``` QAction* self, void (*slot)(QAction*, bool) ```
 void q_action_on_triggered1(void* self, void (*slot)(void*, bool));
 
@@ -524,7 +541,7 @@ void q_action_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QAction* self ```
-libqt_list /* of QObject* */ q_action_children(void* self);
+const libqt_list /* of QObject* */ q_action_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -622,7 +639,7 @@ QBindingStorage* q_action_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QAction* self ```
-QBindingStorage* q_action_binding_storage2(void* self);
+const QBindingStorage* q_action_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -632,6 +649,8 @@ QBindingStorage* q_action_binding_storage2(void* self);
 void q_action_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QAction* self, void (*slot)(QObject*) ```
 void q_action_on_destroyed(void* self, void (*slot)(void*));
@@ -687,6 +706,8 @@ void q_action_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QAction* self, void (*slot)(QObject*, QObject*) ```
 void q_action_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -701,12 +722,16 @@ bool q_action_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAction* self, QObject* watched, QEvent* event ```
 bool q_action_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -724,12 +749,16 @@ void q_action_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAction* self, QTimerEvent* event ```
 void q_action_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -747,12 +776,16 @@ void q_action_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAction* self, QChildEvent* event ```
 void q_action_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -770,12 +803,16 @@ void q_action_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAction* self, QEvent* event ```
 void q_action_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -793,12 +830,16 @@ void q_action_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAction* self, QMetaMethod* signal ```
 void q_action_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -816,12 +857,16 @@ void q_action_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAction* self, QMetaMethod* signal ```
 void q_action_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -839,12 +884,16 @@ QObject* q_action_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAction* self ```
 QObject* q_action_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -862,12 +911,16 @@ int32_t q_action_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAction* self ```
 int32_t q_action_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -885,12 +938,16 @@ int32_t q_action_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAction* self, const char* signal ```
 int32_t q_action_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -908,6 +965,8 @@ bool q_action_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAction* self, QMetaMethod* signal ```
@@ -915,11 +974,24 @@ bool q_action_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QAction* self, bool (*slot)(QAction*, QMetaMethod*) ```
 void q_action_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QAction* self, void (*slot)(QObject*, const char*) ```
+void q_action_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#dtor.QAction)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAction* self ```

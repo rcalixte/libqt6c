@@ -15,25 +15,16 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QColor QColor;
 typedef struct QEvent QEvent;
 typedef struct QFont QFont;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QSettings QSettings;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
-typedef struct QsciAbstractAPIs QsciAbstractAPIs;
 typedef struct QsciLexer QsciLexer;
 typedef struct QsciLexerPerl QsciLexerPerl;
 typedef struct QsciScintilla QsciScintilla;
@@ -145,6 +136,9 @@ void QsciLexerPerl_QBaseSetPaper(QsciLexerPerl* self, QColor* c, int style);
 bool QsciLexerPerl_ReadProperties(QsciLexerPerl* self, QSettings* qs, libqt_string prefix);
 void QsciLexerPerl_OnReadProperties(QsciLexerPerl* self, intptr_t slot);
 bool QsciLexerPerl_QBaseReadProperties(QsciLexerPerl* self, QSettings* qs, libqt_string prefix);
+bool QsciLexerPerl_WriteProperties(const QsciLexerPerl* self, QSettings* qs, libqt_string prefix);
+void QsciLexerPerl_OnWriteProperties(const QsciLexerPerl* self, intptr_t slot);
+bool QsciLexerPerl_QBaseWriteProperties(const QsciLexerPerl* self, QSettings* qs, libqt_string prefix);
 bool QsciLexerPerl_Event(QsciLexerPerl* self, QEvent* event);
 void QsciLexerPerl_OnEvent(QsciLexerPerl* self, intptr_t slot);
 bool QsciLexerPerl_QBaseEvent(QsciLexerPerl* self, QEvent* event);
@@ -166,9 +160,6 @@ void QsciLexerPerl_QBaseConnectNotify(QsciLexerPerl* self, QMetaMethod* signal);
 void QsciLexerPerl_DisconnectNotify(QsciLexerPerl* self, QMetaMethod* signal);
 void QsciLexerPerl_OnDisconnectNotify(QsciLexerPerl* self, intptr_t slot);
 void QsciLexerPerl_QBaseDisconnectNotify(QsciLexerPerl* self, QMetaMethod* signal);
-bool QsciLexerPerl_WriteProperties(const QsciLexerPerl* self, QSettings* qs, libqt_string prefix);
-void QsciLexerPerl_OnWriteProperties(const QsciLexerPerl* self, intptr_t slot);
-bool QsciLexerPerl_QBaseWriteProperties(const QsciLexerPerl* self, QSettings* qs, libqt_string prefix);
 QObject* QsciLexerPerl_Sender(const QsciLexerPerl* self);
 void QsciLexerPerl_OnSender(const QsciLexerPerl* self, intptr_t slot);
 QObject* QsciLexerPerl_QBaseSender(const QsciLexerPerl* self);

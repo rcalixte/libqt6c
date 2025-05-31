@@ -18,7 +18,7 @@ QFont* q_font_new3(const char* families[]) {
     for (size_t _i = 0; _i < families_len; ++_i) {
         families_qstr[_i] = qstring(families[_i]);
     }
-    libqt_list families_list = qstrlist(families_qstr, families_len);
+    libqt_list families_list = qlist(families_qstr, families_len);
 
     return QFont_new3(families_list);
 }
@@ -49,7 +49,7 @@ QFont* q_font_new9(const char* families[], int pointSize) {
     for (size_t _i = 0; _i < families_len; ++_i) {
         families_qstr[_i] = qstring(families[_i]);
     }
-    libqt_list families_list = qstrlist(families_qstr, families_len);
+    libqt_list families_list = qlist(families_qstr, families_len);
 
     return QFont_new9(families_list, pointSize);
 }
@@ -60,7 +60,7 @@ QFont* q_font_new10(const char* families[], int pointSize, int weight) {
     for (size_t _i = 0; _i < families_len; ++_i) {
         families_qstr[_i] = qstring(families[_i]);
     }
-    libqt_list families_list = qstrlist(families_qstr, families_len);
+    libqt_list families_list = qlist(families_qstr, families_len);
 
     return QFont_new10(families_list, pointSize, weight);
 }
@@ -71,7 +71,7 @@ QFont* q_font_new11(const char* families[], int pointSize, int weight, bool ital
     for (size_t _i = 0; _i < families_len; ++_i) {
         families_qstr[_i] = qstring(families[_i]);
     }
-    libqt_list families_list = qstrlist(families_qstr, families_len);
+    libqt_list families_list = qlist(families_qstr, families_len);
 
     return QFont_new11(families_list, pointSize, weight, italic);
 }
@@ -111,7 +111,7 @@ void q_font_set_families(void* self, const char* families[]) {
     for (size_t _i = 0; _i < families_len; ++_i) {
         families_qstr[_i] = qstring(families[_i]);
     }
-    libqt_list families_list = qstrlist(families_qstr, families_len);
+    libqt_list families_list = qlist(families_qstr, families_len);
     QFont_SetFamilies((QFont*)self, families_list);
 }
 
@@ -373,7 +373,7 @@ void q_font_insert_substitutions(const char* param1, const char* param2[]) {
     for (size_t _i = 0; _i < param2_len; ++_i) {
         param2_qstr[_i] = qstring(param2[_i]);
     }
-    libqt_list param2_list = qstrlist(param2_qstr, param2_len);
+    libqt_list param2_list = qlist(param2_qstr, param2_len);
     QFont_InsertSubstitutions(qstring(param1), param2_list);
 }
 

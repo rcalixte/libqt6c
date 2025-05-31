@@ -23,7 +23,6 @@ typedef struct QGraphicsLayoutItem QGraphicsLayoutItem;
 typedef struct QGraphicsLinearLayout QGraphicsLinearLayout;
 typedef struct QRectF QRectF;
 typedef struct QSizeF QSizeF;
-typedef struct QSizePolicy QSizePolicy;
 #endif
 
 QGraphicsLinearLayout* QGraphicsLinearLayout_new();

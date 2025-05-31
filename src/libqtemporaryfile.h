@@ -12,10 +12,7 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
-#include "libqdatetime.h"
 #include "libqfile.h"
 #include "libqfiledevice.h"
 #include "libqiodevice.h"
@@ -23,8 +20,6 @@
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qtemporaryfile.html
 
@@ -51,7 +46,7 @@ QTemporaryFile* q_temporaryfile_new4(const char* templateName, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QTemporaryFile* self ```
-QMetaObject* q_temporaryfile_meta_object(void* self);
+const QMetaObject* q_temporaryfile_meta_object(void* self);
 
 /// ``` QTemporaryFile* self, const char* param1 ```
 void* q_temporaryfile_metacast(void* self, const char* param1);
@@ -94,11 +89,15 @@ bool q_temporaryfile_open(void* self);
 /// ``` QTemporaryFile* self ```
 const char* q_temporaryfile_file_name(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtemporaryfile.html#fileName)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTemporaryFile* self, const char* (*slot)() ```
 void q_temporaryfile_on_file_name(void* self, const char* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtemporaryfile.html#fileName)
+///
 /// Base class method implementation
 ///
 /// ``` QTemporaryFile* self ```
@@ -134,11 +133,15 @@ QTemporaryFile* q_temporaryfile_create_native_file_with_file(void* file);
 /// ``` QTemporaryFile* self, int flags ```
 bool q_temporaryfile_open_with_flags(void* self, int64_t flags);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtemporaryfile.html#open)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTemporaryFile* self, bool (*slot)(QTemporaryFile*, int) ```
 void q_temporaryfile_on_open_with_flags(void* self, bool (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtemporaryfile.html#open)
+///
 /// Base class method implementation
 ///
 /// ``` QTemporaryFile* self, int flags ```
@@ -604,6 +607,8 @@ void q_temporaryfile_ready_read(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
+///
 /// ``` QTemporaryFile* self, void (*slot)(QIODevice*) ```
 void q_temporaryfile_on_ready_read(void* self, void (*slot)(void*));
 
@@ -615,6 +620,8 @@ void q_temporaryfile_on_ready_read(void* self, void (*slot)(void*));
 void q_temporaryfile_channel_ready_read(void* self, int channel);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
 /// ``` QTemporaryFile* self, void (*slot)(QIODevice*, int) ```
 void q_temporaryfile_on_channel_ready_read(void* self, void (*slot)(void*, int));
@@ -628,6 +635,8 @@ void q_temporaryfile_bytes_written(void* self, long long bytes);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
+///
 /// ``` QTemporaryFile* self, void (*slot)(QIODevice*, long long) ```
 void q_temporaryfile_on_bytes_written(void* self, void (*slot)(void*, long long));
 
@@ -639,6 +648,8 @@ void q_temporaryfile_on_bytes_written(void* self, void (*slot)(void*, long long)
 void q_temporaryfile_channel_bytes_written(void* self, int channel, long long bytes);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// ``` QTemporaryFile* self, void (*slot)(QIODevice*, int, long long) ```
 void q_temporaryfile_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long));
@@ -652,6 +663,8 @@ void q_temporaryfile_about_to_close(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
+///
 /// ``` QTemporaryFile* self, void (*slot)(QIODevice*) ```
 void q_temporaryfile_on_about_to_close(void* self, void (*slot)(void*));
 
@@ -663,6 +676,8 @@ void q_temporaryfile_on_about_to_close(void* self, void (*slot)(void*));
 void q_temporaryfile_read_channel_finished(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
 /// ``` QTemporaryFile* self, void (*slot)(QIODevice*) ```
 void q_temporaryfile_on_read_channel_finished(void* self, void (*slot)(void*));
@@ -756,7 +771,7 @@ void q_temporaryfile_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QTemporaryFile* self ```
-libqt_list /* of QObject* */ q_temporaryfile_children(void* self);
+const libqt_list /* of QObject* */ q_temporaryfile_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -854,7 +869,7 @@ QBindingStorage* q_temporaryfile_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QTemporaryFile* self ```
-QBindingStorage* q_temporaryfile_binding_storage2(void* self);
+const QBindingStorage* q_temporaryfile_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -864,6 +879,8 @@ QBindingStorage* q_temporaryfile_binding_storage2(void* self);
 void q_temporaryfile_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QTemporaryFile* self, void (*slot)(QObject*) ```
 void q_temporaryfile_on_destroyed(void* self, void (*slot)(void*));
@@ -919,6 +936,8 @@ void q_temporaryfile_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QTemporaryFile* self, void (*slot)(QObject*, QObject*) ```
 void q_temporaryfile_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -933,12 +952,16 @@ long long q_temporaryfile_size(void* self);
 
 /// Inherited from QFile
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#size)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self ```
 long long q_temporaryfile_qbase_size(void* self);
 
 /// Inherited from QFile
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#size)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -956,12 +979,16 @@ bool q_temporaryfile_resize(void* self, long long sz);
 
 /// Inherited from QFile
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#resize)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self, long long sz ```
 bool q_temporaryfile_qbase_resize(void* self, long long sz);
 
 /// Inherited from QFile
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#resize)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -979,12 +1006,16 @@ int64_t q_temporaryfile_permissions(void* self);
 
 /// Inherited from QFile
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#permissions)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self ```
 int64_t q_temporaryfile_qbase_permissions(void* self);
 
 /// Inherited from QFile
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#permissions)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1002,12 +1033,16 @@ bool q_temporaryfile_set_permissions(void* self, int64_t permissionSpec);
 
 /// Inherited from QFile
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#setPermissions)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self, int permissionSpec ```
 bool q_temporaryfile_qbase_set_permissions(void* self, int64_t permissionSpec);
 
 /// Inherited from QFile
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#setPermissions)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1025,12 +1060,16 @@ void q_temporaryfile_close(void* self);
 
 /// Inherited from QFileDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#close)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self ```
 void q_temporaryfile_qbase_close(void* self);
 
 /// Inherited from QFileDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#close)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1048,12 +1087,16 @@ bool q_temporaryfile_is_sequential(void* self);
 
 /// Inherited from QFileDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#isSequential)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self ```
 bool q_temporaryfile_qbase_is_sequential(void* self);
 
 /// Inherited from QFileDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#isSequential)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1071,12 +1114,16 @@ long long q_temporaryfile_pos(void* self);
 
 /// Inherited from QFileDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#pos)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self ```
 long long q_temporaryfile_qbase_pos(void* self);
 
 /// Inherited from QFileDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#pos)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1094,12 +1141,16 @@ bool q_temporaryfile_seek(void* self, long long offset);
 
 /// Inherited from QFileDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#seek)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self, long long offset ```
 bool q_temporaryfile_qbase_seek(void* self, long long offset);
 
 /// Inherited from QFileDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#seek)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1117,12 +1168,16 @@ bool q_temporaryfile_at_end(void* self);
 
 /// Inherited from QFileDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#atEnd)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self ```
 bool q_temporaryfile_qbase_at_end(void* self);
 
 /// Inherited from QFileDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#atEnd)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1140,12 +1195,16 @@ long long q_temporaryfile_read_data(void* self, char* data, long long maxlen);
 
 /// Inherited from QFileDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#readData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self, char* data, long long maxlen ```
 long long q_temporaryfile_qbase_read_data(void* self, char* data, long long maxlen);
 
 /// Inherited from QFileDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#readData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1163,12 +1222,16 @@ long long q_temporaryfile_write_data(void* self, const char* data, long long len
 
 /// Inherited from QFileDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#writeData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self, const char* data, long long lenVal ```
 long long q_temporaryfile_qbase_write_data(void* self, const char* data, long long lenVal);
 
 /// Inherited from QFileDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#writeData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1186,12 +1249,16 @@ long long q_temporaryfile_read_line_data(void* self, char* data, long long maxle
 
 /// Inherited from QFileDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#readLineData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self, char* data, long long maxlen ```
 long long q_temporaryfile_qbase_read_line_data(void* self, char* data, long long maxlen);
 
 /// Inherited from QFileDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#readLineData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1209,12 +1276,16 @@ bool q_temporaryfile_reset(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#reset)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self ```
 bool q_temporaryfile_qbase_reset(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#reset)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1232,12 +1303,16 @@ long long q_temporaryfile_bytes_available(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesAvailable)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self ```
 long long q_temporaryfile_qbase_bytes_available(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesAvailable)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1255,12 +1330,16 @@ long long q_temporaryfile_bytes_to_write(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesToWrite)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self ```
 long long q_temporaryfile_qbase_bytes_to_write(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesToWrite)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1278,12 +1357,16 @@ bool q_temporaryfile_can_read_line(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#canReadLine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self ```
 bool q_temporaryfile_qbase_can_read_line(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#canReadLine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1301,12 +1384,16 @@ bool q_temporaryfile_wait_for_ready_read(void* self, int msecs);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#waitForReadyRead)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self, int msecs ```
 bool q_temporaryfile_qbase_wait_for_ready_read(void* self, int msecs);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#waitForReadyRead)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1324,12 +1411,16 @@ bool q_temporaryfile_wait_for_bytes_written(void* self, int msecs);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#waitForBytesWritten)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self, int msecs ```
 bool q_temporaryfile_qbase_wait_for_bytes_written(void* self, int msecs);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#waitForBytesWritten)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1347,12 +1438,16 @@ long long q_temporaryfile_skip_data(void* self, long long maxSize);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#skipData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self, long long maxSize ```
 long long q_temporaryfile_qbase_skip_data(void* self, long long maxSize);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#skipData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1370,12 +1465,16 @@ bool q_temporaryfile_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self, QEvent* event ```
 bool q_temporaryfile_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1393,12 +1492,16 @@ bool q_temporaryfile_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self, QObject* watched, QEvent* event ```
 bool q_temporaryfile_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1416,12 +1519,16 @@ void q_temporaryfile_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self, QTimerEvent* event ```
 void q_temporaryfile_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1439,12 +1546,16 @@ void q_temporaryfile_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self, QChildEvent* event ```
 void q_temporaryfile_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1462,12 +1573,16 @@ void q_temporaryfile_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self, QEvent* event ```
 void q_temporaryfile_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1485,12 +1600,16 @@ void q_temporaryfile_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self, QMetaMethod* signal ```
 void q_temporaryfile_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1508,12 +1627,16 @@ void q_temporaryfile_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self, QMetaMethod* signal ```
 void q_temporaryfile_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1531,12 +1654,16 @@ void q_temporaryfile_set_open_mode(void* self, int64_t openMode);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setOpenMode)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self, int openMode ```
 void q_temporaryfile_qbase_set_open_mode(void* self, int64_t openMode);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setOpenMode)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1554,12 +1681,16 @@ void q_temporaryfile_set_error_string(void* self, const char* errorString);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self, const char* errorString ```
 void q_temporaryfile_qbase_set_error_string(void* self, const char* errorString);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1577,12 +1708,16 @@ QObject* q_temporaryfile_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self ```
 QObject* q_temporaryfile_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1600,12 +1735,16 @@ int32_t q_temporaryfile_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self ```
 int32_t q_temporaryfile_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1623,12 +1762,16 @@ int32_t q_temporaryfile_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self, const char* signal ```
 int32_t q_temporaryfile_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1646,6 +1789,8 @@ bool q_temporaryfile_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self, QMetaMethod* signal ```
@@ -1653,11 +1798,24 @@ bool q_temporaryfile_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QTemporaryFile* self, bool (*slot)(QTemporaryFile*, QMetaMethod*) ```
 void q_temporaryfile_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QTemporaryFile* self, void (*slot)(QObject*, const char*) ```
+void q_temporaryfile_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtemporaryfile.html#dtor.QTemporaryFile)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTemporaryFile* self ```

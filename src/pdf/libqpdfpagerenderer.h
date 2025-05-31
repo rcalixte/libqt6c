@@ -12,8 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "../libqevent.h"
 #include "../libqimage.h"
 #include "../libqmetaobject.h"
@@ -22,8 +20,6 @@
 #include "libqpdfdocumentrenderoptions.h"
 #include "../libqsize.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qpdfpagerenderer.html
 
@@ -40,7 +36,7 @@ QPdfPageRenderer* q_pdfpagerenderer_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QPdfPageRenderer* self ```
-QMetaObject* q_pdfpagerenderer_meta_object(void* self);
+const QMetaObject* q_pdfpagerenderer_meta_object(void* self);
 
 /// ``` QPdfPageRenderer* self, const char* param1 ```
 void* q_pdfpagerenderer_metacast(void* self, const char* param1);
@@ -93,6 +89,8 @@ uint64_t q_pdfpagerenderer_request_page(void* self, int pageNumber, void* imageS
 /// ``` QPdfPageRenderer* self, QPdfDocument* document ```
 void q_pdfpagerenderer_document_changed(void* self, void* document);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagerenderer.html#documentChanged)
+///
 /// ``` QPdfPageRenderer* self, void (*slot)(QPdfPageRenderer*, QPdfDocument*) ```
 void q_pdfpagerenderer_on_document_changed(void* self, void (*slot)(void*, void*));
 
@@ -101,6 +99,8 @@ void q_pdfpagerenderer_on_document_changed(void* self, void (*slot)(void*, void*
 /// ``` QPdfPageRenderer* self, enum QPdfPageRenderer__RenderMode renderMode ```
 void q_pdfpagerenderer_render_mode_changed(void* self, int64_t renderMode);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagerenderer.html#renderModeChanged)
+///
 /// ``` QPdfPageRenderer* self, void (*slot)(QPdfPageRenderer*, enum QPdfPageRenderer__RenderMode) ```
 void q_pdfpagerenderer_on_render_mode_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -109,6 +109,8 @@ void q_pdfpagerenderer_on_render_mode_changed(void* self, void (*slot)(void*, in
 /// ``` QPdfPageRenderer* self, int pageNumber, QSize* imageSize, QImage* image, QPdfDocumentRenderOptions* options, uint64_t requestId ```
 void q_pdfpagerenderer_page_rendered(void* self, int pageNumber, void* imageSize, void* image, void* options, uint64_t requestId);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagerenderer.html#pageRendered)
+///
 /// ``` QPdfPageRenderer* self, void (*slot)(QPdfPageRenderer*, int, QSize*, QImage*, QPdfDocumentRenderOptions*, uint64_t) ```
 void q_pdfpagerenderer_on_page_rendered(void* self, void (*slot)(void*, int, void*, void*, void*, uint64_t));
 
@@ -209,7 +211,7 @@ void q_pdfpagerenderer_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QPdfPageRenderer* self ```
-libqt_list /* of QObject* */ q_pdfpagerenderer_children(void* self);
+const libqt_list /* of QObject* */ q_pdfpagerenderer_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -307,7 +309,7 @@ QBindingStorage* q_pdfpagerenderer_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QPdfPageRenderer* self ```
-QBindingStorage* q_pdfpagerenderer_binding_storage2(void* self);
+const QBindingStorage* q_pdfpagerenderer_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -317,6 +319,8 @@ QBindingStorage* q_pdfpagerenderer_binding_storage2(void* self);
 void q_pdfpagerenderer_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QPdfPageRenderer* self, void (*slot)(QObject*) ```
 void q_pdfpagerenderer_on_destroyed(void* self, void (*slot)(void*));
@@ -372,6 +376,8 @@ void q_pdfpagerenderer_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QPdfPageRenderer* self, void (*slot)(QObject*, QObject*) ```
 void q_pdfpagerenderer_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -386,12 +392,16 @@ bool q_pdfpagerenderer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageRenderer* self, QEvent* event ```
 bool q_pdfpagerenderer_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -409,12 +419,16 @@ bool q_pdfpagerenderer_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageRenderer* self, QObject* watched, QEvent* event ```
 bool q_pdfpagerenderer_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -432,12 +446,16 @@ void q_pdfpagerenderer_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageRenderer* self, QTimerEvent* event ```
 void q_pdfpagerenderer_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -455,12 +473,16 @@ void q_pdfpagerenderer_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageRenderer* self, QChildEvent* event ```
 void q_pdfpagerenderer_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -478,12 +500,16 @@ void q_pdfpagerenderer_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageRenderer* self, QEvent* event ```
 void q_pdfpagerenderer_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -501,12 +527,16 @@ void q_pdfpagerenderer_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageRenderer* self, QMetaMethod* signal ```
 void q_pdfpagerenderer_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -524,12 +554,16 @@ void q_pdfpagerenderer_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageRenderer* self, QMetaMethod* signal ```
 void q_pdfpagerenderer_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -547,12 +581,16 @@ QObject* q_pdfpagerenderer_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageRenderer* self ```
 QObject* q_pdfpagerenderer_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -570,12 +608,16 @@ int32_t q_pdfpagerenderer_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageRenderer* self ```
 int32_t q_pdfpagerenderer_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -593,12 +635,16 @@ int32_t q_pdfpagerenderer_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageRenderer* self, const char* signal ```
 int32_t q_pdfpagerenderer_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -616,6 +662,8 @@ bool q_pdfpagerenderer_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPdfPageRenderer* self, QMetaMethod* signal ```
@@ -623,11 +671,24 @@ bool q_pdfpagerenderer_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QPdfPageRenderer* self, bool (*slot)(QPdfPageRenderer*, QMetaMethod*) ```
 void q_pdfpagerenderer_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QPdfPageRenderer* self, void (*slot)(QObject*, const char*) ```
+void q_pdfpagerenderer_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagerenderer.html#dtor.QPdfPageRenderer)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPdfPageRenderer* self ```

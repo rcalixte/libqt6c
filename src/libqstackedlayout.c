@@ -1,16 +1,11 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqlayout.hpp"
 #include "libqlayoutitem.hpp"
-#include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
 #include <string.h>
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqwidget.hpp"
 #include "libqcoreevent.hpp"
 #include "libqstackedlayout.hpp"
@@ -28,7 +23,7 @@ QStackedLayout* q_stackedlayout_new3(void* parentLayout) {
     return QStackedLayout_new3((QLayout*)parentLayout);
 }
 
-QMetaObject* q_stackedlayout_meta_object(void* self) {
+const QMetaObject* q_stackedlayout_meta_object(void* self) {
     return QStackedLayout_MetaObject((QStackedLayout*)self);
 }
 
@@ -349,8 +344,7 @@ const char* q_stackedlayout_object_name(void* self) {
 }
 
 void q_stackedlayout_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_stackedlayout_is_widget_type(void* self) {
@@ -389,7 +383,7 @@ void q_stackedlayout_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_stackedlayout_children(void* self) {
+const libqt_list /* of QObject* */ q_stackedlayout_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -456,7 +450,7 @@ QBindingStorage* q_stackedlayout_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_stackedlayout_binding_storage2(void* self) {
+const QBindingStorage* q_stackedlayout_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -850,6 +844,10 @@ bool q_stackedlayout_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_stackedlayout_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QStackedLayout_OnIsSignalConnected((QStackedLayout*)self, (intptr_t)slot);
+}
+
+void q_stackedlayout_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_stackedlayout_delete(void* self) {

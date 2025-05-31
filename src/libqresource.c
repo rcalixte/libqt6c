@@ -54,7 +54,7 @@ long long q_resource_size(void* self) {
     return QResource_Size((QResource*)self);
 }
 
-unsigned char* q_resource_data(void* self) {
+const unsigned char* q_resource_data(void* self) {
     return (unsigned char*)QResource_Data((QResource*)self);
 }
 

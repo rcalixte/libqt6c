@@ -12,15 +12,11 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqiodevicebase.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qiodevice.html
 
@@ -37,7 +33,7 @@ QIODevice* q_iodevice_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QIODevice* self ```
-QMetaObject* q_iodevice_meta_object(void* self);
+const QMetaObject* q_iodevice_meta_object(void* self);
 
 /// ``` QIODevice* self, const char* param1 ```
 void* q_iodevice_metacast(void* self, const char* param1);
@@ -95,11 +91,15 @@ bool q_iodevice_is_writable(void* self);
 /// ``` QIODevice* self ```
 bool q_iodevice_is_sequential(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#isSequential)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QIODevice* self, bool (*slot)() ```
 void q_iodevice_on_is_sequential(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#isSequential)
+///
 /// Base class method implementation
 ///
 /// ``` QIODevice* self ```
@@ -140,11 +140,15 @@ void q_iodevice_set_current_write_channel(void* self, int channel);
 /// ``` QIODevice* self, int mode ```
 bool q_iodevice_open(void* self, int64_t mode);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#open)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QIODevice* self, bool (*slot)(QIODevice*, int) ```
 void q_iodevice_on_open(void* self, bool (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#open)
+///
 /// Base class method implementation
 ///
 /// ``` QIODevice* self, int mode ```
@@ -155,11 +159,15 @@ bool q_iodevice_qbase_open(void* self, int64_t mode);
 /// ``` QIODevice* self ```
 void q_iodevice_close(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#close)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QIODevice* self, void (*slot)() ```
 void q_iodevice_on_close(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#close)
+///
 /// Base class method implementation
 ///
 /// ``` QIODevice* self ```
@@ -170,11 +178,15 @@ void q_iodevice_qbase_close(void* self);
 /// ``` QIODevice* self ```
 long long q_iodevice_pos(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#pos)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QIODevice* self, long long (*slot)() ```
 void q_iodevice_on_pos(void* self, long long (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#pos)
+///
 /// Base class method implementation
 ///
 /// ``` QIODevice* self ```
@@ -185,11 +197,15 @@ long long q_iodevice_qbase_pos(void* self);
 /// ``` QIODevice* self ```
 long long q_iodevice_size(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#size)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QIODevice* self, long long (*slot)() ```
 void q_iodevice_on_size(void* self, long long (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#size)
+///
 /// Base class method implementation
 ///
 /// ``` QIODevice* self ```
@@ -200,11 +216,15 @@ long long q_iodevice_qbase_size(void* self);
 /// ``` QIODevice* self, long long pos ```
 bool q_iodevice_seek(void* self, long long pos);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#seek)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QIODevice* self, bool (*slot)(QIODevice*, long long) ```
 void q_iodevice_on_seek(void* self, bool (*slot)(void*, long long));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#seek)
+///
 /// Base class method implementation
 ///
 /// ``` QIODevice* self, long long pos ```
@@ -215,11 +235,15 @@ bool q_iodevice_qbase_seek(void* self, long long pos);
 /// ``` QIODevice* self ```
 bool q_iodevice_at_end(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#atEnd)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QIODevice* self, bool (*slot)() ```
 void q_iodevice_on_at_end(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#atEnd)
+///
 /// Base class method implementation
 ///
 /// ``` QIODevice* self ```
@@ -230,11 +254,15 @@ bool q_iodevice_qbase_at_end(void* self);
 /// ``` QIODevice* self ```
 bool q_iodevice_reset(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#reset)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QIODevice* self, bool (*slot)() ```
 void q_iodevice_on_reset(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#reset)
+///
 /// Base class method implementation
 ///
 /// ``` QIODevice* self ```
@@ -245,11 +273,15 @@ bool q_iodevice_qbase_reset(void* self);
 /// ``` QIODevice* self ```
 long long q_iodevice_bytes_available(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesAvailable)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QIODevice* self, long long (*slot)() ```
 void q_iodevice_on_bytes_available(void* self, long long (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesAvailable)
+///
 /// Base class method implementation
 ///
 /// ``` QIODevice* self ```
@@ -260,11 +292,15 @@ long long q_iodevice_qbase_bytes_available(void* self);
 /// ``` QIODevice* self ```
 long long q_iodevice_bytes_to_write(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesToWrite)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QIODevice* self, long long (*slot)() ```
 void q_iodevice_on_bytes_to_write(void* self, long long (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesToWrite)
+///
 /// Base class method implementation
 ///
 /// ``` QIODevice* self ```
@@ -300,11 +336,15 @@ char* q_iodevice_read_line2(void* self);
 /// ``` QIODevice* self ```
 bool q_iodevice_can_read_line(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#canReadLine)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QIODevice* self, bool (*slot)() ```
 void q_iodevice_on_can_read_line(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#canReadLine)
+///
 /// Base class method implementation
 ///
 /// ``` QIODevice* self ```
@@ -365,11 +405,15 @@ long long q_iodevice_skip(void* self, long long maxSize);
 /// ``` QIODevice* self, int msecs ```
 bool q_iodevice_wait_for_ready_read(void* self, int msecs);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#waitForReadyRead)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QIODevice* self, bool (*slot)(QIODevice*, int) ```
 void q_iodevice_on_wait_for_ready_read(void* self, bool (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#waitForReadyRead)
+///
 /// Base class method implementation
 ///
 /// ``` QIODevice* self, int msecs ```
@@ -380,11 +424,15 @@ bool q_iodevice_qbase_wait_for_ready_read(void* self, int msecs);
 /// ``` QIODevice* self, int msecs ```
 bool q_iodevice_wait_for_bytes_written(void* self, int msecs);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#waitForBytesWritten)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QIODevice* self, bool (*slot)(QIODevice*, int) ```
 void q_iodevice_on_wait_for_bytes_written(void* self, bool (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#waitForBytesWritten)
+///
 /// Base class method implementation
 ///
 /// ``` QIODevice* self, int msecs ```
@@ -415,6 +463,8 @@ const char* q_iodevice_error_string(void* self);
 /// ``` QIODevice* self ```
 void q_iodevice_ready_read(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
+///
 /// ``` QIODevice* self, void (*slot)(QIODevice*) ```
 void q_iodevice_on_ready_read(void* self, void (*slot)(void*));
 
@@ -423,6 +473,8 @@ void q_iodevice_on_ready_read(void* self, void (*slot)(void*));
 /// ``` QIODevice* self, int channel ```
 void q_iodevice_channel_ready_read(void* self, int channel);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
+///
 /// ``` QIODevice* self, void (*slot)(QIODevice*, int) ```
 void q_iodevice_on_channel_ready_read(void* self, void (*slot)(void*, int));
 
@@ -431,6 +483,8 @@ void q_iodevice_on_channel_ready_read(void* self, void (*slot)(void*, int));
 /// ``` QIODevice* self, long long bytes ```
 void q_iodevice_bytes_written(void* self, long long bytes);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
+///
 /// ``` QIODevice* self, void (*slot)(QIODevice*, long long) ```
 void q_iodevice_on_bytes_written(void* self, void (*slot)(void*, long long));
 
@@ -439,6 +493,8 @@ void q_iodevice_on_bytes_written(void* self, void (*slot)(void*, long long));
 /// ``` QIODevice* self, int channel, long long bytes ```
 void q_iodevice_channel_bytes_written(void* self, int channel, long long bytes);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
+///
 /// ``` QIODevice* self, void (*slot)(QIODevice*, int, long long) ```
 void q_iodevice_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long));
 
@@ -447,6 +503,8 @@ void q_iodevice_on_channel_bytes_written(void* self, void (*slot)(void*, int, lo
 /// ``` QIODevice* self ```
 void q_iodevice_about_to_close(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
+///
 /// ``` QIODevice* self, void (*slot)(QIODevice*) ```
 void q_iodevice_on_about_to_close(void* self, void (*slot)(void*));
 
@@ -455,6 +513,8 @@ void q_iodevice_on_about_to_close(void* self, void (*slot)(void*));
 /// ``` QIODevice* self ```
 void q_iodevice_read_channel_finished(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
+///
 /// ``` QIODevice* self, void (*slot)(QIODevice*) ```
 void q_iodevice_on_read_channel_finished(void* self, void (*slot)(void*));
 
@@ -463,11 +523,15 @@ void q_iodevice_on_read_channel_finished(void* self, void (*slot)(void*));
 /// ``` QIODevice* self, char* data, long long maxlen ```
 long long q_iodevice_read_data(void* self, char* data, long long maxlen);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QIODevice* self, long long (*slot)(QIODevice*, char*, long long) ```
 void q_iodevice_on_read_data(void* self, long long (*slot)(void*, char*, long long));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readData)
+///
 /// Base class method implementation
 ///
 /// ``` QIODevice* self, char* data, long long maxlen ```
@@ -478,11 +542,15 @@ long long q_iodevice_qbase_read_data(void* self, char* data, long long maxlen);
 /// ``` QIODevice* self, char* data, long long maxlen ```
 long long q_iodevice_read_line_data(void* self, char* data, long long maxlen);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readLineData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QIODevice* self, long long (*slot)(QIODevice*, char*, long long) ```
 void q_iodevice_on_read_line_data(void* self, long long (*slot)(void*, char*, long long));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readLineData)
+///
 /// Base class method implementation
 ///
 /// ``` QIODevice* self, char* data, long long maxlen ```
@@ -493,11 +561,15 @@ long long q_iodevice_qbase_read_line_data(void* self, char* data, long long maxl
 /// ``` QIODevice* self, long long maxSize ```
 long long q_iodevice_skip_data(void* self, long long maxSize);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#skipData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QIODevice* self, long long (*slot)(QIODevice*, long long) ```
 void q_iodevice_on_skip_data(void* self, long long (*slot)(void*, long long));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#skipData)
+///
 /// Base class method implementation
 ///
 /// ``` QIODevice* self, long long maxSize ```
@@ -508,11 +580,15 @@ long long q_iodevice_qbase_skip_data(void* self, long long maxSize);
 /// ``` QIODevice* self, const char* data, long long lenVal ```
 long long q_iodevice_write_data(void* self, const char* data, long long lenVal);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#writeData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QIODevice* self, long long (*slot)(QIODevice*, const char*, long long) ```
 void q_iodevice_on_write_data(void* self, long long (*slot)(void*, const char*, long long));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#writeData)
+///
 /// Base class method implementation
 ///
 /// ``` QIODevice* self, const char* data, long long lenVal ```
@@ -523,11 +599,15 @@ long long q_iodevice_qbase_write_data(void* self, const char* data, long long le
 /// ``` QIODevice* self, int openMode ```
 void q_iodevice_set_open_mode(void* self, int64_t openMode);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setOpenMode)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QIODevice* self, void (*slot)(QIODevice*, int) ```
 void q_iodevice_on_set_open_mode(void* self, void (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setOpenMode)
+///
 /// Base class method implementation
 ///
 /// ``` QIODevice* self, int openMode ```
@@ -538,11 +618,15 @@ void q_iodevice_qbase_set_open_mode(void* self, int64_t openMode);
 /// ``` QIODevice* self, const char* errorString ```
 void q_iodevice_set_error_string(void* self, const char* errorString);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QIODevice* self, void (*slot)(QIODevice*, const char*) ```
 void q_iodevice_on_set_error_string(void* self, void (*slot)(void*, const char*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
+///
 /// Base class method implementation
 ///
 /// ``` QIODevice* self, const char* errorString ```
@@ -645,7 +729,7 @@ void q_iodevice_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QIODevice* self ```
-libqt_list /* of QObject* */ q_iodevice_children(void* self);
+const libqt_list /* of QObject* */ q_iodevice_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -743,7 +827,7 @@ QBindingStorage* q_iodevice_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QIODevice* self ```
-QBindingStorage* q_iodevice_binding_storage2(void* self);
+const QBindingStorage* q_iodevice_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -753,6 +837,8 @@ QBindingStorage* q_iodevice_binding_storage2(void* self);
 void q_iodevice_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QIODevice* self, void (*slot)(QObject*) ```
 void q_iodevice_on_destroyed(void* self, void (*slot)(void*));
@@ -808,6 +894,8 @@ void q_iodevice_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QIODevice* self, void (*slot)(QObject*, QObject*) ```
 void q_iodevice_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -822,12 +910,16 @@ bool q_iodevice_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QIODevice* self, QEvent* event ```
 bool q_iodevice_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -845,12 +937,16 @@ bool q_iodevice_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QIODevice* self, QObject* watched, QEvent* event ```
 bool q_iodevice_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -868,12 +964,16 @@ void q_iodevice_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QIODevice* self, QTimerEvent* event ```
 void q_iodevice_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -891,12 +991,16 @@ void q_iodevice_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QIODevice* self, QChildEvent* event ```
 void q_iodevice_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -914,12 +1018,16 @@ void q_iodevice_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QIODevice* self, QEvent* event ```
 void q_iodevice_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -937,12 +1045,16 @@ void q_iodevice_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QIODevice* self, QMetaMethod* signal ```
 void q_iodevice_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -960,12 +1072,16 @@ void q_iodevice_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QIODevice* self, QMetaMethod* signal ```
 void q_iodevice_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -983,12 +1099,16 @@ QObject* q_iodevice_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QIODevice* self ```
 QObject* q_iodevice_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1006,12 +1126,16 @@ int32_t q_iodevice_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QIODevice* self ```
 int32_t q_iodevice_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1029,12 +1153,16 @@ int32_t q_iodevice_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QIODevice* self, const char* signal ```
 int32_t q_iodevice_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1052,6 +1180,8 @@ bool q_iodevice_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QIODevice* self, QMetaMethod* signal ```
@@ -1059,11 +1189,24 @@ bool q_iodevice_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QIODevice* self, bool (*slot)(QIODevice*, QMetaMethod*) ```
 void q_iodevice_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QIODevice* self, void (*slot)(QObject*, const char*) ```
+void q_iodevice_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#dtor.QIODevice)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QIODevice* self ```

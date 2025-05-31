@@ -91,6 +91,8 @@ void q_systemsemaphore_set_key3(void* self, const char* key, int initialValue, i
 /// ``` QSystemSemaphore* self, int n ```
 bool q_systemsemaphore_release1(void* self, int n);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#dtor.QSystemSemaphore)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSystemSemaphore* self ```

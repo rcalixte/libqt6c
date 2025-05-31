@@ -12,18 +12,14 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqgraphicsitem.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpoint.h"
 #include <string.h>
-#include "libqthread.h"
 #include "libqtimeline.h"
 #include "libqtransform.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qgraphicsitemanimation.html
 
@@ -40,7 +36,7 @@ QGraphicsItemAnimation* q_graphicsitemanimation_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QGraphicsItemAnimation* self ```
-QMetaObject* q_graphicsitemanimation_meta_object(void* self);
+const QMetaObject* q_graphicsitemanimation_meta_object(void* self);
 
 /// ``` QGraphicsItemAnimation* self, const char* param1 ```
 void* q_graphicsitemanimation_metacast(void* self, const char* param1);
@@ -193,11 +189,15 @@ void q_graphicsitemanimation_set_step(void* self, double x);
 /// ``` QGraphicsItemAnimation* self, double step ```
 void q_graphicsitemanimation_before_animation_step(void* self, double step);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#beforeAnimationStep)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsItemAnimation* self, void (*slot)(QGraphicsItemAnimation*, double) ```
 void q_graphicsitemanimation_on_before_animation_step(void* self, void (*slot)(void*, double));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#beforeAnimationStep)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsItemAnimation* self, double step ```
@@ -208,11 +208,15 @@ void q_graphicsitemanimation_qbase_before_animation_step(void* self, double step
 /// ``` QGraphicsItemAnimation* self, double step ```
 void q_graphicsitemanimation_after_animation_step(void* self, double step);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#afterAnimationStep)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsItemAnimation* self, void (*slot)(QGraphicsItemAnimation*, double) ```
 void q_graphicsitemanimation_on_after_animation_step(void* self, void (*slot)(void*, double));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#afterAnimationStep)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsItemAnimation* self, double step ```
@@ -310,7 +314,7 @@ void q_graphicsitemanimation_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QGraphicsItemAnimation* self ```
-libqt_list /* of QObject* */ q_graphicsitemanimation_children(void* self);
+const libqt_list /* of QObject* */ q_graphicsitemanimation_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -408,7 +412,7 @@ QBindingStorage* q_graphicsitemanimation_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QGraphicsItemAnimation* self ```
-QBindingStorage* q_graphicsitemanimation_binding_storage2(void* self);
+const QBindingStorage* q_graphicsitemanimation_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -418,6 +422,8 @@ QBindingStorage* q_graphicsitemanimation_binding_storage2(void* self);
 void q_graphicsitemanimation_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QGraphicsItemAnimation* self, void (*slot)(QObject*) ```
 void q_graphicsitemanimation_on_destroyed(void* self, void (*slot)(void*));
@@ -473,6 +479,8 @@ void q_graphicsitemanimation_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QGraphicsItemAnimation* self, void (*slot)(QObject*, QObject*) ```
 void q_graphicsitemanimation_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -487,12 +495,16 @@ bool q_graphicsitemanimation_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsItemAnimation* self, QEvent* event ```
 bool q_graphicsitemanimation_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -510,12 +522,16 @@ bool q_graphicsitemanimation_event_filter(void* self, void* watched, void* event
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsItemAnimation* self, QObject* watched, QEvent* event ```
 bool q_graphicsitemanimation_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -533,12 +549,16 @@ void q_graphicsitemanimation_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsItemAnimation* self, QTimerEvent* event ```
 void q_graphicsitemanimation_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -556,12 +576,16 @@ void q_graphicsitemanimation_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsItemAnimation* self, QChildEvent* event ```
 void q_graphicsitemanimation_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -579,12 +603,16 @@ void q_graphicsitemanimation_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsItemAnimation* self, QEvent* event ```
 void q_graphicsitemanimation_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -602,12 +630,16 @@ void q_graphicsitemanimation_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsItemAnimation* self, QMetaMethod* signal ```
 void q_graphicsitemanimation_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -625,12 +657,16 @@ void q_graphicsitemanimation_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsItemAnimation* self, QMetaMethod* signal ```
 void q_graphicsitemanimation_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -648,12 +684,16 @@ QObject* q_graphicsitemanimation_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsItemAnimation* self ```
 QObject* q_graphicsitemanimation_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -671,12 +711,16 @@ int32_t q_graphicsitemanimation_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsItemAnimation* self ```
 int32_t q_graphicsitemanimation_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -694,12 +738,16 @@ int32_t q_graphicsitemanimation_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsItemAnimation* self, const char* signal ```
 int32_t q_graphicsitemanimation_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -717,6 +765,8 @@ bool q_graphicsitemanimation_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsItemAnimation* self, QMetaMethod* signal ```
@@ -724,11 +774,24 @@ bool q_graphicsitemanimation_qbase_is_signal_connected(void* self, void* signal)
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QGraphicsItemAnimation* self, bool (*slot)(QGraphicsItemAnimation*, QMetaMethod*) ```
 void q_graphicsitemanimation_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QGraphicsItemAnimation* self, void (*slot)(QObject*, const char*) ```
+void q_graphicsitemanimation_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#dtor.QGraphicsItemAnimation)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGraphicsItemAnimation* self ```

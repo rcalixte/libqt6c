@@ -61,6 +61,8 @@ int64_t q_webenginefilesystemaccessrequest_handle_type(void* self);
 /// ``` QWebEngineFileSystemAccessRequest* self ```
 int64_t q_webenginefilesystemaccessrequest_access_flags(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#dtor.QWebEngineFileSystemAccessRequest)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWebEngineFileSystemAccessRequest* self ```

@@ -54,15 +54,15 @@ QCborValue* q_cbormap_value3(void* self, void* key) {
     return QCborMap_Value3((QCborMap*)self, (QCborValue*)key);
 }
 
-QCborValue* q_cbormap_operator_subscript(void* self, long long key) {
+const QCborValue* q_cbormap_operator_subscript(void* self, long long key) {
     return QCborMap_OperatorSubscript((QCborMap*)self, key);
 }
 
-QCborValue* q_cbormap_operator_subscript2(void* self, const char* key) {
+const QCborValue* q_cbormap_operator_subscript2(void* self, const char* key) {
     return QCborMap_OperatorSubscript2((QCborMap*)self, qstring(key));
 }
 
-QCborValue* q_cbormap_operator_subscript3(void* self, void* key) {
+const QCborValue* q_cbormap_operator_subscript3(void* self, void* key) {
     return QCborMap_OperatorSubscript3((QCborMap*)self, (QCborValue*)key);
 }
 
@@ -290,7 +290,7 @@ QCborValueRef* q_cbormap__iterator_operator_minus_greater(void* self) {
     return QCborMap__Iterator_OperatorMinusGreater((QCborMap__Iterator*)self);
 }
 
-QCborValueConstRef* q_cbormap__iterator_operator_minus_greater2(void* self) {
+const QCborValueConstRef* q_cbormap__iterator_operator_minus_greater2(void* self) {
     return QCborMap__Iterator_OperatorMinusGreater2((QCborMap__Iterator*)self);
 }
 
@@ -414,7 +414,7 @@ libqt_pair /* tuple of QCborValueConstRef* and QCborValueConstRef* */ q_cbormap_
     return QCborMap__ConstIterator_OperatorSubscript((QCborMap__ConstIterator*)self, j);
 }
 
-QCborValueConstRef* q_cbormap__constiterator_operator_minus_greater(void* self) {
+const QCborValueConstRef* q_cbormap__constiterator_operator_minus_greater(void* self) {
     return QCborMap__ConstIterator_OperatorMinusGreater((QCborMap__ConstIterator*)self);
 }
 

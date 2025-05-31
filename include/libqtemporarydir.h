@@ -66,6 +66,8 @@ const char* q_temporarydir_path(void* self);
 /// ``` QTemporaryDir* self, const char* fileName ```
 const char* q_temporarydir_file_path(void* self, const char* fileName);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtemporarydir.html#dtor.QTemporaryDir)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTemporaryDir* self ```

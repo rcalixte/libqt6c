@@ -67,6 +67,8 @@ bool q_cameraformat_operator_equal(void* self, void* other);
 /// ``` QCameraFormat* self, QCameraFormat* other ```
 bool q_cameraformat_operator_not_equal(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcameraformat.html#dtor.QCameraFormat)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCameraFormat* self ```
@@ -134,6 +136,8 @@ libqt_list /* of QSize* */ q_cameradevice_photo_resolutions(void* self);
 /// ``` QCameraDevice* self ```
 libqt_list /* of QCameraFormat* */ q_cameradevice_video_formats(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcameradevice.html#dtor.QCameraDevice)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCameraDevice* self ```

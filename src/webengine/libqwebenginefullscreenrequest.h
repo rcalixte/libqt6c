@@ -46,6 +46,8 @@ bool q_webenginefullscreenrequest_toggle_on(void* self);
 /// ``` QWebEngineFullScreenRequest* self ```
 QUrl* q_webenginefullscreenrequest_origin(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefullscreenrequest.html#dtor.QWebEngineFullScreenRequest)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWebEngineFullScreenRequest* self ```

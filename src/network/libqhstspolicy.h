@@ -92,6 +92,8 @@ void q_hstspolicy_set_host2(void* self, const char* host, int64_t mode);
 /// ``` QHstsPolicy* self, uint32_t options ```
 const char* q_hstspolicy_host1(void* self, int64_t options);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qhstspolicy.html#dtor.QHstsPolicy)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QHstsPolicy* self ```

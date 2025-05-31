@@ -30,7 +30,7 @@ QLoggingCategory* q_loggingcategory_operator_call(void* self) {
     return QLoggingCategory_OperatorCall((QLoggingCategory*)self);
 }
 
-QLoggingCategory* q_loggingcategory_operator_call2(void* self) {
+const QLoggingCategory* q_loggingcategory_operator_call2(void* self) {
     return QLoggingCategory_OperatorCall2((QLoggingCategory*)self);
 }
 

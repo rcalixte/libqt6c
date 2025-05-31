@@ -12,18 +12,13 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
-#include "libqdatetime.h"
 #include "libqfiledevice.h"
 #include "libqiodevice.h"
 #include "libqiodevicebase.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qsavefile.html
 
@@ -50,7 +45,7 @@ QSaveFile* q_savefile_new4(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QSaveFile* self ```
-QMetaObject* q_savefile_meta_object(void* self);
+const QMetaObject* q_savefile_meta_object(void* self);
 
 /// ``` QSaveFile* self, const char* param1 ```
 void* q_savefile_metacast(void* self, const char* param1);
@@ -78,11 +73,15 @@ const char* q_savefile_tr(const char* s);
 /// ``` QSaveFile* self ```
 const char* q_savefile_file_name(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsavefile.html#fileName)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSaveFile* self, const char* (*slot)() ```
 void q_savefile_on_file_name(void* self, const char* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsavefile.html#fileName)
+///
 /// Base class method implementation
 ///
 /// ``` QSaveFile* self ```
@@ -98,11 +97,15 @@ void q_savefile_set_file_name(void* self, const char* name);
 /// ``` QSaveFile* self, int flags ```
 bool q_savefile_open(void* self, int64_t flags);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsavefile.html#open)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSaveFile* self, bool (*slot)(QSaveFile*, int) ```
 void q_savefile_on_open(void* self, bool (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsavefile.html#open)
+///
 /// Base class method implementation
 ///
 /// ``` QSaveFile* self, int flags ```
@@ -133,11 +136,15 @@ bool q_savefile_direct_write_fallback(void* self);
 /// ``` QSaveFile* self, const char* data, long long lenVal ```
 long long q_savefile_write_data(void* self, const char* data, long long lenVal);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsavefile.html#writeData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSaveFile* self, long long (*slot)(QSaveFile*, const char*, long long) ```
 void q_savefile_on_write_data(void* self, long long (*slot)(void*, const char*, long long));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsavefile.html#writeData)
+///
 /// Base class method implementation
 ///
 /// ``` QSaveFile* self, const char* data, long long lenVal ```
@@ -449,6 +456,8 @@ void q_savefile_ready_read(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
+///
 /// ``` QSaveFile* self, void (*slot)(QIODevice*) ```
 void q_savefile_on_ready_read(void* self, void (*slot)(void*));
 
@@ -460,6 +469,8 @@ void q_savefile_on_ready_read(void* self, void (*slot)(void*));
 void q_savefile_channel_ready_read(void* self, int channel);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
 /// ``` QSaveFile* self, void (*slot)(QIODevice*, int) ```
 void q_savefile_on_channel_ready_read(void* self, void (*slot)(void*, int));
@@ -473,6 +484,8 @@ void q_savefile_bytes_written(void* self, long long bytes);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
+///
 /// ``` QSaveFile* self, void (*slot)(QIODevice*, long long) ```
 void q_savefile_on_bytes_written(void* self, void (*slot)(void*, long long));
 
@@ -484,6 +497,8 @@ void q_savefile_on_bytes_written(void* self, void (*slot)(void*, long long));
 void q_savefile_channel_bytes_written(void* self, int channel, long long bytes);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// ``` QSaveFile* self, void (*slot)(QIODevice*, int, long long) ```
 void q_savefile_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long));
@@ -497,6 +512,8 @@ void q_savefile_about_to_close(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
+///
 /// ``` QSaveFile* self, void (*slot)(QIODevice*) ```
 void q_savefile_on_about_to_close(void* self, void (*slot)(void*));
 
@@ -508,6 +525,8 @@ void q_savefile_on_about_to_close(void* self, void (*slot)(void*));
 void q_savefile_read_channel_finished(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
 /// ``` QSaveFile* self, void (*slot)(QIODevice*) ```
 void q_savefile_on_read_channel_finished(void* self, void (*slot)(void*));
@@ -601,7 +620,7 @@ void q_savefile_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QSaveFile* self ```
-libqt_list /* of QObject* */ q_savefile_children(void* self);
+const libqt_list /* of QObject* */ q_savefile_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -699,7 +718,7 @@ QBindingStorage* q_savefile_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QSaveFile* self ```
-QBindingStorage* q_savefile_binding_storage2(void* self);
+const QBindingStorage* q_savefile_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -709,6 +728,8 @@ QBindingStorage* q_savefile_binding_storage2(void* self);
 void q_savefile_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QSaveFile* self, void (*slot)(QObject*) ```
 void q_savefile_on_destroyed(void* self, void (*slot)(void*));
@@ -764,6 +785,8 @@ void q_savefile_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QSaveFile* self, void (*slot)(QObject*, QObject*) ```
 void q_savefile_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -778,12 +801,16 @@ bool q_savefile_is_sequential(void* self);
 
 /// Inherited from QFileDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#isSequential)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self ```
 bool q_savefile_qbase_is_sequential(void* self);
 
 /// Inherited from QFileDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#isSequential)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -801,12 +828,16 @@ long long q_savefile_pos(void* self);
 
 /// Inherited from QFileDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#pos)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self ```
 long long q_savefile_qbase_pos(void* self);
 
 /// Inherited from QFileDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#pos)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -824,12 +855,16 @@ bool q_savefile_seek(void* self, long long offset);
 
 /// Inherited from QFileDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#seek)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self, long long offset ```
 bool q_savefile_qbase_seek(void* self, long long offset);
 
 /// Inherited from QFileDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#seek)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -847,12 +882,16 @@ bool q_savefile_at_end(void* self);
 
 /// Inherited from QFileDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#atEnd)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self ```
 bool q_savefile_qbase_at_end(void* self);
 
 /// Inherited from QFileDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#atEnd)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -870,12 +909,16 @@ long long q_savefile_size(void* self);
 
 /// Inherited from QFileDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#size)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self ```
 long long q_savefile_qbase_size(void* self);
 
 /// Inherited from QFileDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#size)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -893,12 +936,16 @@ bool q_savefile_resize(void* self, long long sz);
 
 /// Inherited from QFileDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#resize)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self, long long sz ```
 bool q_savefile_qbase_resize(void* self, long long sz);
 
 /// Inherited from QFileDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#resize)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -916,12 +963,16 @@ int64_t q_savefile_permissions(void* self);
 
 /// Inherited from QFileDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#permissions)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self ```
 int64_t q_savefile_qbase_permissions(void* self);
 
 /// Inherited from QFileDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#permissions)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -939,12 +990,16 @@ bool q_savefile_set_permissions(void* self, int64_t permissionSpec);
 
 /// Inherited from QFileDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#setPermissions)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self, int permissionSpec ```
 bool q_savefile_qbase_set_permissions(void* self, int64_t permissionSpec);
 
 /// Inherited from QFileDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#setPermissions)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -962,12 +1017,16 @@ long long q_savefile_read_data(void* self, char* data, long long maxlen);
 
 /// Inherited from QFileDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#readData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self, char* data, long long maxlen ```
 long long q_savefile_qbase_read_data(void* self, char* data, long long maxlen);
 
 /// Inherited from QFileDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#readData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -985,12 +1044,16 @@ long long q_savefile_read_line_data(void* self, char* data, long long maxlen);
 
 /// Inherited from QFileDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#readLineData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self, char* data, long long maxlen ```
 long long q_savefile_qbase_read_line_data(void* self, char* data, long long maxlen);
 
 /// Inherited from QFileDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#readLineData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1008,12 +1071,16 @@ bool q_savefile_reset(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#reset)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self ```
 bool q_savefile_qbase_reset(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#reset)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1031,12 +1098,16 @@ long long q_savefile_bytes_available(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesAvailable)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self ```
 long long q_savefile_qbase_bytes_available(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesAvailable)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1054,12 +1125,16 @@ long long q_savefile_bytes_to_write(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesToWrite)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self ```
 long long q_savefile_qbase_bytes_to_write(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesToWrite)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1077,12 +1152,16 @@ bool q_savefile_can_read_line(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#canReadLine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self ```
 bool q_savefile_qbase_can_read_line(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#canReadLine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1100,12 +1179,16 @@ bool q_savefile_wait_for_ready_read(void* self, int msecs);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#waitForReadyRead)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self, int msecs ```
 bool q_savefile_qbase_wait_for_ready_read(void* self, int msecs);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#waitForReadyRead)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1123,12 +1206,16 @@ bool q_savefile_wait_for_bytes_written(void* self, int msecs);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#waitForBytesWritten)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self, int msecs ```
 bool q_savefile_qbase_wait_for_bytes_written(void* self, int msecs);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#waitForBytesWritten)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1146,12 +1233,16 @@ long long q_savefile_skip_data(void* self, long long maxSize);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#skipData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self, long long maxSize ```
 long long q_savefile_qbase_skip_data(void* self, long long maxSize);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#skipData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1169,12 +1260,16 @@ bool q_savefile_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self, QEvent* event ```
 bool q_savefile_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1192,12 +1287,16 @@ bool q_savefile_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self, QObject* watched, QEvent* event ```
 bool q_savefile_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1215,12 +1314,16 @@ void q_savefile_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self, QTimerEvent* event ```
 void q_savefile_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1238,12 +1341,16 @@ void q_savefile_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self, QChildEvent* event ```
 void q_savefile_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1261,12 +1368,16 @@ void q_savefile_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self, QEvent* event ```
 void q_savefile_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1284,12 +1395,16 @@ void q_savefile_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self, QMetaMethod* signal ```
 void q_savefile_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1307,12 +1422,16 @@ void q_savefile_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self, QMetaMethod* signal ```
 void q_savefile_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1330,12 +1449,16 @@ void q_savefile_set_open_mode(void* self, int64_t openMode);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setOpenMode)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self, int openMode ```
 void q_savefile_qbase_set_open_mode(void* self, int64_t openMode);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setOpenMode)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1353,12 +1476,16 @@ void q_savefile_set_error_string(void* self, const char* errorString);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self, const char* errorString ```
 void q_savefile_qbase_set_error_string(void* self, const char* errorString);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1376,12 +1503,16 @@ QObject* q_savefile_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self ```
 QObject* q_savefile_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1399,12 +1530,16 @@ int32_t q_savefile_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self ```
 int32_t q_savefile_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1422,12 +1557,16 @@ int32_t q_savefile_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self, const char* signal ```
 int32_t q_savefile_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1445,6 +1584,8 @@ bool q_savefile_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSaveFile* self, QMetaMethod* signal ```
@@ -1452,11 +1593,24 @@ bool q_savefile_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QSaveFile* self, bool (*slot)(QSaveFile*, QMetaMethod*) ```
 void q_savefile_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QSaveFile* self, void (*slot)(QObject*, const char*) ```
+void q_savefile_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsavefile.html#dtor.QSaveFile)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSaveFile* self ```

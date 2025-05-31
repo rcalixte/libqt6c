@@ -423,6 +423,8 @@ libqt_list /* of QFileInfo* */ q_dir_entry_info_list22(void* self, const char* n
 /// ``` QDir* self, const char* nameFilters[], int filters, int sort ```
 libqt_list /* of QFileInfo* */ q_dir_entry_info_list3(void* self, const char* nameFilters[], int64_t filters, int64_t sort);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#dtor.QDir)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QDir* self ```

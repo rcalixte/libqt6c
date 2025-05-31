@@ -12,27 +12,18 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractaxis.h"
 #include "libqabstractseries.h"
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "../libqbrush.h"
-#include "libqchart.h"
 #include "../libqevent.h"
 #include "../libqcolor.h"
-#include "../libqfont.h"
-#include "../libqimage.h"
 #include "libqlineseries.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include "../libqpen.h"
-#include "../libqpoint.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 #include "libqxyseries.h"
 
-/// https://doc.qt.io/qt-6/qsplineseries.html
+/// https://doc.qt.io/qt-6/qsplineseries-qtcharts.html
 
 /// q_splineseries_new constructs a new QSplineSeries object.
 ///
@@ -47,7 +38,7 @@ QSplineSeries* q_splineseries_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QSplineSeries* self ```
-QMetaObject* q_splineseries_meta_object(void* self);
+const QMetaObject* q_splineseries_meta_object(void* self);
 
 /// ``` QSplineSeries* self, const char* param1 ```
 void* q_splineseries_metacast(void* self, const char* param1);
@@ -70,16 +61,20 @@ int32_t q_splineseries_qbase_metacall(void* self, int64_t param1, int param2, vo
 /// ``` const char* s ```
 const char* q_splineseries_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsplineseries.html#type)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplineseries-qtcharts.html#type)
 ///
 /// ``` QSplineSeries* self ```
 int64_t q_splineseries_type(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplineseries-qtcharts.html#type)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QSplineSeries* self, int64_t (*slot)() ```
 void q_splineseries_on_type(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplineseries-qtcharts.html#type)
+///
 /// Base class method implementation
 ///
 /// ``` QSplineSeries* self ```
@@ -113,8 +108,8 @@ void q_splineseries_append_with_point(void* self, void* point);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#append)
 ///
-/// ``` QSplineSeries* self, QPointF* points[] ```
-void q_splineseries_append_with_points(void* self, void* points[]);
+/// ``` QSplineSeries* self, libqt_list /* of QPointF* */ points ```
+void q_splineseries_append_with_points(void* self, libqt_list points);
 
 /// Inherited from QXYSeries
 ///
@@ -212,7 +207,7 @@ libqt_list /* of QPointF* */ q_splineseries_points_vector(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#at)
 ///
 /// ``` QSplineSeries* self, int index ```
-QPointF* q_splineseries_at(void* self, int index);
+const QPointF* q_splineseries_at(void* self, int index);
 
 /// Inherited from QXYSeries
 ///
@@ -225,8 +220,8 @@ QXYSeries* q_splineseries_operator_shift_left(void* self, void* point);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#operator<<)
 ///
-/// ``` QSplineSeries* self, QPointF* points[] ```
-QXYSeries* q_splineseries_operator_shift_left_with_points(void* self, void* points[]);
+/// ``` QSplineSeries* self, libqt_list /* of QPointF* */ points ```
+QXYSeries* q_splineseries_operator_shift_left_with_points(void* self, libqt_list points);
 
 /// Inherited from QXYSeries
 ///
@@ -344,8 +339,8 @@ bool q_splineseries_point_labels_clipping(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#replace)
 ///
-/// ``` QSplineSeries* self, QPointF* points[] ```
-void q_splineseries_replace_with_points(void* self, void* points[]);
+/// ``` QSplineSeries* self, libqt_list /* of QPointF* */ points ```
+void q_splineseries_replace_with_points(void* self, libqt_list points);
 
 /// Inherited from QXYSeries
 ///
@@ -393,22 +388,22 @@ void q_splineseries_deselect_all_points(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectPoints)
 ///
-/// ``` QSplineSeries* self, int* indexes[] ```
-void q_splineseries_select_points(void* self, int* indexes[]);
+/// ``` QSplineSeries* self, libqt_list /* of int */ indexes ```
+void q_splineseries_select_points(void* self, libqt_list indexes);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#deselectPoints)
 ///
-/// ``` QSplineSeries* self, int* indexes[] ```
-void q_splineseries_deselect_points(void* self, int* indexes[]);
+/// ``` QSplineSeries* self, libqt_list /* of int */ indexes ```
+void q_splineseries_deselect_points(void* self, libqt_list indexes);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#toggleSelection)
 ///
-/// ``` QSplineSeries* self, int* indexes[] ```
-void q_splineseries_toggle_selection(void* self, int* indexes[]);
+/// ``` QSplineSeries* self, libqt_list /* of int */ indexes ```
+void q_splineseries_toggle_selection(void* self, libqt_list indexes);
 
 /// Inherited from QXYSeries
 ///
@@ -429,7 +424,7 @@ void q_splineseries_set_light_marker(void* self, void* lightMarker);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#lightMarker)
 ///
 /// ``` QSplineSeries* self ```
-QImage* q_splineseries_light_marker(void* self);
+const QImage* q_splineseries_light_marker(void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -443,7 +438,7 @@ void q_splineseries_set_selected_light_marker(void* self, void* selectedLightMar
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectedLightMarker)
 ///
 /// ``` QSplineSeries* self ```
-QImage* q_splineseries_selected_light_marker(void* self);
+const QImage* q_splineseries_selected_light_marker(void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -575,15 +570,15 @@ libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ q_splineseries_poi
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#sizeBy)
 ///
-/// ``` QSplineSeries* self, double* sourceData[], double minSize, double maxSize ```
-void q_splineseries_size_by(void* self, double* sourceData[], double minSize, double maxSize);
+/// ``` QSplineSeries* self, libqt_list /* of double */ sourceData, double minSize, double maxSize ```
+void q_splineseries_size_by(void* self, libqt_list sourceData, double minSize, double maxSize);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#colorBy)
 ///
-/// ``` QSplineSeries* self, double* sourceData[] ```
-void q_splineseries_color_by(void* self, double* sourceData[]);
+/// ``` QSplineSeries* self, libqt_list /* of double */ sourceData ```
+void q_splineseries_color_by(void* self, libqt_list sourceData);
 
 /// Inherited from QXYSeries
 ///
@@ -593,6 +588,8 @@ void q_splineseries_color_by(void* self, double* sourceData[]);
 void q_splineseries_clicked(void* self, void* point);
 
 /// Inherited from QXYSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#clicked)
 ///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, QPointF*) ```
 void q_splineseries_on_clicked(void* self, void (*slot)(void*, void*));
@@ -606,6 +603,8 @@ void q_splineseries_hovered(void* self, void* point, bool state);
 
 /// Inherited from QXYSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#hovered)
+///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, QPointF*, bool) ```
 void q_splineseries_on_hovered(void* self, void (*slot)(void*, void*, bool));
 
@@ -617,6 +616,8 @@ void q_splineseries_on_hovered(void* self, void (*slot)(void*, void*, bool));
 void q_splineseries_pressed(void* self, void* point);
 
 /// Inherited from QXYSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pressed)
 ///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, QPointF*) ```
 void q_splineseries_on_pressed(void* self, void (*slot)(void*, void*));
@@ -630,6 +631,8 @@ void q_splineseries_released(void* self, void* point);
 
 /// Inherited from QXYSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#released)
+///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, QPointF*) ```
 void q_splineseries_on_released(void* self, void (*slot)(void*, void*));
 
@@ -641,6 +644,8 @@ void q_splineseries_on_released(void* self, void (*slot)(void*, void*));
 void q_splineseries_double_clicked(void* self, void* point);
 
 /// Inherited from QXYSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#doubleClicked)
 ///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, QPointF*) ```
 void q_splineseries_on_double_clicked(void* self, void (*slot)(void*, void*));
@@ -654,6 +659,8 @@ void q_splineseries_point_replaced(void* self, int index);
 
 /// Inherited from QXYSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointReplaced)
+///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, int) ```
 void q_splineseries_on_point_replaced(void* self, void (*slot)(void*, int));
 
@@ -665,6 +672,8 @@ void q_splineseries_on_point_replaced(void* self, void (*slot)(void*, int));
 void q_splineseries_point_removed(void* self, int index);
 
 /// Inherited from QXYSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointRemoved)
 ///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, int) ```
 void q_splineseries_on_point_removed(void* self, void (*slot)(void*, int));
@@ -678,6 +687,8 @@ void q_splineseries_point_added(void* self, int index);
 
 /// Inherited from QXYSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointAdded)
+///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, int) ```
 void q_splineseries_on_point_added(void* self, void (*slot)(void*, int));
 
@@ -689,6 +700,8 @@ void q_splineseries_on_point_added(void* self, void (*slot)(void*, int));
 void q_splineseries_color_changed(void* self, void* color);
 
 /// Inherited from QXYSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#colorChanged)
 ///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, QColor*) ```
 void q_splineseries_on_color_changed(void* self, void (*slot)(void*, void*));
@@ -702,6 +715,8 @@ void q_splineseries_selected_color_changed(void* self, void* color);
 
 /// Inherited from QXYSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectedColorChanged)
+///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, QColor*) ```
 void q_splineseries_on_selected_color_changed(void* self, void (*slot)(void*, void*));
 
@@ -713,6 +728,8 @@ void q_splineseries_on_selected_color_changed(void* self, void (*slot)(void*, vo
 void q_splineseries_points_replaced(void* self);
 
 /// Inherited from QXYSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointsReplaced)
 ///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*) ```
 void q_splineseries_on_points_replaced(void* self, void (*slot)(void*));
@@ -726,6 +743,8 @@ void q_splineseries_point_labels_format_changed(void* self, const char* format);
 
 /// Inherited from QXYSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsFormatChanged)
+///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, const char*) ```
 void q_splineseries_on_point_labels_format_changed(void* self, void (*slot)(void*, const char*));
 
@@ -737,6 +756,8 @@ void q_splineseries_on_point_labels_format_changed(void* self, void (*slot)(void
 void q_splineseries_point_labels_visibility_changed(void* self, bool visible);
 
 /// Inherited from QXYSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsVisibilityChanged)
 ///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, bool) ```
 void q_splineseries_on_point_labels_visibility_changed(void* self, void (*slot)(void*, bool));
@@ -750,6 +771,8 @@ void q_splineseries_point_labels_font_changed(void* self, void* font);
 
 /// Inherited from QXYSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsFontChanged)
+///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, QFont*) ```
 void q_splineseries_on_point_labels_font_changed(void* self, void (*slot)(void*, void*));
 
@@ -761,6 +784,8 @@ void q_splineseries_on_point_labels_font_changed(void* self, void (*slot)(void*,
 void q_splineseries_point_labels_color_changed(void* self, void* color);
 
 /// Inherited from QXYSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsColorChanged)
 ///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, QColor*) ```
 void q_splineseries_on_point_labels_color_changed(void* self, void (*slot)(void*, void*));
@@ -774,6 +799,8 @@ void q_splineseries_point_labels_clipping_changed(void* self, bool clipping);
 
 /// Inherited from QXYSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsClippingChanged)
+///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, bool) ```
 void q_splineseries_on_point_labels_clipping_changed(void* self, void (*slot)(void*, bool));
 
@@ -785,6 +812,8 @@ void q_splineseries_on_point_labels_clipping_changed(void* self, void (*slot)(vo
 void q_splineseries_points_removed(void* self, int index, int count);
 
 /// Inherited from QXYSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointsRemoved)
 ///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, int, int) ```
 void q_splineseries_on_points_removed(void* self, void (*slot)(void*, int, int));
@@ -798,6 +827,8 @@ void q_splineseries_pen_changed(void* self, void* pen);
 
 /// Inherited from QXYSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#penChanged)
+///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, QPen*) ```
 void q_splineseries_on_pen_changed(void* self, void (*slot)(void*, void*));
 
@@ -809,6 +840,8 @@ void q_splineseries_on_pen_changed(void* self, void (*slot)(void*, void*));
 void q_splineseries_selected_points_changed(void* self);
 
 /// Inherited from QXYSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectedPointsChanged)
 ///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*) ```
 void q_splineseries_on_selected_points_changed(void* self, void (*slot)(void*));
@@ -822,6 +855,8 @@ void q_splineseries_light_marker_changed(void* self, void* lightMarker);
 
 /// Inherited from QXYSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#lightMarkerChanged)
+///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, QImage*) ```
 void q_splineseries_on_light_marker_changed(void* self, void (*slot)(void*, void*));
 
@@ -833,6 +868,8 @@ void q_splineseries_on_light_marker_changed(void* self, void (*slot)(void*, void
 void q_splineseries_selected_light_marker_changed(void* self, void* selectedLightMarker);
 
 /// Inherited from QXYSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectedLightMarkerChanged)
 ///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, QImage*) ```
 void q_splineseries_on_selected_light_marker_changed(void* self, void (*slot)(void*, void*));
@@ -846,6 +883,8 @@ void q_splineseries_best_fit_line_visibility_changed(void* self, bool visible);
 
 /// Inherited from QXYSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#bestFitLineVisibilityChanged)
+///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, bool) ```
 void q_splineseries_on_best_fit_line_visibility_changed(void* self, void (*slot)(void*, bool));
 
@@ -857,6 +896,8 @@ void q_splineseries_on_best_fit_line_visibility_changed(void* self, void (*slot)
 void q_splineseries_best_fit_line_pen_changed(void* self, void* pen);
 
 /// Inherited from QXYSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#bestFitLinePenChanged)
 ///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, QPen*) ```
 void q_splineseries_on_best_fit_line_pen_changed(void* self, void (*slot)(void*, void*));
@@ -870,6 +911,8 @@ void q_splineseries_best_fit_line_color_changed(void* self, void* color);
 
 /// Inherited from QXYSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#bestFitLineColorChanged)
+///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, QColor*) ```
 void q_splineseries_on_best_fit_line_color_changed(void* self, void (*slot)(void*, void*));
 
@@ -882,6 +925,8 @@ void q_splineseries_points_configuration_changed(void* self, libqt_map /* of int
 
 /// Inherited from QXYSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointsConfigurationChanged)
+///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */) ```
 void q_splineseries_on_points_configuration_changed(void* self, void (*slot)(void*, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */));
 
@@ -893,6 +938,8 @@ void q_splineseries_on_points_configuration_changed(void* self, void (*slot)(voi
 void q_splineseries_marker_size_changed(void* self, double size);
 
 /// Inherited from QXYSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#markerSizeChanged)
 ///
 /// ``` QSplineSeries* self, void (*slot)(QXYSeries*, double) ```
 void q_splineseries_on_marker_size_changed(void* self, void (*slot)(void*, double));
@@ -929,8 +976,8 @@ void q_splineseries_set_best_fit_line_visible1(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#colorBy)
 ///
-/// ``` QSplineSeries* self, double* sourceData[], QLinearGradient* gradient ```
-void q_splineseries_color_by2(void* self, double* sourceData[], void* gradient);
+/// ``` QSplineSeries* self, libqt_list /* of double */ sourceData, QLinearGradient* gradient ```
+void q_splineseries_color_by2(void* self, libqt_list sourceData, void* gradient);
 
 /// Inherited from QAbstractSeries
 ///
@@ -1039,6 +1086,8 @@ void q_splineseries_name_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
+///
 /// ``` QSplineSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_splineseries_on_name_changed(void* self, void (*slot)(void*));
 
@@ -1050,6 +1099,8 @@ void q_splineseries_on_name_changed(void* self, void (*slot)(void*));
 void q_splineseries_visible_changed(void* self);
 
 /// Inherited from QAbstractSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
 /// ``` QSplineSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_splineseries_on_visible_changed(void* self, void (*slot)(void*));
@@ -1063,6 +1114,8 @@ void q_splineseries_opacity_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
+///
 /// ``` QSplineSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_splineseries_on_opacity_changed(void* self, void (*slot)(void*));
 
@@ -1074,6 +1127,8 @@ void q_splineseries_on_opacity_changed(void* self, void (*slot)(void*));
 void q_splineseries_use_open_g_l_changed(void* self);
 
 /// Inherited from QAbstractSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
 /// ``` QSplineSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_splineseries_on_use_open_g_l_changed(void* self, void (*slot)(void*));
@@ -1174,7 +1229,7 @@ void q_splineseries_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QSplineSeries* self ```
-libqt_list /* of QObject* */ q_splineseries_children(void* self);
+const libqt_list /* of QObject* */ q_splineseries_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1272,7 +1327,7 @@ QBindingStorage* q_splineseries_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QSplineSeries* self ```
-QBindingStorage* q_splineseries_binding_storage2(void* self);
+const QBindingStorage* q_splineseries_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -1282,6 +1337,8 @@ QBindingStorage* q_splineseries_binding_storage2(void* self);
 void q_splineseries_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QSplineSeries* self, void (*slot)(QObject*) ```
 void q_splineseries_on_destroyed(void* self, void (*slot)(void*));
@@ -1337,6 +1394,8 @@ void q_splineseries_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QSplineSeries* self, void (*slot)(QObject*, QObject*) ```
 void q_splineseries_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -1351,12 +1410,16 @@ void q_splineseries_set_pen(void* self, void* pen);
 
 /// Inherited from QXYSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPen)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplineSeries* self, QPen* pen ```
 void q_splineseries_qbase_set_pen(void* self, void* pen);
 
 /// Inherited from QXYSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPen)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1374,12 +1437,16 @@ void q_splineseries_set_brush(void* self, void* brush);
 
 /// Inherited from QXYSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setBrush)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplineSeries* self, QBrush* brush ```
 void q_splineseries_qbase_set_brush(void* self, void* brush);
 
 /// Inherited from QXYSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setBrush)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1397,12 +1464,16 @@ void q_splineseries_set_color(void* self, void* color);
 
 /// Inherited from QXYSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setColor)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplineSeries* self, QColor* color ```
 void q_splineseries_qbase_set_color(void* self, void* color);
 
 /// Inherited from QXYSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setColor)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1420,12 +1491,16 @@ QColor* q_splineseries_color(void* self);
 
 /// Inherited from QXYSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#color)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplineSeries* self ```
 QColor* q_splineseries_qbase_color(void* self);
 
 /// Inherited from QXYSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#color)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1443,12 +1518,16 @@ bool q_splineseries_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplineSeries* self, QEvent* event ```
 bool q_splineseries_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1466,12 +1545,16 @@ bool q_splineseries_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplineSeries* self, QObject* watched, QEvent* event ```
 bool q_splineseries_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1489,12 +1572,16 @@ void q_splineseries_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplineSeries* self, QTimerEvent* event ```
 void q_splineseries_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1512,12 +1599,16 @@ void q_splineseries_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplineSeries* self, QChildEvent* event ```
 void q_splineseries_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1535,12 +1626,16 @@ void q_splineseries_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplineSeries* self, QEvent* event ```
 void q_splineseries_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1558,12 +1653,16 @@ void q_splineseries_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplineSeries* self, QMetaMethod* signal ```
 void q_splineseries_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1581,12 +1680,16 @@ void q_splineseries_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplineSeries* self, QMetaMethod* signal ```
 void q_splineseries_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1604,12 +1707,16 @@ QObject* q_splineseries_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplineSeries* self ```
 QObject* q_splineseries_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1627,12 +1734,16 @@ int32_t q_splineseries_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplineSeries* self ```
 int32_t q_splineseries_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1650,12 +1761,16 @@ int32_t q_splineseries_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplineSeries* self, const char* signal ```
 int32_t q_splineseries_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1673,6 +1788,8 @@ bool q_splineseries_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSplineSeries* self, QMetaMethod* signal ```
@@ -1680,11 +1797,24 @@ bool q_splineseries_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QSplineSeries* self, bool (*slot)(QSplineSeries*, QMetaMethod*) ```
 void q_splineseries_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QSplineSeries* self, void (*slot)(QObject*, const char*) ```
+void q_splineseries_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsplineseries-qtcharts.html#dtor.QSplineSeries)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSplineSeries* self ```

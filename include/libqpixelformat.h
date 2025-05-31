@@ -169,6 +169,8 @@ int64_t q_pixelformat_yuv_layout(void* self);
 /// ``` QPixelFormat* self ```
 unsigned char q_pixelformat_sub_enum(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpixelformat.html#dtor.QPixelFormat)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPixelFormat* self ```

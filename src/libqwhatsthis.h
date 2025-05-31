@@ -80,6 +80,8 @@ void q_whatsthis_show_text3(void* pos, const char* text, void* w);
 /// ``` QObject* parent ```
 QAction* q_whatsthis_create_action1(void* parent);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwhatsthis.html#dtor.QWhatsThis)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWhatsThis* self ```

@@ -1,16 +1,11 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqlayout.hpp"
 #include "libqlayoutitem.hpp"
-#include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
 #include <string.h>
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqwidget.hpp"
 #include "libqcoreevent.hpp"
 #include "libqboxlayout.hpp"
@@ -24,7 +19,7 @@ QBoxLayout* q_boxlayout_new2(int64_t param1, void* parent) {
     return QBoxLayout_new2(param1, (QWidget*)parent);
 }
 
-QMetaObject* q_boxlayout_meta_object(void* self) {
+const QMetaObject* q_boxlayout_meta_object(void* self) {
     return QBoxLayout_MetaObject((QBoxLayout*)self);
 }
 
@@ -469,8 +464,7 @@ const char* q_boxlayout_object_name(void* self) {
 }
 
 void q_boxlayout_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_boxlayout_is_widget_type(void* self) {
@@ -509,7 +503,7 @@ void q_boxlayout_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_boxlayout_children(void* self) {
+const libqt_list /* of QObject* */ q_boxlayout_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -576,7 +570,7 @@ QBindingStorage* q_boxlayout_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_boxlayout_binding_storage2(void* self) {
+const QBindingStorage* q_boxlayout_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -912,6 +906,10 @@ void q_boxlayout_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) 
     QBoxLayout_OnIsSignalConnected((QBoxLayout*)self, (intptr_t)slot);
 }
 
+void q_boxlayout_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
 void q_boxlayout_delete(void* self) {
     QBoxLayout_Delete((QBoxLayout*)(self));
 }
@@ -924,7 +922,7 @@ QHBoxLayout* q_hboxlayout_new2() {
     return QHBoxLayout_new2();
 }
 
-QMetaObject* q_hboxlayout_meta_object(void* self) {
+const QMetaObject* q_hboxlayout_meta_object(void* self) {
     return QHBoxLayout_MetaObject((QHBoxLayout*)self);
 }
 
@@ -1189,8 +1187,7 @@ const char* q_hboxlayout_object_name(void* self) {
 }
 
 void q_hboxlayout_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_hboxlayout_is_widget_type(void* self) {
@@ -1229,7 +1226,7 @@ void q_hboxlayout_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_hboxlayout_children(void* self) {
+const libqt_list /* of QObject* */ q_hboxlayout_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1296,7 +1293,7 @@ QBindingStorage* q_hboxlayout_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_hboxlayout_binding_storage2(void* self) {
+const QBindingStorage* q_hboxlayout_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1812,6 +1809,10 @@ void q_hboxlayout_on_is_signal_connected(void* self, bool (*slot)(void*, void*))
     QHBoxLayout_OnIsSignalConnected((QHBoxLayout*)self, (intptr_t)slot);
 }
 
+void q_hboxlayout_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
 void q_hboxlayout_delete(void* self) {
     QHBoxLayout_Delete((QHBoxLayout*)(self));
 }
@@ -1824,7 +1825,7 @@ QVBoxLayout* q_vboxlayout_new2() {
     return QVBoxLayout_new2();
 }
 
-QMetaObject* q_vboxlayout_meta_object(void* self) {
+const QMetaObject* q_vboxlayout_meta_object(void* self) {
     return QVBoxLayout_MetaObject((QVBoxLayout*)self);
 }
 
@@ -2089,8 +2090,7 @@ const char* q_vboxlayout_object_name(void* self) {
 }
 
 void q_vboxlayout_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_vboxlayout_is_widget_type(void* self) {
@@ -2129,7 +2129,7 @@ void q_vboxlayout_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_vboxlayout_children(void* self) {
+const libqt_list /* of QObject* */ q_vboxlayout_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -2196,7 +2196,7 @@ QBindingStorage* q_vboxlayout_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_vboxlayout_binding_storage2(void* self) {
+const QBindingStorage* q_vboxlayout_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2710,6 +2710,10 @@ bool q_vboxlayout_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_vboxlayout_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QVBoxLayout_OnIsSignalConnected((QVBoxLayout*)self, (intptr_t)slot);
+}
+
+void q_vboxlayout_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_vboxlayout_delete(void* self) {

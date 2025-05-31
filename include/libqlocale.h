@@ -763,6 +763,8 @@ const char* q_locale_language_to_code2(int64_t language, int64_t codeTypes);
 /// ``` QLocale* self, const char* str, enum QLocale__QuotationStyle style ```
 const char* q_locale_quote_string2(void* self, const char* str, int64_t style);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#dtor.QLocale)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QLocale* self ```

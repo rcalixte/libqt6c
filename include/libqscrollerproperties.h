@@ -61,6 +61,8 @@ QVariant* q_scrollerproperties_scroll_metric(void* self, int64_t metric);
 /// ``` QScrollerProperties* self, enum QScrollerProperties__ScrollMetric metric, QVariant* value ```
 void q_scrollerproperties_set_scroll_metric(void* self, int64_t metric, void* value);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#dtor.QScrollerProperties)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QScrollerProperties* self ```

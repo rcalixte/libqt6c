@@ -289,6 +289,8 @@ void q_futureinterfacebase_swap(void* self, void* other);
 /// ``` QFutureInterfaceBase* self ```
 bool q_futureinterfacebase_is_chain_canceled(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#dtor.QFutureInterfaceBase)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QFutureInterfaceBase* self ```

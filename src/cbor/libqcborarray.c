@@ -48,7 +48,7 @@ QCborValue* q_cborarray_last(void* self) {
     return QCborArray_Last((QCborArray*)self);
 }
 
-QCborValue* q_cborarray_operator_subscript(void* self, int64_t i) {
+const QCborValue* q_cborarray_operator_subscript(void* self, int64_t i) {
     return QCborArray_OperatorSubscript((QCborArray*)self, i);
 }
 
@@ -214,7 +214,7 @@ QCborArray* q_cborarray_from_string_list(const char* list[]) {
     for (size_t _i = 0; _i < list_len; ++_i) {
         list_qstr[_i] = qstring(list[_i]);
     }
-    libqt_list list_list = qstrlist(list_qstr, list_len);
+    libqt_list list_list = qlist(list_qstr, list_len);
     return QCborArray_FromStringList(list_list);
 }
 
@@ -254,7 +254,7 @@ QCborValueRef* q_cborarray__iterator_operator_minus_greater(void* self) {
     return QCborArray__Iterator_OperatorMinusGreater((QCborArray__Iterator*)self);
 }
 
-QCborValueConstRef* q_cborarray__iterator_operator_minus_greater2(void* self) {
+const QCborValueConstRef* q_cborarray__iterator_operator_minus_greater2(void* self) {
     return QCborArray__Iterator_OperatorMinusGreater2((QCborArray__Iterator*)self);
 }
 
@@ -370,7 +370,7 @@ QCborValueConstRef* q_cborarray__constiterator_operator_multiply(void* self) {
     return QCborArray__ConstIterator_OperatorMultiply((QCborArray__ConstIterator*)self);
 }
 
-QCborValueConstRef* q_cborarray__constiterator_operator_minus_greater(void* self) {
+const QCborValueConstRef* q_cborarray__constiterator_operator_minus_greater(void* self) {
     return QCborArray__ConstIterator_OperatorMinusGreater((QCborArray__ConstIterator*)self);
 }
 

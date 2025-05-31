@@ -1,21 +1,11 @@
-#include <QAnyStringView>
-#include <QBindingStorage>
-#include <QByteArray>
-#include <QChildEvent>
-#include <QEvent>
 #include <QImage>
-#include <QList>
 #include <QMetaMethod>
 #include <QMetaObject>
-#define WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection
 #include <QObject>
 #include <QString>
 #include <QByteArray>
 #include <cstring>
-#include <QThread>
-#include <QTimerEvent>
 #include <QUrl>
-#include <QVariant>
 #include <QWebEngineNotification>
 #include <qwebenginenotification.h>
 #include "libqwebenginenotification.hpp"
@@ -154,14 +144,6 @@ libqt_string QWebEngineNotification_Tr3(const char* s, const char* c, int n) {
     memcpy(_str.data, _b.data(), _str.len);
     _str.data[_str.len] = '\0';
     return _str;
-}
-
-bool QWebEngineNotification_Event(QWebEngineNotification* self, QEvent* event) {
-    return self->event(event);
-}
-
-bool QWebEngineNotification_EventFilter(QWebEngineNotification* self, QObject* watched, QEvent* event) {
-    return self->eventFilter(watched, event);
 }
 
 void QWebEngineNotification_Delete(QWebEngineNotification* self) {

@@ -12,15 +12,11 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
-#include "../libqevent.h"
 #include "../libqdatetime.h"
 #include "../libqiodevice.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include <string.h>
-#include "../libqthread.h"
 #include "../libqurl.h"
 #include "../libqvariant.h"
 
@@ -121,6 +117,8 @@ libqt_map /* of int64_t to QVariant* */ q_networkcachemetadata_attributes(void* 
 /// ``` QNetworkCacheMetaData* self, libqt_map /* of enum QNetworkRequest__Attribute to QVariant* */ attributes ```
 void q_networkcachemetadata_set_attributes(void* self, libqt_map /* of int64_t to QVariant* */ attributes);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#dtor.QNetworkCacheMetaData)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QNetworkCacheMetaData* self ```
@@ -131,7 +129,7 @@ void q_networkcachemetadata_delete(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QAbstractNetworkCache* self ```
-QMetaObject* q_abstractnetworkcache_meta_object(void* self);
+const QMetaObject* q_abstractnetworkcache_meta_object(void* self);
 
 /// ``` QAbstractNetworkCache* self, const char* param1 ```
 void* q_abstractnetworkcache_metacast(void* self, const char* param1);
@@ -290,7 +288,7 @@ void q_abstractnetworkcache_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QAbstractNetworkCache* self ```
-libqt_list /* of QObject* */ q_abstractnetworkcache_children(void* self);
+const libqt_list /* of QObject* */ q_abstractnetworkcache_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -388,7 +386,7 @@ QBindingStorage* q_abstractnetworkcache_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QAbstractNetworkCache* self ```
-QBindingStorage* q_abstractnetworkcache_binding_storage2(void* self);
+const QBindingStorage* q_abstractnetworkcache_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -398,6 +396,8 @@ QBindingStorage* q_abstractnetworkcache_binding_storage2(void* self);
 void q_abstractnetworkcache_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QAbstractNetworkCache* self, void (*slot)(QObject*) ```
 void q_abstractnetworkcache_on_destroyed(void* self, void (*slot)(void*));
@@ -453,9 +453,22 @@ void q_abstractnetworkcache_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QAbstractNetworkCache* self, void (*slot)(QObject*, QObject*) ```
 void q_abstractnetworkcache_on_destroyed1(void* self, void (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QAbstractNetworkCache* self, void (*slot)(QObject*, const char*) ```
+void q_abstractnetworkcache_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractnetworkcache.html#dtor.QAbstractNetworkCache)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAbstractNetworkCache* self ```

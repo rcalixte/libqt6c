@@ -142,6 +142,8 @@ bool q_mediaformat_operator_not_equal(void* self, void* other);
 /// ``` QMediaFormat* self, enum QMediaFormat__ResolveFlags flags ```
 void q_mediaformat_resolve_for_encoding(void* self, int64_t flags);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#dtor.QMediaFormat)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMediaFormat* self ```

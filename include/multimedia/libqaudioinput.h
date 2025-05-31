@@ -12,15 +12,11 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
 #include "libqaudiodevice.h"
-#include "../libqbindingstorage.h"
 #include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qaudioinput.html
 
@@ -47,7 +43,7 @@ QAudioInput* q_audioinput_new4(void* deviceInfo, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QAudioInput* self ```
-QMetaObject* q_audioinput_meta_object(void* self);
+const QMetaObject* q_audioinput_meta_object(void* self);
 
 /// ``` QAudioInput* self, const char* param1 ```
 void* q_audioinput_metacast(void* self, const char* param1);
@@ -105,6 +101,8 @@ void q_audioinput_set_muted(void* self, bool muted);
 /// ``` QAudioInput* self ```
 void q_audioinput_device_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaudioinput.html#deviceChanged)
+///
 /// ``` QAudioInput* self, void (*slot)(QAudioInput*) ```
 void q_audioinput_on_device_changed(void* self, void (*slot)(void*));
 
@@ -113,6 +111,8 @@ void q_audioinput_on_device_changed(void* self, void (*slot)(void*));
 /// ``` QAudioInput* self, float volume ```
 void q_audioinput_volume_changed(void* self, float volume);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaudioinput.html#volumeChanged)
+///
 /// ``` QAudioInput* self, void (*slot)(QAudioInput*, float) ```
 void q_audioinput_on_volume_changed(void* self, void (*slot)(void*, float));
 
@@ -121,6 +121,8 @@ void q_audioinput_on_volume_changed(void* self, void (*slot)(void*, float));
 /// ``` QAudioInput* self, bool muted ```
 void q_audioinput_muted_changed(void* self, bool muted);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaudioinput.html#mutedChanged)
+///
 /// ``` QAudioInput* self, void (*slot)(QAudioInput*, bool) ```
 void q_audioinput_on_muted_changed(void* self, void (*slot)(void*, bool));
 
@@ -216,7 +218,7 @@ void q_audioinput_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QAudioInput* self ```
-libqt_list /* of QObject* */ q_audioinput_children(void* self);
+const libqt_list /* of QObject* */ q_audioinput_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -314,7 +316,7 @@ QBindingStorage* q_audioinput_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QAudioInput* self ```
-QBindingStorage* q_audioinput_binding_storage2(void* self);
+const QBindingStorage* q_audioinput_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -324,6 +326,8 @@ QBindingStorage* q_audioinput_binding_storage2(void* self);
 void q_audioinput_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QAudioInput* self, void (*slot)(QObject*) ```
 void q_audioinput_on_destroyed(void* self, void (*slot)(void*));
@@ -379,6 +383,8 @@ void q_audioinput_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QAudioInput* self, void (*slot)(QObject*, QObject*) ```
 void q_audioinput_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -393,12 +399,16 @@ bool q_audioinput_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioInput* self, QEvent* event ```
 bool q_audioinput_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -416,12 +426,16 @@ bool q_audioinput_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioInput* self, QObject* watched, QEvent* event ```
 bool q_audioinput_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -439,12 +453,16 @@ void q_audioinput_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioInput* self, QTimerEvent* event ```
 void q_audioinput_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -462,12 +480,16 @@ void q_audioinput_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioInput* self, QChildEvent* event ```
 void q_audioinput_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -485,12 +507,16 @@ void q_audioinput_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioInput* self, QEvent* event ```
 void q_audioinput_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -508,12 +534,16 @@ void q_audioinput_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioInput* self, QMetaMethod* signal ```
 void q_audioinput_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -531,12 +561,16 @@ void q_audioinput_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioInput* self, QMetaMethod* signal ```
 void q_audioinput_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -554,12 +588,16 @@ QObject* q_audioinput_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioInput* self ```
 QObject* q_audioinput_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -577,12 +615,16 @@ int32_t q_audioinput_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioInput* self ```
 int32_t q_audioinput_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -600,12 +642,16 @@ int32_t q_audioinput_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioInput* self, const char* signal ```
 int32_t q_audioinput_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -623,6 +669,8 @@ bool q_audioinput_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAudioInput* self, QMetaMethod* signal ```
@@ -630,11 +678,24 @@ bool q_audioinput_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QAudioInput* self, bool (*slot)(QAudioInput*, QMetaMethod*) ```
 void q_audioinput_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QAudioInput* self, void (*slot)(QObject*, const char*) ```
+void q_audioinput_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaudioinput.html#dtor.QAudioInput)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAudioInput* self ```

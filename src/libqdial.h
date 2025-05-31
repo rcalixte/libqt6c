@@ -13,43 +13,18 @@
 #include "qtlibc.h"
 
 #include "libqabstractslider.h"
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
-#include "libqcursor.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
-#include "libqlocale.h"
-#include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqscreen.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
 #include "libqstyleoption.h"
-#include "libqthread.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qdial.html
 
@@ -66,7 +41,7 @@ QDial* q_dial_new2();
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QDial* self ```
-QMetaObject* q_dial_meta_object(void* self);
+const QMetaObject* q_dial_meta_object(void* self);
 
 /// ``` QDial* self, const char* param1 ```
 void* q_dial_metacast(void* self, const char* param1);
@@ -119,11 +94,15 @@ bool q_dial_notches_visible(void* self);
 /// ``` QDial* self ```
 QSize* q_dial_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDial* self, QSize* (*slot)() ```
 void q_dial_on_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QDial* self ```
@@ -134,11 +113,15 @@ QSize* q_dial_qbase_size_hint(void* self);
 /// ``` QDial* self ```
 QSize* q_dial_minimum_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#minimumSizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDial* self, QSize* (*slot)() ```
 void q_dial_on_minimum_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#minimumSizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QDial* self ```
@@ -159,11 +142,15 @@ void q_dial_set_wrapping(void* self, bool on);
 /// ``` QDial* self, QEvent* e ```
 bool q_dial_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDial* self, bool (*slot)(QDial*, QEvent*) ```
 void q_dial_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QDial* self, QEvent* e ```
@@ -174,11 +161,15 @@ bool q_dial_qbase_event(void* self, void* e);
 /// ``` QDial* self, QResizeEvent* re ```
 void q_dial_resize_event(void* self, void* re);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#resizeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDial* self, void (*slot)(QDial*, QResizeEvent*) ```
 void q_dial_on_resize_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#resizeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QDial* self, QResizeEvent* re ```
@@ -189,11 +180,15 @@ void q_dial_qbase_resize_event(void* self, void* re);
 /// ``` QDial* self, QPaintEvent* pe ```
 void q_dial_paint_event(void* self, void* pe);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#paintEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDial* self, void (*slot)(QDial*, QPaintEvent*) ```
 void q_dial_on_paint_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#paintEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QDial* self, QPaintEvent* pe ```
@@ -204,11 +199,15 @@ void q_dial_qbase_paint_event(void* self, void* pe);
 /// ``` QDial* self, QMouseEvent* me ```
 void q_dial_mouse_press_event(void* self, void* me);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#mousePressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDial* self, void (*slot)(QDial*, QMouseEvent*) ```
 void q_dial_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#mousePressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QDial* self, QMouseEvent* me ```
@@ -219,11 +218,15 @@ void q_dial_qbase_mouse_press_event(void* self, void* me);
 /// ``` QDial* self, QMouseEvent* me ```
 void q_dial_mouse_release_event(void* self, void* me);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#mouseReleaseEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDial* self, void (*slot)(QDial*, QMouseEvent*) ```
 void q_dial_on_mouse_release_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#mouseReleaseEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QDial* self, QMouseEvent* me ```
@@ -234,11 +237,15 @@ void q_dial_qbase_mouse_release_event(void* self, void* me);
 /// ``` QDial* self, QMouseEvent* me ```
 void q_dial_mouse_move_event(void* self, void* me);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#mouseMoveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDial* self, void (*slot)(QDial*, QMouseEvent*) ```
 void q_dial_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#mouseMoveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QDial* self, QMouseEvent* me ```
@@ -249,11 +256,15 @@ void q_dial_qbase_mouse_move_event(void* self, void* me);
 /// ``` QDial* self, enum QAbstractSlider__SliderChange change ```
 void q_dial_slider_change(void* self, int64_t change);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#sliderChange)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDial* self, void (*slot)(QDial*, enum QAbstractSlider__SliderChange) ```
 void q_dial_on_slider_change(void* self, void (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#sliderChange)
+///
 /// Base class method implementation
 ///
 /// ``` QDial* self, enum QAbstractSlider__SliderChange change ```
@@ -264,11 +275,15 @@ void q_dial_qbase_slider_change(void* self, int64_t change);
 /// ``` QDial* self, QStyleOptionSlider* option ```
 void q_dial_init_style_option(void* self, void* option);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#initStyleOption)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDial* self, void (*slot)(QDial*, QStyleOptionSlider*) ```
 void q_dial_on_init_style_option(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#initStyleOption)
+///
 /// Base class method implementation
 ///
 /// ``` QDial* self, QStyleOptionSlider* option ```
@@ -461,6 +476,8 @@ void q_dial_value_changed(void* self, int value);
 
 /// Inherited from QAbstractSlider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#valueChanged)
+///
 /// ``` QDial* self, void (*slot)(QAbstractSlider*, int) ```
 void q_dial_on_value_changed(void* self, void (*slot)(void*, int));
 
@@ -472,6 +489,8 @@ void q_dial_on_value_changed(void* self, void (*slot)(void*, int));
 void q_dial_slider_pressed(void* self);
 
 /// Inherited from QAbstractSlider
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderPressed)
 ///
 /// ``` QDial* self, void (*slot)(QAbstractSlider*) ```
 void q_dial_on_slider_pressed(void* self, void (*slot)(void*));
@@ -485,6 +504,8 @@ void q_dial_slider_moved(void* self, int position);
 
 /// Inherited from QAbstractSlider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderMoved)
+///
 /// ``` QDial* self, void (*slot)(QAbstractSlider*, int) ```
 void q_dial_on_slider_moved(void* self, void (*slot)(void*, int));
 
@@ -496,6 +517,8 @@ void q_dial_on_slider_moved(void* self, void (*slot)(void*, int));
 void q_dial_slider_released(void* self);
 
 /// Inherited from QAbstractSlider
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderReleased)
 ///
 /// ``` QDial* self, void (*slot)(QAbstractSlider*) ```
 void q_dial_on_slider_released(void* self, void (*slot)(void*));
@@ -509,6 +532,8 @@ void q_dial_range_changed(void* self, int min, int max);
 
 /// Inherited from QAbstractSlider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#rangeChanged)
+///
 /// ``` QDial* self, void (*slot)(QAbstractSlider*, int, int) ```
 void q_dial_on_range_changed(void* self, void (*slot)(void*, int, int));
 
@@ -520,6 +545,8 @@ void q_dial_on_range_changed(void* self, void (*slot)(void*, int, int));
 void q_dial_action_triggered(void* self, int action);
 
 /// Inherited from QAbstractSlider
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#actionTriggered)
 ///
 /// ``` QDial* self, void (*slot)(QAbstractSlider*, int) ```
 void q_dial_on_action_triggered(void* self, void (*slot)(void*, int));
@@ -648,7 +675,7 @@ QRect* q_dial_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QDial* self ```
-QRect* q_dial_geometry(void* self);
+const QRect* q_dial_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1005,7 +1032,7 @@ QWidget* q_dial_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QDial* self ```
-QPalette* q_dial_palette(void* self);
+const QPalette* q_dial_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1047,7 +1074,7 @@ int64_t q_dial_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QDial* self ```
-QFont* q_dial_font(void* self);
+const QFont* q_dial_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2047,15 +2074,15 @@ void q_dial_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QDial* self, QAction* actions[] ```
-void q_dial_add_actions(void* self, void* actions[]);
+/// ``` QDial* self, libqt_list /* of QAction* */ actions ```
+void q_dial_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QDial* self, QAction* before, QAction* actions[] ```
-void q_dial_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QDial* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_dial_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2255,6 +2282,8 @@ void q_dial_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QDial* self, void (*slot)(QWidget*, const char*) ```
 void q_dial_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2266,6 +2295,8 @@ void q_dial_on_window_title_changed(void* self, void (*slot)(void*, const char*)
 void q_dial_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QDial* self, void (*slot)(QWidget*, QIcon*) ```
 void q_dial_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -2279,6 +2310,8 @@ void q_dial_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QDial* self, void (*slot)(QWidget*, const char*) ```
 void q_dial_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2290,6 +2323,8 @@ void q_dial_on_window_icon_text_changed(void* self, void (*slot)(void*, const ch
 void q_dial_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QDial* self, void (*slot)(QWidget*, QPoint*) ```
 void q_dial_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2495,7 +2530,7 @@ void q_dial_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QDial* self ```
-libqt_list /* of QObject* */ q_dial_children(void* self);
+const libqt_list /* of QObject* */ q_dial_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2586,7 +2621,7 @@ QBindingStorage* q_dial_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QDial* self ```
-QBindingStorage* q_dial_binding_storage2(void* self);
+const QBindingStorage* q_dial_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2596,6 +2631,8 @@ QBindingStorage* q_dial_binding_storage2(void* self);
 void q_dial_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QDial* self, void (*slot)(QObject*) ```
 void q_dial_on_destroyed(void* self, void (*slot)(void*));
@@ -2650,6 +2687,8 @@ QMetaObject__Connection* q_dial_connect4(void* self, void* sender, const char* s
 void q_dial_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QDial* self, void (*slot)(QObject*, QObject*) ```
 void q_dial_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -2749,12 +2788,16 @@ void q_dial_key_press_event(void* self, void* ev);
 
 /// Inherited from QAbstractSlider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QKeyEvent* ev ```
 void q_dial_qbase_key_press_event(void* self, void* ev);
 
 /// Inherited from QAbstractSlider
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2772,12 +2815,16 @@ void q_dial_timer_event(void* self, void* param1);
 
 /// Inherited from QAbstractSlider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QTimerEvent* param1 ```
 void q_dial_qbase_timer_event(void* self, void* param1);
 
 /// Inherited from QAbstractSlider
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2795,12 +2842,16 @@ void q_dial_wheel_event(void* self, void* e);
 
 /// Inherited from QAbstractSlider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QWheelEvent* e ```
 void q_dial_qbase_wheel_event(void* self, void* e);
 
 /// Inherited from QAbstractSlider
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2818,12 +2869,16 @@ void q_dial_change_event(void* self, void* e);
 
 /// Inherited from QAbstractSlider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#changeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QEvent* e ```
 void q_dial_qbase_change_event(void* self, void* e);
 
 /// Inherited from QAbstractSlider
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2841,12 +2896,16 @@ int32_t q_dial_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self ```
 int32_t q_dial_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2864,12 +2923,16 @@ void q_dial_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, bool visible ```
 void q_dial_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2887,12 +2950,16 @@ int32_t q_dial_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, int param1 ```
 int32_t q_dial_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2910,12 +2977,16 @@ bool q_dial_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self ```
 bool q_dial_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2933,12 +3004,16 @@ QPaintEngine* q_dial_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self ```
 QPaintEngine* q_dial_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2956,12 +3031,16 @@ void q_dial_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QMouseEvent* event ```
 void q_dial_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2979,12 +3058,16 @@ void q_dial_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QKeyEvent* event ```
 void q_dial_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3002,12 +3085,16 @@ void q_dial_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QFocusEvent* event ```
 void q_dial_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3025,12 +3112,16 @@ void q_dial_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QFocusEvent* event ```
 void q_dial_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3048,12 +3139,16 @@ void q_dial_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QEnterEvent* event ```
 void q_dial_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3071,12 +3166,16 @@ void q_dial_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QEvent* event ```
 void q_dial_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3094,12 +3193,16 @@ void q_dial_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QMoveEvent* event ```
 void q_dial_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3117,12 +3220,16 @@ void q_dial_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QCloseEvent* event ```
 void q_dial_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3140,12 +3247,16 @@ void q_dial_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QContextMenuEvent* event ```
 void q_dial_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3163,12 +3274,16 @@ void q_dial_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QTabletEvent* event ```
 void q_dial_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3186,12 +3301,16 @@ void q_dial_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QActionEvent* event ```
 void q_dial_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3209,12 +3328,16 @@ void q_dial_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QDragEnterEvent* event ```
 void q_dial_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3232,12 +3355,16 @@ void q_dial_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QDragMoveEvent* event ```
 void q_dial_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3255,12 +3382,16 @@ void q_dial_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QDragLeaveEvent* event ```
 void q_dial_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3278,12 +3409,16 @@ void q_dial_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QDropEvent* event ```
 void q_dial_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3301,12 +3436,16 @@ void q_dial_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QShowEvent* event ```
 void q_dial_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3324,12 +3463,16 @@ void q_dial_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QHideEvent* event ```
 void q_dial_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3347,12 +3490,16 @@ bool q_dial_native_event(void* self, const char* eventType, void* message, intpt
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, const char* eventType, void* message, intptr_t* result ```
 bool q_dial_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3370,12 +3517,16 @@ int32_t q_dial_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_dial_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3393,12 +3544,16 @@ void q_dial_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QPainter* painter ```
 void q_dial_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3416,12 +3571,16 @@ QPaintDevice* q_dial_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QPoint* offset ```
 QPaintDevice* q_dial_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3439,12 +3598,16 @@ QPainter* q_dial_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self ```
 QPainter* q_dial_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3462,12 +3625,16 @@ void q_dial_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QInputMethodEvent* param1 ```
 void q_dial_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3485,12 +3652,16 @@ QVariant* q_dial_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_dial_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3508,12 +3679,16 @@ bool q_dial_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, bool next ```
 bool q_dial_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3531,12 +3706,16 @@ bool q_dial_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QObject* watched, QEvent* event ```
 bool q_dial_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3554,12 +3733,16 @@ void q_dial_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QChildEvent* event ```
 void q_dial_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3577,12 +3760,16 @@ void q_dial_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QEvent* event ```
 void q_dial_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3600,12 +3787,16 @@ void q_dial_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QMetaMethod* signal ```
 void q_dial_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3623,12 +3814,16 @@ void q_dial_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QMetaMethod* signal ```
 void q_dial_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3646,12 +3841,16 @@ void q_dial_set_repeat_action(void* self, int64_t action);
 
 /// Inherited from QAbstractSlider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setRepeatAction)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, enum QAbstractSlider__SliderAction action ```
 void q_dial_qbase_set_repeat_action(void* self, int64_t action);
 
 /// Inherited from QAbstractSlider
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setRepeatAction)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3669,12 +3868,16 @@ int64_t q_dial_repeat_action(void* self);
 
 /// Inherited from QAbstractSlider
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#repeatAction)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self ```
 int64_t q_dial_qbase_repeat_action(void* self);
 
 /// Inherited from QAbstractSlider
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#repeatAction)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3692,12 +3895,16 @@ void q_dial_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self ```
 void q_dial_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3715,12 +3922,16 @@ void q_dial_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self ```
 void q_dial_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3738,12 +3949,16 @@ void q_dial_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self ```
 void q_dial_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3761,12 +3976,16 @@ bool q_dial_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self ```
 bool q_dial_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3784,12 +4003,16 @@ bool q_dial_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self ```
 bool q_dial_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3807,12 +4030,16 @@ QObject* q_dial_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self ```
 QObject* q_dial_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3830,12 +4057,16 @@ int32_t q_dial_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self ```
 int32_t q_dial_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3853,12 +4084,16 @@ int32_t q_dial_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, const char* signal ```
 int32_t q_dial_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3876,6 +4111,8 @@ bool q_dial_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDial* self, QMetaMethod* signal ```
@@ -3883,11 +4120,24 @@ bool q_dial_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QDial* self, bool (*slot)(QDial*, QMetaMethod*) ```
 void q_dial_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QDial* self, void (*slot)(QObject*, const char*) ```
+void q_dial_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#dtor.QDial)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QDial* self ```

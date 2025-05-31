@@ -14,8 +14,6 @@
 
 #include "libqabstractitemmodel.h"
 #include "libqabstractitemview.h"
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
@@ -23,8 +21,6 @@
 #include "libqsize.h"
 #include <string.h>
 #include "libqstyleoption.h"
-#include "libqthread.h"
-#include "libqvariant.h"
 #include "libqwidget.h"
 
 /// https://doc.qt.io/qt-6/qabstractitemdelegate.html
@@ -42,7 +38,7 @@ QAbstractItemDelegate* q_abstractitemdelegate_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QAbstractItemDelegate* self ```
-QMetaObject* q_abstractitemdelegate_meta_object(void* self);
+const QMetaObject* q_abstractitemdelegate_meta_object(void* self);
 
 /// ``` QAbstractItemDelegate* self, const char* param1 ```
 void* q_abstractitemdelegate_metacast(void* self, const char* param1);
@@ -70,11 +66,15 @@ const char* q_abstractitemdelegate_tr(const char* s);
 /// ``` QAbstractItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index ```
 void q_abstractitemdelegate_paint(void* self, void* painter, void* option, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractItemDelegate* self, void (*slot)(QAbstractItemDelegate*, QPainter*, QStyleOptionViewItem*, QModelIndex*) ```
 void q_abstractitemdelegate_on_paint(void* self, void (*slot)(void*, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paint)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index ```
@@ -85,11 +85,15 @@ void q_abstractitemdelegate_qbase_paint(void* self, void* painter, void* option,
 /// ``` QAbstractItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index ```
 QSize* q_abstractitemdelegate_size_hint(void* self, void* option, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractItemDelegate* self, QSize* (*slot)(QAbstractItemDelegate*, QStyleOptionViewItem*, QModelIndex*) ```
 void q_abstractitemdelegate_on_size_hint(void* self, QSize* (*slot)(void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index ```
@@ -100,11 +104,15 @@ QSize* q_abstractitemdelegate_qbase_size_hint(void* self, void* option, void* in
 /// ``` QAbstractItemDelegate* self, QWidget* parent, QStyleOptionViewItem* option, QModelIndex* index ```
 QWidget* q_abstractitemdelegate_create_editor(void* self, void* parent, void* option, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#createEditor)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractItemDelegate* self, QWidget* (*slot)(QAbstractItemDelegate*, QWidget*, QStyleOptionViewItem*, QModelIndex*) ```
 void q_abstractitemdelegate_on_create_editor(void* self, QWidget* (*slot)(void*, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#createEditor)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractItemDelegate* self, QWidget* parent, QStyleOptionViewItem* option, QModelIndex* index ```
@@ -115,11 +123,15 @@ QWidget* q_abstractitemdelegate_qbase_create_editor(void* self, void* parent, vo
 /// ``` QAbstractItemDelegate* self, QWidget* editor, QModelIndex* index ```
 void q_abstractitemdelegate_destroy_editor(void* self, void* editor, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#destroyEditor)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractItemDelegate* self, void (*slot)(QAbstractItemDelegate*, QWidget*, QModelIndex*) ```
 void q_abstractitemdelegate_on_destroy_editor(void* self, void (*slot)(void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#destroyEditor)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractItemDelegate* self, QWidget* editor, QModelIndex* index ```
@@ -130,11 +142,15 @@ void q_abstractitemdelegate_qbase_destroy_editor(void* self, void* editor, void*
 /// ``` QAbstractItemDelegate* self, QWidget* editor, QModelIndex* index ```
 void q_abstractitemdelegate_set_editor_data(void* self, void* editor, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setEditorData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractItemDelegate* self, void (*slot)(QAbstractItemDelegate*, QWidget*, QModelIndex*) ```
 void q_abstractitemdelegate_on_set_editor_data(void* self, void (*slot)(void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setEditorData)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractItemDelegate* self, QWidget* editor, QModelIndex* index ```
@@ -145,11 +161,15 @@ void q_abstractitemdelegate_qbase_set_editor_data(void* self, void* editor, void
 /// ``` QAbstractItemDelegate* self, QWidget* editor, QAbstractItemModel* model, QModelIndex* index ```
 void q_abstractitemdelegate_set_model_data(void* self, void* editor, void* model, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setModelData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractItemDelegate* self, void (*slot)(QAbstractItemDelegate*, QWidget*, QAbstractItemModel*, QModelIndex*) ```
 void q_abstractitemdelegate_on_set_model_data(void* self, void (*slot)(void*, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setModelData)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractItemDelegate* self, QWidget* editor, QAbstractItemModel* model, QModelIndex* index ```
@@ -160,11 +180,15 @@ void q_abstractitemdelegate_qbase_set_model_data(void* self, void* editor, void*
 /// ``` QAbstractItemDelegate* self, QWidget* editor, QStyleOptionViewItem* option, QModelIndex* index ```
 void q_abstractitemdelegate_update_editor_geometry(void* self, void* editor, void* option, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#updateEditorGeometry)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractItemDelegate* self, void (*slot)(QAbstractItemDelegate*, QWidget*, QStyleOptionViewItem*, QModelIndex*) ```
 void q_abstractitemdelegate_on_update_editor_geometry(void* self, void (*slot)(void*, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#updateEditorGeometry)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractItemDelegate* self, QWidget* editor, QStyleOptionViewItem* option, QModelIndex* index ```
@@ -175,11 +199,15 @@ void q_abstractitemdelegate_qbase_update_editor_geometry(void* self, void* edito
 /// ``` QAbstractItemDelegate* self, QEvent* event, QAbstractItemModel* model, QStyleOptionViewItem* option, QModelIndex* index ```
 bool q_abstractitemdelegate_editor_event(void* self, void* event, void* model, void* option, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#editorEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractItemDelegate* self, bool (*slot)(QAbstractItemDelegate*, QEvent*, QAbstractItemModel*, QStyleOptionViewItem*, QModelIndex*) ```
 void q_abstractitemdelegate_on_editor_event(void* self, bool (*slot)(void*, void*, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#editorEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractItemDelegate* self, QEvent* event, QAbstractItemModel* model, QStyleOptionViewItem* option, QModelIndex* index ```
@@ -190,11 +218,15 @@ bool q_abstractitemdelegate_qbase_editor_event(void* self, void* event, void* mo
 /// ``` QAbstractItemDelegate* self, QHelpEvent* event, QAbstractItemView* view, QStyleOptionViewItem* option, QModelIndex* index ```
 bool q_abstractitemdelegate_help_event(void* self, void* event, void* view, void* option, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#helpEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractItemDelegate* self, bool (*slot)(QAbstractItemDelegate*, QHelpEvent*, QAbstractItemView*, QStyleOptionViewItem*, QModelIndex*) ```
 void q_abstractitemdelegate_on_help_event(void* self, bool (*slot)(void*, void*, void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#helpEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractItemDelegate* self, QHelpEvent* event, QAbstractItemView* view, QStyleOptionViewItem* option, QModelIndex* index ```
@@ -205,11 +237,15 @@ bool q_abstractitemdelegate_qbase_help_event(void* self, void* event, void* view
 /// ``` QAbstractItemDelegate* self ```
 libqt_list /* of int */ q_abstractitemdelegate_painting_roles(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paintingRoles)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractItemDelegate* self, libqt_list /* of int */ (*slot)() ```
 void q_abstractitemdelegate_on_painting_roles(void* self, libqt_list /* of int */ (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paintingRoles)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractItemDelegate* self ```
@@ -220,6 +256,8 @@ libqt_list /* of int */ q_abstractitemdelegate_qbase_painting_roles(void* self);
 /// ``` QAbstractItemDelegate* self, QWidget* editor ```
 void q_abstractitemdelegate_commit_data(void* self, void* editor);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#commitData)
+///
 /// ``` QAbstractItemDelegate* self, void (*slot)(QAbstractItemDelegate*, QWidget*) ```
 void q_abstractitemdelegate_on_commit_data(void* self, void (*slot)(void*, void*));
 
@@ -228,6 +266,8 @@ void q_abstractitemdelegate_on_commit_data(void* self, void (*slot)(void*, void*
 /// ``` QAbstractItemDelegate* self, QWidget* editor ```
 void q_abstractitemdelegate_close_editor(void* self, void* editor);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#closeEditor)
+///
 /// ``` QAbstractItemDelegate* self, void (*slot)(QAbstractItemDelegate*, QWidget*) ```
 void q_abstractitemdelegate_on_close_editor(void* self, void (*slot)(void*, void*));
 
@@ -236,6 +276,8 @@ void q_abstractitemdelegate_on_close_editor(void* self, void (*slot)(void*, void
 /// ``` QAbstractItemDelegate* self, QModelIndex* param1 ```
 void q_abstractitemdelegate_size_hint_changed(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHintChanged)
+///
 /// ``` QAbstractItemDelegate* self, void (*slot)(QAbstractItemDelegate*, QModelIndex*) ```
 void q_abstractitemdelegate_on_size_hint_changed(void* self, void (*slot)(void*, void*));
 
@@ -254,6 +296,8 @@ const char* q_abstractitemdelegate_tr3(const char* s, const char* c, int n);
 /// ``` QAbstractItemDelegate* self, QWidget* editor, enum QAbstractItemDelegate__EndEditHint hint ```
 void q_abstractitemdelegate_close_editor2(void* self, void* editor, int64_t hint);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#closeEditor)
+///
 /// ``` QAbstractItemDelegate* self, void (*slot)(QAbstractItemDelegate*, QWidget*, enum QAbstractItemDelegate__EndEditHint) ```
 void q_abstractitemdelegate_on_close_editor2(void* self, void (*slot)(void*, void*, int64_t));
 
@@ -339,7 +383,7 @@ void q_abstractitemdelegate_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QAbstractItemDelegate* self ```
-libqt_list /* of QObject* */ q_abstractitemdelegate_children(void* self);
+const libqt_list /* of QObject* */ q_abstractitemdelegate_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -437,7 +481,7 @@ QBindingStorage* q_abstractitemdelegate_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QAbstractItemDelegate* self ```
-QBindingStorage* q_abstractitemdelegate_binding_storage2(void* self);
+const QBindingStorage* q_abstractitemdelegate_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -447,6 +491,8 @@ QBindingStorage* q_abstractitemdelegate_binding_storage2(void* self);
 void q_abstractitemdelegate_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QAbstractItemDelegate* self, void (*slot)(QObject*) ```
 void q_abstractitemdelegate_on_destroyed(void* self, void (*slot)(void*));
@@ -502,6 +548,8 @@ void q_abstractitemdelegate_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QAbstractItemDelegate* self, void (*slot)(QObject*, QObject*) ```
 void q_abstractitemdelegate_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -516,12 +564,16 @@ bool q_abstractitemdelegate_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractItemDelegate* self, QEvent* event ```
 bool q_abstractitemdelegate_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -539,12 +591,16 @@ bool q_abstractitemdelegate_event_filter(void* self, void* watched, void* event)
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractItemDelegate* self, QObject* watched, QEvent* event ```
 bool q_abstractitemdelegate_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -562,12 +618,16 @@ void q_abstractitemdelegate_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractItemDelegate* self, QTimerEvent* event ```
 void q_abstractitemdelegate_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -585,12 +645,16 @@ void q_abstractitemdelegate_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractItemDelegate* self, QChildEvent* event ```
 void q_abstractitemdelegate_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -608,12 +672,16 @@ void q_abstractitemdelegate_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractItemDelegate* self, QEvent* event ```
 void q_abstractitemdelegate_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -631,12 +699,16 @@ void q_abstractitemdelegate_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractItemDelegate* self, QMetaMethod* signal ```
 void q_abstractitemdelegate_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -654,12 +726,16 @@ void q_abstractitemdelegate_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractItemDelegate* self, QMetaMethod* signal ```
 void q_abstractitemdelegate_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -677,12 +753,16 @@ QObject* q_abstractitemdelegate_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractItemDelegate* self ```
 QObject* q_abstractitemdelegate_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -700,12 +780,16 @@ int32_t q_abstractitemdelegate_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractItemDelegate* self ```
 int32_t q_abstractitemdelegate_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -723,12 +807,16 @@ int32_t q_abstractitemdelegate_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractItemDelegate* self, const char* signal ```
 int32_t q_abstractitemdelegate_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -746,6 +834,8 @@ bool q_abstractitemdelegate_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAbstractItemDelegate* self, QMetaMethod* signal ```
@@ -753,11 +843,24 @@ bool q_abstractitemdelegate_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QAbstractItemDelegate* self, bool (*slot)(QAbstractItemDelegate*, QMetaMethod*) ```
 void q_abstractitemdelegate_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QAbstractItemDelegate* self, void (*slot)(QObject*, const char*) ```
+void q_abstractitemdelegate_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#dtor.QAbstractItemDelegate)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAbstractItemDelegate* self ```

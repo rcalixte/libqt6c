@@ -3,7 +3,6 @@
 #include "libqpageranges.hpp"
 #include "libqpagesize.hpp"
 #include "libqpaintdevice.hpp"
-#include "libqpaintengine.hpp"
 #include "libqpagedpaintdevice.hpp"
 #include "libqpagedpaintdevice.h"
 

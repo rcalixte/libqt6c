@@ -14,15 +14,11 @@
 
 #include "libqabstracteventdispatcher.h"
 #include "libqabstractnativeeventfilter.h"
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
-#include "libqthread.h"
 #include "libqtranslator.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qcoreapplication.html
 
@@ -39,7 +35,7 @@ QCoreApplication* q_coreapplication_new2(int* argc, char* argv[], int param3);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QCoreApplication* self ```
-QMetaObject* q_coreapplication_meta_object(void* self);
+const QMetaObject* q_coreapplication_meta_object(void* self);
 
 /// ``` QCoreApplication* self, const char* param1 ```
 void* q_coreapplication_metacast(void* self, const char* param1);
@@ -182,11 +178,15 @@ void q_coreapplication_set_event_dispatcher(void* eventDispatcher);
 /// ``` QCoreApplication* self, QObject* param1, QEvent* param2 ```
 bool q_coreapplication_notify(void* self, void* param1, void* param2);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#notify)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QCoreApplication* self, bool (*slot)(QCoreApplication*, QObject*, QEvent*) ```
 void q_coreapplication_on_notify(void* self, bool (*slot)(void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#notify)
+///
 /// Base class method implementation
 ///
 /// ``` QCoreApplication* self, QObject* param1, QEvent* param2 ```
@@ -257,11 +257,15 @@ const char* q_coreapplication_translate(const char* context, const char* key);
 /// ``` QCoreApplication* self, const char* name, int revision ```
 void* q_coreapplication_resolve_interface(void* self, const char* name, int revision);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#resolveInterface)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QCoreApplication* self, void* (*slot)(QCoreApplication*, const char*, int) ```
 void q_coreapplication_on_resolve_interface(void* self, void* (*slot)(void*, const char*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#resolveInterface)
+///
 /// Base class method implementation
 ///
 /// ``` QCoreApplication* self, const char* name, int revision ```
@@ -272,6 +276,8 @@ void* q_coreapplication_qbase_resolve_interface(void* self, const char* name, in
 /// ``` QCoreApplication* self, QAbstractNativeEventFilter* filterObj ```
 void q_coreapplication_install_native_event_filter(void* self, void* filterObj);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#installNativeEventFilter)
+///
 /// ``` QCoreApplication* self, void (*slot)(QCoreApplication*, QAbstractNativeEventFilter*) ```
 void q_coreapplication_on_install_native_event_filter(void* self, void (*slot)(void*, void*));
 
@@ -280,6 +286,8 @@ void q_coreapplication_on_install_native_event_filter(void* self, void (*slot)(v
 /// ``` QCoreApplication* self, QAbstractNativeEventFilter* filterObj ```
 void q_coreapplication_remove_native_event_filter(void* self, void* filterObj);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#removeNativeEventFilter)
+///
 /// ``` QCoreApplication* self, void (*slot)(QCoreApplication*, QAbstractNativeEventFilter*) ```
 void q_coreapplication_on_remove_native_event_filter(void* self, void (*slot)(void*, void*));
 
@@ -308,6 +316,8 @@ void q_coreapplication_exit();
 /// ``` QCoreApplication* self ```
 void q_coreapplication_organization_name_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#organizationNameChanged)
+///
 /// ``` QCoreApplication* self, void (*slot)(QCoreApplication*) ```
 void q_coreapplication_on_organization_name_changed(void* self, void (*slot)(void*));
 
@@ -316,6 +326,8 @@ void q_coreapplication_on_organization_name_changed(void* self, void (*slot)(voi
 /// ``` QCoreApplication* self ```
 void q_coreapplication_organization_domain_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#organizationDomainChanged)
+///
 /// ``` QCoreApplication* self, void (*slot)(QCoreApplication*) ```
 void q_coreapplication_on_organization_domain_changed(void* self, void (*slot)(void*));
 
@@ -324,6 +336,8 @@ void q_coreapplication_on_organization_domain_changed(void* self, void (*slot)(v
 /// ``` QCoreApplication* self ```
 void q_coreapplication_application_name_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationNameChanged)
+///
 /// ``` QCoreApplication* self, void (*slot)(QCoreApplication*) ```
 void q_coreapplication_on_application_name_changed(void* self, void (*slot)(void*));
 
@@ -332,6 +346,8 @@ void q_coreapplication_on_application_name_changed(void* self, void (*slot)(void
 /// ``` QCoreApplication* self ```
 void q_coreapplication_application_version_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationVersionChanged)
+///
 /// ``` QCoreApplication* self, void (*slot)(QCoreApplication*) ```
 void q_coreapplication_on_application_version_changed(void* self, void (*slot)(void*));
 
@@ -340,11 +356,15 @@ void q_coreapplication_on_application_version_changed(void* self, void (*slot)(v
 /// ``` QCoreApplication* self, QEvent* param1 ```
 bool q_coreapplication_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QCoreApplication* self, bool (*slot)(QCoreApplication*, QEvent*) ```
 void q_coreapplication_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QCoreApplication* self, QEvent* param1 ```
@@ -487,7 +507,7 @@ void q_coreapplication_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QCoreApplication* self ```
-libqt_list /* of QObject* */ q_coreapplication_children(void* self);
+const libqt_list /* of QObject* */ q_coreapplication_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -585,7 +605,7 @@ QBindingStorage* q_coreapplication_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QCoreApplication* self ```
-QBindingStorage* q_coreapplication_binding_storage2(void* self);
+const QBindingStorage* q_coreapplication_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -595,6 +615,8 @@ QBindingStorage* q_coreapplication_binding_storage2(void* self);
 void q_coreapplication_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QCoreApplication* self, void (*slot)(QObject*) ```
 void q_coreapplication_on_destroyed(void* self, void (*slot)(void*));
@@ -650,6 +672,8 @@ void q_coreapplication_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QCoreApplication* self, void (*slot)(QObject*, QObject*) ```
 void q_coreapplication_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -664,12 +688,16 @@ bool q_coreapplication_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCoreApplication* self, QObject* watched, QEvent* event ```
 bool q_coreapplication_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -687,12 +715,16 @@ void q_coreapplication_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCoreApplication* self, QTimerEvent* event ```
 void q_coreapplication_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -710,12 +742,16 @@ void q_coreapplication_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCoreApplication* self, QChildEvent* event ```
 void q_coreapplication_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -733,12 +769,16 @@ void q_coreapplication_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCoreApplication* self, QEvent* event ```
 void q_coreapplication_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -756,12 +796,16 @@ void q_coreapplication_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCoreApplication* self, QMetaMethod* signal ```
 void q_coreapplication_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -779,12 +823,16 @@ void q_coreapplication_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCoreApplication* self, QMetaMethod* signal ```
 void q_coreapplication_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -802,12 +850,16 @@ QObject* q_coreapplication_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCoreApplication* self ```
 QObject* q_coreapplication_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -825,12 +877,16 @@ int32_t q_coreapplication_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCoreApplication* self ```
 int32_t q_coreapplication_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -848,12 +904,16 @@ int32_t q_coreapplication_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCoreApplication* self, const char* signal ```
 int32_t q_coreapplication_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -871,6 +931,8 @@ bool q_coreapplication_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QCoreApplication* self, QMetaMethod* signal ```
@@ -878,11 +940,31 @@ bool q_coreapplication_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QCoreApplication* self, bool (*slot)(QCoreApplication*, QMetaMethod*) ```
 void q_coreapplication_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#aboutToQuit)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QCoreApplication* self, void (*slot)(QCoreApplication*) ```
+void q_coreapplication_on_about_to_quit(void* self, void (*slot)(void*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QCoreApplication* self, void (*slot)(QObject*, const char*) ```
+void q_coreapplication_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#dtor.QCoreApplication)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCoreApplication* self ```

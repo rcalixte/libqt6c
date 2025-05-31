@@ -53,6 +53,8 @@ void q_desktopservices_set_url_handler(const char* scheme, void* receiver, const
 /// ``` const char* scheme ```
 void q_desktopservices_unset_url_handler(const char* scheme);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdesktopservices.html#dtor.QDesktopServices)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QDesktopServices* self ```

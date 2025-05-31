@@ -73,6 +73,8 @@ bool q_waitcondition_wait22(void* self, void* lockedMutex, void* deadline);
 /// ``` QWaitCondition* self, QReadWriteLock* lockedReadWriteLock, QDeadlineTimer* deadline ```
 bool q_waitcondition_wait23(void* self, void* lockedReadWriteLock, void* deadline);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwaitcondition.html#dtor.QWaitCondition)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWaitCondition* self ```

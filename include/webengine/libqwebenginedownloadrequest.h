@@ -12,15 +12,10 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
-#include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include <string.h>
-#include "../libqthread.h"
 #include "../libqurl.h"
-#include "../libqvariant.h"
 #include "libqwebenginepage.h"
 
 /// https://doc.qt.io/qt-6/qwebenginedownloadrequest.html
@@ -28,7 +23,7 @@
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QWebEngineDownloadRequest* self ```
-QMetaObject* q_webenginedownloadrequest_meta_object(void* self);
+const QMetaObject* q_webenginedownloadrequest_meta_object(void* self);
 
 /// ``` QWebEngineDownloadRequest* self, const char* param1 ```
 void* q_webenginedownloadrequest_metacast(void* self, const char* param1);
@@ -161,6 +156,8 @@ void q_webenginedownloadrequest_resume(void* self);
 /// ``` QWebEngineDownloadRequest* self, enum QWebEngineDownloadRequest__DownloadState state ```
 void q_webenginedownloadrequest_state_changed(void* self, int64_t state);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#stateChanged)
+///
 /// ``` QWebEngineDownloadRequest* self, void (*slot)(QWebEngineDownloadRequest*, enum QWebEngineDownloadRequest__DownloadState) ```
 void q_webenginedownloadrequest_on_state_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -169,6 +166,8 @@ void q_webenginedownloadrequest_on_state_changed(void* self, void (*slot)(void*,
 /// ``` QWebEngineDownloadRequest* self ```
 void q_webenginedownloadrequest_save_page_format_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#savePageFormatChanged)
+///
 /// ``` QWebEngineDownloadRequest* self, void (*slot)(QWebEngineDownloadRequest*) ```
 void q_webenginedownloadrequest_on_save_page_format_changed(void* self, void (*slot)(void*));
 
@@ -177,6 +176,8 @@ void q_webenginedownloadrequest_on_save_page_format_changed(void* self, void (*s
 /// ``` QWebEngineDownloadRequest* self ```
 void q_webenginedownloadrequest_received_bytes_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#receivedBytesChanged)
+///
 /// ``` QWebEngineDownloadRequest* self, void (*slot)(QWebEngineDownloadRequest*) ```
 void q_webenginedownloadrequest_on_received_bytes_changed(void* self, void (*slot)(void*));
 
@@ -185,6 +186,8 @@ void q_webenginedownloadrequest_on_received_bytes_changed(void* self, void (*slo
 /// ``` QWebEngineDownloadRequest* self ```
 void q_webenginedownloadrequest_total_bytes_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#totalBytesChanged)
+///
 /// ``` QWebEngineDownloadRequest* self, void (*slot)(QWebEngineDownloadRequest*) ```
 void q_webenginedownloadrequest_on_total_bytes_changed(void* self, void (*slot)(void*));
 
@@ -193,6 +196,8 @@ void q_webenginedownloadrequest_on_total_bytes_changed(void* self, void (*slot)(
 /// ``` QWebEngineDownloadRequest* self ```
 void q_webenginedownloadrequest_interrupt_reason_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#interruptReasonChanged)
+///
 /// ``` QWebEngineDownloadRequest* self, void (*slot)(QWebEngineDownloadRequest*) ```
 void q_webenginedownloadrequest_on_interrupt_reason_changed(void* self, void (*slot)(void*));
 
@@ -201,6 +206,8 @@ void q_webenginedownloadrequest_on_interrupt_reason_changed(void* self, void (*s
 /// ``` QWebEngineDownloadRequest* self ```
 void q_webenginedownloadrequest_is_finished_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#isFinishedChanged)
+///
 /// ``` QWebEngineDownloadRequest* self, void (*slot)(QWebEngineDownloadRequest*) ```
 void q_webenginedownloadrequest_on_is_finished_changed(void* self, void (*slot)(void*));
 
@@ -209,6 +216,8 @@ void q_webenginedownloadrequest_on_is_finished_changed(void* self, void (*slot)(
 /// ``` QWebEngineDownloadRequest* self ```
 void q_webenginedownloadrequest_is_paused_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#isPausedChanged)
+///
 /// ``` QWebEngineDownloadRequest* self, void (*slot)(QWebEngineDownloadRequest*) ```
 void q_webenginedownloadrequest_on_is_paused_changed(void* self, void (*slot)(void*));
 
@@ -217,6 +226,8 @@ void q_webenginedownloadrequest_on_is_paused_changed(void* self, void (*slot)(vo
 /// ``` QWebEngineDownloadRequest* self ```
 void q_webenginedownloadrequest_download_directory_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#downloadDirectoryChanged)
+///
 /// ``` QWebEngineDownloadRequest* self, void (*slot)(QWebEngineDownloadRequest*) ```
 void q_webenginedownloadrequest_on_download_directory_changed(void* self, void (*slot)(void*));
 
@@ -225,6 +236,8 @@ void q_webenginedownloadrequest_on_download_directory_changed(void* self, void (
 /// ``` QWebEngineDownloadRequest* self ```
 void q_webenginedownloadrequest_download_file_name_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#downloadFileNameChanged)
+///
 /// ``` QWebEngineDownloadRequest* self, void (*slot)(QWebEngineDownloadRequest*) ```
 void q_webenginedownloadrequest_on_download_file_name_changed(void* self, void (*slot)(void*));
 
@@ -334,7 +347,7 @@ void q_webenginedownloadrequest_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QWebEngineDownloadRequest* self ```
-libqt_list /* of QObject* */ q_webenginedownloadrequest_children(void* self);
+const libqt_list /* of QObject* */ q_webenginedownloadrequest_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -432,7 +445,7 @@ QBindingStorage* q_webenginedownloadrequest_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QWebEngineDownloadRequest* self ```
-QBindingStorage* q_webenginedownloadrequest_binding_storage2(void* self);
+const QBindingStorage* q_webenginedownloadrequest_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -442,6 +455,8 @@ QBindingStorage* q_webenginedownloadrequest_binding_storage2(void* self);
 void q_webenginedownloadrequest_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QWebEngineDownloadRequest* self, void (*slot)(QObject*) ```
 void q_webenginedownloadrequest_on_destroyed(void* self, void (*slot)(void*));
@@ -497,9 +512,22 @@ void q_webenginedownloadrequest_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QWebEngineDownloadRequest* self, void (*slot)(QObject*, QObject*) ```
 void q_webenginedownloadrequest_on_destroyed1(void* self, void (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QWebEngineDownloadRequest* self, void (*slot)(QObject*, const char*) ```
+void q_webenginedownloadrequest_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#dtor.QWebEngineDownloadRequest)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWebEngineDownloadRequest* self ```

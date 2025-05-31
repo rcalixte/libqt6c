@@ -12,12 +12,8 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractaxis.h"
 #include "libqabstractseries.h"
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "../libqbrush.h"
-#include "libqchart.h"
 #include "../libqevent.h"
 #include "../libqcolor.h"
 #include "../libqfont.h"
@@ -27,10 +23,8 @@
 #include "../libqpen.h"
 #include "../libqpoint.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
-/// https://doc.qt.io/qt-6/qareaseries.html
+/// https://doc.qt.io/qt-6/qareaseries-qtcharts.html
 
 /// q_areaseries_new constructs a new QAreaSeries object.
 ///
@@ -55,7 +49,7 @@ QAreaSeries* q_areaseries_new4(void* upperSeries, void* lowerSeries);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QAreaSeries* self ```
-QMetaObject* q_areaseries_meta_object(void* self);
+const QMetaObject* q_areaseries_meta_object(void* self);
 
 /// ``` QAreaSeries* self, const char* param1 ```
 void* q_areaseries_metacast(void* self, const char* param1);
@@ -78,242 +72,272 @@ int32_t q_areaseries_qbase_metacall(void* self, int64_t param1, int param2, void
 /// ``` const char* s ```
 const char* q_areaseries_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#type)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#type)
 ///
 /// ``` QAreaSeries* self ```
 int64_t q_areaseries_type(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#type)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAreaSeries* self, int64_t (*slot)() ```
 void q_areaseries_on_type(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#type)
+///
 /// Base class method implementation
 ///
 /// ``` QAreaSeries* self ```
 int64_t q_areaseries_qbase_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#setUpperSeries)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setUpperSeries)
 ///
 /// ``` QAreaSeries* self, QLineSeries* series ```
 void q_areaseries_set_upper_series(void* self, void* series);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#upperSeries)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#upperSeries)
 ///
 /// ``` QAreaSeries* self ```
 QLineSeries* q_areaseries_upper_series(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#setLowerSeries)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setLowerSeries)
 ///
 /// ``` QAreaSeries* self, QLineSeries* series ```
 void q_areaseries_set_lower_series(void* self, void* series);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#lowerSeries)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#lowerSeries)
 ///
 /// ``` QAreaSeries* self ```
 QLineSeries* q_areaseries_lower_series(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#setPen)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setPen)
 ///
 /// ``` QAreaSeries* self, QPen* pen ```
 void q_areaseries_set_pen(void* self, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#pen)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pen)
 ///
 /// ``` QAreaSeries* self ```
 QPen* q_areaseries_pen(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#setBrush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setBrush)
 ///
 /// ``` QAreaSeries* self, QBrush* brush ```
 void q_areaseries_set_brush(void* self, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#brush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#brush)
 ///
 /// ``` QAreaSeries* self ```
 QBrush* q_areaseries_brush(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#setColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setColor)
 ///
 /// ``` QAreaSeries* self, QColor* color ```
 void q_areaseries_set_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#color)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#color)
 ///
 /// ``` QAreaSeries* self ```
 QColor* q_areaseries_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#setBorderColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setBorderColor)
 ///
 /// ``` QAreaSeries* self, QColor* color ```
 void q_areaseries_set_border_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#borderColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#borderColor)
 ///
 /// ``` QAreaSeries* self ```
 QColor* q_areaseries_border_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#setPointsVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setPointsVisible)
 ///
 /// ``` QAreaSeries* self ```
 void q_areaseries_set_points_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#pointsVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointsVisible)
 ///
 /// ``` QAreaSeries* self ```
 bool q_areaseries_points_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#setPointLabelsFormat)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setPointLabelsFormat)
 ///
 /// ``` QAreaSeries* self, const char* format ```
 void q_areaseries_set_point_labels_format(void* self, const char* format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#pointLabelsFormat)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsFormat)
 ///
 /// ``` QAreaSeries* self ```
 const char* q_areaseries_point_labels_format(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#setPointLabelsVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setPointLabelsVisible)
 ///
 /// ``` QAreaSeries* self ```
 void q_areaseries_set_point_labels_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#pointLabelsVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsVisible)
 ///
 /// ``` QAreaSeries* self ```
 bool q_areaseries_point_labels_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#setPointLabelsFont)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setPointLabelsFont)
 ///
 /// ``` QAreaSeries* self, QFont* font ```
 void q_areaseries_set_point_labels_font(void* self, void* font);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#pointLabelsFont)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsFont)
 ///
 /// ``` QAreaSeries* self ```
 QFont* q_areaseries_point_labels_font(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#setPointLabelsColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setPointLabelsColor)
 ///
 /// ``` QAreaSeries* self, QColor* color ```
 void q_areaseries_set_point_labels_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#pointLabelsColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsColor)
 ///
 /// ``` QAreaSeries* self ```
 QColor* q_areaseries_point_labels_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#setPointLabelsClipping)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setPointLabelsClipping)
 ///
 /// ``` QAreaSeries* self ```
 void q_areaseries_set_point_labels_clipping(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#pointLabelsClipping)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsClipping)
 ///
 /// ``` QAreaSeries* self ```
 bool q_areaseries_point_labels_clipping(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#clicked)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#clicked)
 ///
 /// ``` QAreaSeries* self, QPointF* point ```
 void q_areaseries_clicked(void* self, void* point);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#clicked)
+///
 /// ``` QAreaSeries* self, void (*slot)(QAreaSeries*, QPointF*) ```
 void q_areaseries_on_clicked(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#hovered)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#hovered)
 ///
 /// ``` QAreaSeries* self, QPointF* point, bool state ```
 void q_areaseries_hovered(void* self, void* point, bool state);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#hovered)
+///
 /// ``` QAreaSeries* self, void (*slot)(QAreaSeries*, QPointF*, bool) ```
 void q_areaseries_on_hovered(void* self, void (*slot)(void*, void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#pressed)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pressed)
 ///
 /// ``` QAreaSeries* self, QPointF* point ```
 void q_areaseries_pressed(void* self, void* point);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pressed)
+///
 /// ``` QAreaSeries* self, void (*slot)(QAreaSeries*, QPointF*) ```
 void q_areaseries_on_pressed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#released)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#released)
 ///
 /// ``` QAreaSeries* self, QPointF* point ```
 void q_areaseries_released(void* self, void* point);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#released)
+///
 /// ``` QAreaSeries* self, void (*slot)(QAreaSeries*, QPointF*) ```
 void q_areaseries_on_released(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#doubleClicked)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#doubleClicked)
 ///
 /// ``` QAreaSeries* self, QPointF* point ```
 void q_areaseries_double_clicked(void* self, void* point);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#doubleClicked)
+///
 /// ``` QAreaSeries* self, void (*slot)(QAreaSeries*, QPointF*) ```
 void q_areaseries_on_double_clicked(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#selected)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#selected)
 ///
 /// ``` QAreaSeries* self ```
 void q_areaseries_selected(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#selected)
+///
 /// ``` QAreaSeries* self, void (*slot)(QAreaSeries*) ```
 void q_areaseries_on_selected(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#colorChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#colorChanged)
 ///
 /// ``` QAreaSeries* self, QColor* color ```
 void q_areaseries_color_changed(void* self, void* color);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#colorChanged)
+///
 /// ``` QAreaSeries* self, void (*slot)(QAreaSeries*, QColor*) ```
 void q_areaseries_on_color_changed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#borderColorChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#borderColorChanged)
 ///
 /// ``` QAreaSeries* self, QColor* color ```
 void q_areaseries_border_color_changed(void* self, void* color);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#borderColorChanged)
+///
 /// ``` QAreaSeries* self, void (*slot)(QAreaSeries*, QColor*) ```
 void q_areaseries_on_border_color_changed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#pointLabelsFormatChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsFormatChanged)
 ///
 /// ``` QAreaSeries* self, const char* format ```
 void q_areaseries_point_labels_format_changed(void* self, const char* format);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsFormatChanged)
+///
 /// ``` QAreaSeries* self, void (*slot)(QAreaSeries*, const char*) ```
 void q_areaseries_on_point_labels_format_changed(void* self, void (*slot)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#pointLabelsVisibilityChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsVisibilityChanged)
 ///
 /// ``` QAreaSeries* self, bool visible ```
 void q_areaseries_point_labels_visibility_changed(void* self, bool visible);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsVisibilityChanged)
+///
 /// ``` QAreaSeries* self, void (*slot)(QAreaSeries*, bool) ```
 void q_areaseries_on_point_labels_visibility_changed(void* self, void (*slot)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#pointLabelsFontChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsFontChanged)
 ///
 /// ``` QAreaSeries* self, QFont* font ```
 void q_areaseries_point_labels_font_changed(void* self, void* font);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsFontChanged)
+///
 /// ``` QAreaSeries* self, void (*slot)(QAreaSeries*, QFont*) ```
 void q_areaseries_on_point_labels_font_changed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#pointLabelsColorChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsColorChanged)
 ///
 /// ``` QAreaSeries* self, QColor* color ```
 void q_areaseries_point_labels_color_changed(void* self, void* color);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsColorChanged)
+///
 /// ``` QAreaSeries* self, void (*slot)(QAreaSeries*, QColor*) ```
 void q_areaseries_on_point_labels_color_changed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#pointLabelsClippingChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsClippingChanged)
 ///
 /// ``` QAreaSeries* self, bool clipping ```
 void q_areaseries_point_labels_clipping_changed(void* self, bool clipping);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsClippingChanged)
+///
 /// ``` QAreaSeries* self, void (*slot)(QAreaSeries*, bool) ```
 void q_areaseries_on_point_labels_clipping_changed(void* self, void (*slot)(void*, bool));
 
@@ -327,17 +351,17 @@ const char* q_areaseries_tr2(const char* s, const char* c);
 /// ``` const char* s, const char* c, int n ```
 const char* q_areaseries_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#setPointsVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setPointsVisible)
 ///
 /// ``` QAreaSeries* self, bool visible ```
 void q_areaseries_set_points_visible1(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#setPointLabelsVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setPointLabelsVisible)
 ///
 /// ``` QAreaSeries* self, bool visible ```
 void q_areaseries_set_point_labels_visible1(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries.html#setPointLabelsClipping)
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setPointLabelsClipping)
 ///
 /// ``` QAreaSeries* self, bool enabled ```
 void q_areaseries_set_point_labels_clipping1(void* self, bool enabled);
@@ -449,6 +473,8 @@ void q_areaseries_name_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
+///
 /// ``` QAreaSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_areaseries_on_name_changed(void* self, void (*slot)(void*));
 
@@ -460,6 +486,8 @@ void q_areaseries_on_name_changed(void* self, void (*slot)(void*));
 void q_areaseries_visible_changed(void* self);
 
 /// Inherited from QAbstractSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
 /// ``` QAreaSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_areaseries_on_visible_changed(void* self, void (*slot)(void*));
@@ -473,6 +501,8 @@ void q_areaseries_opacity_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
+///
 /// ``` QAreaSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_areaseries_on_opacity_changed(void* self, void (*slot)(void*));
 
@@ -484,6 +514,8 @@ void q_areaseries_on_opacity_changed(void* self, void (*slot)(void*));
 void q_areaseries_use_open_g_l_changed(void* self);
 
 /// Inherited from QAbstractSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
 /// ``` QAreaSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_areaseries_on_use_open_g_l_changed(void* self, void (*slot)(void*));
@@ -584,7 +616,7 @@ void q_areaseries_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QAreaSeries* self ```
-libqt_list /* of QObject* */ q_areaseries_children(void* self);
+const libqt_list /* of QObject* */ q_areaseries_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -682,7 +714,7 @@ QBindingStorage* q_areaseries_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QAreaSeries* self ```
-QBindingStorage* q_areaseries_binding_storage2(void* self);
+const QBindingStorage* q_areaseries_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -692,6 +724,8 @@ QBindingStorage* q_areaseries_binding_storage2(void* self);
 void q_areaseries_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QAreaSeries* self, void (*slot)(QObject*) ```
 void q_areaseries_on_destroyed(void* self, void (*slot)(void*));
@@ -747,6 +781,8 @@ void q_areaseries_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QAreaSeries* self, void (*slot)(QObject*, QObject*) ```
 void q_areaseries_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -761,12 +797,16 @@ bool q_areaseries_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAreaSeries* self, QEvent* event ```
 bool q_areaseries_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -784,12 +824,16 @@ bool q_areaseries_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAreaSeries* self, QObject* watched, QEvent* event ```
 bool q_areaseries_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -807,12 +851,16 @@ void q_areaseries_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAreaSeries* self, QTimerEvent* event ```
 void q_areaseries_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -830,12 +878,16 @@ void q_areaseries_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAreaSeries* self, QChildEvent* event ```
 void q_areaseries_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -853,12 +905,16 @@ void q_areaseries_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAreaSeries* self, QEvent* event ```
 void q_areaseries_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -876,12 +932,16 @@ void q_areaseries_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAreaSeries* self, QMetaMethod* signal ```
 void q_areaseries_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -899,12 +959,16 @@ void q_areaseries_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAreaSeries* self, QMetaMethod* signal ```
 void q_areaseries_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -922,12 +986,16 @@ QObject* q_areaseries_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAreaSeries* self ```
 QObject* q_areaseries_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -945,12 +1013,16 @@ int32_t q_areaseries_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAreaSeries* self ```
 int32_t q_areaseries_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -968,12 +1040,16 @@ int32_t q_areaseries_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAreaSeries* self, const char* signal ```
 int32_t q_areaseries_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -991,6 +1067,8 @@ bool q_areaseries_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAreaSeries* self, QMetaMethod* signal ```
@@ -998,11 +1076,24 @@ bool q_areaseries_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QAreaSeries* self, bool (*slot)(QAreaSeries*, QMetaMethod*) ```
 void q_areaseries_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QAreaSeries* self, void (*slot)(QObject*, const char*) ```
+void q_areaseries_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#dtor.QAreaSeries)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAreaSeries* self ```

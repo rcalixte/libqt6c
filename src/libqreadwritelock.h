@@ -59,6 +59,8 @@ bool q_readwritelock_try_lock_for_write_with_timeout(void* self, int timeout);
 /// ``` QReadWriteLock* self ```
 void q_readwritelock_unlock(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qreadwritelock.html#dtor.QReadWriteLock)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QReadWriteLock* self ```
@@ -86,6 +88,8 @@ void q_readlocker_relock(void* self);
 /// ``` QReadLocker* self ```
 QReadWriteLock* q_readlocker_read_write_lock(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qreadlocker.html#dtor.QReadLocker)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QReadLocker* self ```
@@ -113,6 +117,8 @@ void q_writelocker_relock(void* self);
 /// ``` QWriteLocker* self ```
 QReadWriteLock* q_writelocker_read_write_lock(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwritelocker.html#dtor.QWriteLocker)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWriteLocker* self ```

@@ -1,16 +1,9 @@
-#include "libqabstractaxis.hpp"
 #include "libqabstractbarseries.hpp"
 #include "libqabstractseries.hpp"
-#include "../libqanystringview.hpp"
-#include "libqbarset.hpp"
-#include "../libqbindingstorage.hpp"
-#include "libqchart.hpp"
 #include "../libqevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqhorizontalstackedbarseries.hpp"
 #include "libqhorizontalstackedbarseries.h"
@@ -23,7 +16,7 @@ QHorizontalStackedBarSeries* q_horizontalstackedbarseries_new2(void* parent) {
     return QHorizontalStackedBarSeries_new2((QObject*)parent);
 }
 
-QMetaObject* q_horizontalstackedbarseries_meta_object(void* self) {
+const QMetaObject* q_horizontalstackedbarseries_meta_object(void* self) {
     return QHorizontalStackedBarSeries_MetaObject((QHorizontalStackedBarSeries*)self);
 }
 
@@ -96,17 +89,8 @@ bool q_horizontalstackedbarseries_take(void* self, void* set) {
     return QAbstractBarSeries_Take((QAbstractBarSeries*)self, (QBarSet*)set);
 }
 
-bool q_horizontalstackedbarseries_append_with_sets(void* self, void* sets[]) {
-    QBarSet** sets_arr = (QBarSet**)sets;
-    size_t sets_len = 0;
-    while (sets_arr[sets_len] != NULL) {
-        sets_len++;
-    }
-    libqt_list sets_list = {
-        .len = sets_len,
-        .data = {(QBarSet*)sets},
-    };
-    return QAbstractBarSeries_AppendWithSets((QAbstractBarSeries*)self, sets_list);
+bool q_horizontalstackedbarseries_append_with_sets(void* self, libqt_list sets) {
+    return QAbstractBarSeries_AppendWithSets((QAbstractBarSeries*)self, sets);
 }
 
 bool q_horizontalstackedbarseries_insert(void* self, int index, void* set) {
@@ -257,37 +241,19 @@ void q_horizontalstackedbarseries_on_labels_precision_changed(void* self, void (
     QAbstractBarSeries_Connect_LabelsPrecisionChanged((QAbstractBarSeries*)self, (intptr_t)slot);
 }
 
-void q_horizontalstackedbarseries_barsets_added(void* self, void* sets[]) {
-    QBarSet** sets_arr = (QBarSet**)sets;
-    size_t sets_len = 0;
-    while (sets_arr[sets_len] != NULL) {
-        sets_len++;
-    }
-    libqt_list sets_list = {
-        .len = sets_len,
-        .data = {(QBarSet*)sets},
-    };
-    QAbstractBarSeries_BarsetsAdded((QAbstractBarSeries*)self, sets_list);
+void q_horizontalstackedbarseries_barsets_added(void* self, libqt_list sets) {
+    QAbstractBarSeries_BarsetsAdded((QAbstractBarSeries*)self, sets);
 }
 
-void q_horizontalstackedbarseries_on_barsets_added(void* self, void (*slot)(void*, void*)) {
+void q_horizontalstackedbarseries_on_barsets_added(void* self, void (*slot)(void*, libqt_list)) {
     QAbstractBarSeries_Connect_BarsetsAdded((QAbstractBarSeries*)self, (intptr_t)slot);
 }
 
-void q_horizontalstackedbarseries_barsets_removed(void* self, void* sets[]) {
-    QBarSet** sets_arr = (QBarSet**)sets;
-    size_t sets_len = 0;
-    while (sets_arr[sets_len] != NULL) {
-        sets_len++;
-    }
-    libqt_list sets_list = {
-        .len = sets_len,
-        .data = {(QBarSet*)sets},
-    };
-    QAbstractBarSeries_BarsetsRemoved((QAbstractBarSeries*)self, sets_list);
+void q_horizontalstackedbarseries_barsets_removed(void* self, libqt_list sets) {
+    QAbstractBarSeries_BarsetsRemoved((QAbstractBarSeries*)self, sets);
 }
 
-void q_horizontalstackedbarseries_on_barsets_removed(void* self, void (*slot)(void*, void*)) {
+void q_horizontalstackedbarseries_on_barsets_removed(void* self, void (*slot)(void*, libqt_list)) {
     QAbstractBarSeries_Connect_BarsetsRemoved((QAbstractBarSeries*)self, (intptr_t)slot);
 }
 
@@ -403,8 +369,7 @@ const char* q_horizontalstackedbarseries_object_name(void* self) {
 }
 
 void q_horizontalstackedbarseries_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_horizontalstackedbarseries_is_widget_type(void* self) {
@@ -443,7 +408,7 @@ void q_horizontalstackedbarseries_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_horizontalstackedbarseries_children(void* self) {
+const libqt_list /* of QObject* */ q_horizontalstackedbarseries_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -510,7 +475,7 @@ QBindingStorage* q_horizontalstackedbarseries_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_horizontalstackedbarseries_binding_storage2(void* self) {
+const QBindingStorage* q_horizontalstackedbarseries_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -684,6 +649,10 @@ bool q_horizontalstackedbarseries_qbase_is_signal_connected(void* self, void* si
 
 void q_horizontalstackedbarseries_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QHorizontalStackedBarSeries_OnIsSignalConnected((QHorizontalStackedBarSeries*)self, (intptr_t)slot);
+}
+
+void q_horizontalstackedbarseries_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_horizontalstackedbarseries_delete(void* self) {

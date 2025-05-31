@@ -15,17 +15,9 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
-typedef struct QChildEvent QChildEvent;
-typedef struct QEvent QEvent;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QPixmap QPixmap;
 typedef struct QPoint QPoint;
@@ -33,10 +25,7 @@ typedef struct QRect QRect;
 typedef struct QScreen QScreen;
 typedef struct QSize QSize;
 typedef struct QSizeF QSizeF;
-typedef struct QThread QThread;
-typedef struct QTimerEvent QTimerEvent;
 typedef struct QTransform QTransform;
-typedef struct QVariant QVariant;
 #endif
 
 QMetaObject* QScreen_MetaObject(const QScreen* self);
@@ -101,8 +90,6 @@ QPixmap* QScreen_GrabWindow2(QScreen* self, uintptr_t window, int x);
 QPixmap* QScreen_GrabWindow3(QScreen* self, uintptr_t window, int x, int y);
 QPixmap* QScreen_GrabWindow4(QScreen* self, uintptr_t window, int x, int y, int w);
 QPixmap* QScreen_GrabWindow5(QScreen* self, uintptr_t window, int x, int y, int w, int h);
-bool QScreen_Event(QScreen* self, QEvent* event);
-bool QScreen_EventFilter(QScreen* self, QObject* watched, QEvent* event);
 void QScreen_Delete(QScreen* self);
 
 #ifdef __cplusplus

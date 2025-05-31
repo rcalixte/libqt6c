@@ -88,8 +88,8 @@ double q_textoption_tab_stop_distance(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextoption.html#setTabArray)
 ///
-/// ``` QTextOption* self, double* tabStops[] ```
-void q_textoption_set_tab_array(void* self, double* tabStops[]);
+/// ``` QTextOption* self, libqt_list /* of double */ tabStops ```
+void q_textoption_set_tab_array(void* self, libqt_list tabStops);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextoption.html#tabArray)
 ///
@@ -98,8 +98,8 @@ libqt_list /* of double */ q_textoption_tab_array(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextoption.html#setTabs)
 ///
-/// ``` QTextOption* self, QTextOption__Tab* tabStops[] ```
-void q_textoption_set_tabs(void* self, void* tabStops[]);
+/// ``` QTextOption* self, libqt_list /* of QTextOption__Tab* */ tabStops ```
+void q_textoption_set_tabs(void* self, libqt_list tabStops);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextoption.html#tabs)
 ///
@@ -116,6 +116,8 @@ void q_textoption_set_use_design_metrics(void* self, bool b);
 /// ``` QTextOption* self ```
 bool q_textoption_use_design_metrics(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextoption.html#dtor.QTextOption)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextOption* self ```
@@ -168,6 +170,8 @@ bool q_textoption__tab_operator_equal(void* self, void* other);
 /// ``` QTextOption__Tab* self, QTextOption__Tab* other ```
 bool q_textoption__tab_operator_not_equal(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextoption::tab.html#dtor.QTextOption::Tab)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextOption__Tab* self ```

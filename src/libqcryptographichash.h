@@ -62,6 +62,8 @@ char* q_cryptographichash_hash(const char* data, int64_t method);
 /// ``` enum QCryptographicHash__Algorithm method ```
 int32_t q_cryptographichash_hash_length(int64_t method);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#dtor.QCryptographicHash)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCryptographicHash* self ```

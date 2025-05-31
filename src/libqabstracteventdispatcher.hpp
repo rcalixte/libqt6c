@@ -18,25 +18,15 @@ extern "C" {
 #if defined(WORKAROUND_INNER_CLASS_DEFINITION_QAbstractEventDispatcher__TimerInfo)
 typedef QAbstractEventDispatcher::TimerInfo QAbstractEventDispatcher__TimerInfo;
 #endif
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
 typedef struct QAbstractEventDispatcher QAbstractEventDispatcher;
 typedef struct QAbstractEventDispatcher__TimerInfo QAbstractEventDispatcher__TimerInfo;
 typedef struct QAbstractNativeEventFilter QAbstractNativeEventFilter;
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
-typedef struct QChildEvent QChildEvent;
-typedef struct QEvent QEvent;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QSocketNotifier QSocketNotifier;
 typedef struct QThread QThread;
-typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
 #endif
 
 QMetaObject* QAbstractEventDispatcher_MetaObject(const QAbstractEventDispatcher* self);
@@ -67,8 +57,6 @@ void QAbstractEventDispatcher_Connect_Awake(QAbstractEventDispatcher* self, intp
 libqt_string QAbstractEventDispatcher_Tr2(const char* s, const char* c);
 libqt_string QAbstractEventDispatcher_Tr3(const char* s, const char* c, int n);
 QAbstractEventDispatcher* QAbstractEventDispatcher_Instance1(QThread* thread);
-bool QAbstractEventDispatcher_Event(QAbstractEventDispatcher* self, QEvent* event);
-bool QAbstractEventDispatcher_EventFilter(QAbstractEventDispatcher* self, QObject* watched, QEvent* event);
 void QAbstractEventDispatcher_Delete(QAbstractEventDispatcher* self);
 
 QAbstractEventDispatcher__TimerInfo* QAbstractEventDispatcher__TimerInfo_new(QAbstractEventDispatcher__TimerInfo* other);

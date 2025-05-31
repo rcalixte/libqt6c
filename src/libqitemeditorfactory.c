@@ -63,7 +63,7 @@ void q_itemeditorfactory_register_editor(void* self, int userType, void* creator
     QItemEditorFactory_RegisterEditor((QItemEditorFactory*)self, userType, (QItemEditorCreatorBase*)creator);
 }
 
-QItemEditorFactory* q_itemeditorfactory_default_factory() {
+const QItemEditorFactory* q_itemeditorfactory_default_factory() {
     return QItemEditorFactory_DefaultFactory();
 }
 

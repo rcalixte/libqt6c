@@ -15,46 +15,31 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
-typedef struct QCursor QCursor;
 typedef struct QEvent QEvent;
 typedef struct QFocusEvent QFocusEvent;
-typedef struct QGraphicsEffect QGraphicsEffect;
 typedef struct QGraphicsItem QGraphicsItem;
-typedef struct QGraphicsItemGroup QGraphicsItemGroup;
 typedef struct QGraphicsObject QGraphicsObject;
-typedef struct QGraphicsScene QGraphicsScene;
 typedef struct QGraphicsSceneContextMenuEvent QGraphicsSceneContextMenuEvent;
 typedef struct QGraphicsSceneDragDropEvent QGraphicsSceneDragDropEvent;
 typedef struct QGraphicsSceneHoverEvent QGraphicsSceneHoverEvent;
 typedef struct QGraphicsSceneMouseEvent QGraphicsSceneMouseEvent;
 typedef struct QGraphicsSceneWheelEvent QGraphicsSceneWheelEvent;
 typedef struct QGraphicsSvgItem QGraphicsSvgItem;
-typedef struct QGraphicsTransform QGraphicsTransform;
-typedef struct QGraphicsWidget QGraphicsWidget;
 typedef struct QInputMethodEvent QInputMethodEvent;
 typedef struct QKeyEvent QKeyEvent;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QPainter QPainter;
 typedef struct QPainterPath QPainterPath;
 typedef struct QPointF QPointF;
 typedef struct QRectF QRectF;
-typedef struct QRegion QRegion;
 typedef struct QSize QSize;
 typedef struct QStyleOptionGraphicsItem QStyleOptionGraphicsItem;
 typedef struct QSvgRenderer QSvgRenderer;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QTransform QTransform;
 typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
@@ -190,18 +175,18 @@ void QGraphicsSvgItem_QBaseWheelEvent(QGraphicsSvgItem* self, QGraphicsSceneWhee
 void QGraphicsSvgItem_InputMethodEvent(QGraphicsSvgItem* self, QInputMethodEvent* event);
 void QGraphicsSvgItem_OnInputMethodEvent(QGraphicsSvgItem* self, intptr_t slot);
 void QGraphicsSvgItem_QBaseInputMethodEvent(QGraphicsSvgItem* self, QInputMethodEvent* event);
-QVariant* QGraphicsSvgItem_ItemChange(QGraphicsSvgItem* self, int change, QVariant* value);
-void QGraphicsSvgItem_OnItemChange(QGraphicsSvgItem* self, intptr_t slot);
-QVariant* QGraphicsSvgItem_QBaseItemChange(QGraphicsSvgItem* self, int change, QVariant* value);
-void QGraphicsSvgItem_SetExtension(QGraphicsSvgItem* self, int extension, QVariant* variant);
-void QGraphicsSvgItem_OnSetExtension(QGraphicsSvgItem* self, intptr_t slot);
-void QGraphicsSvgItem_QBaseSetExtension(QGraphicsSvgItem* self, int extension, QVariant* variant);
 QVariant* QGraphicsSvgItem_InputMethodQuery(const QGraphicsSvgItem* self, int query);
 void QGraphicsSvgItem_OnInputMethodQuery(const QGraphicsSvgItem* self, intptr_t slot);
 QVariant* QGraphicsSvgItem_QBaseInputMethodQuery(const QGraphicsSvgItem* self, int query);
+QVariant* QGraphicsSvgItem_ItemChange(QGraphicsSvgItem* self, int change, QVariant* value);
+void QGraphicsSvgItem_OnItemChange(QGraphicsSvgItem* self, intptr_t slot);
+QVariant* QGraphicsSvgItem_QBaseItemChange(QGraphicsSvgItem* self, int change, QVariant* value);
 bool QGraphicsSvgItem_SupportsExtension(const QGraphicsSvgItem* self, int extension);
 void QGraphicsSvgItem_OnSupportsExtension(const QGraphicsSvgItem* self, intptr_t slot);
 bool QGraphicsSvgItem_QBaseSupportsExtension(const QGraphicsSvgItem* self, int extension);
+void QGraphicsSvgItem_SetExtension(QGraphicsSvgItem* self, int extension, QVariant* variant);
+void QGraphicsSvgItem_OnSetExtension(QGraphicsSvgItem* self, intptr_t slot);
+void QGraphicsSvgItem_QBaseSetExtension(QGraphicsSvgItem* self, int extension, QVariant* variant);
 QVariant* QGraphicsSvgItem_Extension(const QGraphicsSvgItem* self, QVariant* variant);
 void QGraphicsSvgItem_OnExtension(const QGraphicsSvgItem* self, intptr_t slot);
 QVariant* QGraphicsSvgItem_QBaseExtension(const QGraphicsSvgItem* self, QVariant* variant);

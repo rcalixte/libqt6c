@@ -1,6 +1,4 @@
-#include "../libqanystringview.hpp"
 #include "libqauthenticator.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
 #include "libqhostaddress.hpp"
 #include "../libqiodevice.hpp"
@@ -9,7 +7,6 @@
 #include "libqnetworkproxy.hpp"
 #include "../libqobject.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
 #include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqabstractsocket.hpp"
@@ -19,7 +16,7 @@ QAbstractSocket* q_abstractsocket_new(int64_t socketType, void* parent) {
     return QAbstractSocket_new(socketType, (QObject*)parent);
 }
 
-QMetaObject* q_abstractsocket_meta_object(void* self) {
+const QMetaObject* q_abstractsocket_meta_object(void* self) {
     return QAbstractSocket_MetaObject((QAbstractSocket*)self);
 }
 
@@ -744,8 +741,7 @@ const char* q_abstractsocket_object_name(void* self) {
 }
 
 void q_abstractsocket_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_abstractsocket_is_widget_type(void* self) {
@@ -784,7 +780,7 @@ void q_abstractsocket_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_abstractsocket_children(void* self) {
+const libqt_list /* of QObject* */ q_abstractsocket_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -851,7 +847,7 @@ QBindingStorage* q_abstractsocket_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_abstractsocket_binding_storage2(void* self) {
+const QBindingStorage* q_abstractsocket_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1133,6 +1129,10 @@ bool q_abstractsocket_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_abstractsocket_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QAbstractSocket_OnIsSignalConnected((QAbstractSocket*)self, (intptr_t)slot);
+}
+
+void q_abstractsocket_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_abstractsocket_delete(void* self) {

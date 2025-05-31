@@ -1,20 +1,12 @@
-#include "libqabstractaxis.hpp"
 #include "libqabstractseries.hpp"
-#include "../libqanystringview.hpp"
 #include "libqbarset.hpp"
-#include "../libqbindingstorage.hpp"
-#include "libqchart.hpp"
-#include "../libqevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqabstractbarseries.hpp"
 #include "libqabstractbarseries.h"
 
-QMetaObject* q_abstractbarseries_meta_object(void* self) {
+const QMetaObject* q_abstractbarseries_meta_object(void* self) {
     return QAbstractBarSeries_MetaObject((QAbstractBarSeries*)self);
 }
 
@@ -53,17 +45,8 @@ bool q_abstractbarseries_take(void* self, void* set) {
     return QAbstractBarSeries_Take((QAbstractBarSeries*)self, (QBarSet*)set);
 }
 
-bool q_abstractbarseries_append_with_sets(void* self, void* sets[]) {
-    QBarSet** sets_arr = (QBarSet**)sets;
-    size_t sets_len = 0;
-    while (sets_arr[sets_len] != NULL) {
-        sets_len++;
-    }
-    libqt_list sets_list = {
-        .len = sets_len,
-        .data = {(QBarSet*)sets},
-    };
-    return QAbstractBarSeries_AppendWithSets((QAbstractBarSeries*)self, sets_list);
+bool q_abstractbarseries_append_with_sets(void* self, libqt_list sets) {
+    return QAbstractBarSeries_AppendWithSets((QAbstractBarSeries*)self, sets);
 }
 
 bool q_abstractbarseries_insert(void* self, int index, void* set) {
@@ -214,37 +197,19 @@ void q_abstractbarseries_on_labels_precision_changed(void* self, void (*slot)(vo
     QAbstractBarSeries_Connect_LabelsPrecisionChanged((QAbstractBarSeries*)self, (intptr_t)slot);
 }
 
-void q_abstractbarseries_barsets_added(void* self, void* sets[]) {
-    QBarSet** sets_arr = (QBarSet**)sets;
-    size_t sets_len = 0;
-    while (sets_arr[sets_len] != NULL) {
-        sets_len++;
-    }
-    libqt_list sets_list = {
-        .len = sets_len,
-        .data = {(QBarSet*)sets},
-    };
-    QAbstractBarSeries_BarsetsAdded((QAbstractBarSeries*)self, sets_list);
+void q_abstractbarseries_barsets_added(void* self, libqt_list sets) {
+    QAbstractBarSeries_BarsetsAdded((QAbstractBarSeries*)self, sets);
 }
 
-void q_abstractbarseries_on_barsets_added(void* self, void (*slot)(void*, void*)) {
+void q_abstractbarseries_on_barsets_added(void* self, void (*slot)(void*, libqt_list)) {
     QAbstractBarSeries_Connect_BarsetsAdded((QAbstractBarSeries*)self, (intptr_t)slot);
 }
 
-void q_abstractbarseries_barsets_removed(void* self, void* sets[]) {
-    QBarSet** sets_arr = (QBarSet**)sets;
-    size_t sets_len = 0;
-    while (sets_arr[sets_len] != NULL) {
-        sets_len++;
-    }
-    libqt_list sets_list = {
-        .len = sets_len,
-        .data = {(QBarSet*)sets},
-    };
-    QAbstractBarSeries_BarsetsRemoved((QAbstractBarSeries*)self, sets_list);
+void q_abstractbarseries_barsets_removed(void* self, libqt_list sets) {
+    QAbstractBarSeries_BarsetsRemoved((QAbstractBarSeries*)self, sets);
 }
 
-void q_abstractbarseries_on_barsets_removed(void* self, void (*slot)(void*, void*)) {
+void q_abstractbarseries_on_barsets_removed(void* self, void (*slot)(void*, libqt_list)) {
     QAbstractBarSeries_Connect_BarsetsRemoved((QAbstractBarSeries*)self, (intptr_t)slot);
 }
 
@@ -386,8 +351,7 @@ const char* q_abstractbarseries_object_name(void* self) {
 }
 
 void q_abstractbarseries_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_abstractbarseries_is_widget_type(void* self) {
@@ -426,7 +390,7 @@ void q_abstractbarseries_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_abstractbarseries_children(void* self) {
+const libqt_list /* of QObject* */ q_abstractbarseries_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -493,7 +457,7 @@ QBindingStorage* q_abstractbarseries_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_abstractbarseries_binding_storage2(void* self) {
+const QBindingStorage* q_abstractbarseries_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -535,6 +499,10 @@ void q_abstractbarseries_destroyed1(void* self, void* param1) {
 
 void q_abstractbarseries_on_destroyed1(void* self, void (*slot)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+}
+
+void q_abstractbarseries_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_abstractbarseries_delete(void* self) {

@@ -208,6 +208,8 @@ QRect* q_pagelayout_paint_rect_pixels(void* self, int resolution);
 /// ``` QPageLayout* self, QPageSize* pageSize, QMarginsF* minMargins ```
 void q_pagelayout_set_page_size2(void* self, void* pageSize, void* minMargins);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#dtor.QPageLayout)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPageLayout* self ```

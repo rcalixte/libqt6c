@@ -149,7 +149,7 @@ int64_t q_eventpoint_state(void* self) {
     return QEventPoint_State((QEventPoint*)self);
 }
 
-QPointingDevice* q_eventpoint_device(void* self) {
+const QPointingDevice* q_eventpoint_device(void* self) {
     return QEventPoint_Device((QEventPoint*)self);
 }
 

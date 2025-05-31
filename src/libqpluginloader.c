@@ -1,13 +1,9 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqjsonobject.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqplugin.hpp"
 #include <string.h>
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqcoreevent.hpp"
 #include "libqpluginloader.hpp"
 #include "libqpluginloader.h"
@@ -28,7 +24,7 @@ QPluginLoader* q_pluginloader_new4(const char* fileName, void* parent) {
     return QPluginLoader_new4(qstring(fileName), (QObject*)parent);
 }
 
-QMetaObject* q_pluginloader_meta_object(void* self) {
+const QMetaObject* q_pluginloader_meta_object(void* self) {
     return QPluginLoader_MetaObject((QPluginLoader*)self);
 }
 
@@ -133,8 +129,7 @@ const char* q_pluginloader_object_name(void* self) {
 }
 
 void q_pluginloader_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_pluginloader_is_widget_type(void* self) {
@@ -173,7 +168,7 @@ void q_pluginloader_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_pluginloader_children(void* self) {
+const libqt_list /* of QObject* */ q_pluginloader_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -240,7 +235,7 @@ QBindingStorage* q_pluginloader_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_pluginloader_binding_storage2(void* self) {
+const QBindingStorage* q_pluginloader_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -414,6 +409,10 @@ bool q_pluginloader_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_pluginloader_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QPluginLoader_OnIsSignalConnected((QPluginLoader*)self, (intptr_t)slot);
+}
+
+void q_pluginloader_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_pluginloader_delete(void* self) {

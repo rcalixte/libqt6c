@@ -163,17 +163,8 @@ libqt_list /* of QTextLength* */ q_textformat_length_vector_property(void* self,
     return _arr;
 }
 
-void q_textformat_set_property2(void* self, int propertyId, void* lengths[]) {
-    QTextLength** lengths_arr = (QTextLength**)lengths;
-    size_t lengths_len = 0;
-    while (lengths_arr[lengths_len] != NULL) {
-        lengths_len++;
-    }
-    libqt_list lengths_list = {
-        .len = lengths_len,
-        .data = {(QTextLength*)lengths},
-    };
-    QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths_list);
+void q_textformat_set_property2(void* self, int propertyId, libqt_list lengths) {
+    QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths);
 }
 
 libqt_map /* of int to QVariant* */ q_textformat_properties(void* self) {
@@ -333,7 +324,7 @@ void q_textcharformat_set_font_families(void* self, const char* families[]) {
     for (size_t _i = 0; _i < families_len; ++_i) {
         families_qstr[_i] = qstring(families[_i]);
     }
-    libqt_list families_list = qstrlist(families_qstr, families_len);
+    libqt_list families_list = qlist(families_qstr, families_len);
     QTextCharFormat_SetFontFamilies((QTextCharFormat*)self, families_list);
 }
 
@@ -569,7 +560,7 @@ void q_textcharformat_set_anchor_names(void* self, const char* names[]) {
     for (size_t _i = 0; _i < names_len; ++_i) {
         names_qstr[_i] = qstring(names[_i]);
     }
-    libqt_list names_list = qstrlist(names_qstr, names_len);
+    libqt_list names_list = qlist(names_qstr, names_len);
     QTextCharFormat_SetAnchorNames((QTextCharFormat*)self, names_list);
 }
 
@@ -695,17 +686,8 @@ libqt_list /* of QTextLength* */ q_textcharformat_length_vector_property(void* s
     return _arr;
 }
 
-void q_textcharformat_set_property2(void* self, int propertyId, void* lengths[]) {
-    QTextLength** lengths_arr = (QTextLength**)lengths;
-    size_t lengths_len = 0;
-    while (lengths_arr[lengths_len] != NULL) {
-        lengths_len++;
-    }
-    libqt_list lengths_list = {
-        .len = lengths_len,
-        .data = {(QTextLength*)lengths},
-    };
-    QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths_list);
+void q_textcharformat_set_property2(void* self, int propertyId, libqt_list lengths) {
+    QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths);
 }
 
 libqt_map /* of int to QVariant* */ q_textcharformat_properties(void* self) {
@@ -936,17 +918,8 @@ int64_t q_textblockformat_page_break_policy(void* self) {
     return QTextBlockFormat_PageBreakPolicy((QTextBlockFormat*)self);
 }
 
-void q_textblockformat_set_tab_positions(void* self, void* tabs[]) {
-    QTextOption__Tab** tabs_arr = (QTextOption__Tab**)tabs;
-    size_t tabs_len = 0;
-    while (tabs_arr[tabs_len] != NULL) {
-        tabs_len++;
-    }
-    libqt_list tabs_list = {
-        .len = tabs_len,
-        .data = {(QTextOption__Tab*)tabs},
-    };
-    QTextBlockFormat_SetTabPositions((QTextBlockFormat*)self, tabs_list);
+void q_textblockformat_set_tab_positions(void* self, libqt_list tabs) {
+    QTextBlockFormat_SetTabPositions((QTextBlockFormat*)self, tabs);
 }
 
 libqt_list /* of QTextOption__Tab* */ q_textblockformat_tab_positions(void* self) {
@@ -1046,17 +1019,8 @@ libqt_list /* of QTextLength* */ q_textblockformat_length_vector_property(void* 
     return _arr;
 }
 
-void q_textblockformat_set_property2(void* self, int propertyId, void* lengths[]) {
-    QTextLength** lengths_arr = (QTextLength**)lengths;
-    size_t lengths_len = 0;
-    while (lengths_arr[lengths_len] != NULL) {
-        lengths_len++;
-    }
-    libqt_list lengths_list = {
-        .len = lengths_len,
-        .data = {(QTextLength*)lengths},
-    };
-    QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths_list);
+void q_textblockformat_set_property2(void* self, int propertyId, libqt_list lengths) {
+    QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths);
 }
 
 libqt_map /* of int to QVariant* */ q_textblockformat_properties(void* self) {
@@ -1313,17 +1277,8 @@ libqt_list /* of QTextLength* */ q_textlistformat_length_vector_property(void* s
     return _arr;
 }
 
-void q_textlistformat_set_property2(void* self, int propertyId, void* lengths[]) {
-    QTextLength** lengths_arr = (QTextLength**)lengths;
-    size_t lengths_len = 0;
-    while (lengths_arr[lengths_len] != NULL) {
-        lengths_len++;
-    }
-    libqt_list lengths_list = {
-        .len = lengths_len,
-        .data = {(QTextLength*)lengths},
-    };
-    QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths_list);
+void q_textlistformat_set_property2(void* self, int propertyId, libqt_list lengths) {
+    QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths);
 }
 
 libqt_map /* of int to QVariant* */ q_textlistformat_properties(void* self) {
@@ -1518,7 +1473,7 @@ void q_textimageformat_set_font_families(void* self, const char* families[]) {
     for (size_t _i = 0; _i < families_len; ++_i) {
         families_qstr[_i] = qstring(families[_i]);
     }
-    libqt_list families_list = qstrlist(families_qstr, families_len);
+    libqt_list families_list = qlist(families_qstr, families_len);
     QTextCharFormat_SetFontFamilies((QTextCharFormat*)self, families_list);
 }
 
@@ -1754,7 +1709,7 @@ void q_textimageformat_set_anchor_names(void* self, const char* names[]) {
     for (size_t _i = 0; _i < names_len; ++_i) {
         names_qstr[_i] = qstring(names[_i]);
     }
-    libqt_list names_list = qstrlist(names_qstr, names_len);
+    libqt_list names_list = qlist(names_qstr, names_len);
     QTextCharFormat_SetAnchorNames((QTextCharFormat*)self, names_list);
 }
 
@@ -1880,17 +1835,8 @@ libqt_list /* of QTextLength* */ q_textimageformat_length_vector_property(void* 
     return _arr;
 }
 
-void q_textimageformat_set_property2(void* self, int propertyId, void* lengths[]) {
-    QTextLength** lengths_arr = (QTextLength**)lengths;
-    size_t lengths_len = 0;
-    while (lengths_arr[lengths_len] != NULL) {
-        lengths_len++;
-    }
-    libqt_list lengths_list = {
-        .len = lengths_len,
-        .data = {(QTextLength*)lengths},
-    };
-    QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths_list);
+void q_textimageformat_set_property2(void* self, int propertyId, libqt_list lengths) {
+    QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths);
 }
 
 libqt_map /* of int to QVariant* */ q_textimageformat_properties(void* self) {
@@ -2221,17 +2167,8 @@ libqt_list /* of QTextLength* */ q_textframeformat_length_vector_property(void* 
     return _arr;
 }
 
-void q_textframeformat_set_property2(void* self, int propertyId, void* lengths[]) {
-    QTextLength** lengths_arr = (QTextLength**)lengths;
-    size_t lengths_len = 0;
-    while (lengths_arr[lengths_len] != NULL) {
-        lengths_len++;
-    }
-    libqt_list lengths_list = {
-        .len = lengths_len,
-        .data = {(QTextLength*)lengths},
-    };
-    QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths_list);
+void q_textframeformat_set_property2(void* self, int propertyId, libqt_list lengths) {
+    QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths);
 }
 
 libqt_map /* of int to QVariant* */ q_textframeformat_properties(void* self) {
@@ -2370,17 +2307,8 @@ void q_texttableformat_set_columns(void* self, int columns) {
     QTextTableFormat_SetColumns((QTextTableFormat*)self, columns);
 }
 
-void q_texttableformat_set_column_width_constraints(void* self, void* constraints[]) {
-    QTextLength** constraints_arr = (QTextLength**)constraints;
-    size_t constraints_len = 0;
-    while (constraints_arr[constraints_len] != NULL) {
-        constraints_len++;
-    }
-    libqt_list constraints_list = {
-        .len = constraints_len,
-        .data = {(QTextLength*)constraints},
-    };
-    QTextTableFormat_SetColumnWidthConstraints((QTextTableFormat*)self, constraints_list);
+void q_texttableformat_set_column_width_constraints(void* self, libqt_list constraints) {
+    QTextTableFormat_SetColumnWidthConstraints((QTextTableFormat*)self, constraints);
 }
 
 libqt_list /* of QTextLength* */ q_texttableformat_column_width_constraints(void* self) {
@@ -2628,17 +2556,8 @@ libqt_list /* of QTextLength* */ q_texttableformat_length_vector_property(void* 
     return _arr;
 }
 
-void q_texttableformat_set_property2(void* self, int propertyId, void* lengths[]) {
-    QTextLength** lengths_arr = (QTextLength**)lengths;
-    size_t lengths_len = 0;
-    while (lengths_arr[lengths_len] != NULL) {
-        lengths_len++;
-    }
-    libqt_list lengths_list = {
-        .len = lengths_len,
-        .data = {(QTextLength*)lengths},
-    };
-    QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths_list);
+void q_texttableformat_set_property2(void* self, int propertyId, libqt_list lengths) {
+    QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths);
 }
 
 libqt_map /* of int to QVariant* */ q_texttableformat_properties(void* self) {
@@ -2938,7 +2857,7 @@ void q_texttablecellformat_set_font_families(void* self, const char* families[])
     for (size_t _i = 0; _i < families_len; ++_i) {
         families_qstr[_i] = qstring(families[_i]);
     }
-    libqt_list families_list = qstrlist(families_qstr, families_len);
+    libqt_list families_list = qlist(families_qstr, families_len);
     QTextCharFormat_SetFontFamilies((QTextCharFormat*)self, families_list);
 }
 
@@ -3174,7 +3093,7 @@ void q_texttablecellformat_set_anchor_names(void* self, const char* names[]) {
     for (size_t _i = 0; _i < names_len; ++_i) {
         names_qstr[_i] = qstring(names[_i]);
     }
-    libqt_list names_list = qstrlist(names_qstr, names_len);
+    libqt_list names_list = qlist(names_qstr, names_len);
     QTextCharFormat_SetAnchorNames((QTextCharFormat*)self, names_list);
 }
 
@@ -3300,17 +3219,8 @@ libqt_list /* of QTextLength* */ q_texttablecellformat_length_vector_property(vo
     return _arr;
 }
 
-void q_texttablecellformat_set_property2(void* self, int propertyId, void* lengths[]) {
-    QTextLength** lengths_arr = (QTextLength**)lengths;
-    size_t lengths_len = 0;
-    while (lengths_arr[lengths_len] != NULL) {
-        lengths_len++;
-    }
-    libqt_list lengths_list = {
-        .len = lengths_len,
-        .data = {(QTextLength*)lengths},
-    };
-    QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths_list);
+void q_texttablecellformat_set_property2(void* self, int propertyId, libqt_list lengths) {
+    QTextFormat_SetProperty2((QTextFormat*)self, propertyId, lengths);
 }
 
 libqt_map /* of int to QVariant* */ q_texttablecellformat_properties(void* self) {

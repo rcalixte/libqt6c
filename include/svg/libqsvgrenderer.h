@@ -12,8 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
@@ -21,9 +19,7 @@
 #include "../libqrect.h"
 #include "../libqsize.h"
 #include <string.h>
-#include "../libqthread.h"
 #include "../libqtransform.h"
-#include "../libqvariant.h"
 #include "../libqxmlstream.h"
 
 /// https://doc.qt.io/qt-6/qsvgrenderer.html
@@ -71,7 +67,7 @@ QSvgRenderer* q_svgrenderer_new8(void* contents, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QSvgRenderer* self ```
-QMetaObject* q_svgrenderer_meta_object(void* self);
+const QMetaObject* q_svgrenderer_meta_object(void* self);
 
 /// ``` QSvgRenderer* self, const char* param1 ```
 void* q_svgrenderer_metacast(void* self, const char* param1);
@@ -214,6 +210,8 @@ void q_svgrenderer_render3(void* self, void* p, const char* elementId);
 /// ``` QSvgRenderer* self ```
 void q_svgrenderer_repaint_needed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsvgrenderer.html#repaintNeeded)
+///
 /// ``` QSvgRenderer* self, void (*slot)(QSvgRenderer*) ```
 void q_svgrenderer_on_repaint_needed(void* self, void (*slot)(void*));
 
@@ -314,7 +312,7 @@ void q_svgrenderer_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QSvgRenderer* self ```
-libqt_list /* of QObject* */ q_svgrenderer_children(void* self);
+const libqt_list /* of QObject* */ q_svgrenderer_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -412,7 +410,7 @@ QBindingStorage* q_svgrenderer_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QSvgRenderer* self ```
-QBindingStorage* q_svgrenderer_binding_storage2(void* self);
+const QBindingStorage* q_svgrenderer_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -422,6 +420,8 @@ QBindingStorage* q_svgrenderer_binding_storage2(void* self);
 void q_svgrenderer_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QSvgRenderer* self, void (*slot)(QObject*) ```
 void q_svgrenderer_on_destroyed(void* self, void (*slot)(void*));
@@ -477,6 +477,8 @@ void q_svgrenderer_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QSvgRenderer* self, void (*slot)(QObject*, QObject*) ```
 void q_svgrenderer_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -491,12 +493,16 @@ bool q_svgrenderer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSvgRenderer* self, QEvent* event ```
 bool q_svgrenderer_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -514,12 +520,16 @@ bool q_svgrenderer_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSvgRenderer* self, QObject* watched, QEvent* event ```
 bool q_svgrenderer_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -537,12 +547,16 @@ void q_svgrenderer_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSvgRenderer* self, QTimerEvent* event ```
 void q_svgrenderer_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -560,12 +574,16 @@ void q_svgrenderer_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSvgRenderer* self, QChildEvent* event ```
 void q_svgrenderer_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -583,12 +601,16 @@ void q_svgrenderer_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSvgRenderer* self, QEvent* event ```
 void q_svgrenderer_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -606,12 +628,16 @@ void q_svgrenderer_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSvgRenderer* self, QMetaMethod* signal ```
 void q_svgrenderer_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -629,12 +655,16 @@ void q_svgrenderer_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSvgRenderer* self, QMetaMethod* signal ```
 void q_svgrenderer_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -652,12 +682,16 @@ QObject* q_svgrenderer_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSvgRenderer* self ```
 QObject* q_svgrenderer_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -675,12 +709,16 @@ int32_t q_svgrenderer_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSvgRenderer* self ```
 int32_t q_svgrenderer_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -698,12 +736,16 @@ int32_t q_svgrenderer_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSvgRenderer* self, const char* signal ```
 int32_t q_svgrenderer_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -721,6 +763,8 @@ bool q_svgrenderer_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QSvgRenderer* self, QMetaMethod* signal ```
@@ -728,11 +772,24 @@ bool q_svgrenderer_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QSvgRenderer* self, bool (*slot)(QSvgRenderer*, QMetaMethod*) ```
 void q_svgrenderer_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QSvgRenderer* self, void (*slot)(QObject*, const char*) ```
+void q_svgrenderer_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsvgrenderer.html#dtor.QSvgRenderer)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSvgRenderer* self ```

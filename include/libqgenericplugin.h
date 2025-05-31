@@ -12,14 +12,10 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qgenericplugin.html
 
@@ -36,7 +32,7 @@ QGenericPlugin* q_genericplugin_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QGenericPlugin* self ```
-QMetaObject* q_genericplugin_meta_object(void* self);
+const QMetaObject* q_genericplugin_meta_object(void* self);
 
 /// ``` QGenericPlugin* self, const char* param1 ```
 void* q_genericplugin_metacast(void* self, const char* param1);
@@ -64,11 +60,15 @@ const char* q_genericplugin_tr(const char* s);
 /// ``` QGenericPlugin* self, const char* name, const char* spec ```
 QObject* q_genericplugin_create(void* self, const char* name, const char* spec);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgenericplugin.html#create)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGenericPlugin* self, QObject* (*slot)(QGenericPlugin*, const char*, const char*) ```
 void q_genericplugin_on_create(void* self, QObject* (*slot)(void*, const char*, const char*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgenericplugin.html#create)
+///
 /// Base class method implementation
 ///
 /// ``` QGenericPlugin* self, const char* name, const char* spec ```
@@ -166,7 +166,7 @@ void q_genericplugin_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QGenericPlugin* self ```
-libqt_list /* of QObject* */ q_genericplugin_children(void* self);
+const libqt_list /* of QObject* */ q_genericplugin_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -264,7 +264,7 @@ QBindingStorage* q_genericplugin_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QGenericPlugin* self ```
-QBindingStorage* q_genericplugin_binding_storage2(void* self);
+const QBindingStorage* q_genericplugin_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -274,6 +274,8 @@ QBindingStorage* q_genericplugin_binding_storage2(void* self);
 void q_genericplugin_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QGenericPlugin* self, void (*slot)(QObject*) ```
 void q_genericplugin_on_destroyed(void* self, void (*slot)(void*));
@@ -329,6 +331,8 @@ void q_genericplugin_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QGenericPlugin* self, void (*slot)(QObject*, QObject*) ```
 void q_genericplugin_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -343,12 +347,16 @@ bool q_genericplugin_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGenericPlugin* self, QEvent* event ```
 bool q_genericplugin_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -366,12 +374,16 @@ bool q_genericplugin_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGenericPlugin* self, QObject* watched, QEvent* event ```
 bool q_genericplugin_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -389,12 +401,16 @@ void q_genericplugin_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGenericPlugin* self, QTimerEvent* event ```
 void q_genericplugin_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -412,12 +428,16 @@ void q_genericplugin_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGenericPlugin* self, QChildEvent* event ```
 void q_genericplugin_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -435,12 +455,16 @@ void q_genericplugin_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGenericPlugin* self, QEvent* event ```
 void q_genericplugin_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -458,12 +482,16 @@ void q_genericplugin_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGenericPlugin* self, QMetaMethod* signal ```
 void q_genericplugin_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -481,12 +509,16 @@ void q_genericplugin_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGenericPlugin* self, QMetaMethod* signal ```
 void q_genericplugin_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -504,12 +536,16 @@ QObject* q_genericplugin_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGenericPlugin* self ```
 QObject* q_genericplugin_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -527,12 +563,16 @@ int32_t q_genericplugin_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGenericPlugin* self ```
 int32_t q_genericplugin_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -550,12 +590,16 @@ int32_t q_genericplugin_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGenericPlugin* self, const char* signal ```
 int32_t q_genericplugin_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -573,6 +617,8 @@ bool q_genericplugin_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGenericPlugin* self, QMetaMethod* signal ```
@@ -580,11 +626,24 @@ bool q_genericplugin_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QGenericPlugin* self, bool (*slot)(QGenericPlugin*, QMetaMethod*) ```
 void q_genericplugin_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QGenericPlugin* self, void (*slot)(QObject*, const char*) ```
+void q_genericplugin_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qgenericplugin.html#dtor.QGenericPlugin)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGenericPlugin* self ```

@@ -1,18 +1,10 @@
-#include "libqabstractseries.hpp"
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "libqboxplotseries.hpp"
-#include "../libqbrush.hpp"
 #include "../libqevent.hpp"
-#include "../libqfont.hpp"
 #include "libqlegend.hpp"
 #include "libqlegendmarker.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
-#include "../libqpen.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqboxplotlegendmarker.hpp"
 #include "libqboxplotlegendmarker.h"
@@ -25,7 +17,7 @@ QBoxPlotLegendMarker* q_boxplotlegendmarker_new2(void* series, void* legend, voi
     return QBoxPlotLegendMarker_new2((QBoxPlotSeries*)series, (QLegend*)legend, (QObject*)parent);
 }
 
-QMetaObject* q_boxplotlegendmarker_meta_object(void* self) {
+const QMetaObject* q_boxplotlegendmarker_meta_object(void* self) {
     return QBoxPlotLegendMarker_MetaObject((QBoxPlotLegendMarker*)self);
 }
 
@@ -229,8 +221,7 @@ const char* q_boxplotlegendmarker_object_name(void* self) {
 }
 
 void q_boxplotlegendmarker_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_boxplotlegendmarker_is_widget_type(void* self) {
@@ -269,7 +260,7 @@ void q_boxplotlegendmarker_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_boxplotlegendmarker_children(void* self) {
+const libqt_list /* of QObject* */ q_boxplotlegendmarker_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -336,7 +327,7 @@ QBindingStorage* q_boxplotlegendmarker_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_boxplotlegendmarker_binding_storage2(void* self) {
+const QBindingStorage* q_boxplotlegendmarker_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -510,6 +501,10 @@ bool q_boxplotlegendmarker_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_boxplotlegendmarker_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QBoxPlotLegendMarker_OnIsSignalConnected((QBoxPlotLegendMarker*)self, (intptr_t)slot);
+}
+
+void q_boxplotlegendmarker_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_boxplotlegendmarker_delete(void* self) {

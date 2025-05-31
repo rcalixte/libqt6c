@@ -44,6 +44,8 @@ void q_scopedpointerpoddeleter_cleanup(void* pointer);
 /// ``` QScopedPointerPodDeleter* self, void* pointer ```
 void q_scopedpointerpoddeleter_operator_call(void* self, void* pointer);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qscopedpointerpoddeleter.html#dtor.QScopedPointerPodDeleter)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QScopedPointerPodDeleter* self ```

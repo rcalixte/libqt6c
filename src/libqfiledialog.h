@@ -15,45 +15,20 @@
 #include "libqabstractfileiconprovider.h"
 #include "libqabstractitemdelegate.h"
 #include "libqabstractproxymodel.h"
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
-#include "libqcursor.h"
 #include "libqdialog.h"
 #include "libqdir.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
-#include "libqlocale.h"
-#include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqscreen.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
-#include "libqthread.h"
 #include "libqurl.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qfiledialog.html
 
@@ -90,7 +65,7 @@ QFileDialog* q_filedialog_new6(void* parent, const char* caption, const char* di
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QFileDialog* self ```
-QMetaObject* q_filedialog_meta_object(void* self);
+const QMetaObject* q_filedialog_meta_object(void* self);
 
 /// ``` QFileDialog* self, const char* param1 ```
 void* q_filedialog_metacast(void* self, const char* param1);
@@ -245,8 +220,8 @@ int64_t q_filedialog_accept_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#setSidebarUrls)
 ///
-/// ``` QFileDialog* self, QUrl* urls[] ```
-void q_filedialog_set_sidebar_urls(void* self, void* urls[]);
+/// ``` QFileDialog* self, libqt_list /* of QUrl* */ urls ```
+void q_filedialog_set_sidebar_urls(void* self, libqt_list urls);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#sidebarUrls)
 ///
@@ -358,11 +333,15 @@ int64_t q_filedialog_options(void* self);
 /// ``` QFileDialog* self, bool visible ```
 void q_filedialog_set_visible(void* self, bool visible);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#setVisible)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileDialog* self, void (*slot)(QFileDialog*, bool) ```
 void q_filedialog_on_set_visible(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#setVisible)
+///
 /// Base class method implementation
 ///
 /// ``` QFileDialog* self, bool visible ```
@@ -373,6 +352,8 @@ void q_filedialog_qbase_set_visible(void* self, bool visible);
 /// ``` QFileDialog* self, const char* file ```
 void q_filedialog_file_selected(void* self, const char* file);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#fileSelected)
+///
 /// ``` QFileDialog* self, void (*slot)(QFileDialog*, const char*) ```
 void q_filedialog_on_file_selected(void* self, void (*slot)(void*, const char*));
 
@@ -381,6 +362,8 @@ void q_filedialog_on_file_selected(void* self, void (*slot)(void*, const char*))
 /// ``` QFileDialog* self, const char* files[] ```
 void q_filedialog_files_selected(void* self, const char* files[]);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#filesSelected)
+///
 /// ``` QFileDialog* self, void (*slot)(QFileDialog*, const char*[]) ```
 void q_filedialog_on_files_selected(void* self, void (*slot)(void*, const char*));
 
@@ -389,6 +372,8 @@ void q_filedialog_on_files_selected(void* self, void (*slot)(void*, const char*)
 /// ``` QFileDialog* self, const char* path ```
 void q_filedialog_current_changed(void* self, const char* path);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#currentChanged)
+///
 /// ``` QFileDialog* self, void (*slot)(QFileDialog*, const char*) ```
 void q_filedialog_on_current_changed(void* self, void (*slot)(void*, const char*));
 
@@ -397,6 +382,8 @@ void q_filedialog_on_current_changed(void* self, void (*slot)(void*, const char*
 /// ``` QFileDialog* self, const char* directory ```
 void q_filedialog_directory_entered(void* self, const char* directory);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#directoryEntered)
+///
 /// ``` QFileDialog* self, void (*slot)(QFileDialog*, const char*) ```
 void q_filedialog_on_directory_entered(void* self, void (*slot)(void*, const char*));
 
@@ -405,22 +392,28 @@ void q_filedialog_on_directory_entered(void* self, void (*slot)(void*, const cha
 /// ``` QFileDialog* self, QUrl* url ```
 void q_filedialog_url_selected(void* self, void* url);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#urlSelected)
+///
 /// ``` QFileDialog* self, void (*slot)(QFileDialog*, QUrl*) ```
 void q_filedialog_on_url_selected(void* self, void (*slot)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#urlsSelected)
 ///
-/// ``` QFileDialog* self, QUrl* urls[] ```
-void q_filedialog_urls_selected(void* self, void* urls[]);
+/// ``` QFileDialog* self, libqt_list /* of QUrl* */ urls ```
+void q_filedialog_urls_selected(void* self, libqt_list urls);
 
-/// ``` QFileDialog* self, void (*slot)(QFileDialog*, QUrl*[]) ```
-void q_filedialog_on_urls_selected(void* self, void (*slot)(void*, void*));
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#urlsSelected)
+///
+/// ``` QFileDialog* self, void (*slot)(QFileDialog*, libqt_list /* of QUrl* */ urls ) ```
+void q_filedialog_on_urls_selected(void* self, void (*slot)(void*, libqt_list));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#currentUrlChanged)
 ///
 /// ``` QFileDialog* self, QUrl* url ```
 void q_filedialog_current_url_changed(void* self, void* url);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#currentUrlChanged)
+///
 /// ``` QFileDialog* self, void (*slot)(QFileDialog*, QUrl*) ```
 void q_filedialog_on_current_url_changed(void* self, void (*slot)(void*, void*));
 
@@ -429,6 +422,8 @@ void q_filedialog_on_current_url_changed(void* self, void (*slot)(void*, void*))
 /// ``` QFileDialog* self, QUrl* directory ```
 void q_filedialog_directory_url_entered(void* self, void* directory);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#directoryUrlEntered)
+///
 /// ``` QFileDialog* self, void (*slot)(QFileDialog*, QUrl*) ```
 void q_filedialog_on_directory_url_entered(void* self, void (*slot)(void*, void*));
 
@@ -437,6 +432,8 @@ void q_filedialog_on_directory_url_entered(void* self, void (*slot)(void*, void*
 /// ``` QFileDialog* self, const char* filter ```
 void q_filedialog_filter_selected(void* self, const char* filter);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#filterSelected)
+///
 /// ``` QFileDialog* self, void (*slot)(QFileDialog*, const char*) ```
 void q_filedialog_on_filter_selected(void* self, void (*slot)(void*, const char*));
 
@@ -490,11 +487,15 @@ void q_filedialog_save_file_content(const char* fileContent, const char* fileNam
 /// ``` QFileDialog* self, int result ```
 void q_filedialog_done(void* self, int result);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#done)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileDialog* self, void (*slot)(QFileDialog*, int) ```
 void q_filedialog_on_done(void* self, void (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#done)
+///
 /// Base class method implementation
 ///
 /// ``` QFileDialog* self, int result ```
@@ -505,11 +506,15 @@ void q_filedialog_qbase_done(void* self, int result);
 /// ``` QFileDialog* self ```
 void q_filedialog_accept(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#accept)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileDialog* self, void (*slot)() ```
 void q_filedialog_on_accept(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#accept)
+///
 /// Base class method implementation
 ///
 /// ``` QFileDialog* self ```
@@ -520,11 +525,15 @@ void q_filedialog_qbase_accept(void* self);
 /// ``` QFileDialog* self, QEvent* e ```
 void q_filedialog_change_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#changeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileDialog* self, void (*slot)(QFileDialog*, QEvent*) ```
 void q_filedialog_on_change_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#changeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QFileDialog* self, QEvent* e ```
@@ -754,6 +763,8 @@ void q_filedialog_finished(void* self, int result);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
+///
 /// ``` QFileDialog* self, void (*slot)(QDialog*, int) ```
 void q_filedialog_on_finished(void* self, void (*slot)(void*, int));
 
@@ -766,6 +777,8 @@ void q_filedialog_accepted(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
+///
 /// ``` QFileDialog* self, void (*slot)(QDialog*) ```
 void q_filedialog_on_accepted(void* self, void (*slot)(void*));
 
@@ -777,6 +790,8 @@ void q_filedialog_on_accepted(void* self, void (*slot)(void*));
 void q_filedialog_rejected(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
 /// ``` QFileDialog* self, void (*slot)(QDialog*) ```
 void q_filedialog_on_rejected(void* self, void (*slot)(void*));
@@ -905,7 +920,7 @@ QRect* q_filedialog_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QFileDialog* self ```
-QRect* q_filedialog_geometry(void* self);
+const QRect* q_filedialog_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1262,7 +1277,7 @@ QWidget* q_filedialog_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QFileDialog* self ```
-QPalette* q_filedialog_palette(void* self);
+const QPalette* q_filedialog_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1304,7 +1319,7 @@ int64_t q_filedialog_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QFileDialog* self ```
-QFont* q_filedialog_font(void* self);
+const QFont* q_filedialog_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2304,15 +2319,15 @@ void q_filedialog_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QFileDialog* self, QAction* actions[] ```
-void q_filedialog_add_actions(void* self, void* actions[]);
+/// ``` QFileDialog* self, libqt_list /* of QAction* */ actions ```
+void q_filedialog_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QFileDialog* self, QAction* before, QAction* actions[] ```
-void q_filedialog_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QFileDialog* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_filedialog_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2512,6 +2527,8 @@ void q_filedialog_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QFileDialog* self, void (*slot)(QWidget*, const char*) ```
 void q_filedialog_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2523,6 +2540,8 @@ void q_filedialog_on_window_title_changed(void* self, void (*slot)(void*, const 
 void q_filedialog_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QFileDialog* self, void (*slot)(QWidget*, QIcon*) ```
 void q_filedialog_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -2536,6 +2555,8 @@ void q_filedialog_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QFileDialog* self, void (*slot)(QWidget*, const char*) ```
 void q_filedialog_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2547,6 +2568,8 @@ void q_filedialog_on_window_icon_text_changed(void* self, void (*slot)(void*, co
 void q_filedialog_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QFileDialog* self, void (*slot)(QWidget*, QPoint*) ```
 void q_filedialog_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2752,7 +2775,7 @@ void q_filedialog_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QFileDialog* self ```
-libqt_list /* of QObject* */ q_filedialog_children(void* self);
+const libqt_list /* of QObject* */ q_filedialog_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2843,7 +2866,7 @@ QBindingStorage* q_filedialog_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QFileDialog* self ```
-QBindingStorage* q_filedialog_binding_storage2(void* self);
+const QBindingStorage* q_filedialog_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2853,6 +2876,8 @@ QBindingStorage* q_filedialog_binding_storage2(void* self);
 void q_filedialog_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QFileDialog* self, void (*slot)(QObject*) ```
 void q_filedialog_on_destroyed(void* self, void (*slot)(void*));
@@ -2907,6 +2932,8 @@ QMetaObject__Connection* q_filedialog_connect4(void* self, void* sender, const c
 void q_filedialog_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QFileDialog* self, void (*slot)(QObject*, QObject*) ```
 void q_filedialog_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -3006,12 +3033,16 @@ QSize* q_filedialog_size_hint(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#sizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self ```
 QSize* q_filedialog_qbase_size_hint(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3029,12 +3060,16 @@ QSize* q_filedialog_minimum_size_hint(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self ```
 QSize* q_filedialog_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3052,12 +3087,16 @@ void q_filedialog_open(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#open)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self ```
 void q_filedialog_qbase_open(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#open)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3075,12 +3114,16 @@ int32_t q_filedialog_exec(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#exec)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self ```
 int32_t q_filedialog_qbase_exec(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#exec)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3098,12 +3141,16 @@ void q_filedialog_reject(void* self);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#reject)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self ```
 void q_filedialog_qbase_reject(void* self);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#reject)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3121,12 +3168,16 @@ void q_filedialog_key_press_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QKeyEvent* param1 ```
 void q_filedialog_qbase_key_press_event(void* self, void* param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3144,12 +3195,16 @@ void q_filedialog_close_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QCloseEvent* param1 ```
 void q_filedialog_qbase_close_event(void* self, void* param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3167,12 +3222,16 @@ void q_filedialog_show_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QShowEvent* param1 ```
 void q_filedialog_qbase_show_event(void* self, void* param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3190,12 +3249,16 @@ void q_filedialog_resize_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QResizeEvent* param1 ```
 void q_filedialog_qbase_resize_event(void* self, void* param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3213,12 +3276,16 @@ void q_filedialog_context_menu_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QContextMenuEvent* param1 ```
 void q_filedialog_qbase_context_menu_event(void* self, void* param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3236,12 +3303,16 @@ bool q_filedialog_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QObject* param1, QEvent* param2 ```
 bool q_filedialog_qbase_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3259,12 +3330,16 @@ int32_t q_filedialog_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self ```
 int32_t q_filedialog_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3282,12 +3357,16 @@ int32_t q_filedialog_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, int param1 ```
 int32_t q_filedialog_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3305,12 +3384,16 @@ bool q_filedialog_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self ```
 bool q_filedialog_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3328,12 +3411,16 @@ QPaintEngine* q_filedialog_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self ```
 QPaintEngine* q_filedialog_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3351,12 +3438,16 @@ bool q_filedialog_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QEvent* event ```
 bool q_filedialog_qbase_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3374,12 +3465,16 @@ void q_filedialog_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QMouseEvent* event ```
 void q_filedialog_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3397,12 +3492,16 @@ void q_filedialog_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QMouseEvent* event ```
 void q_filedialog_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3420,12 +3519,16 @@ void q_filedialog_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QMouseEvent* event ```
 void q_filedialog_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3443,12 +3546,16 @@ void q_filedialog_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QMouseEvent* event ```
 void q_filedialog_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3466,12 +3573,16 @@ void q_filedialog_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QWheelEvent* event ```
 void q_filedialog_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3489,12 +3600,16 @@ void q_filedialog_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QKeyEvent* event ```
 void q_filedialog_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3512,12 +3627,16 @@ void q_filedialog_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QFocusEvent* event ```
 void q_filedialog_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3535,12 +3654,16 @@ void q_filedialog_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QFocusEvent* event ```
 void q_filedialog_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3558,12 +3681,16 @@ void q_filedialog_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QEnterEvent* event ```
 void q_filedialog_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3581,12 +3708,16 @@ void q_filedialog_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QEvent* event ```
 void q_filedialog_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3604,12 +3735,16 @@ void q_filedialog_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QPaintEvent* event ```
 void q_filedialog_qbase_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3627,12 +3762,16 @@ void q_filedialog_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QMoveEvent* event ```
 void q_filedialog_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3650,12 +3789,16 @@ void q_filedialog_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QTabletEvent* event ```
 void q_filedialog_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3673,12 +3816,16 @@ void q_filedialog_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QActionEvent* event ```
 void q_filedialog_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3696,12 +3843,16 @@ void q_filedialog_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QDragEnterEvent* event ```
 void q_filedialog_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3719,12 +3870,16 @@ void q_filedialog_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QDragMoveEvent* event ```
 void q_filedialog_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3742,12 +3897,16 @@ void q_filedialog_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QDragLeaveEvent* event ```
 void q_filedialog_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3765,12 +3924,16 @@ void q_filedialog_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QDropEvent* event ```
 void q_filedialog_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3788,12 +3951,16 @@ void q_filedialog_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QHideEvent* event ```
 void q_filedialog_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3811,12 +3978,16 @@ bool q_filedialog_native_event(void* self, const char* eventType, void* message,
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, const char* eventType, void* message, intptr_t* result ```
 bool q_filedialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3834,12 +4005,16 @@ int32_t q_filedialog_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_filedialog_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3857,12 +4032,16 @@ void q_filedialog_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QPainter* painter ```
 void q_filedialog_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3880,12 +4059,16 @@ QPaintDevice* q_filedialog_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QPoint* offset ```
 QPaintDevice* q_filedialog_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3903,12 +4086,16 @@ QPainter* q_filedialog_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self ```
 QPainter* q_filedialog_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3926,12 +4113,16 @@ void q_filedialog_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QInputMethodEvent* param1 ```
 void q_filedialog_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3949,12 +4140,16 @@ QVariant* q_filedialog_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_filedialog_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3972,12 +4167,16 @@ bool q_filedialog_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, bool next ```
 bool q_filedialog_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3995,12 +4194,16 @@ void q_filedialog_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QTimerEvent* event ```
 void q_filedialog_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4018,12 +4221,16 @@ void q_filedialog_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QChildEvent* event ```
 void q_filedialog_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4041,12 +4248,16 @@ void q_filedialog_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QEvent* event ```
 void q_filedialog_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4064,12 +4275,16 @@ void q_filedialog_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QMetaMethod* signal ```
 void q_filedialog_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4087,12 +4302,16 @@ void q_filedialog_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QMetaMethod* signal ```
 void q_filedialog_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4110,12 +4329,16 @@ void q_filedialog_adjust_position(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QWidget* param1 ```
 void q_filedialog_qbase_adjust_position(void* self, void* param1);
 
 /// Inherited from QDialog
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4133,12 +4356,16 @@ void q_filedialog_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self ```
 void q_filedialog_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4156,12 +4383,16 @@ void q_filedialog_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self ```
 void q_filedialog_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4179,12 +4410,16 @@ void q_filedialog_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self ```
 void q_filedialog_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4202,12 +4437,16 @@ bool q_filedialog_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self ```
 bool q_filedialog_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4225,12 +4464,16 @@ bool q_filedialog_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self ```
 bool q_filedialog_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4248,12 +4491,16 @@ QObject* q_filedialog_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self ```
 QObject* q_filedialog_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4271,12 +4518,16 @@ int32_t q_filedialog_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self ```
 int32_t q_filedialog_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4294,12 +4545,16 @@ int32_t q_filedialog_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, const char* signal ```
 int32_t q_filedialog_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4317,6 +4572,8 @@ bool q_filedialog_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileDialog* self, QMetaMethod* signal ```
@@ -4324,11 +4581,24 @@ bool q_filedialog_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QFileDialog* self, bool (*slot)(QFileDialog*, QMetaMethod*) ```
 void q_filedialog_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFileDialog* self, void (*slot)(QObject*, const char*) ```
+void q_filedialog_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#dtor.QFileDialog)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QFileDialog* self ```

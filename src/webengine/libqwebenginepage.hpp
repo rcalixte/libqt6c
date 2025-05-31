@@ -15,31 +15,23 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
 typedef struct QAction QAction;
-typedef struct QAnyStringView QAnyStringView;
 typedef struct QAuthenticator QAuthenticator;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QColor QColor;
 typedef struct QEvent QEvent;
 typedef struct QIcon QIcon;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QPageLayout QPageLayout;
 typedef struct QPageRanges QPageRanges;
 typedef struct QPointF QPointF;
 typedef struct QRect QRect;
 typedef struct QSizeF QSizeF;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
-typedef struct QVariant QVariant;
 typedef struct QWebChannel QWebChannel;
 typedef struct QWebEngineCertificateError QWebEngineCertificateError;
 typedef struct QWebEngineClientCertificateSelection QWebEngineClientCertificateSelection;

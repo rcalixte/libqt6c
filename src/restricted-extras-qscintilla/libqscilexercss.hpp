@@ -15,25 +15,16 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QColor QColor;
 typedef struct QEvent QEvent;
 typedef struct QFont QFont;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QSettings QSettings;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
-typedef struct QsciAbstractAPIs QsciAbstractAPIs;
 typedef struct QsciLexer QsciLexer;
 typedef struct QsciLexerCSS QsciLexerCSS;
 typedef struct QsciScintilla QsciScintilla;
@@ -150,6 +141,9 @@ void QsciLexerCSS_QBaseSetPaper(QsciLexerCSS* self, QColor* c, int style);
 bool QsciLexerCSS_ReadProperties(QsciLexerCSS* self, QSettings* qs, libqt_string prefix);
 void QsciLexerCSS_OnReadProperties(QsciLexerCSS* self, intptr_t slot);
 bool QsciLexerCSS_QBaseReadProperties(QsciLexerCSS* self, QSettings* qs, libqt_string prefix);
+bool QsciLexerCSS_WriteProperties(const QsciLexerCSS* self, QSettings* qs, libqt_string prefix);
+void QsciLexerCSS_OnWriteProperties(const QsciLexerCSS* self, intptr_t slot);
+bool QsciLexerCSS_QBaseWriteProperties(const QsciLexerCSS* self, QSettings* qs, libqt_string prefix);
 bool QsciLexerCSS_Event(QsciLexerCSS* self, QEvent* event);
 void QsciLexerCSS_OnEvent(QsciLexerCSS* self, intptr_t slot);
 bool QsciLexerCSS_QBaseEvent(QsciLexerCSS* self, QEvent* event);
@@ -171,9 +165,6 @@ void QsciLexerCSS_QBaseConnectNotify(QsciLexerCSS* self, QMetaMethod* signal);
 void QsciLexerCSS_DisconnectNotify(QsciLexerCSS* self, QMetaMethod* signal);
 void QsciLexerCSS_OnDisconnectNotify(QsciLexerCSS* self, intptr_t slot);
 void QsciLexerCSS_QBaseDisconnectNotify(QsciLexerCSS* self, QMetaMethod* signal);
-bool QsciLexerCSS_WriteProperties(const QsciLexerCSS* self, QSettings* qs, libqt_string prefix);
-void QsciLexerCSS_OnWriteProperties(const QsciLexerCSS* self, intptr_t slot);
-bool QsciLexerCSS_QBaseWriteProperties(const QsciLexerCSS* self, QSettings* qs, libqt_string prefix);
 QObject* QsciLexerCSS_Sender(const QsciLexerCSS* self);
 void QsciLexerCSS_OnSender(const QsciLexerCSS* self, intptr_t slot);
 QObject* QsciLexerCSS_QBaseSender(const QsciLexerCSS* self);

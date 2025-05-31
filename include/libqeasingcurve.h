@@ -111,6 +111,8 @@ void q_easingcurve_set_type(void* self, int64_t typeVal);
 /// ``` QEasingCurve* self, double progress ```
 double q_easingcurve_value_for_progress(void* self, double progress);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#dtor.QEasingCurve)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QEasingCurve* self ```

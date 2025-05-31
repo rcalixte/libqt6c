@@ -72,6 +72,8 @@ const char* q_sslerror_error_string(void* self);
 /// ``` QSslError* self ```
 QSslCertificate* q_sslerror_certificate(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#dtor.QSslError)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSslError* self ```

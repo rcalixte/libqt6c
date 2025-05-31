@@ -298,6 +298,8 @@ QDate* q_date_from_string23(const char* stringVal, int64_t format);
 /// ``` const char* stringVal, const char* format, QCalendar* cal ```
 QDate* q_date_from_string34(const char* stringVal, const char* format, void* cal);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#dtor.QDate)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QDate* self ```
@@ -465,6 +467,8 @@ QTime* q_time_from_string23(const char* stringVal, int64_t format);
 /// ``` int h, int m, int s, int ms ```
 bool q_time_is_valid4(int h, int m, int s, int ms);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtime.html#dtor.QTime)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTime* self ```
@@ -767,6 +771,8 @@ QDateTime* q_datetime_from_secs_since_epoch22(long long secs, int64_t spec);
 /// ``` long long secs, enum Qt__TimeSpec spec, int offsetFromUtc ```
 QDateTime* q_datetime_from_secs_since_epoch3(long long secs, int64_t spec, int offsetFromUtc);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#dtor.QDateTime)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QDateTime* self ```

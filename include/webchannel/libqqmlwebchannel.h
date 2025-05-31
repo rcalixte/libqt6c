@@ -12,16 +12,12 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include <string.h>
-#include "../libqthread.h"
 #include "../libqvariant.h"
 #include "libqwebchannel.h"
-#include "libqwebchannelabstracttransport.h"
 
 /// https://doc.qt.io/qt-6/qqmlwebchannel.html
 
@@ -38,7 +34,7 @@ QQmlWebChannel* q_qmlwebchannel_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QQmlWebChannel* self ```
-QMetaObject* q_qmlwebchannel_meta_object(void* self);
+const QMetaObject* q_qmlwebchannel_meta_object(void* self);
 
 /// ``` QQmlWebChannel* self, const char* param1 ```
 void* q_qmlwebchannel_metacast(void* self, const char* param1);
@@ -144,6 +140,8 @@ void q_qmlwebchannel_block_updates_changed(void* self, bool block);
 
 /// Inherited from QWebChannel
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebchannel.html#blockUpdatesChanged)
+///
 /// ``` QQmlWebChannel* self, void (*slot)(QWebChannel*, bool) ```
 void q_qmlwebchannel_on_block_updates_changed(void* self, void (*slot)(void*, bool));
 
@@ -229,7 +227,7 @@ void q_qmlwebchannel_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QQmlWebChannel* self ```
-libqt_list /* of QObject* */ q_qmlwebchannel_children(void* self);
+const libqt_list /* of QObject* */ q_qmlwebchannel_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -327,7 +325,7 @@ QBindingStorage* q_qmlwebchannel_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QQmlWebChannel* self ```
-QBindingStorage* q_qmlwebchannel_binding_storage2(void* self);
+const QBindingStorage* q_qmlwebchannel_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -337,6 +335,8 @@ QBindingStorage* q_qmlwebchannel_binding_storage2(void* self);
 void q_qmlwebchannel_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QQmlWebChannel* self, void (*slot)(QObject*) ```
 void q_qmlwebchannel_on_destroyed(void* self, void (*slot)(void*));
@@ -392,6 +392,8 @@ void q_qmlwebchannel_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QQmlWebChannel* self, void (*slot)(QObject*, QObject*) ```
 void q_qmlwebchannel_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -406,12 +408,16 @@ bool q_qmlwebchannel_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QQmlWebChannel* self, QEvent* event ```
 bool q_qmlwebchannel_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -429,12 +435,16 @@ bool q_qmlwebchannel_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QQmlWebChannel* self, QObject* watched, QEvent* event ```
 bool q_qmlwebchannel_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -452,12 +462,16 @@ void q_qmlwebchannel_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QQmlWebChannel* self, QTimerEvent* event ```
 void q_qmlwebchannel_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -475,12 +489,16 @@ void q_qmlwebchannel_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QQmlWebChannel* self, QChildEvent* event ```
 void q_qmlwebchannel_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -498,12 +516,16 @@ void q_qmlwebchannel_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QQmlWebChannel* self, QEvent* event ```
 void q_qmlwebchannel_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -521,12 +543,16 @@ void q_qmlwebchannel_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QQmlWebChannel* self, QMetaMethod* signal ```
 void q_qmlwebchannel_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -544,12 +570,16 @@ void q_qmlwebchannel_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QQmlWebChannel* self, QMetaMethod* signal ```
 void q_qmlwebchannel_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -567,12 +597,16 @@ QObject* q_qmlwebchannel_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QQmlWebChannel* self ```
 QObject* q_qmlwebchannel_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -590,12 +624,16 @@ int32_t q_qmlwebchannel_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QQmlWebChannel* self ```
 int32_t q_qmlwebchannel_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -613,12 +651,16 @@ int32_t q_qmlwebchannel_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QQmlWebChannel* self, const char* signal ```
 int32_t q_qmlwebchannel_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -636,6 +678,8 @@ bool q_qmlwebchannel_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QQmlWebChannel* self, QMetaMethod* signal ```
@@ -643,11 +687,24 @@ bool q_qmlwebchannel_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QQmlWebChannel* self, bool (*slot)(QQmlWebChannel*, QMetaMethod*) ```
 void q_qmlwebchannel_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QQmlWebChannel* self, void (*slot)(QObject*, const char*) ```
+void q_qmlwebchannel_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qqmlwebchannel.html#dtor.QQmlWebChannel)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QQmlWebChannel* self ```

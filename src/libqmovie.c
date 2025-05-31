@@ -1,5 +1,3 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqcolor.hpp"
 #include "libqiodevice.hpp"
@@ -10,8 +8,6 @@
 #include "libqrect.hpp"
 #include "libqsize.hpp"
 #include <string.h>
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqcoreevent.hpp"
 #include "libqmovie.hpp"
 #include "libqmovie.h"
@@ -48,7 +44,7 @@ QMovie* q_movie_new8(const char* fileName, const char* format, void* parent) {
     return QMovie_new8(qstring(fileName), qstring(format), (QObject*)parent);
 }
 
-QMetaObject* q_movie_meta_object(void* self) {
+const QMetaObject* q_movie_meta_object(void* self) {
     return QMovie_MetaObject((QMovie*)self);
 }
 
@@ -296,8 +292,7 @@ const char* q_movie_object_name(void* self) {
 }
 
 void q_movie_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_movie_is_widget_type(void* self) {
@@ -336,7 +331,7 @@ void q_movie_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_movie_children(void* self) {
+const libqt_list /* of QObject* */ q_movie_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -403,7 +398,7 @@ QBindingStorage* q_movie_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_movie_binding_storage2(void* self) {
+const QBindingStorage* q_movie_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -577,6 +572,10 @@ bool q_movie_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_movie_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QMovie_OnIsSignalConnected((QMovie*)self, (intptr_t)slot);
+}
+
+void q_movie_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_movie_delete(void* self) {

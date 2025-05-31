@@ -68,6 +68,8 @@ void q_webenginecertificateerror_accept_certificate(void* self);
 /// ``` QWebEngineCertificateError* self ```
 libqt_list /* of QSslCertificate* */ q_webenginecertificateerror_certificate_chain(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#dtor.QWebEngineCertificateError)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QWebEngineCertificateError* self ```

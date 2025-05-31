@@ -15,46 +15,22 @@
 #include "libqabstractitemdelegate.h"
 #include "libqabstractitemmodel.h"
 #include "libqabstractitemview.h"
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
 #include "libqcompleter.h"
-#include "libqcursor.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
 #include "libqicon.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
 #include "libqlineedit.h"
-#include "libqlocale.h"
-#include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqscreen.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
 #include "libqstyleoption.h"
-#include "libqthread.h"
 #include "libqvalidator.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qcombobox.html
 
@@ -71,7 +47,7 @@ QComboBox* q_combobox_new2();
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QComboBox* self ```
-QMetaObject* q_combobox_meta_object(void* self);
+const QMetaObject* q_combobox_meta_object(void* self);
 
 /// ``` QComboBox* self, const char* param1 ```
 void* q_combobox_metacast(void* self, const char* param1);
@@ -227,7 +203,7 @@ void q_combobox_set_validator(void* self, void* v);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#validator)
 ///
 /// ``` QComboBox* self ```
-QValidator* q_combobox_validator(void* self);
+const QValidator* q_combobox_validator(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#setCompleter)
 ///
@@ -259,11 +235,15 @@ QAbstractItemModel* q_combobox_model(void* self);
 /// ``` QComboBox* self, QAbstractItemModel* model ```
 void q_combobox_set_model(void* self, void* model);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#setModel)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, QAbstractItemModel*) ```
 void q_combobox_on_set_model(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#setModel)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self, QAbstractItemModel* model ```
@@ -389,11 +369,15 @@ void q_combobox_set_view(void* self, void* itemView);
 /// ``` QComboBox* self ```
 QSize* q_combobox_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, QSize* (*slot)() ```
 void q_combobox_on_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self ```
@@ -404,11 +388,15 @@ QSize* q_combobox_qbase_size_hint(void* self);
 /// ``` QComboBox* self ```
 QSize* q_combobox_minimum_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#minimumSizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, QSize* (*slot)() ```
 void q_combobox_on_minimum_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#minimumSizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self ```
@@ -419,11 +407,15 @@ QSize* q_combobox_qbase_minimum_size_hint(void* self);
 /// ``` QComboBox* self ```
 void q_combobox_show_popup(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#showPopup)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, void (*slot)() ```
 void q_combobox_on_show_popup(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#showPopup)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self ```
@@ -434,11 +426,15 @@ void q_combobox_qbase_show_popup(void* self);
 /// ``` QComboBox* self ```
 void q_combobox_hide_popup(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#hidePopup)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, void (*slot)() ```
 void q_combobox_on_hide_popup(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#hidePopup)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self ```
@@ -449,11 +445,15 @@ void q_combobox_qbase_hide_popup(void* self);
 /// ``` QComboBox* self, QEvent* event ```
 bool q_combobox_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, bool (*slot)(QComboBox*, QEvent*) ```
 void q_combobox_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self, QEvent* event ```
@@ -464,11 +464,15 @@ bool q_combobox_qbase_event(void* self, void* event);
 /// ``` QComboBox* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_combobox_input_method_query(void* self, int64_t param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#inputMethodQuery)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, QVariant* (*slot)(QComboBox*, enum Qt__InputMethodQuery) ```
 void q_combobox_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#inputMethodQuery)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self, enum Qt__InputMethodQuery param1 ```
@@ -509,6 +513,8 @@ void q_combobox_set_current_text(void* self, const char* text);
 /// ``` QComboBox* self, const char* param1 ```
 void q_combobox_edit_text_changed(void* self, const char* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#editTextChanged)
+///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, const char*) ```
 void q_combobox_on_edit_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -517,6 +523,8 @@ void q_combobox_on_edit_text_changed(void* self, void (*slot)(void*, const char*
 /// ``` QComboBox* self, int index ```
 void q_combobox_activated(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#activated)
+///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, int) ```
 void q_combobox_on_activated(void* self, void (*slot)(void*, int));
 
@@ -525,6 +533,8 @@ void q_combobox_on_activated(void* self, void (*slot)(void*, int));
 /// ``` QComboBox* self, const char* param1 ```
 void q_combobox_text_activated(void* self, const char* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#textActivated)
+///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, const char*) ```
 void q_combobox_on_text_activated(void* self, void (*slot)(void*, const char*));
 
@@ -533,6 +543,8 @@ void q_combobox_on_text_activated(void* self, void (*slot)(void*, const char*));
 /// ``` QComboBox* self, int index ```
 void q_combobox_highlighted(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#highlighted)
+///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, int) ```
 void q_combobox_on_highlighted(void* self, void (*slot)(void*, int));
 
@@ -541,6 +553,8 @@ void q_combobox_on_highlighted(void* self, void (*slot)(void*, int));
 /// ``` QComboBox* self, const char* param1 ```
 void q_combobox_text_highlighted(void* self, const char* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#textHighlighted)
+///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, const char*) ```
 void q_combobox_on_text_highlighted(void* self, void (*slot)(void*, const char*));
 
@@ -549,6 +563,8 @@ void q_combobox_on_text_highlighted(void* self, void (*slot)(void*, const char*)
 /// ``` QComboBox* self, int index ```
 void q_combobox_current_index_changed(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#currentIndexChanged)
+///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, int) ```
 void q_combobox_on_current_index_changed(void* self, void (*slot)(void*, int));
 
@@ -557,6 +573,8 @@ void q_combobox_on_current_index_changed(void* self, void (*slot)(void*, int));
 /// ``` QComboBox* self, const char* param1 ```
 void q_combobox_current_text_changed(void* self, const char* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#currentTextChanged)
+///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, const char*) ```
 void q_combobox_on_current_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -565,11 +583,15 @@ void q_combobox_on_current_text_changed(void* self, void (*slot)(void*, const ch
 /// ``` QComboBox* self, QFocusEvent* e ```
 void q_combobox_focus_in_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#focusInEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, QFocusEvent*) ```
 void q_combobox_on_focus_in_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#focusInEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self, QFocusEvent* e ```
@@ -580,11 +602,15 @@ void q_combobox_qbase_focus_in_event(void* self, void* e);
 /// ``` QComboBox* self, QFocusEvent* e ```
 void q_combobox_focus_out_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#focusOutEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, QFocusEvent*) ```
 void q_combobox_on_focus_out_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#focusOutEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self, QFocusEvent* e ```
@@ -595,11 +621,15 @@ void q_combobox_qbase_focus_out_event(void* self, void* e);
 /// ``` QComboBox* self, QEvent* e ```
 void q_combobox_change_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#changeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, QEvent*) ```
 void q_combobox_on_change_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#changeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self, QEvent* e ```
@@ -610,11 +640,15 @@ void q_combobox_qbase_change_event(void* self, void* e);
 /// ``` QComboBox* self, QResizeEvent* e ```
 void q_combobox_resize_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#resizeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, QResizeEvent*) ```
 void q_combobox_on_resize_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#resizeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self, QResizeEvent* e ```
@@ -625,11 +659,15 @@ void q_combobox_qbase_resize_event(void* self, void* e);
 /// ``` QComboBox* self, QPaintEvent* e ```
 void q_combobox_paint_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#paintEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, QPaintEvent*) ```
 void q_combobox_on_paint_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#paintEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self, QPaintEvent* e ```
@@ -640,11 +678,15 @@ void q_combobox_qbase_paint_event(void* self, void* e);
 /// ``` QComboBox* self, QShowEvent* e ```
 void q_combobox_show_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#showEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, QShowEvent*) ```
 void q_combobox_on_show_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#showEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self, QShowEvent* e ```
@@ -655,11 +697,15 @@ void q_combobox_qbase_show_event(void* self, void* e);
 /// ``` QComboBox* self, QHideEvent* e ```
 void q_combobox_hide_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#hideEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, QHideEvent*) ```
 void q_combobox_on_hide_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#hideEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self, QHideEvent* e ```
@@ -670,11 +716,15 @@ void q_combobox_qbase_hide_event(void* self, void* e);
 /// ``` QComboBox* self, QMouseEvent* e ```
 void q_combobox_mouse_press_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#mousePressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, QMouseEvent*) ```
 void q_combobox_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#mousePressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self, QMouseEvent* e ```
@@ -685,11 +735,15 @@ void q_combobox_qbase_mouse_press_event(void* self, void* e);
 /// ``` QComboBox* self, QMouseEvent* e ```
 void q_combobox_mouse_release_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#mouseReleaseEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, QMouseEvent*) ```
 void q_combobox_on_mouse_release_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#mouseReleaseEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self, QMouseEvent* e ```
@@ -700,11 +754,15 @@ void q_combobox_qbase_mouse_release_event(void* self, void* e);
 /// ``` QComboBox* self, QKeyEvent* e ```
 void q_combobox_key_press_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#keyPressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, QKeyEvent*) ```
 void q_combobox_on_key_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#keyPressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self, QKeyEvent* e ```
@@ -715,11 +773,15 @@ void q_combobox_qbase_key_press_event(void* self, void* e);
 /// ``` QComboBox* self, QKeyEvent* e ```
 void q_combobox_key_release_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#keyReleaseEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, QKeyEvent*) ```
 void q_combobox_on_key_release_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#keyReleaseEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self, QKeyEvent* e ```
@@ -730,11 +792,15 @@ void q_combobox_qbase_key_release_event(void* self, void* e);
 /// ``` QComboBox* self, QWheelEvent* e ```
 void q_combobox_wheel_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#wheelEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, QWheelEvent*) ```
 void q_combobox_on_wheel_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#wheelEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self, QWheelEvent* e ```
@@ -745,11 +811,15 @@ void q_combobox_qbase_wheel_event(void* self, void* e);
 /// ``` QComboBox* self, QContextMenuEvent* e ```
 void q_combobox_context_menu_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#contextMenuEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, QContextMenuEvent*) ```
 void q_combobox_on_context_menu_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#contextMenuEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self, QContextMenuEvent* e ```
@@ -760,11 +830,15 @@ void q_combobox_qbase_context_menu_event(void* self, void* e);
 /// ``` QComboBox* self, QInputMethodEvent* param1 ```
 void q_combobox_input_method_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#inputMethodEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, QInputMethodEvent*) ```
 void q_combobox_on_input_method_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#inputMethodEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self, QInputMethodEvent* param1 ```
@@ -775,11 +849,15 @@ void q_combobox_qbase_input_method_event(void* self, void* param1);
 /// ``` QComboBox* self, QStyleOptionComboBox* option ```
 void q_combobox_init_style_option(void* self, void* option);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#initStyleOption)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QComboBox* self, void (*slot)(QComboBox*, QStyleOptionComboBox*) ```
 void q_combobox_on_init_style_option(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#initStyleOption)
+///
 /// Base class method implementation
 ///
 /// ``` QComboBox* self, QStyleOptionComboBox* option ```
@@ -969,7 +1047,7 @@ QRect* q_combobox_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QComboBox* self ```
-QRect* q_combobox_geometry(void* self);
+const QRect* q_combobox_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1326,7 +1404,7 @@ QWidget* q_combobox_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QComboBox* self ```
-QPalette* q_combobox_palette(void* self);
+const QPalette* q_combobox_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1368,7 +1446,7 @@ int64_t q_combobox_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QComboBox* self ```
-QFont* q_combobox_font(void* self);
+const QFont* q_combobox_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2368,15 +2446,15 @@ void q_combobox_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QComboBox* self, QAction* actions[] ```
-void q_combobox_add_actions(void* self, void* actions[]);
+/// ``` QComboBox* self, libqt_list /* of QAction* */ actions ```
+void q_combobox_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QComboBox* self, QAction* before, QAction* actions[] ```
-void q_combobox_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QComboBox* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_combobox_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2576,6 +2654,8 @@ void q_combobox_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QComboBox* self, void (*slot)(QWidget*, const char*) ```
 void q_combobox_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2587,6 +2667,8 @@ void q_combobox_on_window_title_changed(void* self, void (*slot)(void*, const ch
 void q_combobox_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QComboBox* self, void (*slot)(QWidget*, QIcon*) ```
 void q_combobox_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -2600,6 +2682,8 @@ void q_combobox_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QComboBox* self, void (*slot)(QWidget*, const char*) ```
 void q_combobox_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2611,6 +2695,8 @@ void q_combobox_on_window_icon_text_changed(void* self, void (*slot)(void*, cons
 void q_combobox_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QComboBox* self, void (*slot)(QWidget*, QPoint*) ```
 void q_combobox_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2816,7 +2902,7 @@ void q_combobox_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QComboBox* self ```
-libqt_list /* of QObject* */ q_combobox_children(void* self);
+const libqt_list /* of QObject* */ q_combobox_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2907,7 +2993,7 @@ QBindingStorage* q_combobox_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QComboBox* self ```
-QBindingStorage* q_combobox_binding_storage2(void* self);
+const QBindingStorage* q_combobox_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2917,6 +3003,8 @@ QBindingStorage* q_combobox_binding_storage2(void* self);
 void q_combobox_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QComboBox* self, void (*slot)(QObject*) ```
 void q_combobox_on_destroyed(void* self, void (*slot)(void*));
@@ -2971,6 +3059,8 @@ QMetaObject__Connection* q_combobox_connect4(void* self, void* sender, const cha
 void q_combobox_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QComboBox* self, void (*slot)(QObject*, QObject*) ```
 void q_combobox_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -3070,12 +3160,16 @@ int32_t q_combobox_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self ```
 int32_t q_combobox_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3093,12 +3187,16 @@ void q_combobox_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, bool visible ```
 void q_combobox_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3116,12 +3214,16 @@ int32_t q_combobox_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, int param1 ```
 int32_t q_combobox_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3139,12 +3241,16 @@ bool q_combobox_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self ```
 bool q_combobox_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3162,12 +3268,16 @@ QPaintEngine* q_combobox_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self ```
 QPaintEngine* q_combobox_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3185,12 +3295,16 @@ void q_combobox_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, QMouseEvent* event ```
 void q_combobox_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3208,12 +3322,16 @@ void q_combobox_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, QMouseEvent* event ```
 void q_combobox_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3231,12 +3349,16 @@ void q_combobox_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, QEnterEvent* event ```
 void q_combobox_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3254,12 +3376,16 @@ void q_combobox_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, QEvent* event ```
 void q_combobox_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3277,12 +3403,16 @@ void q_combobox_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, QMoveEvent* event ```
 void q_combobox_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3300,12 +3430,16 @@ void q_combobox_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, QCloseEvent* event ```
 void q_combobox_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3323,12 +3457,16 @@ void q_combobox_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, QTabletEvent* event ```
 void q_combobox_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3346,12 +3484,16 @@ void q_combobox_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, QActionEvent* event ```
 void q_combobox_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3369,12 +3511,16 @@ void q_combobox_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, QDragEnterEvent* event ```
 void q_combobox_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3392,12 +3538,16 @@ void q_combobox_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, QDragMoveEvent* event ```
 void q_combobox_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3415,12 +3565,16 @@ void q_combobox_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, QDragLeaveEvent* event ```
 void q_combobox_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3438,12 +3592,16 @@ void q_combobox_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, QDropEvent* event ```
 void q_combobox_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3461,12 +3619,16 @@ bool q_combobox_native_event(void* self, const char* eventType, void* message, i
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, const char* eventType, void* message, intptr_t* result ```
 bool q_combobox_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3484,12 +3646,16 @@ int32_t q_combobox_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_combobox_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3507,12 +3673,16 @@ void q_combobox_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, QPainter* painter ```
 void q_combobox_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3530,12 +3700,16 @@ QPaintDevice* q_combobox_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, QPoint* offset ```
 QPaintDevice* q_combobox_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3553,12 +3727,16 @@ QPainter* q_combobox_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self ```
 QPainter* q_combobox_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3576,12 +3754,16 @@ bool q_combobox_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, bool next ```
 bool q_combobox_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3599,12 +3781,16 @@ bool q_combobox_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, QObject* watched, QEvent* event ```
 bool q_combobox_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3622,12 +3808,16 @@ void q_combobox_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, QTimerEvent* event ```
 void q_combobox_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3645,12 +3835,16 @@ void q_combobox_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, QChildEvent* event ```
 void q_combobox_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3668,12 +3862,16 @@ void q_combobox_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, QEvent* event ```
 void q_combobox_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3691,12 +3889,16 @@ void q_combobox_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, QMetaMethod* signal ```
 void q_combobox_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3714,12 +3916,16 @@ void q_combobox_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, QMetaMethod* signal ```
 void q_combobox_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3737,12 +3943,16 @@ void q_combobox_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self ```
 void q_combobox_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3760,12 +3970,16 @@ void q_combobox_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self ```
 void q_combobox_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3783,12 +3997,16 @@ void q_combobox_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self ```
 void q_combobox_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3806,12 +4024,16 @@ bool q_combobox_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self ```
 bool q_combobox_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3829,12 +4051,16 @@ bool q_combobox_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self ```
 bool q_combobox_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3852,12 +4078,16 @@ QObject* q_combobox_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self ```
 QObject* q_combobox_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3875,12 +4105,16 @@ int32_t q_combobox_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self ```
 int32_t q_combobox_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3898,12 +4132,16 @@ int32_t q_combobox_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, const char* signal ```
 int32_t q_combobox_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3921,6 +4159,8 @@ bool q_combobox_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QComboBox* self, QMetaMethod* signal ```
@@ -3928,11 +4168,24 @@ bool q_combobox_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QComboBox* self, bool (*slot)(QComboBox*, QMetaMethod*) ```
 void q_combobox_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QComboBox* self, void (*slot)(QObject*, const char*) ```
+void q_combobox_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#dtor.QComboBox)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QComboBox* self ```

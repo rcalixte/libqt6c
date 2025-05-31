@@ -20,15 +20,8 @@ typedef QAccessible::State QAccessible__State;
 #endif
 #else
 typedef struct QAccessibleActionInterface QAccessibleActionInterface;
-typedef struct QAccessibleEditableTextInterface QAccessibleEditableTextInterface;
-typedef struct QAccessibleHyperlinkInterface QAccessibleHyperlinkInterface;
-typedef struct QAccessibleImageInterface QAccessibleImageInterface;
 typedef struct QAccessibleInterface QAccessibleInterface;
 typedef struct QAccessibleObject QAccessibleObject;
-typedef struct QAccessibleTableCellInterface QAccessibleTableCellInterface;
-typedef struct QAccessibleTableInterface QAccessibleTableInterface;
-typedef struct QAccessibleTextInterface QAccessibleTextInterface;
-typedef struct QAccessibleValueInterface QAccessibleValueInterface;
 typedef struct QAccessibleWidget QAccessibleWidget;
 typedef struct QAccessible__State QAccessible__State;
 typedef struct QColor QColor;
@@ -59,12 +52,6 @@ void* QAccessibleWidget_InterfaceCast(QAccessibleWidget* self, int t);
 libqt_list /* of libqt_string */ QAccessibleWidget_ActionNames(const QAccessibleWidget* self);
 void QAccessibleWidget_DoAction(QAccessibleWidget* self, libqt_string actionName);
 libqt_list /* of libqt_string */ QAccessibleWidget_KeyBindingsForAction(const QAccessibleWidget* self, libqt_string actionName);
-QObject* QAccessibleWidget_Object(const QAccessibleWidget* self);
-void QAccessibleWidget_SetText(QAccessibleWidget* self, int t, libqt_string text);
-QAccessibleInterface* QAccessibleWidget_ChildAt(const QAccessibleWidget* self, int x, int y);
-void QAccessibleWidget_VirtualHook(QAccessibleWidget* self, int id, void* data);
-libqt_string QAccessibleWidget_LocalizedActionName(const QAccessibleWidget* self, libqt_string name);
-libqt_string QAccessibleWidget_LocalizedActionDescription(const QAccessibleWidget* self, libqt_string name);
 
 #ifdef __cplusplus
 } /* extern C */

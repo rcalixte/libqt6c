@@ -134,7 +134,7 @@ unsigned char* q_videoframe_bits(void* self, int plane);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#bits)
 ///
 /// ``` QVideoFrame* self, int plane ```
-unsigned char* q_videoframe_bits_with_plane(void* self, int plane);
+const unsigned char* q_videoframe_bits_with_plane(void* self, int plane);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#mappedBytes)
 ///
@@ -206,6 +206,8 @@ void q_videoframe_set_subtitle_text(void* self, const char* text);
 /// ``` QVideoFrame* self, QPainter* painter, QRectF* rect, QVideoFrame__PaintOptions* options ```
 void q_videoframe_paint(void* self, void* painter, void* rect, void* options);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#dtor.QVideoFrame)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QVideoFrame* self ```
@@ -233,6 +235,8 @@ void q_videoframe__paintoptions_copy_assign(void* self, void* other);
 /// ``` QVideoFrame__PaintOptions* self, QVideoFrame__PaintOptions* other ```
 void q_videoframe__paintoptions_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe::paintoptions.html#dtor.QVideoFrame::PaintOptions)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QVideoFrame__PaintOptions* self ```

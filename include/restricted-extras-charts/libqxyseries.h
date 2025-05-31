@@ -12,13 +12,8 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractaxis.h"
 #include "libqabstractseries.h"
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "../libqbrush.h"
-#include "libqchart.h"
-#include "../libqevent.h"
 #include "../libqcolor.h"
 #include "../libqfont.h"
 #include "../libqimage.h"
@@ -27,15 +22,14 @@
 #include "../libqpen.h"
 #include "../libqpoint.h"
 #include <string.h>
-#include "../libqthread.h"
 #include "../libqvariant.h"
 
-/// https://doc.qt.io/qt-6/qxyseries.html
+/// https://doc.qt.io/qt-6/qxyseries-qtcharts.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QXYSeries* self ```
-QMetaObject* q_xyseries_meta_object(void* self);
+const QMetaObject* q_xyseries_meta_object(void* self);
 
 /// ``` QXYSeries* self, const char* param1 ```
 void* q_xyseries_metacast(void* self, const char* param1);
@@ -48,581 +42,633 @@ int32_t q_xyseries_metacall(void* self, int64_t param1, int param2, void* param3
 /// ``` const char* s ```
 const char* q_xyseries_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#append)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#append)
 ///
 /// ``` QXYSeries* self, double x, double y ```
 void q_xyseries_append(void* self, double x, double y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#append)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#append)
 ///
 /// ``` QXYSeries* self, QPointF* point ```
 void q_xyseries_append_with_point(void* self, void* point);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#append)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#append)
 ///
-/// ``` QXYSeries* self, QPointF* points[] ```
-void q_xyseries_append_with_points(void* self, void* points[]);
+/// ``` QXYSeries* self, libqt_list /* of QPointF* */ points ```
+void q_xyseries_append_with_points(void* self, libqt_list points);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#replace)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#replace)
 ///
 /// ``` QXYSeries* self, double oldX, double oldY, double newX, double newY ```
 void q_xyseries_replace(void* self, double oldX, double oldY, double newX, double newY);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#replace)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#replace)
 ///
 /// ``` QXYSeries* self, QPointF* oldPoint, QPointF* newPoint ```
 void q_xyseries_replace2(void* self, void* oldPoint, void* newPoint);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#replace)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#replace)
 ///
 /// ``` QXYSeries* self, int index, double newX, double newY ```
 void q_xyseries_replace3(void* self, int index, double newX, double newY);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#replace)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#replace)
 ///
 /// ``` QXYSeries* self, int index, QPointF* newPoint ```
 void q_xyseries_replace4(void* self, int index, void* newPoint);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#remove)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#remove)
 ///
 /// ``` QXYSeries* self, double x, double y ```
 void q_xyseries_remove(void* self, double x, double y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#remove)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#remove)
 ///
 /// ``` QXYSeries* self, QPointF* point ```
 void q_xyseries_remove_with_point(void* self, void* point);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#remove)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#remove)
 ///
 /// ``` QXYSeries* self, int index ```
 void q_xyseries_remove_with_index(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#removePoints)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#removePoints)
 ///
 /// ``` QXYSeries* self, int index, int count ```
 void q_xyseries_remove_points(void* self, int index, int count);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#insert)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#insert)
 ///
 /// ``` QXYSeries* self, int index, QPointF* point ```
 void q_xyseries_insert(void* self, int index, void* point);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#clear)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#clear)
 ///
 /// ``` QXYSeries* self ```
 void q_xyseries_clear(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#count)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#count)
 ///
 /// ``` QXYSeries* self ```
 int32_t q_xyseries_count(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#points)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#points)
 ///
 /// ``` QXYSeries* self ```
 libqt_list /* of QPointF* */ q_xyseries_points(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointsVector)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsVector)
 ///
 /// ``` QXYSeries* self ```
 libqt_list /* of QPointF* */ q_xyseries_points_vector(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#at)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#at)
 ///
 /// ``` QXYSeries* self, int index ```
-QPointF* q_xyseries_at(void* self, int index);
+const QPointF* q_xyseries_at(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#operator<<)
 ///
 /// ``` QXYSeries* self, QPointF* point ```
 QXYSeries* q_xyseries_operator_shift_left(void* self, void* point);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#operator<<)
 ///
-/// ``` QXYSeries* self, QPointF* points[] ```
-QXYSeries* q_xyseries_operator_shift_left_with_points(void* self, void* points[]);
+/// ``` QXYSeries* self, libqt_list /* of QPointF* */ points ```
+QXYSeries* q_xyseries_operator_shift_left_with_points(void* self, libqt_list points);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPen)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPen)
 ///
 /// ``` QXYSeries* self, QPen* pen ```
 void q_xyseries_set_pen(void* self, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pen)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pen)
 ///
 /// ``` QXYSeries* self ```
 QPen* q_xyseries_pen(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setBrush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setBrush)
 ///
 /// ``` QXYSeries* self, QBrush* brush ```
 void q_xyseries_set_brush(void* self, void* brush);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#brush)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#brush)
 ///
 /// ``` QXYSeries* self ```
 QBrush* q_xyseries_brush(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setColor)
 ///
 /// ``` QXYSeries* self, QColor* color ```
 void q_xyseries_set_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#color)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#color)
 ///
 /// ``` QXYSeries* self ```
 QColor* q_xyseries_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setSelectedColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setSelectedColor)
 ///
 /// ``` QXYSeries* self, QColor* color ```
 void q_xyseries_set_selected_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectedColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedColor)
 ///
 /// ``` QXYSeries* self ```
 QColor* q_xyseries_selected_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointsVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointsVisible)
 ///
 /// ``` QXYSeries* self ```
 void q_xyseries_set_points_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointsVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsVisible)
 ///
 /// ``` QXYSeries* self ```
 bool q_xyseries_points_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointLabelsFormat)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointLabelsFormat)
 ///
 /// ``` QXYSeries* self, const char* format ```
 void q_xyseries_set_point_labels_format(void* self, const char* format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsFormat)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsFormat)
 ///
 /// ``` QXYSeries* self ```
 const char* q_xyseries_point_labels_format(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointLabelsVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointLabelsVisible)
 ///
 /// ``` QXYSeries* self ```
 void q_xyseries_set_point_labels_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsVisible)
 ///
 /// ``` QXYSeries* self ```
 bool q_xyseries_point_labels_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointLabelsFont)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointLabelsFont)
 ///
 /// ``` QXYSeries* self, QFont* font ```
 void q_xyseries_set_point_labels_font(void* self, void* font);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsFont)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsFont)
 ///
 /// ``` QXYSeries* self ```
 QFont* q_xyseries_point_labels_font(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointLabelsColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointLabelsColor)
 ///
 /// ``` QXYSeries* self, QColor* color ```
 void q_xyseries_set_point_labels_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsColor)
 ///
 /// ``` QXYSeries* self ```
 QColor* q_xyseries_point_labels_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointLabelsClipping)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointLabelsClipping)
 ///
 /// ``` QXYSeries* self ```
 void q_xyseries_set_point_labels_clipping(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsClipping)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsClipping)
 ///
 /// ``` QXYSeries* self ```
 bool q_xyseries_point_labels_clipping(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#replace)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#replace)
 ///
-/// ``` QXYSeries* self, QPointF* points[] ```
-void q_xyseries_replace_with_points(void* self, void* points[]);
+/// ``` QXYSeries* self, libqt_list /* of QPointF* */ points ```
+void q_xyseries_replace_with_points(void* self, libqt_list points);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#isPointSelected)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#isPointSelected)
 ///
 /// ``` QXYSeries* self, int index ```
 bool q_xyseries_is_point_selected(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectPoint)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectPoint)
 ///
 /// ``` QXYSeries* self, int index ```
 void q_xyseries_select_point(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#deselectPoint)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#deselectPoint)
 ///
 /// ``` QXYSeries* self, int index ```
 void q_xyseries_deselect_point(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointSelected)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointSelected)
 ///
 /// ``` QXYSeries* self, int index, bool selected ```
 void q_xyseries_set_point_selected(void* self, int index, bool selected);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectAllPoints)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectAllPoints)
 ///
 /// ``` QXYSeries* self ```
 void q_xyseries_select_all_points(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#deselectAllPoints)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#deselectAllPoints)
 ///
 /// ``` QXYSeries* self ```
 void q_xyseries_deselect_all_points(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectPoints)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectPoints)
 ///
-/// ``` QXYSeries* self, int* indexes[] ```
-void q_xyseries_select_points(void* self, int* indexes[]);
+/// ``` QXYSeries* self, libqt_list /* of int */ indexes ```
+void q_xyseries_select_points(void* self, libqt_list indexes);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#deselectPoints)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#deselectPoints)
 ///
-/// ``` QXYSeries* self, int* indexes[] ```
-void q_xyseries_deselect_points(void* self, int* indexes[]);
+/// ``` QXYSeries* self, libqt_list /* of int */ indexes ```
+void q_xyseries_deselect_points(void* self, libqt_list indexes);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#toggleSelection)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#toggleSelection)
 ///
-/// ``` QXYSeries* self, int* indexes[] ```
-void q_xyseries_toggle_selection(void* self, int* indexes[]);
+/// ``` QXYSeries* self, libqt_list /* of int */ indexes ```
+void q_xyseries_toggle_selection(void* self, libqt_list indexes);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectedPoints)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedPoints)
 ///
 /// ``` QXYSeries* self ```
 libqt_list /* of int */ q_xyseries_selected_points(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setLightMarker)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setLightMarker)
 ///
 /// ``` QXYSeries* self, QImage* lightMarker ```
 void q_xyseries_set_light_marker(void* self, void* lightMarker);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#lightMarker)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#lightMarker)
 ///
 /// ``` QXYSeries* self ```
-QImage* q_xyseries_light_marker(void* self);
+const QImage* q_xyseries_light_marker(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setSelectedLightMarker)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setSelectedLightMarker)
 ///
 /// ``` QXYSeries* self, QImage* selectedLightMarker ```
 void q_xyseries_set_selected_light_marker(void* self, void* selectedLightMarker);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectedLightMarker)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedLightMarker)
 ///
 /// ``` QXYSeries* self ```
-QImage* q_xyseries_selected_light_marker(void* self);
+const QImage* q_xyseries_selected_light_marker(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setMarkerSize)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setMarkerSize)
 ///
 /// ``` QXYSeries* self, double size ```
 void q_xyseries_set_marker_size(void* self, double size);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#markerSize)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#markerSize)
 ///
 /// ``` QXYSeries* self ```
 double q_xyseries_marker_size(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setBestFitLineVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setBestFitLineVisible)
 ///
 /// ``` QXYSeries* self ```
 void q_xyseries_set_best_fit_line_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#bestFitLineVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLineVisible)
 ///
 /// ``` QXYSeries* self ```
 bool q_xyseries_best_fit_line_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#bestFitLineEquation)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLineEquation)
 ///
 /// ``` QXYSeries* self, bool* ok ```
 libqt_pair /* tuple of double and double */ q_xyseries_best_fit_line_equation(void* self, bool* ok);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setBestFitLinePen)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setBestFitLinePen)
 ///
 /// ``` QXYSeries* self, QPen* pen ```
 void q_xyseries_set_best_fit_line_pen(void* self, void* pen);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#bestFitLinePen)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLinePen)
 ///
 /// ``` QXYSeries* self ```
 QPen* q_xyseries_best_fit_line_pen(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setBestFitLineColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setBestFitLineColor)
 ///
 /// ``` QXYSeries* self, QColor* color ```
 void q_xyseries_set_best_fit_line_color(void* self, void* color);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#bestFitLineColor)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLineColor)
 ///
 /// ``` QXYSeries* self ```
 QColor* q_xyseries_best_fit_line_color(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#clearPointConfiguration)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#clearPointConfiguration)
 ///
 /// ``` QXYSeries* self, int index ```
 void q_xyseries_clear_point_configuration(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#clearPointConfiguration)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#clearPointConfiguration)
 ///
 /// ``` QXYSeries* self, int index, enum QXYSeries__PointConfiguration key ```
 void q_xyseries_clear_point_configuration2(void* self, int index, int64_t key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#clearPointsConfiguration)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#clearPointsConfiguration)
 ///
 /// ``` QXYSeries* self ```
 void q_xyseries_clear_points_configuration(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#clearPointsConfiguration)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#clearPointsConfiguration)
 ///
 /// ``` QXYSeries* self, enum QXYSeries__PointConfiguration key ```
 void q_xyseries_clear_points_configuration_with_key(void* self, int64_t key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointConfiguration)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointConfiguration)
 ///
 /// ``` QXYSeries* self, int index, libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */ configuration ```
 void q_xyseries_set_point_configuration(void* self, int index, libqt_map /* of int64_t to QVariant* */ configuration);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointConfiguration)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointConfiguration)
 ///
 /// ``` QXYSeries* self, int index, enum QXYSeries__PointConfiguration key, QVariant* value ```
 void q_xyseries_set_point_configuration2(void* self, int index, int64_t key, void* value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointsConfiguration)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointsConfiguration)
 ///
 /// ``` QXYSeries* self, libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */ pointsConfiguration ```
 void q_xyseries_set_points_configuration(void* self, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ pointsConfiguration);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointConfiguration)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointConfiguration)
 ///
 /// ``` QXYSeries* self, int index ```
 libqt_map /* of int64_t to QVariant* */ q_xyseries_point_configuration(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointsConfiguration)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsConfiguration)
 ///
 /// ``` QXYSeries* self ```
 libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ q_xyseries_points_configuration(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#sizeBy)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#sizeBy)
 ///
-/// ``` QXYSeries* self, double* sourceData[], double minSize, double maxSize ```
-void q_xyseries_size_by(void* self, double* sourceData[], double minSize, double maxSize);
+/// ``` QXYSeries* self, libqt_list /* of double */ sourceData, double minSize, double maxSize ```
+void q_xyseries_size_by(void* self, libqt_list sourceData, double minSize, double maxSize);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#colorBy)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#colorBy)
 ///
-/// ``` QXYSeries* self, double* sourceData[] ```
-void q_xyseries_color_by(void* self, double* sourceData[]);
+/// ``` QXYSeries* self, libqt_list /* of double */ sourceData ```
+void q_xyseries_color_by(void* self, libqt_list sourceData);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#clicked)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#clicked)
 ///
 /// ``` QXYSeries* self, QPointF* point ```
 void q_xyseries_clicked(void* self, void* point);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#clicked)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, QPointF*) ```
 void q_xyseries_on_clicked(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#hovered)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#hovered)
 ///
 /// ``` QXYSeries* self, QPointF* point, bool state ```
 void q_xyseries_hovered(void* self, void* point, bool state);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#hovered)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, QPointF*, bool) ```
 void q_xyseries_on_hovered(void* self, void (*slot)(void*, void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pressed)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pressed)
 ///
 /// ``` QXYSeries* self, QPointF* point ```
 void q_xyseries_pressed(void* self, void* point);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pressed)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, QPointF*) ```
 void q_xyseries_on_pressed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#released)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#released)
 ///
 /// ``` QXYSeries* self, QPointF* point ```
 void q_xyseries_released(void* self, void* point);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#released)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, QPointF*) ```
 void q_xyseries_on_released(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#doubleClicked)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#doubleClicked)
 ///
 /// ``` QXYSeries* self, QPointF* point ```
 void q_xyseries_double_clicked(void* self, void* point);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#doubleClicked)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, QPointF*) ```
 void q_xyseries_on_double_clicked(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointReplaced)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointReplaced)
 ///
 /// ``` QXYSeries* self, int index ```
 void q_xyseries_point_replaced(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointReplaced)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, int) ```
 void q_xyseries_on_point_replaced(void* self, void (*slot)(void*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointRemoved)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointRemoved)
 ///
 /// ``` QXYSeries* self, int index ```
 void q_xyseries_point_removed(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointRemoved)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, int) ```
 void q_xyseries_on_point_removed(void* self, void (*slot)(void*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointAdded)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointAdded)
 ///
 /// ``` QXYSeries* self, int index ```
 void q_xyseries_point_added(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointAdded)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, int) ```
 void q_xyseries_on_point_added(void* self, void (*slot)(void*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#colorChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#colorChanged)
 ///
 /// ``` QXYSeries* self, QColor* color ```
 void q_xyseries_color_changed(void* self, void* color);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#colorChanged)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, QColor*) ```
 void q_xyseries_on_color_changed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectedColorChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedColorChanged)
 ///
 /// ``` QXYSeries* self, QColor* color ```
 void q_xyseries_selected_color_changed(void* self, void* color);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedColorChanged)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, QColor*) ```
 void q_xyseries_on_selected_color_changed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointsReplaced)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsReplaced)
 ///
 /// ``` QXYSeries* self ```
 void q_xyseries_points_replaced(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsReplaced)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*) ```
 void q_xyseries_on_points_replaced(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsFormatChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsFormatChanged)
 ///
 /// ``` QXYSeries* self, const char* format ```
 void q_xyseries_point_labels_format_changed(void* self, const char* format);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsFormatChanged)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, const char*) ```
 void q_xyseries_on_point_labels_format_changed(void* self, void (*slot)(void*, const char*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsVisibilityChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsVisibilityChanged)
 ///
 /// ``` QXYSeries* self, bool visible ```
 void q_xyseries_point_labels_visibility_changed(void* self, bool visible);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsVisibilityChanged)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, bool) ```
 void q_xyseries_on_point_labels_visibility_changed(void* self, void (*slot)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsFontChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsFontChanged)
 ///
 /// ``` QXYSeries* self, QFont* font ```
 void q_xyseries_point_labels_font_changed(void* self, void* font);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsFontChanged)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, QFont*) ```
 void q_xyseries_on_point_labels_font_changed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsColorChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsColorChanged)
 ///
 /// ``` QXYSeries* self, QColor* color ```
 void q_xyseries_point_labels_color_changed(void* self, void* color);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsColorChanged)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, QColor*) ```
 void q_xyseries_on_point_labels_color_changed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsClippingChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsClippingChanged)
 ///
 /// ``` QXYSeries* self, bool clipping ```
 void q_xyseries_point_labels_clipping_changed(void* self, bool clipping);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsClippingChanged)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, bool) ```
 void q_xyseries_on_point_labels_clipping_changed(void* self, void (*slot)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointsRemoved)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsRemoved)
 ///
 /// ``` QXYSeries* self, int index, int count ```
 void q_xyseries_points_removed(void* self, int index, int count);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsRemoved)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, int, int) ```
 void q_xyseries_on_points_removed(void* self, void (*slot)(void*, int, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#penChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#penChanged)
 ///
 /// ``` QXYSeries* self, QPen* pen ```
 void q_xyseries_pen_changed(void* self, void* pen);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#penChanged)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, QPen*) ```
 void q_xyseries_on_pen_changed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectedPointsChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedPointsChanged)
 ///
 /// ``` QXYSeries* self ```
 void q_xyseries_selected_points_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedPointsChanged)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*) ```
 void q_xyseries_on_selected_points_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#lightMarkerChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#lightMarkerChanged)
 ///
 /// ``` QXYSeries* self, QImage* lightMarker ```
 void q_xyseries_light_marker_changed(void* self, void* lightMarker);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#lightMarkerChanged)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, QImage*) ```
 void q_xyseries_on_light_marker_changed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectedLightMarkerChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedLightMarkerChanged)
 ///
 /// ``` QXYSeries* self, QImage* selectedLightMarker ```
 void q_xyseries_selected_light_marker_changed(void* self, void* selectedLightMarker);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedLightMarkerChanged)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, QImage*) ```
 void q_xyseries_on_selected_light_marker_changed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#bestFitLineVisibilityChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLineVisibilityChanged)
 ///
 /// ``` QXYSeries* self, bool visible ```
 void q_xyseries_best_fit_line_visibility_changed(void* self, bool visible);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLineVisibilityChanged)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, bool) ```
 void q_xyseries_on_best_fit_line_visibility_changed(void* self, void (*slot)(void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#bestFitLinePenChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLinePenChanged)
 ///
 /// ``` QXYSeries* self, QPen* pen ```
 void q_xyseries_best_fit_line_pen_changed(void* self, void* pen);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLinePenChanged)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, QPen*) ```
 void q_xyseries_on_best_fit_line_pen_changed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#bestFitLineColorChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLineColorChanged)
 ///
 /// ``` QXYSeries* self, QColor* color ```
 void q_xyseries_best_fit_line_color_changed(void* self, void* color);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLineColorChanged)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, QColor*) ```
 void q_xyseries_on_best_fit_line_color_changed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointsConfigurationChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsConfigurationChanged)
 ///
 /// ``` QXYSeries* self, libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */ configuration ```
 void q_xyseries_points_configuration_changed(void* self, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ configuration);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsConfigurationChanged)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */) ```
 void q_xyseries_on_points_configuration_changed(void* self, void (*slot)(void*, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#markerSizeChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#markerSizeChanged)
 ///
 /// ``` QXYSeries* self, double size ```
 void q_xyseries_marker_size_changed(void* self, double size);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#markerSizeChanged)
+///
 /// ``` QXYSeries* self, void (*slot)(QXYSeries*, double) ```
 void q_xyseries_on_marker_size_changed(void* self, void (*slot)(void*, double));
 
@@ -636,30 +682,30 @@ const char* q_xyseries_tr2(const char* s, const char* c);
 /// ``` const char* s, const char* c, int n ```
 const char* q_xyseries_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointsVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointsVisible)
 ///
 /// ``` QXYSeries* self, bool visible ```
 void q_xyseries_set_points_visible1(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointLabelsVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointLabelsVisible)
 ///
 /// ``` QXYSeries* self, bool visible ```
 void q_xyseries_set_point_labels_visible1(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointLabelsClipping)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointLabelsClipping)
 ///
 /// ``` QXYSeries* self, bool enabled ```
 void q_xyseries_set_point_labels_clipping1(void* self, bool enabled);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setBestFitLineVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setBestFitLineVisible)
 ///
 /// ``` QXYSeries* self, bool visible ```
 void q_xyseries_set_best_fit_line_visible1(void* self, bool visible);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#colorBy)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#colorBy)
 ///
-/// ``` QXYSeries* self, double* sourceData[], QLinearGradient* gradient ```
-void q_xyseries_color_by2(void* self, double* sourceData[], void* gradient);
+/// ``` QXYSeries* self, libqt_list /* of double */ sourceData, QLinearGradient* gradient ```
+void q_xyseries_color_by2(void* self, libqt_list sourceData, void* gradient);
 
 /// Inherited from QAbstractSeries
 ///
@@ -775,6 +821,8 @@ void q_xyseries_name_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
+///
 /// ``` QXYSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_xyseries_on_name_changed(void* self, void (*slot)(void*));
 
@@ -786,6 +834,8 @@ void q_xyseries_on_name_changed(void* self, void (*slot)(void*));
 void q_xyseries_visible_changed(void* self);
 
 /// Inherited from QAbstractSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
 /// ``` QXYSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_xyseries_on_visible_changed(void* self, void (*slot)(void*));
@@ -799,6 +849,8 @@ void q_xyseries_opacity_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
+///
 /// ``` QXYSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_xyseries_on_opacity_changed(void* self, void (*slot)(void*));
 
@@ -810,6 +862,8 @@ void q_xyseries_on_opacity_changed(void* self, void (*slot)(void*));
 void q_xyseries_use_open_g_l_changed(void* self);
 
 /// Inherited from QAbstractSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
 /// ``` QXYSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_xyseries_on_use_open_g_l_changed(void* self, void (*slot)(void*));
@@ -924,7 +978,7 @@ void q_xyseries_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QXYSeries* self ```
-libqt_list /* of QObject* */ q_xyseries_children(void* self);
+const libqt_list /* of QObject* */ q_xyseries_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1022,7 +1076,7 @@ QBindingStorage* q_xyseries_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QXYSeries* self ```
-QBindingStorage* q_xyseries_binding_storage2(void* self);
+const QBindingStorage* q_xyseries_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -1032,6 +1086,8 @@ QBindingStorage* q_xyseries_binding_storage2(void* self);
 void q_xyseries_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QXYSeries* self, void (*slot)(QObject*) ```
 void q_xyseries_on_destroyed(void* self, void (*slot)(void*));
@@ -1087,15 +1143,28 @@ void q_xyseries_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QXYSeries* self, void (*slot)(QObject*, QObject*) ```
 void q_xyseries_on_destroyed1(void* self, void (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QXYSeries* self, void (*slot)(QObject*, const char*) ```
+void q_xyseries_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#dtor.QXYSeries)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QXYSeries* self ```
 void q_xyseries_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qxyseries.html#types
+/// https://doc.qt.io/qt-6/qxyseries-qtcharts.html#types
 
 typedef enum {
     QXYSERIES_POINTCONFIGURATION_COLOR = 0,

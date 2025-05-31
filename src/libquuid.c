@@ -21,9 +21,7 @@ QUuid* q_uuid_new4(uint32_t l, unsigned short w1, unsigned short w2, unsigned ch
 }
 
 QUuid* q_uuid_new5(char* stringVal) {
-    libqt_strview stringVal_strview = qstrview(stringVal);
-
-    return QUuid_new5((QAnyStringView*)&stringVal_strview);
+    return QUuid_new5(stringVal);
 }
 
 QUuid* q_uuid_new6(void* param1) {
@@ -39,8 +37,7 @@ void q_uuid_move_assign(void* self, void* other) {
 }
 
 QUuid* q_uuid_from_string(char* stringVal) {
-    libqt_strview stringVal_strview = qstrview(stringVal);
-    return QUuid_FromString((QAnyStringView*)&stringVal_strview);
+    return QUuid_FromString(stringVal);
 }
 
 const char* q_uuid_to_string(void* self) {

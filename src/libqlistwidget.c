@@ -1,51 +1,30 @@
 #include "libqabstractitemdelegate.hpp"
-#include "libqabstractitemmodel.hpp"
 #include "libqabstractitemview.hpp"
 #include "libqabstractscrollarea.hpp"
-#include "libqaction.hpp"
 #include "libqevent.hpp"
-#include "libqanystringview.hpp"
-#include "libqbackingstore.hpp"
-#include "libqbindingstorage.hpp"
-#include "libqbitmap.hpp"
 #include "libqbrush.hpp"
-#include "libqcursor.hpp"
 #include "libqdatastream.hpp"
 #include "libqfont.hpp"
-#include "libqfontinfo.hpp"
-#include "libqfontmetrics.hpp"
 #include "libqframe.hpp"
-#include "libqgraphicseffect.hpp"
-#include "libqgraphicsproxywidget.hpp"
 #include "libqicon.hpp"
 #include "libqitemselectionmodel.hpp"
-#include "libqkeysequence.hpp"
-#include "libqlayout.hpp"
 #include "libqlistview.hpp"
-#include "libqlocale.hpp"
 #include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
 #include "libqmimedata.hpp"
+#include "libqabstractitemmodel.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
 #include "libqpainter.hpp"
-#include "libqpalette.hpp"
-#include "libqpixmap.hpp"
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
 #include "libqregion.hpp"
-#include "libqscreen.hpp"
-#include "libqscrollbar.hpp"
 #include "libqsize.hpp"
-#include "libqsizepolicy.hpp"
 #include <string.h>
-#include "libqstyle.hpp"
 #include "libqstyleoption.hpp"
-#include "libqthread.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqwindow.hpp"
 #include "libqcoreevent.hpp"
 #include "libqlistwidget.hpp"
 #include "libqlistwidget.h"
@@ -318,7 +297,7 @@ QListWidget* q_listwidget_new2() {
     return QListWidget_new2();
 }
 
-QMetaObject* q_listwidget_meta_object(void* self) {
+const QMetaObject* q_listwidget_meta_object(void* self) {
     return QListWidget_MetaObject((QListWidget*)self);
 }
 
@@ -379,7 +358,7 @@ void q_listwidget_insert_items(void* self, int row, const char* labels[]) {
     for (size_t _i = 0; _i < labels_len; ++_i) {
         labels_qstr[_i] = qstring(labels[_i]);
     }
-    libqt_list labels_list = qstrlist(labels_qstr, labels_len);
+    libqt_list labels_list = qlist(labels_qstr, labels_len);
     QListWidget_InsertItems((QListWidget*)self, row, labels_list);
 }
 
@@ -397,7 +376,7 @@ void q_listwidget_add_items(void* self, const char* labels[]) {
     for (size_t _i = 0; _i < labels_len; ++_i) {
         labels_qstr[_i] = qstring(labels[_i]);
     }
-    libqt_list labels_list = qstrlist(labels_qstr, labels_len);
+    libqt_list labels_list = qlist(labels_qstr, labels_len);
     QListWidget_AddItems((QListWidget*)self, labels_list);
 }
 
@@ -652,34 +631,16 @@ const char** q_listwidget_qbase_mime_types(void* self) {
     return _ret;
 }
 
-QMimeData* q_listwidget_mime_data(void* self, void* items[]) {
-    QListWidgetItem** items_arr = (QListWidgetItem**)items;
-    size_t items_len = 0;
-    while (items_arr[items_len] != NULL) {
-        items_len++;
-    }
-    libqt_list items_list = {
-        .len = items_len,
-        .data = {(QListWidgetItem*)items},
-    };
-    return QListWidget_MimeData((QListWidget*)self, items_list);
+QMimeData* q_listwidget_mime_data(void* self, libqt_list items) {
+    return QListWidget_MimeData((QListWidget*)self, items);
 }
 
-void q_listwidget_on_mime_data(void* self, QMimeData* (*slot)(void*, void*)) {
+void q_listwidget_on_mime_data(void* self, QMimeData* (*slot)(void*, libqt_list)) {
     QListWidget_OnMimeData((QListWidget*)self, (intptr_t)slot);
 }
 
-QMimeData* q_listwidget_qbase_mime_data(void* self, void* items[]) {
-    QListWidgetItem** items_arr = (QListWidgetItem**)items;
-    size_t items_len = 0;
-    while (items_arr[items_len] != NULL) {
-        items_len++;
-    }
-    libqt_list items_list = {
-        .len = items_len,
-        .data = {(QListWidgetItem*)items},
-    };
-    return QListWidget_QBaseMimeData((QListWidget*)self, items_list);
+QMimeData* q_listwidget_qbase_mime_data(void* self, libqt_list items) {
+    return QListWidget_QBaseMimeData((QListWidget*)self, items);
 }
 
 bool q_listwidget_drop_mime_data(void* self, int index, void* data, int64_t action) {
@@ -852,20 +813,11 @@ int64_t q_listwidget_item_alignment(void* self) {
     return QListView_ItemAlignment((QListView*)self);
 }
 
-void q_listwidget_indexes_moved(void* self, void* indexes[]) {
-    QModelIndex** indexes_arr = (QModelIndex**)indexes;
-    size_t indexes_len = 0;
-    while (indexes_arr[indexes_len] != NULL) {
-        indexes_len++;
-    }
-    libqt_list indexes_list = {
-        .len = indexes_len,
-        .data = {(QModelIndex*)indexes},
-    };
-    QListView_IndexesMoved((QListView*)self, indexes_list);
+void q_listwidget_indexes_moved(void* self, libqt_list indexes) {
+    QListView_IndexesMoved((QListView*)self, indexes);
 }
 
-void q_listwidget_on_indexes_moved(void* self, void (*slot)(void*, void*)) {
+void q_listwidget_on_indexes_moved(void* self, void (*slot)(void*, libqt_list)) {
     QListView_Connect_IndexesMoved((QListView*)self, (intptr_t)slot);
 }
 
@@ -1342,7 +1294,7 @@ QRect* q_listwidget_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_listwidget_geometry(void* self) {
+const QRect* q_listwidget_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -1546,7 +1498,7 @@ QWidget* q_listwidget_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_listwidget_palette(void* self) {
+const QPalette* q_listwidget_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -1570,7 +1522,7 @@ int64_t q_listwidget_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_listwidget_font(void* self) {
+const QFont* q_listwidget_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -2171,30 +2123,12 @@ void q_listwidget_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_listwidget_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_listwidget_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_listwidget_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_listwidget_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_listwidget_insert_action(void* self, void* before, void* action) {
@@ -2414,8 +2348,7 @@ const char* q_listwidget_object_name(void* self) {
 }
 
 void q_listwidget_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_listwidget_is_widget_type(void* self) {
@@ -2454,7 +2387,7 @@ void q_listwidget_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_listwidget_children(void* self) {
+const libqt_list /* of QObject* */ q_listwidget_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -2517,7 +2450,7 @@ QBindingStorage* q_listwidget_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_listwidget_binding_storage2(void* self) {
+const QBindingStorage* q_listwidget_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2693,31 +2626,15 @@ void q_listwidget_on_scroll_contents_by(void* self, void (*slot)(void*, int, int
     QListWidget_OnScrollContentsBy((QListWidget*)self, (intptr_t)slot);
 }
 
-void q_listwidget_data_changed(void* self, void* topLeft, void* bottomRight, int* roles[]) {
-    size_t roles_len = 0;
-    while (roles[roles_len] != NULL) {
-        roles_len++;
-    }
-    libqt_list roles_list = {
-        .len = roles_len,
-        .data = {(int*)roles},
-    };
-    QListWidget_DataChanged((QListWidget*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles_list);
+void q_listwidget_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles) {
+    QListWidget_DataChanged((QListWidget*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_listwidget_qbase_data_changed(void* self, void* topLeft, void* bottomRight, int* roles[]) {
-    size_t roles_len = 0;
-    while (roles[roles_len] != NULL) {
-        roles_len++;
-    }
-    libqt_list roles_list = {
-        .len = roles_len,
-        .data = {(int*)roles},
-    };
-    QListWidget_QBaseDataChanged((QListWidget*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles_list);
+void q_listwidget_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles) {
+    QListWidget_QBaseDataChanged((QListWidget*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_listwidget_on_data_changed(void* self, void (*slot)(void*, void*, void*, int*)) {
+void q_listwidget_on_data_changed(void* self, void (*slot)(void*, void*, void*, libqt_list)) {
     QListWidget_OnDataChanged((QListWidget*)self, (intptr_t)slot);
 }
 
@@ -3993,6 +3910,10 @@ bool q_listwidget_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_listwidget_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QListWidget_OnIsSignalConnected((QListWidget*)self, (intptr_t)slot);
+}
+
+void q_listwidget_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_listwidget_delete(void* self) {

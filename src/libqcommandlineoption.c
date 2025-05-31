@@ -12,7 +12,7 @@ QCommandLineOption* q_commandlineoption_new2(const char* names[]) {
     for (size_t _i = 0; _i < names_len; ++_i) {
         names_qstr[_i] = qstring(names[_i]);
     }
-    libqt_list names_list = qstrlist(names_qstr, names_len);
+    libqt_list names_list = qlist(names_qstr, names_len);
 
     return QCommandLineOption_new2(names_list);
 }
@@ -27,7 +27,7 @@ QCommandLineOption* q_commandlineoption_new4(const char* names[], const char* de
     for (size_t _i = 0; _i < names_len; ++_i) {
         names_qstr[_i] = qstring(names[_i]);
     }
-    libqt_list names_list = qstrlist(names_qstr, names_len);
+    libqt_list names_list = qlist(names_qstr, names_len);
 
     return QCommandLineOption_new4(names_list, qstring(description));
 }
@@ -50,7 +50,7 @@ QCommandLineOption* q_commandlineoption_new8(const char* names[], const char* de
     for (size_t _i = 0; _i < names_len; ++_i) {
         names_qstr[_i] = qstring(names[_i]);
     }
-    libqt_list names_list = qstrlist(names_qstr, names_len);
+    libqt_list names_list = qlist(names_qstr, names_len);
 
     return QCommandLineOption_new8(names_list, qstring(description), qstring(valueName));
 }
@@ -61,7 +61,7 @@ QCommandLineOption* q_commandlineoption_new9(const char* names[], const char* de
     for (size_t _i = 0; _i < names_len; ++_i) {
         names_qstr[_i] = qstring(names[_i]);
     }
-    libqt_list names_list = qstrlist(names_qstr, names_len);
+    libqt_list names_list = qlist(names_qstr, names_len);
 
     return QCommandLineOption_new9(names_list, qstring(description), qstring(valueName), qstring(defaultValue));
 }
@@ -120,7 +120,7 @@ void q_commandlineoption_set_default_values(void* self, const char* defaultValue
     for (size_t _i = 0; _i < defaultValues_len; ++_i) {
         defaultValues_qstr[_i] = qstring(defaultValues[_i]);
     }
-    libqt_list defaultValues_list = qstrlist(defaultValues_qstr, defaultValues_len);
+    libqt_list defaultValues_list = qlist(defaultValues_qstr, defaultValues_len);
     QCommandLineOption_SetDefaultValues((QCommandLineOption*)self, defaultValues_list);
 }
 

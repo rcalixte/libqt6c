@@ -15,20 +15,11 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAction QAction;
 typedef struct QActionEvent QActionEvent;
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBackingStore QBackingStore;
-typedef struct QBindingStorage QBindingStorage;
-typedef struct QBitmap QBitmap;
 typedef struct QChildEvent QChildEvent;
 typedef struct QCloseEvent QCloseEvent;
 typedef struct QContextMenuEvent QContextMenuEvent;
-typedef struct QCursor QCursor;
 typedef struct QDragEnterEvent QDragEnterEvent;
 typedef struct QDragLeaveEvent QDragLeaveEvent;
 typedef struct QDragMoveEvent QDragMoveEvent;
@@ -36,23 +27,13 @@ typedef struct QDropEvent QDropEvent;
 typedef struct QEnterEvent QEnterEvent;
 typedef struct QEvent QEvent;
 typedef struct QFocusEvent QFocusEvent;
-typedef struct QFont QFont;
-typedef struct QFontInfo QFontInfo;
-typedef struct QFontMetrics QFontMetrics;
-typedef struct QGraphicsEffect QGraphicsEffect;
-typedef struct QGraphicsProxyWidget QGraphicsProxyWidget;
 typedef struct QHideEvent QHideEvent;
-typedef struct QIcon QIcon;
 typedef struct QInputMethodEvent QInputMethodEvent;
 typedef struct QKeyEvent QKeyEvent;
 typedef struct QKeySequence QKeySequence;
 typedef struct QKeySequenceEdit QKeySequenceEdit;
-typedef struct QLayout QLayout;
-typedef struct QLocale QLocale;
-typedef struct QMargins QMargins;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QMouseEvent QMouseEvent;
 typedef struct QMoveEvent QMoveEvent;
 typedef struct QObject QObject;
@@ -60,25 +41,15 @@ typedef struct QPaintDevice QPaintDevice;
 typedef struct QPaintEngine QPaintEngine;
 typedef struct QPaintEvent QPaintEvent;
 typedef struct QPainter QPainter;
-typedef struct QPalette QPalette;
-typedef struct QPixmap QPixmap;
 typedef struct QPoint QPoint;
-typedef struct QPointF QPointF;
-typedef struct QRect QRect;
-typedef struct QRegion QRegion;
 typedef struct QResizeEvent QResizeEvent;
-typedef struct QScreen QScreen;
 typedef struct QShowEvent QShowEvent;
 typedef struct QSize QSize;
-typedef struct QSizePolicy QSizePolicy;
-typedef struct QStyle QStyle;
 typedef struct QTabletEvent QTabletEvent;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
-typedef struct QWindow QWindow;
 #endif
 
 QKeySequenceEdit* QKeySequenceEdit_new(QWidget* parent);
@@ -207,6 +178,18 @@ bool QKeySequenceEdit_QBaseNativeEvent(QKeySequenceEdit* self, libqt_string even
 void QKeySequenceEdit_ChangeEvent(QKeySequenceEdit* self, QEvent* param1);
 void QKeySequenceEdit_OnChangeEvent(QKeySequenceEdit* self, intptr_t slot);
 void QKeySequenceEdit_QBaseChangeEvent(QKeySequenceEdit* self, QEvent* param1);
+int QKeySequenceEdit_Metric(const QKeySequenceEdit* self, int param1);
+void QKeySequenceEdit_OnMetric(const QKeySequenceEdit* self, intptr_t slot);
+int QKeySequenceEdit_QBaseMetric(const QKeySequenceEdit* self, int param1);
+void QKeySequenceEdit_InitPainter(const QKeySequenceEdit* self, QPainter* painter);
+void QKeySequenceEdit_OnInitPainter(const QKeySequenceEdit* self, intptr_t slot);
+void QKeySequenceEdit_QBaseInitPainter(const QKeySequenceEdit* self, QPainter* painter);
+QPaintDevice* QKeySequenceEdit_Redirected(const QKeySequenceEdit* self, QPoint* offset);
+void QKeySequenceEdit_OnRedirected(const QKeySequenceEdit* self, intptr_t slot);
+QPaintDevice* QKeySequenceEdit_QBaseRedirected(const QKeySequenceEdit* self, QPoint* offset);
+QPainter* QKeySequenceEdit_SharedPainter(const QKeySequenceEdit* self);
+void QKeySequenceEdit_OnSharedPainter(const QKeySequenceEdit* self, intptr_t slot);
+QPainter* QKeySequenceEdit_QBaseSharedPainter(const QKeySequenceEdit* self);
 void QKeySequenceEdit_InputMethodEvent(QKeySequenceEdit* self, QInputMethodEvent* param1);
 void QKeySequenceEdit_OnInputMethodEvent(QKeySequenceEdit* self, intptr_t slot);
 void QKeySequenceEdit_QBaseInputMethodEvent(QKeySequenceEdit* self, QInputMethodEvent* param1);
@@ -231,18 +214,6 @@ void QKeySequenceEdit_QBaseConnectNotify(QKeySequenceEdit* self, QMetaMethod* si
 void QKeySequenceEdit_DisconnectNotify(QKeySequenceEdit* self, QMetaMethod* signal);
 void QKeySequenceEdit_OnDisconnectNotify(QKeySequenceEdit* self, intptr_t slot);
 void QKeySequenceEdit_QBaseDisconnectNotify(QKeySequenceEdit* self, QMetaMethod* signal);
-int QKeySequenceEdit_Metric(const QKeySequenceEdit* self, int param1);
-void QKeySequenceEdit_OnMetric(const QKeySequenceEdit* self, intptr_t slot);
-int QKeySequenceEdit_QBaseMetric(const QKeySequenceEdit* self, int param1);
-void QKeySequenceEdit_InitPainter(const QKeySequenceEdit* self, QPainter* painter);
-void QKeySequenceEdit_OnInitPainter(const QKeySequenceEdit* self, intptr_t slot);
-void QKeySequenceEdit_QBaseInitPainter(const QKeySequenceEdit* self, QPainter* painter);
-QPaintDevice* QKeySequenceEdit_Redirected(const QKeySequenceEdit* self, QPoint* offset);
-void QKeySequenceEdit_OnRedirected(const QKeySequenceEdit* self, intptr_t slot);
-QPaintDevice* QKeySequenceEdit_QBaseRedirected(const QKeySequenceEdit* self, QPoint* offset);
-QPainter* QKeySequenceEdit_SharedPainter(const QKeySequenceEdit* self);
-void QKeySequenceEdit_OnSharedPainter(const QKeySequenceEdit* self, intptr_t slot);
-QPainter* QKeySequenceEdit_QBaseSharedPainter(const QKeySequenceEdit* self);
 void QKeySequenceEdit_UpdateMicroFocus(QKeySequenceEdit* self);
 void QKeySequenceEdit_OnUpdateMicroFocus(QKeySequenceEdit* self, intptr_t slot);
 void QKeySequenceEdit_QBaseUpdateMicroFocus(QKeySequenceEdit* self);

@@ -263,8 +263,8 @@ QCborMap__Iterator* QCborMap_InsertWithQCborMapvalueType(QCborMap* self, libqt_p
     QCborMap::value_type v_QPair;
     QCborValue** v_first = static_cast<QCborValue**>(v.first);
     QCborValue** v_second = static_cast<QCborValue**>(v.second);
-    v_QPair.first = **v_first;
-    v_QPair.second = **v_second;
+    v_QPair.first = *(v_first[0]);
+    v_QPair.second = *(v_second[0]);
     return new QCborMap::Iterator(self->insert(v_QPair));
 }
 

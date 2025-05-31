@@ -69,6 +69,8 @@ void* q_genericargument_data(void* self);
 /// ``` QGenericArgument* self ```
 const char* q_genericargument_name(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgenericargument.html#dtor.QGenericArgument)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGenericArgument* self ```
@@ -130,6 +132,8 @@ void* q_genericreturnargument_data(void* self);
 /// ``` QGenericReturnArgument* self ```
 const char* q_genericreturnargument_name(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgenericreturnargument.html#dtor.QGenericReturnArgument)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGenericReturnArgument* self ```
@@ -155,7 +159,7 @@ const char* q_metaobject_class_name(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#superClass)
 ///
 /// ``` QMetaObject* self ```
-QMetaObject* q_metaobject_super_class(void* self);
+const QMetaObject* q_metaobject_super_class(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#inherits)
 ///
@@ -170,7 +174,7 @@ QObject* q_metaobject_cast(void* self, void* obj);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#cast)
 ///
 /// ``` QMetaObject* self, QObject* obj ```
-QObject* q_metaobject_cast_with_obj(void* self, void* obj);
+const QObject* q_metaobject_cast_with_obj(void* self, void* obj);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -647,6 +651,8 @@ QObject* q_metaobject_new_instance9(void* self, void* val0, void* val1, void* va
 /// ``` QMetaObject* self, QGenericArgument* val0, QGenericArgument* val1, QGenericArgument* val2, QGenericArgument* val3, QGenericArgument* val4, QGenericArgument* val5, QGenericArgument* val6, QGenericArgument* val7, QGenericArgument* val8, QGenericArgument* val9 ```
 QObject* q_metaobject_new_instance10(void* self, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#dtor.QMetaObject)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMetaObject* self ```
@@ -674,6 +680,8 @@ void q_metaobject__connection_operator_assign(void* self, void* other);
 /// ``` QMetaObject__Connection* self, QMetaObject__Connection* other ```
 void q_metaobject__connection_swap(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject::connection.html#dtor.QMetaObject::Connection)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMetaObject__Connection* self ```
@@ -699,18 +707,20 @@ QMetaObject__SuperData* q_metaobject__superdata_new3(void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject__superdata.html#operator->)
 ///
 /// ``` QMetaObject__SuperData* self ```
-QMetaObject* q_metaobject__superdata_operator_minus_greater(void* self);
+const QMetaObject* q_metaobject__superdata_operator_minus_greater(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject__superdata.html#operator const QMetaObject *)
 ///
 /// ``` QMetaObject__SuperData* self ```
-QMetaObject* q_metaobject__superdata_to_const_q_meta_object_multiply(void* self);
+const QMetaObject* q_metaobject__superdata_to_const_q_meta_object_multiply(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject__superdata.html#operator=)
 ///
 /// ``` QMetaObject__SuperData* self, QMetaObject__SuperData* param1 ```
 void q_metaobject__superdata_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject::superdata.html#dtor.QMetaObject::SuperData)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMetaObject__SuperData* self ```
@@ -733,6 +743,8 @@ QMetaObject__Data* q_metaobject__data_new2(void* param1);
 /// ``` QMetaObject__Data* self, QMetaObject__Data* param1 ```
 void q_metaobject__data_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject::data.html#dtor.QMetaObject::Data)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QMetaObject__Data* self ```

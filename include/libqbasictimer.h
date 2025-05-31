@@ -51,6 +51,8 @@ void q_basictimer_start2(void* self, int msec, int64_t timerType, void* obj);
 /// ``` QBasicTimer* self ```
 void q_basictimer_stop(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbasictimer.html#dtor.QBasicTimer)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QBasicTimer* self ```

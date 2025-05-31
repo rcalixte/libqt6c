@@ -87,6 +87,8 @@ void q_pixmapcache_remove_with_key(void* key);
 ///
 void q_pixmapcache_clear();
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpixmapcache.html#dtor.QPixmapCache)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPixmapCache* self ```
@@ -129,6 +131,8 @@ void q_pixmapcache__key_swap(void* self, void* other);
 /// ``` QPixmapCache__Key* self ```
 bool q_pixmapcache__key_is_valid(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpixmapcache::key.html#dtor.QPixmapCache::Key)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPixmapCache__Key* self ```

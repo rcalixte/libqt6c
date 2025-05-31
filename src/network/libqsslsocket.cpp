@@ -1,7 +1,4 @@
 #include <QAbstractSocket>
-#include <QAnyStringView>
-#include <QAuthenticator>
-#include <QBindingStorage>
 #include <QByteArray>
 #include <QChildEvent>
 #include <QEvent>
@@ -11,8 +8,6 @@
 #include <QList>
 #include <QMetaMethod>
 #include <QMetaObject>
-#define WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection
-#include <QNetworkProxy>
 #include <QObject>
 #include <QOcspResponse>
 #include <QSslCertificate>
@@ -26,7 +21,6 @@
 #include <QByteArray>
 #include <cstring>
 #include <QTcpSocket>
-#include <QThread>
 #include <QTimerEvent>
 #include <QVariant>
 #include <qsslsocket.h>
@@ -50,27 +44,30 @@ void* QSslSocket_Metacast(QSslSocket* self, const char* param1) {
 }
 
 int QSslSocket_Metacall(QSslSocket* self, int param1, int param2, void** param3) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return self->qt_metacall(static_cast<QMetaObject::Call>(param1), static_cast<int>(param2), param3);
     } else {
-        return self->qt_metacall(static_cast<QMetaObject::Call>(param1), static_cast<int>(param2), param3);
+        return ((VirtualQSslSocket*)self)->qt_metacall(static_cast<QMetaObject::Call>(param1), static_cast<int>(param2), param3);
     }
 }
 
 // Subclass method to allow providing a virtual method re-implementation
 void QSslSocket_OnMetacall(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Metacall_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_Metacall_Callback>(slot));
     }
 }
 
 // Virtual base class handler implementation
 int QSslSocket_QBaseMetacall(QSslSocket* self, int param1, int param2, void** param3) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Metacall_IsBase(true);
         return vqsslsocket->qt_metacall(static_cast<QMetaObject::Call>(param1), static_cast<int>(param2), param3);
     } else {
-        return self->qt_metacall(static_cast<QMetaObject::Call>(param1), static_cast<int>(param2), param3);
+        return ((VirtualQSslSocket*)self)->qt_metacall(static_cast<QMetaObject::Call>(param1), static_cast<int>(param2), param3);
     }
 }
 
@@ -706,1258 +703,1402 @@ bool QSslSocket_IsFeatureSupported2(int feat, libqt_string backendName) {
 
 // Derived class handler implementation
 void QSslSocket_Resume(QSslSocket* self) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->resume();
     } else {
-        vqsslsocket->resume();
+        self->QSslSocket::resume();
     }
 }
 
 // Base class handler implementation
 void QSslSocket_QBaseResume(QSslSocket* self) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Resume_IsBase(true);
         vqsslsocket->resume();
     } else {
-        vqsslsocket->resume();
+        self->QSslSocket::resume();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnResume(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Resume_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_Resume_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 bool QSslSocket_SetSocketDescriptor(QSslSocket* self, intptr_t socketDescriptor, int state, int openMode) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return vqsslsocket->setSocketDescriptor((qintptr)(socketDescriptor), static_cast<QAbstractSocket::SocketState>(state), static_cast<QIODeviceBase::OpenMode>(openMode));
     } else {
-        return vqsslsocket->setSocketDescriptor((qintptr)(socketDescriptor), static_cast<QAbstractSocket::SocketState>(state), static_cast<QIODeviceBase::OpenMode>(openMode));
+        return self->QSslSocket::setSocketDescriptor((qintptr)(socketDescriptor), static_cast<QAbstractSocket::SocketState>(state), static_cast<QIODeviceBase::OpenMode>(openMode));
     }
 }
 
 // Base class handler implementation
 bool QSslSocket_QBaseSetSocketDescriptor(QSslSocket* self, intptr_t socketDescriptor, int state, int openMode) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetSocketDescriptor_IsBase(true);
         return vqsslsocket->setSocketDescriptor((qintptr)(socketDescriptor), static_cast<QAbstractSocket::SocketState>(state), static_cast<QIODeviceBase::OpenMode>(openMode));
     } else {
-        return vqsslsocket->setSocketDescriptor((qintptr)(socketDescriptor), static_cast<QAbstractSocket::SocketState>(state), static_cast<QIODeviceBase::OpenMode>(openMode));
+        return self->QSslSocket::setSocketDescriptor((qintptr)(socketDescriptor), static_cast<QAbstractSocket::SocketState>(state), static_cast<QIODeviceBase::OpenMode>(openMode));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnSetSocketDescriptor(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetSocketDescriptor_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_SetSocketDescriptor_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QSslSocket_ConnectToHost(QSslSocket* self, libqt_string hostName, uint16_t port, int openMode, int protocol) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
     QString hostName_QString = QString::fromUtf8(hostName.data, hostName.len);
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->connectToHost(hostName_QString, static_cast<quint16>(port), static_cast<QIODeviceBase::OpenMode>(openMode), static_cast<QAbstractSocket::NetworkLayerProtocol>(protocol));
     } else {
-        vqsslsocket->connectToHost(hostName_QString, static_cast<quint16>(port), static_cast<QIODeviceBase::OpenMode>(openMode), static_cast<QAbstractSocket::NetworkLayerProtocol>(protocol));
+        self->QSslSocket::connectToHost(hostName_QString, static_cast<quint16>(port), static_cast<QIODeviceBase::OpenMode>(openMode), static_cast<QAbstractSocket::NetworkLayerProtocol>(protocol));
     }
 }
 
 // Base class handler implementation
 void QSslSocket_QBaseConnectToHost(QSslSocket* self, libqt_string hostName, uint16_t port, int openMode, int protocol) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
     QString hostName_QString = QString::fromUtf8(hostName.data, hostName.len);
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_ConnectToHost_IsBase(true);
         vqsslsocket->connectToHost(hostName_QString, static_cast<quint16>(port), static_cast<QIODeviceBase::OpenMode>(openMode), static_cast<QAbstractSocket::NetworkLayerProtocol>(protocol));
     } else {
-        vqsslsocket->connectToHost(hostName_QString, static_cast<quint16>(port), static_cast<QIODeviceBase::OpenMode>(openMode), static_cast<QAbstractSocket::NetworkLayerProtocol>(protocol));
+        self->QSslSocket::connectToHost(hostName_QString, static_cast<quint16>(port), static_cast<QIODeviceBase::OpenMode>(openMode), static_cast<QAbstractSocket::NetworkLayerProtocol>(protocol));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnConnectToHost(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_ConnectToHost_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_ConnectToHost_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QSslSocket_DisconnectFromHost(QSslSocket* self) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->disconnectFromHost();
     } else {
-        vqsslsocket->disconnectFromHost();
+        self->QSslSocket::disconnectFromHost();
     }
 }
 
 // Base class handler implementation
 void QSslSocket_QBaseDisconnectFromHost(QSslSocket* self) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_DisconnectFromHost_IsBase(true);
         vqsslsocket->disconnectFromHost();
     } else {
-        vqsslsocket->disconnectFromHost();
+        self->QSslSocket::disconnectFromHost();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnDisconnectFromHost(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_DisconnectFromHost_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_DisconnectFromHost_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QSslSocket_SetSocketOption(QSslSocket* self, int option, QVariant* value) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setSocketOption(static_cast<QAbstractSocket::SocketOption>(option), *value);
     } else {
-        vqsslsocket->setSocketOption(static_cast<QAbstractSocket::SocketOption>(option), *value);
+        self->QSslSocket::setSocketOption(static_cast<QAbstractSocket::SocketOption>(option), *value);
     }
 }
 
 // Base class handler implementation
 void QSslSocket_QBaseSetSocketOption(QSslSocket* self, int option, QVariant* value) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetSocketOption_IsBase(true);
         vqsslsocket->setSocketOption(static_cast<QAbstractSocket::SocketOption>(option), *value);
     } else {
-        vqsslsocket->setSocketOption(static_cast<QAbstractSocket::SocketOption>(option), *value);
+        self->QSslSocket::setSocketOption(static_cast<QAbstractSocket::SocketOption>(option), *value);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnSetSocketOption(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetSocketOption_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_SetSocketOption_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 QVariant* QSslSocket_SocketOption(QSslSocket* self, int option) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return new QVariant(vqsslsocket->socketOption(static_cast<QAbstractSocket::SocketOption>(option)));
     } else {
-        return new QVariant(self->socketOption(static_cast<QAbstractSocket::SocketOption>(option)));
+        return new QVariant(((VirtualQSslSocket*)self)->socketOption(static_cast<QAbstractSocket::SocketOption>(option)));
     }
 }
 
 // Base class handler implementation
 QVariant* QSslSocket_QBaseSocketOption(QSslSocket* self, int option) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SocketOption_IsBase(true);
         return new QVariant(vqsslsocket->socketOption(static_cast<QAbstractSocket::SocketOption>(option)));
     } else {
-        return new QVariant(self->socketOption(static_cast<QAbstractSocket::SocketOption>(option)));
+        return new QVariant(((VirtualQSslSocket*)self)->socketOption(static_cast<QAbstractSocket::SocketOption>(option)));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnSocketOption(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SocketOption_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_SocketOption_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 long long QSslSocket_BytesAvailable(const QSslSocket* self) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return static_cast<long long>(vqsslsocket->bytesAvailable());
     } else {
-        return static_cast<long long>(vqsslsocket->bytesAvailable());
+        return static_cast<long long>(self->QSslSocket::bytesAvailable());
     }
 }
 
 // Base class handler implementation
 long long QSslSocket_QBaseBytesAvailable(const QSslSocket* self) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_BytesAvailable_IsBase(true);
         return static_cast<long long>(vqsslsocket->bytesAvailable());
     } else {
-        return static_cast<long long>(vqsslsocket->bytesAvailable());
+        return static_cast<long long>(self->QSslSocket::bytesAvailable());
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnBytesAvailable(const QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_BytesAvailable_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_BytesAvailable_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 long long QSslSocket_BytesToWrite(const QSslSocket* self) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return static_cast<long long>(vqsslsocket->bytesToWrite());
     } else {
-        return static_cast<long long>(vqsslsocket->bytesToWrite());
+        return static_cast<long long>(self->QSslSocket::bytesToWrite());
     }
 }
 
 // Base class handler implementation
 long long QSslSocket_QBaseBytesToWrite(const QSslSocket* self) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_BytesToWrite_IsBase(true);
         return static_cast<long long>(vqsslsocket->bytesToWrite());
     } else {
-        return static_cast<long long>(vqsslsocket->bytesToWrite());
+        return static_cast<long long>(self->QSslSocket::bytesToWrite());
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnBytesToWrite(const QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_BytesToWrite_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_BytesToWrite_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 bool QSslSocket_CanReadLine(const QSslSocket* self) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return vqsslsocket->canReadLine();
     } else {
-        return vqsslsocket->canReadLine();
+        return self->QSslSocket::canReadLine();
     }
 }
 
 // Base class handler implementation
 bool QSslSocket_QBaseCanReadLine(const QSslSocket* self) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_CanReadLine_IsBase(true);
         return vqsslsocket->canReadLine();
     } else {
-        return vqsslsocket->canReadLine();
+        return self->QSslSocket::canReadLine();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnCanReadLine(const QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_CanReadLine_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_CanReadLine_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QSslSocket_Close(QSslSocket* self) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->close();
     } else {
-        vqsslsocket->close();
+        self->QSslSocket::close();
     }
 }
 
 // Base class handler implementation
 void QSslSocket_QBaseClose(QSslSocket* self) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Close_IsBase(true);
         vqsslsocket->close();
     } else {
-        vqsslsocket->close();
+        self->QSslSocket::close();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnClose(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Close_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_Close_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 bool QSslSocket_AtEnd(const QSslSocket* self) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return vqsslsocket->atEnd();
     } else {
-        return vqsslsocket->atEnd();
+        return self->QSslSocket::atEnd();
     }
 }
 
 // Base class handler implementation
 bool QSslSocket_QBaseAtEnd(const QSslSocket* self) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_AtEnd_IsBase(true);
         return vqsslsocket->atEnd();
     } else {
-        return vqsslsocket->atEnd();
+        return self->QSslSocket::atEnd();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnAtEnd(const QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_AtEnd_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_AtEnd_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QSslSocket_SetReadBufferSize(QSslSocket* self, long long size) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setReadBufferSize(static_cast<qint64>(size));
     } else {
-        vqsslsocket->setReadBufferSize(static_cast<qint64>(size));
+        self->QSslSocket::setReadBufferSize(static_cast<qint64>(size));
     }
 }
 
 // Base class handler implementation
 void QSslSocket_QBaseSetReadBufferSize(QSslSocket* self, long long size) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetReadBufferSize_IsBase(true);
         vqsslsocket->setReadBufferSize(static_cast<qint64>(size));
     } else {
-        vqsslsocket->setReadBufferSize(static_cast<qint64>(size));
+        self->QSslSocket::setReadBufferSize(static_cast<qint64>(size));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnSetReadBufferSize(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetReadBufferSize_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_SetReadBufferSize_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 bool QSslSocket_WaitForConnected(QSslSocket* self, int msecs) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return vqsslsocket->waitForConnected(static_cast<int>(msecs));
     } else {
-        return vqsslsocket->waitForConnected(static_cast<int>(msecs));
+        return self->QSslSocket::waitForConnected(static_cast<int>(msecs));
     }
 }
 
 // Base class handler implementation
 bool QSslSocket_QBaseWaitForConnected(QSslSocket* self, int msecs) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_WaitForConnected_IsBase(true);
         return vqsslsocket->waitForConnected(static_cast<int>(msecs));
     } else {
-        return vqsslsocket->waitForConnected(static_cast<int>(msecs));
+        return self->QSslSocket::waitForConnected(static_cast<int>(msecs));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnWaitForConnected(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_WaitForConnected_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_WaitForConnected_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 bool QSslSocket_WaitForReadyRead(QSslSocket* self, int msecs) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return vqsslsocket->waitForReadyRead(static_cast<int>(msecs));
     } else {
-        return vqsslsocket->waitForReadyRead(static_cast<int>(msecs));
+        return self->QSslSocket::waitForReadyRead(static_cast<int>(msecs));
     }
 }
 
 // Base class handler implementation
 bool QSslSocket_QBaseWaitForReadyRead(QSslSocket* self, int msecs) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_WaitForReadyRead_IsBase(true);
         return vqsslsocket->waitForReadyRead(static_cast<int>(msecs));
     } else {
-        return vqsslsocket->waitForReadyRead(static_cast<int>(msecs));
+        return self->QSslSocket::waitForReadyRead(static_cast<int>(msecs));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnWaitForReadyRead(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_WaitForReadyRead_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_WaitForReadyRead_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 bool QSslSocket_WaitForBytesWritten(QSslSocket* self, int msecs) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return vqsslsocket->waitForBytesWritten(static_cast<int>(msecs));
     } else {
-        return vqsslsocket->waitForBytesWritten(static_cast<int>(msecs));
+        return self->QSslSocket::waitForBytesWritten(static_cast<int>(msecs));
     }
 }
 
 // Base class handler implementation
 bool QSslSocket_QBaseWaitForBytesWritten(QSslSocket* self, int msecs) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_WaitForBytesWritten_IsBase(true);
         return vqsslsocket->waitForBytesWritten(static_cast<int>(msecs));
     } else {
-        return vqsslsocket->waitForBytesWritten(static_cast<int>(msecs));
+        return self->QSslSocket::waitForBytesWritten(static_cast<int>(msecs));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnWaitForBytesWritten(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_WaitForBytesWritten_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_WaitForBytesWritten_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 bool QSslSocket_WaitForDisconnected(QSslSocket* self, int msecs) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return vqsslsocket->waitForDisconnected(static_cast<int>(msecs));
     } else {
-        return vqsslsocket->waitForDisconnected(static_cast<int>(msecs));
+        return self->QSslSocket::waitForDisconnected(static_cast<int>(msecs));
     }
 }
 
 // Base class handler implementation
 bool QSslSocket_QBaseWaitForDisconnected(QSslSocket* self, int msecs) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_WaitForDisconnected_IsBase(true);
         return vqsslsocket->waitForDisconnected(static_cast<int>(msecs));
     } else {
-        return vqsslsocket->waitForDisconnected(static_cast<int>(msecs));
+        return self->QSslSocket::waitForDisconnected(static_cast<int>(msecs));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnWaitForDisconnected(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_WaitForDisconnected_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_WaitForDisconnected_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 long long QSslSocket_ReadData(QSslSocket* self, char* data, long long maxlen) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return static_cast<long long>(vqsslsocket->readData(data, static_cast<qint64>(maxlen)));
     } else {
-        return static_cast<long long>(vqsslsocket->readData(data, static_cast<qint64>(maxlen)));
+        return static_cast<long long>(((VirtualQSslSocket*)self)->readData(data, static_cast<qint64>(maxlen)));
     }
 }
 
 // Base class handler implementation
 long long QSslSocket_QBaseReadData(QSslSocket* self, char* data, long long maxlen) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_ReadData_IsBase(true);
         return static_cast<long long>(vqsslsocket->readData(data, static_cast<qint64>(maxlen)));
     } else {
-        return static_cast<long long>(vqsslsocket->readData(data, static_cast<qint64>(maxlen)));
+        return static_cast<long long>(((VirtualQSslSocket*)self)->readData(data, static_cast<qint64>(maxlen)));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnReadData(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_ReadData_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_ReadData_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 long long QSslSocket_SkipData(QSslSocket* self, long long maxSize) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return static_cast<long long>(vqsslsocket->skipData(static_cast<qint64>(maxSize)));
     } else {
-        return static_cast<long long>(vqsslsocket->skipData(static_cast<qint64>(maxSize)));
+        return static_cast<long long>(((VirtualQSslSocket*)self)->skipData(static_cast<qint64>(maxSize)));
     }
 }
 
 // Base class handler implementation
 long long QSslSocket_QBaseSkipData(QSslSocket* self, long long maxSize) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SkipData_IsBase(true);
         return static_cast<long long>(vqsslsocket->skipData(static_cast<qint64>(maxSize)));
     } else {
-        return static_cast<long long>(vqsslsocket->skipData(static_cast<qint64>(maxSize)));
+        return static_cast<long long>(((VirtualQSslSocket*)self)->skipData(static_cast<qint64>(maxSize)));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnSkipData(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SkipData_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_SkipData_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 long long QSslSocket_WriteData(QSslSocket* self, const char* data, long long lenVal) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return static_cast<long long>(vqsslsocket->writeData(data, static_cast<qint64>(lenVal)));
     } else {
-        return static_cast<long long>(vqsslsocket->writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(((VirtualQSslSocket*)self)->writeData(data, static_cast<qint64>(lenVal)));
     }
 }
 
 // Base class handler implementation
 long long QSslSocket_QBaseWriteData(QSslSocket* self, const char* data, long long lenVal) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_WriteData_IsBase(true);
         return static_cast<long long>(vqsslsocket->writeData(data, static_cast<qint64>(lenVal)));
     } else {
-        return static_cast<long long>(vqsslsocket->writeData(data, static_cast<qint64>(lenVal)));
+        return static_cast<long long>(((VirtualQSslSocket*)self)->writeData(data, static_cast<qint64>(lenVal)));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnWriteData(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_WriteData_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_WriteData_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 bool QSslSocket_Bind(QSslSocket* self, QHostAddress* address, uint16_t port, int mode) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return vqsslsocket->bind(*address, static_cast<quint16>(port), static_cast<QAbstractSocket::BindMode>(mode));
     } else {
-        return vqsslsocket->bind(*address, static_cast<quint16>(port), static_cast<QAbstractSocket::BindMode>(mode));
+        return self->QSslSocket::bind(*address, static_cast<quint16>(port), static_cast<QAbstractSocket::BindMode>(mode));
     }
 }
 
 // Base class handler implementation
 bool QSslSocket_QBaseBind(QSslSocket* self, QHostAddress* address, uint16_t port, int mode) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Bind_IsBase(true);
         return vqsslsocket->bind(*address, static_cast<quint16>(port), static_cast<QAbstractSocket::BindMode>(mode));
     } else {
-        return vqsslsocket->bind(*address, static_cast<quint16>(port), static_cast<QAbstractSocket::BindMode>(mode));
+        return self->QSslSocket::bind(*address, static_cast<quint16>(port), static_cast<QAbstractSocket::BindMode>(mode));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnBind(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Bind_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_Bind_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 intptr_t QSslSocket_SocketDescriptor(const QSslSocket* self) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         qintptr _ret = vqsslsocket->socketDescriptor();
         return (intptr_t)(_ret);
     } else {
-        qintptr _ret = vqsslsocket->socketDescriptor();
+        qintptr _ret = self->QSslSocket::socketDescriptor();
         return (intptr_t)(_ret);
     }
 }
 
 // Base class handler implementation
 intptr_t QSslSocket_QBaseSocketDescriptor(const QSslSocket* self) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SocketDescriptor_IsBase(true);
         qintptr _ret = vqsslsocket->socketDescriptor();
         return (intptr_t)(_ret);
     } else {
-        qintptr _ret = vqsslsocket->socketDescriptor();
+        qintptr _ret = self->QSslSocket::socketDescriptor();
         return (intptr_t)(_ret);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnSocketDescriptor(const QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SocketDescriptor_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_SocketDescriptor_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 bool QSslSocket_IsSequential(const QSslSocket* self) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return vqsslsocket->isSequential();
     } else {
-        return vqsslsocket->isSequential();
+        return self->QSslSocket::isSequential();
     }
 }
 
 // Base class handler implementation
 bool QSslSocket_QBaseIsSequential(const QSslSocket* self) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_IsSequential_IsBase(true);
         return vqsslsocket->isSequential();
     } else {
-        return vqsslsocket->isSequential();
+        return self->QSslSocket::isSequential();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnIsSequential(const QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_IsSequential_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_IsSequential_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 long long QSslSocket_ReadLineData(QSslSocket* self, char* data, long long maxlen) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return static_cast<long long>(vqsslsocket->readLineData(data, static_cast<qint64>(maxlen)));
     } else {
-        return static_cast<long long>(vqsslsocket->readLineData(data, static_cast<qint64>(maxlen)));
+        return static_cast<long long>(((VirtualQSslSocket*)self)->readLineData(data, static_cast<qint64>(maxlen)));
     }
 }
 
 // Base class handler implementation
 long long QSslSocket_QBaseReadLineData(QSslSocket* self, char* data, long long maxlen) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_ReadLineData_IsBase(true);
         return static_cast<long long>(vqsslsocket->readLineData(data, static_cast<qint64>(maxlen)));
     } else {
-        return static_cast<long long>(vqsslsocket->readLineData(data, static_cast<qint64>(maxlen)));
+        return static_cast<long long>(((VirtualQSslSocket*)self)->readLineData(data, static_cast<qint64>(maxlen)));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnReadLineData(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_ReadLineData_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_ReadLineData_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 bool QSslSocket_Open(QSslSocket* self, int mode) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return vqsslsocket->open(static_cast<QIODeviceBase::OpenMode>(mode));
     } else {
-        return vqsslsocket->open(static_cast<QIODeviceBase::OpenMode>(mode));
+        return self->QSslSocket::open(static_cast<QIODeviceBase::OpenMode>(mode));
     }
 }
 
 // Base class handler implementation
 bool QSslSocket_QBaseOpen(QSslSocket* self, int mode) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Open_IsBase(true);
         return vqsslsocket->open(static_cast<QIODeviceBase::OpenMode>(mode));
     } else {
-        return vqsslsocket->open(static_cast<QIODeviceBase::OpenMode>(mode));
+        return self->QSslSocket::open(static_cast<QIODeviceBase::OpenMode>(mode));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnOpen(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Open_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_Open_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 long long QSslSocket_Pos(const QSslSocket* self) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return static_cast<long long>(vqsslsocket->pos());
     } else {
-        return static_cast<long long>(vqsslsocket->pos());
+        return static_cast<long long>(self->QSslSocket::pos());
     }
 }
 
 // Base class handler implementation
 long long QSslSocket_QBasePos(const QSslSocket* self) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Pos_IsBase(true);
         return static_cast<long long>(vqsslsocket->pos());
     } else {
-        return static_cast<long long>(vqsslsocket->pos());
+        return static_cast<long long>(self->QSslSocket::pos());
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnPos(const QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Pos_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_Pos_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 long long QSslSocket_Size(const QSslSocket* self) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return static_cast<long long>(vqsslsocket->size());
     } else {
-        return static_cast<long long>(vqsslsocket->size());
+        return static_cast<long long>(self->QSslSocket::size());
     }
 }
 
 // Base class handler implementation
 long long QSslSocket_QBaseSize(const QSslSocket* self) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Size_IsBase(true);
         return static_cast<long long>(vqsslsocket->size());
     } else {
-        return static_cast<long long>(vqsslsocket->size());
+        return static_cast<long long>(self->QSslSocket::size());
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnSize(const QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Size_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_Size_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 bool QSslSocket_Seek(QSslSocket* self, long long pos) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return vqsslsocket->seek(static_cast<qint64>(pos));
     } else {
-        return vqsslsocket->seek(static_cast<qint64>(pos));
+        return self->QSslSocket::seek(static_cast<qint64>(pos));
     }
 }
 
 // Base class handler implementation
 bool QSslSocket_QBaseSeek(QSslSocket* self, long long pos) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Seek_IsBase(true);
         return vqsslsocket->seek(static_cast<qint64>(pos));
     } else {
-        return vqsslsocket->seek(static_cast<qint64>(pos));
+        return self->QSslSocket::seek(static_cast<qint64>(pos));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnSeek(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Seek_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_Seek_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 bool QSslSocket_Reset(QSslSocket* self) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return vqsslsocket->reset();
     } else {
-        return vqsslsocket->reset();
+        return self->QSslSocket::reset();
     }
 }
 
 // Base class handler implementation
 bool QSslSocket_QBaseReset(QSslSocket* self) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Reset_IsBase(true);
         return vqsslsocket->reset();
     } else {
-        return vqsslsocket->reset();
+        return self->QSslSocket::reset();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnReset(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Reset_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_Reset_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 bool QSslSocket_Event(QSslSocket* self, QEvent* event) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return vqsslsocket->event(event);
     } else {
-        return vqsslsocket->event(event);
+        return self->QSslSocket::event(event);
     }
 }
 
 // Base class handler implementation
 bool QSslSocket_QBaseEvent(QSslSocket* self, QEvent* event) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Event_IsBase(true);
         return vqsslsocket->event(event);
     } else {
-        return vqsslsocket->event(event);
+        return self->QSslSocket::event(event);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnEvent(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Event_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_Event_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 bool QSslSocket_EventFilter(QSslSocket* self, QObject* watched, QEvent* event) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return vqsslsocket->eventFilter(watched, event);
     } else {
-        return vqsslsocket->eventFilter(watched, event);
+        return self->QSslSocket::eventFilter(watched, event);
     }
 }
 
 // Base class handler implementation
 bool QSslSocket_QBaseEventFilter(QSslSocket* self, QObject* watched, QEvent* event) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_EventFilter_IsBase(true);
         return vqsslsocket->eventFilter(watched, event);
     } else {
-        return vqsslsocket->eventFilter(watched, event);
+        return self->QSslSocket::eventFilter(watched, event);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnEventFilter(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_EventFilter_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_EventFilter_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QSslSocket_TimerEvent(QSslSocket* self, QTimerEvent* event) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->timerEvent(event);
     } else {
-        vqsslsocket->timerEvent(event);
+        ((VirtualQSslSocket*)self)->timerEvent(event);
     }
 }
 
 // Base class handler implementation
 void QSslSocket_QBaseTimerEvent(QSslSocket* self, QTimerEvent* event) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_TimerEvent_IsBase(true);
         vqsslsocket->timerEvent(event);
     } else {
-        vqsslsocket->timerEvent(event);
+        ((VirtualQSslSocket*)self)->timerEvent(event);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnTimerEvent(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_TimerEvent_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_TimerEvent_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QSslSocket_ChildEvent(QSslSocket* self, QChildEvent* event) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->childEvent(event);
     } else {
-        vqsslsocket->childEvent(event);
+        ((VirtualQSslSocket*)self)->childEvent(event);
     }
 }
 
 // Base class handler implementation
 void QSslSocket_QBaseChildEvent(QSslSocket* self, QChildEvent* event) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_ChildEvent_IsBase(true);
         vqsslsocket->childEvent(event);
     } else {
-        vqsslsocket->childEvent(event);
+        ((VirtualQSslSocket*)self)->childEvent(event);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnChildEvent(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_ChildEvent_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_ChildEvent_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QSslSocket_CustomEvent(QSslSocket* self, QEvent* event) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->customEvent(event);
     } else {
-        vqsslsocket->customEvent(event);
+        ((VirtualQSslSocket*)self)->customEvent(event);
     }
 }
 
 // Base class handler implementation
 void QSslSocket_QBaseCustomEvent(QSslSocket* self, QEvent* event) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_CustomEvent_IsBase(true);
         vqsslsocket->customEvent(event);
     } else {
-        vqsslsocket->customEvent(event);
+        ((VirtualQSslSocket*)self)->customEvent(event);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnCustomEvent(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_CustomEvent_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_CustomEvent_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QSslSocket_ConnectNotify(QSslSocket* self, QMetaMethod* signal) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->connectNotify(*signal);
     } else {
-        vqsslsocket->connectNotify(*signal);
+        ((VirtualQSslSocket*)self)->connectNotify(*signal);
     }
 }
 
 // Base class handler implementation
 void QSslSocket_QBaseConnectNotify(QSslSocket* self, QMetaMethod* signal) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_ConnectNotify_IsBase(true);
         vqsslsocket->connectNotify(*signal);
     } else {
-        vqsslsocket->connectNotify(*signal);
+        ((VirtualQSslSocket*)self)->connectNotify(*signal);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnConnectNotify(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_ConnectNotify_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_ConnectNotify_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QSslSocket_DisconnectNotify(QSslSocket* self, QMetaMethod* signal) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->disconnectNotify(*signal);
     } else {
-        vqsslsocket->disconnectNotify(*signal);
+        ((VirtualQSslSocket*)self)->disconnectNotify(*signal);
     }
 }
 
 // Base class handler implementation
 void QSslSocket_QBaseDisconnectNotify(QSslSocket* self, QMetaMethod* signal) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_DisconnectNotify_IsBase(true);
         vqsslsocket->disconnectNotify(*signal);
     } else {
-        vqsslsocket->disconnectNotify(*signal);
+        ((VirtualQSslSocket*)self)->disconnectNotify(*signal);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnDisconnectNotify(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_DisconnectNotify_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_DisconnectNotify_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QSslSocket_SetSocketState(QSslSocket* self, int state) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setSocketState(static_cast<QAbstractSocket::SocketState>(state));
     } else {
-        vqsslsocket->setSocketState(static_cast<QAbstractSocket::SocketState>(state));
+        ((VirtualQSslSocket*)self)->setSocketState(static_cast<QAbstractSocket::SocketState>(state));
     }
 }
 
 // Base class handler implementation
 void QSslSocket_QBaseSetSocketState(QSslSocket* self, int state) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetSocketState_IsBase(true);
         vqsslsocket->setSocketState(static_cast<QAbstractSocket::SocketState>(state));
     } else {
-        vqsslsocket->setSocketState(static_cast<QAbstractSocket::SocketState>(state));
+        ((VirtualQSslSocket*)self)->setSocketState(static_cast<QAbstractSocket::SocketState>(state));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnSetSocketState(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetSocketState_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_SetSocketState_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QSslSocket_SetSocketError(QSslSocket* self, int socketError) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setSocketError(static_cast<QAbstractSocket::SocketError>(socketError));
     } else {
-        vqsslsocket->setSocketError(static_cast<QAbstractSocket::SocketError>(socketError));
+        ((VirtualQSslSocket*)self)->setSocketError(static_cast<QAbstractSocket::SocketError>(socketError));
     }
 }
 
 // Base class handler implementation
 void QSslSocket_QBaseSetSocketError(QSslSocket* self, int socketError) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetSocketError_IsBase(true);
         vqsslsocket->setSocketError(static_cast<QAbstractSocket::SocketError>(socketError));
     } else {
-        vqsslsocket->setSocketError(static_cast<QAbstractSocket::SocketError>(socketError));
+        ((VirtualQSslSocket*)self)->setSocketError(static_cast<QAbstractSocket::SocketError>(socketError));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnSetSocketError(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetSocketError_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_SetSocketError_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QSslSocket_SetLocalPort(QSslSocket* self, uint16_t port) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setLocalPort(static_cast<quint16>(port));
     } else {
-        vqsslsocket->setLocalPort(static_cast<quint16>(port));
+        ((VirtualQSslSocket*)self)->setLocalPort(static_cast<quint16>(port));
     }
 }
 
 // Base class handler implementation
 void QSslSocket_QBaseSetLocalPort(QSslSocket* self, uint16_t port) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetLocalPort_IsBase(true);
         vqsslsocket->setLocalPort(static_cast<quint16>(port));
     } else {
-        vqsslsocket->setLocalPort(static_cast<quint16>(port));
+        ((VirtualQSslSocket*)self)->setLocalPort(static_cast<quint16>(port));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnSetLocalPort(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetLocalPort_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_SetLocalPort_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QSslSocket_SetLocalAddress(QSslSocket* self, QHostAddress* address) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setLocalAddress(*address);
     } else {
-        vqsslsocket->setLocalAddress(*address);
+        ((VirtualQSslSocket*)self)->setLocalAddress(*address);
     }
 }
 
 // Base class handler implementation
 void QSslSocket_QBaseSetLocalAddress(QSslSocket* self, QHostAddress* address) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetLocalAddress_IsBase(true);
         vqsslsocket->setLocalAddress(*address);
     } else {
-        vqsslsocket->setLocalAddress(*address);
+        ((VirtualQSslSocket*)self)->setLocalAddress(*address);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnSetLocalAddress(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetLocalAddress_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_SetLocalAddress_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QSslSocket_SetPeerPort(QSslSocket* self, uint16_t port) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setPeerPort(static_cast<quint16>(port));
     } else {
-        vqsslsocket->setPeerPort(static_cast<quint16>(port));
+        ((VirtualQSslSocket*)self)->setPeerPort(static_cast<quint16>(port));
     }
 }
 
 // Base class handler implementation
 void QSslSocket_QBaseSetPeerPort(QSslSocket* self, uint16_t port) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetPeerPort_IsBase(true);
         vqsslsocket->setPeerPort(static_cast<quint16>(port));
     } else {
-        vqsslsocket->setPeerPort(static_cast<quint16>(port));
+        ((VirtualQSslSocket*)self)->setPeerPort(static_cast<quint16>(port));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnSetPeerPort(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetPeerPort_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_SetPeerPort_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QSslSocket_SetPeerAddress(QSslSocket* self, QHostAddress* address) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setPeerAddress(*address);
     } else {
-        vqsslsocket->setPeerAddress(*address);
+        ((VirtualQSslSocket*)self)->setPeerAddress(*address);
     }
 }
 
 // Base class handler implementation
 void QSslSocket_QBaseSetPeerAddress(QSslSocket* self, QHostAddress* address) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetPeerAddress_IsBase(true);
         vqsslsocket->setPeerAddress(*address);
     } else {
-        vqsslsocket->setPeerAddress(*address);
+        ((VirtualQSslSocket*)self)->setPeerAddress(*address);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnSetPeerAddress(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetPeerAddress_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_SetPeerAddress_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QSslSocket_SetPeerName(QSslSocket* self, libqt_string name) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
     QString name_QString = QString::fromUtf8(name.data, name.len);
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setPeerName(name_QString);
     } else {
-        vqsslsocket->setPeerName(name_QString);
+        ((VirtualQSslSocket*)self)->setPeerName(name_QString);
     }
 }
 
 // Base class handler implementation
 void QSslSocket_QBaseSetPeerName(QSslSocket* self, libqt_string name) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
     QString name_QString = QString::fromUtf8(name.data, name.len);
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetPeerName_IsBase(true);
         vqsslsocket->setPeerName(name_QString);
     } else {
-        vqsslsocket->setPeerName(name_QString);
+        ((VirtualQSslSocket*)self)->setPeerName(name_QString);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnSetPeerName(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetPeerName_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_SetPeerName_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QSslSocket_SetOpenMode(QSslSocket* self, int openMode) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setOpenMode(static_cast<QIODeviceBase::OpenMode>(openMode));
     } else {
-        vqsslsocket->setOpenMode(static_cast<QIODeviceBase::OpenMode>(openMode));
+        ((VirtualQSslSocket*)self)->setOpenMode(static_cast<QIODeviceBase::OpenMode>(openMode));
     }
 }
 
 // Base class handler implementation
 void QSslSocket_QBaseSetOpenMode(QSslSocket* self, int openMode) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetOpenMode_IsBase(true);
         vqsslsocket->setOpenMode(static_cast<QIODeviceBase::OpenMode>(openMode));
     } else {
-        vqsslsocket->setOpenMode(static_cast<QIODeviceBase::OpenMode>(openMode));
+        ((VirtualQSslSocket*)self)->setOpenMode(static_cast<QIODeviceBase::OpenMode>(openMode));
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnSetOpenMode(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetOpenMode_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_SetOpenMode_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 void QSslSocket_SetErrorString(QSslSocket* self, libqt_string errorString) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setErrorString(errorString_QString);
     } else {
-        vqsslsocket->setErrorString(errorString_QString);
+        ((VirtualQSslSocket*)self)->setErrorString(errorString_QString);
     }
 }
 
 // Base class handler implementation
 void QSslSocket_QBaseSetErrorString(QSslSocket* self, libqt_string errorString) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetErrorString_IsBase(true);
         vqsslsocket->setErrorString(errorString_QString);
     } else {
-        vqsslsocket->setErrorString(errorString_QString);
+        ((VirtualQSslSocket*)self)->setErrorString(errorString_QString);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnSetErrorString(QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self)) {
+    auto* vqsslsocket = dynamic_cast<VirtualQSslSocket*>(self);
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SetErrorString_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_SetErrorString_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 QObject* QSslSocket_Sender(const QSslSocket* self) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return vqsslsocket->sender();
     } else {
-        return vqsslsocket->sender();
+        return ((VirtualQSslSocket*)self)->sender();
     }
 }
 
 // Base class handler implementation
 QObject* QSslSocket_QBaseSender(const QSslSocket* self) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Sender_IsBase(true);
         return vqsslsocket->sender();
     } else {
-        return vqsslsocket->sender();
+        return ((VirtualQSslSocket*)self)->sender();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnSender(const QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Sender_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_Sender_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 int QSslSocket_SenderSignalIndex(const QSslSocket* self) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return vqsslsocket->senderSignalIndex();
     } else {
-        return vqsslsocket->senderSignalIndex();
+        return ((VirtualQSslSocket*)self)->senderSignalIndex();
     }
 }
 
 // Base class handler implementation
 int QSslSocket_QBaseSenderSignalIndex(const QSslSocket* self) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SenderSignalIndex_IsBase(true);
         return vqsslsocket->senderSignalIndex();
     } else {
-        return vqsslsocket->senderSignalIndex();
+        return ((VirtualQSslSocket*)self)->senderSignalIndex();
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnSenderSignalIndex(const QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_SenderSignalIndex_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_SenderSignalIndex_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 int QSslSocket_Receivers(const QSslSocket* self, const char* signal) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return vqsslsocket->receivers(signal);
     } else {
-        return vqsslsocket->receivers(signal);
+        return ((VirtualQSslSocket*)self)->receivers(signal);
     }
 }
 
 // Base class handler implementation
 int QSslSocket_QBaseReceivers(const QSslSocket* self, const char* signal) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Receivers_IsBase(true);
         return vqsslsocket->receivers(signal);
     } else {
-        return vqsslsocket->receivers(signal);
+        return ((VirtualQSslSocket*)self)->receivers(signal);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnReceivers(const QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_Receivers_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_Receivers_Callback>(slot));
     }
 }
 
 // Derived class handler implementation
 bool QSslSocket_IsSignalConnected(const QSslSocket* self, QMetaMethod* signal) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         return vqsslsocket->isSignalConnected(*signal);
     } else {
-        return vqsslsocket->isSignalConnected(*signal);
+        return ((VirtualQSslSocket*)self)->isSignalConnected(*signal);
     }
 }
 
 // Base class handler implementation
 bool QSslSocket_QBaseIsSignalConnected(const QSslSocket* self, QMetaMethod* signal) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_IsSignalConnected_IsBase(true);
         return vqsslsocket->isSignalConnected(*signal);
     } else {
-        return vqsslsocket->isSignalConnected(*signal);
+        return ((VirtualQSslSocket*)self)->isSignalConnected(*signal);
     }
 }
 
 // Auxiliary method to allow providing re-implementation
 void QSslSocket_OnIsSignalConnected(const QSslSocket* self, intptr_t slot) {
-    if (auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self))) {
+    auto* vqsslsocket = const_cast<VirtualQSslSocket*>(dynamic_cast<const VirtualQSslSocket*>(self));
+    if (vqsslsocket && vqsslsocket->isVirtualQSslSocket) {
         vqsslsocket->setQSslSocket_IsSignalConnected_Callback(reinterpret_cast<VirtualQSslSocket::QSslSocket_IsSignalConnected_Callback>(slot));
     }
 }

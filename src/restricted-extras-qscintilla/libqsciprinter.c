@@ -10,7 +10,6 @@
 #include "../printsupport/libqprintengine.hpp"
 #include "../printsupport/libqprinter.hpp"
 #include "../libqrect.hpp"
-#include <string.h>
 #include "libqsciprinter.hpp"
 #include "libqsciprinter.h"
 

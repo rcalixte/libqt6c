@@ -2,49 +2,27 @@
 #include "libqabstractitemmodel.hpp"
 #include "libqabstractitemview.hpp"
 #include "libqabstractscrollarea.hpp"
-#include "libqaction.hpp"
 #include "libqevent.hpp"
-#include "libqanystringview.hpp"
-#include "libqbackingstore.hpp"
-#include "libqbindingstorage.hpp"
-#include "libqbitmap.hpp"
-#include "libqcursor.hpp"
-#include "libqfont.hpp"
-#include "libqfontinfo.hpp"
-#include "libqfontmetrics.hpp"
 #include "libqframe.hpp"
-#include "libqgraphicseffect.hpp"
-#include "libqgraphicsproxywidget.hpp"
 #include "libqicon.hpp"
 #include "libqitemselectionmodel.hpp"
-#include "libqkeysequence.hpp"
-#include "libqlayout.hpp"
 #include "libqlistview.hpp"
-#include "libqlocale.hpp"
 #include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
 #include "libqpainter.hpp"
-#include "libqpalette.hpp"
-#include "libqpixmap.hpp"
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
 #include "libqregion.hpp"
-#include "libqscreen.hpp"
-#include "libqscrollbar.hpp"
 #include "libqsize.hpp"
-#include "libqsizepolicy.hpp"
 #include <string.h>
-#include "libqstyle.hpp"
 #include "libqstyleoption.hpp"
-#include "libqthread.hpp"
 #include "libqundogroup.hpp"
 #include "libqundostack.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqwindow.hpp"
 #include "libqcoreevent.hpp"
 #include "libqundoview.hpp"
 #include "libqundoview.h"
@@ -73,7 +51,7 @@ QUndoView* q_undoview_new6(void* group, void* parent) {
     return QUndoView_new6((QUndoGroup*)group, (QWidget*)parent);
 }
 
-QMetaObject* q_undoview_meta_object(void* self) {
+const QMetaObject* q_undoview_meta_object(void* self) {
     return QUndoView_MetaObject((QUndoView*)self);
 }
 
@@ -273,20 +251,11 @@ int64_t q_undoview_item_alignment(void* self) {
     return QListView_ItemAlignment((QListView*)self);
 }
 
-void q_undoview_indexes_moved(void* self, void* indexes[]) {
-    QModelIndex** indexes_arr = (QModelIndex**)indexes;
-    size_t indexes_len = 0;
-    while (indexes_arr[indexes_len] != NULL) {
-        indexes_len++;
-    }
-    libqt_list indexes_list = {
-        .len = indexes_len,
-        .data = {(QModelIndex*)indexes},
-    };
-    QListView_IndexesMoved((QListView*)self, indexes_list);
+void q_undoview_indexes_moved(void* self, libqt_list indexes) {
+    QListView_IndexesMoved((QListView*)self, indexes);
 }
 
-void q_undoview_on_indexes_moved(void* self, void (*slot)(void*, void*)) {
+void q_undoview_on_indexes_moved(void* self, void (*slot)(void*, libqt_list)) {
     QListView_Connect_IndexesMoved((QListView*)self, (intptr_t)slot);
 }
 
@@ -763,7 +732,7 @@ QRect* q_undoview_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_undoview_geometry(void* self) {
+const QRect* q_undoview_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -967,7 +936,7 @@ QWidget* q_undoview_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_undoview_palette(void* self) {
+const QPalette* q_undoview_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -991,7 +960,7 @@ int64_t q_undoview_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_undoview_font(void* self) {
+const QFont* q_undoview_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -1592,30 +1561,12 @@ void q_undoview_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_undoview_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_undoview_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_undoview_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_undoview_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_undoview_insert_action(void* self, void* before, void* action) {
@@ -1835,8 +1786,7 @@ const char* q_undoview_object_name(void* self) {
 }
 
 void q_undoview_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_undoview_is_widget_type(void* self) {
@@ -1875,7 +1825,7 @@ void q_undoview_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_undoview_children(void* self) {
+const libqt_list /* of QObject* */ q_undoview_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1938,7 +1888,7 @@ QBindingStorage* q_undoview_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_undoview_binding_storage2(void* self) {
+const QBindingStorage* q_undoview_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2126,31 +2076,15 @@ void q_undoview_on_scroll_contents_by(void* self, void (*slot)(void*, int, int))
     QUndoView_OnScrollContentsBy((QUndoView*)self, (intptr_t)slot);
 }
 
-void q_undoview_data_changed(void* self, void* topLeft, void* bottomRight, int* roles[]) {
-    size_t roles_len = 0;
-    while (roles[roles_len] != NULL) {
-        roles_len++;
-    }
-    libqt_list roles_list = {
-        .len = roles_len,
-        .data = {(int*)roles},
-    };
-    QUndoView_DataChanged((QUndoView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles_list);
+void q_undoview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles) {
+    QUndoView_DataChanged((QUndoView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_undoview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, int* roles[]) {
-    size_t roles_len = 0;
-    while (roles[roles_len] != NULL) {
-        roles_len++;
-    }
-    libqt_list roles_list = {
-        .len = roles_len,
-        .data = {(int*)roles},
-    };
-    QUndoView_QBaseDataChanged((QUndoView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles_list);
+void q_undoview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles) {
+    QUndoView_QBaseDataChanged((QUndoView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_undoview_on_data_changed(void* self, void (*slot)(void*, void*, void*, int*)) {
+void q_undoview_on_data_changed(void* self, void (*slot)(void*, void*, void*, libqt_list)) {
     QUndoView_OnDataChanged((QUndoView*)self, (intptr_t)slot);
 }
 
@@ -3462,6 +3396,10 @@ bool q_undoview_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_undoview_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QUndoView_OnIsSignalConnected((QUndoView*)self, (intptr_t)slot);
+}
+
+void q_undoview_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_undoview_delete(void* self) {

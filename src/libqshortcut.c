@@ -1,12 +1,8 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqkeysequence.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include <string.h>
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqcoreevent.hpp"
 #include "libqshortcut.hpp"
 #include "libqshortcut.h"
@@ -47,7 +43,7 @@ QShortcut* q_shortcut_new9(int64_t key, void* parent, const char* member, const 
     return QShortcut_new9(key, (QObject*)parent, member, ambiguousMember, context);
 }
 
-QMetaObject* q_shortcut_meta_object(void* self) {
+const QMetaObject* q_shortcut_meta_object(void* self) {
     return QShortcut_MetaObject((QShortcut*)self);
 }
 
@@ -86,17 +82,8 @@ void q_shortcut_set_keys(void* self, int64_t key) {
     QShortcut_SetKeys((QShortcut*)self, key);
 }
 
-void q_shortcut_set_keys_with_keys(void* self, void* keys[]) {
-    QKeySequence** keys_arr = (QKeySequence**)keys;
-    size_t keys_len = 0;
-    while (keys_arr[keys_len] != NULL) {
-        keys_len++;
-    }
-    libqt_list keys_list = {
-        .len = keys_len,
-        .data = {(QKeySequence*)keys},
-    };
-    QShortcut_SetKeysWithKeys((QShortcut*)self, keys_list);
+void q_shortcut_set_keys_with_keys(void* self, libqt_list keys) {
+    QShortcut_SetKeysWithKeys((QShortcut*)self, keys);
 }
 
 libqt_list /* of QKeySequence* */ q_shortcut_keys(void* self) {
@@ -193,8 +180,7 @@ const char* q_shortcut_object_name(void* self) {
 }
 
 void q_shortcut_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_shortcut_is_widget_type(void* self) {
@@ -233,7 +219,7 @@ void q_shortcut_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_shortcut_children(void* self) {
+const libqt_list /* of QObject* */ q_shortcut_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -300,7 +286,7 @@ QBindingStorage* q_shortcut_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_shortcut_binding_storage2(void* self) {
+const QBindingStorage* q_shortcut_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -462,6 +448,10 @@ bool q_shortcut_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_shortcut_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QShortcut_OnIsSignalConnected((QShortcut*)self, (intptr_t)slot);
+}
+
+void q_shortcut_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_shortcut_delete(void* self) {

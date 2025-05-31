@@ -18,7 +18,6 @@
 #include "libqgraphicslayoutitem.h"
 #include "libqrect.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 
 /// https://doc.qt.io/qt-6/qgraphicslinearlayout.html
 
@@ -82,11 +81,15 @@ void q_graphicslinearlayout_remove_item(void* self, void* item);
 /// ``` QGraphicsLinearLayout* self, int index ```
 void q_graphicslinearlayout_remove_at(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#removeAt)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsLinearLayout* self, void (*slot)(QGraphicsLinearLayout*, int) ```
 void q_graphicslinearlayout_on_remove_at(void* self, void (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#removeAt)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsLinearLayout* self, int index ```
@@ -137,11 +140,15 @@ int64_t q_graphicslinearlayout_alignment(void* self, void* item);
 /// ``` QGraphicsLinearLayout* self, QRectF* rect ```
 void q_graphicslinearlayout_set_geometry(void* self, void* rect);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#setGeometry)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsLinearLayout* self, void (*slot)(QGraphicsLinearLayout*, QRectF*) ```
 void q_graphicslinearlayout_on_set_geometry(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#setGeometry)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsLinearLayout* self, QRectF* rect ```
@@ -152,11 +159,15 @@ void q_graphicslinearlayout_qbase_set_geometry(void* self, void* rect);
 /// ``` QGraphicsLinearLayout* self ```
 int32_t q_graphicslinearlayout_count(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#count)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsLinearLayout* self, int32_t (*slot)() ```
 void q_graphicslinearlayout_on_count(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#count)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsLinearLayout* self ```
@@ -167,11 +178,15 @@ int32_t q_graphicslinearlayout_qbase_count(void* self);
 /// ``` QGraphicsLinearLayout* self, int index ```
 QGraphicsLayoutItem* q_graphicslinearlayout_item_at(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#itemAt)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsLinearLayout* self, QGraphicsLayoutItem* (*slot)(QGraphicsLinearLayout*, int) ```
 void q_graphicslinearlayout_on_item_at(void* self, QGraphicsLayoutItem* (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#itemAt)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsLinearLayout* self, int index ```
@@ -182,11 +197,15 @@ QGraphicsLayoutItem* q_graphicslinearlayout_qbase_item_at(void* self, int index)
 /// ``` QGraphicsLinearLayout* self ```
 void q_graphicslinearlayout_invalidate(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#invalidate)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsLinearLayout* self, void (*slot)() ```
 void q_graphicslinearlayout_on_invalidate(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#invalidate)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsLinearLayout* self ```
@@ -197,11 +216,15 @@ void q_graphicslinearlayout_qbase_invalidate(void* self);
 /// ``` QGraphicsLinearLayout* self, enum Qt__SizeHint which, QSizeF* constraint ```
 QSizeF* q_graphicslinearlayout_size_hint(void* self, int64_t which, void* constraint);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsLinearLayout* self, QSizeF* (*slot)(QGraphicsLinearLayout*, enum Qt__SizeHint, QSizeF*) ```
 void q_graphicslinearlayout_on_size_hint(void* self, QSizeF* (*slot)(void*, int64_t, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsLinearLayout* self, enum Qt__SizeHint which, QSizeF* constraint ```
@@ -511,12 +534,16 @@ void q_graphicslinearlayout_get_contents_margins(void* self, double* left, doubl
 
 /// Inherited from QGraphicsLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#getContentsMargins)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsLinearLayout* self, double* left, double* top, double* right, double* bottom ```
 void q_graphicslinearlayout_qbase_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom);
 
 /// Inherited from QGraphicsLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#getContentsMargins)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -534,12 +561,16 @@ void q_graphicslinearlayout_update_geometry(void* self);
 
 /// Inherited from QGraphicsLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#updateGeometry)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsLinearLayout* self ```
 void q_graphicslinearlayout_qbase_update_geometry(void* self);
 
 /// Inherited from QGraphicsLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#updateGeometry)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -557,12 +588,16 @@ void q_graphicslinearlayout_widget_event(void* self, void* e);
 
 /// Inherited from QGraphicsLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#widgetEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsLinearLayout* self, QEvent* e ```
 void q_graphicslinearlayout_qbase_widget_event(void* self, void* e);
 
 /// Inherited from QGraphicsLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#widgetEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -580,12 +615,16 @@ bool q_graphicslinearlayout_is_empty(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isEmpty)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsLinearLayout* self ```
 bool q_graphicslinearlayout_qbase_is_empty(void* self);
 
 /// Inherited from QGraphicsLayoutItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isEmpty)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -603,12 +642,16 @@ void q_graphicslinearlayout_add_child_layout_item(void* self, void* layoutItem);
 
 /// Inherited from QGraphicsLayout
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#addChildLayoutItem)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsLinearLayout* self, QGraphicsLayoutItem* layoutItem ```
 void q_graphicslinearlayout_qbase_add_child_layout_item(void* self, void* layoutItem);
 
 /// Inherited from QGraphicsLayout
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#addChildLayoutItem)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -626,12 +669,16 @@ void q_graphicslinearlayout_set_graphics_item(void* self, void* item);
 
 /// Inherited from QGraphicsLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setGraphicsItem)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsLinearLayout* self, QGraphicsItem* item ```
 void q_graphicslinearlayout_qbase_set_graphics_item(void* self, void* item);
 
 /// Inherited from QGraphicsLayoutItem
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setGraphicsItem)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -649,6 +696,8 @@ void q_graphicslinearlayout_set_owned_by_layout(void* self, bool ownedByLayout);
 
 /// Inherited from QGraphicsLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setOwnedByLayout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsLinearLayout* self, bool ownedByLayout ```
@@ -656,11 +705,15 @@ void q_graphicslinearlayout_qbase_set_owned_by_layout(void* self, bool ownedByLa
 
 /// Inherited from QGraphicsLayoutItem
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setOwnedByLayout)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QGraphicsLinearLayout* self, void (*slot)(QGraphicsLinearLayout*, bool) ```
 void q_graphicslinearlayout_on_set_owned_by_layout(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#dtor.QGraphicsLinearLayout)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGraphicsLinearLayout* self ```

@@ -15,25 +15,17 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QEvent QEvent;
 typedef struct QIODevice QIODevice;
 typedef struct QIODeviceBase QIODeviceBase;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QProcess QProcess;
 typedef struct QProcessEnvironment QProcessEnvironment;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
 #endif
 
 #ifdef __cplusplus
@@ -238,6 +230,10 @@ int QProcess_QBaseReceivers(const QProcess* self, const char* signal);
 bool QProcess_IsSignalConnected(const QProcess* self, QMetaMethod* signal);
 void QProcess_OnIsSignalConnected(const QProcess* self, intptr_t slot);
 bool QProcess_QBaseIsSignalConnected(const QProcess* self, QMetaMethod* signal);
+void QProcess_Connect_Started(QProcess* self, intptr_t slot);
+void QProcess_Connect_StateChanged(QProcess* self, intptr_t slot);
+void QProcess_Connect_ReadyReadStandardOutput(QProcess* self, intptr_t slot);
+void QProcess_Connect_ReadyReadStandardError(QProcess* self, intptr_t slot);
 void QProcess_Delete(QProcess* self);
 
 #ifdef __cplusplus

@@ -116,16 +116,8 @@ QImage* q_image_convert_to_format(void* self, int64_t f) {
     return QImage_ConvertToFormat((QImage*)self, f);
 }
 
-QImage* q_image_convert_to_format2(void* self, int64_t f, unsigned int* colorTable[]) {
-    size_t colorTable_len = 0;
-    while (colorTable[colorTable_len] != NULL) {
-        colorTable_len++;
-    }
-    libqt_list colorTable_list = {
-        .len = colorTable_len,
-        .data = {(unsigned int*)colorTable},
-    };
-    return QImage_ConvertToFormat2((QImage*)self, f, colorTable_list);
+QImage* q_image_convert_to_format2(void* self, int64_t f, libqt_list colorTable) {
+    return QImage_ConvertToFormat2((QImage*)self, f, colorTable);
 }
 
 bool q_image_reinterpret_as_format(void* self, int64_t f) {
@@ -192,11 +184,11 @@ unsigned char* q_image_bits(void* self) {
     return (unsigned char*)QImage_Bits((QImage*)self);
 }
 
-unsigned char* q_image_bits2(void* self) {
+const unsigned char* q_image_bits2(void* self) {
     return (unsigned char*)QImage_Bits2((QImage*)self);
 }
 
-unsigned char* q_image_const_bits(void* self) {
+const unsigned char* q_image_const_bits(void* self) {
     return (unsigned char*)QImage_ConstBits((QImage*)self);
 }
 
@@ -208,11 +200,11 @@ unsigned char* q_image_scan_line(void* self, int param1) {
     return (unsigned char*)QImage_ScanLine((QImage*)self, param1);
 }
 
-unsigned char* q_image_scan_line_with_int(void* self, int param1) {
+const unsigned char* q_image_scan_line_with_int(void* self, int param1) {
     return (unsigned char*)QImage_ScanLineWithInt((QImage*)self, param1);
 }
 
-unsigned char* q_image_const_scan_line(void* self, int param1) {
+const unsigned char* q_image_const_scan_line(void* self, int param1) {
     return (unsigned char*)QImage_ConstScanLine((QImage*)self, param1);
 }
 
@@ -273,16 +265,8 @@ libqt_list /* of uint32_t */ q_image_color_table(void* self) {
     return _arr;
 }
 
-void q_image_set_color_table(void* self, unsigned int* colors[]) {
-    size_t colors_len = 0;
-    while (colors[colors_len] != NULL) {
-        colors_len++;
-    }
-    libqt_list colors_list = {
-        .len = colors_len,
-        .data = {(unsigned int*)colors},
-    };
-    QImage_SetColorTable((QImage*)self, colors_list);
+void q_image_set_color_table(void* self, libqt_list colors) {
+    QImage_SetColorTable((QImage*)self, colors);
 }
 
 double q_image_device_pixel_ratio(void* self) {
@@ -632,16 +616,8 @@ QImage* q_image_convert_to_format22(void* self, int64_t f, int64_t flags) {
     return QImage_ConvertToFormat22((QImage*)self, f, flags);
 }
 
-QImage* q_image_convert_to_format3(void* self, int64_t f, unsigned int* colorTable[], int64_t flags) {
-    size_t colorTable_len = 0;
-    while (colorTable[colorTable_len] != NULL) {
-        colorTable_len++;
-    }
-    libqt_list colorTable_list = {
-        .len = colorTable_len,
-        .data = {(unsigned int*)colorTable},
-    };
-    return QImage_ConvertToFormat3((QImage*)self, f, colorTable_list, flags);
+QImage* q_image_convert_to_format3(void* self, int64_t f, libqt_list colorTable, int64_t flags) {
+    return QImage_ConvertToFormat3((QImage*)self, f, colorTable, flags);
 }
 
 QImage* q_image_converted_to2(void* self, int64_t f, int64_t flags) {

@@ -1,14 +1,9 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqeventpoint.hpp"
 #include "libqinputdevice.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
-#include "libqrect.hpp"
 #include <string.h>
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqcoreevent.hpp"
 #include "libqpointingdevice.hpp"
 #include "libqpointingdevice.h"
@@ -77,7 +72,7 @@ QPointingDevice* q_pointingdevice_new6(const char* name, long long systemId, int
     return QPointingDevice_new6(qstring(name), systemId, devType, pType, caps, maxPoints, buttonCount, qstring(seatName), (QPointingDeviceUniqueId*)uniqueId, (QObject*)parent);
 }
 
-QMetaObject* q_pointingdevice_meta_object(void* self) {
+const QMetaObject* q_pointingdevice_meta_object(void* self) {
     return QPointingDevice_MetaObject((QPointingDevice*)self);
 }
 
@@ -132,7 +127,7 @@ QPointingDeviceUniqueId* q_pointingdevice_unique_id(void* self) {
     return QPointingDevice_UniqueId((QPointingDevice*)self);
 }
 
-QPointingDevice* q_pointingdevice_primary_pointing_device() {
+const QPointingDevice* q_pointingdevice_primary_pointing_device() {
     return QPointingDevice_PrimaryPointingDevice();
 }
 
@@ -162,7 +157,7 @@ const char* q_pointingdevice_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPointingDevice* q_pointingdevice_primary_pointing_device1(const char* seatName) {
+const QPointingDevice* q_pointingdevice_primary_pointing_device1(const char* seatName) {
     return QPointingDevice_PrimaryPointingDevice1(qstring(seatName));
 }
 
@@ -219,7 +214,7 @@ libqt_list /* of QInputDevice* */ q_pointingdevice_devices() {
     return _arr;
 }
 
-QInputDevice* q_pointingdevice_primary_keyboard() {
+const QInputDevice* q_pointingdevice_primary_keyboard() {
     return QInputDevice_PrimaryKeyboard();
 }
 
@@ -231,7 +226,7 @@ void q_pointingdevice_on_available_virtual_geometry_changed(void* self, void (*s
     QInputDevice_Connect_AvailableVirtualGeometryChanged((QInputDevice*)self, (intptr_t)slot);
 }
 
-QInputDevice* q_pointingdevice_primary_keyboard1(const char* seatName) {
+const QInputDevice* q_pointingdevice_primary_keyboard1(const char* seatName) {
     return QInputDevice_PrimaryKeyboard1(qstring(seatName));
 }
 
@@ -243,8 +238,7 @@ const char* q_pointingdevice_object_name(void* self) {
 }
 
 void q_pointingdevice_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_pointingdevice_is_widget_type(void* self) {
@@ -283,7 +277,7 @@ void q_pointingdevice_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_pointingdevice_children(void* self) {
+const libqt_list /* of QObject* */ q_pointingdevice_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -350,7 +344,7 @@ QBindingStorage* q_pointingdevice_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_pointingdevice_binding_storage2(void* self) {
+const QBindingStorage* q_pointingdevice_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -524,6 +518,10 @@ bool q_pointingdevice_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_pointingdevice_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QPointingDevice_OnIsSignalConnected((QPointingDevice*)self, (intptr_t)slot);
+}
+
+void q_pointingdevice_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_pointingdevice_delete(void* self) {

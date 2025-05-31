@@ -12,20 +12,14 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractaxis.h"
 #include "libqabstractseries.h"
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
-#include "libqchart.h"
 #include "../libqevent.h"
 #include "../libqmetaobject.h"
 #include "../libqobject.h"
 #include "libqpieslice.h"
 #include <string.h>
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
-/// https://doc.qt.io/qt-6/qpieseries.html
+/// https://doc.qt.io/qt-6/qpieseries-qtcharts.html
 
 /// q_pieseries_new constructs a new QPieSeries object.
 ///
@@ -40,7 +34,7 @@ QPieSeries* q_pieseries_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QPieSeries* self ```
-QMetaObject* q_pieseries_meta_object(void* self);
+const QMetaObject* q_pieseries_meta_object(void* self);
 
 /// ``` QPieSeries* self, const char* param1 ```
 void* q_pieseries_metacast(void* self, const char* param1);
@@ -63,220 +57,242 @@ int32_t q_pieseries_qbase_metacall(void* self, int64_t param1, int param2, void*
 /// ``` const char* s ```
 const char* q_pieseries_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#type)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#type)
 ///
 /// ``` QPieSeries* self ```
 int64_t q_pieseries_type(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#type)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QPieSeries* self, int64_t (*slot)() ```
 void q_pieseries_on_type(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#type)
+///
 /// Base class method implementation
 ///
 /// ``` QPieSeries* self ```
 int64_t q_pieseries_qbase_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#append)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#append)
 ///
 /// ``` QPieSeries* self, QPieSlice* slice ```
 bool q_pieseries_append(void* self, void* slice);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#append)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#append)
 ///
-/// ``` QPieSeries* self, QPieSlice* slices[] ```
-bool q_pieseries_append_with_slices(void* self, void* slices[]);
+/// ``` QPieSeries* self, libqt_list /* of QPieSlice* */ slices ```
+bool q_pieseries_append_with_slices(void* self, libqt_list slices);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#operator<<)
 ///
 /// ``` QPieSeries* self, QPieSlice* slice ```
 QPieSeries* q_pieseries_operator_shift_left(void* self, void* slice);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#append)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#append)
 ///
 /// ``` QPieSeries* self, const char* label, double value ```
 QPieSlice* q_pieseries_append2(void* self, const char* label, double value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#insert)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#insert)
 ///
 /// ``` QPieSeries* self, int index, QPieSlice* slice ```
 bool q_pieseries_insert(void* self, int index, void* slice);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#remove)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#remove)
 ///
 /// ``` QPieSeries* self, QPieSlice* slice ```
 bool q_pieseries_remove(void* self, void* slice);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#take)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#take)
 ///
 /// ``` QPieSeries* self, QPieSlice* slice ```
 bool q_pieseries_take(void* self, void* slice);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#clear)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#clear)
 ///
 /// ``` QPieSeries* self ```
 void q_pieseries_clear(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#slices)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#slices)
 ///
 /// ``` QPieSeries* self ```
 libqt_list /* of QPieSlice* */ q_pieseries_slices(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#count)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#count)
 ///
 /// ``` QPieSeries* self ```
 int32_t q_pieseries_count(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#isEmpty)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#isEmpty)
 ///
 /// ``` QPieSeries* self ```
 bool q_pieseries_is_empty(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#sum)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#sum)
 ///
 /// ``` QPieSeries* self ```
 double q_pieseries_sum(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#setHoleSize)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#setHoleSize)
 ///
 /// ``` QPieSeries* self, double holeSize ```
 void q_pieseries_set_hole_size(void* self, double holeSize);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#holeSize)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#holeSize)
 ///
 /// ``` QPieSeries* self ```
 double q_pieseries_hole_size(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#setHorizontalPosition)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#setHorizontalPosition)
 ///
 /// ``` QPieSeries* self, double relativePosition ```
 void q_pieseries_set_horizontal_position(void* self, double relativePosition);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#horizontalPosition)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#horizontalPosition)
 ///
 /// ``` QPieSeries* self ```
 double q_pieseries_horizontal_position(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#setVerticalPosition)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#setVerticalPosition)
 ///
 /// ``` QPieSeries* self, double relativePosition ```
 void q_pieseries_set_vertical_position(void* self, double relativePosition);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#verticalPosition)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#verticalPosition)
 ///
 /// ``` QPieSeries* self ```
 double q_pieseries_vertical_position(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#setPieSize)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#setPieSize)
 ///
 /// ``` QPieSeries* self, double relativeSize ```
 void q_pieseries_set_pie_size(void* self, double relativeSize);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#pieSize)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#pieSize)
 ///
 /// ``` QPieSeries* self ```
 double q_pieseries_pie_size(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#setPieStartAngle)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#setPieStartAngle)
 ///
 /// ``` QPieSeries* self, double startAngle ```
 void q_pieseries_set_pie_start_angle(void* self, double startAngle);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#pieStartAngle)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#pieStartAngle)
 ///
 /// ``` QPieSeries* self ```
 double q_pieseries_pie_start_angle(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#setPieEndAngle)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#setPieEndAngle)
 ///
 /// ``` QPieSeries* self, double endAngle ```
 void q_pieseries_set_pie_end_angle(void* self, double endAngle);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#pieEndAngle)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#pieEndAngle)
 ///
 /// ``` QPieSeries* self ```
 double q_pieseries_pie_end_angle(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#setLabelsVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#setLabelsVisible)
 ///
 /// ``` QPieSeries* self ```
 void q_pieseries_set_labels_visible(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#setLabelsPosition)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#setLabelsPosition)
 ///
 /// ``` QPieSeries* self, enum QPieSlice__LabelPosition position ```
 void q_pieseries_set_labels_position(void* self, int64_t position);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#added)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#added)
 ///
-/// ``` QPieSeries* self, QPieSlice* slices[] ```
-void q_pieseries_added(void* self, void* slices[]);
+/// ``` QPieSeries* self, libqt_list /* of QPieSlice* */ slices ```
+void q_pieseries_added(void* self, libqt_list slices);
 
-/// ``` QPieSeries* self, void (*slot)(QPieSeries*, QPieSlice*[]) ```
-void q_pieseries_on_added(void* self, void (*slot)(void*, void*));
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#removed)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#added)
 ///
-/// ``` QPieSeries* self, QPieSlice* slices[] ```
-void q_pieseries_removed(void* self, void* slices[]);
+/// ``` QPieSeries* self, void (*slot)(QPieSeries*, libqt_list /* of QPieSlice* */ slices ) ```
+void q_pieseries_on_added(void* self, void (*slot)(void*, libqt_list));
 
-/// ``` QPieSeries* self, void (*slot)(QPieSeries*, QPieSlice*[]) ```
-void q_pieseries_on_removed(void* self, void (*slot)(void*, void*));
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#removed)
+///
+/// ``` QPieSeries* self, libqt_list /* of QPieSlice* */ slices ```
+void q_pieseries_removed(void* self, libqt_list slices);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#clicked)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#removed)
+///
+/// ``` QPieSeries* self, void (*slot)(QPieSeries*, libqt_list /* of QPieSlice* */ slices ) ```
+void q_pieseries_on_removed(void* self, void (*slot)(void*, libqt_list));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#clicked)
 ///
 /// ``` QPieSeries* self, QPieSlice* slice ```
 void q_pieseries_clicked(void* self, void* slice);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#clicked)
+///
 /// ``` QPieSeries* self, void (*slot)(QPieSeries*, QPieSlice*) ```
 void q_pieseries_on_clicked(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#hovered)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#hovered)
 ///
 /// ``` QPieSeries* self, QPieSlice* slice, bool state ```
 void q_pieseries_hovered(void* self, void* slice, bool state);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#hovered)
+///
 /// ``` QPieSeries* self, void (*slot)(QPieSeries*, QPieSlice*, bool) ```
 void q_pieseries_on_hovered(void* self, void (*slot)(void*, void*, bool));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#pressed)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#pressed)
 ///
 /// ``` QPieSeries* self, QPieSlice* slice ```
 void q_pieseries_pressed(void* self, void* slice);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#pressed)
+///
 /// ``` QPieSeries* self, void (*slot)(QPieSeries*, QPieSlice*) ```
 void q_pieseries_on_pressed(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#released)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#released)
 ///
 /// ``` QPieSeries* self, QPieSlice* slice ```
 void q_pieseries_released(void* self, void* slice);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#released)
+///
 /// ``` QPieSeries* self, void (*slot)(QPieSeries*, QPieSlice*) ```
 void q_pieseries_on_released(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#doubleClicked)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#doubleClicked)
 ///
 /// ``` QPieSeries* self, QPieSlice* slice ```
 void q_pieseries_double_clicked(void* self, void* slice);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#doubleClicked)
+///
 /// ``` QPieSeries* self, void (*slot)(QPieSeries*, QPieSlice*) ```
 void q_pieseries_on_double_clicked(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#countChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#countChanged)
 ///
 /// ``` QPieSeries* self ```
 void q_pieseries_count_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#countChanged)
+///
 /// ``` QPieSeries* self, void (*slot)(QPieSeries*) ```
 void q_pieseries_on_count_changed(void* self, void (*slot)(void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#sumChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#sumChanged)
 ///
 /// ``` QPieSeries* self ```
 void q_pieseries_sum_changed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#sumChanged)
+///
 /// ``` QPieSeries* self, void (*slot)(QPieSeries*) ```
 void q_pieseries_on_sum_changed(void* self, void (*slot)(void*));
 
@@ -290,7 +306,7 @@ const char* q_pieseries_tr2(const char* s, const char* c);
 /// ``` const char* s, const char* c, int n ```
 const char* q_pieseries_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries.html#setLabelsVisible)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#setLabelsVisible)
 ///
 /// ``` QPieSeries* self, bool visible ```
 void q_pieseries_set_labels_visible1(void* self, bool visible);
@@ -402,6 +418,8 @@ void q_pieseries_name_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
+///
 /// ``` QPieSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_pieseries_on_name_changed(void* self, void (*slot)(void*));
 
@@ -413,6 +431,8 @@ void q_pieseries_on_name_changed(void* self, void (*slot)(void*));
 void q_pieseries_visible_changed(void* self);
 
 /// Inherited from QAbstractSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
 /// ``` QPieSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_pieseries_on_visible_changed(void* self, void (*slot)(void*));
@@ -426,6 +446,8 @@ void q_pieseries_opacity_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
+///
 /// ``` QPieSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_pieseries_on_opacity_changed(void* self, void (*slot)(void*));
 
@@ -437,6 +459,8 @@ void q_pieseries_on_opacity_changed(void* self, void (*slot)(void*));
 void q_pieseries_use_open_g_l_changed(void* self);
 
 /// Inherited from QAbstractSeries
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
 /// ``` QPieSeries* self, void (*slot)(QAbstractSeries*) ```
 void q_pieseries_on_use_open_g_l_changed(void* self, void (*slot)(void*));
@@ -537,7 +561,7 @@ void q_pieseries_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QPieSeries* self ```
-libqt_list /* of QObject* */ q_pieseries_children(void* self);
+const libqt_list /* of QObject* */ q_pieseries_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -635,7 +659,7 @@ QBindingStorage* q_pieseries_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QPieSeries* self ```
-QBindingStorage* q_pieseries_binding_storage2(void* self);
+const QBindingStorage* q_pieseries_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -645,6 +669,8 @@ QBindingStorage* q_pieseries_binding_storage2(void* self);
 void q_pieseries_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QPieSeries* self, void (*slot)(QObject*) ```
 void q_pieseries_on_destroyed(void* self, void (*slot)(void*));
@@ -700,6 +726,8 @@ void q_pieseries_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QPieSeries* self, void (*slot)(QObject*, QObject*) ```
 void q_pieseries_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -714,12 +742,16 @@ bool q_pieseries_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieSeries* self, QEvent* event ```
 bool q_pieseries_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -737,12 +769,16 @@ bool q_pieseries_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieSeries* self, QObject* watched, QEvent* event ```
 bool q_pieseries_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -760,12 +796,16 @@ void q_pieseries_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieSeries* self, QTimerEvent* event ```
 void q_pieseries_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -783,12 +823,16 @@ void q_pieseries_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieSeries* self, QChildEvent* event ```
 void q_pieseries_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -806,12 +850,16 @@ void q_pieseries_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieSeries* self, QEvent* event ```
 void q_pieseries_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -829,12 +877,16 @@ void q_pieseries_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieSeries* self, QMetaMethod* signal ```
 void q_pieseries_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -852,12 +904,16 @@ void q_pieseries_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieSeries* self, QMetaMethod* signal ```
 void q_pieseries_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -875,12 +931,16 @@ QObject* q_pieseries_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieSeries* self ```
 QObject* q_pieseries_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -898,12 +958,16 @@ int32_t q_pieseries_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieSeries* self ```
 int32_t q_pieseries_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -921,12 +985,16 @@ int32_t q_pieseries_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieSeries* self, const char* signal ```
 int32_t q_pieseries_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -944,6 +1012,8 @@ bool q_pieseries_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QPieSeries* self, QMetaMethod* signal ```
@@ -951,11 +1021,24 @@ bool q_pieseries_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QPieSeries* self, bool (*slot)(QPieSeries*, QMetaMethod*) ```
 void q_pieseries_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QPieSeries* self, void (*slot)(QObject*, const char*) ```
+void q_pieseries_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#dtor.QPieSeries)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPieSeries* self ```

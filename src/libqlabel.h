@@ -12,46 +12,22 @@
 
 #include "qtlibc.h"
 
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
-#include "libqcursor.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
 #include "libqframe.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
-#include "libqlocale.h"
-#include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqmovie.h"
 #include "libqobject.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
 #include "libqpicture.h"
 #include "libqpixmap.h"
 #include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqscreen.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
 #include "libqstyleoption.h"
-#include "libqthread.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qlabel.html
 
@@ -88,7 +64,7 @@ QLabel* q_label_new6(const char* text, void* parent, int64_t f);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QLabel* self ```
-QMetaObject* q_label_meta_object(void* self);
+const QMetaObject* q_label_meta_object(void* self);
 
 /// ``` QLabel* self, const char* param1 ```
 void* q_label_metacast(void* self, const char* param1);
@@ -206,11 +182,15 @@ void q_label_set_scaled_contents(void* self, bool scaledContents);
 /// ``` QLabel* self ```
 QSize* q_label_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLabel* self, QSize* (*slot)() ```
 void q_label_on_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QLabel* self ```
@@ -221,11 +201,15 @@ QSize* q_label_qbase_size_hint(void* self);
 /// ``` QLabel* self ```
 QSize* q_label_minimum_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#minimumSizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLabel* self, QSize* (*slot)() ```
 void q_label_on_minimum_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#minimumSizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QLabel* self ```
@@ -246,11 +230,15 @@ QWidget* q_label_buddy(void* self);
 /// ``` QLabel* self, int param1 ```
 int32_t q_label_height_for_width(void* self, int param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#heightForWidth)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLabel* self, int32_t (*slot)(QLabel*, int) ```
 void q_label_on_height_for_width(void* self, int32_t (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#heightForWidth)
+///
 /// Base class method implementation
 ///
 /// ``` QLabel* self, int param1 ```
@@ -336,6 +324,8 @@ void q_label_clear(void* self);
 /// ``` QLabel* self, const char* link ```
 void q_label_link_activated(void* self, const char* link);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#linkActivated)
+///
 /// ``` QLabel* self, void (*slot)(QLabel*, const char*) ```
 void q_label_on_link_activated(void* self, void (*slot)(void*, const char*));
 
@@ -344,6 +334,8 @@ void q_label_on_link_activated(void* self, void (*slot)(void*, const char*));
 /// ``` QLabel* self, const char* link ```
 void q_label_link_hovered(void* self, const char* link);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#linkHovered)
+///
 /// ``` QLabel* self, void (*slot)(QLabel*, const char*) ```
 void q_label_on_link_hovered(void* self, void (*slot)(void*, const char*));
 
@@ -352,11 +344,15 @@ void q_label_on_link_hovered(void* self, void (*slot)(void*, const char*));
 /// ``` QLabel* self, QEvent* e ```
 bool q_label_event(void* self, void* e);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLabel* self, bool (*slot)(QLabel*, QEvent*) ```
 void q_label_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QLabel* self, QEvent* e ```
@@ -367,11 +363,15 @@ bool q_label_qbase_event(void* self, void* e);
 /// ``` QLabel* self, QKeyEvent* ev ```
 void q_label_key_press_event(void* self, void* ev);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#keyPressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLabel* self, void (*slot)(QLabel*, QKeyEvent*) ```
 void q_label_on_key_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#keyPressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QLabel* self, QKeyEvent* ev ```
@@ -382,11 +382,15 @@ void q_label_qbase_key_press_event(void* self, void* ev);
 /// ``` QLabel* self, QPaintEvent* param1 ```
 void q_label_paint_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#paintEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLabel* self, void (*slot)(QLabel*, QPaintEvent*) ```
 void q_label_on_paint_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#paintEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QLabel* self, QPaintEvent* param1 ```
@@ -397,11 +401,15 @@ void q_label_qbase_paint_event(void* self, void* param1);
 /// ``` QLabel* self, QEvent* param1 ```
 void q_label_change_event(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#changeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLabel* self, void (*slot)(QLabel*, QEvent*) ```
 void q_label_on_change_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#changeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QLabel* self, QEvent* param1 ```
@@ -412,11 +420,15 @@ void q_label_qbase_change_event(void* self, void* param1);
 /// ``` QLabel* self, QMouseEvent* ev ```
 void q_label_mouse_press_event(void* self, void* ev);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#mousePressEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLabel* self, void (*slot)(QLabel*, QMouseEvent*) ```
 void q_label_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#mousePressEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QLabel* self, QMouseEvent* ev ```
@@ -427,11 +439,15 @@ void q_label_qbase_mouse_press_event(void* self, void* ev);
 /// ``` QLabel* self, QMouseEvent* ev ```
 void q_label_mouse_move_event(void* self, void* ev);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#mouseMoveEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLabel* self, void (*slot)(QLabel*, QMouseEvent*) ```
 void q_label_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#mouseMoveEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QLabel* self, QMouseEvent* ev ```
@@ -442,11 +458,15 @@ void q_label_qbase_mouse_move_event(void* self, void* ev);
 /// ``` QLabel* self, QMouseEvent* ev ```
 void q_label_mouse_release_event(void* self, void* ev);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#mouseReleaseEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLabel* self, void (*slot)(QLabel*, QMouseEvent*) ```
 void q_label_on_mouse_release_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#mouseReleaseEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QLabel* self, QMouseEvent* ev ```
@@ -457,11 +477,15 @@ void q_label_qbase_mouse_release_event(void* self, void* ev);
 /// ``` QLabel* self, QContextMenuEvent* ev ```
 void q_label_context_menu_event(void* self, void* ev);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#contextMenuEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLabel* self, void (*slot)(QLabel*, QContextMenuEvent*) ```
 void q_label_on_context_menu_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#contextMenuEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QLabel* self, QContextMenuEvent* ev ```
@@ -472,11 +496,15 @@ void q_label_qbase_context_menu_event(void* self, void* ev);
 /// ``` QLabel* self, QFocusEvent* ev ```
 void q_label_focus_in_event(void* self, void* ev);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#focusInEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLabel* self, void (*slot)(QLabel*, QFocusEvent*) ```
 void q_label_on_focus_in_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#focusInEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QLabel* self, QFocusEvent* ev ```
@@ -487,11 +515,15 @@ void q_label_qbase_focus_in_event(void* self, void* ev);
 /// ``` QLabel* self, QFocusEvent* ev ```
 void q_label_focus_out_event(void* self, void* ev);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#focusOutEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLabel* self, void (*slot)(QLabel*, QFocusEvent*) ```
 void q_label_on_focus_out_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#focusOutEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QLabel* self, QFocusEvent* ev ```
@@ -502,11 +534,15 @@ void q_label_qbase_focus_out_event(void* self, void* ev);
 /// ``` QLabel* self, bool next ```
 bool q_label_focus_next_prev_child(void* self, bool next);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#focusNextPrevChild)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QLabel* self, bool (*slot)(QLabel*, bool) ```
 void q_label_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#focusNextPrevChild)
+///
 /// Base class method implementation
 ///
 /// ``` QLabel* self, bool next ```
@@ -737,7 +773,7 @@ QRect* q_label_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QLabel* self ```
-QRect* q_label_geometry(void* self);
+const QRect* q_label_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1094,7 +1130,7 @@ QWidget* q_label_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QLabel* self ```
-QPalette* q_label_palette(void* self);
+const QPalette* q_label_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1136,7 +1172,7 @@ int64_t q_label_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QLabel* self ```
-QFont* q_label_font(void* self);
+const QFont* q_label_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2136,15 +2172,15 @@ void q_label_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QLabel* self, QAction* actions[] ```
-void q_label_add_actions(void* self, void* actions[]);
+/// ``` QLabel* self, libqt_list /* of QAction* */ actions ```
+void q_label_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QLabel* self, QAction* before, QAction* actions[] ```
-void q_label_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QLabel* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_label_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2344,6 +2380,8 @@ void q_label_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QLabel* self, void (*slot)(QWidget*, const char*) ```
 void q_label_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2355,6 +2393,8 @@ void q_label_on_window_title_changed(void* self, void (*slot)(void*, const char*
 void q_label_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QLabel* self, void (*slot)(QWidget*, QIcon*) ```
 void q_label_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -2368,6 +2408,8 @@ void q_label_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QLabel* self, void (*slot)(QWidget*, const char*) ```
 void q_label_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2379,6 +2421,8 @@ void q_label_on_window_icon_text_changed(void* self, void (*slot)(void*, const c
 void q_label_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QLabel* self, void (*slot)(QWidget*, QPoint*) ```
 void q_label_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2584,7 +2628,7 @@ void q_label_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QLabel* self ```
-libqt_list /* of QObject* */ q_label_children(void* self);
+const libqt_list /* of QObject* */ q_label_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2675,7 +2719,7 @@ QBindingStorage* q_label_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QLabel* self ```
-QBindingStorage* q_label_binding_storage2(void* self);
+const QBindingStorage* q_label_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2685,6 +2729,8 @@ QBindingStorage* q_label_binding_storage2(void* self);
 void q_label_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QLabel* self, void (*slot)(QObject*) ```
 void q_label_on_destroyed(void* self, void (*slot)(void*));
@@ -2739,6 +2785,8 @@ QMetaObject__Connection* q_label_connect4(void* self, void* sender, const char* 
 void q_label_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QLabel* self, void (*slot)(QObject*, QObject*) ```
 void q_label_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -2838,12 +2886,16 @@ void q_label_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QStyleOptionFrame* option ```
 void q_label_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2861,12 +2913,16 @@ int32_t q_label_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self ```
 int32_t q_label_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2884,12 +2940,16 @@ void q_label_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, bool visible ```
 void q_label_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2907,12 +2967,16 @@ bool q_label_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self ```
 bool q_label_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2930,12 +2994,16 @@ QPaintEngine* q_label_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self ```
 QPaintEngine* q_label_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2953,12 +3021,16 @@ void q_label_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QMouseEvent* event ```
 void q_label_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2976,12 +3048,16 @@ void q_label_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QWheelEvent* event ```
 void q_label_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2999,12 +3075,16 @@ void q_label_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QKeyEvent* event ```
 void q_label_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3022,12 +3102,16 @@ void q_label_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QEnterEvent* event ```
 void q_label_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3045,12 +3129,16 @@ void q_label_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QEvent* event ```
 void q_label_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3068,12 +3156,16 @@ void q_label_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QMoveEvent* event ```
 void q_label_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3091,12 +3183,16 @@ void q_label_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QResizeEvent* event ```
 void q_label_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3114,12 +3210,16 @@ void q_label_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QCloseEvent* event ```
 void q_label_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3137,12 +3237,16 @@ void q_label_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QTabletEvent* event ```
 void q_label_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3160,12 +3264,16 @@ void q_label_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QActionEvent* event ```
 void q_label_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3183,12 +3291,16 @@ void q_label_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QDragEnterEvent* event ```
 void q_label_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3206,12 +3318,16 @@ void q_label_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QDragMoveEvent* event ```
 void q_label_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3229,12 +3345,16 @@ void q_label_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QDragLeaveEvent* event ```
 void q_label_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3252,12 +3372,16 @@ void q_label_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QDropEvent* event ```
 void q_label_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3275,12 +3399,16 @@ void q_label_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QShowEvent* event ```
 void q_label_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3298,12 +3426,16 @@ void q_label_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QHideEvent* event ```
 void q_label_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3321,12 +3453,16 @@ bool q_label_native_event(void* self, const char* eventType, void* message, intp
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, const char* eventType, void* message, intptr_t* result ```
 bool q_label_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3344,12 +3480,16 @@ int32_t q_label_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_label_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3367,12 +3507,16 @@ void q_label_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QPainter* painter ```
 void q_label_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3390,12 +3534,16 @@ QPaintDevice* q_label_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QPoint* offset ```
 QPaintDevice* q_label_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3413,12 +3561,16 @@ QPainter* q_label_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self ```
 QPainter* q_label_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3436,12 +3588,16 @@ void q_label_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QInputMethodEvent* param1 ```
 void q_label_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3459,12 +3615,16 @@ QVariant* q_label_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_label_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3482,12 +3642,16 @@ bool q_label_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QObject* watched, QEvent* event ```
 bool q_label_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3505,12 +3669,16 @@ void q_label_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QTimerEvent* event ```
 void q_label_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3528,12 +3696,16 @@ void q_label_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QChildEvent* event ```
 void q_label_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3551,12 +3723,16 @@ void q_label_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QEvent* event ```
 void q_label_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3574,12 +3750,16 @@ void q_label_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QMetaMethod* signal ```
 void q_label_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3597,12 +3777,16 @@ void q_label_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QMetaMethod* signal ```
 void q_label_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3620,12 +3804,16 @@ void q_label_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QPainter* param1 ```
 void q_label_qbase_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3643,12 +3831,16 @@ void q_label_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self ```
 void q_label_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3666,12 +3858,16 @@ void q_label_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self ```
 void q_label_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3689,12 +3885,16 @@ void q_label_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self ```
 void q_label_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3712,12 +3912,16 @@ bool q_label_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self ```
 bool q_label_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3735,12 +3939,16 @@ bool q_label_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self ```
 bool q_label_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3758,12 +3966,16 @@ QObject* q_label_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self ```
 QObject* q_label_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3781,12 +3993,16 @@ int32_t q_label_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self ```
 int32_t q_label_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3804,12 +4020,16 @@ int32_t q_label_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, const char* signal ```
 int32_t q_label_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3827,6 +4047,8 @@ bool q_label_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QLabel* self, QMetaMethod* signal ```
@@ -3834,11 +4056,24 @@ bool q_label_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QLabel* self, bool (*slot)(QLabel*, QMetaMethod*) ```
 void q_label_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QLabel* self, void (*slot)(QObject*, const char*) ```
+void q_label_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#dtor.QLabel)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QLabel* self ```

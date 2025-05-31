@@ -12,16 +12,12 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqiodevice.h"
 #include "libqiodevicebase.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qprocessenvironment.html
 
@@ -120,6 +116,8 @@ QProcessEnvironment* q_processenvironment_system_environment();
 /// ``` QProcessEnvironment* self, const char* name, const char* defaultValue ```
 const char* q_processenvironment_value2(void* self, const char* name, const char* defaultValue);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocessenvironment.html#dtor.QProcessEnvironment)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QProcessEnvironment* self ```
@@ -140,7 +138,7 @@ QProcess* q_process_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QProcess* self ```
-QMetaObject* q_process_meta_object(void* self);
+const QMetaObject* q_process_meta_object(void* self);
 
 /// ``` QProcess* self, const char* param1 ```
 void* q_process_metacast(void* self, const char* param1);
@@ -188,11 +186,15 @@ bool q_process_start_detached(void* self);
 /// ``` QProcess* self, int mode ```
 bool q_process_open(void* self, int64_t mode);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#open)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProcess* self, bool (*slot)(QProcess*, int) ```
 void q_process_on_open(void* self, bool (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#open)
+///
 /// Base class method implementation
 ///
 /// ``` QProcess* self, int mode ```
@@ -333,11 +335,15 @@ bool q_process_wait_for_started(void* self);
 /// ``` QProcess* self, int msecs ```
 bool q_process_wait_for_ready_read(void* self, int msecs);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#waitForReadyRead)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProcess* self, bool (*slot)(QProcess*, int) ```
 void q_process_on_wait_for_ready_read(void* self, bool (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#waitForReadyRead)
+///
 /// Base class method implementation
 ///
 /// ``` QProcess* self, int msecs ```
@@ -348,11 +354,15 @@ bool q_process_qbase_wait_for_ready_read(void* self, int msecs);
 /// ``` QProcess* self, int msecs ```
 bool q_process_wait_for_bytes_written(void* self, int msecs);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#waitForBytesWritten)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProcess* self, bool (*slot)(QProcess*, int) ```
 void q_process_on_wait_for_bytes_written(void* self, bool (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#waitForBytesWritten)
+///
 /// Base class method implementation
 ///
 /// ``` QProcess* self, int msecs ```
@@ -388,11 +398,15 @@ int64_t q_process_exit_status(void* self);
 /// ``` QProcess* self ```
 long long q_process_bytes_to_write(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#bytesToWrite)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProcess* self, long long (*slot)() ```
 void q_process_on_bytes_to_write(void* self, long long (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#bytesToWrite)
+///
 /// Base class method implementation
 ///
 /// ``` QProcess* self ```
@@ -403,11 +417,15 @@ long long q_process_qbase_bytes_to_write(void* self);
 /// ``` QProcess* self ```
 bool q_process_is_sequential(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#isSequential)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProcess* self, bool (*slot)() ```
 void q_process_on_is_sequential(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#isSequential)
+///
 /// Base class method implementation
 ///
 /// ``` QProcess* self ```
@@ -418,11 +436,15 @@ bool q_process_qbase_is_sequential(void* self);
 /// ``` QProcess* self ```
 void q_process_close(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#close)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProcess* self, void (*slot)() ```
 void q_process_on_close(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#close)
+///
 /// Base class method implementation
 ///
 /// ``` QProcess* self ```
@@ -463,6 +485,8 @@ void q_process_kill(void* self);
 /// ``` QProcess* self, int exitCode ```
 void q_process_finished(void* self, int exitCode);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#finished)
+///
 /// ``` QProcess* self, void (*slot)(QProcess*, int) ```
 void q_process_on_finished(void* self, void (*slot)(void*, int));
 
@@ -471,6 +495,8 @@ void q_process_on_finished(void* self, void (*slot)(void*, int));
 /// ``` QProcess* self, enum QProcess__ProcessError errorVal ```
 void q_process_error_occurred(void* self, int64_t errorVal);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#errorOccurred)
+///
 /// ``` QProcess* self, void (*slot)(QProcess*, enum QProcess__ProcessError) ```
 void q_process_on_error_occurred(void* self, void (*slot)(void*, int64_t));
 
@@ -479,11 +505,15 @@ void q_process_on_error_occurred(void* self, void (*slot)(void*, int64_t));
 /// ``` QProcess* self, enum QProcess__ProcessState state ```
 void q_process_set_process_state(void* self, int64_t state);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#setProcessState)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProcess* self, void (*slot)(QProcess*, enum QProcess__ProcessState) ```
 void q_process_on_set_process_state(void* self, void (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#setProcessState)
+///
 /// Base class method implementation
 ///
 /// ``` QProcess* self, enum QProcess__ProcessState state ```
@@ -494,11 +524,15 @@ void q_process_qbase_set_process_state(void* self, int64_t state);
 /// ``` QProcess* self, char* data, long long maxlen ```
 long long q_process_read_data(void* self, char* data, long long maxlen);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#readData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProcess* self, long long (*slot)(QProcess*, char*, long long) ```
 void q_process_on_read_data(void* self, long long (*slot)(void*, char*, long long));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#readData)
+///
 /// Base class method implementation
 ///
 /// ``` QProcess* self, char* data, long long maxlen ```
@@ -509,11 +543,15 @@ long long q_process_qbase_read_data(void* self, char* data, long long maxlen);
 /// ``` QProcess* self, const char* data, long long lenVal ```
 long long q_process_write_data(void* self, const char* data, long long lenVal);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#writeData)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QProcess* self, long long (*slot)(QProcess*, const char*, long long) ```
 void q_process_on_write_data(void* self, long long (*slot)(void*, const char*, long long));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#writeData)
+///
 /// Base class method implementation
 ///
 /// ``` QProcess* self, const char* data, long long lenVal ```
@@ -599,6 +637,8 @@ bool q_process_start_detached4(const char* program, const char* arguments[], con
 /// ``` QProcess* self, int exitCode, enum QProcess__ExitStatus exitStatus ```
 void q_process_finished2(void* self, int exitCode, int64_t exitStatus);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#finished)
+///
 /// ``` QProcess* self, void (*slot)(QProcess*, int, enum QProcess__ExitStatus) ```
 void q_process_on_finished2(void* self, void (*slot)(void*, int, int64_t));
 
@@ -828,6 +868,8 @@ void q_process_ready_read(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
+///
 /// ``` QProcess* self, void (*slot)(QIODevice*) ```
 void q_process_on_ready_read(void* self, void (*slot)(void*));
 
@@ -839,6 +881,8 @@ void q_process_on_ready_read(void* self, void (*slot)(void*));
 void q_process_channel_ready_read(void* self, int channel);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
 /// ``` QProcess* self, void (*slot)(QIODevice*, int) ```
 void q_process_on_channel_ready_read(void* self, void (*slot)(void*, int));
@@ -852,6 +896,8 @@ void q_process_bytes_written(void* self, long long bytes);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
+///
 /// ``` QProcess* self, void (*slot)(QIODevice*, long long) ```
 void q_process_on_bytes_written(void* self, void (*slot)(void*, long long));
 
@@ -863,6 +909,8 @@ void q_process_on_bytes_written(void* self, void (*slot)(void*, long long));
 void q_process_channel_bytes_written(void* self, int channel, long long bytes);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// ``` QProcess* self, void (*slot)(QIODevice*, int, long long) ```
 void q_process_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long));
@@ -876,6 +924,8 @@ void q_process_about_to_close(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
+///
 /// ``` QProcess* self, void (*slot)(QIODevice*) ```
 void q_process_on_about_to_close(void* self, void (*slot)(void*));
 
@@ -887,6 +937,8 @@ void q_process_on_about_to_close(void* self, void (*slot)(void*));
 void q_process_read_channel_finished(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
 /// ``` QProcess* self, void (*slot)(QIODevice*) ```
 void q_process_on_read_channel_finished(void* self, void (*slot)(void*));
@@ -980,7 +1032,7 @@ void q_process_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QProcess* self ```
-libqt_list /* of QObject* */ q_process_children(void* self);
+const libqt_list /* of QObject* */ q_process_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1078,7 +1130,7 @@ QBindingStorage* q_process_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QProcess* self ```
-QBindingStorage* q_process_binding_storage2(void* self);
+const QBindingStorage* q_process_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -1088,6 +1140,8 @@ QBindingStorage* q_process_binding_storage2(void* self);
 void q_process_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QProcess* self, void (*slot)(QObject*) ```
 void q_process_on_destroyed(void* self, void (*slot)(void*));
@@ -1143,6 +1197,8 @@ void q_process_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QProcess* self, void (*slot)(QObject*, QObject*) ```
 void q_process_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -1157,12 +1213,16 @@ long long q_process_pos(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#pos)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self ```
 long long q_process_qbase_pos(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#pos)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1180,12 +1240,16 @@ long long q_process_size(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#size)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self ```
 long long q_process_qbase_size(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#size)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1203,12 +1267,16 @@ bool q_process_seek(void* self, long long pos);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#seek)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self, long long pos ```
 bool q_process_qbase_seek(void* self, long long pos);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#seek)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1226,12 +1294,16 @@ bool q_process_at_end(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#atEnd)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self ```
 bool q_process_qbase_at_end(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#atEnd)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1249,12 +1321,16 @@ bool q_process_reset(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#reset)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self ```
 bool q_process_qbase_reset(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#reset)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1272,12 +1348,16 @@ long long q_process_bytes_available(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesAvailable)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self ```
 long long q_process_qbase_bytes_available(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesAvailable)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1295,12 +1375,16 @@ bool q_process_can_read_line(void* self);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#canReadLine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self ```
 bool q_process_qbase_can_read_line(void* self);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#canReadLine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1318,12 +1402,16 @@ long long q_process_read_line_data(void* self, char* data, long long maxlen);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readLineData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self, char* data, long long maxlen ```
 long long q_process_qbase_read_line_data(void* self, char* data, long long maxlen);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readLineData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1341,12 +1429,16 @@ long long q_process_skip_data(void* self, long long maxSize);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#skipData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self, long long maxSize ```
 long long q_process_qbase_skip_data(void* self, long long maxSize);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#skipData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1364,12 +1456,16 @@ bool q_process_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self, QEvent* event ```
 bool q_process_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1387,12 +1483,16 @@ bool q_process_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self, QObject* watched, QEvent* event ```
 bool q_process_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1410,12 +1510,16 @@ void q_process_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self, QTimerEvent* event ```
 void q_process_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1433,12 +1537,16 @@ void q_process_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self, QChildEvent* event ```
 void q_process_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1456,12 +1564,16 @@ void q_process_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self, QEvent* event ```
 void q_process_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1479,12 +1591,16 @@ void q_process_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self, QMetaMethod* signal ```
 void q_process_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1502,12 +1618,16 @@ void q_process_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self, QMetaMethod* signal ```
 void q_process_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1525,12 +1645,16 @@ void q_process_set_open_mode(void* self, int64_t openMode);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setOpenMode)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self, int openMode ```
 void q_process_qbase_set_open_mode(void* self, int64_t openMode);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setOpenMode)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1548,12 +1672,16 @@ void q_process_set_error_string(void* self, const char* errorString);
 
 /// Inherited from QIODevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self, const char* errorString ```
 void q_process_qbase_set_error_string(void* self, const char* errorString);
 
 /// Inherited from QIODevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1571,12 +1699,16 @@ QObject* q_process_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self ```
 QObject* q_process_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1594,12 +1726,16 @@ int32_t q_process_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self ```
 int32_t q_process_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1617,12 +1753,16 @@ int32_t q_process_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self, const char* signal ```
 int32_t q_process_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1640,6 +1780,8 @@ bool q_process_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QProcess* self, QMetaMethod* signal ```
@@ -1647,11 +1789,52 @@ bool q_process_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QProcess* self, bool (*slot)(QProcess*, QMetaMethod*) ```
 void q_process_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#started)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QProcess* self, void (*slot)(QProcess*) ```
+void q_process_on_started(void* self, void (*slot)(void*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#stateChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QProcess* self, void (*slot)(QProcess*, enum QProcess__ProcessState) ```
+void q_process_on_state_changed(void* self, void (*slot)(void*, int64_t));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#readyReadStandardOutput)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QProcess* self, void (*slot)(QProcess*) ```
+void q_process_on_ready_read_standard_output(void* self, void (*slot)(void*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#readyReadStandardError)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QProcess* self, void (*slot)(QProcess*) ```
+void q_process_on_ready_read_standard_error(void* self, void (*slot)(void*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QProcess* self, void (*slot)(QObject*, const char*) ```
+void q_process_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#dtor.QProcess)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QProcess* self ```

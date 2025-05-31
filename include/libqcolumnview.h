@@ -16,46 +16,23 @@
 #include "libqabstractitemmodel.h"
 #include "libqabstractitemview.h"
 #include "libqabstractscrollarea.h"
-#include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
-#include "libqcursor.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
 #include "libqframe.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
 #include "libqitemselectionmodel.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
-#include "libqlocale.h"
 #include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
 #include "libqrect.h"
 #include "libqregion.h"
-#include "libqscreen.h"
-#include "libqscrollbar.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
 #include "libqstyleoption.h"
-#include "libqthread.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qcolumnview.html
 
@@ -72,7 +49,7 @@ QColumnView* q_columnview_new2();
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QColumnView* self ```
-QMetaObject* q_columnview_meta_object(void* self);
+const QMetaObject* q_columnview_meta_object(void* self);
 
 /// ``` QColumnView* self, const char* param1 ```
 void* q_columnview_metacast(void* self, const char* param1);
@@ -100,6 +77,8 @@ const char* q_columnview_tr(const char* s);
 /// ``` QColumnView* self, QModelIndex* index ```
 void q_columnview_update_preview_widget(void* self, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#updatePreviewWidget)
+///
 /// ``` QColumnView* self, void (*slot)(QColumnView*, QModelIndex*) ```
 void q_columnview_on_update_preview_widget(void* self, void (*slot)(void*, void*));
 
@@ -108,11 +87,15 @@ void q_columnview_on_update_preview_widget(void* self, void (*slot)(void*, void*
 /// ``` QColumnView* self, QPoint* point ```
 QModelIndex* q_columnview_index_at(void* self, void* point);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#indexAt)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QColumnView* self, QModelIndex* (*slot)(QColumnView*, QPoint*) ```
 void q_columnview_on_index_at(void* self, QModelIndex* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#indexAt)
+///
 /// Base class method implementation
 ///
 /// ``` QColumnView* self, QPoint* point ```
@@ -123,11 +106,15 @@ QModelIndex* q_columnview_qbase_index_at(void* self, void* point);
 /// ``` QColumnView* self, QModelIndex* index, enum QAbstractItemView__ScrollHint hint ```
 void q_columnview_scroll_to(void* self, void* index, int64_t hint);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#scrollTo)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QColumnView* self, void (*slot)(QColumnView*, QModelIndex*, enum QAbstractItemView__ScrollHint) ```
 void q_columnview_on_scroll_to(void* self, void (*slot)(void*, void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#scrollTo)
+///
 /// Base class method implementation
 ///
 /// ``` QColumnView* self, QModelIndex* index, enum QAbstractItemView__ScrollHint hint ```
@@ -138,11 +125,15 @@ void q_columnview_qbase_scroll_to(void* self, void* index, int64_t hint);
 /// ``` QColumnView* self ```
 QSize* q_columnview_size_hint(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#sizeHint)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QColumnView* self, QSize* (*slot)() ```
 void q_columnview_on_size_hint(void* self, QSize* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#sizeHint)
+///
 /// Base class method implementation
 ///
 /// ``` QColumnView* self ```
@@ -153,11 +144,15 @@ QSize* q_columnview_qbase_size_hint(void* self);
 /// ``` QColumnView* self, QModelIndex* index ```
 QRect* q_columnview_visual_rect(void* self, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#visualRect)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QColumnView* self, QRect* (*slot)(QColumnView*, QModelIndex*) ```
 void q_columnview_on_visual_rect(void* self, QRect* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#visualRect)
+///
 /// Base class method implementation
 ///
 /// ``` QColumnView* self, QModelIndex* index ```
@@ -168,11 +163,15 @@ QRect* q_columnview_qbase_visual_rect(void* self, void* index);
 /// ``` QColumnView* self, QAbstractItemModel* model ```
 void q_columnview_set_model(void* self, void* model);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#setModel)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QColumnView* self, void (*slot)(QColumnView*, QAbstractItemModel*) ```
 void q_columnview_on_set_model(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#setModel)
+///
 /// Base class method implementation
 ///
 /// ``` QColumnView* self, QAbstractItemModel* model ```
@@ -183,11 +182,15 @@ void q_columnview_qbase_set_model(void* self, void* model);
 /// ``` QColumnView* self, QItemSelectionModel* selectionModel ```
 void q_columnview_set_selection_model(void* self, void* selectionModel);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#setSelectionModel)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QColumnView* self, void (*slot)(QColumnView*, QItemSelectionModel*) ```
 void q_columnview_on_set_selection_model(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#setSelectionModel)
+///
 /// Base class method implementation
 ///
 /// ``` QColumnView* self, QItemSelectionModel* selectionModel ```
@@ -198,11 +201,15 @@ void q_columnview_qbase_set_selection_model(void* self, void* selectionModel);
 /// ``` QColumnView* self, QModelIndex* index ```
 void q_columnview_set_root_index(void* self, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#setRootIndex)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QColumnView* self, void (*slot)(QColumnView*, QModelIndex*) ```
 void q_columnview_on_set_root_index(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#setRootIndex)
+///
 /// Base class method implementation
 ///
 /// ``` QColumnView* self, QModelIndex* index ```
@@ -213,11 +220,15 @@ void q_columnview_qbase_set_root_index(void* self, void* index);
 /// ``` QColumnView* self ```
 void q_columnview_select_all(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#selectAll)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QColumnView* self, void (*slot)() ```
 void q_columnview_on_select_all(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#selectAll)
+///
 /// Base class method implementation
 ///
 /// ``` QColumnView* self ```
@@ -245,8 +256,8 @@ void q_columnview_set_preview_widget(void* self, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#setColumnWidths)
 ///
-/// ``` QColumnView* self, int* list[] ```
-void q_columnview_set_column_widths(void* self, int* list[]);
+/// ``` QColumnView* self, libqt_list /* of int */ list ```
+void q_columnview_set_column_widths(void* self, libqt_list list);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#columnWidths)
 ///
@@ -258,11 +269,15 @@ libqt_list /* of int */ q_columnview_column_widths(void* self);
 /// ``` QColumnView* self, QModelIndex* index ```
 bool q_columnview_is_index_hidden(void* self, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#isIndexHidden)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QColumnView* self, bool (*slot)(QColumnView*, QModelIndex*) ```
 void q_columnview_on_is_index_hidden(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#isIndexHidden)
+///
 /// Base class method implementation
 ///
 /// ``` QColumnView* self, QModelIndex* index ```
@@ -273,11 +288,15 @@ bool q_columnview_qbase_is_index_hidden(void* self, void* index);
 /// ``` QColumnView* self, enum QAbstractItemView__CursorAction cursorAction, int modifiers ```
 QModelIndex* q_columnview_move_cursor(void* self, int64_t cursorAction, int64_t modifiers);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#moveCursor)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QColumnView* self, QModelIndex* (*slot)(QColumnView*, enum QAbstractItemView__CursorAction, int) ```
 void q_columnview_on_move_cursor(void* self, QModelIndex* (*slot)(void*, int64_t, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#moveCursor)
+///
 /// Base class method implementation
 ///
 /// ``` QColumnView* self, enum QAbstractItemView__CursorAction cursorAction, int modifiers ```
@@ -288,11 +307,15 @@ QModelIndex* q_columnview_qbase_move_cursor(void* self, int64_t cursorAction, in
 /// ``` QColumnView* self, QResizeEvent* event ```
 void q_columnview_resize_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#resizeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QColumnView* self, void (*slot)(QColumnView*, QResizeEvent*) ```
 void q_columnview_on_resize_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#resizeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QColumnView* self, QResizeEvent* event ```
@@ -303,11 +326,15 @@ void q_columnview_qbase_resize_event(void* self, void* event);
 /// ``` QColumnView* self, QRect* rect, int command ```
 void q_columnview_set_selection(void* self, void* rect, int64_t command);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#setSelection)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QColumnView* self, void (*slot)(QColumnView*, QRect*, int) ```
 void q_columnview_on_set_selection(void* self, void (*slot)(void*, void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#setSelection)
+///
 /// Base class method implementation
 ///
 /// ``` QColumnView* self, QRect* rect, int command ```
@@ -318,11 +345,15 @@ void q_columnview_qbase_set_selection(void* self, void* rect, int64_t command);
 /// ``` QColumnView* self, QItemSelection* selection ```
 QRegion* q_columnview_visual_region_for_selection(void* self, void* selection);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#visualRegionForSelection)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QColumnView* self, QRegion* (*slot)(QColumnView*, QItemSelection*) ```
 void q_columnview_on_visual_region_for_selection(void* self, QRegion* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#visualRegionForSelection)
+///
 /// Base class method implementation
 ///
 /// ``` QColumnView* self, QItemSelection* selection ```
@@ -333,11 +364,15 @@ QRegion* q_columnview_qbase_visual_region_for_selection(void* self, void* select
 /// ``` QColumnView* self ```
 int32_t q_columnview_horizontal_offset(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#horizontalOffset)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QColumnView* self, int32_t (*slot)() ```
 void q_columnview_on_horizontal_offset(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#horizontalOffset)
+///
 /// Base class method implementation
 ///
 /// ``` QColumnView* self ```
@@ -348,11 +383,15 @@ int32_t q_columnview_qbase_horizontal_offset(void* self);
 /// ``` QColumnView* self ```
 int32_t q_columnview_vertical_offset(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#verticalOffset)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QColumnView* self, int32_t (*slot)() ```
 void q_columnview_on_vertical_offset(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#verticalOffset)
+///
 /// Base class method implementation
 ///
 /// ``` QColumnView* self ```
@@ -363,11 +402,15 @@ int32_t q_columnview_qbase_vertical_offset(void* self);
 /// ``` QColumnView* self, QModelIndex* parent, int start, int end ```
 void q_columnview_rows_inserted(void* self, void* parent, int start, int end);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#rowsInserted)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QColumnView* self, void (*slot)(QColumnView*, QModelIndex*, int, int) ```
 void q_columnview_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#rowsInserted)
+///
 /// Base class method implementation
 ///
 /// ``` QColumnView* self, QModelIndex* parent, int start, int end ```
@@ -378,11 +421,15 @@ void q_columnview_qbase_rows_inserted(void* self, void* parent, int start, int e
 /// ``` QColumnView* self, QModelIndex* current, QModelIndex* previous ```
 void q_columnview_current_changed(void* self, void* current, void* previous);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#currentChanged)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QColumnView* self, void (*slot)(QColumnView*, QModelIndex*, QModelIndex*) ```
 void q_columnview_on_current_changed(void* self, void (*slot)(void*, void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#currentChanged)
+///
 /// Base class method implementation
 ///
 /// ``` QColumnView* self, QModelIndex* current, QModelIndex* previous ```
@@ -393,11 +440,15 @@ void q_columnview_qbase_current_changed(void* self, void* current, void* previou
 /// ``` QColumnView* self, int dx, int dy ```
 void q_columnview_scroll_contents_by(void* self, int dx, int dy);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#scrollContentsBy)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QColumnView* self, void (*slot)(QColumnView*, int, int) ```
 void q_columnview_on_scroll_contents_by(void* self, void (*slot)(void*, int, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#scrollContentsBy)
+///
 /// Base class method implementation
 ///
 /// ``` QColumnView* self, int dx, int dy ```
@@ -408,11 +459,15 @@ void q_columnview_qbase_scroll_contents_by(void* self, int dx, int dy);
 /// ``` QColumnView* self, QModelIndex* rootIndex ```
 QAbstractItemView* q_columnview_create_column(void* self, void* rootIndex);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#createColumn)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QColumnView* self, QAbstractItemView* (*slot)(QColumnView*, QModelIndex*) ```
 void q_columnview_on_create_column(void* self, QAbstractItemView* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#createColumn)
+///
 /// Base class method implementation
 ///
 /// ``` QColumnView* self, QModelIndex* rootIndex ```
@@ -423,11 +478,15 @@ QAbstractItemView* q_columnview_qbase_create_column(void* self, void* rootIndex)
 /// ``` QColumnView* self, QAbstractItemView* column ```
 void q_columnview_initialize_column(void* self, void* column);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#initializeColumn)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QColumnView* self, void (*slot)(QColumnView*, QAbstractItemView*) ```
 void q_columnview_on_initialize_column(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#initializeColumn)
+///
 /// Base class method implementation
 ///
 /// ``` QColumnView* self, QAbstractItemView* column ```
@@ -851,6 +910,8 @@ void q_columnview_pressed(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#pressed)
+///
 /// ``` QColumnView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
 void q_columnview_on_pressed(void* self, void (*slot)(void*, void*));
 
@@ -862,6 +923,8 @@ void q_columnview_on_pressed(void* self, void (*slot)(void*, void*));
 void q_columnview_clicked(void* self, void* index);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#clicked)
 ///
 /// ``` QColumnView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
 void q_columnview_on_clicked(void* self, void (*slot)(void*, void*));
@@ -875,6 +938,8 @@ void q_columnview_double_clicked(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doubleClicked)
+///
 /// ``` QColumnView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
 void q_columnview_on_double_clicked(void* self, void (*slot)(void*, void*));
 
@@ -886,6 +951,8 @@ void q_columnview_on_double_clicked(void* self, void (*slot)(void*, void*));
 void q_columnview_activated(void* self, void* index);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#activated)
 ///
 /// ``` QColumnView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
 void q_columnview_on_activated(void* self, void (*slot)(void*, void*));
@@ -899,6 +966,8 @@ void q_columnview_entered(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#entered)
+///
 /// ``` QColumnView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
 void q_columnview_on_entered(void* self, void (*slot)(void*, void*));
 
@@ -911,6 +980,8 @@ void q_columnview_viewport_entered(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportEntered)
+///
 /// ``` QColumnView* self, void (*slot)(QAbstractItemView*) ```
 void q_columnview_on_viewport_entered(void* self, void (*slot)(void*));
 
@@ -922,6 +993,8 @@ void q_columnview_on_viewport_entered(void* self, void (*slot)(void*));
 void q_columnview_icon_size_changed(void* self, void* size);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#iconSizeChanged)
 ///
 /// ``` QColumnView* self, void (*slot)(QAbstractItemView*, QSize*) ```
 void q_columnview_on_icon_size_changed(void* self, void (*slot)(void*, void*));
@@ -1260,7 +1333,7 @@ QRect* q_columnview_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QColumnView* self ```
-QRect* q_columnview_geometry(void* self);
+const QRect* q_columnview_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1617,7 +1690,7 @@ QWidget* q_columnview_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QColumnView* self ```
-QPalette* q_columnview_palette(void* self);
+const QPalette* q_columnview_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1659,7 +1732,7 @@ int64_t q_columnview_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QColumnView* self ```
-QFont* q_columnview_font(void* self);
+const QFont* q_columnview_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2652,15 +2725,15 @@ void q_columnview_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QColumnView* self, QAction* actions[] ```
-void q_columnview_add_actions(void* self, void* actions[]);
+/// ``` QColumnView* self, libqt_list /* of QAction* */ actions ```
+void q_columnview_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QColumnView* self, QAction* before, QAction* actions[] ```
-void q_columnview_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QColumnView* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_columnview_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2860,6 +2933,8 @@ void q_columnview_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QColumnView* self, void (*slot)(QWidget*, const char*) ```
 void q_columnview_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2871,6 +2946,8 @@ void q_columnview_on_window_title_changed(void* self, void (*slot)(void*, const 
 void q_columnview_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QColumnView* self, void (*slot)(QWidget*, QIcon*) ```
 void q_columnview_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -2884,6 +2961,8 @@ void q_columnview_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QColumnView* self, void (*slot)(QWidget*, const char*) ```
 void q_columnview_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2895,6 +2974,8 @@ void q_columnview_on_window_icon_text_changed(void* self, void (*slot)(void*, co
 void q_columnview_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QColumnView* self, void (*slot)(QWidget*, QPoint*) ```
 void q_columnview_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -3100,7 +3181,7 @@ void q_columnview_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QColumnView* self ```
-libqt_list /* of QObject* */ q_columnview_children(void* self);
+const libqt_list /* of QObject* */ q_columnview_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -3191,7 +3272,7 @@ QBindingStorage* q_columnview_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QColumnView* self ```
-QBindingStorage* q_columnview_binding_storage2(void* self);
+const QBindingStorage* q_columnview_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -3201,6 +3282,8 @@ QBindingStorage* q_columnview_binding_storage2(void* self);
 void q_columnview_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QColumnView* self, void (*slot)(QObject*) ```
 void q_columnview_on_destroyed(void* self, void (*slot)(void*));
@@ -3255,6 +3338,8 @@ QMetaObject__Connection* q_columnview_connect4(void* self, void* sender, const c
 void q_columnview_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QColumnView* self, void (*slot)(QObject*, QObject*) ```
 void q_columnview_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -3354,12 +3439,16 @@ void q_columnview_keyboard_search(void* self, const char* search);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#keyboardSearch)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, const char* search ```
 void q_columnview_qbase_keyboard_search(void* self, const char* search);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#keyboardSearch)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3377,12 +3466,16 @@ int32_t q_columnview_size_hint_for_row(void* self, int row);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForRow)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, int row ```
 int32_t q_columnview_qbase_size_hint_for_row(void* self, int row);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForRow)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3400,12 +3493,16 @@ int32_t q_columnview_size_hint_for_column(void* self, int column);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForColumn)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, int column ```
 int32_t q_columnview_qbase_size_hint_for_column(void* self, int column);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForColumn)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3423,12 +3520,16 @@ QAbstractItemDelegate* q_columnview_item_delegate_for_index(void* self, void* in
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QModelIndex* index ```
 QAbstractItemDelegate* q_columnview_qbase_item_delegate_for_index(void* self, void* index);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3446,12 +3547,16 @@ QVariant* q_columnview_input_method_query(void* self, int64_t query);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, enum Qt__InputMethodQuery query ```
 QVariant* q_columnview_qbase_input_method_query(void* self, int64_t query);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3469,12 +3574,16 @@ void q_columnview_reset(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#reset)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 void q_columnview_qbase_reset(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#reset)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3492,12 +3601,16 @@ void q_columnview_do_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doItemsLayout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 void q_columnview_qbase_do_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doItemsLayout)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3510,22 +3623,26 @@ void q_columnview_on_do_items_layout(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QColumnView* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* roles[] ```
-void q_columnview_data_changed(void* self, void* topLeft, void* bottomRight, int* roles[]);
+/// ``` QColumnView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles ```
+void q_columnview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dataChanged)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QColumnView* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* roles[] ```
-void q_columnview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, int* roles[]);
+/// ``` QColumnView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles ```
+void q_columnview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dataChanged)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QColumnView* self, void (*slot)(QColumnView*, QModelIndex*, QModelIndex*, int*[]) ```
-void q_columnview_on_data_changed(void* self, void (*slot)(void*, void*, void*, int*));
+/// ``` QColumnView* self, void (*slot)(QColumnView*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
+void q_columnview_on_data_changed(void* self, void (*slot)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemView
 ///
@@ -3538,12 +3655,16 @@ void q_columnview_rows_about_to_be_removed(void* self, void* parent, int start, 
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#rowsAboutToBeRemoved)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QModelIndex* parent, int start, int end ```
 void q_columnview_qbase_rows_about_to_be_removed(void* self, void* parent, int start, int end);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#rowsAboutToBeRemoved)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3561,12 +3682,16 @@ void q_columnview_selection_changed(void* self, void* selected, void* deselected
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectionChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QItemSelection* selected, QItemSelection* deselected ```
 void q_columnview_qbase_selection_changed(void* self, void* selected, void* deselected);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectionChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3584,12 +3709,16 @@ void q_columnview_update_editor_data(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 void q_columnview_qbase_update_editor_data(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3607,12 +3736,16 @@ void q_columnview_update_editor_geometries(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorGeometries)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 void q_columnview_qbase_update_editor_geometries(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorGeometries)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3630,12 +3763,16 @@ void q_columnview_update_geometries(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#updateGeometries)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 void q_columnview_qbase_update_geometries(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#updateGeometries)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3653,12 +3790,16 @@ void q_columnview_vertical_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollbarAction)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, int action ```
 void q_columnview_qbase_vertical_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollbarAction)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3676,12 +3817,16 @@ void q_columnview_horizontal_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollbarAction)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, int action ```
 void q_columnview_qbase_horizontal_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollbarAction)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3699,12 +3844,16 @@ void q_columnview_vertical_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollbarValueChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, int value ```
 void q_columnview_qbase_vertical_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollbarValueChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3722,12 +3871,16 @@ void q_columnview_horizontal_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollbarValueChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, int value ```
 void q_columnview_qbase_horizontal_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollbarValueChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3745,12 +3898,16 @@ void q_columnview_close_editor(void* self, void* editor, int64_t hint);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#closeEditor)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QWidget* editor, enum QAbstractItemDelegate__EndEditHint hint ```
 void q_columnview_qbase_close_editor(void* self, void* editor, int64_t hint);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#closeEditor)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3768,12 +3925,16 @@ void q_columnview_commit_data(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#commitData)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QWidget* editor ```
 void q_columnview_qbase_commit_data(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#commitData)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3791,12 +3952,16 @@ void q_columnview_editor_destroyed(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#editorDestroyed)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QObject* editor ```
 void q_columnview_qbase_editor_destroyed(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#editorDestroyed)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3814,12 +3979,16 @@ libqt_list /* of QModelIndex* */ q_columnview_selected_indexes(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectedIndexes)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 libqt_list /* of QModelIndex* */ q_columnview_qbase_selected_indexes(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectedIndexes)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3837,12 +4006,16 @@ bool q_columnview_edit2(void* self, void* index, int64_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#edit)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QModelIndex* index, enum QAbstractItemView__EditTrigger trigger, QEvent* event ```
 bool q_columnview_qbase_edit2(void* self, void* index, int64_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#edit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3860,12 +4033,16 @@ int64_t q_columnview_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectionCommand)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QModelIndex* index, QEvent* event ```
 int64_t q_columnview_qbase_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectionCommand)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3883,12 +4060,16 @@ void q_columnview_start_drag(void* self, int64_t supportedActions);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#startDrag)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, int supportedActions ```
 void q_columnview_qbase_start_drag(void* self, int64_t supportedActions);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#startDrag)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3906,12 +4087,16 @@ void q_columnview_init_view_item_option(void* self, void* option);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#initViewItemOption)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QStyleOptionViewItem* option ```
 void q_columnview_qbase_init_view_item_option(void* self, void* option);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#initViewItemOption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3929,12 +4114,16 @@ bool q_columnview_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, bool next ```
 bool q_columnview_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3952,12 +4141,16 @@ bool q_columnview_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QEvent* event ```
 bool q_columnview_qbase_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3975,12 +4168,16 @@ bool q_columnview_viewport_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QEvent* event ```
 bool q_columnview_qbase_viewport_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3998,12 +4195,16 @@ void q_columnview_mouse_press_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#mousePressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QMouseEvent* event ```
 void q_columnview_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4021,12 +4222,16 @@ void q_columnview_mouse_move_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QMouseEvent* event ```
 void q_columnview_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4044,12 +4249,16 @@ void q_columnview_mouse_release_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#mouseReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QMouseEvent* event ```
 void q_columnview_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4067,12 +4276,16 @@ void q_columnview_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QMouseEvent* event ```
 void q_columnview_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4090,12 +4303,16 @@ void q_columnview_drag_enter_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QDragEnterEvent* event ```
 void q_columnview_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4113,12 +4330,16 @@ void q_columnview_drag_move_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QDragMoveEvent* event ```
 void q_columnview_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4136,12 +4357,16 @@ void q_columnview_drag_leave_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QDragLeaveEvent* event ```
 void q_columnview_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4159,12 +4384,16 @@ void q_columnview_drop_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QDropEvent* event ```
 void q_columnview_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4182,12 +4411,16 @@ void q_columnview_focus_in_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QFocusEvent* event ```
 void q_columnview_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4205,12 +4438,16 @@ void q_columnview_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QFocusEvent* event ```
 void q_columnview_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4228,12 +4465,16 @@ void q_columnview_key_press_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QKeyEvent* event ```
 void q_columnview_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4251,12 +4492,16 @@ void q_columnview_timer_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QTimerEvent* event ```
 void q_columnview_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4274,12 +4519,16 @@ void q_columnview_input_method_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QInputMethodEvent* event ```
 void q_columnview_qbase_input_method_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4297,12 +4546,16 @@ bool q_columnview_event_filter(void* self, void* object, void* event);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QObject* object, QEvent* event ```
 bool q_columnview_qbase_event_filter(void* self, void* object, void* event);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4320,12 +4573,16 @@ QSize* q_columnview_viewport_size_hint(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 QSize* q_columnview_qbase_viewport_size_hint(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4343,12 +4600,16 @@ QSize* q_columnview_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 QSize* q_columnview_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4366,12 +4627,16 @@ void q_columnview_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QWidget* viewport ```
 void q_columnview_qbase_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4389,12 +4654,16 @@ void q_columnview_paint_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#paintEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QPaintEvent* param1 ```
 void q_columnview_qbase_paint_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#paintEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4412,12 +4681,16 @@ void q_columnview_wheel_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QWheelEvent* param1 ```
 void q_columnview_qbase_wheel_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4435,12 +4708,16 @@ void q_columnview_context_menu_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QContextMenuEvent* param1 ```
 void q_columnview_qbase_context_menu_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4458,12 +4735,16 @@ void q_columnview_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#changeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QEvent* param1 ```
 void q_columnview_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#changeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4481,12 +4762,16 @@ void q_columnview_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QStyleOptionFrame* option ```
 void q_columnview_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4504,12 +4789,16 @@ int32_t q_columnview_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 int32_t q_columnview_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4527,12 +4816,16 @@ void q_columnview_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, bool visible ```
 void q_columnview_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4550,12 +4843,16 @@ int32_t q_columnview_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, int param1 ```
 int32_t q_columnview_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4573,12 +4870,16 @@ bool q_columnview_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 bool q_columnview_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4596,12 +4897,16 @@ QPaintEngine* q_columnview_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 QPaintEngine* q_columnview_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4619,12 +4924,16 @@ void q_columnview_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QKeyEvent* event ```
 void q_columnview_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4642,12 +4951,16 @@ void q_columnview_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QEnterEvent* event ```
 void q_columnview_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4665,12 +4978,16 @@ void q_columnview_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QEvent* event ```
 void q_columnview_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4688,12 +5005,16 @@ void q_columnview_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QMoveEvent* event ```
 void q_columnview_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4711,12 +5032,16 @@ void q_columnview_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QCloseEvent* event ```
 void q_columnview_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4734,12 +5059,16 @@ void q_columnview_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QTabletEvent* event ```
 void q_columnview_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4757,12 +5086,16 @@ void q_columnview_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QActionEvent* event ```
 void q_columnview_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4780,12 +5113,16 @@ void q_columnview_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QShowEvent* event ```
 void q_columnview_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4803,12 +5140,16 @@ void q_columnview_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QHideEvent* event ```
 void q_columnview_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4826,12 +5167,16 @@ bool q_columnview_native_event(void* self, const char* eventType, void* message,
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, const char* eventType, void* message, intptr_t* result ```
 bool q_columnview_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4849,12 +5194,16 @@ int32_t q_columnview_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_columnview_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4872,12 +5221,16 @@ void q_columnview_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QPainter* painter ```
 void q_columnview_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4895,12 +5248,16 @@ QPaintDevice* q_columnview_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QPoint* offset ```
 QPaintDevice* q_columnview_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4918,12 +5275,16 @@ QPainter* q_columnview_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 QPainter* q_columnview_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4941,12 +5302,16 @@ void q_columnview_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QChildEvent* event ```
 void q_columnview_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4964,12 +5329,16 @@ void q_columnview_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QEvent* event ```
 void q_columnview_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4987,12 +5356,16 @@ void q_columnview_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QMetaMethod* signal ```
 void q_columnview_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5010,12 +5383,16 @@ void q_columnview_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QMetaMethod* signal ```
 void q_columnview_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5033,12 +5410,16 @@ int64_t q_columnview_state(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#state)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 int64_t q_columnview_qbase_state(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#state)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5056,12 +5437,16 @@ void q_columnview_set_state(void* self, int64_t state);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setState)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, enum QAbstractItemView__State state ```
 void q_columnview_qbase_set_state(void* self, int64_t state);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setState)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5079,12 +5464,16 @@ void q_columnview_schedule_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#scheduleDelayedItemsLayout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 void q_columnview_qbase_schedule_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#scheduleDelayedItemsLayout)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5102,12 +5491,16 @@ void q_columnview_execute_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#executeDelayedItemsLayout)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 void q_columnview_qbase_execute_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#executeDelayedItemsLayout)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5125,12 +5518,16 @@ void q_columnview_set_dirty_region(void* self, void* region);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setDirtyRegion)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QRegion* region ```
 void q_columnview_qbase_set_dirty_region(void* self, void* region);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setDirtyRegion)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5148,12 +5545,16 @@ void q_columnview_scroll_dirty_region(void* self, int dx, int dy);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#scrollDirtyRegion)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, int dx, int dy ```
 void q_columnview_qbase_scroll_dirty_region(void* self, int dx, int dy);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#scrollDirtyRegion)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5171,12 +5572,16 @@ QPoint* q_columnview_dirty_region_offset(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dirtyRegionOffset)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 QPoint* q_columnview_qbase_dirty_region_offset(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dirtyRegionOffset)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5194,12 +5599,16 @@ void q_columnview_start_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#startAutoScroll)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 void q_columnview_qbase_start_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#startAutoScroll)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5217,12 +5626,16 @@ void q_columnview_stop_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#stopAutoScroll)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 void q_columnview_qbase_stop_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#stopAutoScroll)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5240,12 +5653,16 @@ void q_columnview_do_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doAutoScroll)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 void q_columnview_qbase_do_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doAutoScroll)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5263,12 +5680,16 @@ int64_t q_columnview_drop_indicator_position(void* self);
 
 /// Inherited from QAbstractItemView
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dropIndicatorPosition)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 int64_t q_columnview_qbase_drop_indicator_position(void* self);
 
 /// Inherited from QAbstractItemView
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dropIndicatorPosition)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5286,12 +5707,16 @@ void q_columnview_set_viewport_margins(void* self, int left, int top, int right,
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, int left, int top, int right, int bottom ```
 void q_columnview_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5309,12 +5734,16 @@ QMargins* q_columnview_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 QMargins* q_columnview_qbase_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5332,12 +5761,16 @@ void q_columnview_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QPainter* param1 ```
 void q_columnview_qbase_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5355,12 +5788,16 @@ void q_columnview_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 void q_columnview_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5378,12 +5815,16 @@ void q_columnview_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 void q_columnview_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5401,12 +5842,16 @@ void q_columnview_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 void q_columnview_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5424,12 +5869,16 @@ bool q_columnview_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 bool q_columnview_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5447,12 +5896,16 @@ bool q_columnview_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 bool q_columnview_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5470,12 +5923,16 @@ QObject* q_columnview_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 QObject* q_columnview_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5493,12 +5950,16 @@ int32_t q_columnview_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self ```
 int32_t q_columnview_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5516,12 +5977,16 @@ int32_t q_columnview_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, const char* signal ```
 int32_t q_columnview_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5539,6 +6004,8 @@ bool q_columnview_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QColumnView* self, QMetaMethod* signal ```
@@ -5546,11 +6013,24 @@ bool q_columnview_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QColumnView* self, bool (*slot)(QColumnView*, QMetaMethod*) ```
 void q_columnview_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QColumnView* self, void (*slot)(QObject*, const char*) ```
+void q_columnview_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#dtor.QColumnView)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QColumnView* self ```

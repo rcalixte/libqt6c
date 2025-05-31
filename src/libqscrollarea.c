@@ -1,43 +1,18 @@
 #include "libqabstractscrollarea.hpp"
-#include "libqaction.hpp"
 #include "libqevent.hpp"
-#include "libqanystringview.hpp"
-#include "libqbackingstore.hpp"
-#include "libqbindingstorage.hpp"
-#include "libqbitmap.hpp"
-#include "libqcursor.hpp"
-#include "libqfont.hpp"
-#include "libqfontinfo.hpp"
-#include "libqfontmetrics.hpp"
 #include "libqframe.hpp"
-#include "libqgraphicseffect.hpp"
-#include "libqgraphicsproxywidget.hpp"
-#include "libqicon.hpp"
-#include "libqkeysequence.hpp"
-#include "libqlayout.hpp"
-#include "libqlocale.hpp"
 #include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
 #include "libqpainter.hpp"
-#include "libqpalette.hpp"
-#include "libqpixmap.hpp"
 #include "libqpoint.hpp"
-#include "libqrect.hpp"
-#include "libqregion.hpp"
-#include "libqscreen.hpp"
-#include "libqscrollbar.hpp"
 #include "libqsize.hpp"
-#include "libqsizepolicy.hpp"
 #include <string.h>
-#include "libqstyle.hpp"
 #include "libqstyleoption.hpp"
-#include "libqthread.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqwindow.hpp"
 #include "libqcoreevent.hpp"
 #include "libqscrollarea.hpp"
 #include "libqscrollarea.h"
@@ -50,7 +25,7 @@ QScrollArea* q_scrollarea_new2() {
     return QScrollArea_new2();
 }
 
-QMetaObject* q_scrollarea_meta_object(void* self) {
+const QMetaObject* q_scrollarea_meta_object(void* self) {
     return QScrollArea_MetaObject((QScrollArea*)self);
 }
 
@@ -416,7 +391,7 @@ QRect* q_scrollarea_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_scrollarea_geometry(void* self) {
+const QRect* q_scrollarea_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -620,7 +595,7 @@ QWidget* q_scrollarea_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_scrollarea_palette(void* self) {
+const QPalette* q_scrollarea_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -644,7 +619,7 @@ int64_t q_scrollarea_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_scrollarea_font(void* self) {
+const QFont* q_scrollarea_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -1249,30 +1224,12 @@ void q_scrollarea_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_scrollarea_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_scrollarea_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_scrollarea_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_scrollarea_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_scrollarea_insert_action(void* self, void* before, void* action) {
@@ -1492,8 +1449,7 @@ const char* q_scrollarea_object_name(void* self) {
 }
 
 void q_scrollarea_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_scrollarea_is_widget_type(void* self) {
@@ -1532,7 +1488,7 @@ void q_scrollarea_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_scrollarea_children(void* self) {
+const libqt_list /* of QObject* */ q_scrollarea_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1595,7 +1551,7 @@ QBindingStorage* q_scrollarea_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_scrollarea_binding_storage2(void* self) {
+const QBindingStorage* q_scrollarea_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2369,6 +2325,10 @@ bool q_scrollarea_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_scrollarea_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QScrollArea_OnIsSignalConnected((QScrollArea*)self, (intptr_t)slot);
+}
+
+void q_scrollarea_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_scrollarea_delete(void* self) {

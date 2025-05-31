@@ -64,18 +64,20 @@ uint32_t q_colormap_pixel(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolormap.html#colorAt)
 ///
 /// ``` QColormap* self, uint32_t pixel ```
-QColor* q_colormap_color_at(void* self, uint32_t pixel);
+const QColor* q_colormap_color_at(void* self, uint32_t pixel);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolormap.html#colormap)
 ///
 /// ``` QColormap* self ```
-libqt_list /* of QColor* */ q_colormap_colormap(void* self);
+const libqt_list /* of QColor* */ q_colormap_colormap(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolormap.html#instance)
 ///
 /// ``` int screen ```
 QColormap* q_colormap_instance1(int screen);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolormap.html#dtor.QColormap)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QColormap* self ```

@@ -17,12 +17,12 @@
 /// q_disambiguated_t_new constructs a new Qt::Disambiguated_t object.
 ///
 /// ``` Disambiguated_t* other ```
-Disambiguated_t* q_disambiguated_t_new(Disambiguated_t* other);
+Disambiguated_t* q_disambiguated_t_new(void* other);
 
 /// q_disambiguated_t_new2 constructs a new Qt::Disambiguated_t object and invalidates the source Qt::Disambiguated_t object.
 ///
 /// ``` Disambiguated_t* other ```
-Disambiguated_t* q_disambiguated_t_new2(Disambiguated_t* other);
+Disambiguated_t* q_disambiguated_t_new2(void* other);
 
 /// q_disambiguated_t_new3 constructs a new Qt::Disambiguated_t object.
 ///
@@ -32,7 +32,7 @@ Disambiguated_t* q_disambiguated_t_new3();
 /// q_disambiguated_t_new4 constructs a new Qt::Disambiguated_t object.
 ///
 /// ``` Disambiguated_t* param1 ```
-Disambiguated_t* q_disambiguated_t_new4(Disambiguated_t* param1);
+Disambiguated_t* q_disambiguated_t_new4(void* param1);
 
 /// q_disambiguated_t_copy_assign shallow copies `other` into `self`.
 ///
@@ -44,6 +44,8 @@ void q_disambiguated_t_copy_assign(void* self, void* other);
 /// ``` Disambiguated_t* self, Disambiguated_t* other ```
 void q_disambiguated_t_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qt::disambiguated_t.html#dtor.Qt::Disambiguated_t)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` Disambiguated_t* self ```
@@ -76,6 +78,8 @@ void q_internal_move_assign(void* self, void* other);
 /// ``` enum QInternal__Callback param1, void* param2 ```
 bool q_internal_activate_callbacks(int64_t param1, void* param2);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinternal.html#dtor.QInternal)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QInternal* self ```
@@ -163,6 +167,8 @@ int32_t q_keycombination_to_combined(void* self);
 /// ``` QKeyCombination* self ```
 int32_t q_keycombination_to_int(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeycombination.html#dtor.QKeyCombination)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QKeyCombination* self ```

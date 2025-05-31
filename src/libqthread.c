@@ -1,12 +1,9 @@
 #include "libqabstracteventdispatcher.hpp"
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqdeadlinetimer.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include <string.h>
-#include "libqvariant.hpp"
 #include "libqcoreevent.hpp"
 #include "libqthread.hpp"
 #include "libqthread.h"
@@ -19,7 +16,7 @@ QThread* q_thread_new2(void* parent) {
     return QThread_new2((QObject*)parent);
 }
 
-QMetaObject* q_thread_meta_object(void* self) {
+const QMetaObject* q_thread_meta_object(void* self) {
     return QThread_MetaObject((QThread*)self);
 }
 
@@ -212,8 +209,7 @@ const char* q_thread_object_name(void* self) {
 }
 
 void q_thread_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_thread_is_widget_type(void* self) {
@@ -252,7 +248,7 @@ void q_thread_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_thread_children(void* self) {
+const libqt_list /* of QObject* */ q_thread_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -319,7 +315,7 @@ QBindingStorage* q_thread_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_thread_binding_storage2(void* self) {
+const QBindingStorage* q_thread_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -481,6 +477,18 @@ bool q_thread_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_thread_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QThread_OnIsSignalConnected((QThread*)self, (intptr_t)slot);
+}
+
+void q_thread_on_started(void* self, void (*slot)(void*)) {
+    QThread_Connect_Started((QThread*)self, (intptr_t)slot);
+}
+
+void q_thread_on_finished(void* self, void (*slot)(void*)) {
+    QThread_Connect_Finished((QThread*)self, (intptr_t)slot);
+}
+
+void q_thread_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_thread_delete(void* self) {

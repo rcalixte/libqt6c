@@ -1,40 +1,15 @@
-#include "libqaction.hpp"
 #include "libqevent.hpp"
-#include "libqanystringview.hpp"
-#include "libqbackingstore.hpp"
-#include "libqbindingstorage.hpp"
-#include "libqbitmap.hpp"
-#include "libqcursor.hpp"
-#include "libqfont.hpp"
-#include "libqfontinfo.hpp"
-#include "libqfontmetrics.hpp"
-#include "libqgraphicseffect.hpp"
-#include "libqgraphicsproxywidget.hpp"
-#include "libqicon.hpp"
-#include "libqkeysequence.hpp"
-#include "libqlayout.hpp"
-#include "libqlocale.hpp"
-#include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
 #include "libqpainter.hpp"
-#include "libqpalette.hpp"
-#include "libqpixmap.hpp"
 #include "libqpoint.hpp"
-#include "libqrect.hpp"
-#include "libqregion.hpp"
-#include "libqscreen.hpp"
 #include "libqsize.hpp"
-#include "libqsizepolicy.hpp"
 #include <string.h>
-#include "libqstyle.hpp"
 #include "libqstyleoption.hpp"
-#include "libqthread.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqwindow.hpp"
 #include "libqcoreevent.hpp"
 #include "libqfocusframe.hpp"
 #include "libqfocusframe.h"
@@ -47,7 +22,7 @@ QFocusFrame* q_focusframe_new2() {
     return QFocusFrame_new2();
 }
 
-QMetaObject* q_focusframe_meta_object(void* self) {
+const QMetaObject* q_focusframe_meta_object(void* self) {
     return QFocusFrame_MetaObject((QFocusFrame*)self);
 }
 
@@ -212,7 +187,7 @@ QRect* q_focusframe_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_focusframe_geometry(void* self) {
+const QRect* q_focusframe_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -416,7 +391,7 @@ QWidget* q_focusframe_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_focusframe_palette(void* self) {
+const QPalette* q_focusframe_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -440,7 +415,7 @@ int64_t q_focusframe_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_focusframe_font(void* self) {
+const QFont* q_focusframe_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -1045,30 +1020,12 @@ void q_focusframe_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_focusframe_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_focusframe_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_focusframe_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_focusframe_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_focusframe_insert_action(void* self, void* before, void* action) {
@@ -1288,8 +1245,7 @@ const char* q_focusframe_object_name(void* self) {
 }
 
 void q_focusframe_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_focusframe_is_widget_type(void* self) {
@@ -1328,7 +1284,7 @@ void q_focusframe_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_focusframe_children(void* self) {
+const libqt_list /* of QObject* */ q_focusframe_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1391,7 +1347,7 @@ QBindingStorage* q_focusframe_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_focusframe_binding_storage2(void* self) {
+const QBindingStorage* q_focusframe_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2117,6 +2073,10 @@ bool q_focusframe_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_focusframe_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QFocusFrame_OnIsSignalConnected((QFocusFrame*)self, (intptr_t)slot);
+}
+
+void q_focusframe_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_focusframe_delete(void* self) {

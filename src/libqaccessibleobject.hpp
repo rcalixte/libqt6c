@@ -19,17 +19,9 @@ extern "C" {
 typedef QAccessible::State QAccessible__State;
 #endif
 #else
-typedef struct QAccessibleActionInterface QAccessibleActionInterface;
 typedef struct QAccessibleApplication QAccessibleApplication;
-typedef struct QAccessibleEditableTextInterface QAccessibleEditableTextInterface;
-typedef struct QAccessibleHyperlinkInterface QAccessibleHyperlinkInterface;
-typedef struct QAccessibleImageInterface QAccessibleImageInterface;
 typedef struct QAccessibleInterface QAccessibleInterface;
 typedef struct QAccessibleObject QAccessibleObject;
-typedef struct QAccessibleTableCellInterface QAccessibleTableCellInterface;
-typedef struct QAccessibleTableInterface QAccessibleTableInterface;
-typedef struct QAccessibleTextInterface QAccessibleTextInterface;
-typedef struct QAccessibleValueInterface QAccessibleValueInterface;
 typedef struct QAccessible__State QAccessible__State;
 typedef struct QColor QColor;
 typedef struct QObject QObject;
@@ -42,20 +34,6 @@ QObject* QAccessibleObject_Object(const QAccessibleObject* self);
 QRect* QAccessibleObject_Rect(const QAccessibleObject* self);
 void QAccessibleObject_SetText(QAccessibleObject* self, int t, libqt_string text);
 QAccessibleInterface* QAccessibleObject_ChildAt(const QAccessibleObject* self, int x, int y);
-QWindow* QAccessibleObject_Window(const QAccessibleObject* self);
-libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int  */ QAccessibleObject_Relations(const QAccessibleObject* self, int match);
-QAccessibleInterface* QAccessibleObject_FocusChild(const QAccessibleObject* self);
-QAccessibleInterface* QAccessibleObject_Parent(const QAccessibleObject* self);
-QAccessibleInterface* QAccessibleObject_Child(const QAccessibleObject* self, int index);
-int QAccessibleObject_ChildCount(const QAccessibleObject* self);
-int QAccessibleObject_IndexOfChild(const QAccessibleObject* self, QAccessibleInterface* param1);
-libqt_string QAccessibleObject_Text(const QAccessibleObject* self, int t);
-int QAccessibleObject_Role(const QAccessibleObject* self);
-QAccessible__State* QAccessibleObject_State(const QAccessibleObject* self);
-QColor* QAccessibleObject_ForegroundColor(const QAccessibleObject* self);
-QColor* QAccessibleObject_BackgroundColor(const QAccessibleObject* self);
-void QAccessibleObject_VirtualHook(QAccessibleObject* self, int id, void* data);
-void* QAccessibleObject_InterfaceCast(QAccessibleObject* self, int param1);
 
 QAccessibleApplication* QAccessibleApplication_new();
 QWindow* QAccessibleApplication_Window(const QAccessibleApplication* self);

@@ -627,7 +627,7 @@ const char* q_locale_create_separated_list(void* self, const char* strl[]) {
     for (size_t _i = 0; _i < strl_len; ++_i) {
         strl_qstr[_i] = qstring(strl[_i]);
     }
-    libqt_list strl_list = qstrlist(strl_qstr, strl_len);
+    libqt_list strl_list = qlist(strl_qstr, strl_len);
     libqt_string _str = QLocale_CreateSeparatedList((QLocale*)self, strl_list);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

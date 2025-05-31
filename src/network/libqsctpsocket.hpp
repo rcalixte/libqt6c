@@ -15,14 +15,8 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
 typedef struct QAbstractSocket QAbstractSocket;
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QAuthenticator QAuthenticator;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QEvent QEvent;
 typedef struct QHostAddress QHostAddress;
@@ -30,13 +24,10 @@ typedef struct QIODevice QIODevice;
 typedef struct QIODeviceBase QIODeviceBase;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QNetworkDatagram QNetworkDatagram;
-typedef struct QNetworkProxy QNetworkProxy;
 typedef struct QObject QObject;
 typedef struct QSctpSocket QSctpSocket;
 typedef struct QTcpSocket QTcpSocket;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
@@ -71,6 +62,9 @@ libqt_string QSctpSocket_Tr3(const char* s, const char* c, int n);
 void QSctpSocket_Resume(QSctpSocket* self);
 void QSctpSocket_OnResume(QSctpSocket* self, intptr_t slot);
 void QSctpSocket_QBaseResume(QSctpSocket* self);
+bool QSctpSocket_Bind(QSctpSocket* self, QHostAddress* address, uint16_t port, int mode);
+void QSctpSocket_OnBind(QSctpSocket* self, intptr_t slot);
+bool QSctpSocket_QBaseBind(QSctpSocket* self, QHostAddress* address, uint16_t port, int mode);
 void QSctpSocket_ConnectToHost(QSctpSocket* self, libqt_string hostName, uint16_t port, int mode, int protocol);
 void QSctpSocket_OnConnectToHost(QSctpSocket* self, intptr_t slot);
 void QSctpSocket_QBaseConnectToHost(QSctpSocket* self, libqt_string hostName, uint16_t port, int mode, int protocol);
@@ -158,9 +152,6 @@ void QSctpSocket_QBaseConnectNotify(QSctpSocket* self, QMetaMethod* signal);
 void QSctpSocket_DisconnectNotify(QSctpSocket* self, QMetaMethod* signal);
 void QSctpSocket_OnDisconnectNotify(QSctpSocket* self, intptr_t slot);
 void QSctpSocket_QBaseDisconnectNotify(QSctpSocket* self, QMetaMethod* signal);
-bool QSctpSocket_Bind(QSctpSocket* self, QHostAddress* address, uint16_t port, int mode);
-void QSctpSocket_OnBind(QSctpSocket* self, intptr_t slot);
-bool QSctpSocket_QBaseBind(QSctpSocket* self, QHostAddress* address, uint16_t port, int mode);
 void QSctpSocket_SetSocketState(QSctpSocket* self, int state);
 void QSctpSocket_OnSetSocketState(QSctpSocket* self, intptr_t slot);
 void QSctpSocket_QBaseSetSocketState(QSctpSocket* self, int state);

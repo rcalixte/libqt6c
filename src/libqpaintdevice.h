@@ -98,6 +98,8 @@ int32_t q_paintdevice_depth(void* self);
 ///
 double q_paintdevice_device_pixel_ratio_f_scale();
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#dtor.QPaintDevice)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPaintDevice* self ```

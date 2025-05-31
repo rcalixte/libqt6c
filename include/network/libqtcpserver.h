@@ -12,8 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqanystringview.h"
-#include "../libqbindingstorage.h"
 #include "../libqevent.h"
 #include "libqhostaddress.h"
 #include "../libqmetaobject.h"
@@ -21,8 +19,6 @@
 #include "../libqobject.h"
 #include <string.h>
 #include "libqtcpsocket.h"
-#include "../libqthread.h"
-#include "../libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qtcpserver.html
 
@@ -39,7 +35,7 @@ QTcpServer* q_tcpserver_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QTcpServer* self ```
-QMetaObject* q_tcpserver_meta_object(void* self);
+const QMetaObject* q_tcpserver_meta_object(void* self);
 
 /// ``` QTcpServer* self, const char* param1 ```
 void* q_tcpserver_metacast(void* self, const char* param1);
@@ -127,11 +123,15 @@ bool q_tcpserver_wait_for_new_connection(void* self);
 /// ``` QTcpServer* self ```
 bool q_tcpserver_has_pending_connections(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#hasPendingConnections)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTcpServer* self, bool (*slot)() ```
 void q_tcpserver_on_has_pending_connections(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#hasPendingConnections)
+///
 /// Base class method implementation
 ///
 /// ``` QTcpServer* self ```
@@ -142,11 +142,15 @@ bool q_tcpserver_qbase_has_pending_connections(void* self);
 /// ``` QTcpServer* self ```
 QTcpSocket* q_tcpserver_next_pending_connection(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#nextPendingConnection)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTcpServer* self, QTcpSocket* (*slot)() ```
 void q_tcpserver_on_next_pending_connection(void* self, QTcpSocket* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#nextPendingConnection)
+///
 /// Base class method implementation
 ///
 /// ``` QTcpServer* self ```
@@ -187,11 +191,15 @@ QNetworkProxy* q_tcpserver_proxy(void* self);
 /// ``` QTcpServer* self, intptr_t handle ```
 void q_tcpserver_incoming_connection(void* self, intptr_t handle);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#incomingConnection)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTcpServer* self, void (*slot)(QTcpServer*, intptr_t) ```
 void q_tcpserver_on_incoming_connection(void* self, void (*slot)(void*, intptr_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#incomingConnection)
+///
 /// Base class method implementation
 ///
 /// ``` QTcpServer* self, intptr_t handle ```
@@ -202,11 +210,15 @@ void q_tcpserver_qbase_incoming_connection(void* self, intptr_t handle);
 /// ``` QTcpServer* self, QTcpSocket* socket ```
 void q_tcpserver_add_pending_connection(void* self, void* socket);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#addPendingConnection)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QTcpServer* self, void (*slot)(QTcpServer*, QTcpSocket*) ```
 void q_tcpserver_on_add_pending_connection(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#addPendingConnection)
+///
 /// Base class method implementation
 ///
 /// ``` QTcpServer* self, QTcpSocket* socket ```
@@ -217,6 +229,8 @@ void q_tcpserver_qbase_add_pending_connection(void* self, void* socket);
 /// ``` QTcpServer* self ```
 void q_tcpserver_new_connection(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#newConnection)
+///
 /// ``` QTcpServer* self, void (*slot)(QTcpServer*) ```
 void q_tcpserver_on_new_connection(void* self, void (*slot)(void*));
 
@@ -225,6 +239,8 @@ void q_tcpserver_on_new_connection(void* self, void (*slot)(void*));
 /// ``` QTcpServer* self, enum QAbstractSocket__SocketError socketError ```
 void q_tcpserver_accept_error(void* self, int64_t socketError);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#acceptError)
+///
 /// ``` QTcpServer* self, void (*slot)(QTcpServer*, enum QAbstractSocket__SocketError) ```
 void q_tcpserver_on_accept_error(void* self, void (*slot)(void*, int64_t));
 
@@ -340,7 +356,7 @@ void q_tcpserver_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QTcpServer* self ```
-libqt_list /* of QObject* */ q_tcpserver_children(void* self);
+const libqt_list /* of QObject* */ q_tcpserver_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -438,7 +454,7 @@ QBindingStorage* q_tcpserver_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QTcpServer* self ```
-QBindingStorage* q_tcpserver_binding_storage2(void* self);
+const QBindingStorage* q_tcpserver_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -448,6 +464,8 @@ QBindingStorage* q_tcpserver_binding_storage2(void* self);
 void q_tcpserver_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QTcpServer* self, void (*slot)(QObject*) ```
 void q_tcpserver_on_destroyed(void* self, void (*slot)(void*));
@@ -503,6 +521,8 @@ void q_tcpserver_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QTcpServer* self, void (*slot)(QObject*, QObject*) ```
 void q_tcpserver_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -517,12 +537,16 @@ bool q_tcpserver_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTcpServer* self, QEvent* event ```
 bool q_tcpserver_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -540,12 +564,16 @@ bool q_tcpserver_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTcpServer* self, QObject* watched, QEvent* event ```
 bool q_tcpserver_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -563,12 +591,16 @@ void q_tcpserver_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTcpServer* self, QTimerEvent* event ```
 void q_tcpserver_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -586,12 +618,16 @@ void q_tcpserver_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTcpServer* self, QChildEvent* event ```
 void q_tcpserver_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -609,12 +645,16 @@ void q_tcpserver_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTcpServer* self, QEvent* event ```
 void q_tcpserver_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -632,12 +672,16 @@ void q_tcpserver_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTcpServer* self, QMetaMethod* signal ```
 void q_tcpserver_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -655,12 +699,16 @@ void q_tcpserver_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTcpServer* self, QMetaMethod* signal ```
 void q_tcpserver_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -678,12 +726,16 @@ QObject* q_tcpserver_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTcpServer* self ```
 QObject* q_tcpserver_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -701,12 +753,16 @@ int32_t q_tcpserver_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTcpServer* self ```
 int32_t q_tcpserver_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -724,12 +780,16 @@ int32_t q_tcpserver_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTcpServer* self, const char* signal ```
 int32_t q_tcpserver_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -747,6 +807,8 @@ bool q_tcpserver_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QTcpServer* self, QMetaMethod* signal ```
@@ -754,11 +816,31 @@ bool q_tcpserver_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QTcpServer* self, bool (*slot)(QTcpServer*, QMetaMethod*) ```
 void q_tcpserver_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#pendingConnectionAvailable)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QTcpServer* self, void (*slot)(QTcpServer*) ```
+void q_tcpserver_on_pending_connection_available(void* self, void (*slot)(void*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QTcpServer* self, void (*slot)(QObject*, const char*) ```
+void q_tcpserver_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#dtor.QTcpServer)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTcpServer* self ```

@@ -1,21 +1,11 @@
-#include <QAnyStringView>
-#include <QBindingStorage>
-#include <QByteArray>
-#include <QChildEvent>
-#include <QEvent>
-#include <QList>
 #include <QMetaMethod>
 #include <QMetaObject>
-#define WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection
 #include <QNetworkCookie>
 #include <QObject>
 #include <QString>
 #include <QByteArray>
 #include <cstring>
-#include <QThread>
-#include <QTimerEvent>
 #include <QUrl>
-#include <QVariant>
 #include <QWebEngineCookieStore>
 #define WORKAROUND_INNER_CLASS_DEFINITION_QWebEngineCookieStore__FilterRequest
 #include <qwebenginecookiestore.h>
@@ -124,14 +114,6 @@ void QWebEngineCookieStore_SetCookie2(QWebEngineCookieStore* self, QNetworkCooki
 
 void QWebEngineCookieStore_DeleteCookie2(QWebEngineCookieStore* self, QNetworkCookie* cookie, QUrl* origin) {
     self->deleteCookie(*cookie, *origin);
-}
-
-bool QWebEngineCookieStore_Event(QWebEngineCookieStore* self, QEvent* event) {
-    return self->event(event);
-}
-
-bool QWebEngineCookieStore_EventFilter(QWebEngineCookieStore* self, QObject* watched, QEvent* event) {
-    return self->eventFilter(watched, event);
 }
 
 void QWebEngineCookieStore_Delete(QWebEngineCookieStore* self) {

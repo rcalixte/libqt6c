@@ -1,18 +1,12 @@
-#include "libqabstractaxis.hpp"
 #include "libqabstractseries.hpp"
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqbrush.hpp"
 #include "libqcandlestickset.hpp"
-#include "libqchart.hpp"
 #include "../libqevent.hpp"
 #include "../libqcolor.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include "../libqpen.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqcandlestickseries.hpp"
 #include "libqcandlestickseries.h"
@@ -25,7 +19,7 @@ QCandlestickSeries* q_candlestickseries_new2(void* parent) {
     return QCandlestickSeries_new2((QObject*)parent);
 }
 
-QMetaObject* q_candlestickseries_meta_object(void* self) {
+const QMetaObject* q_candlestickseries_meta_object(void* self) {
     return QCandlestickSeries_MetaObject((QCandlestickSeries*)self);
 }
 
@@ -60,30 +54,12 @@ bool q_candlestickseries_remove(void* self, void* set) {
     return QCandlestickSeries_Remove((QCandlestickSeries*)self, (QCandlestickSet*)set);
 }
 
-bool q_candlestickseries_append_with_sets(void* self, void* sets[]) {
-    QCandlestickSet** sets_arr = (QCandlestickSet**)sets;
-    size_t sets_len = 0;
-    while (sets_arr[sets_len] != NULL) {
-        sets_len++;
-    }
-    libqt_list sets_list = {
-        .len = sets_len,
-        .data = {(QCandlestickSet*)sets},
-    };
-    return QCandlestickSeries_AppendWithSets((QCandlestickSeries*)self, sets_list);
+bool q_candlestickseries_append_with_sets(void* self, libqt_list sets) {
+    return QCandlestickSeries_AppendWithSets((QCandlestickSeries*)self, sets);
 }
 
-bool q_candlestickseries_remove_with_sets(void* self, void* sets[]) {
-    QCandlestickSet** sets_arr = (QCandlestickSet**)sets;
-    size_t sets_len = 0;
-    while (sets_arr[sets_len] != NULL) {
-        sets_len++;
-    }
-    libqt_list sets_list = {
-        .len = sets_len,
-        .data = {(QCandlestickSet*)sets},
-    };
-    return QCandlestickSeries_RemoveWithSets((QCandlestickSeries*)self, sets_list);
+bool q_candlestickseries_remove_with_sets(void* self, libqt_list sets) {
+    return QCandlestickSeries_RemoveWithSets((QCandlestickSeries*)self, sets);
 }
 
 bool q_candlestickseries_insert(void* self, int index, void* set) {
@@ -239,37 +215,19 @@ void q_candlestickseries_on_double_clicked(void* self, void (*slot)(void*, void*
     QCandlestickSeries_Connect_DoubleClicked((QCandlestickSeries*)self, (intptr_t)slot);
 }
 
-void q_candlestickseries_candlestick_sets_added(void* self, void* sets[]) {
-    QCandlestickSet** sets_arr = (QCandlestickSet**)sets;
-    size_t sets_len = 0;
-    while (sets_arr[sets_len] != NULL) {
-        sets_len++;
-    }
-    libqt_list sets_list = {
-        .len = sets_len,
-        .data = {(QCandlestickSet*)sets},
-    };
-    QCandlestickSeries_CandlestickSetsAdded((QCandlestickSeries*)self, sets_list);
+void q_candlestickseries_candlestick_sets_added(void* self, libqt_list sets) {
+    QCandlestickSeries_CandlestickSetsAdded((QCandlestickSeries*)self, sets);
 }
 
-void q_candlestickseries_on_candlestick_sets_added(void* self, void (*slot)(void*, void*)) {
+void q_candlestickseries_on_candlestick_sets_added(void* self, void (*slot)(void*, libqt_list)) {
     QCandlestickSeries_Connect_CandlestickSetsAdded((QCandlestickSeries*)self, (intptr_t)slot);
 }
 
-void q_candlestickseries_candlestick_sets_removed(void* self, void* sets[]) {
-    QCandlestickSet** sets_arr = (QCandlestickSet**)sets;
-    size_t sets_len = 0;
-    while (sets_arr[sets_len] != NULL) {
-        sets_len++;
-    }
-    libqt_list sets_list = {
-        .len = sets_len,
-        .data = {(QCandlestickSet*)sets},
-    };
-    QCandlestickSeries_CandlestickSetsRemoved((QCandlestickSeries*)self, sets_list);
+void q_candlestickseries_candlestick_sets_removed(void* self, libqt_list sets) {
+    QCandlestickSeries_CandlestickSetsRemoved((QCandlestickSeries*)self, sets);
 }
 
-void q_candlestickseries_on_candlestick_sets_removed(void* self, void (*slot)(void*, void*)) {
+void q_candlestickseries_on_candlestick_sets_removed(void* self, void (*slot)(void*, libqt_list)) {
     QCandlestickSeries_Connect_CandlestickSetsRemoved((QCandlestickSeries*)self, (intptr_t)slot);
 }
 
@@ -483,8 +441,7 @@ const char* q_candlestickseries_object_name(void* self) {
 }
 
 void q_candlestickseries_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_candlestickseries_is_widget_type(void* self) {
@@ -523,7 +480,7 @@ void q_candlestickseries_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_candlestickseries_children(void* self) {
+const libqt_list /* of QObject* */ q_candlestickseries_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -590,7 +547,7 @@ QBindingStorage* q_candlestickseries_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_candlestickseries_binding_storage2(void* self) {
+const QBindingStorage* q_candlestickseries_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -764,6 +721,10 @@ bool q_candlestickseries_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_candlestickseries_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QCandlestickSeries_OnIsSignalConnected((QCandlestickSeries*)self, (intptr_t)slot);
+}
+
+void q_candlestickseries_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_candlestickseries_delete(void* self) {

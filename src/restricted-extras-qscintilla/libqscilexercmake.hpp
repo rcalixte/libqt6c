@@ -15,25 +15,16 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QColor QColor;
 typedef struct QEvent QEvent;
 typedef struct QFont QFont;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QSettings QSettings;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
-typedef struct QsciAbstractAPIs QsciAbstractAPIs;
 typedef struct QsciLexer QsciLexer;
 typedef struct QsciLexerCMake QsciLexerCMake;
 typedef struct QsciScintilla QsciScintilla;
@@ -145,6 +136,9 @@ void QsciLexerCMake_QBaseSetPaper(QsciLexerCMake* self, QColor* c, int style);
 bool QsciLexerCMake_ReadProperties(QsciLexerCMake* self, QSettings* qs, libqt_string prefix);
 void QsciLexerCMake_OnReadProperties(QsciLexerCMake* self, intptr_t slot);
 bool QsciLexerCMake_QBaseReadProperties(QsciLexerCMake* self, QSettings* qs, libqt_string prefix);
+bool QsciLexerCMake_WriteProperties(const QsciLexerCMake* self, QSettings* qs, libqt_string prefix);
+void QsciLexerCMake_OnWriteProperties(const QsciLexerCMake* self, intptr_t slot);
+bool QsciLexerCMake_QBaseWriteProperties(const QsciLexerCMake* self, QSettings* qs, libqt_string prefix);
 bool QsciLexerCMake_Event(QsciLexerCMake* self, QEvent* event);
 void QsciLexerCMake_OnEvent(QsciLexerCMake* self, intptr_t slot);
 bool QsciLexerCMake_QBaseEvent(QsciLexerCMake* self, QEvent* event);
@@ -166,9 +160,6 @@ void QsciLexerCMake_QBaseConnectNotify(QsciLexerCMake* self, QMetaMethod* signal
 void QsciLexerCMake_DisconnectNotify(QsciLexerCMake* self, QMetaMethod* signal);
 void QsciLexerCMake_OnDisconnectNotify(QsciLexerCMake* self, intptr_t slot);
 void QsciLexerCMake_QBaseDisconnectNotify(QsciLexerCMake* self, QMetaMethod* signal);
-bool QsciLexerCMake_WriteProperties(const QsciLexerCMake* self, QSettings* qs, libqt_string prefix);
-void QsciLexerCMake_OnWriteProperties(const QsciLexerCMake* self, intptr_t slot);
-bool QsciLexerCMake_QBaseWriteProperties(const QsciLexerCMake* self, QSettings* qs, libqt_string prefix);
 QObject* QsciLexerCMake_Sender(const QsciLexerCMake* self);
 void QsciLexerCMake_OnSender(const QsciLexerCMake* self, intptr_t slot);
 QObject* QsciLexerCMake_QBaseSender(const QsciLexerCMake* self);

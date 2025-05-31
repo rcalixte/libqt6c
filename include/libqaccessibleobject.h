@@ -212,11 +212,15 @@ QAccessibleApplication* q_accessibleapplication_new();
 /// ``` QAccessibleApplication* self ```
 QWindow* q_accessibleapplication_window(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#window)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAccessibleApplication* self, QWindow* (*slot)() ```
 void q_accessibleapplication_on_window(void* self, QWindow* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#window)
+///
 /// Base class method implementation
 ///
 /// ``` QAccessibleApplication* self ```
@@ -227,11 +231,15 @@ QWindow* q_accessibleapplication_qbase_window(void* self);
 /// ``` QAccessibleApplication* self ```
 int32_t q_accessibleapplication_child_count(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#childCount)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAccessibleApplication* self, int32_t (*slot)() ```
 void q_accessibleapplication_on_child_count(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#childCount)
+///
 /// Base class method implementation
 ///
 /// ``` QAccessibleApplication* self ```
@@ -242,11 +250,15 @@ int32_t q_accessibleapplication_qbase_child_count(void* self);
 /// ``` QAccessibleApplication* self, QAccessibleInterface* param1 ```
 int32_t q_accessibleapplication_index_of_child(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#indexOfChild)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAccessibleApplication* self, int32_t (*slot)(QAccessibleApplication*, QAccessibleInterface*) ```
 void q_accessibleapplication_on_index_of_child(void* self, int32_t (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#indexOfChild)
+///
 /// Base class method implementation
 ///
 /// ``` QAccessibleApplication* self, QAccessibleInterface* param1 ```
@@ -257,11 +269,15 @@ int32_t q_accessibleapplication_qbase_index_of_child(void* self, void* param1);
 /// ``` QAccessibleApplication* self ```
 QAccessibleInterface* q_accessibleapplication_focus_child(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#focusChild)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAccessibleApplication* self, QAccessibleInterface* (*slot)() ```
 void q_accessibleapplication_on_focus_child(void* self, QAccessibleInterface* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#focusChild)
+///
 /// Base class method implementation
 ///
 /// ``` QAccessibleApplication* self ```
@@ -272,11 +288,15 @@ QAccessibleInterface* q_accessibleapplication_qbase_focus_child(void* self);
 /// ``` QAccessibleApplication* self ```
 QAccessibleInterface* q_accessibleapplication_parent(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#parent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAccessibleApplication* self, QAccessibleInterface* (*slot)() ```
 void q_accessibleapplication_on_parent(void* self, QAccessibleInterface* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#parent)
+///
 /// Base class method implementation
 ///
 /// ``` QAccessibleApplication* self ```
@@ -287,11 +307,15 @@ QAccessibleInterface* q_accessibleapplication_qbase_parent(void* self);
 /// ``` QAccessibleApplication* self, int index ```
 QAccessibleInterface* q_accessibleapplication_child(void* self, int index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#child)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAccessibleApplication* self, QAccessibleInterface* (*slot)(QAccessibleApplication*, int) ```
 void q_accessibleapplication_on_child(void* self, QAccessibleInterface* (*slot)(void*, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#child)
+///
 /// Base class method implementation
 ///
 /// ``` QAccessibleApplication* self, int index ```
@@ -302,11 +326,15 @@ QAccessibleInterface* q_accessibleapplication_qbase_child(void* self, int index)
 /// ``` QAccessibleApplication* self, enum QAccessible__Text t ```
 const char* q_accessibleapplication_text(void* self, int64_t t);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#text)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAccessibleApplication* self, const char* (*slot)(QAccessibleApplication*, enum QAccessible__Text) ```
 void q_accessibleapplication_on_text(void* self, const char* (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#text)
+///
 /// Base class method implementation
 ///
 /// ``` QAccessibleApplication* self, enum QAccessible__Text t ```
@@ -317,11 +345,15 @@ const char* q_accessibleapplication_qbase_text(void* self, int64_t t);
 /// ``` QAccessibleApplication* self ```
 int64_t q_accessibleapplication_role(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#role)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAccessibleApplication* self, int64_t (*slot)() ```
 void q_accessibleapplication_on_role(void* self, int64_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#role)
+///
 /// Base class method implementation
 ///
 /// ``` QAccessibleApplication* self ```
@@ -332,11 +364,15 @@ int64_t q_accessibleapplication_qbase_role(void* self);
 /// ``` QAccessibleApplication* self ```
 QAccessible__State* q_accessibleapplication_state(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#state)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAccessibleApplication* self, QAccessible__State* (*slot)() ```
 void q_accessibleapplication_on_state(void* self, QAccessible__State* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#state)
+///
 /// Base class method implementation
 ///
 /// ``` QAccessibleApplication* self ```
@@ -409,12 +445,16 @@ bool q_accessibleapplication_is_valid(void* self);
 
 /// Inherited from QAccessibleObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleobject.html#isValid)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAccessibleApplication* self ```
 bool q_accessibleapplication_qbase_is_valid(void* self);
 
 /// Inherited from QAccessibleObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleobject.html#isValid)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -432,12 +472,16 @@ QObject* q_accessibleapplication_object(void* self);
 
 /// Inherited from QAccessibleObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleobject.html#object)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAccessibleApplication* self ```
 QObject* q_accessibleapplication_qbase_object(void* self);
 
 /// Inherited from QAccessibleObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleobject.html#object)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -455,12 +499,16 @@ QRect* q_accessibleapplication_rect(void* self);
 
 /// Inherited from QAccessibleObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleobject.html#rect)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAccessibleApplication* self ```
 QRect* q_accessibleapplication_qbase_rect(void* self);
 
 /// Inherited from QAccessibleObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleobject.html#rect)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -478,12 +526,16 @@ void q_accessibleapplication_set_text(void* self, int64_t t, const char* text);
 
 /// Inherited from QAccessibleObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleobject.html#setText)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAccessibleApplication* self, enum QAccessible__Text t, const char* text ```
 void q_accessibleapplication_qbase_set_text(void* self, int64_t t, const char* text);
 
 /// Inherited from QAccessibleObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleobject.html#setText)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -501,12 +553,16 @@ QAccessibleInterface* q_accessibleapplication_child_at(void* self, int x, int y)
 
 /// Inherited from QAccessibleObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleobject.html#childAt)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAccessibleApplication* self, int x, int y ```
 QAccessibleInterface* q_accessibleapplication_qbase_child_at(void* self, int x, int y);
 
 /// Inherited from QAccessibleObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleobject.html#childAt)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -524,12 +580,16 @@ libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ q_ac
 
 /// Inherited from QAccessibleInterface
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleinterface.html#relations)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAccessibleApplication* self, int match ```
 libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ q_accessibleapplication_qbase_relations(void* self, int64_t match);
 
 /// Inherited from QAccessibleInterface
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleinterface.html#relations)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -547,12 +607,16 @@ QColor* q_accessibleapplication_foreground_color(void* self);
 
 /// Inherited from QAccessibleInterface
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleinterface.html#foregroundColor)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAccessibleApplication* self ```
 QColor* q_accessibleapplication_qbase_foreground_color(void* self);
 
 /// Inherited from QAccessibleInterface
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleinterface.html#foregroundColor)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -570,12 +634,16 @@ QColor* q_accessibleapplication_background_color(void* self);
 
 /// Inherited from QAccessibleInterface
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleinterface.html#backgroundColor)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAccessibleApplication* self ```
 QColor* q_accessibleapplication_qbase_background_color(void* self);
 
 /// Inherited from QAccessibleInterface
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleinterface.html#backgroundColor)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -593,12 +661,16 @@ void q_accessibleapplication_virtual_hook(void* self, int id, void* data);
 
 /// Inherited from QAccessibleInterface
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleinterface.html#virtual_hook)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAccessibleApplication* self, int id, void* data ```
 void q_accessibleapplication_qbase_virtual_hook(void* self, int id, void* data);
 
 /// Inherited from QAccessibleInterface
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleinterface.html#virtual_hook)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -616,6 +688,8 @@ void* q_accessibleapplication_interface_cast(void* self, int64_t param1);
 
 /// Inherited from QAccessibleInterface
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleinterface.html#interface_cast)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QAccessibleApplication* self, enum QAccessible__InterfaceType param1 ```
@@ -623,11 +697,15 @@ void* q_accessibleapplication_qbase_interface_cast(void* self, int64_t param1);
 
 /// Inherited from QAccessibleInterface
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleinterface.html#interface_cast)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QAccessibleApplication* self, void* (*slot)(QAccessibleApplication*, enum QAccessible__InterfaceType) ```
 void q_accessibleapplication_on_interface_cast(void* self, void* (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#dtor.QAccessibleApplication)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAccessibleApplication* self ```

@@ -15,21 +15,15 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
 typedef struct QAbstractItemModel QAbstractItemModel;
 typedef struct QAbstractListModel QAbstractListModel;
 typedef struct QAbstractTableModel QAbstractTableModel;
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QDataStream QDataStream;
 typedef struct QEvent QEvent;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QMimeData QMimeData;
 typedef struct QModelIndex QModelIndex;
 typedef struct QModelRoleData QModelRoleData;
@@ -37,7 +31,6 @@ typedef struct QModelRoleDataSpan QModelRoleDataSpan;
 typedef struct QObject QObject;
 typedef struct QPersistentModelIndex QPersistentModelIndex;
 typedef struct QSize QSize;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
@@ -383,6 +376,20 @@ int QAbstractItemModel_QBaseReceivers(const QAbstractItemModel* self, const char
 bool QAbstractItemModel_IsSignalConnected(const QAbstractItemModel* self, QMetaMethod* signal);
 void QAbstractItemModel_OnIsSignalConnected(const QAbstractItemModel* self, intptr_t slot);
 bool QAbstractItemModel_QBaseIsSignalConnected(const QAbstractItemModel* self, QMetaMethod* signal);
+void QAbstractItemModel_Connect_RowsAboutToBeInserted(QAbstractItemModel* self, intptr_t slot);
+void QAbstractItemModel_Connect_RowsInserted(QAbstractItemModel* self, intptr_t slot);
+void QAbstractItemModel_Connect_RowsAboutToBeRemoved(QAbstractItemModel* self, intptr_t slot);
+void QAbstractItemModel_Connect_RowsRemoved(QAbstractItemModel* self, intptr_t slot);
+void QAbstractItemModel_Connect_ColumnsAboutToBeInserted(QAbstractItemModel* self, intptr_t slot);
+void QAbstractItemModel_Connect_ColumnsInserted(QAbstractItemModel* self, intptr_t slot);
+void QAbstractItemModel_Connect_ColumnsAboutToBeRemoved(QAbstractItemModel* self, intptr_t slot);
+void QAbstractItemModel_Connect_ColumnsRemoved(QAbstractItemModel* self, intptr_t slot);
+void QAbstractItemModel_Connect_ModelAboutToBeReset(QAbstractItemModel* self, intptr_t slot);
+void QAbstractItemModel_Connect_ModelReset(QAbstractItemModel* self, intptr_t slot);
+void QAbstractItemModel_Connect_RowsAboutToBeMoved(QAbstractItemModel* self, intptr_t slot);
+void QAbstractItemModel_Connect_RowsMoved(QAbstractItemModel* self, intptr_t slot);
+void QAbstractItemModel_Connect_ColumnsAboutToBeMoved(QAbstractItemModel* self, intptr_t slot);
+void QAbstractItemModel_Connect_ColumnsMoved(QAbstractItemModel* self, intptr_t slot);
 void QAbstractItemModel_Delete(QAbstractItemModel* self);
 
 QAbstractTableModel* QAbstractTableModel_new();
@@ -617,27 +624,6 @@ void QAbstractListModel_OnFlags(const QAbstractListModel* self, intptr_t slot);
 int QAbstractListModel_QBaseFlags(const QAbstractListModel* self, QModelIndex* index);
 libqt_string QAbstractListModel_Tr2(const char* s, const char* c);
 libqt_string QAbstractListModel_Tr3(const char* s, const char* c, int n);
-bool QAbstractListModel_Event(QAbstractListModel* self, QEvent* event);
-void QAbstractListModel_OnEvent(QAbstractListModel* self, intptr_t slot);
-bool QAbstractListModel_QBaseEvent(QAbstractListModel* self, QEvent* event);
-bool QAbstractListModel_EventFilter(QAbstractListModel* self, QObject* watched, QEvent* event);
-void QAbstractListModel_OnEventFilter(QAbstractListModel* self, intptr_t slot);
-bool QAbstractListModel_QBaseEventFilter(QAbstractListModel* self, QObject* watched, QEvent* event);
-void QAbstractListModel_TimerEvent(QAbstractListModel* self, QTimerEvent* event);
-void QAbstractListModel_OnTimerEvent(QAbstractListModel* self, intptr_t slot);
-void QAbstractListModel_QBaseTimerEvent(QAbstractListModel* self, QTimerEvent* event);
-void QAbstractListModel_ChildEvent(QAbstractListModel* self, QChildEvent* event);
-void QAbstractListModel_OnChildEvent(QAbstractListModel* self, intptr_t slot);
-void QAbstractListModel_QBaseChildEvent(QAbstractListModel* self, QChildEvent* event);
-void QAbstractListModel_CustomEvent(QAbstractListModel* self, QEvent* event);
-void QAbstractListModel_OnCustomEvent(QAbstractListModel* self, intptr_t slot);
-void QAbstractListModel_QBaseCustomEvent(QAbstractListModel* self, QEvent* event);
-void QAbstractListModel_ConnectNotify(QAbstractListModel* self, QMetaMethod* signal);
-void QAbstractListModel_OnConnectNotify(QAbstractListModel* self, intptr_t slot);
-void QAbstractListModel_QBaseConnectNotify(QAbstractListModel* self, QMetaMethod* signal);
-void QAbstractListModel_DisconnectNotify(QAbstractListModel* self, QMetaMethod* signal);
-void QAbstractListModel_OnDisconnectNotify(QAbstractListModel* self, intptr_t slot);
-void QAbstractListModel_QBaseDisconnectNotify(QAbstractListModel* self, QMetaMethod* signal);
 int QAbstractListModel_RowCount(const QAbstractListModel* self, QModelIndex* parent);
 void QAbstractListModel_OnRowCount(const QAbstractListModel* self, intptr_t slot);
 int QAbstractListModel_QBaseRowCount(const QAbstractListModel* self, QModelIndex* parent);
@@ -728,6 +714,27 @@ void QAbstractListModel_QBaseRevert(QAbstractListModel* self);
 void QAbstractListModel_ResetInternalData(QAbstractListModel* self);
 void QAbstractListModel_OnResetInternalData(QAbstractListModel* self, intptr_t slot);
 void QAbstractListModel_QBaseResetInternalData(QAbstractListModel* self);
+bool QAbstractListModel_Event(QAbstractListModel* self, QEvent* event);
+void QAbstractListModel_OnEvent(QAbstractListModel* self, intptr_t slot);
+bool QAbstractListModel_QBaseEvent(QAbstractListModel* self, QEvent* event);
+bool QAbstractListModel_EventFilter(QAbstractListModel* self, QObject* watched, QEvent* event);
+void QAbstractListModel_OnEventFilter(QAbstractListModel* self, intptr_t slot);
+bool QAbstractListModel_QBaseEventFilter(QAbstractListModel* self, QObject* watched, QEvent* event);
+void QAbstractListModel_TimerEvent(QAbstractListModel* self, QTimerEvent* event);
+void QAbstractListModel_OnTimerEvent(QAbstractListModel* self, intptr_t slot);
+void QAbstractListModel_QBaseTimerEvent(QAbstractListModel* self, QTimerEvent* event);
+void QAbstractListModel_ChildEvent(QAbstractListModel* self, QChildEvent* event);
+void QAbstractListModel_OnChildEvent(QAbstractListModel* self, intptr_t slot);
+void QAbstractListModel_QBaseChildEvent(QAbstractListModel* self, QChildEvent* event);
+void QAbstractListModel_CustomEvent(QAbstractListModel* self, QEvent* event);
+void QAbstractListModel_OnCustomEvent(QAbstractListModel* self, intptr_t slot);
+void QAbstractListModel_QBaseCustomEvent(QAbstractListModel* self, QEvent* event);
+void QAbstractListModel_ConnectNotify(QAbstractListModel* self, QMetaMethod* signal);
+void QAbstractListModel_OnConnectNotify(QAbstractListModel* self, intptr_t slot);
+void QAbstractListModel_QBaseConnectNotify(QAbstractListModel* self, QMetaMethod* signal);
+void QAbstractListModel_DisconnectNotify(QAbstractListModel* self, QMetaMethod* signal);
+void QAbstractListModel_OnDisconnectNotify(QAbstractListModel* self, intptr_t slot);
+void QAbstractListModel_QBaseDisconnectNotify(QAbstractListModel* self, QMetaMethod* signal);
 QModelIndex* QAbstractListModel_CreateIndex(const QAbstractListModel* self, int row, int column);
 void QAbstractListModel_OnCreateIndex(const QAbstractListModel* self, intptr_t slot);
 QModelIndex* QAbstractListModel_QBaseCreateIndex(const QAbstractListModel* self, int row, int column);

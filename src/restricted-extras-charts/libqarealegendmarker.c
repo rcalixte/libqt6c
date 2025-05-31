@@ -1,18 +1,10 @@
-#include "libqabstractseries.hpp"
-#include "../libqanystringview.hpp"
 #include "libqareaseries.hpp"
-#include "../libqbindingstorage.hpp"
-#include "../libqbrush.hpp"
 #include "../libqevent.hpp"
-#include "../libqfont.hpp"
 #include "libqlegend.hpp"
 #include "libqlegendmarker.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
-#include "../libqpen.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqarealegendmarker.hpp"
 #include "libqarealegendmarker.h"
@@ -25,7 +17,7 @@ QAreaLegendMarker* q_arealegendmarker_new2(void* series, void* legend, void* par
     return QAreaLegendMarker_new2((QAreaSeries*)series, (QLegend*)legend, (QObject*)parent);
 }
 
-QMetaObject* q_arealegendmarker_meta_object(void* self) {
+const QMetaObject* q_arealegendmarker_meta_object(void* self) {
     return QAreaLegendMarker_MetaObject((QAreaLegendMarker*)self);
 }
 
@@ -229,8 +221,7 @@ const char* q_arealegendmarker_object_name(void* self) {
 }
 
 void q_arealegendmarker_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_arealegendmarker_is_widget_type(void* self) {
@@ -269,7 +260,7 @@ void q_arealegendmarker_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_arealegendmarker_children(void* self) {
+const libqt_list /* of QObject* */ q_arealegendmarker_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -336,7 +327,7 @@ QBindingStorage* q_arealegendmarker_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_arealegendmarker_binding_storage2(void* self) {
+const QBindingStorage* q_arealegendmarker_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -510,6 +501,10 @@ bool q_arealegendmarker_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_arealegendmarker_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QAreaLegendMarker_OnIsSignalConnected((QAreaLegendMarker*)self, (intptr_t)slot);
+}
+
+void q_arealegendmarker_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_arealegendmarker_delete(void* self) {

@@ -15,14 +15,8 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
 typedef struct QAbstractSocket QAbstractSocket;
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QAuthenticator QAuthenticator;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QEvent QEvent;
 typedef struct QHostAddress QHostAddress;
@@ -30,8 +24,6 @@ typedef struct QIODevice QIODevice;
 typedef struct QIODeviceBase QIODeviceBase;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
-typedef struct QNetworkProxy QNetworkProxy;
 typedef struct QObject QObject;
 typedef struct QOcspResponse QOcspResponse;
 typedef struct QSslCertificate QSslCertificate;
@@ -42,7 +34,6 @@ typedef struct QSslKey QSslKey;
 typedef struct QSslPreSharedKeyAuthenticator QSslPreSharedKeyAuthenticator;
 typedef struct QSslSocket QSslSocket;
 typedef struct QTcpSocket QTcpSocket;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
@@ -207,6 +198,9 @@ libqt_list /* of int */ QSslSocket_ImplementedClasses1(libqt_string backendName)
 bool QSslSocket_IsClassImplemented2(int cl, libqt_string backendName);
 libqt_list /* of int */ QSslSocket_SupportedFeatures1(libqt_string backendName);
 bool QSslSocket_IsFeatureSupported2(int feat, libqt_string backendName);
+bool QSslSocket_Bind(QSslSocket* self, QHostAddress* address, uint16_t port, int mode);
+void QSslSocket_OnBind(QSslSocket* self, intptr_t slot);
+bool QSslSocket_QBaseBind(QSslSocket* self, QHostAddress* address, uint16_t port, int mode);
 intptr_t QSslSocket_SocketDescriptor(const QSslSocket* self);
 void QSslSocket_OnSocketDescriptor(const QSslSocket* self, intptr_t slot);
 intptr_t QSslSocket_QBaseSocketDescriptor(const QSslSocket* self);
@@ -252,9 +246,6 @@ void QSslSocket_QBaseConnectNotify(QSslSocket* self, QMetaMethod* signal);
 void QSslSocket_DisconnectNotify(QSslSocket* self, QMetaMethod* signal);
 void QSslSocket_OnDisconnectNotify(QSslSocket* self, intptr_t slot);
 void QSslSocket_QBaseDisconnectNotify(QSslSocket* self, QMetaMethod* signal);
-bool QSslSocket_Bind(QSslSocket* self, QHostAddress* address, uint16_t port, int mode);
-void QSslSocket_OnBind(QSslSocket* self, intptr_t slot);
-bool QSslSocket_QBaseBind(QSslSocket* self, QHostAddress* address, uint16_t port, int mode);
 void QSslSocket_SetSocketState(QSslSocket* self, int state);
 void QSslSocket_OnSetSocketState(QSslSocket* self, intptr_t slot);
 void QSslSocket_QBaseSetSocketState(QSslSocket* self, int state);

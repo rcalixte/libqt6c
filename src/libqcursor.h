@@ -150,6 +150,8 @@ void q_cursor_set_pos_with_q_point(void* p);
 /// ``` QScreen* screen, QPoint* p ```
 void q_cursor_set_pos3(void* screen, void* p);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#dtor.QCursor)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCursor* self ```

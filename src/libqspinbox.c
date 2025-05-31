@@ -1,42 +1,17 @@
 #include "libqabstractspinbox.hpp"
-#include "libqaction.hpp"
 #include "libqevent.hpp"
-#include "libqanystringview.hpp"
-#include "libqbackingstore.hpp"
-#include "libqbindingstorage.hpp"
-#include "libqbitmap.hpp"
-#include "libqcursor.hpp"
-#include "libqfont.hpp"
-#include "libqfontinfo.hpp"
-#include "libqfontmetrics.hpp"
-#include "libqgraphicseffect.hpp"
-#include "libqgraphicsproxywidget.hpp"
-#include "libqicon.hpp"
-#include "libqkeysequence.hpp"
-#include "libqlayout.hpp"
 #include "libqlineedit.hpp"
-#include "libqlocale.hpp"
-#include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
 #include "libqpainter.hpp"
-#include "libqpalette.hpp"
-#include "libqpixmap.hpp"
 #include "libqpoint.hpp"
-#include "libqrect.hpp"
-#include "libqregion.hpp"
-#include "libqscreen.hpp"
 #include "libqsize.hpp"
-#include "libqsizepolicy.hpp"
 #include <string.h>
-#include "libqstyle.hpp"
 #include "libqstyleoption.hpp"
-#include "libqthread.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqwindow.hpp"
 #include "libqcoreevent.hpp"
 #include "libqspinbox.hpp"
 #include "libqspinbox.h"
@@ -49,7 +24,7 @@ QSpinBox* q_spinbox_new2() {
     return QSpinBox_new2();
 }
 
-QMetaObject* q_spinbox_meta_object(void* self) {
+const QMetaObject* q_spinbox_meta_object(void* self) {
     return QSpinBox_MetaObject((QSpinBox*)self);
 }
 
@@ -439,7 +414,7 @@ QRect* q_spinbox_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_spinbox_geometry(void* self) {
+const QRect* q_spinbox_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -643,7 +618,7 @@ QWidget* q_spinbox_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_spinbox_palette(void* self) {
+const QPalette* q_spinbox_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -667,7 +642,7 @@ int64_t q_spinbox_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_spinbox_font(void* self) {
+const QFont* q_spinbox_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -1272,30 +1247,12 @@ void q_spinbox_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_spinbox_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_spinbox_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_spinbox_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_spinbox_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_spinbox_insert_action(void* self, void* before, void* action) {
@@ -1515,8 +1472,7 @@ const char* q_spinbox_object_name(void* self) {
 }
 
 void q_spinbox_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_spinbox_is_widget_type(void* self) {
@@ -1555,7 +1511,7 @@ void q_spinbox_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_spinbox_children(void* self) {
+const libqt_list /* of QObject* */ q_spinbox_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1618,7 +1574,7 @@ QBindingStorage* q_spinbox_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_spinbox_binding_storage2(void* self) {
+const QBindingStorage* q_spinbox_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2442,6 +2398,10 @@ void q_spinbox_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QSpinBox_OnIsSignalConnected((QSpinBox*)self, (intptr_t)slot);
 }
 
+void q_spinbox_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
 void q_spinbox_delete(void* self) {
     QSpinBox_Delete((QSpinBox*)(self));
 }
@@ -2454,7 +2414,7 @@ QDoubleSpinBox* q_doublespinbox_new2() {
     return QDoubleSpinBox_new2();
 }
 
-QMetaObject* q_doublespinbox_meta_object(void* self) {
+const QMetaObject* q_doublespinbox_meta_object(void* self) {
     return QDoubleSpinBox_MetaObject((QDoubleSpinBox*)self);
 }
 
@@ -2832,7 +2792,7 @@ QRect* q_doublespinbox_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_doublespinbox_geometry(void* self) {
+const QRect* q_doublespinbox_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -3036,7 +2996,7 @@ QWidget* q_doublespinbox_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_doublespinbox_palette(void* self) {
+const QPalette* q_doublespinbox_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -3060,7 +3020,7 @@ int64_t q_doublespinbox_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_doublespinbox_font(void* self) {
+const QFont* q_doublespinbox_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -3665,30 +3625,12 @@ void q_doublespinbox_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_doublespinbox_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_doublespinbox_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_doublespinbox_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_doublespinbox_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_doublespinbox_insert_action(void* self, void* before, void* action) {
@@ -3908,8 +3850,7 @@ const char* q_doublespinbox_object_name(void* self) {
 }
 
 void q_doublespinbox_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_doublespinbox_is_widget_type(void* self) {
@@ -3948,7 +3889,7 @@ void q_doublespinbox_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_doublespinbox_children(void* self) {
+const libqt_list /* of QObject* */ q_doublespinbox_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -4011,7 +3952,7 @@ QBindingStorage* q_doublespinbox_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_doublespinbox_binding_storage2(void* self) {
+const QBindingStorage* q_doublespinbox_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -4845,6 +4786,10 @@ bool q_doublespinbox_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_doublespinbox_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QDoubleSpinBox_OnIsSignalConnected((QDoubleSpinBox*)self, (intptr_t)slot);
+}
+
+void q_doublespinbox_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_doublespinbox_delete(void* self) {

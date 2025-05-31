@@ -1,14 +1,10 @@
-#include "../libqanystringview.hpp"
 #include "libqaudiodevice.hpp"
 #include "libqaudioformat.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
 #include "../libqiodevice.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqaudiosource.hpp"
 #include "libqaudiosource.h"
@@ -37,7 +33,7 @@ QAudioSource* q_audiosource_new6(void* audioDeviceInfo, void* format, void* pare
     return QAudioSource_new6((QAudioDevice*)audioDeviceInfo, (QAudioFormat*)format, (QObject*)parent);
 }
 
-QMetaObject* q_audiosource_meta_object(void* self) {
+const QMetaObject* q_audiosource_meta_object(void* self) {
     return QAudioSource_MetaObject((QAudioSource*)self);
 }
 
@@ -162,8 +158,7 @@ const char* q_audiosource_object_name(void* self) {
 }
 
 void q_audiosource_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_audiosource_is_widget_type(void* self) {
@@ -202,7 +197,7 @@ void q_audiosource_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_audiosource_children(void* self) {
+const libqt_list /* of QObject* */ q_audiosource_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -269,7 +264,7 @@ QBindingStorage* q_audiosource_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_audiosource_binding_storage2(void* self) {
+const QBindingStorage* q_audiosource_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -443,6 +438,10 @@ bool q_audiosource_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_audiosource_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QAudioSource_OnIsSignalConnected((QAudioSource*)self, (intptr_t)slot);
+}
+
+void q_audiosource_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_audiosource_delete(void* self) {

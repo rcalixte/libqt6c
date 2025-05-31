@@ -121,6 +121,8 @@ int64_t q_commandlineoption_flags(void* self);
 /// ``` QCommandLineOption* self, int aflags ```
 void q_commandlineoption_set_flags(void* self, int64_t aflags);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineoption.html#dtor.QCommandLineOption)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QCommandLineOption* self ```

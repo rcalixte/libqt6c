@@ -15,20 +15,11 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAction QAction;
 typedef struct QActionEvent QActionEvent;
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBackingStore QBackingStore;
-typedef struct QBindingStorage QBindingStorage;
-typedef struct QBitmap QBitmap;
 typedef struct QChildEvent QChildEvent;
 typedef struct QCloseEvent QCloseEvent;
 typedef struct QContextMenuEvent QContextMenuEvent;
-typedef struct QCursor QCursor;
 typedef struct QDragEnterEvent QDragEnterEvent;
 typedef struct QDragLeaveEvent QDragLeaveEvent;
 typedef struct QDragMoveEvent QDragMoveEvent;
@@ -36,22 +27,11 @@ typedef struct QDropEvent QDropEvent;
 typedef struct QEnterEvent QEnterEvent;
 typedef struct QEvent QEvent;
 typedef struct QFocusEvent QFocusEvent;
-typedef struct QFont QFont;
-typedef struct QFontInfo QFontInfo;
-typedef struct QFontMetrics QFontMetrics;
-typedef struct QGraphicsEffect QGraphicsEffect;
-typedef struct QGraphicsProxyWidget QGraphicsProxyWidget;
 typedef struct QHideEvent QHideEvent;
-typedef struct QIcon QIcon;
 typedef struct QInputMethodEvent QInputMethodEvent;
 typedef struct QKeyEvent QKeyEvent;
-typedef struct QKeySequence QKeySequence;
-typedef struct QLayout QLayout;
-typedef struct QLocale QLocale;
-typedef struct QMargins QMargins;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QMouseEvent QMouseEvent;
 typedef struct QMoveEvent QMoveEvent;
 typedef struct QObject QObject;
@@ -59,26 +39,16 @@ typedef struct QPaintDevice QPaintDevice;
 typedef struct QPaintEngine QPaintEngine;
 typedef struct QPaintEvent QPaintEvent;
 typedef struct QPainter QPainter;
-typedef struct QPalette QPalette;
-typedef struct QPixmap QPixmap;
 typedef struct QPoint QPoint;
-typedef struct QPointF QPointF;
-typedef struct QRect QRect;
-typedef struct QRegion QRegion;
 typedef struct QResizeEvent QResizeEvent;
-typedef struct QScreen QScreen;
 typedef struct QShowEvent QShowEvent;
 typedef struct QSize QSize;
 typedef struct QSizeGrip QSizeGrip;
-typedef struct QSizePolicy QSizePolicy;
-typedef struct QStyle QStyle;
 typedef struct QTabletEvent QTabletEvent;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
-typedef struct QWindow QWindow;
 #endif
 
 QSizeGrip* QSizeGrip_new(QWidget* parent);
@@ -195,6 +165,18 @@ bool QSizeGrip_QBaseNativeEvent(QSizeGrip* self, libqt_string eventType, void* m
 void QSizeGrip_ChangeEvent(QSizeGrip* self, QEvent* param1);
 void QSizeGrip_OnChangeEvent(QSizeGrip* self, intptr_t slot);
 void QSizeGrip_QBaseChangeEvent(QSizeGrip* self, QEvent* param1);
+int QSizeGrip_Metric(const QSizeGrip* self, int param1);
+void QSizeGrip_OnMetric(const QSizeGrip* self, intptr_t slot);
+int QSizeGrip_QBaseMetric(const QSizeGrip* self, int param1);
+void QSizeGrip_InitPainter(const QSizeGrip* self, QPainter* painter);
+void QSizeGrip_OnInitPainter(const QSizeGrip* self, intptr_t slot);
+void QSizeGrip_QBaseInitPainter(const QSizeGrip* self, QPainter* painter);
+QPaintDevice* QSizeGrip_Redirected(const QSizeGrip* self, QPoint* offset);
+void QSizeGrip_OnRedirected(const QSizeGrip* self, intptr_t slot);
+QPaintDevice* QSizeGrip_QBaseRedirected(const QSizeGrip* self, QPoint* offset);
+QPainter* QSizeGrip_SharedPainter(const QSizeGrip* self);
+void QSizeGrip_OnSharedPainter(const QSizeGrip* self, intptr_t slot);
+QPainter* QSizeGrip_QBaseSharedPainter(const QSizeGrip* self);
 void QSizeGrip_InputMethodEvent(QSizeGrip* self, QInputMethodEvent* param1);
 void QSizeGrip_OnInputMethodEvent(QSizeGrip* self, intptr_t slot);
 void QSizeGrip_QBaseInputMethodEvent(QSizeGrip* self, QInputMethodEvent* param1);
@@ -219,18 +201,6 @@ void QSizeGrip_QBaseConnectNotify(QSizeGrip* self, QMetaMethod* signal);
 void QSizeGrip_DisconnectNotify(QSizeGrip* self, QMetaMethod* signal);
 void QSizeGrip_OnDisconnectNotify(QSizeGrip* self, intptr_t slot);
 void QSizeGrip_QBaseDisconnectNotify(QSizeGrip* self, QMetaMethod* signal);
-int QSizeGrip_Metric(const QSizeGrip* self, int param1);
-void QSizeGrip_OnMetric(const QSizeGrip* self, intptr_t slot);
-int QSizeGrip_QBaseMetric(const QSizeGrip* self, int param1);
-void QSizeGrip_InitPainter(const QSizeGrip* self, QPainter* painter);
-void QSizeGrip_OnInitPainter(const QSizeGrip* self, intptr_t slot);
-void QSizeGrip_QBaseInitPainter(const QSizeGrip* self, QPainter* painter);
-QPaintDevice* QSizeGrip_Redirected(const QSizeGrip* self, QPoint* offset);
-void QSizeGrip_OnRedirected(const QSizeGrip* self, intptr_t slot);
-QPaintDevice* QSizeGrip_QBaseRedirected(const QSizeGrip* self, QPoint* offset);
-QPainter* QSizeGrip_SharedPainter(const QSizeGrip* self);
-void QSizeGrip_OnSharedPainter(const QSizeGrip* self, intptr_t slot);
-QPainter* QSizeGrip_QBaseSharedPainter(const QSizeGrip* self);
 void QSizeGrip_UpdateMicroFocus(QSizeGrip* self);
 void QSizeGrip_OnUpdateMicroFocus(QSizeGrip* self, intptr_t slot);
 void QSizeGrip_QBaseUpdateMicroFocus(QSizeGrip* self);

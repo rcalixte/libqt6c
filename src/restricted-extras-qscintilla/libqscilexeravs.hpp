@@ -15,25 +15,16 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QColor QColor;
 typedef struct QEvent QEvent;
 typedef struct QFont QFont;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QSettings QSettings;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
-typedef struct QsciAbstractAPIs QsciAbstractAPIs;
 typedef struct QsciLexer QsciLexer;
 typedef struct QsciLexerAVS QsciLexerAVS;
 typedef struct QsciScintilla QsciScintilla;
@@ -144,6 +135,9 @@ void QsciLexerAVS_QBaseSetPaper(QsciLexerAVS* self, QColor* c, int style);
 bool QsciLexerAVS_ReadProperties(QsciLexerAVS* self, QSettings* qs, libqt_string prefix);
 void QsciLexerAVS_OnReadProperties(QsciLexerAVS* self, intptr_t slot);
 bool QsciLexerAVS_QBaseReadProperties(QsciLexerAVS* self, QSettings* qs, libqt_string prefix);
+bool QsciLexerAVS_WriteProperties(const QsciLexerAVS* self, QSettings* qs, libqt_string prefix);
+void QsciLexerAVS_OnWriteProperties(const QsciLexerAVS* self, intptr_t slot);
+bool QsciLexerAVS_QBaseWriteProperties(const QsciLexerAVS* self, QSettings* qs, libqt_string prefix);
 bool QsciLexerAVS_Event(QsciLexerAVS* self, QEvent* event);
 void QsciLexerAVS_OnEvent(QsciLexerAVS* self, intptr_t slot);
 bool QsciLexerAVS_QBaseEvent(QsciLexerAVS* self, QEvent* event);
@@ -165,9 +159,6 @@ void QsciLexerAVS_QBaseConnectNotify(QsciLexerAVS* self, QMetaMethod* signal);
 void QsciLexerAVS_DisconnectNotify(QsciLexerAVS* self, QMetaMethod* signal);
 void QsciLexerAVS_OnDisconnectNotify(QsciLexerAVS* self, intptr_t slot);
 void QsciLexerAVS_QBaseDisconnectNotify(QsciLexerAVS* self, QMetaMethod* signal);
-bool QsciLexerAVS_WriteProperties(const QsciLexerAVS* self, QSettings* qs, libqt_string prefix);
-void QsciLexerAVS_OnWriteProperties(const QsciLexerAVS* self, intptr_t slot);
-bool QsciLexerAVS_QBaseWriteProperties(const QsciLexerAVS* self, QSettings* qs, libqt_string prefix);
 QObject* QsciLexerAVS_Sender(const QsciLexerAVS* self);
 void QsciLexerAVS_OnSender(const QsciLexerAVS* self, intptr_t slot);
 QObject* QsciLexerAVS_QBaseSender(const QsciLexerAVS* self);

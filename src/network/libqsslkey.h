@@ -146,6 +146,8 @@ char* q_sslkey_to_pem1(void* self, const char* passPhrase);
 /// ``` QSslKey* self, const char* passPhrase ```
 char* q_sslkey_to_der1(void* self, const char* passPhrase);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#dtor.QSslKey)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSslKey* self ```

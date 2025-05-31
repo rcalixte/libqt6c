@@ -116,6 +116,8 @@ int32_t q_textinlineobject_format_index(void* self);
 /// ``` QTextInlineObject* self ```
 QTextFormat* q_textinlineobject_format(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextinlineobject.html#dtor.QTextInlineObject)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextInlineObject* self ```
@@ -181,7 +183,7 @@ void q_textlayout_set_text_option(void* self, void* option);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#textOption)
 ///
 /// ``` QTextLayout* self ```
-QTextOption* q_textlayout_text_option(void* self);
+const QTextOption* q_textlayout_text_option(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#setPreeditArea)
 ///
@@ -200,8 +202,8 @@ const char* q_textlayout_preedit_area_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#setFormats)
 ///
-/// ``` QTextLayout* self, QTextLayout__FormatRange* overrides[] ```
-void q_textlayout_set_formats(void* self, void* overrides[]);
+/// ``` QTextLayout* self, libqt_list /* of QTextLayout__FormatRange* */ overrides ```
+void q_textlayout_set_formats(void* self, libqt_list overrides);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#formats)
 ///
@@ -355,13 +357,13 @@ int32_t q_textlayout_previous_cursor_position2(void* self, int oldPos, int64_t m
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#draw)
 ///
-/// ``` QTextLayout* self, QPainter* p, QPointF* pos, QTextLayout__FormatRange* selections[] ```
-void q_textlayout_draw3(void* self, void* p, void* pos, void* selections[]);
+/// ``` QTextLayout* self, QPainter* p, QPointF* pos, libqt_list /* of QTextLayout__FormatRange* */ selections ```
+void q_textlayout_draw3(void* self, void* p, void* pos, libqt_list selections);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#draw)
 ///
-/// ``` QTextLayout* self, QPainter* p, QPointF* pos, QTextLayout__FormatRange* selections[], QRectF* clip ```
-void q_textlayout_draw4(void* self, void* p, void* pos, void* selections[], void* clip);
+/// ``` QTextLayout* self, QPainter* p, QPointF* pos, libqt_list /* of QTextLayout__FormatRange* */ selections, QRectF* clip ```
+void q_textlayout_draw4(void* self, void* p, void* pos, libqt_list selections, void* clip);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#glyphRuns)
 ///
@@ -373,6 +375,8 @@ libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs1(void* self, int from);
 /// ``` QTextLayout* self, int from, int length ```
 libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs2(void* self, int from, int length);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#dtor.QTextLayout)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextLayout* self ```
@@ -565,6 +569,8 @@ libqt_list /* of QGlyphRun* */ q_textline_glyph_runs1(void* self, int from);
 /// ``` QTextLine* self, int from, int length ```
 libqt_list /* of QGlyphRun* */ q_textline_glyph_runs2(void* self, int from, int length);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#dtor.QTextLine)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextLine* self ```
@@ -582,6 +588,8 @@ QTextLayout__FormatRange* q_textlayout__formatrange_new(void* param1);
 /// ``` QTextLayout__FormatRange* self, QTextLayout__FormatRange* param1 ```
 void q_textlayout__formatrange_operator_assign(void* self, void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout::formatrange.html#dtor.QTextLayout::FormatRange)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QTextLayout__FormatRange* self ```

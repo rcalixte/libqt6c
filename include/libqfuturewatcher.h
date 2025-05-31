@@ -12,21 +12,17 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qfuturewatcherbase.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QFutureWatcherBase* self ```
-QMetaObject* q_futurewatcherbase_meta_object(void* self);
+const QMetaObject* q_futurewatcherbase_meta_object(void* self);
 
 /// ``` QFutureWatcherBase* self, const char* param1 ```
 void* q_futurewatcherbase_metacast(void* self, const char* param1);
@@ -114,6 +110,8 @@ bool q_futurewatcherbase_event(void* self, void* event);
 /// ``` QFutureWatcherBase* self ```
 void q_futurewatcherbase_started(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#started)
+///
 /// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*) ```
 void q_futurewatcherbase_on_started(void* self, void (*slot)(void*));
 
@@ -122,6 +120,8 @@ void q_futurewatcherbase_on_started(void* self, void (*slot)(void*));
 /// ``` QFutureWatcherBase* self ```
 void q_futurewatcherbase_finished(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#finished)
+///
 /// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*) ```
 void q_futurewatcherbase_on_finished(void* self, void (*slot)(void*));
 
@@ -130,6 +130,8 @@ void q_futurewatcherbase_on_finished(void* self, void (*slot)(void*));
 /// ``` QFutureWatcherBase* self ```
 void q_futurewatcherbase_canceled(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#canceled)
+///
 /// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*) ```
 void q_futurewatcherbase_on_canceled(void* self, void (*slot)(void*));
 
@@ -138,6 +140,8 @@ void q_futurewatcherbase_on_canceled(void* self, void (*slot)(void*));
 /// ``` QFutureWatcherBase* self ```
 void q_futurewatcherbase_paused(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#paused)
+///
 /// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*) ```
 void q_futurewatcherbase_on_paused(void* self, void (*slot)(void*));
 
@@ -146,6 +150,8 @@ void q_futurewatcherbase_on_paused(void* self, void (*slot)(void*));
 /// ``` QFutureWatcherBase* self ```
 void q_futurewatcherbase_suspending(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#suspending)
+///
 /// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*) ```
 void q_futurewatcherbase_on_suspending(void* self, void (*slot)(void*));
 
@@ -154,6 +160,8 @@ void q_futurewatcherbase_on_suspending(void* self, void (*slot)(void*));
 /// ``` QFutureWatcherBase* self ```
 void q_futurewatcherbase_suspended(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#suspended)
+///
 /// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*) ```
 void q_futurewatcherbase_on_suspended(void* self, void (*slot)(void*));
 
@@ -162,6 +170,8 @@ void q_futurewatcherbase_on_suspended(void* self, void (*slot)(void*));
 /// ``` QFutureWatcherBase* self ```
 void q_futurewatcherbase_resumed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#resumed)
+///
 /// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*) ```
 void q_futurewatcherbase_on_resumed(void* self, void (*slot)(void*));
 
@@ -170,6 +180,8 @@ void q_futurewatcherbase_on_resumed(void* self, void (*slot)(void*));
 /// ``` QFutureWatcherBase* self, int resultIndex ```
 void q_futurewatcherbase_result_ready_at(void* self, int resultIndex);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#resultReadyAt)
+///
 /// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*, int) ```
 void q_futurewatcherbase_on_result_ready_at(void* self, void (*slot)(void*, int));
 
@@ -178,6 +190,8 @@ void q_futurewatcherbase_on_result_ready_at(void* self, void (*slot)(void*, int)
 /// ``` QFutureWatcherBase* self, int beginIndex, int endIndex ```
 void q_futurewatcherbase_results_ready_at(void* self, int beginIndex, int endIndex);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#resultsReadyAt)
+///
 /// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*, int, int) ```
 void q_futurewatcherbase_on_results_ready_at(void* self, void (*slot)(void*, int, int));
 
@@ -186,6 +200,8 @@ void q_futurewatcherbase_on_results_ready_at(void* self, void (*slot)(void*, int
 /// ``` QFutureWatcherBase* self, int minimum, int maximum ```
 void q_futurewatcherbase_progress_range_changed(void* self, int minimum, int maximum);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#progressRangeChanged)
+///
 /// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*, int, int) ```
 void q_futurewatcherbase_on_progress_range_changed(void* self, void (*slot)(void*, int, int));
 
@@ -194,6 +210,8 @@ void q_futurewatcherbase_on_progress_range_changed(void* self, void (*slot)(void
 /// ``` QFutureWatcherBase* self, int progressValue ```
 void q_futurewatcherbase_progress_value_changed(void* self, int progressValue);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#progressValueChanged)
+///
 /// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*, int) ```
 void q_futurewatcherbase_on_progress_value_changed(void* self, void (*slot)(void*, int));
 
@@ -202,6 +220,8 @@ void q_futurewatcherbase_on_progress_value_changed(void* self, void (*slot)(void
 /// ``` QFutureWatcherBase* self, const char* progressText ```
 void q_futurewatcherbase_progress_text_changed(void* self, const char* progressText);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#progressTextChanged)
+///
 /// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*, const char*) ```
 void q_futurewatcherbase_on_progress_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -344,7 +364,7 @@ void q_futurewatcherbase_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QFutureWatcherBase* self ```
-libqt_list /* of QObject* */ q_futurewatcherbase_children(void* self);
+const libqt_list /* of QObject* */ q_futurewatcherbase_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -442,7 +462,7 @@ QBindingStorage* q_futurewatcherbase_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QFutureWatcherBase* self ```
-QBindingStorage* q_futurewatcherbase_binding_storage2(void* self);
+const QBindingStorage* q_futurewatcherbase_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -452,6 +472,8 @@ QBindingStorage* q_futurewatcherbase_binding_storage2(void* self);
 void q_futurewatcherbase_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QFutureWatcherBase* self, void (*slot)(QObject*) ```
 void q_futurewatcherbase_on_destroyed(void* self, void (*slot)(void*));
@@ -507,9 +529,22 @@ void q_futurewatcherbase_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QFutureWatcherBase* self, void (*slot)(QObject*, QObject*) ```
 void q_futurewatcherbase_on_destroyed1(void* self, void (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFutureWatcherBase* self, void (*slot)(QObject*, const char*) ```
+void q_futurewatcherbase_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#dtor.QFutureWatcherBase)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QFutureWatcherBase* self ```

@@ -1,12 +1,6 @@
-#include <QAnyStringView>
-#include <QBindingStorage>
-#include <QByteArray>
-#include <QChildEvent>
-#include <QEvent>
 #include <QList>
 #include <QMetaMethod>
 #include <QMetaObject>
-#define WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection
 #include <QObject>
 #include <QPixmap>
 #include <QPoint>
@@ -17,10 +11,7 @@
 #include <QString>
 #include <QByteArray>
 #include <cstring>
-#include <QThread>
-#include <QTimerEvent>
 #include <QTransform>
-#include <QVariant>
 #include <qscreen.h>
 #include "libqscreen.hpp"
 #include "libqscreen.hxx"
@@ -380,14 +371,6 @@ QPixmap* QScreen_GrabWindow4(QScreen* self, uintptr_t window, int x, int y, int 
 
 QPixmap* QScreen_GrabWindow5(QScreen* self, uintptr_t window, int x, int y, int w, int h) {
     return new QPixmap(self->grabWindow(static_cast<WId>(window), static_cast<int>(x), static_cast<int>(y), static_cast<int>(w), static_cast<int>(h)));
-}
-
-bool QScreen_Event(QScreen* self, QEvent* event) {
-    return self->event(event);
-}
-
-bool QScreen_EventFilter(QScreen* self, QObject* watched, QEvent* event) {
-    return self->eventFilter(watched, event);
 }
 
 void QScreen_Delete(QScreen* self) {

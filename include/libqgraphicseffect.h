@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqbrush.h"
 #include "libqevent.h"
 #include "libqcolor.h"
@@ -24,8 +22,6 @@
 #include "libqpoint.h"
 #include "libqrect.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qgraphicseffect.html
 
@@ -42,7 +38,7 @@ QGraphicsEffect* q_graphicseffect_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QGraphicsEffect* self ```
-QMetaObject* q_graphicseffect_meta_object(void* self);
+const QMetaObject* q_graphicseffect_meta_object(void* self);
 
 /// ``` QGraphicsEffect* self, const char* param1 ```
 void* q_graphicseffect_metacast(void* self, const char* param1);
@@ -70,11 +66,15 @@ const char* q_graphicseffect_tr(const char* s);
 /// ``` QGraphicsEffect* self, QRectF* sourceRect ```
 QRectF* q_graphicseffect_bounding_rect_for(void* self, void* sourceRect);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#boundingRectFor)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsEffect* self, QRectF* (*slot)(QGraphicsEffect*, QRectF*) ```
 void q_graphicseffect_on_bounding_rect_for(void* self, QRectF* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#boundingRectFor)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsEffect* self, QRectF* sourceRect ```
@@ -105,6 +105,8 @@ void q_graphicseffect_update(void* self);
 /// ``` QGraphicsEffect* self, bool enabled ```
 void q_graphicseffect_enabled_changed(void* self, bool enabled);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#enabledChanged)
+///
 /// ``` QGraphicsEffect* self, void (*slot)(QGraphicsEffect*, bool) ```
 void q_graphicseffect_on_enabled_changed(void* self, void (*slot)(void*, bool));
 
@@ -113,11 +115,15 @@ void q_graphicseffect_on_enabled_changed(void* self, void (*slot)(void*, bool));
 /// ``` QGraphicsEffect* self, QPainter* painter ```
 void q_graphicseffect_draw(void* self, void* painter);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#draw)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsEffect* self, void (*slot)(QGraphicsEffect*, QPainter*) ```
 void q_graphicseffect_on_draw(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#draw)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsEffect* self, QPainter* painter ```
@@ -128,11 +134,15 @@ void q_graphicseffect_qbase_draw(void* self, void* painter);
 /// ``` QGraphicsEffect* self, int flags ```
 void q_graphicseffect_source_changed(void* self, int64_t flags);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceChanged)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsEffect* self, void (*slot)(QGraphicsEffect*, int) ```
 void q_graphicseffect_on_source_changed(void* self, void (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceChanged)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsEffect* self, int flags ```
@@ -143,11 +153,15 @@ void q_graphicseffect_qbase_source_changed(void* self, int64_t flags);
 /// ``` QGraphicsEffect* self ```
 void q_graphicseffect_update_bounding_rect(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#updateBoundingRect)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsEffect* self, void (*slot)() ```
 void q_graphicseffect_on_update_bounding_rect(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#updateBoundingRect)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsEffect* self ```
@@ -158,11 +172,15 @@ void q_graphicseffect_qbase_update_bounding_rect(void* self);
 /// ``` QGraphicsEffect* self ```
 bool q_graphicseffect_source_is_pixmap(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceIsPixmap)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsEffect* self, bool (*slot)() ```
 void q_graphicseffect_on_source_is_pixmap(void* self, bool (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceIsPixmap)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsEffect* self ```
@@ -173,11 +191,15 @@ bool q_graphicseffect_qbase_source_is_pixmap(void* self);
 /// ``` QGraphicsEffect* self ```
 QRectF* q_graphicseffect_source_bounding_rect(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsEffect* self, QRectF* (*slot)() ```
 void q_graphicseffect_on_source_bounding_rect(void* self, QRectF* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsEffect* self ```
@@ -188,11 +210,15 @@ QRectF* q_graphicseffect_qbase_source_bounding_rect(void* self);
 /// ``` QGraphicsEffect* self, QPainter* painter ```
 void q_graphicseffect_draw_source(void* self, void* painter);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#drawSource)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsEffect* self, void (*slot)(QGraphicsEffect*, QPainter*) ```
 void q_graphicseffect_on_draw_source(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#drawSource)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsEffect* self, QPainter* painter ```
@@ -203,11 +229,15 @@ void q_graphicseffect_qbase_draw_source(void* self, void* painter);
 /// ``` QGraphicsEffect* self ```
 QPixmap* q_graphicseffect_source_pixmap(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsEffect* self, QPixmap* (*slot)() ```
 void q_graphicseffect_on_source_pixmap(void* self, QPixmap* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsEffect* self ```
@@ -228,11 +258,15 @@ const char* q_graphicseffect_tr3(const char* s, const char* c, int n);
 /// ``` QGraphicsEffect* self, enum Qt__CoordinateSystem system ```
 QRectF* q_graphicseffect_source_bounding_rect1(void* self, int64_t system);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsEffect* self, QRectF* (*slot)(QGraphicsEffect*, enum Qt__CoordinateSystem) ```
 void q_graphicseffect_on_source_bounding_rect1(void* self, QRectF* (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsEffect* self, enum Qt__CoordinateSystem system ```
@@ -243,11 +277,15 @@ QRectF* q_graphicseffect_qbase_source_bounding_rect1(void* self, int64_t system)
 /// ``` QGraphicsEffect* self, enum Qt__CoordinateSystem system ```
 QPixmap* q_graphicseffect_source_pixmap1(void* self, int64_t system);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsEffect* self, QPixmap* (*slot)(QGraphicsEffect*, enum Qt__CoordinateSystem) ```
 void q_graphicseffect_on_source_pixmap1(void* self, QPixmap* (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsEffect* self, enum Qt__CoordinateSystem system ```
@@ -258,11 +296,15 @@ QPixmap* q_graphicseffect_qbase_source_pixmap1(void* self, int64_t system);
 /// ``` QGraphicsEffect* self, enum Qt__CoordinateSystem system, QPoint* offset ```
 QPixmap* q_graphicseffect_source_pixmap2(void* self, int64_t system, void* offset);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsEffect* self, QPixmap* (*slot)(QGraphicsEffect*, enum Qt__CoordinateSystem, QPoint*) ```
 void q_graphicseffect_on_source_pixmap2(void* self, QPixmap* (*slot)(void*, int64_t, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsEffect* self, enum Qt__CoordinateSystem system, QPoint* offset ```
@@ -273,11 +315,15 @@ QPixmap* q_graphicseffect_qbase_source_pixmap2(void* self, int64_t system, void*
 /// ``` QGraphicsEffect* self, enum Qt__CoordinateSystem system, QPoint* offset, enum QGraphicsEffect__PixmapPadMode mode ```
 QPixmap* q_graphicseffect_source_pixmap3(void* self, int64_t system, void* offset, int64_t mode);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsEffect* self, QPixmap* (*slot)(QGraphicsEffect*, enum Qt__CoordinateSystem, QPoint*, enum QGraphicsEffect__PixmapPadMode) ```
 void q_graphicseffect_on_source_pixmap3(void* self, QPixmap* (*slot)(void*, int64_t, void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsEffect* self, enum Qt__CoordinateSystem system, QPoint* offset, enum QGraphicsEffect__PixmapPadMode mode ```
@@ -365,7 +411,7 @@ void q_graphicseffect_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QGraphicsEffect* self ```
-libqt_list /* of QObject* */ q_graphicseffect_children(void* self);
+const libqt_list /* of QObject* */ q_graphicseffect_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -463,7 +509,7 @@ QBindingStorage* q_graphicseffect_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QGraphicsEffect* self ```
-QBindingStorage* q_graphicseffect_binding_storage2(void* self);
+const QBindingStorage* q_graphicseffect_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -473,6 +519,8 @@ QBindingStorage* q_graphicseffect_binding_storage2(void* self);
 void q_graphicseffect_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QGraphicsEffect* self, void (*slot)(QObject*) ```
 void q_graphicseffect_on_destroyed(void* self, void (*slot)(void*));
@@ -528,6 +576,8 @@ void q_graphicseffect_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QGraphicsEffect* self, void (*slot)(QObject*, QObject*) ```
 void q_graphicseffect_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -542,12 +592,16 @@ bool q_graphicseffect_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsEffect* self, QEvent* event ```
 bool q_graphicseffect_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -565,12 +619,16 @@ bool q_graphicseffect_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsEffect* self, QObject* watched, QEvent* event ```
 bool q_graphicseffect_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -588,12 +646,16 @@ void q_graphicseffect_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsEffect* self, QTimerEvent* event ```
 void q_graphicseffect_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -611,12 +673,16 @@ void q_graphicseffect_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsEffect* self, QChildEvent* event ```
 void q_graphicseffect_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -634,12 +700,16 @@ void q_graphicseffect_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsEffect* self, QEvent* event ```
 void q_graphicseffect_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -657,12 +727,16 @@ void q_graphicseffect_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsEffect* self, QMetaMethod* signal ```
 void q_graphicseffect_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -680,12 +754,16 @@ void q_graphicseffect_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsEffect* self, QMetaMethod* signal ```
 void q_graphicseffect_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -703,12 +781,16 @@ QObject* q_graphicseffect_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsEffect* self ```
 QObject* q_graphicseffect_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -726,12 +808,16 @@ int32_t q_graphicseffect_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsEffect* self ```
 int32_t q_graphicseffect_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -749,12 +835,16 @@ int32_t q_graphicseffect_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsEffect* self, const char* signal ```
 int32_t q_graphicseffect_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -772,6 +862,8 @@ bool q_graphicseffect_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsEffect* self, QMetaMethod* signal ```
@@ -779,11 +871,24 @@ bool q_graphicseffect_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QGraphicsEffect* self, bool (*slot)(QGraphicsEffect*, QMetaMethod*) ```
 void q_graphicseffect_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QGraphicsEffect* self, void (*slot)(QObject*, const char*) ```
+void q_graphicseffect_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#dtor.QGraphicsEffect)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGraphicsEffect* self ```
@@ -804,7 +909,7 @@ QGraphicsColorizeEffect* q_graphicscolorizeeffect_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QGraphicsColorizeEffect* self ```
-QMetaObject* q_graphicscolorizeeffect_meta_object(void* self);
+const QMetaObject* q_graphicscolorizeeffect_meta_object(void* self);
 
 /// ``` QGraphicsColorizeEffect* self, const char* param1 ```
 void* q_graphicscolorizeeffect_metacast(void* self, const char* param1);
@@ -852,6 +957,8 @@ void q_graphicscolorizeeffect_set_strength(void* self, double strength);
 /// ``` QGraphicsColorizeEffect* self, QColor* color ```
 void q_graphicscolorizeeffect_color_changed(void* self, void* color);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicscolorizeeffect.html#colorChanged)
+///
 /// ``` QGraphicsColorizeEffect* self, void (*slot)(QGraphicsColorizeEffect*, QColor*) ```
 void q_graphicscolorizeeffect_on_color_changed(void* self, void (*slot)(void*, void*));
 
@@ -860,6 +967,8 @@ void q_graphicscolorizeeffect_on_color_changed(void* self, void (*slot)(void*, v
 /// ``` QGraphicsColorizeEffect* self, double strength ```
 void q_graphicscolorizeeffect_strength_changed(void* self, double strength);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicscolorizeeffect.html#strengthChanged)
+///
 /// ``` QGraphicsColorizeEffect* self, void (*slot)(QGraphicsColorizeEffect*, double) ```
 void q_graphicscolorizeeffect_on_strength_changed(void* self, void (*slot)(void*, double));
 
@@ -868,11 +977,15 @@ void q_graphicscolorizeeffect_on_strength_changed(void* self, void (*slot)(void*
 /// ``` QGraphicsColorizeEffect* self, QPainter* painter ```
 void q_graphicscolorizeeffect_draw(void* self, void* painter);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicscolorizeeffect.html#draw)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsColorizeEffect* self, void (*slot)(QGraphicsColorizeEffect*, QPainter*) ```
 void q_graphicscolorizeeffect_on_draw(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicscolorizeeffect.html#draw)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsColorizeEffect* self, QPainter* painter ```
@@ -924,6 +1037,8 @@ void q_graphicscolorizeeffect_update(void* self);
 void q_graphicscolorizeeffect_enabled_changed(void* self, bool enabled);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#enabledChanged)
 ///
 /// ``` QGraphicsColorizeEffect* self, void (*slot)(QGraphicsEffect*, bool) ```
 void q_graphicscolorizeeffect_on_enabled_changed(void* self, void (*slot)(void*, bool));
@@ -1010,7 +1125,7 @@ void q_graphicscolorizeeffect_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QGraphicsColorizeEffect* self ```
-libqt_list /* of QObject* */ q_graphicscolorizeeffect_children(void* self);
+const libqt_list /* of QObject* */ q_graphicscolorizeeffect_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1108,7 +1223,7 @@ QBindingStorage* q_graphicscolorizeeffect_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QGraphicsColorizeEffect* self ```
-QBindingStorage* q_graphicscolorizeeffect_binding_storage2(void* self);
+const QBindingStorage* q_graphicscolorizeeffect_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -1118,6 +1233,8 @@ QBindingStorage* q_graphicscolorizeeffect_binding_storage2(void* self);
 void q_graphicscolorizeeffect_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QGraphicsColorizeEffect* self, void (*slot)(QObject*) ```
 void q_graphicscolorizeeffect_on_destroyed(void* self, void (*slot)(void*));
@@ -1173,6 +1290,8 @@ void q_graphicscolorizeeffect_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QGraphicsColorizeEffect* self, void (*slot)(QObject*, QObject*) ```
 void q_graphicscolorizeeffect_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -1187,12 +1306,16 @@ QRectF* q_graphicscolorizeeffect_bounding_rect_for(void* self, void* sourceRect)
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#boundingRectFor)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsColorizeEffect* self, QRectF* sourceRect ```
 QRectF* q_graphicscolorizeeffect_qbase_bounding_rect_for(void* self, void* sourceRect);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#boundingRectFor)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1210,12 +1333,16 @@ void q_graphicscolorizeeffect_source_changed(void* self, int64_t flags);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsColorizeEffect* self, int flags ```
 void q_graphicscolorizeeffect_qbase_source_changed(void* self, int64_t flags);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1233,12 +1360,16 @@ bool q_graphicscolorizeeffect_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsColorizeEffect* self, QEvent* event ```
 bool q_graphicscolorizeeffect_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1256,12 +1387,16 @@ bool q_graphicscolorizeeffect_event_filter(void* self, void* watched, void* even
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsColorizeEffect* self, QObject* watched, QEvent* event ```
 bool q_graphicscolorizeeffect_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1279,12 +1414,16 @@ void q_graphicscolorizeeffect_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsColorizeEffect* self, QTimerEvent* event ```
 void q_graphicscolorizeeffect_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1302,12 +1441,16 @@ void q_graphicscolorizeeffect_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsColorizeEffect* self, QChildEvent* event ```
 void q_graphicscolorizeeffect_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1325,12 +1468,16 @@ void q_graphicscolorizeeffect_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsColorizeEffect* self, QEvent* event ```
 void q_graphicscolorizeeffect_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1348,12 +1495,16 @@ void q_graphicscolorizeeffect_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsColorizeEffect* self, QMetaMethod* signal ```
 void q_graphicscolorizeeffect_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1371,12 +1522,16 @@ void q_graphicscolorizeeffect_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsColorizeEffect* self, QMetaMethod* signal ```
 void q_graphicscolorizeeffect_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1394,12 +1549,16 @@ void q_graphicscolorizeeffect_update_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#updateBoundingRect)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsColorizeEffect* self ```
 void q_graphicscolorizeeffect_qbase_update_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#updateBoundingRect)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1417,12 +1576,16 @@ bool q_graphicscolorizeeffect_source_is_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceIsPixmap)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsColorizeEffect* self ```
 bool q_graphicscolorizeeffect_qbase_source_is_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceIsPixmap)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1440,12 +1603,16 @@ QRectF* q_graphicscolorizeeffect_source_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsColorizeEffect* self ```
 QRectF* q_graphicscolorizeeffect_qbase_source_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1463,12 +1630,16 @@ void q_graphicscolorizeeffect_draw_source(void* self, void* painter);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#drawSource)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsColorizeEffect* self, QPainter* painter ```
 void q_graphicscolorizeeffect_qbase_draw_source(void* self, void* painter);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#drawSource)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1486,12 +1657,16 @@ QPixmap* q_graphicscolorizeeffect_source_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsColorizeEffect* self ```
 QPixmap* q_graphicscolorizeeffect_qbase_source_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1509,12 +1684,16 @@ QObject* q_graphicscolorizeeffect_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsColorizeEffect* self ```
 QObject* q_graphicscolorizeeffect_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1532,12 +1711,16 @@ int32_t q_graphicscolorizeeffect_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsColorizeEffect* self ```
 int32_t q_graphicscolorizeeffect_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1555,12 +1738,16 @@ int32_t q_graphicscolorizeeffect_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsColorizeEffect* self, const char* signal ```
 int32_t q_graphicscolorizeeffect_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1578,6 +1765,8 @@ bool q_graphicscolorizeeffect_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsColorizeEffect* self, QMetaMethod* signal ```
@@ -1585,11 +1774,24 @@ bool q_graphicscolorizeeffect_qbase_is_signal_connected(void* self, void* signal
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QGraphicsColorizeEffect* self, bool (*slot)(QGraphicsColorizeEffect*, QMetaMethod*) ```
 void q_graphicscolorizeeffect_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QGraphicsColorizeEffect* self, void (*slot)(QObject*, const char*) ```
+void q_graphicscolorizeeffect_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicscolorizeeffect.html#dtor.QGraphicsColorizeEffect)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGraphicsColorizeEffect* self ```
@@ -1610,7 +1812,7 @@ QGraphicsBlurEffect* q_graphicsblureffect_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QGraphicsBlurEffect* self ```
-QMetaObject* q_graphicsblureffect_meta_object(void* self);
+const QMetaObject* q_graphicsblureffect_meta_object(void* self);
 
 /// ``` QGraphicsBlurEffect* self, const char* param1 ```
 void* q_graphicsblureffect_metacast(void* self, const char* param1);
@@ -1638,11 +1840,15 @@ const char* q_graphicsblureffect_tr(const char* s);
 /// ``` QGraphicsBlurEffect* self, QRectF* rect ```
 QRectF* q_graphicsblureffect_bounding_rect_for(void* self, void* rect);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsblureffect.html#boundingRectFor)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsBlurEffect* self, QRectF* (*slot)(QGraphicsBlurEffect*, QRectF*) ```
 void q_graphicsblureffect_on_bounding_rect_for(void* self, QRectF* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsblureffect.html#boundingRectFor)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsBlurEffect* self, QRectF* rect ```
@@ -1673,6 +1879,8 @@ void q_graphicsblureffect_set_blur_hints(void* self, int64_t hints);
 /// ``` QGraphicsBlurEffect* self, double blurRadius ```
 void q_graphicsblureffect_blur_radius_changed(void* self, double blurRadius);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsblureffect.html#blurRadiusChanged)
+///
 /// ``` QGraphicsBlurEffect* self, void (*slot)(QGraphicsBlurEffect*, double) ```
 void q_graphicsblureffect_on_blur_radius_changed(void* self, void (*slot)(void*, double));
 
@@ -1681,6 +1889,8 @@ void q_graphicsblureffect_on_blur_radius_changed(void* self, void (*slot)(void*,
 /// ``` QGraphicsBlurEffect* self, int hints ```
 void q_graphicsblureffect_blur_hints_changed(void* self, int64_t hints);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsblureffect.html#blurHintsChanged)
+///
 /// ``` QGraphicsBlurEffect* self, void (*slot)(QGraphicsBlurEffect*, int) ```
 void q_graphicsblureffect_on_blur_hints_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -1689,11 +1899,15 @@ void q_graphicsblureffect_on_blur_hints_changed(void* self, void (*slot)(void*, 
 /// ``` QGraphicsBlurEffect* self, QPainter* painter ```
 void q_graphicsblureffect_draw(void* self, void* painter);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsblureffect.html#draw)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsBlurEffect* self, void (*slot)(QGraphicsBlurEffect*, QPainter*) ```
 void q_graphicsblureffect_on_draw(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsblureffect.html#draw)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsBlurEffect* self, QPainter* painter ```
@@ -1745,6 +1959,8 @@ void q_graphicsblureffect_update(void* self);
 void q_graphicsblureffect_enabled_changed(void* self, bool enabled);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#enabledChanged)
 ///
 /// ``` QGraphicsBlurEffect* self, void (*slot)(QGraphicsEffect*, bool) ```
 void q_graphicsblureffect_on_enabled_changed(void* self, void (*slot)(void*, bool));
@@ -1831,7 +2047,7 @@ void q_graphicsblureffect_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QGraphicsBlurEffect* self ```
-libqt_list /* of QObject* */ q_graphicsblureffect_children(void* self);
+const libqt_list /* of QObject* */ q_graphicsblureffect_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1929,7 +2145,7 @@ QBindingStorage* q_graphicsblureffect_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QGraphicsBlurEffect* self ```
-QBindingStorage* q_graphicsblureffect_binding_storage2(void* self);
+const QBindingStorage* q_graphicsblureffect_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -1939,6 +2155,8 @@ QBindingStorage* q_graphicsblureffect_binding_storage2(void* self);
 void q_graphicsblureffect_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QGraphicsBlurEffect* self, void (*slot)(QObject*) ```
 void q_graphicsblureffect_on_destroyed(void* self, void (*slot)(void*));
@@ -1994,6 +2212,8 @@ void q_graphicsblureffect_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QGraphicsBlurEffect* self, void (*slot)(QObject*, QObject*) ```
 void q_graphicsblureffect_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -2008,12 +2228,16 @@ void q_graphicsblureffect_source_changed(void* self, int64_t flags);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsBlurEffect* self, int flags ```
 void q_graphicsblureffect_qbase_source_changed(void* self, int64_t flags);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2031,12 +2255,16 @@ bool q_graphicsblureffect_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsBlurEffect* self, QEvent* event ```
 bool q_graphicsblureffect_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2054,12 +2282,16 @@ bool q_graphicsblureffect_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsBlurEffect* self, QObject* watched, QEvent* event ```
 bool q_graphicsblureffect_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2077,12 +2309,16 @@ void q_graphicsblureffect_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsBlurEffect* self, QTimerEvent* event ```
 void q_graphicsblureffect_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2100,12 +2336,16 @@ void q_graphicsblureffect_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsBlurEffect* self, QChildEvent* event ```
 void q_graphicsblureffect_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2123,12 +2363,16 @@ void q_graphicsblureffect_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsBlurEffect* self, QEvent* event ```
 void q_graphicsblureffect_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2146,12 +2390,16 @@ void q_graphicsblureffect_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsBlurEffect* self, QMetaMethod* signal ```
 void q_graphicsblureffect_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2169,12 +2417,16 @@ void q_graphicsblureffect_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsBlurEffect* self, QMetaMethod* signal ```
 void q_graphicsblureffect_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2192,12 +2444,16 @@ void q_graphicsblureffect_update_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#updateBoundingRect)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsBlurEffect* self ```
 void q_graphicsblureffect_qbase_update_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#updateBoundingRect)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2215,12 +2471,16 @@ bool q_graphicsblureffect_source_is_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceIsPixmap)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsBlurEffect* self ```
 bool q_graphicsblureffect_qbase_source_is_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceIsPixmap)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2238,12 +2498,16 @@ QRectF* q_graphicsblureffect_source_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsBlurEffect* self ```
 QRectF* q_graphicsblureffect_qbase_source_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2261,12 +2525,16 @@ void q_graphicsblureffect_draw_source(void* self, void* painter);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#drawSource)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsBlurEffect* self, QPainter* painter ```
 void q_graphicsblureffect_qbase_draw_source(void* self, void* painter);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#drawSource)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2284,12 +2552,16 @@ QPixmap* q_graphicsblureffect_source_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsBlurEffect* self ```
 QPixmap* q_graphicsblureffect_qbase_source_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2307,12 +2579,16 @@ QObject* q_graphicsblureffect_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsBlurEffect* self ```
 QObject* q_graphicsblureffect_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2330,12 +2606,16 @@ int32_t q_graphicsblureffect_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsBlurEffect* self ```
 int32_t q_graphicsblureffect_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2353,12 +2633,16 @@ int32_t q_graphicsblureffect_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsBlurEffect* self, const char* signal ```
 int32_t q_graphicsblureffect_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2376,6 +2660,8 @@ bool q_graphicsblureffect_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsBlurEffect* self, QMetaMethod* signal ```
@@ -2383,11 +2669,24 @@ bool q_graphicsblureffect_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QGraphicsBlurEffect* self, bool (*slot)(QGraphicsBlurEffect*, QMetaMethod*) ```
 void q_graphicsblureffect_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QGraphicsBlurEffect* self, void (*slot)(QObject*, const char*) ```
+void q_graphicsblureffect_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsblureffect.html#dtor.QGraphicsBlurEffect)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGraphicsBlurEffect* self ```
@@ -2408,7 +2707,7 @@ QGraphicsDropShadowEffect* q_graphicsdropshadoweffect_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QGraphicsDropShadowEffect* self ```
-QMetaObject* q_graphicsdropshadoweffect_meta_object(void* self);
+const QMetaObject* q_graphicsdropshadoweffect_meta_object(void* self);
 
 /// ``` QGraphicsDropShadowEffect* self, const char* param1 ```
 void* q_graphicsdropshadoweffect_metacast(void* self, const char* param1);
@@ -2436,11 +2735,15 @@ const char* q_graphicsdropshadoweffect_tr(const char* s);
 /// ``` QGraphicsDropShadowEffect* self, QRectF* rect ```
 QRectF* q_graphicsdropshadoweffect_bounding_rect_for(void* self, void* rect);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#boundingRectFor)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsDropShadowEffect* self, QRectF* (*slot)(QGraphicsDropShadowEffect*, QRectF*) ```
 void q_graphicsdropshadoweffect_on_bounding_rect_for(void* self, QRectF* (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#boundingRectFor)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsDropShadowEffect* self, QRectF* rect ```
@@ -2511,6 +2814,8 @@ void q_graphicsdropshadoweffect_set_color(void* self, void* color);
 /// ``` QGraphicsDropShadowEffect* self, QPointF* offset ```
 void q_graphicsdropshadoweffect_offset_changed(void* self, void* offset);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#offsetChanged)
+///
 /// ``` QGraphicsDropShadowEffect* self, void (*slot)(QGraphicsDropShadowEffect*, QPointF*) ```
 void q_graphicsdropshadoweffect_on_offset_changed(void* self, void (*slot)(void*, void*));
 
@@ -2519,6 +2824,8 @@ void q_graphicsdropshadoweffect_on_offset_changed(void* self, void (*slot)(void*
 /// ``` QGraphicsDropShadowEffect* self, double blurRadius ```
 void q_graphicsdropshadoweffect_blur_radius_changed(void* self, double blurRadius);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#blurRadiusChanged)
+///
 /// ``` QGraphicsDropShadowEffect* self, void (*slot)(QGraphicsDropShadowEffect*, double) ```
 void q_graphicsdropshadoweffect_on_blur_radius_changed(void* self, void (*slot)(void*, double));
 
@@ -2527,6 +2834,8 @@ void q_graphicsdropshadoweffect_on_blur_radius_changed(void* self, void (*slot)(
 /// ``` QGraphicsDropShadowEffect* self, QColor* color ```
 void q_graphicsdropshadoweffect_color_changed(void* self, void* color);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#colorChanged)
+///
 /// ``` QGraphicsDropShadowEffect* self, void (*slot)(QGraphicsDropShadowEffect*, QColor*) ```
 void q_graphicsdropshadoweffect_on_color_changed(void* self, void (*slot)(void*, void*));
 
@@ -2535,11 +2844,15 @@ void q_graphicsdropshadoweffect_on_color_changed(void* self, void (*slot)(void*,
 /// ``` QGraphicsDropShadowEffect* self, QPainter* painter ```
 void q_graphicsdropshadoweffect_draw(void* self, void* painter);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#draw)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsDropShadowEffect* self, void (*slot)(QGraphicsDropShadowEffect*, QPainter*) ```
 void q_graphicsdropshadoweffect_on_draw(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#draw)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsDropShadowEffect* self, QPainter* painter ```
@@ -2591,6 +2904,8 @@ void q_graphicsdropshadoweffect_update(void* self);
 void q_graphicsdropshadoweffect_enabled_changed(void* self, bool enabled);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#enabledChanged)
 ///
 /// ``` QGraphicsDropShadowEffect* self, void (*slot)(QGraphicsEffect*, bool) ```
 void q_graphicsdropshadoweffect_on_enabled_changed(void* self, void (*slot)(void*, bool));
@@ -2677,7 +2992,7 @@ void q_graphicsdropshadoweffect_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QGraphicsDropShadowEffect* self ```
-libqt_list /* of QObject* */ q_graphicsdropshadoweffect_children(void* self);
+const libqt_list /* of QObject* */ q_graphicsdropshadoweffect_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2775,7 +3090,7 @@ QBindingStorage* q_graphicsdropshadoweffect_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QGraphicsDropShadowEffect* self ```
-QBindingStorage* q_graphicsdropshadoweffect_binding_storage2(void* self);
+const QBindingStorage* q_graphicsdropshadoweffect_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2785,6 +3100,8 @@ QBindingStorage* q_graphicsdropshadoweffect_binding_storage2(void* self);
 void q_graphicsdropshadoweffect_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QGraphicsDropShadowEffect* self, void (*slot)(QObject*) ```
 void q_graphicsdropshadoweffect_on_destroyed(void* self, void (*slot)(void*));
@@ -2840,6 +3157,8 @@ void q_graphicsdropshadoweffect_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QGraphicsDropShadowEffect* self, void (*slot)(QObject*, QObject*) ```
 void q_graphicsdropshadoweffect_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -2854,12 +3173,16 @@ void q_graphicsdropshadoweffect_source_changed(void* self, int64_t flags);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsDropShadowEffect* self, int flags ```
 void q_graphicsdropshadoweffect_qbase_source_changed(void* self, int64_t flags);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2877,12 +3200,16 @@ bool q_graphicsdropshadoweffect_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsDropShadowEffect* self, QEvent* event ```
 bool q_graphicsdropshadoweffect_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2900,12 +3227,16 @@ bool q_graphicsdropshadoweffect_event_filter(void* self, void* watched, void* ev
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsDropShadowEffect* self, QObject* watched, QEvent* event ```
 bool q_graphicsdropshadoweffect_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2923,12 +3254,16 @@ void q_graphicsdropshadoweffect_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsDropShadowEffect* self, QTimerEvent* event ```
 void q_graphicsdropshadoweffect_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2946,12 +3281,16 @@ void q_graphicsdropshadoweffect_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsDropShadowEffect* self, QChildEvent* event ```
 void q_graphicsdropshadoweffect_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2969,12 +3308,16 @@ void q_graphicsdropshadoweffect_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsDropShadowEffect* self, QEvent* event ```
 void q_graphicsdropshadoweffect_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2992,12 +3335,16 @@ void q_graphicsdropshadoweffect_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsDropShadowEffect* self, QMetaMethod* signal ```
 void q_graphicsdropshadoweffect_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3015,12 +3362,16 @@ void q_graphicsdropshadoweffect_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsDropShadowEffect* self, QMetaMethod* signal ```
 void q_graphicsdropshadoweffect_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3038,12 +3389,16 @@ void q_graphicsdropshadoweffect_update_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#updateBoundingRect)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsDropShadowEffect* self ```
 void q_graphicsdropshadoweffect_qbase_update_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#updateBoundingRect)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3061,12 +3416,16 @@ bool q_graphicsdropshadoweffect_source_is_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceIsPixmap)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsDropShadowEffect* self ```
 bool q_graphicsdropshadoweffect_qbase_source_is_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceIsPixmap)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3084,12 +3443,16 @@ QRectF* q_graphicsdropshadoweffect_source_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsDropShadowEffect* self ```
 QRectF* q_graphicsdropshadoweffect_qbase_source_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3107,12 +3470,16 @@ void q_graphicsdropshadoweffect_draw_source(void* self, void* painter);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#drawSource)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsDropShadowEffect* self, QPainter* painter ```
 void q_graphicsdropshadoweffect_qbase_draw_source(void* self, void* painter);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#drawSource)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3130,12 +3497,16 @@ QPixmap* q_graphicsdropshadoweffect_source_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsDropShadowEffect* self ```
 QPixmap* q_graphicsdropshadoweffect_qbase_source_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3153,12 +3524,16 @@ QObject* q_graphicsdropshadoweffect_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsDropShadowEffect* self ```
 QObject* q_graphicsdropshadoweffect_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3176,12 +3551,16 @@ int32_t q_graphicsdropshadoweffect_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsDropShadowEffect* self ```
 int32_t q_graphicsdropshadoweffect_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3199,12 +3578,16 @@ int32_t q_graphicsdropshadoweffect_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsDropShadowEffect* self, const char* signal ```
 int32_t q_graphicsdropshadoweffect_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3222,6 +3605,8 @@ bool q_graphicsdropshadoweffect_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsDropShadowEffect* self, QMetaMethod* signal ```
@@ -3229,11 +3614,24 @@ bool q_graphicsdropshadoweffect_qbase_is_signal_connected(void* self, void* sign
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QGraphicsDropShadowEffect* self, bool (*slot)(QGraphicsDropShadowEffect*, QMetaMethod*) ```
 void q_graphicsdropshadoweffect_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QGraphicsDropShadowEffect* self, void (*slot)(QObject*, const char*) ```
+void q_graphicsdropshadoweffect_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#dtor.QGraphicsDropShadowEffect)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGraphicsDropShadowEffect* self ```
@@ -3254,7 +3652,7 @@ QGraphicsOpacityEffect* q_graphicsopacityeffect_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QGraphicsOpacityEffect* self ```
-QMetaObject* q_graphicsopacityeffect_meta_object(void* self);
+const QMetaObject* q_graphicsopacityeffect_meta_object(void* self);
 
 /// ``` QGraphicsOpacityEffect* self, const char* param1 ```
 void* q_graphicsopacityeffect_metacast(void* self, const char* param1);
@@ -3302,6 +3700,8 @@ void q_graphicsopacityeffect_set_opacity_mask(void* self, void* mask);
 /// ``` QGraphicsOpacityEffect* self, double opacity ```
 void q_graphicsopacityeffect_opacity_changed(void* self, double opacity);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsopacityeffect.html#opacityChanged)
+///
 /// ``` QGraphicsOpacityEffect* self, void (*slot)(QGraphicsOpacityEffect*, double) ```
 void q_graphicsopacityeffect_on_opacity_changed(void* self, void (*slot)(void*, double));
 
@@ -3310,6 +3710,8 @@ void q_graphicsopacityeffect_on_opacity_changed(void* self, void (*slot)(void*, 
 /// ``` QGraphicsOpacityEffect* self, QBrush* mask ```
 void q_graphicsopacityeffect_opacity_mask_changed(void* self, void* mask);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsopacityeffect.html#opacityMaskChanged)
+///
 /// ``` QGraphicsOpacityEffect* self, void (*slot)(QGraphicsOpacityEffect*, QBrush*) ```
 void q_graphicsopacityeffect_on_opacity_mask_changed(void* self, void (*slot)(void*, void*));
 
@@ -3318,11 +3720,15 @@ void q_graphicsopacityeffect_on_opacity_mask_changed(void* self, void (*slot)(vo
 /// ``` QGraphicsOpacityEffect* self, QPainter* painter ```
 void q_graphicsopacityeffect_draw(void* self, void* painter);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsopacityeffect.html#draw)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsOpacityEffect* self, void (*slot)(QGraphicsOpacityEffect*, QPainter*) ```
 void q_graphicsopacityeffect_on_draw(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsopacityeffect.html#draw)
+///
 /// Base class method implementation
 ///
 /// ``` QGraphicsOpacityEffect* self, QPainter* painter ```
@@ -3374,6 +3780,8 @@ void q_graphicsopacityeffect_update(void* self);
 void q_graphicsopacityeffect_enabled_changed(void* self, bool enabled);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#enabledChanged)
 ///
 /// ``` QGraphicsOpacityEffect* self, void (*slot)(QGraphicsEffect*, bool) ```
 void q_graphicsopacityeffect_on_enabled_changed(void* self, void (*slot)(void*, bool));
@@ -3460,7 +3868,7 @@ void q_graphicsopacityeffect_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QGraphicsOpacityEffect* self ```
-libqt_list /* of QObject* */ q_graphicsopacityeffect_children(void* self);
+const libqt_list /* of QObject* */ q_graphicsopacityeffect_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -3558,7 +3966,7 @@ QBindingStorage* q_graphicsopacityeffect_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QGraphicsOpacityEffect* self ```
-QBindingStorage* q_graphicsopacityeffect_binding_storage2(void* self);
+const QBindingStorage* q_graphicsopacityeffect_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -3568,6 +3976,8 @@ QBindingStorage* q_graphicsopacityeffect_binding_storage2(void* self);
 void q_graphicsopacityeffect_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QGraphicsOpacityEffect* self, void (*slot)(QObject*) ```
 void q_graphicsopacityeffect_on_destroyed(void* self, void (*slot)(void*));
@@ -3623,6 +4033,8 @@ void q_graphicsopacityeffect_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QGraphicsOpacityEffect* self, void (*slot)(QObject*, QObject*) ```
 void q_graphicsopacityeffect_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -3637,12 +4049,16 @@ QRectF* q_graphicsopacityeffect_bounding_rect_for(void* self, void* sourceRect);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#boundingRectFor)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsOpacityEffect* self, QRectF* sourceRect ```
 QRectF* q_graphicsopacityeffect_qbase_bounding_rect_for(void* self, void* sourceRect);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#boundingRectFor)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3660,12 +4076,16 @@ void q_graphicsopacityeffect_source_changed(void* self, int64_t flags);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceChanged)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsOpacityEffect* self, int flags ```
 void q_graphicsopacityeffect_qbase_source_changed(void* self, int64_t flags);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3683,12 +4103,16 @@ bool q_graphicsopacityeffect_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsOpacityEffect* self, QEvent* event ```
 bool q_graphicsopacityeffect_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3706,12 +4130,16 @@ bool q_graphicsopacityeffect_event_filter(void* self, void* watched, void* event
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsOpacityEffect* self, QObject* watched, QEvent* event ```
 bool q_graphicsopacityeffect_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3729,12 +4157,16 @@ void q_graphicsopacityeffect_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsOpacityEffect* self, QTimerEvent* event ```
 void q_graphicsopacityeffect_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3752,12 +4184,16 @@ void q_graphicsopacityeffect_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsOpacityEffect* self, QChildEvent* event ```
 void q_graphicsopacityeffect_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3775,12 +4211,16 @@ void q_graphicsopacityeffect_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsOpacityEffect* self, QEvent* event ```
 void q_graphicsopacityeffect_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3798,12 +4238,16 @@ void q_graphicsopacityeffect_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsOpacityEffect* self, QMetaMethod* signal ```
 void q_graphicsopacityeffect_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3821,12 +4265,16 @@ void q_graphicsopacityeffect_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsOpacityEffect* self, QMetaMethod* signal ```
 void q_graphicsopacityeffect_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3844,12 +4292,16 @@ void q_graphicsopacityeffect_update_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#updateBoundingRect)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsOpacityEffect* self ```
 void q_graphicsopacityeffect_qbase_update_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#updateBoundingRect)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3867,12 +4319,16 @@ bool q_graphicsopacityeffect_source_is_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceIsPixmap)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsOpacityEffect* self ```
 bool q_graphicsopacityeffect_qbase_source_is_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceIsPixmap)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3890,12 +4346,16 @@ QRectF* q_graphicsopacityeffect_source_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsOpacityEffect* self ```
 QRectF* q_graphicsopacityeffect_qbase_source_bounding_rect(void* self);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3913,12 +4373,16 @@ void q_graphicsopacityeffect_draw_source(void* self, void* painter);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#drawSource)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsOpacityEffect* self, QPainter* painter ```
 void q_graphicsopacityeffect_qbase_draw_source(void* self, void* painter);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#drawSource)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3936,12 +4400,16 @@ QPixmap* q_graphicsopacityeffect_source_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsOpacityEffect* self ```
 QPixmap* q_graphicsopacityeffect_qbase_source_pixmap(void* self);
 
 /// Inherited from QGraphicsEffect
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3959,12 +4427,16 @@ QObject* q_graphicsopacityeffect_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsOpacityEffect* self ```
 QObject* q_graphicsopacityeffect_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3982,12 +4454,16 @@ int32_t q_graphicsopacityeffect_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsOpacityEffect* self ```
 int32_t q_graphicsopacityeffect_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4005,12 +4481,16 @@ int32_t q_graphicsopacityeffect_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsOpacityEffect* self, const char* signal ```
 int32_t q_graphicsopacityeffect_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4028,6 +4508,8 @@ bool q_graphicsopacityeffect_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QGraphicsOpacityEffect* self, QMetaMethod* signal ```
@@ -4035,11 +4517,24 @@ bool q_graphicsopacityeffect_qbase_is_signal_connected(void* self, void* signal)
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QGraphicsOpacityEffect* self, bool (*slot)(QGraphicsOpacityEffect*, QMetaMethod*) ```
 void q_graphicsopacityeffect_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QGraphicsOpacityEffect* self, void (*slot)(QObject*, const char*) ```
+void q_graphicsopacityeffect_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsopacityeffect.html#dtor.QGraphicsOpacityEffect)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QGraphicsOpacityEffect* self ```

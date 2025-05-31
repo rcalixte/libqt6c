@@ -13,15 +13,11 @@
 #include "qtlibc.h"
 
 #include "libqaction.h"
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
-#include "libqthread.h"
 #include "libqundostack.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qundogroup.html
 
@@ -38,7 +34,7 @@ QUndoGroup* q_undogroup_new2(void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QUndoGroup* self ```
-QMetaObject* q_undogroup_meta_object(void* self);
+const QMetaObject* q_undogroup_meta_object(void* self);
 
 /// ``` QUndoGroup* self, const char* param1 ```
 void* q_undogroup_metacast(void* self, const char* param1);
@@ -136,6 +132,8 @@ void q_undogroup_set_active_stack(void* self, void* stack);
 /// ``` QUndoGroup* self, QUndoStack* stack ```
 void q_undogroup_active_stack_changed(void* self, void* stack);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundogroup.html#activeStackChanged)
+///
 /// ``` QUndoGroup* self, void (*slot)(QUndoGroup*, QUndoStack*) ```
 void q_undogroup_on_active_stack_changed(void* self, void (*slot)(void*, void*));
 
@@ -144,6 +142,8 @@ void q_undogroup_on_active_stack_changed(void* self, void (*slot)(void*, void*))
 /// ``` QUndoGroup* self, int idx ```
 void q_undogroup_index_changed(void* self, int idx);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundogroup.html#indexChanged)
+///
 /// ``` QUndoGroup* self, void (*slot)(QUndoGroup*, int) ```
 void q_undogroup_on_index_changed(void* self, void (*slot)(void*, int));
 
@@ -152,6 +152,8 @@ void q_undogroup_on_index_changed(void* self, void (*slot)(void*, int));
 /// ``` QUndoGroup* self, bool clean ```
 void q_undogroup_clean_changed(void* self, bool clean);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundogroup.html#cleanChanged)
+///
 /// ``` QUndoGroup* self, void (*slot)(QUndoGroup*, bool) ```
 void q_undogroup_on_clean_changed(void* self, void (*slot)(void*, bool));
 
@@ -160,6 +162,8 @@ void q_undogroup_on_clean_changed(void* self, void (*slot)(void*, bool));
 /// ``` QUndoGroup* self, bool canUndo ```
 void q_undogroup_can_undo_changed(void* self, bool canUndo);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundogroup.html#canUndoChanged)
+///
 /// ``` QUndoGroup* self, void (*slot)(QUndoGroup*, bool) ```
 void q_undogroup_on_can_undo_changed(void* self, void (*slot)(void*, bool));
 
@@ -168,6 +172,8 @@ void q_undogroup_on_can_undo_changed(void* self, void (*slot)(void*, bool));
 /// ``` QUndoGroup* self, bool canRedo ```
 void q_undogroup_can_redo_changed(void* self, bool canRedo);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundogroup.html#canRedoChanged)
+///
 /// ``` QUndoGroup* self, void (*slot)(QUndoGroup*, bool) ```
 void q_undogroup_on_can_redo_changed(void* self, void (*slot)(void*, bool));
 
@@ -176,6 +182,8 @@ void q_undogroup_on_can_redo_changed(void* self, void (*slot)(void*, bool));
 /// ``` QUndoGroup* self, const char* undoText ```
 void q_undogroup_undo_text_changed(void* self, const char* undoText);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundogroup.html#undoTextChanged)
+///
 /// ``` QUndoGroup* self, void (*slot)(QUndoGroup*, const char*) ```
 void q_undogroup_on_undo_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -184,6 +192,8 @@ void q_undogroup_on_undo_text_changed(void* self, void (*slot)(void*, const char
 /// ``` QUndoGroup* self, const char* redoText ```
 void q_undogroup_redo_text_changed(void* self, const char* redoText);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qundogroup.html#redoTextChanged)
+///
 /// ``` QUndoGroup* self, void (*slot)(QUndoGroup*, const char*) ```
 void q_undogroup_on_redo_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -289,7 +299,7 @@ void q_undogroup_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QUndoGroup* self ```
-libqt_list /* of QObject* */ q_undogroup_children(void* self);
+const libqt_list /* of QObject* */ q_undogroup_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -387,7 +397,7 @@ QBindingStorage* q_undogroup_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QUndoGroup* self ```
-QBindingStorage* q_undogroup_binding_storage2(void* self);
+const QBindingStorage* q_undogroup_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -397,6 +407,8 @@ QBindingStorage* q_undogroup_binding_storage2(void* self);
 void q_undogroup_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QUndoGroup* self, void (*slot)(QObject*) ```
 void q_undogroup_on_destroyed(void* self, void (*slot)(void*));
@@ -452,6 +464,8 @@ void q_undogroup_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QUndoGroup* self, void (*slot)(QObject*, QObject*) ```
 void q_undogroup_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -466,12 +480,16 @@ bool q_undogroup_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoGroup* self, QEvent* event ```
 bool q_undogroup_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -489,12 +507,16 @@ bool q_undogroup_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoGroup* self, QObject* watched, QEvent* event ```
 bool q_undogroup_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -512,12 +534,16 @@ void q_undogroup_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoGroup* self, QTimerEvent* event ```
 void q_undogroup_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -535,12 +561,16 @@ void q_undogroup_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoGroup* self, QChildEvent* event ```
 void q_undogroup_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -558,12 +588,16 @@ void q_undogroup_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoGroup* self, QEvent* event ```
 void q_undogroup_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -581,12 +615,16 @@ void q_undogroup_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoGroup* self, QMetaMethod* signal ```
 void q_undogroup_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -604,12 +642,16 @@ void q_undogroup_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoGroup* self, QMetaMethod* signal ```
 void q_undogroup_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -627,12 +669,16 @@ QObject* q_undogroup_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoGroup* self ```
 QObject* q_undogroup_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -650,12 +696,16 @@ int32_t q_undogroup_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoGroup* self ```
 int32_t q_undogroup_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -673,12 +723,16 @@ int32_t q_undogroup_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoGroup* self, const char* signal ```
 int32_t q_undogroup_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -696,6 +750,8 @@ bool q_undogroup_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QUndoGroup* self, QMetaMethod* signal ```
@@ -703,11 +759,24 @@ bool q_undogroup_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QUndoGroup* self, bool (*slot)(QUndoGroup*, QMetaMethod*) ```
 void q_undogroup_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QUndoGroup* self, void (*slot)(QObject*, const char*) ```
+void q_undogroup_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qundogroup.html#dtor.QUndoGroup)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QUndoGroup* self ```

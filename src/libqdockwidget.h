@@ -14,41 +14,17 @@
 
 #include "libqaction.h"
 #include "libqevent.h"
-#include "libqanystringview.h"
-#include "libqbackingstore.h"
-#include "libqbindingstorage.h"
-#include "libqbitmap.h"
-#include "libqcursor.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
-#include "libqlayout.h"
-#include "libqlocale.h"
-#include "libqmargins.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include "libqpaintdevice.h"
 #include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
 #include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqscreen.h"
 #include "libqsize.h"
-#include "libqsizepolicy.h"
 #include <string.h>
-#include "libqstyle.h"
 #include "libqstyleoption.h"
-#include "libqthread.h"
 #include "libqvariant.h"
 #include "libqwidget.h"
-#include "libqwindow.h"
 
 /// https://doc.qt.io/qt-6/qdockwidget.html
 
@@ -85,7 +61,7 @@ QDockWidget* q_dockwidget_new6(void* parent, int64_t flags);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QDockWidget* self ```
-QMetaObject* q_dockwidget_meta_object(void* self);
+const QMetaObject* q_dockwidget_meta_object(void* self);
 
 /// ``` QDockWidget* self, const char* param1 ```
 void* q_dockwidget_metacast(void* self, const char* param1);
@@ -173,6 +149,8 @@ QAction* q_dockwidget_toggle_view_action(void* self);
 /// ``` QDockWidget* self, int features ```
 void q_dockwidget_features_changed(void* self, int64_t features);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#featuresChanged)
+///
 /// ``` QDockWidget* self, void (*slot)(QDockWidget*, int) ```
 void q_dockwidget_on_features_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -181,6 +159,8 @@ void q_dockwidget_on_features_changed(void* self, void (*slot)(void*, int64_t));
 /// ``` QDockWidget* self, bool topLevel ```
 void q_dockwidget_top_level_changed(void* self, bool topLevel);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#topLevelChanged)
+///
 /// ``` QDockWidget* self, void (*slot)(QDockWidget*, bool) ```
 void q_dockwidget_on_top_level_changed(void* self, void (*slot)(void*, bool));
 
@@ -189,6 +169,8 @@ void q_dockwidget_on_top_level_changed(void* self, void (*slot)(void*, bool));
 /// ``` QDockWidget* self, int allowedAreas ```
 void q_dockwidget_allowed_areas_changed(void* self, int64_t allowedAreas);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#allowedAreasChanged)
+///
 /// ``` QDockWidget* self, void (*slot)(QDockWidget*, int) ```
 void q_dockwidget_on_allowed_areas_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -197,6 +179,8 @@ void q_dockwidget_on_allowed_areas_changed(void* self, void (*slot)(void*, int64
 /// ``` QDockWidget* self, bool visible ```
 void q_dockwidget_visibility_changed(void* self, bool visible);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#visibilityChanged)
+///
 /// ``` QDockWidget* self, void (*slot)(QDockWidget*, bool) ```
 void q_dockwidget_on_visibility_changed(void* self, void (*slot)(void*, bool));
 
@@ -205,6 +189,8 @@ void q_dockwidget_on_visibility_changed(void* self, void (*slot)(void*, bool));
 /// ``` QDockWidget* self, enum Qt__DockWidgetArea area ```
 void q_dockwidget_dock_location_changed(void* self, int64_t area);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#dockLocationChanged)
+///
 /// ``` QDockWidget* self, void (*slot)(QDockWidget*, enum Qt__DockWidgetArea) ```
 void q_dockwidget_on_dock_location_changed(void* self, void (*slot)(void*, int64_t));
 
@@ -213,11 +199,15 @@ void q_dockwidget_on_dock_location_changed(void* self, void (*slot)(void*, int64
 /// ``` QDockWidget* self, QEvent* event ```
 void q_dockwidget_change_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#changeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDockWidget* self, void (*slot)(QDockWidget*, QEvent*) ```
 void q_dockwidget_on_change_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#changeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QDockWidget* self, QEvent* event ```
@@ -228,11 +218,15 @@ void q_dockwidget_qbase_change_event(void* self, void* event);
 /// ``` QDockWidget* self, QCloseEvent* event ```
 void q_dockwidget_close_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#closeEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDockWidget* self, void (*slot)(QDockWidget*, QCloseEvent*) ```
 void q_dockwidget_on_close_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#closeEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QDockWidget* self, QCloseEvent* event ```
@@ -243,11 +237,15 @@ void q_dockwidget_qbase_close_event(void* self, void* event);
 /// ``` QDockWidget* self, QPaintEvent* event ```
 void q_dockwidget_paint_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#paintEvent)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDockWidget* self, void (*slot)(QDockWidget*, QPaintEvent*) ```
 void q_dockwidget_on_paint_event(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#paintEvent)
+///
 /// Base class method implementation
 ///
 /// ``` QDockWidget* self, QPaintEvent* event ```
@@ -258,11 +256,15 @@ void q_dockwidget_qbase_paint_event(void* self, void* event);
 /// ``` QDockWidget* self, QEvent* event ```
 bool q_dockwidget_event(void* self, void* event);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#event)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDockWidget* self, bool (*slot)(QDockWidget*, QEvent*) ```
 void q_dockwidget_on_event(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#event)
+///
 /// Base class method implementation
 ///
 /// ``` QDockWidget* self, QEvent* event ```
@@ -273,11 +275,15 @@ bool q_dockwidget_qbase_event(void* self, void* event);
 /// ``` QDockWidget* self, QStyleOptionDockWidget* option ```
 void q_dockwidget_init_style_option(void* self, void* option);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#initStyleOption)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QDockWidget* self, void (*slot)(QDockWidget*, QStyleOptionDockWidget*) ```
 void q_dockwidget_on_init_style_option(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#initStyleOption)
+///
 /// Base class method implementation
 ///
 /// ``` QDockWidget* self, QStyleOptionDockWidget* option ```
@@ -417,7 +423,7 @@ QRect* q_dockwidget_frame_geometry(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
 /// ``` QDockWidget* self ```
-QRect* q_dockwidget_geometry(void* self);
+const QRect* q_dockwidget_geometry(void* self);
 
 /// Inherited from QWidget
 ///
@@ -774,7 +780,7 @@ QWidget* q_dockwidget_top_level_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
 /// ``` QDockWidget* self ```
-QPalette* q_dockwidget_palette(void* self);
+const QPalette* q_dockwidget_palette(void* self);
 
 /// Inherited from QWidget
 ///
@@ -816,7 +822,7 @@ int64_t q_dockwidget_foreground_role(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
 /// ``` QDockWidget* self ```
-QFont* q_dockwidget_font(void* self);
+const QFont* q_dockwidget_font(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1816,15 +1822,15 @@ void q_dockwidget_add_action(void* self, void* action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QDockWidget* self, QAction* actions[] ```
-void q_dockwidget_add_actions(void* self, void* actions[]);
+/// ``` QDockWidget* self, libqt_list /* of QAction* */ actions ```
+void q_dockwidget_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QDockWidget* self, QAction* before, QAction* actions[] ```
-void q_dockwidget_insert_actions(void* self, void* before, void* actions[]);
+/// ``` QDockWidget* self, QAction* before, libqt_list /* of QAction* */ actions ```
+void q_dockwidget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
@@ -2024,6 +2030,8 @@ void q_dockwidget_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
+///
 /// ``` QDockWidget* self, void (*slot)(QWidget*, const char*) ```
 void q_dockwidget_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2035,6 +2043,8 @@ void q_dockwidget_on_window_title_changed(void* self, void (*slot)(void*, const 
 void q_dockwidget_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// ``` QDockWidget* self, void (*slot)(QWidget*, QIcon*) ```
 void q_dockwidget_on_window_icon_changed(void* self, void (*slot)(void*, void*));
@@ -2048,6 +2058,8 @@ void q_dockwidget_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
+///
 /// ``` QDockWidget* self, void (*slot)(QWidget*, const char*) ```
 void q_dockwidget_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
@@ -2059,6 +2071,8 @@ void q_dockwidget_on_window_icon_text_changed(void* self, void (*slot)(void*, co
 void q_dockwidget_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// ``` QDockWidget* self, void (*slot)(QWidget*, QPoint*) ```
 void q_dockwidget_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
@@ -2264,7 +2278,7 @@ void q_dockwidget_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QDockWidget* self ```
-libqt_list /* of QObject* */ q_dockwidget_children(void* self);
+const libqt_list /* of QObject* */ q_dockwidget_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2355,7 +2369,7 @@ QBindingStorage* q_dockwidget_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QDockWidget* self ```
-QBindingStorage* q_dockwidget_binding_storage2(void* self);
+const QBindingStorage* q_dockwidget_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -2365,6 +2379,8 @@ QBindingStorage* q_dockwidget_binding_storage2(void* self);
 void q_dockwidget_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QDockWidget* self, void (*slot)(QObject*) ```
 void q_dockwidget_on_destroyed(void* self, void (*slot)(void*));
@@ -2419,6 +2435,8 @@ QMetaObject__Connection* q_dockwidget_connect4(void* self, void* sender, const c
 void q_dockwidget_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QDockWidget* self, void (*slot)(QObject*, QObject*) ```
 void q_dockwidget_on_destroyed1(void* self, void (*slot)(void*, void*));
@@ -2518,12 +2536,16 @@ int32_t q_dockwidget_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self ```
 int32_t q_dockwidget_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2541,12 +2563,16 @@ void q_dockwidget_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, bool visible ```
 void q_dockwidget_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2564,12 +2590,16 @@ QSize* q_dockwidget_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self ```
 QSize* q_dockwidget_qbase_size_hint(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2587,12 +2617,16 @@ QSize* q_dockwidget_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self ```
 QSize* q_dockwidget_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2610,12 +2644,16 @@ int32_t q_dockwidget_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, int param1 ```
 int32_t q_dockwidget_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2633,12 +2671,16 @@ bool q_dockwidget_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self ```
 bool q_dockwidget_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2656,12 +2698,16 @@ QPaintEngine* q_dockwidget_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self ```
 QPaintEngine* q_dockwidget_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2679,12 +2725,16 @@ void q_dockwidget_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QMouseEvent* event ```
 void q_dockwidget_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2702,12 +2752,16 @@ void q_dockwidget_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QMouseEvent* event ```
 void q_dockwidget_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2725,12 +2779,16 @@ void q_dockwidget_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QMouseEvent* event ```
 void q_dockwidget_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2748,12 +2806,16 @@ void q_dockwidget_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QMouseEvent* event ```
 void q_dockwidget_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2771,12 +2833,16 @@ void q_dockwidget_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QWheelEvent* event ```
 void q_dockwidget_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2794,12 +2860,16 @@ void q_dockwidget_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QKeyEvent* event ```
 void q_dockwidget_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2817,12 +2887,16 @@ void q_dockwidget_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QKeyEvent* event ```
 void q_dockwidget_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2840,12 +2914,16 @@ void q_dockwidget_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QFocusEvent* event ```
 void q_dockwidget_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2863,12 +2941,16 @@ void q_dockwidget_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QFocusEvent* event ```
 void q_dockwidget_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2886,12 +2968,16 @@ void q_dockwidget_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QEnterEvent* event ```
 void q_dockwidget_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2909,12 +2995,16 @@ void q_dockwidget_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QEvent* event ```
 void q_dockwidget_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2932,12 +3022,16 @@ void q_dockwidget_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QMoveEvent* event ```
 void q_dockwidget_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2955,12 +3049,16 @@ void q_dockwidget_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QResizeEvent* event ```
 void q_dockwidget_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -2978,12 +3076,16 @@ void q_dockwidget_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QContextMenuEvent* event ```
 void q_dockwidget_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3001,12 +3103,16 @@ void q_dockwidget_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QTabletEvent* event ```
 void q_dockwidget_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3024,12 +3130,16 @@ void q_dockwidget_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QActionEvent* event ```
 void q_dockwidget_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3047,12 +3157,16 @@ void q_dockwidget_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QDragEnterEvent* event ```
 void q_dockwidget_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3070,12 +3184,16 @@ void q_dockwidget_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QDragMoveEvent* event ```
 void q_dockwidget_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3093,12 +3211,16 @@ void q_dockwidget_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QDragLeaveEvent* event ```
 void q_dockwidget_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3116,12 +3238,16 @@ void q_dockwidget_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QDropEvent* event ```
 void q_dockwidget_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3139,12 +3265,16 @@ void q_dockwidget_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QShowEvent* event ```
 void q_dockwidget_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3162,12 +3292,16 @@ void q_dockwidget_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QHideEvent* event ```
 void q_dockwidget_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3185,12 +3319,16 @@ bool q_dockwidget_native_event(void* self, const char* eventType, void* message,
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, const char* eventType, void* message, intptr_t* result ```
 bool q_dockwidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3208,12 +3346,16 @@ int32_t q_dockwidget_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, enum QPaintDevice__PaintDeviceMetric param1 ```
 int32_t q_dockwidget_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3231,12 +3373,16 @@ void q_dockwidget_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QPainter* painter ```
 void q_dockwidget_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3254,12 +3400,16 @@ QPaintDevice* q_dockwidget_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QPoint* offset ```
 QPaintDevice* q_dockwidget_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3277,12 +3427,16 @@ QPainter* q_dockwidget_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self ```
 QPainter* q_dockwidget_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3300,12 +3454,16 @@ void q_dockwidget_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QInputMethodEvent* param1 ```
 void q_dockwidget_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3323,12 +3481,16 @@ QVariant* q_dockwidget_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, enum Qt__InputMethodQuery param1 ```
 QVariant* q_dockwidget_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3346,12 +3508,16 @@ bool q_dockwidget_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, bool next ```
 bool q_dockwidget_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3369,12 +3535,16 @@ bool q_dockwidget_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QObject* watched, QEvent* event ```
 bool q_dockwidget_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3392,12 +3562,16 @@ void q_dockwidget_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QTimerEvent* event ```
 void q_dockwidget_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3415,12 +3589,16 @@ void q_dockwidget_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QChildEvent* event ```
 void q_dockwidget_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3438,12 +3616,16 @@ void q_dockwidget_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QEvent* event ```
 void q_dockwidget_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3461,12 +3643,16 @@ void q_dockwidget_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QMetaMethod* signal ```
 void q_dockwidget_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3484,12 +3670,16 @@ void q_dockwidget_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QMetaMethod* signal ```
 void q_dockwidget_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3507,12 +3697,16 @@ void q_dockwidget_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self ```
 void q_dockwidget_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3530,12 +3724,16 @@ void q_dockwidget_create(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self ```
 void q_dockwidget_qbase_create(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3553,12 +3751,16 @@ void q_dockwidget_destroy(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self ```
 void q_dockwidget_qbase_destroy(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3576,12 +3778,16 @@ bool q_dockwidget_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self ```
 bool q_dockwidget_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3599,12 +3805,16 @@ bool q_dockwidget_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self ```
 bool q_dockwidget_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3622,12 +3832,16 @@ QObject* q_dockwidget_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self ```
 QObject* q_dockwidget_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3645,12 +3859,16 @@ int32_t q_dockwidget_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self ```
 int32_t q_dockwidget_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3668,12 +3886,16 @@ int32_t q_dockwidget_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, const char* signal ```
 int32_t q_dockwidget_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3691,6 +3913,8 @@ bool q_dockwidget_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QDockWidget* self, QMetaMethod* signal ```
@@ -3698,11 +3922,24 @@ bool q_dockwidget_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QDockWidget* self, bool (*slot)(QDockWidget*, QMetaMethod*) ```
 void q_dockwidget_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QDockWidget* self, void (*slot)(QObject*, const char*) ```
+void q_dockwidget_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#dtor.QDockWidget)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QDockWidget* self ```

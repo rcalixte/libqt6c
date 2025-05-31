@@ -1,41 +1,16 @@
 #include "libqabstractslider.hpp"
-#include "libqaction.hpp"
 #include "libqevent.hpp"
-#include "libqanystringview.hpp"
-#include "libqbackingstore.hpp"
-#include "libqbindingstorage.hpp"
-#include "libqbitmap.hpp"
-#include "libqcursor.hpp"
-#include "libqfont.hpp"
-#include "libqfontinfo.hpp"
-#include "libqfontmetrics.hpp"
-#include "libqgraphicseffect.hpp"
-#include "libqgraphicsproxywidget.hpp"
-#include "libqicon.hpp"
-#include "libqkeysequence.hpp"
-#include "libqlayout.hpp"
-#include "libqlocale.hpp"
-#include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
 #include "libqpainter.hpp"
-#include "libqpalette.hpp"
-#include "libqpixmap.hpp"
 #include "libqpoint.hpp"
-#include "libqrect.hpp"
-#include "libqregion.hpp"
-#include "libqscreen.hpp"
 #include "libqsize.hpp"
-#include "libqsizepolicy.hpp"
 #include <string.h>
-#include "libqstyle.hpp"
 #include "libqstyleoption.hpp"
-#include "libqthread.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqwindow.hpp"
 #include "libqcoreevent.hpp"
 #include "libqscrollbar.hpp"
 #include "libqscrollbar.h"
@@ -56,7 +31,7 @@ QScrollBar* q_scrollbar_new4(int64_t param1, void* parent) {
     return QScrollBar_new4(param1, (QWidget*)parent);
 }
 
-QMetaObject* q_scrollbar_meta_object(void* self) {
+const QMetaObject* q_scrollbar_meta_object(void* self) {
     return QScrollBar_MetaObject((QScrollBar*)self);
 }
 
@@ -441,7 +416,7 @@ QRect* q_scrollbar_frame_geometry(void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-QRect* q_scrollbar_geometry(void* self) {
+const QRect* q_scrollbar_geometry(void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
@@ -645,7 +620,7 @@ QWidget* q_scrollbar_top_level_widget(void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-QPalette* q_scrollbar_palette(void* self) {
+const QPalette* q_scrollbar_palette(void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
@@ -669,7 +644,7 @@ int64_t q_scrollbar_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-QFont* q_scrollbar_font(void* self) {
+const QFont* q_scrollbar_font(void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
@@ -1274,30 +1249,12 @@ void q_scrollbar_add_action(void* self, void* action) {
     QWidget_AddAction((QWidget*)self, (QAction*)action);
 }
 
-void q_scrollbar_add_actions(void* self, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_AddActions((QWidget*)self, actions_list);
+void q_scrollbar_add_actions(void* self, libqt_list actions) {
+    QWidget_AddActions((QWidget*)self, actions);
 }
 
-void q_scrollbar_insert_actions(void* self, void* before, void* actions[]) {
-    QAction** actions_arr = (QAction**)actions;
-    size_t actions_len = 0;
-    while (actions_arr[actions_len] != NULL) {
-        actions_len++;
-    }
-    libqt_list actions_list = {
-        .len = actions_len,
-        .data = {(QAction*)actions},
-    };
-    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions_list);
+void q_scrollbar_insert_actions(void* self, void* before, libqt_list actions) {
+    QWidget_InsertActions((QWidget*)self, (QAction*)before, actions);
 }
 
 void q_scrollbar_insert_action(void* self, void* before, void* action) {
@@ -1517,8 +1474,7 @@ const char* q_scrollbar_object_name(void* self) {
 }
 
 void q_scrollbar_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_scrollbar_is_widget_type(void* self) {
@@ -1557,7 +1513,7 @@ void q_scrollbar_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_scrollbar_children(void* self) {
+const libqt_list /* of QObject* */ q_scrollbar_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1620,7 +1576,7 @@ QBindingStorage* q_scrollbar_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_scrollbar_binding_storage2(void* self) {
+const QBindingStorage* q_scrollbar_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2298,6 +2254,10 @@ bool q_scrollbar_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_scrollbar_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QScrollBar_OnIsSignalConnected((QScrollBar*)self, (intptr_t)slot);
+}
+
+void q_scrollbar_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_scrollbar_delete(void* self) {

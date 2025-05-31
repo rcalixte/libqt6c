@@ -1,12 +1,8 @@
 #include "libqabstractitemmodel.hpp"
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include <string.h>
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
 #include "libqcoreevent.hpp"
 #include "libqitemselectionmodel.hpp"
 #include "libqitemselectionmodel.h"
@@ -55,11 +51,11 @@ int32_t q_itemselectionrange_height(void* self) {
     return QItemSelectionRange_Height((QItemSelectionRange*)self);
 }
 
-QPersistentModelIndex* q_itemselectionrange_top_left(void* self) {
+const QPersistentModelIndex* q_itemselectionrange_top_left(void* self) {
     return QItemSelectionRange_TopLeft((QItemSelectionRange*)self);
 }
 
-QPersistentModelIndex* q_itemselectionrange_bottom_right(void* self) {
+const QPersistentModelIndex* q_itemselectionrange_bottom_right(void* self) {
     return QItemSelectionRange_BottomRight((QItemSelectionRange*)self);
 }
 
@@ -67,7 +63,7 @@ QModelIndex* q_itemselectionrange_parent(void* self) {
     return QItemSelectionRange_Parent((QItemSelectionRange*)self);
 }
 
-QAbstractItemModel* q_itemselectionrange_model(void* self) {
+const QAbstractItemModel* q_itemselectionrange_model(void* self) {
     return QItemSelectionRange_Model((QItemSelectionRange*)self);
 }
 
@@ -124,7 +120,7 @@ QItemSelectionModel* q_itemselectionmodel_new3(void* model) {
     return QItemSelectionModel_new3((QAbstractItemModel*)model);
 }
 
-QMetaObject* q_itemselectionmodel_meta_object(void* self) {
+const QMetaObject* q_itemselectionmodel_meta_object(void* self) {
     return QItemSelectionModel_MetaObject((QItemSelectionModel*)self);
 }
 
@@ -194,11 +190,11 @@ libqt_list /* of QModelIndex* */ q_itemselectionmodel_selected_columns(void* sel
     return _arr;
 }
 
-QItemSelection* q_itemselectionmodel_selection(void* self) {
+const QItemSelection* q_itemselectionmodel_selection(void* self) {
     return QItemSelectionModel_Selection((QItemSelectionModel*)self);
 }
 
-QAbstractItemModel* q_itemselectionmodel_model(void* self) {
+const QAbstractItemModel* q_itemselectionmodel_model(void* self) {
     return QItemSelectionModel_Model((QItemSelectionModel*)self);
 }
 
@@ -386,8 +382,7 @@ const char* q_itemselectionmodel_object_name(void* self) {
 }
 
 void q_itemselectionmodel_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_itemselectionmodel_is_widget_type(void* self) {
@@ -426,7 +421,7 @@ void q_itemselectionmodel_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_itemselectionmodel_children(void* self) {
+const libqt_list /* of QObject* */ q_itemselectionmodel_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -493,7 +488,7 @@ QBindingStorage* q_itemselectionmodel_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_itemselectionmodel_binding_storage2(void* self) {
+const QBindingStorage* q_itemselectionmodel_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -669,9 +664,14 @@ void q_itemselectionmodel_on_is_signal_connected(void* self, bool (*slot)(void*,
     QItemSelectionModel_OnIsSignalConnected((QItemSelectionModel*)self, (intptr_t)slot);
 }
 
+void q_itemselectionmodel_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+}
+
 void q_itemselectionmodel_delete(void* self) {
     QItemSelectionModel_Delete((QItemSelectionModel*)(self));
 }
+
 // Also inherits unprojectable QList<QItemSelectionRange>
 
 QItemSelection* q_itemselection_new(void* topLeft, void* bottomRight) {

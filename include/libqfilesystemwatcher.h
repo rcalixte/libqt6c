@@ -12,14 +12,10 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
 #include "libqevent.h"
 #include "libqmetaobject.h"
 #include "libqobject.h"
 #include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qfilesystemwatcher.html
 
@@ -46,7 +42,7 @@ QFileSystemWatcher* q_filesystemwatcher_new4(const char* paths[], void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QFileSystemWatcher* self ```
-QMetaObject* q_filesystemwatcher_meta_object(void* self);
+const QMetaObject* q_filesystemwatcher_meta_object(void* self);
 
 /// ``` QFileSystemWatcher* self, const char* param1 ```
 void* q_filesystemwatcher_metacast(void* self, const char* param1);
@@ -191,7 +187,7 @@ void q_filesystemwatcher_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QFileSystemWatcher* self ```
-libqt_list /* of QObject* */ q_filesystemwatcher_children(void* self);
+const libqt_list /* of QObject* */ q_filesystemwatcher_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -289,7 +285,7 @@ QBindingStorage* q_filesystemwatcher_binding_storage(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
 /// ``` QFileSystemWatcher* self ```
-QBindingStorage* q_filesystemwatcher_binding_storage2(void* self);
+const QBindingStorage* q_filesystemwatcher_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
@@ -299,6 +295,8 @@ QBindingStorage* q_filesystemwatcher_binding_storage2(void* self);
 void q_filesystemwatcher_destroyed(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// ``` QFileSystemWatcher* self, void (*slot)(QObject*) ```
 void q_filesystemwatcher_on_destroyed(void* self, void (*slot)(void*));
@@ -354,6 +352,8 @@ void q_filesystemwatcher_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
+///
 /// ``` QFileSystemWatcher* self, void (*slot)(QObject*, QObject*) ```
 void q_filesystemwatcher_on_destroyed1(void* self, void (*slot)(void*, void*));
 
@@ -368,12 +368,16 @@ bool q_filesystemwatcher_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemWatcher* self, QEvent* event ```
 bool q_filesystemwatcher_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -391,12 +395,16 @@ bool q_filesystemwatcher_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemWatcher* self, QObject* watched, QEvent* event ```
 bool q_filesystemwatcher_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -414,12 +422,16 @@ void q_filesystemwatcher_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemWatcher* self, QTimerEvent* event ```
 void q_filesystemwatcher_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -437,12 +449,16 @@ void q_filesystemwatcher_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemWatcher* self, QChildEvent* event ```
 void q_filesystemwatcher_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -460,12 +476,16 @@ void q_filesystemwatcher_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemWatcher* self, QEvent* event ```
 void q_filesystemwatcher_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -483,12 +503,16 @@ void q_filesystemwatcher_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemWatcher* self, QMetaMethod* signal ```
 void q_filesystemwatcher_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -506,12 +530,16 @@ void q_filesystemwatcher_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemWatcher* self, QMetaMethod* signal ```
 void q_filesystemwatcher_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -529,12 +557,16 @@ QObject* q_filesystemwatcher_sender(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemWatcher* self ```
 QObject* q_filesystemwatcher_qbase_sender(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -552,12 +584,16 @@ int32_t q_filesystemwatcher_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemWatcher* self ```
 int32_t q_filesystemwatcher_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -575,12 +611,16 @@ int32_t q_filesystemwatcher_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemWatcher* self, const char* signal ```
 int32_t q_filesystemwatcher_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -598,6 +638,8 @@ bool q_filesystemwatcher_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QFileSystemWatcher* self, QMetaMethod* signal ```
@@ -605,11 +647,38 @@ bool q_filesystemwatcher_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QFileSystemWatcher* self, bool (*slot)(QFileSystemWatcher*, QMetaMethod*) ```
 void q_filesystemwatcher_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemwatcher.html#fileChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFileSystemWatcher* self, void (*slot)(QFileSystemWatcher*, const char*) ```
+void q_filesystemwatcher_on_file_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemwatcher.html#directoryChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFileSystemWatcher* self, void (*slot)(QFileSystemWatcher*, const char*) ```
+void q_filesystemwatcher_on_directory_changed(void* self, void (*slot)(void*, const char*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
+///
+/// Wrapper to allow calling private signal
+///
+/// ``` QFileSystemWatcher* self, void (*slot)(QObject*, const char*) ```
+void q_filesystemwatcher_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemwatcher.html#dtor.QFileSystemWatcher)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QFileSystemWatcher* self ```

@@ -21,6 +21,8 @@
 /// ``` QFactoryInterface* self ```
 const char** q_factoryinterface_keys(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfactoryinterface.html#dtor.QFactoryInterface)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QFactoryInterface* self ```

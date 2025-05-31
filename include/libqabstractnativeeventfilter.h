@@ -24,16 +24,22 @@ QAbstractNativeEventFilter* q_abstractnativeeventfilter_new();
 /// ``` QAbstractNativeEventFilter* self, const char* eventType, void* message, intptr_t* result ```
 bool q_abstractnativeeventfilter_native_event_filter(void* self, const char* eventType, void* message, intptr_t* result);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractnativeeventfilter.html#nativeEventFilter)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractNativeEventFilter* self, bool (*slot)(QAbstractNativeEventFilter*, const char*, void*, intptr_t*) ```
 void q_abstractnativeeventfilter_on_native_event_filter(void* self, bool (*slot)(void*, const char*, void*, intptr_t*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractnativeeventfilter.html#nativeEventFilter)
+///
 /// Base class method implementation
 ///
 /// ``` QAbstractNativeEventFilter* self, const char* eventType, void* message, intptr_t* result ```
 bool q_abstractnativeeventfilter_qbase_native_event_filter(void* self, const char* eventType, void* message, intptr_t* result);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractnativeeventfilter.html#dtor.QAbstractNativeEventFilter)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QAbstractNativeEventFilter* self ```

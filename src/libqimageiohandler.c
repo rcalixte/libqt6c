@@ -1,5 +1,3 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
 #include "libqevent.hpp"
 #include "libqiodevice.hpp"
 #include "libqimage.hpp"
@@ -8,7 +6,6 @@
 #include "libqrect.hpp"
 #include "libqsize.hpp"
 #include <string.h>
-#include "libqthread.hpp"
 #include "libqvariant.hpp"
 #include "libqcoreevent.hpp"
 #include "libqimageiohandler.hpp"
@@ -213,7 +210,7 @@ QImageIOPlugin* q_imageioplugin_new2(void* parent) {
     return QImageIOPlugin_new2((QObject*)parent);
 }
 
-QMetaObject* q_imageioplugin_meta_object(void* self) {
+const QMetaObject* q_imageioplugin_meta_object(void* self) {
     return QImageIOPlugin_MetaObject((QImageIOPlugin*)self);
 }
 
@@ -286,8 +283,7 @@ const char* q_imageioplugin_object_name(void* self) {
 }
 
 void q_imageioplugin_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_imageioplugin_is_widget_type(void* self) {
@@ -326,7 +322,7 @@ void q_imageioplugin_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_imageioplugin_children(void* self) {
+const libqt_list /* of QObject* */ q_imageioplugin_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -393,7 +389,7 @@ QBindingStorage* q_imageioplugin_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_imageioplugin_binding_storage2(void* self) {
+const QBindingStorage* q_imageioplugin_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -567,6 +563,10 @@ bool q_imageioplugin_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_imageioplugin_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QImageIOPlugin_OnIsSignalConnected((QImageIOPlugin*)self, (intptr_t)slot);
+}
+
+void q_imageioplugin_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_imageioplugin_delete(void* self) {

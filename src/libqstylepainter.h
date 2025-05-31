@@ -12,31 +12,14 @@
 
 #include "qtlibc.h"
 
-#include "libqbrush.h"
-#include "libqcolor.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
-#include "libqglyphrun.h"
-#include "libqimage.h"
-#include "libqline.h"
 #include "libqpaintdevice.h"
-#include "libqpaintengine.h"
 #include "libqpainter.h"
-#include "libqpainterpath.h"
 #include "libqpalette.h"
-#include "libqpen.h"
-#include "libqpicture.h"
 #include "libqpixmap.h"
-#include "libqpoint.h"
 #include "libqrect.h"
-#include "libqregion.h"
-#include "libqstatictext.h"
 #include <string.h>
 #include "libqstyle.h"
 #include "libqstyleoption.h"
-#include "libqtextoption.h"
-#include "libqtransform.h"
 #include "libqwidget.h"
 
 /// https://doc.qt.io/qt-6/qstylepainter.html
@@ -141,7 +124,7 @@ int64_t q_stylepainter_composition_mode(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#font)
 ///
 /// ``` QStylePainter* self ```
-QFont* q_stylepainter_font(void* self);
+const QFont* q_stylepainter_font(void* self);
 
 /// Inherited from QPainter
 ///
@@ -190,7 +173,7 @@ void q_stylepainter_set_pen_with_style(void* self, int64_t style);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#pen)
 ///
 /// ``` QStylePainter* self ```
-QPen* q_stylepainter_pen(void* self);
+const QPen* q_stylepainter_pen(void* self);
 
 /// Inherited from QPainter
 ///
@@ -211,7 +194,7 @@ void q_stylepainter_set_brush_with_style(void* self, int64_t style);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#brush)
 ///
 /// ``` QStylePainter* self ```
-QBrush* q_stylepainter_brush(void* self);
+const QBrush* q_stylepainter_brush(void* self);
 
 /// Inherited from QPainter
 ///
@@ -267,7 +250,7 @@ void q_stylepainter_set_background(void* self, void* bg);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#background)
 ///
 /// ``` QStylePainter* self ```
-QBrush* q_stylepainter_background(void* self);
+const QBrush* q_stylepainter_background(void* self);
 
 /// Inherited from QPainter
 ///
@@ -379,14 +362,14 @@ void q_stylepainter_set_transform(void* self, void* transform);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#transform)
 ///
 /// ``` QStylePainter* self ```
-QTransform* q_stylepainter_transform(void* self);
+const QTransform* q_stylepainter_transform(void* self);
 
 /// Inherited from QPainter
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#deviceTransform)
 ///
 /// ``` QStylePainter* self ```
-QTransform* q_stylepainter_device_transform(void* self);
+const QTransform* q_stylepainter_device_transform(void* self);
 
 /// Inherited from QPainter
 ///
@@ -407,7 +390,7 @@ void q_stylepainter_set_world_transform(void* self, void* matrix);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#worldTransform)
 ///
 /// ``` QStylePainter* self ```
-QTransform* q_stylepainter_world_transform(void* self);
+const QTransform* q_stylepainter_world_transform(void* self);
 
 /// Inherited from QPainter
 ///
@@ -630,8 +613,8 @@ void q_stylepainter_draw_lines(void* self, void* lines, int lineCount);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
-/// ``` QStylePainter* self, QLineF* lines[] ```
-void q_stylepainter_draw_lines_with_lines(void* self, void* lines[]);
+/// ``` QStylePainter* self, libqt_list /* of QLineF* */ lines ```
+void q_stylepainter_draw_lines_with_lines(void* self, libqt_list lines);
 
 /// Inherited from QPainter
 ///
@@ -644,8 +627,8 @@ void q_stylepainter_draw_lines2(void* self, void* pointPairs, int lineCount);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
-/// ``` QStylePainter* self, QPointF* pointPairs[] ```
-void q_stylepainter_draw_lines_with_point_pairs(void* self, void* pointPairs[]);
+/// ``` QStylePainter* self, libqt_list /* of QPointF* */ pointPairs ```
+void q_stylepainter_draw_lines_with_point_pairs(void* self, libqt_list pointPairs);
 
 /// Inherited from QPainter
 ///
@@ -658,8 +641,8 @@ void q_stylepainter_draw_lines3(void* self, void* lines, int lineCount);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
-/// ``` QStylePainter* self, QLine* lines[] ```
-void q_stylepainter_draw_lines4(void* self, void* lines[]);
+/// ``` QStylePainter* self, libqt_list /* of QLine* */ lines ```
+void q_stylepainter_draw_lines4(void* self, libqt_list lines);
 
 /// Inherited from QPainter
 ///
@@ -672,8 +655,8 @@ void q_stylepainter_draw_lines5(void* self, void* pointPairs, int lineCount);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawLines)
 ///
-/// ``` QStylePainter* self, QPoint* pointPairs[] ```
-void q_stylepainter_draw_lines6(void* self, void* pointPairs[]);
+/// ``` QStylePainter* self, libqt_list /* of QPoint* */ pointPairs ```
+void q_stylepainter_draw_lines6(void* self, libqt_list pointPairs);
 
 /// Inherited from QPainter
 ///
@@ -707,8 +690,8 @@ void q_stylepainter_draw_rects(void* self, void* rects, int rectCount);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRects)
 ///
-/// ``` QStylePainter* self, QRectF* rectangles[] ```
-void q_stylepainter_draw_rects_with_rectangles(void* self, void* rectangles[]);
+/// ``` QStylePainter* self, libqt_list /* of QRectF* */ rectangles ```
+void q_stylepainter_draw_rects_with_rectangles(void* self, libqt_list rectangles);
 
 /// Inherited from QPainter
 ///
@@ -721,8 +704,8 @@ void q_stylepainter_draw_rects2(void* self, void* rects, int rectCount);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRects)
 ///
-/// ``` QStylePainter* self, QRect* rectangles[] ```
-void q_stylepainter_draw_rects3(void* self, void* rectangles[]);
+/// ``` QStylePainter* self, libqt_list /* of QRect* */ rectangles ```
+void q_stylepainter_draw_rects3(void* self, libqt_list rectangles);
 
 /// Inherited from QPainter
 ///
@@ -1627,6 +1610,8 @@ void q_stylepainter_set_render_hint2(void* self, int64_t hint, bool on);
 /// ``` QStylePainter* self, int hints, bool on ```
 void q_stylepainter_set_render_hints2(void* self, int64_t hints, bool on);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylepainter.html#dtor.QStylePainter)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QStylePainter* self ```

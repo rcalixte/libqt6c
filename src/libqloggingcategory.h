@@ -54,7 +54,7 @@ QLoggingCategory* q_loggingcategory_operator_call(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qloggingcategory.html#operator())
 ///
 /// ``` QLoggingCategory* self ```
-QLoggingCategory* q_loggingcategory_operator_call2(void* self);
+const QLoggingCategory* q_loggingcategory_operator_call2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qloggingcategory.html#defaultCategory)
 ///
@@ -66,6 +66,8 @@ QLoggingCategory* q_loggingcategory_default_category();
 /// ``` const char* rules ```
 void q_loggingcategory_set_filter_rules(const char* rules);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qloggingcategory.html#dtor.QLoggingCategory)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QLoggingCategory* self ```

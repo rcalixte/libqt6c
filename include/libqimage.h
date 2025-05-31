@@ -100,11 +100,15 @@ bool q_image_is_null(void* self);
 /// ``` QImage* self ```
 int32_t q_image_dev_type(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#devType)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImage* self, int32_t (*slot)() ```
 void q_image_on_dev_type(void* self, int32_t (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#devType)
+///
 /// Base class method implementation
 ///
 /// ``` QImage* self ```
@@ -157,8 +161,8 @@ QImage* q_image_convert_to_format(void* self, int64_t f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertToFormat)
 ///
-/// ``` QImage* self, enum QImage__Format f, unsigned int* colorTable[] ```
-QImage* q_image_convert_to_format2(void* self, int64_t f, unsigned int* colorTable[]);
+/// ``` QImage* self, enum QImage__Format f, libqt_list /* of uint32_t */ colorTable ```
+QImage* q_image_convert_to_format2(void* self, int64_t f, libqt_list colorTable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#reinterpretAsFormat)
 ///
@@ -243,12 +247,12 @@ unsigned char* q_image_bits(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#bits)
 ///
 /// ``` QImage* self ```
-unsigned char* q_image_bits2(void* self);
+const unsigned char* q_image_bits2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#constBits)
 ///
 /// ``` QImage* self ```
-unsigned char* q_image_const_bits(void* self);
+const unsigned char* q_image_const_bits(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#sizeInBytes)
 ///
@@ -263,12 +267,12 @@ unsigned char* q_image_scan_line(void* self, int param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#scanLine)
 ///
 /// ``` QImage* self, int param1 ```
-unsigned char* q_image_scan_line_with_int(void* self, int param1);
+const unsigned char* q_image_scan_line_with_int(void* self, int param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#constScanLine)
 ///
 /// ``` QImage* self, int param1 ```
-unsigned char* q_image_const_scan_line(void* self, int param1);
+const unsigned char* q_image_const_scan_line(void* self, int param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#bytesPerLine)
 ///
@@ -342,8 +346,8 @@ libqt_list /* of uint32_t */ q_image_color_table(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#setColorTable)
 ///
-/// ``` QImage* self, unsigned int* colors[] ```
-void q_image_set_color_table(void* self, unsigned int* colors[]);
+/// ``` QImage* self, libqt_list /* of uint32_t */ colors ```
+void q_image_set_color_table(void* self, libqt_list colors);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#devicePixelRatio)
 ///
@@ -545,11 +549,15 @@ long long q_image_cache_key(void* self);
 /// ``` QImage* self ```
 QPaintEngine* q_image_paint_engine(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#paintEngine)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImage* self, QPaintEngine* (*slot)() ```
 void q_image_on_paint_engine(void* self, QPaintEngine* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#paintEngine)
+///
 /// Base class method implementation
 ///
 /// ``` QImage* self ```
@@ -620,11 +628,15 @@ int64_t q_image_to_image_format(void* format);
 /// ``` QImage* self, enum QPaintDevice__PaintDeviceMetric metric ```
 int32_t q_image_metric(void* self, int64_t metric);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#metric)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImage* self, int32_t (*slot)(QImage*, enum QPaintDevice__PaintDeviceMetric) ```
 void q_image_on_metric(void* self, int32_t (*slot)(void*, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#metric)
+///
 /// Base class method implementation
 ///
 /// ``` QImage* self, enum QPaintDevice__PaintDeviceMetric metric ```
@@ -635,11 +647,15 @@ int32_t q_image_qbase_metric(void* self, int64_t metric);
 /// ``` QImage* self, bool horizontal, bool vertical ```
 QImage* q_image_mirrored_helper(void* self, bool horizontal, bool vertical);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#mirrored_helper)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImage* self, QImage* (*slot)(QImage*, bool, bool) ```
 void q_image_on_mirrored_helper(void* self, QImage* (*slot)(void*, bool, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#mirrored_helper)
+///
 /// Base class method implementation
 ///
 /// ``` QImage* self, bool horizontal, bool vertical ```
@@ -650,11 +666,15 @@ QImage* q_image_qbase_mirrored_helper(void* self, bool horizontal, bool vertical
 /// ``` QImage* self ```
 QImage* q_image_rgb_swapped_helper(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#rgbSwapped_helper)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImage* self, QImage* (*slot)() ```
 void q_image_on_rgb_swapped_helper(void* self, QImage* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#rgbSwapped_helper)
+///
 /// Base class method implementation
 ///
 /// ``` QImage* self ```
@@ -665,11 +685,15 @@ QImage* q_image_qbase_rgb_swapped_helper(void* self);
 /// ``` QImage* self, bool horizontal, bool vertical ```
 void q_image_mirrored_inplace(void* self, bool horizontal, bool vertical);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#mirrored_inplace)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImage* self, void (*slot)(QImage*, bool, bool) ```
 void q_image_on_mirrored_inplace(void* self, void (*slot)(void*, bool, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#mirrored_inplace)
+///
 /// Base class method implementation
 ///
 /// ``` QImage* self, bool horizontal, bool vertical ```
@@ -680,11 +704,15 @@ void q_image_qbase_mirrored_inplace(void* self, bool horizontal, bool vertical);
 /// ``` QImage* self ```
 void q_image_rgb_swapped_inplace(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#rgbSwapped_inplace)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImage* self, void (*slot)() ```
 void q_image_on_rgb_swapped_inplace(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#rgbSwapped_inplace)
+///
 /// Base class method implementation
 ///
 /// ``` QImage* self ```
@@ -695,11 +723,15 @@ void q_image_qbase_rgb_swapped_inplace(void* self);
 /// ``` QImage* self, enum QImage__Format format, int flags ```
 QImage* q_image_convert_to_format_helper(void* self, int64_t format, int64_t flags);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertToFormat_helper)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImage* self, QImage* (*slot)(QImage*, enum QImage__Format, int) ```
 void q_image_on_convert_to_format_helper(void* self, QImage* (*slot)(void*, int64_t, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertToFormat_helper)
+///
 /// Base class method implementation
 ///
 /// ``` QImage* self, enum QImage__Format format, int flags ```
@@ -710,11 +742,15 @@ QImage* q_image_qbase_convert_to_format_helper(void* self, int64_t format, int64
 /// ``` QImage* self, enum QImage__Format format, int flags ```
 bool q_image_convert_to_format_inplace(void* self, int64_t format, int64_t flags);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertToFormat_inplace)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImage* self, bool (*slot)(QImage*, enum QImage__Format, int) ```
 void q_image_on_convert_to_format_inplace(void* self, bool (*slot)(void*, int64_t, int64_t));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertToFormat_inplace)
+///
 /// Base class method implementation
 ///
 /// ``` QImage* self, enum QImage__Format format, int flags ```
@@ -725,11 +761,15 @@ bool q_image_qbase_convert_to_format_inplace(void* self, int64_t format, int64_t
 /// ``` QImage* self, int w, int h ```
 QImage* q_image_smooth_scaled(void* self, int w, int h);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#smoothScaled)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImage* self, QImage* (*slot)(QImage*, int, int) ```
 void q_image_on_smooth_scaled(void* self, QImage* (*slot)(void*, int, int));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#smoothScaled)
+///
 /// Base class method implementation
 ///
 /// ``` QImage* self, int w, int h ```
@@ -740,11 +780,15 @@ QImage* q_image_qbase_smooth_scaled(void* self, int w, int h);
 /// ``` QImage* self ```
 void q_image_detach_metadata(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#detachMetadata)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImage* self, void (*slot)() ```
 void q_image_on_detach_metadata(void* self, void (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#detachMetadata)
+///
 /// Base class method implementation
 ///
 /// ``` QImage* self ```
@@ -762,8 +806,8 @@ QImage* q_image_convert_to_format22(void* self, int64_t f, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertToFormat)
 ///
-/// ``` QImage* self, enum QImage__Format f, unsigned int* colorTable[], int flags ```
-QImage* q_image_convert_to_format3(void* self, int64_t f, unsigned int* colorTable[], int64_t flags);
+/// ``` QImage* self, enum QImage__Format f, libqt_list /* of uint32_t */ colorTable, int flags ```
+QImage* q_image_convert_to_format3(void* self, int64_t f, libqt_list colorTable, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertedTo)
 ///
@@ -915,11 +959,15 @@ const char* q_image_text1(void* self, const char* key);
 /// ``` QImage* self, bool invalidateCache ```
 void q_image_detach_metadata1(void* self, bool invalidateCache);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#detachMetadata)
+///
 /// Allows for overriding the related default method
 ///
 /// ``` QImage* self, void (*slot)(QImage*, bool) ```
 void q_image_on_detach_metadata1(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#detachMetadata)
+///
 /// Base class method implementation
 ///
 /// ``` QImage* self, bool invalidateCache ```
@@ -999,12 +1047,16 @@ void q_image_init_painter(void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#initPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImage* self, QPainter* painter ```
 void q_image_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#initPainter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1022,12 +1074,16 @@ QPaintDevice* q_image_redirected(void* self, void* offset);
 
 /// Inherited from QPaintDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#redirected)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImage* self, QPoint* offset ```
 QPaintDevice* q_image_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#redirected)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1045,6 +1101,8 @@ QPainter* q_image_shared_painter(void* self);
 
 /// Inherited from QPaintDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#sharedPainter)
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QImage* self ```
@@ -1052,11 +1110,15 @@ QPainter* q_image_qbase_shared_painter(void* self);
 
 /// Inherited from QPaintDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#sharedPainter)
+///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QImage* self, QPainter* (*slot)() ```
 void q_image_on_shared_painter(void* self, QPainter* (*slot)());
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#dtor.QImage)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QImage* self ```

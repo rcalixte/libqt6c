@@ -82,6 +82,8 @@ QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded2(const ch
 /// ``` QIODevice* device, enum QSsl__EncodingFormat format ```
 QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded22(void* device, int64_t format);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#dtor.QSslDiffieHellmanParameters)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSslDiffieHellmanParameters* self ```

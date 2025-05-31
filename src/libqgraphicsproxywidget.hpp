@@ -15,27 +15,15 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAction QAction;
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QCloseEvent QCloseEvent;
-typedef struct QCursor QCursor;
 typedef struct QEvent QEvent;
 typedef struct QFocusEvent QFocusEvent;
-typedef struct QFont QFont;
-typedef struct QGraphicsEffect QGraphicsEffect;
 typedef struct QGraphicsItem QGraphicsItem;
-typedef struct QGraphicsItemGroup QGraphicsItemGroup;
-typedef struct QGraphicsLayout QGraphicsLayout;
 typedef struct QGraphicsLayoutItem QGraphicsLayoutItem;
 typedef struct QGraphicsObject QGraphicsObject;
 typedef struct QGraphicsProxyWidget QGraphicsProxyWidget;
-typedef struct QGraphicsScene QGraphicsScene;
 typedef struct QGraphicsSceneContextMenuEvent QGraphicsSceneContextMenuEvent;
 typedef struct QGraphicsSceneDragDropEvent QGraphicsSceneDragDropEvent;
 typedef struct QGraphicsSceneHoverEvent QGraphicsSceneHoverEvent;
@@ -43,33 +31,22 @@ typedef struct QGraphicsSceneMouseEvent QGraphicsSceneMouseEvent;
 typedef struct QGraphicsSceneMoveEvent QGraphicsSceneMoveEvent;
 typedef struct QGraphicsSceneResizeEvent QGraphicsSceneResizeEvent;
 typedef struct QGraphicsSceneWheelEvent QGraphicsSceneWheelEvent;
-typedef struct QGraphicsTransform QGraphicsTransform;
 typedef struct QGraphicsWidget QGraphicsWidget;
 typedef struct QHideEvent QHideEvent;
 typedef struct QInputMethodEvent QInputMethodEvent;
 typedef struct QKeyEvent QKeyEvent;
-typedef struct QKeySequence QKeySequence;
-typedef struct QMarginsF QMarginsF;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
 typedef struct QPainter QPainter;
 typedef struct QPainterPath QPainterPath;
-typedef struct QPalette QPalette;
 typedef struct QPointF QPointF;
 typedef struct QRectF QRectF;
-typedef struct QRegion QRegion;
 typedef struct QShowEvent QShowEvent;
-typedef struct QSize QSize;
 typedef struct QSizeF QSizeF;
-typedef struct QSizePolicy QSizePolicy;
-typedef struct QStyle QStyle;
 typedef struct QStyleOption QStyleOption;
 typedef struct QStyleOptionGraphicsItem QStyleOptionGraphicsItem;
-typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QTransform QTransform;
 typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
@@ -197,6 +174,9 @@ QRectF* QGraphicsProxyWidget_QBaseBoundingRect(const QGraphicsProxyWidget* self)
 QPainterPath* QGraphicsProxyWidget_Shape(const QGraphicsProxyWidget* self);
 void QGraphicsProxyWidget_OnShape(const QGraphicsProxyWidget* self, intptr_t slot);
 QPainterPath* QGraphicsProxyWidget_QBaseShape(const QGraphicsProxyWidget* self);
+void QGraphicsProxyWidget_InitStyleOption(const QGraphicsProxyWidget* self, QStyleOption* option);
+void QGraphicsProxyWidget_OnInitStyleOption(const QGraphicsProxyWidget* self, intptr_t slot);
+void QGraphicsProxyWidget_QBaseInitStyleOption(const QGraphicsProxyWidget* self, QStyleOption* option);
 void QGraphicsProxyWidget_UpdateGeometry(QGraphicsProxyWidget* self);
 void QGraphicsProxyWidget_OnUpdateGeometry(QGraphicsProxyWidget* self, intptr_t slot);
 void QGraphicsProxyWidget_QBaseUpdateGeometry(QGraphicsProxyWidget* self);
@@ -209,6 +189,9 @@ bool QGraphicsProxyWidget_QBaseSceneEvent(QGraphicsProxyWidget* self, QEvent* ev
 bool QGraphicsProxyWidget_WindowFrameEvent(QGraphicsProxyWidget* self, QEvent* e);
 void QGraphicsProxyWidget_OnWindowFrameEvent(QGraphicsProxyWidget* self, intptr_t slot);
 bool QGraphicsProxyWidget_QBaseWindowFrameEvent(QGraphicsProxyWidget* self, QEvent* e);
+int QGraphicsProxyWidget_WindowFrameSectionAt(const QGraphicsProxyWidget* self, QPointF* pos);
+void QGraphicsProxyWidget_OnWindowFrameSectionAt(const QGraphicsProxyWidget* self, intptr_t slot);
+int QGraphicsProxyWidget_QBaseWindowFrameSectionAt(const QGraphicsProxyWidget* self, QPointF* pos);
 void QGraphicsProxyWidget_ChangeEvent(QGraphicsProxyWidget* self, QEvent* event);
 void QGraphicsProxyWidget_OnChangeEvent(QGraphicsProxyWidget* self, intptr_t slot);
 void QGraphicsProxyWidget_QBaseChangeEvent(QGraphicsProxyWidget* self, QEvent* event);
@@ -263,24 +246,18 @@ QPainterPath* QGraphicsProxyWidget_QBaseOpaqueArea(const QGraphicsProxyWidget* s
 bool QGraphicsProxyWidget_SceneEventFilter(QGraphicsProxyWidget* self, QGraphicsItem* watched, QEvent* event);
 void QGraphicsProxyWidget_OnSceneEventFilter(QGraphicsProxyWidget* self, intptr_t slot);
 bool QGraphicsProxyWidget_QBaseSceneEventFilter(QGraphicsProxyWidget* self, QGraphicsItem* watched, QEvent* event);
-void QGraphicsProxyWidget_SetExtension(QGraphicsProxyWidget* self, int extension, QVariant* variant);
-void QGraphicsProxyWidget_OnSetExtension(QGraphicsProxyWidget* self, intptr_t slot);
-void QGraphicsProxyWidget_QBaseSetExtension(QGraphicsProxyWidget* self, int extension, QVariant* variant);
-bool QGraphicsProxyWidget_IsEmpty(const QGraphicsProxyWidget* self);
-void QGraphicsProxyWidget_OnIsEmpty(const QGraphicsProxyWidget* self, intptr_t slot);
-bool QGraphicsProxyWidget_QBaseIsEmpty(const QGraphicsProxyWidget* self);
-void QGraphicsProxyWidget_InitStyleOption(const QGraphicsProxyWidget* self, QStyleOption* option);
-void QGraphicsProxyWidget_OnInitStyleOption(const QGraphicsProxyWidget* self, intptr_t slot);
-void QGraphicsProxyWidget_QBaseInitStyleOption(const QGraphicsProxyWidget* self, QStyleOption* option);
-int QGraphicsProxyWidget_WindowFrameSectionAt(const QGraphicsProxyWidget* self, QPointF* pos);
-void QGraphicsProxyWidget_OnWindowFrameSectionAt(const QGraphicsProxyWidget* self, intptr_t slot);
-int QGraphicsProxyWidget_QBaseWindowFrameSectionAt(const QGraphicsProxyWidget* self, QPointF* pos);
 bool QGraphicsProxyWidget_SupportsExtension(const QGraphicsProxyWidget* self, int extension);
 void QGraphicsProxyWidget_OnSupportsExtension(const QGraphicsProxyWidget* self, intptr_t slot);
 bool QGraphicsProxyWidget_QBaseSupportsExtension(const QGraphicsProxyWidget* self, int extension);
+void QGraphicsProxyWidget_SetExtension(QGraphicsProxyWidget* self, int extension, QVariant* variant);
+void QGraphicsProxyWidget_OnSetExtension(QGraphicsProxyWidget* self, intptr_t slot);
+void QGraphicsProxyWidget_QBaseSetExtension(QGraphicsProxyWidget* self, int extension, QVariant* variant);
 QVariant* QGraphicsProxyWidget_Extension(const QGraphicsProxyWidget* self, QVariant* variant);
 void QGraphicsProxyWidget_OnExtension(const QGraphicsProxyWidget* self, intptr_t slot);
 QVariant* QGraphicsProxyWidget_QBaseExtension(const QGraphicsProxyWidget* self, QVariant* variant);
+bool QGraphicsProxyWidget_IsEmpty(const QGraphicsProxyWidget* self);
+void QGraphicsProxyWidget_OnIsEmpty(const QGraphicsProxyWidget* self, intptr_t slot);
+bool QGraphicsProxyWidget_QBaseIsEmpty(const QGraphicsProxyWidget* self);
 QGraphicsProxyWidget* QGraphicsProxyWidget_NewProxyWidget(QGraphicsProxyWidget* self, QWidget* param1);
 void QGraphicsProxyWidget_OnNewProxyWidget(QGraphicsProxyWidget* self, intptr_t slot);
 QGraphicsProxyWidget* QGraphicsProxyWidget_QBaseNewProxyWidget(QGraphicsProxyWidget* self, QWidget* param1);

@@ -15,23 +15,15 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_QMetaObject__Connection)
-typedef QMetaObject::Connection QMetaObject__Connection;
-#endif
 #else
-typedef struct QAnyStringView QAnyStringView;
-typedef struct QBindingStorage QBindingStorage;
 typedef struct QChildEvent QChildEvent;
 typedef struct QEasingCurve QEasingCurve;
 typedef struct QEvent QEvent;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
-typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QObject QObject;
-typedef struct QThread QThread;
 typedef struct QTimeLine QTimeLine;
 typedef struct QTimerEvent QTimerEvent;
-typedef struct QVariant QVariant;
 #endif
 
 #ifdef __cplusplus
@@ -115,6 +107,10 @@ int QTimeLine_QBaseReceivers(const QTimeLine* self, const char* signal);
 bool QTimeLine_IsSignalConnected(const QTimeLine* self, QMetaMethod* signal);
 void QTimeLine_OnIsSignalConnected(const QTimeLine* self, intptr_t slot);
 bool QTimeLine_QBaseIsSignalConnected(const QTimeLine* self, QMetaMethod* signal);
+void QTimeLine_Connect_ValueChanged(QTimeLine* self, intptr_t slot);
+void QTimeLine_Connect_FrameChanged(QTimeLine* self, intptr_t slot);
+void QTimeLine_Connect_StateChanged(QTimeLine* self, intptr_t slot);
+void QTimeLine_Connect_Finished(QTimeLine* self, intptr_t slot);
 void QTimeLine_Delete(QTimeLine* self);
 
 #ifdef __cplusplus

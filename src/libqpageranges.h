@@ -91,6 +91,8 @@ int32_t q_pageranges_last_page(void* self);
 /// ``` QPageRanges* self ```
 void q_pageranges_detach(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#dtor.QPageRanges)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPageRanges* self ```
@@ -133,6 +135,8 @@ void q_pageranges__range_move_assign(void* self, void* other);
 /// ``` QPageRanges__Range* self, int pageNumber ```
 bool q_pageranges__range_contains(void* self, int pageNumber);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges::range.html#dtor.QPageRanges::Range)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QPageRanges__Range* self ```

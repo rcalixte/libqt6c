@@ -144,6 +144,8 @@ uint64_t q_rgba64_to_unsigned_long_long(void* self);
 /// ``` QRgba64* self, uint64_t _rgba ```
 void q_rgba64_operator_assign(void* self, uint64_t _rgba);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qrgba64.html#dtor.QRgba64)
+///
 /// Delete this object from C++ memory.
 ///
 /// ``` QRgba64* self ```

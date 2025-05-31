@@ -1,13 +1,9 @@
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "../libqevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "libqnetworkcookie.hpp"
 #include "../libqobject.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
 #include "../libqurl.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqnetworkcookiejar.hpp"
 #include "libqnetworkcookiejar.h"
@@ -20,7 +16,7 @@ QNetworkCookieJar* q_networkcookiejar_new2(void* parent) {
     return QNetworkCookieJar_new2((QObject*)parent);
 }
 
-QMetaObject* q_networkcookiejar_meta_object(void* self) {
+const QMetaObject* q_networkcookiejar_meta_object(void* self) {
     return QNetworkCookieJar_MetaObject((QNetworkCookieJar*)self);
 }
 
@@ -61,34 +57,16 @@ libqt_list /* of QNetworkCookie* */ q_networkcookiejar_qbase_cookies_for_url(voi
     return _arr;
 }
 
-bool q_networkcookiejar_set_cookies_from_url(void* self, void* cookieList[], void* url) {
-    QNetworkCookie** cookieList_arr = (QNetworkCookie**)cookieList;
-    size_t cookieList_len = 0;
-    while (cookieList_arr[cookieList_len] != NULL) {
-        cookieList_len++;
-    }
-    libqt_list cookieList_list = {
-        .len = cookieList_len,
-        .data = {(QNetworkCookie*)cookieList},
-    };
-    return QNetworkCookieJar_SetCookiesFromUrl((QNetworkCookieJar*)self, cookieList_list, (QUrl*)url);
+bool q_networkcookiejar_set_cookies_from_url(void* self, libqt_list cookieList, void* url) {
+    return QNetworkCookieJar_SetCookiesFromUrl((QNetworkCookieJar*)self, cookieList, (QUrl*)url);
 }
 
-void q_networkcookiejar_on_set_cookies_from_url(void* self, bool (*slot)(void*, void*, void*)) {
+void q_networkcookiejar_on_set_cookies_from_url(void* self, bool (*slot)(void*, libqt_list, void*)) {
     QNetworkCookieJar_OnSetCookiesFromUrl((QNetworkCookieJar*)self, (intptr_t)slot);
 }
 
-bool q_networkcookiejar_qbase_set_cookies_from_url(void* self, void* cookieList[], void* url) {
-    QNetworkCookie** cookieList_arr = (QNetworkCookie**)cookieList;
-    size_t cookieList_len = 0;
-    while (cookieList_arr[cookieList_len] != NULL) {
-        cookieList_len++;
-    }
-    libqt_list cookieList_list = {
-        .len = cookieList_len,
-        .data = {(QNetworkCookie*)cookieList},
-    };
-    return QNetworkCookieJar_QBaseSetCookiesFromUrl((QNetworkCookieJar*)self, cookieList_list, (QUrl*)url);
+bool q_networkcookiejar_qbase_set_cookies_from_url(void* self, libqt_list cookieList, void* url) {
+    return QNetworkCookieJar_QBaseSetCookiesFromUrl((QNetworkCookieJar*)self, cookieList, (QUrl*)url);
 }
 
 bool q_networkcookiejar_insert_cookie(void* self, void* cookie) {
@@ -141,34 +119,16 @@ libqt_list /* of QNetworkCookie* */ q_networkcookiejar_qbase_all_cookies(void* s
     return _arr;
 }
 
-void q_networkcookiejar_set_all_cookies(void* self, void* cookieList[]) {
-    QNetworkCookie** cookieList_arr = (QNetworkCookie**)cookieList;
-    size_t cookieList_len = 0;
-    while (cookieList_arr[cookieList_len] != NULL) {
-        cookieList_len++;
-    }
-    libqt_list cookieList_list = {
-        .len = cookieList_len,
-        .data = {(QNetworkCookie*)cookieList},
-    };
-    QNetworkCookieJar_SetAllCookies((QNetworkCookieJar*)self, cookieList_list);
+void q_networkcookiejar_set_all_cookies(void* self, libqt_list cookieList) {
+    QNetworkCookieJar_SetAllCookies((QNetworkCookieJar*)self, cookieList);
 }
 
-void q_networkcookiejar_on_set_all_cookies(void* self, void (*slot)(void*, void*)) {
+void q_networkcookiejar_on_set_all_cookies(void* self, void (*slot)(void*, libqt_list)) {
     QNetworkCookieJar_OnSetAllCookies((QNetworkCookieJar*)self, (intptr_t)slot);
 }
 
-void q_networkcookiejar_qbase_set_all_cookies(void* self, void* cookieList[]) {
-    QNetworkCookie** cookieList_arr = (QNetworkCookie**)cookieList;
-    size_t cookieList_len = 0;
-    while (cookieList_arr[cookieList_len] != NULL) {
-        cookieList_len++;
-    }
-    libqt_list cookieList_list = {
-        .len = cookieList_len,
-        .data = {(QNetworkCookie*)cookieList},
-    };
-    QNetworkCookieJar_QBaseSetAllCookies((QNetworkCookieJar*)self, cookieList_list);
+void q_networkcookiejar_qbase_set_all_cookies(void* self, libqt_list cookieList) {
+    QNetworkCookieJar_QBaseSetAllCookies((QNetworkCookieJar*)self, cookieList);
 }
 
 bool q_networkcookiejar_validate_cookie(void* self, void* cookie, void* url) {
@@ -205,8 +165,7 @@ const char* q_networkcookiejar_object_name(void* self) {
 }
 
 void q_networkcookiejar_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_networkcookiejar_is_widget_type(void* self) {
@@ -245,7 +204,7 @@ void q_networkcookiejar_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_networkcookiejar_children(void* self) {
+const libqt_list /* of QObject* */ q_networkcookiejar_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -312,7 +271,7 @@ QBindingStorage* q_networkcookiejar_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_networkcookiejar_binding_storage2(void* self) {
+const QBindingStorage* q_networkcookiejar_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -486,6 +445,10 @@ bool q_networkcookiejar_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_networkcookiejar_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QNetworkCookieJar_OnIsSignalConnected((QNetworkCookieJar*)self, (intptr_t)slot);
+}
+
+void q_networkcookiejar_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_networkcookiejar_delete(void* self) {

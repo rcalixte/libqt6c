@@ -17,19 +17,13 @@ extern "C" {
 #ifdef __cplusplus
 #else
 typedef struct QBitmap QBitmap;
-typedef struct QColor QColor;
-typedef struct QIODevice QIODevice;
 typedef struct QImage QImage;
-typedef struct QImageReader QImageReader;
 typedef struct QPaintDevice QPaintDevice;
 typedef struct QPaintEngine QPaintEngine;
 typedef struct QPainter QPainter;
 typedef struct QPixmap QPixmap;
 typedef struct QPoint QPoint;
-typedef struct QRect QRect;
-typedef struct QRegion QRegion;
 typedef struct QSize QSize;
-typedef struct QSizeF QSizeF;
 typedef struct QTransform QTransform;
 typedef struct QVariant QVariant;
 #endif

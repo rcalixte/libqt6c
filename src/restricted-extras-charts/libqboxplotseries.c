@@ -1,17 +1,11 @@
-#include "libqabstractaxis.hpp"
 #include "libqabstractseries.hpp"
-#include "../libqanystringview.hpp"
-#include "../libqbindingstorage.hpp"
 #include "libqboxset.hpp"
 #include "../libqbrush.hpp"
-#include "libqchart.hpp"
 #include "../libqevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include "../libqpen.hpp"
 #include <string.h>
-#include "../libqthread.hpp"
-#include "../libqvariant.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqboxplotseries.hpp"
 #include "libqboxplotseries.h"
@@ -24,7 +18,7 @@ QBoxPlotSeries* q_boxplotseries_new2(void* parent) {
     return QBoxPlotSeries_new2((QObject*)parent);
 }
 
-QMetaObject* q_boxplotseries_meta_object(void* self) {
+const QMetaObject* q_boxplotseries_meta_object(void* self) {
     return QBoxPlotSeries_MetaObject((QBoxPlotSeries*)self);
 }
 
@@ -63,17 +57,8 @@ bool q_boxplotseries_take(void* self, void* box) {
     return QBoxPlotSeries_Take((QBoxPlotSeries*)self, (QBoxSet*)box);
 }
 
-bool q_boxplotseries_append_with_boxes(void* self, void* boxes[]) {
-    QBoxSet** boxes_arr = (QBoxSet**)boxes;
-    size_t boxes_len = 0;
-    while (boxes_arr[boxes_len] != NULL) {
-        boxes_len++;
-    }
-    libqt_list boxes_list = {
-        .len = boxes_len,
-        .data = {(QBoxSet*)boxes},
-    };
-    return QBoxPlotSeries_AppendWithBoxes((QBoxPlotSeries*)self, boxes_list);
+bool q_boxplotseries_append_with_boxes(void* self, libqt_list boxes) {
+    return QBoxPlotSeries_AppendWithBoxes((QBoxPlotSeries*)self, boxes);
 }
 
 bool q_boxplotseries_insert(void* self, int index, void* box) {
@@ -217,37 +202,19 @@ void q_boxplotseries_on_box_width_changed(void* self, void (*slot)(void*)) {
     QBoxPlotSeries_Connect_BoxWidthChanged((QBoxPlotSeries*)self, (intptr_t)slot);
 }
 
-void q_boxplotseries_boxsets_added(void* self, void* sets[]) {
-    QBoxSet** sets_arr = (QBoxSet**)sets;
-    size_t sets_len = 0;
-    while (sets_arr[sets_len] != NULL) {
-        sets_len++;
-    }
-    libqt_list sets_list = {
-        .len = sets_len,
-        .data = {(QBoxSet*)sets},
-    };
-    QBoxPlotSeries_BoxsetsAdded((QBoxPlotSeries*)self, sets_list);
+void q_boxplotseries_boxsets_added(void* self, libqt_list sets) {
+    QBoxPlotSeries_BoxsetsAdded((QBoxPlotSeries*)self, sets);
 }
 
-void q_boxplotseries_on_boxsets_added(void* self, void (*slot)(void*, void*)) {
+void q_boxplotseries_on_boxsets_added(void* self, void (*slot)(void*, libqt_list)) {
     QBoxPlotSeries_Connect_BoxsetsAdded((QBoxPlotSeries*)self, (intptr_t)slot);
 }
 
-void q_boxplotseries_boxsets_removed(void* self, void* sets[]) {
-    QBoxSet** sets_arr = (QBoxSet**)sets;
-    size_t sets_len = 0;
-    while (sets_arr[sets_len] != NULL) {
-        sets_len++;
-    }
-    libqt_list sets_list = {
-        .len = sets_len,
-        .data = {(QBoxSet*)sets},
-    };
-    QBoxPlotSeries_BoxsetsRemoved((QBoxPlotSeries*)self, sets_list);
+void q_boxplotseries_boxsets_removed(void* self, libqt_list sets) {
+    QBoxPlotSeries_BoxsetsRemoved((QBoxPlotSeries*)self, sets);
 }
 
-void q_boxplotseries_on_boxsets_removed(void* self, void (*slot)(void*, void*)) {
+void q_boxplotseries_on_boxsets_removed(void* self, void (*slot)(void*, libqt_list)) {
     QBoxPlotSeries_Connect_BoxsetsRemoved((QBoxPlotSeries*)self, (intptr_t)slot);
 }
 
@@ -373,8 +340,7 @@ const char* q_boxplotseries_object_name(void* self) {
 }
 
 void q_boxplotseries_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_boxplotseries_is_widget_type(void* self) {
@@ -413,7 +379,7 @@ void q_boxplotseries_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_boxplotseries_children(void* self) {
+const libqt_list /* of QObject* */ q_boxplotseries_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -480,7 +446,7 @@ QBindingStorage* q_boxplotseries_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_boxplotseries_binding_storage2(void* self) {
+const QBindingStorage* q_boxplotseries_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -654,6 +620,10 @@ bool q_boxplotseries_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_boxplotseries_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QBoxPlotSeries_OnIsSignalConnected((QBoxPlotSeries*)self, (intptr_t)slot);
+}
+
+void q_boxplotseries_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
 
 void q_boxplotseries_delete(void* self) {

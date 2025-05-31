@@ -1,19 +1,13 @@
-#include "libqanystringview.hpp"
-#include "libqbindingstorage.hpp"
-#include "libqevent.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
 #include "libqscrollerproperties.hpp"
 #include <string.h>
-#include "libqthread.hpp"
-#include "libqvariant.hpp"
-#include "libqcoreevent.hpp"
 #include "libqscroller.hpp"
 #include "libqscroller.h"
 
-QMetaObject* q_scroller_meta_object(void* self) {
+const QMetaObject* q_scroller_meta_object(void* self) {
     return QScroller_MetaObject((QScroller*)self);
 }
 
@@ -40,7 +34,7 @@ QScroller* q_scroller_scroller(void* target) {
     return QScroller_Scroller((QObject*)target);
 }
 
-QScroller* q_scroller_scroller_with_target(void* target) {
+const QScroller* q_scroller_scroller_with_target(void* target) {
     return QScroller_ScrollerWithTarget((QObject*)target);
 }
 
@@ -93,32 +87,16 @@ QScrollerProperties* q_scroller_scroller_properties(void* self) {
     return QScroller_ScrollerProperties((QScroller*)self);
 }
 
-void q_scroller_set_snap_positions_x(void* self, double* positions[]) {
-    size_t positions_len = 0;
-    while (positions[positions_len] != NULL) {
-        positions_len++;
-    }
-    libqt_list positions_list = {
-        .len = positions_len,
-        .data = {(double*)positions},
-    };
-    QScroller_SetSnapPositionsX((QScroller*)self, positions_list);
+void q_scroller_set_snap_positions_x(void* self, libqt_list positions) {
+    QScroller_SetSnapPositionsX((QScroller*)self, positions);
 }
 
 void q_scroller_set_snap_positions_x2(void* self, double first, double interval) {
     QScroller_SetSnapPositionsX2((QScroller*)self, first, interval);
 }
 
-void q_scroller_set_snap_positions_y(void* self, double* positions[]) {
-    size_t positions_len = 0;
-    while (positions[positions_len] != NULL) {
-        positions_len++;
-    }
-    libqt_list positions_list = {
-        .len = positions_len,
-        .data = {(double*)positions},
-    };
-    QScroller_SetSnapPositionsY((QScroller*)self, positions_list);
+void q_scroller_set_snap_positions_y(void* self, libqt_list positions) {
+    QScroller_SetSnapPositionsY((QScroller*)self, positions);
 }
 
 void q_scroller_set_snap_positions_y2(void* self, double first, double interval) {
@@ -203,8 +181,7 @@ const char* q_scroller_object_name(void* self) {
 }
 
 void q_scroller_set_object_name(void* self, char* name) {
-    libqt_strview name_strview = qstrview(name);
-    QObject_SetObjectName((QObject*)self, (QAnyStringView*)&name_strview);
+    QObject_SetObjectName((QObject*)self, name);
 }
 
 bool q_scroller_is_widget_type(void* self) {
@@ -243,7 +220,7 @@ void q_scroller_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_scroller_children(void* self) {
+const libqt_list /* of QObject* */ q_scroller_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -310,7 +287,7 @@ QBindingStorage* q_scroller_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-QBindingStorage* q_scroller_binding_storage2(void* self) {
+const QBindingStorage* q_scroller_binding_storage2(void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -352,4 +329,8 @@ void q_scroller_destroyed1(void* self, void* param1) {
 
 void q_scroller_on_destroyed1(void* self, void (*slot)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+}
+
+void q_scroller_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
 }
