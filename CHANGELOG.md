@@ -1,4 +1,8 @@
 
+### 6.4.2 rev11 (14 June 2025)
+
+* Leverage consistent constness in internal library (#10)
+
 ### 6.4.2 rev10 (31 May 2025)
 
 * Breaking changes/improvements (#9)
