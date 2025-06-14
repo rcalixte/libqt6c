@@ -30,7 +30,7 @@ typedef struct libqt_pair libqt_pair;
 // QString
 struct libqt_string {
     size_t len;
-    char* data;
+    const char* data;
 };
 
 // QAnyStringView, QByteArrayView, and similar view types
@@ -78,10 +78,11 @@ static libqt_string qstring(const char* string) {
         str.len = strlen(string);
         // we malloc char* to ensure proper alignment even though
         // it is wasteful... we can do better
-        str.data = (char*)malloc((str.len + 1) * sizeof(char*));
-        if (str.data) {
-            memcpy(str.data, string, str.len);
-            str.data[str.len] = '\0';
+        char* temp = (char*)malloc((str.len + 1) * sizeof(char*));
+        if (temp) {
+            memcpy(temp, string, str.len);
+            temp[str.len] = '\0';
+            str.data = temp;
         } else {
             str.len = 0;
         }
@@ -114,7 +115,7 @@ static libqt_pair qpair(void* first, void* second) {
 
 static inline void libqt_string_free(libqt_string* str) {
     if (str && str->data) {
-        free(str->data);
+        free((void*)str->data);
         str->data = NULL;
         str->len = 0;
     }
