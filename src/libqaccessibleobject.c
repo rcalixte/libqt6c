@@ -7,76 +7,68 @@
 #include "libqaccessibleobject.hpp"
 #include "libqaccessibleobject.h"
 
+QAccessibleObject* q_accessibleobject_new(void* object) {
+    return QAccessibleObject_new((QObject*)object);
+}
+
 bool q_accessibleobject_is_valid(void* self) {
     return QAccessibleObject_IsValid((QAccessibleObject*)self);
+}
+
+void q_accessibleobject_on_is_valid(void* self, bool (*slot)()) {
+    QAccessibleObject_OnIsValid((QAccessibleObject*)self, (intptr_t)slot);
+}
+
+bool q_accessibleobject_qbase_is_valid(void* self) {
+    return QAccessibleObject_QBaseIsValid((QAccessibleObject*)self);
 }
 
 QObject* q_accessibleobject_object(void* self) {
     return QAccessibleObject_Object((QAccessibleObject*)self);
 }
 
+void q_accessibleobject_on_object(void* self, QObject* (*slot)()) {
+    QAccessibleObject_OnObject((QAccessibleObject*)self, (intptr_t)slot);
+}
+
+QObject* q_accessibleobject_qbase_object(void* self) {
+    return QAccessibleObject_QBaseObject((QAccessibleObject*)self);
+}
+
 QRect* q_accessibleobject_rect(void* self) {
     return QAccessibleObject_Rect((QAccessibleObject*)self);
+}
+
+void q_accessibleobject_on_rect(void* self, QRect* (*slot)()) {
+    QAccessibleObject_OnRect((QAccessibleObject*)self, (intptr_t)slot);
+}
+
+QRect* q_accessibleobject_qbase_rect(void* self) {
+    return QAccessibleObject_QBaseRect((QAccessibleObject*)self);
 }
 
 void q_accessibleobject_set_text(void* self, int64_t t, const char* text) {
     QAccessibleObject_SetText((QAccessibleObject*)self, t, qstring(text));
 }
 
+void q_accessibleobject_on_set_text(void* self, void (*slot)(void*, int64_t, const char*)) {
+    QAccessibleObject_OnSetText((QAccessibleObject*)self, (intptr_t)slot);
+}
+
+void q_accessibleobject_qbase_set_text(void* self, int64_t t, const char* text) {
+    QAccessibleObject_QBaseSetText((QAccessibleObject*)self, t, qstring(text));
+}
+
 QAccessibleInterface* q_accessibleobject_child_at(void* self, int x, int y) {
     return QAccessibleObject_ChildAt((QAccessibleObject*)self, x, y);
 }
 
-QWindow* q_accessibleobject_window(void* self) {
-    return QAccessibleInterface_Window((QAccessibleInterface*)self);
+void q_accessibleobject_on_child_at(void* self, QAccessibleInterface* (*slot)(void*, int, int)) {
+    QAccessibleObject_OnChildAt((QAccessibleObject*)self, (intptr_t)slot);
 }
 
-libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ q_accessibleobject_relations(void* self, int64_t match) {
-    libqt_list _arr = QAccessibleInterface_Relations((QAccessibleInterface*)self, match);
-    return _arr;
-}
-
-QAccessibleInterface* q_accessibleobject_focus_child(void* self) {
-    return QAccessibleInterface_FocusChild((QAccessibleInterface*)self);
-}
-
-QAccessibleInterface* q_accessibleobject_parent(void* self) {
-    return QAccessibleInterface_Parent((QAccessibleInterface*)self);
-}
-
-QAccessibleInterface* q_accessibleobject_child(void* self, int index) {
-    return QAccessibleInterface_Child((QAccessibleInterface*)self, index);
-}
-
-int32_t q_accessibleobject_child_count(void* self) {
-    return QAccessibleInterface_ChildCount((QAccessibleInterface*)self);
-}
-
-int32_t q_accessibleobject_index_of_child(void* self, void* param1) {
-    return QAccessibleInterface_IndexOfChild((QAccessibleInterface*)self, (QAccessibleInterface*)param1);
-}
-
-const char* q_accessibleobject_text(void* self, int64_t t) {
-    libqt_string _str = QAccessibleInterface_Text((QAccessibleInterface*)self, t);
-    char* _ret = qstring_to_char(_str);
-    libqt_string_free(&_str);
-    return _ret;
-}
-
-int64_t q_accessibleobject_role(void* self) {
-    return QAccessibleInterface_Role((QAccessibleInterface*)self);
-}
-
-QAccessible__State* q_accessibleobject_state(void* self) {
-    return QAccessibleInterface_State((QAccessibleInterface*)self);
-}
-
-QColor* q_accessibleobject_foreground_color(void* self) {
-    return QAccessibleInterface_ForegroundColor((QAccessibleInterface*)self);
-}
-
-QColor* q_accessibleobject_background_color(void* self) {
-    return QAccessibleInterface_BackgroundColor((QAccessibleInterface*)self);
+QAccessibleInterface* q_accessibleobject_qbase_child_at(void* self, int x, int y) {
+    return QAccessibleObject_QBaseChildAt((QAccessibleObject*)self, x, y);
 }
 
 QAccessibleTextInterface* q_accessibleobject_text_interface(void* self) {
@@ -111,12 +103,180 @@ QAccessibleHyperlinkInterface* q_accessibleobject_hyperlink_interface(void* self
     return QAccessibleInterface_HyperlinkInterface((QAccessibleInterface*)self);
 }
 
+QWindow* q_accessibleobject_window(void* self) {
+    return QAccessibleObject_Window((QAccessibleObject*)self);
+}
+
+QWindow* q_accessibleobject_qbase_window(void* self) {
+    return QAccessibleObject_QBaseWindow((QAccessibleObject*)self);
+}
+
+void q_accessibleobject_on_window(void* self, QWindow* (*slot)()) {
+    QAccessibleObject_OnWindow((QAccessibleObject*)self, (intptr_t)slot);
+}
+
+libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ q_accessibleobject_relations(void* self, int64_t match) {
+    libqt_list _arr = QAccessibleObject_Relations((QAccessibleObject*)self, match);
+    return _arr;
+}
+
+libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ q_accessibleobject_qbase_relations(void* self, int64_t match) {
+    libqt_list _arr = QAccessibleObject_QBaseRelations((QAccessibleObject*)self, match);
+    return _arr;
+}
+
+void q_accessibleobject_on_relations(void* self, libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int64_t  */ (*slot)(void*, int64_t)) {
+    QAccessibleObject_OnRelations((QAccessibleObject*)self, (intptr_t)slot);
+}
+
+QAccessibleInterface* q_accessibleobject_focus_child(void* self) {
+    return QAccessibleObject_FocusChild((QAccessibleObject*)self);
+}
+
+QAccessibleInterface* q_accessibleobject_qbase_focus_child(void* self) {
+    return QAccessibleObject_QBaseFocusChild((QAccessibleObject*)self);
+}
+
+void q_accessibleobject_on_focus_child(void* self, QAccessibleInterface* (*slot)()) {
+    QAccessibleObject_OnFocusChild((QAccessibleObject*)self, (intptr_t)slot);
+}
+
+QAccessibleInterface* q_accessibleobject_parent(void* self) {
+    return QAccessibleObject_Parent((QAccessibleObject*)self);
+}
+
+QAccessibleInterface* q_accessibleobject_qbase_parent(void* self) {
+    return QAccessibleObject_QBaseParent((QAccessibleObject*)self);
+}
+
+void q_accessibleobject_on_parent(void* self, QAccessibleInterface* (*slot)()) {
+    QAccessibleObject_OnParent((QAccessibleObject*)self, (intptr_t)slot);
+}
+
+QAccessibleInterface* q_accessibleobject_child(void* self, int index) {
+    return QAccessibleObject_Child((QAccessibleObject*)self, index);
+}
+
+QAccessibleInterface* q_accessibleobject_qbase_child(void* self, int index) {
+    return QAccessibleObject_QBaseChild((QAccessibleObject*)self, index);
+}
+
+void q_accessibleobject_on_child(void* self, QAccessibleInterface* (*slot)(void*, int)) {
+    QAccessibleObject_OnChild((QAccessibleObject*)self, (intptr_t)slot);
+}
+
+int32_t q_accessibleobject_child_count(void* self) {
+    return QAccessibleObject_ChildCount((QAccessibleObject*)self);
+}
+
+int32_t q_accessibleobject_qbase_child_count(void* self) {
+    return QAccessibleObject_QBaseChildCount((QAccessibleObject*)self);
+}
+
+void q_accessibleobject_on_child_count(void* self, int32_t (*slot)()) {
+    QAccessibleObject_OnChildCount((QAccessibleObject*)self, (intptr_t)slot);
+}
+
+int32_t q_accessibleobject_index_of_child(void* self, void* param1) {
+    return QAccessibleObject_IndexOfChild((QAccessibleObject*)self, (QAccessibleInterface*)param1);
+}
+
+int32_t q_accessibleobject_qbase_index_of_child(void* self, void* param1) {
+    return QAccessibleObject_QBaseIndexOfChild((QAccessibleObject*)self, (QAccessibleInterface*)param1);
+}
+
+void q_accessibleobject_on_index_of_child(void* self, int32_t (*slot)(void*, void*)) {
+    QAccessibleObject_OnIndexOfChild((QAccessibleObject*)self, (intptr_t)slot);
+}
+
+const char* q_accessibleobject_text(void* self, int64_t t) {
+    libqt_string _str = QAccessibleObject_Text((QAccessibleObject*)self, t);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_accessibleobject_qbase_text(void* self, int64_t t) {
+    libqt_string _str = QAccessibleObject_QBaseText((QAccessibleObject*)self, t);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_accessibleobject_on_text(void* self, const char* (*slot)(void*, int64_t)) {
+    QAccessibleObject_OnText((QAccessibleObject*)self, (intptr_t)slot);
+}
+
+int64_t q_accessibleobject_role(void* self) {
+    return QAccessibleObject_Role((QAccessibleObject*)self);
+}
+
+int64_t q_accessibleobject_qbase_role(void* self) {
+    return QAccessibleObject_QBaseRole((QAccessibleObject*)self);
+}
+
+void q_accessibleobject_on_role(void* self, int64_t (*slot)()) {
+    QAccessibleObject_OnRole((QAccessibleObject*)self, (intptr_t)slot);
+}
+
+QAccessible__State* q_accessibleobject_state(void* self) {
+    return QAccessibleObject_State((QAccessibleObject*)self);
+}
+
+QAccessible__State* q_accessibleobject_qbase_state(void* self) {
+    return QAccessibleObject_QBaseState((QAccessibleObject*)self);
+}
+
+void q_accessibleobject_on_state(void* self, QAccessible__State* (*slot)()) {
+    QAccessibleObject_OnState((QAccessibleObject*)self, (intptr_t)slot);
+}
+
+QColor* q_accessibleobject_foreground_color(void* self) {
+    return QAccessibleObject_ForegroundColor((QAccessibleObject*)self);
+}
+
+QColor* q_accessibleobject_qbase_foreground_color(void* self) {
+    return QAccessibleObject_QBaseForegroundColor((QAccessibleObject*)self);
+}
+
+void q_accessibleobject_on_foreground_color(void* self, QColor* (*slot)()) {
+    QAccessibleObject_OnForegroundColor((QAccessibleObject*)self, (intptr_t)slot);
+}
+
+QColor* q_accessibleobject_background_color(void* self) {
+    return QAccessibleObject_BackgroundColor((QAccessibleObject*)self);
+}
+
+QColor* q_accessibleobject_qbase_background_color(void* self) {
+    return QAccessibleObject_QBaseBackgroundColor((QAccessibleObject*)self);
+}
+
+void q_accessibleobject_on_background_color(void* self, QColor* (*slot)()) {
+    QAccessibleObject_OnBackgroundColor((QAccessibleObject*)self, (intptr_t)slot);
+}
+
 void q_accessibleobject_virtual_hook(void* self, int id, void* data) {
-    QAccessibleInterface_VirtualHook((QAccessibleInterface*)self, id, data);
+    QAccessibleObject_VirtualHook((QAccessibleObject*)self, id, data);
+}
+
+void q_accessibleobject_qbase_virtual_hook(void* self, int id, void* data) {
+    QAccessibleObject_QBaseVirtualHook((QAccessibleObject*)self, id, data);
+}
+
+void q_accessibleobject_on_virtual_hook(void* self, void (*slot)(void*, int, void*)) {
+    QAccessibleObject_OnVirtualHook((QAccessibleObject*)self, (intptr_t)slot);
 }
 
 void* q_accessibleobject_interface_cast(void* self, int64_t param1) {
-    return QAccessibleInterface_InterfaceCast((QAccessibleInterface*)self, param1);
+    return QAccessibleObject_InterfaceCast((QAccessibleObject*)self, param1);
+}
+
+void* q_accessibleobject_qbase_interface_cast(void* self, int64_t param1) {
+    return QAccessibleObject_QBaseInterfaceCast((QAccessibleObject*)self, param1);
+}
+
+void q_accessibleobject_on_interface_cast(void* self, void* (*slot)(void*, int64_t)) {
+    QAccessibleObject_OnInterfaceCast((QAccessibleObject*)self, (intptr_t)slot);
 }
 
 QAccessibleApplication* q_accessibleapplication_new() {
