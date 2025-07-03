@@ -1,4 +1,10 @@
 
+### 6.4.2 rev13 (3 July 2025)
+
+* **BREAKING CHANGE:** Switch enum workarounds to remove uppercasing (#12)
+* Remove ineffectual const return type
+* Add QStringList null terminator
+
 ### 6.4.2 rev12 (16 June 2025)
 
 * Allow virtual classes for QAccessibleObject and QAccessibleWidget (#11)
