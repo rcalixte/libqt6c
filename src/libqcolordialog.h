@@ -2307,7 +2307,7 @@ void q_colordialog_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QColorDialog* self ```
-const libqt_list /* of QObject* */ q_colordialog_children(void* self);
+libqt_list /* of QObject* */ q_colordialog_children(void* self);
 
 /// Inherited from QObject
 ///

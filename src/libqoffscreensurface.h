@@ -277,7 +277,7 @@ void q_offscreensurface_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QOffscreenSurface* self ```
-const libqt_list /* of QObject* */ q_offscreensurface_children(void* self);
+libqt_list /* of QObject* */ q_offscreensurface_children(void* self);
 
 /// Inherited from QObject
 ///

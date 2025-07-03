@@ -408,7 +408,7 @@ void q_movie_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QMovie* self ```
-const libqt_list /* of QObject* */ q_movie_children(void* self);
+libqt_list /* of QObject* */ q_movie_children(void* self);
 
 /// Inherited from QObject
 ///

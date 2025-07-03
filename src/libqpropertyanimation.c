@@ -325,7 +325,7 @@ void q_propertyanimation_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-const libqt_list /* of QObject* */ q_propertyanimation_children(void* self) {
+libqt_list /* of QObject* */ q_propertyanimation_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -381,6 +381,7 @@ const char** q_propertyanimation_dynamic_property_names(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         _ret[_i] = qstring_to_char(_qstr[_i]);
     }
+    _ret[_arr.len] = NULL;
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }

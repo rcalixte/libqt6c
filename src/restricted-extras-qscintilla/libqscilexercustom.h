@@ -395,7 +395,7 @@ void q_scilexercustom_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QsciLexerCustom* self ```
-const libqt_list /* of QObject* */ q_scilexercustom_children(void* self);
+libqt_list /* of QObject* */ q_scilexercustom_children(void* self);
 
 /// Inherited from QObject
 ///

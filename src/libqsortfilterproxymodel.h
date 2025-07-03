@@ -1280,7 +1280,7 @@ void q_sortfilterproxymodel_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QSortFilterProxyModel* self ```
-const libqt_list /* of QObject* */ q_sortfilterproxymodel_children(void* self);
+libqt_list /* of QObject* */ q_sortfilterproxymodel_children(void* self);
 
 /// Inherited from QObject
 ///

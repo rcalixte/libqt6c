@@ -187,7 +187,7 @@ void q_filesystemwatcher_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QFileSystemWatcher* self ```
-const libqt_list /* of QObject* */ q_filesystemwatcher_children(void* self);
+libqt_list /* of QObject* */ q_filesystemwatcher_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -167,7 +167,7 @@ void q_textobject_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QTextObject* self ```
-const libqt_list /* of QObject* */ q_textobject_children(void* self);
+libqt_list /* of QObject* */ q_textobject_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -498,7 +498,7 @@ void q_textblockgroup_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QTextBlockGroup* self ```
-const libqt_list /* of QObject* */ q_textblockgroup_children(void* self);
+libqt_list /* of QObject* */ q_textblockgroup_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -904,7 +904,7 @@ void q_textframe_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QTextFrame* self ```
-const libqt_list /* of QObject* */ q_textframe_children(void* self);
+libqt_list /* of QObject* */ q_textframe_children(void* self);
 
 /// Inherited from QObject
 ///

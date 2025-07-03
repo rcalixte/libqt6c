@@ -1928,7 +1928,7 @@ void q_graphicsobject_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QGraphicsObject* self ```
-const libqt_list /* of QObject* */ q_graphicsobject_children(void* self);
+libqt_list /* of QObject* */ q_graphicsobject_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -21015,7 +21015,7 @@ void q_graphicstextitem_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QGraphicsTextItem* self ```
-const libqt_list /* of QObject* */ q_graphicstextitem_children(void* self);
+libqt_list /* of QObject* */ q_graphicstextitem_children(void* self);
 
 /// Inherited from QObject
 ///

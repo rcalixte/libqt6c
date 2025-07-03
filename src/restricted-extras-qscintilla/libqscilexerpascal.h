@@ -502,7 +502,7 @@ void q_scilexerpascal_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QsciLexerPascal* self ```
-const libqt_list /* of QObject* */ q_scilexerpascal_children(void* self);
+libqt_list /* of QObject* */ q_scilexerpascal_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -270,7 +270,7 @@ void q_hpiemodelmapper_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QHPieModelMapper* self ```
-const libqt_list /* of QObject* */ q_hpiemodelmapper_children(void* self);
+libqt_list /* of QObject* */ q_hpiemodelmapper_children(void* self);
 
 /// Inherited from QObject
 ///

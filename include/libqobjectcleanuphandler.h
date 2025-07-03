@@ -162,7 +162,7 @@ void q_objectcleanuphandler_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QObjectCleanupHandler* self ```
-const libqt_list /* of QObject* */ q_objectcleanuphandler_children(void* self);
+libqt_list /* of QObject* */ q_objectcleanuphandler_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -314,7 +314,7 @@ void q_graphicsitemanimation_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QGraphicsItemAnimation* self ```
-const libqt_list /* of QObject* */ q_graphicsitemanimation_children(void* self);
+libqt_list /* of QObject* */ q_graphicsitemanimation_children(void* self);
 
 /// Inherited from QObject
 ///

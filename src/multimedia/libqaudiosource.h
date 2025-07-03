@@ -265,7 +265,7 @@ void q_audiosource_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QAudioSource* self ```
-const libqt_list /* of QObject* */ q_audiosource_children(void* self);
+libqt_list /* of QObject* */ q_audiosource_children(void* self);
 
 /// Inherited from QObject
 ///

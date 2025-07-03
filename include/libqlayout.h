@@ -738,7 +738,7 @@ void q_layout_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QLayout* self ```
-const libqt_list /* of QObject* */ q_layout_children(void* self);
+libqt_list /* of QObject* */ q_layout_children(void* self);
 
 /// Inherited from QObject
 ///

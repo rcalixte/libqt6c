@@ -424,7 +424,7 @@ void q_scilexerlua_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QsciLexerLua* self ```
-const libqt_list /* of QObject* */ q_scilexerlua_children(void* self);
+libqt_list /* of QObject* */ q_scilexerlua_children(void* self);
 
 /// Inherited from QObject
 ///

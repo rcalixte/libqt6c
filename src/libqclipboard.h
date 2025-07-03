@@ -308,7 +308,7 @@ void q_clipboard_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QClipboard* self ```
-const libqt_list /* of QObject* */ q_clipboard_children(void* self);
+libqt_list /* of QObject* */ q_clipboard_children(void* self);
 
 /// Inherited from QObject
 ///

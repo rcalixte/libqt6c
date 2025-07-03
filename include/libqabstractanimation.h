@@ -368,7 +368,7 @@ void q_abstractanimation_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QAbstractAnimation* self ```
-const libqt_list /* of QObject* */ q_abstractanimation_children(void* self);
+libqt_list /* of QObject* */ q_abstractanimation_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1084,7 +1084,7 @@ void q_animationdriver_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QAnimationDriver* self ```
-const libqt_list /* of QObject* */ q_animationdriver_children(void* self);
+libqt_list /* of QObject* */ q_animationdriver_children(void* self);
 
 /// Inherited from QObject
 ///

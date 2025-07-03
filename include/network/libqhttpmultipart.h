@@ -238,7 +238,7 @@ void q_httpmultipart_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QHttpMultiPart* self ```
-const libqt_list /* of QObject* */ q_httpmultipart_children(void* self);
+libqt_list /* of QObject* */ q_httpmultipart_children(void* self);
 
 /// Inherited from QObject
 ///

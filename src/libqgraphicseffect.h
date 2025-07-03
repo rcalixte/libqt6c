@@ -411,7 +411,7 @@ void q_graphicseffect_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QGraphicsEffect* self ```
-const libqt_list /* of QObject* */ q_graphicseffect_children(void* self);
+libqt_list /* of QObject* */ q_graphicseffect_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1125,7 +1125,7 @@ void q_graphicscolorizeeffect_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QGraphicsColorizeEffect* self ```
-const libqt_list /* of QObject* */ q_graphicscolorizeeffect_children(void* self);
+libqt_list /* of QObject* */ q_graphicscolorizeeffect_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2047,7 +2047,7 @@ void q_graphicsblureffect_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QGraphicsBlurEffect* self ```
-const libqt_list /* of QObject* */ q_graphicsblureffect_children(void* self);
+libqt_list /* of QObject* */ q_graphicsblureffect_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2992,7 +2992,7 @@ void q_graphicsdropshadoweffect_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QGraphicsDropShadowEffect* self ```
-const libqt_list /* of QObject* */ q_graphicsdropshadoweffect_children(void* self);
+libqt_list /* of QObject* */ q_graphicsdropshadoweffect_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -3868,7 +3868,7 @@ void q_graphicsopacityeffect_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QGraphicsOpacityEffect* self ```
-const libqt_list /* of QObject* */ q_graphicsopacityeffect_children(void* self);
+libqt_list /* of QObject* */ q_graphicsopacityeffect_children(void* self);
 
 /// Inherited from QObject
 ///

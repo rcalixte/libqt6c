@@ -2847,7 +2847,7 @@ void q_datetimeedit_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QDateTimeEdit* self ```
-const libqt_list /* of QObject* */ q_datetimeedit_children(void* self);
+libqt_list /* of QObject* */ q_datetimeedit_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -7067,7 +7067,7 @@ void q_timeedit_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QTimeEdit* self ```
-const libqt_list /* of QObject* */ q_timeedit_children(void* self);
+libqt_list /* of QObject* */ q_timeedit_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -11719,7 +11719,7 @@ void q_dateedit_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QDateEdit* self ```
-const libqt_list /* of QObject* */ q_dateedit_children(void* self);
+libqt_list /* of QObject* */ q_dateedit_children(void* self);
 
 /// Inherited from QObject
 ///

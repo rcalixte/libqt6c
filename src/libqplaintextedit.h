@@ -3390,7 +3390,7 @@ void q_plaintextedit_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QPlainTextEdit* self ```
-const libqt_list /* of QObject* */ q_plaintextedit_children(void* self);
+libqt_list /* of QObject* */ q_plaintextedit_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -5158,7 +5158,7 @@ void q_plaintextdocumentlayout_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QPlainTextDocumentLayout* self ```
-const libqt_list /* of QObject* */ q_plaintextdocumentlayout_children(void* self);
+libqt_list /* of QObject* */ q_plaintextdocumentlayout_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -1370,7 +1370,7 @@ void q_application_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QApplication* self ```
-const libqt_list /* of QObject* */ q_application_children(void* self);
+libqt_list /* of QObject* */ q_application_children(void* self);
 
 /// Inherited from QObject
 ///

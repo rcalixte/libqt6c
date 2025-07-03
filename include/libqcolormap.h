@@ -69,7 +69,7 @@ const QColor* q_colormap_color_at(void* self, uint32_t pixel);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolormap.html#colormap)
 ///
 /// ``` QColormap* self ```
-const libqt_list /* of QColor* */ q_colormap_colormap(void* self);
+libqt_list /* of QColor* */ q_colormap_colormap(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolormap.html#instance)
 ///

@@ -2455,7 +2455,7 @@ void q_spinbox_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QSpinBox* self ```
-const libqt_list /* of QObject* */ q_spinbox_children(void* self);
+libqt_list /* of QObject* */ q_spinbox_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -6774,7 +6774,7 @@ void q_doublespinbox_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QDoubleSpinBox* self ```
-const libqt_list /* of QObject* */ q_doublespinbox_children(void* self);
+libqt_list /* of QObject* */ q_doublespinbox_children(void* self);
 
 /// Inherited from QObject
 ///

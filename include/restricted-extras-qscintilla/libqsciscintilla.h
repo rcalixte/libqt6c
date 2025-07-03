@@ -5400,7 +5400,7 @@ void q_sciscintilla_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QsciScintilla* self ```
-const libqt_list /* of QObject* */ q_sciscintilla_children(void* self);
+libqt_list /* of QObject* */ q_sciscintilla_children(void* self);
 
 /// Inherited from QObject
 ///

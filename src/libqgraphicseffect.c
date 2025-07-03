@@ -276,7 +276,7 @@ void q_graphicseffect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-const libqt_list /* of QObject* */ q_graphicseffect_children(void* self) {
+libqt_list /* of QObject* */ q_graphicseffect_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -332,6 +332,7 @@ const char** q_graphicseffect_dynamic_property_names(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         _ret[_i] = qstring_to_char(_qstr[_i]);
     }
+    _ret[_arr.len] = NULL;
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
@@ -691,7 +692,7 @@ void q_graphicscolorizeeffect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-const libqt_list /* of QObject* */ q_graphicscolorizeeffect_children(void* self) {
+libqt_list /* of QObject* */ q_graphicscolorizeeffect_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -747,6 +748,7 @@ const char** q_graphicscolorizeeffect_dynamic_property_names(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         _ret[_i] = qstring_to_char(_qstr[_i]);
     }
+    _ret[_arr.len] = NULL;
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
@@ -1202,7 +1204,7 @@ void q_graphicsblureffect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-const libqt_list /* of QObject* */ q_graphicsblureffect_children(void* self) {
+libqt_list /* of QObject* */ q_graphicsblureffect_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1258,6 +1260,7 @@ const char** q_graphicsblureffect_dynamic_property_names(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         _ret[_i] = qstring_to_char(_qstr[_i]);
     }
+    _ret[_arr.len] = NULL;
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
@@ -1741,7 +1744,7 @@ void q_graphicsdropshadoweffect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-const libqt_list /* of QObject* */ q_graphicsdropshadoweffect_children(void* self) {
+libqt_list /* of QObject* */ q_graphicsdropshadoweffect_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1797,6 +1800,7 @@ const char** q_graphicsdropshadoweffect_dynamic_property_names(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         _ret[_i] = qstring_to_char(_qstr[_i]);
     }
+    _ret[_arr.len] = NULL;
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
@@ -2228,7 +2232,7 @@ void q_graphicsopacityeffect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-const libqt_list /* of QObject* */ q_graphicsopacityeffect_children(void* self) {
+libqt_list /* of QObject* */ q_graphicsopacityeffect_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -2284,6 +2288,7 @@ const char** q_graphicsopacityeffect_dynamic_property_names(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         _ret[_i] = qstring_to_char(_qstr[_i]);
     }
+    _ret[_arr.len] = NULL;
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }

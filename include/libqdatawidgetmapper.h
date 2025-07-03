@@ -304,7 +304,7 @@ void q_datawidgetmapper_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QDataWidgetMapper* self ```
-const libqt_list /* of QObject* */ q_datawidgetmapper_children(void* self);
+libqt_list /* of QObject* */ q_datawidgetmapper_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -2316,7 +2316,7 @@ void q_lcdnumber_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QLCDNumber* self ```
-const libqt_list /* of QObject* */ q_lcdnumber_children(void* self);
+libqt_list /* of QObject* */ q_lcdnumber_children(void* self);
 
 /// Inherited from QObject
 ///

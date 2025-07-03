@@ -596,7 +596,7 @@ void q_itemdelegate_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QItemDelegate* self ```
-const libqt_list /* of QObject* */ q_itemdelegate_children(void* self);
+libqt_list /* of QObject* */ q_itemdelegate_children(void* self);
 
 /// Inherited from QObject
 ///

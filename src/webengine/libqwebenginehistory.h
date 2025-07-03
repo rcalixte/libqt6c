@@ -674,7 +674,7 @@ void q_webenginehistorymodel_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QWebEngineHistoryModel* self ```
-const libqt_list /* of QObject* */ q_webenginehistorymodel_children(void* self);
+libqt_list /* of QObject* */ q_webenginehistorymodel_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1186,7 +1186,7 @@ void q_webenginehistory_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QWebEngineHistory* self ```
-const libqt_list /* of QObject* */ q_webenginehistory_children(void* self);
+libqt_list /* of QObject* */ q_webenginehistory_children(void* self);
 
 /// Inherited from QObject
 ///

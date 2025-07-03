@@ -435,7 +435,7 @@ void q_scilexeravs_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QsciLexerAVS* self ```
-const libqt_list /* of QObject* */ q_scilexeravs_children(void* self);
+libqt_list /* of QObject* */ q_scilexeravs_children(void* self);
 
 /// Inherited from QObject
 ///
