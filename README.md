@@ -274,7 +274,7 @@ Qt expects fixed OS threads to be used for each QObject. When you first call `q_
 
 - When accessing Qt objects from inside another thread, it's safest to use `q_threading_async` to access the Qt objects from Qt's main thread. The [Threading library](https://github.com/rcalixte/libqt6c/tree/master/src/threading/libqt6cthreading.h) documents additional available strategies within the header code.
 
-Qt C++ enums are projected as PascalCase C typedef enums, replacing namespace indicators from C++ (`::`) with underscores and where enum values are represented by the uppercase equivalent of the Qt C++ class name, enum name, and enum value. For example, `Qt::AlignmentFlag` is projected as a C enum typedef of `Qt__AlignmentFlag` with values prefixed by `QT_ALIGNMENTFLAG`. Enums are not strongly typed in their definitions but are currently typed as `int64_t` parameters or return types by the C API.
+Qt C++ enums are projected as PascalCase C typedef enums, replacing namespace indicators from C++ (`::`) with underscores and where enum values are represented by the uppercase equivalent of the Qt C++ class name, enum name, and enum value, with casing exceptions for the values for `Qt::Key` and `QsciLexerRuby::PercentString*`. For example, `Qt::AlignmentFlag` is projected as a C enum typedef of `Qt__AlignmentFlag` with values prefixed by `QT_ALIGNMENTFLAG`. Enums are not strongly typed in their definitions but are currently typed as `int64_t` parameters or return types by the C API.
 
 #### API at a glance
 
