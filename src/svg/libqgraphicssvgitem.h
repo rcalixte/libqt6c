@@ -453,7 +453,7 @@ void q_graphicssvgitem_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QGraphicsSvgItem* self ```
-const libqt_list /* of QObject* */ q_graphicssvgitem_children(void* self);
+libqt_list /* of QObject* */ q_graphicssvgitem_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -218,7 +218,7 @@ void q_audiooutput_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QAudioOutput* self ```
-const libqt_list /* of QObject* */ q_audiooutput_children(void* self);
+libqt_list /* of QObject* */ q_audiooutput_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -484,7 +484,7 @@ void q_abstracttextdocumentlayout_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QAbstractTextDocumentLayout* self ```
-const libqt_list /* of QObject* */ q_abstracttextdocumentlayout_children(void* self);
+libqt_list /* of QObject* */ q_abstracttextdocumentlayout_children(void* self);
 
 /// Inherited from QObject
 ///

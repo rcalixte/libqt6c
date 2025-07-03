@@ -2479,7 +2479,7 @@ void q_splitter_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QSplitter* self ```
-const libqt_list /* of QObject* */ q_splitter_children(void* self);
+libqt_list /* of QObject* */ q_splitter_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -6359,7 +6359,7 @@ void q_splitterhandle_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QSplitterHandle* self ```
-const libqt_list /* of QObject* */ q_splitterhandle_children(void* self);
+libqt_list /* of QObject* */ q_splitterhandle_children(void* self);
 
 /// Inherited from QObject
 ///

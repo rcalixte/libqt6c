@@ -409,7 +409,7 @@ void q_scilexerfortran77_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QsciLexerFortran77* self ```
-const libqt_list /* of QObject* */ q_scilexerfortran77_children(void* self);
+libqt_list /* of QObject* */ q_scilexerfortran77_children(void* self);
 
 /// Inherited from QObject
 ///

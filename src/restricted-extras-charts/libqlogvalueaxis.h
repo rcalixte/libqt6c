@@ -1172,7 +1172,7 @@ void q_logvalueaxis_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QLogValueAxis* self ```
-const libqt_list /* of QObject* */ q_logvalueaxis_children(void* self);
+libqt_list /* of QObject* */ q_logvalueaxis_children(void* self);
 
 /// Inherited from QObject
 ///

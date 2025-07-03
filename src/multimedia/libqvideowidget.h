@@ -2206,7 +2206,7 @@ void q_videowidget_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QVideoWidget* self ```
-const libqt_list /* of QObject* */ q_videowidget_children(void* self);
+libqt_list /* of QObject* */ q_videowidget_children(void* self);
 
 /// Inherited from QObject
 ///

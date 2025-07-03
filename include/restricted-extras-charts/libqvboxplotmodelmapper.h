@@ -270,7 +270,7 @@ void q_vboxplotmodelmapper_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QVBoxPlotModelMapper* self ```
-const libqt_list /* of QObject* */ q_vboxplotmodelmapper_children(void* self);
+libqt_list /* of QObject* */ q_vboxplotmodelmapper_children(void* self);
 
 /// Inherited from QObject
 ///

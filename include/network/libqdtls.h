@@ -183,7 +183,7 @@ void q_dtlsclientverifier_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QDtlsClientVerifier* self ```
-const libqt_list /* of QObject* */ q_dtlsclientverifier_children(void* self);
+libqt_list /* of QObject* */ q_dtlsclientverifier_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -961,7 +961,7 @@ void q_dtls_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QDtls* self ```
-const libqt_list /* of QObject* */ q_dtls_children(void* self);
+libqt_list /* of QObject* */ q_dtls_children(void* self);
 
 /// Inherited from QObject
 ///

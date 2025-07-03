@@ -2500,7 +2500,7 @@ void q_abstractbutton_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QAbstractButton* self ```
-const libqt_list /* of QObject* */ q_abstractbutton_children(void* self);
+libqt_list /* of QObject* */ q_abstractbutton_children(void* self);
 
 /// Inherited from QObject
 ///

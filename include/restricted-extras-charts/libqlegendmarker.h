@@ -314,7 +314,7 @@ void q_legendmarker_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QLegendMarker* self ```
-const libqt_list /* of QObject* */ q_legendmarker_children(void* self);
+libqt_list /* of QObject* */ q_legendmarker_children(void* self);
 
 /// Inherited from QObject
 ///

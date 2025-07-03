@@ -91,6 +91,7 @@ const char** q_sslcertificate_issuer_info(void* self, int64_t info) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         _ret[_i] = qstring_to_char(_qstr[_i]);
     }
+    _ret[_arr.len] = NULL;
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
@@ -105,6 +106,7 @@ const char** q_sslcertificate_issuer_info_with_attribute(void* self, const char*
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         _ret[_i] = qstring_to_char(_qstr[_i]);
     }
+    _ret[_arr.len] = NULL;
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
@@ -119,6 +121,7 @@ const char** q_sslcertificate_subject_info(void* self, int64_t info) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         _ret[_i] = qstring_to_char(_qstr[_i]);
     }
+    _ret[_arr.len] = NULL;
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
@@ -133,6 +136,7 @@ const char** q_sslcertificate_subject_info_with_attribute(void* self, const char
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         _ret[_i] = qstring_to_char(_qstr[_i]);
     }
+    _ret[_arr.len] = NULL;
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
@@ -161,6 +165,7 @@ const char** q_sslcertificate_subject_info_attributes(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         _ret[_i] = qstring_to_char(_qstr[_i]);
     }
+    _ret[_arr.len] = NULL;
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
@@ -175,6 +180,7 @@ const char** q_sslcertificate_issuer_info_attributes(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         _ret[_i] = qstring_to_char(_qstr[_i]);
     }
+    _ret[_arr.len] = NULL;
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }

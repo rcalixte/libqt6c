@@ -665,7 +665,7 @@ void q_barseries_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QBarSeries* self ```
-const libqt_list /* of QObject* */ q_barseries_children(void* self);
+libqt_list /* of QObject* */ q_barseries_children(void* self);
 
 /// Inherited from QObject
 ///

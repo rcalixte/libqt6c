@@ -136,7 +136,7 @@ void q_gesture_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-const libqt_list /* of QObject* */ q_gesture_children(void* self) {
+libqt_list /* of QObject* */ q_gesture_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -192,6 +192,7 @@ const char** q_gesture_dynamic_property_names(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         _ret[_i] = qstring_to_char(_qstr[_i]);
     }
+    _ret[_arr.len] = NULL;
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
@@ -543,7 +544,7 @@ void q_pangesture_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-const libqt_list /* of QObject* */ q_pangesture_children(void* self) {
+libqt_list /* of QObject* */ q_pangesture_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -599,6 +600,7 @@ const char** q_pangesture_dynamic_property_names(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         _ret[_i] = qstring_to_char(_qstr[_i]);
     }
+    _ret[_arr.len] = NULL;
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
@@ -1010,7 +1012,7 @@ void q_pinchgesture_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-const libqt_list /* of QObject* */ q_pinchgesture_children(void* self) {
+libqt_list /* of QObject* */ q_pinchgesture_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1066,6 +1068,7 @@ const char** q_pinchgesture_dynamic_property_names(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         _ret[_i] = qstring_to_char(_qstr[_i]);
     }
+    _ret[_arr.len] = NULL;
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
@@ -1405,7 +1408,7 @@ void q_swipegesture_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-const libqt_list /* of QObject* */ q_swipegesture_children(void* self) {
+libqt_list /* of QObject* */ q_swipegesture_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1461,6 +1464,7 @@ const char** q_swipegesture_dynamic_property_names(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         _ret[_i] = qstring_to_char(_qstr[_i]);
     }
+    _ret[_arr.len] = NULL;
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
@@ -1792,7 +1796,7 @@ void q_tapgesture_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-const libqt_list /* of QObject* */ q_tapgesture_children(void* self) {
+libqt_list /* of QObject* */ q_tapgesture_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1848,6 +1852,7 @@ const char** q_tapgesture_dynamic_property_names(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         _ret[_i] = qstring_to_char(_qstr[_i]);
     }
+    _ret[_arr.len] = NULL;
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
@@ -2187,7 +2192,7 @@ void q_tapandholdgesture_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-const libqt_list /* of QObject* */ q_tapandholdgesture_children(void* self) {
+libqt_list /* of QObject* */ q_tapandholdgesture_children(void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -2243,6 +2248,7 @@ const char** q_tapandholdgesture_dynamic_property_names(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         _ret[_i] = qstring_to_char(_qstr[_i]);
     }
+    _ret[_arr.len] = NULL;
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }

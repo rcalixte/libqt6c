@@ -2566,7 +2566,7 @@ void q_wizard_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QWizard* self ```
-const libqt_list /* of QObject* */ q_wizard_children(void* self);
+libqt_list /* of QObject* */ q_wizard_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -6647,7 +6647,7 @@ void q_wizardpage_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QWizardPage* self ```
-const libqt_list /* of QObject* */ q_wizardpage_children(void* self);
+libqt_list /* of QObject* */ q_wizardpage_children(void* self);
 
 /// Inherited from QObject
 ///

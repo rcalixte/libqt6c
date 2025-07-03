@@ -207,7 +207,7 @@ void q_validator_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QValidator* self ```
-const libqt_list /* of QObject* */ q_validator_children(void* self);
+libqt_list /* of QObject* */ q_validator_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -941,7 +941,7 @@ void q_intvalidator_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QIntValidator* self ```
-const libqt_list /* of QObject* */ q_intvalidator_children(void* self);
+libqt_list /* of QObject* */ q_intvalidator_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1720,7 +1720,7 @@ void q_doublevalidator_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QDoubleValidator* self ```
-const libqt_list /* of QObject* */ q_doublevalidator_children(void* self);
+libqt_list /* of QObject* */ q_doublevalidator_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2410,7 +2410,7 @@ void q_regularexpressionvalidator_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QRegularExpressionValidator* self ```
-const libqt_list /* of QObject* */ q_regularexpressionvalidator_children(void* self);
+libqt_list /* of QObject* */ q_regularexpressionvalidator_children(void* self);
 
 /// Inherited from QObject
 ///

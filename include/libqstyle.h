@@ -655,7 +655,7 @@ void q_style_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QStyle* self ```
-const libqt_list /* of QObject* */ q_style_children(void* self);
+libqt_list /* of QObject* */ q_style_children(void* self);
 
 /// Inherited from QObject
 ///

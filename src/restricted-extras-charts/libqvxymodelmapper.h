@@ -270,7 +270,7 @@ void q_vxymodelmapper_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QVXYModelMapper* self ```
-const libqt_list /* of QObject* */ q_vxymodelmapper_children(void* self);
+libqt_list /* of QObject* */ q_vxymodelmapper_children(void* self);
 
 /// Inherited from QObject
 ///

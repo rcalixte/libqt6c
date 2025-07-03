@@ -168,7 +168,7 @@ void q_object_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QObject* self ```
-const libqt_list /* of QObject* */ q_object_children(void* self);
+libqt_list /* of QObject* */ q_object_children(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///

@@ -435,7 +435,7 @@ void q_scilexerruby_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QsciLexerRuby* self ```
-const libqt_list /* of QObject* */ q_scilexerruby_children(void* self);
+libqt_list /* of QObject* */ q_scilexerruby_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1535,13 +1535,11 @@ typedef enum {
     QSCILEXERRUBY__DATASECTION = 19,
     QSCILEXERRUBY__HEREDOCUMENTDELIMITER = 20,
     QSCILEXERRUBY__HEREDOCUMENT = 21,
-    /// Workaround for duplicate enum value: PERCENTSTRINGQ
-    QSCILEXERRUBY__PERCENTSTRINGQ_4 = 24,
-    /// Workaround for duplicate enum value: PERCENTSTRINGQ
-    QSCILEXERRUBY__PERCENTSTRINGQ_5 = 25,
-    QSCILEXERRUBY__PERCENTSTRINGX = 26,
-    QSCILEXERRUBY__PERCENTSTRINGR = 27,
-    QSCILEXERRUBY__PERCENTSTRINGW = 28,
+    QSCILEXERRUBY__PercentStringq = 24,
+    QSCILEXERRUBY__PercentStringQ = 25,
+    QSCILEXERRUBY__PercentStringx = 26,
+    QSCILEXERRUBY__PercentStringr = 27,
+    QSCILEXERRUBY__PercentStringw = 28,
     QSCILEXERRUBY__DEMOTEDKEYWORD = 29,
     QSCILEXERRUBY__STDIN = 30,
     QSCILEXERRUBY__STDOUT = 31,

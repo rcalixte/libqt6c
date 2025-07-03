@@ -288,7 +288,7 @@ QEventPoint* q_pointerevent_point(void* self, int64_t i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
 /// ``` QPointerEvent* self ```
-const libqt_list /* of QEventPoint* */ q_pointerevent_points(void* self);
+libqt_list /* of QEventPoint* */ q_pointerevent_points(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointById)
 ///
@@ -615,7 +615,7 @@ QEventPoint* q_singlepointevent_point(void* self, int64_t i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
 /// ``` QSinglePointEvent* self ```
-const libqt_list /* of QEventPoint* */ q_singlepointevent_points(void* self);
+libqt_list /* of QEventPoint* */ q_singlepointevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -950,7 +950,7 @@ QEventPoint* q_enterevent_point(void* self, int64_t i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
 /// ``` QEnterEvent* self ```
-const libqt_list /* of QEventPoint* */ q_enterevent_points(void* self);
+libqt_list /* of QEventPoint* */ q_enterevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -1453,7 +1453,7 @@ QEventPoint* q_mouseevent_point(void* self, int64_t i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
 /// ``` QMouseEvent* self ```
-const libqt_list /* of QEventPoint* */ q_mouseevent_points(void* self);
+libqt_list /* of QEventPoint* */ q_mouseevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -1930,7 +1930,7 @@ QEventPoint* q_hoverevent_point(void* self, int64_t i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
 /// ``` QHoverEvent* self ```
-const libqt_list /* of QEventPoint* */ q_hoverevent_points(void* self);
+libqt_list /* of QEventPoint* */ q_hoverevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -2418,7 +2418,7 @@ QEventPoint* q_wheelevent_point(void* self, int64_t i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
 /// ``` QWheelEvent* self ```
-const libqt_list /* of QEventPoint* */ q_wheelevent_points(void* self);
+libqt_list /* of QEventPoint* */ q_wheelevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -2835,7 +2835,7 @@ QEventPoint* q_tabletevent_point(void* self, int64_t i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
 /// ``` QTabletEvent* self ```
-const libqt_list /* of QEventPoint* */ q_tabletevent_points(void* self);
+libqt_list /* of QEventPoint* */ q_tabletevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -3303,7 +3303,7 @@ QEventPoint* q_nativegestureevent_point(void* self, int64_t i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
 /// ``` QNativeGestureEvent* self ```
-const libqt_list /* of QEventPoint* */ q_nativegestureevent_points(void* self);
+libqt_list /* of QEventPoint* */ q_nativegestureevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -5524,7 +5524,7 @@ void q_inputmethodevent_set_commit_string(void* self, const char* commitString);
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent.html#attributes)
 ///
 /// ``` QInputMethodEvent* self ```
-const libqt_list /* of QInputMethodEvent__Attribute* */ q_inputmethodevent_attributes(void* self);
+libqt_list /* of QInputMethodEvent__Attribute* */ q_inputmethodevent_attributes(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent.html#preeditString)
 ///
@@ -7852,7 +7852,7 @@ int64_t q_touchevent_touch_point_states(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#touchPoints)
 ///
 /// ``` QTouchEvent* self ```
-const libqt_list /* of QEventPoint* */ q_touchevent_touch_points(void* self);
+libqt_list /* of QEventPoint* */ q_touchevent_touch_points(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#isBeginEvent)
 ///
@@ -7944,7 +7944,7 @@ QEventPoint* q_touchevent_point(void* self, int64_t i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
 /// ``` QTouchEvent* self ```
-const libqt_list /* of QEventPoint* */ q_touchevent_points(void* self);
+libqt_list /* of QEventPoint* */ q_touchevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///

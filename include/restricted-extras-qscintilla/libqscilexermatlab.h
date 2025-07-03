@@ -334,7 +334,7 @@ void q_scilexermatlab_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QsciLexerMatlab* self ```
-const libqt_list /* of QObject* */ q_scilexermatlab_children(void* self);
+libqt_list /* of QObject* */ q_scilexermatlab_children(void* self);
 
 /// Inherited from QObject
 ///

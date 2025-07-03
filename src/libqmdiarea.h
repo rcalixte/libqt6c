@@ -2670,7 +2670,7 @@ void q_mdiarea_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QMdiArea* self ```
-const libqt_list /* of QObject* */ q_mdiarea_children(void* self);
+libqt_list /* of QObject* */ q_mdiarea_children(void* self);
 
 /// Inherited from QObject
 ///

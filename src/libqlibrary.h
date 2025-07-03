@@ -232,7 +232,7 @@ void q_library_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QLibrary* self ```
-const libqt_list /* of QObject* */ q_library_children(void* self);
+libqt_list /* of QObject* */ q_library_children(void* self);
 
 /// Inherited from QObject
 ///

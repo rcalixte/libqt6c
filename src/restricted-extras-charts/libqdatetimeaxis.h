@@ -1138,7 +1138,7 @@ void q_datetimeaxis_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QDateTimeAxis* self ```
-const libqt_list /* of QObject* */ q_datetimeaxis_children(void* self);
+libqt_list /* of QObject* */ q_datetimeaxis_children(void* self);
 
 /// Inherited from QObject
 ///

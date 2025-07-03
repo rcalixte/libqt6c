@@ -121,7 +121,7 @@ char* q_networkreply_raw_header(void* self, const char* headerName);
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkreply.html#rawHeaderPairs)
 ///
 /// ``` QNetworkReply* self ```
-const libqt_list /* of libqt_pair  tuple of char* and char*  */ q_networkreply_raw_header_pairs(void* self);
+libqt_list /* of libqt_pair  tuple of char* and char*  */ q_networkreply_raw_header_pairs(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkreply.html#attribute)
 ///
@@ -764,7 +764,7 @@ void q_networkreply_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QNetworkReply* self ```
-const libqt_list /* of QObject* */ q_networkreply_children(void* self);
+libqt_list /* of QObject* */ q_networkreply_children(void* self);
 
 /// Inherited from QObject
 ///

@@ -42,7 +42,7 @@ const QColor* q_colormap_color_at(void* self, uint32_t pixel) {
     return QColormap_ColorAt((QColormap*)self, pixel);
 }
 
-const libqt_list /* of QColor* */ q_colormap_colormap(void* self) {
+libqt_list /* of QColor* */ q_colormap_colormap(void* self) {
     libqt_list _arr = QColormap_Colormap((QColormap*)self);
     return _arr;
 }

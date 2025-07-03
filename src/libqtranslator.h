@@ -246,7 +246,7 @@ void q_translator_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QTranslator* self ```
-const libqt_list /* of QObject* */ q_translator_children(void* self);
+libqt_list /* of QObject* */ q_translator_children(void* self);
 
 /// Inherited from QObject
 ///

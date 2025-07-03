@@ -189,7 +189,7 @@ void q_gesture_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QGesture* self ```
-const libqt_list /* of QObject* */ q_gesture_children(void* self);
+libqt_list /* of QObject* */ q_gesture_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -893,7 +893,7 @@ void q_pangesture_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QPanGesture* self ```
-const libqt_list /* of QObject* */ q_pangesture_children(void* self);
+libqt_list /* of QObject* */ q_pangesture_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -1672,7 +1672,7 @@ void q_pinchgesture_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QPinchGesture* self ```
-const libqt_list /* of QObject* */ q_pinchgesture_children(void* self);
+libqt_list /* of QObject* */ q_pinchgesture_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2361,7 +2361,7 @@ void q_swipegesture_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QSwipeGesture* self ```
-const libqt_list /* of QObject* */ q_swipegesture_children(void* self);
+libqt_list /* of QObject* */ q_swipegesture_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -3040,7 +3040,7 @@ void q_tapgesture_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QTapGesture* self ```
-const libqt_list /* of QObject* */ q_tapgesture_children(void* self);
+libqt_list /* of QObject* */ q_tapgesture_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -3729,7 +3729,7 @@ void q_tapandholdgesture_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QTapAndHoldGesture* self ```
-const libqt_list /* of QObject* */ q_tapandholdgesture_children(void* self);
+libqt_list /* of QObject* */ q_tapandholdgesture_children(void* self);
 
 /// Inherited from QObject
 ///

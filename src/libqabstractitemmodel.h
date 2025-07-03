@@ -1823,7 +1823,7 @@ void q_abstractitemmodel_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QAbstractItemModel* self ```
-const libqt_list /* of QObject* */ q_abstractitemmodel_children(void* self);
+libqt_list /* of QObject* */ q_abstractitemmodel_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -2877,7 +2877,7 @@ void q_abstracttablemodel_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QAbstractTableModel* self ```
-const libqt_list /* of QObject* */ q_abstracttablemodel_children(void* self);
+libqt_list /* of QObject* */ q_abstracttablemodel_children(void* self);
 
 /// Inherited from QObject
 ///
@@ -5361,7 +5361,7 @@ void q_abstractlistmodel_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
 /// ``` QAbstractListModel* self ```
-const libqt_list /* of QObject* */ q_abstractlistmodel_children(void* self);
+libqt_list /* of QObject* */ q_abstractlistmodel_children(void* self);
 
 /// Inherited from QObject
 ///

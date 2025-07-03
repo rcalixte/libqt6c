@@ -319,7 +319,7 @@ func (p CppParameter) renderReturnTypeC(cfs *cFileState) string {
 		ret = strings.Replace(ret, "::", "__", -1)
 	}
 
-	maybeConst := ifv(p.Const && !strings.HasPrefix(ret, "const "), "const ", "")
+	maybeConst := ifv(p.Const && !strings.HasPrefix(ret, "const ") && !strings.HasPrefix(ret, "libqt"), "const ", "")
 	return maybeConst + ret
 }
 
@@ -575,6 +575,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 			afterword += "for (size_t _i = 0; _i < " + namePrefix + "_arr.len; ++_i) {\n"
 			afterword += "    " + namePrefix + "_ret[_i] = qstring_to_char(" + namePrefix + "_qstr[_i]);\n"
 			afterword += "}\n"
+			afterword += namePrefix + "_ret[" + namePrefix + "_arr.len] = NULL;\n"
 			afterword += "for (size_t _i = 0; _i < " + namePrefix + "_arr.len; ++_i) {\n"
 			afterword += "    libqt_string_free((libqt_string*)&" + namePrefix + "_qstr[_i]);\n"
 			afterword += "}\n"
@@ -1375,17 +1376,12 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 `)
 		if len(e.Entries) > 0 {
 			for i, ee := range e.Entries {
-				enumPrefix := strings.ToUpper(strings.Replace(e.EnumName, "::", "_", -1))
-				entryName := strings.ToUpper(cabiEnumClassName(ee.EntryName))
-				if strings.HasPrefix(entryName, "KEY_DEAD_") && len(entryName) == 10 {
-					ret.WriteString("    /// Workaround for duplicate enum value: " + entryName + "\n")
-					entryName = entryName + "_" + ee.EntryValue[len(ee.EntryValue)-1:]
+				enumPrefix := strings.ToUpper(strings.ReplaceAll(e.EnumName, "::", "_"))
+				entryName := ee.EntryName
+				if !(strings.HasPrefix(entryName, "Key_") && enumPrefix == "QT_KEY") && !strings.HasPrefix(entryName, "PercentString") {
+					entryName = strings.ToUpper(cabiEnumClassName(ee.EntryName))
 				}
-				if strings.HasPrefix(entryName, "PERCENTSTRINGQ") {
-					ret.WriteString("    /// Workaround for duplicate enum value: " + entryName + "\n")
-					entryName = entryName + "_" + ee.EntryValue[len(ee.EntryValue)-1:]
-				}
-				entryName = strings.Replace(entryName, "___", "_", -1)
+				entryName = strings.ReplaceAll(entryName, "___", "_")
 				ret.WriteString("    " + enumPrefix + "_" + entryName + " = " + ee.EntryValue)
 				if i < len(e.Entries)-1 {
 					ret.WriteString(",\n")
