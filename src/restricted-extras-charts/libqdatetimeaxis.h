@@ -12,13 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractaxis.h"
-#include "../libqevent.h"
-#include "../libqdatetime.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qdatetimeaxis-qtcharts.html
 
 /// q_datetimeaxis_new constructs a new QDateTimeAxis object.
@@ -1117,7 +1110,7 @@ QThread* q_datetimeaxis_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QDateTimeAxis* self, QThread* thread ```
-void q_datetimeaxis_move_to_thread(void* self, void* thread);
+bool q_datetimeaxis_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -1132,6 +1125,13 @@ int32_t q_datetimeaxis_start_timer(void* self, int interval);
 ///
 /// ``` QDateTimeAxis* self, int id ```
 void q_datetimeaxis_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QDateTimeAxis* self, enum Qt__TimerId id ```
+void q_datetimeaxis_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1272,6 +1272,13 @@ bool q_datetimeaxis_inherits(void* self, const char* classname);
 ///
 /// ``` QDateTimeAxis* self ```
 void q_datetimeaxis_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QDateTimeAxis* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_datetimeaxis_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

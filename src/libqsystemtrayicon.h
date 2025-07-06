@@ -12,14 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqicon.h"
-#include "libqmenu.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqrect.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qsystemtrayicon.html
 
 /// q_systemtrayicon_new constructs a new QSystemTrayIcon object.
@@ -268,7 +260,7 @@ QThread* q_systemtrayicon_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QSystemTrayIcon* self, QThread* thread ```
-void q_systemtrayicon_move_to_thread(void* self, void* thread);
+bool q_systemtrayicon_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -283,6 +275,13 @@ int32_t q_systemtrayicon_start_timer(void* self, int interval);
 ///
 /// ``` QSystemTrayIcon* self, int id ```
 void q_systemtrayicon_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QSystemTrayIcon* self, enum Qt__TimerId id ```
+void q_systemtrayicon_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -423,6 +422,13 @@ bool q_systemtrayicon_inherits(void* self, const char* classname);
 ///
 /// ``` QSystemTrayIcon* self ```
 void q_systemtrayicon_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QSystemTrayIcon* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_systemtrayicon_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

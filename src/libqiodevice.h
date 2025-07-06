@@ -12,12 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqiodevicebase.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qiodevice.html
 
 /// q_iodevice_new constructs a new QIODevice object.
@@ -708,7 +702,7 @@ QThread* q_iodevice_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QIODevice* self, QThread* thread ```
-void q_iodevice_move_to_thread(void* self, void* thread);
+bool q_iodevice_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -723,6 +717,13 @@ int32_t q_iodevice_start_timer(void* self, int interval);
 ///
 /// ``` QIODevice* self, int id ```
 void q_iodevice_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QIODevice* self, enum Qt__TimerId id ```
+void q_iodevice_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -863,6 +864,13 @@ bool q_iodevice_inherits(void* self, const char* classname);
 ///
 /// ``` QIODevice* self ```
 void q_iodevice_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QIODevice* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_iodevice_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

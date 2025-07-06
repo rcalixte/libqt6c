@@ -19,7 +19,7 @@ QBitmap* QBitmap_new() {
     return new VirtualQBitmap();
 }
 
-QBitmap* QBitmap_new2(QPixmap* param1) {
+QBitmap* QBitmap_new2(const QPixmap* param1) {
     return new VirtualQBitmap(*param1);
 }
 
@@ -27,25 +27,21 @@ QBitmap* QBitmap_new3(int w, int h) {
     return new VirtualQBitmap(static_cast<int>(w), static_cast<int>(h));
 }
 
-QBitmap* QBitmap_new4(QSize* param1) {
+QBitmap* QBitmap_new4(const QSize* param1) {
     return new VirtualQBitmap(*param1);
 }
 
-QBitmap* QBitmap_new5(libqt_string fileName) {
+QBitmap* QBitmap_new5(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQBitmap(fileName_QString);
 }
 
-QBitmap* QBitmap_new6(QBitmap* param1) {
-    return new VirtualQBitmap(*param1);
-}
-
-QBitmap* QBitmap_new7(libqt_string fileName, const char* format) {
+QBitmap* QBitmap_new6(const libqt_string fileName, const char* format) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQBitmap(fileName_QString, format);
 }
 
-void QBitmap_OperatorAssign(QBitmap* self, QPixmap* param1) {
+void QBitmap_OperatorAssign(QBitmap* self, const QPixmap* param1) {
     self->operator=(*param1);
 }
 
@@ -61,31 +57,31 @@ void QBitmap_Clear(QBitmap* self) {
     self->clear();
 }
 
-QBitmap* QBitmap_FromImage(QImage* image) {
+QBitmap* QBitmap_FromImage(const QImage* image) {
     return new QBitmap(QBitmap::fromImage(*image));
 }
 
-QBitmap* QBitmap_FromData(QSize* size, const unsigned char* bits) {
+QBitmap* QBitmap_FromData(const QSize* size, const unsigned char* bits) {
     return new QBitmap(QBitmap::fromData(*size, static_cast<const uchar*>(bits)));
 }
 
-QBitmap* QBitmap_FromPixmap(QPixmap* pixmap) {
+QBitmap* QBitmap_FromPixmap(const QPixmap* pixmap) {
     return new QBitmap(QBitmap::fromPixmap(*pixmap));
 }
 
-QBitmap* QBitmap_Transformed(const QBitmap* self, QTransform* matrix) {
+QBitmap* QBitmap_Transformed(const QBitmap* self, const QTransform* matrix) {
     return new QBitmap(self->transformed(*matrix));
 }
 
-void QBitmap_OperatorAssignWithQBitmap(QBitmap* self, QBitmap* param1) {
+void QBitmap_OperatorAssignWithQBitmap(QBitmap* self, const QBitmap* param1) {
     self->operator=(*param1);
 }
 
-QBitmap* QBitmap_FromImage2(QImage* image, int flags) {
+QBitmap* QBitmap_FromImage2(const QImage* image, int flags) {
     return new QBitmap(QBitmap::fromImage(*image, static_cast<Qt::ImageConversionFlags>(flags)));
 }
 
-QBitmap* QBitmap_FromData3(QSize* size, const unsigned char* bits, int monoFormat) {
+QBitmap* QBitmap_FromData3(const QSize* size, const unsigned char* bits, int monoFormat) {
     return new QBitmap(QBitmap::fromData(*size, static_cast<const uchar*>(bits), static_cast<QImage::Format>(monoFormat)));
 }
 
@@ -260,6 +256,35 @@ void QBitmap_OnSharedPainter(const QBitmap* self, intptr_t slot) {
     auto* vqbitmap = const_cast<VirtualQBitmap*>(dynamic_cast<const VirtualQBitmap*>(self));
     if (vqbitmap && vqbitmap->isVirtualQBitmap) {
         vqbitmap->setQBitmap_SharedPainter_Callback(reinterpret_cast<VirtualQBitmap::QBitmap_SharedPainter_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QBitmap_GetDecodedMetricF(const QBitmap* self, int metricA, int metricB) {
+    auto* vqbitmap = const_cast<VirtualQBitmap*>(dynamic_cast<const VirtualQBitmap*>(self));
+    if (vqbitmap && vqbitmap->isVirtualQBitmap) {
+        return vqbitmap->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQBitmap*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QBitmap_QBaseGetDecodedMetricF(const QBitmap* self, int metricA, int metricB) {
+    auto* vqbitmap = const_cast<VirtualQBitmap*>(dynamic_cast<const VirtualQBitmap*>(self));
+    if (vqbitmap && vqbitmap->isVirtualQBitmap) {
+        vqbitmap->setQBitmap_GetDecodedMetricF_IsBase(true);
+        return vqbitmap->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQBitmap*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QBitmap_OnGetDecodedMetricF(const QBitmap* self, intptr_t slot) {
+    auto* vqbitmap = const_cast<VirtualQBitmap*>(dynamic_cast<const VirtualQBitmap*>(self));
+    if (vqbitmap && vqbitmap->isVirtualQBitmap) {
+        vqbitmap->setQBitmap_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQBitmap::QBitmap_GetDecodedMetricF_Callback>(slot));
     }
 }
 

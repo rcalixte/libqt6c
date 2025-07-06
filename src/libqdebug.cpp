@@ -17,11 +17,11 @@ QDebug* QDebug_new(QIODevice* device) {
     return new QDebug(device);
 }
 
-QDebug* QDebug_new2(QDebug* o) {
+QDebug* QDebug_new2(const QDebug* o) {
     return new QDebug(*o);
 }
 
-void QDebug_OperatorAssign(QDebug* self, QDebug* other) {
+void QDebug_OperatorAssign(QDebug* self, const QDebug* other) {
     self->operator=(*other);
 }
 
@@ -73,6 +73,14 @@ bool QDebug_AutoInsertSpaces(const QDebug* self) {
 
 void QDebug_SetAutoInsertSpaces(QDebug* self, bool b) {
     self->setAutoInsertSpaces(b);
+}
+
+bool QDebug_QuoteStrings(const QDebug* self) {
+    return self->quoteStrings();
+}
+
+void QDebug_SetQuoteStrings(QDebug* self, bool b) {
+    self->setQuoteStrings(b);
 }
 
 QDebug* QDebug_Quote(QDebug* self) {
@@ -177,14 +185,14 @@ QDebug* QDebug_OperatorShiftLeft2(QDebug* self, const char* t) {
     return &_ret;
 }
 
-QDebug* QDebug_OperatorShiftLeftWithQString(QDebug* self, libqt_string t) {
+QDebug* QDebug_OperatorShiftLeftWithQString(QDebug* self, const libqt_string t) {
     QString t_QString = QString::fromUtf8(t.data, t.len);
     QDebug& _ret = self->operator<<(t_QString);
     // Cast returned reference into pointer
     return &_ret;
 }
 
-QDebug* QDebug_OperatorShiftLeftWithQByteArray(QDebug* self, libqt_string t) {
+QDebug* QDebug_OperatorShiftLeftWithQByteArray(QDebug* self, const libqt_string t) {
     QByteArray t_QByteArray(t.data, t.len);
     QDebug& _ret = self->operator<<(t_QByteArray);
     // Cast returned reference into pointer
@@ -221,7 +229,7 @@ void QDebugStateSaver_Delete(QDebugStateSaver* self) {
     delete self;
 }
 
-QNoDebug* QNoDebug_new(QNoDebug* other) {
+QNoDebug* QNoDebug_new(const QNoDebug* other) {
     return new QNoDebug(*other);
 }
 

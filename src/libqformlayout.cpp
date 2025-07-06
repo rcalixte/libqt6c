@@ -131,12 +131,12 @@ void QFormLayout_AddRow2(QFormLayout* self, QWidget* label, QLayout* field) {
     self->addRow(label, field);
 }
 
-void QFormLayout_AddRow3(QFormLayout* self, libqt_string labelText, QWidget* field) {
+void QFormLayout_AddRow3(QFormLayout* self, const libqt_string labelText, QWidget* field) {
     QString labelText_QString = QString::fromUtf8(labelText.data, labelText.len);
     self->addRow(labelText_QString, field);
 }
 
-void QFormLayout_AddRow4(QFormLayout* self, libqt_string labelText, QLayout* field) {
+void QFormLayout_AddRow4(QFormLayout* self, const libqt_string labelText, QLayout* field) {
     QString labelText_QString = QString::fromUtf8(labelText.data, labelText.len);
     self->addRow(labelText_QString, field);
 }
@@ -157,12 +157,12 @@ void QFormLayout_InsertRow2(QFormLayout* self, int row, QWidget* label, QLayout*
     self->insertRow(static_cast<int>(row), label, field);
 }
 
-void QFormLayout_InsertRow3(QFormLayout* self, int row, libqt_string labelText, QWidget* field) {
+void QFormLayout_InsertRow3(QFormLayout* self, int row, const libqt_string labelText, QWidget* field) {
     QString labelText_QString = QString::fromUtf8(labelText.data, labelText.len);
     self->insertRow(static_cast<int>(row), labelText_QString, field);
 }
 
-void QFormLayout_InsertRow4(QFormLayout* self, int row, libqt_string labelText, QLayout* field) {
+void QFormLayout_InsertRow4(QFormLayout* self, int row, const libqt_string labelText, QLayout* field) {
     QString labelText_QString = QString::fromUtf8(labelText.data, labelText.len);
     self->insertRow(static_cast<int>(row), labelText_QString, field);
 }
@@ -421,7 +421,7 @@ void QFormLayout_OnTakeAt(QFormLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFormLayout_SetGeometry(QFormLayout* self, QRect* rect) {
+void QFormLayout_SetGeometry(QFormLayout* self, const QRect* rect) {
     auto* vqformlayout = dynamic_cast<VirtualQFormLayout*>(self);
     if (vqformlayout && vqformlayout->isVirtualQFormLayout) {
         vqformlayout->setGeometry(*rect);
@@ -431,7 +431,7 @@ void QFormLayout_SetGeometry(QFormLayout* self, QRect* rect) {
 }
 
 // Base class handler implementation
-void QFormLayout_QBaseSetGeometry(QFormLayout* self, QRect* rect) {
+void QFormLayout_QBaseSetGeometry(QFormLayout* self, const QRect* rect) {
     auto* vqformlayout = dynamic_cast<VirtualQFormLayout*>(self);
     if (vqformlayout && vqformlayout->isVirtualQFormLayout) {
         vqformlayout->setQFormLayout_SetGeometry_IsBase(true);
@@ -711,7 +711,7 @@ void QFormLayout_OnMaximumSize(const QFormLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-int QFormLayout_IndexOf(const QFormLayout* self, QWidget* param1) {
+int QFormLayout_IndexOf(const QFormLayout* self, const QWidget* param1) {
     auto* vqformlayout = const_cast<VirtualQFormLayout*>(dynamic_cast<const VirtualQFormLayout*>(self));
     if (vqformlayout && vqformlayout->isVirtualQFormLayout) {
         return vqformlayout->indexOf(param1);
@@ -721,7 +721,7 @@ int QFormLayout_IndexOf(const QFormLayout* self, QWidget* param1) {
 }
 
 // Base class handler implementation
-int QFormLayout_QBaseIndexOf(const QFormLayout* self, QWidget* param1) {
+int QFormLayout_QBaseIndexOf(const QFormLayout* self, const QWidget* param1) {
     auto* vqformlayout = const_cast<VirtualQFormLayout*>(dynamic_cast<const VirtualQFormLayout*>(self));
     if (vqformlayout && vqformlayout->isVirtualQFormLayout) {
         vqformlayout->setQFormLayout_IndexOf_IsBase(true);
@@ -1001,7 +1001,7 @@ void QFormLayout_OnCustomEvent(QFormLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFormLayout_ConnectNotify(QFormLayout* self, QMetaMethod* signal) {
+void QFormLayout_ConnectNotify(QFormLayout* self, const QMetaMethod* signal) {
     auto* vqformlayout = dynamic_cast<VirtualQFormLayout*>(self);
     if (vqformlayout && vqformlayout->isVirtualQFormLayout) {
         vqformlayout->connectNotify(*signal);
@@ -1011,7 +1011,7 @@ void QFormLayout_ConnectNotify(QFormLayout* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QFormLayout_QBaseConnectNotify(QFormLayout* self, QMetaMethod* signal) {
+void QFormLayout_QBaseConnectNotify(QFormLayout* self, const QMetaMethod* signal) {
     auto* vqformlayout = dynamic_cast<VirtualQFormLayout*>(self);
     if (vqformlayout && vqformlayout->isVirtualQFormLayout) {
         vqformlayout->setQFormLayout_ConnectNotify_IsBase(true);
@@ -1030,7 +1030,7 @@ void QFormLayout_OnConnectNotify(QFormLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFormLayout_DisconnectNotify(QFormLayout* self, QMetaMethod* signal) {
+void QFormLayout_DisconnectNotify(QFormLayout* self, const QMetaMethod* signal) {
     auto* vqformlayout = dynamic_cast<VirtualQFormLayout*>(self);
     if (vqformlayout && vqformlayout->isVirtualQFormLayout) {
         vqformlayout->disconnectNotify(*signal);
@@ -1040,7 +1040,7 @@ void QFormLayout_DisconnectNotify(QFormLayout* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QFormLayout_QBaseDisconnectNotify(QFormLayout* self, QMetaMethod* signal) {
+void QFormLayout_QBaseDisconnectNotify(QFormLayout* self, const QMetaMethod* signal) {
     auto* vqformlayout = dynamic_cast<VirtualQFormLayout*>(self);
     if (vqformlayout && vqformlayout->isVirtualQFormLayout) {
         vqformlayout->setQFormLayout_DisconnectNotify_IsBase(true);
@@ -1262,7 +1262,7 @@ void QFormLayout_OnAdoptLayout(QFormLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QRect* QFormLayout_AlignmentRect(const QFormLayout* self, QRect* param1) {
+QRect* QFormLayout_AlignmentRect(const QFormLayout* self, const QRect* param1) {
     auto* vqformlayout = const_cast<VirtualQFormLayout*>(dynamic_cast<const VirtualQFormLayout*>(self));
     if (vqformlayout && vqformlayout->isVirtualQFormLayout) {
         return new QRect(vqformlayout->alignmentRect(*param1));
@@ -1271,7 +1271,7 @@ QRect* QFormLayout_AlignmentRect(const QFormLayout* self, QRect* param1) {
 }
 
 // Base class handler implementation
-QRect* QFormLayout_QBaseAlignmentRect(const QFormLayout* self, QRect* param1) {
+QRect* QFormLayout_QBaseAlignmentRect(const QFormLayout* self, const QRect* param1) {
     auto* vqformlayout = const_cast<VirtualQFormLayout*>(dynamic_cast<const VirtualQFormLayout*>(self));
     if (vqformlayout && vqformlayout->isVirtualQFormLayout) {
         vqformlayout->setQFormLayout_AlignmentRect_IsBase(true);
@@ -1376,7 +1376,7 @@ void QFormLayout_OnReceivers(const QFormLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFormLayout_IsSignalConnected(const QFormLayout* self, QMetaMethod* signal) {
+bool QFormLayout_IsSignalConnected(const QFormLayout* self, const QMetaMethod* signal) {
     auto* vqformlayout = const_cast<VirtualQFormLayout*>(dynamic_cast<const VirtualQFormLayout*>(self));
     if (vqformlayout && vqformlayout->isVirtualQFormLayout) {
         return vqformlayout->isSignalConnected(*signal);
@@ -1386,7 +1386,7 @@ bool QFormLayout_IsSignalConnected(const QFormLayout* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QFormLayout_QBaseIsSignalConnected(const QFormLayout* self, QMetaMethod* signal) {
+bool QFormLayout_QBaseIsSignalConnected(const QFormLayout* self, const QMetaMethod* signal) {
     auto* vqformlayout = const_cast<VirtualQFormLayout*>(dynamic_cast<const VirtualQFormLayout*>(self));
     if (vqformlayout && vqformlayout->isVirtualQFormLayout) {
         vqformlayout->setQFormLayout_IsSignalConnected_IsBase(true);
@@ -1405,5 +1405,17 @@ void QFormLayout_OnIsSignalConnected(const QFormLayout* self, intptr_t slot) {
 }
 
 void QFormLayout_Delete(QFormLayout* self) {
+    delete self;
+}
+
+QFormLayout__TakeRowResult* QFormLayout__TakeRowResult_new() {
+    return new QFormLayout::TakeRowResult();
+}
+
+QFormLayout__TakeRowResult* QFormLayout__TakeRowResult_new2(const QFormLayout__TakeRowResult* param1) {
+    return new QFormLayout::TakeRowResult(*param1);
+}
+
+void QFormLayout__TakeRowResult_Delete(QFormLayout__TakeRowResult* self) {
     delete self;
 }

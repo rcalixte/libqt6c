@@ -12,16 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqcolor.h"
-#include "libqobject.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqvariant.h"
-#include "libqwindow.h"
-
 /// https://doc.qt.io/qt-6/qaccessibleinterface.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleinterface.html#isValid)
@@ -148,6 +138,16 @@ QAccessibleTableCellInterface* q_accessibleinterface_table_cell_interface(void* 
 ///
 /// ``` QAccessibleInterface* self ```
 QAccessibleHyperlinkInterface* q_accessibleinterface_hyperlink_interface(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleinterface.html#selectionInterface)
+///
+/// ``` QAccessibleInterface* self ```
+QAccessibleSelectionInterface* q_accessibleinterface_selection_interface(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleinterface.html#attributesInterface)
+///
+/// ``` QAccessibleInterface* self ```
+QAccessibleAttributesInterface* q_accessibleinterface_attributes_interface(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleinterface.html#virtual_hook)
 ///
@@ -665,6 +665,84 @@ void q_accessiblehyperlinkinterface_operator_assign(void* self, void* param1);
 ///
 /// ``` QAccessibleHyperlinkInterface* self ```
 void q_accessiblehyperlinkinterface_delete(void* self);
+
+/// https://doc.qt.io/qt-6/qaccessibleselectioninterface.html
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleselectioninterface.html#selectedItemCount)
+///
+/// ``` QAccessibleSelectionInterface* self ```
+int32_t q_accessibleselectioninterface_selected_item_count(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleselectioninterface.html#selectedItems)
+///
+/// ``` QAccessibleSelectionInterface* self ```
+libqt_list /* of QAccessibleInterface* */ q_accessibleselectioninterface_selected_items(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleselectioninterface.html#selectedItem)
+///
+/// ``` QAccessibleSelectionInterface* self, int selectionIndex ```
+QAccessibleInterface* q_accessibleselectioninterface_selected_item(void* self, int selectionIndex);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleselectioninterface.html#isSelected)
+///
+/// ``` QAccessibleSelectionInterface* self, QAccessibleInterface* childItem ```
+bool q_accessibleselectioninterface_is_selected(void* self, void* childItem);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleselectioninterface.html#select)
+///
+/// ``` QAccessibleSelectionInterface* self, QAccessibleInterface* childItem ```
+bool q_accessibleselectioninterface_select(void* self, void* childItem);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleselectioninterface.html#unselect)
+///
+/// ``` QAccessibleSelectionInterface* self, QAccessibleInterface* childItem ```
+bool q_accessibleselectioninterface_unselect(void* self, void* childItem);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleselectioninterface.html#selectAll)
+///
+/// ``` QAccessibleSelectionInterface* self ```
+bool q_accessibleselectioninterface_select_all(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleselectioninterface.html#clear)
+///
+/// ``` QAccessibleSelectionInterface* self ```
+bool q_accessibleselectioninterface_clear(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleselectioninterface.html#operator=)
+///
+/// ``` QAccessibleSelectionInterface* self, QAccessibleSelectionInterface* param1 ```
+void q_accessibleselectioninterface_operator_assign(void* self, void* param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleselectioninterface.html#dtor.QAccessibleSelectionInterface)
+///
+/// Delete this object from C++ memory.
+///
+/// ``` QAccessibleSelectionInterface* self ```
+void q_accessibleselectioninterface_delete(void* self);
+
+/// https://doc.qt.io/qt-6/qaccessibleattributesinterface.html
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleattributesinterface.html#attributeKeys)
+///
+/// ``` QAccessibleAttributesInterface* self ```
+libqt_list /* of int64_t */ q_accessibleattributesinterface_attribute_keys(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleattributesinterface.html#attributeValue)
+///
+/// ``` QAccessibleAttributesInterface* self, enum QAccessible__Attribute key ```
+QVariant* q_accessibleattributesinterface_attribute_value(void* self, int64_t key);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleattributesinterface.html#operator=)
+///
+/// ``` QAccessibleAttributesInterface* self, QAccessibleAttributesInterface* param1 ```
+void q_accessibleattributesinterface_operator_assign(void* self, void* param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleattributesinterface.html#dtor.QAccessibleAttributesInterface)
+///
+/// Delete this object from C++ memory.
+///
+/// ``` QAccessibleAttributesInterface* self ```
+void q_accessibleattributesinterface_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qaccessibleevent.html
 
@@ -1557,6 +1635,102 @@ void q_accessibletablemodelchangeevent_on_accessible_interface(void* self, QAcce
 ///
 /// ``` QAccessibleTableModelChangeEvent* self ```
 void q_accessibletablemodelchangeevent_delete(void* self);
+
+/// https://doc.qt.io/qt-6/qaccessibleannouncementevent.html
+
+/// q_accessibleannouncementevent_new constructs a new QAccessibleAnnouncementEvent object.
+///
+/// ``` QObject* object, const char* message ```
+QAccessibleAnnouncementEvent* q_accessibleannouncementevent_new(void* object, const char* message);
+
+/// q_accessibleannouncementevent_new2 constructs a new QAccessibleAnnouncementEvent object.
+///
+/// ``` QAccessibleInterface* iface, const char* message ```
+QAccessibleAnnouncementEvent* q_accessibleannouncementevent_new2(void* iface, const char* message);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleannouncementevent.html#message)
+///
+/// ``` QAccessibleAnnouncementEvent* self ```
+const char* q_accessibleannouncementevent_message(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleannouncementevent.html#politeness)
+///
+/// ``` QAccessibleAnnouncementEvent* self ```
+int64_t q_accessibleannouncementevent_politeness(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleannouncementevent.html#setPoliteness)
+///
+/// ``` QAccessibleAnnouncementEvent* self, enum QAccessible__AnnouncementPoliteness politeness ```
+void q_accessibleannouncementevent_set_politeness(void* self, int64_t politeness);
+
+/// Inherited from QAccessibleEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#type)
+///
+/// ``` QAccessibleAnnouncementEvent* self ```
+int64_t q_accessibleannouncementevent_type(void* self);
+
+/// Inherited from QAccessibleEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#object)
+///
+/// ``` QAccessibleAnnouncementEvent* self ```
+QObject* q_accessibleannouncementevent_object(void* self);
+
+/// Inherited from QAccessibleEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#uniqueId)
+///
+/// ``` QAccessibleAnnouncementEvent* self ```
+uint32_t q_accessibleannouncementevent_unique_id(void* self);
+
+/// Inherited from QAccessibleEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#setChild)
+///
+/// ``` QAccessibleAnnouncementEvent* self, int chld ```
+void q_accessibleannouncementevent_set_child(void* self, int chld);
+
+/// Inherited from QAccessibleEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#child)
+///
+/// ``` QAccessibleAnnouncementEvent* self ```
+int32_t q_accessibleannouncementevent_child(void* self);
+
+/// Inherited from QAccessibleEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QAccessibleAnnouncementEvent* self ```
+QAccessibleInterface* q_accessibleannouncementevent_accessible_interface(void* self);
+
+/// Inherited from QAccessibleEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QAccessibleAnnouncementEvent* self ```
+QAccessibleInterface* q_accessibleannouncementevent_qbase_accessible_interface(void* self);
+
+/// Inherited from QAccessibleEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QAccessibleAnnouncementEvent* self, QAccessibleInterface* (*slot)() ```
+void q_accessibleannouncementevent_on_accessible_interface(void* self, QAccessibleInterface* (*slot)());
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleannouncementevent.html#dtor.QAccessibleAnnouncementEvent)
+///
+/// Delete this object from C++ memory.
+///
+/// ``` QAccessibleAnnouncementEvent* self ```
+void q_accessibleannouncementevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qaccessible.html#types
 

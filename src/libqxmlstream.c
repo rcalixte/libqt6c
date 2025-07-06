@@ -1,3 +1,4 @@
+#include "libqanystringview.hpp"
 #include "libqiodevice.hpp"
 #include <string.h>
 #include "libqxmlstream.hpp"
@@ -23,20 +24,34 @@ bool q_xmlstreamattribute_is_default(void* self) {
     return QXmlStreamAttribute_IsDefault((QXmlStreamAttribute*)self);
 }
 
-bool q_xmlstreamattribute_operator_equal(void* self, void* other) {
-    return QXmlStreamAttribute_OperatorEqual((QXmlStreamAttribute*)self, (QXmlStreamAttribute*)other);
-}
-
-bool q_xmlstreamattribute_operator_not_equal(void* self, void* other) {
-    return QXmlStreamAttribute_OperatorNotEqual((QXmlStreamAttribute*)self, (QXmlStreamAttribute*)other);
-}
-
-void q_xmlstreamattribute_operator_assign(void* self, void* param1) {
-    QXmlStreamAttribute_OperatorAssign((QXmlStreamAttribute*)self, (QXmlStreamAttribute*)param1);
-}
-
 void q_xmlstreamattribute_delete(void* self) {
     QXmlStreamAttribute_Delete((QXmlStreamAttribute*)(self));
+}
+
+// Also inherits unprojectable QList<QXmlStreamAttribute>
+
+QXmlStreamAttributes* q_xmlstreamattributes_new() {
+    return QXmlStreamAttributes_new();
+}
+
+void q_xmlstreamattributes_append(void* self, const char* namespaceUri, const char* name, const char* value) {
+    QXmlStreamAttributes_Append((QXmlStreamAttributes*)self, qstring(namespaceUri), qstring(name), qstring(value));
+}
+
+void q_xmlstreamattributes_append2(void* self, const char* qualifiedName, const char* value) {
+    QXmlStreamAttributes_Append2((QXmlStreamAttributes*)self, qstring(qualifiedName), qstring(value));
+}
+
+bool q_xmlstreamattributes_has_attribute(void* self, char* qualifiedName) {
+    return QXmlStreamAttributes_HasAttribute((QXmlStreamAttributes*)self, qualifiedName);
+}
+
+bool q_xmlstreamattributes_has_attribute2(void* self, char* namespaceUri, char* name) {
+    return QXmlStreamAttributes_HasAttribute2((QXmlStreamAttributes*)self, namespaceUri, name);
+}
+
+void q_xmlstreamattributes_delete(void* self) {
+    QXmlStreamAttributes_Delete((QXmlStreamAttributes*)(self));
 }
 
 QXmlStreamNamespaceDeclaration* q_xmlstreamnamespacedeclaration_new() {
@@ -47,12 +62,8 @@ QXmlStreamNamespaceDeclaration* q_xmlstreamnamespacedeclaration_new2(const char*
     return QXmlStreamNamespaceDeclaration_new2(qstring(prefix), qstring(namespaceUri));
 }
 
-bool q_xmlstreamnamespacedeclaration_operator_equal(void* self, void* other) {
-    return QXmlStreamNamespaceDeclaration_OperatorEqual((QXmlStreamNamespaceDeclaration*)self, (QXmlStreamNamespaceDeclaration*)other);
-}
-
-bool q_xmlstreamnamespacedeclaration_operator_not_equal(void* self, void* other) {
-    return QXmlStreamNamespaceDeclaration_OperatorNotEqual((QXmlStreamNamespaceDeclaration*)self, (QXmlStreamNamespaceDeclaration*)other);
+QXmlStreamNamespaceDeclaration* q_xmlstreamnamespacedeclaration_new3(void* param1) {
+    return QXmlStreamNamespaceDeclaration_new3((QXmlStreamNamespaceDeclaration*)param1);
 }
 
 void q_xmlstreamnamespacedeclaration_delete(void* self) {
@@ -63,12 +74,8 @@ QXmlStreamNotationDeclaration* q_xmlstreamnotationdeclaration_new() {
     return QXmlStreamNotationDeclaration_new();
 }
 
-bool q_xmlstreamnotationdeclaration_operator_equal(void* self, void* other) {
-    return QXmlStreamNotationDeclaration_OperatorEqual((QXmlStreamNotationDeclaration*)self, (QXmlStreamNotationDeclaration*)other);
-}
-
-bool q_xmlstreamnotationdeclaration_operator_not_equal(void* self, void* other) {
-    return QXmlStreamNotationDeclaration_OperatorNotEqual((QXmlStreamNotationDeclaration*)self, (QXmlStreamNotationDeclaration*)other);
+QXmlStreamNotationDeclaration* q_xmlstreamnotationdeclaration_new2(void* param1) {
+    return QXmlStreamNotationDeclaration_new2((QXmlStreamNotationDeclaration*)param1);
 }
 
 void q_xmlstreamnotationdeclaration_delete(void* self) {
@@ -79,16 +86,16 @@ QXmlStreamEntityDeclaration* q_xmlstreamentitydeclaration_new() {
     return QXmlStreamEntityDeclaration_new();
 }
 
-bool q_xmlstreamentitydeclaration_operator_equal(void* self, void* other) {
-    return QXmlStreamEntityDeclaration_OperatorEqual((QXmlStreamEntityDeclaration*)self, (QXmlStreamEntityDeclaration*)other);
-}
-
-bool q_xmlstreamentitydeclaration_operator_not_equal(void* self, void* other) {
-    return QXmlStreamEntityDeclaration_OperatorNotEqual((QXmlStreamEntityDeclaration*)self, (QXmlStreamEntityDeclaration*)other);
+QXmlStreamEntityDeclaration* q_xmlstreamentitydeclaration_new2(void* param1) {
+    return QXmlStreamEntityDeclaration_new2((QXmlStreamEntityDeclaration*)param1);
 }
 
 void q_xmlstreamentitydeclaration_delete(void* self) {
     QXmlStreamEntityDeclaration_Delete((QXmlStreamEntityDeclaration*)(self));
+}
+
+QXmlStreamEntityResolver* q_xmlstreamentityresolver_new() {
+    return QXmlStreamEntityResolver_new();
 }
 
 const char* q_xmlstreamentityresolver_resolve_entity(void* self, const char* publicId, const char* systemId) {
@@ -98,8 +105,30 @@ const char* q_xmlstreamentityresolver_resolve_entity(void* self, const char* pub
     return _ret;
 }
 
+void q_xmlstreamentityresolver_on_resolve_entity(void* self, const char* (*slot)(void*, const char*, const char*)) {
+    QXmlStreamEntityResolver_OnResolveEntity((QXmlStreamEntityResolver*)self, (intptr_t)slot);
+}
+
+const char* q_xmlstreamentityresolver_qbase_resolve_entity(void* self, const char* publicId, const char* systemId) {
+    libqt_string _str = QXmlStreamEntityResolver_QBaseResolveEntity((QXmlStreamEntityResolver*)self, qstring(publicId), qstring(systemId));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
 const char* q_xmlstreamentityresolver_resolve_undeclared_entity(void* self, const char* name) {
     libqt_string _str = QXmlStreamEntityResolver_ResolveUndeclaredEntity((QXmlStreamEntityResolver*)self, qstring(name));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_xmlstreamentityresolver_on_resolve_undeclared_entity(void* self, const char* (*slot)(void*, const char*)) {
+    QXmlStreamEntityResolver_OnResolveUndeclaredEntity((QXmlStreamEntityResolver*)self, (intptr_t)slot);
+}
+
+const char* q_xmlstreamentityresolver_qbase_resolve_undeclared_entity(void* self, const char* name) {
+    libqt_string _str = QXmlStreamEntityResolver_QBaseResolveUndeclaredEntity((QXmlStreamEntityResolver*)self, qstring(name));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -117,16 +146,8 @@ QXmlStreamReader* q_xmlstreamreader_new2(void* device) {
     return QXmlStreamReader_new2((QIODevice*)device);
 }
 
-QXmlStreamReader* q_xmlstreamreader_new3(const char* data) {
-    return QXmlStreamReader_new3(qstring(data));
-}
-
-QXmlStreamReader* q_xmlstreamreader_new4(const char* data) {
-    return QXmlStreamReader_new4(qstring(data));
-}
-
-QXmlStreamReader* q_xmlstreamreader_new5(const char* data) {
-    return QXmlStreamReader_new5(data);
+QXmlStreamReader* q_xmlstreamreader_new3(char* data) {
+    return QXmlStreamReader_new3(data);
 }
 
 void q_xmlstreamreader_set_device(void* self, void* device) {
@@ -137,16 +158,8 @@ QIODevice* q_xmlstreamreader_device(void* self) {
     return QXmlStreamReader_Device((QXmlStreamReader*)self);
 }
 
-void q_xmlstreamreader_add_data(void* self, const char* data) {
-    QXmlStreamReader_AddData((QXmlStreamReader*)self, qstring(data));
-}
-
-void q_xmlstreamreader_add_data_with_data(void* self, const char* data) {
-    QXmlStreamReader_AddDataWithData((QXmlStreamReader*)self, qstring(data));
-}
-
-void q_xmlstreamreader_add_data2(void* self, const char* data) {
-    QXmlStreamReader_AddData2((QXmlStreamReader*)self, data);
+void q_xmlstreamreader_add_data(void* self, char* data) {
+    QXmlStreamReader_AddData((QXmlStreamReader*)self, data);
 }
 
 void q_xmlstreamreader_clear(void* self) {
@@ -236,6 +249,10 @@ bool q_xmlstreamreader_is_standalone_document(void* self) {
     return QXmlStreamReader_IsStandaloneDocument((QXmlStreamReader*)self);
 }
 
+bool q_xmlstreamreader_has_standalone_declaration(void* self) {
+    return QXmlStreamReader_HasStandaloneDeclaration((QXmlStreamReader*)self);
+}
+
 long long q_xmlstreamreader_line_number(void* self) {
     return QXmlStreamReader_LineNumber((QXmlStreamReader*)self);
 }
@@ -246,6 +263,10 @@ long long q_xmlstreamreader_column_number(void* self) {
 
 long long q_xmlstreamreader_character_offset(void* self) {
     return QXmlStreamReader_CharacterOffset((QXmlStreamReader*)self);
+}
+
+QXmlStreamAttributes* q_xmlstreamreader_attributes(void* self) {
+    return QXmlStreamReader_Attributes((QXmlStreamReader*)self);
 }
 
 const char* q_xmlstreamreader_read_element_text(void* self) {
@@ -360,48 +381,52 @@ int32_t q_xmlstreamwriter_auto_formatting_indent(void* self) {
     return QXmlStreamWriter_AutoFormattingIndent((QXmlStreamWriter*)self);
 }
 
-void q_xmlstreamwriter_write_attribute(void* self, const char* qualifiedName, const char* value) {
-    QXmlStreamWriter_WriteAttribute((QXmlStreamWriter*)self, qstring(qualifiedName), qstring(value));
+void q_xmlstreamwriter_write_attribute(void* self, char* qualifiedName, char* value) {
+    QXmlStreamWriter_WriteAttribute((QXmlStreamWriter*)self, qualifiedName, value);
 }
 
-void q_xmlstreamwriter_write_attribute2(void* self, const char* namespaceUri, const char* name, const char* value) {
-    QXmlStreamWriter_WriteAttribute2((QXmlStreamWriter*)self, qstring(namespaceUri), qstring(name), qstring(value));
+void q_xmlstreamwriter_write_attribute2(void* self, char* namespaceUri, char* name, char* value) {
+    QXmlStreamWriter_WriteAttribute2((QXmlStreamWriter*)self, namespaceUri, name, value);
 }
 
 void q_xmlstreamwriter_write_attribute_with_attribute(void* self, void* attribute) {
     QXmlStreamWriter_WriteAttributeWithAttribute((QXmlStreamWriter*)self, (QXmlStreamAttribute*)attribute);
 }
 
-void q_xmlstreamwriter_write_c_d_a_t_a(void* self, const char* text) {
-    QXmlStreamWriter_WriteCDATA((QXmlStreamWriter*)self, qstring(text));
+void q_xmlstreamwriter_write_attributes(void* self, void* attributes) {
+    QXmlStreamWriter_WriteAttributes((QXmlStreamWriter*)self, (QXmlStreamAttributes*)attributes);
 }
 
-void q_xmlstreamwriter_write_characters(void* self, const char* text) {
-    QXmlStreamWriter_WriteCharacters((QXmlStreamWriter*)self, qstring(text));
+void q_xmlstreamwriter_write_c_d_a_t_a(void* self, char* text) {
+    QXmlStreamWriter_WriteCDATA((QXmlStreamWriter*)self, text);
 }
 
-void q_xmlstreamwriter_write_comment(void* self, const char* text) {
-    QXmlStreamWriter_WriteComment((QXmlStreamWriter*)self, qstring(text));
+void q_xmlstreamwriter_write_characters(void* self, char* text) {
+    QXmlStreamWriter_WriteCharacters((QXmlStreamWriter*)self, text);
 }
 
-void q_xmlstreamwriter_write_d_t_d(void* self, const char* dtd) {
-    QXmlStreamWriter_WriteDTD((QXmlStreamWriter*)self, qstring(dtd));
+void q_xmlstreamwriter_write_comment(void* self, char* text) {
+    QXmlStreamWriter_WriteComment((QXmlStreamWriter*)self, text);
 }
 
-void q_xmlstreamwriter_write_empty_element(void* self, const char* qualifiedName) {
-    QXmlStreamWriter_WriteEmptyElement((QXmlStreamWriter*)self, qstring(qualifiedName));
+void q_xmlstreamwriter_write_d_t_d(void* self, char* dtd) {
+    QXmlStreamWriter_WriteDTD((QXmlStreamWriter*)self, dtd);
 }
 
-void q_xmlstreamwriter_write_empty_element2(void* self, const char* namespaceUri, const char* name) {
-    QXmlStreamWriter_WriteEmptyElement2((QXmlStreamWriter*)self, qstring(namespaceUri), qstring(name));
+void q_xmlstreamwriter_write_empty_element(void* self, char* qualifiedName) {
+    QXmlStreamWriter_WriteEmptyElement((QXmlStreamWriter*)self, qualifiedName);
 }
 
-void q_xmlstreamwriter_write_text_element(void* self, const char* qualifiedName, const char* text) {
-    QXmlStreamWriter_WriteTextElement((QXmlStreamWriter*)self, qstring(qualifiedName), qstring(text));
+void q_xmlstreamwriter_write_empty_element2(void* self, char* namespaceUri, char* name) {
+    QXmlStreamWriter_WriteEmptyElement2((QXmlStreamWriter*)self, namespaceUri, name);
 }
 
-void q_xmlstreamwriter_write_text_element2(void* self, const char* namespaceUri, const char* name, const char* text) {
-    QXmlStreamWriter_WriteTextElement2((QXmlStreamWriter*)self, qstring(namespaceUri), qstring(name), qstring(text));
+void q_xmlstreamwriter_write_text_element(void* self, char* qualifiedName, char* text) {
+    QXmlStreamWriter_WriteTextElement((QXmlStreamWriter*)self, qualifiedName, text);
+}
+
+void q_xmlstreamwriter_write_text_element2(void* self, char* namespaceUri, char* name, char* text) {
+    QXmlStreamWriter_WriteTextElement2((QXmlStreamWriter*)self, namespaceUri, name, text);
 }
 
 void q_xmlstreamwriter_write_end_document(void* self) {
@@ -412,40 +437,40 @@ void q_xmlstreamwriter_write_end_element(void* self) {
     QXmlStreamWriter_WriteEndElement((QXmlStreamWriter*)self);
 }
 
-void q_xmlstreamwriter_write_entity_reference(void* self, const char* name) {
-    QXmlStreamWriter_WriteEntityReference((QXmlStreamWriter*)self, qstring(name));
+void q_xmlstreamwriter_write_entity_reference(void* self, char* name) {
+    QXmlStreamWriter_WriteEntityReference((QXmlStreamWriter*)self, name);
 }
 
-void q_xmlstreamwriter_write_namespace(void* self, const char* namespaceUri) {
-    QXmlStreamWriter_WriteNamespace((QXmlStreamWriter*)self, qstring(namespaceUri));
+void q_xmlstreamwriter_write_namespace(void* self, char* namespaceUri) {
+    QXmlStreamWriter_WriteNamespace((QXmlStreamWriter*)self, namespaceUri);
 }
 
-void q_xmlstreamwriter_write_default_namespace(void* self, const char* namespaceUri) {
-    QXmlStreamWriter_WriteDefaultNamespace((QXmlStreamWriter*)self, qstring(namespaceUri));
+void q_xmlstreamwriter_write_default_namespace(void* self, char* namespaceUri) {
+    QXmlStreamWriter_WriteDefaultNamespace((QXmlStreamWriter*)self, namespaceUri);
 }
 
-void q_xmlstreamwriter_write_processing_instruction(void* self, const char* target) {
-    QXmlStreamWriter_WriteProcessingInstruction((QXmlStreamWriter*)self, qstring(target));
+void q_xmlstreamwriter_write_processing_instruction(void* self, char* target) {
+    QXmlStreamWriter_WriteProcessingInstruction((QXmlStreamWriter*)self, target);
 }
 
 void q_xmlstreamwriter_write_start_document(void* self) {
     QXmlStreamWriter_WriteStartDocument((QXmlStreamWriter*)self);
 }
 
-void q_xmlstreamwriter_write_start_document_with_version(void* self, const char* version) {
-    QXmlStreamWriter_WriteStartDocumentWithVersion((QXmlStreamWriter*)self, qstring(version));
+void q_xmlstreamwriter_write_start_document_with_version(void* self, char* version) {
+    QXmlStreamWriter_WriteStartDocumentWithVersion((QXmlStreamWriter*)self, version);
 }
 
-void q_xmlstreamwriter_write_start_document2(void* self, const char* version, bool standalone) {
-    QXmlStreamWriter_WriteStartDocument2((QXmlStreamWriter*)self, qstring(version), standalone);
+void q_xmlstreamwriter_write_start_document2(void* self, char* version, bool standalone) {
+    QXmlStreamWriter_WriteStartDocument2((QXmlStreamWriter*)self, version, standalone);
 }
 
-void q_xmlstreamwriter_write_start_element(void* self, const char* qualifiedName) {
-    QXmlStreamWriter_WriteStartElement((QXmlStreamWriter*)self, qstring(qualifiedName));
+void q_xmlstreamwriter_write_start_element(void* self, char* qualifiedName) {
+    QXmlStreamWriter_WriteStartElement((QXmlStreamWriter*)self, qualifiedName);
 }
 
-void q_xmlstreamwriter_write_start_element2(void* self, const char* namespaceUri, const char* name) {
-    QXmlStreamWriter_WriteStartElement2((QXmlStreamWriter*)self, qstring(namespaceUri), qstring(name));
+void q_xmlstreamwriter_write_start_element2(void* self, char* namespaceUri, char* name) {
+    QXmlStreamWriter_WriteStartElement2((QXmlStreamWriter*)self, namespaceUri, name);
 }
 
 void q_xmlstreamwriter_write_current_token(void* self, void* reader) {
@@ -456,12 +481,12 @@ bool q_xmlstreamwriter_has_error(void* self) {
     return QXmlStreamWriter_HasError((QXmlStreamWriter*)self);
 }
 
-void q_xmlstreamwriter_write_namespace2(void* self, const char* namespaceUri, const char* prefix) {
-    QXmlStreamWriter_WriteNamespace2((QXmlStreamWriter*)self, qstring(namespaceUri), qstring(prefix));
+void q_xmlstreamwriter_write_namespace2(void* self, char* namespaceUri, char* prefix) {
+    QXmlStreamWriter_WriteNamespace2((QXmlStreamWriter*)self, namespaceUri, prefix);
 }
 
-void q_xmlstreamwriter_write_processing_instruction2(void* self, const char* target, const char* data) {
-    QXmlStreamWriter_WriteProcessingInstruction2((QXmlStreamWriter*)self, qstring(target), qstring(data));
+void q_xmlstreamwriter_write_processing_instruction2(void* self, char* target, char* data) {
+    QXmlStreamWriter_WriteProcessingInstruction2((QXmlStreamWriter*)self, target, data);
 }
 
 void q_xmlstreamwriter_delete(void* self) {

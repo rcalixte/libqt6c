@@ -298,7 +298,7 @@ void QGraphicsGridLayout_OnInvalidate(QGraphicsGridLayout* self, intptr_t slot) 
 }
 
 // Derived class handler implementation
-void QGraphicsGridLayout_SetGeometry(QGraphicsGridLayout* self, QRectF* rect) {
+void QGraphicsGridLayout_SetGeometry(QGraphicsGridLayout* self, const QRectF* rect) {
     auto* vqgraphicsgridlayout = dynamic_cast<VirtualQGraphicsGridLayout*>(self);
     if (vqgraphicsgridlayout && vqgraphicsgridlayout->isVirtualQGraphicsGridLayout) {
         vqgraphicsgridlayout->setGeometry(*rect);
@@ -308,7 +308,7 @@ void QGraphicsGridLayout_SetGeometry(QGraphicsGridLayout* self, QRectF* rect) {
 }
 
 // Base class handler implementation
-void QGraphicsGridLayout_QBaseSetGeometry(QGraphicsGridLayout* self, QRectF* rect) {
+void QGraphicsGridLayout_QBaseSetGeometry(QGraphicsGridLayout* self, const QRectF* rect) {
     auto* vqgraphicsgridlayout = dynamic_cast<VirtualQGraphicsGridLayout*>(self);
     if (vqgraphicsgridlayout && vqgraphicsgridlayout->isVirtualQGraphicsGridLayout) {
         vqgraphicsgridlayout->setQGraphicsGridLayout_SetGeometry_IsBase(true);
@@ -327,7 +327,7 @@ void QGraphicsGridLayout_OnSetGeometry(QGraphicsGridLayout* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-QSizeF* QGraphicsGridLayout_SizeHint(const QGraphicsGridLayout* self, int which, QSizeF* constraint) {
+QSizeF* QGraphicsGridLayout_SizeHint(const QGraphicsGridLayout* self, int which, const QSizeF* constraint) {
     auto* vqgraphicsgridlayout = const_cast<VirtualQGraphicsGridLayout*>(dynamic_cast<const VirtualQGraphicsGridLayout*>(self));
     if (vqgraphicsgridlayout && vqgraphicsgridlayout->isVirtualQGraphicsGridLayout) {
         return new QSizeF(vqgraphicsgridlayout->sizeHint(static_cast<Qt::SizeHint>(which), *constraint));
@@ -337,7 +337,7 @@ QSizeF* QGraphicsGridLayout_SizeHint(const QGraphicsGridLayout* self, int which,
 }
 
 // Base class handler implementation
-QSizeF* QGraphicsGridLayout_QBaseSizeHint(const QGraphicsGridLayout* self, int which, QSizeF* constraint) {
+QSizeF* QGraphicsGridLayout_QBaseSizeHint(const QGraphicsGridLayout* self, int which, const QSizeF* constraint) {
     auto* vqgraphicsgridlayout = const_cast<VirtualQGraphicsGridLayout*>(dynamic_cast<const VirtualQGraphicsGridLayout*>(self));
     if (vqgraphicsgridlayout && vqgraphicsgridlayout->isVirtualQGraphicsGridLayout) {
         vqgraphicsgridlayout->setQGraphicsGridLayout_SizeHint_IsBase(true);

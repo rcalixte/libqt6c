@@ -24,24 +24,14 @@ typedef struct QSizeF QSizeF;
 typedef struct QVector2D QVector2D;
 #endif
 
-#ifdef __cplusplus
-typedef QEventPoint::QtGadgetHelper QtGadgetHelper; // C++ QFlags
-typedef QEventPoint::State State;                   // C++ enum
-typedef QEventPoint::States States;                 // C++ QFlags
-#else
-typedef int State;           // C ABI enum
-typedef int States;          // C ABI QFlags
-typedef void QtGadgetHelper; // C ABI QFlags
-#endif
-
 QEventPoint* QEventPoint_new();
-QEventPoint* QEventPoint_new2(int pointId, uint8_t state, QPointF* scenePosition, QPointF* globalPosition);
-QEventPoint* QEventPoint_new3(QEventPoint* other);
+QEventPoint* QEventPoint_new2(int pointId, uint8_t state, const QPointF* scenePosition, const QPointF* globalPosition);
+QEventPoint* QEventPoint_new3(const QEventPoint* other);
 QEventPoint* QEventPoint_new4(int id);
-QEventPoint* QEventPoint_new5(int id, QPointingDevice* device);
-void QEventPoint_OperatorAssign(QEventPoint* self, QEventPoint* other);
-bool QEventPoint_OperatorEqual(const QEventPoint* self, QEventPoint* other);
-bool QEventPoint_OperatorNotEqual(const QEventPoint* self, QEventPoint* other);
+QEventPoint* QEventPoint_new5(int id, const QPointingDevice* device);
+void QEventPoint_OperatorAssign(QEventPoint* self, const QEventPoint* other);
+bool QEventPoint_OperatorEqual(const QEventPoint* self, const QEventPoint* other);
+bool QEventPoint_OperatorNotEqual(const QEventPoint* self, const QEventPoint* other);
 void QEventPoint_Swap(QEventPoint* self, QEventPoint* other);
 QPointF* QEventPoint_Position(const QEventPoint* self);
 QPointF* QEventPoint_PressPosition(const QEventPoint* self);

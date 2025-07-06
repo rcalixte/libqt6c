@@ -12,16 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractitemmodel.h"
-#include "libqevent.h"
-#include "libqdatastream.h"
-#include "libqmetaobject.h"
-#include "libqmimedata.h"
-#include "libqobject.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html
 
 /// q_concatenatetablesproxymodel_new constructs a new QConcatenateTablesProxyModel object.
@@ -665,7 +655,7 @@ QThread* q_concatenatetablesproxymodel_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QConcatenateTablesProxyModel* self, QThread* thread ```
-void q_concatenatetablesproxymodel_move_to_thread(void* self, void* thread);
+bool q_concatenatetablesproxymodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -680,6 +670,13 @@ int32_t q_concatenatetablesproxymodel_start_timer(void* self, int interval);
 ///
 /// ``` QConcatenateTablesProxyModel* self, int id ```
 void q_concatenatetablesproxymodel_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QConcatenateTablesProxyModel* self, enum Qt__TimerId id ```
+void q_concatenatetablesproxymodel_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -813,6 +810,13 @@ bool q_concatenatetablesproxymodel_inherits(void* self, const char* classname);
 ///
 /// ``` QConcatenateTablesProxyModel* self ```
 void q_concatenatetablesproxymodel_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QConcatenateTablesProxyModel* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_concatenatetablesproxymodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

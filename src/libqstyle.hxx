@@ -130,7 +130,7 @@ class VirtualQStyle final : public QStyle {
     mutable bool qstyle_issignalconnected_isbase = false;
 
   public:
-    VirtualQStyle() : QStyle(){};
+    VirtualQStyle() : QStyle() {};
 
     ~VirtualQStyle() {
         qstyle_metacall_callback = nullptr;
@@ -809,18 +809,18 @@ class VirtualQStyle final : public QStyle {
     friend void QStyle_QBaseChildEvent(QStyle* self, QChildEvent* event);
     friend void QStyle_CustomEvent(QStyle* self, QEvent* event);
     friend void QStyle_QBaseCustomEvent(QStyle* self, QEvent* event);
-    friend void QStyle_ConnectNotify(QStyle* self, QMetaMethod* signal);
-    friend void QStyle_QBaseConnectNotify(QStyle* self, QMetaMethod* signal);
-    friend void QStyle_DisconnectNotify(QStyle* self, QMetaMethod* signal);
-    friend void QStyle_QBaseDisconnectNotify(QStyle* self, QMetaMethod* signal);
+    friend void QStyle_ConnectNotify(QStyle* self, const QMetaMethod* signal);
+    friend void QStyle_QBaseConnectNotify(QStyle* self, const QMetaMethod* signal);
+    friend void QStyle_DisconnectNotify(QStyle* self, const QMetaMethod* signal);
+    friend void QStyle_QBaseDisconnectNotify(QStyle* self, const QMetaMethod* signal);
     friend QObject* QStyle_Sender(const QStyle* self);
     friend QObject* QStyle_QBaseSender(const QStyle* self);
     friend int QStyle_SenderSignalIndex(const QStyle* self);
     friend int QStyle_QBaseSenderSignalIndex(const QStyle* self);
     friend int QStyle_Receivers(const QStyle* self, const char* signal);
     friend int QStyle_QBaseReceivers(const QStyle* self, const char* signal);
-    friend bool QStyle_IsSignalConnected(const QStyle* self, QMetaMethod* signal);
-    friend bool QStyle_QBaseIsSignalConnected(const QStyle* self, QMetaMethod* signal);
+    friend bool QStyle_IsSignalConnected(const QStyle* self, const QMetaMethod* signal);
+    friend bool QStyle_QBaseIsSignalConnected(const QStyle* self, const QMetaMethod* signal);
 };
 
 #endif

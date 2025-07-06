@@ -12,22 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqgraphicsitem.h"
-#include "libqgraphicslayoutitem.h"
-#include "libqgraphicswidget.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpainter.h"
-#include "libqpainterpath.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqstyleoption.h"
-#include "libqvariant.h"
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qgraphicsproxywidget.html
 
 /// q_graphicsproxywidget_new constructs a new QGraphicsProxyWidget object.
@@ -1384,7 +1368,7 @@ QThread* q_graphicsproxywidget_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QGraphicsProxyWidget* self, QThread* thread ```
-void q_graphicsproxywidget_move_to_thread(void* self, void* thread);
+bool q_graphicsproxywidget_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -1399,6 +1383,13 @@ int32_t q_graphicsproxywidget_start_timer(void* self, int interval);
 ///
 /// ``` QGraphicsProxyWidget* self, int id ```
 void q_graphicsproxywidget_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QGraphicsProxyWidget* self, enum Qt__TimerId id ```
+void q_graphicsproxywidget_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1539,6 +1530,13 @@ bool q_graphicsproxywidget_inherits(void* self, const char* classname);
 ///
 /// ``` QGraphicsProxyWidget* self ```
 void q_graphicsproxywidget_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QGraphicsProxyWidget* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_graphicsproxywidget_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

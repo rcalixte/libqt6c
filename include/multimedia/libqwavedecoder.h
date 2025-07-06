@@ -12,14 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqaudioformat.h"
-#include "../libqevent.h"
-#include "../libqiodevice.h"
-#include "../libqiodevicebase.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qwavedecoder.html
 
 /// q_wavedecoder_new constructs a new QWaveDecoder object.
@@ -620,7 +612,7 @@ QThread* q_wavedecoder_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QWaveDecoder* self, QThread* thread ```
-void q_wavedecoder_move_to_thread(void* self, void* thread);
+bool q_wavedecoder_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -635,6 +627,13 @@ int32_t q_wavedecoder_start_timer(void* self, int interval);
 ///
 /// ``` QWaveDecoder* self, int id ```
 void q_wavedecoder_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QWaveDecoder* self, enum Qt__TimerId id ```
+void q_wavedecoder_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -775,6 +774,13 @@ bool q_wavedecoder_inherits(void* self, const char* classname);
 ///
 /// ``` QWaveDecoder* self ```
 void q_wavedecoder_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QWaveDecoder* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_wavedecoder_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

@@ -12,14 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqevent.h"
-#include "../libqcolor.h"
-#include "../libqfont.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqsettings.h"
-#include <string.h>
-
 /// https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html
 
 /// q_scilexer_new constructs a new QsciLexer object.
@@ -814,6 +806,44 @@ void q_scilexer_on_write_properties(void* self, bool (*slot)(void*, void*, const
 /// ``` QsciLexer* self, QSettings* qs, const char* prefix ```
 bool q_scilexer_qbase_write_properties(void* self, void* qs, const char* prefix);
 
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// ``` QsciLexer* self, const char* text ```
+char* q_scilexer_text_as_bytes(void* self, const char* text);
+
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Allows for overriding the related default method
+///
+/// ``` QsciLexer* self, char* (*slot)(QsciLexer*, const char*) ```
+void q_scilexer_on_text_as_bytes(void* self, char* (*slot)(void*, const char*));
+
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Base class method implementation
+///
+/// ``` QsciLexer* self, const char* text ```
+char* q_scilexer_qbase_text_as_bytes(void* self, const char* text);
+
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// ``` QsciLexer* self, const char* bytes, int size ```
+const char* q_scilexer_bytes_as_text(void* self, const char* bytes, int size);
+
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Allows for overriding the related default method
+///
+/// ``` QsciLexer* self, const char* (*slot)(QsciLexer*, const char*, int) ```
+void q_scilexer_on_bytes_as_text(void* self, const char* (*slot)(void*, const char*, int));
+
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Base class method implementation
+///
+/// ``` QsciLexer* self, const char* bytes, int size ```
+const char* q_scilexer_qbase_bytes_as_text(void* self, const char* bytes, int size);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// ``` const char* s, const char* c ```
@@ -895,7 +925,7 @@ QThread* q_scilexer_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QsciLexer* self, QThread* thread ```
-void q_scilexer_move_to_thread(void* self, void* thread);
+bool q_scilexer_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -910,6 +940,13 @@ int32_t q_scilexer_start_timer(void* self, int interval);
 ///
 /// ``` QsciLexer* self, int id ```
 void q_scilexer_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QsciLexer* self, enum Qt__TimerId id ```
+void q_scilexer_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1050,6 +1087,13 @@ bool q_scilexer_inherits(void* self, const char* classname);
 ///
 /// ``` QsciLexer* self ```
 void q_scilexer_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QsciLexer* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_scilexer_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

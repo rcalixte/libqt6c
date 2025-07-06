@@ -53,20 +53,6 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QAbstractSpinBox::ButtonSymbols ButtonSymbols;     // C++ enum
-typedef QAbstractSpinBox::CorrectionMode CorrectionMode;   // C++ enum
-typedef QAbstractSpinBox::StepEnabled StepEnabled;         // C++ QFlags
-typedef QAbstractSpinBox::StepEnabledFlag StepEnabledFlag; // C++ enum
-typedef QAbstractSpinBox::StepType StepType;               // C++ enum
-#else
-typedef int ButtonSymbols;   // C ABI enum
-typedef int CorrectionMode;  // C ABI enum
-typedef int StepEnabled;     // C ABI QFlags
-typedef int StepEnabledFlag; // C ABI enum
-typedef int StepType;        // C ABI enum
-#endif
-
 QAbstractSpinBox* QAbstractSpinBox_new(QWidget* parent);
 QAbstractSpinBox* QAbstractSpinBox_new2();
 QMetaObject* QAbstractSpinBox_MetaObject(const QAbstractSpinBox* self);
@@ -82,7 +68,7 @@ int QAbstractSpinBox_CorrectionMode(const QAbstractSpinBox* self);
 bool QAbstractSpinBox_HasAcceptableInput(const QAbstractSpinBox* self);
 libqt_string QAbstractSpinBox_Text(const QAbstractSpinBox* self);
 libqt_string QAbstractSpinBox_SpecialValueText(const QAbstractSpinBox* self);
-void QAbstractSpinBox_SetSpecialValueText(QAbstractSpinBox* self, libqt_string txt);
+void QAbstractSpinBox_SetSpecialValueText(QAbstractSpinBox* self, const libqt_string txt);
 bool QAbstractSpinBox_Wrapping(const QAbstractSpinBox* self);
 void QAbstractSpinBox_SetWrapping(QAbstractSpinBox* self, bool w);
 void QAbstractSpinBox_SetReadOnly(QAbstractSpinBox* self, bool r);
@@ -228,9 +214,9 @@ void QAbstractSpinBox_QBaseDragLeaveEvent(QAbstractSpinBox* self, QDragLeaveEven
 void QAbstractSpinBox_DropEvent(QAbstractSpinBox* self, QDropEvent* event);
 void QAbstractSpinBox_OnDropEvent(QAbstractSpinBox* self, intptr_t slot);
 void QAbstractSpinBox_QBaseDropEvent(QAbstractSpinBox* self, QDropEvent* event);
-bool QAbstractSpinBox_NativeEvent(QAbstractSpinBox* self, libqt_string eventType, void* message, intptr_t* result);
+bool QAbstractSpinBox_NativeEvent(QAbstractSpinBox* self, const libqt_string eventType, void* message, intptr_t* result);
 void QAbstractSpinBox_OnNativeEvent(QAbstractSpinBox* self, intptr_t slot);
-bool QAbstractSpinBox_QBaseNativeEvent(QAbstractSpinBox* self, libqt_string eventType, void* message, intptr_t* result);
+bool QAbstractSpinBox_QBaseNativeEvent(QAbstractSpinBox* self, const libqt_string eventType, void* message, intptr_t* result);
 int QAbstractSpinBox_Metric(const QAbstractSpinBox* self, int param1);
 void QAbstractSpinBox_OnMetric(const QAbstractSpinBox* self, intptr_t slot);
 int QAbstractSpinBox_QBaseMetric(const QAbstractSpinBox* self, int param1);
@@ -258,12 +244,12 @@ void QAbstractSpinBox_QBaseChildEvent(QAbstractSpinBox* self, QChildEvent* event
 void QAbstractSpinBox_CustomEvent(QAbstractSpinBox* self, QEvent* event);
 void QAbstractSpinBox_OnCustomEvent(QAbstractSpinBox* self, intptr_t slot);
 void QAbstractSpinBox_QBaseCustomEvent(QAbstractSpinBox* self, QEvent* event);
-void QAbstractSpinBox_ConnectNotify(QAbstractSpinBox* self, QMetaMethod* signal);
+void QAbstractSpinBox_ConnectNotify(QAbstractSpinBox* self, const QMetaMethod* signal);
 void QAbstractSpinBox_OnConnectNotify(QAbstractSpinBox* self, intptr_t slot);
-void QAbstractSpinBox_QBaseConnectNotify(QAbstractSpinBox* self, QMetaMethod* signal);
-void QAbstractSpinBox_DisconnectNotify(QAbstractSpinBox* self, QMetaMethod* signal);
+void QAbstractSpinBox_QBaseConnectNotify(QAbstractSpinBox* self, const QMetaMethod* signal);
+void QAbstractSpinBox_DisconnectNotify(QAbstractSpinBox* self, const QMetaMethod* signal);
 void QAbstractSpinBox_OnDisconnectNotify(QAbstractSpinBox* self, intptr_t slot);
-void QAbstractSpinBox_QBaseDisconnectNotify(QAbstractSpinBox* self, QMetaMethod* signal);
+void QAbstractSpinBox_QBaseDisconnectNotify(QAbstractSpinBox* self, const QMetaMethod* signal);
 QLineEdit* QAbstractSpinBox_LineEdit(const QAbstractSpinBox* self);
 void QAbstractSpinBox_OnLineEdit(const QAbstractSpinBox* self, intptr_t slot);
 QLineEdit* QAbstractSpinBox_QBaseLineEdit(const QAbstractSpinBox* self);
@@ -294,9 +280,12 @@ int QAbstractSpinBox_QBaseSenderSignalIndex(const QAbstractSpinBox* self);
 int QAbstractSpinBox_Receivers(const QAbstractSpinBox* self, const char* signal);
 void QAbstractSpinBox_OnReceivers(const QAbstractSpinBox* self, intptr_t slot);
 int QAbstractSpinBox_QBaseReceivers(const QAbstractSpinBox* self, const char* signal);
-bool QAbstractSpinBox_IsSignalConnected(const QAbstractSpinBox* self, QMetaMethod* signal);
+bool QAbstractSpinBox_IsSignalConnected(const QAbstractSpinBox* self, const QMetaMethod* signal);
 void QAbstractSpinBox_OnIsSignalConnected(const QAbstractSpinBox* self, intptr_t slot);
-bool QAbstractSpinBox_QBaseIsSignalConnected(const QAbstractSpinBox* self, QMetaMethod* signal);
+bool QAbstractSpinBox_QBaseIsSignalConnected(const QAbstractSpinBox* self, const QMetaMethod* signal);
+double QAbstractSpinBox_GetDecodedMetricF(const QAbstractSpinBox* self, int metricA, int metricB);
+void QAbstractSpinBox_OnGetDecodedMetricF(const QAbstractSpinBox* self, intptr_t slot);
+double QAbstractSpinBox_QBaseGetDecodedMetricF(const QAbstractSpinBox* self, int metricA, int metricB);
 void QAbstractSpinBox_Delete(QAbstractSpinBox* self);
 
 #ifdef __cplusplus

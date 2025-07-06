@@ -64,8 +64,8 @@ class VirtualQBoxPlotSeries final : public QBoxPlotSeries {
     mutable bool qboxplotseries_issignalconnected_isbase = false;
 
   public:
-    VirtualQBoxPlotSeries() : QBoxPlotSeries(){};
-    VirtualQBoxPlotSeries(QObject* parent) : QBoxPlotSeries(parent){};
+    VirtualQBoxPlotSeries() : QBoxPlotSeries() {};
+    VirtualQBoxPlotSeries(QObject* parent) : QBoxPlotSeries(parent) {};
 
     ~VirtualQBoxPlotSeries() {
         qboxplotseries_metacall_callback = nullptr;
@@ -313,18 +313,18 @@ class VirtualQBoxPlotSeries final : public QBoxPlotSeries {
     friend void QBoxPlotSeries_QBaseChildEvent(QBoxPlotSeries* self, QChildEvent* event);
     friend void QBoxPlotSeries_CustomEvent(QBoxPlotSeries* self, QEvent* event);
     friend void QBoxPlotSeries_QBaseCustomEvent(QBoxPlotSeries* self, QEvent* event);
-    friend void QBoxPlotSeries_ConnectNotify(QBoxPlotSeries* self, QMetaMethod* signal);
-    friend void QBoxPlotSeries_QBaseConnectNotify(QBoxPlotSeries* self, QMetaMethod* signal);
-    friend void QBoxPlotSeries_DisconnectNotify(QBoxPlotSeries* self, QMetaMethod* signal);
-    friend void QBoxPlotSeries_QBaseDisconnectNotify(QBoxPlotSeries* self, QMetaMethod* signal);
+    friend void QBoxPlotSeries_ConnectNotify(QBoxPlotSeries* self, const QMetaMethod* signal);
+    friend void QBoxPlotSeries_QBaseConnectNotify(QBoxPlotSeries* self, const QMetaMethod* signal);
+    friend void QBoxPlotSeries_DisconnectNotify(QBoxPlotSeries* self, const QMetaMethod* signal);
+    friend void QBoxPlotSeries_QBaseDisconnectNotify(QBoxPlotSeries* self, const QMetaMethod* signal);
     friend QObject* QBoxPlotSeries_Sender(const QBoxPlotSeries* self);
     friend QObject* QBoxPlotSeries_QBaseSender(const QBoxPlotSeries* self);
     friend int QBoxPlotSeries_SenderSignalIndex(const QBoxPlotSeries* self);
     friend int QBoxPlotSeries_QBaseSenderSignalIndex(const QBoxPlotSeries* self);
     friend int QBoxPlotSeries_Receivers(const QBoxPlotSeries* self, const char* signal);
     friend int QBoxPlotSeries_QBaseReceivers(const QBoxPlotSeries* self, const char* signal);
-    friend bool QBoxPlotSeries_IsSignalConnected(const QBoxPlotSeries* self, QMetaMethod* signal);
-    friend bool QBoxPlotSeries_QBaseIsSignalConnected(const QBoxPlotSeries* self, QMetaMethod* signal);
+    friend bool QBoxPlotSeries_IsSignalConnected(const QBoxPlotSeries* self, const QMetaMethod* signal);
+    friend bool QBoxPlotSeries_QBaseIsSignalConnected(const QBoxPlotSeries* self, const QMetaMethod* signal);
 };
 
 #endif

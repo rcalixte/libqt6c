@@ -12,9 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qgenericpluginfactory.html
 
 /// q_genericpluginfactory_new constructs a new QGenericPluginFactory object.

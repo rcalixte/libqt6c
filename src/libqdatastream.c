@@ -151,10 +151,6 @@ void q_datastream_operator_shift_left_with_quint64(void* self, uint64_t i) {
     QDataStream_OperatorShiftLeftWithQuint64((QDataStream*)self, i);
 }
 
-void q_datastream_operator_shift_left_with_bool(void* self, bool i) {
-    QDataStream_OperatorShiftLeftWithBool((QDataStream*)self, i);
-}
-
 void q_datastream_operator_shift_left_with_float(void* self, float f) {
     QDataStream_OperatorShiftLeftWithFloat((QDataStream*)self, f);
 }
@@ -171,19 +167,23 @@ QDataStream* q_datastream_read_bytes(void* self, char* param1, uint32_t* lenVal)
     return QDataStream_ReadBytes((QDataStream*)self, param1, lenVal);
 }
 
-int32_t q_datastream_read_raw_data(void* self, char* param1, int lenVal) {
+QDataStream* q_datastream_read_bytes2(void* self, char* param1, long long* lenVal) {
+    return QDataStream_ReadBytes2((QDataStream*)self, param1, lenVal);
+}
+
+long long q_datastream_read_raw_data(void* self, char* param1, long long lenVal) {
     return QDataStream_ReadRawData((QDataStream*)self, param1, lenVal);
 }
 
-void q_datastream_write_bytes(void* self, const char* param1, uint32_t lenVal) {
+void q_datastream_write_bytes(void* self, const char* param1, long long lenVal) {
     QDataStream_WriteBytes((QDataStream*)self, param1, lenVal);
 }
 
-int32_t q_datastream_write_raw_data(void* self, const char* param1, int lenVal) {
+long long q_datastream_write_raw_data(void* self, const char* param1, long long lenVal) {
     return QDataStream_WriteRawData((QDataStream*)self, param1, lenVal);
 }
 
-int32_t q_datastream_skip_raw_data(void* self, int lenVal) {
+long long q_datastream_skip_raw_data(void* self, long long lenVal) {
     return QDataStream_SkipRawData((QDataStream*)self, lenVal);
 }
 

@@ -137,7 +137,7 @@ int QHeaderView_LogicalIndexAt2(const QHeaderView* self, int x, int y) {
     return self->logicalIndexAt(static_cast<int>(x), static_cast<int>(y));
 }
 
-int QHeaderView_LogicalIndexAtWithPos(const QHeaderView* self, QPoint* pos) {
+int QHeaderView_LogicalIndexAtWithPos(const QHeaderView* self, const QPoint* pos) {
     return self->logicalIndexAt(*pos);
 }
 
@@ -355,7 +355,7 @@ libqt_string QHeaderView_SaveState(const QHeaderView* self) {
     return _str;
 }
 
-bool QHeaderView_RestoreState(QHeaderView* self, libqt_string state) {
+bool QHeaderView_RestoreState(QHeaderView* self, const libqt_string state) {
     QByteArray state_QByteArray(state.data, state.len);
     return self->restoreState(state_QByteArray);
 }
@@ -683,7 +683,7 @@ void QHeaderView_OnReset(QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHeaderView_CurrentChanged(QHeaderView* self, QModelIndex* current, QModelIndex* old) {
+void QHeaderView_CurrentChanged(QHeaderView* self, const QModelIndex* current, const QModelIndex* old) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->currentChanged(*current, *old);
@@ -693,7 +693,7 @@ void QHeaderView_CurrentChanged(QHeaderView* self, QModelIndex* current, QModelI
 }
 
 // Base class handler implementation
-void QHeaderView_QBaseCurrentChanged(QHeaderView* self, QModelIndex* current, QModelIndex* old) {
+void QHeaderView_QBaseCurrentChanged(QHeaderView* self, const QModelIndex* current, const QModelIndex* old) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_CurrentChanged_IsBase(true);
@@ -915,7 +915,7 @@ void QHeaderView_OnViewportEvent(QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHeaderView_PaintSection(const QHeaderView* self, QPainter* painter, QRect* rect, int logicalIndex) {
+void QHeaderView_PaintSection(const QHeaderView* self, QPainter* painter, const QRect* rect, int logicalIndex) {
     auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->paintSection(painter, *rect, static_cast<int>(logicalIndex));
@@ -925,7 +925,7 @@ void QHeaderView_PaintSection(const QHeaderView* self, QPainter* painter, QRect*
 }
 
 // Base class handler implementation
-void QHeaderView_QBasePaintSection(const QHeaderView* self, QPainter* painter, QRect* rect, int logicalIndex) {
+void QHeaderView_QBasePaintSection(const QHeaderView* self, QPainter* painter, const QRect* rect, int logicalIndex) {
     auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_PaintSection_IsBase(true);
@@ -1087,7 +1087,7 @@ void QHeaderView_OnScrollContentsBy(QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHeaderView_DataChanged(QHeaderView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles) {
+void QHeaderView_DataChanged(QHeaderView* self, const QModelIndex* topLeft, const QModelIndex* bottomRight, const libqt_list /* of int */ roles) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     QList<int> roles_QList;
     roles_QList.reserve(roles.len);
@@ -1103,7 +1103,7 @@ void QHeaderView_DataChanged(QHeaderView* self, QModelIndex* topLeft, QModelInde
 }
 
 // Base class handler implementation
-void QHeaderView_QBaseDataChanged(QHeaderView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles) {
+void QHeaderView_QBaseDataChanged(QHeaderView* self, const QModelIndex* topLeft, const QModelIndex* bottomRight, const libqt_list /* of int */ roles) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     QList<int> roles_QList;
     roles_QList.reserve(roles.len);
@@ -1128,7 +1128,7 @@ void QHeaderView_OnDataChanged(QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHeaderView_RowsInserted(QHeaderView* self, QModelIndex* parent, int start, int end) {
+void QHeaderView_RowsInserted(QHeaderView* self, const QModelIndex* parent, int start, int end) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->rowsInserted(*parent, static_cast<int>(start), static_cast<int>(end));
@@ -1138,7 +1138,7 @@ void QHeaderView_RowsInserted(QHeaderView* self, QModelIndex* parent, int start,
 }
 
 // Base class handler implementation
-void QHeaderView_QBaseRowsInserted(QHeaderView* self, QModelIndex* parent, int start, int end) {
+void QHeaderView_QBaseRowsInserted(QHeaderView* self, const QModelIndex* parent, int start, int end) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_RowsInserted_IsBase(true);
@@ -1157,7 +1157,7 @@ void QHeaderView_OnRowsInserted(QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QRect* QHeaderView_VisualRect(const QHeaderView* self, QModelIndex* index) {
+QRect* QHeaderView_VisualRect(const QHeaderView* self, const QModelIndex* index) {
     auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         return new QRect(vqheaderview->visualRect(*index));
@@ -1166,7 +1166,7 @@ QRect* QHeaderView_VisualRect(const QHeaderView* self, QModelIndex* index) {
 }
 
 // Base class handler implementation
-QRect* QHeaderView_QBaseVisualRect(const QHeaderView* self, QModelIndex* index) {
+QRect* QHeaderView_QBaseVisualRect(const QHeaderView* self, const QModelIndex* index) {
     auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_VisualRect_IsBase(true);
@@ -1184,7 +1184,7 @@ void QHeaderView_OnVisualRect(const QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHeaderView_ScrollTo(QHeaderView* self, QModelIndex* index, int hint) {
+void QHeaderView_ScrollTo(QHeaderView* self, const QModelIndex* index, int hint) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->scrollTo(*index, static_cast<QAbstractItemView::ScrollHint>(hint));
@@ -1194,7 +1194,7 @@ void QHeaderView_ScrollTo(QHeaderView* self, QModelIndex* index, int hint) {
 }
 
 // Base class handler implementation
-void QHeaderView_QBaseScrollTo(QHeaderView* self, QModelIndex* index, int hint) {
+void QHeaderView_QBaseScrollTo(QHeaderView* self, const QModelIndex* index, int hint) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_ScrollTo_IsBase(true);
@@ -1213,7 +1213,7 @@ void QHeaderView_OnScrollTo(QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QModelIndex* QHeaderView_IndexAt(const QHeaderView* self, QPoint* p) {
+QModelIndex* QHeaderView_IndexAt(const QHeaderView* self, const QPoint* p) {
     auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         return new QModelIndex(vqheaderview->indexAt(*p));
@@ -1222,7 +1222,7 @@ QModelIndex* QHeaderView_IndexAt(const QHeaderView* self, QPoint* p) {
 }
 
 // Base class handler implementation
-QModelIndex* QHeaderView_QBaseIndexAt(const QHeaderView* self, QPoint* p) {
+QModelIndex* QHeaderView_QBaseIndexAt(const QHeaderView* self, const QPoint* p) {
     auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_IndexAt_IsBase(true);
@@ -1240,7 +1240,7 @@ void QHeaderView_OnIndexAt(const QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QHeaderView_IsIndexHidden(const QHeaderView* self, QModelIndex* index) {
+bool QHeaderView_IsIndexHidden(const QHeaderView* self, const QModelIndex* index) {
     auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         return vqheaderview->isIndexHidden(*index);
@@ -1250,7 +1250,7 @@ bool QHeaderView_IsIndexHidden(const QHeaderView* self, QModelIndex* index) {
 }
 
 // Base class handler implementation
-bool QHeaderView_QBaseIsIndexHidden(const QHeaderView* self, QModelIndex* index) {
+bool QHeaderView_QBaseIsIndexHidden(const QHeaderView* self, const QModelIndex* index) {
     auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_IsIndexHidden_IsBase(true);
@@ -1296,7 +1296,7 @@ void QHeaderView_OnMoveCursor(QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHeaderView_SetSelection(QHeaderView* self, QRect* rect, int flags) {
+void QHeaderView_SetSelection(QHeaderView* self, const QRect* rect, int flags) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setSelection(*rect, static_cast<QItemSelectionModel::SelectionFlags>(flags));
@@ -1306,7 +1306,7 @@ void QHeaderView_SetSelection(QHeaderView* self, QRect* rect, int flags) {
 }
 
 // Base class handler implementation
-void QHeaderView_QBaseSetSelection(QHeaderView* self, QRect* rect, int flags) {
+void QHeaderView_QBaseSetSelection(QHeaderView* self, const QRect* rect, int flags) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_SetSelection_IsBase(true);
@@ -1325,7 +1325,7 @@ void QHeaderView_OnSetSelection(QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QRegion* QHeaderView_VisualRegionForSelection(const QHeaderView* self, QItemSelection* selection) {
+QRegion* QHeaderView_VisualRegionForSelection(const QHeaderView* self, const QItemSelection* selection) {
     auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         return new QRegion(vqheaderview->visualRegionForSelection(*selection));
@@ -1334,7 +1334,7 @@ QRegion* QHeaderView_VisualRegionForSelection(const QHeaderView* self, QItemSele
 }
 
 // Base class handler implementation
-QRegion* QHeaderView_QBaseVisualRegionForSelection(const QHeaderView* self, QItemSelection* selection) {
+QRegion* QHeaderView_QBaseVisualRegionForSelection(const QHeaderView* self, const QItemSelection* selection) {
     auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_VisualRegionForSelection_IsBase(true);
@@ -1439,7 +1439,7 @@ void QHeaderView_OnSetSelectionModel(QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHeaderView_KeyboardSearch(QHeaderView* self, libqt_string search) {
+void QHeaderView_KeyboardSearch(QHeaderView* self, const libqt_string search) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     QString search_QString = QString::fromUtf8(search.data, search.len);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
@@ -1450,7 +1450,7 @@ void QHeaderView_KeyboardSearch(QHeaderView* self, libqt_string search) {
 }
 
 // Base class handler implementation
-void QHeaderView_QBaseKeyboardSearch(QHeaderView* self, libqt_string search) {
+void QHeaderView_QBaseKeyboardSearch(QHeaderView* self, const libqt_string search) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     QString search_QString = QString::fromUtf8(search.data, search.len);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
@@ -1528,7 +1528,7 @@ void QHeaderView_OnSizeHintForColumn(const QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QAbstractItemDelegate* QHeaderView_ItemDelegateForIndex(const QHeaderView* self, QModelIndex* index) {
+QAbstractItemDelegate* QHeaderView_ItemDelegateForIndex(const QHeaderView* self, const QModelIndex* index) {
     auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         return vqheaderview->itemDelegateForIndex(*index);
@@ -1538,7 +1538,7 @@ QAbstractItemDelegate* QHeaderView_ItemDelegateForIndex(const QHeaderView* self,
 }
 
 // Base class handler implementation
-QAbstractItemDelegate* QHeaderView_QBaseItemDelegateForIndex(const QHeaderView* self, QModelIndex* index) {
+QAbstractItemDelegate* QHeaderView_QBaseItemDelegateForIndex(const QHeaderView* self, const QModelIndex* index) {
     auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_ItemDelegateForIndex_IsBase(true);
@@ -1586,7 +1586,7 @@ void QHeaderView_OnInputMethodQuery(const QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHeaderView_SetRootIndex(QHeaderView* self, QModelIndex* index) {
+void QHeaderView_SetRootIndex(QHeaderView* self, const QModelIndex* index) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setRootIndex(*index);
@@ -1596,7 +1596,7 @@ void QHeaderView_SetRootIndex(QHeaderView* self, QModelIndex* index) {
 }
 
 // Base class handler implementation
-void QHeaderView_QBaseSetRootIndex(QHeaderView* self, QModelIndex* index) {
+void QHeaderView_QBaseSetRootIndex(QHeaderView* self, const QModelIndex* index) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_SetRootIndex_IsBase(true);
@@ -1644,7 +1644,7 @@ void QHeaderView_OnSelectAll(QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHeaderView_RowsAboutToBeRemoved(QHeaderView* self, QModelIndex* parent, int start, int end) {
+void QHeaderView_RowsAboutToBeRemoved(QHeaderView* self, const QModelIndex* parent, int start, int end) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->rowsAboutToBeRemoved(*parent, static_cast<int>(start), static_cast<int>(end));
@@ -1654,7 +1654,7 @@ void QHeaderView_RowsAboutToBeRemoved(QHeaderView* self, QModelIndex* parent, in
 }
 
 // Base class handler implementation
-void QHeaderView_QBaseRowsAboutToBeRemoved(QHeaderView* self, QModelIndex* parent, int start, int end) {
+void QHeaderView_QBaseRowsAboutToBeRemoved(QHeaderView* self, const QModelIndex* parent, int start, int end) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_RowsAboutToBeRemoved_IsBase(true);
@@ -1673,7 +1673,7 @@ void QHeaderView_OnRowsAboutToBeRemoved(QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHeaderView_SelectionChanged(QHeaderView* self, QItemSelection* selected, QItemSelection* deselected) {
+void QHeaderView_SelectionChanged(QHeaderView* self, const QItemSelection* selected, const QItemSelection* deselected) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->selectionChanged(*selected, *deselected);
@@ -1683,7 +1683,7 @@ void QHeaderView_SelectionChanged(QHeaderView* self, QItemSelection* selected, Q
 }
 
 // Base class handler implementation
-void QHeaderView_QBaseSelectionChanged(QHeaderView* self, QItemSelection* selected, QItemSelection* deselected) {
+void QHeaderView_QBaseSelectionChanged(QHeaderView* self, const QItemSelection* selected, const QItemSelection* deselected) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_SelectionChanged_IsBase(true);
@@ -1966,25 +1966,25 @@ void QHeaderView_OnEditorDestroyed(QHeaderView* self, intptr_t slot) {
 libqt_list /* of QModelIndex* */ QHeaderView_SelectedIndexes(const QHeaderView* self) {
     auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
-        QModelIndexList _ret = vqheaderview->selectedIndexes();
+        QList<QModelIndex> _ret = vqheaderview->selectedIndexes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QModelIndexList _ret = ((VirtualQHeaderView*)self)->selectedIndexes();
+        QList<QModelIndex> _ret = ((VirtualQHeaderView*)self)->selectedIndexes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -1995,25 +1995,25 @@ libqt_list /* of QModelIndex* */ QHeaderView_QBaseSelectedIndexes(const QHeaderV
     auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_SelectedIndexes_IsBase(true);
-        QModelIndexList _ret = vqheaderview->selectedIndexes();
+        QList<QModelIndex> _ret = vqheaderview->selectedIndexes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QModelIndexList _ret = ((VirtualQHeaderView*)self)->selectedIndexes();
+        QList<QModelIndex> _ret = ((VirtualQHeaderView*)self)->selectedIndexes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -2028,7 +2028,7 @@ void QHeaderView_OnSelectedIndexes(const QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QHeaderView_Edit2(QHeaderView* self, QModelIndex* index, int trigger, QEvent* event) {
+bool QHeaderView_Edit2(QHeaderView* self, const QModelIndex* index, int trigger, QEvent* event) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         return vqheaderview->edit(*index, static_cast<QAbstractItemView::EditTrigger>(trigger), event);
@@ -2038,7 +2038,7 @@ bool QHeaderView_Edit2(QHeaderView* self, QModelIndex* index, int trigger, QEven
 }
 
 // Base class handler implementation
-bool QHeaderView_QBaseEdit2(QHeaderView* self, QModelIndex* index, int trigger, QEvent* event) {
+bool QHeaderView_QBaseEdit2(QHeaderView* self, const QModelIndex* index, int trigger, QEvent* event) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_Edit2_IsBase(true);
@@ -2057,7 +2057,7 @@ void QHeaderView_OnEdit2(QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-int QHeaderView_SelectionCommand(const QHeaderView* self, QModelIndex* index, QEvent* event) {
+int QHeaderView_SelectionCommand(const QHeaderView* self, const QModelIndex* index, const QEvent* event) {
     auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         return static_cast<int>(vqheaderview->selectionCommand(*index, event));
@@ -2067,7 +2067,7 @@ int QHeaderView_SelectionCommand(const QHeaderView* self, QModelIndex* index, QE
 }
 
 // Base class handler implementation
-int QHeaderView_QBaseSelectionCommand(const QHeaderView* self, QModelIndex* index, QEvent* event) {
+int QHeaderView_QBaseSelectionCommand(const QHeaderView* self, const QModelIndex* index, const QEvent* event) {
     auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_SelectionCommand_IsBase(true);
@@ -3041,7 +3041,7 @@ void QHeaderView_OnHideEvent(QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QHeaderView_NativeEvent(QHeaderView* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QHeaderView_NativeEvent(QHeaderView* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
@@ -3052,7 +3052,7 @@ bool QHeaderView_NativeEvent(QHeaderView* self, libqt_string eventType, void* me
 }
 
 // Base class handler implementation
-bool QHeaderView_QBaseNativeEvent(QHeaderView* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QHeaderView_QBaseNativeEvent(QHeaderView* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
@@ -3246,7 +3246,7 @@ void QHeaderView_OnCustomEvent(QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHeaderView_ConnectNotify(QHeaderView* self, QMetaMethod* signal) {
+void QHeaderView_ConnectNotify(QHeaderView* self, const QMetaMethod* signal) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->connectNotify(*signal);
@@ -3256,7 +3256,7 @@ void QHeaderView_ConnectNotify(QHeaderView* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QHeaderView_QBaseConnectNotify(QHeaderView* self, QMetaMethod* signal) {
+void QHeaderView_QBaseConnectNotify(QHeaderView* self, const QMetaMethod* signal) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_ConnectNotify_IsBase(true);
@@ -3275,7 +3275,7 @@ void QHeaderView_OnConnectNotify(QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHeaderView_DisconnectNotify(QHeaderView* self, QMetaMethod* signal) {
+void QHeaderView_DisconnectNotify(QHeaderView* self, const QMetaMethod* signal) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->disconnectNotify(*signal);
@@ -3285,7 +3285,7 @@ void QHeaderView_DisconnectNotify(QHeaderView* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QHeaderView_QBaseDisconnectNotify(QHeaderView* self, QMetaMethod* signal) {
+void QHeaderView_QBaseDisconnectNotify(QHeaderView* self, const QMetaMethod* signal) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_DisconnectNotify_IsBase(true);
@@ -3362,7 +3362,7 @@ void QHeaderView_OnResizeSections2(QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHeaderView_SectionsInserted(QHeaderView* self, QModelIndex* parent, int logicalFirst, int logicalLast) {
+void QHeaderView_SectionsInserted(QHeaderView* self, const QModelIndex* parent, int logicalFirst, int logicalLast) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->sectionsInserted(*parent, static_cast<int>(logicalFirst), static_cast<int>(logicalLast));
@@ -3372,7 +3372,7 @@ void QHeaderView_SectionsInserted(QHeaderView* self, QModelIndex* parent, int lo
 }
 
 // Base class handler implementation
-void QHeaderView_QBaseSectionsInserted(QHeaderView* self, QModelIndex* parent, int logicalFirst, int logicalLast) {
+void QHeaderView_QBaseSectionsInserted(QHeaderView* self, const QModelIndex* parent, int logicalFirst, int logicalLast) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_SectionsInserted_IsBase(true);
@@ -3391,7 +3391,7 @@ void QHeaderView_OnSectionsInserted(QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHeaderView_SectionsAboutToBeRemoved(QHeaderView* self, QModelIndex* parent, int logicalFirst, int logicalLast) {
+void QHeaderView_SectionsAboutToBeRemoved(QHeaderView* self, const QModelIndex* parent, int logicalFirst, int logicalLast) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->sectionsAboutToBeRemoved(*parent, static_cast<int>(logicalFirst), static_cast<int>(logicalLast));
@@ -3401,7 +3401,7 @@ void QHeaderView_SectionsAboutToBeRemoved(QHeaderView* self, QModelIndex* parent
 }
 
 // Base class handler implementation
-void QHeaderView_QBaseSectionsAboutToBeRemoved(QHeaderView* self, QModelIndex* parent, int logicalFirst, int logicalLast) {
+void QHeaderView_QBaseSectionsAboutToBeRemoved(QHeaderView* self, const QModelIndex* parent, int logicalFirst, int logicalLast) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_SectionsAboutToBeRemoved_IsBase(true);
@@ -3623,7 +3623,7 @@ void QHeaderView_OnExecuteDelayedItemsLayout(QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHeaderView_SetDirtyRegion(QHeaderView* self, QRegion* region) {
+void QHeaderView_SetDirtyRegion(QHeaderView* self, const QRegion* region) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setDirtyRegion(*region);
@@ -3633,7 +3633,7 @@ void QHeaderView_SetDirtyRegion(QHeaderView* self, QRegion* region) {
 }
 
 // Base class handler implementation
-void QHeaderView_QBaseSetDirtyRegion(QHeaderView* self, QRegion* region) {
+void QHeaderView_QBaseSetDirtyRegion(QHeaderView* self, const QRegion* region) {
     auto* vqheaderview = dynamic_cast<VirtualQHeaderView*>(self);
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_SetDirtyRegion_IsBase(true);
@@ -4141,7 +4141,7 @@ void QHeaderView_OnReceivers(const QHeaderView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QHeaderView_IsSignalConnected(const QHeaderView* self, QMetaMethod* signal) {
+bool QHeaderView_IsSignalConnected(const QHeaderView* self, const QMetaMethod* signal) {
     auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         return vqheaderview->isSignalConnected(*signal);
@@ -4151,7 +4151,7 @@ bool QHeaderView_IsSignalConnected(const QHeaderView* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QHeaderView_QBaseIsSignalConnected(const QHeaderView* self, QMetaMethod* signal) {
+bool QHeaderView_QBaseIsSignalConnected(const QHeaderView* self, const QMetaMethod* signal) {
     auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_IsSignalConnected_IsBase(true);
@@ -4166,6 +4166,35 @@ void QHeaderView_OnIsSignalConnected(const QHeaderView* self, intptr_t slot) {
     auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
     if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
         vqheaderview->setQHeaderView_IsSignalConnected_Callback(reinterpret_cast<VirtualQHeaderView::QHeaderView_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QHeaderView_GetDecodedMetricF(const QHeaderView* self, int metricA, int metricB) {
+    auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
+    if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
+        return vqheaderview->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQHeaderView*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QHeaderView_QBaseGetDecodedMetricF(const QHeaderView* self, int metricA, int metricB) {
+    auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
+    if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
+        vqheaderview->setQHeaderView_GetDecodedMetricF_IsBase(true);
+        return vqheaderview->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQHeaderView*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QHeaderView_OnGetDecodedMetricF(const QHeaderView* self, intptr_t slot) {
+    auto* vqheaderview = const_cast<VirtualQHeaderView*>(dynamic_cast<const VirtualQHeaderView*>(self));
+    if (vqheaderview && vqheaderview->isVirtualQHeaderView) {
+        vqheaderview->setQHeaderView_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQHeaderView::QHeaderView_GetDecodedMetricF_Callback>(slot));
     }
 }
 

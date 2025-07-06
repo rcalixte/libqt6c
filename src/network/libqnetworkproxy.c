@@ -1,3 +1,4 @@
+#include "libqhttpheaders.hpp"
 #include <string.h>
 #include "../libqurl.hpp"
 #include "../libqvariant.hpp"
@@ -233,6 +234,14 @@ void q_networkproxy_set_application_proxy(void* proxy) {
 
 QNetworkProxy* q_networkproxy_application_proxy() {
     return QNetworkProxy_ApplicationProxy();
+}
+
+QHttpHeaders* q_networkproxy_headers(void* self) {
+    return QNetworkProxy_Headers((QNetworkProxy*)self);
+}
+
+void q_networkproxy_set_headers(void* self, void* newHeaders) {
+    QNetworkProxy_SetHeaders((QNetworkProxy*)self, (QHttpHeaders*)newHeaders);
 }
 
 QVariant* q_networkproxy_header(void* self, int64_t header) {

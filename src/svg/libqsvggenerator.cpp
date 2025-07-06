@@ -18,6 +18,10 @@ QSvgGenerator* QSvgGenerator_new() {
     return new VirtualQSvgGenerator();
 }
 
+QSvgGenerator* QSvgGenerator_new2(int version) {
+    return new VirtualQSvgGenerator(static_cast<QSvgGenerator::SvgVersion>(version));
+}
+
 libqt_string QSvgGenerator_Title(const QSvgGenerator* self) {
     QString _ret = self->title();
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -30,7 +34,7 @@ libqt_string QSvgGenerator_Title(const QSvgGenerator* self) {
     return _str;
 }
 
-void QSvgGenerator_SetTitle(QSvgGenerator* self, libqt_string title) {
+void QSvgGenerator_SetTitle(QSvgGenerator* self, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     self->setTitle(title_QString);
 }
@@ -47,7 +51,7 @@ libqt_string QSvgGenerator_Description(const QSvgGenerator* self) {
     return _str;
 }
 
-void QSvgGenerator_SetDescription(QSvgGenerator* self, libqt_string description) {
+void QSvgGenerator_SetDescription(QSvgGenerator* self, const libqt_string description) {
     QString description_QString = QString::fromUtf8(description.data, description.len);
     self->setDescription(description_QString);
 }
@@ -56,7 +60,7 @@ QSize* QSvgGenerator_Size(const QSvgGenerator* self) {
     return new QSize(self->size());
 }
 
-void QSvgGenerator_SetSize(QSvgGenerator* self, QSize* size) {
+void QSvgGenerator_SetSize(QSvgGenerator* self, const QSize* size) {
     self->setSize(*size);
 }
 
@@ -68,11 +72,11 @@ QRectF* QSvgGenerator_ViewBoxF(const QSvgGenerator* self) {
     return new QRectF(self->viewBoxF());
 }
 
-void QSvgGenerator_SetViewBox(QSvgGenerator* self, QRect* viewBox) {
+void QSvgGenerator_SetViewBox(QSvgGenerator* self, const QRect* viewBox) {
     self->setViewBox(*viewBox);
 }
 
-void QSvgGenerator_SetViewBoxWithViewBox(QSvgGenerator* self, QRectF* viewBox) {
+void QSvgGenerator_SetViewBoxWithViewBox(QSvgGenerator* self, const QRectF* viewBox) {
     self->setViewBox(*viewBox);
 }
 
@@ -88,7 +92,7 @@ libqt_string QSvgGenerator_FileName(const QSvgGenerator* self) {
     return _str;
 }
 
-void QSvgGenerator_SetFileName(QSvgGenerator* self, libqt_string fileName) {
+void QSvgGenerator_SetFileName(QSvgGenerator* self, const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     self->setFileName(fileName_QString);
 }
@@ -107,6 +111,10 @@ void QSvgGenerator_SetResolution(QSvgGenerator* self, int dpi) {
 
 int QSvgGenerator_Resolution(const QSvgGenerator* self) {
     return self->resolution();
+}
+
+int QSvgGenerator_SvgVersion(const QSvgGenerator* self) {
+    return static_cast<int>(self->svgVersion());
 }
 
 // Derived class handler implementation
@@ -280,6 +288,35 @@ void QSvgGenerator_OnSharedPainter(const QSvgGenerator* self, intptr_t slot) {
     auto* vqsvggenerator = const_cast<VirtualQSvgGenerator*>(dynamic_cast<const VirtualQSvgGenerator*>(self));
     if (vqsvggenerator && vqsvggenerator->isVirtualQSvgGenerator) {
         vqsvggenerator->setQSvgGenerator_SharedPainter_Callback(reinterpret_cast<VirtualQSvgGenerator::QSvgGenerator_SharedPainter_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QSvgGenerator_GetDecodedMetricF(const QSvgGenerator* self, int metricA, int metricB) {
+    auto* vqsvggenerator = const_cast<VirtualQSvgGenerator*>(dynamic_cast<const VirtualQSvgGenerator*>(self));
+    if (vqsvggenerator && vqsvggenerator->isVirtualQSvgGenerator) {
+        return vqsvggenerator->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQSvgGenerator*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QSvgGenerator_QBaseGetDecodedMetricF(const QSvgGenerator* self, int metricA, int metricB) {
+    auto* vqsvggenerator = const_cast<VirtualQSvgGenerator*>(dynamic_cast<const VirtualQSvgGenerator*>(self));
+    if (vqsvggenerator && vqsvggenerator->isVirtualQSvgGenerator) {
+        vqsvggenerator->setQSvgGenerator_GetDecodedMetricF_IsBase(true);
+        return vqsvggenerator->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQSvgGenerator*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QSvgGenerator_OnGetDecodedMetricF(const QSvgGenerator* self, intptr_t slot) {
+    auto* vqsvggenerator = const_cast<VirtualQSvgGenerator*>(dynamic_cast<const VirtualQSvgGenerator*>(self));
+    if (vqsvggenerator && vqsvggenerator->isVirtualQSvgGenerator) {
+        vqsvggenerator->setQSvgGenerator_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQSvgGenerator::QSvgGenerator_GetDecodedMetricF_Callback>(slot));
     }
 }
 

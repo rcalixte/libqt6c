@@ -12,10 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqdeadlinetimer.h"
-#include "libqhostaddress.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qnetworkaddressentry.html
 
 /// q_networkaddressentry_new constructs a new QNetworkAddressEntry object.

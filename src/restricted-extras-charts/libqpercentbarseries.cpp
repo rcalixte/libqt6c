@@ -269,7 +269,7 @@ void QPercentBarSeries_OnCustomEvent(QPercentBarSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPercentBarSeries_ConnectNotify(QPercentBarSeries* self, QMetaMethod* signal) {
+void QPercentBarSeries_ConnectNotify(QPercentBarSeries* self, const QMetaMethod* signal) {
     auto* vqpercentbarseries = dynamic_cast<VirtualQPercentBarSeries*>(self);
     if (vqpercentbarseries && vqpercentbarseries->isVirtualQPercentBarSeries) {
         vqpercentbarseries->connectNotify(*signal);
@@ -279,7 +279,7 @@ void QPercentBarSeries_ConnectNotify(QPercentBarSeries* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-void QPercentBarSeries_QBaseConnectNotify(QPercentBarSeries* self, QMetaMethod* signal) {
+void QPercentBarSeries_QBaseConnectNotify(QPercentBarSeries* self, const QMetaMethod* signal) {
     auto* vqpercentbarseries = dynamic_cast<VirtualQPercentBarSeries*>(self);
     if (vqpercentbarseries && vqpercentbarseries->isVirtualQPercentBarSeries) {
         vqpercentbarseries->setQPercentBarSeries_ConnectNotify_IsBase(true);
@@ -298,7 +298,7 @@ void QPercentBarSeries_OnConnectNotify(QPercentBarSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPercentBarSeries_DisconnectNotify(QPercentBarSeries* self, QMetaMethod* signal) {
+void QPercentBarSeries_DisconnectNotify(QPercentBarSeries* self, const QMetaMethod* signal) {
     auto* vqpercentbarseries = dynamic_cast<VirtualQPercentBarSeries*>(self);
     if (vqpercentbarseries && vqpercentbarseries->isVirtualQPercentBarSeries) {
         vqpercentbarseries->disconnectNotify(*signal);
@@ -308,7 +308,7 @@ void QPercentBarSeries_DisconnectNotify(QPercentBarSeries* self, QMetaMethod* si
 }
 
 // Base class handler implementation
-void QPercentBarSeries_QBaseDisconnectNotify(QPercentBarSeries* self, QMetaMethod* signal) {
+void QPercentBarSeries_QBaseDisconnectNotify(QPercentBarSeries* self, const QMetaMethod* signal) {
     auto* vqpercentbarseries = dynamic_cast<VirtualQPercentBarSeries*>(self);
     if (vqpercentbarseries && vqpercentbarseries->isVirtualQPercentBarSeries) {
         vqpercentbarseries->setQPercentBarSeries_DisconnectNotify_IsBase(true);
@@ -414,7 +414,7 @@ void QPercentBarSeries_OnReceivers(const QPercentBarSeries* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-bool QPercentBarSeries_IsSignalConnected(const QPercentBarSeries* self, QMetaMethod* signal) {
+bool QPercentBarSeries_IsSignalConnected(const QPercentBarSeries* self, const QMetaMethod* signal) {
     auto* vqpercentbarseries = const_cast<VirtualQPercentBarSeries*>(dynamic_cast<const VirtualQPercentBarSeries*>(self));
     if (vqpercentbarseries && vqpercentbarseries->isVirtualQPercentBarSeries) {
         return vqpercentbarseries->isSignalConnected(*signal);
@@ -424,7 +424,7 @@ bool QPercentBarSeries_IsSignalConnected(const QPercentBarSeries* self, QMetaMet
 }
 
 // Base class handler implementation
-bool QPercentBarSeries_QBaseIsSignalConnected(const QPercentBarSeries* self, QMetaMethod* signal) {
+bool QPercentBarSeries_QBaseIsSignalConnected(const QPercentBarSeries* self, const QMetaMethod* signal) {
     auto* vqpercentbarseries = const_cast<VirtualQPercentBarSeries*>(dynamic_cast<const VirtualQPercentBarSeries*>(self));
     if (vqpercentbarseries && vqpercentbarseries->isVirtualQPercentBarSeries) {
         vqpercentbarseries->setQPercentBarSeries_IsSignalConnected_IsBase(true);

@@ -64,8 +64,8 @@ class VirtualQGenericPlugin final : public QGenericPlugin {
     mutable bool qgenericplugin_issignalconnected_isbase = false;
 
   public:
-    VirtualQGenericPlugin() : QGenericPlugin(){};
-    VirtualQGenericPlugin(QObject* parent) : QGenericPlugin(parent){};
+    VirtualQGenericPlugin() : QGenericPlugin() {};
+    VirtualQGenericPlugin(QObject* parent) : QGenericPlugin(parent) {};
 
     ~VirtualQGenericPlugin() {
         qgenericplugin_metacall_callback = nullptr;
@@ -329,18 +329,18 @@ class VirtualQGenericPlugin final : public QGenericPlugin {
     friend void QGenericPlugin_QBaseChildEvent(QGenericPlugin* self, QChildEvent* event);
     friend void QGenericPlugin_CustomEvent(QGenericPlugin* self, QEvent* event);
     friend void QGenericPlugin_QBaseCustomEvent(QGenericPlugin* self, QEvent* event);
-    friend void QGenericPlugin_ConnectNotify(QGenericPlugin* self, QMetaMethod* signal);
-    friend void QGenericPlugin_QBaseConnectNotify(QGenericPlugin* self, QMetaMethod* signal);
-    friend void QGenericPlugin_DisconnectNotify(QGenericPlugin* self, QMetaMethod* signal);
-    friend void QGenericPlugin_QBaseDisconnectNotify(QGenericPlugin* self, QMetaMethod* signal);
+    friend void QGenericPlugin_ConnectNotify(QGenericPlugin* self, const QMetaMethod* signal);
+    friend void QGenericPlugin_QBaseConnectNotify(QGenericPlugin* self, const QMetaMethod* signal);
+    friend void QGenericPlugin_DisconnectNotify(QGenericPlugin* self, const QMetaMethod* signal);
+    friend void QGenericPlugin_QBaseDisconnectNotify(QGenericPlugin* self, const QMetaMethod* signal);
     friend QObject* QGenericPlugin_Sender(const QGenericPlugin* self);
     friend QObject* QGenericPlugin_QBaseSender(const QGenericPlugin* self);
     friend int QGenericPlugin_SenderSignalIndex(const QGenericPlugin* self);
     friend int QGenericPlugin_QBaseSenderSignalIndex(const QGenericPlugin* self);
     friend int QGenericPlugin_Receivers(const QGenericPlugin* self, const char* signal);
     friend int QGenericPlugin_QBaseReceivers(const QGenericPlugin* self, const char* signal);
-    friend bool QGenericPlugin_IsSignalConnected(const QGenericPlugin* self, QMetaMethod* signal);
-    friend bool QGenericPlugin_QBaseIsSignalConnected(const QGenericPlugin* self, QMetaMethod* signal);
+    friend bool QGenericPlugin_IsSignalConnected(const QGenericPlugin* self, const QMetaMethod* signal);
+    friend bool QGenericPlugin_QBaseIsSignalConnected(const QGenericPlugin* self, const QMetaMethod* signal);
 };
 
 #endif

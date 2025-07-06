@@ -82,12 +82,12 @@ void QUndoGroup_RemoveStack(QUndoGroup* self, QUndoStack* stack) {
 libqt_list /* of QUndoStack* */ QUndoGroup_Stacks(const QUndoGroup* self) {
     QList<QUndoStack*> _ret = self->stacks();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QUndoStack** _arr = static_cast<QUndoStack**>(malloc(sizeof(QUndoStack*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QUndoStack** _arr = static_cast<QUndoStack**>(malloc(sizeof(QUndoStack*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -212,7 +212,7 @@ void QUndoGroup_Connect_CanRedoChanged(QUndoGroup* self, intptr_t slot) {
     });
 }
 
-void QUndoGroup_UndoTextChanged(QUndoGroup* self, libqt_string undoText) {
+void QUndoGroup_UndoTextChanged(QUndoGroup* self, const libqt_string undoText) {
     QString undoText_QString = QString::fromUtf8(undoText.data, undoText.len);
     self->undoTextChanged(undoText_QString);
 }
@@ -233,7 +233,7 @@ void QUndoGroup_Connect_UndoTextChanged(QUndoGroup* self, intptr_t slot) {
     });
 }
 
-void QUndoGroup_RedoTextChanged(QUndoGroup* self, libqt_string redoText) {
+void QUndoGroup_RedoTextChanged(QUndoGroup* self, const libqt_string redoText) {
     QString redoText_QString = QString::fromUtf8(redoText.data, redoText.len);
     self->redoTextChanged(redoText_QString);
 }
@@ -278,12 +278,12 @@ libqt_string QUndoGroup_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-QAction* QUndoGroup_CreateUndoAction2(const QUndoGroup* self, QObject* parent, libqt_string prefix) {
+QAction* QUndoGroup_CreateUndoAction2(const QUndoGroup* self, QObject* parent, const libqt_string prefix) {
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     return self->createUndoAction(parent, prefix_QString);
 }
 
-QAction* QUndoGroup_CreateRedoAction2(const QUndoGroup* self, QObject* parent, libqt_string prefix) {
+QAction* QUndoGroup_CreateRedoAction2(const QUndoGroup* self, QObject* parent, const libqt_string prefix) {
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     return self->createRedoAction(parent, prefix_QString);
 }
@@ -434,7 +434,7 @@ void QUndoGroup_OnCustomEvent(QUndoGroup* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QUndoGroup_ConnectNotify(QUndoGroup* self, QMetaMethod* signal) {
+void QUndoGroup_ConnectNotify(QUndoGroup* self, const QMetaMethod* signal) {
     auto* vqundogroup = dynamic_cast<VirtualQUndoGroup*>(self);
     if (vqundogroup && vqundogroup->isVirtualQUndoGroup) {
         vqundogroup->connectNotify(*signal);
@@ -444,7 +444,7 @@ void QUndoGroup_ConnectNotify(QUndoGroup* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QUndoGroup_QBaseConnectNotify(QUndoGroup* self, QMetaMethod* signal) {
+void QUndoGroup_QBaseConnectNotify(QUndoGroup* self, const QMetaMethod* signal) {
     auto* vqundogroup = dynamic_cast<VirtualQUndoGroup*>(self);
     if (vqundogroup && vqundogroup->isVirtualQUndoGroup) {
         vqundogroup->setQUndoGroup_ConnectNotify_IsBase(true);
@@ -463,7 +463,7 @@ void QUndoGroup_OnConnectNotify(QUndoGroup* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QUndoGroup_DisconnectNotify(QUndoGroup* self, QMetaMethod* signal) {
+void QUndoGroup_DisconnectNotify(QUndoGroup* self, const QMetaMethod* signal) {
     auto* vqundogroup = dynamic_cast<VirtualQUndoGroup*>(self);
     if (vqundogroup && vqundogroup->isVirtualQUndoGroup) {
         vqundogroup->disconnectNotify(*signal);
@@ -473,7 +473,7 @@ void QUndoGroup_DisconnectNotify(QUndoGroup* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QUndoGroup_QBaseDisconnectNotify(QUndoGroup* self, QMetaMethod* signal) {
+void QUndoGroup_QBaseDisconnectNotify(QUndoGroup* self, const QMetaMethod* signal) {
     auto* vqundogroup = dynamic_cast<VirtualQUndoGroup*>(self);
     if (vqundogroup && vqundogroup->isVirtualQUndoGroup) {
         vqundogroup->setQUndoGroup_DisconnectNotify_IsBase(true);
@@ -579,7 +579,7 @@ void QUndoGroup_OnReceivers(const QUndoGroup* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QUndoGroup_IsSignalConnected(const QUndoGroup* self, QMetaMethod* signal) {
+bool QUndoGroup_IsSignalConnected(const QUndoGroup* self, const QMetaMethod* signal) {
     auto* vqundogroup = const_cast<VirtualQUndoGroup*>(dynamic_cast<const VirtualQUndoGroup*>(self));
     if (vqundogroup && vqundogroup->isVirtualQUndoGroup) {
         return vqundogroup->isSignalConnected(*signal);
@@ -589,7 +589,7 @@ bool QUndoGroup_IsSignalConnected(const QUndoGroup* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QUndoGroup_QBaseIsSignalConnected(const QUndoGroup* self, QMetaMethod* signal) {
+bool QUndoGroup_QBaseIsSignalConnected(const QUndoGroup* self, const QMetaMethod* signal) {
     auto* vqundogroup = const_cast<VirtualQUndoGroup*>(dynamic_cast<const VirtualQUndoGroup*>(self));
     if (vqundogroup && vqundogroup->isVirtualQUndoGroup) {
         vqundogroup->setQUndoGroup_IsSignalConnected_IsBase(true);

@@ -23,7 +23,7 @@ QPrinter* QPrinter_new() {
     return new VirtualQPrinter();
 }
 
-QPrinter* QPrinter_new2(QPrinterInfo* printer) {
+QPrinter* QPrinter_new2(const QPrinterInfo* printer) {
     return new VirtualQPrinter(*printer);
 }
 
@@ -31,7 +31,7 @@ QPrinter* QPrinter_new3(int mode) {
     return new VirtualQPrinter(static_cast<QPrinter::PrinterMode>(mode));
 }
 
-QPrinter* QPrinter_new4(QPrinterInfo* printer, int mode) {
+QPrinter* QPrinter_new4(const QPrinterInfo* printer, int mode) {
     return new VirtualQPrinter(*printer, static_cast<QPrinter::PrinterMode>(mode));
 }
 
@@ -51,7 +51,7 @@ int QPrinter_PdfVersion(const QPrinter* self) {
     return static_cast<int>(self->pdfVersion());
 }
 
-void QPrinter_SetPrinterName(QPrinter* self, libqt_string printerName) {
+void QPrinter_SetPrinterName(QPrinter* self, const libqt_string printerName) {
     QString printerName_QString = QString::fromUtf8(printerName.data, printerName.len);
     self->setPrinterName(printerName_QString);
 }
@@ -72,7 +72,7 @@ bool QPrinter_IsValid(const QPrinter* self) {
     return self->isValid();
 }
 
-void QPrinter_SetOutputFileName(QPrinter* self, libqt_string outputFileName) {
+void QPrinter_SetOutputFileName(QPrinter* self, const libqt_string outputFileName) {
     QString outputFileName_QString = QString::fromUtf8(outputFileName.data, outputFileName.len);
     self->setOutputFileName(outputFileName_QString);
 }
@@ -89,7 +89,7 @@ libqt_string QPrinter_OutputFileName(const QPrinter* self) {
     return _str;
 }
 
-void QPrinter_SetPrintProgram(QPrinter* self, libqt_string printProgram) {
+void QPrinter_SetPrintProgram(QPrinter* self, const libqt_string printProgram) {
     QString printProgram_QString = QString::fromUtf8(printProgram.data, printProgram.len);
     self->setPrintProgram(printProgram_QString);
 }
@@ -106,7 +106,7 @@ libqt_string QPrinter_PrintProgram(const QPrinter* self) {
     return _str;
 }
 
-void QPrinter_SetDocName(QPrinter* self, libqt_string docName) {
+void QPrinter_SetDocName(QPrinter* self, const libqt_string docName) {
     QString docName_QString = QString::fromUtf8(docName.data, docName.len);
     self->setDocName(docName_QString);
 }
@@ -123,7 +123,7 @@ libqt_string QPrinter_DocName(const QPrinter* self) {
     return _str;
 }
 
-void QPrinter_SetCreator(QPrinter* self, libqt_string creator) {
+void QPrinter_SetCreator(QPrinter* self, const libqt_string creator) {
     QString creator_QString = QString::fromUtf8(creator.data, creator.len);
     self->setCreator(creator_QString);
 }
@@ -211,12 +211,12 @@ int QPrinter_Duplex(const QPrinter* self) {
 libqt_list /* of int */ QPrinter_SupportedResolutions(const QPrinter* self) {
     QList<int> _ret = self->supportedResolutions();
     // Convert QList<> from C++ memory to manually-managed C memory
-    int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ints = _arr;
     return _out;
 }
@@ -249,7 +249,7 @@ libqt_string QPrinter_PrinterSelectionOption(const QPrinter* self) {
     return _str;
 }
 
-void QPrinter_SetPrinterSelectionOption(QPrinter* self, libqt_string printerSelectionOption) {
+void QPrinter_SetPrinterSelectionOption(QPrinter* self, const libqt_string printerSelectionOption) {
     QString printerSelectionOption_QString = QString::fromUtf8(printerSelectionOption.data, printerSelectionOption.len);
     self->setPrinterSelectionOption(printerSelectionOption_QString);
 }
@@ -403,7 +403,7 @@ void QPrinter_OnMetric(const QPrinter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPrinter_SetPageLayout(QPrinter* self, QPageLayout* pageLayout) {
+bool QPrinter_SetPageLayout(QPrinter* self, const QPageLayout* pageLayout) {
     auto* vqprinter = dynamic_cast<VirtualQPrinter*>(self);
     if (vqprinter && vqprinter->isVirtualQPrinter) {
         return vqprinter->setPageLayout(*pageLayout);
@@ -413,7 +413,7 @@ bool QPrinter_SetPageLayout(QPrinter* self, QPageLayout* pageLayout) {
 }
 
 // Base class handler implementation
-bool QPrinter_QBaseSetPageLayout(QPrinter* self, QPageLayout* pageLayout) {
+bool QPrinter_QBaseSetPageLayout(QPrinter* self, const QPageLayout* pageLayout) {
     auto* vqprinter = dynamic_cast<VirtualQPrinter*>(self);
     if (vqprinter && vqprinter->isVirtualQPrinter) {
         vqprinter->setQPrinter_SetPageLayout_IsBase(true);
@@ -432,7 +432,7 @@ void QPrinter_OnSetPageLayout(QPrinter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPrinter_SetPageSize(QPrinter* self, QPageSize* pageSize) {
+bool QPrinter_SetPageSize(QPrinter* self, const QPageSize* pageSize) {
     auto* vqprinter = dynamic_cast<VirtualQPrinter*>(self);
     if (vqprinter && vqprinter->isVirtualQPrinter) {
         return vqprinter->setPageSize(*pageSize);
@@ -442,7 +442,7 @@ bool QPrinter_SetPageSize(QPrinter* self, QPageSize* pageSize) {
 }
 
 // Base class handler implementation
-bool QPrinter_QBaseSetPageSize(QPrinter* self, QPageSize* pageSize) {
+bool QPrinter_QBaseSetPageSize(QPrinter* self, const QPageSize* pageSize) {
     auto* vqprinter = dynamic_cast<VirtualQPrinter*>(self);
     if (vqprinter && vqprinter->isVirtualQPrinter) {
         vqprinter->setQPrinter_SetPageSize_IsBase(true);
@@ -490,7 +490,7 @@ void QPrinter_OnSetPageOrientation(QPrinter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPrinter_SetPageMargins(QPrinter* self, QMarginsF* margins, int units) {
+bool QPrinter_SetPageMargins(QPrinter* self, const QMarginsF* margins, int units) {
     auto* vqprinter = dynamic_cast<VirtualQPrinter*>(self);
     if (vqprinter && vqprinter->isVirtualQPrinter) {
         return vqprinter->setPageMargins(*margins, static_cast<QPageLayout::Unit>(units));
@@ -500,7 +500,7 @@ bool QPrinter_SetPageMargins(QPrinter* self, QMarginsF* margins, int units) {
 }
 
 // Base class handler implementation
-bool QPrinter_QBaseSetPageMargins(QPrinter* self, QMarginsF* margins, int units) {
+bool QPrinter_QBaseSetPageMargins(QPrinter* self, const QMarginsF* margins, int units) {
     auto* vqprinter = dynamic_cast<VirtualQPrinter*>(self);
     if (vqprinter && vqprinter->isVirtualQPrinter) {
         vqprinter->setQPrinter_SetPageMargins_IsBase(true);
@@ -519,7 +519,7 @@ void QPrinter_OnSetPageMargins(QPrinter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPrinter_SetPageRanges(QPrinter* self, QPageRanges* ranges) {
+void QPrinter_SetPageRanges(QPrinter* self, const QPageRanges* ranges) {
     auto* vqprinter = dynamic_cast<VirtualQPrinter*>(self);
     if (vqprinter && vqprinter->isVirtualQPrinter) {
         vqprinter->setPageRanges(*ranges);
@@ -529,7 +529,7 @@ void QPrinter_SetPageRanges(QPrinter* self, QPageRanges* ranges) {
 }
 
 // Base class handler implementation
-void QPrinter_QBaseSetPageRanges(QPrinter* self, QPageRanges* ranges) {
+void QPrinter_QBaseSetPageRanges(QPrinter* self, const QPageRanges* ranges) {
     auto* vqprinter = dynamic_cast<VirtualQPrinter*>(self);
     if (vqprinter && vqprinter->isVirtualQPrinter) {
         vqprinter->setQPrinter_SetPageRanges_IsBase(true);
@@ -660,6 +660,35 @@ void QPrinter_OnSetEngines(QPrinter* self, intptr_t slot) {
     auto* vqprinter = dynamic_cast<VirtualQPrinter*>(self);
     if (vqprinter && vqprinter->isVirtualQPrinter) {
         vqprinter->setQPrinter_SetEngines_Callback(reinterpret_cast<VirtualQPrinter::QPrinter_SetEngines_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QPrinter_GetDecodedMetricF(const QPrinter* self, int metricA, int metricB) {
+    auto* vqprinter = const_cast<VirtualQPrinter*>(dynamic_cast<const VirtualQPrinter*>(self));
+    if (vqprinter && vqprinter->isVirtualQPrinter) {
+        return vqprinter->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQPrinter*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QPrinter_QBaseGetDecodedMetricF(const QPrinter* self, int metricA, int metricB) {
+    auto* vqprinter = const_cast<VirtualQPrinter*>(dynamic_cast<const VirtualQPrinter*>(self));
+    if (vqprinter && vqprinter->isVirtualQPrinter) {
+        vqprinter->setQPrinter_GetDecodedMetricF_IsBase(true);
+        return vqprinter->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQPrinter*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QPrinter_OnGetDecodedMetricF(const QPrinter* self, intptr_t slot) {
+    auto* vqprinter = const_cast<VirtualQPrinter*>(dynamic_cast<const VirtualQPrinter*>(self));
+    if (vqprinter && vqprinter->isVirtualQPrinter) {
+        vqprinter->setQPrinter_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQPrinter::QPrinter_GetDecodedMetricF_Callback>(slot));
     }
 }
 

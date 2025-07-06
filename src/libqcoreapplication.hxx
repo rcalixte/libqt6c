@@ -67,8 +67,8 @@ class VirtualQCoreApplication final : public QCoreApplication {
     mutable bool qcoreapplication_issignalconnected_isbase = false;
 
   public:
-    VirtualQCoreApplication(int& argc, char** argv) : QCoreApplication(argc, argv){};
-    VirtualQCoreApplication(int& argc, char** argv, int param3) : QCoreApplication(argc, argv, param3){};
+    VirtualQCoreApplication(int& argc, char** argv) : QCoreApplication(argc, argv) {};
+    VirtualQCoreApplication(int& argc, char** argv, int param3) : QCoreApplication(argc, argv, param3) {};
 
     ~VirtualQCoreApplication() {
         qcoreapplication_metacall_callback = nullptr;
@@ -340,10 +340,10 @@ class VirtualQCoreApplication final : public QCoreApplication {
     friend void QCoreApplication_QBaseChildEvent(QCoreApplication* self, QChildEvent* event);
     friend void QCoreApplication_CustomEvent(QCoreApplication* self, QEvent* event);
     friend void QCoreApplication_QBaseCustomEvent(QCoreApplication* self, QEvent* event);
-    friend void QCoreApplication_ConnectNotify(QCoreApplication* self, QMetaMethod* signal);
-    friend void QCoreApplication_QBaseConnectNotify(QCoreApplication* self, QMetaMethod* signal);
-    friend void QCoreApplication_DisconnectNotify(QCoreApplication* self, QMetaMethod* signal);
-    friend void QCoreApplication_QBaseDisconnectNotify(QCoreApplication* self, QMetaMethod* signal);
+    friend void QCoreApplication_ConnectNotify(QCoreApplication* self, const QMetaMethod* signal);
+    friend void QCoreApplication_QBaseConnectNotify(QCoreApplication* self, const QMetaMethod* signal);
+    friend void QCoreApplication_DisconnectNotify(QCoreApplication* self, const QMetaMethod* signal);
+    friend void QCoreApplication_QBaseDisconnectNotify(QCoreApplication* self, const QMetaMethod* signal);
     friend void* QCoreApplication_ResolveInterface(const QCoreApplication* self, const char* name, int revision);
     friend void* QCoreApplication_QBaseResolveInterface(const QCoreApplication* self, const char* name, int revision);
     friend QObject* QCoreApplication_Sender(const QCoreApplication* self);
@@ -352,8 +352,8 @@ class VirtualQCoreApplication final : public QCoreApplication {
     friend int QCoreApplication_QBaseSenderSignalIndex(const QCoreApplication* self);
     friend int QCoreApplication_Receivers(const QCoreApplication* self, const char* signal);
     friend int QCoreApplication_QBaseReceivers(const QCoreApplication* self, const char* signal);
-    friend bool QCoreApplication_IsSignalConnected(const QCoreApplication* self, QMetaMethod* signal);
-    friend bool QCoreApplication_QBaseIsSignalConnected(const QCoreApplication* self, QMetaMethod* signal);
+    friend bool QCoreApplication_IsSignalConnected(const QCoreApplication* self, const QMetaMethod* signal);
+    friend bool QCoreApplication_QBaseIsSignalConnected(const QCoreApplication* self, const QMetaMethod* signal);
 };
 
 #endif

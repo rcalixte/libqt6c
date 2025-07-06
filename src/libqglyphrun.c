@@ -1,6 +1,7 @@
 #include "libqpoint.hpp"
 #include "libqrawfont.hpp"
 #include "libqrect.hpp"
+#include <string.h>
 #include "libqglyphrun.hpp"
 #include "libqglyphrun.h"
 
@@ -112,6 +113,26 @@ void q_glyphrun_set_bounding_rect(void* self, void* boundingRect) {
 
 QRectF* q_glyphrun_bounding_rect(void* self) {
     return QGlyphRun_BoundingRect((QGlyphRun*)self);
+}
+
+libqt_list /* of int64_t */ q_glyphrun_string_indexes(void* self) {
+    libqt_list _arr = QGlyphRun_StringIndexes((QGlyphRun*)self);
+    return _arr;
+}
+
+void q_glyphrun_set_string_indexes(void* self, libqt_list stringIndexes) {
+    QGlyphRun_SetStringIndexes((QGlyphRun*)self, stringIndexes);
+}
+
+void q_glyphrun_set_source_string(void* self, const char* sourceString) {
+    QGlyphRun_SetSourceString((QGlyphRun*)self, qstring(sourceString));
+}
+
+const char* q_glyphrun_source_string(void* self) {
+    libqt_string _str = QGlyphRun_SourceString((QGlyphRun*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
 }
 
 bool q_glyphrun_is_empty(void* self) {

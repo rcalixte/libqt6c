@@ -140,6 +140,7 @@ class VirtualQListView final : public QListView {
     using QListView_SenderSignalIndex_Callback = int (*)();
     using QListView_Receivers_Callback = int (*)(const QListView*, const char*);
     using QListView_IsSignalConnected_Callback = bool (*)(const QListView*, QMetaMethod*);
+    using QListView_GetDecodedMetricF_Callback = double (*)(const QListView*, int, int);
 
   protected:
     // Instance callback storage
@@ -262,6 +263,7 @@ class VirtualQListView final : public QListView {
     QListView_SenderSignalIndex_Callback qlistview_sendersignalindex_callback = nullptr;
     QListView_Receivers_Callback qlistview_receivers_callback = nullptr;
     QListView_IsSignalConnected_Callback qlistview_issignalconnected_callback = nullptr;
+    QListView_GetDecodedMetricF_Callback qlistview_getdecodedmetricf_callback = nullptr;
 
     // Instance base flags
     mutable bool qlistview_metacall_isbase = false;
@@ -383,10 +385,11 @@ class VirtualQListView final : public QListView {
     mutable bool qlistview_sendersignalindex_isbase = false;
     mutable bool qlistview_receivers_isbase = false;
     mutable bool qlistview_issignalconnected_isbase = false;
+    mutable bool qlistview_getdecodedmetricf_isbase = false;
 
   public:
-    VirtualQListView(QWidget* parent) : QListView(parent){};
-    VirtualQListView() : QListView(){};
+    VirtualQListView(QWidget* parent) : QListView(parent) {};
+    VirtualQListView() : QListView() {};
 
     ~VirtualQListView() {
         qlistview_metacall_callback = nullptr;
@@ -508,6 +511,7 @@ class VirtualQListView final : public QListView {
         qlistview_sendersignalindex_callback = nullptr;
         qlistview_receivers_callback = nullptr;
         qlistview_issignalconnected_callback = nullptr;
+        qlistview_getdecodedmetricf_callback = nullptr;
     }
 
     // Callback setters
@@ -630,6 +634,7 @@ class VirtualQListView final : public QListView {
     inline void setQListView_SenderSignalIndex_Callback(QListView_SenderSignalIndex_Callback cb) { qlistview_sendersignalindex_callback = cb; }
     inline void setQListView_Receivers_Callback(QListView_Receivers_Callback cb) { qlistview_receivers_callback = cb; }
     inline void setQListView_IsSignalConnected_Callback(QListView_IsSignalConnected_Callback cb) { qlistview_issignalconnected_callback = cb; }
+    inline void setQListView_GetDecodedMetricF_Callback(QListView_GetDecodedMetricF_Callback cb) { qlistview_getdecodedmetricf_callback = cb; }
 
     // Base flag setters
     inline void setQListView_Metacall_IsBase(bool value) const { qlistview_metacall_isbase = value; }
@@ -751,6 +756,7 @@ class VirtualQListView final : public QListView {
     inline void setQListView_SenderSignalIndex_IsBase(bool value) const { qlistview_sendersignalindex_isbase = value; }
     inline void setQListView_Receivers_IsBase(bool value) const { qlistview_receivers_isbase = value; }
     inline void setQListView_IsSignalConnected_IsBase(bool value) const { qlistview_issignalconnected_isbase = value; }
+    inline void setQListView_GetDecodedMetricF_IsBase(bool value) const { qlistview_getdecodedmetricf_isbase = value; }
 
     // Virtual method for C ABI access and custom callback
     virtual int qt_metacall(QMetaObject::Call param1, int param2, void** param3) override {
@@ -903,13 +909,13 @@ class VirtualQListView final : public QListView {
             // Cast returned reference into pointer
             QModelIndex* cbval2 = const_cast<QModelIndex*>(&bottomRight_ret);
             const QList<int>& roles_ret = roles;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            int* roles_arr = static_cast<int*>(malloc(sizeof(int) * roles_ret.length()));
-            for (size_t i = 0; i < roles_ret.length(); ++i) {
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            int* roles_arr = static_cast<int*>(malloc(sizeof(int) * roles_ret.size()));
+            for (size_t i = 0; i < roles_ret.size(); ++i) {
                 roles_arr[i] = roles_ret[i];
             }
             libqt_list roles_out;
-            roles_out.len = roles_ret.length();
+            roles_out.len = roles_ret.size();
             roles_out.data.ints = roles_arr;
             libqt_list /* of int */ cbval3 = roles_out;
 
@@ -1186,13 +1192,13 @@ class VirtualQListView final : public QListView {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QModelIndexList selectedIndexes() const override {
+    virtual QList<QModelIndex> selectedIndexes() const override {
         if (qlistview_selectedindexes_isbase) {
             qlistview_selectedindexes_isbase = false;
             return QListView::selectedIndexes();
         } else if (qlistview_selectedindexes_callback != nullptr) {
             libqt_list /* of QModelIndex* */ callback_ret = qlistview_selectedindexes_callback();
-            QModelIndexList callback_ret_QList;
+            QList<QModelIndex> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             QModelIndex** callback_ret_arr = static_cast<QModelIndex**>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -2501,17 +2507,33 @@ class VirtualQListView final : public QListView {
         }
     }
 
+    // Virtual method for C ABI access and custom callback
+    double getDecodedMetricF(QPaintDevice::PaintDeviceMetric metricA, QPaintDevice::PaintDeviceMetric metricB) const {
+        if (qlistview_getdecodedmetricf_isbase) {
+            qlistview_getdecodedmetricf_isbase = false;
+            return QListView::getDecodedMetricF(metricA, metricB);
+        } else if (qlistview_getdecodedmetricf_callback != nullptr) {
+            int cbval1 = static_cast<int>(metricA);
+            int cbval2 = static_cast<int>(metricB);
+
+            double callback_ret = qlistview_getdecodedmetricf_callback(this, cbval1, cbval2);
+            return static_cast<double>(callback_ret);
+        } else {
+            return QListView::getDecodedMetricF(metricA, metricB);
+        }
+    }
+
     // Friend functions
     friend bool QListView_Event(QListView* self, QEvent* e);
     friend bool QListView_QBaseEvent(QListView* self, QEvent* e);
     friend void QListView_ScrollContentsBy(QListView* self, int dx, int dy);
     friend void QListView_QBaseScrollContentsBy(QListView* self, int dx, int dy);
-    friend void QListView_DataChanged(QListView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles);
-    friend void QListView_QBaseDataChanged(QListView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles);
-    friend void QListView_RowsInserted(QListView* self, QModelIndex* parent, int start, int end);
-    friend void QListView_QBaseRowsInserted(QListView* self, QModelIndex* parent, int start, int end);
-    friend void QListView_RowsAboutToBeRemoved(QListView* self, QModelIndex* parent, int start, int end);
-    friend void QListView_QBaseRowsAboutToBeRemoved(QListView* self, QModelIndex* parent, int start, int end);
+    friend void QListView_DataChanged(QListView* self, const QModelIndex* topLeft, const QModelIndex* bottomRight, const libqt_list /* of int */ roles);
+    friend void QListView_QBaseDataChanged(QListView* self, const QModelIndex* topLeft, const QModelIndex* bottomRight, const libqt_list /* of int */ roles);
+    friend void QListView_RowsInserted(QListView* self, const QModelIndex* parent, int start, int end);
+    friend void QListView_QBaseRowsInserted(QListView* self, const QModelIndex* parent, int start, int end);
+    friend void QListView_RowsAboutToBeRemoved(QListView* self, const QModelIndex* parent, int start, int end);
+    friend void QListView_QBaseRowsAboutToBeRemoved(QListView* self, const QModelIndex* parent, int start, int end);
     friend void QListView_MouseMoveEvent(QListView* self, QMouseEvent* e);
     friend void QListView_QBaseMouseMoveEvent(QListView* self, QMouseEvent* e);
     friend void QListView_MouseReleaseEvent(QListView* self, QMouseEvent* e);
@@ -2540,20 +2562,20 @@ class VirtualQListView final : public QListView {
     friend int QListView_QBaseVerticalOffset(const QListView* self);
     friend QModelIndex* QListView_MoveCursor(QListView* self, int cursorAction, int modifiers);
     friend QModelIndex* QListView_QBaseMoveCursor(QListView* self, int cursorAction, int modifiers);
-    friend void QListView_SetSelection(QListView* self, QRect* rect, int command);
-    friend void QListView_QBaseSetSelection(QListView* self, QRect* rect, int command);
-    friend QRegion* QListView_VisualRegionForSelection(const QListView* self, QItemSelection* selection);
-    friend QRegion* QListView_QBaseVisualRegionForSelection(const QListView* self, QItemSelection* selection);
+    friend void QListView_SetSelection(QListView* self, const QRect* rect, int command);
+    friend void QListView_QBaseSetSelection(QListView* self, const QRect* rect, int command);
+    friend QRegion* QListView_VisualRegionForSelection(const QListView* self, const QItemSelection* selection);
+    friend QRegion* QListView_QBaseVisualRegionForSelection(const QListView* self, const QItemSelection* selection);
     friend libqt_list /* of QModelIndex* */ QListView_SelectedIndexes(const QListView* self);
     friend libqt_list /* of QModelIndex* */ QListView_QBaseSelectedIndexes(const QListView* self);
     friend void QListView_UpdateGeometries(QListView* self);
     friend void QListView_QBaseUpdateGeometries(QListView* self);
-    friend bool QListView_IsIndexHidden(const QListView* self, QModelIndex* index);
-    friend bool QListView_QBaseIsIndexHidden(const QListView* self, QModelIndex* index);
-    friend void QListView_SelectionChanged(QListView* self, QItemSelection* selected, QItemSelection* deselected);
-    friend void QListView_QBaseSelectionChanged(QListView* self, QItemSelection* selected, QItemSelection* deselected);
-    friend void QListView_CurrentChanged(QListView* self, QModelIndex* current, QModelIndex* previous);
-    friend void QListView_QBaseCurrentChanged(QListView* self, QModelIndex* current, QModelIndex* previous);
+    friend bool QListView_IsIndexHidden(const QListView* self, const QModelIndex* index);
+    friend bool QListView_QBaseIsIndexHidden(const QListView* self, const QModelIndex* index);
+    friend void QListView_SelectionChanged(QListView* self, const QItemSelection* selected, const QItemSelection* deselected);
+    friend void QListView_QBaseSelectionChanged(QListView* self, const QItemSelection* selected, const QItemSelection* deselected);
+    friend void QListView_CurrentChanged(QListView* self, const QModelIndex* current, const QModelIndex* previous);
+    friend void QListView_QBaseCurrentChanged(QListView* self, const QModelIndex* current, const QModelIndex* previous);
     friend QSize* QListView_ViewportSizeHint(const QListView* self);
     friend QSize* QListView_QBaseViewportSizeHint(const QListView* self);
     friend void QListView_UpdateEditorData(QListView* self);
@@ -2574,10 +2596,10 @@ class VirtualQListView final : public QListView {
     friend void QListView_QBaseCommitData(QListView* self, QWidget* editor);
     friend void QListView_EditorDestroyed(QListView* self, QObject* editor);
     friend void QListView_QBaseEditorDestroyed(QListView* self, QObject* editor);
-    friend bool QListView_Edit2(QListView* self, QModelIndex* index, int trigger, QEvent* event);
-    friend bool QListView_QBaseEdit2(QListView* self, QModelIndex* index, int trigger, QEvent* event);
-    friend int QListView_SelectionCommand(const QListView* self, QModelIndex* index, QEvent* event);
-    friend int QListView_QBaseSelectionCommand(const QListView* self, QModelIndex* index, QEvent* event);
+    friend bool QListView_Edit2(QListView* self, const QModelIndex* index, int trigger, QEvent* event);
+    friend bool QListView_QBaseEdit2(QListView* self, const QModelIndex* index, int trigger, QEvent* event);
+    friend int QListView_SelectionCommand(const QListView* self, const QModelIndex* index, const QEvent* event);
+    friend int QListView_QBaseSelectionCommand(const QListView* self, const QModelIndex* index, const QEvent* event);
     friend bool QListView_FocusNextPrevChild(QListView* self, bool next);
     friend bool QListView_QBaseFocusNextPrevChild(QListView* self, bool next);
     friend bool QListView_ViewportEvent(QListView* self, QEvent* event);
@@ -2622,8 +2644,8 @@ class VirtualQListView final : public QListView {
     friend void QListView_QBaseShowEvent(QListView* self, QShowEvent* event);
     friend void QListView_HideEvent(QListView* self, QHideEvent* event);
     friend void QListView_QBaseHideEvent(QListView* self, QHideEvent* event);
-    friend bool QListView_NativeEvent(QListView* self, libqt_string eventType, void* message, intptr_t* result);
-    friend bool QListView_QBaseNativeEvent(QListView* self, libqt_string eventType, void* message, intptr_t* result);
+    friend bool QListView_NativeEvent(QListView* self, const libqt_string eventType, void* message, intptr_t* result);
+    friend bool QListView_QBaseNativeEvent(QListView* self, const libqt_string eventType, void* message, intptr_t* result);
     friend int QListView_Metric(const QListView* self, int param1);
     friend int QListView_QBaseMetric(const QListView* self, int param1);
     friend void QListView_InitPainter(const QListView* self, QPainter* painter);
@@ -2636,18 +2658,18 @@ class VirtualQListView final : public QListView {
     friend void QListView_QBaseChildEvent(QListView* self, QChildEvent* event);
     friend void QListView_CustomEvent(QListView* self, QEvent* event);
     friend void QListView_QBaseCustomEvent(QListView* self, QEvent* event);
-    friend void QListView_ConnectNotify(QListView* self, QMetaMethod* signal);
-    friend void QListView_QBaseConnectNotify(QListView* self, QMetaMethod* signal);
-    friend void QListView_DisconnectNotify(QListView* self, QMetaMethod* signal);
-    friend void QListView_QBaseDisconnectNotify(QListView* self, QMetaMethod* signal);
+    friend void QListView_ConnectNotify(QListView* self, const QMetaMethod* signal);
+    friend void QListView_QBaseConnectNotify(QListView* self, const QMetaMethod* signal);
+    friend void QListView_DisconnectNotify(QListView* self, const QMetaMethod* signal);
+    friend void QListView_QBaseDisconnectNotify(QListView* self, const QMetaMethod* signal);
     friend void QListView_ResizeContents(QListView* self, int width, int height);
     friend void QListView_QBaseResizeContents(QListView* self, int width, int height);
     friend QSize* QListView_ContentsSize(const QListView* self);
     friend QSize* QListView_QBaseContentsSize(const QListView* self);
-    friend QRect* QListView_RectForIndex(const QListView* self, QModelIndex* index);
-    friend QRect* QListView_QBaseRectForIndex(const QListView* self, QModelIndex* index);
-    friend void QListView_SetPositionForIndex(QListView* self, QPoint* position, QModelIndex* index);
-    friend void QListView_QBaseSetPositionForIndex(QListView* self, QPoint* position, QModelIndex* index);
+    friend QRect* QListView_RectForIndex(const QListView* self, const QModelIndex* index);
+    friend QRect* QListView_QBaseRectForIndex(const QListView* self, const QModelIndex* index);
+    friend void QListView_SetPositionForIndex(QListView* self, const QPoint* position, const QModelIndex* index);
+    friend void QListView_QBaseSetPositionForIndex(QListView* self, const QPoint* position, const QModelIndex* index);
     friend int QListView_State(const QListView* self);
     friend int QListView_QBaseState(const QListView* self);
     friend void QListView_SetState(QListView* self, int state);
@@ -2656,8 +2678,8 @@ class VirtualQListView final : public QListView {
     friend void QListView_QBaseScheduleDelayedItemsLayout(QListView* self);
     friend void QListView_ExecuteDelayedItemsLayout(QListView* self);
     friend void QListView_QBaseExecuteDelayedItemsLayout(QListView* self);
-    friend void QListView_SetDirtyRegion(QListView* self, QRegion* region);
-    friend void QListView_QBaseSetDirtyRegion(QListView* self, QRegion* region);
+    friend void QListView_SetDirtyRegion(QListView* self, const QRegion* region);
+    friend void QListView_QBaseSetDirtyRegion(QListView* self, const QRegion* region);
     friend void QListView_ScrollDirtyRegion(QListView* self, int dx, int dy);
     friend void QListView_QBaseScrollDirtyRegion(QListView* self, int dx, int dy);
     friend QPoint* QListView_DirtyRegionOffset(const QListView* self);
@@ -2692,8 +2714,10 @@ class VirtualQListView final : public QListView {
     friend int QListView_QBaseSenderSignalIndex(const QListView* self);
     friend int QListView_Receivers(const QListView* self, const char* signal);
     friend int QListView_QBaseReceivers(const QListView* self, const char* signal);
-    friend bool QListView_IsSignalConnected(const QListView* self, QMetaMethod* signal);
-    friend bool QListView_QBaseIsSignalConnected(const QListView* self, QMetaMethod* signal);
+    friend bool QListView_IsSignalConnected(const QListView* self, const QMetaMethod* signal);
+    friend bool QListView_QBaseIsSignalConnected(const QListView* self, const QMetaMethod* signal);
+    friend double QListView_GetDecodedMetricF(const QListView* self, int metricA, int metricB);
+    friend double QListView_QBaseGetDecodedMetricF(const QListView* self, int metricA, int metricB);
 };
 
 #endif

@@ -48,12 +48,12 @@ QSvgWidget* QSvgWidget_new2() {
     return new VirtualQSvgWidget();
 }
 
-QSvgWidget* QSvgWidget_new3(libqt_string file) {
+QSvgWidget* QSvgWidget_new3(const libqt_string file) {
     QString file_QString = QString::fromUtf8(file.data, file.len);
     return new VirtualQSvgWidget(file_QString);
 }
 
-QSvgWidget* QSvgWidget_new4(libqt_string file, QWidget* parent) {
+QSvgWidget* QSvgWidget_new4(const libqt_string file, QWidget* parent) {
     QString file_QString = QString::fromUtf8(file.data, file.len);
     return new VirtualQSvgWidget(file_QString, parent);
 }
@@ -110,12 +110,20 @@ QSvgRenderer* QSvgWidget_Renderer(const QSvgWidget* self) {
     return self->renderer();
 }
 
-void QSvgWidget_Load(QSvgWidget* self, libqt_string file) {
+int QSvgWidget_Options(const QSvgWidget* self) {
+    return static_cast<int>(self->options());
+}
+
+void QSvgWidget_SetOptions(QSvgWidget* self, int options) {
+    self->setOptions(static_cast<QtSvg::Options>(options));
+}
+
+void QSvgWidget_Load(QSvgWidget* self, const libqt_string file) {
     QString file_QString = QString::fromUtf8(file.data, file.len);
     self->load(file_QString);
 }
 
-void QSvgWidget_LoadWithContents(QSvgWidget* self, libqt_string contents) {
+void QSvgWidget_LoadWithContents(QSvgWidget* self, const libqt_string contents) {
     QByteArray contents_QByteArray(contents.data, contents.len);
     self->load(contents_QByteArray);
 }
@@ -1073,7 +1081,7 @@ void QSvgWidget_OnHideEvent(QSvgWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSvgWidget_NativeEvent(QSvgWidget* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QSvgWidget_NativeEvent(QSvgWidget* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqsvgwidget = dynamic_cast<VirtualQSvgWidget*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqsvgwidget && vqsvgwidget->isVirtualQSvgWidget) {
@@ -1084,7 +1092,7 @@ bool QSvgWidget_NativeEvent(QSvgWidget* self, libqt_string eventType, void* mess
 }
 
 // Base class handler implementation
-bool QSvgWidget_QBaseNativeEvent(QSvgWidget* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QSvgWidget_QBaseNativeEvent(QSvgWidget* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqsvgwidget = dynamic_cast<VirtualQSvgWidget*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqsvgwidget && vqsvgwidget->isVirtualQSvgWidget) {
@@ -1452,7 +1460,7 @@ void QSvgWidget_OnCustomEvent(QSvgWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSvgWidget_ConnectNotify(QSvgWidget* self, QMetaMethod* signal) {
+void QSvgWidget_ConnectNotify(QSvgWidget* self, const QMetaMethod* signal) {
     auto* vqsvgwidget = dynamic_cast<VirtualQSvgWidget*>(self);
     if (vqsvgwidget && vqsvgwidget->isVirtualQSvgWidget) {
         vqsvgwidget->connectNotify(*signal);
@@ -1462,7 +1470,7 @@ void QSvgWidget_ConnectNotify(QSvgWidget* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSvgWidget_QBaseConnectNotify(QSvgWidget* self, QMetaMethod* signal) {
+void QSvgWidget_QBaseConnectNotify(QSvgWidget* self, const QMetaMethod* signal) {
     auto* vqsvgwidget = dynamic_cast<VirtualQSvgWidget*>(self);
     if (vqsvgwidget && vqsvgwidget->isVirtualQSvgWidget) {
         vqsvgwidget->setQSvgWidget_ConnectNotify_IsBase(true);
@@ -1481,7 +1489,7 @@ void QSvgWidget_OnConnectNotify(QSvgWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSvgWidget_DisconnectNotify(QSvgWidget* self, QMetaMethod* signal) {
+void QSvgWidget_DisconnectNotify(QSvgWidget* self, const QMetaMethod* signal) {
     auto* vqsvgwidget = dynamic_cast<VirtualQSvgWidget*>(self);
     if (vqsvgwidget && vqsvgwidget->isVirtualQSvgWidget) {
         vqsvgwidget->disconnectNotify(*signal);
@@ -1491,7 +1499,7 @@ void QSvgWidget_DisconnectNotify(QSvgWidget* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSvgWidget_QBaseDisconnectNotify(QSvgWidget* self, QMetaMethod* signal) {
+void QSvgWidget_QBaseDisconnectNotify(QSvgWidget* self, const QMetaMethod* signal) {
     auto* vqsvgwidget = dynamic_cast<VirtualQSvgWidget*>(self);
     if (vqsvgwidget && vqsvgwidget->isVirtualQSvgWidget) {
         vqsvgwidget->setQSvgWidget_DisconnectNotify_IsBase(true);
@@ -1742,7 +1750,7 @@ void QSvgWidget_OnReceivers(const QSvgWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSvgWidget_IsSignalConnected(const QSvgWidget* self, QMetaMethod* signal) {
+bool QSvgWidget_IsSignalConnected(const QSvgWidget* self, const QMetaMethod* signal) {
     auto* vqsvgwidget = const_cast<VirtualQSvgWidget*>(dynamic_cast<const VirtualQSvgWidget*>(self));
     if (vqsvgwidget && vqsvgwidget->isVirtualQSvgWidget) {
         return vqsvgwidget->isSignalConnected(*signal);
@@ -1752,7 +1760,7 @@ bool QSvgWidget_IsSignalConnected(const QSvgWidget* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QSvgWidget_QBaseIsSignalConnected(const QSvgWidget* self, QMetaMethod* signal) {
+bool QSvgWidget_QBaseIsSignalConnected(const QSvgWidget* self, const QMetaMethod* signal) {
     auto* vqsvgwidget = const_cast<VirtualQSvgWidget*>(dynamic_cast<const VirtualQSvgWidget*>(self));
     if (vqsvgwidget && vqsvgwidget->isVirtualQSvgWidget) {
         vqsvgwidget->setQSvgWidget_IsSignalConnected_IsBase(true);
@@ -1767,6 +1775,35 @@ void QSvgWidget_OnIsSignalConnected(const QSvgWidget* self, intptr_t slot) {
     auto* vqsvgwidget = const_cast<VirtualQSvgWidget*>(dynamic_cast<const VirtualQSvgWidget*>(self));
     if (vqsvgwidget && vqsvgwidget->isVirtualQSvgWidget) {
         vqsvgwidget->setQSvgWidget_IsSignalConnected_Callback(reinterpret_cast<VirtualQSvgWidget::QSvgWidget_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QSvgWidget_GetDecodedMetricF(const QSvgWidget* self, int metricA, int metricB) {
+    auto* vqsvgwidget = const_cast<VirtualQSvgWidget*>(dynamic_cast<const VirtualQSvgWidget*>(self));
+    if (vqsvgwidget && vqsvgwidget->isVirtualQSvgWidget) {
+        return vqsvgwidget->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQSvgWidget*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QSvgWidget_QBaseGetDecodedMetricF(const QSvgWidget* self, int metricA, int metricB) {
+    auto* vqsvgwidget = const_cast<VirtualQSvgWidget*>(dynamic_cast<const VirtualQSvgWidget*>(self));
+    if (vqsvgwidget && vqsvgwidget->isVirtualQSvgWidget) {
+        vqsvgwidget->setQSvgWidget_GetDecodedMetricF_IsBase(true);
+        return vqsvgwidget->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQSvgWidget*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QSvgWidget_OnGetDecodedMetricF(const QSvgWidget* self, intptr_t slot) {
+    auto* vqsvgwidget = const_cast<VirtualQSvgWidget*>(dynamic_cast<const VirtualQSvgWidget*>(self));
+    if (vqsvgwidget && vqsvgwidget->isVirtualQSvgWidget) {
+        vqsvgwidget->setQSvgWidget_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQSvgWidget::QSvgWidget_GetDecodedMetricF_Callback>(slot));
     }
 }
 

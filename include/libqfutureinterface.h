@@ -12,11 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqmutex.h"
-#include "libqrunnable.h"
-#include <string.h>
-#include "libqthreadpool.h"
-
 /// https://doc.qt.io/qt-6/qfutureinterfacebase.html
 
 /// q_futureinterfacebase_new constructs a new QFutureInterfaceBase object.

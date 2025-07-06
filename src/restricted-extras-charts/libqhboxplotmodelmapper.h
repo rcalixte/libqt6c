@@ -12,14 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqabstractitemmodel.h"
-#include "libqboxplotmodelmapper.h"
-#include "libqboxplotseries.h"
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qhboxplotmodelmapper-qtcharts.html
 
 /// q_hboxplotmodelmapper_new constructs a new QHBoxPlotModelMapper object.
@@ -249,7 +241,7 @@ QThread* q_hboxplotmodelmapper_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QHBoxPlotModelMapper* self, QThread* thread ```
-void q_hboxplotmodelmapper_move_to_thread(void* self, void* thread);
+bool q_hboxplotmodelmapper_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -264,6 +256,13 @@ int32_t q_hboxplotmodelmapper_start_timer(void* self, int interval);
 ///
 /// ``` QHBoxPlotModelMapper* self, int id ```
 void q_hboxplotmodelmapper_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QHBoxPlotModelMapper* self, enum Qt__TimerId id ```
+void q_hboxplotmodelmapper_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -404,6 +403,13 @@ bool q_hboxplotmodelmapper_inherits(void* self, const char* classname);
 ///
 /// ``` QHBoxPlotModelMapper* self ```
 void q_hboxplotmodelmapper_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QHBoxPlotModelMapper* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_hboxplotmodelmapper_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

@@ -76,6 +76,10 @@ int QTimer_TimerId(const QTimer* self) {
     return self->timerId();
 }
 
+int QTimer_Id(const QTimer* self) {
+    return static_cast<int>(self->id());
+}
+
 void QTimer_SetInterval(QTimer* self, int msec) {
     self->setInterval(static_cast<int>(msec));
 }
@@ -286,7 +290,7 @@ void QTimer_OnCustomEvent(QTimer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTimer_ConnectNotify(QTimer* self, QMetaMethod* signal) {
+void QTimer_ConnectNotify(QTimer* self, const QMetaMethod* signal) {
     auto* vqtimer = dynamic_cast<VirtualQTimer*>(self);
     if (vqtimer && vqtimer->isVirtualQTimer) {
         vqtimer->connectNotify(*signal);
@@ -296,7 +300,7 @@ void QTimer_ConnectNotify(QTimer* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTimer_QBaseConnectNotify(QTimer* self, QMetaMethod* signal) {
+void QTimer_QBaseConnectNotify(QTimer* self, const QMetaMethod* signal) {
     auto* vqtimer = dynamic_cast<VirtualQTimer*>(self);
     if (vqtimer && vqtimer->isVirtualQTimer) {
         vqtimer->setQTimer_ConnectNotify_IsBase(true);
@@ -315,7 +319,7 @@ void QTimer_OnConnectNotify(QTimer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTimer_DisconnectNotify(QTimer* self, QMetaMethod* signal) {
+void QTimer_DisconnectNotify(QTimer* self, const QMetaMethod* signal) {
     auto* vqtimer = dynamic_cast<VirtualQTimer*>(self);
     if (vqtimer && vqtimer->isVirtualQTimer) {
         vqtimer->disconnectNotify(*signal);
@@ -325,7 +329,7 @@ void QTimer_DisconnectNotify(QTimer* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTimer_QBaseDisconnectNotify(QTimer* self, QMetaMethod* signal) {
+void QTimer_QBaseDisconnectNotify(QTimer* self, const QMetaMethod* signal) {
     auto* vqtimer = dynamic_cast<VirtualQTimer*>(self);
     if (vqtimer && vqtimer->isVirtualQTimer) {
         vqtimer->setQTimer_DisconnectNotify_IsBase(true);
@@ -431,7 +435,7 @@ void QTimer_OnReceivers(const QTimer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTimer_IsSignalConnected(const QTimer* self, QMetaMethod* signal) {
+bool QTimer_IsSignalConnected(const QTimer* self, const QMetaMethod* signal) {
     auto* vqtimer = const_cast<VirtualQTimer*>(dynamic_cast<const VirtualQTimer*>(self));
     if (vqtimer && vqtimer->isVirtualQTimer) {
         return vqtimer->isSignalConnected(*signal);
@@ -441,7 +445,7 @@ bool QTimer_IsSignalConnected(const QTimer* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QTimer_QBaseIsSignalConnected(const QTimer* self, QMetaMethod* signal) {
+bool QTimer_QBaseIsSignalConnected(const QTimer* self, const QMetaMethod* signal) {
     auto* vqtimer = const_cast<VirtualQTimer*>(dynamic_cast<const VirtualQTimer*>(self));
     if (vqtimer && vqtimer->isVirtualQTimer) {
         vqtimer->setQTimer_IsSignalConnected_IsBase(true);

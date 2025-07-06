@@ -102,22 +102,22 @@ libqt_string QToolBox_Tr(const char* s) {
     return _str;
 }
 
-int QToolBox_AddItem(QToolBox* self, QWidget* widget, libqt_string text) {
+int QToolBox_AddItem(QToolBox* self, QWidget* widget, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->addItem(widget, text_QString);
 }
 
-int QToolBox_AddItem2(QToolBox* self, QWidget* widget, QIcon* icon, libqt_string text) {
+int QToolBox_AddItem2(QToolBox* self, QWidget* widget, const QIcon* icon, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->addItem(widget, *icon, text_QString);
 }
 
-int QToolBox_InsertItem(QToolBox* self, int index, QWidget* widget, libqt_string text) {
+int QToolBox_InsertItem(QToolBox* self, int index, QWidget* widget, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->insertItem(static_cast<int>(index), widget, text_QString);
 }
 
-int QToolBox_InsertItem2(QToolBox* self, int index, QWidget* widget, QIcon* icon, libqt_string text) {
+int QToolBox_InsertItem2(QToolBox* self, int index, QWidget* widget, const QIcon* icon, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->insertItem(static_cast<int>(index), widget, *icon, text_QString);
 }
@@ -134,7 +134,7 @@ bool QToolBox_IsItemEnabled(const QToolBox* self, int index) {
     return self->isItemEnabled(static_cast<int>(index));
 }
 
-void QToolBox_SetItemText(QToolBox* self, int index, libqt_string text) {
+void QToolBox_SetItemText(QToolBox* self, int index, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setItemText(static_cast<int>(index), text_QString);
 }
@@ -151,7 +151,7 @@ libqt_string QToolBox_ItemText(const QToolBox* self, int index) {
     return _str;
 }
 
-void QToolBox_SetItemIcon(QToolBox* self, int index, QIcon* icon) {
+void QToolBox_SetItemIcon(QToolBox* self, int index, const QIcon* icon) {
     self->setItemIcon(static_cast<int>(index), *icon);
 }
 
@@ -159,7 +159,7 @@ QIcon* QToolBox_ItemIcon(const QToolBox* self, int index) {
     return new QIcon(self->itemIcon(static_cast<int>(index)));
 }
 
-void QToolBox_SetItemToolTip(QToolBox* self, int index, libqt_string toolTip) {
+void QToolBox_SetItemToolTip(QToolBox* self, int index, const libqt_string toolTip) {
     QString toolTip_QString = QString::fromUtf8(toolTip.data, toolTip.len);
     self->setItemToolTip(static_cast<int>(index), toolTip_QString);
 }
@@ -188,7 +188,7 @@ QWidget* QToolBox_Widget(const QToolBox* self, int index) {
     return self->widget(static_cast<int>(index));
 }
 
-int QToolBox_IndexOf(const QToolBox* self, QWidget* widget) {
+int QToolBox_IndexOf(const QToolBox* self, const QWidget* widget) {
     return self->indexOf(widget);
 }
 
@@ -1285,7 +1285,7 @@ void QToolBox_OnHideEvent(QToolBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QToolBox_NativeEvent(QToolBox* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QToolBox_NativeEvent(QToolBox* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqtoolbox = dynamic_cast<VirtualQToolBox*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqtoolbox && vqtoolbox->isVirtualQToolBox) {
@@ -1296,7 +1296,7 @@ bool QToolBox_NativeEvent(QToolBox* self, libqt_string eventType, void* message,
 }
 
 // Base class handler implementation
-bool QToolBox_QBaseNativeEvent(QToolBox* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QToolBox_QBaseNativeEvent(QToolBox* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqtoolbox = dynamic_cast<VirtualQToolBox*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqtoolbox && vqtoolbox->isVirtualQToolBox) {
@@ -1635,7 +1635,7 @@ void QToolBox_OnCustomEvent(QToolBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QToolBox_ConnectNotify(QToolBox* self, QMetaMethod* signal) {
+void QToolBox_ConnectNotify(QToolBox* self, const QMetaMethod* signal) {
     auto* vqtoolbox = dynamic_cast<VirtualQToolBox*>(self);
     if (vqtoolbox && vqtoolbox->isVirtualQToolBox) {
         vqtoolbox->connectNotify(*signal);
@@ -1645,7 +1645,7 @@ void QToolBox_ConnectNotify(QToolBox* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QToolBox_QBaseConnectNotify(QToolBox* self, QMetaMethod* signal) {
+void QToolBox_QBaseConnectNotify(QToolBox* self, const QMetaMethod* signal) {
     auto* vqtoolbox = dynamic_cast<VirtualQToolBox*>(self);
     if (vqtoolbox && vqtoolbox->isVirtualQToolBox) {
         vqtoolbox->setQToolBox_ConnectNotify_IsBase(true);
@@ -1664,7 +1664,7 @@ void QToolBox_OnConnectNotify(QToolBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QToolBox_DisconnectNotify(QToolBox* self, QMetaMethod* signal) {
+void QToolBox_DisconnectNotify(QToolBox* self, const QMetaMethod* signal) {
     auto* vqtoolbox = dynamic_cast<VirtualQToolBox*>(self);
     if (vqtoolbox && vqtoolbox->isVirtualQToolBox) {
         vqtoolbox->disconnectNotify(*signal);
@@ -1674,7 +1674,7 @@ void QToolBox_DisconnectNotify(QToolBox* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QToolBox_QBaseDisconnectNotify(QToolBox* self, QMetaMethod* signal) {
+void QToolBox_QBaseDisconnectNotify(QToolBox* self, const QMetaMethod* signal) {
     auto* vqtoolbox = dynamic_cast<VirtualQToolBox*>(self);
     if (vqtoolbox && vqtoolbox->isVirtualQToolBox) {
         vqtoolbox->setQToolBox_DisconnectNotify_IsBase(true);
@@ -1954,7 +1954,7 @@ void QToolBox_OnReceivers(const QToolBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QToolBox_IsSignalConnected(const QToolBox* self, QMetaMethod* signal) {
+bool QToolBox_IsSignalConnected(const QToolBox* self, const QMetaMethod* signal) {
     auto* vqtoolbox = const_cast<VirtualQToolBox*>(dynamic_cast<const VirtualQToolBox*>(self));
     if (vqtoolbox && vqtoolbox->isVirtualQToolBox) {
         return vqtoolbox->isSignalConnected(*signal);
@@ -1964,7 +1964,7 @@ bool QToolBox_IsSignalConnected(const QToolBox* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QToolBox_QBaseIsSignalConnected(const QToolBox* self, QMetaMethod* signal) {
+bool QToolBox_QBaseIsSignalConnected(const QToolBox* self, const QMetaMethod* signal) {
     auto* vqtoolbox = const_cast<VirtualQToolBox*>(dynamic_cast<const VirtualQToolBox*>(self));
     if (vqtoolbox && vqtoolbox->isVirtualQToolBox) {
         vqtoolbox->setQToolBox_IsSignalConnected_IsBase(true);
@@ -1979,6 +1979,35 @@ void QToolBox_OnIsSignalConnected(const QToolBox* self, intptr_t slot) {
     auto* vqtoolbox = const_cast<VirtualQToolBox*>(dynamic_cast<const VirtualQToolBox*>(self));
     if (vqtoolbox && vqtoolbox->isVirtualQToolBox) {
         vqtoolbox->setQToolBox_IsSignalConnected_Callback(reinterpret_cast<VirtualQToolBox::QToolBox_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QToolBox_GetDecodedMetricF(const QToolBox* self, int metricA, int metricB) {
+    auto* vqtoolbox = const_cast<VirtualQToolBox*>(dynamic_cast<const VirtualQToolBox*>(self));
+    if (vqtoolbox && vqtoolbox->isVirtualQToolBox) {
+        return vqtoolbox->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQToolBox*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QToolBox_QBaseGetDecodedMetricF(const QToolBox* self, int metricA, int metricB) {
+    auto* vqtoolbox = const_cast<VirtualQToolBox*>(dynamic_cast<const VirtualQToolBox*>(self));
+    if (vqtoolbox && vqtoolbox->isVirtualQToolBox) {
+        vqtoolbox->setQToolBox_GetDecodedMetricF_IsBase(true);
+        return vqtoolbox->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQToolBox*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QToolBox_OnGetDecodedMetricF(const QToolBox* self, intptr_t slot) {
+    auto* vqtoolbox = const_cast<VirtualQToolBox*>(dynamic_cast<const VirtualQToolBox*>(self));
+    if (vqtoolbox && vqtoolbox->isVirtualQToolBox) {
+        vqtoolbox->setQToolBox_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQToolBox::QToolBox_GetDecodedMetricF_Callback>(slot));
     }
 }
 

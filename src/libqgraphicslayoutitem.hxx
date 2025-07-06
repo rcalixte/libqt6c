@@ -46,9 +46,9 @@ class VirtualQGraphicsLayoutItem final : public QGraphicsLayoutItem {
     mutable bool qgraphicslayoutitem_setownedbylayout_isbase = false;
 
   public:
-    VirtualQGraphicsLayoutItem() : QGraphicsLayoutItem(){};
-    VirtualQGraphicsLayoutItem(QGraphicsLayoutItem* parent) : QGraphicsLayoutItem(parent){};
-    VirtualQGraphicsLayoutItem(QGraphicsLayoutItem* parent, bool isLayout) : QGraphicsLayoutItem(parent, isLayout){};
+    VirtualQGraphicsLayoutItem() : QGraphicsLayoutItem() {};
+    VirtualQGraphicsLayoutItem(QGraphicsLayoutItem* parent) : QGraphicsLayoutItem(parent) {};
+    VirtualQGraphicsLayoutItem(QGraphicsLayoutItem* parent, bool isLayout) : QGraphicsLayoutItem(parent, isLayout) {};
 
     ~VirtualQGraphicsLayoutItem() {
         qgraphicslayoutitem_setgeometry_callback = nullptr;
@@ -180,8 +180,8 @@ class VirtualQGraphicsLayoutItem final : public QGraphicsLayoutItem {
     }
 
     // Friend functions
-    friend QSizeF* QGraphicsLayoutItem_SizeHint(const QGraphicsLayoutItem* self, int which, QSizeF* constraint);
-    friend QSizeF* QGraphicsLayoutItem_QBaseSizeHint(const QGraphicsLayoutItem* self, int which, QSizeF* constraint);
+    friend QSizeF* QGraphicsLayoutItem_SizeHint(const QGraphicsLayoutItem* self, int which, const QSizeF* constraint);
+    friend QSizeF* QGraphicsLayoutItem_QBaseSizeHint(const QGraphicsLayoutItem* self, int which, const QSizeF* constraint);
     friend void QGraphicsLayoutItem_SetGraphicsItem(QGraphicsLayoutItem* self, QGraphicsItem* item);
     friend void QGraphicsLayoutItem_QBaseSetGraphicsItem(QGraphicsLayoutItem* self, QGraphicsItem* item);
     friend void QGraphicsLayoutItem_SetOwnedByLayout(QGraphicsLayoutItem* self, bool ownedByLayout);

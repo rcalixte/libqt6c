@@ -12,9 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqchar.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qtextboundaryfinder.html
 
 /// q_textboundaryfinder_new constructs a new QTextBoundaryFinder object.

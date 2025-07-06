@@ -12,23 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqclipboard.h"
-#include "libqcoreapplication.h"
-#include "libqcursor.h"
-#include "libqfont.h"
-#include "libqicon.h"
-#include "libqinputmethod.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpalette.h"
-#include "libqpoint.h"
-#include "libqscreen.h"
-#include "libqsessionmanager.h"
-#include <string.h>
-#include "libqstylehints.h"
-#include "libqwindow.h"
-
 /// https://doc.qt.io/qt-6/qguiapplication.html
 
 /// q_guiapplication_new constructs a new QGuiApplication object.
@@ -76,6 +59,11 @@ void q_guiapplication_set_application_display_name(const char* name);
 ///
 ///
 const char* q_guiapplication_application_display_name();
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setBadgeNumber)
+///
+/// ``` QGuiApplication* self, long long number ```
+void q_guiapplication_set_badge_number(void* self, long long number);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setDesktopFileName)
 ///
@@ -628,6 +616,13 @@ void q_guiapplication_process_events2(int64_t flags, int maxtime);
 
 /// Inherited from QCoreApplication
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#processEvents)
+///
+/// ``` int flags, QDeadlineTimer* deadline ```
+void q_guiapplication_process_events3(int64_t flags, void* deadline);
+
+/// Inherited from QCoreApplication
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#sendEvent)
 ///
 /// ``` QObject* receiver, QEvent* event ```
@@ -702,6 +697,13 @@ const char* q_guiapplication_application_file_path();
 ///
 ///
 long long q_guiapplication_application_pid();
+
+/// Inherited from QCoreApplication
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#checkPermission)
+///
+/// ``` QGuiApplication* self, QPermission* permission ```
+int64_t q_guiapplication_check_permission(void* self, void* permission);
 
 /// Inherited from QCoreApplication
 ///
@@ -988,7 +990,7 @@ QThread* q_guiapplication_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QGuiApplication* self, QThread* thread ```
-void q_guiapplication_move_to_thread(void* self, void* thread);
+bool q_guiapplication_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -1003,6 +1005,13 @@ int32_t q_guiapplication_start_timer(void* self, int interval);
 ///
 /// ``` QGuiApplication* self, int id ```
 void q_guiapplication_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QGuiApplication* self, enum Qt__TimerId id ```
+void q_guiapplication_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1143,6 +1152,13 @@ bool q_guiapplication_inherits(void* self, const char* classname);
 ///
 /// ``` QGuiApplication* self ```
 void q_guiapplication_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QGuiApplication* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_guiapplication_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

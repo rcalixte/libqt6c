@@ -117,7 +117,7 @@ int QStackedWidget_CurrentIndex(const QStackedWidget* self) {
     return self->currentIndex();
 }
 
-int QStackedWidget_IndexOf(const QStackedWidget* self, QWidget* param1) {
+int QStackedWidget_IndexOf(const QStackedWidget* self, const QWidget* param1) {
     return self->indexOf(param1);
 }
 
@@ -1172,7 +1172,7 @@ void QStackedWidget_OnHideEvent(QStackedWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QStackedWidget_NativeEvent(QStackedWidget* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QStackedWidget_NativeEvent(QStackedWidget* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqstackedwidget = dynamic_cast<VirtualQStackedWidget*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqstackedwidget && vqstackedwidget->isVirtualQStackedWidget) {
@@ -1183,7 +1183,7 @@ bool QStackedWidget_NativeEvent(QStackedWidget* self, libqt_string eventType, vo
 }
 
 // Base class handler implementation
-bool QStackedWidget_QBaseNativeEvent(QStackedWidget* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QStackedWidget_QBaseNativeEvent(QStackedWidget* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqstackedwidget = dynamic_cast<VirtualQStackedWidget*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqstackedwidget && vqstackedwidget->isVirtualQStackedWidget) {
@@ -1522,7 +1522,7 @@ void QStackedWidget_OnCustomEvent(QStackedWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QStackedWidget_ConnectNotify(QStackedWidget* self, QMetaMethod* signal) {
+void QStackedWidget_ConnectNotify(QStackedWidget* self, const QMetaMethod* signal) {
     auto* vqstackedwidget = dynamic_cast<VirtualQStackedWidget*>(self);
     if (vqstackedwidget && vqstackedwidget->isVirtualQStackedWidget) {
         vqstackedwidget->connectNotify(*signal);
@@ -1532,7 +1532,7 @@ void QStackedWidget_ConnectNotify(QStackedWidget* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QStackedWidget_QBaseConnectNotify(QStackedWidget* self, QMetaMethod* signal) {
+void QStackedWidget_QBaseConnectNotify(QStackedWidget* self, const QMetaMethod* signal) {
     auto* vqstackedwidget = dynamic_cast<VirtualQStackedWidget*>(self);
     if (vqstackedwidget && vqstackedwidget->isVirtualQStackedWidget) {
         vqstackedwidget->setQStackedWidget_ConnectNotify_IsBase(true);
@@ -1551,7 +1551,7 @@ void QStackedWidget_OnConnectNotify(QStackedWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QStackedWidget_DisconnectNotify(QStackedWidget* self, QMetaMethod* signal) {
+void QStackedWidget_DisconnectNotify(QStackedWidget* self, const QMetaMethod* signal) {
     auto* vqstackedwidget = dynamic_cast<VirtualQStackedWidget*>(self);
     if (vqstackedwidget && vqstackedwidget->isVirtualQStackedWidget) {
         vqstackedwidget->disconnectNotify(*signal);
@@ -1561,7 +1561,7 @@ void QStackedWidget_DisconnectNotify(QStackedWidget* self, QMetaMethod* signal) 
 }
 
 // Base class handler implementation
-void QStackedWidget_QBaseDisconnectNotify(QStackedWidget* self, QMetaMethod* signal) {
+void QStackedWidget_QBaseDisconnectNotify(QStackedWidget* self, const QMetaMethod* signal) {
     auto* vqstackedwidget = dynamic_cast<VirtualQStackedWidget*>(self);
     if (vqstackedwidget && vqstackedwidget->isVirtualQStackedWidget) {
         vqstackedwidget->setQStackedWidget_DisconnectNotify_IsBase(true);
@@ -1841,7 +1841,7 @@ void QStackedWidget_OnReceivers(const QStackedWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QStackedWidget_IsSignalConnected(const QStackedWidget* self, QMetaMethod* signal) {
+bool QStackedWidget_IsSignalConnected(const QStackedWidget* self, const QMetaMethod* signal) {
     auto* vqstackedwidget = const_cast<VirtualQStackedWidget*>(dynamic_cast<const VirtualQStackedWidget*>(self));
     if (vqstackedwidget && vqstackedwidget->isVirtualQStackedWidget) {
         return vqstackedwidget->isSignalConnected(*signal);
@@ -1851,7 +1851,7 @@ bool QStackedWidget_IsSignalConnected(const QStackedWidget* self, QMetaMethod* s
 }
 
 // Base class handler implementation
-bool QStackedWidget_QBaseIsSignalConnected(const QStackedWidget* self, QMetaMethod* signal) {
+bool QStackedWidget_QBaseIsSignalConnected(const QStackedWidget* self, const QMetaMethod* signal) {
     auto* vqstackedwidget = const_cast<VirtualQStackedWidget*>(dynamic_cast<const VirtualQStackedWidget*>(self));
     if (vqstackedwidget && vqstackedwidget->isVirtualQStackedWidget) {
         vqstackedwidget->setQStackedWidget_IsSignalConnected_IsBase(true);
@@ -1866,6 +1866,35 @@ void QStackedWidget_OnIsSignalConnected(const QStackedWidget* self, intptr_t slo
     auto* vqstackedwidget = const_cast<VirtualQStackedWidget*>(dynamic_cast<const VirtualQStackedWidget*>(self));
     if (vqstackedwidget && vqstackedwidget->isVirtualQStackedWidget) {
         vqstackedwidget->setQStackedWidget_IsSignalConnected_Callback(reinterpret_cast<VirtualQStackedWidget::QStackedWidget_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QStackedWidget_GetDecodedMetricF(const QStackedWidget* self, int metricA, int metricB) {
+    auto* vqstackedwidget = const_cast<VirtualQStackedWidget*>(dynamic_cast<const VirtualQStackedWidget*>(self));
+    if (vqstackedwidget && vqstackedwidget->isVirtualQStackedWidget) {
+        return vqstackedwidget->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQStackedWidget*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QStackedWidget_QBaseGetDecodedMetricF(const QStackedWidget* self, int metricA, int metricB) {
+    auto* vqstackedwidget = const_cast<VirtualQStackedWidget*>(dynamic_cast<const VirtualQStackedWidget*>(self));
+    if (vqstackedwidget && vqstackedwidget->isVirtualQStackedWidget) {
+        vqstackedwidget->setQStackedWidget_GetDecodedMetricF_IsBase(true);
+        return vqstackedwidget->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQStackedWidget*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QStackedWidget_OnGetDecodedMetricF(const QStackedWidget* self, intptr_t slot) {
+    auto* vqstackedwidget = const_cast<VirtualQStackedWidget*>(dynamic_cast<const VirtualQStackedWidget*>(self));
+    if (vqstackedwidget && vqstackedwidget->isVirtualQStackedWidget) {
+        vqstackedwidget->setQStackedWidget_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQStackedWidget::QStackedWidget_GetDecodedMetricF_Callback>(slot));
     }
 }
 

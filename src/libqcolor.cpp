@@ -10,7 +10,7 @@
 #include "libqcolor.hpp"
 #include "libqcolor.hxx"
 
-QColor* QColor_new(QColor* other) {
+QColor* QColor_new(const QColor* other) {
     return new QColor(*other);
 }
 
@@ -38,7 +38,7 @@ QColor* QColor_new7(QRgba64* rgba64) {
     return new QColor(*rgba64);
 }
 
-QColor* QColor_new8(libqt_string name) {
+QColor* QColor_new8(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QColor(name_QString);
 }
@@ -55,7 +55,7 @@ QColor* QColor_new11(int spec, uint16_t a1, uint16_t a2, uint16_t a3, uint16_t a
     return new QColor(static_cast<QColor::Spec>(spec), static_cast<ushort>(a1), static_cast<ushort>(a2), static_cast<ushort>(a3), static_cast<ushort>(a4));
 }
 
-QColor* QColor_new12(QColor* param1) {
+QColor* QColor_new12(const QColor* param1) {
     return new QColor(*param1);
 }
 
@@ -99,16 +99,16 @@ libqt_string QColor_Name(const QColor* self) {
     return _str;
 }
 
-void QColor_SetNamedColor(QColor* self, libqt_string name) {
+void QColor_SetNamedColor(QColor* self, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     self->setNamedColor(name_QString);
 }
 
 libqt_list /* of libqt_string */ QColor_ColorNames() {
-    QStringList _ret = QColor::colorNames();
+    QList<QString> _ret = QColor::colorNames();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -120,7 +120,7 @@ libqt_list /* of libqt_string */ QColor_ColorNames() {
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -457,11 +457,11 @@ QColor* QColor_Darker(const QColor* self) {
     return new QColor(self->darker());
 }
 
-bool QColor_OperatorEqual(const QColor* self, QColor* c) {
+bool QColor_OperatorEqual(const QColor* self, const QColor* c) {
     return (*self == *c);
 }
 
-bool QColor_OperatorNotEqual(const QColor* self, QColor* c) {
+bool QColor_OperatorNotEqual(const QColor* self, const QColor* c) {
     return (*self != *c);
 }
 
@@ -469,7 +469,7 @@ QVariant* QColor_ToQVariant(const QColor* self) {
     return new QVariant(self->operator QVariant());
 }
 
-bool QColor_IsValidColor(libqt_string name) {
+bool QColor_IsValidColor(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return QColor::isValidColor(name_QString);
 }

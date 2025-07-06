@@ -12,9 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqdatetime.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qhstspolicy.html
 
 /// q_hstspolicy_new constructs a new QHstsPolicy object.

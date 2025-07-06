@@ -73,8 +73,8 @@ class VirtualQSslServer final : public QSslServer {
     mutable bool qsslserver_issignalconnected_isbase = false;
 
   public:
-    VirtualQSslServer() : QSslServer(){};
-    VirtualQSslServer(QObject* parent) : QSslServer(parent){};
+    VirtualQSslServer() : QSslServer() {};
+    VirtualQSslServer(QObject* parent) : QSslServer(parent) {};
 
     ~VirtualQSslServer() {
         qsslserver_metacall_callback = nullptr;
@@ -375,10 +375,10 @@ class VirtualQSslServer final : public QSslServer {
     friend void QSslServer_QBaseChildEvent(QSslServer* self, QChildEvent* event);
     friend void QSslServer_CustomEvent(QSslServer* self, QEvent* event);
     friend void QSslServer_QBaseCustomEvent(QSslServer* self, QEvent* event);
-    friend void QSslServer_ConnectNotify(QSslServer* self, QMetaMethod* signal);
-    friend void QSslServer_QBaseConnectNotify(QSslServer* self, QMetaMethod* signal);
-    friend void QSslServer_DisconnectNotify(QSslServer* self, QMetaMethod* signal);
-    friend void QSslServer_QBaseDisconnectNotify(QSslServer* self, QMetaMethod* signal);
+    friend void QSslServer_ConnectNotify(QSslServer* self, const QMetaMethod* signal);
+    friend void QSslServer_QBaseConnectNotify(QSslServer* self, const QMetaMethod* signal);
+    friend void QSslServer_DisconnectNotify(QSslServer* self, const QMetaMethod* signal);
+    friend void QSslServer_QBaseDisconnectNotify(QSslServer* self, const QMetaMethod* signal);
     friend void QSslServer_AddPendingConnection(QSslServer* self, QTcpSocket* socket);
     friend void QSslServer_QBaseAddPendingConnection(QSslServer* self, QTcpSocket* socket);
     friend QObject* QSslServer_Sender(const QSslServer* self);
@@ -387,8 +387,8 @@ class VirtualQSslServer final : public QSslServer {
     friend int QSslServer_QBaseSenderSignalIndex(const QSslServer* self);
     friend int QSslServer_Receivers(const QSslServer* self, const char* signal);
     friend int QSslServer_QBaseReceivers(const QSslServer* self, const char* signal);
-    friend bool QSslServer_IsSignalConnected(const QSslServer* self, QMetaMethod* signal);
-    friend bool QSslServer_QBaseIsSignalConnected(const QSslServer* self, QMetaMethod* signal);
+    friend bool QSslServer_IsSignalConnected(const QSslServer* self, const QMetaMethod* signal);
+    friend bool QSslServer_QBaseIsSignalConnected(const QSslServer* self, const QMetaMethod* signal);
 };
 
 #endif

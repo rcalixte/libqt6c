@@ -232,8 +232,8 @@ class VirtualQConcatenateTablesProxyModel final : public QConcatenateTablesProxy
     mutable bool qconcatenatetablesproxymodel_issignalconnected_isbase = false;
 
   public:
-    VirtualQConcatenateTablesProxyModel() : QConcatenateTablesProxyModel(){};
-    VirtualQConcatenateTablesProxyModel(QObject* parent) : QConcatenateTablesProxyModel(parent){};
+    VirtualQConcatenateTablesProxyModel() : QConcatenateTablesProxyModel() {};
+    VirtualQConcatenateTablesProxyModel(QObject* parent) : QConcatenateTablesProxyModel(parent) {};
 
     ~VirtualQConcatenateTablesProxyModel() {
         qconcatenatetablesproxymodel_metacall_callback = nullptr;
@@ -538,7 +538,7 @@ class VirtualQConcatenateTablesProxyModel final : public QConcatenateTablesProxy
             // Cast returned reference into pointer
             QModelIndex* cbval1 = const_cast<QModelIndex*>(&index_ret);
             const QMap<int, QVariant>& roles_ret = roles;
-            // Convert QMap<> from C++ memory to manually-managed C memory
+            // Convert const QMap<> from C++ memory to manually-managed C memory
             int* roles_karr = static_cast<int*>(malloc(sizeof(int) * roles_ret.size()));
             QVariant** roles_varr = static_cast<QVariant**>(malloc(sizeof(QVariant*) * roles_ret.size()));
             int roles_ctr = 0;
@@ -665,13 +665,13 @@ class VirtualQConcatenateTablesProxyModel final : public QConcatenateTablesProxy
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QStringList mimeTypes() const override {
+    virtual QList<QString> mimeTypes() const override {
         if (qconcatenatetablesproxymodel_mimetypes_isbase) {
             qconcatenatetablesproxymodel_mimetypes_isbase = false;
             return QConcatenateTablesProxyModel::mimeTypes();
         } else if (qconcatenatetablesproxymodel_mimetypes_callback != nullptr) {
             libqt_list /* of libqt_string */ callback_ret = qconcatenatetablesproxymodel_mimetypes_callback();
-            QStringList callback_ret_QList;
+            QList<QString> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             libqt_string* callback_ret_arr = static_cast<libqt_string*>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -685,19 +685,19 @@ class VirtualQConcatenateTablesProxyModel final : public QConcatenateTablesProxy
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QMimeData* mimeData(const QModelIndexList& indexes) const override {
+    virtual QMimeData* mimeData(const QList<QModelIndex>& indexes) const override {
         if (qconcatenatetablesproxymodel_mimedata_isbase) {
             qconcatenatetablesproxymodel_mimedata_isbase = false;
             return QConcatenateTablesProxyModel::mimeData(indexes);
         } else if (qconcatenatetablesproxymodel_mimedata_callback != nullptr) {
-            const QModelIndexList& indexes_ret = indexes;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.length()));
-            for (size_t i = 0; i < indexes_ret.length(); ++i) {
+            const QList<QModelIndex>& indexes_ret = indexes;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.size()));
+            for (size_t i = 0; i < indexes_ret.size(); ++i) {
                 indexes_arr[i] = new QModelIndex(indexes_ret[i]);
             }
             libqt_list indexes_out;
-            indexes_out.len = indexes_ret.length();
+            indexes_out.len = indexes_ret.size();
             indexes_out.data.ptr = static_cast<void*>(indexes_arr);
             libqt_list /* of QModelIndex* */ cbval1 = indexes_out;
 
@@ -1054,7 +1054,7 @@ class VirtualQConcatenateTablesProxyModel final : public QConcatenateTablesProxy
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QModelIndexList match(const QModelIndex& start, int role, const QVariant& value, int hits, Qt::MatchFlags flags) const override {
+    virtual QList<QModelIndex> match(const QModelIndex& start, int role, const QVariant& value, int hits, Qt::MatchFlags flags) const override {
         if (qconcatenatetablesproxymodel_match_isbase) {
             qconcatenatetablesproxymodel_match_isbase = false;
             return QConcatenateTablesProxyModel::match(start, role, value, hits, flags);
@@ -1070,7 +1070,7 @@ class VirtualQConcatenateTablesProxyModel final : public QConcatenateTablesProxy
             int cbval5 = static_cast<int>(flags);
 
             libqt_list /* of QModelIndex* */ callback_ret = qconcatenatetablesproxymodel_match_callback(this, cbval1, cbval2, cbval3, cbval4, cbval5);
-            QModelIndexList callback_ret_QList;
+            QList<QModelIndex> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             QModelIndex** callback_ret_arr = static_cast<QModelIndex**>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -1279,19 +1279,19 @@ class VirtualQConcatenateTablesProxyModel final : public QConcatenateTablesProxy
     }
 
     // Virtual method for C ABI access and custom callback
-    void encodeData(const QModelIndexList& indexes, QDataStream& stream) const {
+    void encodeData(const QList<QModelIndex>& indexes, QDataStream& stream) const {
         if (qconcatenatetablesproxymodel_encodedata_isbase) {
             qconcatenatetablesproxymodel_encodedata_isbase = false;
             QConcatenateTablesProxyModel::encodeData(indexes, stream);
         } else if (qconcatenatetablesproxymodel_encodedata_callback != nullptr) {
-            const QModelIndexList& indexes_ret = indexes;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.length()));
-            for (size_t i = 0; i < indexes_ret.length(); ++i) {
+            const QList<QModelIndex>& indexes_ret = indexes;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.size()));
+            for (size_t i = 0; i < indexes_ret.size(); ++i) {
                 indexes_arr[i] = new QModelIndex(indexes_ret[i]);
             }
             libqt_list indexes_out;
-            indexes_out.len = indexes_ret.length();
+            indexes_out.len = indexes_ret.size();
             indexes_out.data.ptr = static_cast<void*>(indexes_arr);
             libqt_list /* of QModelIndex* */ cbval1 = indexes_out;
             QDataStream& stream_ret = stream;
@@ -1560,29 +1560,29 @@ class VirtualQConcatenateTablesProxyModel final : public QConcatenateTablesProxy
     }
 
     // Virtual method for C ABI access and custom callback
-    void changePersistentIndexList(const QModelIndexList& from, const QModelIndexList& to) {
+    void changePersistentIndexList(const QList<QModelIndex>& from, const QList<QModelIndex>& to) {
         if (qconcatenatetablesproxymodel_changepersistentindexlist_isbase) {
             qconcatenatetablesproxymodel_changepersistentindexlist_isbase = false;
             QConcatenateTablesProxyModel::changePersistentIndexList(from, to);
         } else if (qconcatenatetablesproxymodel_changepersistentindexlist_callback != nullptr) {
-            const QModelIndexList& from_ret = from;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** from_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * from_ret.length()));
-            for (size_t i = 0; i < from_ret.length(); ++i) {
+            const QList<QModelIndex>& from_ret = from;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** from_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * from_ret.size()));
+            for (size_t i = 0; i < from_ret.size(); ++i) {
                 from_arr[i] = new QModelIndex(from_ret[i]);
             }
             libqt_list from_out;
-            from_out.len = from_ret.length();
+            from_out.len = from_ret.size();
             from_out.data.ptr = static_cast<void*>(from_arr);
             libqt_list /* of QModelIndex* */ cbval1 = from_out;
-            const QModelIndexList& to_ret = to;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** to_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * to_ret.length()));
-            for (size_t i = 0; i < to_ret.length(); ++i) {
+            const QList<QModelIndex>& to_ret = to;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** to_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * to_ret.size()));
+            for (size_t i = 0; i < to_ret.size(); ++i) {
                 to_arr[i] = new QModelIndex(to_ret[i]);
             }
             libqt_list to_out;
-            to_out.len = to_ret.length();
+            to_out.len = to_ret.size();
             to_out.data.ptr = static_cast<void*>(to_arr);
             libqt_list /* of QModelIndex* */ cbval2 = to_out;
 
@@ -1593,13 +1593,13 @@ class VirtualQConcatenateTablesProxyModel final : public QConcatenateTablesProxy
     }
 
     // Virtual method for C ABI access and custom callback
-    QModelIndexList persistentIndexList() const {
+    QList<QModelIndex> persistentIndexList() const {
         if (qconcatenatetablesproxymodel_persistentindexlist_isbase) {
             qconcatenatetablesproxymodel_persistentindexlist_isbase = false;
             return QConcatenateTablesProxyModel::persistentIndexList();
         } else if (qconcatenatetablesproxymodel_persistentindexlist_callback != nullptr) {
             libqt_list /* of QModelIndex* */ callback_ret = qconcatenatetablesproxymodel_persistentindexlist_callback();
-            QModelIndexList callback_ret_QList;
+            QList<QModelIndex> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             QModelIndex** callback_ret_arr = static_cast<QModelIndex**>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -1678,48 +1678,48 @@ class VirtualQConcatenateTablesProxyModel final : public QConcatenateTablesProxy
     friend void QConcatenateTablesProxyModel_QBaseChildEvent(QConcatenateTablesProxyModel* self, QChildEvent* event);
     friend void QConcatenateTablesProxyModel_CustomEvent(QConcatenateTablesProxyModel* self, QEvent* event);
     friend void QConcatenateTablesProxyModel_QBaseCustomEvent(QConcatenateTablesProxyModel* self, QEvent* event);
-    friend void QConcatenateTablesProxyModel_ConnectNotify(QConcatenateTablesProxyModel* self, QMetaMethod* signal);
-    friend void QConcatenateTablesProxyModel_QBaseConnectNotify(QConcatenateTablesProxyModel* self, QMetaMethod* signal);
-    friend void QConcatenateTablesProxyModel_DisconnectNotify(QConcatenateTablesProxyModel* self, QMetaMethod* signal);
-    friend void QConcatenateTablesProxyModel_QBaseDisconnectNotify(QConcatenateTablesProxyModel* self, QMetaMethod* signal);
+    friend void QConcatenateTablesProxyModel_ConnectNotify(QConcatenateTablesProxyModel* self, const QMetaMethod* signal);
+    friend void QConcatenateTablesProxyModel_QBaseConnectNotify(QConcatenateTablesProxyModel* self, const QMetaMethod* signal);
+    friend void QConcatenateTablesProxyModel_DisconnectNotify(QConcatenateTablesProxyModel* self, const QMetaMethod* signal);
+    friend void QConcatenateTablesProxyModel_QBaseDisconnectNotify(QConcatenateTablesProxyModel* self, const QMetaMethod* signal);
     friend QModelIndex* QConcatenateTablesProxyModel_CreateIndex(const QConcatenateTablesProxyModel* self, int row, int column);
     friend QModelIndex* QConcatenateTablesProxyModel_QBaseCreateIndex(const QConcatenateTablesProxyModel* self, int row, int column);
-    friend void QConcatenateTablesProxyModel_EncodeData(const QConcatenateTablesProxyModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
-    friend void QConcatenateTablesProxyModel_QBaseEncodeData(const QConcatenateTablesProxyModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
-    friend bool QConcatenateTablesProxyModel_DecodeData(QConcatenateTablesProxyModel* self, int row, int column, QModelIndex* parent, QDataStream* stream);
-    friend bool QConcatenateTablesProxyModel_QBaseDecodeData(QConcatenateTablesProxyModel* self, int row, int column, QModelIndex* parent, QDataStream* stream);
-    friend void QConcatenateTablesProxyModel_BeginInsertRows(QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last);
-    friend void QConcatenateTablesProxyModel_QBaseBeginInsertRows(QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last);
+    friend void QConcatenateTablesProxyModel_EncodeData(const QConcatenateTablesProxyModel* self, const libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
+    friend void QConcatenateTablesProxyModel_QBaseEncodeData(const QConcatenateTablesProxyModel* self, const libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
+    friend bool QConcatenateTablesProxyModel_DecodeData(QConcatenateTablesProxyModel* self, int row, int column, const QModelIndex* parent, QDataStream* stream);
+    friend bool QConcatenateTablesProxyModel_QBaseDecodeData(QConcatenateTablesProxyModel* self, int row, int column, const QModelIndex* parent, QDataStream* stream);
+    friend void QConcatenateTablesProxyModel_BeginInsertRows(QConcatenateTablesProxyModel* self, const QModelIndex* parent, int first, int last);
+    friend void QConcatenateTablesProxyModel_QBaseBeginInsertRows(QConcatenateTablesProxyModel* self, const QModelIndex* parent, int first, int last);
     friend void QConcatenateTablesProxyModel_EndInsertRows(QConcatenateTablesProxyModel* self);
     friend void QConcatenateTablesProxyModel_QBaseEndInsertRows(QConcatenateTablesProxyModel* self);
-    friend void QConcatenateTablesProxyModel_BeginRemoveRows(QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last);
-    friend void QConcatenateTablesProxyModel_QBaseBeginRemoveRows(QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last);
+    friend void QConcatenateTablesProxyModel_BeginRemoveRows(QConcatenateTablesProxyModel* self, const QModelIndex* parent, int first, int last);
+    friend void QConcatenateTablesProxyModel_QBaseBeginRemoveRows(QConcatenateTablesProxyModel* self, const QModelIndex* parent, int first, int last);
     friend void QConcatenateTablesProxyModel_EndRemoveRows(QConcatenateTablesProxyModel* self);
     friend void QConcatenateTablesProxyModel_QBaseEndRemoveRows(QConcatenateTablesProxyModel* self);
-    friend bool QConcatenateTablesProxyModel_BeginMoveRows(QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow);
-    friend bool QConcatenateTablesProxyModel_QBaseBeginMoveRows(QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow);
+    friend bool QConcatenateTablesProxyModel_BeginMoveRows(QConcatenateTablesProxyModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationRow);
+    friend bool QConcatenateTablesProxyModel_QBaseBeginMoveRows(QConcatenateTablesProxyModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationRow);
     friend void QConcatenateTablesProxyModel_EndMoveRows(QConcatenateTablesProxyModel* self);
     friend void QConcatenateTablesProxyModel_QBaseEndMoveRows(QConcatenateTablesProxyModel* self);
-    friend void QConcatenateTablesProxyModel_BeginInsertColumns(QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last);
-    friend void QConcatenateTablesProxyModel_QBaseBeginInsertColumns(QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last);
+    friend void QConcatenateTablesProxyModel_BeginInsertColumns(QConcatenateTablesProxyModel* self, const QModelIndex* parent, int first, int last);
+    friend void QConcatenateTablesProxyModel_QBaseBeginInsertColumns(QConcatenateTablesProxyModel* self, const QModelIndex* parent, int first, int last);
     friend void QConcatenateTablesProxyModel_EndInsertColumns(QConcatenateTablesProxyModel* self);
     friend void QConcatenateTablesProxyModel_QBaseEndInsertColumns(QConcatenateTablesProxyModel* self);
-    friend void QConcatenateTablesProxyModel_BeginRemoveColumns(QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last);
-    friend void QConcatenateTablesProxyModel_QBaseBeginRemoveColumns(QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last);
+    friend void QConcatenateTablesProxyModel_BeginRemoveColumns(QConcatenateTablesProxyModel* self, const QModelIndex* parent, int first, int last);
+    friend void QConcatenateTablesProxyModel_QBaseBeginRemoveColumns(QConcatenateTablesProxyModel* self, const QModelIndex* parent, int first, int last);
     friend void QConcatenateTablesProxyModel_EndRemoveColumns(QConcatenateTablesProxyModel* self);
     friend void QConcatenateTablesProxyModel_QBaseEndRemoveColumns(QConcatenateTablesProxyModel* self);
-    friend bool QConcatenateTablesProxyModel_BeginMoveColumns(QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn);
-    friend bool QConcatenateTablesProxyModel_QBaseBeginMoveColumns(QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn);
+    friend bool QConcatenateTablesProxyModel_BeginMoveColumns(QConcatenateTablesProxyModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationColumn);
+    friend bool QConcatenateTablesProxyModel_QBaseBeginMoveColumns(QConcatenateTablesProxyModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationColumn);
     friend void QConcatenateTablesProxyModel_EndMoveColumns(QConcatenateTablesProxyModel* self);
     friend void QConcatenateTablesProxyModel_QBaseEndMoveColumns(QConcatenateTablesProxyModel* self);
     friend void QConcatenateTablesProxyModel_BeginResetModel(QConcatenateTablesProxyModel* self);
     friend void QConcatenateTablesProxyModel_QBaseBeginResetModel(QConcatenateTablesProxyModel* self);
     friend void QConcatenateTablesProxyModel_EndResetModel(QConcatenateTablesProxyModel* self);
     friend void QConcatenateTablesProxyModel_QBaseEndResetModel(QConcatenateTablesProxyModel* self);
-    friend void QConcatenateTablesProxyModel_ChangePersistentIndex(QConcatenateTablesProxyModel* self, QModelIndex* from, QModelIndex* to);
-    friend void QConcatenateTablesProxyModel_QBaseChangePersistentIndex(QConcatenateTablesProxyModel* self, QModelIndex* from, QModelIndex* to);
-    friend void QConcatenateTablesProxyModel_ChangePersistentIndexList(QConcatenateTablesProxyModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
-    friend void QConcatenateTablesProxyModel_QBaseChangePersistentIndexList(QConcatenateTablesProxyModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
+    friend void QConcatenateTablesProxyModel_ChangePersistentIndex(QConcatenateTablesProxyModel* self, const QModelIndex* from, const QModelIndex* to);
+    friend void QConcatenateTablesProxyModel_QBaseChangePersistentIndex(QConcatenateTablesProxyModel* self, const QModelIndex* from, const QModelIndex* to);
+    friend void QConcatenateTablesProxyModel_ChangePersistentIndexList(QConcatenateTablesProxyModel* self, const libqt_list /* of QModelIndex* */ from, const libqt_list /* of QModelIndex* */ to);
+    friend void QConcatenateTablesProxyModel_QBaseChangePersistentIndexList(QConcatenateTablesProxyModel* self, const libqt_list /* of QModelIndex* */ from, const libqt_list /* of QModelIndex* */ to);
     friend libqt_list /* of QModelIndex* */ QConcatenateTablesProxyModel_PersistentIndexList(const QConcatenateTablesProxyModel* self);
     friend libqt_list /* of QModelIndex* */ QConcatenateTablesProxyModel_QBasePersistentIndexList(const QConcatenateTablesProxyModel* self);
     friend QObject* QConcatenateTablesProxyModel_Sender(const QConcatenateTablesProxyModel* self);
@@ -1728,8 +1728,8 @@ class VirtualQConcatenateTablesProxyModel final : public QConcatenateTablesProxy
     friend int QConcatenateTablesProxyModel_QBaseSenderSignalIndex(const QConcatenateTablesProxyModel* self);
     friend int QConcatenateTablesProxyModel_Receivers(const QConcatenateTablesProxyModel* self, const char* signal);
     friend int QConcatenateTablesProxyModel_QBaseReceivers(const QConcatenateTablesProxyModel* self, const char* signal);
-    friend bool QConcatenateTablesProxyModel_IsSignalConnected(const QConcatenateTablesProxyModel* self, QMetaMethod* signal);
-    friend bool QConcatenateTablesProxyModel_QBaseIsSignalConnected(const QConcatenateTablesProxyModel* self, QMetaMethod* signal);
+    friend bool QConcatenateTablesProxyModel_IsSignalConnected(const QConcatenateTablesProxyModel* self, const QMetaMethod* signal);
+    friend bool QConcatenateTablesProxyModel_QBaseIsSignalConnected(const QConcatenateTablesProxyModel* self, const QMetaMethod* signal);
 };
 
 #endif

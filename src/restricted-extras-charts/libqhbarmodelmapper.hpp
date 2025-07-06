@@ -77,12 +77,12 @@ void QHBarModelMapper_QBaseChildEvent(QHBarModelMapper* self, QChildEvent* event
 void QHBarModelMapper_CustomEvent(QHBarModelMapper* self, QEvent* event);
 void QHBarModelMapper_OnCustomEvent(QHBarModelMapper* self, intptr_t slot);
 void QHBarModelMapper_QBaseCustomEvent(QHBarModelMapper* self, QEvent* event);
-void QHBarModelMapper_ConnectNotify(QHBarModelMapper* self, QMetaMethod* signal);
+void QHBarModelMapper_ConnectNotify(QHBarModelMapper* self, const QMetaMethod* signal);
 void QHBarModelMapper_OnConnectNotify(QHBarModelMapper* self, intptr_t slot);
-void QHBarModelMapper_QBaseConnectNotify(QHBarModelMapper* self, QMetaMethod* signal);
-void QHBarModelMapper_DisconnectNotify(QHBarModelMapper* self, QMetaMethod* signal);
+void QHBarModelMapper_QBaseConnectNotify(QHBarModelMapper* self, const QMetaMethod* signal);
+void QHBarModelMapper_DisconnectNotify(QHBarModelMapper* self, const QMetaMethod* signal);
 void QHBarModelMapper_OnDisconnectNotify(QHBarModelMapper* self, intptr_t slot);
-void QHBarModelMapper_QBaseDisconnectNotify(QHBarModelMapper* self, QMetaMethod* signal);
+void QHBarModelMapper_QBaseDisconnectNotify(QHBarModelMapper* self, const QMetaMethod* signal);
 int QHBarModelMapper_First(const QHBarModelMapper* self);
 void QHBarModelMapper_OnFirst(const QHBarModelMapper* self, intptr_t slot);
 int QHBarModelMapper_QBaseFirst(const QHBarModelMapper* self);
@@ -122,9 +122,9 @@ int QHBarModelMapper_QBaseSenderSignalIndex(const QHBarModelMapper* self);
 int QHBarModelMapper_Receivers(const QHBarModelMapper* self, const char* signal);
 void QHBarModelMapper_OnReceivers(const QHBarModelMapper* self, intptr_t slot);
 int QHBarModelMapper_QBaseReceivers(const QHBarModelMapper* self, const char* signal);
-bool QHBarModelMapper_IsSignalConnected(const QHBarModelMapper* self, QMetaMethod* signal);
+bool QHBarModelMapper_IsSignalConnected(const QHBarModelMapper* self, const QMetaMethod* signal);
 void QHBarModelMapper_OnIsSignalConnected(const QHBarModelMapper* self, intptr_t slot);
-bool QHBarModelMapper_QBaseIsSignalConnected(const QHBarModelMapper* self, QMetaMethod* signal);
+bool QHBarModelMapper_QBaseIsSignalConnected(const QHBarModelMapper* self, const QMetaMethod* signal);
 void QHBarModelMapper_Delete(QHBarModelMapper* self);
 
 #ifdef __cplusplus

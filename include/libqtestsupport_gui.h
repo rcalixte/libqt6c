@@ -12,9 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqpoint.h"
-#include "libqwindow.h"
-
 /// https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtest__qtoucheventsequence.html#press)

@@ -12,12 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqobjectdefs.h"
-#include "libqmetatype.h"
-#include "libqobject.h"
-#include "libqproperty.h"
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qmetamethod.html
 
 /// q_metamethod_new constructs a new QMetaMethod object.
@@ -167,13 +161,13 @@ bool q_metamethod_invoke2(void* self, void* object, void* returnValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
-/// ``` QMetaMethod* self, QObject* object, enum Qt__ConnectionType connectionType ```
-bool q_metamethod_invoke3(void* self, void* object, int64_t connectionType);
+/// ``` QMetaMethod* self, QObject* object, enum Qt__ConnectionType connectionType, QGenericArgument* val0 ```
+bool q_metamethod_invoke3(void* self, void* object, int64_t connectionType, void* val0);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
-/// ``` QMetaMethod* self, QObject* object ```
-bool q_metamethod_invoke_with_object(void* self, void* object);
+/// ``` QMetaMethod* self, QObject* object, QGenericArgument* val0 ```
+bool q_metamethod_invoke4(void* self, void* object, void* val0);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
 ///
@@ -182,8 +176,8 @@ bool q_metamethod_invoke_on_gadget(void* self, void* gadget, void* returnValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
 ///
-/// ``` QMetaMethod* self, void* gadget ```
-bool q_metamethod_invoke_on_gadget_with_gadget(void* self, void* gadget);
+/// ``` QMetaMethod* self, void* gadget, QGenericArgument* val0 ```
+bool q_metamethod_invoke_on_gadget2(void* self, void* gadget, void* val0);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#isValid)
 ///
@@ -193,7 +187,7 @@ bool q_metamethod_is_valid(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
 /// ``` QMetaMethod* self, QObject* object, enum Qt__ConnectionType connectionType, QGenericReturnArgument* returnValue, QGenericArgument* val0 ```
-bool q_metamethod_invoke4(void* self, void* object, int64_t connectionType, void* returnValue, void* val0);
+bool q_metamethod_invoke42(void* self, void* object, int64_t connectionType, void* returnValue, void* val0);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -248,7 +242,7 @@ bool q_metamethod_invoke32(void* self, void* object, void* returnValue, void* va
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
 /// ``` QMetaMethod* self, QObject* object, QGenericReturnArgument* returnValue, QGenericArgument* val0, QGenericArgument* val1 ```
-bool q_metamethod_invoke42(void* self, void* object, void* returnValue, void* val0, void* val1);
+bool q_metamethod_invoke43(void* self, void* object, void* returnValue, void* val0, void* val1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -292,13 +286,8 @@ bool q_metamethod_invoke122(void* self, void* object, void* returnValue, void* v
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
-/// ``` QMetaMethod* self, QObject* object, enum Qt__ConnectionType connectionType, QGenericArgument* val0 ```
-bool q_metamethod_invoke33(void* self, void* object, int64_t connectionType, void* val0);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
-///
 /// ``` QMetaMethod* self, QObject* object, enum Qt__ConnectionType connectionType, QGenericArgument* val0, QGenericArgument* val1 ```
-bool q_metamethod_invoke43(void* self, void* object, int64_t connectionType, void* val0, void* val1);
+bool q_metamethod_invoke44(void* self, void* object, int64_t connectionType, void* val0, void* val1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -342,18 +331,13 @@ bool q_metamethod_invoke123(void* self, void* object, int64_t connectionType, vo
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
-/// ``` QMetaMethod* self, QObject* object, QGenericArgument* val0 ```
-bool q_metamethod_invoke22(void* self, void* object, void* val0);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
-///
 /// ``` QMetaMethod* self, QObject* object, QGenericArgument* val0, QGenericArgument* val1 ```
-bool q_metamethod_invoke34(void* self, void* object, void* val0, void* val1);
+bool q_metamethod_invoke33(void* self, void* object, void* val0, void* val1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
 /// ``` QMetaMethod* self, QObject* object, QGenericArgument* val0, QGenericArgument* val1, QGenericArgument* val2 ```
-bool q_metamethod_invoke44(void* self, void* object, void* val0, void* val1, void* val2);
+bool q_metamethod_invoke45(void* self, void* object, void* val0, void* val1, void* val2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -439,11 +423,6 @@ bool q_metamethod_invoke_on_gadget11(void* self, void* gadget, void* returnValue
 ///
 /// ``` QMetaMethod* self, void* gadget, QGenericReturnArgument* returnValue, QGenericArgument* val0, QGenericArgument* val1, QGenericArgument* val2, QGenericArgument* val3, QGenericArgument* val4, QGenericArgument* val5, QGenericArgument* val6, QGenericArgument* val7, QGenericArgument* val8, QGenericArgument* val9 ```
 bool q_metamethod_invoke_on_gadget12(void* self, void* gadget, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
-///
-/// ``` QMetaMethod* self, void* gadget, QGenericArgument* val0 ```
-bool q_metamethod_invoke_on_gadget2(void* self, void* gadget, void* val0);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invokeOnGadget)
 ///
@@ -538,6 +517,11 @@ const char* q_metaenum_name(void* self);
 ///
 /// ``` QMetaEnum* self ```
 const char* q_metaenum_enum_name(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaenum.html#metaType)
+///
+/// ``` QMetaEnum* self ```
+QMetaType* q_metaenum_meta_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaenum.html#isFlag)
 ///
@@ -851,6 +835,11 @@ QMetaClassInfo* q_metaclassinfo_new2(void* other);
 ///
 ///
 QMetaClassInfo* q_metaclassinfo_new3();
+
+/// q_metaclassinfo_new4 constructs a new QMetaClassInfo object.
+///
+/// ``` QMetaClassInfo* param1 ```
+QMetaClassInfo* q_metaclassinfo_new4(void* param1);
 
 /// q_metaclassinfo_copy_assign shallow copies `other` into `self`.
 ///

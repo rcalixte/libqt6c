@@ -12,9 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqcolor.h"
-#include "libqrgba64.h"
-
 /// https://doc.qt.io/qt-6/qcolortransform.html
 
 /// q_colortransform_new constructs a new QColorTransform object.

@@ -71,12 +71,12 @@ QAction* QActionGroup_AddAction(QActionGroup* self, QAction* a) {
     return self->addAction(a);
 }
 
-QAction* QActionGroup_AddActionWithText(QActionGroup* self, libqt_string text) {
+QAction* QActionGroup_AddActionWithText(QActionGroup* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->addAction(text_QString);
 }
 
-QAction* QActionGroup_AddAction2(QActionGroup* self, QIcon* icon, libqt_string text) {
+QAction* QActionGroup_AddAction2(QActionGroup* self, const QIcon* icon, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->addAction(*icon, text_QString);
 }
@@ -88,12 +88,12 @@ void QActionGroup_RemoveAction(QActionGroup* self, QAction* a) {
 libqt_list /* of QAction* */ QActionGroup_Actions(const QActionGroup* self) {
     QList<QAction*> _ret = self->actions();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QAction** _arr = static_cast<QAction**>(malloc(sizeof(QAction*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QAction** _arr = static_cast<QAction**>(malloc(sizeof(QAction*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -332,7 +332,7 @@ void QActionGroup_OnCustomEvent(QActionGroup* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QActionGroup_ConnectNotify(QActionGroup* self, QMetaMethod* signal) {
+void QActionGroup_ConnectNotify(QActionGroup* self, const QMetaMethod* signal) {
     auto* vqactiongroup = dynamic_cast<VirtualQActionGroup*>(self);
     if (vqactiongroup && vqactiongroup->isVirtualQActionGroup) {
         vqactiongroup->connectNotify(*signal);
@@ -342,7 +342,7 @@ void QActionGroup_ConnectNotify(QActionGroup* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QActionGroup_QBaseConnectNotify(QActionGroup* self, QMetaMethod* signal) {
+void QActionGroup_QBaseConnectNotify(QActionGroup* self, const QMetaMethod* signal) {
     auto* vqactiongroup = dynamic_cast<VirtualQActionGroup*>(self);
     if (vqactiongroup && vqactiongroup->isVirtualQActionGroup) {
         vqactiongroup->setQActionGroup_ConnectNotify_IsBase(true);
@@ -361,7 +361,7 @@ void QActionGroup_OnConnectNotify(QActionGroup* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QActionGroup_DisconnectNotify(QActionGroup* self, QMetaMethod* signal) {
+void QActionGroup_DisconnectNotify(QActionGroup* self, const QMetaMethod* signal) {
     auto* vqactiongroup = dynamic_cast<VirtualQActionGroup*>(self);
     if (vqactiongroup && vqactiongroup->isVirtualQActionGroup) {
         vqactiongroup->disconnectNotify(*signal);
@@ -371,7 +371,7 @@ void QActionGroup_DisconnectNotify(QActionGroup* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QActionGroup_QBaseDisconnectNotify(QActionGroup* self, QMetaMethod* signal) {
+void QActionGroup_QBaseDisconnectNotify(QActionGroup* self, const QMetaMethod* signal) {
     auto* vqactiongroup = dynamic_cast<VirtualQActionGroup*>(self);
     if (vqactiongroup && vqactiongroup->isVirtualQActionGroup) {
         vqactiongroup->setQActionGroup_DisconnectNotify_IsBase(true);
@@ -477,7 +477,7 @@ void QActionGroup_OnReceivers(const QActionGroup* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QActionGroup_IsSignalConnected(const QActionGroup* self, QMetaMethod* signal) {
+bool QActionGroup_IsSignalConnected(const QActionGroup* self, const QMetaMethod* signal) {
     auto* vqactiongroup = const_cast<VirtualQActionGroup*>(dynamic_cast<const VirtualQActionGroup*>(self));
     if (vqactiongroup && vqactiongroup->isVirtualQActionGroup) {
         return vqactiongroup->isSignalConnected(*signal);
@@ -487,7 +487,7 @@ bool QActionGroup_IsSignalConnected(const QActionGroup* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-bool QActionGroup_QBaseIsSignalConnected(const QActionGroup* self, QMetaMethod* signal) {
+bool QActionGroup_QBaseIsSignalConnected(const QActionGroup* self, const QMetaMethod* signal) {
     auto* vqactiongroup = const_cast<VirtualQActionGroup*>(dynamic_cast<const VirtualQActionGroup*>(self));
     if (vqactiongroup && vqactiongroup->isVirtualQActionGroup) {
         vqactiongroup->setQActionGroup_IsSignalConnected_IsBase(true);

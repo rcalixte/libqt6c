@@ -63,6 +63,11 @@ bool q_mutex_try_lock(void* self);
 /// ``` QMutex* self, int timeout ```
 bool q_mutex_try_lock_with_timeout(void* self, int timeout);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmutex.html#tryLock)
+///
+/// ``` QMutex* self, QDeadlineTimer* timeout ```
+bool q_mutex_try_lock2(void* self, void* timeout);
+
 /// Inherited from QBasicMutex
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qbasicmutex.html#lock)
@@ -76,13 +81,6 @@ void q_mutex_lock(void* self);
 ///
 /// ``` QMutex* self ```
 void q_mutex_unlock(void* self);
-
-/// Inherited from QBasicMutex
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qbasicmutex.html#try_lock)
-///
-/// ``` QMutex* self ```
-bool q_mutex_try_lock2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmutex.html#dtor.QMutex)
 ///
@@ -105,8 +103,13 @@ void q_recursivemutex_lock(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrecursivemutex.html#tryLock)
 ///
+/// ``` QRecursiveMutex* self, int timeout ```
+bool q_recursivemutex_try_lock(void* self, int timeout);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qrecursivemutex.html#tryLock)
+///
 /// ``` QRecursiveMutex* self ```
-bool q_recursivemutex_try_lock(void* self);
+bool q_recursivemutex_try_lock2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrecursivemutex.html#unlock)
 ///
@@ -116,12 +119,12 @@ void q_recursivemutex_unlock(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qrecursivemutex.html#try_lock)
 ///
 /// ``` QRecursiveMutex* self ```
-bool q_recursivemutex_try_lock2(void* self);
+bool q_recursivemutex_try_lock3(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrecursivemutex.html#tryLock)
 ///
-/// ``` QRecursiveMutex* self, int timeout ```
-bool q_recursivemutex_try_lock1(void* self, int timeout);
+/// ``` QRecursiveMutex* self, QDeadlineTimer* timer ```
+bool q_recursivemutex_try_lock1(void* self, void* timer);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrecursivemutex.html#dtor.QRecursiveMutex)
 ///

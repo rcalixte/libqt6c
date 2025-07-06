@@ -104,12 +104,12 @@ QAction* QMenuBar_AddMenu(QMenuBar* self, QMenu* menu) {
     return self->addMenu(menu);
 }
 
-QMenu* QMenuBar_AddMenuWithTitle(QMenuBar* self, libqt_string title) {
+QMenu* QMenuBar_AddMenuWithTitle(QMenuBar* self, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return self->addMenu(title_QString);
 }
 
-QMenu* QMenuBar_AddMenu2(QMenuBar* self, QIcon* icon, libqt_string title) {
+QMenu* QMenuBar_AddMenu2(QMenuBar* self, const QIcon* icon, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return self->addMenu(*icon, title_QString);
 }
@@ -150,7 +150,7 @@ QRect* QMenuBar_ActionGeometry(const QMenuBar* self, QAction* param1) {
     return new QRect(self->actionGeometry(param1));
 }
 
-QAction* QMenuBar_ActionAt(const QMenuBar* self, QPoint* param1) {
+QAction* QMenuBar_ActionAt(const QMenuBar* self, const QPoint* param1) {
     return self->actionAt(*param1);
 }
 
@@ -749,7 +749,7 @@ void QMenuBar_OnEvent(QMenuBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMenuBar_InitStyleOption(const QMenuBar* self, QStyleOptionMenuItem* option, QAction* action) {
+void QMenuBar_InitStyleOption(const QMenuBar* self, QStyleOptionMenuItem* option, const QAction* action) {
     auto* vqmenubar = const_cast<VirtualQMenuBar*>(dynamic_cast<const VirtualQMenuBar*>(self));
     if (vqmenubar && vqmenubar->isVirtualQMenuBar) {
         vqmenubar->initStyleOption(option, action);
@@ -759,7 +759,7 @@ void QMenuBar_InitStyleOption(const QMenuBar* self, QStyleOptionMenuItem* option
 }
 
 // Base class handler implementation
-void QMenuBar_QBaseInitStyleOption(const QMenuBar* self, QStyleOptionMenuItem* option, QAction* action) {
+void QMenuBar_QBaseInitStyleOption(const QMenuBar* self, QStyleOptionMenuItem* option, const QAction* action) {
     auto* vqmenubar = const_cast<VirtualQMenuBar*>(dynamic_cast<const VirtualQMenuBar*>(self));
     if (vqmenubar && vqmenubar->isVirtualQMenuBar) {
         vqmenubar->setQMenuBar_InitStyleOption_IsBase(true);
@@ -1271,7 +1271,7 @@ void QMenuBar_OnHideEvent(QMenuBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QMenuBar_NativeEvent(QMenuBar* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QMenuBar_NativeEvent(QMenuBar* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqmenubar = dynamic_cast<VirtualQMenuBar*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqmenubar && vqmenubar->isVirtualQMenuBar) {
@@ -1282,7 +1282,7 @@ bool QMenuBar_NativeEvent(QMenuBar* self, libqt_string eventType, void* message,
 }
 
 // Base class handler implementation
-bool QMenuBar_QBaseNativeEvent(QMenuBar* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QMenuBar_QBaseNativeEvent(QMenuBar* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqmenubar = dynamic_cast<VirtualQMenuBar*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqmenubar && vqmenubar->isVirtualQMenuBar) {
@@ -1563,7 +1563,7 @@ void QMenuBar_OnCustomEvent(QMenuBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMenuBar_ConnectNotify(QMenuBar* self, QMetaMethod* signal) {
+void QMenuBar_ConnectNotify(QMenuBar* self, const QMetaMethod* signal) {
     auto* vqmenubar = dynamic_cast<VirtualQMenuBar*>(self);
     if (vqmenubar && vqmenubar->isVirtualQMenuBar) {
         vqmenubar->connectNotify(*signal);
@@ -1573,7 +1573,7 @@ void QMenuBar_ConnectNotify(QMenuBar* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QMenuBar_QBaseConnectNotify(QMenuBar* self, QMetaMethod* signal) {
+void QMenuBar_QBaseConnectNotify(QMenuBar* self, const QMetaMethod* signal) {
     auto* vqmenubar = dynamic_cast<VirtualQMenuBar*>(self);
     if (vqmenubar && vqmenubar->isVirtualQMenuBar) {
         vqmenubar->setQMenuBar_ConnectNotify_IsBase(true);
@@ -1592,7 +1592,7 @@ void QMenuBar_OnConnectNotify(QMenuBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMenuBar_DisconnectNotify(QMenuBar* self, QMetaMethod* signal) {
+void QMenuBar_DisconnectNotify(QMenuBar* self, const QMetaMethod* signal) {
     auto* vqmenubar = dynamic_cast<VirtualQMenuBar*>(self);
     if (vqmenubar && vqmenubar->isVirtualQMenuBar) {
         vqmenubar->disconnectNotify(*signal);
@@ -1602,7 +1602,7 @@ void QMenuBar_DisconnectNotify(QMenuBar* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QMenuBar_QBaseDisconnectNotify(QMenuBar* self, QMetaMethod* signal) {
+void QMenuBar_QBaseDisconnectNotify(QMenuBar* self, const QMetaMethod* signal) {
     auto* vqmenubar = dynamic_cast<VirtualQMenuBar*>(self);
     if (vqmenubar && vqmenubar->isVirtualQMenuBar) {
         vqmenubar->setQMenuBar_DisconnectNotify_IsBase(true);
@@ -1853,7 +1853,7 @@ void QMenuBar_OnReceivers(const QMenuBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QMenuBar_IsSignalConnected(const QMenuBar* self, QMetaMethod* signal) {
+bool QMenuBar_IsSignalConnected(const QMenuBar* self, const QMetaMethod* signal) {
     auto* vqmenubar = const_cast<VirtualQMenuBar*>(dynamic_cast<const VirtualQMenuBar*>(self));
     if (vqmenubar && vqmenubar->isVirtualQMenuBar) {
         return vqmenubar->isSignalConnected(*signal);
@@ -1863,7 +1863,7 @@ bool QMenuBar_IsSignalConnected(const QMenuBar* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QMenuBar_QBaseIsSignalConnected(const QMenuBar* self, QMetaMethod* signal) {
+bool QMenuBar_QBaseIsSignalConnected(const QMenuBar* self, const QMetaMethod* signal) {
     auto* vqmenubar = const_cast<VirtualQMenuBar*>(dynamic_cast<const VirtualQMenuBar*>(self));
     if (vqmenubar && vqmenubar->isVirtualQMenuBar) {
         vqmenubar->setQMenuBar_IsSignalConnected_IsBase(true);
@@ -1878,6 +1878,35 @@ void QMenuBar_OnIsSignalConnected(const QMenuBar* self, intptr_t slot) {
     auto* vqmenubar = const_cast<VirtualQMenuBar*>(dynamic_cast<const VirtualQMenuBar*>(self));
     if (vqmenubar && vqmenubar->isVirtualQMenuBar) {
         vqmenubar->setQMenuBar_IsSignalConnected_Callback(reinterpret_cast<VirtualQMenuBar::QMenuBar_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QMenuBar_GetDecodedMetricF(const QMenuBar* self, int metricA, int metricB) {
+    auto* vqmenubar = const_cast<VirtualQMenuBar*>(dynamic_cast<const VirtualQMenuBar*>(self));
+    if (vqmenubar && vqmenubar->isVirtualQMenuBar) {
+        return vqmenubar->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQMenuBar*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QMenuBar_QBaseGetDecodedMetricF(const QMenuBar* self, int metricA, int metricB) {
+    auto* vqmenubar = const_cast<VirtualQMenuBar*>(dynamic_cast<const VirtualQMenuBar*>(self));
+    if (vqmenubar && vqmenubar->isVirtualQMenuBar) {
+        vqmenubar->setQMenuBar_GetDecodedMetricF_IsBase(true);
+        return vqmenubar->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQMenuBar*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QMenuBar_OnGetDecodedMetricF(const QMenuBar* self, intptr_t slot) {
+    auto* vqmenubar = const_cast<VirtualQMenuBar*>(dynamic_cast<const VirtualQMenuBar*>(self));
+    if (vqmenubar && vqmenubar->isVirtualQMenuBar) {
+        vqmenubar->setQMenuBar_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQMenuBar::QMenuBar_GetDecodedMetricF_Callback>(slot));
     }
 }
 

@@ -64,8 +64,8 @@ class VirtualQGraphicsAnchorLayout final : public QGraphicsAnchorLayout {
     mutable bool qgraphicsanchorlayout_setownedbylayout_isbase = false;
 
   public:
-    VirtualQGraphicsAnchorLayout() : QGraphicsAnchorLayout(){};
-    VirtualQGraphicsAnchorLayout(QGraphicsLayoutItem* parent) : QGraphicsAnchorLayout(parent){};
+    VirtualQGraphicsAnchorLayout() : QGraphicsAnchorLayout() {};
+    VirtualQGraphicsAnchorLayout(QGraphicsLayoutItem* parent) : QGraphicsAnchorLayout(parent) {};
 
     ~VirtualQGraphicsAnchorLayout() {
         qgraphicsanchorlayout_removeat_callback = nullptr;
@@ -300,8 +300,8 @@ class VirtualQGraphicsAnchorLayout final : public QGraphicsAnchorLayout {
     }
 
     // Friend functions
-    friend QSizeF* QGraphicsAnchorLayout_SizeHint(const QGraphicsAnchorLayout* self, int which, QSizeF* constraint);
-    friend QSizeF* QGraphicsAnchorLayout_QBaseSizeHint(const QGraphicsAnchorLayout* self, int which, QSizeF* constraint);
+    friend QSizeF* QGraphicsAnchorLayout_SizeHint(const QGraphicsAnchorLayout* self, int which, const QSizeF* constraint);
+    friend QSizeF* QGraphicsAnchorLayout_QBaseSizeHint(const QGraphicsAnchorLayout* self, int which, const QSizeF* constraint);
     friend void QGraphicsAnchorLayout_AddChildLayoutItem(QGraphicsAnchorLayout* self, QGraphicsLayoutItem* layoutItem);
     friend void QGraphicsAnchorLayout_QBaseAddChildLayoutItem(QGraphicsAnchorLayout* self, QGraphicsLayoutItem* layoutItem);
     friend void QGraphicsAnchorLayout_SetGraphicsItem(QGraphicsAnchorLayout* self, QGraphicsItem* item);

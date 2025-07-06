@@ -6,7 +6,7 @@
 #include "libqwebenginesettings.hpp"
 #include "libqwebenginesettings.hxx"
 
-void QWebEngineSettings_SetFontFamily(QWebEngineSettings* self, int which, libqt_string family) {
+void QWebEngineSettings_SetFontFamily(QWebEngineSettings* self, int which, const libqt_string family) {
     QString family_QString = QString::fromUtf8(family.data, family.len);
     self->setFontFamily(static_cast<QWebEngineSettings::FontFamily>(which), family_QString);
 }
@@ -51,7 +51,7 @@ void QWebEngineSettings_ResetAttribute(QWebEngineSettings* self, int attr) {
     self->resetAttribute(static_cast<QWebEngineSettings::WebAttribute>(attr));
 }
 
-void QWebEngineSettings_SetDefaultTextEncoding(QWebEngineSettings* self, libqt_string encoding) {
+void QWebEngineSettings_SetDefaultTextEncoding(QWebEngineSettings* self, const libqt_string encoding) {
     QString encoding_QString = QString::fromUtf8(encoding.data, encoding.len);
     self->setDefaultTextEncoding(encoding_QString);
 }
@@ -78,6 +78,18 @@ void QWebEngineSettings_SetUnknownUrlSchemePolicy(QWebEngineSettings* self, int 
 
 void QWebEngineSettings_ResetUnknownUrlSchemePolicy(QWebEngineSettings* self) {
     self->resetUnknownUrlSchemePolicy();
+}
+
+void QWebEngineSettings_SetImageAnimationPolicy(QWebEngineSettings* self, uint8_t policy) {
+    self->setImageAnimationPolicy(static_cast<QWebEngineSettings::ImageAnimationPolicy>(policy));
+}
+
+uint8_t QWebEngineSettings_ImageAnimationPolicy(const QWebEngineSettings* self) {
+    return static_cast<uint8_t>(self->imageAnimationPolicy());
+}
+
+void QWebEngineSettings_ResetImageAnimationPolicy(QWebEngineSettings* self) {
+    self->resetImageAnimationPolicy();
 }
 
 void QWebEngineSettings_Delete(QWebEngineSettings* self) {

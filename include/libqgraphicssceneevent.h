@@ -12,12 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqmimedata.h"
-#include "libqpoint.h"
-#include "libqsize.h"
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qgraphicssceneevent.html
 
 /// q_graphicssceneevent_new constructs a new QGraphicsSceneEvent object.

@@ -12,12 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractitemmodel.h"
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qitemselectionrange.html
 
 /// q_itemselectionrange_new constructs a new QItemSelectionRange object.
@@ -34,11 +28,6 @@ QItemSelectionRange* q_itemselectionrange_new2(void* topL, void* bottomR);
 ///
 /// ``` QModelIndex* index ```
 QItemSelectionRange* q_itemselectionrange_new3(void* index);
-
-/// q_itemselectionrange_new4 constructs a new QItemSelectionRange object.
-///
-/// ``` QItemSelectionRange* param1 ```
-QItemSelectionRange* q_itemselectionrange_new4(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionrange.html#swap)
 ///
@@ -114,16 +103,6 @@ bool q_itemselectionrange_intersects(void* self, void* other);
 ///
 /// ``` QItemSelectionRange* self, QItemSelectionRange* other ```
 QItemSelectionRange* q_itemselectionrange_intersected(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionrange.html#operator==)
-///
-/// ``` QItemSelectionRange* self, QItemSelectionRange* other ```
-bool q_itemselectionrange_operator_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionrange.html#operator!=)
-///
-/// ``` QItemSelectionRange* self, QItemSelectionRange* other ```
-bool q_itemselectionrange_operator_not_equal(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionrange.html#isValid)
 ///
@@ -549,7 +528,7 @@ QThread* q_itemselectionmodel_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QItemSelectionModel* self, QThread* thread ```
-void q_itemselectionmodel_move_to_thread(void* self, void* thread);
+bool q_itemselectionmodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -564,6 +543,13 @@ int32_t q_itemselectionmodel_start_timer(void* self, int interval);
 ///
 /// ``` QItemSelectionModel* self, int id ```
 void q_itemselectionmodel_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QItemSelectionModel* self, enum Qt__TimerId id ```
+void q_itemselectionmodel_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -704,6 +690,13 @@ bool q_itemselectionmodel_inherits(void* self, const char* classname);
 ///
 /// ``` QItemSelectionModel* self ```
 void q_itemselectionmodel_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QItemSelectionModel* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_itemselectionmodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

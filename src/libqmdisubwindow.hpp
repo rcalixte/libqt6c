@@ -53,14 +53,6 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QMdiSubWindow::SubWindowOption SubWindowOption;   // C++ enum
-typedef QMdiSubWindow::SubWindowOptions SubWindowOptions; // C++ QFlags
-#else
-typedef int SubWindowOption;  // C ABI enum
-typedef int SubWindowOptions; // C ABI QFlags
-#endif
-
 QMdiSubWindow* QMdiSubWindow_new(QWidget* parent);
 QMdiSubWindow* QMdiSubWindow_new2();
 QMdiSubWindow* QMdiSubWindow_new3(QWidget* parent, int flags);
@@ -201,9 +193,9 @@ void QMdiSubWindow_QBaseDragLeaveEvent(QMdiSubWindow* self, QDragLeaveEvent* eve
 void QMdiSubWindow_DropEvent(QMdiSubWindow* self, QDropEvent* event);
 void QMdiSubWindow_OnDropEvent(QMdiSubWindow* self, intptr_t slot);
 void QMdiSubWindow_QBaseDropEvent(QMdiSubWindow* self, QDropEvent* event);
-bool QMdiSubWindow_NativeEvent(QMdiSubWindow* self, libqt_string eventType, void* message, intptr_t* result);
+bool QMdiSubWindow_NativeEvent(QMdiSubWindow* self, const libqt_string eventType, void* message, intptr_t* result);
 void QMdiSubWindow_OnNativeEvent(QMdiSubWindow* self, intptr_t slot);
-bool QMdiSubWindow_QBaseNativeEvent(QMdiSubWindow* self, libqt_string eventType, void* message, intptr_t* result);
+bool QMdiSubWindow_QBaseNativeEvent(QMdiSubWindow* self, const libqt_string eventType, void* message, intptr_t* result);
 int QMdiSubWindow_Metric(const QMdiSubWindow* self, int param1);
 void QMdiSubWindow_OnMetric(const QMdiSubWindow* self, intptr_t slot);
 int QMdiSubWindow_QBaseMetric(const QMdiSubWindow* self, int param1);
@@ -228,12 +220,12 @@ bool QMdiSubWindow_QBaseFocusNextPrevChild(QMdiSubWindow* self, bool next);
 void QMdiSubWindow_CustomEvent(QMdiSubWindow* self, QEvent* event);
 void QMdiSubWindow_OnCustomEvent(QMdiSubWindow* self, intptr_t slot);
 void QMdiSubWindow_QBaseCustomEvent(QMdiSubWindow* self, QEvent* event);
-void QMdiSubWindow_ConnectNotify(QMdiSubWindow* self, QMetaMethod* signal);
+void QMdiSubWindow_ConnectNotify(QMdiSubWindow* self, const QMetaMethod* signal);
 void QMdiSubWindow_OnConnectNotify(QMdiSubWindow* self, intptr_t slot);
-void QMdiSubWindow_QBaseConnectNotify(QMdiSubWindow* self, QMetaMethod* signal);
-void QMdiSubWindow_DisconnectNotify(QMdiSubWindow* self, QMetaMethod* signal);
+void QMdiSubWindow_QBaseConnectNotify(QMdiSubWindow* self, const QMetaMethod* signal);
+void QMdiSubWindow_DisconnectNotify(QMdiSubWindow* self, const QMetaMethod* signal);
 void QMdiSubWindow_OnDisconnectNotify(QMdiSubWindow* self, intptr_t slot);
-void QMdiSubWindow_QBaseDisconnectNotify(QMdiSubWindow* self, QMetaMethod* signal);
+void QMdiSubWindow_QBaseDisconnectNotify(QMdiSubWindow* self, const QMetaMethod* signal);
 void QMdiSubWindow_UpdateMicroFocus(QMdiSubWindow* self);
 void QMdiSubWindow_OnUpdateMicroFocus(QMdiSubWindow* self, intptr_t slot);
 void QMdiSubWindow_QBaseUpdateMicroFocus(QMdiSubWindow* self);
@@ -258,9 +250,12 @@ int QMdiSubWindow_QBaseSenderSignalIndex(const QMdiSubWindow* self);
 int QMdiSubWindow_Receivers(const QMdiSubWindow* self, const char* signal);
 void QMdiSubWindow_OnReceivers(const QMdiSubWindow* self, intptr_t slot);
 int QMdiSubWindow_QBaseReceivers(const QMdiSubWindow* self, const char* signal);
-bool QMdiSubWindow_IsSignalConnected(const QMdiSubWindow* self, QMetaMethod* signal);
+bool QMdiSubWindow_IsSignalConnected(const QMdiSubWindow* self, const QMetaMethod* signal);
 void QMdiSubWindow_OnIsSignalConnected(const QMdiSubWindow* self, intptr_t slot);
-bool QMdiSubWindow_QBaseIsSignalConnected(const QMdiSubWindow* self, QMetaMethod* signal);
+bool QMdiSubWindow_QBaseIsSignalConnected(const QMdiSubWindow* self, const QMetaMethod* signal);
+double QMdiSubWindow_GetDecodedMetricF(const QMdiSubWindow* self, int metricA, int metricB);
+void QMdiSubWindow_OnGetDecodedMetricF(const QMdiSubWindow* self, intptr_t slot);
+double QMdiSubWindow_QBaseGetDecodedMetricF(const QMdiSubWindow* self, int metricA, int metricB);
 void QMdiSubWindow_Delete(QMdiSubWindow* self);
 
 #ifdef __cplusplus

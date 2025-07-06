@@ -8,6 +8,7 @@
 #include <QEvent>
 #include <QFileInfo>
 #include <QFileSystemModel>
+#include <QHash>
 #include <QIcon>
 #include <QList>
 #include <QMap>
@@ -21,6 +22,7 @@
 #include <QString>
 #include <QByteArray>
 #include <cstring>
+#include <QTimeZone>
 #include <QTimerEvent>
 #include <QVariant>
 #include <qfilesystemmodel.h>
@@ -83,7 +85,7 @@ libqt_string QFileSystemModel_Tr(const char* s) {
     return _str;
 }
 
-void QFileSystemModel_RootPathChanged(QFileSystemModel* self, libqt_string newPath) {
+void QFileSystemModel_RootPathChanged(QFileSystemModel* self, const libqt_string newPath) {
     QString newPath_QString = QString::fromUtf8(newPath.data, newPath.len);
     self->rootPathChanged(newPath_QString);
 }
@@ -104,7 +106,7 @@ void QFileSystemModel_Connect_RootPathChanged(QFileSystemModel* self, intptr_t s
     });
 }
 
-void QFileSystemModel_FileRenamed(QFileSystemModel* self, libqt_string path, libqt_string oldName, libqt_string newName) {
+void QFileSystemModel_FileRenamed(QFileSystemModel* self, const libqt_string path, const libqt_string oldName, const libqt_string newName) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     QString oldName_QString = QString::fromUtf8(oldName.data, oldName.len);
     QString newName_QString = QString::fromUtf8(newName.data, newName.len);
@@ -145,7 +147,7 @@ void QFileSystemModel_Connect_FileRenamed(QFileSystemModel* self, intptr_t slot)
     });
 }
 
-void QFileSystemModel_DirectoryLoaded(QFileSystemModel* self, libqt_string path) {
+void QFileSystemModel_DirectoryLoaded(QFileSystemModel* self, const libqt_string path) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     self->directoryLoaded(path_QString);
 }
@@ -166,7 +168,7 @@ void QFileSystemModel_Connect_DirectoryLoaded(QFileSystemModel* self, intptr_t s
     });
 }
 
-QModelIndex* QFileSystemModel_IndexWithPath(const QFileSystemModel* self, libqt_string path) {
+QModelIndex* QFileSystemModel_IndexWithPath(const QFileSystemModel* self, const libqt_string path) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     return new QModelIndex(self->index(path_QString));
 }
@@ -175,7 +177,7 @@ QVariant* QFileSystemModel_MyComputer(const QFileSystemModel* self) {
     return new QVariant(self->myComputer());
 }
 
-QModelIndex* QFileSystemModel_SetRootPath(QFileSystemModel* self, libqt_string path) {
+QModelIndex* QFileSystemModel_SetRootPath(QFileSystemModel* self, const libqt_string path) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     return new QModelIndex(self->setRootPath(path_QString));
 }
@@ -236,8 +238,8 @@ bool QFileSystemModel_NameFilterDisables(const QFileSystemModel* self) {
     return self->nameFilterDisables();
 }
 
-void QFileSystemModel_SetNameFilters(QFileSystemModel* self, libqt_list /* of libqt_string */ filters) {
-    QStringList filters_QList;
+void QFileSystemModel_SetNameFilters(QFileSystemModel* self, const libqt_list /* of libqt_string */ filters) {
+    QList<QString> filters_QList;
     filters_QList.reserve(filters.len);
     libqt_string* filters_arr = static_cast<libqt_string*>(filters.data.ptr);
     for (size_t i = 0; i < filters.len; ++i) {
@@ -248,10 +250,10 @@ void QFileSystemModel_SetNameFilters(QFileSystemModel* self, libqt_list /* of li
 }
 
 libqt_list /* of libqt_string */ QFileSystemModel_NameFilters(const QFileSystemModel* self) {
-    QStringList _ret = self->nameFilters();
+    QList<QString> _ret = self->nameFilters();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -263,7 +265,7 @@ libqt_list /* of libqt_string */ QFileSystemModel_NameFilters(const QFileSystemM
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -284,7 +286,7 @@ int QFileSystemModel_Options(const QFileSystemModel* self) {
     return static_cast<int>(self->options());
 }
 
-libqt_string QFileSystemModel_FilePath(const QFileSystemModel* self, QModelIndex* index) {
+libqt_string QFileSystemModel_FilePath(const QFileSystemModel* self, const QModelIndex* index) {
     QString _ret = self->filePath(*index);
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
     QByteArray _b = _ret.toUtf8();
@@ -296,15 +298,15 @@ libqt_string QFileSystemModel_FilePath(const QFileSystemModel* self, QModelIndex
     return _str;
 }
 
-bool QFileSystemModel_IsDir(const QFileSystemModel* self, QModelIndex* index) {
+bool QFileSystemModel_IsDir(const QFileSystemModel* self, const QModelIndex* index) {
     return self->isDir(*index);
 }
 
-long long QFileSystemModel_Size(const QFileSystemModel* self, QModelIndex* index) {
+long long QFileSystemModel_Size(const QFileSystemModel* self, const QModelIndex* index) {
     return static_cast<long long>(self->size(*index));
 }
 
-libqt_string QFileSystemModel_Type(const QFileSystemModel* self, QModelIndex* index) {
+libqt_string QFileSystemModel_Type(const QFileSystemModel* self, const QModelIndex* index) {
     QString _ret = self->type(*index);
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
     QByteArray _b = _ret.toUtf8();
@@ -316,20 +318,24 @@ libqt_string QFileSystemModel_Type(const QFileSystemModel* self, QModelIndex* in
     return _str;
 }
 
-QDateTime* QFileSystemModel_LastModified(const QFileSystemModel* self, QModelIndex* index) {
+QDateTime* QFileSystemModel_LastModified(const QFileSystemModel* self, const QModelIndex* index) {
     return new QDateTime(self->lastModified(*index));
 }
 
-QModelIndex* QFileSystemModel_Mkdir(QFileSystemModel* self, QModelIndex* parent, libqt_string name) {
+QDateTime* QFileSystemModel_LastModified2(const QFileSystemModel* self, const QModelIndex* index, const QTimeZone* tz) {
+    return new QDateTime(self->lastModified(*index, *tz));
+}
+
+QModelIndex* QFileSystemModel_Mkdir(QFileSystemModel* self, const QModelIndex* parent, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QModelIndex(self->mkdir(*parent, name_QString));
 }
 
-bool QFileSystemModel_Rmdir(QFileSystemModel* self, QModelIndex* index) {
+bool QFileSystemModel_Rmdir(QFileSystemModel* self, const QModelIndex* index) {
     return self->rmdir(*index);
 }
 
-libqt_string QFileSystemModel_FileName(const QFileSystemModel* self, QModelIndex* index) {
+libqt_string QFileSystemModel_FileName(const QFileSystemModel* self, const QModelIndex* index) {
     QString _ret = self->fileName(*index);
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
     QByteArray _b = _ret.toUtf8();
@@ -341,19 +347,19 @@ libqt_string QFileSystemModel_FileName(const QFileSystemModel* self, QModelIndex
     return _str;
 }
 
-QIcon* QFileSystemModel_FileIcon(const QFileSystemModel* self, QModelIndex* index) {
+QIcon* QFileSystemModel_FileIcon(const QFileSystemModel* self, const QModelIndex* index) {
     return new QIcon(self->fileIcon(*index));
 }
 
-int QFileSystemModel_Permissions(const QFileSystemModel* self, QModelIndex* index) {
+int QFileSystemModel_Permissions(const QFileSystemModel* self, const QModelIndex* index) {
     return static_cast<int>(self->permissions(*index));
 }
 
-QFileInfo* QFileSystemModel_FileInfo(const QFileSystemModel* self, QModelIndex* index) {
+QFileInfo* QFileSystemModel_FileInfo(const QFileSystemModel* self, const QModelIndex* index) {
     return new QFileInfo(self->fileInfo(*index));
 }
 
-bool QFileSystemModel_Remove(QFileSystemModel* self, QModelIndex* index) {
+bool QFileSystemModel_Remove(QFileSystemModel* self, const QModelIndex* index) {
     return self->remove(*index);
 }
 
@@ -381,7 +387,7 @@ libqt_string QFileSystemModel_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-QModelIndex* QFileSystemModel_Index2(const QFileSystemModel* self, libqt_string path, int column) {
+QModelIndex* QFileSystemModel_Index2(const QFileSystemModel* self, const libqt_string path, int column) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     return new QModelIndex(self->index(path_QString, static_cast<int>(column)));
 }
@@ -395,7 +401,7 @@ void QFileSystemModel_SetOption2(QFileSystemModel* self, int option, bool on) {
 }
 
 // Derived class handler implementation
-QModelIndex* QFileSystemModel_Index(const QFileSystemModel* self, int row, int column, QModelIndex* parent) {
+QModelIndex* QFileSystemModel_Index(const QFileSystemModel* self, int row, int column, const QModelIndex* parent) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return new QModelIndex(vqfilesystemmodel->index(static_cast<int>(row), static_cast<int>(column), *parent));
@@ -405,7 +411,7 @@ QModelIndex* QFileSystemModel_Index(const QFileSystemModel* self, int row, int c
 }
 
 // Base class handler implementation
-QModelIndex* QFileSystemModel_QBaseIndex(const QFileSystemModel* self, int row, int column, QModelIndex* parent) {
+QModelIndex* QFileSystemModel_QBaseIndex(const QFileSystemModel* self, int row, int column, const QModelIndex* parent) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_Index_IsBase(true);
@@ -424,7 +430,7 @@ void QFileSystemModel_OnIndex(const QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QModelIndex* QFileSystemModel_Parent(const QFileSystemModel* self, QModelIndex* child) {
+QModelIndex* QFileSystemModel_Parent(const QFileSystemModel* self, const QModelIndex* child) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return new QModelIndex(vqfilesystemmodel->parent(*child));
@@ -434,7 +440,7 @@ QModelIndex* QFileSystemModel_Parent(const QFileSystemModel* self, QModelIndex* 
 }
 
 // Base class handler implementation
-QModelIndex* QFileSystemModel_QBaseParent(const QFileSystemModel* self, QModelIndex* child) {
+QModelIndex* QFileSystemModel_QBaseParent(const QFileSystemModel* self, const QModelIndex* child) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_Parent_IsBase(true);
@@ -453,7 +459,7 @@ void QFileSystemModel_OnParent(const QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QModelIndex* QFileSystemModel_Sibling(const QFileSystemModel* self, int row, int column, QModelIndex* idx) {
+QModelIndex* QFileSystemModel_Sibling(const QFileSystemModel* self, int row, int column, const QModelIndex* idx) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return new QModelIndex(vqfilesystemmodel->sibling(static_cast<int>(row), static_cast<int>(column), *idx));
@@ -463,7 +469,7 @@ QModelIndex* QFileSystemModel_Sibling(const QFileSystemModel* self, int row, int
 }
 
 // Base class handler implementation
-QModelIndex* QFileSystemModel_QBaseSibling(const QFileSystemModel* self, int row, int column, QModelIndex* idx) {
+QModelIndex* QFileSystemModel_QBaseSibling(const QFileSystemModel* self, int row, int column, const QModelIndex* idx) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_Sibling_IsBase(true);
@@ -482,7 +488,7 @@ void QFileSystemModel_OnSibling(const QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFileSystemModel_HasChildren(const QFileSystemModel* self, QModelIndex* parent) {
+bool QFileSystemModel_HasChildren(const QFileSystemModel* self, const QModelIndex* parent) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return vqfilesystemmodel->hasChildren(*parent);
@@ -492,7 +498,7 @@ bool QFileSystemModel_HasChildren(const QFileSystemModel* self, QModelIndex* par
 }
 
 // Base class handler implementation
-bool QFileSystemModel_QBaseHasChildren(const QFileSystemModel* self, QModelIndex* parent) {
+bool QFileSystemModel_QBaseHasChildren(const QFileSystemModel* self, const QModelIndex* parent) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_HasChildren_IsBase(true);
@@ -511,7 +517,7 @@ void QFileSystemModel_OnHasChildren(const QFileSystemModel* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-bool QFileSystemModel_CanFetchMore(const QFileSystemModel* self, QModelIndex* parent) {
+bool QFileSystemModel_CanFetchMore(const QFileSystemModel* self, const QModelIndex* parent) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return vqfilesystemmodel->canFetchMore(*parent);
@@ -521,7 +527,7 @@ bool QFileSystemModel_CanFetchMore(const QFileSystemModel* self, QModelIndex* pa
 }
 
 // Base class handler implementation
-bool QFileSystemModel_QBaseCanFetchMore(const QFileSystemModel* self, QModelIndex* parent) {
+bool QFileSystemModel_QBaseCanFetchMore(const QFileSystemModel* self, const QModelIndex* parent) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_CanFetchMore_IsBase(true);
@@ -540,7 +546,7 @@ void QFileSystemModel_OnCanFetchMore(const QFileSystemModel* self, intptr_t slot
 }
 
 // Derived class handler implementation
-void QFileSystemModel_FetchMore(QFileSystemModel* self, QModelIndex* parent) {
+void QFileSystemModel_FetchMore(QFileSystemModel* self, const QModelIndex* parent) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->fetchMore(*parent);
@@ -550,7 +556,7 @@ void QFileSystemModel_FetchMore(QFileSystemModel* self, QModelIndex* parent) {
 }
 
 // Base class handler implementation
-void QFileSystemModel_QBaseFetchMore(QFileSystemModel* self, QModelIndex* parent) {
+void QFileSystemModel_QBaseFetchMore(QFileSystemModel* self, const QModelIndex* parent) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_FetchMore_IsBase(true);
@@ -569,7 +575,7 @@ void QFileSystemModel_OnFetchMore(QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-int QFileSystemModel_RowCount(const QFileSystemModel* self, QModelIndex* parent) {
+int QFileSystemModel_RowCount(const QFileSystemModel* self, const QModelIndex* parent) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return vqfilesystemmodel->rowCount(*parent);
@@ -579,7 +585,7 @@ int QFileSystemModel_RowCount(const QFileSystemModel* self, QModelIndex* parent)
 }
 
 // Base class handler implementation
-int QFileSystemModel_QBaseRowCount(const QFileSystemModel* self, QModelIndex* parent) {
+int QFileSystemModel_QBaseRowCount(const QFileSystemModel* self, const QModelIndex* parent) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_RowCount_IsBase(true);
@@ -598,7 +604,7 @@ void QFileSystemModel_OnRowCount(const QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-int QFileSystemModel_ColumnCount(const QFileSystemModel* self, QModelIndex* parent) {
+int QFileSystemModel_ColumnCount(const QFileSystemModel* self, const QModelIndex* parent) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return vqfilesystemmodel->columnCount(*parent);
@@ -608,7 +614,7 @@ int QFileSystemModel_ColumnCount(const QFileSystemModel* self, QModelIndex* pare
 }
 
 // Base class handler implementation
-int QFileSystemModel_QBaseColumnCount(const QFileSystemModel* self, QModelIndex* parent) {
+int QFileSystemModel_QBaseColumnCount(const QFileSystemModel* self, const QModelIndex* parent) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_ColumnCount_IsBase(true);
@@ -627,7 +633,7 @@ void QFileSystemModel_OnColumnCount(const QFileSystemModel* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-QVariant* QFileSystemModel_Data(const QFileSystemModel* self, QModelIndex* index, int role) {
+QVariant* QFileSystemModel_Data(const QFileSystemModel* self, const QModelIndex* index, int role) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return new QVariant(vqfilesystemmodel->data(*index, static_cast<int>(role)));
@@ -637,7 +643,7 @@ QVariant* QFileSystemModel_Data(const QFileSystemModel* self, QModelIndex* index
 }
 
 // Base class handler implementation
-QVariant* QFileSystemModel_QBaseData(const QFileSystemModel* self, QModelIndex* index, int role) {
+QVariant* QFileSystemModel_QBaseData(const QFileSystemModel* self, const QModelIndex* index, int role) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_Data_IsBase(true);
@@ -656,7 +662,7 @@ void QFileSystemModel_OnData(const QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFileSystemModel_SetData(QFileSystemModel* self, QModelIndex* index, QVariant* value, int role) {
+bool QFileSystemModel_SetData(QFileSystemModel* self, const QModelIndex* index, const QVariant* value, int role) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return vqfilesystemmodel->setData(*index, *value, static_cast<int>(role));
@@ -666,7 +672,7 @@ bool QFileSystemModel_SetData(QFileSystemModel* self, QModelIndex* index, QVaria
 }
 
 // Base class handler implementation
-bool QFileSystemModel_QBaseSetData(QFileSystemModel* self, QModelIndex* index, QVariant* value, int role) {
+bool QFileSystemModel_QBaseSetData(QFileSystemModel* self, const QModelIndex* index, const QVariant* value, int role) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_SetData_IsBase(true);
@@ -714,7 +720,7 @@ void QFileSystemModel_OnHeaderData(const QFileSystemModel* self, intptr_t slot) 
 }
 
 // Derived class handler implementation
-int QFileSystemModel_Flags(const QFileSystemModel* self, QModelIndex* index) {
+int QFileSystemModel_Flags(const QFileSystemModel* self, const QModelIndex* index) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return static_cast<int>(vqfilesystemmodel->flags(*index));
@@ -724,7 +730,7 @@ int QFileSystemModel_Flags(const QFileSystemModel* self, QModelIndex* index) {
 }
 
 // Base class handler implementation
-int QFileSystemModel_QBaseFlags(const QFileSystemModel* self, QModelIndex* index) {
+int QFileSystemModel_QBaseFlags(const QFileSystemModel* self, const QModelIndex* index) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_Flags_IsBase(true);
@@ -775,10 +781,10 @@ void QFileSystemModel_OnSort(QFileSystemModel* self, intptr_t slot) {
 libqt_list /* of libqt_string */ QFileSystemModel_MimeTypes(const QFileSystemModel* self) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
-        QStringList _ret = vqfilesystemmodel->mimeTypes();
+        QList<QString> _ret = vqfilesystemmodel->mimeTypes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -790,14 +796,14 @@ libqt_list /* of libqt_string */ QFileSystemModel_MimeTypes(const QFileSystemMod
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = self->QFileSystemModel::mimeTypes();
+        QList<QString> _ret = self->QFileSystemModel::mimeTypes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -809,7 +815,7 @@ libqt_list /* of libqt_string */ QFileSystemModel_MimeTypes(const QFileSystemMod
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -820,10 +826,10 @@ libqt_list /* of libqt_string */ QFileSystemModel_QBaseMimeTypes(const QFileSyst
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_MimeTypes_IsBase(true);
-        QStringList _ret = vqfilesystemmodel->mimeTypes();
+        QList<QString> _ret = vqfilesystemmodel->mimeTypes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -835,14 +841,14 @@ libqt_list /* of libqt_string */ QFileSystemModel_QBaseMimeTypes(const QFileSyst
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = self->QFileSystemModel::mimeTypes();
+        QList<QString> _ret = self->QFileSystemModel::mimeTypes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -854,7 +860,7 @@ libqt_list /* of libqt_string */ QFileSystemModel_QBaseMimeTypes(const QFileSyst
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -869,9 +875,9 @@ void QFileSystemModel_OnMimeTypes(const QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QMimeData* QFileSystemModel_MimeData(const QFileSystemModel* self, libqt_list /* of QModelIndex* */ indexes) {
+QMimeData* QFileSystemModel_MimeData(const QFileSystemModel* self, const libqt_list /* of QModelIndex* */ indexes) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
-    QModelIndexList indexes_QList;
+    QList<QModelIndex> indexes_QList;
     indexes_QList.reserve(indexes.len);
     QModelIndex** indexes_arr = static_cast<QModelIndex**>(indexes.data.ptr);
     for (size_t i = 0; i < indexes.len; ++i) {
@@ -885,9 +891,9 @@ QMimeData* QFileSystemModel_MimeData(const QFileSystemModel* self, libqt_list /*
 }
 
 // Base class handler implementation
-QMimeData* QFileSystemModel_QBaseMimeData(const QFileSystemModel* self, libqt_list /* of QModelIndex* */ indexes) {
+QMimeData* QFileSystemModel_QBaseMimeData(const QFileSystemModel* self, const libqt_list /* of QModelIndex* */ indexes) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
-    QModelIndexList indexes_QList;
+    QList<QModelIndex> indexes_QList;
     indexes_QList.reserve(indexes.len);
     QModelIndex** indexes_arr = static_cast<QModelIndex**>(indexes.data.ptr);
     for (size_t i = 0; i < indexes.len; ++i) {
@@ -910,7 +916,7 @@ void QFileSystemModel_OnMimeData(const QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFileSystemModel_DropMimeData(QFileSystemModel* self, QMimeData* data, int action, int row, int column, QModelIndex* parent) {
+bool QFileSystemModel_DropMimeData(QFileSystemModel* self, const QMimeData* data, int action, int row, int column, const QModelIndex* parent) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return vqfilesystemmodel->dropMimeData(data, static_cast<Qt::DropAction>(action), static_cast<int>(row), static_cast<int>(column), *parent);
@@ -920,7 +926,7 @@ bool QFileSystemModel_DropMimeData(QFileSystemModel* self, QMimeData* data, int 
 }
 
 // Base class handler implementation
-bool QFileSystemModel_QBaseDropMimeData(QFileSystemModel* self, QMimeData* data, int action, int row, int column, QModelIndex* parent) {
+bool QFileSystemModel_QBaseDropMimeData(QFileSystemModel* self, const QMimeData* data, int action, int row, int column, const QModelIndex* parent) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_DropMimeData_IsBase(true);
@@ -972,7 +978,7 @@ libqt_map /* of int to libqt_string */ QFileSystemModel_RoleNames(const QFileSys
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         QHash<int, QByteArray> _ret = vqfilesystemmodel->roleNames();
-        // Convert QMap<> from C++ memory to manually-managed C memory
+        // Convert QHash<> from C++ memory to manually-managed C memory
         int* _karr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
         libqt_string* _varr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
         int _ctr = 0;
@@ -994,7 +1000,7 @@ libqt_map /* of int to libqt_string */ QFileSystemModel_RoleNames(const QFileSys
         return _out;
     } else {
         QHash<int, QByteArray> _ret = self->QFileSystemModel::roleNames();
-        // Convert QMap<> from C++ memory to manually-managed C memory
+        // Convert QHash<> from C++ memory to manually-managed C memory
         int* _karr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
         libqt_string* _varr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
         int _ctr = 0;
@@ -1023,7 +1029,7 @@ libqt_map /* of int to libqt_string */ QFileSystemModel_QBaseRoleNames(const QFi
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_RoleNames_IsBase(true);
         QHash<int, QByteArray> _ret = vqfilesystemmodel->roleNames();
-        // Convert QMap<> from C++ memory to manually-managed C memory
+        // Convert QHash<> from C++ memory to manually-managed C memory
         int* _karr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
         libqt_string* _varr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
         int _ctr = 0;
@@ -1045,7 +1051,7 @@ libqt_map /* of int to libqt_string */ QFileSystemModel_QBaseRoleNames(const QFi
         return _out;
     } else {
         QHash<int, QByteArray> _ret = self->QFileSystemModel::roleNames();
-        // Convert QMap<> from C++ memory to manually-managed C memory
+        // Convert QHash<> from C++ memory to manually-managed C memory
         int* _karr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
         libqt_string* _varr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
         int _ctr = 0;
@@ -1135,7 +1141,7 @@ void QFileSystemModel_OnEvent(QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFileSystemModel_SetHeaderData(QFileSystemModel* self, int section, int orientation, QVariant* value, int role) {
+bool QFileSystemModel_SetHeaderData(QFileSystemModel* self, int section, int orientation, const QVariant* value, int role) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return vqfilesystemmodel->setHeaderData(static_cast<int>(section), static_cast<Qt::Orientation>(orientation), *value, static_cast<int>(role));
@@ -1145,7 +1151,7 @@ bool QFileSystemModel_SetHeaderData(QFileSystemModel* self, int section, int ori
 }
 
 // Base class handler implementation
-bool QFileSystemModel_QBaseSetHeaderData(QFileSystemModel* self, int section, int orientation, QVariant* value, int role) {
+bool QFileSystemModel_QBaseSetHeaderData(QFileSystemModel* self, int section, int orientation, const QVariant* value, int role) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_SetHeaderData_IsBase(true);
@@ -1164,7 +1170,7 @@ void QFileSystemModel_OnSetHeaderData(QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-libqt_map /* of int to QVariant* */ QFileSystemModel_ItemData(const QFileSystemModel* self, QModelIndex* index) {
+libqt_map /* of int to QVariant* */ QFileSystemModel_ItemData(const QFileSystemModel* self, const QModelIndex* index) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         QMap<int, QVariant> _ret = vqfilesystemmodel->itemData(*index);
@@ -1202,7 +1208,7 @@ libqt_map /* of int to QVariant* */ QFileSystemModel_ItemData(const QFileSystemM
 }
 
 // Base class handler implementation
-libqt_map /* of int to QVariant* */ QFileSystemModel_QBaseItemData(const QFileSystemModel* self, QModelIndex* index) {
+libqt_map /* of int to QVariant* */ QFileSystemModel_QBaseItemData(const QFileSystemModel* self, const QModelIndex* index) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_ItemData_IsBase(true);
@@ -1249,7 +1255,7 @@ void QFileSystemModel_OnItemData(const QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFileSystemModel_SetItemData(QFileSystemModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ roles) {
+bool QFileSystemModel_SetItemData(QFileSystemModel* self, const QModelIndex* index, const libqt_map /* of int to QVariant* */ roles) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     QMap<int, QVariant> roles_QMap;
     int* roles_karr = static_cast<int*>(roles.keys);
@@ -1265,7 +1271,7 @@ bool QFileSystemModel_SetItemData(QFileSystemModel* self, QModelIndex* index, li
 }
 
 // Base class handler implementation
-bool QFileSystemModel_QBaseSetItemData(QFileSystemModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ roles) {
+bool QFileSystemModel_QBaseSetItemData(QFileSystemModel* self, const QModelIndex* index, const libqt_map /* of int to QVariant* */ roles) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     QMap<int, QVariant> roles_QMap;
     int* roles_karr = static_cast<int*>(roles.keys);
@@ -1290,7 +1296,7 @@ void QFileSystemModel_OnSetItemData(QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFileSystemModel_ClearItemData(QFileSystemModel* self, QModelIndex* index) {
+bool QFileSystemModel_ClearItemData(QFileSystemModel* self, const QModelIndex* index) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return vqfilesystemmodel->clearItemData(*index);
@@ -1300,7 +1306,7 @@ bool QFileSystemModel_ClearItemData(QFileSystemModel* self, QModelIndex* index) 
 }
 
 // Base class handler implementation
-bool QFileSystemModel_QBaseClearItemData(QFileSystemModel* self, QModelIndex* index) {
+bool QFileSystemModel_QBaseClearItemData(QFileSystemModel* self, const QModelIndex* index) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_ClearItemData_IsBase(true);
@@ -1319,7 +1325,7 @@ void QFileSystemModel_OnClearItemData(QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFileSystemModel_CanDropMimeData(const QFileSystemModel* self, QMimeData* data, int action, int row, int column, QModelIndex* parent) {
+bool QFileSystemModel_CanDropMimeData(const QFileSystemModel* self, const QMimeData* data, int action, int row, int column, const QModelIndex* parent) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return vqfilesystemmodel->canDropMimeData(data, static_cast<Qt::DropAction>(action), static_cast<int>(row), static_cast<int>(column), *parent);
@@ -1329,7 +1335,7 @@ bool QFileSystemModel_CanDropMimeData(const QFileSystemModel* self, QMimeData* d
 }
 
 // Base class handler implementation
-bool QFileSystemModel_QBaseCanDropMimeData(const QFileSystemModel* self, QMimeData* data, int action, int row, int column, QModelIndex* parent) {
+bool QFileSystemModel_QBaseCanDropMimeData(const QFileSystemModel* self, const QMimeData* data, int action, int row, int column, const QModelIndex* parent) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_CanDropMimeData_IsBase(true);
@@ -1377,7 +1383,7 @@ void QFileSystemModel_OnSupportedDragActions(const QFileSystemModel* self, intpt
 }
 
 // Derived class handler implementation
-bool QFileSystemModel_InsertRows(QFileSystemModel* self, int row, int count, QModelIndex* parent) {
+bool QFileSystemModel_InsertRows(QFileSystemModel* self, int row, int count, const QModelIndex* parent) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return vqfilesystemmodel->insertRows(static_cast<int>(row), static_cast<int>(count), *parent);
@@ -1387,7 +1393,7 @@ bool QFileSystemModel_InsertRows(QFileSystemModel* self, int row, int count, QMo
 }
 
 // Base class handler implementation
-bool QFileSystemModel_QBaseInsertRows(QFileSystemModel* self, int row, int count, QModelIndex* parent) {
+bool QFileSystemModel_QBaseInsertRows(QFileSystemModel* self, int row, int count, const QModelIndex* parent) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_InsertRows_IsBase(true);
@@ -1406,7 +1412,7 @@ void QFileSystemModel_OnInsertRows(QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFileSystemModel_InsertColumns(QFileSystemModel* self, int column, int count, QModelIndex* parent) {
+bool QFileSystemModel_InsertColumns(QFileSystemModel* self, int column, int count, const QModelIndex* parent) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return vqfilesystemmodel->insertColumns(static_cast<int>(column), static_cast<int>(count), *parent);
@@ -1416,7 +1422,7 @@ bool QFileSystemModel_InsertColumns(QFileSystemModel* self, int column, int coun
 }
 
 // Base class handler implementation
-bool QFileSystemModel_QBaseInsertColumns(QFileSystemModel* self, int column, int count, QModelIndex* parent) {
+bool QFileSystemModel_QBaseInsertColumns(QFileSystemModel* self, int column, int count, const QModelIndex* parent) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_InsertColumns_IsBase(true);
@@ -1435,7 +1441,7 @@ void QFileSystemModel_OnInsertColumns(QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFileSystemModel_RemoveRows(QFileSystemModel* self, int row, int count, QModelIndex* parent) {
+bool QFileSystemModel_RemoveRows(QFileSystemModel* self, int row, int count, const QModelIndex* parent) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return vqfilesystemmodel->removeRows(static_cast<int>(row), static_cast<int>(count), *parent);
@@ -1445,7 +1451,7 @@ bool QFileSystemModel_RemoveRows(QFileSystemModel* self, int row, int count, QMo
 }
 
 // Base class handler implementation
-bool QFileSystemModel_QBaseRemoveRows(QFileSystemModel* self, int row, int count, QModelIndex* parent) {
+bool QFileSystemModel_QBaseRemoveRows(QFileSystemModel* self, int row, int count, const QModelIndex* parent) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_RemoveRows_IsBase(true);
@@ -1464,7 +1470,7 @@ void QFileSystemModel_OnRemoveRows(QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFileSystemModel_RemoveColumns(QFileSystemModel* self, int column, int count, QModelIndex* parent) {
+bool QFileSystemModel_RemoveColumns(QFileSystemModel* self, int column, int count, const QModelIndex* parent) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return vqfilesystemmodel->removeColumns(static_cast<int>(column), static_cast<int>(count), *parent);
@@ -1474,7 +1480,7 @@ bool QFileSystemModel_RemoveColumns(QFileSystemModel* self, int column, int coun
 }
 
 // Base class handler implementation
-bool QFileSystemModel_QBaseRemoveColumns(QFileSystemModel* self, int column, int count, QModelIndex* parent) {
+bool QFileSystemModel_QBaseRemoveColumns(QFileSystemModel* self, int column, int count, const QModelIndex* parent) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_RemoveColumns_IsBase(true);
@@ -1493,7 +1499,7 @@ void QFileSystemModel_OnRemoveColumns(QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFileSystemModel_MoveRows(QFileSystemModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild) {
+bool QFileSystemModel_MoveRows(QFileSystemModel* self, const QModelIndex* sourceParent, int sourceRow, int count, const QModelIndex* destinationParent, int destinationChild) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return vqfilesystemmodel->moveRows(*sourceParent, static_cast<int>(sourceRow), static_cast<int>(count), *destinationParent, static_cast<int>(destinationChild));
@@ -1503,7 +1509,7 @@ bool QFileSystemModel_MoveRows(QFileSystemModel* self, QModelIndex* sourceParent
 }
 
 // Base class handler implementation
-bool QFileSystemModel_QBaseMoveRows(QFileSystemModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild) {
+bool QFileSystemModel_QBaseMoveRows(QFileSystemModel* self, const QModelIndex* sourceParent, int sourceRow, int count, const QModelIndex* destinationParent, int destinationChild) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_MoveRows_IsBase(true);
@@ -1522,7 +1528,7 @@ void QFileSystemModel_OnMoveRows(QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFileSystemModel_MoveColumns(QFileSystemModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild) {
+bool QFileSystemModel_MoveColumns(QFileSystemModel* self, const QModelIndex* sourceParent, int sourceColumn, int count, const QModelIndex* destinationParent, int destinationChild) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return vqfilesystemmodel->moveColumns(*sourceParent, static_cast<int>(sourceColumn), static_cast<int>(count), *destinationParent, static_cast<int>(destinationChild));
@@ -1532,7 +1538,7 @@ bool QFileSystemModel_MoveColumns(QFileSystemModel* self, QModelIndex* sourcePar
 }
 
 // Base class handler implementation
-bool QFileSystemModel_QBaseMoveColumns(QFileSystemModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild) {
+bool QFileSystemModel_QBaseMoveColumns(QFileSystemModel* self, const QModelIndex* sourceParent, int sourceColumn, int count, const QModelIndex* destinationParent, int destinationChild) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_MoveColumns_IsBase(true);
@@ -1551,7 +1557,7 @@ void QFileSystemModel_OnMoveColumns(QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QModelIndex* QFileSystemModel_Buddy(const QFileSystemModel* self, QModelIndex* index) {
+QModelIndex* QFileSystemModel_Buddy(const QFileSystemModel* self, const QModelIndex* index) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return new QModelIndex(vqfilesystemmodel->buddy(*index));
@@ -1561,7 +1567,7 @@ QModelIndex* QFileSystemModel_Buddy(const QFileSystemModel* self, QModelIndex* i
 }
 
 // Base class handler implementation
-QModelIndex* QFileSystemModel_QBaseBuddy(const QFileSystemModel* self, QModelIndex* index) {
+QModelIndex* QFileSystemModel_QBaseBuddy(const QFileSystemModel* self, const QModelIndex* index) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_Buddy_IsBase(true);
@@ -1580,57 +1586,57 @@ void QFileSystemModel_OnBuddy(const QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-libqt_list /* of QModelIndex* */ QFileSystemModel_Match(const QFileSystemModel* self, QModelIndex* start, int role, QVariant* value, int hits, int flags) {
+libqt_list /* of QModelIndex* */ QFileSystemModel_Match(const QFileSystemModel* self, const QModelIndex* start, int role, const QVariant* value, int hits, int flags) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
-        QModelIndexList _ret = vqfilesystemmodel->match(*start, static_cast<int>(role), *value, static_cast<int>(hits), static_cast<Qt::MatchFlags>(flags));
+        QList<QModelIndex> _ret = vqfilesystemmodel->match(*start, static_cast<int>(role), *value, static_cast<int>(hits), static_cast<Qt::MatchFlags>(flags));
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QModelIndexList _ret = self->QFileSystemModel::match(*start, static_cast<int>(role), *value, static_cast<int>(hits), static_cast<Qt::MatchFlags>(flags));
+        QList<QModelIndex> _ret = self->QFileSystemModel::match(*start, static_cast<int>(role), *value, static_cast<int>(hits), static_cast<Qt::MatchFlags>(flags));
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
 }
 
 // Base class handler implementation
-libqt_list /* of QModelIndex* */ QFileSystemModel_QBaseMatch(const QFileSystemModel* self, QModelIndex* start, int role, QVariant* value, int hits, int flags) {
+libqt_list /* of QModelIndex* */ QFileSystemModel_QBaseMatch(const QFileSystemModel* self, const QModelIndex* start, int role, const QVariant* value, int hits, int flags) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_Match_IsBase(true);
-        QModelIndexList _ret = vqfilesystemmodel->match(*start, static_cast<int>(role), *value, static_cast<int>(hits), static_cast<Qt::MatchFlags>(flags));
+        QList<QModelIndex> _ret = vqfilesystemmodel->match(*start, static_cast<int>(role), *value, static_cast<int>(hits), static_cast<Qt::MatchFlags>(flags));
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QModelIndexList _ret = self->QFileSystemModel::match(*start, static_cast<int>(role), *value, static_cast<int>(hits), static_cast<Qt::MatchFlags>(flags));
+        QList<QModelIndex> _ret = self->QFileSystemModel::match(*start, static_cast<int>(role), *value, static_cast<int>(hits), static_cast<Qt::MatchFlags>(flags));
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -1645,7 +1651,7 @@ void QFileSystemModel_OnMatch(const QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QSize* QFileSystemModel_Span(const QFileSystemModel* self, QModelIndex* index) {
+QSize* QFileSystemModel_Span(const QFileSystemModel* self, const QModelIndex* index) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return new QSize(vqfilesystemmodel->span(*index));
@@ -1655,7 +1661,7 @@ QSize* QFileSystemModel_Span(const QFileSystemModel* self, QModelIndex* index) {
 }
 
 // Base class handler implementation
-QSize* QFileSystemModel_QBaseSpan(const QFileSystemModel* self, QModelIndex* index) {
+QSize* QFileSystemModel_QBaseSpan(const QFileSystemModel* self, const QModelIndex* index) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_Span_IsBase(true);
@@ -1674,7 +1680,7 @@ void QFileSystemModel_OnSpan(const QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFileSystemModel_MultiData(const QFileSystemModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan) {
+void QFileSystemModel_MultiData(const QFileSystemModel* self, const QModelIndex* index, QModelRoleDataSpan* roleDataSpan) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->multiData(*index, *roleDataSpan);
@@ -1684,7 +1690,7 @@ void QFileSystemModel_MultiData(const QFileSystemModel* self, QModelIndex* index
 }
 
 // Base class handler implementation
-void QFileSystemModel_QBaseMultiData(const QFileSystemModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan) {
+void QFileSystemModel_QBaseMultiData(const QFileSystemModel* self, const QModelIndex* index, QModelRoleDataSpan* roleDataSpan) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_MultiData_IsBase(true);
@@ -1877,7 +1883,7 @@ void QFileSystemModel_OnCustomEvent(QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFileSystemModel_ConnectNotify(QFileSystemModel* self, QMetaMethod* signal) {
+void QFileSystemModel_ConnectNotify(QFileSystemModel* self, const QMetaMethod* signal) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->connectNotify(*signal);
@@ -1887,7 +1893,7 @@ void QFileSystemModel_ConnectNotify(QFileSystemModel* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-void QFileSystemModel_QBaseConnectNotify(QFileSystemModel* self, QMetaMethod* signal) {
+void QFileSystemModel_QBaseConnectNotify(QFileSystemModel* self, const QMetaMethod* signal) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_ConnectNotify_IsBase(true);
@@ -1906,7 +1912,7 @@ void QFileSystemModel_OnConnectNotify(QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFileSystemModel_DisconnectNotify(QFileSystemModel* self, QMetaMethod* signal) {
+void QFileSystemModel_DisconnectNotify(QFileSystemModel* self, const QMetaMethod* signal) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->disconnectNotify(*signal);
@@ -1916,7 +1922,7 @@ void QFileSystemModel_DisconnectNotify(QFileSystemModel* self, QMetaMethod* sign
 }
 
 // Base class handler implementation
-void QFileSystemModel_QBaseDisconnectNotify(QFileSystemModel* self, QMetaMethod* signal) {
+void QFileSystemModel_QBaseDisconnectNotify(QFileSystemModel* self, const QMetaMethod* signal) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_DisconnectNotify_IsBase(true);
@@ -1962,9 +1968,9 @@ void QFileSystemModel_OnCreateIndex(const QFileSystemModel* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-void QFileSystemModel_EncodeData(const QFileSystemModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream) {
+void QFileSystemModel_EncodeData(const QFileSystemModel* self, const libqt_list /* of QModelIndex* */ indexes, QDataStream* stream) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
-    QModelIndexList indexes_QList;
+    QList<QModelIndex> indexes_QList;
     indexes_QList.reserve(indexes.len);
     QModelIndex** indexes_arr = static_cast<QModelIndex**>(indexes.data.ptr);
     for (size_t i = 0; i < indexes.len; ++i) {
@@ -1978,9 +1984,9 @@ void QFileSystemModel_EncodeData(const QFileSystemModel* self, libqt_list /* of 
 }
 
 // Base class handler implementation
-void QFileSystemModel_QBaseEncodeData(const QFileSystemModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream) {
+void QFileSystemModel_QBaseEncodeData(const QFileSystemModel* self, const libqt_list /* of QModelIndex* */ indexes, QDataStream* stream) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
-    QModelIndexList indexes_QList;
+    QList<QModelIndex> indexes_QList;
     indexes_QList.reserve(indexes.len);
     QModelIndex** indexes_arr = static_cast<QModelIndex**>(indexes.data.ptr);
     for (size_t i = 0; i < indexes.len; ++i) {
@@ -2003,7 +2009,7 @@ void QFileSystemModel_OnEncodeData(const QFileSystemModel* self, intptr_t slot) 
 }
 
 // Derived class handler implementation
-bool QFileSystemModel_DecodeData(QFileSystemModel* self, int row, int column, QModelIndex* parent, QDataStream* stream) {
+bool QFileSystemModel_DecodeData(QFileSystemModel* self, int row, int column, const QModelIndex* parent, QDataStream* stream) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return vqfilesystemmodel->decodeData(static_cast<int>(row), static_cast<int>(column), *parent, *stream);
@@ -2013,7 +2019,7 @@ bool QFileSystemModel_DecodeData(QFileSystemModel* self, int row, int column, QM
 }
 
 // Base class handler implementation
-bool QFileSystemModel_QBaseDecodeData(QFileSystemModel* self, int row, int column, QModelIndex* parent, QDataStream* stream) {
+bool QFileSystemModel_QBaseDecodeData(QFileSystemModel* self, int row, int column, const QModelIndex* parent, QDataStream* stream) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_DecodeData_IsBase(true);
@@ -2032,7 +2038,7 @@ void QFileSystemModel_OnDecodeData(QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFileSystemModel_BeginInsertRows(QFileSystemModel* self, QModelIndex* parent, int first, int last) {
+void QFileSystemModel_BeginInsertRows(QFileSystemModel* self, const QModelIndex* parent, int first, int last) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->beginInsertRows(*parent, static_cast<int>(first), static_cast<int>(last));
@@ -2042,7 +2048,7 @@ void QFileSystemModel_BeginInsertRows(QFileSystemModel* self, QModelIndex* paren
 }
 
 // Base class handler implementation
-void QFileSystemModel_QBaseBeginInsertRows(QFileSystemModel* self, QModelIndex* parent, int first, int last) {
+void QFileSystemModel_QBaseBeginInsertRows(QFileSystemModel* self, const QModelIndex* parent, int first, int last) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_BeginInsertRows_IsBase(true);
@@ -2090,7 +2096,7 @@ void QFileSystemModel_OnEndInsertRows(QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFileSystemModel_BeginRemoveRows(QFileSystemModel* self, QModelIndex* parent, int first, int last) {
+void QFileSystemModel_BeginRemoveRows(QFileSystemModel* self, const QModelIndex* parent, int first, int last) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->beginRemoveRows(*parent, static_cast<int>(first), static_cast<int>(last));
@@ -2100,7 +2106,7 @@ void QFileSystemModel_BeginRemoveRows(QFileSystemModel* self, QModelIndex* paren
 }
 
 // Base class handler implementation
-void QFileSystemModel_QBaseBeginRemoveRows(QFileSystemModel* self, QModelIndex* parent, int first, int last) {
+void QFileSystemModel_QBaseBeginRemoveRows(QFileSystemModel* self, const QModelIndex* parent, int first, int last) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_BeginRemoveRows_IsBase(true);
@@ -2148,7 +2154,7 @@ void QFileSystemModel_OnEndRemoveRows(QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFileSystemModel_BeginMoveRows(QFileSystemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow) {
+bool QFileSystemModel_BeginMoveRows(QFileSystemModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationRow) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return vqfilesystemmodel->beginMoveRows(*sourceParent, static_cast<int>(sourceFirst), static_cast<int>(sourceLast), *destinationParent, static_cast<int>(destinationRow));
@@ -2158,7 +2164,7 @@ bool QFileSystemModel_BeginMoveRows(QFileSystemModel* self, QModelIndex* sourceP
 }
 
 // Base class handler implementation
-bool QFileSystemModel_QBaseBeginMoveRows(QFileSystemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow) {
+bool QFileSystemModel_QBaseBeginMoveRows(QFileSystemModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationRow) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_BeginMoveRows_IsBase(true);
@@ -2206,7 +2212,7 @@ void QFileSystemModel_OnEndMoveRows(QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFileSystemModel_BeginInsertColumns(QFileSystemModel* self, QModelIndex* parent, int first, int last) {
+void QFileSystemModel_BeginInsertColumns(QFileSystemModel* self, const QModelIndex* parent, int first, int last) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->beginInsertColumns(*parent, static_cast<int>(first), static_cast<int>(last));
@@ -2216,7 +2222,7 @@ void QFileSystemModel_BeginInsertColumns(QFileSystemModel* self, QModelIndex* pa
 }
 
 // Base class handler implementation
-void QFileSystemModel_QBaseBeginInsertColumns(QFileSystemModel* self, QModelIndex* parent, int first, int last) {
+void QFileSystemModel_QBaseBeginInsertColumns(QFileSystemModel* self, const QModelIndex* parent, int first, int last) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_BeginInsertColumns_IsBase(true);
@@ -2264,7 +2270,7 @@ void QFileSystemModel_OnEndInsertColumns(QFileSystemModel* self, intptr_t slot) 
 }
 
 // Derived class handler implementation
-void QFileSystemModel_BeginRemoveColumns(QFileSystemModel* self, QModelIndex* parent, int first, int last) {
+void QFileSystemModel_BeginRemoveColumns(QFileSystemModel* self, const QModelIndex* parent, int first, int last) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->beginRemoveColumns(*parent, static_cast<int>(first), static_cast<int>(last));
@@ -2274,7 +2280,7 @@ void QFileSystemModel_BeginRemoveColumns(QFileSystemModel* self, QModelIndex* pa
 }
 
 // Base class handler implementation
-void QFileSystemModel_QBaseBeginRemoveColumns(QFileSystemModel* self, QModelIndex* parent, int first, int last) {
+void QFileSystemModel_QBaseBeginRemoveColumns(QFileSystemModel* self, const QModelIndex* parent, int first, int last) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_BeginRemoveColumns_IsBase(true);
@@ -2322,7 +2328,7 @@ void QFileSystemModel_OnEndRemoveColumns(QFileSystemModel* self, intptr_t slot) 
 }
 
 // Derived class handler implementation
-bool QFileSystemModel_BeginMoveColumns(QFileSystemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn) {
+bool QFileSystemModel_BeginMoveColumns(QFileSystemModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationColumn) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return vqfilesystemmodel->beginMoveColumns(*sourceParent, static_cast<int>(sourceFirst), static_cast<int>(sourceLast), *destinationParent, static_cast<int>(destinationColumn));
@@ -2332,7 +2338,7 @@ bool QFileSystemModel_BeginMoveColumns(QFileSystemModel* self, QModelIndex* sour
 }
 
 // Base class handler implementation
-bool QFileSystemModel_QBaseBeginMoveColumns(QFileSystemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn) {
+bool QFileSystemModel_QBaseBeginMoveColumns(QFileSystemModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationColumn) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_BeginMoveColumns_IsBase(true);
@@ -2438,7 +2444,7 @@ void QFileSystemModel_OnEndResetModel(QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFileSystemModel_ChangePersistentIndex(QFileSystemModel* self, QModelIndex* from, QModelIndex* to) {
+void QFileSystemModel_ChangePersistentIndex(QFileSystemModel* self, const QModelIndex* from, const QModelIndex* to) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->changePersistentIndex(*from, *to);
@@ -2448,7 +2454,7 @@ void QFileSystemModel_ChangePersistentIndex(QFileSystemModel* self, QModelIndex*
 }
 
 // Base class handler implementation
-void QFileSystemModel_QBaseChangePersistentIndex(QFileSystemModel* self, QModelIndex* from, QModelIndex* to) {
+void QFileSystemModel_QBaseChangePersistentIndex(QFileSystemModel* self, const QModelIndex* from, const QModelIndex* to) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_ChangePersistentIndex_IsBase(true);
@@ -2467,15 +2473,15 @@ void QFileSystemModel_OnChangePersistentIndex(QFileSystemModel* self, intptr_t s
 }
 
 // Derived class handler implementation
-void QFileSystemModel_ChangePersistentIndexList(QFileSystemModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
+void QFileSystemModel_ChangePersistentIndexList(QFileSystemModel* self, const libqt_list /* of QModelIndex* */ from, const libqt_list /* of QModelIndex* */ to) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
-    QModelIndexList from_QList;
+    QList<QModelIndex> from_QList;
     from_QList.reserve(from.len);
     QModelIndex** from_arr = static_cast<QModelIndex**>(from.data.ptr);
     for (size_t i = 0; i < from.len; ++i) {
         from_QList.push_back(*(from_arr[i]));
     }
-    QModelIndexList to_QList;
+    QList<QModelIndex> to_QList;
     to_QList.reserve(to.len);
     QModelIndex** to_arr = static_cast<QModelIndex**>(to.data.ptr);
     for (size_t i = 0; i < to.len; ++i) {
@@ -2489,15 +2495,15 @@ void QFileSystemModel_ChangePersistentIndexList(QFileSystemModel* self, libqt_li
 }
 
 // Base class handler implementation
-void QFileSystemModel_QBaseChangePersistentIndexList(QFileSystemModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
+void QFileSystemModel_QBaseChangePersistentIndexList(QFileSystemModel* self, const libqt_list /* of QModelIndex* */ from, const libqt_list /* of QModelIndex* */ to) {
     auto* vqfilesystemmodel = dynamic_cast<VirtualQFileSystemModel*>(self);
-    QModelIndexList from_QList;
+    QList<QModelIndex> from_QList;
     from_QList.reserve(from.len);
     QModelIndex** from_arr = static_cast<QModelIndex**>(from.data.ptr);
     for (size_t i = 0; i < from.len; ++i) {
         from_QList.push_back(*(from_arr[i]));
     }
-    QModelIndexList to_QList;
+    QList<QModelIndex> to_QList;
     to_QList.reserve(to.len);
     QModelIndex** to_arr = static_cast<QModelIndex**>(to.data.ptr);
     for (size_t i = 0; i < to.len; ++i) {
@@ -2523,25 +2529,25 @@ void QFileSystemModel_OnChangePersistentIndexList(QFileSystemModel* self, intptr
 libqt_list /* of QModelIndex* */ QFileSystemModel_PersistentIndexList(const QFileSystemModel* self) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
-        QModelIndexList _ret = vqfilesystemmodel->persistentIndexList();
+        QList<QModelIndex> _ret = vqfilesystemmodel->persistentIndexList();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QModelIndexList _ret = ((VirtualQFileSystemModel*)self)->persistentIndexList();
+        QList<QModelIndex> _ret = ((VirtualQFileSystemModel*)self)->persistentIndexList();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -2552,25 +2558,25 @@ libqt_list /* of QModelIndex* */ QFileSystemModel_QBasePersistentIndexList(const
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_PersistentIndexList_IsBase(true);
-        QModelIndexList _ret = vqfilesystemmodel->persistentIndexList();
+        QList<QModelIndex> _ret = vqfilesystemmodel->persistentIndexList();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QModelIndexList _ret = ((VirtualQFileSystemModel*)self)->persistentIndexList();
+        QList<QModelIndex> _ret = ((VirtualQFileSystemModel*)self)->persistentIndexList();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -2672,7 +2678,7 @@ void QFileSystemModel_OnReceivers(const QFileSystemModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFileSystemModel_IsSignalConnected(const QFileSystemModel* self, QMetaMethod* signal) {
+bool QFileSystemModel_IsSignalConnected(const QFileSystemModel* self, const QMetaMethod* signal) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         return vqfilesystemmodel->isSignalConnected(*signal);
@@ -2682,7 +2688,7 @@ bool QFileSystemModel_IsSignalConnected(const QFileSystemModel* self, QMetaMetho
 }
 
 // Base class handler implementation
-bool QFileSystemModel_QBaseIsSignalConnected(const QFileSystemModel* self, QMetaMethod* signal) {
+bool QFileSystemModel_QBaseIsSignalConnected(const QFileSystemModel* self, const QMetaMethod* signal) {
     auto* vqfilesystemmodel = const_cast<VirtualQFileSystemModel*>(dynamic_cast<const VirtualQFileSystemModel*>(self));
     if (vqfilesystemmodel && vqfilesystemmodel->isVirtualQFileSystemModel) {
         vqfilesystemmodel->setQFileSystemModel_IsSignalConnected_IsBase(true);

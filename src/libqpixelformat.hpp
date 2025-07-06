@@ -19,29 +19,11 @@ extern "C" {
 typedef struct QPixelFormat QPixelFormat;
 #endif
 
-#ifdef __cplusplus
-typedef QPixelFormat::AlphaPosition AlphaPosition;           // C++ enum
-typedef QPixelFormat::AlphaPremultiplied AlphaPremultiplied; // C++ enum
-typedef QPixelFormat::AlphaUsage AlphaUsage;                 // C++ enum
-typedef QPixelFormat::ByteOrder ByteOrder;                   // C++ enum
-typedef QPixelFormat::ColorModel ColorModel;                 // C++ enum
-typedef QPixelFormat::TypeInterpretation TypeInterpretation; // C++ enum
-typedef QPixelFormat::YUVLayout YUVLayout;                   // C++ enum
-#else
-typedef int AlphaPosition;      // C ABI enum
-typedef int AlphaPremultiplied; // C ABI enum
-typedef int AlphaUsage;         // C ABI enum
-typedef int ByteOrder;          // C ABI enum
-typedef int ColorModel;         // C ABI enum
-typedef int TypeInterpretation; // C ABI enum
-typedef int YUVLayout;          // C ABI enum
-#endif
-
-QPixelFormat* QPixelFormat_new(QPixelFormat* other);
+QPixelFormat* QPixelFormat_new(const QPixelFormat* other);
 QPixelFormat* QPixelFormat_new2(QPixelFormat* other);
 QPixelFormat* QPixelFormat_new3();
 QPixelFormat* QPixelFormat_new4(int colorModel, unsigned char firstSize, unsigned char secondSize, unsigned char thirdSize, unsigned char fourthSize, unsigned char fifthSize, unsigned char alphaSize, int alphaUsage, int alphaPosition, int premultiplied, int typeInterpretation);
-QPixelFormat* QPixelFormat_new5(QPixelFormat* param1);
+QPixelFormat* QPixelFormat_new5(const QPixelFormat* param1);
 QPixelFormat* QPixelFormat_new6(int colorModel, unsigned char firstSize, unsigned char secondSize, unsigned char thirdSize, unsigned char fourthSize, unsigned char fifthSize, unsigned char alphaSize, int alphaUsage, int alphaPosition, int premultiplied, int typeInterpretation, int byteOrder);
 QPixelFormat* QPixelFormat_new7(int colorModel, unsigned char firstSize, unsigned char secondSize, unsigned char thirdSize, unsigned char fourthSize, unsigned char fifthSize, unsigned char alphaSize, int alphaUsage, int alphaPosition, int premultiplied, int typeInterpretation, int byteOrder, unsigned char subEnum);
 void QPixelFormat_CopyAssign(QPixelFormat* self, QPixelFormat* other);

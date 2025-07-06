@@ -73,8 +73,8 @@ class VirtualQAnimationGroup final : public QAnimationGroup {
     mutable bool qanimationgroup_issignalconnected_isbase = false;
 
   public:
-    VirtualQAnimationGroup() : QAnimationGroup(){};
-    VirtualQAnimationGroup(QObject* parent) : QAnimationGroup(parent){};
+    VirtualQAnimationGroup() : QAnimationGroup() {};
+    VirtualQAnimationGroup(QObject* parent) : QAnimationGroup(parent) {};
 
     ~VirtualQAnimationGroup() {
         qanimationgroup_metacall_callback = nullptr;
@@ -374,18 +374,18 @@ class VirtualQAnimationGroup final : public QAnimationGroup {
     friend void QAnimationGroup_QBaseChildEvent(QAnimationGroup* self, QChildEvent* event);
     friend void QAnimationGroup_CustomEvent(QAnimationGroup* self, QEvent* event);
     friend void QAnimationGroup_QBaseCustomEvent(QAnimationGroup* self, QEvent* event);
-    friend void QAnimationGroup_ConnectNotify(QAnimationGroup* self, QMetaMethod* signal);
-    friend void QAnimationGroup_QBaseConnectNotify(QAnimationGroup* self, QMetaMethod* signal);
-    friend void QAnimationGroup_DisconnectNotify(QAnimationGroup* self, QMetaMethod* signal);
-    friend void QAnimationGroup_QBaseDisconnectNotify(QAnimationGroup* self, QMetaMethod* signal);
+    friend void QAnimationGroup_ConnectNotify(QAnimationGroup* self, const QMetaMethod* signal);
+    friend void QAnimationGroup_QBaseConnectNotify(QAnimationGroup* self, const QMetaMethod* signal);
+    friend void QAnimationGroup_DisconnectNotify(QAnimationGroup* self, const QMetaMethod* signal);
+    friend void QAnimationGroup_QBaseDisconnectNotify(QAnimationGroup* self, const QMetaMethod* signal);
     friend QObject* QAnimationGroup_Sender(const QAnimationGroup* self);
     friend QObject* QAnimationGroup_QBaseSender(const QAnimationGroup* self);
     friend int QAnimationGroup_SenderSignalIndex(const QAnimationGroup* self);
     friend int QAnimationGroup_QBaseSenderSignalIndex(const QAnimationGroup* self);
     friend int QAnimationGroup_Receivers(const QAnimationGroup* self, const char* signal);
     friend int QAnimationGroup_QBaseReceivers(const QAnimationGroup* self, const char* signal);
-    friend bool QAnimationGroup_IsSignalConnected(const QAnimationGroup* self, QMetaMethod* signal);
-    friend bool QAnimationGroup_QBaseIsSignalConnected(const QAnimationGroup* self, QMetaMethod* signal);
+    friend bool QAnimationGroup_IsSignalConnected(const QAnimationGroup* self, const QMetaMethod* signal);
+    friend bool QAnimationGroup_QBaseIsSignalConnected(const QAnimationGroup* self, const QMetaMethod* signal);
 };
 
 #endif

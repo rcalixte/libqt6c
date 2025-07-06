@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqproperty.h"
-
 /// https://doc.qt.io/qt-6/quntypedpropertydata.html
 
 /// q_untypedpropertydata_new constructs a new QUntypedPropertyData object.

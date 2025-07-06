@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqrect.h"
-#include "libqsize.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qpagesize.html
 
 /// q_pagesize_new constructs a new QPageSize object.

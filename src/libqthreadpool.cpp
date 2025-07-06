@@ -1,4 +1,5 @@
 #include <QChildEvent>
+#include <QDeadlineTimer>
 #include <QEvent>
 #include <QMetaMethod>
 #include <QMetaObject>
@@ -130,7 +131,11 @@ void QThreadPool_ReleaseThread(QThreadPool* self) {
     self->releaseThread();
 }
 
-bool QThreadPool_WaitForDone(QThreadPool* self) {
+bool QThreadPool_WaitForDone(QThreadPool* self, int msecs) {
+    return self->waitForDone(static_cast<int>(msecs));
+}
+
+bool QThreadPool_WaitForDone2(QThreadPool* self) {
     return self->waitForDone();
 }
 
@@ -138,7 +143,7 @@ void QThreadPool_Clear(QThreadPool* self) {
     self->clear();
 }
 
-bool QThreadPool_Contains(const QThreadPool* self, QThread* thread) {
+bool QThreadPool_Contains(const QThreadPool* self, const QThread* thread) {
     return self->contains(thread);
 }
 
@@ -174,8 +179,8 @@ void QThreadPool_Start2(QThreadPool* self, QRunnable* runnable, int priority) {
     self->start(runnable, static_cast<int>(priority));
 }
 
-bool QThreadPool_WaitForDone1(QThreadPool* self, int msecs) {
-    return self->waitForDone(static_cast<int>(msecs));
+bool QThreadPool_WaitForDone1(QThreadPool* self, QDeadlineTimer* deadline) {
+    return self->waitForDone(*deadline);
 }
 
 // Derived class handler implementation
@@ -324,7 +329,7 @@ void QThreadPool_OnCustomEvent(QThreadPool* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QThreadPool_ConnectNotify(QThreadPool* self, QMetaMethod* signal) {
+void QThreadPool_ConnectNotify(QThreadPool* self, const QMetaMethod* signal) {
     auto* vqthreadpool = dynamic_cast<VirtualQThreadPool*>(self);
     if (vqthreadpool && vqthreadpool->isVirtualQThreadPool) {
         vqthreadpool->connectNotify(*signal);
@@ -334,7 +339,7 @@ void QThreadPool_ConnectNotify(QThreadPool* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QThreadPool_QBaseConnectNotify(QThreadPool* self, QMetaMethod* signal) {
+void QThreadPool_QBaseConnectNotify(QThreadPool* self, const QMetaMethod* signal) {
     auto* vqthreadpool = dynamic_cast<VirtualQThreadPool*>(self);
     if (vqthreadpool && vqthreadpool->isVirtualQThreadPool) {
         vqthreadpool->setQThreadPool_ConnectNotify_IsBase(true);
@@ -353,7 +358,7 @@ void QThreadPool_OnConnectNotify(QThreadPool* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QThreadPool_DisconnectNotify(QThreadPool* self, QMetaMethod* signal) {
+void QThreadPool_DisconnectNotify(QThreadPool* self, const QMetaMethod* signal) {
     auto* vqthreadpool = dynamic_cast<VirtualQThreadPool*>(self);
     if (vqthreadpool && vqthreadpool->isVirtualQThreadPool) {
         vqthreadpool->disconnectNotify(*signal);
@@ -363,7 +368,7 @@ void QThreadPool_DisconnectNotify(QThreadPool* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QThreadPool_QBaseDisconnectNotify(QThreadPool* self, QMetaMethod* signal) {
+void QThreadPool_QBaseDisconnectNotify(QThreadPool* self, const QMetaMethod* signal) {
     auto* vqthreadpool = dynamic_cast<VirtualQThreadPool*>(self);
     if (vqthreadpool && vqthreadpool->isVirtualQThreadPool) {
         vqthreadpool->setQThreadPool_DisconnectNotify_IsBase(true);
@@ -469,7 +474,7 @@ void QThreadPool_OnReceivers(const QThreadPool* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QThreadPool_IsSignalConnected(const QThreadPool* self, QMetaMethod* signal) {
+bool QThreadPool_IsSignalConnected(const QThreadPool* self, const QMetaMethod* signal) {
     auto* vqthreadpool = const_cast<VirtualQThreadPool*>(dynamic_cast<const VirtualQThreadPool*>(self));
     if (vqthreadpool && vqthreadpool->isVirtualQThreadPool) {
         return vqthreadpool->isSignalConnected(*signal);
@@ -479,7 +484,7 @@ bool QThreadPool_IsSignalConnected(const QThreadPool* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QThreadPool_QBaseIsSignalConnected(const QThreadPool* self, QMetaMethod* signal) {
+bool QThreadPool_QBaseIsSignalConnected(const QThreadPool* self, const QMetaMethod* signal) {
     auto* vqthreadpool = const_cast<VirtualQThreadPool*>(dynamic_cast<const VirtualQThreadPool*>(self));
     if (vqthreadpool && vqthreadpool->isVirtualQThreadPool) {
         vqthreadpool->setQThreadPool_IsSignalConnected_IsBase(true);

@@ -24,6 +24,14 @@ QTextItem* q_textitem_new2(void* other) {
     return QTextItem_new2((QTextItem*)other);
 }
 
+QTextItem* q_textitem_new3() {
+    return QTextItem_new3();
+}
+
+QTextItem* q_textitem_new4(void* param1) {
+    return QTextItem_new4((QTextItem*)param1);
+}
+
 void q_textitem_copy_assign(void* self, void* other) {
     QTextItem_CopyAssign((QTextItem*)self, (QTextItem*)other);
 }

@@ -12,16 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqpaintdevice.h"
-#include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
-#include "libqrect.h"
-#include <string.h>
-#include "libqstyle.h"
-#include "libqstyleoption.h"
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qstylepainter.html
 
 /// q_stylepainter_new constructs a new QStylePainter object.

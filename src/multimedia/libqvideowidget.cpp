@@ -1089,7 +1089,7 @@ void QVideoWidget_OnDropEvent(QVideoWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QVideoWidget_NativeEvent(QVideoWidget* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QVideoWidget_NativeEvent(QVideoWidget* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqvideowidget = dynamic_cast<VirtualQVideoWidget*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqvideowidget && vqvideowidget->isVirtualQVideoWidget) {
@@ -1100,7 +1100,7 @@ bool QVideoWidget_NativeEvent(QVideoWidget* self, libqt_string eventType, void* 
 }
 
 // Base class handler implementation
-bool QVideoWidget_QBaseNativeEvent(QVideoWidget* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QVideoWidget_QBaseNativeEvent(QVideoWidget* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqvideowidget = dynamic_cast<VirtualQVideoWidget*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqvideowidget && vqvideowidget->isVirtualQVideoWidget) {
@@ -1468,7 +1468,7 @@ void QVideoWidget_OnCustomEvent(QVideoWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QVideoWidget_ConnectNotify(QVideoWidget* self, QMetaMethod* signal) {
+void QVideoWidget_ConnectNotify(QVideoWidget* self, const QMetaMethod* signal) {
     auto* vqvideowidget = dynamic_cast<VirtualQVideoWidget*>(self);
     if (vqvideowidget && vqvideowidget->isVirtualQVideoWidget) {
         vqvideowidget->connectNotify(*signal);
@@ -1478,7 +1478,7 @@ void QVideoWidget_ConnectNotify(QVideoWidget* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QVideoWidget_QBaseConnectNotify(QVideoWidget* self, QMetaMethod* signal) {
+void QVideoWidget_QBaseConnectNotify(QVideoWidget* self, const QMetaMethod* signal) {
     auto* vqvideowidget = dynamic_cast<VirtualQVideoWidget*>(self);
     if (vqvideowidget && vqvideowidget->isVirtualQVideoWidget) {
         vqvideowidget->setQVideoWidget_ConnectNotify_IsBase(true);
@@ -1497,7 +1497,7 @@ void QVideoWidget_OnConnectNotify(QVideoWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QVideoWidget_DisconnectNotify(QVideoWidget* self, QMetaMethod* signal) {
+void QVideoWidget_DisconnectNotify(QVideoWidget* self, const QMetaMethod* signal) {
     auto* vqvideowidget = dynamic_cast<VirtualQVideoWidget*>(self);
     if (vqvideowidget && vqvideowidget->isVirtualQVideoWidget) {
         vqvideowidget->disconnectNotify(*signal);
@@ -1507,7 +1507,7 @@ void QVideoWidget_DisconnectNotify(QVideoWidget* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QVideoWidget_QBaseDisconnectNotify(QVideoWidget* self, QMetaMethod* signal) {
+void QVideoWidget_QBaseDisconnectNotify(QVideoWidget* self, const QMetaMethod* signal) {
     auto* vqvideowidget = dynamic_cast<VirtualQVideoWidget*>(self);
     if (vqvideowidget && vqvideowidget->isVirtualQVideoWidget) {
         vqvideowidget->setQVideoWidget_DisconnectNotify_IsBase(true);
@@ -1758,7 +1758,7 @@ void QVideoWidget_OnReceivers(const QVideoWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QVideoWidget_IsSignalConnected(const QVideoWidget* self, QMetaMethod* signal) {
+bool QVideoWidget_IsSignalConnected(const QVideoWidget* self, const QMetaMethod* signal) {
     auto* vqvideowidget = const_cast<VirtualQVideoWidget*>(dynamic_cast<const VirtualQVideoWidget*>(self));
     if (vqvideowidget && vqvideowidget->isVirtualQVideoWidget) {
         return vqvideowidget->isSignalConnected(*signal);
@@ -1768,7 +1768,7 @@ bool QVideoWidget_IsSignalConnected(const QVideoWidget* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-bool QVideoWidget_QBaseIsSignalConnected(const QVideoWidget* self, QMetaMethod* signal) {
+bool QVideoWidget_QBaseIsSignalConnected(const QVideoWidget* self, const QMetaMethod* signal) {
     auto* vqvideowidget = const_cast<VirtualQVideoWidget*>(dynamic_cast<const VirtualQVideoWidget*>(self));
     if (vqvideowidget && vqvideowidget->isVirtualQVideoWidget) {
         vqvideowidget->setQVideoWidget_IsSignalConnected_IsBase(true);
@@ -1783,6 +1783,35 @@ void QVideoWidget_OnIsSignalConnected(const QVideoWidget* self, intptr_t slot) {
     auto* vqvideowidget = const_cast<VirtualQVideoWidget*>(dynamic_cast<const VirtualQVideoWidget*>(self));
     if (vqvideowidget && vqvideowidget->isVirtualQVideoWidget) {
         vqvideowidget->setQVideoWidget_IsSignalConnected_Callback(reinterpret_cast<VirtualQVideoWidget::QVideoWidget_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QVideoWidget_GetDecodedMetricF(const QVideoWidget* self, int metricA, int metricB) {
+    auto* vqvideowidget = const_cast<VirtualQVideoWidget*>(dynamic_cast<const VirtualQVideoWidget*>(self));
+    if (vqvideowidget && vqvideowidget->isVirtualQVideoWidget) {
+        return vqvideowidget->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQVideoWidget*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QVideoWidget_QBaseGetDecodedMetricF(const QVideoWidget* self, int metricA, int metricB) {
+    auto* vqvideowidget = const_cast<VirtualQVideoWidget*>(dynamic_cast<const VirtualQVideoWidget*>(self));
+    if (vqvideowidget && vqvideowidget->isVirtualQVideoWidget) {
+        vqvideowidget->setQVideoWidget_GetDecodedMetricF_IsBase(true);
+        return vqvideowidget->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQVideoWidget*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QVideoWidget_OnGetDecodedMetricF(const QVideoWidget* self, intptr_t slot) {
+    auto* vqvideowidget = const_cast<VirtualQVideoWidget*>(dynamic_cast<const VirtualQVideoWidget*>(self));
+    if (vqvideowidget && vqvideowidget->isVirtualQVideoWidget) {
+        vqvideowidget->setQVideoWidget_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQVideoWidget::QVideoWidget_GetDecodedMetricF_Callback>(slot));
     }
 }
 

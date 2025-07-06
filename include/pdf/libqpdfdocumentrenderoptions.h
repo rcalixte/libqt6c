@@ -12,9 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqrect.h"
-#include "../libqsize.h"
-
 /// https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html
 
 /// q_pdfdocumentrenderoptions_new constructs a new QPdfDocumentRenderOptions object.

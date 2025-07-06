@@ -73,10 +73,10 @@ class VirtualQPauseAnimation final : public QPauseAnimation {
     mutable bool qpauseanimation_issignalconnected_isbase = false;
 
   public:
-    VirtualQPauseAnimation() : QPauseAnimation(){};
-    VirtualQPauseAnimation(int msecs) : QPauseAnimation(msecs){};
-    VirtualQPauseAnimation(QObject* parent) : QPauseAnimation(parent){};
-    VirtualQPauseAnimation(int msecs, QObject* parent) : QPauseAnimation(msecs, parent){};
+    VirtualQPauseAnimation() : QPauseAnimation() {};
+    VirtualQPauseAnimation(int msecs) : QPauseAnimation(msecs) {};
+    VirtualQPauseAnimation(QObject* parent) : QPauseAnimation(parent) {};
+    VirtualQPauseAnimation(int msecs, QObject* parent) : QPauseAnimation(msecs, parent) {};
 
     ~VirtualQPauseAnimation() {
         qpauseanimation_metacall_callback = nullptr;
@@ -384,18 +384,18 @@ class VirtualQPauseAnimation final : public QPauseAnimation {
     friend void QPauseAnimation_QBaseChildEvent(QPauseAnimation* self, QChildEvent* event);
     friend void QPauseAnimation_CustomEvent(QPauseAnimation* self, QEvent* event);
     friend void QPauseAnimation_QBaseCustomEvent(QPauseAnimation* self, QEvent* event);
-    friend void QPauseAnimation_ConnectNotify(QPauseAnimation* self, QMetaMethod* signal);
-    friend void QPauseAnimation_QBaseConnectNotify(QPauseAnimation* self, QMetaMethod* signal);
-    friend void QPauseAnimation_DisconnectNotify(QPauseAnimation* self, QMetaMethod* signal);
-    friend void QPauseAnimation_QBaseDisconnectNotify(QPauseAnimation* self, QMetaMethod* signal);
+    friend void QPauseAnimation_ConnectNotify(QPauseAnimation* self, const QMetaMethod* signal);
+    friend void QPauseAnimation_QBaseConnectNotify(QPauseAnimation* self, const QMetaMethod* signal);
+    friend void QPauseAnimation_DisconnectNotify(QPauseAnimation* self, const QMetaMethod* signal);
+    friend void QPauseAnimation_QBaseDisconnectNotify(QPauseAnimation* self, const QMetaMethod* signal);
     friend QObject* QPauseAnimation_Sender(const QPauseAnimation* self);
     friend QObject* QPauseAnimation_QBaseSender(const QPauseAnimation* self);
     friend int QPauseAnimation_SenderSignalIndex(const QPauseAnimation* self);
     friend int QPauseAnimation_QBaseSenderSignalIndex(const QPauseAnimation* self);
     friend int QPauseAnimation_Receivers(const QPauseAnimation* self, const char* signal);
     friend int QPauseAnimation_QBaseReceivers(const QPauseAnimation* self, const char* signal);
-    friend bool QPauseAnimation_IsSignalConnected(const QPauseAnimation* self, QMetaMethod* signal);
-    friend bool QPauseAnimation_QBaseIsSignalConnected(const QPauseAnimation* self, QMetaMethod* signal);
+    friend bool QPauseAnimation_IsSignalConnected(const QPauseAnimation* self, const QMetaMethod* signal);
+    friend bool QPauseAnimation_QBaseIsSignalConnected(const QPauseAnimation* self, const QMetaMethod* signal);
 };
 
 #endif

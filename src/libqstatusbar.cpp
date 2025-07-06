@@ -135,7 +135,7 @@ libqt_string QStatusBar_CurrentMessage(const QStatusBar* self) {
     return _str;
 }
 
-void QStatusBar_ShowMessage(QStatusBar* self, libqt_string text) {
+void QStatusBar_ShowMessage(QStatusBar* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->showMessage(text_QString);
 }
@@ -144,7 +144,7 @@ void QStatusBar_ClearMessage(QStatusBar* self) {
     self->clearMessage();
 }
 
-void QStatusBar_MessageChanged(QStatusBar* self, libqt_string text) {
+void QStatusBar_MessageChanged(QStatusBar* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->messageChanged(text_QString);
 }
@@ -205,7 +205,7 @@ int QStatusBar_InsertPermanentWidget3(QStatusBar* self, int index, QWidget* widg
     return self->insertPermanentWidget(static_cast<int>(index), widget, static_cast<int>(stretch));
 }
 
-void QStatusBar_ShowMessage2(QStatusBar* self, libqt_string text, int timeout) {
+void QStatusBar_ShowMessage2(QStatusBar* self, const libqt_string text, int timeout) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->showMessage(text_QString, static_cast<int>(timeout));
 }
@@ -1139,7 +1139,7 @@ void QStatusBar_OnHideEvent(QStatusBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QStatusBar_NativeEvent(QStatusBar* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QStatusBar_NativeEvent(QStatusBar* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqstatusbar = dynamic_cast<VirtualQStatusBar*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqstatusbar && vqstatusbar->isVirtualQStatusBar) {
@@ -1150,7 +1150,7 @@ bool QStatusBar_NativeEvent(QStatusBar* self, libqt_string eventType, void* mess
 }
 
 // Base class handler implementation
-bool QStatusBar_QBaseNativeEvent(QStatusBar* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QStatusBar_QBaseNativeEvent(QStatusBar* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqstatusbar = dynamic_cast<VirtualQStatusBar*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqstatusbar && vqstatusbar->isVirtualQStatusBar) {
@@ -1518,7 +1518,7 @@ void QStatusBar_OnCustomEvent(QStatusBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QStatusBar_ConnectNotify(QStatusBar* self, QMetaMethod* signal) {
+void QStatusBar_ConnectNotify(QStatusBar* self, const QMetaMethod* signal) {
     auto* vqstatusbar = dynamic_cast<VirtualQStatusBar*>(self);
     if (vqstatusbar && vqstatusbar->isVirtualQStatusBar) {
         vqstatusbar->connectNotify(*signal);
@@ -1528,7 +1528,7 @@ void QStatusBar_ConnectNotify(QStatusBar* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QStatusBar_QBaseConnectNotify(QStatusBar* self, QMetaMethod* signal) {
+void QStatusBar_QBaseConnectNotify(QStatusBar* self, const QMetaMethod* signal) {
     auto* vqstatusbar = dynamic_cast<VirtualQStatusBar*>(self);
     if (vqstatusbar && vqstatusbar->isVirtualQStatusBar) {
         vqstatusbar->setQStatusBar_ConnectNotify_IsBase(true);
@@ -1547,7 +1547,7 @@ void QStatusBar_OnConnectNotify(QStatusBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QStatusBar_DisconnectNotify(QStatusBar* self, QMetaMethod* signal) {
+void QStatusBar_DisconnectNotify(QStatusBar* self, const QMetaMethod* signal) {
     auto* vqstatusbar = dynamic_cast<VirtualQStatusBar*>(self);
     if (vqstatusbar && vqstatusbar->isVirtualQStatusBar) {
         vqstatusbar->disconnectNotify(*signal);
@@ -1557,7 +1557,7 @@ void QStatusBar_DisconnectNotify(QStatusBar* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QStatusBar_QBaseDisconnectNotify(QStatusBar* self, QMetaMethod* signal) {
+void QStatusBar_QBaseDisconnectNotify(QStatusBar* self, const QMetaMethod* signal) {
     auto* vqstatusbar = dynamic_cast<VirtualQStatusBar*>(self);
     if (vqstatusbar && vqstatusbar->isVirtualQStatusBar) {
         vqstatusbar->setQStatusBar_DisconnectNotify_IsBase(true);
@@ -1866,7 +1866,7 @@ void QStatusBar_OnReceivers(const QStatusBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QStatusBar_IsSignalConnected(const QStatusBar* self, QMetaMethod* signal) {
+bool QStatusBar_IsSignalConnected(const QStatusBar* self, const QMetaMethod* signal) {
     auto* vqstatusbar = const_cast<VirtualQStatusBar*>(dynamic_cast<const VirtualQStatusBar*>(self));
     if (vqstatusbar && vqstatusbar->isVirtualQStatusBar) {
         return vqstatusbar->isSignalConnected(*signal);
@@ -1876,7 +1876,7 @@ bool QStatusBar_IsSignalConnected(const QStatusBar* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QStatusBar_QBaseIsSignalConnected(const QStatusBar* self, QMetaMethod* signal) {
+bool QStatusBar_QBaseIsSignalConnected(const QStatusBar* self, const QMetaMethod* signal) {
     auto* vqstatusbar = const_cast<VirtualQStatusBar*>(dynamic_cast<const VirtualQStatusBar*>(self));
     if (vqstatusbar && vqstatusbar->isVirtualQStatusBar) {
         vqstatusbar->setQStatusBar_IsSignalConnected_IsBase(true);
@@ -1891,6 +1891,35 @@ void QStatusBar_OnIsSignalConnected(const QStatusBar* self, intptr_t slot) {
     auto* vqstatusbar = const_cast<VirtualQStatusBar*>(dynamic_cast<const VirtualQStatusBar*>(self));
     if (vqstatusbar && vqstatusbar->isVirtualQStatusBar) {
         vqstatusbar->setQStatusBar_IsSignalConnected_Callback(reinterpret_cast<VirtualQStatusBar::QStatusBar_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QStatusBar_GetDecodedMetricF(const QStatusBar* self, int metricA, int metricB) {
+    auto* vqstatusbar = const_cast<VirtualQStatusBar*>(dynamic_cast<const VirtualQStatusBar*>(self));
+    if (vqstatusbar && vqstatusbar->isVirtualQStatusBar) {
+        return vqstatusbar->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQStatusBar*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QStatusBar_QBaseGetDecodedMetricF(const QStatusBar* self, int metricA, int metricB) {
+    auto* vqstatusbar = const_cast<VirtualQStatusBar*>(dynamic_cast<const VirtualQStatusBar*>(self));
+    if (vqstatusbar && vqstatusbar->isVirtualQStatusBar) {
+        vqstatusbar->setQStatusBar_GetDecodedMetricF_IsBase(true);
+        return vqstatusbar->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQStatusBar*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QStatusBar_OnGetDecodedMetricF(const QStatusBar* self, intptr_t slot) {
+    auto* vqstatusbar = const_cast<VirtualQStatusBar*>(dynamic_cast<const VirtualQStatusBar*>(self));
+    if (vqstatusbar && vqstatusbar->isVirtualQStatusBar) {
+        vqstatusbar->setQStatusBar_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQStatusBar::QStatusBar_GetDecodedMetricF_Callback>(slot));
     }
 }
 

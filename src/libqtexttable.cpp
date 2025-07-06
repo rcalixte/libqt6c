@@ -10,7 +10,6 @@
 #include <QTextCursor>
 #include <QTextDocument>
 #include <QTextFrame>
-#define WORKAROUND_INNER_CLASS_DEFINITION_QTextFrame__iterator
 #include <QTextObject>
 #include <QTextTable>
 #include <QTextTableCell>
@@ -24,15 +23,15 @@ QTextTableCell* QTextTableCell_new() {
     return new QTextTableCell();
 }
 
-QTextTableCell* QTextTableCell_new2(QTextTableCell* o) {
+QTextTableCell* QTextTableCell_new2(const QTextTableCell* o) {
     return new QTextTableCell(*o);
 }
 
-void QTextTableCell_OperatorAssign(QTextTableCell* self, QTextTableCell* o) {
+void QTextTableCell_OperatorAssign(QTextTableCell* self, const QTextTableCell* o) {
     self->operator=(*o);
 }
 
-void QTextTableCell_SetFormat(QTextTableCell* self, QTextCharFormat* format) {
+void QTextTableCell_SetFormat(QTextTableCell* self, const QTextCharFormat* format) {
     self->setFormat(*format);
 }
 
@@ -76,20 +75,12 @@ int QTextTableCell_LastPosition(const QTextTableCell* self) {
     return self->lastPosition();
 }
 
-bool QTextTableCell_OperatorEqual(const QTextTableCell* self, QTextTableCell* other) {
+bool QTextTableCell_OperatorEqual(const QTextTableCell* self, const QTextTableCell* other) {
     return (*self == *other);
 }
 
-bool QTextTableCell_OperatorNotEqual(const QTextTableCell* self, QTextTableCell* other) {
+bool QTextTableCell_OperatorNotEqual(const QTextTableCell* self, const QTextTableCell* other) {
     return (*self != *other);
-}
-
-QTextFrame__iterator* QTextTableCell_Begin(const QTextTableCell* self) {
-    return new QTextFrame::iterator(self->begin());
-}
-
-QTextFrame__iterator* QTextTableCell_End(const QTextTableCell* self) {
-    return new QTextFrame::iterator(self->end());
 }
 
 int QTextTableCell_TableCellFormatIndex(const QTextTableCell* self) {
@@ -184,7 +175,7 @@ void QTextTable_MergeCells(QTextTable* self, int row, int col, int numRows, int 
     self->mergeCells(static_cast<int>(row), static_cast<int>(col), static_cast<int>(numRows), static_cast<int>(numCols));
 }
 
-void QTextTable_MergeCellsWithCursor(QTextTable* self, QTextCursor* cursor) {
+void QTextTable_MergeCellsWithCursor(QTextTable* self, const QTextCursor* cursor) {
     self->mergeCells(*cursor);
 }
 
@@ -208,19 +199,19 @@ QTextTableCell* QTextTable_CellAtWithPosition(const QTextTable* self, int positi
     return new QTextTableCell(self->cellAt(static_cast<int>(position)));
 }
 
-QTextTableCell* QTextTable_CellAtWithQTextCursor(const QTextTable* self, QTextCursor* c) {
+QTextTableCell* QTextTable_CellAtWithQTextCursor(const QTextTable* self, const QTextCursor* c) {
     return new QTextTableCell(self->cellAt(*c));
 }
 
-QTextCursor* QTextTable_RowStart(const QTextTable* self, QTextCursor* c) {
+QTextCursor* QTextTable_RowStart(const QTextTable* self, const QTextCursor* c) {
     return new QTextCursor(self->rowStart(*c));
 }
 
-QTextCursor* QTextTable_RowEnd(const QTextTable* self, QTextCursor* c) {
+QTextCursor* QTextTable_RowEnd(const QTextTable* self, const QTextCursor* c) {
     return new QTextCursor(self->rowEnd(*c));
 }
 
-void QTextTable_SetFormat(QTextTable* self, QTextTableFormat* format) {
+void QTextTable_SetFormat(QTextTable* self, const QTextTableFormat* format) {
     self->setFormat(*format);
 }
 
@@ -398,7 +389,7 @@ void QTextTable_OnCustomEvent(QTextTable* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTextTable_ConnectNotify(QTextTable* self, QMetaMethod* signal) {
+void QTextTable_ConnectNotify(QTextTable* self, const QMetaMethod* signal) {
     auto* vqtexttable = dynamic_cast<VirtualQTextTable*>(self);
     if (vqtexttable && vqtexttable->isVirtualQTextTable) {
         vqtexttable->connectNotify(*signal);
@@ -408,7 +399,7 @@ void QTextTable_ConnectNotify(QTextTable* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTextTable_QBaseConnectNotify(QTextTable* self, QMetaMethod* signal) {
+void QTextTable_QBaseConnectNotify(QTextTable* self, const QMetaMethod* signal) {
     auto* vqtexttable = dynamic_cast<VirtualQTextTable*>(self);
     if (vqtexttable && vqtexttable->isVirtualQTextTable) {
         vqtexttable->setQTextTable_ConnectNotify_IsBase(true);
@@ -427,7 +418,7 @@ void QTextTable_OnConnectNotify(QTextTable* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTextTable_DisconnectNotify(QTextTable* self, QMetaMethod* signal) {
+void QTextTable_DisconnectNotify(QTextTable* self, const QMetaMethod* signal) {
     auto* vqtexttable = dynamic_cast<VirtualQTextTable*>(self);
     if (vqtexttable && vqtexttable->isVirtualQTextTable) {
         vqtexttable->disconnectNotify(*signal);
@@ -437,7 +428,7 @@ void QTextTable_DisconnectNotify(QTextTable* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTextTable_QBaseDisconnectNotify(QTextTable* self, QMetaMethod* signal) {
+void QTextTable_QBaseDisconnectNotify(QTextTable* self, const QMetaMethod* signal) {
     auto* vqtexttable = dynamic_cast<VirtualQTextTable*>(self);
     if (vqtexttable && vqtexttable->isVirtualQTextTable) {
         vqtexttable->setQTextTable_DisconnectNotify_IsBase(true);
@@ -543,7 +534,7 @@ void QTextTable_OnReceivers(const QTextTable* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTextTable_IsSignalConnected(const QTextTable* self, QMetaMethod* signal) {
+bool QTextTable_IsSignalConnected(const QTextTable* self, const QMetaMethod* signal) {
     auto* vqtexttable = const_cast<VirtualQTextTable*>(dynamic_cast<const VirtualQTextTable*>(self));
     if (vqtexttable && vqtexttable->isVirtualQTextTable) {
         return vqtexttable->isSignalConnected(*signal);
@@ -553,7 +544,7 @@ bool QTextTable_IsSignalConnected(const QTextTable* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QTextTable_QBaseIsSignalConnected(const QTextTable* self, QMetaMethod* signal) {
+bool QTextTable_QBaseIsSignalConnected(const QTextTable* self, const QMetaMethod* signal) {
     auto* vqtexttable = const_cast<VirtualQTextTable*>(dynamic_cast<const VirtualQTextTable*>(self));
     if (vqtexttable && vqtexttable->isVirtualQTextTable) {
         vqtexttable->setQTextTable_IsSignalConnected_IsBase(true);

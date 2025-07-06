@@ -63,8 +63,8 @@ QTreeWidgetItem* QTreeWidgetItem_new() {
     return new VirtualQTreeWidgetItem();
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new2(libqt_list /* of libqt_string */ strings) {
-    QStringList strings_QList;
+QTreeWidgetItem* QTreeWidgetItem_new2(const libqt_list /* of libqt_string */ strings) {
+    QList<QString> strings_QList;
     strings_QList.reserve(strings.len);
     libqt_string* strings_arr = static_cast<libqt_string*>(strings.data.ptr);
     for (size_t i = 0; i < strings.len; ++i) {
@@ -78,8 +78,8 @@ QTreeWidgetItem* QTreeWidgetItem_new3(QTreeWidget* treeview) {
     return new VirtualQTreeWidgetItem(treeview);
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new4(QTreeWidget* treeview, libqt_list /* of libqt_string */ strings) {
-    QStringList strings_QList;
+QTreeWidgetItem* QTreeWidgetItem_new4(QTreeWidget* treeview, const libqt_list /* of libqt_string */ strings) {
+    QList<QString> strings_QList;
     strings_QList.reserve(strings.len);
     libqt_string* strings_arr = static_cast<libqt_string*>(strings.data.ptr);
     for (size_t i = 0; i < strings.len; ++i) {
@@ -97,8 +97,8 @@ QTreeWidgetItem* QTreeWidgetItem_new6(QTreeWidgetItem* parent) {
     return new VirtualQTreeWidgetItem(parent);
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new7(QTreeWidgetItem* parent, libqt_list /* of libqt_string */ strings) {
-    QStringList strings_QList;
+QTreeWidgetItem* QTreeWidgetItem_new7(QTreeWidgetItem* parent, const libqt_list /* of libqt_string */ strings) {
+    QList<QString> strings_QList;
     strings_QList.reserve(strings.len);
     libqt_string* strings_arr = static_cast<libqt_string*>(strings.data.ptr);
     for (size_t i = 0; i < strings.len; ++i) {
@@ -112,7 +112,7 @@ QTreeWidgetItem* QTreeWidgetItem_new8(QTreeWidgetItem* parent, QTreeWidgetItem* 
     return new VirtualQTreeWidgetItem(parent, after);
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new9(QTreeWidgetItem* other) {
+QTreeWidgetItem* QTreeWidgetItem_new9(const QTreeWidgetItem* other) {
     return new VirtualQTreeWidgetItem(*other);
 }
 
@@ -120,8 +120,8 @@ QTreeWidgetItem* QTreeWidgetItem_new10(int typeVal) {
     return new VirtualQTreeWidgetItem(static_cast<int>(typeVal));
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new11(libqt_list /* of libqt_string */ strings, int typeVal) {
-    QStringList strings_QList;
+QTreeWidgetItem* QTreeWidgetItem_new11(const libqt_list /* of libqt_string */ strings, int typeVal) {
+    QList<QString> strings_QList;
     strings_QList.reserve(strings.len);
     libqt_string* strings_arr = static_cast<libqt_string*>(strings.data.ptr);
     for (size_t i = 0; i < strings.len; ++i) {
@@ -135,8 +135,8 @@ QTreeWidgetItem* QTreeWidgetItem_new12(QTreeWidget* treeview, int typeVal) {
     return new VirtualQTreeWidgetItem(treeview, static_cast<int>(typeVal));
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new13(QTreeWidget* treeview, libqt_list /* of libqt_string */ strings, int typeVal) {
-    QStringList strings_QList;
+QTreeWidgetItem* QTreeWidgetItem_new13(QTreeWidget* treeview, const libqt_list /* of libqt_string */ strings, int typeVal) {
+    QList<QString> strings_QList;
     strings_QList.reserve(strings.len);
     libqt_string* strings_arr = static_cast<libqt_string*>(strings.data.ptr);
     for (size_t i = 0; i < strings.len; ++i) {
@@ -154,8 +154,8 @@ QTreeWidgetItem* QTreeWidgetItem_new15(QTreeWidgetItem* parent, int typeVal) {
     return new VirtualQTreeWidgetItem(parent, static_cast<int>(typeVal));
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new16(QTreeWidgetItem* parent, libqt_list /* of libqt_string */ strings, int typeVal) {
-    QStringList strings_QList;
+QTreeWidgetItem* QTreeWidgetItem_new16(QTreeWidgetItem* parent, const libqt_list /* of libqt_string */ strings, int typeVal) {
+    QList<QString> strings_QList;
     strings_QList.reserve(strings.len);
     libqt_string* strings_arr = static_cast<libqt_string*>(strings.data.ptr);
     for (size_t i = 0; i < strings.len; ++i) {
@@ -241,7 +241,7 @@ libqt_string QTreeWidgetItem_Text(const QTreeWidgetItem* self, int column) {
     return _str;
 }
 
-void QTreeWidgetItem_SetText(QTreeWidgetItem* self, int column, libqt_string text) {
+void QTreeWidgetItem_SetText(QTreeWidgetItem* self, int column, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setText(static_cast<int>(column), text_QString);
 }
@@ -250,7 +250,7 @@ QIcon* QTreeWidgetItem_Icon(const QTreeWidgetItem* self, int column) {
     return new QIcon(self->icon(static_cast<int>(column)));
 }
 
-void QTreeWidgetItem_SetIcon(QTreeWidgetItem* self, int column, QIcon* icon) {
+void QTreeWidgetItem_SetIcon(QTreeWidgetItem* self, int column, const QIcon* icon) {
     self->setIcon(static_cast<int>(column), *icon);
 }
 
@@ -266,7 +266,7 @@ libqt_string QTreeWidgetItem_StatusTip(const QTreeWidgetItem* self, int column) 
     return _str;
 }
 
-void QTreeWidgetItem_SetStatusTip(QTreeWidgetItem* self, int column, libqt_string statusTip) {
+void QTreeWidgetItem_SetStatusTip(QTreeWidgetItem* self, int column, const libqt_string statusTip) {
     QString statusTip_QString = QString::fromUtf8(statusTip.data, statusTip.len);
     self->setStatusTip(static_cast<int>(column), statusTip_QString);
 }
@@ -283,7 +283,7 @@ libqt_string QTreeWidgetItem_ToolTip(const QTreeWidgetItem* self, int column) {
     return _str;
 }
 
-void QTreeWidgetItem_SetToolTip(QTreeWidgetItem* self, int column, libqt_string toolTip) {
+void QTreeWidgetItem_SetToolTip(QTreeWidgetItem* self, int column, const libqt_string toolTip) {
     QString toolTip_QString = QString::fromUtf8(toolTip.data, toolTip.len);
     self->setToolTip(static_cast<int>(column), toolTip_QString);
 }
@@ -300,7 +300,7 @@ libqt_string QTreeWidgetItem_WhatsThis(const QTreeWidgetItem* self, int column) 
     return _str;
 }
 
-void QTreeWidgetItem_SetWhatsThis(QTreeWidgetItem* self, int column, libqt_string whatsThis) {
+void QTreeWidgetItem_SetWhatsThis(QTreeWidgetItem* self, int column, const libqt_string whatsThis) {
     QString whatsThis_QString = QString::fromUtf8(whatsThis.data, whatsThis.len);
     self->setWhatsThis(static_cast<int>(column), whatsThis_QString);
 }
@@ -309,7 +309,7 @@ QFont* QTreeWidgetItem_Font(const QTreeWidgetItem* self, int column) {
     return new QFont(self->font(static_cast<int>(column)));
 }
 
-void QTreeWidgetItem_SetFont(QTreeWidgetItem* self, int column, QFont* font) {
+void QTreeWidgetItem_SetFont(QTreeWidgetItem* self, int column, const QFont* font) {
     self->setFont(static_cast<int>(column), *font);
 }
 
@@ -333,7 +333,7 @@ QBrush* QTreeWidgetItem_Background(const QTreeWidgetItem* self, int column) {
     return new QBrush(self->background(static_cast<int>(column)));
 }
 
-void QTreeWidgetItem_SetBackground(QTreeWidgetItem* self, int column, QBrush* brush) {
+void QTreeWidgetItem_SetBackground(QTreeWidgetItem* self, int column, const QBrush* brush) {
     self->setBackground(static_cast<int>(column), *brush);
 }
 
@@ -341,7 +341,7 @@ QBrush* QTreeWidgetItem_Foreground(const QTreeWidgetItem* self, int column) {
     return new QBrush(self->foreground(static_cast<int>(column)));
 }
 
-void QTreeWidgetItem_SetForeground(QTreeWidgetItem* self, int column, QBrush* brush) {
+void QTreeWidgetItem_SetForeground(QTreeWidgetItem* self, int column, const QBrush* brush) {
     self->setForeground(static_cast<int>(column), *brush);
 }
 
@@ -357,11 +357,11 @@ QSize* QTreeWidgetItem_SizeHint(const QTreeWidgetItem* self, int column) {
     return new QSize(self->sizeHint(static_cast<int>(column)));
 }
 
-void QTreeWidgetItem_SetSizeHint(QTreeWidgetItem* self, int column, QSize* size) {
+void QTreeWidgetItem_SetSizeHint(QTreeWidgetItem* self, int column, const QSize* size) {
     self->setSizeHint(static_cast<int>(column), *size);
 }
 
-void QTreeWidgetItem_OperatorAssign(QTreeWidgetItem* self, QTreeWidgetItem* other) {
+void QTreeWidgetItem_OperatorAssign(QTreeWidgetItem* self, const QTreeWidgetItem* other) {
     self->operator=(*other);
 }
 
@@ -401,7 +401,7 @@ QTreeWidgetItem* QTreeWidgetItem_TakeChild(QTreeWidgetItem* self, int index) {
     return self->takeChild(static_cast<int>(index));
 }
 
-void QTreeWidgetItem_AddChildren(QTreeWidgetItem* self, libqt_list /* of QTreeWidgetItem* */ children) {
+void QTreeWidgetItem_AddChildren(QTreeWidgetItem* self, const libqt_list /* of QTreeWidgetItem* */ children) {
     QList<QTreeWidgetItem*> children_QList;
     children_QList.reserve(children.len);
     QTreeWidgetItem** children_arr = static_cast<QTreeWidgetItem**>(children.data.ptr);
@@ -411,7 +411,7 @@ void QTreeWidgetItem_AddChildren(QTreeWidgetItem* self, libqt_list /* of QTreeWi
     self->addChildren(children_QList);
 }
 
-void QTreeWidgetItem_InsertChildren(QTreeWidgetItem* self, int index, libqt_list /* of QTreeWidgetItem* */ children) {
+void QTreeWidgetItem_InsertChildren(QTreeWidgetItem* self, int index, const libqt_list /* of QTreeWidgetItem* */ children) {
     QList<QTreeWidgetItem*> children_QList;
     children_QList.reserve(children.len);
     QTreeWidgetItem** children_arr = static_cast<QTreeWidgetItem**>(children.data.ptr);
@@ -424,12 +424,12 @@ void QTreeWidgetItem_InsertChildren(QTreeWidgetItem* self, int index, libqt_list
 libqt_list /* of QTreeWidgetItem* */ QTreeWidgetItem_TakeChildren(QTreeWidgetItem* self) {
     QList<QTreeWidgetItem*> _ret = self->takeChildren();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QTreeWidgetItem** _arr = static_cast<QTreeWidgetItem**>(malloc(sizeof(QTreeWidgetItem*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QTreeWidgetItem** _arr = static_cast<QTreeWidgetItem**>(malloc(sizeof(QTreeWidgetItem*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -501,7 +501,7 @@ void QTreeWidgetItem_OnData(const QTreeWidgetItem* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTreeWidgetItem_SetData(QTreeWidgetItem* self, int column, int role, QVariant* value) {
+void QTreeWidgetItem_SetData(QTreeWidgetItem* self, int column, int role, const QVariant* value) {
     auto* vqtreewidgetitem = dynamic_cast<VirtualQTreeWidgetItem*>(self);
     if (vqtreewidgetitem && vqtreewidgetitem->isVirtualQTreeWidgetItem) {
         vqtreewidgetitem->setData(static_cast<int>(column), static_cast<int>(role), *value);
@@ -511,7 +511,7 @@ void QTreeWidgetItem_SetData(QTreeWidgetItem* self, int column, int role, QVaria
 }
 
 // Base class handler implementation
-void QTreeWidgetItem_QBaseSetData(QTreeWidgetItem* self, int column, int role, QVariant* value) {
+void QTreeWidgetItem_QBaseSetData(QTreeWidgetItem* self, int column, int role, const QVariant* value) {
     auto* vqtreewidgetitem = dynamic_cast<VirtualQTreeWidgetItem*>(self);
     if (vqtreewidgetitem && vqtreewidgetitem->isVirtualQTreeWidgetItem) {
         vqtreewidgetitem->setQTreeWidgetItem_SetData_IsBase(true);
@@ -530,7 +530,7 @@ void QTreeWidgetItem_OnSetData(QTreeWidgetItem* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTreeWidgetItem_OperatorLesser(const QTreeWidgetItem* self, QTreeWidgetItem* other) {
+bool QTreeWidgetItem_OperatorLesser(const QTreeWidgetItem* self, const QTreeWidgetItem* other) {
     auto* vqtreewidgetitem = const_cast<VirtualQTreeWidgetItem*>(dynamic_cast<const VirtualQTreeWidgetItem*>(self));
     if (vqtreewidgetitem && vqtreewidgetitem->isVirtualQTreeWidgetItem) {
         return vqtreewidgetitem->operator<(*other);
@@ -540,7 +540,7 @@ bool QTreeWidgetItem_OperatorLesser(const QTreeWidgetItem* self, QTreeWidgetItem
 }
 
 // Base class handler implementation
-bool QTreeWidgetItem_QBaseOperatorLesser(const QTreeWidgetItem* self, QTreeWidgetItem* other) {
+bool QTreeWidgetItem_QBaseOperatorLesser(const QTreeWidgetItem* self, const QTreeWidgetItem* other) {
     auto* vqtreewidgetitem = const_cast<VirtualQTreeWidgetItem*>(dynamic_cast<const VirtualQTreeWidgetItem*>(self));
     if (vqtreewidgetitem && vqtreewidgetitem->isVirtualQTreeWidgetItem) {
         vqtreewidgetitem->setQTreeWidgetItem_OperatorLesser_IsBase(true);
@@ -741,7 +741,7 @@ int QTreeWidget_IndexOfTopLevelItem(const QTreeWidget* self, QTreeWidgetItem* it
     return self->indexOfTopLevelItem(item);
 }
 
-void QTreeWidget_InsertTopLevelItems(QTreeWidget* self, int index, libqt_list /* of QTreeWidgetItem* */ items) {
+void QTreeWidget_InsertTopLevelItems(QTreeWidget* self, int index, const libqt_list /* of QTreeWidgetItem* */ items) {
     QList<QTreeWidgetItem*> items_QList;
     items_QList.reserve(items.len);
     QTreeWidgetItem** items_arr = static_cast<QTreeWidgetItem**>(items.data.ptr);
@@ -751,7 +751,7 @@ void QTreeWidget_InsertTopLevelItems(QTreeWidget* self, int index, libqt_list /*
     self->insertTopLevelItems(static_cast<int>(index), items_QList);
 }
 
-void QTreeWidget_AddTopLevelItems(QTreeWidget* self, libqt_list /* of QTreeWidgetItem* */ items) {
+void QTreeWidget_AddTopLevelItems(QTreeWidget* self, const libqt_list /* of QTreeWidgetItem* */ items) {
     QList<QTreeWidgetItem*> items_QList;
     items_QList.reserve(items.len);
     QTreeWidgetItem** items_arr = static_cast<QTreeWidgetItem**>(items.data.ptr);
@@ -769,8 +769,8 @@ void QTreeWidget_SetHeaderItem(QTreeWidget* self, QTreeWidgetItem* item) {
     self->setHeaderItem(item);
 }
 
-void QTreeWidget_SetHeaderLabels(QTreeWidget* self, libqt_list /* of libqt_string */ labels) {
-    QStringList labels_QList;
+void QTreeWidget_SetHeaderLabels(QTreeWidget* self, const libqt_list /* of libqt_string */ labels) {
+    QList<QString> labels_QList;
     labels_QList.reserve(labels.len);
     libqt_string* labels_arr = static_cast<libqt_string*>(labels.data.ptr);
     for (size_t i = 0; i < labels.len; ++i) {
@@ -780,7 +780,7 @@ void QTreeWidget_SetHeaderLabels(QTreeWidget* self, libqt_list /* of libqt_strin
     self->setHeaderLabels(labels_QList);
 }
 
-void QTreeWidget_SetHeaderLabel(QTreeWidget* self, libqt_string label) {
+void QTreeWidget_SetHeaderLabel(QTreeWidget* self, const libqt_string label) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     self->setHeaderLabel(label_QString);
 }
@@ -805,7 +805,7 @@ void QTreeWidget_SetCurrentItem3(QTreeWidget* self, QTreeWidgetItem* item, int c
     self->setCurrentItem(item, static_cast<int>(column), static_cast<QItemSelectionModel::SelectionFlags>(command));
 }
 
-QTreeWidgetItem* QTreeWidget_ItemAt(const QTreeWidget* self, QPoint* p) {
+QTreeWidgetItem* QTreeWidget_ItemAt(const QTreeWidget* self, const QPoint* p) {
     return self->itemAt(*p);
 }
 
@@ -813,7 +813,7 @@ QTreeWidgetItem* QTreeWidget_ItemAt2(const QTreeWidget* self, int x, int y) {
     return self->itemAt(static_cast<int>(x), static_cast<int>(y));
 }
 
-QRect* QTreeWidget_VisualItemRect(const QTreeWidget* self, QTreeWidgetItem* item) {
+QRect* QTreeWidget_VisualItemRect(const QTreeWidget* self, const QTreeWidgetItem* item) {
     return new QRect(self->visualItemRect(item));
 }
 
@@ -856,55 +856,55 @@ void QTreeWidget_RemoveItemWidget(QTreeWidget* self, QTreeWidgetItem* item, int 
 libqt_list /* of QTreeWidgetItem* */ QTreeWidget_SelectedItems(const QTreeWidget* self) {
     QList<QTreeWidgetItem*> _ret = self->selectedItems();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QTreeWidgetItem** _arr = static_cast<QTreeWidgetItem**>(malloc(sizeof(QTreeWidgetItem*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QTreeWidgetItem** _arr = static_cast<QTreeWidgetItem**>(malloc(sizeof(QTreeWidgetItem*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-libqt_list /* of QTreeWidgetItem* */ QTreeWidget_FindItems(const QTreeWidget* self, libqt_string text, int flags) {
+libqt_list /* of QTreeWidgetItem* */ QTreeWidget_FindItems(const QTreeWidget* self, const libqt_string text, int flags) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QList<QTreeWidgetItem*> _ret = self->findItems(text_QString, static_cast<Qt::MatchFlags>(flags));
     // Convert QList<> from C++ memory to manually-managed C memory
-    QTreeWidgetItem** _arr = static_cast<QTreeWidgetItem**>(malloc(sizeof(QTreeWidgetItem*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QTreeWidgetItem** _arr = static_cast<QTreeWidgetItem**>(malloc(sizeof(QTreeWidgetItem*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-QTreeWidgetItem* QTreeWidget_ItemAbove(const QTreeWidget* self, QTreeWidgetItem* item) {
+QTreeWidgetItem* QTreeWidget_ItemAbove(const QTreeWidget* self, const QTreeWidgetItem* item) {
     return self->itemAbove(item);
 }
 
-QTreeWidgetItem* QTreeWidget_ItemBelow(const QTreeWidget* self, QTreeWidgetItem* item) {
+QTreeWidgetItem* QTreeWidget_ItemBelow(const QTreeWidget* self, const QTreeWidgetItem* item) {
     return self->itemBelow(item);
 }
 
-QModelIndex* QTreeWidget_IndexFromItem(const QTreeWidget* self, QTreeWidgetItem* item) {
+QModelIndex* QTreeWidget_IndexFromItem(const QTreeWidget* self, const QTreeWidgetItem* item) {
     return new QModelIndex(self->indexFromItem(item));
 }
 
-QTreeWidgetItem* QTreeWidget_ItemFromIndex(const QTreeWidget* self, QModelIndex* index) {
+QTreeWidgetItem* QTreeWidget_ItemFromIndex(const QTreeWidget* self, const QModelIndex* index) {
     return self->itemFromIndex(*index);
 }
 
-void QTreeWidget_ScrollToItem(QTreeWidget* self, QTreeWidgetItem* item) {
+void QTreeWidget_ScrollToItem(QTreeWidget* self, const QTreeWidgetItem* item) {
     self->scrollToItem(item);
 }
 
-void QTreeWidget_ExpandItem(QTreeWidget* self, QTreeWidgetItem* item) {
+void QTreeWidget_ExpandItem(QTreeWidget* self, const QTreeWidgetItem* item) {
     self->expandItem(item);
 }
 
-void QTreeWidget_CollapseItem(QTreeWidget* self, QTreeWidgetItem* item) {
+void QTreeWidget_CollapseItem(QTreeWidget* self, const QTreeWidgetItem* item) {
     self->collapseItem(item);
 }
 
@@ -1078,25 +1078,25 @@ bool QTreeWidget_IsPersistentEditorOpen2(const QTreeWidget* self, QTreeWidgetIte
     return self->isPersistentEditorOpen(item, static_cast<int>(column));
 }
 
-libqt_list /* of QTreeWidgetItem* */ QTreeWidget_FindItems3(const QTreeWidget* self, libqt_string text, int flags, int column) {
+libqt_list /* of QTreeWidgetItem* */ QTreeWidget_FindItems3(const QTreeWidget* self, const libqt_string text, int flags, int column) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QList<QTreeWidgetItem*> _ret = self->findItems(text_QString, static_cast<Qt::MatchFlags>(flags), static_cast<int>(column));
     // Convert QList<> from C++ memory to manually-managed C memory
-    QTreeWidgetItem** _arr = static_cast<QTreeWidgetItem**>(malloc(sizeof(QTreeWidgetItem*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QTreeWidgetItem** _arr = static_cast<QTreeWidgetItem**>(malloc(sizeof(QTreeWidgetItem*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-QModelIndex* QTreeWidget_IndexFromItem2(const QTreeWidget* self, QTreeWidgetItem* item, int column) {
+QModelIndex* QTreeWidget_IndexFromItem2(const QTreeWidget* self, const QTreeWidgetItem* item, int column) {
     return new QModelIndex(self->indexFromItem(item, static_cast<int>(column)));
 }
 
-void QTreeWidget_ScrollToItem2(QTreeWidget* self, QTreeWidgetItem* item, int hint) {
+void QTreeWidget_ScrollToItem2(QTreeWidget* self, const QTreeWidgetItem* item, int hint) {
     self->scrollToItem(item, static_cast<QAbstractItemView::ScrollHint>(hint));
 }
 
@@ -1162,10 +1162,10 @@ void QTreeWidget_OnEvent(QTreeWidget* self, intptr_t slot) {
 libqt_list /* of libqt_string */ QTreeWidget_MimeTypes(const QTreeWidget* self) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
-        QStringList _ret = vqtreewidget->mimeTypes();
+        QList<QString> _ret = vqtreewidget->mimeTypes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -1177,14 +1177,14 @@ libqt_list /* of libqt_string */ QTreeWidget_MimeTypes(const QTreeWidget* self) 
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = ((VirtualQTreeWidget*)self)->mimeTypes();
+        QList<QString> _ret = ((VirtualQTreeWidget*)self)->mimeTypes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -1196,7 +1196,7 @@ libqt_list /* of libqt_string */ QTreeWidget_MimeTypes(const QTreeWidget* self) 
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -1207,10 +1207,10 @@ libqt_list /* of libqt_string */ QTreeWidget_QBaseMimeTypes(const QTreeWidget* s
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_MimeTypes_IsBase(true);
-        QStringList _ret = vqtreewidget->mimeTypes();
+        QList<QString> _ret = vqtreewidget->mimeTypes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -1222,14 +1222,14 @@ libqt_list /* of libqt_string */ QTreeWidget_QBaseMimeTypes(const QTreeWidget* s
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = ((VirtualQTreeWidget*)self)->mimeTypes();
+        QList<QString> _ret = ((VirtualQTreeWidget*)self)->mimeTypes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -1241,7 +1241,7 @@ libqt_list /* of libqt_string */ QTreeWidget_QBaseMimeTypes(const QTreeWidget* s
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -1256,7 +1256,7 @@ void QTreeWidget_OnMimeTypes(const QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QMimeData* QTreeWidget_MimeData(const QTreeWidget* self, libqt_list /* of QTreeWidgetItem* */ items) {
+QMimeData* QTreeWidget_MimeData(const QTreeWidget* self, const libqt_list /* of QTreeWidgetItem* */ items) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     QList<QTreeWidgetItem*> items_QList;
     items_QList.reserve(items.len);
@@ -1272,7 +1272,7 @@ QMimeData* QTreeWidget_MimeData(const QTreeWidget* self, libqt_list /* of QTreeW
 }
 
 // Base class handler implementation
-QMimeData* QTreeWidget_QBaseMimeData(const QTreeWidget* self, libqt_list /* of QTreeWidgetItem* */ items) {
+QMimeData* QTreeWidget_QBaseMimeData(const QTreeWidget* self, const libqt_list /* of QTreeWidgetItem* */ items) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     QList<QTreeWidgetItem*> items_QList;
     items_QList.reserve(items.len);
@@ -1297,7 +1297,7 @@ void QTreeWidget_OnMimeData(const QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTreeWidget_DropMimeData(QTreeWidget* self, QTreeWidgetItem* parent, int index, QMimeData* data, int action) {
+bool QTreeWidget_DropMimeData(QTreeWidget* self, QTreeWidgetItem* parent, int index, const QMimeData* data, int action) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         return vqtreewidget->dropMimeData(parent, static_cast<int>(index), data, static_cast<Qt::DropAction>(action));
@@ -1307,7 +1307,7 @@ bool QTreeWidget_DropMimeData(QTreeWidget* self, QTreeWidgetItem* parent, int in
 }
 
 // Base class handler implementation
-bool QTreeWidget_QBaseDropMimeData(QTreeWidget* self, QTreeWidgetItem* parent, int index, QMimeData* data, int action) {
+bool QTreeWidget_QBaseDropMimeData(QTreeWidget* self, QTreeWidgetItem* parent, int index, const QMimeData* data, int action) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_DropMimeData_IsBase(true);
@@ -1384,7 +1384,7 @@ void QTreeWidget_OnDropEvent(QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTreeWidget_SetRootIndex(QTreeWidget* self, QModelIndex* index) {
+void QTreeWidget_SetRootIndex(QTreeWidget* self, const QModelIndex* index) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setRootIndex(*index);
@@ -1394,7 +1394,7 @@ void QTreeWidget_SetRootIndex(QTreeWidget* self, QModelIndex* index) {
 }
 
 // Base class handler implementation
-void QTreeWidget_QBaseSetRootIndex(QTreeWidget* self, QModelIndex* index) {
+void QTreeWidget_QBaseSetRootIndex(QTreeWidget* self, const QModelIndex* index) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_SetRootIndex_IsBase(true);
@@ -1413,7 +1413,7 @@ void QTreeWidget_OnSetRootIndex(QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTreeWidget_KeyboardSearch(QTreeWidget* self, libqt_string search) {
+void QTreeWidget_KeyboardSearch(QTreeWidget* self, const libqt_string search) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     QString search_QString = QString::fromUtf8(search.data, search.len);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
@@ -1424,7 +1424,7 @@ void QTreeWidget_KeyboardSearch(QTreeWidget* self, libqt_string search) {
 }
 
 // Base class handler implementation
-void QTreeWidget_QBaseKeyboardSearch(QTreeWidget* self, libqt_string search) {
+void QTreeWidget_QBaseKeyboardSearch(QTreeWidget* self, const libqt_string search) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     QString search_QString = QString::fromUtf8(search.data, search.len);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
@@ -1444,7 +1444,7 @@ void QTreeWidget_OnKeyboardSearch(QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QRect* QTreeWidget_VisualRect(const QTreeWidget* self, QModelIndex* index) {
+QRect* QTreeWidget_VisualRect(const QTreeWidget* self, const QModelIndex* index) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         return new QRect(vqtreewidget->visualRect(*index));
@@ -1454,7 +1454,7 @@ QRect* QTreeWidget_VisualRect(const QTreeWidget* self, QModelIndex* index) {
 }
 
 // Base class handler implementation
-QRect* QTreeWidget_QBaseVisualRect(const QTreeWidget* self, QModelIndex* index) {
+QRect* QTreeWidget_QBaseVisualRect(const QTreeWidget* self, const QModelIndex* index) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_VisualRect_IsBase(true);
@@ -1473,7 +1473,7 @@ void QTreeWidget_OnVisualRect(const QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTreeWidget_ScrollTo(QTreeWidget* self, QModelIndex* index, int hint) {
+void QTreeWidget_ScrollTo(QTreeWidget* self, const QModelIndex* index, int hint) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->scrollTo(*index, static_cast<QAbstractItemView::ScrollHint>(hint));
@@ -1483,7 +1483,7 @@ void QTreeWidget_ScrollTo(QTreeWidget* self, QModelIndex* index, int hint) {
 }
 
 // Base class handler implementation
-void QTreeWidget_QBaseScrollTo(QTreeWidget* self, QModelIndex* index, int hint) {
+void QTreeWidget_QBaseScrollTo(QTreeWidget* self, const QModelIndex* index, int hint) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_ScrollTo_IsBase(true);
@@ -1502,7 +1502,7 @@ void QTreeWidget_OnScrollTo(QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QModelIndex* QTreeWidget_IndexAt(const QTreeWidget* self, QPoint* p) {
+QModelIndex* QTreeWidget_IndexAt(const QTreeWidget* self, const QPoint* p) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         return new QModelIndex(vqtreewidget->indexAt(*p));
@@ -1512,7 +1512,7 @@ QModelIndex* QTreeWidget_IndexAt(const QTreeWidget* self, QPoint* p) {
 }
 
 // Base class handler implementation
-QModelIndex* QTreeWidget_QBaseIndexAt(const QTreeWidget* self, QPoint* p) {
+QModelIndex* QTreeWidget_QBaseIndexAt(const QTreeWidget* self, const QPoint* p) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_IndexAt_IsBase(true);
@@ -1589,7 +1589,7 @@ void QTreeWidget_OnReset(QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTreeWidget_DataChanged(QTreeWidget* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles) {
+void QTreeWidget_DataChanged(QTreeWidget* self, const QModelIndex* topLeft, const QModelIndex* bottomRight, const libqt_list /* of int */ roles) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     QList<int> roles_QList;
     roles_QList.reserve(roles.len);
@@ -1605,7 +1605,7 @@ void QTreeWidget_DataChanged(QTreeWidget* self, QModelIndex* topLeft, QModelInde
 }
 
 // Base class handler implementation
-void QTreeWidget_QBaseDataChanged(QTreeWidget* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles) {
+void QTreeWidget_QBaseDataChanged(QTreeWidget* self, const QModelIndex* topLeft, const QModelIndex* bottomRight, const libqt_list /* of int */ roles) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     QList<int> roles_QList;
     roles_QList.reserve(roles.len);
@@ -1717,7 +1717,7 @@ void QTreeWidget_OnScrollContentsBy(QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTreeWidget_RowsInserted(QTreeWidget* self, QModelIndex* parent, int start, int end) {
+void QTreeWidget_RowsInserted(QTreeWidget* self, const QModelIndex* parent, int start, int end) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->rowsInserted(*parent, static_cast<int>(start), static_cast<int>(end));
@@ -1727,7 +1727,7 @@ void QTreeWidget_RowsInserted(QTreeWidget* self, QModelIndex* parent, int start,
 }
 
 // Base class handler implementation
-void QTreeWidget_QBaseRowsInserted(QTreeWidget* self, QModelIndex* parent, int start, int end) {
+void QTreeWidget_QBaseRowsInserted(QTreeWidget* self, const QModelIndex* parent, int start, int end) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_RowsInserted_IsBase(true);
@@ -1746,7 +1746,7 @@ void QTreeWidget_OnRowsInserted(QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTreeWidget_RowsAboutToBeRemoved(QTreeWidget* self, QModelIndex* parent, int start, int end) {
+void QTreeWidget_RowsAboutToBeRemoved(QTreeWidget* self, const QModelIndex* parent, int start, int end) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->rowsAboutToBeRemoved(*parent, static_cast<int>(start), static_cast<int>(end));
@@ -1756,7 +1756,7 @@ void QTreeWidget_RowsAboutToBeRemoved(QTreeWidget* self, QModelIndex* parent, in
 }
 
 // Base class handler implementation
-void QTreeWidget_QBaseRowsAboutToBeRemoved(QTreeWidget* self, QModelIndex* parent, int start, int end) {
+void QTreeWidget_QBaseRowsAboutToBeRemoved(QTreeWidget* self, const QModelIndex* parent, int start, int end) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_RowsAboutToBeRemoved_IsBase(true);
@@ -1860,7 +1860,7 @@ void QTreeWidget_OnVerticalOffset(const QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTreeWidget_SetSelection(QTreeWidget* self, QRect* rect, int command) {
+void QTreeWidget_SetSelection(QTreeWidget* self, const QRect* rect, int command) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setSelection(*rect, static_cast<QItemSelectionModel::SelectionFlags>(command));
@@ -1870,7 +1870,7 @@ void QTreeWidget_SetSelection(QTreeWidget* self, QRect* rect, int command) {
 }
 
 // Base class handler implementation
-void QTreeWidget_QBaseSetSelection(QTreeWidget* self, QRect* rect, int command) {
+void QTreeWidget_QBaseSetSelection(QTreeWidget* self, const QRect* rect, int command) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_SetSelection_IsBase(true);
@@ -1889,7 +1889,7 @@ void QTreeWidget_OnSetSelection(QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QRegion* QTreeWidget_VisualRegionForSelection(const QTreeWidget* self, QItemSelection* selection) {
+QRegion* QTreeWidget_VisualRegionForSelection(const QTreeWidget* self, const QItemSelection* selection) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         return new QRegion(vqtreewidget->visualRegionForSelection(*selection));
@@ -1898,7 +1898,7 @@ QRegion* QTreeWidget_VisualRegionForSelection(const QTreeWidget* self, QItemSele
 }
 
 // Base class handler implementation
-QRegion* QTreeWidget_QBaseVisualRegionForSelection(const QTreeWidget* self, QItemSelection* selection) {
+QRegion* QTreeWidget_QBaseVisualRegionForSelection(const QTreeWidget* self, const QItemSelection* selection) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_VisualRegionForSelection_IsBase(true);
@@ -1919,25 +1919,25 @@ void QTreeWidget_OnVisualRegionForSelection(const QTreeWidget* self, intptr_t sl
 libqt_list /* of QModelIndex* */ QTreeWidget_SelectedIndexes(const QTreeWidget* self) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
-        QModelIndexList _ret = vqtreewidget->selectedIndexes();
+        QList<QModelIndex> _ret = vqtreewidget->selectedIndexes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QModelIndexList _ret = ((VirtualQTreeWidget*)self)->selectedIndexes();
+        QList<QModelIndex> _ret = ((VirtualQTreeWidget*)self)->selectedIndexes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -1948,25 +1948,25 @@ libqt_list /* of QModelIndex* */ QTreeWidget_QBaseSelectedIndexes(const QTreeWid
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_SelectedIndexes_IsBase(true);
-        QModelIndexList _ret = vqtreewidget->selectedIndexes();
+        QList<QModelIndex> _ret = vqtreewidget->selectedIndexes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QModelIndexList _ret = ((VirtualQTreeWidget*)self)->selectedIndexes();
+        QList<QModelIndex> _ret = ((VirtualQTreeWidget*)self)->selectedIndexes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -2068,7 +2068,7 @@ void QTreeWidget_OnPaintEvent(QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTreeWidget_DrawRow(const QTreeWidget* self, QPainter* painter, QStyleOptionViewItem* options, QModelIndex* index) {
+void QTreeWidget_DrawRow(const QTreeWidget* self, QPainter* painter, const QStyleOptionViewItem* options, const QModelIndex* index) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->drawRow(painter, *options, *index);
@@ -2078,7 +2078,7 @@ void QTreeWidget_DrawRow(const QTreeWidget* self, QPainter* painter, QStyleOptio
 }
 
 // Base class handler implementation
-void QTreeWidget_QBaseDrawRow(const QTreeWidget* self, QPainter* painter, QStyleOptionViewItem* options, QModelIndex* index) {
+void QTreeWidget_QBaseDrawRow(const QTreeWidget* self, QPainter* painter, const QStyleOptionViewItem* options, const QModelIndex* index) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_DrawRow_IsBase(true);
@@ -2097,7 +2097,7 @@ void QTreeWidget_OnDrawRow(const QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTreeWidget_DrawBranches(const QTreeWidget* self, QPainter* painter, QRect* rect, QModelIndex* index) {
+void QTreeWidget_DrawBranches(const QTreeWidget* self, QPainter* painter, const QRect* rect, const QModelIndex* index) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->drawBranches(painter, *rect, *index);
@@ -2107,7 +2107,7 @@ void QTreeWidget_DrawBranches(const QTreeWidget* self, QPainter* painter, QRect*
 }
 
 // Base class handler implementation
-void QTreeWidget_QBaseDrawBranches(const QTreeWidget* self, QPainter* painter, QRect* rect, QModelIndex* index) {
+void QTreeWidget_QBaseDrawBranches(const QTreeWidget* self, QPainter* painter, const QRect* rect, const QModelIndex* index) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_DrawBranches_IsBase(true);
@@ -2443,7 +2443,7 @@ void QTreeWidget_OnHorizontalScrollbarAction(QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTreeWidget_IsIndexHidden(const QTreeWidget* self, QModelIndex* index) {
+bool QTreeWidget_IsIndexHidden(const QTreeWidget* self, const QModelIndex* index) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         return vqtreewidget->isIndexHidden(*index);
@@ -2453,7 +2453,7 @@ bool QTreeWidget_IsIndexHidden(const QTreeWidget* self, QModelIndex* index) {
 }
 
 // Base class handler implementation
-bool QTreeWidget_QBaseIsIndexHidden(const QTreeWidget* self, QModelIndex* index) {
+bool QTreeWidget_QBaseIsIndexHidden(const QTreeWidget* self, const QModelIndex* index) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_IsIndexHidden_IsBase(true);
@@ -2472,7 +2472,7 @@ void QTreeWidget_OnIsIndexHidden(const QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTreeWidget_SelectionChanged(QTreeWidget* self, QItemSelection* selected, QItemSelection* deselected) {
+void QTreeWidget_SelectionChanged(QTreeWidget* self, const QItemSelection* selected, const QItemSelection* deselected) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->selectionChanged(*selected, *deselected);
@@ -2482,7 +2482,7 @@ void QTreeWidget_SelectionChanged(QTreeWidget* self, QItemSelection* selected, Q
 }
 
 // Base class handler implementation
-void QTreeWidget_QBaseSelectionChanged(QTreeWidget* self, QItemSelection* selected, QItemSelection* deselected) {
+void QTreeWidget_QBaseSelectionChanged(QTreeWidget* self, const QItemSelection* selected, const QItemSelection* deselected) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_SelectionChanged_IsBase(true);
@@ -2501,7 +2501,7 @@ void QTreeWidget_OnSelectionChanged(QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTreeWidget_CurrentChanged(QTreeWidget* self, QModelIndex* current, QModelIndex* previous) {
+void QTreeWidget_CurrentChanged(QTreeWidget* self, const QModelIndex* current, const QModelIndex* previous) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->currentChanged(*current, *previous);
@@ -2511,7 +2511,7 @@ void QTreeWidget_CurrentChanged(QTreeWidget* self, QModelIndex* current, QModelI
 }
 
 // Base class handler implementation
-void QTreeWidget_QBaseCurrentChanged(QTreeWidget* self, QModelIndex* current, QModelIndex* previous) {
+void QTreeWidget_QBaseCurrentChanged(QTreeWidget* self, const QModelIndex* current, const QModelIndex* previous) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_CurrentChanged_IsBase(true);
@@ -2559,7 +2559,7 @@ void QTreeWidget_OnSizeHintForRow(const QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QAbstractItemDelegate* QTreeWidget_ItemDelegateForIndex(const QTreeWidget* self, QModelIndex* index) {
+QAbstractItemDelegate* QTreeWidget_ItemDelegateForIndex(const QTreeWidget* self, const QModelIndex* index) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         return vqtreewidget->itemDelegateForIndex(*index);
@@ -2569,7 +2569,7 @@ QAbstractItemDelegate* QTreeWidget_ItemDelegateForIndex(const QTreeWidget* self,
 }
 
 // Base class handler implementation
-QAbstractItemDelegate* QTreeWidget_QBaseItemDelegateForIndex(const QTreeWidget* self, QModelIndex* index) {
+QAbstractItemDelegate* QTreeWidget_QBaseItemDelegateForIndex(const QTreeWidget* self, const QModelIndex* index) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_ItemDelegateForIndex_IsBase(true);
@@ -2820,7 +2820,7 @@ void QTreeWidget_OnEditorDestroyed(QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTreeWidget_Edit2(QTreeWidget* self, QModelIndex* index, int trigger, QEvent* event) {
+bool QTreeWidget_Edit2(QTreeWidget* self, const QModelIndex* index, int trigger, QEvent* event) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         return vqtreewidget->edit(*index, static_cast<QAbstractItemView::EditTrigger>(trigger), event);
@@ -2830,7 +2830,7 @@ bool QTreeWidget_Edit2(QTreeWidget* self, QModelIndex* index, int trigger, QEven
 }
 
 // Base class handler implementation
-bool QTreeWidget_QBaseEdit2(QTreeWidget* self, QModelIndex* index, int trigger, QEvent* event) {
+bool QTreeWidget_QBaseEdit2(QTreeWidget* self, const QModelIndex* index, int trigger, QEvent* event) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_Edit2_IsBase(true);
@@ -2849,7 +2849,7 @@ void QTreeWidget_OnEdit2(QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-int QTreeWidget_SelectionCommand(const QTreeWidget* self, QModelIndex* index, QEvent* event) {
+int QTreeWidget_SelectionCommand(const QTreeWidget* self, const QModelIndex* index, const QEvent* event) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         return static_cast<int>(vqtreewidget->selectionCommand(*index, event));
@@ -2859,7 +2859,7 @@ int QTreeWidget_SelectionCommand(const QTreeWidget* self, QModelIndex* index, QE
 }
 
 // Base class handler implementation
-int QTreeWidget_QBaseSelectionCommand(const QTreeWidget* self, QModelIndex* index, QEvent* event) {
+int QTreeWidget_QBaseSelectionCommand(const QTreeWidget* self, const QModelIndex* index, const QEvent* event) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_SelectionCommand_IsBase(true);
@@ -3748,7 +3748,7 @@ void QTreeWidget_OnHideEvent(QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTreeWidget_NativeEvent(QTreeWidget* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QTreeWidget_NativeEvent(QTreeWidget* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
@@ -3759,7 +3759,7 @@ bool QTreeWidget_NativeEvent(QTreeWidget* self, libqt_string eventType, void* me
 }
 
 // Base class handler implementation
-bool QTreeWidget_QBaseNativeEvent(QTreeWidget* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QTreeWidget_QBaseNativeEvent(QTreeWidget* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
@@ -3953,7 +3953,7 @@ void QTreeWidget_OnCustomEvent(QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTreeWidget_ConnectNotify(QTreeWidget* self, QMetaMethod* signal) {
+void QTreeWidget_ConnectNotify(QTreeWidget* self, const QMetaMethod* signal) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->connectNotify(*signal);
@@ -3963,7 +3963,7 @@ void QTreeWidget_ConnectNotify(QTreeWidget* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTreeWidget_QBaseConnectNotify(QTreeWidget* self, QMetaMethod* signal) {
+void QTreeWidget_QBaseConnectNotify(QTreeWidget* self, const QMetaMethod* signal) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_ConnectNotify_IsBase(true);
@@ -3982,7 +3982,7 @@ void QTreeWidget_OnConnectNotify(QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTreeWidget_DisconnectNotify(QTreeWidget* self, QMetaMethod* signal) {
+void QTreeWidget_DisconnectNotify(QTreeWidget* self, const QMetaMethod* signal) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->disconnectNotify(*signal);
@@ -3992,7 +3992,7 @@ void QTreeWidget_DisconnectNotify(QTreeWidget* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTreeWidget_QBaseDisconnectNotify(QTreeWidget* self, QMetaMethod* signal) {
+void QTreeWidget_QBaseDisconnectNotify(QTreeWidget* self, const QMetaMethod* signal) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_DisconnectNotify_IsBase(true);
@@ -4127,7 +4127,7 @@ void QTreeWidget_OnReexpand(QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTreeWidget_RowsRemoved(QTreeWidget* self, QModelIndex* parent, int first, int last) {
+void QTreeWidget_RowsRemoved(QTreeWidget* self, const QModelIndex* parent, int first, int last) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->rowsRemoved(*parent, static_cast<int>(first), static_cast<int>(last));
@@ -4137,7 +4137,7 @@ void QTreeWidget_RowsRemoved(QTreeWidget* self, QModelIndex* parent, int first, 
 }
 
 // Base class handler implementation
-void QTreeWidget_QBaseRowsRemoved(QTreeWidget* self, QModelIndex* parent, int first, int last) {
+void QTreeWidget_QBaseRowsRemoved(QTreeWidget* self, const QModelIndex* parent, int first, int last) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_RowsRemoved_IsBase(true);
@@ -4156,7 +4156,7 @@ void QTreeWidget_OnRowsRemoved(QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTreeWidget_DrawTree(const QTreeWidget* self, QPainter* painter, QRegion* region) {
+void QTreeWidget_DrawTree(const QTreeWidget* self, QPainter* painter, const QRegion* region) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->drawTree(painter, *region);
@@ -4166,7 +4166,7 @@ void QTreeWidget_DrawTree(const QTreeWidget* self, QPainter* painter, QRegion* r
 }
 
 // Base class handler implementation
-void QTreeWidget_QBaseDrawTree(const QTreeWidget* self, QPainter* painter, QRegion* region) {
+void QTreeWidget_QBaseDrawTree(const QTreeWidget* self, QPainter* painter, const QRegion* region) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_DrawTree_IsBase(true);
@@ -4185,7 +4185,7 @@ void QTreeWidget_OnDrawTree(const QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-int QTreeWidget_IndexRowSizeHint(const QTreeWidget* self, QModelIndex* index) {
+int QTreeWidget_IndexRowSizeHint(const QTreeWidget* self, const QModelIndex* index) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         return vqtreewidget->indexRowSizeHint(*index);
@@ -4195,7 +4195,7 @@ int QTreeWidget_IndexRowSizeHint(const QTreeWidget* self, QModelIndex* index) {
 }
 
 // Base class handler implementation
-int QTreeWidget_QBaseIndexRowSizeHint(const QTreeWidget* self, QModelIndex* index) {
+int QTreeWidget_QBaseIndexRowSizeHint(const QTreeWidget* self, const QModelIndex* index) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_IndexRowSizeHint_IsBase(true);
@@ -4214,7 +4214,7 @@ void QTreeWidget_OnIndexRowSizeHint(const QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-int QTreeWidget_RowHeight(const QTreeWidget* self, QModelIndex* index) {
+int QTreeWidget_RowHeight(const QTreeWidget* self, const QModelIndex* index) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         return vqtreewidget->rowHeight(*index);
@@ -4224,7 +4224,7 @@ int QTreeWidget_RowHeight(const QTreeWidget* self, QModelIndex* index) {
 }
 
 // Base class handler implementation
-int QTreeWidget_QBaseRowHeight(const QTreeWidget* self, QModelIndex* index) {
+int QTreeWidget_QBaseRowHeight(const QTreeWidget* self, const QModelIndex* index) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_RowHeight_IsBase(true);
@@ -4359,7 +4359,7 @@ void QTreeWidget_OnExecuteDelayedItemsLayout(QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTreeWidget_SetDirtyRegion(QTreeWidget* self, QRegion* region) {
+void QTreeWidget_SetDirtyRegion(QTreeWidget* self, const QRegion* region) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setDirtyRegion(*region);
@@ -4369,7 +4369,7 @@ void QTreeWidget_SetDirtyRegion(QTreeWidget* self, QRegion* region) {
 }
 
 // Base class handler implementation
-void QTreeWidget_QBaseSetDirtyRegion(QTreeWidget* self, QRegion* region) {
+void QTreeWidget_QBaseSetDirtyRegion(QTreeWidget* self, const QRegion* region) {
     auto* vqtreewidget = dynamic_cast<VirtualQTreeWidget*>(self);
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_SetDirtyRegion_IsBase(true);
@@ -4877,7 +4877,7 @@ void QTreeWidget_OnReceivers(const QTreeWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTreeWidget_IsSignalConnected(const QTreeWidget* self, QMetaMethod* signal) {
+bool QTreeWidget_IsSignalConnected(const QTreeWidget* self, const QMetaMethod* signal) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         return vqtreewidget->isSignalConnected(*signal);
@@ -4887,7 +4887,7 @@ bool QTreeWidget_IsSignalConnected(const QTreeWidget* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QTreeWidget_QBaseIsSignalConnected(const QTreeWidget* self, QMetaMethod* signal) {
+bool QTreeWidget_QBaseIsSignalConnected(const QTreeWidget* self, const QMetaMethod* signal) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_IsSignalConnected_IsBase(true);
@@ -4902,6 +4902,35 @@ void QTreeWidget_OnIsSignalConnected(const QTreeWidget* self, intptr_t slot) {
     auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
     if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
         vqtreewidget->setQTreeWidget_IsSignalConnected_Callback(reinterpret_cast<VirtualQTreeWidget::QTreeWidget_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QTreeWidget_GetDecodedMetricF(const QTreeWidget* self, int metricA, int metricB) {
+    auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
+    if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
+        return vqtreewidget->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQTreeWidget*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QTreeWidget_QBaseGetDecodedMetricF(const QTreeWidget* self, int metricA, int metricB) {
+    auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
+    if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
+        vqtreewidget->setQTreeWidget_GetDecodedMetricF_IsBase(true);
+        return vqtreewidget->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQTreeWidget*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QTreeWidget_OnGetDecodedMetricF(const QTreeWidget* self, intptr_t slot) {
+    auto* vqtreewidget = const_cast<VirtualQTreeWidget*>(dynamic_cast<const VirtualQTreeWidget*>(self));
+    if (vqtreewidget && vqtreewidget->isVirtualQTreeWidget) {
+        vqtreewidget->setQTreeWidget_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQTreeWidget::QTreeWidget_GetDecodedMetricF_Callback>(slot));
     }
 }
 

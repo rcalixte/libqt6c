@@ -106,8 +106,8 @@ class VirtualQCandlestickModelMapper final : public QCandlestickModelMapper {
     mutable bool qcandlestickmodelmapper_issignalconnected_isbase = false;
 
   public:
-    VirtualQCandlestickModelMapper() : QCandlestickModelMapper(){};
-    VirtualQCandlestickModelMapper(QObject* parent) : QCandlestickModelMapper(parent){};
+    VirtualQCandlestickModelMapper() : QCandlestickModelMapper() {};
+    VirtualQCandlestickModelMapper(QObject* parent) : QCandlestickModelMapper(parent) {};
 
     ~VirtualQCandlestickModelMapper() {
         qcandlestickmodelmapper_metacall_callback = nullptr;
@@ -583,10 +583,10 @@ class VirtualQCandlestickModelMapper final : public QCandlestickModelMapper {
     friend void QCandlestickModelMapper_QBaseChildEvent(QCandlestickModelMapper* self, QChildEvent* event);
     friend void QCandlestickModelMapper_CustomEvent(QCandlestickModelMapper* self, QEvent* event);
     friend void QCandlestickModelMapper_QBaseCustomEvent(QCandlestickModelMapper* self, QEvent* event);
-    friend void QCandlestickModelMapper_ConnectNotify(QCandlestickModelMapper* self, QMetaMethod* signal);
-    friend void QCandlestickModelMapper_QBaseConnectNotify(QCandlestickModelMapper* self, QMetaMethod* signal);
-    friend void QCandlestickModelMapper_DisconnectNotify(QCandlestickModelMapper* self, QMetaMethod* signal);
-    friend void QCandlestickModelMapper_QBaseDisconnectNotify(QCandlestickModelMapper* self, QMetaMethod* signal);
+    friend void QCandlestickModelMapper_ConnectNotify(QCandlestickModelMapper* self, const QMetaMethod* signal);
+    friend void QCandlestickModelMapper_QBaseConnectNotify(QCandlestickModelMapper* self, const QMetaMethod* signal);
+    friend void QCandlestickModelMapper_DisconnectNotify(QCandlestickModelMapper* self, const QMetaMethod* signal);
+    friend void QCandlestickModelMapper_QBaseDisconnectNotify(QCandlestickModelMapper* self, const QMetaMethod* signal);
     friend void QCandlestickModelMapper_SetTimestamp(QCandlestickModelMapper* self, int timestamp);
     friend void QCandlestickModelMapper_QBaseSetTimestamp(QCandlestickModelMapper* self, int timestamp);
     friend int QCandlestickModelMapper_Timestamp(const QCandlestickModelMapper* self);
@@ -621,8 +621,8 @@ class VirtualQCandlestickModelMapper final : public QCandlestickModelMapper {
     friend int QCandlestickModelMapper_QBaseSenderSignalIndex(const QCandlestickModelMapper* self);
     friend int QCandlestickModelMapper_Receivers(const QCandlestickModelMapper* self, const char* signal);
     friend int QCandlestickModelMapper_QBaseReceivers(const QCandlestickModelMapper* self, const char* signal);
-    friend bool QCandlestickModelMapper_IsSignalConnected(const QCandlestickModelMapper* self, QMetaMethod* signal);
-    friend bool QCandlestickModelMapper_QBaseIsSignalConnected(const QCandlestickModelMapper* self, QMetaMethod* signal);
+    friend bool QCandlestickModelMapper_IsSignalConnected(const QCandlestickModelMapper* self, const QMetaMethod* signal);
+    friend bool QCandlestickModelMapper_QBaseIsSignalConnected(const QCandlestickModelMapper* self, const QMetaMethod* signal);
 };
 
 #endif

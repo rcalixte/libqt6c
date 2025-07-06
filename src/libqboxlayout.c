@@ -491,8 +491,8 @@ QThread* q_boxlayout_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_boxlayout_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_boxlayout_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_boxlayout_start_timer(void* self, int interval) {
@@ -501,6 +501,10 @@ int32_t q_boxlayout_start_timer(void* self, int interval) {
 
 void q_boxlayout_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_boxlayout_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_boxlayout_children(void* self) {
@@ -593,6 +597,10 @@ bool q_boxlayout_inherits(void* self, const char* classname) {
 
 void q_boxlayout_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_boxlayout_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_boxlayout_start_timer2(void* self, int interval, int64_t timerType) {
@@ -1215,8 +1223,8 @@ QThread* q_hboxlayout_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_hboxlayout_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_hboxlayout_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_hboxlayout_start_timer(void* self, int interval) {
@@ -1225,6 +1233,10 @@ int32_t q_hboxlayout_start_timer(void* self, int interval) {
 
 void q_hboxlayout_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_hboxlayout_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_hboxlayout_children(void* self) {
@@ -1317,6 +1329,10 @@ bool q_hboxlayout_inherits(void* self, const char* classname) {
 
 void q_hboxlayout_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_hboxlayout_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_hboxlayout_start_timer2(void* self, int interval, int64_t timerType) {
@@ -2119,8 +2135,8 @@ QThread* q_vboxlayout_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_vboxlayout_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_vboxlayout_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_vboxlayout_start_timer(void* self, int interval) {
@@ -2129,6 +2145,10 @@ int32_t q_vboxlayout_start_timer(void* self, int interval) {
 
 void q_vboxlayout_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_vboxlayout_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_vboxlayout_children(void* self) {
@@ -2221,6 +2241,10 @@ bool q_vboxlayout_inherits(void* self, const char* classname) {
 
 void q_vboxlayout_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_vboxlayout_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_vboxlayout_start_timer2(void* self, int interval, int64_t timerType) {

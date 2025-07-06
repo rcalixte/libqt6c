@@ -61,14 +61,14 @@ class VirtualQLibrary final : public QLibrary {
     mutable bool qlibrary_issignalconnected_isbase = false;
 
   public:
-    VirtualQLibrary() : QLibrary(){};
-    VirtualQLibrary(const QString& fileName) : QLibrary(fileName){};
-    VirtualQLibrary(const QString& fileName, int verNum) : QLibrary(fileName, verNum){};
-    VirtualQLibrary(const QString& fileName, const QString& version) : QLibrary(fileName, version){};
-    VirtualQLibrary(QObject* parent) : QLibrary(parent){};
-    VirtualQLibrary(const QString& fileName, QObject* parent) : QLibrary(fileName, parent){};
-    VirtualQLibrary(const QString& fileName, int verNum, QObject* parent) : QLibrary(fileName, verNum, parent){};
-    VirtualQLibrary(const QString& fileName, const QString& version, QObject* parent) : QLibrary(fileName, version, parent){};
+    VirtualQLibrary() : QLibrary() {};
+    VirtualQLibrary(const QString& fileName) : QLibrary(fileName) {};
+    VirtualQLibrary(const QString& fileName, int verNum) : QLibrary(fileName, verNum) {};
+    VirtualQLibrary(const QString& fileName, const QString& version) : QLibrary(fileName, version) {};
+    VirtualQLibrary(QObject* parent) : QLibrary(parent) {};
+    VirtualQLibrary(const QString& fileName, QObject* parent) : QLibrary(fileName, parent) {};
+    VirtualQLibrary(const QString& fileName, int verNum, QObject* parent) : QLibrary(fileName, verNum, parent) {};
+    VirtualQLibrary(const QString& fileName, const QString& version, QObject* parent) : QLibrary(fileName, version, parent) {};
 
     ~VirtualQLibrary() {
         qlibrary_metacall_callback = nullptr;
@@ -300,18 +300,18 @@ class VirtualQLibrary final : public QLibrary {
     friend void QLibrary_QBaseChildEvent(QLibrary* self, QChildEvent* event);
     friend void QLibrary_CustomEvent(QLibrary* self, QEvent* event);
     friend void QLibrary_QBaseCustomEvent(QLibrary* self, QEvent* event);
-    friend void QLibrary_ConnectNotify(QLibrary* self, QMetaMethod* signal);
-    friend void QLibrary_QBaseConnectNotify(QLibrary* self, QMetaMethod* signal);
-    friend void QLibrary_DisconnectNotify(QLibrary* self, QMetaMethod* signal);
-    friend void QLibrary_QBaseDisconnectNotify(QLibrary* self, QMetaMethod* signal);
+    friend void QLibrary_ConnectNotify(QLibrary* self, const QMetaMethod* signal);
+    friend void QLibrary_QBaseConnectNotify(QLibrary* self, const QMetaMethod* signal);
+    friend void QLibrary_DisconnectNotify(QLibrary* self, const QMetaMethod* signal);
+    friend void QLibrary_QBaseDisconnectNotify(QLibrary* self, const QMetaMethod* signal);
     friend QObject* QLibrary_Sender(const QLibrary* self);
     friend QObject* QLibrary_QBaseSender(const QLibrary* self);
     friend int QLibrary_SenderSignalIndex(const QLibrary* self);
     friend int QLibrary_QBaseSenderSignalIndex(const QLibrary* self);
     friend int QLibrary_Receivers(const QLibrary* self, const char* signal);
     friend int QLibrary_QBaseReceivers(const QLibrary* self, const char* signal);
-    friend bool QLibrary_IsSignalConnected(const QLibrary* self, QMetaMethod* signal);
-    friend bool QLibrary_QBaseIsSignalConnected(const QLibrary* self, QMetaMethod* signal);
+    friend bool QLibrary_IsSignalConnected(const QLibrary* self, const QMetaMethod* signal);
+    friend bool QLibrary_QBaseIsSignalConnected(const QLibrary* self, const QMetaMethod* signal);
 };
 
 #endif

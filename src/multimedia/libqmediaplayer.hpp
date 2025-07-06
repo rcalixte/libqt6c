@@ -16,6 +16,7 @@ extern "C" {
 
 #ifdef __cplusplus
 #else
+typedef struct QAudioBufferOutput QAudioBufferOutput;
 typedef struct QAudioOutput QAudioOutput;
 typedef struct QChildEvent QChildEvent;
 typedef struct QEvent QEvent;
@@ -29,18 +30,6 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 typedef struct QVideoSink QVideoSink;
-#endif
-
-#ifdef __cplusplus
-typedef QMediaPlayer::Error Error;                 // C++ enum
-typedef QMediaPlayer::Loops Loops;                 // C++ enum
-typedef QMediaPlayer::MediaStatus MediaStatus;     // C++ enum
-typedef QMediaPlayer::PlaybackState PlaybackState; // C++ enum
-#else
-typedef int Error;         // C ABI enum
-typedef int Loops;         // C ABI enum
-typedef int MediaStatus;   // C ABI enum
-typedef int PlaybackState; // C ABI enum
 #endif
 
 QMediaPlayer* QMediaPlayer_new();
@@ -60,6 +49,8 @@ int QMediaPlayer_ActiveSubtitleTrack(const QMediaPlayer* self);
 void QMediaPlayer_SetActiveAudioTrack(QMediaPlayer* self, int index);
 void QMediaPlayer_SetActiveVideoTrack(QMediaPlayer* self, int index);
 void QMediaPlayer_SetActiveSubtitleTrack(QMediaPlayer* self, int index);
+void QMediaPlayer_SetAudioBufferOutput(QMediaPlayer* self, QAudioBufferOutput* output);
+QAudioBufferOutput* QMediaPlayer_AudioBufferOutput(const QMediaPlayer* self);
 void QMediaPlayer_SetAudioOutput(QMediaPlayer* self, QAudioOutput* output);
 QAudioOutput* QMediaPlayer_AudioOutput(const QMediaPlayer* self);
 void QMediaPlayer_SetVideoOutput(QMediaPlayer* self, QObject* videoOutput);
@@ -78,6 +69,7 @@ float QMediaPlayer_BufferProgress(const QMediaPlayer* self);
 QMediaTimeRange* QMediaPlayer_BufferedTimeRange(const QMediaPlayer* self);
 bool QMediaPlayer_IsSeekable(const QMediaPlayer* self);
 double QMediaPlayer_PlaybackRate(const QMediaPlayer* self);
+bool QMediaPlayer_IsPlaying(const QMediaPlayer* self);
 int QMediaPlayer_Loops(const QMediaPlayer* self);
 void QMediaPlayer_SetLoops(QMediaPlayer* self, int loops);
 int QMediaPlayer_Error(const QMediaPlayer* self);
@@ -89,9 +81,9 @@ void QMediaPlayer_Pause(QMediaPlayer* self);
 void QMediaPlayer_Stop(QMediaPlayer* self);
 void QMediaPlayer_SetPosition(QMediaPlayer* self, long long position);
 void QMediaPlayer_SetPlaybackRate(QMediaPlayer* self, double rate);
-void QMediaPlayer_SetSource(QMediaPlayer* self, QUrl* source);
+void QMediaPlayer_SetSource(QMediaPlayer* self, const QUrl* source);
 void QMediaPlayer_SetSourceDevice(QMediaPlayer* self, QIODevice* device);
-void QMediaPlayer_SourceChanged(QMediaPlayer* self, QUrl* media);
+void QMediaPlayer_SourceChanged(QMediaPlayer* self, const QUrl* media);
 void QMediaPlayer_Connect_SourceChanged(QMediaPlayer* self, intptr_t slot);
 void QMediaPlayer_PlaybackStateChanged(QMediaPlayer* self, int newState);
 void QMediaPlayer_Connect_PlaybackStateChanged(QMediaPlayer* self, intptr_t slot);
@@ -109,6 +101,8 @@ void QMediaPlayer_BufferProgressChanged(QMediaPlayer* self, float progress);
 void QMediaPlayer_Connect_BufferProgressChanged(QMediaPlayer* self, intptr_t slot);
 void QMediaPlayer_SeekableChanged(QMediaPlayer* self, bool seekable);
 void QMediaPlayer_Connect_SeekableChanged(QMediaPlayer* self, intptr_t slot);
+void QMediaPlayer_PlayingChanged(QMediaPlayer* self, bool playing);
+void QMediaPlayer_Connect_PlayingChanged(QMediaPlayer* self, intptr_t slot);
 void QMediaPlayer_PlaybackRateChanged(QMediaPlayer* self, double rate);
 void QMediaPlayer_Connect_PlaybackRateChanged(QMediaPlayer* self, intptr_t slot);
 void QMediaPlayer_LoopsChanged(QMediaPlayer* self);
@@ -119,17 +113,19 @@ void QMediaPlayer_VideoOutputChanged(QMediaPlayer* self);
 void QMediaPlayer_Connect_VideoOutputChanged(QMediaPlayer* self, intptr_t slot);
 void QMediaPlayer_AudioOutputChanged(QMediaPlayer* self);
 void QMediaPlayer_Connect_AudioOutputChanged(QMediaPlayer* self, intptr_t slot);
+void QMediaPlayer_AudioBufferOutputChanged(QMediaPlayer* self);
+void QMediaPlayer_Connect_AudioBufferOutputChanged(QMediaPlayer* self, intptr_t slot);
 void QMediaPlayer_TracksChanged(QMediaPlayer* self);
 void QMediaPlayer_Connect_TracksChanged(QMediaPlayer* self, intptr_t slot);
 void QMediaPlayer_ActiveTracksChanged(QMediaPlayer* self);
 void QMediaPlayer_Connect_ActiveTracksChanged(QMediaPlayer* self, intptr_t slot);
 void QMediaPlayer_ErrorChanged(QMediaPlayer* self);
 void QMediaPlayer_Connect_ErrorChanged(QMediaPlayer* self, intptr_t slot);
-void QMediaPlayer_ErrorOccurred(QMediaPlayer* self, int errorVal, libqt_string errorString);
+void QMediaPlayer_ErrorOccurred(QMediaPlayer* self, int errorVal, const libqt_string errorString);
 void QMediaPlayer_Connect_ErrorOccurred(QMediaPlayer* self, intptr_t slot);
 libqt_string QMediaPlayer_Tr2(const char* s, const char* c);
 libqt_string QMediaPlayer_Tr3(const char* s, const char* c, int n);
-void QMediaPlayer_SetSourceDevice2(QMediaPlayer* self, QIODevice* device, QUrl* sourceUrl);
+void QMediaPlayer_SetSourceDevice2(QMediaPlayer* self, QIODevice* device, const QUrl* sourceUrl);
 bool QMediaPlayer_Event(QMediaPlayer* self, QEvent* event);
 void QMediaPlayer_OnEvent(QMediaPlayer* self, intptr_t slot);
 bool QMediaPlayer_QBaseEvent(QMediaPlayer* self, QEvent* event);
@@ -145,12 +141,12 @@ void QMediaPlayer_QBaseChildEvent(QMediaPlayer* self, QChildEvent* event);
 void QMediaPlayer_CustomEvent(QMediaPlayer* self, QEvent* event);
 void QMediaPlayer_OnCustomEvent(QMediaPlayer* self, intptr_t slot);
 void QMediaPlayer_QBaseCustomEvent(QMediaPlayer* self, QEvent* event);
-void QMediaPlayer_ConnectNotify(QMediaPlayer* self, QMetaMethod* signal);
+void QMediaPlayer_ConnectNotify(QMediaPlayer* self, const QMetaMethod* signal);
 void QMediaPlayer_OnConnectNotify(QMediaPlayer* self, intptr_t slot);
-void QMediaPlayer_QBaseConnectNotify(QMediaPlayer* self, QMetaMethod* signal);
-void QMediaPlayer_DisconnectNotify(QMediaPlayer* self, QMetaMethod* signal);
+void QMediaPlayer_QBaseConnectNotify(QMediaPlayer* self, const QMetaMethod* signal);
+void QMediaPlayer_DisconnectNotify(QMediaPlayer* self, const QMetaMethod* signal);
 void QMediaPlayer_OnDisconnectNotify(QMediaPlayer* self, intptr_t slot);
-void QMediaPlayer_QBaseDisconnectNotify(QMediaPlayer* self, QMetaMethod* signal);
+void QMediaPlayer_QBaseDisconnectNotify(QMediaPlayer* self, const QMetaMethod* signal);
 QObject* QMediaPlayer_Sender(const QMediaPlayer* self);
 void QMediaPlayer_OnSender(const QMediaPlayer* self, intptr_t slot);
 QObject* QMediaPlayer_QBaseSender(const QMediaPlayer* self);
@@ -160,9 +156,9 @@ int QMediaPlayer_QBaseSenderSignalIndex(const QMediaPlayer* self);
 int QMediaPlayer_Receivers(const QMediaPlayer* self, const char* signal);
 void QMediaPlayer_OnReceivers(const QMediaPlayer* self, intptr_t slot);
 int QMediaPlayer_QBaseReceivers(const QMediaPlayer* self, const char* signal);
-bool QMediaPlayer_IsSignalConnected(const QMediaPlayer* self, QMetaMethod* signal);
+bool QMediaPlayer_IsSignalConnected(const QMediaPlayer* self, const QMetaMethod* signal);
 void QMediaPlayer_OnIsSignalConnected(const QMediaPlayer* self, intptr_t slot);
-bool QMediaPlayer_QBaseIsSignalConnected(const QMediaPlayer* self, QMetaMethod* signal);
+bool QMediaPlayer_QBaseIsSignalConnected(const QMediaPlayer* self, const QMetaMethod* signal);
 void QMediaPlayer_Delete(QMediaPlayer* self);
 
 #ifdef __cplusplus

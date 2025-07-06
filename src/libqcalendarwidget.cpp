@@ -120,12 +120,20 @@ void QCalendarWidget_SetMinimumDate(QCalendarWidget* self, QDate* date) {
     self->setMinimumDate(*date);
 }
 
+void QCalendarWidget_ClearMinimumDate(QCalendarWidget* self) {
+    self->clearMinimumDate();
+}
+
 QDate* QCalendarWidget_MaximumDate(const QCalendarWidget* self) {
     return new QDate(self->maximumDate());
 }
 
 void QCalendarWidget_SetMaximumDate(QCalendarWidget* self, QDate* date) {
     self->setMaximumDate(*date);
+}
+
+void QCalendarWidget_ClearMaximumDate(QCalendarWidget* self) {
+    self->clearMaximumDate();
 }
 
 int QCalendarWidget_FirstDayOfWeek(const QCalendarWidget* self) {
@@ -180,7 +188,7 @@ QTextCharFormat* QCalendarWidget_HeaderTextFormat(const QCalendarWidget* self) {
     return new QTextCharFormat(self->headerTextFormat());
 }
 
-void QCalendarWidget_SetHeaderTextFormat(QCalendarWidget* self, QTextCharFormat* format) {
+void QCalendarWidget_SetHeaderTextFormat(QCalendarWidget* self, const QTextCharFormat* format) {
     self->setHeaderTextFormat(*format);
 }
 
@@ -188,7 +196,7 @@ QTextCharFormat* QCalendarWidget_WeekdayTextFormat(const QCalendarWidget* self, 
     return new QTextCharFormat(self->weekdayTextFormat(static_cast<Qt::DayOfWeek>(dayOfWeek)));
 }
 
-void QCalendarWidget_SetWeekdayTextFormat(QCalendarWidget* self, int dayOfWeek, QTextCharFormat* format) {
+void QCalendarWidget_SetWeekdayTextFormat(QCalendarWidget* self, int dayOfWeek, const QTextCharFormat* format) {
     self->setWeekdayTextFormat(static_cast<Qt::DayOfWeek>(dayOfWeek), *format);
 }
 
@@ -214,7 +222,7 @@ QTextCharFormat* QCalendarWidget_DateTextFormatWithDate(const QCalendarWidget* s
     return new QTextCharFormat(self->dateTextFormat(*date));
 }
 
-void QCalendarWidget_SetDateTextFormat(QCalendarWidget* self, QDate* date, QTextCharFormat* format) {
+void QCalendarWidget_SetDateTextFormat(QCalendarWidget* self, QDate* date, const QTextCharFormat* format) {
     self->setDateTextFormat(*date, *format);
 }
 
@@ -554,7 +562,7 @@ void QCalendarWidget_OnKeyPressEvent(QCalendarWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QCalendarWidget_PaintCell(const QCalendarWidget* self, QPainter* painter, QRect* rect, QDate* date) {
+void QCalendarWidget_PaintCell(const QCalendarWidget* self, QPainter* painter, const QRect* rect, QDate* date) {
     auto* vqcalendarwidget = const_cast<VirtualQCalendarWidget*>(dynamic_cast<const VirtualQCalendarWidget*>(self));
     if (vqcalendarwidget && vqcalendarwidget->isVirtualQCalendarWidget) {
         vqcalendarwidget->paintCell(painter, *rect, *date);
@@ -564,7 +572,7 @@ void QCalendarWidget_PaintCell(const QCalendarWidget* self, QPainter* painter, Q
 }
 
 // Base class handler implementation
-void QCalendarWidget_QBasePaintCell(const QCalendarWidget* self, QPainter* painter, QRect* rect, QDate* date) {
+void QCalendarWidget_QBasePaintCell(const QCalendarWidget* self, QPainter* painter, const QRect* rect, QDate* date) {
     auto* vqcalendarwidget = const_cast<VirtualQCalendarWidget*>(dynamic_cast<const VirtualQCalendarWidget*>(self));
     if (vqcalendarwidget && vqcalendarwidget->isVirtualQCalendarWidget) {
         vqcalendarwidget->setQCalendarWidget_PaintCell_IsBase(true);
@@ -1337,7 +1345,7 @@ void QCalendarWidget_OnHideEvent(QCalendarWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QCalendarWidget_NativeEvent(QCalendarWidget* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QCalendarWidget_NativeEvent(QCalendarWidget* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqcalendarwidget = dynamic_cast<VirtualQCalendarWidget*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqcalendarwidget && vqcalendarwidget->isVirtualQCalendarWidget) {
@@ -1348,7 +1356,7 @@ bool QCalendarWidget_NativeEvent(QCalendarWidget* self, libqt_string eventType, 
 }
 
 // Base class handler implementation
-bool QCalendarWidget_QBaseNativeEvent(QCalendarWidget* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QCalendarWidget_QBaseNativeEvent(QCalendarWidget* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqcalendarwidget = dynamic_cast<VirtualQCalendarWidget*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqcalendarwidget && vqcalendarwidget->isVirtualQCalendarWidget) {
@@ -1687,7 +1695,7 @@ void QCalendarWidget_OnCustomEvent(QCalendarWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QCalendarWidget_ConnectNotify(QCalendarWidget* self, QMetaMethod* signal) {
+void QCalendarWidget_ConnectNotify(QCalendarWidget* self, const QMetaMethod* signal) {
     auto* vqcalendarwidget = dynamic_cast<VirtualQCalendarWidget*>(self);
     if (vqcalendarwidget && vqcalendarwidget->isVirtualQCalendarWidget) {
         vqcalendarwidget->connectNotify(*signal);
@@ -1697,7 +1705,7 @@ void QCalendarWidget_ConnectNotify(QCalendarWidget* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QCalendarWidget_QBaseConnectNotify(QCalendarWidget* self, QMetaMethod* signal) {
+void QCalendarWidget_QBaseConnectNotify(QCalendarWidget* self, const QMetaMethod* signal) {
     auto* vqcalendarwidget = dynamic_cast<VirtualQCalendarWidget*>(self);
     if (vqcalendarwidget && vqcalendarwidget->isVirtualQCalendarWidget) {
         vqcalendarwidget->setQCalendarWidget_ConnectNotify_IsBase(true);
@@ -1716,7 +1724,7 @@ void QCalendarWidget_OnConnectNotify(QCalendarWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QCalendarWidget_DisconnectNotify(QCalendarWidget* self, QMetaMethod* signal) {
+void QCalendarWidget_DisconnectNotify(QCalendarWidget* self, const QMetaMethod* signal) {
     auto* vqcalendarwidget = dynamic_cast<VirtualQCalendarWidget*>(self);
     if (vqcalendarwidget && vqcalendarwidget->isVirtualQCalendarWidget) {
         vqcalendarwidget->disconnectNotify(*signal);
@@ -1726,7 +1734,7 @@ void QCalendarWidget_DisconnectNotify(QCalendarWidget* self, QMetaMethod* signal
 }
 
 // Base class handler implementation
-void QCalendarWidget_QBaseDisconnectNotify(QCalendarWidget* self, QMetaMethod* signal) {
+void QCalendarWidget_QBaseDisconnectNotify(QCalendarWidget* self, const QMetaMethod* signal) {
     auto* vqcalendarwidget = dynamic_cast<VirtualQCalendarWidget*>(self);
     if (vqcalendarwidget && vqcalendarwidget->isVirtualQCalendarWidget) {
         vqcalendarwidget->setQCalendarWidget_DisconnectNotify_IsBase(true);
@@ -2035,7 +2043,7 @@ void QCalendarWidget_OnReceivers(const QCalendarWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QCalendarWidget_IsSignalConnected(const QCalendarWidget* self, QMetaMethod* signal) {
+bool QCalendarWidget_IsSignalConnected(const QCalendarWidget* self, const QMetaMethod* signal) {
     auto* vqcalendarwidget = const_cast<VirtualQCalendarWidget*>(dynamic_cast<const VirtualQCalendarWidget*>(self));
     if (vqcalendarwidget && vqcalendarwidget->isVirtualQCalendarWidget) {
         return vqcalendarwidget->isSignalConnected(*signal);
@@ -2045,7 +2053,7 @@ bool QCalendarWidget_IsSignalConnected(const QCalendarWidget* self, QMetaMethod*
 }
 
 // Base class handler implementation
-bool QCalendarWidget_QBaseIsSignalConnected(const QCalendarWidget* self, QMetaMethod* signal) {
+bool QCalendarWidget_QBaseIsSignalConnected(const QCalendarWidget* self, const QMetaMethod* signal) {
     auto* vqcalendarwidget = const_cast<VirtualQCalendarWidget*>(dynamic_cast<const VirtualQCalendarWidget*>(self));
     if (vqcalendarwidget && vqcalendarwidget->isVirtualQCalendarWidget) {
         vqcalendarwidget->setQCalendarWidget_IsSignalConnected_IsBase(true);
@@ -2060,6 +2068,35 @@ void QCalendarWidget_OnIsSignalConnected(const QCalendarWidget* self, intptr_t s
     auto* vqcalendarwidget = const_cast<VirtualQCalendarWidget*>(dynamic_cast<const VirtualQCalendarWidget*>(self));
     if (vqcalendarwidget && vqcalendarwidget->isVirtualQCalendarWidget) {
         vqcalendarwidget->setQCalendarWidget_IsSignalConnected_Callback(reinterpret_cast<VirtualQCalendarWidget::QCalendarWidget_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QCalendarWidget_GetDecodedMetricF(const QCalendarWidget* self, int metricA, int metricB) {
+    auto* vqcalendarwidget = const_cast<VirtualQCalendarWidget*>(dynamic_cast<const VirtualQCalendarWidget*>(self));
+    if (vqcalendarwidget && vqcalendarwidget->isVirtualQCalendarWidget) {
+        return vqcalendarwidget->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQCalendarWidget*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QCalendarWidget_QBaseGetDecodedMetricF(const QCalendarWidget* self, int metricA, int metricB) {
+    auto* vqcalendarwidget = const_cast<VirtualQCalendarWidget*>(dynamic_cast<const VirtualQCalendarWidget*>(self));
+    if (vqcalendarwidget && vqcalendarwidget->isVirtualQCalendarWidget) {
+        vqcalendarwidget->setQCalendarWidget_GetDecodedMetricF_IsBase(true);
+        return vqcalendarwidget->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQCalendarWidget*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QCalendarWidget_OnGetDecodedMetricF(const QCalendarWidget* self, intptr_t slot) {
+    auto* vqcalendarwidget = const_cast<VirtualQCalendarWidget*>(dynamic_cast<const VirtualQCalendarWidget*>(self));
+    if (vqcalendarwidget && vqcalendarwidget->isVirtualQCalendarWidget) {
+        vqcalendarwidget->setQCalendarWidget_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQCalendarWidget::QCalendarWidget_GetDecodedMetricF_Callback>(slot));
     }
 }
 

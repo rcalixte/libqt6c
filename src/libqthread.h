@@ -12,13 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstracteventdispatcher.h"
-#include "libqevent.h"
-#include "libqdeadlinetimer.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qthread.html
 
 /// q_thread_new constructs a new QThread object.
@@ -66,6 +59,11 @@ void* q_thread_current_thread_id();
 ///
 ///
 QThread* q_thread_current_thread();
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#isMainThread)
+///
+///
+bool q_thread_is_main_thread();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#idealThreadCount)
 ///
@@ -150,6 +148,11 @@ bool q_thread_qbase_event(void* self, void* event);
 ///
 /// ``` QThread* self ```
 int32_t q_thread_loop_level(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#isCurrentThread)
+///
+/// ``` QThread* self ```
+bool q_thread_is_current_thread(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#start)
 ///
@@ -320,7 +323,7 @@ QThread* q_thread_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QThread* self, QThread* thread ```
-void q_thread_move_to_thread(void* self, void* thread);
+bool q_thread_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -335,6 +338,13 @@ int32_t q_thread_start_timer(void* self, int interval);
 ///
 /// ``` QThread* self, int id ```
 void q_thread_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QThread* self, enum Qt__TimerId id ```
+void q_thread_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -475,6 +485,13 @@ bool q_thread_inherits(void* self, const char* classname);
 ///
 /// ``` QThread* self ```
 void q_thread_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QThread* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_thread_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

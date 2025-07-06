@@ -12,12 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-#include "libqthread.h"
-
 /// https://doc.qt.io/qt-6/qeventloop.html
 
 /// q_eventloop_new constructs a new QEventLoop object.
@@ -65,6 +59,11 @@ bool q_eventloop_process_events(void* self);
 ///
 /// ``` QEventLoop* self, int flags, int maximumTime ```
 void q_eventloop_process_events2(void* self, int64_t flags, int maximumTime);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qeventloop.html#processEvents)
+///
+/// ``` QEventLoop* self, int flags, QDeadlineTimer* deadline ```
+void q_eventloop_process_events3(void* self, int64_t flags, void* deadline);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeventloop.html#exec)
 ///
@@ -196,7 +195,7 @@ QThread* q_eventloop_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QEventLoop* self, QThread* thread ```
-void q_eventloop_move_to_thread(void* self, void* thread);
+bool q_eventloop_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -211,6 +210,13 @@ int32_t q_eventloop_start_timer(void* self, int interval);
 ///
 /// ``` QEventLoop* self, int id ```
 void q_eventloop_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QEventLoop* self, enum Qt__TimerId id ```
+void q_eventloop_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -351,6 +357,13 @@ bool q_eventloop_inherits(void* self, const char* classname);
 ///
 /// ``` QEventLoop* self ```
 void q_eventloop_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QEventLoop* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_eventloop_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -689,6 +702,11 @@ QEventLoopLocker* q_eventlooplocker_new2(void* loop);
 ///
 /// ``` QThread* thread ```
 QEventLoopLocker* q_eventlooplocker_new3(void* thread);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qeventlooplocker.html#swap)
+///
+/// ``` QEventLoopLocker* self, QEventLoopLocker* other ```
+void q_eventlooplocker_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeventlooplocker.html#dtor.QEventLoopLocker)
 ///

@@ -14,11 +14,11 @@ QNetworkAddressEntry* QNetworkAddressEntry_new() {
     return new QNetworkAddressEntry();
 }
 
-QNetworkAddressEntry* QNetworkAddressEntry_new2(QNetworkAddressEntry* other) {
+QNetworkAddressEntry* QNetworkAddressEntry_new2(const QNetworkAddressEntry* other) {
     return new QNetworkAddressEntry(*other);
 }
 
-void QNetworkAddressEntry_OperatorAssign(QNetworkAddressEntry* self, QNetworkAddressEntry* other) {
+void QNetworkAddressEntry_OperatorAssign(QNetworkAddressEntry* self, const QNetworkAddressEntry* other) {
     self->operator=(*other);
 }
 
@@ -26,11 +26,11 @@ void QNetworkAddressEntry_Swap(QNetworkAddressEntry* self, QNetworkAddressEntry*
     self->swap(*other);
 }
 
-bool QNetworkAddressEntry_OperatorEqual(const QNetworkAddressEntry* self, QNetworkAddressEntry* other) {
+bool QNetworkAddressEntry_OperatorEqual(const QNetworkAddressEntry* self, const QNetworkAddressEntry* other) {
     return (*self == *other);
 }
 
-bool QNetworkAddressEntry_OperatorNotEqual(const QNetworkAddressEntry* self, QNetworkAddressEntry* other) {
+bool QNetworkAddressEntry_OperatorNotEqual(const QNetworkAddressEntry* self, const QNetworkAddressEntry* other) {
     return (*self != *other);
 }
 
@@ -46,7 +46,7 @@ QHostAddress* QNetworkAddressEntry_Ip(const QNetworkAddressEntry* self) {
     return new QHostAddress(self->ip());
 }
 
-void QNetworkAddressEntry_SetIp(QNetworkAddressEntry* self, QHostAddress* newIp) {
+void QNetworkAddressEntry_SetIp(QNetworkAddressEntry* self, const QHostAddress* newIp) {
     self->setIp(*newIp);
 }
 
@@ -54,7 +54,7 @@ QHostAddress* QNetworkAddressEntry_Netmask(const QNetworkAddressEntry* self) {
     return new QHostAddress(self->netmask());
 }
 
-void QNetworkAddressEntry_SetNetmask(QNetworkAddressEntry* self, QHostAddress* newNetmask) {
+void QNetworkAddressEntry_SetNetmask(QNetworkAddressEntry* self, const QHostAddress* newNetmask) {
     self->setNetmask(*newNetmask);
 }
 
@@ -70,7 +70,7 @@ QHostAddress* QNetworkAddressEntry_Broadcast(const QNetworkAddressEntry* self) {
     return new QHostAddress(self->broadcast());
 }
 
-void QNetworkAddressEntry_SetBroadcast(QNetworkAddressEntry* self, QHostAddress* newBroadcast) {
+void QNetworkAddressEntry_SetBroadcast(QNetworkAddressEntry* self, const QHostAddress* newBroadcast) {
     self->setBroadcast(*newBroadcast);
 }
 
@@ -110,11 +110,11 @@ QNetworkInterface* QNetworkInterface_new() {
     return new QNetworkInterface();
 }
 
-QNetworkInterface* QNetworkInterface_new2(QNetworkInterface* other) {
+QNetworkInterface* QNetworkInterface_new2(const QNetworkInterface* other) {
     return new QNetworkInterface(*other);
 }
 
-void QNetworkInterface_OperatorAssign(QNetworkInterface* self, QNetworkInterface* other) {
+void QNetworkInterface_OperatorAssign(QNetworkInterface* self, const QNetworkInterface* other) {
     self->operator=(*other);
 }
 
@@ -181,22 +181,22 @@ libqt_string QNetworkInterface_HardwareAddress(const QNetworkInterface* self) {
 libqt_list /* of QNetworkAddressEntry* */ QNetworkInterface_AddressEntries(const QNetworkInterface* self) {
     QList<QNetworkAddressEntry> _ret = self->addressEntries();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QNetworkAddressEntry** _arr = static_cast<QNetworkAddressEntry**>(malloc(sizeof(QNetworkAddressEntry*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QNetworkAddressEntry** _arr = static_cast<QNetworkAddressEntry**>(malloc(sizeof(QNetworkAddressEntry*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QNetworkAddressEntry(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-int QNetworkInterface_InterfaceIndexFromName(libqt_string name) {
+int QNetworkInterface_InterfaceIndexFromName(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return QNetworkInterface::interfaceIndexFromName(name_QString);
 }
 
-QNetworkInterface* QNetworkInterface_InterfaceFromName(libqt_string name) {
+QNetworkInterface* QNetworkInterface_InterfaceFromName(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QNetworkInterface(QNetworkInterface::interfaceFromName(name_QString));
 }
@@ -220,12 +220,12 @@ libqt_string QNetworkInterface_InterfaceNameFromIndex(int index) {
 libqt_list /* of QNetworkInterface* */ QNetworkInterface_AllInterfaces() {
     QList<QNetworkInterface> _ret = QNetworkInterface::allInterfaces();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QNetworkInterface** _arr = static_cast<QNetworkInterface**>(malloc(sizeof(QNetworkInterface*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QNetworkInterface** _arr = static_cast<QNetworkInterface**>(malloc(sizeof(QNetworkInterface*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QNetworkInterface(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -233,12 +233,12 @@ libqt_list /* of QNetworkInterface* */ QNetworkInterface_AllInterfaces() {
 libqt_list /* of QHostAddress* */ QNetworkInterface_AllAddresses() {
     QList<QHostAddress> _ret = QNetworkInterface::allAddresses();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QHostAddress** _arr = static_cast<QHostAddress**>(malloc(sizeof(QHostAddress*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QHostAddress** _arr = static_cast<QHostAddress**>(malloc(sizeof(QHostAddress*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QHostAddress(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }

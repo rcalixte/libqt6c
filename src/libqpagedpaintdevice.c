@@ -102,6 +102,10 @@ double q_pagedpaintdevice_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
 }
 
+int32_t q_pagedpaintdevice_encode_metric_f(int64_t metric, double value) {
+    return QPaintDevice_EncodeMetricF(metric, value);
+}
+
 void q_pagedpaintdevice_delete(void* self) {
     QPagedPaintDevice_Delete((QPagedPaintDevice*)(self));
 }

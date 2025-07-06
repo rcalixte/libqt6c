@@ -78,11 +78,11 @@ QTextBlock* QTextList_Item(const QTextList* self, int i) {
     return new QTextBlock(self->item(static_cast<int>(i)));
 }
 
-int QTextList_ItemNumber(const QTextList* self, QTextBlock* param1) {
+int QTextList_ItemNumber(const QTextList* self, const QTextBlock* param1) {
     return self->itemNumber(*param1);
 }
 
-libqt_string QTextList_ItemText(const QTextList* self, QTextBlock* param1) {
+libqt_string QTextList_ItemText(const QTextList* self, const QTextBlock* param1) {
     QString _ret = self->itemText(*param1);
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
     QByteArray _b = _ret.toUtf8();
@@ -98,15 +98,15 @@ void QTextList_RemoveItem(QTextList* self, int i) {
     self->removeItem(static_cast<int>(i));
 }
 
-void QTextList_Remove(QTextList* self, QTextBlock* param1) {
+void QTextList_Remove(QTextList* self, const QTextBlock* param1) {
     self->remove(*param1);
 }
 
-void QTextList_Add(QTextList* self, QTextBlock* block) {
+void QTextList_Add(QTextList* self, const QTextBlock* block) {
     self->add(*block);
 }
 
-void QTextList_SetFormat(QTextList* self, QTextListFormat* format) {
+void QTextList_SetFormat(QTextList* self, const QTextListFormat* format) {
     self->setFormat(*format);
 }
 
@@ -139,7 +139,7 @@ libqt_string QTextList_Tr3(const char* s, const char* c, int n) {
 }
 
 // Derived class handler implementation
-void QTextList_BlockInserted(QTextList* self, QTextBlock* block) {
+void QTextList_BlockInserted(QTextList* self, const QTextBlock* block) {
     auto* vqtextlist = dynamic_cast<VirtualQTextList*>(self);
     if (vqtextlist && vqtextlist->isVirtualQTextList) {
         vqtextlist->blockInserted(*block);
@@ -149,7 +149,7 @@ void QTextList_BlockInserted(QTextList* self, QTextBlock* block) {
 }
 
 // Base class handler implementation
-void QTextList_QBaseBlockInserted(QTextList* self, QTextBlock* block) {
+void QTextList_QBaseBlockInserted(QTextList* self, const QTextBlock* block) {
     auto* vqtextlist = dynamic_cast<VirtualQTextList*>(self);
     if (vqtextlist && vqtextlist->isVirtualQTextList) {
         vqtextlist->setQTextList_BlockInserted_IsBase(true);
@@ -168,7 +168,7 @@ void QTextList_OnBlockInserted(QTextList* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTextList_BlockRemoved(QTextList* self, QTextBlock* block) {
+void QTextList_BlockRemoved(QTextList* self, const QTextBlock* block) {
     auto* vqtextlist = dynamic_cast<VirtualQTextList*>(self);
     if (vqtextlist && vqtextlist->isVirtualQTextList) {
         vqtextlist->blockRemoved(*block);
@@ -178,7 +178,7 @@ void QTextList_BlockRemoved(QTextList* self, QTextBlock* block) {
 }
 
 // Base class handler implementation
-void QTextList_QBaseBlockRemoved(QTextList* self, QTextBlock* block) {
+void QTextList_QBaseBlockRemoved(QTextList* self, const QTextBlock* block) {
     auto* vqtextlist = dynamic_cast<VirtualQTextList*>(self);
     if (vqtextlist && vqtextlist->isVirtualQTextList) {
         vqtextlist->setQTextList_BlockRemoved_IsBase(true);
@@ -197,7 +197,7 @@ void QTextList_OnBlockRemoved(QTextList* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTextList_BlockFormatChanged(QTextList* self, QTextBlock* block) {
+void QTextList_BlockFormatChanged(QTextList* self, const QTextBlock* block) {
     auto* vqtextlist = dynamic_cast<VirtualQTextList*>(self);
     if (vqtextlist && vqtextlist->isVirtualQTextList) {
         vqtextlist->blockFormatChanged(*block);
@@ -207,7 +207,7 @@ void QTextList_BlockFormatChanged(QTextList* self, QTextBlock* block) {
 }
 
 // Base class handler implementation
-void QTextList_QBaseBlockFormatChanged(QTextList* self, QTextBlock* block) {
+void QTextList_QBaseBlockFormatChanged(QTextList* self, const QTextBlock* block) {
     auto* vqtextlist = dynamic_cast<VirtualQTextList*>(self);
     if (vqtextlist && vqtextlist->isVirtualQTextList) {
         vqtextlist->setQTextList_BlockFormatChanged_IsBase(true);
@@ -371,7 +371,7 @@ void QTextList_OnCustomEvent(QTextList* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTextList_ConnectNotify(QTextList* self, QMetaMethod* signal) {
+void QTextList_ConnectNotify(QTextList* self, const QMetaMethod* signal) {
     auto* vqtextlist = dynamic_cast<VirtualQTextList*>(self);
     if (vqtextlist && vqtextlist->isVirtualQTextList) {
         vqtextlist->connectNotify(*signal);
@@ -381,7 +381,7 @@ void QTextList_ConnectNotify(QTextList* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTextList_QBaseConnectNotify(QTextList* self, QMetaMethod* signal) {
+void QTextList_QBaseConnectNotify(QTextList* self, const QMetaMethod* signal) {
     auto* vqtextlist = dynamic_cast<VirtualQTextList*>(self);
     if (vqtextlist && vqtextlist->isVirtualQTextList) {
         vqtextlist->setQTextList_ConnectNotify_IsBase(true);
@@ -400,7 +400,7 @@ void QTextList_OnConnectNotify(QTextList* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTextList_DisconnectNotify(QTextList* self, QMetaMethod* signal) {
+void QTextList_DisconnectNotify(QTextList* self, const QMetaMethod* signal) {
     auto* vqtextlist = dynamic_cast<VirtualQTextList*>(self);
     if (vqtextlist && vqtextlist->isVirtualQTextList) {
         vqtextlist->disconnectNotify(*signal);
@@ -410,7 +410,7 @@ void QTextList_DisconnectNotify(QTextList* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTextList_QBaseDisconnectNotify(QTextList* self, QMetaMethod* signal) {
+void QTextList_QBaseDisconnectNotify(QTextList* self, const QMetaMethod* signal) {
     auto* vqtextlist = dynamic_cast<VirtualQTextList*>(self);
     if (vqtextlist && vqtextlist->isVirtualQTextList) {
         vqtextlist->setQTextList_DisconnectNotify_IsBase(true);
@@ -434,23 +434,23 @@ libqt_list /* of QTextBlock* */ QTextList_BlockList(const QTextList* self) {
     if (vqtextlist && vqtextlist->isVirtualQTextList) {
         QList<QTextBlock> _ret = vqtextlist->blockList();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QTextBlock** _arr = static_cast<QTextBlock**>(malloc(sizeof(QTextBlock*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QTextBlock** _arr = static_cast<QTextBlock**>(malloc(sizeof(QTextBlock*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QTextBlock(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
         QList<QTextBlock> _ret = ((VirtualQTextList*)self)->blockList();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QTextBlock** _arr = static_cast<QTextBlock**>(malloc(sizeof(QTextBlock*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QTextBlock** _arr = static_cast<QTextBlock**>(malloc(sizeof(QTextBlock*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QTextBlock(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -463,23 +463,23 @@ libqt_list /* of QTextBlock* */ QTextList_QBaseBlockList(const QTextList* self) 
         vqtextlist->setQTextList_BlockList_IsBase(true);
         QList<QTextBlock> _ret = vqtextlist->blockList();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QTextBlock** _arr = static_cast<QTextBlock**>(malloc(sizeof(QTextBlock*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QTextBlock** _arr = static_cast<QTextBlock**>(malloc(sizeof(QTextBlock*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QTextBlock(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
         QList<QTextBlock> _ret = ((VirtualQTextList*)self)->blockList();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QTextBlock** _arr = static_cast<QTextBlock**>(malloc(sizeof(QTextBlock*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QTextBlock** _arr = static_cast<QTextBlock**>(malloc(sizeof(QTextBlock*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QTextBlock(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -581,7 +581,7 @@ void QTextList_OnReceivers(const QTextList* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTextList_IsSignalConnected(const QTextList* self, QMetaMethod* signal) {
+bool QTextList_IsSignalConnected(const QTextList* self, const QMetaMethod* signal) {
     auto* vqtextlist = const_cast<VirtualQTextList*>(dynamic_cast<const VirtualQTextList*>(self));
     if (vqtextlist && vqtextlist->isVirtualQTextList) {
         return vqtextlist->isSignalConnected(*signal);
@@ -591,7 +591,7 @@ bool QTextList_IsSignalConnected(const QTextList* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QTextList_QBaseIsSignalConnected(const QTextList* self, QMetaMethod* signal) {
+bool QTextList_QBaseIsSignalConnected(const QTextList* self, const QMetaMethod* signal) {
     auto* vqtextlist = const_cast<VirtualQTextList*>(dynamic_cast<const VirtualQTextList*>(self));
     if (vqtextlist && vqtextlist->isVirtualQTextList) {
         vqtextlist->setQTextList_IsSignalConnected_IsBase(true);

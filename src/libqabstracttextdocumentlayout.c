@@ -329,8 +329,8 @@ QThread* q_abstracttextdocumentlayout_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_abstracttextdocumentlayout_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_abstracttextdocumentlayout_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_abstracttextdocumentlayout_start_timer(void* self, int interval) {
@@ -339,6 +339,10 @@ int32_t q_abstracttextdocumentlayout_start_timer(void* self, int interval) {
 
 void q_abstracttextdocumentlayout_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_abstracttextdocumentlayout_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_abstracttextdocumentlayout_children(void* self) {
@@ -431,6 +435,10 @@ bool q_abstracttextdocumentlayout_inherits(void* self, const char* classname) {
 
 void q_abstracttextdocumentlayout_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_abstracttextdocumentlayout_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_abstracttextdocumentlayout_start_timer2(void* self, int interval, int64_t timerType) {
@@ -609,8 +617,8 @@ void q_textobjectinterface_delete(void* self) {
     QTextObjectInterface_Delete((QTextObjectInterface*)(self));
 }
 
-QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new(void* param1) {
-    return QAbstractTextDocumentLayout__Selection_new((QAbstractTextDocumentLayout__Selection*)param1);
+QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new() {
+    return QAbstractTextDocumentLayout__Selection_new();
 }
 
 void q_abstracttextdocumentlayout__selection_operator_assign(void* self, void* param1) {
@@ -623,10 +631,6 @@ void q_abstracttextdocumentlayout__selection_delete(void* self) {
 
 QAbstractTextDocumentLayout__PaintContext* q_abstracttextdocumentlayout__paintcontext_new() {
     return QAbstractTextDocumentLayout__PaintContext_new();
-}
-
-QAbstractTextDocumentLayout__PaintContext* q_abstracttextdocumentlayout__paintcontext_new2(void* param1) {
-    return QAbstractTextDocumentLayout__PaintContext_new2((QAbstractTextDocumentLayout__PaintContext*)param1);
 }
 
 void q_abstracttextdocumentlayout__paintcontext_operator_assign(void* self, void* param1) {

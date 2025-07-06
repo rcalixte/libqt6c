@@ -12,8 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qwebenginesettings.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#setFontFamily)
@@ -86,6 +84,21 @@ void q_webenginesettings_set_unknown_url_scheme_policy(void* self, int64_t polic
 /// ``` QWebEngineSettings* self ```
 void q_webenginesettings_reset_unknown_url_scheme_policy(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#setImageAnimationPolicy)
+///
+/// ``` QWebEngineSettings* self, enum QWebEngineSettings__ImageAnimationPolicy policy ```
+void q_webenginesettings_set_image_animation_policy(void* self, int64_t policy);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#imageAnimationPolicy)
+///
+/// ``` QWebEngineSettings* self ```
+int64_t q_webenginesettings_image_animation_policy(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#resetImageAnimationPolicy)
+///
+/// ``` QWebEngineSettings* self ```
+void q_webenginesettings_reset_image_animation_policy(void* self);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#dtor.QWebEngineSettings)
 ///
 /// Delete this object from C++ memory.
@@ -137,7 +150,9 @@ typedef enum {
     QWEBENGINESETTINGS_WEBATTRIBUTE_JAVASCRIPTCANPASTE = 28,
     QWEBENGINESETTINGS_WEBATTRIBUTE_DNSPREFETCHENABLED = 29,
     QWEBENGINESETTINGS_WEBATTRIBUTE_PDFVIEWERENABLED = 30,
-    QWEBENGINESETTINGS_WEBATTRIBUTE_NAVIGATEONDROPENABLED = 31
+    QWEBENGINESETTINGS_WEBATTRIBUTE_NAVIGATEONDROPENABLED = 31,
+    QWEBENGINESETTINGS_WEBATTRIBUTE_READINGFROMCANVASENABLED = 32,
+    QWEBENGINESETTINGS_WEBATTRIBUTE_FORCEDARKMODE = 33
 } QWebEngineSettings__WebAttribute;
 
 typedef enum {
@@ -153,5 +168,12 @@ typedef enum {
     QWEBENGINESETTINGS_UNKNOWNURLSCHEMEPOLICY_ALLOWUNKNOWNURLSCHEMESFROMUSERINTERACTION = 2,
     QWEBENGINESETTINGS_UNKNOWNURLSCHEMEPOLICY_ALLOWALLUNKNOWNURLSCHEMES = 3
 } QWebEngineSettings__UnknownUrlSchemePolicy;
+
+typedef enum {
+    QWEBENGINESETTINGS_IMAGEANIMATIONPOLICY_INHERITED = 0,
+    QWEBENGINESETTINGS_IMAGEANIMATIONPOLICY_ALLOW = 1,
+    QWEBENGINESETTINGS_IMAGEANIMATIONPOLICY_ANIMATEONCE = 2,
+    QWEBENGINESETTINGS_IMAGEANIMATIONPOLICY_DISALLOW = 3
+} QWebEngineSettings__ImageAnimationPolicy;
 
 #endif

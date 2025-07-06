@@ -30,12 +30,6 @@ typedef struct QPieSlice QPieSlice;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-#ifdef __cplusplus
-typedef QPieSlice::LabelPosition LabelPosition; // C++ enum
-#else
-typedef int LabelPosition; // C ABI enum
-#endif
-
 QPieSlice* QPieSlice_new();
 QPieSlice* QPieSlice_new2(libqt_string label, double value);
 QPieSlice* QPieSlice_new3(QObject* parent);
@@ -56,21 +50,21 @@ int QPieSlice_LabelPosition(QPieSlice* self);
 void QPieSlice_SetLabelPosition(QPieSlice* self, int position);
 void QPieSlice_SetExploded(QPieSlice* self);
 bool QPieSlice_IsExploded(const QPieSlice* self);
-void QPieSlice_SetPen(QPieSlice* self, QPen* pen);
+void QPieSlice_SetPen(QPieSlice* self, const QPen* pen);
 QPen* QPieSlice_Pen(const QPieSlice* self);
 QColor* QPieSlice_BorderColor(QPieSlice* self);
 void QPieSlice_SetBorderColor(QPieSlice* self, QColor* color);
 int QPieSlice_BorderWidth(QPieSlice* self);
 void QPieSlice_SetBorderWidth(QPieSlice* self, int width);
-void QPieSlice_SetBrush(QPieSlice* self, QBrush* brush);
+void QPieSlice_SetBrush(QPieSlice* self, const QBrush* brush);
 QBrush* QPieSlice_Brush(const QPieSlice* self);
 QColor* QPieSlice_Color(QPieSlice* self);
 void QPieSlice_SetColor(QPieSlice* self, QColor* color);
-void QPieSlice_SetLabelBrush(QPieSlice* self, QBrush* brush);
+void QPieSlice_SetLabelBrush(QPieSlice* self, const QBrush* brush);
 QBrush* QPieSlice_LabelBrush(const QPieSlice* self);
 QColor* QPieSlice_LabelColor(QPieSlice* self);
 void QPieSlice_SetLabelColor(QPieSlice* self, QColor* color);
-void QPieSlice_SetLabelFont(QPieSlice* self, QFont* font);
+void QPieSlice_SetLabelFont(QPieSlice* self, const QFont* font);
 QFont* QPieSlice_LabelFont(const QPieSlice* self);
 void QPieSlice_SetLabelArmLengthFactor(QPieSlice* self, double factor);
 double QPieSlice_LabelArmLengthFactor(const QPieSlice* self);
@@ -137,12 +131,12 @@ void QPieSlice_QBaseChildEvent(QPieSlice* self, QChildEvent* event);
 void QPieSlice_CustomEvent(QPieSlice* self, QEvent* event);
 void QPieSlice_OnCustomEvent(QPieSlice* self, intptr_t slot);
 void QPieSlice_QBaseCustomEvent(QPieSlice* self, QEvent* event);
-void QPieSlice_ConnectNotify(QPieSlice* self, QMetaMethod* signal);
+void QPieSlice_ConnectNotify(QPieSlice* self, const QMetaMethod* signal);
 void QPieSlice_OnConnectNotify(QPieSlice* self, intptr_t slot);
-void QPieSlice_QBaseConnectNotify(QPieSlice* self, QMetaMethod* signal);
-void QPieSlice_DisconnectNotify(QPieSlice* self, QMetaMethod* signal);
+void QPieSlice_QBaseConnectNotify(QPieSlice* self, const QMetaMethod* signal);
+void QPieSlice_DisconnectNotify(QPieSlice* self, const QMetaMethod* signal);
 void QPieSlice_OnDisconnectNotify(QPieSlice* self, intptr_t slot);
-void QPieSlice_QBaseDisconnectNotify(QPieSlice* self, QMetaMethod* signal);
+void QPieSlice_QBaseDisconnectNotify(QPieSlice* self, const QMetaMethod* signal);
 QObject* QPieSlice_Sender(const QPieSlice* self);
 void QPieSlice_OnSender(const QPieSlice* self, intptr_t slot);
 QObject* QPieSlice_QBaseSender(const QPieSlice* self);
@@ -152,9 +146,9 @@ int QPieSlice_QBaseSenderSignalIndex(const QPieSlice* self);
 int QPieSlice_Receivers(const QPieSlice* self, const char* signal);
 void QPieSlice_OnReceivers(const QPieSlice* self, intptr_t slot);
 int QPieSlice_QBaseReceivers(const QPieSlice* self, const char* signal);
-bool QPieSlice_IsSignalConnected(const QPieSlice* self, QMetaMethod* signal);
+bool QPieSlice_IsSignalConnected(const QPieSlice* self, const QMetaMethod* signal);
 void QPieSlice_OnIsSignalConnected(const QPieSlice* self, intptr_t slot);
-bool QPieSlice_QBaseIsSignalConnected(const QPieSlice* self, QMetaMethod* signal);
+bool QPieSlice_QBaseIsSignalConnected(const QPieSlice* self, const QMetaMethod* signal);
 void QPieSlice_Delete(QPieSlice* self);
 
 #ifdef __cplusplus

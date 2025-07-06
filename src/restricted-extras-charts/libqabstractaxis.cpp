@@ -66,7 +66,7 @@ void QAbstractAxis_SetLineVisible(QAbstractAxis* self) {
     self->setLineVisible();
 }
 
-void QAbstractAxis_SetLinePen(QAbstractAxis* self, QPen* pen) {
+void QAbstractAxis_SetLinePen(QAbstractAxis* self, const QPen* pen) {
     self->setLinePen(*pen);
 }
 
@@ -90,7 +90,7 @@ void QAbstractAxis_SetGridLineVisible(QAbstractAxis* self) {
     self->setGridLineVisible();
 }
 
-void QAbstractAxis_SetGridLinePen(QAbstractAxis* self, QPen* pen) {
+void QAbstractAxis_SetGridLinePen(QAbstractAxis* self, const QPen* pen) {
     self->setGridLinePen(*pen);
 }
 
@@ -106,7 +106,7 @@ void QAbstractAxis_SetMinorGridLineVisible(QAbstractAxis* self) {
     self->setMinorGridLineVisible();
 }
 
-void QAbstractAxis_SetMinorGridLinePen(QAbstractAxis* self, QPen* pen) {
+void QAbstractAxis_SetMinorGridLinePen(QAbstractAxis* self, const QPen* pen) {
     self->setMinorGridLinePen(*pen);
 }
 
@@ -114,7 +114,7 @@ QPen* QAbstractAxis_MinorGridLinePen(const QAbstractAxis* self) {
     return new QPen(self->minorGridLinePen());
 }
 
-void QAbstractAxis_SetGridLineColor(QAbstractAxis* self, QColor* color) {
+void QAbstractAxis_SetGridLineColor(QAbstractAxis* self, const QColor* color) {
     self->setGridLineColor(*color);
 }
 
@@ -122,7 +122,7 @@ QColor* QAbstractAxis_GridLineColor(QAbstractAxis* self) {
     return new QColor(self->gridLineColor());
 }
 
-void QAbstractAxis_SetMinorGridLineColor(QAbstractAxis* self, QColor* color) {
+void QAbstractAxis_SetMinorGridLineColor(QAbstractAxis* self, const QColor* color) {
     self->setMinorGridLineColor(*color);
 }
 
@@ -138,7 +138,7 @@ void QAbstractAxis_SetLabelsVisible(QAbstractAxis* self) {
     self->setLabelsVisible();
 }
 
-void QAbstractAxis_SetLabelsBrush(QAbstractAxis* self, QBrush* brush) {
+void QAbstractAxis_SetLabelsBrush(QAbstractAxis* self, const QBrush* brush) {
     self->setLabelsBrush(*brush);
 }
 
@@ -146,7 +146,7 @@ QBrush* QAbstractAxis_LabelsBrush(const QAbstractAxis* self) {
     return new QBrush(self->labelsBrush());
 }
 
-void QAbstractAxis_SetLabelsFont(QAbstractAxis* self, QFont* font) {
+void QAbstractAxis_SetLabelsFont(QAbstractAxis* self, const QFont* font) {
     self->setLabelsFont(*font);
 }
 
@@ -178,7 +178,7 @@ void QAbstractAxis_SetTitleVisible(QAbstractAxis* self) {
     self->setTitleVisible();
 }
 
-void QAbstractAxis_SetTitleBrush(QAbstractAxis* self, QBrush* brush) {
+void QAbstractAxis_SetTitleBrush(QAbstractAxis* self, const QBrush* brush) {
     self->setTitleBrush(*brush);
 }
 
@@ -186,7 +186,7 @@ QBrush* QAbstractAxis_TitleBrush(const QAbstractAxis* self) {
     return new QBrush(self->titleBrush());
 }
 
-void QAbstractAxis_SetTitleFont(QAbstractAxis* self, QFont* font) {
+void QAbstractAxis_SetTitleFont(QAbstractAxis* self, const QFont* font) {
     self->setTitleFont(*font);
 }
 
@@ -194,7 +194,7 @@ QFont* QAbstractAxis_TitleFont(const QAbstractAxis* self) {
     return new QFont(self->titleFont());
 }
 
-void QAbstractAxis_SetTitleText(QAbstractAxis* self, libqt_string title) {
+void QAbstractAxis_SetTitleText(QAbstractAxis* self, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     self->setTitleText(title_QString);
 }
@@ -219,7 +219,7 @@ void QAbstractAxis_SetShadesVisible(QAbstractAxis* self) {
     self->setShadesVisible();
 }
 
-void QAbstractAxis_SetShadesPen(QAbstractAxis* self, QPen* pen) {
+void QAbstractAxis_SetShadesPen(QAbstractAxis* self, const QPen* pen) {
     self->setShadesPen(*pen);
 }
 
@@ -227,7 +227,7 @@ QPen* QAbstractAxis_ShadesPen(const QAbstractAxis* self) {
     return new QPen(self->shadesPen());
 }
 
-void QAbstractAxis_SetShadesBrush(QAbstractAxis* self, QBrush* brush) {
+void QAbstractAxis_SetShadesBrush(QAbstractAxis* self, const QBrush* brush) {
     self->setShadesBrush(*brush);
 }
 
@@ -259,15 +259,15 @@ int QAbstractAxis_Alignment(const QAbstractAxis* self) {
     return static_cast<int>(self->alignment());
 }
 
-void QAbstractAxis_SetMin(QAbstractAxis* self, QVariant* min) {
+void QAbstractAxis_SetMin(QAbstractAxis* self, const QVariant* min) {
     self->setMin(*min);
 }
 
-void QAbstractAxis_SetMax(QAbstractAxis* self, QVariant* max) {
+void QAbstractAxis_SetMax(QAbstractAxis* self, const QVariant* max) {
     self->setMax(*max);
 }
 
-void QAbstractAxis_SetRange(QAbstractAxis* self, QVariant* min, QVariant* max) {
+void QAbstractAxis_SetRange(QAbstractAxis* self, const QVariant* min, const QVariant* max) {
     self->setRange(*min, *max);
 }
 
@@ -311,7 +311,7 @@ void QAbstractAxis_Connect_VisibleChanged(QAbstractAxis* self, intptr_t slot) {
     });
 }
 
-void QAbstractAxis_LinePenChanged(QAbstractAxis* self, QPen* pen) {
+void QAbstractAxis_LinePenChanged(QAbstractAxis* self, const QPen* pen) {
     self->linePenChanged(*pen);
 }
 
@@ -349,7 +349,7 @@ void QAbstractAxis_Connect_LabelsVisibleChanged(QAbstractAxis* self, intptr_t sl
     });
 }
 
-void QAbstractAxis_LabelsBrushChanged(QAbstractAxis* self, QBrush* brush) {
+void QAbstractAxis_LabelsBrushChanged(QAbstractAxis* self, const QBrush* brush) {
     self->labelsBrushChanged(*brush);
 }
 
@@ -363,7 +363,7 @@ void QAbstractAxis_Connect_LabelsBrushChanged(QAbstractAxis* self, intptr_t slot
     });
 }
 
-void QAbstractAxis_LabelsFontChanged(QAbstractAxis* self, QFont* pen) {
+void QAbstractAxis_LabelsFontChanged(QAbstractAxis* self, const QFont* pen) {
     self->labelsFontChanged(*pen);
 }
 
@@ -389,7 +389,7 @@ void QAbstractAxis_Connect_LabelsAngleChanged(QAbstractAxis* self, intptr_t slot
     });
 }
 
-void QAbstractAxis_GridLinePenChanged(QAbstractAxis* self, QPen* pen) {
+void QAbstractAxis_GridLinePenChanged(QAbstractAxis* self, const QPen* pen) {
     self->gridLinePenChanged(*pen);
 }
 
@@ -427,7 +427,7 @@ void QAbstractAxis_Connect_MinorGridVisibleChanged(QAbstractAxis* self, intptr_t
     });
 }
 
-void QAbstractAxis_MinorGridLinePenChanged(QAbstractAxis* self, QPen* pen) {
+void QAbstractAxis_MinorGridLinePenChanged(QAbstractAxis* self, const QPen* pen) {
     self->minorGridLinePenChanged(*pen);
 }
 
@@ -441,7 +441,7 @@ void QAbstractAxis_Connect_MinorGridLinePenChanged(QAbstractAxis* self, intptr_t
     });
 }
 
-void QAbstractAxis_GridLineColorChanged(QAbstractAxis* self, QColor* color) {
+void QAbstractAxis_GridLineColorChanged(QAbstractAxis* self, const QColor* color) {
     self->gridLineColorChanged(*color);
 }
 
@@ -455,7 +455,7 @@ void QAbstractAxis_Connect_GridLineColorChanged(QAbstractAxis* self, intptr_t sl
     });
 }
 
-void QAbstractAxis_MinorGridLineColorChanged(QAbstractAxis* self, QColor* color) {
+void QAbstractAxis_MinorGridLineColorChanged(QAbstractAxis* self, const QColor* color) {
     self->minorGridLineColorChanged(*color);
 }
 
@@ -493,7 +493,7 @@ void QAbstractAxis_Connect_LabelsColorChanged(QAbstractAxis* self, intptr_t slot
     });
 }
 
-void QAbstractAxis_TitleTextChanged(QAbstractAxis* self, libqt_string title) {
+void QAbstractAxis_TitleTextChanged(QAbstractAxis* self, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     self->titleTextChanged(title_QString);
 }
@@ -514,7 +514,7 @@ void QAbstractAxis_Connect_TitleTextChanged(QAbstractAxis* self, intptr_t slot) 
     });
 }
 
-void QAbstractAxis_TitleBrushChanged(QAbstractAxis* self, QBrush* brush) {
+void QAbstractAxis_TitleBrushChanged(QAbstractAxis* self, const QBrush* brush) {
     self->titleBrushChanged(*brush);
 }
 
@@ -540,7 +540,7 @@ void QAbstractAxis_Connect_TitleVisibleChanged(QAbstractAxis* self, intptr_t slo
     });
 }
 
-void QAbstractAxis_TitleFontChanged(QAbstractAxis* self, QFont* font) {
+void QAbstractAxis_TitleFontChanged(QAbstractAxis* self, const QFont* font) {
     self->titleFontChanged(*font);
 }
 
@@ -590,7 +590,7 @@ void QAbstractAxis_Connect_ShadesBorderColorChanged(QAbstractAxis* self, intptr_
     });
 }
 
-void QAbstractAxis_ShadesPenChanged(QAbstractAxis* self, QPen* pen) {
+void QAbstractAxis_ShadesPenChanged(QAbstractAxis* self, const QPen* pen) {
     self->shadesPenChanged(*pen);
 }
 
@@ -604,7 +604,7 @@ void QAbstractAxis_Connect_ShadesPenChanged(QAbstractAxis* self, intptr_t slot) 
     });
 }
 
-void QAbstractAxis_ShadesBrushChanged(QAbstractAxis* self, QBrush* brush) {
+void QAbstractAxis_ShadesBrushChanged(QAbstractAxis* self, const QBrush* brush) {
     self->shadesBrushChanged(*brush);
 }
 

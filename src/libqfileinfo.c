@@ -2,6 +2,7 @@
 #include "libqdir.hpp"
 #include "libqfiledevice.hpp"
 #include <string.h>
+#include "libqtimezone.hpp"
 #include "libqfileinfo.hpp"
 #include "libqfileinfo.h"
 
@@ -31,14 +32,6 @@ void q_fileinfo_operator_assign(void* self, void* fileinfo) {
 
 void q_fileinfo_swap(void* self, void* other) {
     QFileInfo_Swap((QFileInfo*)self, (QFileInfo*)other);
-}
-
-bool q_fileinfo_operator_equal(void* self, void* fileinfo) {
-    return QFileInfo_OperatorEqual((QFileInfo*)self, (QFileInfo*)fileinfo);
-}
-
-bool q_fileinfo_operator_not_equal(void* self, void* fileinfo) {
-    return QFileInfo_OperatorNotEqual((QFileInfo*)self, (QFileInfo*)fileinfo);
 }
 
 void q_fileinfo_set_file(void* self, const char* file) {
@@ -232,6 +225,13 @@ const char* q_fileinfo_sym_link_target(void* self) {
     return _ret;
 }
 
+const char* q_fileinfo_read_sym_link(void* self) {
+    libqt_string _str = QFileInfo_ReadSymLink((QFileInfo*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
 const char* q_fileinfo_junction_target(void* self) {
     libqt_string _str = QFileInfo_JunctionTarget((QFileInfo*)self);
     char* _ret = qstring_to_char(_str);
@@ -291,6 +291,26 @@ QDateTime* q_fileinfo_last_read(void* self) {
 
 QDateTime* q_fileinfo_file_time(void* self, int64_t time) {
     return QFileInfo_FileTime((QFileInfo*)self, time);
+}
+
+QDateTime* q_fileinfo_birth_time_with_tz(void* self, void* tz) {
+    return QFileInfo_BirthTimeWithTz((QFileInfo*)self, (QTimeZone*)tz);
+}
+
+QDateTime* q_fileinfo_metadata_change_time_with_tz(void* self, void* tz) {
+    return QFileInfo_MetadataChangeTimeWithTz((QFileInfo*)self, (QTimeZone*)tz);
+}
+
+QDateTime* q_fileinfo_last_modified_with_tz(void* self, void* tz) {
+    return QFileInfo_LastModifiedWithTz((QFileInfo*)self, (QTimeZone*)tz);
+}
+
+QDateTime* q_fileinfo_last_read_with_tz(void* self, void* tz) {
+    return QFileInfo_LastReadWithTz((QFileInfo*)self, (QTimeZone*)tz);
+}
+
+QDateTime* q_fileinfo_file_time2(void* self, int64_t time, void* tz) {
+    return QFileInfo_FileTime2((QFileInfo*)self, time, (QTimeZone*)tz);
 }
 
 bool q_fileinfo_caching(void* self) {

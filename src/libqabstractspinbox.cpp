@@ -141,7 +141,7 @@ libqt_string QAbstractSpinBox_SpecialValueText(const QAbstractSpinBox* self) {
     return _str;
 }
 
-void QAbstractSpinBox_SetSpecialValueText(QAbstractSpinBox* self, libqt_string txt) {
+void QAbstractSpinBox_SetSpecialValueText(QAbstractSpinBox* self, const libqt_string txt) {
     QString txt_QString = QString::fromUtf8(txt.data, txt.len);
     self->setSpecialValueText(txt_QString);
 }
@@ -1447,7 +1447,7 @@ void QAbstractSpinBox_OnDropEvent(QAbstractSpinBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QAbstractSpinBox_NativeEvent(QAbstractSpinBox* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QAbstractSpinBox_NativeEvent(QAbstractSpinBox* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqabstractspinbox = dynamic_cast<VirtualQAbstractSpinBox*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqabstractspinbox && vqabstractspinbox->isVirtualQAbstractSpinBox) {
@@ -1458,7 +1458,7 @@ bool QAbstractSpinBox_NativeEvent(QAbstractSpinBox* self, libqt_string eventType
 }
 
 // Base class handler implementation
-bool QAbstractSpinBox_QBaseNativeEvent(QAbstractSpinBox* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QAbstractSpinBox_QBaseNativeEvent(QAbstractSpinBox* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqabstractspinbox = dynamic_cast<VirtualQAbstractSpinBox*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqabstractspinbox && vqabstractspinbox->isVirtualQAbstractSpinBox) {
@@ -1739,7 +1739,7 @@ void QAbstractSpinBox_OnCustomEvent(QAbstractSpinBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAbstractSpinBox_ConnectNotify(QAbstractSpinBox* self, QMetaMethod* signal) {
+void QAbstractSpinBox_ConnectNotify(QAbstractSpinBox* self, const QMetaMethod* signal) {
     auto* vqabstractspinbox = dynamic_cast<VirtualQAbstractSpinBox*>(self);
     if (vqabstractspinbox && vqabstractspinbox->isVirtualQAbstractSpinBox) {
         vqabstractspinbox->connectNotify(*signal);
@@ -1749,7 +1749,7 @@ void QAbstractSpinBox_ConnectNotify(QAbstractSpinBox* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-void QAbstractSpinBox_QBaseConnectNotify(QAbstractSpinBox* self, QMetaMethod* signal) {
+void QAbstractSpinBox_QBaseConnectNotify(QAbstractSpinBox* self, const QMetaMethod* signal) {
     auto* vqabstractspinbox = dynamic_cast<VirtualQAbstractSpinBox*>(self);
     if (vqabstractspinbox && vqabstractspinbox->isVirtualQAbstractSpinBox) {
         vqabstractspinbox->setQAbstractSpinBox_ConnectNotify_IsBase(true);
@@ -1768,7 +1768,7 @@ void QAbstractSpinBox_OnConnectNotify(QAbstractSpinBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAbstractSpinBox_DisconnectNotify(QAbstractSpinBox* self, QMetaMethod* signal) {
+void QAbstractSpinBox_DisconnectNotify(QAbstractSpinBox* self, const QMetaMethod* signal) {
     auto* vqabstractspinbox = dynamic_cast<VirtualQAbstractSpinBox*>(self);
     if (vqabstractspinbox && vqabstractspinbox->isVirtualQAbstractSpinBox) {
         vqabstractspinbox->disconnectNotify(*signal);
@@ -1778,7 +1778,7 @@ void QAbstractSpinBox_DisconnectNotify(QAbstractSpinBox* self, QMetaMethod* sign
 }
 
 // Base class handler implementation
-void QAbstractSpinBox_QBaseDisconnectNotify(QAbstractSpinBox* self, QMetaMethod* signal) {
+void QAbstractSpinBox_QBaseDisconnectNotify(QAbstractSpinBox* self, const QMetaMethod* signal) {
     auto* vqabstractspinbox = dynamic_cast<VirtualQAbstractSpinBox*>(self);
     if (vqabstractspinbox && vqabstractspinbox->isVirtualQAbstractSpinBox) {
         vqabstractspinbox->setQAbstractSpinBox_DisconnectNotify_IsBase(true);
@@ -2087,7 +2087,7 @@ void QAbstractSpinBox_OnReceivers(const QAbstractSpinBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QAbstractSpinBox_IsSignalConnected(const QAbstractSpinBox* self, QMetaMethod* signal) {
+bool QAbstractSpinBox_IsSignalConnected(const QAbstractSpinBox* self, const QMetaMethod* signal) {
     auto* vqabstractspinbox = const_cast<VirtualQAbstractSpinBox*>(dynamic_cast<const VirtualQAbstractSpinBox*>(self));
     if (vqabstractspinbox && vqabstractspinbox->isVirtualQAbstractSpinBox) {
         return vqabstractspinbox->isSignalConnected(*signal);
@@ -2097,7 +2097,7 @@ bool QAbstractSpinBox_IsSignalConnected(const QAbstractSpinBox* self, QMetaMetho
 }
 
 // Base class handler implementation
-bool QAbstractSpinBox_QBaseIsSignalConnected(const QAbstractSpinBox* self, QMetaMethod* signal) {
+bool QAbstractSpinBox_QBaseIsSignalConnected(const QAbstractSpinBox* self, const QMetaMethod* signal) {
     auto* vqabstractspinbox = const_cast<VirtualQAbstractSpinBox*>(dynamic_cast<const VirtualQAbstractSpinBox*>(self));
     if (vqabstractspinbox && vqabstractspinbox->isVirtualQAbstractSpinBox) {
         vqabstractspinbox->setQAbstractSpinBox_IsSignalConnected_IsBase(true);
@@ -2112,6 +2112,35 @@ void QAbstractSpinBox_OnIsSignalConnected(const QAbstractSpinBox* self, intptr_t
     auto* vqabstractspinbox = const_cast<VirtualQAbstractSpinBox*>(dynamic_cast<const VirtualQAbstractSpinBox*>(self));
     if (vqabstractspinbox && vqabstractspinbox->isVirtualQAbstractSpinBox) {
         vqabstractspinbox->setQAbstractSpinBox_IsSignalConnected_Callback(reinterpret_cast<VirtualQAbstractSpinBox::QAbstractSpinBox_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QAbstractSpinBox_GetDecodedMetricF(const QAbstractSpinBox* self, int metricA, int metricB) {
+    auto* vqabstractspinbox = const_cast<VirtualQAbstractSpinBox*>(dynamic_cast<const VirtualQAbstractSpinBox*>(self));
+    if (vqabstractspinbox && vqabstractspinbox->isVirtualQAbstractSpinBox) {
+        return vqabstractspinbox->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQAbstractSpinBox*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QAbstractSpinBox_QBaseGetDecodedMetricF(const QAbstractSpinBox* self, int metricA, int metricB) {
+    auto* vqabstractspinbox = const_cast<VirtualQAbstractSpinBox*>(dynamic_cast<const VirtualQAbstractSpinBox*>(self));
+    if (vqabstractspinbox && vqabstractspinbox->isVirtualQAbstractSpinBox) {
+        vqabstractspinbox->setQAbstractSpinBox_GetDecodedMetricF_IsBase(true);
+        return vqabstractspinbox->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQAbstractSpinBox*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QAbstractSpinBox_OnGetDecodedMetricF(const QAbstractSpinBox* self, intptr_t slot) {
+    auto* vqabstractspinbox = const_cast<VirtualQAbstractSpinBox*>(dynamic_cast<const VirtualQAbstractSpinBox*>(self));
+    if (vqabstractspinbox && vqabstractspinbox->isVirtualQAbstractSpinBox) {
+        vqabstractspinbox->setQAbstractSpinBox_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQAbstractSpinBox::QAbstractSpinBox_GetDecodedMetricF_Callback>(slot));
     }
 }
 

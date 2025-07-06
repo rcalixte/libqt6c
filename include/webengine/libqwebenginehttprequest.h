@@ -12,9 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include <string.h>
-#include "../libqurl.h"
-
 /// https://doc.qt.io/qt-6/qwebenginehttprequest.html
 
 /// q_webenginehttprequest_new constructs a new QWebEngineHttpRequest object.

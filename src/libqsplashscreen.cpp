@@ -50,19 +50,19 @@ QSplashScreen* QSplashScreen_new2(QScreen* screen) {
     return new VirtualQSplashScreen(screen);
 }
 
-QSplashScreen* QSplashScreen_new3(QPixmap* pixmap) {
+QSplashScreen* QSplashScreen_new3(const QPixmap* pixmap) {
     return new VirtualQSplashScreen(*pixmap);
 }
 
-QSplashScreen* QSplashScreen_new4(QPixmap* pixmap, int f) {
+QSplashScreen* QSplashScreen_new4(const QPixmap* pixmap, int f) {
     return new VirtualQSplashScreen(*pixmap, static_cast<Qt::WindowFlags>(f));
 }
 
-QSplashScreen* QSplashScreen_new5(QScreen* screen, QPixmap* pixmap) {
+QSplashScreen* QSplashScreen_new5(QScreen* screen, const QPixmap* pixmap) {
     return new VirtualQSplashScreen(screen, *pixmap);
 }
 
-QSplashScreen* QSplashScreen_new6(QScreen* screen, QPixmap* pixmap, int f) {
+QSplashScreen* QSplashScreen_new6(QScreen* screen, const QPixmap* pixmap, int f) {
     return new VirtualQSplashScreen(screen, *pixmap, static_cast<Qt::WindowFlags>(f));
 }
 
@@ -114,7 +114,7 @@ libqt_string QSplashScreen_Tr(const char* s) {
     return _str;
 }
 
-void QSplashScreen_SetPixmap(QSplashScreen* self, QPixmap* pixmap) {
+void QSplashScreen_SetPixmap(QSplashScreen* self, const QPixmap* pixmap) {
     self->setPixmap(*pixmap);
 }
 
@@ -142,7 +142,7 @@ libqt_string QSplashScreen_Message(const QSplashScreen* self) {
     return _str;
 }
 
-void QSplashScreen_ShowMessage(QSplashScreen* self, libqt_string message) {
+void QSplashScreen_ShowMessage(QSplashScreen* self, const libqt_string message) {
     QString message_QString = QString::fromUtf8(message.data, message.len);
     self->showMessage(message_QString);
 }
@@ -151,7 +151,7 @@ void QSplashScreen_ClearMessage(QSplashScreen* self) {
     self->clearMessage();
 }
 
-void QSplashScreen_MessageChanged(QSplashScreen* self, libqt_string message) {
+void QSplashScreen_MessageChanged(QSplashScreen* self, const libqt_string message) {
     QString message_QString = QString::fromUtf8(message.data, message.len);
     self->messageChanged(message_QString);
 }
@@ -196,12 +196,12 @@ libqt_string QSplashScreen_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-void QSplashScreen_ShowMessage2(QSplashScreen* self, libqt_string message, int alignment) {
+void QSplashScreen_ShowMessage2(QSplashScreen* self, const libqt_string message, int alignment) {
     QString message_QString = QString::fromUtf8(message.data, message.len);
     self->showMessage(message_QString, static_cast<int>(alignment));
 }
 
-void QSplashScreen_ShowMessage3(QSplashScreen* self, libqt_string message, int alignment, QColor* color) {
+void QSplashScreen_ShowMessage3(QSplashScreen* self, const libqt_string message, int alignment, const QColor* color) {
     QString message_QString = QString::fromUtf8(message.data, message.len);
     self->showMessage(message_QString, static_cast<int>(alignment), *color);
 }
@@ -1164,7 +1164,7 @@ void QSplashScreen_OnHideEvent(QSplashScreen* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSplashScreen_NativeEvent(QSplashScreen* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QSplashScreen_NativeEvent(QSplashScreen* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqsplashscreen = dynamic_cast<VirtualQSplashScreen*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqsplashscreen && vqsplashscreen->isVirtualQSplashScreen) {
@@ -1175,7 +1175,7 @@ bool QSplashScreen_NativeEvent(QSplashScreen* self, libqt_string eventType, void
 }
 
 // Base class handler implementation
-bool QSplashScreen_QBaseNativeEvent(QSplashScreen* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QSplashScreen_QBaseNativeEvent(QSplashScreen* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqsplashscreen = dynamic_cast<VirtualQSplashScreen*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqsplashscreen && vqsplashscreen->isVirtualQSplashScreen) {
@@ -1543,7 +1543,7 @@ void QSplashScreen_OnCustomEvent(QSplashScreen* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSplashScreen_ConnectNotify(QSplashScreen* self, QMetaMethod* signal) {
+void QSplashScreen_ConnectNotify(QSplashScreen* self, const QMetaMethod* signal) {
     auto* vqsplashscreen = dynamic_cast<VirtualQSplashScreen*>(self);
     if (vqsplashscreen && vqsplashscreen->isVirtualQSplashScreen) {
         vqsplashscreen->connectNotify(*signal);
@@ -1553,7 +1553,7 @@ void QSplashScreen_ConnectNotify(QSplashScreen* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSplashScreen_QBaseConnectNotify(QSplashScreen* self, QMetaMethod* signal) {
+void QSplashScreen_QBaseConnectNotify(QSplashScreen* self, const QMetaMethod* signal) {
     auto* vqsplashscreen = dynamic_cast<VirtualQSplashScreen*>(self);
     if (vqsplashscreen && vqsplashscreen->isVirtualQSplashScreen) {
         vqsplashscreen->setQSplashScreen_ConnectNotify_IsBase(true);
@@ -1572,7 +1572,7 @@ void QSplashScreen_OnConnectNotify(QSplashScreen* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSplashScreen_DisconnectNotify(QSplashScreen* self, QMetaMethod* signal) {
+void QSplashScreen_DisconnectNotify(QSplashScreen* self, const QMetaMethod* signal) {
     auto* vqsplashscreen = dynamic_cast<VirtualQSplashScreen*>(self);
     if (vqsplashscreen && vqsplashscreen->isVirtualQSplashScreen) {
         vqsplashscreen->disconnectNotify(*signal);
@@ -1582,7 +1582,7 @@ void QSplashScreen_DisconnectNotify(QSplashScreen* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSplashScreen_QBaseDisconnectNotify(QSplashScreen* self, QMetaMethod* signal) {
+void QSplashScreen_QBaseDisconnectNotify(QSplashScreen* self, const QMetaMethod* signal) {
     auto* vqsplashscreen = dynamic_cast<VirtualQSplashScreen*>(self);
     if (vqsplashscreen && vqsplashscreen->isVirtualQSplashScreen) {
         vqsplashscreen->setQSplashScreen_DisconnectNotify_IsBase(true);
@@ -1833,7 +1833,7 @@ void QSplashScreen_OnReceivers(const QSplashScreen* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSplashScreen_IsSignalConnected(const QSplashScreen* self, QMetaMethod* signal) {
+bool QSplashScreen_IsSignalConnected(const QSplashScreen* self, const QMetaMethod* signal) {
     auto* vqsplashscreen = const_cast<VirtualQSplashScreen*>(dynamic_cast<const VirtualQSplashScreen*>(self));
     if (vqsplashscreen && vqsplashscreen->isVirtualQSplashScreen) {
         return vqsplashscreen->isSignalConnected(*signal);
@@ -1843,7 +1843,7 @@ bool QSplashScreen_IsSignalConnected(const QSplashScreen* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-bool QSplashScreen_QBaseIsSignalConnected(const QSplashScreen* self, QMetaMethod* signal) {
+bool QSplashScreen_QBaseIsSignalConnected(const QSplashScreen* self, const QMetaMethod* signal) {
     auto* vqsplashscreen = const_cast<VirtualQSplashScreen*>(dynamic_cast<const VirtualQSplashScreen*>(self));
     if (vqsplashscreen && vqsplashscreen->isVirtualQSplashScreen) {
         vqsplashscreen->setQSplashScreen_IsSignalConnected_IsBase(true);
@@ -1858,6 +1858,35 @@ void QSplashScreen_OnIsSignalConnected(const QSplashScreen* self, intptr_t slot)
     auto* vqsplashscreen = const_cast<VirtualQSplashScreen*>(dynamic_cast<const VirtualQSplashScreen*>(self));
     if (vqsplashscreen && vqsplashscreen->isVirtualQSplashScreen) {
         vqsplashscreen->setQSplashScreen_IsSignalConnected_Callback(reinterpret_cast<VirtualQSplashScreen::QSplashScreen_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QSplashScreen_GetDecodedMetricF(const QSplashScreen* self, int metricA, int metricB) {
+    auto* vqsplashscreen = const_cast<VirtualQSplashScreen*>(dynamic_cast<const VirtualQSplashScreen*>(self));
+    if (vqsplashscreen && vqsplashscreen->isVirtualQSplashScreen) {
+        return vqsplashscreen->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQSplashScreen*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QSplashScreen_QBaseGetDecodedMetricF(const QSplashScreen* self, int metricA, int metricB) {
+    auto* vqsplashscreen = const_cast<VirtualQSplashScreen*>(dynamic_cast<const VirtualQSplashScreen*>(self));
+    if (vqsplashscreen && vqsplashscreen->isVirtualQSplashScreen) {
+        vqsplashscreen->setQSplashScreen_GetDecodedMetricF_IsBase(true);
+        return vqsplashscreen->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQSplashScreen*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QSplashScreen_OnGetDecodedMetricF(const QSplashScreen* self, intptr_t slot) {
+    auto* vqsplashscreen = const_cast<VirtualQSplashScreen*>(dynamic_cast<const VirtualQSplashScreen*>(self));
+    if (vqsplashscreen && vqsplashscreen->isVirtualQSplashScreen) {
+        vqsplashscreen->setQSplashScreen_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQSplashScreen::QSplashScreen_GetDecodedMetricF_Callback>(slot));
     }
 }
 

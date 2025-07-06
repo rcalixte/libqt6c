@@ -1277,6 +1277,10 @@ QWidget* q_radiobutton_child_at_with_q_point(void* self, void* p) {
     return QWidget_ChildAtWithQPoint((QWidget*)self, (QPoint*)p);
 }
 
+QWidget* q_radiobutton_child_at_with_q_point_f(void* self, void* p) {
+    return QWidget_ChildAtWithQPointF((QWidget*)self, (QPointF*)p);
+}
+
 void q_radiobutton_set_attribute(void* self, int64_t param1) {
     QWidget_SetAttribute((QWidget*)self, param1);
 }
@@ -1456,8 +1460,8 @@ QThread* q_radiobutton_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_radiobutton_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_radiobutton_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_radiobutton_start_timer(void* self, int interval) {
@@ -1466,6 +1470,10 @@ int32_t q_radiobutton_start_timer(void* self, int interval) {
 
 void q_radiobutton_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_radiobutton_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_radiobutton_children(void* self) {
@@ -1556,6 +1564,10 @@ void q_radiobutton_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
+bool q_radiobutton_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
+}
+
 int32_t q_radiobutton_start_timer2(void* self, int interval, int64_t timerType) {
     return QObject_StartTimer2((QObject*)self, interval, timerType);
 }
@@ -1622,6 +1634,10 @@ int32_t q_radiobutton_depth(void* self) {
 
 double q_radiobutton_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
+}
+
+int32_t q_radiobutton_encode_metric_f(int64_t metric, double value) {
+    return QPaintDevice_EncodeMetricF(metric, value);
 }
 
 void q_radiobutton_check_state_set(void* self) {
@@ -2258,6 +2274,18 @@ bool q_radiobutton_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_radiobutton_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QRadioButton_OnIsSignalConnected((QRadioButton*)self, (intptr_t)slot);
+}
+
+double q_radiobutton_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QRadioButton_GetDecodedMetricF((QRadioButton*)self, metricA, metricB);
+}
+
+double q_radiobutton_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QRadioButton_QBaseGetDecodedMetricF((QRadioButton*)self, metricA, metricB);
+}
+
+void q_radiobutton_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
+    QRadioButton_OnGetDecodedMetricF((QRadioButton*)self, (intptr_t)slot);
 }
 
 void q_radiobutton_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {

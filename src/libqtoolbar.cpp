@@ -46,7 +46,7 @@ QToolBar* QToolBar_new(QWidget* parent) {
     return new VirtualQToolBar(parent);
 }
 
-QToolBar* QToolBar_new2(libqt_string title) {
+QToolBar* QToolBar_new2(const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualQToolBar(title_QString);
 }
@@ -55,7 +55,7 @@ QToolBar* QToolBar_new3() {
     return new VirtualQToolBar();
 }
 
-QToolBar* QToolBar_new4(libqt_string title, QWidget* parent) {
+QToolBar* QToolBar_new4(const libqt_string title, QWidget* parent) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualQToolBar(title_QString, parent);
 }
@@ -160,7 +160,7 @@ QRect* QToolBar_ActionGeometry(const QToolBar* self, QAction* action) {
     return new QRect(self->actionGeometry(action));
 }
 
-QAction* QToolBar_ActionAt(const QToolBar* self, QPoint* p) {
+QAction* QToolBar_ActionAt(const QToolBar* self, const QPoint* p) {
     return self->actionAt(*p);
 }
 
@@ -196,7 +196,7 @@ bool QToolBar_IsFloating(const QToolBar* self) {
     return self->isFloating();
 }
 
-void QToolBar_SetIconSize(QToolBar* self, QSize* iconSize) {
+void QToolBar_SetIconSize(QToolBar* self, const QSize* iconSize) {
     self->setIconSize(*iconSize);
 }
 
@@ -252,7 +252,7 @@ void QToolBar_Connect_OrientationChanged(QToolBar* self, intptr_t slot) {
     });
 }
 
-void QToolBar_IconSizeChanged(QToolBar* self, QSize* iconSize) {
+void QToolBar_IconSizeChanged(QToolBar* self, const QSize* iconSize) {
     self->iconSizeChanged(*iconSize);
 }
 
@@ -1313,7 +1313,7 @@ void QToolBar_OnHideEvent(QToolBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QToolBar_NativeEvent(QToolBar* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QToolBar_NativeEvent(QToolBar* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqtoolbar = dynamic_cast<VirtualQToolBar*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqtoolbar && vqtoolbar->isVirtualQToolBar) {
@@ -1324,7 +1324,7 @@ bool QToolBar_NativeEvent(QToolBar* self, libqt_string eventType, void* message,
 }
 
 // Base class handler implementation
-bool QToolBar_QBaseNativeEvent(QToolBar* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QToolBar_QBaseNativeEvent(QToolBar* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqtoolbar = dynamic_cast<VirtualQToolBar*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqtoolbar && vqtoolbar->isVirtualQToolBar) {
@@ -1663,7 +1663,7 @@ void QToolBar_OnCustomEvent(QToolBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QToolBar_ConnectNotify(QToolBar* self, QMetaMethod* signal) {
+void QToolBar_ConnectNotify(QToolBar* self, const QMetaMethod* signal) {
     auto* vqtoolbar = dynamic_cast<VirtualQToolBar*>(self);
     if (vqtoolbar && vqtoolbar->isVirtualQToolBar) {
         vqtoolbar->connectNotify(*signal);
@@ -1673,7 +1673,7 @@ void QToolBar_ConnectNotify(QToolBar* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QToolBar_QBaseConnectNotify(QToolBar* self, QMetaMethod* signal) {
+void QToolBar_QBaseConnectNotify(QToolBar* self, const QMetaMethod* signal) {
     auto* vqtoolbar = dynamic_cast<VirtualQToolBar*>(self);
     if (vqtoolbar && vqtoolbar->isVirtualQToolBar) {
         vqtoolbar->setQToolBar_ConnectNotify_IsBase(true);
@@ -1692,7 +1692,7 @@ void QToolBar_OnConnectNotify(QToolBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QToolBar_DisconnectNotify(QToolBar* self, QMetaMethod* signal) {
+void QToolBar_DisconnectNotify(QToolBar* self, const QMetaMethod* signal) {
     auto* vqtoolbar = dynamic_cast<VirtualQToolBar*>(self);
     if (vqtoolbar && vqtoolbar->isVirtualQToolBar) {
         vqtoolbar->disconnectNotify(*signal);
@@ -1702,7 +1702,7 @@ void QToolBar_DisconnectNotify(QToolBar* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QToolBar_QBaseDisconnectNotify(QToolBar* self, QMetaMethod* signal) {
+void QToolBar_QBaseDisconnectNotify(QToolBar* self, const QMetaMethod* signal) {
     auto* vqtoolbar = dynamic_cast<VirtualQToolBar*>(self);
     if (vqtoolbar && vqtoolbar->isVirtualQToolBar) {
         vqtoolbar->setQToolBar_DisconnectNotify_IsBase(true);
@@ -1953,7 +1953,7 @@ void QToolBar_OnReceivers(const QToolBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QToolBar_IsSignalConnected(const QToolBar* self, QMetaMethod* signal) {
+bool QToolBar_IsSignalConnected(const QToolBar* self, const QMetaMethod* signal) {
     auto* vqtoolbar = const_cast<VirtualQToolBar*>(dynamic_cast<const VirtualQToolBar*>(self));
     if (vqtoolbar && vqtoolbar->isVirtualQToolBar) {
         return vqtoolbar->isSignalConnected(*signal);
@@ -1963,7 +1963,7 @@ bool QToolBar_IsSignalConnected(const QToolBar* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QToolBar_QBaseIsSignalConnected(const QToolBar* self, QMetaMethod* signal) {
+bool QToolBar_QBaseIsSignalConnected(const QToolBar* self, const QMetaMethod* signal) {
     auto* vqtoolbar = const_cast<VirtualQToolBar*>(dynamic_cast<const VirtualQToolBar*>(self));
     if (vqtoolbar && vqtoolbar->isVirtualQToolBar) {
         vqtoolbar->setQToolBar_IsSignalConnected_IsBase(true);
@@ -1978,6 +1978,35 @@ void QToolBar_OnIsSignalConnected(const QToolBar* self, intptr_t slot) {
     auto* vqtoolbar = const_cast<VirtualQToolBar*>(dynamic_cast<const VirtualQToolBar*>(self));
     if (vqtoolbar && vqtoolbar->isVirtualQToolBar) {
         vqtoolbar->setQToolBar_IsSignalConnected_Callback(reinterpret_cast<VirtualQToolBar::QToolBar_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QToolBar_GetDecodedMetricF(const QToolBar* self, int metricA, int metricB) {
+    auto* vqtoolbar = const_cast<VirtualQToolBar*>(dynamic_cast<const VirtualQToolBar*>(self));
+    if (vqtoolbar && vqtoolbar->isVirtualQToolBar) {
+        return vqtoolbar->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQToolBar*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QToolBar_QBaseGetDecodedMetricF(const QToolBar* self, int metricA, int metricB) {
+    auto* vqtoolbar = const_cast<VirtualQToolBar*>(dynamic_cast<const VirtualQToolBar*>(self));
+    if (vqtoolbar && vqtoolbar->isVirtualQToolBar) {
+        vqtoolbar->setQToolBar_GetDecodedMetricF_IsBase(true);
+        return vqtoolbar->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQToolBar*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QToolBar_OnGetDecodedMetricF(const QToolBar* self, intptr_t slot) {
+    auto* vqtoolbar = const_cast<VirtualQToolBar*>(dynamic_cast<const VirtualQToolBar*>(self));
+    if (vqtoolbar && vqtoolbar->isVirtualQToolBar) {
+        vqtoolbar->setQToolBar_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQToolBar::QToolBar_GetDecodedMetricF_Callback>(slot));
     }
 }
 

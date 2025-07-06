@@ -12,12 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqaccessible.h"
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qaccessibleplugin.html
 
 /// q_accessibleplugin_new constructs a new QAccessiblePlugin object.
@@ -146,7 +140,7 @@ QThread* q_accessibleplugin_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QAccessiblePlugin* self, QThread* thread ```
-void q_accessibleplugin_move_to_thread(void* self, void* thread);
+bool q_accessibleplugin_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -161,6 +155,13 @@ int32_t q_accessibleplugin_start_timer(void* self, int interval);
 ///
 /// ``` QAccessiblePlugin* self, int id ```
 void q_accessibleplugin_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QAccessiblePlugin* self, enum Qt__TimerId id ```
+void q_accessibleplugin_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -301,6 +302,13 @@ bool q_accessibleplugin_inherits(void* self, const char* classname);
 ///
 /// ``` QAccessiblePlugin* self ```
 void q_accessibleplugin_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QAccessiblePlugin* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_accessibleplugin_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

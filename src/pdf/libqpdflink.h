@@ -12,11 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqpoint.h"
-#include "../libqrect.h"
-#include <string.h>
-#include "../libqurl.h"
-
 /// https://doc.qt.io/qt-6/qpdflink.html
 
 /// q_pdflink_new constructs a new QPdfLink object.

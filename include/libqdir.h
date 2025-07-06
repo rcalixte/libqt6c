@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqchar.h"
-#include "libqfileinfo.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qdir.html
 
 /// q_dir_new constructs a new QDir object.
@@ -166,7 +162,7 @@ void q_dir_set_sorting(void* self, int64_t sort);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#count)
 ///
 /// ``` QDir* self ```
-uint32_t q_dir_count(void* self);
+int64_t q_dir_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#isEmpty)
 ///
@@ -175,8 +171,8 @@ bool q_dir_is_empty(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#operator[])
 ///
-/// ``` QDir* self, int param1 ```
-const char* q_dir_operator_subscript(void* self, int param1);
+/// ``` QDir* self, long long param1 ```
+const char* q_dir_operator_subscript(void* self, long long param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#nameFiltersFromString)
 ///
@@ -273,16 +269,6 @@ bool q_dir_is_absolute(void* self);
 /// ``` QDir* self ```
 bool q_dir_make_absolute(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#operator==)
-///
-/// ``` QDir* self, QDir* dir ```
-bool q_dir_operator_equal(void* self, void* dir);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#operator!=)
-///
-/// ``` QDir* self, QDir* dir ```
-bool q_dir_operator_not_equal(void* self, void* dir);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#remove)
 ///
 /// ``` QDir* self, const char* fileName ```
@@ -377,6 +363,11 @@ const char* q_dir_clean_path(const char* path);
 ///
 /// ``` QDir* self ```
 void q_dir_refresh(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#count)
+///
+/// ``` QDir* self, Disambiguated_t* param1 ```
+int64_t q_dir_count1(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#isEmpty)
 ///

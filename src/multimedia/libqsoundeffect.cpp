@@ -19,7 +19,7 @@ QSoundEffect* QSoundEffect_new() {
     return new VirtualQSoundEffect();
 }
 
-QSoundEffect* QSoundEffect_new2(QAudioDevice* audioDevice) {
+QSoundEffect* QSoundEffect_new2(const QAudioDevice* audioDevice) {
     return new VirtualQSoundEffect(*audioDevice);
 }
 
@@ -27,7 +27,7 @@ QSoundEffect* QSoundEffect_new3(QObject* parent) {
     return new VirtualQSoundEffect(parent);
 }
 
-QSoundEffect* QSoundEffect_new4(QAudioDevice* audioDevice, QObject* parent) {
+QSoundEffect* QSoundEffect_new4(const QAudioDevice* audioDevice, QObject* parent) {
     return new VirtualQSoundEffect(*audioDevice, parent);
 }
 
@@ -80,10 +80,10 @@ libqt_string QSoundEffect_Tr(const char* s) {
 }
 
 libqt_list /* of libqt_string */ QSoundEffect_SupportedMimeTypes() {
-    QStringList _ret = QSoundEffect::supportedMimeTypes();
+    QList<QString> _ret = QSoundEffect::supportedMimeTypes();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -95,7 +95,7 @@ libqt_list /* of libqt_string */ QSoundEffect_SupportedMimeTypes() {
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -104,7 +104,7 @@ QUrl* QSoundEffect_Source(const QSoundEffect* self) {
     return new QUrl(self->source());
 }
 
-void QSoundEffect_SetSource(QSoundEffect* self, QUrl* url) {
+void QSoundEffect_SetSource(QSoundEffect* self, const QUrl* url) {
     self->setSource(*url);
 }
 
@@ -124,7 +124,7 @@ QAudioDevice* QSoundEffect_AudioDevice(QSoundEffect* self) {
     return new QAudioDevice(self->audioDevice());
 }
 
-void QSoundEffect_SetAudioDevice(QSoundEffect* self, QAudioDevice* device) {
+void QSoundEffect_SetAudioDevice(QSoundEffect* self, const QAudioDevice* device) {
     self->setAudioDevice(*device);
 }
 
@@ -433,7 +433,7 @@ void QSoundEffect_OnCustomEvent(QSoundEffect* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSoundEffect_ConnectNotify(QSoundEffect* self, QMetaMethod* signal) {
+void QSoundEffect_ConnectNotify(QSoundEffect* self, const QMetaMethod* signal) {
     auto* vqsoundeffect = dynamic_cast<VirtualQSoundEffect*>(self);
     if (vqsoundeffect && vqsoundeffect->isVirtualQSoundEffect) {
         vqsoundeffect->connectNotify(*signal);
@@ -443,7 +443,7 @@ void QSoundEffect_ConnectNotify(QSoundEffect* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSoundEffect_QBaseConnectNotify(QSoundEffect* self, QMetaMethod* signal) {
+void QSoundEffect_QBaseConnectNotify(QSoundEffect* self, const QMetaMethod* signal) {
     auto* vqsoundeffect = dynamic_cast<VirtualQSoundEffect*>(self);
     if (vqsoundeffect && vqsoundeffect->isVirtualQSoundEffect) {
         vqsoundeffect->setQSoundEffect_ConnectNotify_IsBase(true);
@@ -462,7 +462,7 @@ void QSoundEffect_OnConnectNotify(QSoundEffect* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSoundEffect_DisconnectNotify(QSoundEffect* self, QMetaMethod* signal) {
+void QSoundEffect_DisconnectNotify(QSoundEffect* self, const QMetaMethod* signal) {
     auto* vqsoundeffect = dynamic_cast<VirtualQSoundEffect*>(self);
     if (vqsoundeffect && vqsoundeffect->isVirtualQSoundEffect) {
         vqsoundeffect->disconnectNotify(*signal);
@@ -472,7 +472,7 @@ void QSoundEffect_DisconnectNotify(QSoundEffect* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSoundEffect_QBaseDisconnectNotify(QSoundEffect* self, QMetaMethod* signal) {
+void QSoundEffect_QBaseDisconnectNotify(QSoundEffect* self, const QMetaMethod* signal) {
     auto* vqsoundeffect = dynamic_cast<VirtualQSoundEffect*>(self);
     if (vqsoundeffect && vqsoundeffect->isVirtualQSoundEffect) {
         vqsoundeffect->setQSoundEffect_DisconnectNotify_IsBase(true);
@@ -578,7 +578,7 @@ void QSoundEffect_OnReceivers(const QSoundEffect* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSoundEffect_IsSignalConnected(const QSoundEffect* self, QMetaMethod* signal) {
+bool QSoundEffect_IsSignalConnected(const QSoundEffect* self, const QMetaMethod* signal) {
     auto* vqsoundeffect = const_cast<VirtualQSoundEffect*>(dynamic_cast<const VirtualQSoundEffect*>(self));
     if (vqsoundeffect && vqsoundeffect->isVirtualQSoundEffect) {
         return vqsoundeffect->isSignalConnected(*signal);
@@ -588,7 +588,7 @@ bool QSoundEffect_IsSignalConnected(const QSoundEffect* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-bool QSoundEffect_QBaseIsSignalConnected(const QSoundEffect* self, QMetaMethod* signal) {
+bool QSoundEffect_QBaseIsSignalConnected(const QSoundEffect* self, const QMetaMethod* signal) {
     auto* vqsoundeffect = const_cast<VirtualQSoundEffect*>(dynamic_cast<const VirtualQSoundEffect*>(self));
     if (vqsoundeffect && vqsoundeffect->isVirtualQSoundEffect) {
         vqsoundeffect->setQSoundEffect_IsSignalConnected_IsBase(true);

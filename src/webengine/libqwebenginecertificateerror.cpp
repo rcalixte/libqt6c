@@ -9,11 +9,11 @@
 #include "libqwebenginecertificateerror.hpp"
 #include "libqwebenginecertificateerror.hxx"
 
-QWebEngineCertificateError* QWebEngineCertificateError_new(QWebEngineCertificateError* other) {
+QWebEngineCertificateError* QWebEngineCertificateError_new(const QWebEngineCertificateError* other) {
     return new QWebEngineCertificateError(*other);
 }
 
-void QWebEngineCertificateError_OperatorAssign(QWebEngineCertificateError* self, QWebEngineCertificateError* other) {
+void QWebEngineCertificateError_OperatorAssign(QWebEngineCertificateError* self, const QWebEngineCertificateError* other) {
     self->operator=(*other);
 }
 
@@ -41,6 +41,10 @@ libqt_string QWebEngineCertificateError_Description(const QWebEngineCertificateE
     return _str;
 }
 
+bool QWebEngineCertificateError_IsMainFrame(const QWebEngineCertificateError* self) {
+    return self->isMainFrame();
+}
+
 void QWebEngineCertificateError_Defer(QWebEngineCertificateError* self) {
     self->defer();
 }
@@ -56,12 +60,12 @@ void QWebEngineCertificateError_AcceptCertificate(QWebEngineCertificateError* se
 libqt_list /* of QSslCertificate* */ QWebEngineCertificateError_CertificateChain(const QWebEngineCertificateError* self) {
     QList<QSslCertificate> _ret = self->certificateChain();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QSslCertificate** _arr = static_cast<QSslCertificate**>(malloc(sizeof(QSslCertificate*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QSslCertificate** _arr = static_cast<QSslCertificate**>(malloc(sizeof(QSslCertificate*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QSslCertificate(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }

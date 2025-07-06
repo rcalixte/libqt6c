@@ -12,15 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqscreen.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqsurface.h"
-#include "libqsurfaceformat.h"
-
 /// https://doc.qt.io/qt-6/qoffscreensurface.html
 
 /// q_offscreensurface_new constructs a new QOffscreenSurface object.
@@ -256,7 +247,7 @@ QThread* q_offscreensurface_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QOffscreenSurface* self, QThread* thread ```
-void q_offscreensurface_move_to_thread(void* self, void* thread);
+bool q_offscreensurface_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -271,6 +262,13 @@ int32_t q_offscreensurface_start_timer(void* self, int interval);
 ///
 /// ``` QOffscreenSurface* self, int id ```
 void q_offscreensurface_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QOffscreenSurface* self, enum Qt__TimerId id ```
+void q_offscreensurface_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -411,6 +409,13 @@ bool q_offscreensurface_inherits(void* self, const char* classname);
 ///
 /// ``` QOffscreenSurface* self ```
 void q_offscreensurface_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QOffscreenSurface* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_offscreensurface_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

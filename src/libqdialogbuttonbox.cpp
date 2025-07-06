@@ -134,7 +134,7 @@ void QDialogButtonBox_AddButton(QDialogButtonBox* self, QAbstractButton* button,
     self->addButton(button, static_cast<QDialogButtonBox::ButtonRole>(role));
 }
 
-QPushButton* QDialogButtonBox_AddButton2(QDialogButtonBox* self, libqt_string text, int role) {
+QPushButton* QDialogButtonBox_AddButton2(QDialogButtonBox* self, const libqt_string text, int role) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->addButton(text_QString, static_cast<QDialogButtonBox::ButtonRole>(role));
 }
@@ -154,12 +154,12 @@ void QDialogButtonBox_Clear(QDialogButtonBox* self) {
 libqt_list /* of QAbstractButton* */ QDialogButtonBox_Buttons(const QDialogButtonBox* self) {
     QList<QAbstractButton*> _ret = self->buttons();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QAbstractButton** _arr = static_cast<QAbstractButton**>(malloc(sizeof(QAbstractButton*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QAbstractButton** _arr = static_cast<QAbstractButton**>(malloc(sizeof(QAbstractButton*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -1219,7 +1219,7 @@ void QDialogButtonBox_OnHideEvent(QDialogButtonBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QDialogButtonBox_NativeEvent(QDialogButtonBox* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QDialogButtonBox_NativeEvent(QDialogButtonBox* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqdialogbuttonbox = dynamic_cast<VirtualQDialogButtonBox*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqdialogbuttonbox && vqdialogbuttonbox->isVirtualQDialogButtonBox) {
@@ -1230,7 +1230,7 @@ bool QDialogButtonBox_NativeEvent(QDialogButtonBox* self, libqt_string eventType
 }
 
 // Base class handler implementation
-bool QDialogButtonBox_QBaseNativeEvent(QDialogButtonBox* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QDialogButtonBox_QBaseNativeEvent(QDialogButtonBox* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqdialogbuttonbox = dynamic_cast<VirtualQDialogButtonBox*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqdialogbuttonbox && vqdialogbuttonbox->isVirtualQDialogButtonBox) {
@@ -1569,7 +1569,7 @@ void QDialogButtonBox_OnCustomEvent(QDialogButtonBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QDialogButtonBox_ConnectNotify(QDialogButtonBox* self, QMetaMethod* signal) {
+void QDialogButtonBox_ConnectNotify(QDialogButtonBox* self, const QMetaMethod* signal) {
     auto* vqdialogbuttonbox = dynamic_cast<VirtualQDialogButtonBox*>(self);
     if (vqdialogbuttonbox && vqdialogbuttonbox->isVirtualQDialogButtonBox) {
         vqdialogbuttonbox->connectNotify(*signal);
@@ -1579,7 +1579,7 @@ void QDialogButtonBox_ConnectNotify(QDialogButtonBox* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-void QDialogButtonBox_QBaseConnectNotify(QDialogButtonBox* self, QMetaMethod* signal) {
+void QDialogButtonBox_QBaseConnectNotify(QDialogButtonBox* self, const QMetaMethod* signal) {
     auto* vqdialogbuttonbox = dynamic_cast<VirtualQDialogButtonBox*>(self);
     if (vqdialogbuttonbox && vqdialogbuttonbox->isVirtualQDialogButtonBox) {
         vqdialogbuttonbox->setQDialogButtonBox_ConnectNotify_IsBase(true);
@@ -1598,7 +1598,7 @@ void QDialogButtonBox_OnConnectNotify(QDialogButtonBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QDialogButtonBox_DisconnectNotify(QDialogButtonBox* self, QMetaMethod* signal) {
+void QDialogButtonBox_DisconnectNotify(QDialogButtonBox* self, const QMetaMethod* signal) {
     auto* vqdialogbuttonbox = dynamic_cast<VirtualQDialogButtonBox*>(self);
     if (vqdialogbuttonbox && vqdialogbuttonbox->isVirtualQDialogButtonBox) {
         vqdialogbuttonbox->disconnectNotify(*signal);
@@ -1608,7 +1608,7 @@ void QDialogButtonBox_DisconnectNotify(QDialogButtonBox* self, QMetaMethod* sign
 }
 
 // Base class handler implementation
-void QDialogButtonBox_QBaseDisconnectNotify(QDialogButtonBox* self, QMetaMethod* signal) {
+void QDialogButtonBox_QBaseDisconnectNotify(QDialogButtonBox* self, const QMetaMethod* signal) {
     auto* vqdialogbuttonbox = dynamic_cast<VirtualQDialogButtonBox*>(self);
     if (vqdialogbuttonbox && vqdialogbuttonbox->isVirtualQDialogButtonBox) {
         vqdialogbuttonbox->setQDialogButtonBox_DisconnectNotify_IsBase(true);
@@ -1859,7 +1859,7 @@ void QDialogButtonBox_OnReceivers(const QDialogButtonBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QDialogButtonBox_IsSignalConnected(const QDialogButtonBox* self, QMetaMethod* signal) {
+bool QDialogButtonBox_IsSignalConnected(const QDialogButtonBox* self, const QMetaMethod* signal) {
     auto* vqdialogbuttonbox = const_cast<VirtualQDialogButtonBox*>(dynamic_cast<const VirtualQDialogButtonBox*>(self));
     if (vqdialogbuttonbox && vqdialogbuttonbox->isVirtualQDialogButtonBox) {
         return vqdialogbuttonbox->isSignalConnected(*signal);
@@ -1869,7 +1869,7 @@ bool QDialogButtonBox_IsSignalConnected(const QDialogButtonBox* self, QMetaMetho
 }
 
 // Base class handler implementation
-bool QDialogButtonBox_QBaseIsSignalConnected(const QDialogButtonBox* self, QMetaMethod* signal) {
+bool QDialogButtonBox_QBaseIsSignalConnected(const QDialogButtonBox* self, const QMetaMethod* signal) {
     auto* vqdialogbuttonbox = const_cast<VirtualQDialogButtonBox*>(dynamic_cast<const VirtualQDialogButtonBox*>(self));
     if (vqdialogbuttonbox && vqdialogbuttonbox->isVirtualQDialogButtonBox) {
         vqdialogbuttonbox->setQDialogButtonBox_IsSignalConnected_IsBase(true);
@@ -1884,6 +1884,35 @@ void QDialogButtonBox_OnIsSignalConnected(const QDialogButtonBox* self, intptr_t
     auto* vqdialogbuttonbox = const_cast<VirtualQDialogButtonBox*>(dynamic_cast<const VirtualQDialogButtonBox*>(self));
     if (vqdialogbuttonbox && vqdialogbuttonbox->isVirtualQDialogButtonBox) {
         vqdialogbuttonbox->setQDialogButtonBox_IsSignalConnected_Callback(reinterpret_cast<VirtualQDialogButtonBox::QDialogButtonBox_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QDialogButtonBox_GetDecodedMetricF(const QDialogButtonBox* self, int metricA, int metricB) {
+    auto* vqdialogbuttonbox = const_cast<VirtualQDialogButtonBox*>(dynamic_cast<const VirtualQDialogButtonBox*>(self));
+    if (vqdialogbuttonbox && vqdialogbuttonbox->isVirtualQDialogButtonBox) {
+        return vqdialogbuttonbox->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQDialogButtonBox*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QDialogButtonBox_QBaseGetDecodedMetricF(const QDialogButtonBox* self, int metricA, int metricB) {
+    auto* vqdialogbuttonbox = const_cast<VirtualQDialogButtonBox*>(dynamic_cast<const VirtualQDialogButtonBox*>(self));
+    if (vqdialogbuttonbox && vqdialogbuttonbox->isVirtualQDialogButtonBox) {
+        vqdialogbuttonbox->setQDialogButtonBox_GetDecodedMetricF_IsBase(true);
+        return vqdialogbuttonbox->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQDialogButtonBox*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QDialogButtonBox_OnGetDecodedMetricF(const QDialogButtonBox* self, intptr_t slot) {
+    auto* vqdialogbuttonbox = const_cast<VirtualQDialogButtonBox*>(dynamic_cast<const VirtualQDialogButtonBox*>(self));
+    if (vqdialogbuttonbox && vqdialogbuttonbox->isVirtualQDialogButtonBox) {
+        vqdialogbuttonbox->setQDialogButtonBox_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQDialogButtonBox::QDialogButtonBox_GetDecodedMetricF_Callback>(slot));
     }
 }
 

@@ -61,12 +61,12 @@ class VirtualQAudioSink final : public QAudioSink {
     mutable bool qaudiosink_issignalconnected_isbase = false;
 
   public:
-    VirtualQAudioSink() : QAudioSink(){};
-    VirtualQAudioSink(const QAudioDevice& audioDeviceInfo) : QAudioSink(audioDeviceInfo){};
-    VirtualQAudioSink(const QAudioFormat& format) : QAudioSink(format){};
-    VirtualQAudioSink(const QAudioFormat& format, QObject* parent) : QAudioSink(format, parent){};
-    VirtualQAudioSink(const QAudioDevice& audioDeviceInfo, const QAudioFormat& format) : QAudioSink(audioDeviceInfo, format){};
-    VirtualQAudioSink(const QAudioDevice& audioDeviceInfo, const QAudioFormat& format, QObject* parent) : QAudioSink(audioDeviceInfo, format, parent){};
+    VirtualQAudioSink() : QAudioSink() {};
+    VirtualQAudioSink(const QAudioDevice& audioDeviceInfo) : QAudioSink(audioDeviceInfo) {};
+    VirtualQAudioSink(const QAudioFormat& format) : QAudioSink(format) {};
+    VirtualQAudioSink(const QAudioFormat& format, QObject* parent) : QAudioSink(format, parent) {};
+    VirtualQAudioSink(const QAudioDevice& audioDeviceInfo, const QAudioFormat& format) : QAudioSink(audioDeviceInfo, format) {};
+    VirtualQAudioSink(const QAudioDevice& audioDeviceInfo, const QAudioFormat& format, QObject* parent) : QAudioSink(audioDeviceInfo, format, parent) {};
 
     ~VirtualQAudioSink() {
         qaudiosink_metacall_callback = nullptr;
@@ -298,18 +298,18 @@ class VirtualQAudioSink final : public QAudioSink {
     friend void QAudioSink_QBaseChildEvent(QAudioSink* self, QChildEvent* event);
     friend void QAudioSink_CustomEvent(QAudioSink* self, QEvent* event);
     friend void QAudioSink_QBaseCustomEvent(QAudioSink* self, QEvent* event);
-    friend void QAudioSink_ConnectNotify(QAudioSink* self, QMetaMethod* signal);
-    friend void QAudioSink_QBaseConnectNotify(QAudioSink* self, QMetaMethod* signal);
-    friend void QAudioSink_DisconnectNotify(QAudioSink* self, QMetaMethod* signal);
-    friend void QAudioSink_QBaseDisconnectNotify(QAudioSink* self, QMetaMethod* signal);
+    friend void QAudioSink_ConnectNotify(QAudioSink* self, const QMetaMethod* signal);
+    friend void QAudioSink_QBaseConnectNotify(QAudioSink* self, const QMetaMethod* signal);
+    friend void QAudioSink_DisconnectNotify(QAudioSink* self, const QMetaMethod* signal);
+    friend void QAudioSink_QBaseDisconnectNotify(QAudioSink* self, const QMetaMethod* signal);
     friend QObject* QAudioSink_Sender(const QAudioSink* self);
     friend QObject* QAudioSink_QBaseSender(const QAudioSink* self);
     friend int QAudioSink_SenderSignalIndex(const QAudioSink* self);
     friend int QAudioSink_QBaseSenderSignalIndex(const QAudioSink* self);
     friend int QAudioSink_Receivers(const QAudioSink* self, const char* signal);
     friend int QAudioSink_QBaseReceivers(const QAudioSink* self, const char* signal);
-    friend bool QAudioSink_IsSignalConnected(const QAudioSink* self, QMetaMethod* signal);
-    friend bool QAudioSink_QBaseIsSignalConnected(const QAudioSink* self, QMetaMethod* signal);
+    friend bool QAudioSink_IsSignalConnected(const QAudioSink* self, const QMetaMethod* signal);
+    friend bool QAudioSink_QBaseIsSignalConnected(const QAudioSink* self, const QMetaMethod* signal);
 };
 
 #endif

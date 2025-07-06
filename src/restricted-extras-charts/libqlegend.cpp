@@ -49,11 +49,11 @@ libqt_string QLegend_Tr(const char* s) {
     return _str;
 }
 
-void QLegend_Paint(QLegend* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget) {
+void QLegend_Paint(QLegend* self, QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget) {
     self->paint(painter, option, widget);
 }
 
-void QLegend_SetBrush(QLegend* self, QBrush* brush) {
+void QLegend_SetBrush(QLegend* self, const QBrush* brush) {
     self->setBrush(*brush);
 }
 
@@ -69,7 +69,7 @@ QColor* QLegend_Color(QLegend* self) {
     return new QColor(self->color());
 }
 
-void QLegend_SetPen(QLegend* self, QPen* pen) {
+void QLegend_SetPen(QLegend* self, const QPen* pen) {
     self->setPen(*pen);
 }
 
@@ -85,7 +85,7 @@ QColor* QLegend_BorderColor(QLegend* self) {
     return new QColor(self->borderColor());
 }
 
-void QLegend_SetFont(QLegend* self, QFont* font) {
+void QLegend_SetFont(QLegend* self, const QFont* font) {
     self->setFont(*font);
 }
 
@@ -93,7 +93,7 @@ QFont* QLegend_Font(const QLegend* self) {
     return new QFont(self->font());
 }
 
-void QLegend_SetLabelBrush(QLegend* self, QBrush* brush) {
+void QLegend_SetLabelBrush(QLegend* self, const QBrush* brush) {
     self->setLabelBrush(*brush);
 }
 
@@ -140,12 +140,12 @@ bool QLegend_IsBackgroundVisible(const QLegend* self) {
 libqt_list /* of QLegendMarker* */ QLegend_Markers(const QLegend* self) {
     QList<QLegendMarker*> _ret = self->markers();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QLegendMarker** _arr = static_cast<QLegendMarker**>(malloc(sizeof(QLegendMarker*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QLegendMarker** _arr = static_cast<QLegendMarker**>(malloc(sizeof(QLegendMarker*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -333,12 +333,12 @@ void QLegend_SetBackgroundVisible1(QLegend* self, bool visible) {
 libqt_list /* of QLegendMarker* */ QLegend_Markers1(const QLegend* self, QAbstractSeries* series) {
     QList<QLegendMarker*> _ret = self->markers(series);
     // Convert QList<> from C++ memory to manually-managed C memory
-    QLegendMarker** _arr = static_cast<QLegendMarker**>(malloc(sizeof(QLegendMarker*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QLegendMarker** _arr = static_cast<QLegendMarker**>(malloc(sizeof(QLegendMarker*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }

@@ -29,11 +29,11 @@ typedef struct QTimerEvent QTimerEvent;
 #endif
 
 QAudioSource* QAudioSource_new();
-QAudioSource* QAudioSource_new2(QAudioDevice* audioDeviceInfo);
-QAudioSource* QAudioSource_new3(QAudioFormat* format);
-QAudioSource* QAudioSource_new4(QAudioFormat* format, QObject* parent);
-QAudioSource* QAudioSource_new5(QAudioDevice* audioDeviceInfo, QAudioFormat* format);
-QAudioSource* QAudioSource_new6(QAudioDevice* audioDeviceInfo, QAudioFormat* format, QObject* parent);
+QAudioSource* QAudioSource_new2(const QAudioDevice* audioDeviceInfo);
+QAudioSource* QAudioSource_new3(const QAudioFormat* format);
+QAudioSource* QAudioSource_new4(const QAudioFormat* format, QObject* parent);
+QAudioSource* QAudioSource_new5(const QAudioDevice* audioDeviceInfo, const QAudioFormat* format);
+QAudioSource* QAudioSource_new6(const QAudioDevice* audioDeviceInfo, const QAudioFormat* format, QObject* parent);
 QMetaObject* QAudioSource_MetaObject(const QAudioSource* self);
 void* QAudioSource_Metacast(QAudioSource* self, const char* param1);
 int QAudioSource_Metacall(QAudioSource* self, int param1, int param2, void** param3);
@@ -76,12 +76,12 @@ void QAudioSource_QBaseChildEvent(QAudioSource* self, QChildEvent* event);
 void QAudioSource_CustomEvent(QAudioSource* self, QEvent* event);
 void QAudioSource_OnCustomEvent(QAudioSource* self, intptr_t slot);
 void QAudioSource_QBaseCustomEvent(QAudioSource* self, QEvent* event);
-void QAudioSource_ConnectNotify(QAudioSource* self, QMetaMethod* signal);
+void QAudioSource_ConnectNotify(QAudioSource* self, const QMetaMethod* signal);
 void QAudioSource_OnConnectNotify(QAudioSource* self, intptr_t slot);
-void QAudioSource_QBaseConnectNotify(QAudioSource* self, QMetaMethod* signal);
-void QAudioSource_DisconnectNotify(QAudioSource* self, QMetaMethod* signal);
+void QAudioSource_QBaseConnectNotify(QAudioSource* self, const QMetaMethod* signal);
+void QAudioSource_DisconnectNotify(QAudioSource* self, const QMetaMethod* signal);
 void QAudioSource_OnDisconnectNotify(QAudioSource* self, intptr_t slot);
-void QAudioSource_QBaseDisconnectNotify(QAudioSource* self, QMetaMethod* signal);
+void QAudioSource_QBaseDisconnectNotify(QAudioSource* self, const QMetaMethod* signal);
 QObject* QAudioSource_Sender(const QAudioSource* self);
 void QAudioSource_OnSender(const QAudioSource* self, intptr_t slot);
 QObject* QAudioSource_QBaseSender(const QAudioSource* self);
@@ -91,9 +91,9 @@ int QAudioSource_QBaseSenderSignalIndex(const QAudioSource* self);
 int QAudioSource_Receivers(const QAudioSource* self, const char* signal);
 void QAudioSource_OnReceivers(const QAudioSource* self, intptr_t slot);
 int QAudioSource_QBaseReceivers(const QAudioSource* self, const char* signal);
-bool QAudioSource_IsSignalConnected(const QAudioSource* self, QMetaMethod* signal);
+bool QAudioSource_IsSignalConnected(const QAudioSource* self, const QMetaMethod* signal);
 void QAudioSource_OnIsSignalConnected(const QAudioSource* self, intptr_t slot);
-bool QAudioSource_QBaseIsSignalConnected(const QAudioSource* self, QMetaMethod* signal);
+bool QAudioSource_QBaseIsSignalConnected(const QAudioSource* self, const QMetaMethod* signal);
 void QAudioSource_Delete(QAudioSource* self);
 
 #ifdef __cplusplus

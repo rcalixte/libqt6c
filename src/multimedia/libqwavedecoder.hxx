@@ -112,10 +112,10 @@ class VirtualQWaveDecoder final : public QWaveDecoder {
     mutable bool qwavedecoder_issignalconnected_isbase = false;
 
   public:
-    VirtualQWaveDecoder(QIODevice* device) : QWaveDecoder(device){};
-    VirtualQWaveDecoder(QIODevice* device, const QAudioFormat& format) : QWaveDecoder(device, format){};
-    VirtualQWaveDecoder(QIODevice* device, QObject* parent) : QWaveDecoder(device, parent){};
-    VirtualQWaveDecoder(QIODevice* device, const QAudioFormat& format, QObject* parent) : QWaveDecoder(device, format, parent){};
+    VirtualQWaveDecoder(QIODevice* device) : QWaveDecoder(device) {};
+    VirtualQWaveDecoder(QIODevice* device, const QAudioFormat& format) : QWaveDecoder(device, format) {};
+    VirtualQWaveDecoder(QIODevice* device, QObject* parent) : QWaveDecoder(device, parent) {};
+    VirtualQWaveDecoder(QIODevice* device, const QAudioFormat& format, QObject* parent) : QWaveDecoder(device, format, parent) {};
 
     ~VirtualQWaveDecoder() {
         qwavedecoder_metacall_callback = nullptr;
@@ -645,22 +645,22 @@ class VirtualQWaveDecoder final : public QWaveDecoder {
     friend void QWaveDecoder_QBaseChildEvent(QWaveDecoder* self, QChildEvent* event);
     friend void QWaveDecoder_CustomEvent(QWaveDecoder* self, QEvent* event);
     friend void QWaveDecoder_QBaseCustomEvent(QWaveDecoder* self, QEvent* event);
-    friend void QWaveDecoder_ConnectNotify(QWaveDecoder* self, QMetaMethod* signal);
-    friend void QWaveDecoder_QBaseConnectNotify(QWaveDecoder* self, QMetaMethod* signal);
-    friend void QWaveDecoder_DisconnectNotify(QWaveDecoder* self, QMetaMethod* signal);
-    friend void QWaveDecoder_QBaseDisconnectNotify(QWaveDecoder* self, QMetaMethod* signal);
+    friend void QWaveDecoder_ConnectNotify(QWaveDecoder* self, const QMetaMethod* signal);
+    friend void QWaveDecoder_QBaseConnectNotify(QWaveDecoder* self, const QMetaMethod* signal);
+    friend void QWaveDecoder_DisconnectNotify(QWaveDecoder* self, const QMetaMethod* signal);
+    friend void QWaveDecoder_QBaseDisconnectNotify(QWaveDecoder* self, const QMetaMethod* signal);
     friend void QWaveDecoder_SetOpenMode(QWaveDecoder* self, int openMode);
     friend void QWaveDecoder_QBaseSetOpenMode(QWaveDecoder* self, int openMode);
-    friend void QWaveDecoder_SetErrorString(QWaveDecoder* self, libqt_string errorString);
-    friend void QWaveDecoder_QBaseSetErrorString(QWaveDecoder* self, libqt_string errorString);
+    friend void QWaveDecoder_SetErrorString(QWaveDecoder* self, const libqt_string errorString);
+    friend void QWaveDecoder_QBaseSetErrorString(QWaveDecoder* self, const libqt_string errorString);
     friend QObject* QWaveDecoder_Sender(const QWaveDecoder* self);
     friend QObject* QWaveDecoder_QBaseSender(const QWaveDecoder* self);
     friend int QWaveDecoder_SenderSignalIndex(const QWaveDecoder* self);
     friend int QWaveDecoder_QBaseSenderSignalIndex(const QWaveDecoder* self);
     friend int QWaveDecoder_Receivers(const QWaveDecoder* self, const char* signal);
     friend int QWaveDecoder_QBaseReceivers(const QWaveDecoder* self, const char* signal);
-    friend bool QWaveDecoder_IsSignalConnected(const QWaveDecoder* self, QMetaMethod* signal);
-    friend bool QWaveDecoder_QBaseIsSignalConnected(const QWaveDecoder* self, QMetaMethod* signal);
+    friend bool QWaveDecoder_IsSignalConnected(const QWaveDecoder* self, const QMetaMethod* signal);
+    friend bool QWaveDecoder_QBaseIsSignalConnected(const QWaveDecoder* self, const QMetaMethod* signal);
 };
 
 #endif

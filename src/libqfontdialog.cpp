@@ -49,11 +49,11 @@ QFontDialog* QFontDialog_new2() {
     return new VirtualQFontDialog();
 }
 
-QFontDialog* QFontDialog_new3(QFont* initial) {
+QFontDialog* QFontDialog_new3(const QFont* initial) {
     return new VirtualQFontDialog(*initial);
 }
 
-QFontDialog* QFontDialog_new4(QFont* initial, QWidget* parent) {
+QFontDialog* QFontDialog_new4(const QFont* initial, QWidget* parent) {
     return new VirtualQFontDialog(*initial, parent);
 }
 
@@ -105,7 +105,7 @@ libqt_string QFontDialog_Tr(const char* s) {
     return _str;
 }
 
-void QFontDialog_SetCurrentFont(QFontDialog* self, QFont* font) {
+void QFontDialog_SetCurrentFont(QFontDialog* self, const QFont* font) {
     self->setCurrentFont(*font);
 }
 
@@ -137,11 +137,11 @@ QFont* QFontDialog_GetFont(bool* ok) {
     return new QFont(QFontDialog::getFont(ok));
 }
 
-QFont* QFontDialog_GetFont2(bool* ok, QFont* initial) {
+QFont* QFontDialog_GetFont2(bool* ok, const QFont* initial) {
     return new QFont(QFontDialog::getFont(ok, *initial));
 }
 
-void QFontDialog_CurrentFontChanged(QFontDialog* self, QFont* font) {
+void QFontDialog_CurrentFontChanged(QFontDialog* self, const QFont* font) {
     self->currentFontChanged(*font);
 }
 
@@ -155,7 +155,7 @@ void QFontDialog_Connect_CurrentFontChanged(QFontDialog* self, intptr_t slot) {
     });
 }
 
-void QFontDialog_FontSelected(QFontDialog* self, QFont* font) {
+void QFontDialog_FontSelected(QFontDialog* self, const QFont* font) {
     self->fontSelected(*font);
 }
 
@@ -201,16 +201,16 @@ QFont* QFontDialog_GetFont22(bool* ok, QWidget* parent) {
     return new QFont(QFontDialog::getFont(ok, parent));
 }
 
-QFont* QFontDialog_GetFont3(bool* ok, QFont* initial, QWidget* parent) {
+QFont* QFontDialog_GetFont3(bool* ok, const QFont* initial, QWidget* parent) {
     return new QFont(QFontDialog::getFont(ok, *initial, parent));
 }
 
-QFont* QFontDialog_GetFont4(bool* ok, QFont* initial, QWidget* parent, libqt_string title) {
+QFont* QFontDialog_GetFont4(bool* ok, const QFont* initial, QWidget* parent, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new QFont(QFontDialog::getFont(ok, *initial, parent, title_QString));
 }
 
-QFont* QFontDialog_GetFont5(bool* ok, QFont* initial, QWidget* parent, libqt_string title, int options) {
+QFont* QFontDialog_GetFont5(bool* ok, const QFont* initial, QWidget* parent, const libqt_string title, int options) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new QFont(QFontDialog::getFont(ok, *initial, parent, title_QString, static_cast<QFontDialog::FontDialogOptions>(options)));
 }
@@ -1347,7 +1347,7 @@ void QFontDialog_OnHideEvent(QFontDialog* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFontDialog_NativeEvent(QFontDialog* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QFontDialog_NativeEvent(QFontDialog* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqfontdialog = dynamic_cast<VirtualQFontDialog*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqfontdialog && vqfontdialog->isVirtualQFontDialog) {
@@ -1358,7 +1358,7 @@ bool QFontDialog_NativeEvent(QFontDialog* self, libqt_string eventType, void* me
 }
 
 // Base class handler implementation
-bool QFontDialog_QBaseNativeEvent(QFontDialog* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QFontDialog_QBaseNativeEvent(QFontDialog* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqfontdialog = dynamic_cast<VirtualQFontDialog*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqfontdialog && vqfontdialog->isVirtualQFontDialog) {
@@ -1668,7 +1668,7 @@ void QFontDialog_OnCustomEvent(QFontDialog* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFontDialog_ConnectNotify(QFontDialog* self, QMetaMethod* signal) {
+void QFontDialog_ConnectNotify(QFontDialog* self, const QMetaMethod* signal) {
     auto* vqfontdialog = dynamic_cast<VirtualQFontDialog*>(self);
     if (vqfontdialog && vqfontdialog->isVirtualQFontDialog) {
         vqfontdialog->connectNotify(*signal);
@@ -1678,7 +1678,7 @@ void QFontDialog_ConnectNotify(QFontDialog* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QFontDialog_QBaseConnectNotify(QFontDialog* self, QMetaMethod* signal) {
+void QFontDialog_QBaseConnectNotify(QFontDialog* self, const QMetaMethod* signal) {
     auto* vqfontdialog = dynamic_cast<VirtualQFontDialog*>(self);
     if (vqfontdialog && vqfontdialog->isVirtualQFontDialog) {
         vqfontdialog->setQFontDialog_ConnectNotify_IsBase(true);
@@ -1697,7 +1697,7 @@ void QFontDialog_OnConnectNotify(QFontDialog* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFontDialog_DisconnectNotify(QFontDialog* self, QMetaMethod* signal) {
+void QFontDialog_DisconnectNotify(QFontDialog* self, const QMetaMethod* signal) {
     auto* vqfontdialog = dynamic_cast<VirtualQFontDialog*>(self);
     if (vqfontdialog && vqfontdialog->isVirtualQFontDialog) {
         vqfontdialog->disconnectNotify(*signal);
@@ -1707,7 +1707,7 @@ void QFontDialog_DisconnectNotify(QFontDialog* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QFontDialog_QBaseDisconnectNotify(QFontDialog* self, QMetaMethod* signal) {
+void QFontDialog_QBaseDisconnectNotify(QFontDialog* self, const QMetaMethod* signal) {
     auto* vqfontdialog = dynamic_cast<VirtualQFontDialog*>(self);
     if (vqfontdialog && vqfontdialog->isVirtualQFontDialog) {
         vqfontdialog->setQFontDialog_DisconnectNotify_IsBase(true);
@@ -1987,7 +1987,7 @@ void QFontDialog_OnReceivers(const QFontDialog* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFontDialog_IsSignalConnected(const QFontDialog* self, QMetaMethod* signal) {
+bool QFontDialog_IsSignalConnected(const QFontDialog* self, const QMetaMethod* signal) {
     auto* vqfontdialog = const_cast<VirtualQFontDialog*>(dynamic_cast<const VirtualQFontDialog*>(self));
     if (vqfontdialog && vqfontdialog->isVirtualQFontDialog) {
         return vqfontdialog->isSignalConnected(*signal);
@@ -1997,7 +1997,7 @@ bool QFontDialog_IsSignalConnected(const QFontDialog* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QFontDialog_QBaseIsSignalConnected(const QFontDialog* self, QMetaMethod* signal) {
+bool QFontDialog_QBaseIsSignalConnected(const QFontDialog* self, const QMetaMethod* signal) {
     auto* vqfontdialog = const_cast<VirtualQFontDialog*>(dynamic_cast<const VirtualQFontDialog*>(self));
     if (vqfontdialog && vqfontdialog->isVirtualQFontDialog) {
         vqfontdialog->setQFontDialog_IsSignalConnected_IsBase(true);
@@ -2012,6 +2012,35 @@ void QFontDialog_OnIsSignalConnected(const QFontDialog* self, intptr_t slot) {
     auto* vqfontdialog = const_cast<VirtualQFontDialog*>(dynamic_cast<const VirtualQFontDialog*>(self));
     if (vqfontdialog && vqfontdialog->isVirtualQFontDialog) {
         vqfontdialog->setQFontDialog_IsSignalConnected_Callback(reinterpret_cast<VirtualQFontDialog::QFontDialog_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QFontDialog_GetDecodedMetricF(const QFontDialog* self, int metricA, int metricB) {
+    auto* vqfontdialog = const_cast<VirtualQFontDialog*>(dynamic_cast<const VirtualQFontDialog*>(self));
+    if (vqfontdialog && vqfontdialog->isVirtualQFontDialog) {
+        return vqfontdialog->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQFontDialog*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QFontDialog_QBaseGetDecodedMetricF(const QFontDialog* self, int metricA, int metricB) {
+    auto* vqfontdialog = const_cast<VirtualQFontDialog*>(dynamic_cast<const VirtualQFontDialog*>(self));
+    if (vqfontdialog && vqfontdialog->isVirtualQFontDialog) {
+        vqfontdialog->setQFontDialog_GetDecodedMetricF_IsBase(true);
+        return vqfontdialog->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQFontDialog*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QFontDialog_OnGetDecodedMetricF(const QFontDialog* self, intptr_t slot) {
+    auto* vqfontdialog = const_cast<VirtualQFontDialog*>(dynamic_cast<const VirtualQFontDialog*>(self));
+    if (vqfontdialog && vqfontdialog->isVirtualQFontDialog) {
+        vqfontdialog->setQFontDialog_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQFontDialog::QFontDialog_GetDecodedMetricF_Callback>(slot));
     }
 }
 

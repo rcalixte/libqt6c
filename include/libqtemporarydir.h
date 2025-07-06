@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qtemporarydir.html
 
 /// q_temporarydir_new constructs a new QTemporaryDir object.

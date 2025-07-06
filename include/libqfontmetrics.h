@@ -12,14 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqchar.h"
-#include "libqfont.h"
-#include "libqpaintdevice.h"
-#include "libqrect.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqtextoption.h"
-
 /// https://doc.qt.io/qt-6/qfontmetrics.html
 
 /// q_fontmetrics_new constructs a new QFontMetrics object.

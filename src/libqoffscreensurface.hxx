@@ -73,9 +73,9 @@ class VirtualQOffscreenSurface final : public QOffscreenSurface {
     mutable bool qoffscreensurface_issignalconnected_isbase = false;
 
   public:
-    VirtualQOffscreenSurface() : QOffscreenSurface(){};
-    VirtualQOffscreenSurface(QScreen* screen) : QOffscreenSurface(screen){};
-    VirtualQOffscreenSurface(QScreen* screen, QObject* parent) : QOffscreenSurface(screen, parent){};
+    VirtualQOffscreenSurface() : QOffscreenSurface() {};
+    VirtualQOffscreenSurface(QScreen* screen) : QOffscreenSurface(screen) {};
+    VirtualQOffscreenSurface(QScreen* screen, QObject* parent) : QOffscreenSurface(screen, parent) {};
 
     ~VirtualQOffscreenSurface() {
         qoffscreensurface_metacall_callback = nullptr;
@@ -374,10 +374,10 @@ class VirtualQOffscreenSurface final : public QOffscreenSurface {
     friend void QOffscreenSurface_QBaseChildEvent(QOffscreenSurface* self, QChildEvent* event);
     friend void QOffscreenSurface_CustomEvent(QOffscreenSurface* self, QEvent* event);
     friend void QOffscreenSurface_QBaseCustomEvent(QOffscreenSurface* self, QEvent* event);
-    friend void QOffscreenSurface_ConnectNotify(QOffscreenSurface* self, QMetaMethod* signal);
-    friend void QOffscreenSurface_QBaseConnectNotify(QOffscreenSurface* self, QMetaMethod* signal);
-    friend void QOffscreenSurface_DisconnectNotify(QOffscreenSurface* self, QMetaMethod* signal);
-    friend void QOffscreenSurface_QBaseDisconnectNotify(QOffscreenSurface* self, QMetaMethod* signal);
+    friend void QOffscreenSurface_ConnectNotify(QOffscreenSurface* self, const QMetaMethod* signal);
+    friend void QOffscreenSurface_QBaseConnectNotify(QOffscreenSurface* self, const QMetaMethod* signal);
+    friend void QOffscreenSurface_DisconnectNotify(QOffscreenSurface* self, const QMetaMethod* signal);
+    friend void QOffscreenSurface_QBaseDisconnectNotify(QOffscreenSurface* self, const QMetaMethod* signal);
     friend void* QOffscreenSurface_ResolveInterface(const QOffscreenSurface* self, const char* name, int revision);
     friend void* QOffscreenSurface_QBaseResolveInterface(const QOffscreenSurface* self, const char* name, int revision);
     friend QObject* QOffscreenSurface_Sender(const QOffscreenSurface* self);
@@ -386,8 +386,8 @@ class VirtualQOffscreenSurface final : public QOffscreenSurface {
     friend int QOffscreenSurface_QBaseSenderSignalIndex(const QOffscreenSurface* self);
     friend int QOffscreenSurface_Receivers(const QOffscreenSurface* self, const char* signal);
     friend int QOffscreenSurface_QBaseReceivers(const QOffscreenSurface* self, const char* signal);
-    friend bool QOffscreenSurface_IsSignalConnected(const QOffscreenSurface* self, QMetaMethod* signal);
-    friend bool QOffscreenSurface_QBaseIsSignalConnected(const QOffscreenSurface* self, QMetaMethod* signal);
+    friend bool QOffscreenSurface_IsSignalConnected(const QOffscreenSurface* self, const QMetaMethod* signal);
+    friend bool QOffscreenSurface_QBaseIsSignalConnected(const QOffscreenSurface* self, const QMetaMethod* signal);
 };
 
 #endif

@@ -311,7 +311,7 @@ void QWidgetAction_OnCustomEvent(QWidgetAction* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWidgetAction_ConnectNotify(QWidgetAction* self, QMetaMethod* signal) {
+void QWidgetAction_ConnectNotify(QWidgetAction* self, const QMetaMethod* signal) {
     auto* vqwidgetaction = dynamic_cast<VirtualQWidgetAction*>(self);
     if (vqwidgetaction && vqwidgetaction->isVirtualQWidgetAction) {
         vqwidgetaction->connectNotify(*signal);
@@ -321,7 +321,7 @@ void QWidgetAction_ConnectNotify(QWidgetAction* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QWidgetAction_QBaseConnectNotify(QWidgetAction* self, QMetaMethod* signal) {
+void QWidgetAction_QBaseConnectNotify(QWidgetAction* self, const QMetaMethod* signal) {
     auto* vqwidgetaction = dynamic_cast<VirtualQWidgetAction*>(self);
     if (vqwidgetaction && vqwidgetaction->isVirtualQWidgetAction) {
         vqwidgetaction->setQWidgetAction_ConnectNotify_IsBase(true);
@@ -340,7 +340,7 @@ void QWidgetAction_OnConnectNotify(QWidgetAction* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWidgetAction_DisconnectNotify(QWidgetAction* self, QMetaMethod* signal) {
+void QWidgetAction_DisconnectNotify(QWidgetAction* self, const QMetaMethod* signal) {
     auto* vqwidgetaction = dynamic_cast<VirtualQWidgetAction*>(self);
     if (vqwidgetaction && vqwidgetaction->isVirtualQWidgetAction) {
         vqwidgetaction->disconnectNotify(*signal);
@@ -350,7 +350,7 @@ void QWidgetAction_DisconnectNotify(QWidgetAction* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QWidgetAction_QBaseDisconnectNotify(QWidgetAction* self, QMetaMethod* signal) {
+void QWidgetAction_QBaseDisconnectNotify(QWidgetAction* self, const QMetaMethod* signal) {
     auto* vqwidgetaction = dynamic_cast<VirtualQWidgetAction*>(self);
     if (vqwidgetaction && vqwidgetaction->isVirtualQWidgetAction) {
         vqwidgetaction->setQWidgetAction_DisconnectNotify_IsBase(true);
@@ -374,23 +374,23 @@ libqt_list /* of QWidget* */ QWidgetAction_CreatedWidgets(const QWidgetAction* s
     if (vqwidgetaction && vqwidgetaction->isVirtualQWidgetAction) {
         QList<QWidget*> _ret = vqwidgetaction->createdWidgets();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QWidget** _arr = static_cast<QWidget**>(malloc(sizeof(QWidget*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QWidget** _arr = static_cast<QWidget**>(malloc(sizeof(QWidget*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = _ret[i];
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
         QList<QWidget*> _ret = ((VirtualQWidgetAction*)self)->createdWidgets();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QWidget** _arr = static_cast<QWidget**>(malloc(sizeof(QWidget*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QWidget** _arr = static_cast<QWidget**>(malloc(sizeof(QWidget*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = _ret[i];
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -403,23 +403,23 @@ libqt_list /* of QWidget* */ QWidgetAction_QBaseCreatedWidgets(const QWidgetActi
         vqwidgetaction->setQWidgetAction_CreatedWidgets_IsBase(true);
         QList<QWidget*> _ret = vqwidgetaction->createdWidgets();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QWidget** _arr = static_cast<QWidget**>(malloc(sizeof(QWidget*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QWidget** _arr = static_cast<QWidget**>(malloc(sizeof(QWidget*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = _ret[i];
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
         QList<QWidget*> _ret = ((VirtualQWidgetAction*)self)->createdWidgets();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QWidget** _arr = static_cast<QWidget**>(malloc(sizeof(QWidget*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QWidget** _arr = static_cast<QWidget**>(malloc(sizeof(QWidget*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = _ret[i];
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -521,7 +521,7 @@ void QWidgetAction_OnReceivers(const QWidgetAction* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QWidgetAction_IsSignalConnected(const QWidgetAction* self, QMetaMethod* signal) {
+bool QWidgetAction_IsSignalConnected(const QWidgetAction* self, const QMetaMethod* signal) {
     auto* vqwidgetaction = const_cast<VirtualQWidgetAction*>(dynamic_cast<const VirtualQWidgetAction*>(self));
     if (vqwidgetaction && vqwidgetaction->isVirtualQWidgetAction) {
         return vqwidgetaction->isSignalConnected(*signal);
@@ -531,7 +531,7 @@ bool QWidgetAction_IsSignalConnected(const QWidgetAction* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-bool QWidgetAction_QBaseIsSignalConnected(const QWidgetAction* self, QMetaMethod* signal) {
+bool QWidgetAction_QBaseIsSignalConnected(const QWidgetAction* self, const QMetaMethod* signal) {
     auto* vqwidgetaction = const_cast<VirtualQWidgetAction*>(dynamic_cast<const VirtualQWidgetAction*>(self));
     if (vqwidgetaction && vqwidgetaction->isVirtualQWidgetAction) {
         vqwidgetaction->setQWidgetAction_IsSignalConnected_IsBase(true);

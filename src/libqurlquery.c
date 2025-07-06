@@ -24,14 +24,6 @@ void q_urlquery_operator_assign(void* self, void* other) {
     QUrlQuery_OperatorAssign((QUrlQuery*)self, (QUrlQuery*)other);
 }
 
-bool q_urlquery_operator_equal(void* self, void* other) {
-    return QUrlQuery_OperatorEqual((QUrlQuery*)self, (QUrlQuery*)other);
-}
-
-bool q_urlquery_operator_not_equal(void* self, void* other) {
-    return QUrlQuery_OperatorNotEqual((QUrlQuery*)self, (QUrlQuery*)other);
-}
-
 void q_urlquery_swap(void* self, void* other) {
     QUrlQuery_Swap((QUrlQuery*)self, (QUrlQuery*)other);
 }

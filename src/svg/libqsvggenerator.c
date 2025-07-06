@@ -13,6 +13,10 @@ QSvgGenerator* q_svggenerator_new() {
     return QSvgGenerator_new();
 }
 
+QSvgGenerator* q_svggenerator_new2(int64_t version) {
+    return QSvgGenerator_new2(version);
+}
+
 const char* q_svggenerator_title(void* self) {
     libqt_string _str = QSvgGenerator_Title((QSvgGenerator*)self);
     char* _ret = qstring_to_char(_str);
@@ -84,6 +88,10 @@ void q_svggenerator_set_resolution(void* self, int dpi) {
 
 int32_t q_svggenerator_resolution(void* self) {
     return QSvgGenerator_Resolution((QSvgGenerator*)self);
+}
+
+int64_t q_svggenerator_svg_version(void* self) {
+    return QSvgGenerator_SvgVersion((QSvgGenerator*)self);
 }
 
 QPaintEngine* q_svggenerator_paint_engine(void* self) {
@@ -166,6 +174,10 @@ double q_svggenerator_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
 }
 
+int32_t q_svggenerator_encode_metric_f(int64_t metric, double value) {
+    return QPaintDevice_EncodeMetricF(metric, value);
+}
+
 int32_t q_svggenerator_dev_type(void* self) {
     return QSvgGenerator_DevType((QSvgGenerator*)self);
 }
@@ -212,6 +224,18 @@ QPainter* q_svggenerator_qbase_shared_painter(void* self) {
 
 void q_svggenerator_on_shared_painter(void* self, QPainter* (*slot)()) {
     QSvgGenerator_OnSharedPainter((QSvgGenerator*)self, (intptr_t)slot);
+}
+
+double q_svggenerator_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QSvgGenerator_GetDecodedMetricF((QSvgGenerator*)self, metricA, metricB);
+}
+
+double q_svggenerator_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QSvgGenerator_QBaseGetDecodedMetricF((QSvgGenerator*)self, metricA, metricB);
+}
+
+void q_svggenerator_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
+    QSvgGenerator_OnGetDecodedMetricF((QSvgGenerator*)self, (intptr_t)slot);
 }
 
 void q_svggenerator_delete(void* self) {

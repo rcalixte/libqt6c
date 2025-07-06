@@ -98,11 +98,11 @@ void QPdfPageNavigator_Jump(QPdfPageNavigator* self, QPdfLink* destination) {
     self->jump(*destination);
 }
 
-void QPdfPageNavigator_Jump2(QPdfPageNavigator* self, int page, QPointF* location) {
+void QPdfPageNavigator_Jump2(QPdfPageNavigator* self, int page, const QPointF* location) {
     self->jump(static_cast<int>(page), *location);
 }
 
-void QPdfPageNavigator_Update(QPdfPageNavigator* self, int page, QPointF* location, double zoom) {
+void QPdfPageNavigator_Update(QPdfPageNavigator* self, int page, const QPointF* location, double zoom) {
     self->update(static_cast<int>(page), *location, static_cast<qreal>(zoom));
 }
 
@@ -210,7 +210,7 @@ libqt_string QPdfPageNavigator_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-void QPdfPageNavigator_Jump3(QPdfPageNavigator* self, int page, QPointF* location, double zoom) {
+void QPdfPageNavigator_Jump3(QPdfPageNavigator* self, int page, const QPointF* location, double zoom) {
     self->jump(static_cast<int>(page), *location, static_cast<qreal>(zoom));
 }
 
@@ -360,7 +360,7 @@ void QPdfPageNavigator_OnCustomEvent(QPdfPageNavigator* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPdfPageNavigator_ConnectNotify(QPdfPageNavigator* self, QMetaMethod* signal) {
+void QPdfPageNavigator_ConnectNotify(QPdfPageNavigator* self, const QMetaMethod* signal) {
     auto* vqpdfpagenavigator = dynamic_cast<VirtualQPdfPageNavigator*>(self);
     if (vqpdfpagenavigator && vqpdfpagenavigator->isVirtualQPdfPageNavigator) {
         vqpdfpagenavigator->connectNotify(*signal);
@@ -370,7 +370,7 @@ void QPdfPageNavigator_ConnectNotify(QPdfPageNavigator* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-void QPdfPageNavigator_QBaseConnectNotify(QPdfPageNavigator* self, QMetaMethod* signal) {
+void QPdfPageNavigator_QBaseConnectNotify(QPdfPageNavigator* self, const QMetaMethod* signal) {
     auto* vqpdfpagenavigator = dynamic_cast<VirtualQPdfPageNavigator*>(self);
     if (vqpdfpagenavigator && vqpdfpagenavigator->isVirtualQPdfPageNavigator) {
         vqpdfpagenavigator->setQPdfPageNavigator_ConnectNotify_IsBase(true);
@@ -389,7 +389,7 @@ void QPdfPageNavigator_OnConnectNotify(QPdfPageNavigator* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPdfPageNavigator_DisconnectNotify(QPdfPageNavigator* self, QMetaMethod* signal) {
+void QPdfPageNavigator_DisconnectNotify(QPdfPageNavigator* self, const QMetaMethod* signal) {
     auto* vqpdfpagenavigator = dynamic_cast<VirtualQPdfPageNavigator*>(self);
     if (vqpdfpagenavigator && vqpdfpagenavigator->isVirtualQPdfPageNavigator) {
         vqpdfpagenavigator->disconnectNotify(*signal);
@@ -399,7 +399,7 @@ void QPdfPageNavigator_DisconnectNotify(QPdfPageNavigator* self, QMetaMethod* si
 }
 
 // Base class handler implementation
-void QPdfPageNavigator_QBaseDisconnectNotify(QPdfPageNavigator* self, QMetaMethod* signal) {
+void QPdfPageNavigator_QBaseDisconnectNotify(QPdfPageNavigator* self, const QMetaMethod* signal) {
     auto* vqpdfpagenavigator = dynamic_cast<VirtualQPdfPageNavigator*>(self);
     if (vqpdfpagenavigator && vqpdfpagenavigator->isVirtualQPdfPageNavigator) {
         vqpdfpagenavigator->setQPdfPageNavigator_DisconnectNotify_IsBase(true);
@@ -532,7 +532,7 @@ void QPdfPageNavigator_OnReceivers(const QPdfPageNavigator* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-bool QPdfPageNavigator_IsSignalConnected(const QPdfPageNavigator* self, QMetaMethod* signal) {
+bool QPdfPageNavigator_IsSignalConnected(const QPdfPageNavigator* self, const QMetaMethod* signal) {
     auto* vqpdfpagenavigator = const_cast<VirtualQPdfPageNavigator*>(dynamic_cast<const VirtualQPdfPageNavigator*>(self));
     if (vqpdfpagenavigator && vqpdfpagenavigator->isVirtualQPdfPageNavigator) {
         return vqpdfpagenavigator->isSignalConnected(*signal);
@@ -542,7 +542,7 @@ bool QPdfPageNavigator_IsSignalConnected(const QPdfPageNavigator* self, QMetaMet
 }
 
 // Base class handler implementation
-bool QPdfPageNavigator_QBaseIsSignalConnected(const QPdfPageNavigator* self, QMetaMethod* signal) {
+bool QPdfPageNavigator_QBaseIsSignalConnected(const QPdfPageNavigator* self, const QMetaMethod* signal) {
     auto* vqpdfpagenavigator = const_cast<VirtualQPdfPageNavigator*>(dynamic_cast<const VirtualQPdfPageNavigator*>(self));
     if (vqpdfpagenavigator && vqpdfpagenavigator->isVirtualQPdfPageNavigator) {
         vqpdfpagenavigator->setQPdfPageNavigator_IsSignalConnected_IsBase(true);

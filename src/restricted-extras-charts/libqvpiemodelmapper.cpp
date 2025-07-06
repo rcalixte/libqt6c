@@ -355,7 +355,7 @@ void QVPieModelMapper_OnCustomEvent(QVPieModelMapper* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QVPieModelMapper_ConnectNotify(QVPieModelMapper* self, QMetaMethod* signal) {
+void QVPieModelMapper_ConnectNotify(QVPieModelMapper* self, const QMetaMethod* signal) {
     auto* vqvpiemodelmapper = dynamic_cast<VirtualQVPieModelMapper*>(self);
     if (vqvpiemodelmapper && vqvpiemodelmapper->isVirtualQVPieModelMapper) {
         vqvpiemodelmapper->connectNotify(*signal);
@@ -365,7 +365,7 @@ void QVPieModelMapper_ConnectNotify(QVPieModelMapper* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-void QVPieModelMapper_QBaseConnectNotify(QVPieModelMapper* self, QMetaMethod* signal) {
+void QVPieModelMapper_QBaseConnectNotify(QVPieModelMapper* self, const QMetaMethod* signal) {
     auto* vqvpiemodelmapper = dynamic_cast<VirtualQVPieModelMapper*>(self);
     if (vqvpiemodelmapper && vqvpiemodelmapper->isVirtualQVPieModelMapper) {
         vqvpiemodelmapper->setQVPieModelMapper_ConnectNotify_IsBase(true);
@@ -384,7 +384,7 @@ void QVPieModelMapper_OnConnectNotify(QVPieModelMapper* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QVPieModelMapper_DisconnectNotify(QVPieModelMapper* self, QMetaMethod* signal) {
+void QVPieModelMapper_DisconnectNotify(QVPieModelMapper* self, const QMetaMethod* signal) {
     auto* vqvpiemodelmapper = dynamic_cast<VirtualQVPieModelMapper*>(self);
     if (vqvpiemodelmapper && vqvpiemodelmapper->isVirtualQVPieModelMapper) {
         vqvpiemodelmapper->disconnectNotify(*signal);
@@ -394,7 +394,7 @@ void QVPieModelMapper_DisconnectNotify(QVPieModelMapper* self, QMetaMethod* sign
 }
 
 // Base class handler implementation
-void QVPieModelMapper_QBaseDisconnectNotify(QVPieModelMapper* self, QMetaMethod* signal) {
+void QVPieModelMapper_QBaseDisconnectNotify(QVPieModelMapper* self, const QMetaMethod* signal) {
     auto* vqvpiemodelmapper = dynamic_cast<VirtualQVPieModelMapper*>(self);
     if (vqvpiemodelmapper && vqvpiemodelmapper->isVirtualQVPieModelMapper) {
         vqvpiemodelmapper->setQVPieModelMapper_DisconnectNotify_IsBase(true);
@@ -790,7 +790,7 @@ void QVPieModelMapper_OnReceivers(const QVPieModelMapper* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QVPieModelMapper_IsSignalConnected(const QVPieModelMapper* self, QMetaMethod* signal) {
+bool QVPieModelMapper_IsSignalConnected(const QVPieModelMapper* self, const QMetaMethod* signal) {
     auto* vqvpiemodelmapper = const_cast<VirtualQVPieModelMapper*>(dynamic_cast<const VirtualQVPieModelMapper*>(self));
     if (vqvpiemodelmapper && vqvpiemodelmapper->isVirtualQVPieModelMapper) {
         return vqvpiemodelmapper->isSignalConnected(*signal);
@@ -800,7 +800,7 @@ bool QVPieModelMapper_IsSignalConnected(const QVPieModelMapper* self, QMetaMetho
 }
 
 // Base class handler implementation
-bool QVPieModelMapper_QBaseIsSignalConnected(const QVPieModelMapper* self, QMetaMethod* signal) {
+bool QVPieModelMapper_QBaseIsSignalConnected(const QVPieModelMapper* self, const QMetaMethod* signal) {
     auto* vqvpiemodelmapper = const_cast<VirtualQVPieModelMapper*>(dynamic_cast<const VirtualQVPieModelMapper*>(self));
     if (vqvpiemodelmapper && vqvpiemodelmapper->isVirtualQVPieModelMapper) {
         vqvpiemodelmapper->setQVPieModelMapper_IsSignalConnected_IsBase(true);

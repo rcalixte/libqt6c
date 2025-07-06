@@ -18,6 +18,10 @@ QStaticPlugin* q_staticplugin_new2(void* other) {
     return QStaticPlugin_new2((QStaticPlugin*)other);
 }
 
+QStaticPlugin* q_staticplugin_new3(void* param1) {
+    return QStaticPlugin_new3((QStaticPlugin*)param1);
+}
+
 void q_staticplugin_copy_assign(void* self, void* other) {
     QStaticPlugin_CopyAssign((QStaticPlugin*)self, (QStaticPlugin*)other);
 }

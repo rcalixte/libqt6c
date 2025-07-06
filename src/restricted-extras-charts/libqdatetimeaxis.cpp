@@ -384,7 +384,7 @@ void QDateTimeAxis_OnCustomEvent(QDateTimeAxis* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QDateTimeAxis_ConnectNotify(QDateTimeAxis* self, QMetaMethod* signal) {
+void QDateTimeAxis_ConnectNotify(QDateTimeAxis* self, const QMetaMethod* signal) {
     auto* vqdatetimeaxis = dynamic_cast<VirtualQDateTimeAxis*>(self);
     if (vqdatetimeaxis && vqdatetimeaxis->isVirtualQDateTimeAxis) {
         vqdatetimeaxis->connectNotify(*signal);
@@ -394,7 +394,7 @@ void QDateTimeAxis_ConnectNotify(QDateTimeAxis* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QDateTimeAxis_QBaseConnectNotify(QDateTimeAxis* self, QMetaMethod* signal) {
+void QDateTimeAxis_QBaseConnectNotify(QDateTimeAxis* self, const QMetaMethod* signal) {
     auto* vqdatetimeaxis = dynamic_cast<VirtualQDateTimeAxis*>(self);
     if (vqdatetimeaxis && vqdatetimeaxis->isVirtualQDateTimeAxis) {
         vqdatetimeaxis->setQDateTimeAxis_ConnectNotify_IsBase(true);
@@ -413,7 +413,7 @@ void QDateTimeAxis_OnConnectNotify(QDateTimeAxis* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QDateTimeAxis_DisconnectNotify(QDateTimeAxis* self, QMetaMethod* signal) {
+void QDateTimeAxis_DisconnectNotify(QDateTimeAxis* self, const QMetaMethod* signal) {
     auto* vqdatetimeaxis = dynamic_cast<VirtualQDateTimeAxis*>(self);
     if (vqdatetimeaxis && vqdatetimeaxis->isVirtualQDateTimeAxis) {
         vqdatetimeaxis->disconnectNotify(*signal);
@@ -423,7 +423,7 @@ void QDateTimeAxis_DisconnectNotify(QDateTimeAxis* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QDateTimeAxis_QBaseDisconnectNotify(QDateTimeAxis* self, QMetaMethod* signal) {
+void QDateTimeAxis_QBaseDisconnectNotify(QDateTimeAxis* self, const QMetaMethod* signal) {
     auto* vqdatetimeaxis = dynamic_cast<VirtualQDateTimeAxis*>(self);
     if (vqdatetimeaxis && vqdatetimeaxis->isVirtualQDateTimeAxis) {
         vqdatetimeaxis->setQDateTimeAxis_DisconnectNotify_IsBase(true);
@@ -529,7 +529,7 @@ void QDateTimeAxis_OnReceivers(const QDateTimeAxis* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QDateTimeAxis_IsSignalConnected(const QDateTimeAxis* self, QMetaMethod* signal) {
+bool QDateTimeAxis_IsSignalConnected(const QDateTimeAxis* self, const QMetaMethod* signal) {
     auto* vqdatetimeaxis = const_cast<VirtualQDateTimeAxis*>(dynamic_cast<const VirtualQDateTimeAxis*>(self));
     if (vqdatetimeaxis && vqdatetimeaxis->isVirtualQDateTimeAxis) {
         return vqdatetimeaxis->isSignalConnected(*signal);
@@ -539,7 +539,7 @@ bool QDateTimeAxis_IsSignalConnected(const QDateTimeAxis* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-bool QDateTimeAxis_QBaseIsSignalConnected(const QDateTimeAxis* self, QMetaMethod* signal) {
+bool QDateTimeAxis_QBaseIsSignalConnected(const QDateTimeAxis* self, const QMetaMethod* signal) {
     auto* vqdatetimeaxis = const_cast<VirtualQDateTimeAxis*>(dynamic_cast<const VirtualQDateTimeAxis*>(self));
     if (vqdatetimeaxis && vqdatetimeaxis->isVirtualQDateTimeAxis) {
         vqdatetimeaxis->setQDateTimeAxis_IsSignalConnected_IsBase(true);

@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqcolor.h"
-
 /// https://doc.qt.io/qt-6/qcolormap.html
 
 /// q_colormap_new constructs a new QColormap object.

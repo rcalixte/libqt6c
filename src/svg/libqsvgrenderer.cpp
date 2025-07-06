@@ -23,12 +23,12 @@ QSvgRenderer* QSvgRenderer_new() {
     return new VirtualQSvgRenderer();
 }
 
-QSvgRenderer* QSvgRenderer_new2(libqt_string filename) {
+QSvgRenderer* QSvgRenderer_new2(const libqt_string filename) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     return new VirtualQSvgRenderer(filename_QString);
 }
 
-QSvgRenderer* QSvgRenderer_new3(libqt_string contents) {
+QSvgRenderer* QSvgRenderer_new3(const libqt_string contents) {
     QByteArray contents_QByteArray(contents.data, contents.len);
     return new VirtualQSvgRenderer(contents_QByteArray);
 }
@@ -41,12 +41,12 @@ QSvgRenderer* QSvgRenderer_new5(QObject* parent) {
     return new VirtualQSvgRenderer(parent);
 }
 
-QSvgRenderer* QSvgRenderer_new6(libqt_string filename, QObject* parent) {
+QSvgRenderer* QSvgRenderer_new6(const libqt_string filename, QObject* parent) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     return new VirtualQSvgRenderer(filename_QString, parent);
 }
 
-QSvgRenderer* QSvgRenderer_new7(libqt_string contents, QObject* parent) {
+QSvgRenderer* QSvgRenderer_new7(const libqt_string contents, QObject* parent) {
     QByteArray contents_QByteArray(contents.data, contents.len);
     return new VirtualQSvgRenderer(contents_QByteArray, parent);
 }
@@ -119,11 +119,11 @@ QRectF* QSvgRenderer_ViewBoxF(const QSvgRenderer* self) {
     return new QRectF(self->viewBoxF());
 }
 
-void QSvgRenderer_SetViewBox(QSvgRenderer* self, QRect* viewbox) {
+void QSvgRenderer_SetViewBox(QSvgRenderer* self, const QRect* viewbox) {
     self->setViewBox(*viewbox);
 }
 
-void QSvgRenderer_SetViewBoxWithViewbox(QSvgRenderer* self, QRectF* viewbox) {
+void QSvgRenderer_SetViewBoxWithViewbox(QSvgRenderer* self, const QRectF* viewbox) {
     self->setViewBox(*viewbox);
 }
 
@@ -133,6 +133,14 @@ int QSvgRenderer_AspectRatioMode(const QSvgRenderer* self) {
 
 void QSvgRenderer_SetAspectRatioMode(QSvgRenderer* self, int mode) {
     self->setAspectRatioMode(static_cast<Qt::AspectRatioMode>(mode));
+}
+
+int QSvgRenderer_Options(const QSvgRenderer* self) {
+    return static_cast<int>(self->options());
+}
+
+void QSvgRenderer_SetOptions(QSvgRenderer* self, int flags) {
+    self->setOptions(static_cast<QtSvg::Options>(flags));
 }
 
 bool QSvgRenderer_Animated(const QSvgRenderer* self) {
@@ -159,27 +167,39 @@ int QSvgRenderer_AnimationDuration(const QSvgRenderer* self) {
     return self->animationDuration();
 }
 
-QRectF* QSvgRenderer_BoundsOnElement(const QSvgRenderer* self, libqt_string id) {
+bool QSvgRenderer_IsAnimationEnabled(const QSvgRenderer* self) {
+    return self->isAnimationEnabled();
+}
+
+void QSvgRenderer_SetAnimationEnabled(QSvgRenderer* self, bool enable) {
+    self->setAnimationEnabled(enable);
+}
+
+QRectF* QSvgRenderer_BoundsOnElement(const QSvgRenderer* self, const libqt_string id) {
     QString id_QString = QString::fromUtf8(id.data, id.len);
     return new QRectF(self->boundsOnElement(id_QString));
 }
 
-bool QSvgRenderer_ElementExists(const QSvgRenderer* self, libqt_string id) {
+bool QSvgRenderer_ElementExists(const QSvgRenderer* self, const libqt_string id) {
     QString id_QString = QString::fromUtf8(id.data, id.len);
     return self->elementExists(id_QString);
 }
 
-QTransform* QSvgRenderer_TransformForElement(const QSvgRenderer* self, libqt_string id) {
+QTransform* QSvgRenderer_TransformForElement(const QSvgRenderer* self, const libqt_string id) {
     QString id_QString = QString::fromUtf8(id.data, id.len);
     return new QTransform(self->transformForElement(id_QString));
 }
 
-bool QSvgRenderer_Load(QSvgRenderer* self, libqt_string filename) {
+void QSvgRenderer_SetDefaultOptions(int flags) {
+    QSvgRenderer::setDefaultOptions(static_cast<QtSvg::Options>(flags));
+}
+
+bool QSvgRenderer_Load(QSvgRenderer* self, const libqt_string filename) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     return self->load(filename_QString);
 }
 
-bool QSvgRenderer_LoadWithContents(QSvgRenderer* self, libqt_string contents) {
+bool QSvgRenderer_LoadWithContents(QSvgRenderer* self, const libqt_string contents) {
     QByteArray contents_QByteArray(contents.data, contents.len);
     return self->load(contents_QByteArray);
 }
@@ -192,11 +212,11 @@ void QSvgRenderer_Render(QSvgRenderer* self, QPainter* p) {
     self->render(p);
 }
 
-void QSvgRenderer_Render2(QSvgRenderer* self, QPainter* p, QRectF* bounds) {
+void QSvgRenderer_Render2(QSvgRenderer* self, QPainter* p, const QRectF* bounds) {
     self->render(p, *bounds);
 }
 
-void QSvgRenderer_Render3(QSvgRenderer* self, QPainter* p, libqt_string elementId) {
+void QSvgRenderer_Render3(QSvgRenderer* self, QPainter* p, const libqt_string elementId) {
     QString elementId_QString = QString::fromUtf8(elementId.data, elementId.len);
     self->render(p, elementId_QString);
 }
@@ -236,7 +256,7 @@ libqt_string QSvgRenderer_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-void QSvgRenderer_Render32(QSvgRenderer* self, QPainter* p, libqt_string elementId, QRectF* bounds) {
+void QSvgRenderer_Render32(QSvgRenderer* self, QPainter* p, const libqt_string elementId, const QRectF* bounds) {
     QString elementId_QString = QString::fromUtf8(elementId.data, elementId.len);
     self->render(p, elementId_QString, *bounds);
 }
@@ -387,7 +407,7 @@ void QSvgRenderer_OnCustomEvent(QSvgRenderer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSvgRenderer_ConnectNotify(QSvgRenderer* self, QMetaMethod* signal) {
+void QSvgRenderer_ConnectNotify(QSvgRenderer* self, const QMetaMethod* signal) {
     auto* vqsvgrenderer = dynamic_cast<VirtualQSvgRenderer*>(self);
     if (vqsvgrenderer && vqsvgrenderer->isVirtualQSvgRenderer) {
         vqsvgrenderer->connectNotify(*signal);
@@ -397,7 +417,7 @@ void QSvgRenderer_ConnectNotify(QSvgRenderer* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSvgRenderer_QBaseConnectNotify(QSvgRenderer* self, QMetaMethod* signal) {
+void QSvgRenderer_QBaseConnectNotify(QSvgRenderer* self, const QMetaMethod* signal) {
     auto* vqsvgrenderer = dynamic_cast<VirtualQSvgRenderer*>(self);
     if (vqsvgrenderer && vqsvgrenderer->isVirtualQSvgRenderer) {
         vqsvgrenderer->setQSvgRenderer_ConnectNotify_IsBase(true);
@@ -416,7 +436,7 @@ void QSvgRenderer_OnConnectNotify(QSvgRenderer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSvgRenderer_DisconnectNotify(QSvgRenderer* self, QMetaMethod* signal) {
+void QSvgRenderer_DisconnectNotify(QSvgRenderer* self, const QMetaMethod* signal) {
     auto* vqsvgrenderer = dynamic_cast<VirtualQSvgRenderer*>(self);
     if (vqsvgrenderer && vqsvgrenderer->isVirtualQSvgRenderer) {
         vqsvgrenderer->disconnectNotify(*signal);
@@ -426,7 +446,7 @@ void QSvgRenderer_DisconnectNotify(QSvgRenderer* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSvgRenderer_QBaseDisconnectNotify(QSvgRenderer* self, QMetaMethod* signal) {
+void QSvgRenderer_QBaseDisconnectNotify(QSvgRenderer* self, const QMetaMethod* signal) {
     auto* vqsvgrenderer = dynamic_cast<VirtualQSvgRenderer*>(self);
     if (vqsvgrenderer && vqsvgrenderer->isVirtualQSvgRenderer) {
         vqsvgrenderer->setQSvgRenderer_DisconnectNotify_IsBase(true);
@@ -532,7 +552,7 @@ void QSvgRenderer_OnReceivers(const QSvgRenderer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSvgRenderer_IsSignalConnected(const QSvgRenderer* self, QMetaMethod* signal) {
+bool QSvgRenderer_IsSignalConnected(const QSvgRenderer* self, const QMetaMethod* signal) {
     auto* vqsvgrenderer = const_cast<VirtualQSvgRenderer*>(dynamic_cast<const VirtualQSvgRenderer*>(self));
     if (vqsvgrenderer && vqsvgrenderer->isVirtualQSvgRenderer) {
         return vqsvgrenderer->isSignalConnected(*signal);
@@ -542,7 +562,7 @@ bool QSvgRenderer_IsSignalConnected(const QSvgRenderer* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-bool QSvgRenderer_QBaseIsSignalConnected(const QSvgRenderer* self, QMetaMethod* signal) {
+bool QSvgRenderer_QBaseIsSignalConnected(const QSvgRenderer* self, const QMetaMethod* signal) {
     auto* vqsvgrenderer = const_cast<VirtualQSvgRenderer*>(dynamic_cast<const VirtualQSvgRenderer*>(self));
     if (vqsvgrenderer && vqsvgrenderer->isVirtualQSvgRenderer) {
         vqsvgrenderer->setQSvgRenderer_IsSignalConnected_IsBase(true);

@@ -60,7 +60,7 @@
 #include "libqtablewidget.hpp"
 #include "libqtablewidget.hxx"
 
-QTableWidgetSelectionRange* QTableWidgetSelectionRange_new(QTableWidgetSelectionRange* other) {
+QTableWidgetSelectionRange* QTableWidgetSelectionRange_new(const QTableWidgetSelectionRange* other) {
     return new QTableWidgetSelectionRange(*other);
 }
 
@@ -116,17 +116,17 @@ QTableWidgetItem* QTableWidgetItem_new() {
     return new VirtualQTableWidgetItem();
 }
 
-QTableWidgetItem* QTableWidgetItem_new2(libqt_string text) {
+QTableWidgetItem* QTableWidgetItem_new2(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQTableWidgetItem(text_QString);
 }
 
-QTableWidgetItem* QTableWidgetItem_new3(QIcon* icon, libqt_string text) {
+QTableWidgetItem* QTableWidgetItem_new3(const QIcon* icon, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQTableWidgetItem(*icon, text_QString);
 }
 
-QTableWidgetItem* QTableWidgetItem_new4(QTableWidgetItem* other) {
+QTableWidgetItem* QTableWidgetItem_new4(const QTableWidgetItem* other) {
     return new VirtualQTableWidgetItem(*other);
 }
 
@@ -134,12 +134,12 @@ QTableWidgetItem* QTableWidgetItem_new5(int typeVal) {
     return new VirtualQTableWidgetItem(static_cast<int>(typeVal));
 }
 
-QTableWidgetItem* QTableWidgetItem_new6(libqt_string text, int typeVal) {
+QTableWidgetItem* QTableWidgetItem_new6(const libqt_string text, int typeVal) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQTableWidgetItem(text_QString, static_cast<int>(typeVal));
 }
 
-QTableWidgetItem* QTableWidgetItem_new7(QIcon* icon, libqt_string text, int typeVal) {
+QTableWidgetItem* QTableWidgetItem_new7(const QIcon* icon, const libqt_string text, int typeVal) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQTableWidgetItem(*icon, text_QString, static_cast<int>(typeVal));
 }
@@ -184,7 +184,7 @@ libqt_string QTableWidgetItem_Text(const QTableWidgetItem* self) {
     return _str;
 }
 
-void QTableWidgetItem_SetText(QTableWidgetItem* self, libqt_string text) {
+void QTableWidgetItem_SetText(QTableWidgetItem* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setText(text_QString);
 }
@@ -193,7 +193,7 @@ QIcon* QTableWidgetItem_Icon(const QTableWidgetItem* self) {
     return new QIcon(self->icon());
 }
 
-void QTableWidgetItem_SetIcon(QTableWidgetItem* self, QIcon* icon) {
+void QTableWidgetItem_SetIcon(QTableWidgetItem* self, const QIcon* icon) {
     self->setIcon(*icon);
 }
 
@@ -209,7 +209,7 @@ libqt_string QTableWidgetItem_StatusTip(const QTableWidgetItem* self) {
     return _str;
 }
 
-void QTableWidgetItem_SetStatusTip(QTableWidgetItem* self, libqt_string statusTip) {
+void QTableWidgetItem_SetStatusTip(QTableWidgetItem* self, const libqt_string statusTip) {
     QString statusTip_QString = QString::fromUtf8(statusTip.data, statusTip.len);
     self->setStatusTip(statusTip_QString);
 }
@@ -226,7 +226,7 @@ libqt_string QTableWidgetItem_ToolTip(const QTableWidgetItem* self) {
     return _str;
 }
 
-void QTableWidgetItem_SetToolTip(QTableWidgetItem* self, libqt_string toolTip) {
+void QTableWidgetItem_SetToolTip(QTableWidgetItem* self, const libqt_string toolTip) {
     QString toolTip_QString = QString::fromUtf8(toolTip.data, toolTip.len);
     self->setToolTip(toolTip_QString);
 }
@@ -243,7 +243,7 @@ libqt_string QTableWidgetItem_WhatsThis(const QTableWidgetItem* self) {
     return _str;
 }
 
-void QTableWidgetItem_SetWhatsThis(QTableWidgetItem* self, libqt_string whatsThis) {
+void QTableWidgetItem_SetWhatsThis(QTableWidgetItem* self, const libqt_string whatsThis) {
     QString whatsThis_QString = QString::fromUtf8(whatsThis.data, whatsThis.len);
     self->setWhatsThis(whatsThis_QString);
 }
@@ -252,7 +252,7 @@ QFont* QTableWidgetItem_Font(const QTableWidgetItem* self) {
     return new QFont(self->font());
 }
 
-void QTableWidgetItem_SetFont(QTableWidgetItem* self, QFont* font) {
+void QTableWidgetItem_SetFont(QTableWidgetItem* self, const QFont* font) {
     self->setFont(*font);
 }
 
@@ -276,7 +276,7 @@ QBrush* QTableWidgetItem_Background(const QTableWidgetItem* self) {
     return new QBrush(self->background());
 }
 
-void QTableWidgetItem_SetBackground(QTableWidgetItem* self, QBrush* brush) {
+void QTableWidgetItem_SetBackground(QTableWidgetItem* self, const QBrush* brush) {
     self->setBackground(*brush);
 }
 
@@ -284,7 +284,7 @@ QBrush* QTableWidgetItem_Foreground(const QTableWidgetItem* self) {
     return new QBrush(self->foreground());
 }
 
-void QTableWidgetItem_SetForeground(QTableWidgetItem* self, QBrush* brush) {
+void QTableWidgetItem_SetForeground(QTableWidgetItem* self, const QBrush* brush) {
     self->setForeground(*brush);
 }
 
@@ -300,11 +300,11 @@ QSize* QTableWidgetItem_SizeHint(const QTableWidgetItem* self) {
     return new QSize(self->sizeHint());
 }
 
-void QTableWidgetItem_SetSizeHint(QTableWidgetItem* self, QSize* size) {
+void QTableWidgetItem_SetSizeHint(QTableWidgetItem* self, const QSize* size) {
     self->setSizeHint(*size);
 }
 
-void QTableWidgetItem_OperatorAssign(QTableWidgetItem* self, QTableWidgetItem* other) {
+void QTableWidgetItem_OperatorAssign(QTableWidgetItem* self, const QTableWidgetItem* other) {
     self->operator=(*other);
 }
 
@@ -371,7 +371,7 @@ void QTableWidgetItem_OnData(const QTableWidgetItem* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTableWidgetItem_SetData(QTableWidgetItem* self, int role, QVariant* value) {
+void QTableWidgetItem_SetData(QTableWidgetItem* self, int role, const QVariant* value) {
     auto* vqtablewidgetitem = dynamic_cast<VirtualQTableWidgetItem*>(self);
     if (vqtablewidgetitem && vqtablewidgetitem->isVirtualQTableWidgetItem) {
         vqtablewidgetitem->setData(static_cast<int>(role), *value);
@@ -381,7 +381,7 @@ void QTableWidgetItem_SetData(QTableWidgetItem* self, int role, QVariant* value)
 }
 
 // Base class handler implementation
-void QTableWidgetItem_QBaseSetData(QTableWidgetItem* self, int role, QVariant* value) {
+void QTableWidgetItem_QBaseSetData(QTableWidgetItem* self, int role, const QVariant* value) {
     auto* vqtablewidgetitem = dynamic_cast<VirtualQTableWidgetItem*>(self);
     if (vqtablewidgetitem && vqtablewidgetitem->isVirtualQTableWidgetItem) {
         vqtablewidgetitem->setQTableWidgetItem_SetData_IsBase(true);
@@ -400,7 +400,7 @@ void QTableWidgetItem_OnSetData(QTableWidgetItem* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTableWidgetItem_OperatorLesser(const QTableWidgetItem* self, QTableWidgetItem* other) {
+bool QTableWidgetItem_OperatorLesser(const QTableWidgetItem* self, const QTableWidgetItem* other) {
     auto* vqtablewidgetitem = const_cast<VirtualQTableWidgetItem*>(dynamic_cast<const VirtualQTableWidgetItem*>(self));
     if (vqtablewidgetitem && vqtablewidgetitem->isVirtualQTableWidgetItem) {
         return vqtablewidgetitem->operator<(*other);
@@ -410,7 +410,7 @@ bool QTableWidgetItem_OperatorLesser(const QTableWidgetItem* self, QTableWidgetI
 }
 
 // Base class handler implementation
-bool QTableWidgetItem_QBaseOperatorLesser(const QTableWidgetItem* self, QTableWidgetItem* other) {
+bool QTableWidgetItem_QBaseOperatorLesser(const QTableWidgetItem* self, const QTableWidgetItem* other) {
     auto* vqtablewidgetitem = const_cast<VirtualQTableWidgetItem*>(dynamic_cast<const VirtualQTableWidgetItem*>(self));
     if (vqtablewidgetitem && vqtablewidgetitem->isVirtualQTableWidgetItem) {
         vqtablewidgetitem->setQTableWidgetItem_OperatorLesser_IsBase(true);
@@ -570,11 +570,11 @@ int QTableWidget_ColumnCount(const QTableWidget* self) {
     return self->columnCount();
 }
 
-int QTableWidget_Row(const QTableWidget* self, QTableWidgetItem* item) {
+int QTableWidget_Row(const QTableWidget* self, const QTableWidgetItem* item) {
     return self->row(item);
 }
 
-int QTableWidget_Column(const QTableWidget* self, QTableWidgetItem* item) {
+int QTableWidget_Column(const QTableWidget* self, const QTableWidgetItem* item) {
     return self->column(item);
 }
 
@@ -590,24 +590,24 @@ QTableWidgetItem* QTableWidget_TakeItem(QTableWidget* self, int row, int column)
     return self->takeItem(static_cast<int>(row), static_cast<int>(column));
 }
 
-libqt_list /* of QTableWidgetItem* */ QTableWidget_Items(const QTableWidget* self, QMimeData* data) {
+libqt_list /* of QTableWidgetItem* */ QTableWidget_Items(const QTableWidget* self, const QMimeData* data) {
     QList<QTableWidgetItem*> _ret = self->items(data);
     // Convert QList<> from C++ memory to manually-managed C memory
-    QTableWidgetItem** _arr = static_cast<QTableWidgetItem**>(malloc(sizeof(QTableWidgetItem*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QTableWidgetItem** _arr = static_cast<QTableWidgetItem**>(malloc(sizeof(QTableWidgetItem*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-QModelIndex* QTableWidget_IndexFromItem(const QTableWidget* self, QTableWidgetItem* item) {
+QModelIndex* QTableWidget_IndexFromItem(const QTableWidget* self, const QTableWidgetItem* item) {
     return new QModelIndex(self->indexFromItem(item));
 }
 
-QTableWidgetItem* QTableWidget_ItemFromIndex(const QTableWidget* self, QModelIndex* index) {
+QTableWidgetItem* QTableWidget_ItemFromIndex(const QTableWidget* self, const QModelIndex* index) {
     return self->itemFromIndex(*index);
 }
 
@@ -635,8 +635,8 @@ QTableWidgetItem* QTableWidget_TakeHorizontalHeaderItem(QTableWidget* self, int 
     return self->takeHorizontalHeaderItem(static_cast<int>(column));
 }
 
-void QTableWidget_SetVerticalHeaderLabels(QTableWidget* self, libqt_list /* of libqt_string */ labels) {
-    QStringList labels_QList;
+void QTableWidget_SetVerticalHeaderLabels(QTableWidget* self, const libqt_list /* of libqt_string */ labels) {
+    QList<QString> labels_QList;
     labels_QList.reserve(labels.len);
     libqt_string* labels_arr = static_cast<libqt_string*>(labels.data.ptr);
     for (size_t i = 0; i < labels.len; ++i) {
@@ -646,8 +646,8 @@ void QTableWidget_SetVerticalHeaderLabels(QTableWidget* self, libqt_list /* of l
     self->setVerticalHeaderLabels(labels_QList);
 }
 
-void QTableWidget_SetHorizontalHeaderLabels(QTableWidget* self, libqt_list /* of libqt_string */ labels) {
-    QStringList labels_QList;
+void QTableWidget_SetHorizontalHeaderLabels(QTableWidget* self, const libqt_list /* of libqt_string */ labels) {
+    QList<QString> labels_QList;
     labels_QList.reserve(labels.len);
     libqt_string* labels_arr = static_cast<libqt_string*>(labels.data.ptr);
     for (size_t i = 0; i < labels.len; ++i) {
@@ -725,19 +725,19 @@ void QTableWidget_RemoveCellWidget(QTableWidget* self, int row, int column) {
     self->removeCellWidget(static_cast<int>(row), static_cast<int>(column));
 }
 
-void QTableWidget_SetRangeSelected(QTableWidget* self, QTableWidgetSelectionRange* range, bool selectVal) {
+void QTableWidget_SetRangeSelected(QTableWidget* self, const QTableWidgetSelectionRange* range, bool selectVal) {
     self->setRangeSelected(*range, selectVal);
 }
 
 libqt_list /* of QTableWidgetSelectionRange* */ QTableWidget_SelectedRanges(const QTableWidget* self) {
     QList<QTableWidgetSelectionRange> _ret = self->selectedRanges();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QTableWidgetSelectionRange** _arr = static_cast<QTableWidgetSelectionRange**>(malloc(sizeof(QTableWidgetSelectionRange*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QTableWidgetSelectionRange** _arr = static_cast<QTableWidgetSelectionRange**>(malloc(sizeof(QTableWidgetSelectionRange*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QTableWidgetSelectionRange(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -745,26 +745,26 @@ libqt_list /* of QTableWidgetSelectionRange* */ QTableWidget_SelectedRanges(cons
 libqt_list /* of QTableWidgetItem* */ QTableWidget_SelectedItems(const QTableWidget* self) {
     QList<QTableWidgetItem*> _ret = self->selectedItems();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QTableWidgetItem** _arr = static_cast<QTableWidgetItem**>(malloc(sizeof(QTableWidgetItem*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QTableWidgetItem** _arr = static_cast<QTableWidgetItem**>(malloc(sizeof(QTableWidgetItem*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-libqt_list /* of QTableWidgetItem* */ QTableWidget_FindItems(const QTableWidget* self, libqt_string text, int flags) {
+libqt_list /* of QTableWidgetItem* */ QTableWidget_FindItems(const QTableWidget* self, const libqt_string text, int flags) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QList<QTableWidgetItem*> _ret = self->findItems(text_QString, static_cast<Qt::MatchFlags>(flags));
     // Convert QList<> from C++ memory to manually-managed C memory
-    QTableWidgetItem** _arr = static_cast<QTableWidgetItem**>(malloc(sizeof(QTableWidgetItem*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QTableWidgetItem** _arr = static_cast<QTableWidgetItem**>(malloc(sizeof(QTableWidgetItem*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -777,7 +777,7 @@ int QTableWidget_VisualColumn(const QTableWidget* self, int logicalColumn) {
     return self->visualColumn(static_cast<int>(logicalColumn));
 }
 
-QTableWidgetItem* QTableWidget_ItemAt(const QTableWidget* self, QPoint* p) {
+QTableWidgetItem* QTableWidget_ItemAt(const QTableWidget* self, const QPoint* p) {
     return self->itemAt(*p);
 }
 
@@ -785,7 +785,7 @@ QTableWidgetItem* QTableWidget_ItemAt2(const QTableWidget* self, int x, int y) {
     return self->itemAt(static_cast<int>(x), static_cast<int>(y));
 }
 
-QRect* QTableWidget_VisualItemRect(const QTableWidget* self, QTableWidgetItem* item) {
+QRect* QTableWidget_VisualItemRect(const QTableWidget* self, const QTableWidgetItem* item) {
     return new QRect(self->visualItemRect(item));
 }
 
@@ -793,11 +793,11 @@ QTableWidgetItem* QTableWidget_ItemPrototype(const QTableWidget* self) {
     return (QTableWidgetItem*)self->itemPrototype();
 }
 
-void QTableWidget_SetItemPrototype(QTableWidget* self, QTableWidgetItem* item) {
+void QTableWidget_SetItemPrototype(QTableWidget* self, const QTableWidgetItem* item) {
     self->setItemPrototype(item);
 }
 
-void QTableWidget_ScrollToItem(QTableWidget* self, QTableWidgetItem* item) {
+void QTableWidget_ScrollToItem(QTableWidget* self, const QTableWidgetItem* item) {
     self->scrollToItem(item);
 }
 
@@ -1042,7 +1042,7 @@ void QTableWidget_SortItems2(QTableWidget* self, int column, int order) {
     self->sortItems(static_cast<int>(column), static_cast<Qt::SortOrder>(order));
 }
 
-void QTableWidget_ScrollToItem2(QTableWidget* self, QTableWidgetItem* item, int hint) {
+void QTableWidget_ScrollToItem2(QTableWidget* self, const QTableWidgetItem* item, int hint) {
     self->scrollToItem(item, static_cast<QAbstractItemView::ScrollHint>(hint));
 }
 
@@ -1079,10 +1079,10 @@ void QTableWidget_OnEvent(QTableWidget* self, intptr_t slot) {
 libqt_list /* of libqt_string */ QTableWidget_MimeTypes(const QTableWidget* self) {
     auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
-        QStringList _ret = vqtablewidget->mimeTypes();
+        QList<QString> _ret = vqtablewidget->mimeTypes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -1094,14 +1094,14 @@ libqt_list /* of libqt_string */ QTableWidget_MimeTypes(const QTableWidget* self
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = ((VirtualQTableWidget*)self)->mimeTypes();
+        QList<QString> _ret = ((VirtualQTableWidget*)self)->mimeTypes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -1113,7 +1113,7 @@ libqt_list /* of libqt_string */ QTableWidget_MimeTypes(const QTableWidget* self
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -1124,10 +1124,10 @@ libqt_list /* of libqt_string */ QTableWidget_QBaseMimeTypes(const QTableWidget*
     auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_MimeTypes_IsBase(true);
-        QStringList _ret = vqtablewidget->mimeTypes();
+        QList<QString> _ret = vqtablewidget->mimeTypes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -1139,14 +1139,14 @@ libqt_list /* of libqt_string */ QTableWidget_QBaseMimeTypes(const QTableWidget*
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = ((VirtualQTableWidget*)self)->mimeTypes();
+        QList<QString> _ret = ((VirtualQTableWidget*)self)->mimeTypes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -1158,7 +1158,7 @@ libqt_list /* of libqt_string */ QTableWidget_QBaseMimeTypes(const QTableWidget*
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -1173,7 +1173,7 @@ void QTableWidget_OnMimeTypes(const QTableWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QMimeData* QTableWidget_MimeData(const QTableWidget* self, libqt_list /* of QTableWidgetItem* */ items) {
+QMimeData* QTableWidget_MimeData(const QTableWidget* self, const libqt_list /* of QTableWidgetItem* */ items) {
     auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
     QList<QTableWidgetItem*> items_QList;
     items_QList.reserve(items.len);
@@ -1189,7 +1189,7 @@ QMimeData* QTableWidget_MimeData(const QTableWidget* self, libqt_list /* of QTab
 }
 
 // Base class handler implementation
-QMimeData* QTableWidget_QBaseMimeData(const QTableWidget* self, libqt_list /* of QTableWidgetItem* */ items) {
+QMimeData* QTableWidget_QBaseMimeData(const QTableWidget* self, const libqt_list /* of QTableWidgetItem* */ items) {
     auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
     QList<QTableWidgetItem*> items_QList;
     items_QList.reserve(items.len);
@@ -1214,7 +1214,7 @@ void QTableWidget_OnMimeData(const QTableWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTableWidget_DropMimeData(QTableWidget* self, int row, int column, QMimeData* data, int action) {
+bool QTableWidget_DropMimeData(QTableWidget* self, int row, int column, const QMimeData* data, int action) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         return vqtablewidget->dropMimeData(static_cast<int>(row), static_cast<int>(column), data, static_cast<Qt::DropAction>(action));
@@ -1224,7 +1224,7 @@ bool QTableWidget_DropMimeData(QTableWidget* self, int row, int column, QMimeDat
 }
 
 // Base class handler implementation
-bool QTableWidget_QBaseDropMimeData(QTableWidget* self, int row, int column, QMimeData* data, int action) {
+bool QTableWidget_QBaseDropMimeData(QTableWidget* self, int row, int column, const QMimeData* data, int action) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_DropMimeData_IsBase(true);
@@ -1301,7 +1301,7 @@ void QTableWidget_OnDropEvent(QTableWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTableWidget_SetRootIndex(QTableWidget* self, QModelIndex* index) {
+void QTableWidget_SetRootIndex(QTableWidget* self, const QModelIndex* index) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setRootIndex(*index);
@@ -1311,7 +1311,7 @@ void QTableWidget_SetRootIndex(QTableWidget* self, QModelIndex* index) {
 }
 
 // Base class handler implementation
-void QTableWidget_QBaseSetRootIndex(QTableWidget* self, QModelIndex* index) {
+void QTableWidget_QBaseSetRootIndex(QTableWidget* self, const QModelIndex* index) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_SetRootIndex_IsBase(true);
@@ -1388,7 +1388,7 @@ void QTableWidget_OnDoItemsLayout(QTableWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QRect* QTableWidget_VisualRect(const QTableWidget* self, QModelIndex* index) {
+QRect* QTableWidget_VisualRect(const QTableWidget* self, const QModelIndex* index) {
     auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         return new QRect(vqtablewidget->visualRect(*index));
@@ -1398,7 +1398,7 @@ QRect* QTableWidget_VisualRect(const QTableWidget* self, QModelIndex* index) {
 }
 
 // Base class handler implementation
-QRect* QTableWidget_QBaseVisualRect(const QTableWidget* self, QModelIndex* index) {
+QRect* QTableWidget_QBaseVisualRect(const QTableWidget* self, const QModelIndex* index) {
     auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_VisualRect_IsBase(true);
@@ -1417,7 +1417,7 @@ void QTableWidget_OnVisualRect(const QTableWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTableWidget_ScrollTo(QTableWidget* self, QModelIndex* index, int hint) {
+void QTableWidget_ScrollTo(QTableWidget* self, const QModelIndex* index, int hint) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->scrollTo(*index, static_cast<QAbstractItemView::ScrollHint>(hint));
@@ -1427,7 +1427,7 @@ void QTableWidget_ScrollTo(QTableWidget* self, QModelIndex* index, int hint) {
 }
 
 // Base class handler implementation
-void QTableWidget_QBaseScrollTo(QTableWidget* self, QModelIndex* index, int hint) {
+void QTableWidget_QBaseScrollTo(QTableWidget* self, const QModelIndex* index, int hint) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_ScrollTo_IsBase(true);
@@ -1446,7 +1446,7 @@ void QTableWidget_OnScrollTo(QTableWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QModelIndex* QTableWidget_IndexAt(const QTableWidget* self, QPoint* p) {
+QModelIndex* QTableWidget_IndexAt(const QTableWidget* self, const QPoint* p) {
     auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         return new QModelIndex(vqtablewidget->indexAt(*p));
@@ -1456,7 +1456,7 @@ QModelIndex* QTableWidget_IndexAt(const QTableWidget* self, QPoint* p) {
 }
 
 // Base class handler implementation
-QModelIndex* QTableWidget_QBaseIndexAt(const QTableWidget* self, QPoint* p) {
+QModelIndex* QTableWidget_QBaseIndexAt(const QTableWidget* self, const QPoint* p) {
     auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_IndexAt_IsBase(true);
@@ -1676,7 +1676,7 @@ void QTableWidget_OnMoveCursor(QTableWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTableWidget_SetSelection(QTableWidget* self, QRect* rect, int command) {
+void QTableWidget_SetSelection(QTableWidget* self, const QRect* rect, int command) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setSelection(*rect, static_cast<QItemSelectionModel::SelectionFlags>(command));
@@ -1686,7 +1686,7 @@ void QTableWidget_SetSelection(QTableWidget* self, QRect* rect, int command) {
 }
 
 // Base class handler implementation
-void QTableWidget_QBaseSetSelection(QTableWidget* self, QRect* rect, int command) {
+void QTableWidget_QBaseSetSelection(QTableWidget* self, const QRect* rect, int command) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_SetSelection_IsBase(true);
@@ -1705,7 +1705,7 @@ void QTableWidget_OnSetSelection(QTableWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QRegion* QTableWidget_VisualRegionForSelection(const QTableWidget* self, QItemSelection* selection) {
+QRegion* QTableWidget_VisualRegionForSelection(const QTableWidget* self, const QItemSelection* selection) {
     auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         return new QRegion(vqtablewidget->visualRegionForSelection(*selection));
@@ -1714,7 +1714,7 @@ QRegion* QTableWidget_VisualRegionForSelection(const QTableWidget* self, QItemSe
 }
 
 // Base class handler implementation
-QRegion* QTableWidget_QBaseVisualRegionForSelection(const QTableWidget* self, QItemSelection* selection) {
+QRegion* QTableWidget_QBaseVisualRegionForSelection(const QTableWidget* self, const QItemSelection* selection) {
     auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_VisualRegionForSelection_IsBase(true);
@@ -1735,25 +1735,25 @@ void QTableWidget_OnVisualRegionForSelection(const QTableWidget* self, intptr_t 
 libqt_list /* of QModelIndex* */ QTableWidget_SelectedIndexes(const QTableWidget* self) {
     auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
-        QModelIndexList _ret = vqtablewidget->selectedIndexes();
+        QList<QModelIndex> _ret = vqtablewidget->selectedIndexes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QModelIndexList _ret = ((VirtualQTableWidget*)self)->selectedIndexes();
+        QList<QModelIndex> _ret = ((VirtualQTableWidget*)self)->selectedIndexes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -1764,25 +1764,25 @@ libqt_list /* of QModelIndex* */ QTableWidget_QBaseSelectedIndexes(const QTableW
     auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_SelectedIndexes_IsBase(true);
-        QModelIndexList _ret = vqtablewidget->selectedIndexes();
+        QList<QModelIndex> _ret = vqtablewidget->selectedIndexes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QModelIndexList _ret = ((VirtualQTableWidget*)self)->selectedIndexes();
+        QList<QModelIndex> _ret = ((VirtualQTableWidget*)self)->selectedIndexes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -1969,7 +1969,7 @@ void QTableWidget_OnHorizontalScrollbarAction(QTableWidget* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-bool QTableWidget_IsIndexHidden(const QTableWidget* self, QModelIndex* index) {
+bool QTableWidget_IsIndexHidden(const QTableWidget* self, const QModelIndex* index) {
     auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         return vqtablewidget->isIndexHidden(*index);
@@ -1979,7 +1979,7 @@ bool QTableWidget_IsIndexHidden(const QTableWidget* self, QModelIndex* index) {
 }
 
 // Base class handler implementation
-bool QTableWidget_QBaseIsIndexHidden(const QTableWidget* self, QModelIndex* index) {
+bool QTableWidget_QBaseIsIndexHidden(const QTableWidget* self, const QModelIndex* index) {
     auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_IsIndexHidden_IsBase(true);
@@ -1998,7 +1998,7 @@ void QTableWidget_OnIsIndexHidden(const QTableWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTableWidget_SelectionChanged(QTableWidget* self, QItemSelection* selected, QItemSelection* deselected) {
+void QTableWidget_SelectionChanged(QTableWidget* self, const QItemSelection* selected, const QItemSelection* deselected) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->selectionChanged(*selected, *deselected);
@@ -2008,7 +2008,7 @@ void QTableWidget_SelectionChanged(QTableWidget* self, QItemSelection* selected,
 }
 
 // Base class handler implementation
-void QTableWidget_QBaseSelectionChanged(QTableWidget* self, QItemSelection* selected, QItemSelection* deselected) {
+void QTableWidget_QBaseSelectionChanged(QTableWidget* self, const QItemSelection* selected, const QItemSelection* deselected) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_SelectionChanged_IsBase(true);
@@ -2027,7 +2027,7 @@ void QTableWidget_OnSelectionChanged(QTableWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTableWidget_CurrentChanged(QTableWidget* self, QModelIndex* current, QModelIndex* previous) {
+void QTableWidget_CurrentChanged(QTableWidget* self, const QModelIndex* current, const QModelIndex* previous) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->currentChanged(*current, *previous);
@@ -2037,7 +2037,7 @@ void QTableWidget_CurrentChanged(QTableWidget* self, QModelIndex* current, QMode
 }
 
 // Base class handler implementation
-void QTableWidget_QBaseCurrentChanged(QTableWidget* self, QModelIndex* current, QModelIndex* previous) {
+void QTableWidget_QBaseCurrentChanged(QTableWidget* self, const QModelIndex* current, const QModelIndex* previous) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_CurrentChanged_IsBase(true);
@@ -2056,7 +2056,7 @@ void QTableWidget_OnCurrentChanged(QTableWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTableWidget_KeyboardSearch(QTableWidget* self, libqt_string search) {
+void QTableWidget_KeyboardSearch(QTableWidget* self, const libqt_string search) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     QString search_QString = QString::fromUtf8(search.data, search.len);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
@@ -2067,7 +2067,7 @@ void QTableWidget_KeyboardSearch(QTableWidget* self, libqt_string search) {
 }
 
 // Base class handler implementation
-void QTableWidget_QBaseKeyboardSearch(QTableWidget* self, libqt_string search) {
+void QTableWidget_QBaseKeyboardSearch(QTableWidget* self, const libqt_string search) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     QString search_QString = QString::fromUtf8(search.data, search.len);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
@@ -2087,7 +2087,7 @@ void QTableWidget_OnKeyboardSearch(QTableWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QAbstractItemDelegate* QTableWidget_ItemDelegateForIndex(const QTableWidget* self, QModelIndex* index) {
+QAbstractItemDelegate* QTableWidget_ItemDelegateForIndex(const QTableWidget* self, const QModelIndex* index) {
     auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         return vqtablewidget->itemDelegateForIndex(*index);
@@ -2097,7 +2097,7 @@ QAbstractItemDelegate* QTableWidget_ItemDelegateForIndex(const QTableWidget* sel
 }
 
 // Base class handler implementation
-QAbstractItemDelegate* QTableWidget_QBaseItemDelegateForIndex(const QTableWidget* self, QModelIndex* index) {
+QAbstractItemDelegate* QTableWidget_QBaseItemDelegateForIndex(const QTableWidget* self, const QModelIndex* index) {
     auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_ItemDelegateForIndex_IsBase(true);
@@ -2203,7 +2203,7 @@ void QTableWidget_OnSelectAll(QTableWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTableWidget_DataChanged(QTableWidget* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles) {
+void QTableWidget_DataChanged(QTableWidget* self, const QModelIndex* topLeft, const QModelIndex* bottomRight, const libqt_list /* of int */ roles) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     QList<int> roles_QList;
     roles_QList.reserve(roles.len);
@@ -2219,7 +2219,7 @@ void QTableWidget_DataChanged(QTableWidget* self, QModelIndex* topLeft, QModelIn
 }
 
 // Base class handler implementation
-void QTableWidget_QBaseDataChanged(QTableWidget* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles) {
+void QTableWidget_QBaseDataChanged(QTableWidget* self, const QModelIndex* topLeft, const QModelIndex* bottomRight, const libqt_list /* of int */ roles) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     QList<int> roles_QList;
     roles_QList.reserve(roles.len);
@@ -2244,7 +2244,7 @@ void QTableWidget_OnDataChanged(QTableWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTableWidget_RowsInserted(QTableWidget* self, QModelIndex* parent, int start, int end) {
+void QTableWidget_RowsInserted(QTableWidget* self, const QModelIndex* parent, int start, int end) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->rowsInserted(*parent, static_cast<int>(start), static_cast<int>(end));
@@ -2254,7 +2254,7 @@ void QTableWidget_RowsInserted(QTableWidget* self, QModelIndex* parent, int star
 }
 
 // Base class handler implementation
-void QTableWidget_QBaseRowsInserted(QTableWidget* self, QModelIndex* parent, int start, int end) {
+void QTableWidget_QBaseRowsInserted(QTableWidget* self, const QModelIndex* parent, int start, int end) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_RowsInserted_IsBase(true);
@@ -2273,7 +2273,7 @@ void QTableWidget_OnRowsInserted(QTableWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTableWidget_RowsAboutToBeRemoved(QTableWidget* self, QModelIndex* parent, int start, int end) {
+void QTableWidget_RowsAboutToBeRemoved(QTableWidget* self, const QModelIndex* parent, int start, int end) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->rowsAboutToBeRemoved(*parent, static_cast<int>(start), static_cast<int>(end));
@@ -2283,7 +2283,7 @@ void QTableWidget_RowsAboutToBeRemoved(QTableWidget* self, QModelIndex* parent, 
 }
 
 // Base class handler implementation
-void QTableWidget_QBaseRowsAboutToBeRemoved(QTableWidget* self, QModelIndex* parent, int start, int end) {
+void QTableWidget_QBaseRowsAboutToBeRemoved(QTableWidget* self, const QModelIndex* parent, int start, int end) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_RowsAboutToBeRemoved_IsBase(true);
@@ -2505,7 +2505,7 @@ void QTableWidget_OnEditorDestroyed(QTableWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTableWidget_Edit2(QTableWidget* self, QModelIndex* index, int trigger, QEvent* event) {
+bool QTableWidget_Edit2(QTableWidget* self, const QModelIndex* index, int trigger, QEvent* event) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         return vqtablewidget->edit(*index, static_cast<QAbstractItemView::EditTrigger>(trigger), event);
@@ -2515,7 +2515,7 @@ bool QTableWidget_Edit2(QTableWidget* self, QModelIndex* index, int trigger, QEv
 }
 
 // Base class handler implementation
-bool QTableWidget_QBaseEdit2(QTableWidget* self, QModelIndex* index, int trigger, QEvent* event) {
+bool QTableWidget_QBaseEdit2(QTableWidget* self, const QModelIndex* index, int trigger, QEvent* event) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_Edit2_IsBase(true);
@@ -2534,7 +2534,7 @@ void QTableWidget_OnEdit2(QTableWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-int QTableWidget_SelectionCommand(const QTableWidget* self, QModelIndex* index, QEvent* event) {
+int QTableWidget_SelectionCommand(const QTableWidget* self, const QModelIndex* index, const QEvent* event) {
     auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         return static_cast<int>(vqtablewidget->selectionCommand(*index, event));
@@ -2544,7 +2544,7 @@ int QTableWidget_SelectionCommand(const QTableWidget* self, QModelIndex* index, 
 }
 
 // Base class handler implementation
-int QTableWidget_QBaseSelectionCommand(const QTableWidget* self, QModelIndex* index, QEvent* event) {
+int QTableWidget_QBaseSelectionCommand(const QTableWidget* self, const QModelIndex* index, const QEvent* event) {
     auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_SelectionCommand_IsBase(true);
@@ -3636,7 +3636,7 @@ void QTableWidget_OnHideEvent(QTableWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTableWidget_NativeEvent(QTableWidget* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QTableWidget_NativeEvent(QTableWidget* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
@@ -3647,7 +3647,7 @@ bool QTableWidget_NativeEvent(QTableWidget* self, libqt_string eventType, void* 
 }
 
 // Base class handler implementation
-bool QTableWidget_QBaseNativeEvent(QTableWidget* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QTableWidget_QBaseNativeEvent(QTableWidget* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
@@ -3841,7 +3841,7 @@ void QTableWidget_OnCustomEvent(QTableWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTableWidget_ConnectNotify(QTableWidget* self, QMetaMethod* signal) {
+void QTableWidget_ConnectNotify(QTableWidget* self, const QMetaMethod* signal) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->connectNotify(*signal);
@@ -3851,7 +3851,7 @@ void QTableWidget_ConnectNotify(QTableWidget* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTableWidget_QBaseConnectNotify(QTableWidget* self, QMetaMethod* signal) {
+void QTableWidget_QBaseConnectNotify(QTableWidget* self, const QMetaMethod* signal) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_ConnectNotify_IsBase(true);
@@ -3870,7 +3870,7 @@ void QTableWidget_OnConnectNotify(QTableWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTableWidget_DisconnectNotify(QTableWidget* self, QMetaMethod* signal) {
+void QTableWidget_DisconnectNotify(QTableWidget* self, const QMetaMethod* signal) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->disconnectNotify(*signal);
@@ -3880,7 +3880,7 @@ void QTableWidget_DisconnectNotify(QTableWidget* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTableWidget_QBaseDisconnectNotify(QTableWidget* self, QMetaMethod* signal) {
+void QTableWidget_QBaseDisconnectNotify(QTableWidget* self, const QMetaMethod* signal) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_DisconnectNotify_IsBase(true);
@@ -4189,7 +4189,7 @@ void QTableWidget_OnExecuteDelayedItemsLayout(QTableWidget* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-void QTableWidget_SetDirtyRegion(QTableWidget* self, QRegion* region) {
+void QTableWidget_SetDirtyRegion(QTableWidget* self, const QRegion* region) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setDirtyRegion(*region);
@@ -4199,7 +4199,7 @@ void QTableWidget_SetDirtyRegion(QTableWidget* self, QRegion* region) {
 }
 
 // Base class handler implementation
-void QTableWidget_QBaseSetDirtyRegion(QTableWidget* self, QRegion* region) {
+void QTableWidget_QBaseSetDirtyRegion(QTableWidget* self, const QRegion* region) {
     auto* vqtablewidget = dynamic_cast<VirtualQTableWidget*>(self);
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_SetDirtyRegion_IsBase(true);
@@ -4707,7 +4707,7 @@ void QTableWidget_OnReceivers(const QTableWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTableWidget_IsSignalConnected(const QTableWidget* self, QMetaMethod* signal) {
+bool QTableWidget_IsSignalConnected(const QTableWidget* self, const QMetaMethod* signal) {
     auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         return vqtablewidget->isSignalConnected(*signal);
@@ -4717,7 +4717,7 @@ bool QTableWidget_IsSignalConnected(const QTableWidget* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-bool QTableWidget_QBaseIsSignalConnected(const QTableWidget* self, QMetaMethod* signal) {
+bool QTableWidget_QBaseIsSignalConnected(const QTableWidget* self, const QMetaMethod* signal) {
     auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_IsSignalConnected_IsBase(true);
@@ -4732,6 +4732,35 @@ void QTableWidget_OnIsSignalConnected(const QTableWidget* self, intptr_t slot) {
     auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
     if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
         vqtablewidget->setQTableWidget_IsSignalConnected_Callback(reinterpret_cast<VirtualQTableWidget::QTableWidget_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QTableWidget_GetDecodedMetricF(const QTableWidget* self, int metricA, int metricB) {
+    auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
+    if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
+        return vqtablewidget->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQTableWidget*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QTableWidget_QBaseGetDecodedMetricF(const QTableWidget* self, int metricA, int metricB) {
+    auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
+    if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
+        vqtablewidget->setQTableWidget_GetDecodedMetricF_IsBase(true);
+        return vqtablewidget->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQTableWidget*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QTableWidget_OnGetDecodedMetricF(const QTableWidget* self, intptr_t slot) {
+    auto* vqtablewidget = const_cast<VirtualQTableWidget*>(dynamic_cast<const VirtualQTableWidget*>(self));
+    if (vqtablewidget && vqtablewidget->isVirtualQTableWidget) {
+        vqtablewidget->setQTableWidget_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQTableWidget::QTableWidget_GetDecodedMetricF_Callback>(slot));
     }
 }
 

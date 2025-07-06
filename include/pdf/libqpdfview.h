@@ -12,24 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqabstractscrollarea.h"
-#include "../libqevent.h"
-#include "../libqframe.h"
-#include "../libqmargins.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqpaintdevice.h"
-#include "../libqpaintengine.h"
-#include "../libqpainter.h"
-#include "libqpdfdocument.h"
-#include "libqpdfpagenavigator.h"
-#include "../libqpoint.h"
-#include "../libqsize.h"
-#include <string.h>
-#include "../libqstyleoption.h"
-#include "../libqvariant.h"
-#include "../libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qpdfview.html
 
 /// q_pdfview_new constructs a new QPdfView object.
@@ -77,6 +59,21 @@ void q_pdfview_set_document(void* self, void* document);
 ///
 /// ``` QPdfView* self ```
 QPdfDocument* q_pdfview_document(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#searchModel)
+///
+/// ``` QPdfView* self ```
+QPdfSearchModel* q_pdfview_search_model(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#setSearchModel)
+///
+/// ``` QPdfView* self, QPdfSearchModel* searchModel ```
+void q_pdfview_set_search_model(void* self, void* searchModel);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#currentSearchResultIndex)
+///
+/// ``` QPdfView* self ```
+int32_t q_pdfview_current_search_result_index(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#pageNavigator)
 ///
@@ -132,6 +129,11 @@ void q_pdfview_set_zoom_mode(void* self, int64_t mode);
 ///
 /// ``` QPdfView* self, double factor ```
 void q_pdfview_set_zoom_factor(void* self, double factor);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#setCurrentSearchResultIndex)
+///
+/// ``` QPdfView* self, int currentResult ```
+void q_pdfview_set_current_search_result_index(void* self, int currentResult);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#documentChanged)
 ///
@@ -193,6 +195,26 @@ void q_pdfview_document_margins_changed(void* self, void* documentMargins);
 /// ``` QPdfView* self, void (*slot)(QPdfView*, QMargins*) ```
 void q_pdfview_on_document_margins_changed(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#searchModelChanged)
+///
+/// ``` QPdfView* self, QPdfSearchModel* searchModel ```
+void q_pdfview_search_model_changed(void* self, void* searchModel);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#searchModelChanged)
+///
+/// ``` QPdfView* self, void (*slot)(QPdfView*, QPdfSearchModel*) ```
+void q_pdfview_on_search_model_changed(void* self, void (*slot)(void*, void*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#currentSearchResultIndexChanged)
+///
+/// ``` QPdfView* self, int currentResult ```
+void q_pdfview_current_search_result_index_changed(void* self, int currentResult);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#currentSearchResultIndexChanged)
+///
+/// ``` QPdfView* self, void (*slot)(QPdfView*, int) ```
+void q_pdfview_on_current_search_result_index_changed(void* self, void (*slot)(void*, int));
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#paintEvent)
 ///
 /// ``` QPdfView* self, QPaintEvent* event ```
@@ -249,6 +271,63 @@ void q_pdfview_on_scroll_contents_by(void* self, void (*slot)(void*, int, int));
 ///
 /// ``` QPdfView* self, int dx, int dy ```
 void q_pdfview_qbase_scroll_contents_by(void* self, int dx, int dy);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#mousePressEvent)
+///
+/// ``` QPdfView* self, QMouseEvent* event ```
+void q_pdfview_mouse_press_event(void* self, void* event);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#mousePressEvent)
+///
+/// Allows for overriding the related default method
+///
+/// ``` QPdfView* self, void (*slot)(QPdfView*, QMouseEvent*) ```
+void q_pdfview_on_mouse_press_event(void* self, void (*slot)(void*, void*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#mousePressEvent)
+///
+/// Base class method implementation
+///
+/// ``` QPdfView* self, QMouseEvent* event ```
+void q_pdfview_qbase_mouse_press_event(void* self, void* event);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#mouseMoveEvent)
+///
+/// ``` QPdfView* self, QMouseEvent* event ```
+void q_pdfview_mouse_move_event(void* self, void* event);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#mouseMoveEvent)
+///
+/// Allows for overriding the related default method
+///
+/// ``` QPdfView* self, void (*slot)(QPdfView*, QMouseEvent*) ```
+void q_pdfview_on_mouse_move_event(void* self, void (*slot)(void*, void*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#mouseMoveEvent)
+///
+/// Base class method implementation
+///
+/// ``` QPdfView* self, QMouseEvent* event ```
+void q_pdfview_qbase_mouse_move_event(void* self, void* event);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#mouseReleaseEvent)
+///
+/// ``` QPdfView* self, QMouseEvent* event ```
+void q_pdfview_mouse_release_event(void* self, void* event);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#mouseReleaseEvent)
+///
+/// Allows for overriding the related default method
+///
+/// ``` QPdfView* self, void (*slot)(QPdfView*, QMouseEvent*) ```
+void q_pdfview_on_mouse_release_event(void* self, void (*slot)(void*, void*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#mouseReleaseEvent)
+///
+/// Base class method implementation
+///
+/// ``` QPdfView* self, QMouseEvent* event ```
+void q_pdfview_qbase_mouse_release_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -2117,6 +2196,13 @@ QWidget* q_pdfview_child_at_with_q_point(void* self, void* p);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+///
+/// ``` QPdfView* self, QPointF* p ```
+QWidget* q_pdfview_child_at_with_q_point_f(void* self, void* p);
+
+/// Inherited from QWidget
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
 /// ``` QPdfView* self, enum Qt__WidgetAttribute param1 ```
@@ -2428,7 +2514,7 @@ QThread* q_pdfview_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QPdfView* self, QThread* thread ```
-void q_pdfview_move_to_thread(void* self, void* thread);
+bool q_pdfview_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -2443,6 +2529,13 @@ int32_t q_pdfview_start_timer(void* self, int interval);
 ///
 /// ``` QPdfView* self, int id ```
 void q_pdfview_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QPdfView* self, enum Qt__TimerId id ```
+void q_pdfview_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -2579,6 +2672,13 @@ void q_pdfview_delete_later(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QPdfView* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_pdfview_move_to_thread2(void* self, void* thread, void* param2);
+
+/// Inherited from QObject
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QPdfView* self, int interval, enum Qt__TimerType timerType ```
@@ -2695,6 +2795,13 @@ int32_t q_pdfview_depth(void* self);
 ///
 ///
 double q_pdfview_device_pixel_ratio_f_scale();
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_pdfview_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2860,60 +2967,6 @@ void q_pdfview_on_viewport_event(void* self, bool (*slot)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#mousePressEvent)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QPdfView* self, QMouseEvent* param1 ```
-void q_pdfview_mouse_press_event(void* self, void* param1);
-
-/// Inherited from QAbstractScrollArea
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#mousePressEvent)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QPdfView* self, QMouseEvent* param1 ```
-void q_pdfview_qbase_mouse_press_event(void* self, void* param1);
-
-/// Inherited from QAbstractScrollArea
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#mousePressEvent)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QPdfView* self, void (*slot)(QPdfView*, QMouseEvent*) ```
-void q_pdfview_on_mouse_press_event(void* self, void (*slot)(void*, void*));
-
-/// Inherited from QAbstractScrollArea
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#mouseReleaseEvent)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QPdfView* self, QMouseEvent* param1 ```
-void q_pdfview_mouse_release_event(void* self, void* param1);
-
-/// Inherited from QAbstractScrollArea
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#mouseReleaseEvent)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QPdfView* self, QMouseEvent* param1 ```
-void q_pdfview_qbase_mouse_release_event(void* self, void* param1);
-
-/// Inherited from QAbstractScrollArea
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#mouseReleaseEvent)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QPdfView* self, void (*slot)(QPdfView*, QMouseEvent*) ```
-void q_pdfview_on_mouse_release_event(void* self, void (*slot)(void*, void*));
-
-/// Inherited from QAbstractScrollArea
-///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#mouseDoubleClickEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
@@ -2938,33 +2991,6 @@ void q_pdfview_qbase_mouse_double_click_event(void* self, void* param1);
 ///
 /// ``` QPdfView* self, void (*slot)(QPdfView*, QMouseEvent*) ```
 void q_pdfview_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
-
-/// Inherited from QAbstractScrollArea
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#mouseMoveEvent)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QPdfView* self, QMouseEvent* param1 ```
-void q_pdfview_mouse_move_event(void* self, void* param1);
-
-/// Inherited from QAbstractScrollArea
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#mouseMoveEvent)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QPdfView* self, QMouseEvent* param1 ```
-void q_pdfview_qbase_mouse_move_event(void* self, void* param1);
-
-/// Inherited from QAbstractScrollArea
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#mouseMoveEvent)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QPdfView* self, void (*slot)(QPdfView*, QMouseEvent*) ```
-void q_pdfview_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4342,6 +4368,33 @@ bool q_pdfview_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// ``` QPdfView* self, bool (*slot)(QPdfView*, QMetaMethod*) ```
 void q_pdfview_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QPdfView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_pdfview_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QPdfView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_pdfview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QPdfView* self, double (*slot)(QPdfView*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
+void q_pdfview_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///

@@ -12,15 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqaudioengine.h"
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqquaternion.h"
-#include <string.h>
-#include "../libqurl.h"
-#include "../libqvectornd.h"
-
 /// https://doc.qt.io/qt-6/qspatialsound.html
 
 /// q_spatialsound_new constructs a new QSpatialSound object.
@@ -425,7 +416,7 @@ QThread* q_spatialsound_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QSpatialSound* self, QThread* thread ```
-void q_spatialsound_move_to_thread(void* self, void* thread);
+bool q_spatialsound_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -440,6 +431,13 @@ int32_t q_spatialsound_start_timer(void* self, int interval);
 ///
 /// ``` QSpatialSound* self, int id ```
 void q_spatialsound_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QSpatialSound* self, enum Qt__TimerId id ```
+void q_spatialsound_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -580,6 +578,13 @@ bool q_spatialsound_inherits(void* self, const char* classname);
 ///
 /// ``` QSpatialSound* self ```
 void q_spatialsound_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QSpatialSound* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_spatialsound_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

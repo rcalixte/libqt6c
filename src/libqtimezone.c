@@ -1,3 +1,4 @@
+#include "libqbytearrayview.hpp"
 #include "libqdatetime.hpp"
 #include "libqlocale.hpp"
 #include <string.h>
@@ -8,28 +9,32 @@ QTimeZone* q_timezone_new() {
     return QTimeZone_new();
 }
 
-QTimeZone* q_timezone_new2(const char* ianaId) {
-    return QTimeZone_new2(qstring(ianaId));
+QTimeZone* q_timezone_new2(int64_t spec) {
+    return QTimeZone_new2(spec);
 }
 
 QTimeZone* q_timezone_new3(int offsetSeconds) {
     return QTimeZone_new3(offsetSeconds);
 }
 
-QTimeZone* q_timezone_new4(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation) {
-    return QTimeZone_new4(qstring(zoneId), offsetSeconds, qstring(name), qstring(abbreviation));
+QTimeZone* q_timezone_new4(const char* ianaId) {
+    return QTimeZone_new4(qstring(ianaId));
 }
 
-QTimeZone* q_timezone_new5(void* other) {
-    return QTimeZone_new5((QTimeZone*)other);
+QTimeZone* q_timezone_new5(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation) {
+    return QTimeZone_new5(qstring(zoneId), offsetSeconds, qstring(name), qstring(abbreviation));
 }
 
-QTimeZone* q_timezone_new6(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, int64_t territory) {
-    return QTimeZone_new6(qstring(zoneId), offsetSeconds, qstring(name), qstring(abbreviation), territory);
+QTimeZone* q_timezone_new6(void* other) {
+    return QTimeZone_new6((QTimeZone*)other);
 }
 
-QTimeZone* q_timezone_new7(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, int64_t territory, const char* comment) {
-    return QTimeZone_new7(qstring(zoneId), offsetSeconds, qstring(name), qstring(abbreviation), territory, qstring(comment));
+QTimeZone* q_timezone_new7(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, int64_t territory) {
+    return QTimeZone_new7(qstring(zoneId), offsetSeconds, qstring(name), qstring(abbreviation), territory);
+}
+
+QTimeZone* q_timezone_new8(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, int64_t territory, const char* comment) {
+    return QTimeZone_new8(qstring(zoneId), offsetSeconds, qstring(name), qstring(abbreviation), territory, qstring(comment));
 }
 
 void q_timezone_operator_assign(void* self, void* other) {
@@ -42,6 +47,35 @@ void q_timezone_swap(void* self, void* other) {
 
 bool q_timezone_is_valid(void* self) {
     return QTimeZone_IsValid((QTimeZone*)self);
+}
+
+QTimeZone* q_timezone_from_seconds_ahead_of_utc(int offset) {
+    return QTimeZone_FromSecondsAheadOfUtc(offset);
+}
+
+int64_t q_timezone_time_spec(void* self) {
+    return QTimeZone_TimeSpec((QTimeZone*)self);
+}
+
+int32_t q_timezone_fixed_seconds_ahead_of_utc(void* self) {
+    return QTimeZone_FixedSecondsAheadOfUtc((QTimeZone*)self);
+}
+
+bool q_timezone_is_utc_or_fixed_offset(int64_t spec) {
+    return QTimeZone_IsUtcOrFixedOffset(spec);
+}
+
+bool q_timezone_is_utc_or_fixed_offset2(void* self) {
+    return QTimeZone_IsUtcOrFixedOffset2((QTimeZone*)self);
+}
+
+QTimeZone* q_timezone_as_backend_zone(void* self) {
+    return QTimeZone_AsBackendZone((QTimeZone*)self);
+}
+
+bool q_timezone_has_alternative_name(void* self, const char* alias) {
+    libqt_strview alias_strview = qstrview(alias);
+    return QTimeZone_HasAlternativeName((QTimeZone*)self, (QByteArrayView*)&alias_strview);
 }
 
 char* q_timezone_id(void* self) {
@@ -277,6 +311,10 @@ void q_timezone_delete(void* self) {
 
 QTimeZone__OffsetData* q_timezone__offsetdata_new(void* param1) {
     return QTimeZone__OffsetData_new((QTimeZone__OffsetData*)param1);
+}
+
+QTimeZone__OffsetData* q_timezone__offsetdata_new2() {
+    return QTimeZone__OffsetData_new2();
 }
 
 void q_timezone__offsetdata_operator_assign(void* self, void* param1) {

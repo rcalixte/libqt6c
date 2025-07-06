@@ -7,8 +7,16 @@ QCryptographicHash* q_cryptographichash_new(int64_t method) {
     return QCryptographicHash_new(method);
 }
 
+void q_cryptographichash_swap(void* self, void* other) {
+    QCryptographicHash_Swap((QCryptographicHash*)self, (QCryptographicHash*)other);
+}
+
 void q_cryptographichash_reset(void* self) {
     QCryptographicHash_Reset((QCryptographicHash*)self);
+}
+
+int64_t q_cryptographichash_algorithm(void* self) {
+    return QCryptographicHash_Algorithm((QCryptographicHash*)self);
 }
 
 void q_cryptographichash_add_data(void* self, const char* data, int64_t length) {
@@ -48,8 +56,50 @@ char* q_cryptographichash_hash(const char* data, int64_t method) {
     return _ret;
 }
 
+const char* q_cryptographichash_hash_into(libqt_list buffer, const char* data, int64_t method) {
+    libqt_strview data_strview = qstrview(data);
+    QByteArrayView* _view = QCryptographicHash_HashInto(buffer, (QByteArrayView*)&data_strview, method);
+    libqt_strview _ret = {
+        .ptr = QByteArrayView_Data(_view),
+        .len = QByteArrayView_Size(_view),
+    };
+    return _ret.ptr;
+}
+
+const char* q_cryptographichash_hash_into2(libqt_list buffer, const char* data, int64_t method) {
+    libqt_strview data_strview = qstrview(data);
+    QByteArrayView* _view = QCryptographicHash_HashInto2(buffer, (QByteArrayView*)&data_strview, method);
+    libqt_strview _ret = {
+        .ptr = QByteArrayView_Data(_view),
+        .len = QByteArrayView_Size(_view),
+    };
+    return _ret.ptr;
+}
+
+const char* q_cryptographichash_hash_into4(libqt_list buffer, libqt_list data, int64_t method) {
+    QByteArrayView* _view = QCryptographicHash_HashInto4(buffer, data, method);
+    libqt_strview _ret = {
+        .ptr = QByteArrayView_Data(_view),
+        .len = QByteArrayView_Size(_view),
+    };
+    return _ret.ptr;
+}
+
+const char* q_cryptographichash_hash_into5(libqt_list buffer, libqt_list data, int64_t method) {
+    QByteArrayView* _view = QCryptographicHash_HashInto5(buffer, data, method);
+    libqt_strview _ret = {
+        .ptr = QByteArrayView_Data(_view),
+        .len = QByteArrayView_Size(_view),
+    };
+    return _ret.ptr;
+}
+
 int32_t q_cryptographichash_hash_length(int64_t method) {
     return QCryptographicHash_HashLength(method);
+}
+
+bool q_cryptographichash_supports_algorithm(int64_t method) {
+    return QCryptographicHash_SupportsAlgorithm(method);
 }
 
 void q_cryptographichash_delete(void* self) {

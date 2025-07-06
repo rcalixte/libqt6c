@@ -91,13 +91,13 @@ libqt_string QBuffer_Buffer2(const QBuffer* self) {
     return _str;
 }
 
-void QBuffer_SetData(QBuffer* self, libqt_string data) {
+void QBuffer_SetData(QBuffer* self, const libqt_string data) {
     QByteArray data_QByteArray(data.data, data.len);
     self->setData(data_QByteArray);
 }
 
-void QBuffer_SetData2(QBuffer* self, const char* data, int lenVal) {
-    self->setData(data, static_cast<int>(lenVal));
+void QBuffer_SetData2(QBuffer* self, const char* data, ptrdiff_t lenVal) {
+    self->setData(data, (qsizetype)(lenVal));
 }
 
 libqt_string QBuffer_Data(const QBuffer* self) {
@@ -138,9 +138,9 @@ libqt_string QBuffer_Tr3(const char* s, const char* c, int n) {
 bool QBuffer_Open(QBuffer* self, int openMode) {
     auto* vqbuffer = dynamic_cast<VirtualQBuffer*>(self);
     if (vqbuffer && vqbuffer->isVirtualQBuffer) {
-        return vqbuffer->open(static_cast<QIODeviceBase::OpenMode>(openMode));
+        return vqbuffer->open(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(openMode));
     } else {
-        return self->QBuffer::open(static_cast<QIODeviceBase::OpenMode>(openMode));
+        return self->QBuffer::open(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(openMode));
     }
 }
 
@@ -149,9 +149,9 @@ bool QBuffer_QBaseOpen(QBuffer* self, int openMode) {
     auto* vqbuffer = dynamic_cast<VirtualQBuffer*>(self);
     if (vqbuffer && vqbuffer->isVirtualQBuffer) {
         vqbuffer->setQBuffer_Open_IsBase(true);
-        return vqbuffer->open(static_cast<QIODeviceBase::OpenMode>(openMode));
+        return vqbuffer->open(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(openMode));
     } else {
-        return self->QBuffer::open(static_cast<QIODeviceBase::OpenMode>(openMode));
+        return self->QBuffer::open(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(openMode));
     }
 }
 
@@ -338,7 +338,7 @@ void QBuffer_OnCanReadLine(const QBuffer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QBuffer_ConnectNotify(QBuffer* self, QMetaMethod* param1) {
+void QBuffer_ConnectNotify(QBuffer* self, const QMetaMethod* param1) {
     auto* vqbuffer = dynamic_cast<VirtualQBuffer*>(self);
     if (vqbuffer && vqbuffer->isVirtualQBuffer) {
         vqbuffer->connectNotify(*param1);
@@ -348,7 +348,7 @@ void QBuffer_ConnectNotify(QBuffer* self, QMetaMethod* param1) {
 }
 
 // Base class handler implementation
-void QBuffer_QBaseConnectNotify(QBuffer* self, QMetaMethod* param1) {
+void QBuffer_QBaseConnectNotify(QBuffer* self, const QMetaMethod* param1) {
     auto* vqbuffer = dynamic_cast<VirtualQBuffer*>(self);
     if (vqbuffer && vqbuffer->isVirtualQBuffer) {
         vqbuffer->setQBuffer_ConnectNotify_IsBase(true);
@@ -367,7 +367,7 @@ void QBuffer_OnConnectNotify(QBuffer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QBuffer_DisconnectNotify(QBuffer* self, QMetaMethod* param1) {
+void QBuffer_DisconnectNotify(QBuffer* self, const QMetaMethod* param1) {
     auto* vqbuffer = dynamic_cast<VirtualQBuffer*>(self);
     if (vqbuffer && vqbuffer->isVirtualQBuffer) {
         vqbuffer->disconnectNotify(*param1);
@@ -377,7 +377,7 @@ void QBuffer_DisconnectNotify(QBuffer* self, QMetaMethod* param1) {
 }
 
 // Base class handler implementation
-void QBuffer_QBaseDisconnectNotify(QBuffer* self, QMetaMethod* param1) {
+void QBuffer_QBaseDisconnectNotify(QBuffer* self, const QMetaMethod* param1) {
     auto* vqbuffer = dynamic_cast<VirtualQBuffer*>(self);
     if (vqbuffer && vqbuffer->isVirtualQBuffer) {
         vqbuffer->setQBuffer_DisconnectNotify_IsBase(true);
@@ -860,7 +860,7 @@ void QBuffer_OnSetOpenMode(QBuffer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QBuffer_SetErrorString(QBuffer* self, libqt_string errorString) {
+void QBuffer_SetErrorString(QBuffer* self, const libqt_string errorString) {
     auto* vqbuffer = dynamic_cast<VirtualQBuffer*>(self);
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     if (vqbuffer && vqbuffer->isVirtualQBuffer) {
@@ -871,7 +871,7 @@ void QBuffer_SetErrorString(QBuffer* self, libqt_string errorString) {
 }
 
 // Base class handler implementation
-void QBuffer_QBaseSetErrorString(QBuffer* self, libqt_string errorString) {
+void QBuffer_QBaseSetErrorString(QBuffer* self, const libqt_string errorString) {
     auto* vqbuffer = dynamic_cast<VirtualQBuffer*>(self);
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     if (vqbuffer && vqbuffer->isVirtualQBuffer) {
@@ -978,7 +978,7 @@ void QBuffer_OnReceivers(const QBuffer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QBuffer_IsSignalConnected(const QBuffer* self, QMetaMethod* signal) {
+bool QBuffer_IsSignalConnected(const QBuffer* self, const QMetaMethod* signal) {
     auto* vqbuffer = const_cast<VirtualQBuffer*>(dynamic_cast<const VirtualQBuffer*>(self));
     if (vqbuffer && vqbuffer->isVirtualQBuffer) {
         return vqbuffer->isSignalConnected(*signal);
@@ -988,7 +988,7 @@ bool QBuffer_IsSignalConnected(const QBuffer* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QBuffer_QBaseIsSignalConnected(const QBuffer* self, QMetaMethod* signal) {
+bool QBuffer_QBaseIsSignalConnected(const QBuffer* self, const QMetaMethod* signal) {
     auto* vqbuffer = const_cast<VirtualQBuffer*>(dynamic_cast<const VirtualQBuffer*>(self));
     if (vqbuffer && vqbuffer->isVirtualQBuffer) {
         vqbuffer->setQBuffer_IsSignalConnected_IsBase(true);

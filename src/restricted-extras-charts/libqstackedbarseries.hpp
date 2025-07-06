@@ -55,12 +55,12 @@ void QStackedBarSeries_QBaseChildEvent(QStackedBarSeries* self, QChildEvent* eve
 void QStackedBarSeries_CustomEvent(QStackedBarSeries* self, QEvent* event);
 void QStackedBarSeries_OnCustomEvent(QStackedBarSeries* self, intptr_t slot);
 void QStackedBarSeries_QBaseCustomEvent(QStackedBarSeries* self, QEvent* event);
-void QStackedBarSeries_ConnectNotify(QStackedBarSeries* self, QMetaMethod* signal);
+void QStackedBarSeries_ConnectNotify(QStackedBarSeries* self, const QMetaMethod* signal);
 void QStackedBarSeries_OnConnectNotify(QStackedBarSeries* self, intptr_t slot);
-void QStackedBarSeries_QBaseConnectNotify(QStackedBarSeries* self, QMetaMethod* signal);
-void QStackedBarSeries_DisconnectNotify(QStackedBarSeries* self, QMetaMethod* signal);
+void QStackedBarSeries_QBaseConnectNotify(QStackedBarSeries* self, const QMetaMethod* signal);
+void QStackedBarSeries_DisconnectNotify(QStackedBarSeries* self, const QMetaMethod* signal);
 void QStackedBarSeries_OnDisconnectNotify(QStackedBarSeries* self, intptr_t slot);
-void QStackedBarSeries_QBaseDisconnectNotify(QStackedBarSeries* self, QMetaMethod* signal);
+void QStackedBarSeries_QBaseDisconnectNotify(QStackedBarSeries* self, const QMetaMethod* signal);
 QObject* QStackedBarSeries_Sender(const QStackedBarSeries* self);
 void QStackedBarSeries_OnSender(const QStackedBarSeries* self, intptr_t slot);
 QObject* QStackedBarSeries_QBaseSender(const QStackedBarSeries* self);
@@ -70,9 +70,9 @@ int QStackedBarSeries_QBaseSenderSignalIndex(const QStackedBarSeries* self);
 int QStackedBarSeries_Receivers(const QStackedBarSeries* self, const char* signal);
 void QStackedBarSeries_OnReceivers(const QStackedBarSeries* self, intptr_t slot);
 int QStackedBarSeries_QBaseReceivers(const QStackedBarSeries* self, const char* signal);
-bool QStackedBarSeries_IsSignalConnected(const QStackedBarSeries* self, QMetaMethod* signal);
+bool QStackedBarSeries_IsSignalConnected(const QStackedBarSeries* self, const QMetaMethod* signal);
 void QStackedBarSeries_OnIsSignalConnected(const QStackedBarSeries* self, intptr_t slot);
-bool QStackedBarSeries_QBaseIsSignalConnected(const QStackedBarSeries* self, QMetaMethod* signal);
+bool QStackedBarSeries_QBaseIsSignalConnected(const QStackedBarSeries* self, const QMetaMethod* signal);
 void QStackedBarSeries_Delete(QStackedBarSeries* self);
 
 #ifdef __cplusplus

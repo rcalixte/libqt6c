@@ -12,14 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbindingstorage.h"
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include <string.h>
-#include "libqthread.h"
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qobjectdata.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#dynamicMetaObject)
@@ -153,7 +145,7 @@ QThread* q_object_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QObject* self, QThread* thread ```
-void q_object_move_to_thread(void* self, void* thread);
+bool q_object_move_to_thread(void* self, void* thread);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
@@ -164,6 +156,11 @@ int32_t q_object_start_timer(void* self, int interval);
 ///
 /// ``` QObject* self, int id ```
 void q_object_kill_timer(void* self, int id);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QObject* self, enum Qt__TimerId id ```
+void q_object_kill_timer_with_id(void* self, int64_t id);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
@@ -446,6 +443,11 @@ const char* q_object_tr2(const char* s, const char* c);
 /// ``` const char* s, const char* c, int n ```
 const char* q_object_tr3(const char* s, const char* c, int n);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QObject* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_object_move_to_thread2(void* self, void* thread, void* param2);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QObject* self, int interval, enum Qt__TimerType timerType ```
@@ -506,6 +508,11 @@ void q_signalblocker_reblock(void* self);
 ///
 /// ``` QSignalBlocker* self ```
 void q_signalblocker_unblock(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsignalblocker.html#dismiss)
+///
+/// ``` QSignalBlocker* self ```
+void q_signalblocker_dismiss(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsignalblocker.html#dtor.QSignalBlocker)
 ///

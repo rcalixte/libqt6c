@@ -127,10 +127,10 @@ class VirtualQSaveFile final : public QSaveFile {
     mutable bool qsavefile_issignalconnected_isbase = false;
 
   public:
-    VirtualQSaveFile(const QString& name) : QSaveFile(name){};
-    VirtualQSaveFile() : QSaveFile(){};
-    VirtualQSaveFile(const QString& name, QObject* parent) : QSaveFile(name, parent){};
-    VirtualQSaveFile(QObject* parent) : QSaveFile(parent){};
+    VirtualQSaveFile(const QString& name) : QSaveFile(name) {};
+    VirtualQSaveFile() : QSaveFile() {};
+    VirtualQSaveFile(const QString& name, QObject* parent) : QSaveFile(name, parent) {};
+    VirtualQSaveFile(QObject* parent) : QSaveFile(parent) {};
 
     ~VirtualQSaveFile() {
         qsavefile_metacall_callback = nullptr;
@@ -273,7 +273,7 @@ class VirtualQSaveFile final : public QSaveFile {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual bool open(QIODeviceBase::OpenMode flags) override {
+    virtual bool open(QFlags<QIODeviceBase::OpenModeFlag> flags) override {
         if (qsavefile_open_isbase) {
             qsavefile_open_isbase = false;
             return QSaveFile::open(flags);
@@ -756,22 +756,22 @@ class VirtualQSaveFile final : public QSaveFile {
     friend void QSaveFile_QBaseChildEvent(QSaveFile* self, QChildEvent* event);
     friend void QSaveFile_CustomEvent(QSaveFile* self, QEvent* event);
     friend void QSaveFile_QBaseCustomEvent(QSaveFile* self, QEvent* event);
-    friend void QSaveFile_ConnectNotify(QSaveFile* self, QMetaMethod* signal);
-    friend void QSaveFile_QBaseConnectNotify(QSaveFile* self, QMetaMethod* signal);
-    friend void QSaveFile_DisconnectNotify(QSaveFile* self, QMetaMethod* signal);
-    friend void QSaveFile_QBaseDisconnectNotify(QSaveFile* self, QMetaMethod* signal);
+    friend void QSaveFile_ConnectNotify(QSaveFile* self, const QMetaMethod* signal);
+    friend void QSaveFile_QBaseConnectNotify(QSaveFile* self, const QMetaMethod* signal);
+    friend void QSaveFile_DisconnectNotify(QSaveFile* self, const QMetaMethod* signal);
+    friend void QSaveFile_QBaseDisconnectNotify(QSaveFile* self, const QMetaMethod* signal);
     friend void QSaveFile_SetOpenMode(QSaveFile* self, int openMode);
     friend void QSaveFile_QBaseSetOpenMode(QSaveFile* self, int openMode);
-    friend void QSaveFile_SetErrorString(QSaveFile* self, libqt_string errorString);
-    friend void QSaveFile_QBaseSetErrorString(QSaveFile* self, libqt_string errorString);
+    friend void QSaveFile_SetErrorString(QSaveFile* self, const libqt_string errorString);
+    friend void QSaveFile_QBaseSetErrorString(QSaveFile* self, const libqt_string errorString);
     friend QObject* QSaveFile_Sender(const QSaveFile* self);
     friend QObject* QSaveFile_QBaseSender(const QSaveFile* self);
     friend int QSaveFile_SenderSignalIndex(const QSaveFile* self);
     friend int QSaveFile_QBaseSenderSignalIndex(const QSaveFile* self);
     friend int QSaveFile_Receivers(const QSaveFile* self, const char* signal);
     friend int QSaveFile_QBaseReceivers(const QSaveFile* self, const char* signal);
-    friend bool QSaveFile_IsSignalConnected(const QSaveFile* self, QMetaMethod* signal);
-    friend bool QSaveFile_QBaseIsSignalConnected(const QSaveFile* self, QMetaMethod* signal);
+    friend bool QSaveFile_IsSignalConnected(const QSaveFile* self, const QMetaMethod* signal);
+    friend bool QSaveFile_QBaseIsSignalConnected(const QSaveFile* self, const QMetaMethod* signal);
 };
 
 #endif

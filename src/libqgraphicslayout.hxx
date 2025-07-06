@@ -64,8 +64,8 @@ class VirtualQGraphicsLayout final : public QGraphicsLayout {
     mutable bool qgraphicslayout_setownedbylayout_isbase = false;
 
   public:
-    VirtualQGraphicsLayout() : QGraphicsLayout(){};
-    VirtualQGraphicsLayout(QGraphicsLayoutItem* parent) : QGraphicsLayout(parent){};
+    VirtualQGraphicsLayout() : QGraphicsLayout() {};
+    VirtualQGraphicsLayout(QGraphicsLayoutItem* parent) : QGraphicsLayout(parent) {};
 
     ~VirtualQGraphicsLayout() {
         qgraphicslayout_getcontentsmargins_callback = nullptr;
@@ -286,8 +286,8 @@ class VirtualQGraphicsLayout final : public QGraphicsLayout {
     }
 
     // Friend functions
-    friend QSizeF* QGraphicsLayout_SizeHint(const QGraphicsLayout* self, int which, QSizeF* constraint);
-    friend QSizeF* QGraphicsLayout_QBaseSizeHint(const QGraphicsLayout* self, int which, QSizeF* constraint);
+    friend QSizeF* QGraphicsLayout_SizeHint(const QGraphicsLayout* self, int which, const QSizeF* constraint);
+    friend QSizeF* QGraphicsLayout_QBaseSizeHint(const QGraphicsLayout* self, int which, const QSizeF* constraint);
     friend void QGraphicsLayout_AddChildLayoutItem(QGraphicsLayout* self, QGraphicsLayoutItem* layoutItem);
     friend void QGraphicsLayout_QBaseAddChildLayoutItem(QGraphicsLayout* self, QGraphicsLayoutItem* layoutItem);
     friend void QGraphicsLayout_SetGraphicsItem(QGraphicsLayout* self, QGraphicsItem* item);

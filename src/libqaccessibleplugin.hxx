@@ -64,8 +64,8 @@ class VirtualQAccessiblePlugin final : public QAccessiblePlugin {
     mutable bool qaccessibleplugin_issignalconnected_isbase = false;
 
   public:
-    VirtualQAccessiblePlugin() : QAccessiblePlugin(){};
-    VirtualQAccessiblePlugin(QObject* parent) : QAccessiblePlugin(parent){};
+    VirtualQAccessiblePlugin() : QAccessiblePlugin() {};
+    VirtualQAccessiblePlugin(QObject* parent) : QAccessiblePlugin(parent) {};
 
     ~VirtualQAccessiblePlugin() {
         qaccessibleplugin_metacall_callback = nullptr;
@@ -321,18 +321,18 @@ class VirtualQAccessiblePlugin final : public QAccessiblePlugin {
     friend void QAccessiblePlugin_QBaseChildEvent(QAccessiblePlugin* self, QChildEvent* event);
     friend void QAccessiblePlugin_CustomEvent(QAccessiblePlugin* self, QEvent* event);
     friend void QAccessiblePlugin_QBaseCustomEvent(QAccessiblePlugin* self, QEvent* event);
-    friend void QAccessiblePlugin_ConnectNotify(QAccessiblePlugin* self, QMetaMethod* signal);
-    friend void QAccessiblePlugin_QBaseConnectNotify(QAccessiblePlugin* self, QMetaMethod* signal);
-    friend void QAccessiblePlugin_DisconnectNotify(QAccessiblePlugin* self, QMetaMethod* signal);
-    friend void QAccessiblePlugin_QBaseDisconnectNotify(QAccessiblePlugin* self, QMetaMethod* signal);
+    friend void QAccessiblePlugin_ConnectNotify(QAccessiblePlugin* self, const QMetaMethod* signal);
+    friend void QAccessiblePlugin_QBaseConnectNotify(QAccessiblePlugin* self, const QMetaMethod* signal);
+    friend void QAccessiblePlugin_DisconnectNotify(QAccessiblePlugin* self, const QMetaMethod* signal);
+    friend void QAccessiblePlugin_QBaseDisconnectNotify(QAccessiblePlugin* self, const QMetaMethod* signal);
     friend QObject* QAccessiblePlugin_Sender(const QAccessiblePlugin* self);
     friend QObject* QAccessiblePlugin_QBaseSender(const QAccessiblePlugin* self);
     friend int QAccessiblePlugin_SenderSignalIndex(const QAccessiblePlugin* self);
     friend int QAccessiblePlugin_QBaseSenderSignalIndex(const QAccessiblePlugin* self);
     friend int QAccessiblePlugin_Receivers(const QAccessiblePlugin* self, const char* signal);
     friend int QAccessiblePlugin_QBaseReceivers(const QAccessiblePlugin* self, const char* signal);
-    friend bool QAccessiblePlugin_IsSignalConnected(const QAccessiblePlugin* self, QMetaMethod* signal);
-    friend bool QAccessiblePlugin_QBaseIsSignalConnected(const QAccessiblePlugin* self, QMetaMethod* signal);
+    friend bool QAccessiblePlugin_IsSignalConnected(const QAccessiblePlugin* self, const QMetaMethod* signal);
+    friend bool QAccessiblePlugin_QBaseIsSignalConnected(const QAccessiblePlugin* self, const QMetaMethod* signal);
 };
 
 #endif

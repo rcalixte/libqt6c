@@ -12,13 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqrunnable.h"
-#include <string.h>
-#include "libqthread.h"
-
 /// https://doc.qt.io/qt-6/qthreadpool.html
 
 /// q_threadpool_new constructs a new QThreadPool object.
@@ -134,8 +127,13 @@ void q_threadpool_release_thread(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#waitForDone)
 ///
+/// ``` QThreadPool* self, int msecs ```
+bool q_threadpool_wait_for_done(void* self, int msecs);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#waitForDone)
+///
 /// ``` QThreadPool* self ```
-bool q_threadpool_wait_for_done(void* self);
+bool q_threadpool_wait_for_done2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#clear)
 ///
@@ -169,8 +167,8 @@ void q_threadpool_start2(void* self, void* runnable, int priority);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#waitForDone)
 ///
-/// ``` QThreadPool* self, int msecs ```
-bool q_threadpool_wait_for_done1(void* self, int msecs);
+/// ``` QThreadPool* self, QDeadlineTimer* deadline ```
+bool q_threadpool_wait_for_done1(void* self, void* deadline);
 
 /// Inherited from QObject
 ///
@@ -233,7 +231,7 @@ QThread* q_threadpool_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QThreadPool* self, QThread* thread ```
-void q_threadpool_move_to_thread(void* self, void* thread);
+bool q_threadpool_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -248,6 +246,13 @@ int32_t q_threadpool_start_timer(void* self, int interval);
 ///
 /// ``` QThreadPool* self, int id ```
 void q_threadpool_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QThreadPool* self, enum Qt__TimerId id ```
+void q_threadpool_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -388,6 +393,13 @@ bool q_threadpool_inherits(void* self, const char* classname);
 ///
 /// ``` QThreadPool* self ```
 void q_threadpool_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QThreadPool* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_threadpool_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

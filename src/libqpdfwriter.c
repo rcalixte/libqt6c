@@ -10,8 +10,10 @@
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
 #include "libqpainter.hpp"
+#include "libqpdfoutputintent.hpp"
 #include "libqpoint.hpp"
 #include <string.h>
+#include "libquuid.hpp"
 #include "libqcoreevent.hpp"
 #include "libqpdfwriter.hpp"
 #include "libqpdfwriter.h"
@@ -81,6 +83,14 @@ void q_pdfwriter_set_creator(void* self, const char* creator) {
     QPdfWriter_SetCreator((QPdfWriter*)self, qstring(creator));
 }
 
+QUuid* q_pdfwriter_document_id(void* self) {
+    return QPdfWriter_DocumentId((QPdfWriter*)self);
+}
+
+void q_pdfwriter_set_document_id(void* self, void* documentId) {
+    QPdfWriter_SetDocumentId((QPdfWriter*)self, (QUuid*)documentId);
+}
+
 bool q_pdfwriter_new_page(void* self) {
     return QPdfWriter_NewPage((QPdfWriter*)self);
 }
@@ -114,6 +124,22 @@ char* q_pdfwriter_document_xmp_metadata(void* self) {
 
 void q_pdfwriter_add_file_attachment(void* self, const char* fileName, const char* data) {
     QPdfWriter_AddFileAttachment((QPdfWriter*)self, qstring(fileName), qstring(data));
+}
+
+int64_t q_pdfwriter_color_model(void* self) {
+    return QPdfWriter_ColorModel((QPdfWriter*)self);
+}
+
+void q_pdfwriter_set_color_model(void* self, int64_t model) {
+    QPdfWriter_SetColorModel((QPdfWriter*)self, model);
+}
+
+QPdfOutputIntent* q_pdfwriter_output_intent(void* self) {
+    return QPdfWriter_OutputIntent((QPdfWriter*)self);
+}
+
+void q_pdfwriter_set_output_intent(void* self, void* intent) {
+    QPdfWriter_SetOutputIntent((QPdfWriter*)self, (QPdfOutputIntent*)intent);
 }
 
 QPaintEngine* q_pdfwriter_paint_engine(void* self) {
@@ -193,8 +219,8 @@ QThread* q_pdfwriter_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_pdfwriter_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_pdfwriter_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_pdfwriter_start_timer(void* self, int interval) {
@@ -203,6 +229,10 @@ int32_t q_pdfwriter_start_timer(void* self, int interval) {
 
 void q_pdfwriter_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_pdfwriter_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_pdfwriter_children(void* self) {
@@ -297,6 +327,10 @@ void q_pdfwriter_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
+bool q_pdfwriter_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
+}
+
 int32_t q_pdfwriter_start_timer2(void* self, int interval, int64_t timerType) {
     return QObject_StartTimer2((QObject*)self, interval, timerType);
 }
@@ -379,6 +413,10 @@ int32_t q_pdfwriter_depth(void* self) {
 
 double q_pdfwriter_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
+}
+
+int32_t q_pdfwriter_encode_metric_f(int64_t metric, double value) {
+    return QPaintDevice_EncodeMetricF(metric, value);
 }
 
 bool q_pdfwriter_event(void* self, void* event) {
@@ -619,6 +657,18 @@ bool q_pdfwriter_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_pdfwriter_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QPdfWriter_OnIsSignalConnected((QPdfWriter*)self, (intptr_t)slot);
+}
+
+double q_pdfwriter_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QPdfWriter_GetDecodedMetricF((QPdfWriter*)self, metricA, metricB);
+}
+
+double q_pdfwriter_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QPdfWriter_QBaseGetDecodedMetricF((QPdfWriter*)self, metricA, metricB);
+}
+
+void q_pdfwriter_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
+    QPdfWriter_OnGetDecodedMetricF((QPdfWriter*)self, (intptr_t)slot);
 }
 
 void q_pdfwriter_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {

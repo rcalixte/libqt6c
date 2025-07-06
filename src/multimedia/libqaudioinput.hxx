@@ -61,10 +61,10 @@ class VirtualQAudioInput final : public QAudioInput {
     mutable bool qaudioinput_issignalconnected_isbase = false;
 
   public:
-    VirtualQAudioInput() : QAudioInput(){};
-    VirtualQAudioInput(const QAudioDevice& deviceInfo) : QAudioInput(deviceInfo){};
-    VirtualQAudioInput(QObject* parent) : QAudioInput(parent){};
-    VirtualQAudioInput(const QAudioDevice& deviceInfo, QObject* parent) : QAudioInput(deviceInfo, parent){};
+    VirtualQAudioInput() : QAudioInput() {};
+    VirtualQAudioInput(const QAudioDevice& deviceInfo) : QAudioInput(deviceInfo) {};
+    VirtualQAudioInput(QObject* parent) : QAudioInput(parent) {};
+    VirtualQAudioInput(const QAudioDevice& deviceInfo, QObject* parent) : QAudioInput(deviceInfo, parent) {};
 
     ~VirtualQAudioInput() {
         qaudioinput_metacall_callback = nullptr;
@@ -296,18 +296,18 @@ class VirtualQAudioInput final : public QAudioInput {
     friend void QAudioInput_QBaseChildEvent(QAudioInput* self, QChildEvent* event);
     friend void QAudioInput_CustomEvent(QAudioInput* self, QEvent* event);
     friend void QAudioInput_QBaseCustomEvent(QAudioInput* self, QEvent* event);
-    friend void QAudioInput_ConnectNotify(QAudioInput* self, QMetaMethod* signal);
-    friend void QAudioInput_QBaseConnectNotify(QAudioInput* self, QMetaMethod* signal);
-    friend void QAudioInput_DisconnectNotify(QAudioInput* self, QMetaMethod* signal);
-    friend void QAudioInput_QBaseDisconnectNotify(QAudioInput* self, QMetaMethod* signal);
+    friend void QAudioInput_ConnectNotify(QAudioInput* self, const QMetaMethod* signal);
+    friend void QAudioInput_QBaseConnectNotify(QAudioInput* self, const QMetaMethod* signal);
+    friend void QAudioInput_DisconnectNotify(QAudioInput* self, const QMetaMethod* signal);
+    friend void QAudioInput_QBaseDisconnectNotify(QAudioInput* self, const QMetaMethod* signal);
     friend QObject* QAudioInput_Sender(const QAudioInput* self);
     friend QObject* QAudioInput_QBaseSender(const QAudioInput* self);
     friend int QAudioInput_SenderSignalIndex(const QAudioInput* self);
     friend int QAudioInput_QBaseSenderSignalIndex(const QAudioInput* self);
     friend int QAudioInput_Receivers(const QAudioInput* self, const char* signal);
     friend int QAudioInput_QBaseReceivers(const QAudioInput* self, const char* signal);
-    friend bool QAudioInput_IsSignalConnected(const QAudioInput* self, QMetaMethod* signal);
-    friend bool QAudioInput_QBaseIsSignalConnected(const QAudioInput* self, QMetaMethod* signal);
+    friend bool QAudioInput_IsSignalConnected(const QAudioInput* self, const QMetaMethod* signal);
+    friend bool QAudioInput_QBaseIsSignalConnected(const QAudioInput* self, const QMetaMethod* signal);
 };
 
 #endif

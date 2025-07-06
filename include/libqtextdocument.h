@@ -12,25 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstracttextdocumentlayout.h"
-#include "libqchar.h"
-#include "libqevent.h"
-#include "libqfont.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpagedpaintdevice.h"
-#include "libqpainter.h"
-#include "libqrect.h"
-#include "libqregularexpression.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqtextobject.h"
-#include "libqtextcursor.h"
-#include "libqtextformat.h"
-#include "libqtextoption.h"
-#include "libqurl.h"
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qabstractundoitem.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractundoitem.html#undo)
@@ -826,7 +807,7 @@ QThread* q_textdocument_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QTextDocument* self, QThread* thread ```
-void q_textdocument_move_to_thread(void* self, void* thread);
+bool q_textdocument_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -841,6 +822,13 @@ int32_t q_textdocument_start_timer(void* self, int interval);
 ///
 /// ``` QTextDocument* self, int id ```
 void q_textdocument_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QTextDocument* self, enum Qt__TimerId id ```
+void q_textdocument_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -981,6 +969,13 @@ bool q_textdocument_inherits(void* self, const char* classname);
 ///
 /// ``` QTextDocument* self ```
 void q_textdocument_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QTextDocument* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_textdocument_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -1335,13 +1330,14 @@ void q_textdocument_delete(void* self);
 typedef enum {
     QTEXTDOCUMENT_METAINFORMATION_DOCUMENTTITLE = 0,
     QTEXTDOCUMENT_METAINFORMATION_DOCUMENTURL = 1,
-    QTEXTDOCUMENT_METAINFORMATION_CSSMEDIA = 2
+    QTEXTDOCUMENT_METAINFORMATION_CSSMEDIA = 2,
+    QTEXTDOCUMENT_METAINFORMATION_FRONTMATTER = 3
 } QTextDocument__MetaInformation;
 
 typedef enum {
     QTEXTDOCUMENT_MARKDOWNFEATURE_MARKDOWNNOHTML = 96,
     QTEXTDOCUMENT_MARKDOWNFEATURE_MARKDOWNDIALECTCOMMONMARK = 0,
-    QTEXTDOCUMENT_MARKDOWNFEATURE_MARKDOWNDIALECTGITHUB = 20236
+    QTEXTDOCUMENT_MARKDOWNFEATURE_MARKDOWNDIALECTGITHUB = 1068812
 } QTextDocument__MarkdownFeature;
 
 typedef enum {

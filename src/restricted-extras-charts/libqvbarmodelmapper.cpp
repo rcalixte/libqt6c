@@ -355,7 +355,7 @@ void QVBarModelMapper_OnCustomEvent(QVBarModelMapper* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QVBarModelMapper_ConnectNotify(QVBarModelMapper* self, QMetaMethod* signal) {
+void QVBarModelMapper_ConnectNotify(QVBarModelMapper* self, const QMetaMethod* signal) {
     auto* vqvbarmodelmapper = dynamic_cast<VirtualQVBarModelMapper*>(self);
     if (vqvbarmodelmapper && vqvbarmodelmapper->isVirtualQVBarModelMapper) {
         vqvbarmodelmapper->connectNotify(*signal);
@@ -365,7 +365,7 @@ void QVBarModelMapper_ConnectNotify(QVBarModelMapper* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-void QVBarModelMapper_QBaseConnectNotify(QVBarModelMapper* self, QMetaMethod* signal) {
+void QVBarModelMapper_QBaseConnectNotify(QVBarModelMapper* self, const QMetaMethod* signal) {
     auto* vqvbarmodelmapper = dynamic_cast<VirtualQVBarModelMapper*>(self);
     if (vqvbarmodelmapper && vqvbarmodelmapper->isVirtualQVBarModelMapper) {
         vqvbarmodelmapper->setQVBarModelMapper_ConnectNotify_IsBase(true);
@@ -384,7 +384,7 @@ void QVBarModelMapper_OnConnectNotify(QVBarModelMapper* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QVBarModelMapper_DisconnectNotify(QVBarModelMapper* self, QMetaMethod* signal) {
+void QVBarModelMapper_DisconnectNotify(QVBarModelMapper* self, const QMetaMethod* signal) {
     auto* vqvbarmodelmapper = dynamic_cast<VirtualQVBarModelMapper*>(self);
     if (vqvbarmodelmapper && vqvbarmodelmapper->isVirtualQVBarModelMapper) {
         vqvbarmodelmapper->disconnectNotify(*signal);
@@ -394,7 +394,7 @@ void QVBarModelMapper_DisconnectNotify(QVBarModelMapper* self, QMetaMethod* sign
 }
 
 // Base class handler implementation
-void QVBarModelMapper_QBaseDisconnectNotify(QVBarModelMapper* self, QMetaMethod* signal) {
+void QVBarModelMapper_QBaseDisconnectNotify(QVBarModelMapper* self, const QMetaMethod* signal) {
     auto* vqvbarmodelmapper = dynamic_cast<VirtualQVBarModelMapper*>(self);
     if (vqvbarmodelmapper && vqvbarmodelmapper->isVirtualQVBarModelMapper) {
         vqvbarmodelmapper->setQVBarModelMapper_DisconnectNotify_IsBase(true);
@@ -790,7 +790,7 @@ void QVBarModelMapper_OnReceivers(const QVBarModelMapper* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QVBarModelMapper_IsSignalConnected(const QVBarModelMapper* self, QMetaMethod* signal) {
+bool QVBarModelMapper_IsSignalConnected(const QVBarModelMapper* self, const QMetaMethod* signal) {
     auto* vqvbarmodelmapper = const_cast<VirtualQVBarModelMapper*>(dynamic_cast<const VirtualQVBarModelMapper*>(self));
     if (vqvbarmodelmapper && vqvbarmodelmapper->isVirtualQVBarModelMapper) {
         return vqvbarmodelmapper->isSignalConnected(*signal);
@@ -800,7 +800,7 @@ bool QVBarModelMapper_IsSignalConnected(const QVBarModelMapper* self, QMetaMetho
 }
 
 // Base class handler implementation
-bool QVBarModelMapper_QBaseIsSignalConnected(const QVBarModelMapper* self, QMetaMethod* signal) {
+bool QVBarModelMapper_QBaseIsSignalConnected(const QVBarModelMapper* self, const QMetaMethod* signal) {
     auto* vqvbarmodelmapper = const_cast<VirtualQVBarModelMapper*>(dynamic_cast<const VirtualQVBarModelMapper*>(self));
     if (vqvbarmodelmapper && vqvbarmodelmapper->isVirtualQVBarModelMapper) {
         vqvbarmodelmapper->setQVBarModelMapper_IsSignalConnected_IsBase(true);

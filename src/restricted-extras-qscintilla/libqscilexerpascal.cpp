@@ -1,3 +1,4 @@
+#include <QByteArray>
 #include <QChildEvent>
 #include <QColor>
 #include <QEvent>
@@ -346,10 +347,10 @@ void QsciLexerPascal_OnAutoCompletionFillups(const QsciLexerPascal* self, intptr
 libqt_list /* of libqt_string */ QsciLexerPascal_AutoCompletionWordSeparators(const QsciLexerPascal* self) {
     auto* vqscilexerpascal = const_cast<VirtualQsciLexerPascal*>(dynamic_cast<const VirtualQsciLexerPascal*>(self));
     if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
-        QStringList _ret = vqscilexerpascal->autoCompletionWordSeparators();
+        QList<QString> _ret = vqscilexerpascal->autoCompletionWordSeparators();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -361,14 +362,14 @@ libqt_list /* of libqt_string */ QsciLexerPascal_AutoCompletionWordSeparators(co
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = ((VirtualQsciLexerPascal*)self)->autoCompletionWordSeparators();
+        QList<QString> _ret = ((VirtualQsciLexerPascal*)self)->autoCompletionWordSeparators();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -380,7 +381,7 @@ libqt_list /* of libqt_string */ QsciLexerPascal_AutoCompletionWordSeparators(co
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -391,10 +392,10 @@ libqt_list /* of libqt_string */ QsciLexerPascal_QBaseAutoCompletionWordSeparato
     auto* vqscilexerpascal = const_cast<VirtualQsciLexerPascal*>(dynamic_cast<const VirtualQsciLexerPascal*>(self));
     if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
         vqscilexerpascal->setQsciLexerPascal_AutoCompletionWordSeparators_IsBase(true);
-        QStringList _ret = vqscilexerpascal->autoCompletionWordSeparators();
+        QList<QString> _ret = vqscilexerpascal->autoCompletionWordSeparators();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -406,14 +407,14 @@ libqt_list /* of libqt_string */ QsciLexerPascal_QBaseAutoCompletionWordSeparato
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = ((VirtualQsciLexerPascal*)self)->autoCompletionWordSeparators();
+        QList<QString> _ret = ((VirtualQsciLexerPascal*)self)->autoCompletionWordSeparators();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -425,7 +426,7 @@ libqt_list /* of libqt_string */ QsciLexerPascal_QBaseAutoCompletionWordSeparato
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -1139,7 +1140,7 @@ void QsciLexerPascal_OnSetAutoIndentStyle(QsciLexerPascal* self, intptr_t slot) 
 }
 
 // Derived class handler implementation
-void QsciLexerPascal_SetColor(QsciLexerPascal* self, QColor* c, int style) {
+void QsciLexerPascal_SetColor(QsciLexerPascal* self, const QColor* c, int style) {
     auto* vqscilexerpascal = dynamic_cast<VirtualQsciLexerPascal*>(self);
     if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
         vqscilexerpascal->setColor(*c, static_cast<int>(style));
@@ -1149,7 +1150,7 @@ void QsciLexerPascal_SetColor(QsciLexerPascal* self, QColor* c, int style) {
 }
 
 // Base class handler implementation
-void QsciLexerPascal_QBaseSetColor(QsciLexerPascal* self, QColor* c, int style) {
+void QsciLexerPascal_QBaseSetColor(QsciLexerPascal* self, const QColor* c, int style) {
     auto* vqscilexerpascal = dynamic_cast<VirtualQsciLexerPascal*>(self);
     if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
         vqscilexerpascal->setQsciLexerPascal_SetColor_IsBase(true);
@@ -1197,7 +1198,7 @@ void QsciLexerPascal_OnSetEolFill(QsciLexerPascal* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciLexerPascal_SetFont(QsciLexerPascal* self, QFont* f, int style) {
+void QsciLexerPascal_SetFont(QsciLexerPascal* self, const QFont* f, int style) {
     auto* vqscilexerpascal = dynamic_cast<VirtualQsciLexerPascal*>(self);
     if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
         vqscilexerpascal->setFont(*f, static_cast<int>(style));
@@ -1207,7 +1208,7 @@ void QsciLexerPascal_SetFont(QsciLexerPascal* self, QFont* f, int style) {
 }
 
 // Base class handler implementation
-void QsciLexerPascal_QBaseSetFont(QsciLexerPascal* self, QFont* f, int style) {
+void QsciLexerPascal_QBaseSetFont(QsciLexerPascal* self, const QFont* f, int style) {
     auto* vqscilexerpascal = dynamic_cast<VirtualQsciLexerPascal*>(self);
     if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
         vqscilexerpascal->setQsciLexerPascal_SetFont_IsBase(true);
@@ -1226,7 +1227,7 @@ void QsciLexerPascal_OnSetFont(QsciLexerPascal* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciLexerPascal_SetPaper(QsciLexerPascal* self, QColor* c, int style) {
+void QsciLexerPascal_SetPaper(QsciLexerPascal* self, const QColor* c, int style) {
     auto* vqscilexerpascal = dynamic_cast<VirtualQsciLexerPascal*>(self);
     if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
         vqscilexerpascal->setPaper(*c, static_cast<int>(style));
@@ -1236,7 +1237,7 @@ void QsciLexerPascal_SetPaper(QsciLexerPascal* self, QColor* c, int style) {
 }
 
 // Base class handler implementation
-void QsciLexerPascal_QBaseSetPaper(QsciLexerPascal* self, QColor* c, int style) {
+void QsciLexerPascal_QBaseSetPaper(QsciLexerPascal* self, const QColor* c, int style) {
     auto* vqscilexerpascal = dynamic_cast<VirtualQsciLexerPascal*>(self);
     if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
         vqscilexerpascal->setQsciLexerPascal_SetPaper_IsBase(true);
@@ -1255,7 +1256,7 @@ void QsciLexerPascal_OnSetPaper(QsciLexerPascal* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QsciLexerPascal_ReadProperties(QsciLexerPascal* self, QSettings* qs, libqt_string prefix) {
+bool QsciLexerPascal_ReadProperties(QsciLexerPascal* self, QSettings* qs, const libqt_string prefix) {
     auto* vqscilexerpascal = dynamic_cast<VirtualQsciLexerPascal*>(self);
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
@@ -1266,7 +1267,7 @@ bool QsciLexerPascal_ReadProperties(QsciLexerPascal* self, QSettings* qs, libqt_
 }
 
 // Base class handler implementation
-bool QsciLexerPascal_QBaseReadProperties(QsciLexerPascal* self, QSettings* qs, libqt_string prefix) {
+bool QsciLexerPascal_QBaseReadProperties(QsciLexerPascal* self, QSettings* qs, const libqt_string prefix) {
     auto* vqscilexerpascal = dynamic_cast<VirtualQsciLexerPascal*>(self);
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
@@ -1286,7 +1287,7 @@ void QsciLexerPascal_OnReadProperties(QsciLexerPascal* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QsciLexerPascal_WriteProperties(const QsciLexerPascal* self, QSettings* qs, libqt_string prefix) {
+bool QsciLexerPascal_WriteProperties(const QsciLexerPascal* self, QSettings* qs, const libqt_string prefix) {
     auto* vqscilexerpascal = const_cast<VirtualQsciLexerPascal*>(dynamic_cast<const VirtualQsciLexerPascal*>(self));
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
@@ -1297,7 +1298,7 @@ bool QsciLexerPascal_WriteProperties(const QsciLexerPascal* self, QSettings* qs,
 }
 
 // Base class handler implementation
-bool QsciLexerPascal_QBaseWriteProperties(const QsciLexerPascal* self, QSettings* qs, libqt_string prefix) {
+bool QsciLexerPascal_QBaseWriteProperties(const QsciLexerPascal* self, QSettings* qs, const libqt_string prefix) {
     auto* vqscilexerpascal = const_cast<VirtualQsciLexerPascal*>(dynamic_cast<const VirtualQsciLexerPascal*>(self));
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
@@ -1462,7 +1463,7 @@ void QsciLexerPascal_OnCustomEvent(QsciLexerPascal* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciLexerPascal_ConnectNotify(QsciLexerPascal* self, QMetaMethod* signal) {
+void QsciLexerPascal_ConnectNotify(QsciLexerPascal* self, const QMetaMethod* signal) {
     auto* vqscilexerpascal = dynamic_cast<VirtualQsciLexerPascal*>(self);
     if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
         vqscilexerpascal->connectNotify(*signal);
@@ -1472,7 +1473,7 @@ void QsciLexerPascal_ConnectNotify(QsciLexerPascal* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QsciLexerPascal_QBaseConnectNotify(QsciLexerPascal* self, QMetaMethod* signal) {
+void QsciLexerPascal_QBaseConnectNotify(QsciLexerPascal* self, const QMetaMethod* signal) {
     auto* vqscilexerpascal = dynamic_cast<VirtualQsciLexerPascal*>(self);
     if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
         vqscilexerpascal->setQsciLexerPascal_ConnectNotify_IsBase(true);
@@ -1491,7 +1492,7 @@ void QsciLexerPascal_OnConnectNotify(QsciLexerPascal* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciLexerPascal_DisconnectNotify(QsciLexerPascal* self, QMetaMethod* signal) {
+void QsciLexerPascal_DisconnectNotify(QsciLexerPascal* self, const QMetaMethod* signal) {
     auto* vqscilexerpascal = dynamic_cast<VirtualQsciLexerPascal*>(self);
     if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
         vqscilexerpascal->disconnectNotify(*signal);
@@ -1501,7 +1502,7 @@ void QsciLexerPascal_DisconnectNotify(QsciLexerPascal* self, QMetaMethod* signal
 }
 
 // Base class handler implementation
-void QsciLexerPascal_QBaseDisconnectNotify(QsciLexerPascal* self, QMetaMethod* signal) {
+void QsciLexerPascal_QBaseDisconnectNotify(QsciLexerPascal* self, const QMetaMethod* signal) {
     auto* vqscilexerpascal = dynamic_cast<VirtualQsciLexerPascal*>(self);
     if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
         vqscilexerpascal->setQsciLexerPascal_DisconnectNotify_IsBase(true);
@@ -1516,6 +1517,122 @@ void QsciLexerPascal_OnDisconnectNotify(QsciLexerPascal* self, intptr_t slot) {
     auto* vqscilexerpascal = dynamic_cast<VirtualQsciLexerPascal*>(self);
     if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
         vqscilexerpascal->setQsciLexerPascal_DisconnectNotify_Callback(reinterpret_cast<VirtualQsciLexerPascal::QsciLexerPascal_DisconnectNotify_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+libqt_string QsciLexerPascal_TextAsBytes(const QsciLexerPascal* self, const libqt_string text) {
+    auto* vqscilexerpascal = const_cast<VirtualQsciLexerPascal*>(dynamic_cast<const VirtualQsciLexerPascal*>(self));
+    QString text_QString = QString::fromUtf8(text.data, text.len);
+    if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
+        QByteArray _qb = vqscilexerpascal->textAsBytes(text_QString);
+        libqt_string _str;
+        _str.len = _qb.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _qb.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    } else {
+        QByteArray _qb = ((VirtualQsciLexerPascal*)self)->textAsBytes(text_QString);
+        libqt_string _str;
+        _str.len = _qb.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _qb.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    }
+}
+
+// Base class handler implementation
+libqt_string QsciLexerPascal_QBaseTextAsBytes(const QsciLexerPascal* self, const libqt_string text) {
+    auto* vqscilexerpascal = const_cast<VirtualQsciLexerPascal*>(dynamic_cast<const VirtualQsciLexerPascal*>(self));
+    QString text_QString = QString::fromUtf8(text.data, text.len);
+    if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
+        vqscilexerpascal->setQsciLexerPascal_TextAsBytes_IsBase(true);
+        QByteArray _qb = vqscilexerpascal->textAsBytes(text_QString);
+        libqt_string _str;
+        _str.len = _qb.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _qb.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    } else {
+        QByteArray _qb = ((VirtualQsciLexerPascal*)self)->textAsBytes(text_QString);
+        libqt_string _str;
+        _str.len = _qb.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _qb.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QsciLexerPascal_OnTextAsBytes(const QsciLexerPascal* self, intptr_t slot) {
+    auto* vqscilexerpascal = const_cast<VirtualQsciLexerPascal*>(dynamic_cast<const VirtualQsciLexerPascal*>(self));
+    if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
+        vqscilexerpascal->setQsciLexerPascal_TextAsBytes_Callback(reinterpret_cast<VirtualQsciLexerPascal::QsciLexerPascal_TextAsBytes_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+libqt_string QsciLexerPascal_BytesAsText(const QsciLexerPascal* self, const char* bytes, int size) {
+    auto* vqscilexerpascal = const_cast<VirtualQsciLexerPascal*>(dynamic_cast<const VirtualQsciLexerPascal*>(self));
+    if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
+        QString _ret = vqscilexerpascal->bytesAsText(bytes, static_cast<int>(size));
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        QByteArray _b = _ret.toUtf8();
+        libqt_string _str;
+        _str.len = _b.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _b.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    } else {
+        QString _ret = ((VirtualQsciLexerPascal*)self)->bytesAsText(bytes, static_cast<int>(size));
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        QByteArray _b = _ret.toUtf8();
+        libqt_string _str;
+        _str.len = _b.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _b.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    }
+}
+
+// Base class handler implementation
+libqt_string QsciLexerPascal_QBaseBytesAsText(const QsciLexerPascal* self, const char* bytes, int size) {
+    auto* vqscilexerpascal = const_cast<VirtualQsciLexerPascal*>(dynamic_cast<const VirtualQsciLexerPascal*>(self));
+    if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
+        vqscilexerpascal->setQsciLexerPascal_BytesAsText_IsBase(true);
+        QString _ret = vqscilexerpascal->bytesAsText(bytes, static_cast<int>(size));
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        QByteArray _b = _ret.toUtf8();
+        libqt_string _str;
+        _str.len = _b.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _b.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    } else {
+        QString _ret = ((VirtualQsciLexerPascal*)self)->bytesAsText(bytes, static_cast<int>(size));
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        QByteArray _b = _ret.toUtf8();
+        libqt_string _str;
+        _str.len = _b.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _b.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QsciLexerPascal_OnBytesAsText(const QsciLexerPascal* self, intptr_t slot) {
+    auto* vqscilexerpascal = const_cast<VirtualQsciLexerPascal*>(dynamic_cast<const VirtualQsciLexerPascal*>(self));
+    if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
+        vqscilexerpascal->setQsciLexerPascal_BytesAsText_Callback(reinterpret_cast<VirtualQsciLexerPascal::QsciLexerPascal_BytesAsText_Callback>(slot));
     }
 }
 
@@ -1607,7 +1724,7 @@ void QsciLexerPascal_OnReceivers(const QsciLexerPascal* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QsciLexerPascal_IsSignalConnected(const QsciLexerPascal* self, QMetaMethod* signal) {
+bool QsciLexerPascal_IsSignalConnected(const QsciLexerPascal* self, const QMetaMethod* signal) {
     auto* vqscilexerpascal = const_cast<VirtualQsciLexerPascal*>(dynamic_cast<const VirtualQsciLexerPascal*>(self));
     if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
         return vqscilexerpascal->isSignalConnected(*signal);
@@ -1617,7 +1734,7 @@ bool QsciLexerPascal_IsSignalConnected(const QsciLexerPascal* self, QMetaMethod*
 }
 
 // Base class handler implementation
-bool QsciLexerPascal_QBaseIsSignalConnected(const QsciLexerPascal* self, QMetaMethod* signal) {
+bool QsciLexerPascal_QBaseIsSignalConnected(const QsciLexerPascal* self, const QMetaMethod* signal) {
     auto* vqscilexerpascal = const_cast<VirtualQsciLexerPascal*>(dynamic_cast<const VirtualQsciLexerPascal*>(self));
     if (vqscilexerpascal && vqscilexerpascal->isVirtualQsciLexerPascal) {
         vqscilexerpascal->setQsciLexerPascal_IsSignalConnected_IsBase(true);

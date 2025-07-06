@@ -146,6 +146,7 @@ class VirtualQHeaderView final : public QHeaderView {
     using QHeaderView_SenderSignalIndex_Callback = int (*)();
     using QHeaderView_Receivers_Callback = int (*)(const QHeaderView*, const char*);
     using QHeaderView_IsSignalConnected_Callback = bool (*)(const QHeaderView*, QMetaMethod*);
+    using QHeaderView_GetDecodedMetricF_Callback = double (*)(const QHeaderView*, int, int);
 
   protected:
     // Instance callback storage
@@ -274,6 +275,7 @@ class VirtualQHeaderView final : public QHeaderView {
     QHeaderView_SenderSignalIndex_Callback qheaderview_sendersignalindex_callback = nullptr;
     QHeaderView_Receivers_Callback qheaderview_receivers_callback = nullptr;
     QHeaderView_IsSignalConnected_Callback qheaderview_issignalconnected_callback = nullptr;
+    QHeaderView_GetDecodedMetricF_Callback qheaderview_getdecodedmetricf_callback = nullptr;
 
     // Instance base flags
     mutable bool qheaderview_metacall_isbase = false;
@@ -401,10 +403,11 @@ class VirtualQHeaderView final : public QHeaderView {
     mutable bool qheaderview_sendersignalindex_isbase = false;
     mutable bool qheaderview_receivers_isbase = false;
     mutable bool qheaderview_issignalconnected_isbase = false;
+    mutable bool qheaderview_getdecodedmetricf_isbase = false;
 
   public:
-    VirtualQHeaderView(Qt::Orientation orientation) : QHeaderView(orientation){};
-    VirtualQHeaderView(Qt::Orientation orientation, QWidget* parent) : QHeaderView(orientation, parent){};
+    VirtualQHeaderView(Qt::Orientation orientation) : QHeaderView(orientation) {};
+    VirtualQHeaderView(Qt::Orientation orientation, QWidget* parent) : QHeaderView(orientation, parent) {};
 
     ~VirtualQHeaderView() {
         qheaderview_metacall_callback = nullptr;
@@ -532,6 +535,7 @@ class VirtualQHeaderView final : public QHeaderView {
         qheaderview_sendersignalindex_callback = nullptr;
         qheaderview_receivers_callback = nullptr;
         qheaderview_issignalconnected_callback = nullptr;
+        qheaderview_getdecodedmetricf_callback = nullptr;
     }
 
     // Callback setters
@@ -660,6 +664,7 @@ class VirtualQHeaderView final : public QHeaderView {
     inline void setQHeaderView_SenderSignalIndex_Callback(QHeaderView_SenderSignalIndex_Callback cb) { qheaderview_sendersignalindex_callback = cb; }
     inline void setQHeaderView_Receivers_Callback(QHeaderView_Receivers_Callback cb) { qheaderview_receivers_callback = cb; }
     inline void setQHeaderView_IsSignalConnected_Callback(QHeaderView_IsSignalConnected_Callback cb) { qheaderview_issignalconnected_callback = cb; }
+    inline void setQHeaderView_GetDecodedMetricF_Callback(QHeaderView_GetDecodedMetricF_Callback cb) { qheaderview_getdecodedmetricf_callback = cb; }
 
     // Base flag setters
     inline void setQHeaderView_Metacall_IsBase(bool value) const { qheaderview_metacall_isbase = value; }
@@ -787,6 +792,7 @@ class VirtualQHeaderView final : public QHeaderView {
     inline void setQHeaderView_SenderSignalIndex_IsBase(bool value) const { qheaderview_sendersignalindex_isbase = value; }
     inline void setQHeaderView_Receivers_IsBase(bool value) const { qheaderview_receivers_isbase = value; }
     inline void setQHeaderView_IsSignalConnected_IsBase(bool value) const { qheaderview_issignalconnected_isbase = value; }
+    inline void setQHeaderView_GetDecodedMetricF_IsBase(bool value) const { qheaderview_getdecodedmetricf_isbase = value; }
 
     // Virtual method for C ABI access and custom callback
     virtual int qt_metacall(QMetaObject::Call param1, int param2, void** param3) override {
@@ -1088,13 +1094,13 @@ class VirtualQHeaderView final : public QHeaderView {
             // Cast returned reference into pointer
             QModelIndex* cbval2 = const_cast<QModelIndex*>(&bottomRight_ret);
             const QList<int>& roles_ret = roles;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            int* roles_arr = static_cast<int*>(malloc(sizeof(int) * roles_ret.length()));
-            for (size_t i = 0; i < roles_ret.length(); ++i) {
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            int* roles_arr = static_cast<int*>(malloc(sizeof(int) * roles_ret.size()));
+            for (size_t i = 0; i < roles_ret.size(); ++i) {
                 roles_arr[i] = roles_ret[i];
             }
             libqt_list roles_out;
-            roles_out.len = roles_ret.length();
+            roles_out.len = roles_ret.size();
             roles_out.data.ints = roles_arr;
             libqt_list /* of int */ cbval3 = roles_out;
 
@@ -1556,13 +1562,13 @@ class VirtualQHeaderView final : public QHeaderView {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QModelIndexList selectedIndexes() const override {
+    virtual QList<QModelIndex> selectedIndexes() const override {
         if (qheaderview_selectedindexes_isbase) {
             qheaderview_selectedindexes_isbase = false;
             return QHeaderView::selectedIndexes();
         } else if (qheaderview_selectedindexes_callback != nullptr) {
             libqt_list /* of QModelIndex* */ callback_ret = qheaderview_selectedindexes_callback();
-            QModelIndexList callback_ret_QList;
+            QList<QModelIndex> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             QModelIndex** callback_ret_arr = static_cast<QModelIndex**>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -2622,9 +2628,25 @@ class VirtualQHeaderView final : public QHeaderView {
         }
     }
 
+    // Virtual method for C ABI access and custom callback
+    double getDecodedMetricF(QPaintDevice::PaintDeviceMetric metricA, QPaintDevice::PaintDeviceMetric metricB) const {
+        if (qheaderview_getdecodedmetricf_isbase) {
+            qheaderview_getdecodedmetricf_isbase = false;
+            return QHeaderView::getDecodedMetricF(metricA, metricB);
+        } else if (qheaderview_getdecodedmetricf_callback != nullptr) {
+            int cbval1 = static_cast<int>(metricA);
+            int cbval2 = static_cast<int>(metricB);
+
+            double callback_ret = qheaderview_getdecodedmetricf_callback(this, cbval1, cbval2);
+            return static_cast<double>(callback_ret);
+        } else {
+            return QHeaderView::getDecodedMetricF(metricA, metricB);
+        }
+    }
+
     // Friend functions
-    friend void QHeaderView_CurrentChanged(QHeaderView* self, QModelIndex* current, QModelIndex* old);
-    friend void QHeaderView_QBaseCurrentChanged(QHeaderView* self, QModelIndex* current, QModelIndex* old);
+    friend void QHeaderView_CurrentChanged(QHeaderView* self, const QModelIndex* current, const QModelIndex* old);
+    friend void QHeaderView_QBaseCurrentChanged(QHeaderView* self, const QModelIndex* current, const QModelIndex* old);
     friend bool QHeaderView_Event(QHeaderView* self, QEvent* e);
     friend bool QHeaderView_QBaseEvent(QHeaderView* self, QEvent* e);
     friend void QHeaderView_PaintEvent(QHeaderView* self, QPaintEvent* e);
@@ -2639,8 +2661,8 @@ class VirtualQHeaderView final : public QHeaderView {
     friend void QHeaderView_QBaseMouseDoubleClickEvent(QHeaderView* self, QMouseEvent* e);
     friend bool QHeaderView_ViewportEvent(QHeaderView* self, QEvent* e);
     friend bool QHeaderView_QBaseViewportEvent(QHeaderView* self, QEvent* e);
-    friend void QHeaderView_PaintSection(const QHeaderView* self, QPainter* painter, QRect* rect, int logicalIndex);
-    friend void QHeaderView_QBasePaintSection(const QHeaderView* self, QPainter* painter, QRect* rect, int logicalIndex);
+    friend void QHeaderView_PaintSection(const QHeaderView* self, QPainter* painter, const QRect* rect, int logicalIndex);
+    friend void QHeaderView_QBasePaintSection(const QHeaderView* self, QPainter* painter, const QRect* rect, int logicalIndex);
     friend QSize* QHeaderView_SectionSizeFromContents(const QHeaderView* self, int logicalIndex);
     friend QSize* QHeaderView_QBaseSectionSizeFromContents(const QHeaderView* self, int logicalIndex);
     friend int QHeaderView_HorizontalOffset(const QHeaderView* self);
@@ -2651,32 +2673,32 @@ class VirtualQHeaderView final : public QHeaderView {
     friend void QHeaderView_QBaseUpdateGeometries(QHeaderView* self);
     friend void QHeaderView_ScrollContentsBy(QHeaderView* self, int dx, int dy);
     friend void QHeaderView_QBaseScrollContentsBy(QHeaderView* self, int dx, int dy);
-    friend void QHeaderView_DataChanged(QHeaderView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles);
-    friend void QHeaderView_QBaseDataChanged(QHeaderView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles);
-    friend void QHeaderView_RowsInserted(QHeaderView* self, QModelIndex* parent, int start, int end);
-    friend void QHeaderView_QBaseRowsInserted(QHeaderView* self, QModelIndex* parent, int start, int end);
-    friend QRect* QHeaderView_VisualRect(const QHeaderView* self, QModelIndex* index);
-    friend QRect* QHeaderView_QBaseVisualRect(const QHeaderView* self, QModelIndex* index);
-    friend void QHeaderView_ScrollTo(QHeaderView* self, QModelIndex* index, int hint);
-    friend void QHeaderView_QBaseScrollTo(QHeaderView* self, QModelIndex* index, int hint);
-    friend QModelIndex* QHeaderView_IndexAt(const QHeaderView* self, QPoint* p);
-    friend QModelIndex* QHeaderView_QBaseIndexAt(const QHeaderView* self, QPoint* p);
-    friend bool QHeaderView_IsIndexHidden(const QHeaderView* self, QModelIndex* index);
-    friend bool QHeaderView_QBaseIsIndexHidden(const QHeaderView* self, QModelIndex* index);
+    friend void QHeaderView_DataChanged(QHeaderView* self, const QModelIndex* topLeft, const QModelIndex* bottomRight, const libqt_list /* of int */ roles);
+    friend void QHeaderView_QBaseDataChanged(QHeaderView* self, const QModelIndex* topLeft, const QModelIndex* bottomRight, const libqt_list /* of int */ roles);
+    friend void QHeaderView_RowsInserted(QHeaderView* self, const QModelIndex* parent, int start, int end);
+    friend void QHeaderView_QBaseRowsInserted(QHeaderView* self, const QModelIndex* parent, int start, int end);
+    friend QRect* QHeaderView_VisualRect(const QHeaderView* self, const QModelIndex* index);
+    friend QRect* QHeaderView_QBaseVisualRect(const QHeaderView* self, const QModelIndex* index);
+    friend void QHeaderView_ScrollTo(QHeaderView* self, const QModelIndex* index, int hint);
+    friend void QHeaderView_QBaseScrollTo(QHeaderView* self, const QModelIndex* index, int hint);
+    friend QModelIndex* QHeaderView_IndexAt(const QHeaderView* self, const QPoint* p);
+    friend QModelIndex* QHeaderView_QBaseIndexAt(const QHeaderView* self, const QPoint* p);
+    friend bool QHeaderView_IsIndexHidden(const QHeaderView* self, const QModelIndex* index);
+    friend bool QHeaderView_QBaseIsIndexHidden(const QHeaderView* self, const QModelIndex* index);
     friend QModelIndex* QHeaderView_MoveCursor(QHeaderView* self, int param1, int param2);
     friend QModelIndex* QHeaderView_QBaseMoveCursor(QHeaderView* self, int param1, int param2);
-    friend void QHeaderView_SetSelection(QHeaderView* self, QRect* rect, int flags);
-    friend void QHeaderView_QBaseSetSelection(QHeaderView* self, QRect* rect, int flags);
-    friend QRegion* QHeaderView_VisualRegionForSelection(const QHeaderView* self, QItemSelection* selection);
-    friend QRegion* QHeaderView_QBaseVisualRegionForSelection(const QHeaderView* self, QItemSelection* selection);
+    friend void QHeaderView_SetSelection(QHeaderView* self, const QRect* rect, int flags);
+    friend void QHeaderView_QBaseSetSelection(QHeaderView* self, const QRect* rect, int flags);
+    friend QRegion* QHeaderView_VisualRegionForSelection(const QHeaderView* self, const QItemSelection* selection);
+    friend QRegion* QHeaderView_QBaseVisualRegionForSelection(const QHeaderView* self, const QItemSelection* selection);
     friend void QHeaderView_InitStyleOptionForIndex(const QHeaderView* self, QStyleOptionHeader* option, int logicalIndex);
     friend void QHeaderView_QBaseInitStyleOptionForIndex(const QHeaderView* self, QStyleOptionHeader* option, int logicalIndex);
     friend void QHeaderView_InitStyleOption(const QHeaderView* self, QStyleOptionHeader* option);
     friend void QHeaderView_QBaseInitStyleOption(const QHeaderView* self, QStyleOptionHeader* option);
-    friend void QHeaderView_RowsAboutToBeRemoved(QHeaderView* self, QModelIndex* parent, int start, int end);
-    friend void QHeaderView_QBaseRowsAboutToBeRemoved(QHeaderView* self, QModelIndex* parent, int start, int end);
-    friend void QHeaderView_SelectionChanged(QHeaderView* self, QItemSelection* selected, QItemSelection* deselected);
-    friend void QHeaderView_QBaseSelectionChanged(QHeaderView* self, QItemSelection* selected, QItemSelection* deselected);
+    friend void QHeaderView_RowsAboutToBeRemoved(QHeaderView* self, const QModelIndex* parent, int start, int end);
+    friend void QHeaderView_QBaseRowsAboutToBeRemoved(QHeaderView* self, const QModelIndex* parent, int start, int end);
+    friend void QHeaderView_SelectionChanged(QHeaderView* self, const QItemSelection* selected, const QItemSelection* deselected);
+    friend void QHeaderView_QBaseSelectionChanged(QHeaderView* self, const QItemSelection* selected, const QItemSelection* deselected);
     friend void QHeaderView_UpdateEditorData(QHeaderView* self);
     friend void QHeaderView_QBaseUpdateEditorData(QHeaderView* self);
     friend void QHeaderView_UpdateEditorGeometries(QHeaderView* self);
@@ -2697,10 +2719,10 @@ class VirtualQHeaderView final : public QHeaderView {
     friend void QHeaderView_QBaseEditorDestroyed(QHeaderView* self, QObject* editor);
     friend libqt_list /* of QModelIndex* */ QHeaderView_SelectedIndexes(const QHeaderView* self);
     friend libqt_list /* of QModelIndex* */ QHeaderView_QBaseSelectedIndexes(const QHeaderView* self);
-    friend bool QHeaderView_Edit2(QHeaderView* self, QModelIndex* index, int trigger, QEvent* event);
-    friend bool QHeaderView_QBaseEdit2(QHeaderView* self, QModelIndex* index, int trigger, QEvent* event);
-    friend int QHeaderView_SelectionCommand(const QHeaderView* self, QModelIndex* index, QEvent* event);
-    friend int QHeaderView_QBaseSelectionCommand(const QHeaderView* self, QModelIndex* index, QEvent* event);
+    friend bool QHeaderView_Edit2(QHeaderView* self, const QModelIndex* index, int trigger, QEvent* event);
+    friend bool QHeaderView_QBaseEdit2(QHeaderView* self, const QModelIndex* index, int trigger, QEvent* event);
+    friend int QHeaderView_SelectionCommand(const QHeaderView* self, const QModelIndex* index, const QEvent* event);
+    friend int QHeaderView_QBaseSelectionCommand(const QHeaderView* self, const QModelIndex* index, const QEvent* event);
     friend void QHeaderView_StartDrag(QHeaderView* self, int supportedActions);
     friend void QHeaderView_QBaseStartDrag(QHeaderView* self, int supportedActions);
     friend void QHeaderView_InitViewItemOption(const QHeaderView* self, QStyleOptionViewItem* option);
@@ -2755,8 +2777,8 @@ class VirtualQHeaderView final : public QHeaderView {
     friend void QHeaderView_QBaseShowEvent(QHeaderView* self, QShowEvent* event);
     friend void QHeaderView_HideEvent(QHeaderView* self, QHideEvent* event);
     friend void QHeaderView_QBaseHideEvent(QHeaderView* self, QHideEvent* event);
-    friend bool QHeaderView_NativeEvent(QHeaderView* self, libqt_string eventType, void* message, intptr_t* result);
-    friend bool QHeaderView_QBaseNativeEvent(QHeaderView* self, libqt_string eventType, void* message, intptr_t* result);
+    friend bool QHeaderView_NativeEvent(QHeaderView* self, const libqt_string eventType, void* message, intptr_t* result);
+    friend bool QHeaderView_QBaseNativeEvent(QHeaderView* self, const libqt_string eventType, void* message, intptr_t* result);
     friend int QHeaderView_Metric(const QHeaderView* self, int param1);
     friend int QHeaderView_QBaseMetric(const QHeaderView* self, int param1);
     friend void QHeaderView_InitPainter(const QHeaderView* self, QPainter* painter);
@@ -2769,18 +2791,18 @@ class VirtualQHeaderView final : public QHeaderView {
     friend void QHeaderView_QBaseChildEvent(QHeaderView* self, QChildEvent* event);
     friend void QHeaderView_CustomEvent(QHeaderView* self, QEvent* event);
     friend void QHeaderView_QBaseCustomEvent(QHeaderView* self, QEvent* event);
-    friend void QHeaderView_ConnectNotify(QHeaderView* self, QMetaMethod* signal);
-    friend void QHeaderView_QBaseConnectNotify(QHeaderView* self, QMetaMethod* signal);
-    friend void QHeaderView_DisconnectNotify(QHeaderView* self, QMetaMethod* signal);
-    friend void QHeaderView_QBaseDisconnectNotify(QHeaderView* self, QMetaMethod* signal);
+    friend void QHeaderView_ConnectNotify(QHeaderView* self, const QMetaMethod* signal);
+    friend void QHeaderView_QBaseConnectNotify(QHeaderView* self, const QMetaMethod* signal);
+    friend void QHeaderView_DisconnectNotify(QHeaderView* self, const QMetaMethod* signal);
+    friend void QHeaderView_QBaseDisconnectNotify(QHeaderView* self, const QMetaMethod* signal);
     friend void QHeaderView_UpdateSection(QHeaderView* self, int logicalIndex);
     friend void QHeaderView_QBaseUpdateSection(QHeaderView* self, int logicalIndex);
     friend void QHeaderView_ResizeSections2(QHeaderView* self);
     friend void QHeaderView_QBaseResizeSections2(QHeaderView* self);
-    friend void QHeaderView_SectionsInserted(QHeaderView* self, QModelIndex* parent, int logicalFirst, int logicalLast);
-    friend void QHeaderView_QBaseSectionsInserted(QHeaderView* self, QModelIndex* parent, int logicalFirst, int logicalLast);
-    friend void QHeaderView_SectionsAboutToBeRemoved(QHeaderView* self, QModelIndex* parent, int logicalFirst, int logicalLast);
-    friend void QHeaderView_QBaseSectionsAboutToBeRemoved(QHeaderView* self, QModelIndex* parent, int logicalFirst, int logicalLast);
+    friend void QHeaderView_SectionsInserted(QHeaderView* self, const QModelIndex* parent, int logicalFirst, int logicalLast);
+    friend void QHeaderView_QBaseSectionsInserted(QHeaderView* self, const QModelIndex* parent, int logicalFirst, int logicalLast);
+    friend void QHeaderView_SectionsAboutToBeRemoved(QHeaderView* self, const QModelIndex* parent, int logicalFirst, int logicalLast);
+    friend void QHeaderView_QBaseSectionsAboutToBeRemoved(QHeaderView* self, const QModelIndex* parent, int logicalFirst, int logicalLast);
     friend void QHeaderView_Initialize(QHeaderView* self);
     friend void QHeaderView_QBaseInitialize(QHeaderView* self);
     friend void QHeaderView_InitializeSections(QHeaderView* self);
@@ -2795,8 +2817,8 @@ class VirtualQHeaderView final : public QHeaderView {
     friend void QHeaderView_QBaseScheduleDelayedItemsLayout(QHeaderView* self);
     friend void QHeaderView_ExecuteDelayedItemsLayout(QHeaderView* self);
     friend void QHeaderView_QBaseExecuteDelayedItemsLayout(QHeaderView* self);
-    friend void QHeaderView_SetDirtyRegion(QHeaderView* self, QRegion* region);
-    friend void QHeaderView_QBaseSetDirtyRegion(QHeaderView* self, QRegion* region);
+    friend void QHeaderView_SetDirtyRegion(QHeaderView* self, const QRegion* region);
+    friend void QHeaderView_QBaseSetDirtyRegion(QHeaderView* self, const QRegion* region);
     friend void QHeaderView_ScrollDirtyRegion(QHeaderView* self, int dx, int dy);
     friend void QHeaderView_QBaseScrollDirtyRegion(QHeaderView* self, int dx, int dy);
     friend QPoint* QHeaderView_DirtyRegionOffset(const QHeaderView* self);
@@ -2831,8 +2853,10 @@ class VirtualQHeaderView final : public QHeaderView {
     friend int QHeaderView_QBaseSenderSignalIndex(const QHeaderView* self);
     friend int QHeaderView_Receivers(const QHeaderView* self, const char* signal);
     friend int QHeaderView_QBaseReceivers(const QHeaderView* self, const char* signal);
-    friend bool QHeaderView_IsSignalConnected(const QHeaderView* self, QMetaMethod* signal);
-    friend bool QHeaderView_QBaseIsSignalConnected(const QHeaderView* self, QMetaMethod* signal);
+    friend bool QHeaderView_IsSignalConnected(const QHeaderView* self, const QMetaMethod* signal);
+    friend bool QHeaderView_QBaseIsSignalConnected(const QHeaderView* self, const QMetaMethod* signal);
+    friend double QHeaderView_GetDecodedMetricF(const QHeaderView* self, int metricA, int metricB);
+    friend double QHeaderView_QBaseGetDecodedMetricF(const QHeaderView* self, int metricA, int metricB);
 };
 
 #endif

@@ -26,8 +26,8 @@ QCompleter* QCompleter_new2(QAbstractItemModel* model) {
     return new VirtualQCompleter(model);
 }
 
-QCompleter* QCompleter_new3(libqt_list /* of libqt_string */ completions) {
-    QStringList completions_QList;
+QCompleter* QCompleter_new3(const libqt_list /* of libqt_string */ completions) {
+    QList<QString> completions_QList;
     completions_QList.reserve(completions.len);
     libqt_string* completions_arr = static_cast<libqt_string*>(completions.data.ptr);
     for (size_t i = 0; i < completions.len; ++i) {
@@ -45,8 +45,8 @@ QCompleter* QCompleter_new5(QAbstractItemModel* model, QObject* parent) {
     return new VirtualQCompleter(model, parent);
 }
 
-QCompleter* QCompleter_new6(libqt_list /* of libqt_string */ completions, QObject* parent) {
-    QStringList completions_QList;
+QCompleter* QCompleter_new6(const libqt_list /* of libqt_string */ completions, QObject* parent) {
+    QList<QString> completions_QList;
     completions_QList.reserve(completions.len);
     libqt_string* completions_arr = static_cast<libqt_string*>(completions.data.ptr);
     for (size_t i = 0; i < completions.len; ++i) {
@@ -232,7 +232,7 @@ libqt_string QCompleter_CompletionPrefix(const QCompleter* self) {
     return _str;
 }
 
-void QCompleter_SetCompletionPrefix(QCompleter* self, libqt_string prefix) {
+void QCompleter_SetCompletionPrefix(QCompleter* self, const libqt_string prefix) {
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     self->setCompletionPrefix(prefix_QString);
 }
@@ -245,21 +245,21 @@ void QCompleter_SetWrapAround(QCompleter* self, bool wrap) {
     self->setWrapAround(wrap);
 }
 
-void QCompleter_Activated(QCompleter* self, libqt_string text) {
+void QCompleter_Activated(QCompleter* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->activated(text_QString);
 }
 
-void QCompleter_ActivatedWithIndex(QCompleter* self, QModelIndex* index) {
+void QCompleter_ActivatedWithIndex(QCompleter* self, const QModelIndex* index) {
     self->activated(*index);
 }
 
-void QCompleter_Highlighted(QCompleter* self, libqt_string text) {
+void QCompleter_Highlighted(QCompleter* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->highlighted(text_QString);
 }
 
-void QCompleter_HighlightedWithIndex(QCompleter* self, QModelIndex* index) {
+void QCompleter_HighlightedWithIndex(QCompleter* self, const QModelIndex* index) {
     self->highlighted(*index);
 }
 
@@ -287,12 +287,12 @@ libqt_string QCompleter_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-void QCompleter_Complete1(QCompleter* self, QRect* rect) {
+void QCompleter_Complete1(QCompleter* self, const QRect* rect) {
     self->complete(*rect);
 }
 
 // Derived class handler implementation
-libqt_string QCompleter_PathFromIndex(const QCompleter* self, QModelIndex* index) {
+libqt_string QCompleter_PathFromIndex(const QCompleter* self, const QModelIndex* index) {
     auto* vqcompleter = const_cast<VirtualQCompleter*>(dynamic_cast<const VirtualQCompleter*>(self));
     if (vqcompleter && vqcompleter->isVirtualQCompleter) {
         QString _ret = vqcompleter->pathFromIndex(*index);
@@ -318,7 +318,7 @@ libqt_string QCompleter_PathFromIndex(const QCompleter* self, QModelIndex* index
 }
 
 // Base class handler implementation
-libqt_string QCompleter_QBasePathFromIndex(const QCompleter* self, QModelIndex* index) {
+libqt_string QCompleter_QBasePathFromIndex(const QCompleter* self, const QModelIndex* index) {
     auto* vqcompleter = const_cast<VirtualQCompleter*>(dynamic_cast<const VirtualQCompleter*>(self));
     if (vqcompleter && vqcompleter->isVirtualQCompleter) {
         vqcompleter->setQCompleter_PathFromIndex_IsBase(true);
@@ -353,14 +353,14 @@ void QCompleter_OnPathFromIndex(const QCompleter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-libqt_list /* of libqt_string */ QCompleter_SplitPath(const QCompleter* self, libqt_string path) {
+libqt_list /* of libqt_string */ QCompleter_SplitPath(const QCompleter* self, const libqt_string path) {
     auto* vqcompleter = const_cast<VirtualQCompleter*>(dynamic_cast<const VirtualQCompleter*>(self));
     QString path_QString = QString::fromUtf8(path.data, path.len);
     if (vqcompleter && vqcompleter->isVirtualQCompleter) {
-        QStringList _ret = vqcompleter->splitPath(path_QString);
+        QList<QString> _ret = vqcompleter->splitPath(path_QString);
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -372,14 +372,14 @@ libqt_list /* of libqt_string */ QCompleter_SplitPath(const QCompleter* self, li
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = self->QCompleter::splitPath(path_QString);
+        QList<QString> _ret = self->QCompleter::splitPath(path_QString);
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -391,22 +391,22 @@ libqt_list /* of libqt_string */ QCompleter_SplitPath(const QCompleter* self, li
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
 }
 
 // Base class handler implementation
-libqt_list /* of libqt_string */ QCompleter_QBaseSplitPath(const QCompleter* self, libqt_string path) {
+libqt_list /* of libqt_string */ QCompleter_QBaseSplitPath(const QCompleter* self, const libqt_string path) {
     auto* vqcompleter = const_cast<VirtualQCompleter*>(dynamic_cast<const VirtualQCompleter*>(self));
     QString path_QString = QString::fromUtf8(path.data, path.len);
     if (vqcompleter && vqcompleter->isVirtualQCompleter) {
         vqcompleter->setQCompleter_SplitPath_IsBase(true);
-        QStringList _ret = vqcompleter->splitPath(path_QString);
+        QList<QString> _ret = vqcompleter->splitPath(path_QString);
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -418,14 +418,14 @@ libqt_list /* of libqt_string */ QCompleter_QBaseSplitPath(const QCompleter* sel
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = self->QCompleter::splitPath(path_QString);
+        QList<QString> _ret = self->QCompleter::splitPath(path_QString);
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -437,7 +437,7 @@ libqt_list /* of libqt_string */ QCompleter_QBaseSplitPath(const QCompleter* sel
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -597,7 +597,7 @@ void QCompleter_OnCustomEvent(QCompleter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QCompleter_ConnectNotify(QCompleter* self, QMetaMethod* signal) {
+void QCompleter_ConnectNotify(QCompleter* self, const QMetaMethod* signal) {
     auto* vqcompleter = dynamic_cast<VirtualQCompleter*>(self);
     if (vqcompleter && vqcompleter->isVirtualQCompleter) {
         vqcompleter->connectNotify(*signal);
@@ -607,7 +607,7 @@ void QCompleter_ConnectNotify(QCompleter* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QCompleter_QBaseConnectNotify(QCompleter* self, QMetaMethod* signal) {
+void QCompleter_QBaseConnectNotify(QCompleter* self, const QMetaMethod* signal) {
     auto* vqcompleter = dynamic_cast<VirtualQCompleter*>(self);
     if (vqcompleter && vqcompleter->isVirtualQCompleter) {
         vqcompleter->setQCompleter_ConnectNotify_IsBase(true);
@@ -626,7 +626,7 @@ void QCompleter_OnConnectNotify(QCompleter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QCompleter_DisconnectNotify(QCompleter* self, QMetaMethod* signal) {
+void QCompleter_DisconnectNotify(QCompleter* self, const QMetaMethod* signal) {
     auto* vqcompleter = dynamic_cast<VirtualQCompleter*>(self);
     if (vqcompleter && vqcompleter->isVirtualQCompleter) {
         vqcompleter->disconnectNotify(*signal);
@@ -636,7 +636,7 @@ void QCompleter_DisconnectNotify(QCompleter* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QCompleter_QBaseDisconnectNotify(QCompleter* self, QMetaMethod* signal) {
+void QCompleter_QBaseDisconnectNotify(QCompleter* self, const QMetaMethod* signal) {
     auto* vqcompleter = dynamic_cast<VirtualQCompleter*>(self);
     if (vqcompleter && vqcompleter->isVirtualQCompleter) {
         vqcompleter->setQCompleter_DisconnectNotify_IsBase(true);
@@ -742,7 +742,7 @@ void QCompleter_OnReceivers(const QCompleter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QCompleter_IsSignalConnected(const QCompleter* self, QMetaMethod* signal) {
+bool QCompleter_IsSignalConnected(const QCompleter* self, const QMetaMethod* signal) {
     auto* vqcompleter = const_cast<VirtualQCompleter*>(dynamic_cast<const VirtualQCompleter*>(self));
     if (vqcompleter && vqcompleter->isVirtualQCompleter) {
         return vqcompleter->isSignalConnected(*signal);
@@ -752,7 +752,7 @@ bool QCompleter_IsSignalConnected(const QCompleter* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QCompleter_QBaseIsSignalConnected(const QCompleter* self, QMetaMethod* signal) {
+bool QCompleter_QBaseIsSignalConnected(const QCompleter* self, const QMetaMethod* signal) {
     auto* vqcompleter = const_cast<VirtualQCompleter*>(dynamic_cast<const VirtualQCompleter*>(self));
     if (vqcompleter && vqcompleter->isVirtualQCompleter) {
         vqcompleter->setQCompleter_IsSignalConnected_IsBase(true);

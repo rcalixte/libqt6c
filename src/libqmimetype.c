@@ -18,14 +18,6 @@ void q_mimetype_swap(void* self, void* other) {
     QMimeType_Swap((QMimeType*)self, (QMimeType*)other);
 }
 
-bool q_mimetype_operator_equal(void* self, void* other) {
-    return QMimeType_OperatorEqual((QMimeType*)self, (QMimeType*)other);
-}
-
-bool q_mimetype_operator_not_equal(void* self, void* other) {
-    return QMimeType_OperatorNotEqual((QMimeType*)self, (QMimeType*)other);
-}
-
 bool q_mimetype_is_valid(void* self) {
     return QMimeType_IsValid((QMimeType*)self);
 }

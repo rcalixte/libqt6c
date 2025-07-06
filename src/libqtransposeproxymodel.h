@@ -12,18 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractitemmodel.h"
-#include "libqabstractproxymodel.h"
-#include "libqevent.h"
-#include "libqdatastream.h"
-#include "libqitemselectionmodel.h"
-#include "libqmetaobject.h"
-#include "libqmimedata.h"
-#include "libqobject.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qtransposeproxymodel.html
 
 /// q_transposeproxymodel_new constructs a new QTransposeProxyModel object.
@@ -725,7 +713,7 @@ QThread* q_transposeproxymodel_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QTransposeProxyModel* self, QThread* thread ```
-void q_transposeproxymodel_move_to_thread(void* self, void* thread);
+bool q_transposeproxymodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -740,6 +728,13 @@ int32_t q_transposeproxymodel_start_timer(void* self, int interval);
 ///
 /// ``` QTransposeProxyModel* self, int id ```
 void q_transposeproxymodel_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QTransposeProxyModel* self, enum Qt__TimerId id ```
+void q_transposeproxymodel_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -873,6 +868,13 @@ bool q_transposeproxymodel_inherits(void* self, const char* classname);
 ///
 /// ``` QTransposeProxyModel* self ```
 void q_transposeproxymodel_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QTransposeProxyModel* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_transposeproxymodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

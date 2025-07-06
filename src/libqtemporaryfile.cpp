@@ -20,7 +20,7 @@ QTemporaryFile* QTemporaryFile_new() {
     return new VirtualQTemporaryFile();
 }
 
-QTemporaryFile* QTemporaryFile_new2(libqt_string templateName) {
+QTemporaryFile* QTemporaryFile_new2(const libqt_string templateName) {
     QString templateName_QString = QString::fromUtf8(templateName.data, templateName.len);
     return new VirtualQTemporaryFile(templateName_QString);
 }
@@ -29,7 +29,7 @@ QTemporaryFile* QTemporaryFile_new3(QObject* parent) {
     return new VirtualQTemporaryFile(parent);
 }
 
-QTemporaryFile* QTemporaryFile_new4(libqt_string templateName, QObject* parent) {
+QTemporaryFile* QTemporaryFile_new4(const libqt_string templateName, QObject* parent) {
     QString templateName_QString = QString::fromUtf8(templateName.data, templateName.len);
     return new VirtualQTemporaryFile(templateName_QString, parent);
 }
@@ -106,17 +106,17 @@ libqt_string QTemporaryFile_FileTemplate(const QTemporaryFile* self) {
     return _str;
 }
 
-void QTemporaryFile_SetFileTemplate(QTemporaryFile* self, libqt_string name) {
+void QTemporaryFile_SetFileTemplate(QTemporaryFile* self, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     self->setFileTemplate(name_QString);
 }
 
-bool QTemporaryFile_Rename(QTemporaryFile* self, libqt_string newName) {
+bool QTemporaryFile_Rename(QTemporaryFile* self, const libqt_string newName) {
     QString newName_QString = QString::fromUtf8(newName.data, newName.len);
     return self->rename(newName_QString);
 }
 
-QTemporaryFile* QTemporaryFile_CreateNativeFile(libqt_string fileName) {
+QTemporaryFile* QTemporaryFile_CreateNativeFile(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return QTemporaryFile::createNativeFile(fileName_QString);
 }
@@ -214,9 +214,9 @@ void QTemporaryFile_OnFileName(const QTemporaryFile* self, intptr_t slot) {
 bool QTemporaryFile_OpenWithFlags(QTemporaryFile* self, int flags) {
     auto* vqtemporaryfile = dynamic_cast<VirtualQTemporaryFile*>(self);
     if (vqtemporaryfile && vqtemporaryfile->isVirtualQTemporaryFile) {
-        return vqtemporaryfile->open(static_cast<QIODeviceBase::OpenMode>(flags));
+        return vqtemporaryfile->open(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(flags));
     } else {
-        return ((VirtualQTemporaryFile*)self)->open(static_cast<QIODeviceBase::OpenMode>(flags));
+        return ((VirtualQTemporaryFile*)self)->open(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(flags));
     }
 }
 
@@ -225,9 +225,9 @@ bool QTemporaryFile_QBaseOpenWithFlags(QTemporaryFile* self, int flags) {
     auto* vqtemporaryfile = dynamic_cast<VirtualQTemporaryFile*>(self);
     if (vqtemporaryfile && vqtemporaryfile->isVirtualQTemporaryFile) {
         vqtemporaryfile->setQTemporaryFile_OpenWithFlags_IsBase(true);
-        return vqtemporaryfile->open(static_cast<QIODeviceBase::OpenMode>(flags));
+        return vqtemporaryfile->open(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(flags));
     } else {
-        return ((VirtualQTemporaryFile*)self)->open(static_cast<QIODeviceBase::OpenMode>(flags));
+        return ((VirtualQTemporaryFile*)self)->open(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(flags));
     }
 }
 
@@ -936,7 +936,7 @@ void QTemporaryFile_OnCustomEvent(QTemporaryFile* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTemporaryFile_ConnectNotify(QTemporaryFile* self, QMetaMethod* signal) {
+void QTemporaryFile_ConnectNotify(QTemporaryFile* self, const QMetaMethod* signal) {
     auto* vqtemporaryfile = dynamic_cast<VirtualQTemporaryFile*>(self);
     if (vqtemporaryfile && vqtemporaryfile->isVirtualQTemporaryFile) {
         vqtemporaryfile->connectNotify(*signal);
@@ -946,7 +946,7 @@ void QTemporaryFile_ConnectNotify(QTemporaryFile* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTemporaryFile_QBaseConnectNotify(QTemporaryFile* self, QMetaMethod* signal) {
+void QTemporaryFile_QBaseConnectNotify(QTemporaryFile* self, const QMetaMethod* signal) {
     auto* vqtemporaryfile = dynamic_cast<VirtualQTemporaryFile*>(self);
     if (vqtemporaryfile && vqtemporaryfile->isVirtualQTemporaryFile) {
         vqtemporaryfile->setQTemporaryFile_ConnectNotify_IsBase(true);
@@ -965,7 +965,7 @@ void QTemporaryFile_OnConnectNotify(QTemporaryFile* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTemporaryFile_DisconnectNotify(QTemporaryFile* self, QMetaMethod* signal) {
+void QTemporaryFile_DisconnectNotify(QTemporaryFile* self, const QMetaMethod* signal) {
     auto* vqtemporaryfile = dynamic_cast<VirtualQTemporaryFile*>(self);
     if (vqtemporaryfile && vqtemporaryfile->isVirtualQTemporaryFile) {
         vqtemporaryfile->disconnectNotify(*signal);
@@ -975,7 +975,7 @@ void QTemporaryFile_DisconnectNotify(QTemporaryFile* self, QMetaMethod* signal) 
 }
 
 // Base class handler implementation
-void QTemporaryFile_QBaseDisconnectNotify(QTemporaryFile* self, QMetaMethod* signal) {
+void QTemporaryFile_QBaseDisconnectNotify(QTemporaryFile* self, const QMetaMethod* signal) {
     auto* vqtemporaryfile = dynamic_cast<VirtualQTemporaryFile*>(self);
     if (vqtemporaryfile && vqtemporaryfile->isVirtualQTemporaryFile) {
         vqtemporaryfile->setQTemporaryFile_DisconnectNotify_IsBase(true);
@@ -1023,7 +1023,7 @@ void QTemporaryFile_OnSetOpenMode(QTemporaryFile* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTemporaryFile_SetErrorString(QTemporaryFile* self, libqt_string errorString) {
+void QTemporaryFile_SetErrorString(QTemporaryFile* self, const libqt_string errorString) {
     auto* vqtemporaryfile = dynamic_cast<VirtualQTemporaryFile*>(self);
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     if (vqtemporaryfile && vqtemporaryfile->isVirtualQTemporaryFile) {
@@ -1034,7 +1034,7 @@ void QTemporaryFile_SetErrorString(QTemporaryFile* self, libqt_string errorStrin
 }
 
 // Base class handler implementation
-void QTemporaryFile_QBaseSetErrorString(QTemporaryFile* self, libqt_string errorString) {
+void QTemporaryFile_QBaseSetErrorString(QTemporaryFile* self, const libqt_string errorString) {
     auto* vqtemporaryfile = dynamic_cast<VirtualQTemporaryFile*>(self);
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     if (vqtemporaryfile && vqtemporaryfile->isVirtualQTemporaryFile) {
@@ -1141,7 +1141,7 @@ void QTemporaryFile_OnReceivers(const QTemporaryFile* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTemporaryFile_IsSignalConnected(const QTemporaryFile* self, QMetaMethod* signal) {
+bool QTemporaryFile_IsSignalConnected(const QTemporaryFile* self, const QMetaMethod* signal) {
     auto* vqtemporaryfile = const_cast<VirtualQTemporaryFile*>(dynamic_cast<const VirtualQTemporaryFile*>(self));
     if (vqtemporaryfile && vqtemporaryfile->isVirtualQTemporaryFile) {
         return vqtemporaryfile->isSignalConnected(*signal);
@@ -1151,7 +1151,7 @@ bool QTemporaryFile_IsSignalConnected(const QTemporaryFile* self, QMetaMethod* s
 }
 
 // Base class handler implementation
-bool QTemporaryFile_QBaseIsSignalConnected(const QTemporaryFile* self, QMetaMethod* signal) {
+bool QTemporaryFile_QBaseIsSignalConnected(const QTemporaryFile* self, const QMetaMethod* signal) {
     auto* vqtemporaryfile = const_cast<VirtualQTemporaryFile*>(dynamic_cast<const VirtualQTemporaryFile*>(self));
     if (vqtemporaryfile && vqtemporaryfile->isVirtualQTemporaryFile) {
         vqtemporaryfile->setQTemporaryFile_IsSignalConnected_IsBase(true);

@@ -12,11 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqmetaobject.h"
-#include "libqmetatype.h"
-#include "libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qgenericargument.html
 
 /// q_genericargument_new constructs a new QGenericArgument object.
@@ -363,18 +358,18 @@ bool q_metaobject_invoke_method2(void* obj, const char* member, void* retVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
-/// ``` QObject* obj, const char* member, enum Qt__ConnectionType typeVal ```
-bool q_metaobject_invoke_method3(void* obj, const char* member, int64_t typeVal);
+/// ``` QObject* obj, const char* member, enum Qt__ConnectionType typeVal, QGenericArgument* val0 ```
+bool q_metaobject_invoke_method3(void* obj, const char* member, int64_t typeVal, void* val0);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
-/// ``` QObject* obj, const char* member ```
-bool q_metaobject_invoke_method4(void* obj, const char* member);
+/// ``` QObject* obj, const char* member, QGenericArgument* val0 ```
+bool q_metaobject_invoke_method4(void* obj, const char* member, void* val0);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#newInstance)
 ///
-/// ``` QMetaObject* self ```
-QObject* q_metaobject_new_instance(void* self);
+/// ``` QMetaObject* self, QGenericArgument* val0 ```
+QObject* q_metaobject_new_instance(void* self, void* val0);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#static_metacall)
 ///
@@ -503,11 +498,6 @@ bool q_metaobject_invoke_method132(void* obj, const char* member, void* retVal, 
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
-/// ``` QObject* obj, const char* member, enum Qt__ConnectionType typeVal, QGenericArgument* val0 ```
-bool q_metaobject_invoke_method43(void* obj, const char* member, int64_t typeVal, void* val0);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
-///
 /// ``` QObject* obj, const char* member, enum Qt__ConnectionType typeVal, QGenericArgument* val0, QGenericArgument* val1 ```
 bool q_metaobject_invoke_method53(void* obj, const char* member, int64_t typeVal, void* val0, void* val1);
 
@@ -553,13 +543,8 @@ bool q_metaobject_invoke_method133(void* obj, const char* member, int64_t typeVa
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
-/// ``` QObject* obj, const char* member, QGenericArgument* val0 ```
-bool q_metaobject_invoke_method32(void* obj, const char* member, void* val0);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
-///
 /// ``` QObject* obj, const char* member, QGenericArgument* val0, QGenericArgument* val1 ```
-bool q_metaobject_invoke_method44(void* obj, const char* member, void* val0, void* val1);
+bool q_metaobject_invoke_method43(void* obj, const char* member, void* val0, void* val1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
@@ -600,11 +585,6 @@ bool q_metaobject_invoke_method114(void* obj, const char* member, void* val0, vo
 ///
 /// ``` QObject* obj, const char* member, QGenericArgument* val0, QGenericArgument* val1, QGenericArgument* val2, QGenericArgument* val3, QGenericArgument* val4, QGenericArgument* val5, QGenericArgument* val6, QGenericArgument* val7, QGenericArgument* val8, QGenericArgument* val9 ```
 bool q_metaobject_invoke_method124(void* obj, const char* member, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#newInstance)
-///
-/// ``` QMetaObject* self, QGenericArgument* val0 ```
-QObject* q_metaobject_new_instance1(void* self, void* val0);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#newInstance)
 ///
@@ -762,7 +742,8 @@ typedef enum {
     QMETAOBJECT_CALL_REGISTERPROPERTYMETATYPE = 6,
     QMETAOBJECT_CALL_REGISTERMETHODARGUMENTMETATYPE = 7,
     QMETAOBJECT_CALL_BINDABLEPROPERTY = 8,
-    QMETAOBJECT_CALL_CUSTOMCALL = 9
+    QMETAOBJECT_CALL_CUSTOMCALL = 9,
+    QMETAOBJECT_CALL_CONSTRUCTINPLACE = 10
 } QMetaObject__Call;
 
 #endif

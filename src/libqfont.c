@@ -283,6 +283,56 @@ int64_t q_font_hinting_preference(void* self) {
     return QFont_HintingPreference((QFont*)self);
 }
 
+void q_font_set_feature(void* self, void* tag, uint32_t value) {
+    QFont_SetFeature((QFont*)self, (QFont__Tag*)tag, value);
+}
+
+void q_font_unset_feature(void* self, void* tag) {
+    QFont_UnsetFeature((QFont*)self, (QFont__Tag*)tag);
+}
+
+uint32_t q_font_feature_value(void* self, void* tag) {
+    return QFont_FeatureValue((QFont*)self, (QFont__Tag*)tag);
+}
+
+bool q_font_is_feature_set(void* self, void* tag) {
+    return QFont_IsFeatureSet((QFont*)self, (QFont__Tag*)tag);
+}
+
+libqt_list /* of QFont__Tag* */ q_font_feature_tags(void* self) {
+    libqt_list _arr = QFont_FeatureTags((QFont*)self);
+    return _arr;
+}
+
+void q_font_clear_features(void* self) {
+    QFont_ClearFeatures((QFont*)self);
+}
+
+void q_font_set_variable_axis(void* self, void* tag, float value) {
+    QFont_SetVariableAxis((QFont*)self, (QFont__Tag*)tag, value);
+}
+
+void q_font_unset_variable_axis(void* self, void* tag) {
+    QFont_UnsetVariableAxis((QFont*)self, (QFont__Tag*)tag);
+}
+
+bool q_font_is_variable_axis_set(void* self, void* tag) {
+    return QFont_IsVariableAxisSet((QFont*)self, (QFont__Tag*)tag);
+}
+
+float q_font_variable_axis_value(void* self, void* tag) {
+    return QFont_VariableAxisValue((QFont*)self, (QFont__Tag*)tag);
+}
+
+void q_font_clear_variable_axes(void* self) {
+    QFont_ClearVariableAxes((QFont*)self);
+}
+
+libqt_list /* of QFont__Tag* */ q_font_variable_axis_tags(void* self) {
+    libqt_list _arr = QFont_VariableAxisTags((QFont*)self);
+    return _arr;
+}
+
 bool q_font_exact_match(void* self) {
     return QFont_ExactMatch((QFont*)self);
 }
@@ -429,4 +479,47 @@ void q_font_set_style_hint2(void* self, int64_t param1, int64_t param2) {
 
 void q_font_delete(void* self) {
     QFont_Delete((QFont*)(self));
+}
+
+QFont__Tag* q_font__tag_new(void* other) {
+    return QFont__Tag_new((QFont__Tag*)other);
+}
+
+QFont__Tag* q_font__tag_new2(void* other) {
+    return QFont__Tag_new2((QFont__Tag*)other);
+}
+
+QFont__Tag* q_font__tag_new3() {
+    return QFont__Tag_new3();
+}
+
+QFont__Tag* q_font__tag_new4(void* param1) {
+    return QFont__Tag_new4((QFont__Tag*)param1);
+}
+
+void q_font__tag_copy_assign(void* self, void* other) {
+    QFont__Tag_CopyAssign((QFont__Tag*)self, (QFont__Tag*)other);
+}
+
+void q_font__tag_move_assign(void* self, void* other) {
+    QFont__Tag_MoveAssign((QFont__Tag*)self, (QFont__Tag*)other);
+}
+
+bool q_font__tag_is_valid(void* self) {
+    return QFont__Tag_IsValid((QFont__Tag*)self);
+}
+
+uint32_t q_font__tag_value(void* self) {
+    return QFont__Tag_Value((QFont__Tag*)self);
+}
+
+char* q_font__tag_to_string(void* self) {
+    libqt_string _str = QFont__Tag_ToString((QFont__Tag*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_font__tag_delete(void* self) {
+    QFont__Tag_Delete((QFont__Tag*)(self));
 }

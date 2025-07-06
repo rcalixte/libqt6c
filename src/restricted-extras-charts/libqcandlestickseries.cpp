@@ -82,7 +82,7 @@ bool QCandlestickSeries_Remove(QCandlestickSeries* self, QCandlestickSet* set) {
     return self->remove(set);
 }
 
-bool QCandlestickSeries_AppendWithSets(QCandlestickSeries* self, libqt_list /* of QCandlestickSet* */ sets) {
+bool QCandlestickSeries_AppendWithSets(QCandlestickSeries* self, const libqt_list /* of QCandlestickSet* */ sets) {
     QList<QCandlestickSet*> sets_QList;
     sets_QList.reserve(sets.len);
     QCandlestickSet** sets_arr = static_cast<QCandlestickSet**>(sets.data.ptr);
@@ -92,7 +92,7 @@ bool QCandlestickSeries_AppendWithSets(QCandlestickSeries* self, libqt_list /* o
     return self->append(sets_QList);
 }
 
-bool QCandlestickSeries_RemoveWithSets(QCandlestickSeries* self, libqt_list /* of QCandlestickSet* */ sets) {
+bool QCandlestickSeries_RemoveWithSets(QCandlestickSeries* self, const libqt_list /* of QCandlestickSet* */ sets) {
     QList<QCandlestickSet*> sets_QList;
     sets_QList.reserve(sets.len);
     QCandlestickSet** sets_arr = static_cast<QCandlestickSet**>(sets.data.ptr);
@@ -117,12 +117,12 @@ void QCandlestickSeries_Clear(QCandlestickSeries* self) {
 libqt_list /* of QCandlestickSet* */ QCandlestickSeries_Sets(const QCandlestickSeries* self) {
     QList<QCandlestickSet*> _ret = self->sets();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QCandlestickSet** _arr = static_cast<QCandlestickSet**>(malloc(sizeof(QCandlestickSet*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QCandlestickSet** _arr = static_cast<QCandlestickSet**>(malloc(sizeof(QCandlestickSet*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -179,7 +179,7 @@ bool QCandlestickSeries_CapsVisible(const QCandlestickSeries* self) {
     return self->capsVisible();
 }
 
-void QCandlestickSeries_SetIncreasingColor(QCandlestickSeries* self, QColor* increasingColor) {
+void QCandlestickSeries_SetIncreasingColor(QCandlestickSeries* self, const QColor* increasingColor) {
     self->setIncreasingColor(*increasingColor);
 }
 
@@ -187,7 +187,7 @@ QColor* QCandlestickSeries_IncreasingColor(const QCandlestickSeries* self) {
     return new QColor(self->increasingColor());
 }
 
-void QCandlestickSeries_SetDecreasingColor(QCandlestickSeries* self, QColor* decreasingColor) {
+void QCandlestickSeries_SetDecreasingColor(QCandlestickSeries* self, const QColor* decreasingColor) {
     self->setDecreasingColor(*decreasingColor);
 }
 
@@ -195,7 +195,7 @@ QColor* QCandlestickSeries_DecreasingColor(const QCandlestickSeries* self) {
     return new QColor(self->decreasingColor());
 }
 
-void QCandlestickSeries_SetBrush(QCandlestickSeries* self, QBrush* brush) {
+void QCandlestickSeries_SetBrush(QCandlestickSeries* self, const QBrush* brush) {
     self->setBrush(*brush);
 }
 
@@ -203,7 +203,7 @@ QBrush* QCandlestickSeries_Brush(const QCandlestickSeries* self) {
     return new QBrush(self->brush());
 }
 
-void QCandlestickSeries_SetPen(QCandlestickSeries* self, QPen* pen) {
+void QCandlestickSeries_SetPen(QCandlestickSeries* self, const QPen* pen) {
     self->setPen(*pen);
 }
 
@@ -272,7 +272,7 @@ void QCandlestickSeries_Connect_DoubleClicked(QCandlestickSeries* self, intptr_t
     });
 }
 
-void QCandlestickSeries_CandlestickSetsAdded(QCandlestickSeries* self, libqt_list /* of QCandlestickSet* */ sets) {
+void QCandlestickSeries_CandlestickSetsAdded(QCandlestickSeries* self, const libqt_list /* of QCandlestickSet* */ sets) {
     QList<QCandlestickSet*> sets_QList;
     sets_QList.reserve(sets.len);
     QCandlestickSet** sets_arr = static_cast<QCandlestickSet**>(sets.data.ptr);
@@ -286,20 +286,20 @@ void QCandlestickSeries_Connect_CandlestickSetsAdded(QCandlestickSeries* self, i
     void (*slotFunc)(QCandlestickSeries*, libqt_list /* of QCandlestickSet* */) = reinterpret_cast<void (*)(QCandlestickSeries*, libqt_list /* of QCandlestickSet* */)>(slot);
     QCandlestickSeries::connect(self, &QCandlestickSeries::candlestickSetsAdded, [self, slotFunc](const QList<QCandlestickSet*>& sets) {
         const QList<QCandlestickSet*>& sets_ret = sets;
-        // Convert QList<> from C++ memory to manually-managed C memory
-        QCandlestickSet** sets_arr = static_cast<QCandlestickSet**>(malloc(sizeof(QCandlestickSet*) * sets_ret.length()));
-        for (size_t i = 0; i < sets_ret.length(); ++i) {
+        // Convert const QList<> from C++ memory to manually-managed C memory
+        QCandlestickSet** sets_arr = static_cast<QCandlestickSet**>(malloc(sizeof(QCandlestickSet*) * sets_ret.size()));
+        for (size_t i = 0; i < sets_ret.size(); ++i) {
             sets_arr[i] = sets_ret[i];
         }
         libqt_list sets_out;
-        sets_out.len = sets_ret.length();
+        sets_out.len = sets_ret.size();
         sets_out.data.ptr = static_cast<void*>(sets_arr);
         libqt_list /* of QCandlestickSet* */ sigval1 = sets_out;
         slotFunc(self, sigval1);
     });
 }
 
-void QCandlestickSeries_CandlestickSetsRemoved(QCandlestickSeries* self, libqt_list /* of QCandlestickSet* */ sets) {
+void QCandlestickSeries_CandlestickSetsRemoved(QCandlestickSeries* self, const libqt_list /* of QCandlestickSet* */ sets) {
     QList<QCandlestickSet*> sets_QList;
     sets_QList.reserve(sets.len);
     QCandlestickSet** sets_arr = static_cast<QCandlestickSet**>(sets.data.ptr);
@@ -313,13 +313,13 @@ void QCandlestickSeries_Connect_CandlestickSetsRemoved(QCandlestickSeries* self,
     void (*slotFunc)(QCandlestickSeries*, libqt_list /* of QCandlestickSet* */) = reinterpret_cast<void (*)(QCandlestickSeries*, libqt_list /* of QCandlestickSet* */)>(slot);
     QCandlestickSeries::connect(self, &QCandlestickSeries::candlestickSetsRemoved, [self, slotFunc](const QList<QCandlestickSet*>& sets) {
         const QList<QCandlestickSet*>& sets_ret = sets;
-        // Convert QList<> from C++ memory to manually-managed C memory
-        QCandlestickSet** sets_arr = static_cast<QCandlestickSet**>(malloc(sizeof(QCandlestickSet*) * sets_ret.length()));
-        for (size_t i = 0; i < sets_ret.length(); ++i) {
+        // Convert const QList<> from C++ memory to manually-managed C memory
+        QCandlestickSet** sets_arr = static_cast<QCandlestickSet**>(malloc(sizeof(QCandlestickSet*) * sets_ret.size()));
+        for (size_t i = 0; i < sets_ret.size(); ++i) {
             sets_arr[i] = sets_ret[i];
         }
         libqt_list sets_out;
-        sets_out.len = sets_ret.length();
+        sets_out.len = sets_ret.size();
         sets_out.data.ptr = static_cast<void*>(sets_arr);
         libqt_list /* of QCandlestickSet* */ sigval1 = sets_out;
         slotFunc(self, sigval1);
@@ -646,7 +646,7 @@ void QCandlestickSeries_OnCustomEvent(QCandlestickSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QCandlestickSeries_ConnectNotify(QCandlestickSeries* self, QMetaMethod* signal) {
+void QCandlestickSeries_ConnectNotify(QCandlestickSeries* self, const QMetaMethod* signal) {
     auto* vqcandlestickseries = dynamic_cast<VirtualQCandlestickSeries*>(self);
     if (vqcandlestickseries && vqcandlestickseries->isVirtualQCandlestickSeries) {
         vqcandlestickseries->connectNotify(*signal);
@@ -656,7 +656,7 @@ void QCandlestickSeries_ConnectNotify(QCandlestickSeries* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-void QCandlestickSeries_QBaseConnectNotify(QCandlestickSeries* self, QMetaMethod* signal) {
+void QCandlestickSeries_QBaseConnectNotify(QCandlestickSeries* self, const QMetaMethod* signal) {
     auto* vqcandlestickseries = dynamic_cast<VirtualQCandlestickSeries*>(self);
     if (vqcandlestickseries && vqcandlestickseries->isVirtualQCandlestickSeries) {
         vqcandlestickseries->setQCandlestickSeries_ConnectNotify_IsBase(true);
@@ -675,7 +675,7 @@ void QCandlestickSeries_OnConnectNotify(QCandlestickSeries* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-void QCandlestickSeries_DisconnectNotify(QCandlestickSeries* self, QMetaMethod* signal) {
+void QCandlestickSeries_DisconnectNotify(QCandlestickSeries* self, const QMetaMethod* signal) {
     auto* vqcandlestickseries = dynamic_cast<VirtualQCandlestickSeries*>(self);
     if (vqcandlestickseries && vqcandlestickseries->isVirtualQCandlestickSeries) {
         vqcandlestickseries->disconnectNotify(*signal);
@@ -685,7 +685,7 @@ void QCandlestickSeries_DisconnectNotify(QCandlestickSeries* self, QMetaMethod* 
 }
 
 // Base class handler implementation
-void QCandlestickSeries_QBaseDisconnectNotify(QCandlestickSeries* self, QMetaMethod* signal) {
+void QCandlestickSeries_QBaseDisconnectNotify(QCandlestickSeries* self, const QMetaMethod* signal) {
     auto* vqcandlestickseries = dynamic_cast<VirtualQCandlestickSeries*>(self);
     if (vqcandlestickseries && vqcandlestickseries->isVirtualQCandlestickSeries) {
         vqcandlestickseries->setQCandlestickSeries_DisconnectNotify_IsBase(true);
@@ -791,7 +791,7 @@ void QCandlestickSeries_OnReceivers(const QCandlestickSeries* self, intptr_t slo
 }
 
 // Derived class handler implementation
-bool QCandlestickSeries_IsSignalConnected(const QCandlestickSeries* self, QMetaMethod* signal) {
+bool QCandlestickSeries_IsSignalConnected(const QCandlestickSeries* self, const QMetaMethod* signal) {
     auto* vqcandlestickseries = const_cast<VirtualQCandlestickSeries*>(dynamic_cast<const VirtualQCandlestickSeries*>(self));
     if (vqcandlestickseries && vqcandlestickseries->isVirtualQCandlestickSeries) {
         return vqcandlestickseries->isSignalConnected(*signal);
@@ -801,7 +801,7 @@ bool QCandlestickSeries_IsSignalConnected(const QCandlestickSeries* self, QMetaM
 }
 
 // Base class handler implementation
-bool QCandlestickSeries_QBaseIsSignalConnected(const QCandlestickSeries* self, QMetaMethod* signal) {
+bool QCandlestickSeries_QBaseIsSignalConnected(const QCandlestickSeries* self, const QMetaMethod* signal) {
     auto* vqcandlestickseries = const_cast<VirtualQCandlestickSeries*>(dynamic_cast<const VirtualQCandlestickSeries*>(self));
     if (vqcandlestickseries && vqcandlestickseries->isVirtualQCandlestickSeries) {
         vqcandlestickseries->setQCandlestickSeries_IsSignalConnected_IsBase(true);

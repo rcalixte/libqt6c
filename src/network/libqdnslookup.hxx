@@ -61,12 +61,17 @@ class VirtualQDnsLookup final : public QDnsLookup {
     mutable bool qdnslookup_issignalconnected_isbase = false;
 
   public:
-    VirtualQDnsLookup() : QDnsLookup(){};
-    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name) : QDnsLookup(typeVal, name){};
-    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name, const QHostAddress& nameserver) : QDnsLookup(typeVal, name, nameserver){};
-    VirtualQDnsLookup(QObject* parent) : QDnsLookup(parent){};
-    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name, QObject* parent) : QDnsLookup(typeVal, name, parent){};
-    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name, const QHostAddress& nameserver, QObject* parent) : QDnsLookup(typeVal, name, nameserver, parent){};
+    VirtualQDnsLookup() : QDnsLookup() {};
+    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name) : QDnsLookup(typeVal, name) {};
+    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name, const QHostAddress& nameserver) : QDnsLookup(typeVal, name, nameserver) {};
+    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name, const QHostAddress& nameserver, quint16 port) : QDnsLookup(typeVal, name, nameserver, port) {};
+    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name, QDnsLookup::Protocol protocol, const QHostAddress& nameserver) : QDnsLookup(typeVal, name, protocol, nameserver) {};
+    VirtualQDnsLookup(QObject* parent) : QDnsLookup(parent) {};
+    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name, QObject* parent) : QDnsLookup(typeVal, name, parent) {};
+    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name, const QHostAddress& nameserver, QObject* parent) : QDnsLookup(typeVal, name, nameserver, parent) {};
+    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name, const QHostAddress& nameserver, quint16 port, QObject* parent) : QDnsLookup(typeVal, name, nameserver, port, parent) {};
+    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name, QDnsLookup::Protocol protocol, const QHostAddress& nameserver, quint16 port) : QDnsLookup(typeVal, name, protocol, nameserver, port) {};
+    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name, QDnsLookup::Protocol protocol, const QHostAddress& nameserver, quint16 port, QObject* parent) : QDnsLookup(typeVal, name, protocol, nameserver, port, parent) {};
 
     ~VirtualQDnsLookup() {
         qdnslookup_metacall_callback = nullptr;
@@ -298,18 +303,18 @@ class VirtualQDnsLookup final : public QDnsLookup {
     friend void QDnsLookup_QBaseChildEvent(QDnsLookup* self, QChildEvent* event);
     friend void QDnsLookup_CustomEvent(QDnsLookup* self, QEvent* event);
     friend void QDnsLookup_QBaseCustomEvent(QDnsLookup* self, QEvent* event);
-    friend void QDnsLookup_ConnectNotify(QDnsLookup* self, QMetaMethod* signal);
-    friend void QDnsLookup_QBaseConnectNotify(QDnsLookup* self, QMetaMethod* signal);
-    friend void QDnsLookup_DisconnectNotify(QDnsLookup* self, QMetaMethod* signal);
-    friend void QDnsLookup_QBaseDisconnectNotify(QDnsLookup* self, QMetaMethod* signal);
+    friend void QDnsLookup_ConnectNotify(QDnsLookup* self, const QMetaMethod* signal);
+    friend void QDnsLookup_QBaseConnectNotify(QDnsLookup* self, const QMetaMethod* signal);
+    friend void QDnsLookup_DisconnectNotify(QDnsLookup* self, const QMetaMethod* signal);
+    friend void QDnsLookup_QBaseDisconnectNotify(QDnsLookup* self, const QMetaMethod* signal);
     friend QObject* QDnsLookup_Sender(const QDnsLookup* self);
     friend QObject* QDnsLookup_QBaseSender(const QDnsLookup* self);
     friend int QDnsLookup_SenderSignalIndex(const QDnsLookup* self);
     friend int QDnsLookup_QBaseSenderSignalIndex(const QDnsLookup* self);
     friend int QDnsLookup_Receivers(const QDnsLookup* self, const char* signal);
     friend int QDnsLookup_QBaseReceivers(const QDnsLookup* self, const char* signal);
-    friend bool QDnsLookup_IsSignalConnected(const QDnsLookup* self, QMetaMethod* signal);
-    friend bool QDnsLookup_QBaseIsSignalConnected(const QDnsLookup* self, QMetaMethod* signal);
+    friend bool QDnsLookup_IsSignalConnected(const QDnsLookup* self, const QMetaMethod* signal);
+    friend bool QDnsLookup_QBaseIsSignalConnected(const QDnsLookup* self, const QMetaMethod* signal);
 };
 
 #endif

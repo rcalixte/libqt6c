@@ -89,7 +89,7 @@ int QAudioEngine_SampleRate(const QAudioEngine* self) {
     return self->sampleRate();
 }
 
-void QAudioEngine_SetOutputDevice(QAudioEngine* self, QAudioDevice* device) {
+void QAudioEngine_SetOutputDevice(QAudioEngine* self, const QAudioDevice* device) {
     self->setOutputDevice(*device);
 }
 
@@ -370,7 +370,7 @@ void QAudioEngine_OnCustomEvent(QAudioEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAudioEngine_ConnectNotify(QAudioEngine* self, QMetaMethod* signal) {
+void QAudioEngine_ConnectNotify(QAudioEngine* self, const QMetaMethod* signal) {
     auto* vqaudioengine = dynamic_cast<VirtualQAudioEngine*>(self);
     if (vqaudioengine && vqaudioengine->isVirtualQAudioEngine) {
         vqaudioengine->connectNotify(*signal);
@@ -380,7 +380,7 @@ void QAudioEngine_ConnectNotify(QAudioEngine* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QAudioEngine_QBaseConnectNotify(QAudioEngine* self, QMetaMethod* signal) {
+void QAudioEngine_QBaseConnectNotify(QAudioEngine* self, const QMetaMethod* signal) {
     auto* vqaudioengine = dynamic_cast<VirtualQAudioEngine*>(self);
     if (vqaudioengine && vqaudioengine->isVirtualQAudioEngine) {
         vqaudioengine->setQAudioEngine_ConnectNotify_IsBase(true);
@@ -399,7 +399,7 @@ void QAudioEngine_OnConnectNotify(QAudioEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAudioEngine_DisconnectNotify(QAudioEngine* self, QMetaMethod* signal) {
+void QAudioEngine_DisconnectNotify(QAudioEngine* self, const QMetaMethod* signal) {
     auto* vqaudioengine = dynamic_cast<VirtualQAudioEngine*>(self);
     if (vqaudioengine && vqaudioengine->isVirtualQAudioEngine) {
         vqaudioengine->disconnectNotify(*signal);
@@ -409,7 +409,7 @@ void QAudioEngine_DisconnectNotify(QAudioEngine* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QAudioEngine_QBaseDisconnectNotify(QAudioEngine* self, QMetaMethod* signal) {
+void QAudioEngine_QBaseDisconnectNotify(QAudioEngine* self, const QMetaMethod* signal) {
     auto* vqaudioengine = dynamic_cast<VirtualQAudioEngine*>(self);
     if (vqaudioengine && vqaudioengine->isVirtualQAudioEngine) {
         vqaudioengine->setQAudioEngine_DisconnectNotify_IsBase(true);
@@ -515,7 +515,7 @@ void QAudioEngine_OnReceivers(const QAudioEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QAudioEngine_IsSignalConnected(const QAudioEngine* self, QMetaMethod* signal) {
+bool QAudioEngine_IsSignalConnected(const QAudioEngine* self, const QMetaMethod* signal) {
     auto* vqaudioengine = const_cast<VirtualQAudioEngine*>(dynamic_cast<const VirtualQAudioEngine*>(self));
     if (vqaudioengine && vqaudioengine->isVirtualQAudioEngine) {
         return vqaudioengine->isSignalConnected(*signal);
@@ -525,7 +525,7 @@ bool QAudioEngine_IsSignalConnected(const QAudioEngine* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-bool QAudioEngine_QBaseIsSignalConnected(const QAudioEngine* self, QMetaMethod* signal) {
+bool QAudioEngine_QBaseIsSignalConnected(const QAudioEngine* self, const QMetaMethod* signal) {
     auto* vqaudioengine = const_cast<VirtualQAudioEngine*>(dynamic_cast<const VirtualQAudioEngine*>(self));
     if (vqaudioengine && vqaudioengine->isVirtualQAudioEngine) {
         vqaudioengine->setQAudioEngine_IsSignalConnected_IsBase(true);

@@ -13,20 +13,20 @@ QDeadlineTimer* q_deadlinetimer_new3() {
     return QDeadlineTimer_new3();
 }
 
-QDeadlineTimer* q_deadlinetimer_new4(int64_t param1) {
-    return QDeadlineTimer_new4(param1);
+QDeadlineTimer* q_deadlinetimer_new4(int64_t type_) {
+    return QDeadlineTimer_new4(type_);
 }
 
-QDeadlineTimer* q_deadlinetimer_new5(long long msecs) {
-    return QDeadlineTimer_new5(msecs);
+QDeadlineTimer* q_deadlinetimer_new5(int64_t param1) {
+    return QDeadlineTimer_new5(param1);
 }
 
-QDeadlineTimer* q_deadlinetimer_new6(void* param1) {
-    return QDeadlineTimer_new6((QDeadlineTimer*)param1);
+QDeadlineTimer* q_deadlinetimer_new6(long long msecs) {
+    return QDeadlineTimer_new6(msecs);
 }
 
-QDeadlineTimer* q_deadlinetimer_new7(int64_t type_) {
-    return QDeadlineTimer_new7(type_);
+QDeadlineTimer* q_deadlinetimer_new7(void* param1) {
+    return QDeadlineTimer_new7((QDeadlineTimer*)param1);
 }
 
 QDeadlineTimer* q_deadlinetimer_new8(int64_t param1, int64_t type_) {
@@ -111,10 +111,6 @@ QDeadlineTimer* q_deadlinetimer_operator_plus_assign(void* self, long long msecs
 
 QDeadlineTimer* q_deadlinetimer_operator_minus_assign(void* self, long long msecs) {
     return QDeadlineTimer_OperatorMinusAssign((QDeadlineTimer*)self, msecs);
-}
-
-void q_deadlinetimer_operator_assign(void* self, void* param1) {
-    QDeadlineTimer_OperatorAssign((QDeadlineTimer*)self, (QDeadlineTimer*)param1);
 }
 
 void q_deadlinetimer_set_remaining_time2(void* self, long long msecs, int64_t typeVal) {

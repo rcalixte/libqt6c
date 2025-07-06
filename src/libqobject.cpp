@@ -16,6 +16,7 @@
 #include <QThread>
 #include <QTimerEvent>
 #include <QVariant>
+#define WORKAROUND_INNER_CLASS_DEFINITION_Disambiguated_t
 #include <qobject.h>
 #include "libqobject.hpp"
 #include "libqobject.hxx"
@@ -129,8 +130,8 @@ QThread* QObject_Thread(const QObject* self) {
     return self->thread();
 }
 
-void QObject_MoveToThread(QObject* self, QThread* thread) {
-    self->moveToThread(thread);
+bool QObject_MoveToThread(QObject* self, QThread* thread) {
+    return self->moveToThread(thread);
 }
 
 int QObject_StartTimer(QObject* self, int interval) {
@@ -141,15 +142,19 @@ void QObject_KillTimer(QObject* self, int id) {
     self->killTimer(static_cast<int>(id));
 }
 
+void QObject_KillTimerWithId(QObject* self, int id) {
+    self->killTimer(static_cast<Qt::TimerId>(id));
+}
+
 libqt_list /* of QObject* */ QObject_Children(const QObject* self) {
-    const QObjectList& _ret = self->children();
-    // Convert QList<> from C++ memory to manually-managed C memory
-    QObject** _arr = static_cast<QObject**>(malloc(sizeof(QObject*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    const QList<QObject*>& _ret = self->children();
+    // Convert const QList<> from C++ memory to manually-managed C memory
+    QObject** _arr = static_cast<QObject**>(malloc(sizeof(QObject*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -166,19 +171,19 @@ void QObject_RemoveEventFilter(QObject* self, QObject* obj) {
     self->removeEventFilter(obj);
 }
 
-QMetaObject__Connection* QObject_Connect(QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method) {
+QMetaObject__Connection* QObject_Connect(const QObject* sender, const QMetaMethod* signal, const QObject* receiver, const QMetaMethod* method) {
     return new QMetaObject::Connection(QObject::connect(sender, *signal, receiver, *method));
 }
 
-QMetaObject__Connection* QObject_Connect2(const QObject* self, QObject* sender, const char* signal, const char* member) {
+QMetaObject__Connection* QObject_Connect2(const QObject* self, const QObject* sender, const char* signal, const char* member) {
     return new QMetaObject::Connection(self->connect(sender, signal, member));
 }
 
-bool QObject_Disconnect(QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member) {
+bool QObject_Disconnect(const QObject* sender, const QMetaMethod* signal, const QObject* receiver, const QMetaMethod* member) {
     return QObject::disconnect(sender, *signal, receiver, *member);
 }
 
-bool QObject_DisconnectWithQMetaObjectConnection(QMetaObject__Connection* param1) {
+bool QObject_DisconnectWithQMetaObjectConnection(const QMetaObject__Connection* param1) {
     return QObject::disconnect(*param1);
 }
 
@@ -190,7 +195,7 @@ void QObject_DumpObjectInfo(const QObject* self) {
     self->dumpObjectInfo();
 }
 
-bool QObject_SetProperty(QObject* self, const char* name, QVariant* value) {
+bool QObject_SetProperty(QObject* self, const char* name, const QVariant* value) {
     return self->setProperty(name, *value);
 }
 
@@ -201,8 +206,8 @@ QVariant* QObject_Property(const QObject* self, const char* name) {
 libqt_list /* of libqt_string */ QObject_DynamicPropertyNames(const QObject* self) {
     QList<QByteArray> _ret = self->dynamicPropertyNames();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QByteArray _lv_qb = _ret[i];
         libqt_string _lv_str;
         _lv_str.len = _lv_qb.length();
@@ -212,7 +217,7 @@ libqt_list /* of libqt_string */ QObject_DynamicPropertyNames(const QObject* sel
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -272,15 +277,19 @@ libqt_string QObject_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
+bool QObject_MoveToThread2(QObject* self, QThread* thread, Disambiguated_t* param2) {
+    return self->moveToThread(thread, *param2);
+}
+
 int QObject_StartTimer2(QObject* self, int interval, int timerType) {
     return self->startTimer(static_cast<int>(interval), static_cast<Qt::TimerType>(timerType));
 }
 
-QMetaObject__Connection* QObject_Connect5(QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, int typeVal) {
+QMetaObject__Connection* QObject_Connect5(const QObject* sender, const QMetaMethod* signal, const QObject* receiver, const QMetaMethod* method, int typeVal) {
     return new QMetaObject::Connection(QObject::connect(sender, *signal, receiver, *method, static_cast<Qt::ConnectionType>(typeVal)));
 }
 
-QMetaObject__Connection* QObject_Connect4(const QObject* self, QObject* sender, const char* signal, const char* member, int typeVal) {
+QMetaObject__Connection* QObject_Connect4(const QObject* self, const QObject* sender, const char* signal, const char* member, int typeVal) {
     return new QMetaObject::Connection(self->connect(sender, signal, member, static_cast<Qt::ConnectionType>(typeVal)));
 }
 
@@ -442,7 +451,7 @@ void QObject_OnCustomEvent(QObject* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QObject_ConnectNotify(QObject* self, QMetaMethod* signal) {
+void QObject_ConnectNotify(QObject* self, const QMetaMethod* signal) {
     auto* vqobject = dynamic_cast<VirtualQObject*>(self);
     if (vqobject && vqobject->isVirtualQObject) {
         vqobject->connectNotify(*signal);
@@ -452,7 +461,7 @@ void QObject_ConnectNotify(QObject* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QObject_QBaseConnectNotify(QObject* self, QMetaMethod* signal) {
+void QObject_QBaseConnectNotify(QObject* self, const QMetaMethod* signal) {
     auto* vqobject = dynamic_cast<VirtualQObject*>(self);
     if (vqobject && vqobject->isVirtualQObject) {
         vqobject->setQObject_ConnectNotify_IsBase(true);
@@ -471,7 +480,7 @@ void QObject_OnConnectNotify(QObject* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QObject_DisconnectNotify(QObject* self, QMetaMethod* signal) {
+void QObject_DisconnectNotify(QObject* self, const QMetaMethod* signal) {
     auto* vqobject = dynamic_cast<VirtualQObject*>(self);
     if (vqobject && vqobject->isVirtualQObject) {
         vqobject->disconnectNotify(*signal);
@@ -481,7 +490,7 @@ void QObject_DisconnectNotify(QObject* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QObject_QBaseDisconnectNotify(QObject* self, QMetaMethod* signal) {
+void QObject_QBaseDisconnectNotify(QObject* self, const QMetaMethod* signal) {
     auto* vqobject = dynamic_cast<VirtualQObject*>(self);
     if (vqobject && vqobject->isVirtualQObject) {
         vqobject->setQObject_DisconnectNotify_IsBase(true);
@@ -587,7 +596,7 @@ void QObject_OnReceivers(const QObject* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QObject_IsSignalConnected(const QObject* self, QMetaMethod* signal) {
+bool QObject_IsSignalConnected(const QObject* self, const QMetaMethod* signal) {
     auto* vqobject = const_cast<VirtualQObject*>(dynamic_cast<const VirtualQObject*>(self));
     if (vqobject && vqobject->isVirtualQObject) {
         return vqobject->isSignalConnected(*signal);
@@ -597,7 +606,7 @@ bool QObject_IsSignalConnected(const QObject* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QObject_QBaseIsSignalConnected(const QObject* self, QMetaMethod* signal) {
+bool QObject_QBaseIsSignalConnected(const QObject* self, const QMetaMethod* signal) {
     auto* vqobject = const_cast<VirtualQObject*>(dynamic_cast<const VirtualQObject*>(self));
     if (vqobject && vqobject->isVirtualQObject) {
         vqobject->setQObject_IsSignalConnected_IsBase(true);
@@ -649,6 +658,10 @@ void QSignalBlocker_Reblock(QSignalBlocker* self) {
 
 void QSignalBlocker_Unblock(QSignalBlocker* self) {
     self->unblock();
+}
+
+void QSignalBlocker_Dismiss(QSignalBlocker* self) {
+    self->dismiss();
 }
 
 void QSignalBlocker_Delete(QSignalBlocker* self) {

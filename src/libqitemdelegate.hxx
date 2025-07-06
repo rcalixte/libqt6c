@@ -124,8 +124,8 @@ class VirtualQItemDelegate final : public QItemDelegate {
     mutable bool qitemdelegate_issignalconnected_isbase = false;
 
   public:
-    VirtualQItemDelegate() : QItemDelegate(){};
-    VirtualQItemDelegate(QObject* parent) : QItemDelegate(parent){};
+    VirtualQItemDelegate() : QItemDelegate() {};
+    VirtualQItemDelegate(QObject* parent) : QItemDelegate(parent) {};
 
     ~VirtualQItemDelegate() {
         qitemdelegate_metacall_callback = nullptr;
@@ -857,50 +857,50 @@ class VirtualQItemDelegate final : public QItemDelegate {
     }
 
     // Friend functions
-    friend void QItemDelegate_DrawDisplay(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect, libqt_string text);
-    friend void QItemDelegate_QBaseDrawDisplay(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect, libqt_string text);
-    friend void QItemDelegate_DrawDecoration(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect, QPixmap* pixmap);
-    friend void QItemDelegate_QBaseDrawDecoration(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect, QPixmap* pixmap);
-    friend void QItemDelegate_DrawFocus(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect);
-    friend void QItemDelegate_QBaseDrawFocus(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect);
-    friend void QItemDelegate_DrawCheck(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect, int state);
-    friend void QItemDelegate_QBaseDrawCheck(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect, int state);
+    friend void QItemDelegate_DrawDisplay(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QRect* rect, const libqt_string text);
+    friend void QItemDelegate_QBaseDrawDisplay(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QRect* rect, const libqt_string text);
+    friend void QItemDelegate_DrawDecoration(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QRect* rect, const QPixmap* pixmap);
+    friend void QItemDelegate_QBaseDrawDecoration(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QRect* rect, const QPixmap* pixmap);
+    friend void QItemDelegate_DrawFocus(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QRect* rect);
+    friend void QItemDelegate_QBaseDrawFocus(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QRect* rect);
+    friend void QItemDelegate_DrawCheck(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QRect* rect, int state);
+    friend void QItemDelegate_QBaseDrawCheck(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QRect* rect, int state);
     friend bool QItemDelegate_EventFilter(QItemDelegate* self, QObject* object, QEvent* event);
     friend bool QItemDelegate_QBaseEventFilter(QItemDelegate* self, QObject* object, QEvent* event);
-    friend bool QItemDelegate_EditorEvent(QItemDelegate* self, QEvent* event, QAbstractItemModel* model, QStyleOptionViewItem* option, QModelIndex* index);
-    friend bool QItemDelegate_QBaseEditorEvent(QItemDelegate* self, QEvent* event, QAbstractItemModel* model, QStyleOptionViewItem* option, QModelIndex* index);
+    friend bool QItemDelegate_EditorEvent(QItemDelegate* self, QEvent* event, QAbstractItemModel* model, const QStyleOptionViewItem* option, const QModelIndex* index);
+    friend bool QItemDelegate_QBaseEditorEvent(QItemDelegate* self, QEvent* event, QAbstractItemModel* model, const QStyleOptionViewItem* option, const QModelIndex* index);
     friend void QItemDelegate_TimerEvent(QItemDelegate* self, QTimerEvent* event);
     friend void QItemDelegate_QBaseTimerEvent(QItemDelegate* self, QTimerEvent* event);
     friend void QItemDelegate_ChildEvent(QItemDelegate* self, QChildEvent* event);
     friend void QItemDelegate_QBaseChildEvent(QItemDelegate* self, QChildEvent* event);
     friend void QItemDelegate_CustomEvent(QItemDelegate* self, QEvent* event);
     friend void QItemDelegate_QBaseCustomEvent(QItemDelegate* self, QEvent* event);
-    friend void QItemDelegate_ConnectNotify(QItemDelegate* self, QMetaMethod* signal);
-    friend void QItemDelegate_QBaseConnectNotify(QItemDelegate* self, QMetaMethod* signal);
-    friend void QItemDelegate_DisconnectNotify(QItemDelegate* self, QMetaMethod* signal);
-    friend void QItemDelegate_QBaseDisconnectNotify(QItemDelegate* self, QMetaMethod* signal);
-    friend void QItemDelegate_DrawBackground(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index);
-    friend void QItemDelegate_QBaseDrawBackground(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index);
-    friend void QItemDelegate_DoLayout(const QItemDelegate* self, QStyleOptionViewItem* option, QRect* checkRect, QRect* iconRect, QRect* textRect, bool hint);
-    friend void QItemDelegate_QBaseDoLayout(const QItemDelegate* self, QStyleOptionViewItem* option, QRect* checkRect, QRect* iconRect, QRect* textRect, bool hint);
-    friend QRect* QItemDelegate_Rect(const QItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index, int role);
-    friend QRect* QItemDelegate_QBaseRect(const QItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index, int role);
-    friend QStyleOptionViewItem* QItemDelegate_SetOptions(const QItemDelegate* self, QModelIndex* index, QStyleOptionViewItem* option);
-    friend QStyleOptionViewItem* QItemDelegate_QBaseSetOptions(const QItemDelegate* self, QModelIndex* index, QStyleOptionViewItem* option);
-    friend QPixmap* QItemDelegate_Decoration(const QItemDelegate* self, QStyleOptionViewItem* option, QVariant* variant);
-    friend QPixmap* QItemDelegate_QBaseDecoration(const QItemDelegate* self, QStyleOptionViewItem* option, QVariant* variant);
-    friend QRect* QItemDelegate_DoCheck(const QItemDelegate* self, QStyleOptionViewItem* option, QRect* bounding, QVariant* variant);
-    friend QRect* QItemDelegate_QBaseDoCheck(const QItemDelegate* self, QStyleOptionViewItem* option, QRect* bounding, QVariant* variant);
-    friend QRect* QItemDelegate_TextRectangle(const QItemDelegate* self, QPainter* painter, QRect* rect, QFont* font, libqt_string text);
-    friend QRect* QItemDelegate_QBaseTextRectangle(const QItemDelegate* self, QPainter* painter, QRect* rect, QFont* font, libqt_string text);
+    friend void QItemDelegate_ConnectNotify(QItemDelegate* self, const QMetaMethod* signal);
+    friend void QItemDelegate_QBaseConnectNotify(QItemDelegate* self, const QMetaMethod* signal);
+    friend void QItemDelegate_DisconnectNotify(QItemDelegate* self, const QMetaMethod* signal);
+    friend void QItemDelegate_QBaseDisconnectNotify(QItemDelegate* self, const QMetaMethod* signal);
+    friend void QItemDelegate_DrawBackground(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QModelIndex* index);
+    friend void QItemDelegate_QBaseDrawBackground(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QModelIndex* index);
+    friend void QItemDelegate_DoLayout(const QItemDelegate* self, const QStyleOptionViewItem* option, QRect* checkRect, QRect* iconRect, QRect* textRect, bool hint);
+    friend void QItemDelegate_QBaseDoLayout(const QItemDelegate* self, const QStyleOptionViewItem* option, QRect* checkRect, QRect* iconRect, QRect* textRect, bool hint);
+    friend QRect* QItemDelegate_Rect(const QItemDelegate* self, const QStyleOptionViewItem* option, const QModelIndex* index, int role);
+    friend QRect* QItemDelegate_QBaseRect(const QItemDelegate* self, const QStyleOptionViewItem* option, const QModelIndex* index, int role);
+    friend QStyleOptionViewItem* QItemDelegate_SetOptions(const QItemDelegate* self, const QModelIndex* index, const QStyleOptionViewItem* option);
+    friend QStyleOptionViewItem* QItemDelegate_QBaseSetOptions(const QItemDelegate* self, const QModelIndex* index, const QStyleOptionViewItem* option);
+    friend QPixmap* QItemDelegate_Decoration(const QItemDelegate* self, const QStyleOptionViewItem* option, const QVariant* variant);
+    friend QPixmap* QItemDelegate_QBaseDecoration(const QItemDelegate* self, const QStyleOptionViewItem* option, const QVariant* variant);
+    friend QRect* QItemDelegate_DoCheck(const QItemDelegate* self, const QStyleOptionViewItem* option, const QRect* bounding, const QVariant* variant);
+    friend QRect* QItemDelegate_QBaseDoCheck(const QItemDelegate* self, const QStyleOptionViewItem* option, const QRect* bounding, const QVariant* variant);
+    friend QRect* QItemDelegate_TextRectangle(const QItemDelegate* self, QPainter* painter, const QRect* rect, const QFont* font, const libqt_string text);
+    friend QRect* QItemDelegate_QBaseTextRectangle(const QItemDelegate* self, QPainter* painter, const QRect* rect, const QFont* font, const libqt_string text);
     friend QObject* QItemDelegate_Sender(const QItemDelegate* self);
     friend QObject* QItemDelegate_QBaseSender(const QItemDelegate* self);
     friend int QItemDelegate_SenderSignalIndex(const QItemDelegate* self);
     friend int QItemDelegate_QBaseSenderSignalIndex(const QItemDelegate* self);
     friend int QItemDelegate_Receivers(const QItemDelegate* self, const char* signal);
     friend int QItemDelegate_QBaseReceivers(const QItemDelegate* self, const char* signal);
-    friend bool QItemDelegate_IsSignalConnected(const QItemDelegate* self, QMetaMethod* signal);
-    friend bool QItemDelegate_QBaseIsSignalConnected(const QItemDelegate* self, QMetaMethod* signal);
+    friend bool QItemDelegate_IsSignalConnected(const QItemDelegate* self, const QMetaMethod* signal);
+    friend bool QItemDelegate_QBaseIsSignalConnected(const QItemDelegate* self, const QMetaMethod* signal);
 };
 
 #endif

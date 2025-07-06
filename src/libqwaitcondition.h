@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqdeadlinetimer.h"
-#include "libqmutex.h"
-#include "libqreadwritelock.h"
-
 /// https://doc.qt.io/qt-6/qwaitcondition.html
 
 /// q_waitcondition_new constructs a new QWaitCondition object.

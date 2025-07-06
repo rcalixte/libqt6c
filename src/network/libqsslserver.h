@@ -12,17 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "libqsslconfiguration.h"
-#include "libqsslerror.h"
-#include "libqsslpresharedkeyauthenticator.h"
-#include "libqsslsocket.h"
-#include <string.h>
-#include "libqtcpserver.h"
-#include "libqtcpsocket.h"
-
 /// https://doc.qt.io/qt-6/qsslserver.html
 
 /// q_sslserver_new constructs a new QSslServer object.
@@ -433,7 +422,7 @@ QThread* q_sslserver_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QSslServer* self, QThread* thread ```
-void q_sslserver_move_to_thread(void* self, void* thread);
+bool q_sslserver_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -448,6 +437,13 @@ int32_t q_sslserver_start_timer(void* self, int interval);
 ///
 /// ``` QSslServer* self, int id ```
 void q_sslserver_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QSslServer* self, enum Qt__TimerId id ```
+void q_sslserver_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -588,6 +584,13 @@ bool q_sslserver_inherits(void* self, const char* classname);
 ///
 /// ``` QSslServer* self ```
 void q_sslserver_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QSslServer* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_sslserver_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

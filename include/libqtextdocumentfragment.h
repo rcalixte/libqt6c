@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include <string.h>
-#include "libqtextcursor.h"
-#include "libqtextdocument.h"
-
 /// https://doc.qt.io/qt-6/qtextdocumentfragment.html
 
 /// q_textdocumentfragment_new constructs a new QTextDocumentFragment object.

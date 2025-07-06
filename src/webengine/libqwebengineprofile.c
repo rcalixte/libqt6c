@@ -4,8 +4,10 @@
 #include <string.h>
 #include "../libqurl.hpp"
 #include "libqwebengineclientcertificatestore.hpp"
+#include "libqwebengineclienthints.hpp"
 #include "libqwebenginecookiestore.hpp"
 #include "libqwebenginedownloadrequest.hpp"
+#include "libqwebenginepermission.hpp"
 #include "libqwebenginescriptcollection.hpp"
 #include "libqwebenginesettings.hpp"
 #include "libqwebengineurlrequestinterceptor.hpp"
@@ -128,6 +130,14 @@ void q_webengineprofile_set_persistent_cookies_policy(void* self, int64_t persis
     QWebEngineProfile_SetPersistentCookiesPolicy((QWebEngineProfile*)self, persistentCookiesPolicy);
 }
 
+int64_t q_webengineprofile_persistent_permissions_policy(void* self) {
+    return QWebEngineProfile_PersistentPermissionsPolicy((QWebEngineProfile*)self);
+}
+
+void q_webengineprofile_set_persistent_permissions_policy(void* self, int64_t persistentPermissionsPolicy) {
+    QWebEngineProfile_SetPersistentPermissionsPolicy((QWebEngineProfile*)self, persistentPermissionsPolicy);
+}
+
 int32_t q_webengineprofile_http_cache_maximum_size(void* self) {
     return QWebEngineProfile_HttpCacheMaximumSize((QWebEngineProfile*)self);
 }
@@ -162,6 +172,10 @@ QWebEngineSettings* q_webengineprofile_settings(void* self) {
 
 QWebEngineScriptCollection* q_webengineprofile_scripts(void* self) {
     return QWebEngineProfile_Scripts((QWebEngineProfile*)self);
+}
+
+QWebEngineClientHints* q_webengineprofile_client_hints(void* self) {
+    return QWebEngineProfile_ClientHints((QWebEngineProfile*)self);
 }
 
 const QWebEngineUrlSchemeHandler* q_webengineprofile_url_scheme_handler(void* self, const char* param1) {
@@ -232,8 +246,35 @@ void q_webengineprofile_set_download_path(void* self, const char* path) {
     QWebEngineProfile_SetDownloadPath((QWebEngineProfile*)self, qstring(path));
 }
 
+bool q_webengineprofile_is_push_service_enabled(void* self) {
+    return QWebEngineProfile_IsPushServiceEnabled((QWebEngineProfile*)self);
+}
+
+void q_webengineprofile_set_push_service_enabled(void* self, bool enabled) {
+    QWebEngineProfile_SetPushServiceEnabled((QWebEngineProfile*)self, enabled);
+}
+
 QWebEngineClientCertificateStore* q_webengineprofile_client_certificate_store(void* self) {
     return QWebEngineProfile_ClientCertificateStore((QWebEngineProfile*)self);
+}
+
+QWebEnginePermission* q_webengineprofile_query_permission(void* self, void* securityOrigin, int64_t permissionType) {
+    return QWebEngineProfile_QueryPermission((QWebEngineProfile*)self, (QUrl*)securityOrigin, permissionType);
+}
+
+libqt_list /* of QWebEnginePermission* */ q_webengineprofile_list_all_permissions(void* self) {
+    libqt_list _arr = QWebEngineProfile_ListAllPermissions((QWebEngineProfile*)self);
+    return _arr;
+}
+
+libqt_list /* of QWebEnginePermission* */ q_webengineprofile_list_permissions_for_origin(void* self, void* securityOrigin) {
+    libqt_list _arr = QWebEngineProfile_ListPermissionsForOrigin((QWebEngineProfile*)self, (QUrl*)securityOrigin);
+    return _arr;
+}
+
+libqt_list /* of QWebEnginePermission* */ q_webengineprofile_list_permissions_for_permission_type(void* self, int64_t permissionType) {
+    libqt_list _arr = QWebEngineProfile_ListPermissionsForPermissionType((QWebEngineProfile*)self, permissionType);
+    return _arr;
 }
 
 QWebEngineProfile* q_webengineprofile_default_profile() {
@@ -246,6 +287,14 @@ void q_webengineprofile_download_requested(void* self, void* download) {
 
 void q_webengineprofile_on_download_requested(void* self, void (*slot)(void*, void*)) {
     QWebEngineProfile_Connect_DownloadRequested((QWebEngineProfile*)self, (intptr_t)slot);
+}
+
+void q_webengineprofile_clear_http_cache_completed(void* self) {
+    QWebEngineProfile_ClearHttpCacheCompleted((QWebEngineProfile*)self);
+}
+
+void q_webengineprofile_on_clear_http_cache_completed(void* self, void (*slot)(void*)) {
+    QWebEngineProfile_Connect_ClearHttpCacheCompleted((QWebEngineProfile*)self, (intptr_t)slot);
 }
 
 const char* q_webengineprofile_tr2(const char* s, const char* c) {
@@ -297,8 +346,8 @@ QThread* q_webengineprofile_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_webengineprofile_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_webengineprofile_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_webengineprofile_start_timer(void* self, int interval) {
@@ -307,6 +356,10 @@ int32_t q_webengineprofile_start_timer(void* self, int interval) {
 
 void q_webengineprofile_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_webengineprofile_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_webengineprofile_children(void* self) {
@@ -399,6 +452,10 @@ bool q_webengineprofile_inherits(void* self, const char* classname) {
 
 void q_webengineprofile_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_webengineprofile_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_webengineprofile_start_timer2(void* self, int interval, int64_t timerType) {

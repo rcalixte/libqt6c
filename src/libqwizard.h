@@ -12,21 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractbutton.h"
-#include "libqevent.h"
-#include "libqdialog.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpaintdevice.h"
-#include "libqpaintengine.h"
-#include "libqpainter.h"
-#include "libqpixmap.h"
-#include "libqpoint.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqvariant.h"
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qwizard.html
 
 /// q_wizard_new constructs a new QWizard object.
@@ -2234,6 +2219,13 @@ QWidget* q_wizard_child_at_with_q_point(void* self, void* p);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+///
+/// ``` QWizard* self, QPointF* p ```
+QWidget* q_wizard_child_at_with_q_point_f(void* self, void* p);
+
+/// Inherited from QWidget
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
 /// ``` QWizard* self, enum Qt__WidgetAttribute param1 ```
@@ -2545,7 +2537,7 @@ QThread* q_wizard_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QWizard* self, QThread* thread ```
-void q_wizard_move_to_thread(void* self, void* thread);
+bool q_wizard_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -2560,6 +2552,13 @@ int32_t q_wizard_start_timer(void* self, int interval);
 ///
 /// ``` QWizard* self, int id ```
 void q_wizard_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QWizard* self, enum Qt__TimerId id ```
+void q_wizard_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -2696,6 +2695,13 @@ void q_wizard_delete_later(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QWizard* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_wizard_move_to_thread2(void* self, void* thread, void* param2);
+
+/// Inherited from QObject
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QWizard* self, int interval, enum Qt__TimerType timerType ```
@@ -2812,6 +2818,13 @@ int32_t q_wizard_depth(void* self);
 ///
 ///
 double q_wizard_device_pixel_ratio_f_scale();
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_wizard_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QDialog
 ///
@@ -4324,6 +4337,33 @@ bool q_wizard_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// ``` QWizard* self, bool (*slot)(QWizard*, QMetaMethod*) ```
 void q_wizard_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QWizard* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_wizard_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QWizard* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_wizard_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QWizard* self, double (*slot)(QWizard*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
+void q_wizard_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///
@@ -6315,6 +6355,13 @@ QWidget* q_wizardpage_child_at_with_q_point(void* self, void* p);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+///
+/// ``` QWizardPage* self, QPointF* p ```
+QWidget* q_wizardpage_child_at_with_q_point_f(void* self, void* p);
+
+/// Inherited from QWidget
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
 /// ``` QWizardPage* self, enum Qt__WidgetAttribute param1 ```
@@ -6626,7 +6673,7 @@ QThread* q_wizardpage_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QWizardPage* self, QThread* thread ```
-void q_wizardpage_move_to_thread(void* self, void* thread);
+bool q_wizardpage_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -6641,6 +6688,13 @@ int32_t q_wizardpage_start_timer(void* self, int interval);
 ///
 /// ``` QWizardPage* self, int id ```
 void q_wizardpage_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QWizardPage* self, enum Qt__TimerId id ```
+void q_wizardpage_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -6777,6 +6831,13 @@ void q_wizardpage_delete_later(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QWizardPage* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_wizardpage_move_to_thread2(void* self, void* thread, void* param2);
+
+/// Inherited from QObject
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QWizardPage* self, int interval, enum Qt__TimerType timerType ```
@@ -6893,6 +6954,13 @@ int32_t q_wizardpage_depth(void* self);
 ///
 ///
 double q_wizardpage_device_pixel_ratio_f_scale();
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_wizardpage_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QWidget
 ///
@@ -8405,6 +8473,33 @@ bool q_wizardpage_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// ``` QWizardPage* self, bool (*slot)(QWizardPage*, QMetaMethod*) ```
 void q_wizardpage_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QWizardPage* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_wizardpage_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QWizardPage* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_wizardpage_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QWizardPage* self, double (*slot)(QWizardPage*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
+void q_wizardpage_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///

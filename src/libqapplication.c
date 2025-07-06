@@ -246,16 +246,16 @@ const char* q_application_style_sheet(void* self) {
     return _ret;
 }
 
+bool q_application_auto_sip_enabled(void* self) {
+    return QApplication_AutoSipEnabled((QApplication*)self);
+}
+
 void q_application_set_style_sheet(void* self, const char* sheet) {
     QApplication_SetStyleSheet((QApplication*)self, qstring(sheet));
 }
 
 void q_application_set_auto_sip_enabled(void* self, bool enabled) {
     QApplication_SetAutoSipEnabled((QApplication*)self, enabled);
-}
-
-bool q_application_auto_sip_enabled(void* self) {
-    return QApplication_AutoSipEnabled((QApplication*)self);
 }
 
 void q_application_close_all_windows() {
@@ -317,6 +317,10 @@ const char* q_application_application_display_name() {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+void q_application_set_badge_number(void* self, long long number) {
+    QGuiApplication_SetBadgeNumber((QGuiApplication*)self, number);
 }
 
 void q_application_set_desktop_file_name(const char* name) {
@@ -693,6 +697,10 @@ void q_application_process_events2(int64_t flags, int maxtime) {
     QCoreApplication_ProcessEvents2(flags, maxtime);
 }
 
+void q_application_process_events3(int64_t flags, void* deadline) {
+    QCoreApplication_ProcessEvents3(flags, (QDeadlineTimer*)deadline);
+}
+
 bool q_application_send_event(void* receiver, void* event) {
     return QCoreApplication_SendEvent((QObject*)receiver, (QEvent*)event);
 }
@@ -741,6 +749,10 @@ const char* q_application_application_file_path() {
 
 long long q_application_application_pid() {
     return QCoreApplication_ApplicationPid();
+}
+
+int64_t q_application_check_permission(void* self, void* permission) {
+    return QCoreApplication_CheckPermission((QCoreApplication*)self, (QPermission*)permission);
 }
 
 void q_application_set_library_paths(const char* libraryPaths[]) {
@@ -932,8 +944,8 @@ QThread* q_application_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_application_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_application_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_application_start_timer(void* self, int interval) {
@@ -942,6 +954,10 @@ int32_t q_application_start_timer(void* self, int interval) {
 
 void q_application_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_application_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_application_children(void* self) {
@@ -1034,6 +1050,10 @@ bool q_application_inherits(void* self, const char* classname) {
 
 void q_application_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_application_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_application_start_timer2(void* self, int interval, int64_t timerType) {

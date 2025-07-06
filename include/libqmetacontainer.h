@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqmetatype.h"
-
 /// https://doc.qt.io/qt-6/qmetacontainer.html
 
 /// q_metacontainer_new constructs a new QMetaContainer object.

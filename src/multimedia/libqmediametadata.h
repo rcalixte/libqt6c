@@ -12,9 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include <string.h>
-#include "../libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qmediametadata.html
 
 /// q_mediametadata_new constructs a new QMediaMetaData object.
@@ -109,7 +106,8 @@ typedef enum {
     QMEDIAMETADATA_KEY_THUMBNAILIMAGE = 24,
     QMEDIAMETADATA_KEY_COVERARTIMAGE = 25,
     QMEDIAMETADATA_KEY_ORIENTATION = 26,
-    QMEDIAMETADATA_KEY_RESOLUTION = 27
+    QMEDIAMETADATA_KEY_RESOLUTION = 27,
+    QMEDIAMETADATA_KEY_HASHDRCONTENT = 28
 } QMediaMetaData__Key;
 
 #endif

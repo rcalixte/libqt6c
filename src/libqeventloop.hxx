@@ -61,8 +61,8 @@ class VirtualQEventLoop final : public QEventLoop {
     mutable bool qeventloop_issignalconnected_isbase = false;
 
   public:
-    VirtualQEventLoop() : QEventLoop(){};
-    VirtualQEventLoop(QObject* parent) : QEventLoop(parent){};
+    VirtualQEventLoop() : QEventLoop() {};
+    VirtualQEventLoop(QObject* parent) : QEventLoop(parent) {};
 
     ~VirtualQEventLoop() {
         qeventloop_metacall_callback = nullptr;
@@ -294,18 +294,18 @@ class VirtualQEventLoop final : public QEventLoop {
     friend void QEventLoop_QBaseChildEvent(QEventLoop* self, QChildEvent* event);
     friend void QEventLoop_CustomEvent(QEventLoop* self, QEvent* event);
     friend void QEventLoop_QBaseCustomEvent(QEventLoop* self, QEvent* event);
-    friend void QEventLoop_ConnectNotify(QEventLoop* self, QMetaMethod* signal);
-    friend void QEventLoop_QBaseConnectNotify(QEventLoop* self, QMetaMethod* signal);
-    friend void QEventLoop_DisconnectNotify(QEventLoop* self, QMetaMethod* signal);
-    friend void QEventLoop_QBaseDisconnectNotify(QEventLoop* self, QMetaMethod* signal);
+    friend void QEventLoop_ConnectNotify(QEventLoop* self, const QMetaMethod* signal);
+    friend void QEventLoop_QBaseConnectNotify(QEventLoop* self, const QMetaMethod* signal);
+    friend void QEventLoop_DisconnectNotify(QEventLoop* self, const QMetaMethod* signal);
+    friend void QEventLoop_QBaseDisconnectNotify(QEventLoop* self, const QMetaMethod* signal);
     friend QObject* QEventLoop_Sender(const QEventLoop* self);
     friend QObject* QEventLoop_QBaseSender(const QEventLoop* self);
     friend int QEventLoop_SenderSignalIndex(const QEventLoop* self);
     friend int QEventLoop_QBaseSenderSignalIndex(const QEventLoop* self);
     friend int QEventLoop_Receivers(const QEventLoop* self, const char* signal);
     friend int QEventLoop_QBaseReceivers(const QEventLoop* self, const char* signal);
-    friend bool QEventLoop_IsSignalConnected(const QEventLoop* self, QMetaMethod* signal);
-    friend bool QEventLoop_QBaseIsSignalConnected(const QEventLoop* self, QMetaMethod* signal);
+    friend bool QEventLoop_IsSignalConnected(const QEventLoop* self, const QMetaMethod* signal);
+    friend bool QEventLoop_QBaseIsSignalConnected(const QEventLoop* self, const QMetaMethod* signal);
 };
 
 #endif

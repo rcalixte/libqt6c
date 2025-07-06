@@ -77,7 +77,7 @@ QVariant* QVariantAnimation_StartValue(const QVariantAnimation* self) {
     return new QVariant(self->startValue());
 }
 
-void QVariantAnimation_SetStartValue(QVariantAnimation* self, QVariant* value) {
+void QVariantAnimation_SetStartValue(QVariantAnimation* self, const QVariant* value) {
     self->setStartValue(*value);
 }
 
@@ -85,7 +85,7 @@ QVariant* QVariantAnimation_EndValue(const QVariantAnimation* self) {
     return new QVariant(self->endValue());
 }
 
-void QVariantAnimation_SetEndValue(QVariantAnimation* self, QVariant* value) {
+void QVariantAnimation_SetEndValue(QVariantAnimation* self, const QVariant* value) {
     self->setEndValue(*value);
 }
 
@@ -93,15 +93,15 @@ QVariant* QVariantAnimation_KeyValueAt(const QVariantAnimation* self, double ste
     return new QVariant(self->keyValueAt(static_cast<qreal>(step)));
 }
 
-void QVariantAnimation_SetKeyValueAt(QVariantAnimation* self, double step, QVariant* value) {
+void QVariantAnimation_SetKeyValueAt(QVariantAnimation* self, double step, const QVariant* value) {
     self->setKeyValueAt(static_cast<qreal>(step), *value);
 }
 
 libqt_list /* of libqt_pair  tuple of double and QVariant*  */ QVariantAnimation_KeyValues(const QVariantAnimation* self) {
-    QVariantAnimation::KeyValues _ret = self->keyValues();
+    QList<QPair<double, QVariant>> _ret = self->keyValues();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_pair /* tuple of double and QVariant* */* _arr = static_cast<libqt_pair /* tuple of double and QVariant* */*>(malloc(sizeof(libqt_pair /* tuple of double and QVariant* */) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_pair /* tuple of double and QVariant* */* _arr = static_cast<libqt_pair /* tuple of double and QVariant* */*>(malloc(sizeof(libqt_pair /* tuple of double and QVariant* */) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QPair<double, QVariant> _lv_ret = _ret[i];
         // Convert QPair<> from C++ memory to manually-managed C memory
         double* _lv_first = static_cast<double*>(malloc(sizeof(double)));
@@ -114,13 +114,13 @@ libqt_list /* of libqt_pair  tuple of double and QVariant*  */ QVariantAnimation
         _arr[i] = _lv_out;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-void QVariantAnimation_SetKeyValues(QVariantAnimation* self, libqt_list /* of libqt_pair  tuple of double and QVariant*  */ values) {
-    QVariantAnimation::KeyValues values_QList;
+void QVariantAnimation_SetKeyValues(QVariantAnimation* self, const libqt_list /* of libqt_pair  tuple of double and QVariant*  */ values) {
+    QList<QPair<double, QVariant>> values_QList;
     values_QList.reserve(values.len);
     libqt_pair /* tuple of double and QVariant* */* values_arr = static_cast<libqt_pair /* tuple of double and QVariant* */*>(values.data.ptr);
     for (size_t i = 0; i < values.len; ++i) {
@@ -146,11 +146,11 @@ QEasingCurve* QVariantAnimation_EasingCurve(const QVariantAnimation* self) {
     return new QEasingCurve(self->easingCurve());
 }
 
-void QVariantAnimation_SetEasingCurve(QVariantAnimation* self, QEasingCurve* easing) {
+void QVariantAnimation_SetEasingCurve(QVariantAnimation* self, const QEasingCurve* easing) {
     self->setEasingCurve(*easing);
 }
 
-void QVariantAnimation_ValueChanged(QVariantAnimation* self, QVariant* value) {
+void QVariantAnimation_ValueChanged(QVariantAnimation* self, const QVariant* value) {
     self->valueChanged(*value);
 }
 
@@ -305,7 +305,7 @@ void QVariantAnimation_OnUpdateState(QVariantAnimation* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QVariantAnimation_UpdateCurrentValue(QVariantAnimation* self, QVariant* value) {
+void QVariantAnimation_UpdateCurrentValue(QVariantAnimation* self, const QVariant* value) {
     auto* vqvariantanimation = dynamic_cast<VirtualQVariantAnimation*>(self);
     if (vqvariantanimation && vqvariantanimation->isVirtualQVariantAnimation) {
         vqvariantanimation->updateCurrentValue(*value);
@@ -315,7 +315,7 @@ void QVariantAnimation_UpdateCurrentValue(QVariantAnimation* self, QVariant* val
 }
 
 // Base class handler implementation
-void QVariantAnimation_QBaseUpdateCurrentValue(QVariantAnimation* self, QVariant* value) {
+void QVariantAnimation_QBaseUpdateCurrentValue(QVariantAnimation* self, const QVariant* value) {
     auto* vqvariantanimation = dynamic_cast<VirtualQVariantAnimation*>(self);
     if (vqvariantanimation && vqvariantanimation->isVirtualQVariantAnimation) {
         vqvariantanimation->setQVariantAnimation_UpdateCurrentValue_IsBase(true);
@@ -334,7 +334,7 @@ void QVariantAnimation_OnUpdateCurrentValue(QVariantAnimation* self, intptr_t sl
 }
 
 // Derived class handler implementation
-QVariant* QVariantAnimation_Interpolated(const QVariantAnimation* self, QVariant* from, QVariant* to, double progress) {
+QVariant* QVariantAnimation_Interpolated(const QVariantAnimation* self, const QVariant* from, const QVariant* to, double progress) {
     auto* vqvariantanimation = const_cast<VirtualQVariantAnimation*>(dynamic_cast<const VirtualQVariantAnimation*>(self));
     if (vqvariantanimation && vqvariantanimation->isVirtualQVariantAnimation) {
         return new QVariant(vqvariantanimation->interpolated(*from, *to, static_cast<qreal>(progress)));
@@ -343,7 +343,7 @@ QVariant* QVariantAnimation_Interpolated(const QVariantAnimation* self, QVariant
 }
 
 // Base class handler implementation
-QVariant* QVariantAnimation_QBaseInterpolated(const QVariantAnimation* self, QVariant* from, QVariant* to, double progress) {
+QVariant* QVariantAnimation_QBaseInterpolated(const QVariantAnimation* self, const QVariant* from, const QVariant* to, double progress) {
     auto* vqvariantanimation = const_cast<VirtualQVariantAnimation*>(dynamic_cast<const VirtualQVariantAnimation*>(self));
     if (vqvariantanimation && vqvariantanimation->isVirtualQVariantAnimation) {
         vqvariantanimation->setQVariantAnimation_Interpolated_IsBase(true);
@@ -506,7 +506,7 @@ void QVariantAnimation_OnCustomEvent(QVariantAnimation* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QVariantAnimation_ConnectNotify(QVariantAnimation* self, QMetaMethod* signal) {
+void QVariantAnimation_ConnectNotify(QVariantAnimation* self, const QMetaMethod* signal) {
     auto* vqvariantanimation = dynamic_cast<VirtualQVariantAnimation*>(self);
     if (vqvariantanimation && vqvariantanimation->isVirtualQVariantAnimation) {
         vqvariantanimation->connectNotify(*signal);
@@ -516,7 +516,7 @@ void QVariantAnimation_ConnectNotify(QVariantAnimation* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-void QVariantAnimation_QBaseConnectNotify(QVariantAnimation* self, QMetaMethod* signal) {
+void QVariantAnimation_QBaseConnectNotify(QVariantAnimation* self, const QMetaMethod* signal) {
     auto* vqvariantanimation = dynamic_cast<VirtualQVariantAnimation*>(self);
     if (vqvariantanimation && vqvariantanimation->isVirtualQVariantAnimation) {
         vqvariantanimation->setQVariantAnimation_ConnectNotify_IsBase(true);
@@ -535,7 +535,7 @@ void QVariantAnimation_OnConnectNotify(QVariantAnimation* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QVariantAnimation_DisconnectNotify(QVariantAnimation* self, QMetaMethod* signal) {
+void QVariantAnimation_DisconnectNotify(QVariantAnimation* self, const QMetaMethod* signal) {
     auto* vqvariantanimation = dynamic_cast<VirtualQVariantAnimation*>(self);
     if (vqvariantanimation && vqvariantanimation->isVirtualQVariantAnimation) {
         vqvariantanimation->disconnectNotify(*signal);
@@ -545,7 +545,7 @@ void QVariantAnimation_DisconnectNotify(QVariantAnimation* self, QMetaMethod* si
 }
 
 // Base class handler implementation
-void QVariantAnimation_QBaseDisconnectNotify(QVariantAnimation* self, QMetaMethod* signal) {
+void QVariantAnimation_QBaseDisconnectNotify(QVariantAnimation* self, const QMetaMethod* signal) {
     auto* vqvariantanimation = dynamic_cast<VirtualQVariantAnimation*>(self);
     if (vqvariantanimation && vqvariantanimation->isVirtualQVariantAnimation) {
         vqvariantanimation->setQVariantAnimation_DisconnectNotify_IsBase(true);
@@ -651,7 +651,7 @@ void QVariantAnimation_OnReceivers(const QVariantAnimation* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-bool QVariantAnimation_IsSignalConnected(const QVariantAnimation* self, QMetaMethod* signal) {
+bool QVariantAnimation_IsSignalConnected(const QVariantAnimation* self, const QMetaMethod* signal) {
     auto* vqvariantanimation = const_cast<VirtualQVariantAnimation*>(dynamic_cast<const VirtualQVariantAnimation*>(self));
     if (vqvariantanimation && vqvariantanimation->isVirtualQVariantAnimation) {
         return vqvariantanimation->isSignalConnected(*signal);
@@ -661,7 +661,7 @@ bool QVariantAnimation_IsSignalConnected(const QVariantAnimation* self, QMetaMet
 }
 
 // Base class handler implementation
-bool QVariantAnimation_QBaseIsSignalConnected(const QVariantAnimation* self, QMetaMethod* signal) {
+bool QVariantAnimation_QBaseIsSignalConnected(const QVariantAnimation* self, const QMetaMethod* signal) {
     auto* vqvariantanimation = const_cast<VirtualQVariantAnimation*>(dynamic_cast<const VirtualQVariantAnimation*>(self));
     if (vqvariantanimation && vqvariantanimation->isVirtualQVariantAnimation) {
         vqvariantanimation->setQVariantAnimation_IsSignalConnected_IsBase(true);

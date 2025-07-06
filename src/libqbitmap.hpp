@@ -28,30 +28,23 @@ typedef struct QTransform QTransform;
 typedef struct QVariant QVariant;
 #endif
 
-#ifdef __cplusplus
-typedef QBitmap::DataPtr DataPtr; // C++ QFlags
-#else
-
-#endif
-
 QBitmap* QBitmap_new();
-QBitmap* QBitmap_new2(QPixmap* param1);
+QBitmap* QBitmap_new2(const QPixmap* param1);
 QBitmap* QBitmap_new3(int w, int h);
-QBitmap* QBitmap_new4(QSize* param1);
-QBitmap* QBitmap_new5(libqt_string fileName);
-QBitmap* QBitmap_new6(QBitmap* param1);
-QBitmap* QBitmap_new7(libqt_string fileName, const char* format);
-void QBitmap_OperatorAssign(QBitmap* self, QPixmap* param1);
+QBitmap* QBitmap_new4(const QSize* param1);
+QBitmap* QBitmap_new5(const libqt_string fileName);
+QBitmap* QBitmap_new6(const libqt_string fileName, const char* format);
+void QBitmap_OperatorAssign(QBitmap* self, const QPixmap* param1);
 void QBitmap_Swap(QBitmap* self, QBitmap* other);
 QVariant* QBitmap_ToQVariant(const QBitmap* self);
 void QBitmap_Clear(QBitmap* self);
-QBitmap* QBitmap_FromImage(QImage* image);
-QBitmap* QBitmap_FromData(QSize* size, const unsigned char* bits);
-QBitmap* QBitmap_FromPixmap(QPixmap* pixmap);
-QBitmap* QBitmap_Transformed(const QBitmap* self, QTransform* matrix);
-void QBitmap_OperatorAssignWithQBitmap(QBitmap* self, QBitmap* param1);
-QBitmap* QBitmap_FromImage2(QImage* image, int flags);
-QBitmap* QBitmap_FromData3(QSize* size, const unsigned char* bits, int monoFormat);
+QBitmap* QBitmap_FromImage(const QImage* image);
+QBitmap* QBitmap_FromData(const QSize* size, const unsigned char* bits);
+QBitmap* QBitmap_FromPixmap(const QPixmap* pixmap);
+QBitmap* QBitmap_Transformed(const QBitmap* self, const QTransform* matrix);
+void QBitmap_OperatorAssignWithQBitmap(QBitmap* self, const QBitmap* param1);
+QBitmap* QBitmap_FromImage2(const QImage* image, int flags);
+QBitmap* QBitmap_FromData3(const QSize* size, const unsigned char* bits, int monoFormat);
 int QBitmap_DevType(const QBitmap* self);
 void QBitmap_OnDevType(const QBitmap* self, intptr_t slot);
 int QBitmap_QBaseDevType(const QBitmap* self);
@@ -70,6 +63,9 @@ QPaintDevice* QBitmap_QBaseRedirected(const QBitmap* self, QPoint* offset);
 QPainter* QBitmap_SharedPainter(const QBitmap* self);
 void QBitmap_OnSharedPainter(const QBitmap* self, intptr_t slot);
 QPainter* QBitmap_QBaseSharedPainter(const QBitmap* self);
+double QBitmap_GetDecodedMetricF(const QBitmap* self, int metricA, int metricB);
+void QBitmap_OnGetDecodedMetricF(const QBitmap* self, intptr_t slot);
+double QBitmap_QBaseGetDecodedMetricF(const QBitmap* self, int metricA, int metricB);
 void QBitmap_Delete(QBitmap* self);
 
 #ifdef __cplusplus

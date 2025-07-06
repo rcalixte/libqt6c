@@ -11,8 +11,10 @@
 #include <QTimerEvent>
 #include <QUrl>
 #include <QWebEngineClientCertificateStore>
+#include <QWebEngineClientHints>
 #include <QWebEngineCookieStore>
 #include <QWebEngineDownloadRequest>
+#include <QWebEnginePermission>
 #include <QWebEngineProfile>
 #include <QWebEngineScriptCollection>
 #include <QWebEngineSettings>
@@ -26,7 +28,7 @@ QWebEngineProfile* QWebEngineProfile_new() {
     return new VirtualQWebEngineProfile();
 }
 
-QWebEngineProfile* QWebEngineProfile_new2(libqt_string name) {
+QWebEngineProfile* QWebEngineProfile_new2(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQWebEngineProfile(name_QString);
 }
@@ -35,7 +37,7 @@ QWebEngineProfile* QWebEngineProfile_new3(QObject* parent) {
     return new VirtualQWebEngineProfile(parent);
 }
 
-QWebEngineProfile* QWebEngineProfile_new4(libqt_string name, QObject* parent) {
+QWebEngineProfile* QWebEngineProfile_new4(const libqt_string name, QObject* parent) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQWebEngineProfile(name_QString, parent);
 }
@@ -116,7 +118,7 @@ libqt_string QWebEngineProfile_PersistentStoragePath(const QWebEngineProfile* se
     return _str;
 }
 
-void QWebEngineProfile_SetPersistentStoragePath(QWebEngineProfile* self, libqt_string path) {
+void QWebEngineProfile_SetPersistentStoragePath(QWebEngineProfile* self, const libqt_string path) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     self->setPersistentStoragePath(path_QString);
 }
@@ -133,7 +135,7 @@ libqt_string QWebEngineProfile_CachePath(const QWebEngineProfile* self) {
     return _str;
 }
 
-void QWebEngineProfile_SetCachePath(QWebEngineProfile* self, libqt_string path) {
+void QWebEngineProfile_SetCachePath(QWebEngineProfile* self, const libqt_string path) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     self->setCachePath(path_QString);
 }
@@ -150,7 +152,7 @@ libqt_string QWebEngineProfile_HttpUserAgent(const QWebEngineProfile* self) {
     return _str;
 }
 
-void QWebEngineProfile_SetHttpUserAgent(QWebEngineProfile* self, libqt_string userAgent) {
+void QWebEngineProfile_SetHttpUserAgent(QWebEngineProfile* self, const libqt_string userAgent) {
     QString userAgent_QString = QString::fromUtf8(userAgent.data, userAgent.len);
     self->setHttpUserAgent(userAgent_QString);
 }
@@ -163,7 +165,7 @@ void QWebEngineProfile_SetHttpCacheType(QWebEngineProfile* self, int httpCacheTy
     self->setHttpCacheType(static_cast<QWebEngineProfile::HttpCacheType>(httpCacheType));
 }
 
-void QWebEngineProfile_SetHttpAcceptLanguage(QWebEngineProfile* self, libqt_string httpAcceptLanguage) {
+void QWebEngineProfile_SetHttpAcceptLanguage(QWebEngineProfile* self, const libqt_string httpAcceptLanguage) {
     QString httpAcceptLanguage_QString = QString::fromUtf8(httpAcceptLanguage.data, httpAcceptLanguage.len);
     self->setHttpAcceptLanguage(httpAcceptLanguage_QString);
 }
@@ -188,6 +190,14 @@ void QWebEngineProfile_SetPersistentCookiesPolicy(QWebEngineProfile* self, int p
     self->setPersistentCookiesPolicy(static_cast<QWebEngineProfile::PersistentCookiesPolicy>(persistentCookiesPolicy));
 }
 
+uint8_t QWebEngineProfile_PersistentPermissionsPolicy(const QWebEngineProfile* self) {
+    return static_cast<uint8_t>(self->persistentPermissionsPolicy());
+}
+
+void QWebEngineProfile_SetPersistentPermissionsPolicy(QWebEngineProfile* self, uint8_t persistentPermissionsPolicy) {
+    self->setPersistentPermissionsPolicy(static_cast<QWebEngineProfile::PersistentPermissionsPolicy>(persistentPermissionsPolicy));
+}
+
 int QWebEngineProfile_HttpCacheMaximumSize(const QWebEngineProfile* self) {
     return self->httpCacheMaximumSize();
 }
@@ -208,7 +218,7 @@ void QWebEngineProfile_ClearAllVisitedLinks(QWebEngineProfile* self) {
     self->clearAllVisitedLinks();
 }
 
-void QWebEngineProfile_ClearVisitedLinks(QWebEngineProfile* self, libqt_list /* of QUrl* */ urls) {
+void QWebEngineProfile_ClearVisitedLinks(QWebEngineProfile* self, const libqt_list /* of QUrl* */ urls) {
     QList<QUrl> urls_QList;
     urls_QList.reserve(urls.len);
     QUrl** urls_arr = static_cast<QUrl**>(urls.data.ptr);
@@ -218,7 +228,7 @@ void QWebEngineProfile_ClearVisitedLinks(QWebEngineProfile* self, libqt_list /* 
     self->clearVisitedLinks(urls_QList);
 }
 
-bool QWebEngineProfile_VisitedLinksContainsUrl(const QWebEngineProfile* self, QUrl* url) {
+bool QWebEngineProfile_VisitedLinksContainsUrl(const QWebEngineProfile* self, const QUrl* url) {
     return self->visitedLinksContainsUrl(*url);
 }
 
@@ -230,17 +240,21 @@ QWebEngineScriptCollection* QWebEngineProfile_Scripts(const QWebEngineProfile* s
     return self->scripts();
 }
 
-QWebEngineUrlSchemeHandler* QWebEngineProfile_UrlSchemeHandler(const QWebEngineProfile* self, libqt_string param1) {
+QWebEngineClientHints* QWebEngineProfile_ClientHints(const QWebEngineProfile* self) {
+    return self->clientHints();
+}
+
+QWebEngineUrlSchemeHandler* QWebEngineProfile_UrlSchemeHandler(const QWebEngineProfile* self, const libqt_string param1) {
     QByteArray param1_QByteArray(param1.data, param1.len);
     return (QWebEngineUrlSchemeHandler*)self->urlSchemeHandler(param1_QByteArray);
 }
 
-void QWebEngineProfile_InstallUrlSchemeHandler(QWebEngineProfile* self, libqt_string scheme, QWebEngineUrlSchemeHandler* param2) {
+void QWebEngineProfile_InstallUrlSchemeHandler(QWebEngineProfile* self, const libqt_string scheme, QWebEngineUrlSchemeHandler* param2) {
     QByteArray scheme_QByteArray(scheme.data, scheme.len);
     self->installUrlSchemeHandler(scheme_QByteArray, param2);
 }
 
-void QWebEngineProfile_RemoveUrlScheme(QWebEngineProfile* self, libqt_string scheme) {
+void QWebEngineProfile_RemoveUrlScheme(QWebEngineProfile* self, const libqt_string scheme) {
     QByteArray scheme_QByteArray(scheme.data, scheme.len);
     self->removeUrlScheme(scheme_QByteArray);
 }
@@ -257,8 +271,8 @@ void QWebEngineProfile_ClearHttpCache(QWebEngineProfile* self) {
     self->clearHttpCache();
 }
 
-void QWebEngineProfile_SetSpellCheckLanguages(QWebEngineProfile* self, libqt_list /* of libqt_string */ languages) {
-    QStringList languages_QList;
+void QWebEngineProfile_SetSpellCheckLanguages(QWebEngineProfile* self, const libqt_list /* of libqt_string */ languages) {
+    QList<QString> languages_QList;
     languages_QList.reserve(languages.len);
     libqt_string* languages_arr = static_cast<libqt_string*>(languages.data.ptr);
     for (size_t i = 0; i < languages.len; ++i) {
@@ -269,10 +283,10 @@ void QWebEngineProfile_SetSpellCheckLanguages(QWebEngineProfile* self, libqt_lis
 }
 
 libqt_list /* of libqt_string */ QWebEngineProfile_SpellCheckLanguages(const QWebEngineProfile* self) {
-    QStringList _ret = self->spellCheckLanguages();
+    QList<QString> _ret = self->spellCheckLanguages();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -284,7 +298,7 @@ libqt_list /* of libqt_string */ QWebEngineProfile_SpellCheckLanguages(const QWe
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -309,13 +323,64 @@ libqt_string QWebEngineProfile_DownloadPath(const QWebEngineProfile* self) {
     return _str;
 }
 
-void QWebEngineProfile_SetDownloadPath(QWebEngineProfile* self, libqt_string path) {
+void QWebEngineProfile_SetDownloadPath(QWebEngineProfile* self, const libqt_string path) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     self->setDownloadPath(path_QString);
 }
 
+bool QWebEngineProfile_IsPushServiceEnabled(const QWebEngineProfile* self) {
+    return self->isPushServiceEnabled();
+}
+
+void QWebEngineProfile_SetPushServiceEnabled(QWebEngineProfile* self, bool enabled) {
+    self->setPushServiceEnabled(enabled);
+}
+
 QWebEngineClientCertificateStore* QWebEngineProfile_ClientCertificateStore(QWebEngineProfile* self) {
     return self->clientCertificateStore();
+}
+
+QWebEnginePermission* QWebEngineProfile_QueryPermission(const QWebEngineProfile* self, const QUrl* securityOrigin, uint8_t permissionType) {
+    return new QWebEnginePermission(self->queryPermission(*securityOrigin, static_cast<QWebEnginePermission::PermissionType>(permissionType)));
+}
+
+libqt_list /* of QWebEnginePermission* */ QWebEngineProfile_ListAllPermissions(const QWebEngineProfile* self) {
+    QList<QWebEnginePermission> _ret = self->listAllPermissions();
+    // Convert QList<> from C++ memory to manually-managed C memory
+    QWebEnginePermission** _arr = static_cast<QWebEnginePermission**>(malloc(sizeof(QWebEnginePermission*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
+        _arr[i] = new QWebEnginePermission(_ret[i]);
+    }
+    libqt_list _out;
+    _out.len = _ret.size();
+    _out.data.ptr = static_cast<void*>(_arr);
+    return _out;
+}
+
+libqt_list /* of QWebEnginePermission* */ QWebEngineProfile_ListPermissionsForOrigin(const QWebEngineProfile* self, const QUrl* securityOrigin) {
+    QList<QWebEnginePermission> _ret = self->listPermissionsForOrigin(*securityOrigin);
+    // Convert QList<> from C++ memory to manually-managed C memory
+    QWebEnginePermission** _arr = static_cast<QWebEnginePermission**>(malloc(sizeof(QWebEnginePermission*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
+        _arr[i] = new QWebEnginePermission(_ret[i]);
+    }
+    libqt_list _out;
+    _out.len = _ret.size();
+    _out.data.ptr = static_cast<void*>(_arr);
+    return _out;
+}
+
+libqt_list /* of QWebEnginePermission* */ QWebEngineProfile_ListPermissionsForPermissionType(const QWebEngineProfile* self, uint8_t permissionType) {
+    QList<QWebEnginePermission> _ret = self->listPermissionsForPermissionType(static_cast<QWebEnginePermission::PermissionType>(permissionType));
+    // Convert QList<> from C++ memory to manually-managed C memory
+    QWebEnginePermission** _arr = static_cast<QWebEnginePermission**>(malloc(sizeof(QWebEnginePermission*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
+        _arr[i] = new QWebEnginePermission(_ret[i]);
+    }
+    libqt_list _out;
+    _out.len = _ret.size();
+    _out.data.ptr = static_cast<void*>(_arr);
+    return _out;
 }
 
 QWebEngineProfile* QWebEngineProfile_DefaultProfile() {
@@ -331,6 +396,17 @@ void QWebEngineProfile_Connect_DownloadRequested(QWebEngineProfile* self, intptr
     QWebEngineProfile::connect(self, &QWebEngineProfile::downloadRequested, [self, slotFunc](QWebEngineDownloadRequest* download) {
         QWebEngineDownloadRequest* sigval1 = download;
         slotFunc(self, sigval1);
+    });
+}
+
+void QWebEngineProfile_ClearHttpCacheCompleted(QWebEngineProfile* self) {
+    self->clearHttpCacheCompleted();
+}
+
+void QWebEngineProfile_Connect_ClearHttpCacheCompleted(QWebEngineProfile* self, intptr_t slot) {
+    void (*slotFunc)(QWebEngineProfile*) = reinterpret_cast<void (*)(QWebEngineProfile*)>(slot);
+    QWebEngineProfile::connect(self, &QWebEngineProfile::clearHttpCacheCompleted, [self, slotFunc]() {
+        slotFunc(self);
     });
 }
 
@@ -504,7 +580,7 @@ void QWebEngineProfile_OnCustomEvent(QWebEngineProfile* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWebEngineProfile_ConnectNotify(QWebEngineProfile* self, QMetaMethod* signal) {
+void QWebEngineProfile_ConnectNotify(QWebEngineProfile* self, const QMetaMethod* signal) {
     auto* vqwebengineprofile = dynamic_cast<VirtualQWebEngineProfile*>(self);
     if (vqwebengineprofile && vqwebengineprofile->isVirtualQWebEngineProfile) {
         vqwebengineprofile->connectNotify(*signal);
@@ -514,7 +590,7 @@ void QWebEngineProfile_ConnectNotify(QWebEngineProfile* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-void QWebEngineProfile_QBaseConnectNotify(QWebEngineProfile* self, QMetaMethod* signal) {
+void QWebEngineProfile_QBaseConnectNotify(QWebEngineProfile* self, const QMetaMethod* signal) {
     auto* vqwebengineprofile = dynamic_cast<VirtualQWebEngineProfile*>(self);
     if (vqwebengineprofile && vqwebengineprofile->isVirtualQWebEngineProfile) {
         vqwebengineprofile->setQWebEngineProfile_ConnectNotify_IsBase(true);
@@ -533,7 +609,7 @@ void QWebEngineProfile_OnConnectNotify(QWebEngineProfile* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWebEngineProfile_DisconnectNotify(QWebEngineProfile* self, QMetaMethod* signal) {
+void QWebEngineProfile_DisconnectNotify(QWebEngineProfile* self, const QMetaMethod* signal) {
     auto* vqwebengineprofile = dynamic_cast<VirtualQWebEngineProfile*>(self);
     if (vqwebengineprofile && vqwebengineprofile->isVirtualQWebEngineProfile) {
         vqwebengineprofile->disconnectNotify(*signal);
@@ -543,7 +619,7 @@ void QWebEngineProfile_DisconnectNotify(QWebEngineProfile* self, QMetaMethod* si
 }
 
 // Base class handler implementation
-void QWebEngineProfile_QBaseDisconnectNotify(QWebEngineProfile* self, QMetaMethod* signal) {
+void QWebEngineProfile_QBaseDisconnectNotify(QWebEngineProfile* self, const QMetaMethod* signal) {
     auto* vqwebengineprofile = dynamic_cast<VirtualQWebEngineProfile*>(self);
     if (vqwebengineprofile && vqwebengineprofile->isVirtualQWebEngineProfile) {
         vqwebengineprofile->setQWebEngineProfile_DisconnectNotify_IsBase(true);
@@ -649,7 +725,7 @@ void QWebEngineProfile_OnReceivers(const QWebEngineProfile* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-bool QWebEngineProfile_IsSignalConnected(const QWebEngineProfile* self, QMetaMethod* signal) {
+bool QWebEngineProfile_IsSignalConnected(const QWebEngineProfile* self, const QMetaMethod* signal) {
     auto* vqwebengineprofile = const_cast<VirtualQWebEngineProfile*>(dynamic_cast<const VirtualQWebEngineProfile*>(self));
     if (vqwebengineprofile && vqwebengineprofile->isVirtualQWebEngineProfile) {
         return vqwebengineprofile->isSignalConnected(*signal);
@@ -659,7 +735,7 @@ bool QWebEngineProfile_IsSignalConnected(const QWebEngineProfile* self, QMetaMet
 }
 
 // Base class handler implementation
-bool QWebEngineProfile_QBaseIsSignalConnected(const QWebEngineProfile* self, QMetaMethod* signal) {
+bool QWebEngineProfile_QBaseIsSignalConnected(const QWebEngineProfile* self, const QMetaMethod* signal) {
     auto* vqwebengineprofile = const_cast<VirtualQWebEngineProfile*>(dynamic_cast<const VirtualQWebEngineProfile*>(self));
     if (vqwebengineprofile && vqwebengineprofile->isVirtualQWebEngineProfile) {
         vqwebengineprofile->setQWebEngineProfile_IsSignalConnected_IsBase(true);

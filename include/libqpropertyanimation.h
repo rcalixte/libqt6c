@@ -12,14 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractanimation.h"
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-#include "libqvariant.h"
-#include "libqvariantanimation.h"
-
 /// https://doc.qt.io/qt-6/qpropertyanimation.html
 
 /// q_propertyanimation_new constructs a new QPropertyAnimation object.
@@ -489,7 +481,7 @@ QThread* q_propertyanimation_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QPropertyAnimation* self, QThread* thread ```
-void q_propertyanimation_move_to_thread(void* self, void* thread);
+bool q_propertyanimation_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -504,6 +496,13 @@ int32_t q_propertyanimation_start_timer(void* self, int interval);
 ///
 /// ``` QPropertyAnimation* self, int id ```
 void q_propertyanimation_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QPropertyAnimation* self, enum Qt__TimerId id ```
+void q_propertyanimation_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -644,6 +643,13 @@ bool q_propertyanimation_inherits(void* self, const char* classname);
 ///
 /// ``` QPropertyAnimation* self ```
 void q_propertyanimation_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QPropertyAnimation* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_propertyanimation_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

@@ -20,7 +20,7 @@ QFile* QFile_new() {
     return new VirtualQFile();
 }
 
-QFile* QFile_new2(libqt_string name) {
+QFile* QFile_new2(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQFile(name_QString);
 }
@@ -29,7 +29,7 @@ QFile* QFile_new3(QObject* parent) {
     return new VirtualQFile(parent);
 }
 
-QFile* QFile_new4(libqt_string name, QObject* parent) {
+QFile* QFile_new4(const libqt_string name, QObject* parent) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQFile(name_QString, parent);
 }
@@ -82,12 +82,12 @@ libqt_string QFile_Tr(const char* s) {
     return _str;
 }
 
-void QFile_SetFileName(QFile* self, libqt_string name) {
+void QFile_SetFileName(QFile* self, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     self->setFileName(name_QString);
 }
 
-libqt_string QFile_EncodeName(libqt_string fileName) {
+libqt_string QFile_EncodeName(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QByteArray _qb = QFile::encodeName(fileName_QString);
     libqt_string _str;
@@ -98,7 +98,7 @@ libqt_string QFile_EncodeName(libqt_string fileName) {
     return _str;
 }
 
-libqt_string QFile_DecodeName(libqt_string localFileName) {
+libqt_string QFile_DecodeName(const libqt_string localFileName) {
     QByteArray localFileName_QByteArray(localFileName.data, localFileName.len);
     QString _ret = QFile::decodeName(localFileName_QByteArray);
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -127,7 +127,7 @@ bool QFile_Exists(const QFile* self) {
     return self->exists();
 }
 
-bool QFile_ExistsWithFileName(libqt_string fileName) {
+bool QFile_ExistsWithFileName(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return QFile::exists(fileName_QString);
 }
@@ -144,7 +144,7 @@ libqt_string QFile_SymLinkTarget(const QFile* self) {
     return _str;
 }
 
-libqt_string QFile_SymLinkTargetWithFileName(libqt_string fileName) {
+libqt_string QFile_SymLinkTargetWithFileName(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QString _ret = QFile::symLinkTarget(fileName_QString);
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -161,7 +161,7 @@ bool QFile_Remove(QFile* self) {
     return self->remove();
 }
 
-bool QFile_RemoveWithFileName(libqt_string fileName) {
+bool QFile_RemoveWithFileName(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return QFile::remove(fileName_QString);
 }
@@ -170,63 +170,63 @@ bool QFile_MoveToTrash(QFile* self) {
     return self->moveToTrash();
 }
 
-bool QFile_MoveToTrashWithFileName(libqt_string fileName) {
+bool QFile_MoveToTrashWithFileName(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return QFile::moveToTrash(fileName_QString);
 }
 
-bool QFile_Rename(QFile* self, libqt_string newName) {
+bool QFile_Rename(QFile* self, const libqt_string newName) {
     QString newName_QString = QString::fromUtf8(newName.data, newName.len);
     return self->rename(newName_QString);
 }
 
-bool QFile_Rename2(libqt_string oldName, libqt_string newName) {
+bool QFile_Rename2(const libqt_string oldName, const libqt_string newName) {
     QString oldName_QString = QString::fromUtf8(oldName.data, oldName.len);
     QString newName_QString = QString::fromUtf8(newName.data, newName.len);
     return QFile::rename(oldName_QString, newName_QString);
 }
 
-bool QFile_Link(QFile* self, libqt_string newName) {
+bool QFile_Link(QFile* self, const libqt_string newName) {
     QString newName_QString = QString::fromUtf8(newName.data, newName.len);
     return self->link(newName_QString);
 }
 
-bool QFile_Link2(libqt_string fileName, libqt_string newName) {
+bool QFile_Link2(const libqt_string fileName, const libqt_string newName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QString newName_QString = QString::fromUtf8(newName.data, newName.len);
     return QFile::link(fileName_QString, newName_QString);
 }
 
-bool QFile_Copy(QFile* self, libqt_string newName) {
+bool QFile_Copy(QFile* self, const libqt_string newName) {
     QString newName_QString = QString::fromUtf8(newName.data, newName.len);
     return self->copy(newName_QString);
 }
 
-bool QFile_Copy2(libqt_string fileName, libqt_string newName) {
+bool QFile_Copy2(const libqt_string fileName, const libqt_string newName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QString newName_QString = QString::fromUtf8(newName.data, newName.len);
     return QFile::copy(fileName_QString, newName_QString);
 }
 
 bool QFile_Open2(QFile* self, int flags, int permissions) {
-    return self->open(static_cast<QIODeviceBase::OpenMode>(flags), static_cast<QFileDevice::Permissions>(permissions));
+    return self->open(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(flags), static_cast<QFileDevice::Permissions>(permissions));
 }
 
 bool QFile_Open4(QFile* self, int fd, int ioFlags) {
-    return self->open(static_cast<int>(fd), static_cast<QIODeviceBase::OpenMode>(ioFlags));
+    return self->open(static_cast<int>(fd), static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(ioFlags));
 }
 
-bool QFile_Resize2(libqt_string filename, long long sz) {
+bool QFile_Resize2(const libqt_string filename, long long sz) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     return QFile::resize(filename_QString, static_cast<qint64>(sz));
 }
 
-int QFile_PermissionsWithFilename(libqt_string filename) {
+int QFile_PermissionsWithFilename(const libqt_string filename) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     return static_cast<int>(QFile::permissions(filename_QString));
 }
 
-bool QFile_SetPermissions2(libqt_string filename, int permissionSpec) {
+bool QFile_SetPermissions2(const libqt_string filename, int permissionSpec) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     return QFile::setPermissions(filename_QString, static_cast<QFileDevice::Permissions>(permissionSpec));
 }
@@ -256,7 +256,7 @@ libqt_string QFile_Tr3(const char* s, const char* c, int n) {
 }
 
 bool QFile_Open33(QFile* self, int fd, int ioFlags, int handleFlags) {
-    return self->open(static_cast<int>(fd), static_cast<QIODeviceBase::OpenMode>(ioFlags), static_cast<QFileDevice::FileHandleFlags>(handleFlags));
+    return self->open(static_cast<int>(fd), static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(ioFlags), static_cast<QFileDevice::FileHandleFlags>(handleFlags));
 }
 
 // Derived class handler implementation
@@ -324,9 +324,9 @@ void QFile_OnFileName(const QFile* self, intptr_t slot) {
 bool QFile_Open(QFile* self, int flags) {
     auto* vqfile = dynamic_cast<VirtualQFile*>(self);
     if (vqfile && vqfile->isVirtualQFile) {
-        return vqfile->open(static_cast<QIODeviceBase::OpenMode>(flags));
+        return vqfile->open(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(flags));
     } else {
-        return self->QFile::open(static_cast<QIODeviceBase::OpenMode>(flags));
+        return self->QFile::open(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(flags));
     }
 }
 
@@ -335,9 +335,9 @@ bool QFile_QBaseOpen(QFile* self, int flags) {
     auto* vqfile = dynamic_cast<VirtualQFile*>(self);
     if (vqfile && vqfile->isVirtualQFile) {
         vqfile->setQFile_Open_IsBase(true);
-        return vqfile->open(static_cast<QIODeviceBase::OpenMode>(flags));
+        return vqfile->open(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(flags));
     } else {
-        return self->QFile::open(static_cast<QIODeviceBase::OpenMode>(flags));
+        return self->QFile::open(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(flags));
     }
 }
 
@@ -1046,7 +1046,7 @@ void QFile_OnCustomEvent(QFile* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFile_ConnectNotify(QFile* self, QMetaMethod* signal) {
+void QFile_ConnectNotify(QFile* self, const QMetaMethod* signal) {
     auto* vqfile = dynamic_cast<VirtualQFile*>(self);
     if (vqfile && vqfile->isVirtualQFile) {
         vqfile->connectNotify(*signal);
@@ -1056,7 +1056,7 @@ void QFile_ConnectNotify(QFile* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QFile_QBaseConnectNotify(QFile* self, QMetaMethod* signal) {
+void QFile_QBaseConnectNotify(QFile* self, const QMetaMethod* signal) {
     auto* vqfile = dynamic_cast<VirtualQFile*>(self);
     if (vqfile && vqfile->isVirtualQFile) {
         vqfile->setQFile_ConnectNotify_IsBase(true);
@@ -1075,7 +1075,7 @@ void QFile_OnConnectNotify(QFile* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFile_DisconnectNotify(QFile* self, QMetaMethod* signal) {
+void QFile_DisconnectNotify(QFile* self, const QMetaMethod* signal) {
     auto* vqfile = dynamic_cast<VirtualQFile*>(self);
     if (vqfile && vqfile->isVirtualQFile) {
         vqfile->disconnectNotify(*signal);
@@ -1085,7 +1085,7 @@ void QFile_DisconnectNotify(QFile* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QFile_QBaseDisconnectNotify(QFile* self, QMetaMethod* signal) {
+void QFile_QBaseDisconnectNotify(QFile* self, const QMetaMethod* signal) {
     auto* vqfile = dynamic_cast<VirtualQFile*>(self);
     if (vqfile && vqfile->isVirtualQFile) {
         vqfile->setQFile_DisconnectNotify_IsBase(true);
@@ -1133,7 +1133,7 @@ void QFile_OnSetOpenMode(QFile* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFile_SetErrorString(QFile* self, libqt_string errorString) {
+void QFile_SetErrorString(QFile* self, const libqt_string errorString) {
     auto* vqfile = dynamic_cast<VirtualQFile*>(self);
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     if (vqfile && vqfile->isVirtualQFile) {
@@ -1144,7 +1144,7 @@ void QFile_SetErrorString(QFile* self, libqt_string errorString) {
 }
 
 // Base class handler implementation
-void QFile_QBaseSetErrorString(QFile* self, libqt_string errorString) {
+void QFile_QBaseSetErrorString(QFile* self, const libqt_string errorString) {
     auto* vqfile = dynamic_cast<VirtualQFile*>(self);
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     if (vqfile && vqfile->isVirtualQFile) {
@@ -1251,7 +1251,7 @@ void QFile_OnReceivers(const QFile* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFile_IsSignalConnected(const QFile* self, QMetaMethod* signal) {
+bool QFile_IsSignalConnected(const QFile* self, const QMetaMethod* signal) {
     auto* vqfile = const_cast<VirtualQFile*>(dynamic_cast<const VirtualQFile*>(self));
     if (vqfile && vqfile->isVirtualQFile) {
         return vqfile->isSignalConnected(*signal);
@@ -1261,7 +1261,7 @@ bool QFile_IsSignalConnected(const QFile* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QFile_QBaseIsSignalConnected(const QFile* self, QMetaMethod* signal) {
+bool QFile_QBaseIsSignalConnected(const QFile* self, const QMetaMethod* signal) {
     auto* vqfile = const_cast<VirtualQFile*>(dynamic_cast<const VirtualQFile*>(self));
     if (vqfile && vqfile->isVirtualQFile) {
         vqfile->setQFile_IsSignalConnected_IsBase(true);

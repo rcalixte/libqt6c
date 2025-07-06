@@ -240,7 +240,7 @@ void QGraphicsLayout_OnRemoveAt(QGraphicsLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QGraphicsLayout_SetGeometry(QGraphicsLayout* self, QRectF* rect) {
+void QGraphicsLayout_SetGeometry(QGraphicsLayout* self, const QRectF* rect) {
     auto* vqgraphicslayout = dynamic_cast<VirtualQGraphicsLayout*>(self);
     if (vqgraphicslayout && vqgraphicslayout->isVirtualQGraphicsLayout) {
         vqgraphicslayout->setGeometry(*rect);
@@ -250,7 +250,7 @@ void QGraphicsLayout_SetGeometry(QGraphicsLayout* self, QRectF* rect) {
 }
 
 // Base class handler implementation
-void QGraphicsLayout_QBaseSetGeometry(QGraphicsLayout* self, QRectF* rect) {
+void QGraphicsLayout_QBaseSetGeometry(QGraphicsLayout* self, const QRectF* rect) {
     auto* vqgraphicslayout = dynamic_cast<VirtualQGraphicsLayout*>(self);
     if (vqgraphicslayout && vqgraphicslayout->isVirtualQGraphicsLayout) {
         vqgraphicslayout->setQGraphicsLayout_SetGeometry_IsBase(true);
@@ -298,7 +298,7 @@ void QGraphicsLayout_OnIsEmpty(const QGraphicsLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QSizeF* QGraphicsLayout_SizeHint(const QGraphicsLayout* self, int which, QSizeF* constraint) {
+QSizeF* QGraphicsLayout_SizeHint(const QGraphicsLayout* self, int which, const QSizeF* constraint) {
     auto* vqgraphicslayout = const_cast<VirtualQGraphicsLayout*>(dynamic_cast<const VirtualQGraphicsLayout*>(self));
     if (vqgraphicslayout && vqgraphicslayout->isVirtualQGraphicsLayout) {
         return new QSizeF(vqgraphicslayout->sizeHint(static_cast<Qt::SizeHint>(which), *constraint));
@@ -307,7 +307,7 @@ QSizeF* QGraphicsLayout_SizeHint(const QGraphicsLayout* self, int which, QSizeF*
 }
 
 // Base class handler implementation
-QSizeF* QGraphicsLayout_QBaseSizeHint(const QGraphicsLayout* self, int which, QSizeF* constraint) {
+QSizeF* QGraphicsLayout_QBaseSizeHint(const QGraphicsLayout* self, int which, const QSizeF* constraint) {
     auto* vqgraphicslayout = const_cast<VirtualQGraphicsLayout*>(dynamic_cast<const VirtualQGraphicsLayout*>(self));
     if (vqgraphicslayout && vqgraphicslayout->isVirtualQGraphicsLayout) {
         vqgraphicslayout->setQGraphicsLayout_SizeHint_IsBase(true);

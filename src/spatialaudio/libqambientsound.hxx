@@ -61,7 +61,7 @@ class VirtualQAmbientSound final : public QAmbientSound {
     mutable bool qambientsound_issignalconnected_isbase = false;
 
   public:
-    VirtualQAmbientSound(QAudioEngine* engine) : QAmbientSound(engine){};
+    VirtualQAmbientSound(QAudioEngine* engine) : QAmbientSound(engine) {};
 
     ~VirtualQAmbientSound() {
         qambientsound_metacall_callback = nullptr;
@@ -293,18 +293,18 @@ class VirtualQAmbientSound final : public QAmbientSound {
     friend void QAmbientSound_QBaseChildEvent(QAmbientSound* self, QChildEvent* event);
     friend void QAmbientSound_CustomEvent(QAmbientSound* self, QEvent* event);
     friend void QAmbientSound_QBaseCustomEvent(QAmbientSound* self, QEvent* event);
-    friend void QAmbientSound_ConnectNotify(QAmbientSound* self, QMetaMethod* signal);
-    friend void QAmbientSound_QBaseConnectNotify(QAmbientSound* self, QMetaMethod* signal);
-    friend void QAmbientSound_DisconnectNotify(QAmbientSound* self, QMetaMethod* signal);
-    friend void QAmbientSound_QBaseDisconnectNotify(QAmbientSound* self, QMetaMethod* signal);
+    friend void QAmbientSound_ConnectNotify(QAmbientSound* self, const QMetaMethod* signal);
+    friend void QAmbientSound_QBaseConnectNotify(QAmbientSound* self, const QMetaMethod* signal);
+    friend void QAmbientSound_DisconnectNotify(QAmbientSound* self, const QMetaMethod* signal);
+    friend void QAmbientSound_QBaseDisconnectNotify(QAmbientSound* self, const QMetaMethod* signal);
     friend QObject* QAmbientSound_Sender(const QAmbientSound* self);
     friend QObject* QAmbientSound_QBaseSender(const QAmbientSound* self);
     friend int QAmbientSound_SenderSignalIndex(const QAmbientSound* self);
     friend int QAmbientSound_QBaseSenderSignalIndex(const QAmbientSound* self);
     friend int QAmbientSound_Receivers(const QAmbientSound* self, const char* signal);
     friend int QAmbientSound_QBaseReceivers(const QAmbientSound* self, const char* signal);
-    friend bool QAmbientSound_IsSignalConnected(const QAmbientSound* self, QMetaMethod* signal);
-    friend bool QAmbientSound_QBaseIsSignalConnected(const QAmbientSound* self, QMetaMethod* signal);
+    friend bool QAmbientSound_IsSignalConnected(const QAmbientSound* self, const QMetaMethod* signal);
+    friend bool QAmbientSound_QBaseIsSignalConnected(const QAmbientSound* self, const QMetaMethod* signal);
 };
 
 #endif

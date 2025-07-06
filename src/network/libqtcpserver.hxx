@@ -73,8 +73,8 @@ class VirtualQTcpServer final : public QTcpServer {
     mutable bool qtcpserver_issignalconnected_isbase = false;
 
   public:
-    VirtualQTcpServer() : QTcpServer(){};
-    VirtualQTcpServer(QObject* parent) : QTcpServer(parent){};
+    VirtualQTcpServer() : QTcpServer() {};
+    VirtualQTcpServer(QObject* parent) : QTcpServer(parent) {};
 
     ~VirtualQTcpServer() {
         qtcpserver_metacall_callback = nullptr;
@@ -375,10 +375,10 @@ class VirtualQTcpServer final : public QTcpServer {
     friend void QTcpServer_QBaseChildEvent(QTcpServer* self, QChildEvent* event);
     friend void QTcpServer_CustomEvent(QTcpServer* self, QEvent* event);
     friend void QTcpServer_QBaseCustomEvent(QTcpServer* self, QEvent* event);
-    friend void QTcpServer_ConnectNotify(QTcpServer* self, QMetaMethod* signal);
-    friend void QTcpServer_QBaseConnectNotify(QTcpServer* self, QMetaMethod* signal);
-    friend void QTcpServer_DisconnectNotify(QTcpServer* self, QMetaMethod* signal);
-    friend void QTcpServer_QBaseDisconnectNotify(QTcpServer* self, QMetaMethod* signal);
+    friend void QTcpServer_ConnectNotify(QTcpServer* self, const QMetaMethod* signal);
+    friend void QTcpServer_QBaseConnectNotify(QTcpServer* self, const QMetaMethod* signal);
+    friend void QTcpServer_DisconnectNotify(QTcpServer* self, const QMetaMethod* signal);
+    friend void QTcpServer_QBaseDisconnectNotify(QTcpServer* self, const QMetaMethod* signal);
     friend void QTcpServer_AddPendingConnection(QTcpServer* self, QTcpSocket* socket);
     friend void QTcpServer_QBaseAddPendingConnection(QTcpServer* self, QTcpSocket* socket);
     friend QObject* QTcpServer_Sender(const QTcpServer* self);
@@ -387,8 +387,8 @@ class VirtualQTcpServer final : public QTcpServer {
     friend int QTcpServer_QBaseSenderSignalIndex(const QTcpServer* self);
     friend int QTcpServer_Receivers(const QTcpServer* self, const char* signal);
     friend int QTcpServer_QBaseReceivers(const QTcpServer* self, const char* signal);
-    friend bool QTcpServer_IsSignalConnected(const QTcpServer* self, QMetaMethod* signal);
-    friend bool QTcpServer_QBaseIsSignalConnected(const QTcpServer* self, QMetaMethod* signal);
+    friend bool QTcpServer_IsSignalConnected(const QTcpServer* self, const QMetaMethod* signal);
+    friend bool QTcpServer_QBaseIsSignalConnected(const QTcpServer* self, const QMetaMethod* signal);
 };
 
 #endif

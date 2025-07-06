@@ -19,7 +19,7 @@ QSystemTrayIcon* QSystemTrayIcon_new() {
     return new VirtualQSystemTrayIcon();
 }
 
-QSystemTrayIcon* QSystemTrayIcon_new2(QIcon* icon) {
+QSystemTrayIcon* QSystemTrayIcon_new2(const QIcon* icon) {
     return new VirtualQSystemTrayIcon(*icon);
 }
 
@@ -27,7 +27,7 @@ QSystemTrayIcon* QSystemTrayIcon_new3(QObject* parent) {
     return new VirtualQSystemTrayIcon(parent);
 }
 
-QSystemTrayIcon* QSystemTrayIcon_new4(QIcon* icon, QObject* parent) {
+QSystemTrayIcon* QSystemTrayIcon_new4(const QIcon* icon, QObject* parent) {
     return new VirtualQSystemTrayIcon(*icon, parent);
 }
 
@@ -91,7 +91,7 @@ QIcon* QSystemTrayIcon_Icon(const QSystemTrayIcon* self) {
     return new QIcon(self->icon());
 }
 
-void QSystemTrayIcon_SetIcon(QSystemTrayIcon* self, QIcon* icon) {
+void QSystemTrayIcon_SetIcon(QSystemTrayIcon* self, const QIcon* icon) {
     self->setIcon(*icon);
 }
 
@@ -107,7 +107,7 @@ libqt_string QSystemTrayIcon_ToolTip(const QSystemTrayIcon* self) {
     return _str;
 }
 
-void QSystemTrayIcon_SetToolTip(QSystemTrayIcon* self, libqt_string tip) {
+void QSystemTrayIcon_SetToolTip(QSystemTrayIcon* self, const libqt_string tip) {
     QString tip_QString = QString::fromUtf8(tip.data, tip.len);
     self->setToolTip(tip_QString);
 }
@@ -140,13 +140,13 @@ void QSystemTrayIcon_Hide(QSystemTrayIcon* self) {
     self->hide();
 }
 
-void QSystemTrayIcon_ShowMessage(QSystemTrayIcon* self, libqt_string title, libqt_string msg, QIcon* icon) {
+void QSystemTrayIcon_ShowMessage(QSystemTrayIcon* self, const libqt_string title, const libqt_string msg, const QIcon* icon) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString msg_QString = QString::fromUtf8(msg.data, msg.len);
     self->showMessage(title_QString, msg_QString, *icon);
 }
 
-void QSystemTrayIcon_ShowMessage2(QSystemTrayIcon* self, libqt_string title, libqt_string msg) {
+void QSystemTrayIcon_ShowMessage2(QSystemTrayIcon* self, const libqt_string title, const libqt_string msg) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString msg_QString = QString::fromUtf8(msg.data, msg.len);
     self->showMessage(title_QString, msg_QString);
@@ -199,19 +199,19 @@ libqt_string QSystemTrayIcon_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-void QSystemTrayIcon_ShowMessage4(QSystemTrayIcon* self, libqt_string title, libqt_string msg, QIcon* icon, int msecs) {
+void QSystemTrayIcon_ShowMessage4(QSystemTrayIcon* self, const libqt_string title, const libqt_string msg, const QIcon* icon, int msecs) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString msg_QString = QString::fromUtf8(msg.data, msg.len);
     self->showMessage(title_QString, msg_QString, *icon, static_cast<int>(msecs));
 }
 
-void QSystemTrayIcon_ShowMessage3(QSystemTrayIcon* self, libqt_string title, libqt_string msg, int icon) {
+void QSystemTrayIcon_ShowMessage3(QSystemTrayIcon* self, const libqt_string title, const libqt_string msg, int icon) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString msg_QString = QString::fromUtf8(msg.data, msg.len);
     self->showMessage(title_QString, msg_QString, static_cast<QSystemTrayIcon::MessageIcon>(icon));
 }
 
-void QSystemTrayIcon_ShowMessage42(QSystemTrayIcon* self, libqt_string title, libqt_string msg, int icon, int msecs) {
+void QSystemTrayIcon_ShowMessage42(QSystemTrayIcon* self, const libqt_string title, const libqt_string msg, int icon, int msecs) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString msg_QString = QString::fromUtf8(msg.data, msg.len);
     self->showMessage(title_QString, msg_QString, static_cast<QSystemTrayIcon::MessageIcon>(icon), static_cast<int>(msecs));
@@ -363,7 +363,7 @@ void QSystemTrayIcon_OnCustomEvent(QSystemTrayIcon* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSystemTrayIcon_ConnectNotify(QSystemTrayIcon* self, QMetaMethod* signal) {
+void QSystemTrayIcon_ConnectNotify(QSystemTrayIcon* self, const QMetaMethod* signal) {
     auto* vqsystemtrayicon = dynamic_cast<VirtualQSystemTrayIcon*>(self);
     if (vqsystemtrayicon && vqsystemtrayicon->isVirtualQSystemTrayIcon) {
         vqsystemtrayicon->connectNotify(*signal);
@@ -373,7 +373,7 @@ void QSystemTrayIcon_ConnectNotify(QSystemTrayIcon* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSystemTrayIcon_QBaseConnectNotify(QSystemTrayIcon* self, QMetaMethod* signal) {
+void QSystemTrayIcon_QBaseConnectNotify(QSystemTrayIcon* self, const QMetaMethod* signal) {
     auto* vqsystemtrayicon = dynamic_cast<VirtualQSystemTrayIcon*>(self);
     if (vqsystemtrayicon && vqsystemtrayicon->isVirtualQSystemTrayIcon) {
         vqsystemtrayicon->setQSystemTrayIcon_ConnectNotify_IsBase(true);
@@ -392,7 +392,7 @@ void QSystemTrayIcon_OnConnectNotify(QSystemTrayIcon* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSystemTrayIcon_DisconnectNotify(QSystemTrayIcon* self, QMetaMethod* signal) {
+void QSystemTrayIcon_DisconnectNotify(QSystemTrayIcon* self, const QMetaMethod* signal) {
     auto* vqsystemtrayicon = dynamic_cast<VirtualQSystemTrayIcon*>(self);
     if (vqsystemtrayicon && vqsystemtrayicon->isVirtualQSystemTrayIcon) {
         vqsystemtrayicon->disconnectNotify(*signal);
@@ -402,7 +402,7 @@ void QSystemTrayIcon_DisconnectNotify(QSystemTrayIcon* self, QMetaMethod* signal
 }
 
 // Base class handler implementation
-void QSystemTrayIcon_QBaseDisconnectNotify(QSystemTrayIcon* self, QMetaMethod* signal) {
+void QSystemTrayIcon_QBaseDisconnectNotify(QSystemTrayIcon* self, const QMetaMethod* signal) {
     auto* vqsystemtrayicon = dynamic_cast<VirtualQSystemTrayIcon*>(self);
     if (vqsystemtrayicon && vqsystemtrayicon->isVirtualQSystemTrayIcon) {
         vqsystemtrayicon->setQSystemTrayIcon_DisconnectNotify_IsBase(true);
@@ -508,7 +508,7 @@ void QSystemTrayIcon_OnReceivers(const QSystemTrayIcon* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSystemTrayIcon_IsSignalConnected(const QSystemTrayIcon* self, QMetaMethod* signal) {
+bool QSystemTrayIcon_IsSignalConnected(const QSystemTrayIcon* self, const QMetaMethod* signal) {
     auto* vqsystemtrayicon = const_cast<VirtualQSystemTrayIcon*>(dynamic_cast<const VirtualQSystemTrayIcon*>(self));
     if (vqsystemtrayicon && vqsystemtrayicon->isVirtualQSystemTrayIcon) {
         return vqsystemtrayicon->isSignalConnected(*signal);
@@ -518,7 +518,7 @@ bool QSystemTrayIcon_IsSignalConnected(const QSystemTrayIcon* self, QMetaMethod*
 }
 
 // Base class handler implementation
-bool QSystemTrayIcon_QBaseIsSignalConnected(const QSystemTrayIcon* self, QMetaMethod* signal) {
+bool QSystemTrayIcon_QBaseIsSignalConnected(const QSystemTrayIcon* self, const QMetaMethod* signal) {
     auto* vqsystemtrayicon = const_cast<VirtualQSystemTrayIcon*>(dynamic_cast<const VirtualQSystemTrayIcon*>(self));
     if (vqsystemtrayicon && vqsystemtrayicon->isVirtualQSystemTrayIcon) {
         vqsystemtrayicon->setQSystemTrayIcon_IsSignalConnected_IsBase(true);

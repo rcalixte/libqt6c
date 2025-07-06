@@ -53,12 +53,6 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QSlider::TickPosition TickPosition; // C++ enum
-#else
-typedef int TickPosition; // C ABI enum
-#endif
-
 QSlider* QSlider_new(QWidget* parent);
 QSlider* QSlider_new2();
 QSlider* QSlider_new3(int orientation);
@@ -183,9 +177,9 @@ void QSlider_QBaseShowEvent(QSlider* self, QShowEvent* event);
 void QSlider_HideEvent(QSlider* self, QHideEvent* event);
 void QSlider_OnHideEvent(QSlider* self, intptr_t slot);
 void QSlider_QBaseHideEvent(QSlider* self, QHideEvent* event);
-bool QSlider_NativeEvent(QSlider* self, libqt_string eventType, void* message, intptr_t* result);
+bool QSlider_NativeEvent(QSlider* self, const libqt_string eventType, void* message, intptr_t* result);
 void QSlider_OnNativeEvent(QSlider* self, intptr_t slot);
-bool QSlider_QBaseNativeEvent(QSlider* self, libqt_string eventType, void* message, intptr_t* result);
+bool QSlider_QBaseNativeEvent(QSlider* self, const libqt_string eventType, void* message, intptr_t* result);
 int QSlider_Metric(const QSlider* self, int param1);
 void QSlider_OnMetric(const QSlider* self, intptr_t slot);
 int QSlider_QBaseMetric(const QSlider* self, int param1);
@@ -216,12 +210,12 @@ void QSlider_QBaseChildEvent(QSlider* self, QChildEvent* event);
 void QSlider_CustomEvent(QSlider* self, QEvent* event);
 void QSlider_OnCustomEvent(QSlider* self, intptr_t slot);
 void QSlider_QBaseCustomEvent(QSlider* self, QEvent* event);
-void QSlider_ConnectNotify(QSlider* self, QMetaMethod* signal);
+void QSlider_ConnectNotify(QSlider* self, const QMetaMethod* signal);
 void QSlider_OnConnectNotify(QSlider* self, intptr_t slot);
-void QSlider_QBaseConnectNotify(QSlider* self, QMetaMethod* signal);
-void QSlider_DisconnectNotify(QSlider* self, QMetaMethod* signal);
+void QSlider_QBaseConnectNotify(QSlider* self, const QMetaMethod* signal);
+void QSlider_DisconnectNotify(QSlider* self, const QMetaMethod* signal);
 void QSlider_OnDisconnectNotify(QSlider* self, intptr_t slot);
-void QSlider_QBaseDisconnectNotify(QSlider* self, QMetaMethod* signal);
+void QSlider_QBaseDisconnectNotify(QSlider* self, const QMetaMethod* signal);
 void QSlider_SetRepeatAction(QSlider* self, int action);
 void QSlider_OnSetRepeatAction(QSlider* self, intptr_t slot);
 void QSlider_QBaseSetRepeatAction(QSlider* self, int action);
@@ -252,9 +246,12 @@ int QSlider_QBaseSenderSignalIndex(const QSlider* self);
 int QSlider_Receivers(const QSlider* self, const char* signal);
 void QSlider_OnReceivers(const QSlider* self, intptr_t slot);
 int QSlider_QBaseReceivers(const QSlider* self, const char* signal);
-bool QSlider_IsSignalConnected(const QSlider* self, QMetaMethod* signal);
+bool QSlider_IsSignalConnected(const QSlider* self, const QMetaMethod* signal);
 void QSlider_OnIsSignalConnected(const QSlider* self, intptr_t slot);
-bool QSlider_QBaseIsSignalConnected(const QSlider* self, QMetaMethod* signal);
+bool QSlider_QBaseIsSignalConnected(const QSlider* self, const QMetaMethod* signal);
+double QSlider_GetDecodedMetricF(const QSlider* self, int metricA, int metricB);
+void QSlider_OnGetDecodedMetricF(const QSlider* self, intptr_t slot);
+double QSlider_QBaseGetDecodedMetricF(const QSlider* self, int metricA, int metricB);
 void QSlider_Delete(QSlider* self);
 
 #ifdef __cplusplus

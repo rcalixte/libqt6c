@@ -12,14 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqsslcertificate.h"
-#include "libqsslcipher.h"
-#include "libqssldiffiehellmanparameters.h"
-#include "libqsslellipticcurve.h"
-#include "libqsslkey.h"
-#include <string.h>
-#include "../libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qsslconfiguration.html
 
 /// q_sslconfiguration_new constructs a new QSslConfiguration object.

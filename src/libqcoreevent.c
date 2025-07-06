@@ -79,6 +79,10 @@ QTimerEvent* q_timerevent_new(int timerId) {
     return QTimerEvent_new(timerId);
 }
 
+QTimerEvent* q_timerevent_new2(int64_t timerId) {
+    return QTimerEvent_new2(timerId);
+}
+
 QTimerEvent* q_timerevent_clone(void* self) {
     return QTimerEvent_Clone((QTimerEvent*)self);
 }
@@ -93,6 +97,10 @@ QTimerEvent* q_timerevent_qbase_clone(void* self) {
 
 int32_t q_timerevent_timer_id(void* self) {
     return QTimerEvent_TimerId((QTimerEvent*)self);
+}
+
+int64_t q_timerevent_id(void* self) {
+    return QTimerEvent_Id((QTimerEvent*)self);
 }
 
 int64_t q_timerevent_type(void* self) {

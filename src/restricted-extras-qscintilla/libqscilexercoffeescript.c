@@ -320,8 +320,8 @@ QThread* q_scilexercoffeescript_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_scilexercoffeescript_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_scilexercoffeescript_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_scilexercoffeescript_start_timer(void* self, int interval) {
@@ -330,6 +330,10 @@ int32_t q_scilexercoffeescript_start_timer(void* self, int interval) {
 
 void q_scilexercoffeescript_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_scilexercoffeescript_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_scilexercoffeescript_children(void* self) {
@@ -422,6 +426,10 @@ bool q_scilexercoffeescript_inherits(void* self, const char* classname) {
 
 void q_scilexercoffeescript_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_scilexercoffeescript_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_scilexercoffeescript_start_timer2(void* self, int interval, int64_t timerType) {
@@ -766,6 +774,42 @@ void q_scilexercoffeescript_qbase_disconnect_notify(void* self, void* signal) {
 
 void q_scilexercoffeescript_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
     QsciLexerCoffeeScript_OnDisconnectNotify((QsciLexerCoffeeScript*)self, (intptr_t)slot);
+}
+
+char* q_scilexercoffeescript_text_as_bytes(void* self, const char* text) {
+    libqt_string _str = QsciLexerCoffeeScript_TextAsBytes((QsciLexerCoffeeScript*)self, qstring(text));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+char* q_scilexercoffeescript_qbase_text_as_bytes(void* self, const char* text) {
+    libqt_string _str = QsciLexerCoffeeScript_QBaseTextAsBytes((QsciLexerCoffeeScript*)self, qstring(text));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_scilexercoffeescript_on_text_as_bytes(void* self, char* (*slot)(void*, const char*)) {
+    QsciLexerCoffeeScript_OnTextAsBytes((QsciLexerCoffeeScript*)self, (intptr_t)slot);
+}
+
+const char* q_scilexercoffeescript_bytes_as_text(void* self, const char* bytes, int size) {
+    libqt_string _str = QsciLexerCoffeeScript_BytesAsText((QsciLexerCoffeeScript*)self, bytes, size);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_scilexercoffeescript_qbase_bytes_as_text(void* self, const char* bytes, int size) {
+    libqt_string _str = QsciLexerCoffeeScript_QBaseBytesAsText((QsciLexerCoffeeScript*)self, bytes, size);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_scilexercoffeescript_on_bytes_as_text(void* self, const char* (*slot)(void*, const char*, int)) {
+    QsciLexerCoffeeScript_OnBytesAsText((QsciLexerCoffeeScript*)self, (intptr_t)slot);
 }
 
 QObject* q_scilexercoffeescript_sender(void* self) {

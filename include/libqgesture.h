@@ -12,13 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpoint.h"
-#include <string.h>
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qgesture.html
 
 /// q_gesture_new constructs a new QGesture object.
@@ -168,7 +161,7 @@ QThread* q_gesture_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QGesture* self, QThread* thread ```
-void q_gesture_move_to_thread(void* self, void* thread);
+bool q_gesture_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -183,6 +176,13 @@ int32_t q_gesture_start_timer(void* self, int interval);
 ///
 /// ``` QGesture* self, int id ```
 void q_gesture_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QGesture* self, enum Qt__TimerId id ```
+void q_gesture_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -323,6 +323,13 @@ bool q_gesture_inherits(void* self, const char* classname);
 ///
 /// ``` QGesture* self ```
 void q_gesture_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QGesture* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_gesture_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -872,7 +879,7 @@ QThread* q_pangesture_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QPanGesture* self, QThread* thread ```
-void q_pangesture_move_to_thread(void* self, void* thread);
+bool q_pangesture_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -887,6 +894,13 @@ int32_t q_pangesture_start_timer(void* self, int interval);
 ///
 /// ``` QPanGesture* self, int id ```
 void q_pangesture_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QPanGesture* self, enum Qt__TimerId id ```
+void q_pangesture_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1027,6 +1041,13 @@ bool q_pangesture_inherits(void* self, const char* classname);
 ///
 /// ``` QPanGesture* self ```
 void q_pangesture_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QPanGesture* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_pangesture_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -1651,7 +1672,7 @@ QThread* q_pinchgesture_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QPinchGesture* self, QThread* thread ```
-void q_pinchgesture_move_to_thread(void* self, void* thread);
+bool q_pinchgesture_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -1666,6 +1687,13 @@ int32_t q_pinchgesture_start_timer(void* self, int interval);
 ///
 /// ``` QPinchGesture* self, int id ```
 void q_pinchgesture_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QPinchGesture* self, enum Qt__TimerId id ```
+void q_pinchgesture_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1806,6 +1834,13 @@ bool q_pinchgesture_inherits(void* self, const char* classname);
 ///
 /// ``` QPinchGesture* self ```
 void q_pinchgesture_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QPinchGesture* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_pinchgesture_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -2340,7 +2375,7 @@ QThread* q_swipegesture_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QSwipeGesture* self, QThread* thread ```
-void q_swipegesture_move_to_thread(void* self, void* thread);
+bool q_swipegesture_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -2355,6 +2390,13 @@ int32_t q_swipegesture_start_timer(void* self, int interval);
 ///
 /// ``` QSwipeGesture* self, int id ```
 void q_swipegesture_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QSwipeGesture* self, enum Qt__TimerId id ```
+void q_swipegesture_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -2495,6 +2537,13 @@ bool q_swipegesture_inherits(void* self, const char* classname);
 ///
 /// ``` QSwipeGesture* self ```
 void q_swipegesture_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QSwipeGesture* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_swipegesture_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -3019,7 +3068,7 @@ QThread* q_tapgesture_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QTapGesture* self, QThread* thread ```
-void q_tapgesture_move_to_thread(void* self, void* thread);
+bool q_tapgesture_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -3034,6 +3083,13 @@ int32_t q_tapgesture_start_timer(void* self, int interval);
 ///
 /// ``` QTapGesture* self, int id ```
 void q_tapgesture_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QTapGesture* self, enum Qt__TimerId id ```
+void q_tapgesture_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -3174,6 +3230,13 @@ bool q_tapgesture_inherits(void* self, const char* classname);
 ///
 /// ``` QTapGesture* self ```
 void q_tapgesture_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QTapGesture* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_tapgesture_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -3708,7 +3771,7 @@ QThread* q_tapandholdgesture_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QTapAndHoldGesture* self, QThread* thread ```
-void q_tapandholdgesture_move_to_thread(void* self, void* thread);
+bool q_tapandholdgesture_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -3723,6 +3786,13 @@ int32_t q_tapandholdgesture_start_timer(void* self, int interval);
 ///
 /// ``` QTapAndHoldGesture* self, int id ```
 void q_tapandholdgesture_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QTapAndHoldGesture* self, enum Qt__TimerId id ```
+void q_tapandholdgesture_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -3863,6 +3933,13 @@ bool q_tapandholdgesture_inherits(void* self, const char* classname);
 ///
 /// ``` QTapAndHoldGesture* self ```
 void q_tapandholdgesture_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QTapAndHoldGesture* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_tapandholdgesture_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

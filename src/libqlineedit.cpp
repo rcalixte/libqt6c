@@ -55,12 +55,12 @@ QLineEdit* QLineEdit_new2() {
     return new VirtualQLineEdit();
 }
 
-QLineEdit* QLineEdit_new3(libqt_string param1) {
+QLineEdit* QLineEdit_new3(const libqt_string param1) {
     QString param1_QString = QString::fromUtf8(param1.data, param1.len);
     return new VirtualQLineEdit(param1_QString);
 }
 
-QLineEdit* QLineEdit_new4(libqt_string param1, QWidget* parent) {
+QLineEdit* QLineEdit_new4(const libqt_string param1, QWidget* parent) {
     QString param1_QString = QString::fromUtf8(param1.data, param1.len);
     return new VirtualQLineEdit(param1_QString, parent);
 }
@@ -149,7 +149,7 @@ libqt_string QLineEdit_PlaceholderText(const QLineEdit* self) {
     return _str;
 }
 
-void QLineEdit_SetPlaceholderText(QLineEdit* self, libqt_string placeholderText) {
+void QLineEdit_SetPlaceholderText(QLineEdit* self, const libqt_string placeholderText) {
     QString placeholderText_QString = QString::fromUtf8(placeholderText.data, placeholderText.len);
     self->setPlaceholderText(placeholderText_QString);
 }
@@ -194,7 +194,7 @@ void QLineEdit_SetReadOnly(QLineEdit* self, bool readOnly) {
     self->setReadOnly(readOnly);
 }
 
-void QLineEdit_SetValidator(QLineEdit* self, QValidator* validator) {
+void QLineEdit_SetValidator(QLineEdit* self, const QValidator* validator) {
     self->setValidator(validator);
 }
 
@@ -218,7 +218,7 @@ void QLineEdit_SetCursorPosition(QLineEdit* self, int cursorPosition) {
     self->setCursorPosition(static_cast<int>(cursorPosition));
 }
 
-int QLineEdit_CursorPositionAt(QLineEdit* self, QPoint* pos) {
+int QLineEdit_CursorPositionAt(QLineEdit* self, const QPoint* pos) {
     return self->cursorPositionAt(*pos);
 }
 
@@ -338,7 +338,7 @@ libqt_string QLineEdit_InputMask(const QLineEdit* self) {
     return _str;
 }
 
-void QLineEdit_SetInputMask(QLineEdit* self, libqt_string inputMask) {
+void QLineEdit_SetInputMask(QLineEdit* self, const libqt_string inputMask) {
     QString inputMask_QString = QString::fromUtf8(inputMask.data, inputMask.len);
     self->setInputMask(inputMask_QString);
 }
@@ -351,7 +351,7 @@ void QLineEdit_SetTextMargins(QLineEdit* self, int left, int top, int right, int
     self->setTextMargins(static_cast<int>(left), static_cast<int>(top), static_cast<int>(right), static_cast<int>(bottom));
 }
 
-void QLineEdit_SetTextMarginsWithMargins(QLineEdit* self, QMargins* margins) {
+void QLineEdit_SetTextMarginsWithMargins(QLineEdit* self, const QMargins* margins) {
     self->setTextMargins(*margins);
 }
 
@@ -363,11 +363,11 @@ void QLineEdit_AddAction(QLineEdit* self, QAction* action, int position) {
     self->addAction(action, static_cast<QLineEdit::ActionPosition>(position));
 }
 
-QAction* QLineEdit_AddAction2(QLineEdit* self, QIcon* icon, int position) {
+QAction* QLineEdit_AddAction2(QLineEdit* self, const QIcon* icon, int position) {
     return self->addAction(*icon, static_cast<QLineEdit::ActionPosition>(position));
 }
 
-void QLineEdit_SetText(QLineEdit* self, libqt_string text) {
+void QLineEdit_SetText(QLineEdit* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setText(text_QString);
 }
@@ -404,7 +404,7 @@ void QLineEdit_Deselect(QLineEdit* self) {
     self->deselect();
 }
 
-void QLineEdit_Insert(QLineEdit* self, libqt_string param1) {
+void QLineEdit_Insert(QLineEdit* self, const libqt_string param1) {
     QString param1_QString = QString::fromUtf8(param1.data, param1.len);
     self->insert(param1_QString);
 }
@@ -413,7 +413,7 @@ QMenu* QLineEdit_CreateStandardContextMenu(QLineEdit* self) {
     return self->createStandardContextMenu();
 }
 
-void QLineEdit_TextChanged(QLineEdit* self, libqt_string param1) {
+void QLineEdit_TextChanged(QLineEdit* self, const libqt_string param1) {
     QString param1_QString = QString::fromUtf8(param1.data, param1.len);
     self->textChanged(param1_QString);
 }
@@ -434,7 +434,7 @@ void QLineEdit_Connect_TextChanged(QLineEdit* self, intptr_t slot) {
     });
 }
 
-void QLineEdit_TextEdited(QLineEdit* self, libqt_string param1) {
+void QLineEdit_TextEdited(QLineEdit* self, const libqt_string param1) {
     QString param1_QString = QString::fromUtf8(param1.data, param1.len);
     self->textEdited(param1_QString);
 }
@@ -1622,7 +1622,7 @@ void QLineEdit_OnHideEvent(QLineEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QLineEdit_NativeEvent(QLineEdit* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QLineEdit_NativeEvent(QLineEdit* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqlineedit = dynamic_cast<VirtualQLineEdit*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqlineedit && vqlineedit->isVirtualQLineEdit) {
@@ -1633,7 +1633,7 @@ bool QLineEdit_NativeEvent(QLineEdit* self, libqt_string eventType, void* messag
 }
 
 // Base class handler implementation
-bool QLineEdit_QBaseNativeEvent(QLineEdit* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QLineEdit_QBaseNativeEvent(QLineEdit* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqlineedit = dynamic_cast<VirtualQLineEdit*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqlineedit && vqlineedit->isVirtualQLineEdit) {
@@ -1885,7 +1885,7 @@ void QLineEdit_OnCustomEvent(QLineEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLineEdit_ConnectNotify(QLineEdit* self, QMetaMethod* signal) {
+void QLineEdit_ConnectNotify(QLineEdit* self, const QMetaMethod* signal) {
     auto* vqlineedit = dynamic_cast<VirtualQLineEdit*>(self);
     if (vqlineedit && vqlineedit->isVirtualQLineEdit) {
         vqlineedit->connectNotify(*signal);
@@ -1895,7 +1895,7 @@ void QLineEdit_ConnectNotify(QLineEdit* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QLineEdit_QBaseConnectNotify(QLineEdit* self, QMetaMethod* signal) {
+void QLineEdit_QBaseConnectNotify(QLineEdit* self, const QMetaMethod* signal) {
     auto* vqlineedit = dynamic_cast<VirtualQLineEdit*>(self);
     if (vqlineedit && vqlineedit->isVirtualQLineEdit) {
         vqlineedit->setQLineEdit_ConnectNotify_IsBase(true);
@@ -1914,7 +1914,7 @@ void QLineEdit_OnConnectNotify(QLineEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLineEdit_DisconnectNotify(QLineEdit* self, QMetaMethod* signal) {
+void QLineEdit_DisconnectNotify(QLineEdit* self, const QMetaMethod* signal) {
     auto* vqlineedit = dynamic_cast<VirtualQLineEdit*>(self);
     if (vqlineedit && vqlineedit->isVirtualQLineEdit) {
         vqlineedit->disconnectNotify(*signal);
@@ -1924,7 +1924,7 @@ void QLineEdit_DisconnectNotify(QLineEdit* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QLineEdit_QBaseDisconnectNotify(QLineEdit* self, QMetaMethod* signal) {
+void QLineEdit_QBaseDisconnectNotify(QLineEdit* self, const QMetaMethod* signal) {
     auto* vqlineedit = dynamic_cast<VirtualQLineEdit*>(self);
     if (vqlineedit && vqlineedit->isVirtualQLineEdit) {
         vqlineedit->setQLineEdit_DisconnectNotify_IsBase(true);
@@ -2202,7 +2202,7 @@ void QLineEdit_OnReceivers(const QLineEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QLineEdit_IsSignalConnected(const QLineEdit* self, QMetaMethod* signal) {
+bool QLineEdit_IsSignalConnected(const QLineEdit* self, const QMetaMethod* signal) {
     auto* vqlineedit = const_cast<VirtualQLineEdit*>(dynamic_cast<const VirtualQLineEdit*>(self));
     if (vqlineedit && vqlineedit->isVirtualQLineEdit) {
         return vqlineedit->isSignalConnected(*signal);
@@ -2212,7 +2212,7 @@ bool QLineEdit_IsSignalConnected(const QLineEdit* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QLineEdit_QBaseIsSignalConnected(const QLineEdit* self, QMetaMethod* signal) {
+bool QLineEdit_QBaseIsSignalConnected(const QLineEdit* self, const QMetaMethod* signal) {
     auto* vqlineedit = const_cast<VirtualQLineEdit*>(dynamic_cast<const VirtualQLineEdit*>(self));
     if (vqlineedit && vqlineedit->isVirtualQLineEdit) {
         vqlineedit->setQLineEdit_IsSignalConnected_IsBase(true);
@@ -2227,6 +2227,35 @@ void QLineEdit_OnIsSignalConnected(const QLineEdit* self, intptr_t slot) {
     auto* vqlineedit = const_cast<VirtualQLineEdit*>(dynamic_cast<const VirtualQLineEdit*>(self));
     if (vqlineedit && vqlineedit->isVirtualQLineEdit) {
         vqlineedit->setQLineEdit_IsSignalConnected_Callback(reinterpret_cast<VirtualQLineEdit::QLineEdit_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QLineEdit_GetDecodedMetricF(const QLineEdit* self, int metricA, int metricB) {
+    auto* vqlineedit = const_cast<VirtualQLineEdit*>(dynamic_cast<const VirtualQLineEdit*>(self));
+    if (vqlineedit && vqlineedit->isVirtualQLineEdit) {
+        return vqlineedit->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQLineEdit*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QLineEdit_QBaseGetDecodedMetricF(const QLineEdit* self, int metricA, int metricB) {
+    auto* vqlineedit = const_cast<VirtualQLineEdit*>(dynamic_cast<const VirtualQLineEdit*>(self));
+    if (vqlineedit && vqlineedit->isVirtualQLineEdit) {
+        vqlineedit->setQLineEdit_GetDecodedMetricF_IsBase(true);
+        return vqlineedit->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQLineEdit*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QLineEdit_OnGetDecodedMetricF(const QLineEdit* self, intptr_t slot) {
+    auto* vqlineedit = const_cast<VirtualQLineEdit*>(dynamic_cast<const VirtualQLineEdit*>(self));
+    if (vqlineedit && vqlineedit->isVirtualQLineEdit) {
+        vqlineedit->setQLineEdit_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQLineEdit::QLineEdit_GetDecodedMetricF_Callback>(slot));
     }
 }
 

@@ -12,13 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqpoint.h"
-#include "libqquaternion.h"
-#include "libqrect.h"
-#include "libqtransform.h"
-#include "libqvariant.h"
-#include "libqvectornd.h"
-
 /// https://doc.qt.io/qt-6/qmatrix4x4.html
 
 /// q_matrix4x4_new constructs a new QMatrix4x4 object.
@@ -338,8 +331,13 @@ QVariant* q_matrix4x4_to_q_variant(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#projectedRotate)
 ///
+/// ``` QMatrix4x4* self, float angle, float x, float y, float z, float distanceToPlane ```
+void q_matrix4x4_projected_rotate(void* self, float angle, float x, float y, float z, float distanceToPlane);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#projectedRotate)
+///
 /// ``` QMatrix4x4* self, float angle, float x, float y, float z ```
-void q_matrix4x4_projected_rotate(void* self, float angle, float x, float y, float z);
+void q_matrix4x4_projected_rotate2(void* self, float angle, float x, float y, float z);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#flags)
 ///

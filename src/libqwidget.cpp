@@ -63,11 +63,11 @@
 #include "libqwidget.hpp"
 #include "libqwidget.hxx"
 
-QWidgetData* QWidgetData_new(QWidgetData* param1) {
+QWidgetData* QWidgetData_new(const QWidgetData* param1) {
     return new QWidgetData(*param1);
 }
 
-void QWidgetData_OperatorAssign(QWidgetData* self, QWidgetData* param1) {
+void QWidgetData_OperatorAssign(QWidgetData* self, const QWidgetData* param1) {
     self->operator=(*param1);
 }
 
@@ -183,7 +183,7 @@ bool QWidget_IsEnabled(const QWidget* self) {
     return self->isEnabled();
 }
 
-bool QWidget_IsEnabledTo(const QWidget* self, QWidget* param1) {
+bool QWidget_IsEnabledTo(const QWidget* self, const QWidget* param1) {
     return self->isEnabledTo(param1);
 }
 
@@ -277,7 +277,7 @@ int QWidget_MaximumHeight(const QWidget* self) {
     return self->maximumHeight();
 }
 
-void QWidget_SetMinimumSize(QWidget* self, QSize* minimumSize) {
+void QWidget_SetMinimumSize(QWidget* self, const QSize* minimumSize) {
     self->setMinimumSize(*minimumSize);
 }
 
@@ -285,7 +285,7 @@ void QWidget_SetMinimumSize2(QWidget* self, int minw, int minh) {
     self->setMinimumSize(static_cast<int>(minw), static_cast<int>(minh));
 }
 
-void QWidget_SetMaximumSize(QWidget* self, QSize* maximumSize) {
+void QWidget_SetMaximumSize(QWidget* self, const QSize* maximumSize) {
     self->setMaximumSize(*maximumSize);
 }
 
@@ -313,7 +313,7 @@ QSize* QWidget_SizeIncrement(const QWidget* self) {
     return new QSize(self->sizeIncrement());
 }
 
-void QWidget_SetSizeIncrement(QWidget* self, QSize* sizeIncrement) {
+void QWidget_SetSizeIncrement(QWidget* self, const QSize* sizeIncrement) {
     self->setSizeIncrement(*sizeIncrement);
 }
 
@@ -325,7 +325,7 @@ QSize* QWidget_BaseSize(const QWidget* self) {
     return new QSize(self->baseSize());
 }
 
-void QWidget_SetBaseSize(QWidget* self, QSize* baseSize) {
+void QWidget_SetBaseSize(QWidget* self, const QSize* baseSize) {
     self->setBaseSize(*baseSize);
 }
 
@@ -333,7 +333,7 @@ void QWidget_SetBaseSize2(QWidget* self, int basew, int baseh) {
     self->setBaseSize(static_cast<int>(basew), static_cast<int>(baseh));
 }
 
-void QWidget_SetFixedSize(QWidget* self, QSize* fixedSize) {
+void QWidget_SetFixedSize(QWidget* self, const QSize* fixedSize) {
     self->setFixedSize(*fixedSize);
 }
 
@@ -349,51 +349,51 @@ void QWidget_SetFixedHeight(QWidget* self, int h) {
     self->setFixedHeight(static_cast<int>(h));
 }
 
-QPointF* QWidget_MapToGlobal(const QWidget* self, QPointF* param1) {
+QPointF* QWidget_MapToGlobal(const QWidget* self, const QPointF* param1) {
     return new QPointF(self->mapToGlobal(*param1));
 }
 
-QPoint* QWidget_MapToGlobalWithQPoint(const QWidget* self, QPoint* param1) {
+QPoint* QWidget_MapToGlobalWithQPoint(const QWidget* self, const QPoint* param1) {
     return new QPoint(self->mapToGlobal(*param1));
 }
 
-QPointF* QWidget_MapFromGlobal(const QWidget* self, QPointF* param1) {
+QPointF* QWidget_MapFromGlobal(const QWidget* self, const QPointF* param1) {
     return new QPointF(self->mapFromGlobal(*param1));
 }
 
-QPoint* QWidget_MapFromGlobalWithQPoint(const QWidget* self, QPoint* param1) {
+QPoint* QWidget_MapFromGlobalWithQPoint(const QWidget* self, const QPoint* param1) {
     return new QPoint(self->mapFromGlobal(*param1));
 }
 
-QPointF* QWidget_MapToParent(const QWidget* self, QPointF* param1) {
+QPointF* QWidget_MapToParent(const QWidget* self, const QPointF* param1) {
     return new QPointF(self->mapToParent(*param1));
 }
 
-QPoint* QWidget_MapToParentWithQPoint(const QWidget* self, QPoint* param1) {
+QPoint* QWidget_MapToParentWithQPoint(const QWidget* self, const QPoint* param1) {
     return new QPoint(self->mapToParent(*param1));
 }
 
-QPointF* QWidget_MapFromParent(const QWidget* self, QPointF* param1) {
+QPointF* QWidget_MapFromParent(const QWidget* self, const QPointF* param1) {
     return new QPointF(self->mapFromParent(*param1));
 }
 
-QPoint* QWidget_MapFromParentWithQPoint(const QWidget* self, QPoint* param1) {
+QPoint* QWidget_MapFromParentWithQPoint(const QWidget* self, const QPoint* param1) {
     return new QPoint(self->mapFromParent(*param1));
 }
 
-QPointF* QWidget_MapTo(const QWidget* self, QWidget* param1, QPointF* param2) {
+QPointF* QWidget_MapTo(const QWidget* self, const QWidget* param1, const QPointF* param2) {
     return new QPointF(self->mapTo(param1, *param2));
 }
 
-QPoint* QWidget_MapTo2(const QWidget* self, QWidget* param1, QPoint* param2) {
+QPoint* QWidget_MapTo2(const QWidget* self, const QWidget* param1, const QPoint* param2) {
     return new QPoint(self->mapTo(param1, *param2));
 }
 
-QPointF* QWidget_MapFrom(const QWidget* self, QWidget* param1, QPointF* param2) {
+QPointF* QWidget_MapFrom(const QWidget* self, const QWidget* param1, const QPointF* param2) {
     return new QPointF(self->mapFrom(param1, *param2));
 }
 
-QPoint* QWidget_MapFrom2(const QWidget* self, QWidget* param1, QPoint* param2) {
+QPoint* QWidget_MapFrom2(const QWidget* self, const QWidget* param1, const QPoint* param2) {
     return new QPoint(self->mapFrom(param1, *param2));
 }
 
@@ -415,7 +415,7 @@ QPalette* QWidget_Palette(const QWidget* self) {
     return const_cast<QPalette*>(&_ret);
 }
 
-void QWidget_SetPalette(QWidget* self, QPalette* palette) {
+void QWidget_SetPalette(QWidget* self, const QPalette* palette) {
     self->setPalette(*palette);
 }
 
@@ -441,7 +441,7 @@ QFont* QWidget_Font(const QWidget* self) {
     return const_cast<QFont*>(&_ret);
 }
 
-void QWidget_SetFont(QWidget* self, QFont* font) {
+void QWidget_SetFont(QWidget* self, const QFont* font) {
     self->setFont(*font);
 }
 
@@ -457,7 +457,7 @@ QCursor* QWidget_Cursor(const QWidget* self) {
     return new QCursor(self->cursor());
 }
 
-void QWidget_SetCursor(QWidget* self, QCursor* cursor) {
+void QWidget_SetCursor(QWidget* self, const QCursor* cursor) {
     self->setCursor(*cursor);
 }
 
@@ -485,11 +485,11 @@ bool QWidget_HasTabletTracking(const QWidget* self) {
     return self->hasTabletTracking();
 }
 
-void QWidget_SetMask(QWidget* self, QBitmap* mask) {
+void QWidget_SetMask(QWidget* self, const QBitmap* mask) {
     self->setMask(*mask);
 }
 
-void QWidget_SetMaskWithMask(QWidget* self, QRegion* mask) {
+void QWidget_SetMaskWithMask(QWidget* self, const QRegion* mask) {
     self->setMask(*mask);
 }
 
@@ -529,12 +529,12 @@ void QWidget_UngrabGesture(QWidget* self, int typeVal) {
     self->ungrabGesture(static_cast<Qt::GestureType>(typeVal));
 }
 
-void QWidget_SetWindowTitle(QWidget* self, libqt_string windowTitle) {
+void QWidget_SetWindowTitle(QWidget* self, const libqt_string windowTitle) {
     QString windowTitle_QString = QString::fromUtf8(windowTitle.data, windowTitle.len);
     self->setWindowTitle(windowTitle_QString);
 }
 
-void QWidget_SetStyleSheet(QWidget* self, libqt_string styleSheet) {
+void QWidget_SetStyleSheet(QWidget* self, const libqt_string styleSheet) {
     QString styleSheet_QString = QString::fromUtf8(styleSheet.data, styleSheet.len);
     self->setStyleSheet(styleSheet_QString);
 }
@@ -563,7 +563,7 @@ libqt_string QWidget_WindowTitle(const QWidget* self) {
     return _str;
 }
 
-void QWidget_SetWindowIcon(QWidget* self, QIcon* icon) {
+void QWidget_SetWindowIcon(QWidget* self, const QIcon* icon) {
     self->setWindowIcon(*icon);
 }
 
@@ -571,7 +571,7 @@ QIcon* QWidget_WindowIcon(const QWidget* self) {
     return new QIcon(self->windowIcon());
 }
 
-void QWidget_SetWindowIconText(QWidget* self, libqt_string windowIconText) {
+void QWidget_SetWindowIconText(QWidget* self, const libqt_string windowIconText) {
     QString windowIconText_QString = QString::fromUtf8(windowIconText.data, windowIconText.len);
     self->setWindowIconText(windowIconText_QString);
 }
@@ -588,7 +588,7 @@ libqt_string QWidget_WindowIconText(const QWidget* self) {
     return _str;
 }
 
-void QWidget_SetWindowRole(QWidget* self, libqt_string windowRole) {
+void QWidget_SetWindowRole(QWidget* self, const libqt_string windowRole) {
     QString windowRole_QString = QString::fromUtf8(windowRole.data, windowRole.len);
     self->setWindowRole(windowRole_QString);
 }
@@ -605,7 +605,7 @@ libqt_string QWidget_WindowRole(const QWidget* self) {
     return _str;
 }
 
-void QWidget_SetWindowFilePath(QWidget* self, libqt_string filePath) {
+void QWidget_SetWindowFilePath(QWidget* self, const libqt_string filePath) {
     QString filePath_QString = QString::fromUtf8(filePath.data, filePath.len);
     self->setWindowFilePath(filePath_QString);
 }
@@ -634,7 +634,7 @@ bool QWidget_IsWindowModified(const QWidget* self) {
     return self->isWindowModified();
 }
 
-void QWidget_SetToolTip(QWidget* self, libqt_string toolTip) {
+void QWidget_SetToolTip(QWidget* self, const libqt_string toolTip) {
     QString toolTip_QString = QString::fromUtf8(toolTip.data, toolTip.len);
     self->setToolTip(toolTip_QString);
 }
@@ -659,7 +659,7 @@ int QWidget_ToolTipDuration(const QWidget* self) {
     return self->toolTipDuration();
 }
 
-void QWidget_SetStatusTip(QWidget* self, libqt_string statusTip) {
+void QWidget_SetStatusTip(QWidget* self, const libqt_string statusTip) {
     QString statusTip_QString = QString::fromUtf8(statusTip.data, statusTip.len);
     self->setStatusTip(statusTip_QString);
 }
@@ -676,7 +676,7 @@ libqt_string QWidget_StatusTip(const QWidget* self) {
     return _str;
 }
 
-void QWidget_SetWhatsThis(QWidget* self, libqt_string whatsThis) {
+void QWidget_SetWhatsThis(QWidget* self, const libqt_string whatsThis) {
     QString whatsThis_QString = QString::fromUtf8(whatsThis.data, whatsThis.len);
     self->setWhatsThis(whatsThis_QString);
 }
@@ -705,7 +705,7 @@ libqt_string QWidget_AccessibleName(const QWidget* self) {
     return _str;
 }
 
-void QWidget_SetAccessibleName(QWidget* self, libqt_string name) {
+void QWidget_SetAccessibleName(QWidget* self, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     self->setAccessibleName(name_QString);
 }
@@ -722,7 +722,7 @@ libqt_string QWidget_AccessibleDescription(const QWidget* self) {
     return _str;
 }
 
-void QWidget_SetAccessibleDescription(QWidget* self, libqt_string description) {
+void QWidget_SetAccessibleDescription(QWidget* self, const libqt_string description) {
     QString description_QString = QString::fromUtf8(description.data, description.len);
     self->setAccessibleDescription(description_QString);
 }
@@ -739,7 +739,7 @@ void QWidget_UnsetLayoutDirection(QWidget* self) {
     self->unsetLayoutDirection();
 }
 
-void QWidget_SetLocale(QWidget* self, QLocale* locale) {
+void QWidget_SetLocale(QWidget* self, const QLocale* locale) {
     self->setLocale(*locale);
 }
 
@@ -815,7 +815,7 @@ void QWidget_GrabMouse(QWidget* self) {
     self->grabMouse();
 }
 
-void QWidget_GrabMouseWithQCursor(QWidget* self, QCursor* param1) {
+void QWidget_GrabMouseWithQCursor(QWidget* self, const QCursor* param1) {
     self->grabMouse(*param1);
 }
 
@@ -831,7 +831,7 @@ void QWidget_ReleaseKeyboard(QWidget* self) {
     self->releaseKeyboard();
 }
 
-int QWidget_GrabShortcut(QWidget* self, QKeySequence* key) {
+int QWidget_GrabShortcut(QWidget* self, const QKeySequence* key) {
     return self->grabShortcut(*key);
 }
 
@@ -879,11 +879,11 @@ void QWidget_Update2(QWidget* self, int x, int y, int w, int h) {
     self->update(static_cast<int>(x), static_cast<int>(y), static_cast<int>(w), static_cast<int>(h));
 }
 
-void QWidget_UpdateWithQRect(QWidget* self, QRect* param1) {
+void QWidget_UpdateWithQRect(QWidget* self, const QRect* param1) {
     self->update(*param1);
 }
 
-void QWidget_UpdateWithQRegion(QWidget* self, QRegion* param1) {
+void QWidget_UpdateWithQRegion(QWidget* self, const QRegion* param1) {
     self->update(*param1);
 }
 
@@ -891,11 +891,11 @@ void QWidget_Repaint2(QWidget* self, int x, int y, int w, int h) {
     self->repaint(static_cast<int>(x), static_cast<int>(y), static_cast<int>(w), static_cast<int>(h));
 }
 
-void QWidget_RepaintWithQRect(QWidget* self, QRect* param1) {
+void QWidget_RepaintWithQRect(QWidget* self, const QRect* param1) {
     self->repaint(*param1);
 }
 
-void QWidget_RepaintWithQRegion(QWidget* self, QRegion* param1) {
+void QWidget_RepaintWithQRegion(QWidget* self, const QRegion* param1) {
     self->repaint(*param1);
 }
 
@@ -947,7 +947,7 @@ void QWidget_Move(QWidget* self, int x, int y) {
     self->move(static_cast<int>(x), static_cast<int>(y));
 }
 
-void QWidget_MoveWithQPoint(QWidget* self, QPoint* param1) {
+void QWidget_MoveWithQPoint(QWidget* self, const QPoint* param1) {
     self->move(*param1);
 }
 
@@ -955,7 +955,7 @@ void QWidget_Resize(QWidget* self, int w, int h) {
     self->resize(static_cast<int>(w), static_cast<int>(h));
 }
 
-void QWidget_ResizeWithQSize(QWidget* self, QSize* param1) {
+void QWidget_ResizeWithQSize(QWidget* self, const QSize* param1) {
     self->resize(*param1);
 }
 
@@ -963,7 +963,7 @@ void QWidget_SetGeometry(QWidget* self, int x, int y, int w, int h) {
     self->setGeometry(static_cast<int>(x), static_cast<int>(y), static_cast<int>(w), static_cast<int>(h));
 }
 
-void QWidget_SetGeometryWithGeometry(QWidget* self, QRect* geometry) {
+void QWidget_SetGeometryWithGeometry(QWidget* self, const QRect* geometry) {
     self->setGeometry(*geometry);
 }
 
@@ -977,7 +977,7 @@ libqt_string QWidget_SaveGeometry(const QWidget* self) {
     return _str;
 }
 
-bool QWidget_RestoreGeometry(QWidget* self, libqt_string geometry) {
+bool QWidget_RestoreGeometry(QWidget* self, const libqt_string geometry) {
     QByteArray geometry_QByteArray(geometry.data, geometry.len);
     return self->restoreGeometry(geometry_QByteArray);
 }
@@ -990,7 +990,7 @@ bool QWidget_IsVisible(const QWidget* self) {
     return self->isVisible();
 }
 
-bool QWidget_IsVisibleTo(const QWidget* self, QWidget* param1) {
+bool QWidget_IsVisibleTo(const QWidget* self, const QWidget* param1) {
     return self->isVisibleTo(param1);
 }
 
@@ -1042,7 +1042,7 @@ void QWidget_SetContentsMargins(QWidget* self, int left, int top, int right, int
     self->setContentsMargins(static_cast<int>(left), static_cast<int>(top), static_cast<int>(right), static_cast<int>(bottom));
 }
 
-void QWidget_SetContentsMarginsWithMargins(QWidget* self, QMargins* margins) {
+void QWidget_SetContentsMarginsWithMargins(QWidget* self, const QMargins* margins) {
     self->setContentsMargins(*margins);
 }
 
@@ -1078,7 +1078,7 @@ void QWidget_Scroll(QWidget* self, int dx, int dy) {
     self->scroll(static_cast<int>(dx), static_cast<int>(dy));
 }
 
-void QWidget_Scroll2(QWidget* self, int dx, int dy, QRect* param3) {
+void QWidget_Scroll2(QWidget* self, int dx, int dy, const QRect* param3) {
     self->scroll(static_cast<int>(dx), static_cast<int>(dy), *param3);
 }
 
@@ -1106,7 +1106,7 @@ void QWidget_AddAction(QWidget* self, QAction* action) {
     self->addAction(action);
 }
 
-void QWidget_AddActions(QWidget* self, libqt_list /* of QAction* */ actions) {
+void QWidget_AddActions(QWidget* self, const libqt_list /* of QAction* */ actions) {
     QList<QAction*> actions_QList;
     actions_QList.reserve(actions.len);
     QAction** actions_arr = static_cast<QAction**>(actions.data.ptr);
@@ -1116,7 +1116,7 @@ void QWidget_AddActions(QWidget* self, libqt_list /* of QAction* */ actions) {
     self->addActions(actions_QList);
 }
 
-void QWidget_InsertActions(QWidget* self, QAction* before, libqt_list /* of QAction* */ actions) {
+void QWidget_InsertActions(QWidget* self, QAction* before, const libqt_list /* of QAction* */ actions) {
     QList<QAction*> actions_QList;
     actions_QList.reserve(actions.len);
     QAction** actions_arr = static_cast<QAction**>(actions.data.ptr);
@@ -1137,32 +1137,32 @@ void QWidget_RemoveAction(QWidget* self, QAction* action) {
 libqt_list /* of QAction* */ QWidget_Actions(const QWidget* self) {
     QList<QAction*> _ret = self->actions();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QAction** _arr = static_cast<QAction**>(malloc(sizeof(QAction*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QAction** _arr = static_cast<QAction**>(malloc(sizeof(QAction*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-QAction* QWidget_AddActionWithText(QWidget* self, libqt_string text) {
+QAction* QWidget_AddActionWithText(QWidget* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->addAction(text_QString);
 }
 
-QAction* QWidget_AddAction2(QWidget* self, QIcon* icon, libqt_string text) {
+QAction* QWidget_AddAction2(QWidget* self, const QIcon* icon, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->addAction(*icon, text_QString);
 }
 
-QAction* QWidget_AddAction3(QWidget* self, libqt_string text, QKeySequence* shortcut) {
+QAction* QWidget_AddAction3(QWidget* self, const libqt_string text, const QKeySequence* shortcut) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->addAction(text_QString, *shortcut);
 }
 
-QAction* QWidget_AddAction4(QWidget* self, QIcon* icon, libqt_string text, QKeySequence* shortcut) {
+QAction* QWidget_AddAction4(QWidget* self, const QIcon* icon, const libqt_string text, const QKeySequence* shortcut) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->addAction(*icon, text_QString, *shortcut);
 }
@@ -1199,7 +1199,11 @@ QWidget* QWidget_ChildAt(const QWidget* self, int x, int y) {
     return self->childAt(static_cast<int>(x), static_cast<int>(y));
 }
 
-QWidget* QWidget_ChildAtWithQPoint(const QWidget* self, QPoint* p) {
+QWidget* QWidget_ChildAtWithQPoint(const QWidget* self, const QPoint* p) {
+    return self->childAt(*p);
+}
+
+QWidget* QWidget_ChildAtWithQPointF(const QWidget* self, const QPointF* p) {
     return self->childAt(*p);
 }
 
@@ -1215,7 +1219,7 @@ void QWidget_EnsurePolished(const QWidget* self) {
     self->ensurePolished();
 }
 
-bool QWidget_IsAncestorOf(const QWidget* self, QWidget* child) {
+bool QWidget_IsAncestorOf(const QWidget* self, const QWidget* child) {
     return self->isAncestorOf(child);
 }
 
@@ -1247,7 +1251,7 @@ QWidget* QWidget_CreateWindowContainer(QWindow* window) {
     return QWidget::createWindowContainer(window);
 }
 
-void QWidget_WindowTitleChanged(QWidget* self, libqt_string title) {
+void QWidget_WindowTitleChanged(QWidget* self, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     self->windowTitleChanged(title_QString);
 }
@@ -1268,7 +1272,7 @@ void QWidget_Connect_WindowTitleChanged(QWidget* self, intptr_t slot) {
     });
 }
 
-void QWidget_WindowIconChanged(QWidget* self, QIcon* icon) {
+void QWidget_WindowIconChanged(QWidget* self, const QIcon* icon) {
     self->windowIconChanged(*icon);
 }
 
@@ -1282,7 +1286,7 @@ void QWidget_Connect_WindowIconChanged(QWidget* self, intptr_t slot) {
     });
 }
 
-void QWidget_WindowIconTextChanged(QWidget* self, libqt_string iconText) {
+void QWidget_WindowIconTextChanged(QWidget* self, const libqt_string iconText) {
     QString iconText_QString = QString::fromUtf8(iconText.data, iconText.len);
     self->windowIconTextChanged(iconText_QString);
 }
@@ -1303,7 +1307,7 @@ void QWidget_Connect_WindowIconTextChanged(QWidget* self, intptr_t slot) {
     });
 }
 
-void QWidget_CustomContextMenuRequested(QWidget* self, QPoint* pos) {
+void QWidget_CustomContextMenuRequested(QWidget* self, const QPoint* pos) {
     self->customContextMenuRequested(*pos);
 }
 
@@ -1349,31 +1353,31 @@ libqt_string QWidget_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-void QWidget_Render2(QWidget* self, QPaintDevice* target, QPoint* targetOffset) {
+void QWidget_Render2(QWidget* self, QPaintDevice* target, const QPoint* targetOffset) {
     self->render(target, *targetOffset);
 }
 
-void QWidget_Render3(QWidget* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion) {
+void QWidget_Render3(QWidget* self, QPaintDevice* target, const QPoint* targetOffset, const QRegion* sourceRegion) {
     self->render(target, *targetOffset, *sourceRegion);
 }
 
-void QWidget_Render4(QWidget* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags) {
+void QWidget_Render4(QWidget* self, QPaintDevice* target, const QPoint* targetOffset, const QRegion* sourceRegion, int renderFlags) {
     self->render(target, *targetOffset, *sourceRegion, static_cast<QWidget::RenderFlags>(renderFlags));
 }
 
-void QWidget_Render22(QWidget* self, QPainter* painter, QPoint* targetOffset) {
+void QWidget_Render22(QWidget* self, QPainter* painter, const QPoint* targetOffset) {
     self->render(painter, *targetOffset);
 }
 
-void QWidget_Render32(QWidget* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion) {
+void QWidget_Render32(QWidget* self, QPainter* painter, const QPoint* targetOffset, const QRegion* sourceRegion) {
     self->render(painter, *targetOffset, *sourceRegion);
 }
 
-void QWidget_Render42(QWidget* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags) {
+void QWidget_Render42(QWidget* self, QPainter* painter, const QPoint* targetOffset, const QRegion* sourceRegion, int renderFlags) {
     self->render(painter, *targetOffset, *sourceRegion, static_cast<QWidget::RenderFlags>(renderFlags));
 }
 
-QPixmap* QWidget_Grab1(QWidget* self, QRect* rectangle) {
+QPixmap* QWidget_Grab1(QWidget* self, const QRect* rectangle) {
     return new QPixmap(self->grab(*rectangle));
 }
 
@@ -1381,7 +1385,7 @@ void QWidget_GrabGesture2(QWidget* self, int typeVal, int flags) {
     self->grabGesture(static_cast<Qt::GestureType>(typeVal), static_cast<Qt::GestureFlags>(flags));
 }
 
-int QWidget_GrabShortcut2(QWidget* self, QKeySequence* key, int context) {
+int QWidget_GrabShortcut2(QWidget* self, const QKeySequence* key, int context) {
     return self->grabShortcut(*key, static_cast<Qt::ShortcutContext>(context));
 }
 
@@ -2338,7 +2342,7 @@ void QWidget_OnHideEvent(QWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QWidget_NativeEvent(QWidget* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QWidget_NativeEvent(QWidget* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqwidget = dynamic_cast<VirtualQWidget*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqwidget && vqwidget->isVirtualQWidget) {
@@ -2349,7 +2353,7 @@ bool QWidget_NativeEvent(QWidget* self, libqt_string eventType, void* message, i
 }
 
 // Base class handler implementation
-bool QWidget_QBaseNativeEvent(QWidget* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QWidget_QBaseNativeEvent(QWidget* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqwidget = dynamic_cast<VirtualQWidget*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqwidget && vqwidget->isVirtualQWidget) {
@@ -2717,7 +2721,7 @@ void QWidget_OnCustomEvent(QWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWidget_ConnectNotify(QWidget* self, QMetaMethod* signal) {
+void QWidget_ConnectNotify(QWidget* self, const QMetaMethod* signal) {
     auto* vqwidget = dynamic_cast<VirtualQWidget*>(self);
     if (vqwidget && vqwidget->isVirtualQWidget) {
         vqwidget->connectNotify(*signal);
@@ -2727,7 +2731,7 @@ void QWidget_ConnectNotify(QWidget* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QWidget_QBaseConnectNotify(QWidget* self, QMetaMethod* signal) {
+void QWidget_QBaseConnectNotify(QWidget* self, const QMetaMethod* signal) {
     auto* vqwidget = dynamic_cast<VirtualQWidget*>(self);
     if (vqwidget && vqwidget->isVirtualQWidget) {
         vqwidget->setQWidget_ConnectNotify_IsBase(true);
@@ -2746,7 +2750,7 @@ void QWidget_OnConnectNotify(QWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWidget_DisconnectNotify(QWidget* self, QMetaMethod* signal) {
+void QWidget_DisconnectNotify(QWidget* self, const QMetaMethod* signal) {
     auto* vqwidget = dynamic_cast<VirtualQWidget*>(self);
     if (vqwidget && vqwidget->isVirtualQWidget) {
         vqwidget->disconnectNotify(*signal);
@@ -2756,7 +2760,7 @@ void QWidget_DisconnectNotify(QWidget* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QWidget_QBaseDisconnectNotify(QWidget* self, QMetaMethod* signal) {
+void QWidget_QBaseDisconnectNotify(QWidget* self, const QMetaMethod* signal) {
     auto* vqwidget = dynamic_cast<VirtualQWidget*>(self);
     if (vqwidget && vqwidget->isVirtualQWidget) {
         vqwidget->setQWidget_DisconnectNotify_IsBase(true);
@@ -3181,7 +3185,7 @@ void QWidget_OnReceivers(const QWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QWidget_IsSignalConnected(const QWidget* self, QMetaMethod* signal) {
+bool QWidget_IsSignalConnected(const QWidget* self, const QMetaMethod* signal) {
     auto* vqwidget = const_cast<VirtualQWidget*>(dynamic_cast<const VirtualQWidget*>(self));
     if (vqwidget && vqwidget->isVirtualQWidget) {
         return vqwidget->isSignalConnected(*signal);
@@ -3191,7 +3195,7 @@ bool QWidget_IsSignalConnected(const QWidget* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QWidget_QBaseIsSignalConnected(const QWidget* self, QMetaMethod* signal) {
+bool QWidget_QBaseIsSignalConnected(const QWidget* self, const QMetaMethod* signal) {
     auto* vqwidget = const_cast<VirtualQWidget*>(dynamic_cast<const VirtualQWidget*>(self));
     if (vqwidget && vqwidget->isVirtualQWidget) {
         vqwidget->setQWidget_IsSignalConnected_IsBase(true);
@@ -3206,6 +3210,35 @@ void QWidget_OnIsSignalConnected(const QWidget* self, intptr_t slot) {
     auto* vqwidget = const_cast<VirtualQWidget*>(dynamic_cast<const VirtualQWidget*>(self));
     if (vqwidget && vqwidget->isVirtualQWidget) {
         vqwidget->setQWidget_IsSignalConnected_Callback(reinterpret_cast<VirtualQWidget::QWidget_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QWidget_GetDecodedMetricF(const QWidget* self, int metricA, int metricB) {
+    auto* vqwidget = const_cast<VirtualQWidget*>(dynamic_cast<const VirtualQWidget*>(self));
+    if (vqwidget && vqwidget->isVirtualQWidget) {
+        return vqwidget->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQWidget*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QWidget_QBaseGetDecodedMetricF(const QWidget* self, int metricA, int metricB) {
+    auto* vqwidget = const_cast<VirtualQWidget*>(dynamic_cast<const VirtualQWidget*>(self));
+    if (vqwidget && vqwidget->isVirtualQWidget) {
+        vqwidget->setQWidget_GetDecodedMetricF_IsBase(true);
+        return vqwidget->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQWidget*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QWidget_OnGetDecodedMetricF(const QWidget* self, intptr_t slot) {
+    auto* vqwidget = const_cast<VirtualQWidget*>(dynamic_cast<const VirtualQWidget*>(self));
+    if (vqwidget && vqwidget->isVirtualQWidget) {
+        vqwidget->setQWidget_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQWidget::QWidget_GetDecodedMetricF_Callback>(slot));
     }
 }
 

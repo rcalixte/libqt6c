@@ -12,14 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractnetworkcache.h"
-#include "../libqevent.h"
-#include "../libqiodevice.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-#include "../libqurl.h"
-
 /// https://doc.qt.io/qt-6/qnetworkdiskcache.html
 
 /// q_networkdiskcache_new constructs a new QNetworkDiskCache object.
@@ -325,7 +317,7 @@ QThread* q_networkdiskcache_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QNetworkDiskCache* self, QThread* thread ```
-void q_networkdiskcache_move_to_thread(void* self, void* thread);
+bool q_networkdiskcache_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -340,6 +332,13 @@ int32_t q_networkdiskcache_start_timer(void* self, int interval);
 ///
 /// ``` QNetworkDiskCache* self, int id ```
 void q_networkdiskcache_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QNetworkDiskCache* self, enum Qt__TimerId id ```
+void q_networkdiskcache_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -480,6 +479,13 @@ bool q_networkdiskcache_inherits(void* self, const char* classname);
 ///
 /// ``` QNetworkDiskCache* self ```
 void q_networkdiskcache_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QNetworkDiskCache* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_networkdiskcache_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

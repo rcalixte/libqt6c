@@ -268,7 +268,7 @@ void QWebEngineUrlRequestInterceptor_OnCustomEvent(QWebEngineUrlRequestIntercept
 }
 
 // Derived class handler implementation
-void QWebEngineUrlRequestInterceptor_ConnectNotify(QWebEngineUrlRequestInterceptor* self, QMetaMethod* signal) {
+void QWebEngineUrlRequestInterceptor_ConnectNotify(QWebEngineUrlRequestInterceptor* self, const QMetaMethod* signal) {
     auto* vqwebengineurlrequestinterceptor = dynamic_cast<VirtualQWebEngineUrlRequestInterceptor*>(self);
     if (vqwebengineurlrequestinterceptor && vqwebengineurlrequestinterceptor->isVirtualQWebEngineUrlRequestInterceptor) {
         vqwebengineurlrequestinterceptor->connectNotify(*signal);
@@ -278,7 +278,7 @@ void QWebEngineUrlRequestInterceptor_ConnectNotify(QWebEngineUrlRequestIntercept
 }
 
 // Base class handler implementation
-void QWebEngineUrlRequestInterceptor_QBaseConnectNotify(QWebEngineUrlRequestInterceptor* self, QMetaMethod* signal) {
+void QWebEngineUrlRequestInterceptor_QBaseConnectNotify(QWebEngineUrlRequestInterceptor* self, const QMetaMethod* signal) {
     auto* vqwebengineurlrequestinterceptor = dynamic_cast<VirtualQWebEngineUrlRequestInterceptor*>(self);
     if (vqwebengineurlrequestinterceptor && vqwebengineurlrequestinterceptor->isVirtualQWebEngineUrlRequestInterceptor) {
         vqwebengineurlrequestinterceptor->setQWebEngineUrlRequestInterceptor_ConnectNotify_IsBase(true);
@@ -297,7 +297,7 @@ void QWebEngineUrlRequestInterceptor_OnConnectNotify(QWebEngineUrlRequestInterce
 }
 
 // Derived class handler implementation
-void QWebEngineUrlRequestInterceptor_DisconnectNotify(QWebEngineUrlRequestInterceptor* self, QMetaMethod* signal) {
+void QWebEngineUrlRequestInterceptor_DisconnectNotify(QWebEngineUrlRequestInterceptor* self, const QMetaMethod* signal) {
     auto* vqwebengineurlrequestinterceptor = dynamic_cast<VirtualQWebEngineUrlRequestInterceptor*>(self);
     if (vqwebengineurlrequestinterceptor && vqwebengineurlrequestinterceptor->isVirtualQWebEngineUrlRequestInterceptor) {
         vqwebengineurlrequestinterceptor->disconnectNotify(*signal);
@@ -307,7 +307,7 @@ void QWebEngineUrlRequestInterceptor_DisconnectNotify(QWebEngineUrlRequestInterc
 }
 
 // Base class handler implementation
-void QWebEngineUrlRequestInterceptor_QBaseDisconnectNotify(QWebEngineUrlRequestInterceptor* self, QMetaMethod* signal) {
+void QWebEngineUrlRequestInterceptor_QBaseDisconnectNotify(QWebEngineUrlRequestInterceptor* self, const QMetaMethod* signal) {
     auto* vqwebengineurlrequestinterceptor = dynamic_cast<VirtualQWebEngineUrlRequestInterceptor*>(self);
     if (vqwebengineurlrequestinterceptor && vqwebengineurlrequestinterceptor->isVirtualQWebEngineUrlRequestInterceptor) {
         vqwebengineurlrequestinterceptor->setQWebEngineUrlRequestInterceptor_DisconnectNotify_IsBase(true);
@@ -413,7 +413,7 @@ void QWebEngineUrlRequestInterceptor_OnReceivers(const QWebEngineUrlRequestInter
 }
 
 // Derived class handler implementation
-bool QWebEngineUrlRequestInterceptor_IsSignalConnected(const QWebEngineUrlRequestInterceptor* self, QMetaMethod* signal) {
+bool QWebEngineUrlRequestInterceptor_IsSignalConnected(const QWebEngineUrlRequestInterceptor* self, const QMetaMethod* signal) {
     auto* vqwebengineurlrequestinterceptor = const_cast<VirtualQWebEngineUrlRequestInterceptor*>(dynamic_cast<const VirtualQWebEngineUrlRequestInterceptor*>(self));
     if (vqwebengineurlrequestinterceptor && vqwebengineurlrequestinterceptor->isVirtualQWebEngineUrlRequestInterceptor) {
         return vqwebengineurlrequestinterceptor->isSignalConnected(*signal);
@@ -423,7 +423,7 @@ bool QWebEngineUrlRequestInterceptor_IsSignalConnected(const QWebEngineUrlReques
 }
 
 // Base class handler implementation
-bool QWebEngineUrlRequestInterceptor_QBaseIsSignalConnected(const QWebEngineUrlRequestInterceptor* self, QMetaMethod* signal) {
+bool QWebEngineUrlRequestInterceptor_QBaseIsSignalConnected(const QWebEngineUrlRequestInterceptor* self, const QMetaMethod* signal) {
     auto* vqwebengineurlrequestinterceptor = const_cast<VirtualQWebEngineUrlRequestInterceptor*>(dynamic_cast<const VirtualQWebEngineUrlRequestInterceptor*>(self));
     if (vqwebengineurlrequestinterceptor && vqwebengineurlrequestinterceptor->isVirtualQWebEngineUrlRequestInterceptor) {
         vqwebengineurlrequestinterceptor->setQWebEngineUrlRequestInterceptor_IsSignalConnected_IsBase(true);

@@ -61,12 +61,12 @@ class VirtualQCamera final : public QCamera {
     mutable bool qcamera_issignalconnected_isbase = false;
 
   public:
-    VirtualQCamera() : QCamera(){};
-    VirtualQCamera(const QCameraDevice& cameraDevice) : QCamera(cameraDevice){};
-    VirtualQCamera(QCameraDevice::Position position) : QCamera(position){};
-    VirtualQCamera(QObject* parent) : QCamera(parent){};
-    VirtualQCamera(const QCameraDevice& cameraDevice, QObject* parent) : QCamera(cameraDevice, parent){};
-    VirtualQCamera(QCameraDevice::Position position, QObject* parent) : QCamera(position, parent){};
+    VirtualQCamera() : QCamera() {};
+    VirtualQCamera(const QCameraDevice& cameraDevice) : QCamera(cameraDevice) {};
+    VirtualQCamera(QCameraDevice::Position position) : QCamera(position) {};
+    VirtualQCamera(QObject* parent) : QCamera(parent) {};
+    VirtualQCamera(const QCameraDevice& cameraDevice, QObject* parent) : QCamera(cameraDevice, parent) {};
+    VirtualQCamera(QCameraDevice::Position position, QObject* parent) : QCamera(position, parent) {};
 
     ~VirtualQCamera() {
         qcamera_metacall_callback = nullptr;
@@ -298,18 +298,18 @@ class VirtualQCamera final : public QCamera {
     friend void QCamera_QBaseChildEvent(QCamera* self, QChildEvent* event);
     friend void QCamera_CustomEvent(QCamera* self, QEvent* event);
     friend void QCamera_QBaseCustomEvent(QCamera* self, QEvent* event);
-    friend void QCamera_ConnectNotify(QCamera* self, QMetaMethod* signal);
-    friend void QCamera_QBaseConnectNotify(QCamera* self, QMetaMethod* signal);
-    friend void QCamera_DisconnectNotify(QCamera* self, QMetaMethod* signal);
-    friend void QCamera_QBaseDisconnectNotify(QCamera* self, QMetaMethod* signal);
+    friend void QCamera_ConnectNotify(QCamera* self, const QMetaMethod* signal);
+    friend void QCamera_QBaseConnectNotify(QCamera* self, const QMetaMethod* signal);
+    friend void QCamera_DisconnectNotify(QCamera* self, const QMetaMethod* signal);
+    friend void QCamera_QBaseDisconnectNotify(QCamera* self, const QMetaMethod* signal);
     friend QObject* QCamera_Sender(const QCamera* self);
     friend QObject* QCamera_QBaseSender(const QCamera* self);
     friend int QCamera_SenderSignalIndex(const QCamera* self);
     friend int QCamera_QBaseSenderSignalIndex(const QCamera* self);
     friend int QCamera_Receivers(const QCamera* self, const char* signal);
     friend int QCamera_QBaseReceivers(const QCamera* self, const char* signal);
-    friend bool QCamera_IsSignalConnected(const QCamera* self, QMetaMethod* signal);
-    friend bool QCamera_QBaseIsSignalConnected(const QCamera* self, QMetaMethod* signal);
+    friend bool QCamera_IsSignalConnected(const QCamera* self, const QMetaMethod* signal);
+    friend bool QCamera_QBaseIsSignalConnected(const QCamera* self, const QMetaMethod* signal);
 };
 
 #endif

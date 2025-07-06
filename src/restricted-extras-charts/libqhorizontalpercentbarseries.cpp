@@ -269,7 +269,7 @@ void QHorizontalPercentBarSeries_OnCustomEvent(QHorizontalPercentBarSeries* self
 }
 
 // Derived class handler implementation
-void QHorizontalPercentBarSeries_ConnectNotify(QHorizontalPercentBarSeries* self, QMetaMethod* signal) {
+void QHorizontalPercentBarSeries_ConnectNotify(QHorizontalPercentBarSeries* self, const QMetaMethod* signal) {
     auto* vqhorizontalpercentbarseries = dynamic_cast<VirtualQHorizontalPercentBarSeries*>(self);
     if (vqhorizontalpercentbarseries && vqhorizontalpercentbarseries->isVirtualQHorizontalPercentBarSeries) {
         vqhorizontalpercentbarseries->connectNotify(*signal);
@@ -279,7 +279,7 @@ void QHorizontalPercentBarSeries_ConnectNotify(QHorizontalPercentBarSeries* self
 }
 
 // Base class handler implementation
-void QHorizontalPercentBarSeries_QBaseConnectNotify(QHorizontalPercentBarSeries* self, QMetaMethod* signal) {
+void QHorizontalPercentBarSeries_QBaseConnectNotify(QHorizontalPercentBarSeries* self, const QMetaMethod* signal) {
     auto* vqhorizontalpercentbarseries = dynamic_cast<VirtualQHorizontalPercentBarSeries*>(self);
     if (vqhorizontalpercentbarseries && vqhorizontalpercentbarseries->isVirtualQHorizontalPercentBarSeries) {
         vqhorizontalpercentbarseries->setQHorizontalPercentBarSeries_ConnectNotify_IsBase(true);
@@ -298,7 +298,7 @@ void QHorizontalPercentBarSeries_OnConnectNotify(QHorizontalPercentBarSeries* se
 }
 
 // Derived class handler implementation
-void QHorizontalPercentBarSeries_DisconnectNotify(QHorizontalPercentBarSeries* self, QMetaMethod* signal) {
+void QHorizontalPercentBarSeries_DisconnectNotify(QHorizontalPercentBarSeries* self, const QMetaMethod* signal) {
     auto* vqhorizontalpercentbarseries = dynamic_cast<VirtualQHorizontalPercentBarSeries*>(self);
     if (vqhorizontalpercentbarseries && vqhorizontalpercentbarseries->isVirtualQHorizontalPercentBarSeries) {
         vqhorizontalpercentbarseries->disconnectNotify(*signal);
@@ -308,7 +308,7 @@ void QHorizontalPercentBarSeries_DisconnectNotify(QHorizontalPercentBarSeries* s
 }
 
 // Base class handler implementation
-void QHorizontalPercentBarSeries_QBaseDisconnectNotify(QHorizontalPercentBarSeries* self, QMetaMethod* signal) {
+void QHorizontalPercentBarSeries_QBaseDisconnectNotify(QHorizontalPercentBarSeries* self, const QMetaMethod* signal) {
     auto* vqhorizontalpercentbarseries = dynamic_cast<VirtualQHorizontalPercentBarSeries*>(self);
     if (vqhorizontalpercentbarseries && vqhorizontalpercentbarseries->isVirtualQHorizontalPercentBarSeries) {
         vqhorizontalpercentbarseries->setQHorizontalPercentBarSeries_DisconnectNotify_IsBase(true);
@@ -414,7 +414,7 @@ void QHorizontalPercentBarSeries_OnReceivers(const QHorizontalPercentBarSeries* 
 }
 
 // Derived class handler implementation
-bool QHorizontalPercentBarSeries_IsSignalConnected(const QHorizontalPercentBarSeries* self, QMetaMethod* signal) {
+bool QHorizontalPercentBarSeries_IsSignalConnected(const QHorizontalPercentBarSeries* self, const QMetaMethod* signal) {
     auto* vqhorizontalpercentbarseries = const_cast<VirtualQHorizontalPercentBarSeries*>(dynamic_cast<const VirtualQHorizontalPercentBarSeries*>(self));
     if (vqhorizontalpercentbarseries && vqhorizontalpercentbarseries->isVirtualQHorizontalPercentBarSeries) {
         return vqhorizontalpercentbarseries->isSignalConnected(*signal);
@@ -424,7 +424,7 @@ bool QHorizontalPercentBarSeries_IsSignalConnected(const QHorizontalPercentBarSe
 }
 
 // Base class handler implementation
-bool QHorizontalPercentBarSeries_QBaseIsSignalConnected(const QHorizontalPercentBarSeries* self, QMetaMethod* signal) {
+bool QHorizontalPercentBarSeries_QBaseIsSignalConnected(const QHorizontalPercentBarSeries* self, const QMetaMethod* signal) {
     auto* vqhorizontalpercentbarseries = const_cast<VirtualQHorizontalPercentBarSeries*>(dynamic_cast<const VirtualQHorizontalPercentBarSeries*>(self));
     if (vqhorizontalpercentbarseries && vqhorizontalpercentbarseries->isVirtualQHorizontalPercentBarSeries) {
         vqhorizontalpercentbarseries->setQHorizontalPercentBarSeries_IsSignalConnected_IsBase(true);

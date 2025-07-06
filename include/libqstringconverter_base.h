@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqstringconverter.h"
-
 /// https://doc.qt.io/qt-6/qstringconverter.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#isValid)
@@ -40,6 +38,11 @@ const char* q_stringconverter_name(void* self);
 ///
 /// ``` enum QStringConverter__Encoding e ```
 const char* q_stringconverter_name_for_encoding(int64_t e);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#availableCodecs)
+///
+///
+const char** q_stringconverter_available_codecs();
 
 /// https://doc.qt.io/qt-6/qstringconverterbase-state.html
 

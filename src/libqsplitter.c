@@ -1330,6 +1330,10 @@ QWidget* q_splitter_child_at_with_q_point(void* self, void* p) {
     return QWidget_ChildAtWithQPoint((QWidget*)self, (QPoint*)p);
 }
 
+QWidget* q_splitter_child_at_with_q_point_f(void* self, void* p) {
+    return QWidget_ChildAtWithQPointF((QWidget*)self, (QPointF*)p);
+}
+
 void q_splitter_set_attribute(void* self, int64_t param1) {
     QWidget_SetAttribute((QWidget*)self, param1);
 }
@@ -1509,8 +1513,8 @@ QThread* q_splitter_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_splitter_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_splitter_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_splitter_start_timer(void* self, int interval) {
@@ -1519,6 +1523,10 @@ int32_t q_splitter_start_timer(void* self, int interval) {
 
 void q_splitter_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_splitter_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_splitter_children(void* self) {
@@ -1609,6 +1617,10 @@ void q_splitter_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
+bool q_splitter_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
+}
+
 int32_t q_splitter_start_timer2(void* self, int interval, int64_t timerType) {
     return QObject_StartTimer2((QObject*)self, interval, timerType);
 }
@@ -1675,6 +1687,10 @@ int32_t q_splitter_depth(void* self) {
 
 double q_splitter_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
+}
+
+int32_t q_splitter_encode_metric_f(int64_t metric, double value) {
+    return QPaintDevice_EncodeMetricF(metric, value);
 }
 
 void q_splitter_paint_event(void* self, void* param1) {
@@ -2299,6 +2315,18 @@ bool q_splitter_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_splitter_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QSplitter_OnIsSignalConnected((QSplitter*)self, (intptr_t)slot);
+}
+
+double q_splitter_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QSplitter_GetDecodedMetricF((QSplitter*)self, metricA, metricB);
+}
+
+double q_splitter_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QSplitter_QBaseGetDecodedMetricF((QSplitter*)self, metricA, metricB);
+}
+
+void q_splitter_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
+    QSplitter_OnGetDecodedMetricF((QSplitter*)self, (intptr_t)slot);
 }
 
 void q_splitter_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
@@ -3452,6 +3480,10 @@ QWidget* q_splitterhandle_child_at_with_q_point(void* self, void* p) {
     return QWidget_ChildAtWithQPoint((QWidget*)self, (QPoint*)p);
 }
 
+QWidget* q_splitterhandle_child_at_with_q_point_f(void* self, void* p) {
+    return QWidget_ChildAtWithQPointF((QWidget*)self, (QPointF*)p);
+}
+
 void q_splitterhandle_set_attribute(void* self, int64_t param1) {
     QWidget_SetAttribute((QWidget*)self, param1);
 }
@@ -3631,8 +3663,8 @@ QThread* q_splitterhandle_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_splitterhandle_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_splitterhandle_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_splitterhandle_start_timer(void* self, int interval) {
@@ -3641,6 +3673,10 @@ int32_t q_splitterhandle_start_timer(void* self, int interval) {
 
 void q_splitterhandle_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_splitterhandle_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_splitterhandle_children(void* self) {
@@ -3731,6 +3767,10 @@ void q_splitterhandle_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
+bool q_splitterhandle_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
+}
+
 int32_t q_splitterhandle_start_timer2(void* self, int interval, int64_t timerType) {
     return QObject_StartTimer2((QObject*)self, interval, timerType);
 }
@@ -3797,6 +3837,10 @@ int32_t q_splitterhandle_depth(void* self) {
 
 double q_splitterhandle_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
+}
+
+int32_t q_splitterhandle_encode_metric_f(int64_t metric, double value) {
+    return QPaintDevice_EncodeMetricF(metric, value);
 }
 
 int32_t q_splitterhandle_dev_type(void* self) {
@@ -4385,6 +4429,18 @@ bool q_splitterhandle_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_splitterhandle_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QSplitterHandle_OnIsSignalConnected((QSplitterHandle*)self, (intptr_t)slot);
+}
+
+double q_splitterhandle_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QSplitterHandle_GetDecodedMetricF((QSplitterHandle*)self, metricA, metricB);
+}
+
+double q_splitterhandle_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QSplitterHandle_QBaseGetDecodedMetricF((QSplitterHandle*)self, metricA, metricB);
+}
+
+void q_splitterhandle_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
+    QSplitterHandle_OnGetDecodedMetricF((QSplitterHandle*)self, (intptr_t)slot);
 }
 
 void q_splitterhandle_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {

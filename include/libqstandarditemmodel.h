@@ -12,19 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractitemmodel.h"
-#include "libqbrush.h"
-#include "libqevent.h"
-#include "libqdatastream.h"
-#include "libqfont.h"
-#include "libqicon.h"
-#include "libqmetaobject.h"
-#include "libqmimedata.h"
-#include "libqobject.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qstandarditem.html
 
 /// q_standarditem_new constructs a new QStandardItem object.
@@ -1625,7 +1612,7 @@ QThread* q_standarditemmodel_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QStandardItemModel* self, QThread* thread ```
-void q_standarditemmodel_move_to_thread(void* self, void* thread);
+bool q_standarditemmodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -1640,6 +1627,13 @@ int32_t q_standarditemmodel_start_timer(void* self, int interval);
 ///
 /// ``` QStandardItemModel* self, int id ```
 void q_standarditemmodel_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QStandardItemModel* self, enum Qt__TimerId id ```
+void q_standarditemmodel_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1773,6 +1767,13 @@ bool q_standarditemmodel_inherits(void* self, const char* classname);
 ///
 /// ``` QStandardItemModel* self ```
 void q_standarditemmodel_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QStandardItemModel* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_standarditemmodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

@@ -82,10 +82,10 @@ class VirtualQWebEnginePage final : public QWebEnginePage {
     mutable bool qwebenginepage_issignalconnected_isbase = false;
 
   public:
-    VirtualQWebEnginePage() : QWebEnginePage(){};
-    VirtualQWebEnginePage(QWebEngineProfile* profile) : QWebEnginePage(profile){};
-    VirtualQWebEnginePage(QObject* parent) : QWebEnginePage(parent){};
-    VirtualQWebEnginePage(QWebEngineProfile* profile, QObject* parent) : QWebEnginePage(profile, parent){};
+    VirtualQWebEnginePage() : QWebEnginePage() {};
+    VirtualQWebEnginePage(QWebEngineProfile* profile) : QWebEnginePage(profile) {};
+    VirtualQWebEnginePage(QObject* parent) : QWebEnginePage(parent) {};
+    VirtualQWebEnginePage(QWebEngineProfile* profile, QObject* parent) : QWebEnginePage(profile, parent) {};
 
     ~VirtualQWebEnginePage() {
         qwebenginepage_metacall_callback = nullptr;
@@ -214,16 +214,16 @@ class VirtualQWebEnginePage final : public QWebEnginePage {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QStringList chooseFiles(QWebEnginePage::FileSelectionMode mode, const QStringList& oldFiles, const QStringList& acceptedMimeTypes) override {
+    virtual QList<QString> chooseFiles(QWebEnginePage::FileSelectionMode mode, const QList<QString>& oldFiles, const QList<QString>& acceptedMimeTypes) override {
         if (qwebenginepage_choosefiles_isbase) {
             qwebenginepage_choosefiles_isbase = false;
             return QWebEnginePage::chooseFiles(mode, oldFiles, acceptedMimeTypes);
         } else if (qwebenginepage_choosefiles_callback != nullptr) {
             int cbval1 = static_cast<int>(mode);
-            const QStringList& oldFiles_ret = oldFiles;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            libqt_string* oldFiles_arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * oldFiles_ret.length()));
-            for (size_t i = 0; i < oldFiles_ret.length(); ++i) {
+            const QList<QString>& oldFiles_ret = oldFiles;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            libqt_string* oldFiles_arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * oldFiles_ret.size()));
+            for (size_t i = 0; i < oldFiles_ret.size(); ++i) {
                 QString oldFiles_lv_ret = oldFiles_ret[i];
                 // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
                 QByteArray oldFiles_lv_b = oldFiles_lv_ret.toUtf8();
@@ -235,13 +235,13 @@ class VirtualQWebEnginePage final : public QWebEnginePage {
                 oldFiles_arr[i] = oldFiles_lv_str;
             }
             libqt_list oldFiles_out;
-            oldFiles_out.len = oldFiles_ret.length();
+            oldFiles_out.len = oldFiles_ret.size();
             oldFiles_out.data.ptr = static_cast<void*>(oldFiles_arr);
             libqt_list /* of libqt_string */ cbval2 = oldFiles_out;
-            const QStringList& acceptedMimeTypes_ret = acceptedMimeTypes;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            libqt_string* acceptedMimeTypes_arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * acceptedMimeTypes_ret.length()));
-            for (size_t i = 0; i < acceptedMimeTypes_ret.length(); ++i) {
+            const QList<QString>& acceptedMimeTypes_ret = acceptedMimeTypes;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            libqt_string* acceptedMimeTypes_arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * acceptedMimeTypes_ret.size()));
+            for (size_t i = 0; i < acceptedMimeTypes_ret.size(); ++i) {
                 QString acceptedMimeTypes_lv_ret = acceptedMimeTypes_ret[i];
                 // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
                 QByteArray acceptedMimeTypes_lv_b = acceptedMimeTypes_lv_ret.toUtf8();
@@ -253,12 +253,12 @@ class VirtualQWebEnginePage final : public QWebEnginePage {
                 acceptedMimeTypes_arr[i] = acceptedMimeTypes_lv_str;
             }
             libqt_list acceptedMimeTypes_out;
-            acceptedMimeTypes_out.len = acceptedMimeTypes_ret.length();
+            acceptedMimeTypes_out.len = acceptedMimeTypes_ret.size();
             acceptedMimeTypes_out.data.ptr = static_cast<void*>(acceptedMimeTypes_arr);
             libqt_list /* of libqt_string */ cbval3 = acceptedMimeTypes_out;
 
             libqt_list /* of libqt_string */ callback_ret = qwebenginepage_choosefiles_callback(this, cbval1, cbval2, cbval3);
-            QStringList callback_ret_QList;
+            QList<QString> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             libqt_string* callback_ret_arr = static_cast<libqt_string*>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -525,34 +525,34 @@ class VirtualQWebEnginePage final : public QWebEnginePage {
     // Friend functions
     friend QWebEnginePage* QWebEnginePage_CreateWindow(QWebEnginePage* self, int typeVal);
     friend QWebEnginePage* QWebEnginePage_QBaseCreateWindow(QWebEnginePage* self, int typeVal);
-    friend libqt_list /* of libqt_string */ QWebEnginePage_ChooseFiles(QWebEnginePage* self, int mode, libqt_list /* of libqt_string */ oldFiles, libqt_list /* of libqt_string */ acceptedMimeTypes);
-    friend libqt_list /* of libqt_string */ QWebEnginePage_QBaseChooseFiles(QWebEnginePage* self, int mode, libqt_list /* of libqt_string */ oldFiles, libqt_list /* of libqt_string */ acceptedMimeTypes);
-    friend void QWebEnginePage_JavaScriptAlert(QWebEnginePage* self, QUrl* securityOrigin, libqt_string msg);
-    friend void QWebEnginePage_QBaseJavaScriptAlert(QWebEnginePage* self, QUrl* securityOrigin, libqt_string msg);
-    friend bool QWebEnginePage_JavaScriptConfirm(QWebEnginePage* self, QUrl* securityOrigin, libqt_string msg);
-    friend bool QWebEnginePage_QBaseJavaScriptConfirm(QWebEnginePage* self, QUrl* securityOrigin, libqt_string msg);
-    friend void QWebEnginePage_JavaScriptConsoleMessage(QWebEnginePage* self, int level, libqt_string message, int lineNumber, libqt_string sourceID);
-    friend void QWebEnginePage_QBaseJavaScriptConsoleMessage(QWebEnginePage* self, int level, libqt_string message, int lineNumber, libqt_string sourceID);
-    friend bool QWebEnginePage_AcceptNavigationRequest(QWebEnginePage* self, QUrl* url, int typeVal, bool isMainFrame);
-    friend bool QWebEnginePage_QBaseAcceptNavigationRequest(QWebEnginePage* self, QUrl* url, int typeVal, bool isMainFrame);
+    friend libqt_list /* of libqt_string */ QWebEnginePage_ChooseFiles(QWebEnginePage* self, int mode, const libqt_list /* of libqt_string */ oldFiles, const libqt_list /* of libqt_string */ acceptedMimeTypes);
+    friend libqt_list /* of libqt_string */ QWebEnginePage_QBaseChooseFiles(QWebEnginePage* self, int mode, const libqt_list /* of libqt_string */ oldFiles, const libqt_list /* of libqt_string */ acceptedMimeTypes);
+    friend void QWebEnginePage_JavaScriptAlert(QWebEnginePage* self, const QUrl* securityOrigin, const libqt_string msg);
+    friend void QWebEnginePage_QBaseJavaScriptAlert(QWebEnginePage* self, const QUrl* securityOrigin, const libqt_string msg);
+    friend bool QWebEnginePage_JavaScriptConfirm(QWebEnginePage* self, const QUrl* securityOrigin, const libqt_string msg);
+    friend bool QWebEnginePage_QBaseJavaScriptConfirm(QWebEnginePage* self, const QUrl* securityOrigin, const libqt_string msg);
+    friend void QWebEnginePage_JavaScriptConsoleMessage(QWebEnginePage* self, int level, const libqt_string message, int lineNumber, const libqt_string sourceID);
+    friend void QWebEnginePage_QBaseJavaScriptConsoleMessage(QWebEnginePage* self, int level, const libqt_string message, int lineNumber, const libqt_string sourceID);
+    friend bool QWebEnginePage_AcceptNavigationRequest(QWebEnginePage* self, const QUrl* url, int typeVal, bool isMainFrame);
+    friend bool QWebEnginePage_QBaseAcceptNavigationRequest(QWebEnginePage* self, const QUrl* url, int typeVal, bool isMainFrame);
     friend void QWebEnginePage_TimerEvent(QWebEnginePage* self, QTimerEvent* event);
     friend void QWebEnginePage_QBaseTimerEvent(QWebEnginePage* self, QTimerEvent* event);
     friend void QWebEnginePage_ChildEvent(QWebEnginePage* self, QChildEvent* event);
     friend void QWebEnginePage_QBaseChildEvent(QWebEnginePage* self, QChildEvent* event);
     friend void QWebEnginePage_CustomEvent(QWebEnginePage* self, QEvent* event);
     friend void QWebEnginePage_QBaseCustomEvent(QWebEnginePage* self, QEvent* event);
-    friend void QWebEnginePage_ConnectNotify(QWebEnginePage* self, QMetaMethod* signal);
-    friend void QWebEnginePage_QBaseConnectNotify(QWebEnginePage* self, QMetaMethod* signal);
-    friend void QWebEnginePage_DisconnectNotify(QWebEnginePage* self, QMetaMethod* signal);
-    friend void QWebEnginePage_QBaseDisconnectNotify(QWebEnginePage* self, QMetaMethod* signal);
+    friend void QWebEnginePage_ConnectNotify(QWebEnginePage* self, const QMetaMethod* signal);
+    friend void QWebEnginePage_QBaseConnectNotify(QWebEnginePage* self, const QMetaMethod* signal);
+    friend void QWebEnginePage_DisconnectNotify(QWebEnginePage* self, const QMetaMethod* signal);
+    friend void QWebEnginePage_QBaseDisconnectNotify(QWebEnginePage* self, const QMetaMethod* signal);
     friend QObject* QWebEnginePage_Sender(const QWebEnginePage* self);
     friend QObject* QWebEnginePage_QBaseSender(const QWebEnginePage* self);
     friend int QWebEnginePage_SenderSignalIndex(const QWebEnginePage* self);
     friend int QWebEnginePage_QBaseSenderSignalIndex(const QWebEnginePage* self);
     friend int QWebEnginePage_Receivers(const QWebEnginePage* self, const char* signal);
     friend int QWebEnginePage_QBaseReceivers(const QWebEnginePage* self, const char* signal);
-    friend bool QWebEnginePage_IsSignalConnected(const QWebEnginePage* self, QMetaMethod* signal);
-    friend bool QWebEnginePage_QBaseIsSignalConnected(const QWebEnginePage* self, QMetaMethod* signal);
+    friend bool QWebEnginePage_IsSignalConnected(const QWebEnginePage* self, const QMetaMethod* signal);
+    friend bool QWebEnginePage_QBaseIsSignalConnected(const QWebEnginePage* self, const QMetaMethod* signal);
 };
 
 #endif

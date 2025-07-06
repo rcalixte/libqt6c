@@ -12,12 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqbytearrayview.h"
-#include "libqdatastream.h"
-#include "libqdebug.h"
-#include "libqmetaobject.h"
-#include "libqcompare.h"
-
 /// https://doc.qt.io/qt-6/qmetatype.html
 
 /// q_metatype_new constructs a new QMetaType object.
@@ -125,6 +119,11 @@ bool q_metatype_is_valid(void* self);
 /// ``` QMetaType* self ```
 bool q_metatype_is_registered2(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#registerType)
+///
+/// ``` QMetaType* self ```
+void q_metatype_register_type(void* self);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#id)
 ///
 /// ``` QMetaType* self ```
@@ -185,6 +184,26 @@ QPartialOrdering* q_metatype_compare(void* self, void* lhs, void* rhs);
 /// ``` QMetaType* self, void* lhs, void* rhs ```
 bool q_metatype_equals(void* self, void* lhs, void* rhs);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#isDefaultConstructible)
+///
+/// ``` QMetaType* self ```
+bool q_metatype_is_default_constructible(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#isCopyConstructible)
+///
+/// ``` QMetaType* self ```
+bool q_metatype_is_copy_constructible(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#isMoveConstructible)
+///
+/// ``` QMetaType* self ```
+bool q_metatype_is_move_constructible(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#isDestructible)
+///
+/// ``` QMetaType* self ```
+bool q_metatype_is_destructible(void* self);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#isEqualityComparable)
 ///
 /// ``` QMetaType* self ```
@@ -219,6 +238,11 @@ bool q_metatype_save2(void* stream, int typeVal, void* data);
 ///
 /// ``` QDataStream* stream, int typeVal, void* data ```
 bool q_metatype_load2(void* stream, int typeVal, void* data);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#underlyingType)
+///
+/// ``` QMetaType* self ```
+QMetaType* q_metatype_underlying_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#fromName)
 ///
@@ -387,6 +411,7 @@ typedef enum {
     QMETATYPE_TYPE_QCBORVALUE = 53,
     QMETATYPE_TYPE_QCBORARRAY = 54,
     QMETATYPE_TYPE_QCBORMAP = 55,
+    QMETATYPE_TYPE_FLOAT16 = 63,
     QMETATYPE_TYPE_QMODELINDEX = 42,
     QMETATYPE_TYPE_QPERSISTENTMODELINDEX = 50,
     QMETATYPE_TYPE_QOBJECTSTAR = 39,
@@ -421,7 +446,7 @@ typedef enum {
     QMETATYPE_TYPE_QCOLORSPACE = 4119,
     QMETATYPE_TYPE_QSIZEPOLICY = 8192,
     QMETATYPE_TYPE_FIRSTCORETYPE = 1,
-    QMETATYPE_TYPE_LASTCORETYPE = 58,
+    QMETATYPE_TYPE_LASTCORETYPE = 63,
     QMETATYPE_TYPE_FIRSTGUITYPE = 4096,
     QMETATYPE_TYPE_LASTGUITYPE = 4119,
     QMETATYPE_TYPE_FIRSTWIDGETSTYPE = 8192,
@@ -447,7 +472,9 @@ typedef enum {
     QMETATYPE_TYPEFLAG_POINTERTOGADGET = 1024,
     QMETATYPE_TYPEFLAG_ISPOINTER = 2048,
     QMETATYPE_TYPEFLAG_ISQMLLIST = 4096,
-    QMETATYPE_TYPEFLAG_ISCONST = 8192
+    QMETATYPE_TYPEFLAG_ISCONST = 8192,
+    QMETATYPE_TYPEFLAG_NEEDSCOPYCONSTRUCTION = 16384,
+    QMETATYPE_TYPEFLAG_NEEDSMOVECONSTRUCTION = 32768
 } QMetaType__TypeFlag;
 
 #endif

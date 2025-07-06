@@ -9,6 +9,7 @@
 #include "../libqpainter.hpp"
 #include "libqpdfdocument.hpp"
 #include "libqpdfpagenavigator.hpp"
+#include "libqpdfsearchmodel.hpp"
 #include "../libqpoint.hpp"
 #include "../libqsize.hpp"
 #include <string.h>
@@ -62,6 +63,18 @@ QPdfDocument* q_pdfview_document(void* self) {
     return QPdfView_Document((QPdfView*)self);
 }
 
+QPdfSearchModel* q_pdfview_search_model(void* self) {
+    return QPdfView_SearchModel((QPdfView*)self);
+}
+
+void q_pdfview_set_search_model(void* self, void* searchModel) {
+    QPdfView_SetSearchModel((QPdfView*)self, (QPdfSearchModel*)searchModel);
+}
+
+int32_t q_pdfview_current_search_result_index(void* self) {
+    return QPdfView_CurrentSearchResultIndex((QPdfView*)self);
+}
+
 QPdfPageNavigator* q_pdfview_page_navigator(void* self) {
     return QPdfView_PageNavigator((QPdfView*)self);
 }
@@ -104,6 +117,10 @@ void q_pdfview_set_zoom_mode(void* self, int64_t mode) {
 
 void q_pdfview_set_zoom_factor(void* self, double factor) {
     QPdfView_SetZoomFactor((QPdfView*)self, factor);
+}
+
+void q_pdfview_set_current_search_result_index(void* self, int currentResult) {
+    QPdfView_SetCurrentSearchResultIndex((QPdfView*)self, currentResult);
 }
 
 void q_pdfview_document_changed(void* self, void* document) {
@@ -154,6 +171,22 @@ void q_pdfview_on_document_margins_changed(void* self, void (*slot)(void*, void*
     QPdfView_Connect_DocumentMarginsChanged((QPdfView*)self, (intptr_t)slot);
 }
 
+void q_pdfview_search_model_changed(void* self, void* searchModel) {
+    QPdfView_SearchModelChanged((QPdfView*)self, (QPdfSearchModel*)searchModel);
+}
+
+void q_pdfview_on_search_model_changed(void* self, void (*slot)(void*, void*)) {
+    QPdfView_Connect_SearchModelChanged((QPdfView*)self, (intptr_t)slot);
+}
+
+void q_pdfview_current_search_result_index_changed(void* self, int currentResult) {
+    QPdfView_CurrentSearchResultIndexChanged((QPdfView*)self, currentResult);
+}
+
+void q_pdfview_on_current_search_result_index_changed(void* self, void (*slot)(void*, int)) {
+    QPdfView_Connect_CurrentSearchResultIndexChanged((QPdfView*)self, (intptr_t)slot);
+}
+
 void q_pdfview_paint_event(void* self, void* event) {
     QPdfView_PaintEvent((QPdfView*)self, (QPaintEvent*)event);
 }
@@ -188,6 +221,42 @@ void q_pdfview_on_scroll_contents_by(void* self, void (*slot)(void*, int, int)) 
 
 void q_pdfview_qbase_scroll_contents_by(void* self, int dx, int dy) {
     QPdfView_QBaseScrollContentsBy((QPdfView*)self, dx, dy);
+}
+
+void q_pdfview_mouse_press_event(void* self, void* event) {
+    QPdfView_MousePressEvent((QPdfView*)self, (QMouseEvent*)event);
+}
+
+void q_pdfview_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
+    QPdfView_OnMousePressEvent((QPdfView*)self, (intptr_t)slot);
+}
+
+void q_pdfview_qbase_mouse_press_event(void* self, void* event) {
+    QPdfView_QBaseMousePressEvent((QPdfView*)self, (QMouseEvent*)event);
+}
+
+void q_pdfview_mouse_move_event(void* self, void* event) {
+    QPdfView_MouseMoveEvent((QPdfView*)self, (QMouseEvent*)event);
+}
+
+void q_pdfview_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
+    QPdfView_OnMouseMoveEvent((QPdfView*)self, (intptr_t)slot);
+}
+
+void q_pdfview_qbase_mouse_move_event(void* self, void* event) {
+    QPdfView_QBaseMouseMoveEvent((QPdfView*)self, (QMouseEvent*)event);
+}
+
+void q_pdfview_mouse_release_event(void* self, void* event) {
+    QPdfView_MouseReleaseEvent((QPdfView*)self, (QMouseEvent*)event);
+}
+
+void q_pdfview_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
+    QPdfView_OnMouseReleaseEvent((QPdfView*)self, (intptr_t)slot);
+}
+
+void q_pdfview_qbase_mouse_release_event(void* self, void* event) {
+    QPdfView_QBaseMouseReleaseEvent((QPdfView*)self, (QMouseEvent*)event);
 }
 
 const char* q_pdfview_tr2(const char* s, const char* c) {
@@ -1299,6 +1368,10 @@ QWidget* q_pdfview_child_at_with_q_point(void* self, void* p) {
     return QWidget_ChildAtWithQPoint((QWidget*)self, (QPoint*)p);
 }
 
+QWidget* q_pdfview_child_at_with_q_point_f(void* self, void* p) {
+    return QWidget_ChildAtWithQPointF((QWidget*)self, (QPointF*)p);
+}
+
 void q_pdfview_set_attribute(void* self, int64_t param1) {
     QWidget_SetAttribute((QWidget*)self, param1);
 }
@@ -1478,8 +1551,8 @@ QThread* q_pdfview_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_pdfview_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_pdfview_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_pdfview_start_timer(void* self, int interval) {
@@ -1488,6 +1561,10 @@ int32_t q_pdfview_start_timer(void* self, int interval) {
 
 void q_pdfview_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_pdfview_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_pdfview_children(void* self) {
@@ -1578,6 +1655,10 @@ void q_pdfview_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
+bool q_pdfview_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
+}
+
 int32_t q_pdfview_start_timer2(void* self, int interval, int64_t timerType) {
     return QObject_StartTimer2((QObject*)self, interval, timerType);
 }
@@ -1644,6 +1725,10 @@ int32_t q_pdfview_depth(void* self) {
 
 double q_pdfview_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
+}
+
+int32_t q_pdfview_encode_metric_f(int64_t metric, double value) {
+    return QPaintDevice_EncodeMetricF(metric, value);
 }
 
 QSize* q_pdfview_minimum_size_hint(void* self) {
@@ -1718,30 +1803,6 @@ void q_pdfview_on_viewport_event(void* self, bool (*slot)(void*, void*)) {
     QPdfView_OnViewportEvent((QPdfView*)self, (intptr_t)slot);
 }
 
-void q_pdfview_mouse_press_event(void* self, void* param1) {
-    QPdfView_MousePressEvent((QPdfView*)self, (QMouseEvent*)param1);
-}
-
-void q_pdfview_qbase_mouse_press_event(void* self, void* param1) {
-    QPdfView_QBaseMousePressEvent((QPdfView*)self, (QMouseEvent*)param1);
-}
-
-void q_pdfview_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QPdfView_OnMousePressEvent((QPdfView*)self, (intptr_t)slot);
-}
-
-void q_pdfview_mouse_release_event(void* self, void* param1) {
-    QPdfView_MouseReleaseEvent((QPdfView*)self, (QMouseEvent*)param1);
-}
-
-void q_pdfview_qbase_mouse_release_event(void* self, void* param1) {
-    QPdfView_QBaseMouseReleaseEvent((QPdfView*)self, (QMouseEvent*)param1);
-}
-
-void q_pdfview_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QPdfView_OnMouseReleaseEvent((QPdfView*)self, (intptr_t)slot);
-}
-
 void q_pdfview_mouse_double_click_event(void* self, void* param1) {
     QPdfView_MouseDoubleClickEvent((QPdfView*)self, (QMouseEvent*)param1);
 }
@@ -1752,18 +1813,6 @@ void q_pdfview_qbase_mouse_double_click_event(void* self, void* param1) {
 
 void q_pdfview_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
     QPdfView_OnMouseDoubleClickEvent((QPdfView*)self, (intptr_t)slot);
-}
-
-void q_pdfview_mouse_move_event(void* self, void* param1) {
-    QPdfView_MouseMoveEvent((QPdfView*)self, (QMouseEvent*)param1);
-}
-
-void q_pdfview_qbase_mouse_move_event(void* self, void* param1) {
-    QPdfView_QBaseMouseMoveEvent((QPdfView*)self, (QMouseEvent*)param1);
-}
-
-void q_pdfview_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QPdfView_OnMouseMoveEvent((QPdfView*)self, (intptr_t)slot);
 }
 
 void q_pdfview_wheel_event(void* self, void* param1) {
@@ -2376,6 +2425,18 @@ bool q_pdfview_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_pdfview_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QPdfView_OnIsSignalConnected((QPdfView*)self, (intptr_t)slot);
+}
+
+double q_pdfview_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QPdfView_GetDecodedMetricF((QPdfView*)self, metricA, metricB);
+}
+
+double q_pdfview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QPdfView_QBaseGetDecodedMetricF((QPdfView*)self, metricA, metricB);
+}
+
+void q_pdfview_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
+    QPdfView_OnGetDecodedMetricF((QPdfView*)self, (intptr_t)slot);
 }
 
 void q_pdfview_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {

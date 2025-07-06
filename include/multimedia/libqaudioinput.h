@@ -12,12 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqaudiodevice.h"
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qaudioinput.html
 
 /// q_audioinput_new constructs a new QAudioInput object.
@@ -197,7 +191,7 @@ QThread* q_audioinput_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QAudioInput* self, QThread* thread ```
-void q_audioinput_move_to_thread(void* self, void* thread);
+bool q_audioinput_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -212,6 +206,13 @@ int32_t q_audioinput_start_timer(void* self, int interval);
 ///
 /// ``` QAudioInput* self, int id ```
 void q_audioinput_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QAudioInput* self, enum Qt__TimerId id ```
+void q_audioinput_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -352,6 +353,13 @@ bool q_audioinput_inherits(void* self, const char* classname);
 ///
 /// ``` QAudioInput* self ```
 void q_audioinput_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QAudioInput* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_audioinput_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

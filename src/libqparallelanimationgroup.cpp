@@ -356,7 +356,7 @@ void QParallelAnimationGroup_OnCustomEvent(QParallelAnimationGroup* self, intptr
 }
 
 // Derived class handler implementation
-void QParallelAnimationGroup_ConnectNotify(QParallelAnimationGroup* self, QMetaMethod* signal) {
+void QParallelAnimationGroup_ConnectNotify(QParallelAnimationGroup* self, const QMetaMethod* signal) {
     auto* vqparallelanimationgroup = dynamic_cast<VirtualQParallelAnimationGroup*>(self);
     if (vqparallelanimationgroup && vqparallelanimationgroup->isVirtualQParallelAnimationGroup) {
         vqparallelanimationgroup->connectNotify(*signal);
@@ -366,7 +366,7 @@ void QParallelAnimationGroup_ConnectNotify(QParallelAnimationGroup* self, QMetaM
 }
 
 // Base class handler implementation
-void QParallelAnimationGroup_QBaseConnectNotify(QParallelAnimationGroup* self, QMetaMethod* signal) {
+void QParallelAnimationGroup_QBaseConnectNotify(QParallelAnimationGroup* self, const QMetaMethod* signal) {
     auto* vqparallelanimationgroup = dynamic_cast<VirtualQParallelAnimationGroup*>(self);
     if (vqparallelanimationgroup && vqparallelanimationgroup->isVirtualQParallelAnimationGroup) {
         vqparallelanimationgroup->setQParallelAnimationGroup_ConnectNotify_IsBase(true);
@@ -385,7 +385,7 @@ void QParallelAnimationGroup_OnConnectNotify(QParallelAnimationGroup* self, intp
 }
 
 // Derived class handler implementation
-void QParallelAnimationGroup_DisconnectNotify(QParallelAnimationGroup* self, QMetaMethod* signal) {
+void QParallelAnimationGroup_DisconnectNotify(QParallelAnimationGroup* self, const QMetaMethod* signal) {
     auto* vqparallelanimationgroup = dynamic_cast<VirtualQParallelAnimationGroup*>(self);
     if (vqparallelanimationgroup && vqparallelanimationgroup->isVirtualQParallelAnimationGroup) {
         vqparallelanimationgroup->disconnectNotify(*signal);
@@ -395,7 +395,7 @@ void QParallelAnimationGroup_DisconnectNotify(QParallelAnimationGroup* self, QMe
 }
 
 // Base class handler implementation
-void QParallelAnimationGroup_QBaseDisconnectNotify(QParallelAnimationGroup* self, QMetaMethod* signal) {
+void QParallelAnimationGroup_QBaseDisconnectNotify(QParallelAnimationGroup* self, const QMetaMethod* signal) {
     auto* vqparallelanimationgroup = dynamic_cast<VirtualQParallelAnimationGroup*>(self);
     if (vqparallelanimationgroup && vqparallelanimationgroup->isVirtualQParallelAnimationGroup) {
         vqparallelanimationgroup->setQParallelAnimationGroup_DisconnectNotify_IsBase(true);
@@ -501,7 +501,7 @@ void QParallelAnimationGroup_OnReceivers(const QParallelAnimationGroup* self, in
 }
 
 // Derived class handler implementation
-bool QParallelAnimationGroup_IsSignalConnected(const QParallelAnimationGroup* self, QMetaMethod* signal) {
+bool QParallelAnimationGroup_IsSignalConnected(const QParallelAnimationGroup* self, const QMetaMethod* signal) {
     auto* vqparallelanimationgroup = const_cast<VirtualQParallelAnimationGroup*>(dynamic_cast<const VirtualQParallelAnimationGroup*>(self));
     if (vqparallelanimationgroup && vqparallelanimationgroup->isVirtualQParallelAnimationGroup) {
         return vqparallelanimationgroup->isSignalConnected(*signal);
@@ -511,7 +511,7 @@ bool QParallelAnimationGroup_IsSignalConnected(const QParallelAnimationGroup* se
 }
 
 // Base class handler implementation
-bool QParallelAnimationGroup_QBaseIsSignalConnected(const QParallelAnimationGroup* self, QMetaMethod* signal) {
+bool QParallelAnimationGroup_QBaseIsSignalConnected(const QParallelAnimationGroup* self, const QMetaMethod* signal) {
     auto* vqparallelanimationgroup = const_cast<VirtualQParallelAnimationGroup*>(dynamic_cast<const VirtualQParallelAnimationGroup*>(self));
     if (vqparallelanimationgroup && vqparallelanimationgroup->isVirtualQParallelAnimationGroup) {
         vqparallelanimationgroup->setQParallelAnimationGroup_IsSignalConnected_IsBase(true);

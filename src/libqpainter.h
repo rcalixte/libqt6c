@@ -12,28 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqbrush.h"
-#include "libqcolor.h"
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include "libqfontmetrics.h"
-#include "libqglyphrun.h"
-#include "libqimage.h"
-#include "libqline.h"
-#include "libqpaintdevice.h"
-#include "libqpaintengine.h"
-#include "libqpainterpath.h"
-#include "libqpen.h"
-#include "libqpicture.h"
-#include "libqpixmap.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqstatictext.h"
-#include <string.h>
-#include "libqtextoption.h"
-#include "libqtransform.h"
-
 /// https://doc.qt.io/qt-6/qpainter.html
 
 /// q_painter_new constructs a new QPainter object.
@@ -1149,6 +1127,16 @@ void q_painter_set_render_hints2(void* self, int64_t hints, bool on);
 void q_painter_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qpainter-pixmapfragment.html
+
+/// q_painter__pixmapfragment_new constructs a new QPainter::PixmapFragment object.
+///
+///
+QPainter__PixmapFragment* q_painter__pixmapfragment_new();
+
+/// q_painter__pixmapfragment_new2 constructs a new QPainter::PixmapFragment object.
+///
+/// ``` QPainter__PixmapFragment* param1 ```
+QPainter__PixmapFragment* q_painter__pixmapfragment_new2(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter__pixmapfragment.html#create)
 ///

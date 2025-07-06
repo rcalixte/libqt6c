@@ -67,8 +67,8 @@ class VirtualQAreaLegendMarker final : public QAreaLegendMarker {
     mutable bool qarealegendmarker_issignalconnected_isbase = false;
 
   public:
-    VirtualQAreaLegendMarker(QAreaSeries* series, QLegend* legend) : QAreaLegendMarker(series, legend){};
-    VirtualQAreaLegendMarker(QAreaSeries* series, QLegend* legend, QObject* parent) : QAreaLegendMarker(series, legend, parent){};
+    VirtualQAreaLegendMarker(QAreaSeries* series, QLegend* legend) : QAreaLegendMarker(series, legend) {};
+    VirtualQAreaLegendMarker(QAreaSeries* series, QLegend* legend, QObject* parent) : QAreaLegendMarker(series, legend, parent) {};
 
     ~VirtualQAreaLegendMarker() {
         qarealegendmarker_metacall_callback = nullptr;
@@ -332,18 +332,18 @@ class VirtualQAreaLegendMarker final : public QAreaLegendMarker {
     friend void QAreaLegendMarker_QBaseChildEvent(QAreaLegendMarker* self, QChildEvent* event);
     friend void QAreaLegendMarker_CustomEvent(QAreaLegendMarker* self, QEvent* event);
     friend void QAreaLegendMarker_QBaseCustomEvent(QAreaLegendMarker* self, QEvent* event);
-    friend void QAreaLegendMarker_ConnectNotify(QAreaLegendMarker* self, QMetaMethod* signal);
-    friend void QAreaLegendMarker_QBaseConnectNotify(QAreaLegendMarker* self, QMetaMethod* signal);
-    friend void QAreaLegendMarker_DisconnectNotify(QAreaLegendMarker* self, QMetaMethod* signal);
-    friend void QAreaLegendMarker_QBaseDisconnectNotify(QAreaLegendMarker* self, QMetaMethod* signal);
+    friend void QAreaLegendMarker_ConnectNotify(QAreaLegendMarker* self, const QMetaMethod* signal);
+    friend void QAreaLegendMarker_QBaseConnectNotify(QAreaLegendMarker* self, const QMetaMethod* signal);
+    friend void QAreaLegendMarker_DisconnectNotify(QAreaLegendMarker* self, const QMetaMethod* signal);
+    friend void QAreaLegendMarker_QBaseDisconnectNotify(QAreaLegendMarker* self, const QMetaMethod* signal);
     friend QObject* QAreaLegendMarker_Sender(const QAreaLegendMarker* self);
     friend QObject* QAreaLegendMarker_QBaseSender(const QAreaLegendMarker* self);
     friend int QAreaLegendMarker_SenderSignalIndex(const QAreaLegendMarker* self);
     friend int QAreaLegendMarker_QBaseSenderSignalIndex(const QAreaLegendMarker* self);
     friend int QAreaLegendMarker_Receivers(const QAreaLegendMarker* self, const char* signal);
     friend int QAreaLegendMarker_QBaseReceivers(const QAreaLegendMarker* self, const char* signal);
-    friend bool QAreaLegendMarker_IsSignalConnected(const QAreaLegendMarker* self, QMetaMethod* signal);
-    friend bool QAreaLegendMarker_QBaseIsSignalConnected(const QAreaLegendMarker* self, QMetaMethod* signal);
+    friend bool QAreaLegendMarker_IsSignalConnected(const QAreaLegendMarker* self, const QMetaMethod* signal);
+    friend bool QAreaLegendMarker_QBaseIsSignalConnected(const QAreaLegendMarker* self, const QMetaMethod* signal);
 };
 
 #endif

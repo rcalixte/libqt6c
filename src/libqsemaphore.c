@@ -1,3 +1,4 @@
+#include "libqdeadlinetimer.hpp"
 #include "libqsemaphore.hpp"
 #include "libqsemaphore.h"
 
@@ -21,6 +22,10 @@ bool q_semaphore_try_acquire2(void* self, int n, int timeout) {
     return QSemaphore_TryAcquire2((QSemaphore*)self, n, timeout);
 }
 
+bool q_semaphore_try_acquire3(void* self, int n, void* timeout) {
+    return QSemaphore_TryAcquire3((QSemaphore*)self, n, (QDeadlineTimer*)timeout);
+}
+
 void q_semaphore_release(void* self) {
     QSemaphore_Release((QSemaphore*)self);
 }
@@ -29,8 +34,8 @@ int32_t q_semaphore_available(void* self) {
     return QSemaphore_Available((QSemaphore*)self);
 }
 
-bool q_semaphore_try_acquire3(void* self) {
-    return QSemaphore_TryAcquire3((QSemaphore*)self);
+bool q_semaphore_try_acquire4(void* self) {
+    return QSemaphore_TryAcquire4((QSemaphore*)self);
 }
 
 void q_semaphore_acquire1(void* self, int n) {

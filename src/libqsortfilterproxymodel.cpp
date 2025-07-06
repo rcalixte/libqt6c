@@ -4,6 +4,7 @@
 #include <QChildEvent>
 #include <QDataStream>
 #include <QEvent>
+#include <QHash>
 #include <QItemSelection>
 #include <QList>
 #include <QMap>
@@ -165,21 +166,21 @@ void QSortFilterProxyModel_SetAutoAcceptChildRows(QSortFilterProxyModel* self, b
     self->setAutoAcceptChildRows(accept);
 }
 
-void QSortFilterProxyModel_SetFilterRegularExpression(QSortFilterProxyModel* self, libqt_string pattern) {
+void QSortFilterProxyModel_SetFilterRegularExpression(QSortFilterProxyModel* self, const libqt_string pattern) {
     QString pattern_QString = QString::fromUtf8(pattern.data, pattern.len);
     self->setFilterRegularExpression(pattern_QString);
 }
 
-void QSortFilterProxyModel_SetFilterRegularExpressionWithRegularExpression(QSortFilterProxyModel* self, QRegularExpression* regularExpression) {
+void QSortFilterProxyModel_SetFilterRegularExpressionWithRegularExpression(QSortFilterProxyModel* self, const QRegularExpression* regularExpression) {
     self->setFilterRegularExpression(*regularExpression);
 }
 
-void QSortFilterProxyModel_SetFilterWildcard(QSortFilterProxyModel* self, libqt_string pattern) {
+void QSortFilterProxyModel_SetFilterWildcard(QSortFilterProxyModel* self, const libqt_string pattern) {
     QString pattern_QString = QString::fromUtf8(pattern.data, pattern.len);
     self->setFilterWildcard(pattern_QString);
 }
 
-void QSortFilterProxyModel_SetFilterFixedString(QSortFilterProxyModel* self, libqt_string pattern) {
+void QSortFilterProxyModel_SetFilterFixedString(QSortFilterProxyModel* self, const libqt_string pattern) {
     QString pattern_QString = QString::fromUtf8(pattern.data, pattern.len);
     self->setFilterFixedString(pattern_QString);
 }
@@ -338,7 +339,7 @@ void QSortFilterProxyModel_OnSetSourceModel(QSortFilterProxyModel* self, intptr_
 }
 
 // Derived class handler implementation
-QModelIndex* QSortFilterProxyModel_MapToSource(const QSortFilterProxyModel* self, QModelIndex* proxyIndex) {
+QModelIndex* QSortFilterProxyModel_MapToSource(const QSortFilterProxyModel* self, const QModelIndex* proxyIndex) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return new QModelIndex(vqsortfilterproxymodel->mapToSource(*proxyIndex));
@@ -348,7 +349,7 @@ QModelIndex* QSortFilterProxyModel_MapToSource(const QSortFilterProxyModel* self
 }
 
 // Base class handler implementation
-QModelIndex* QSortFilterProxyModel_QBaseMapToSource(const QSortFilterProxyModel* self, QModelIndex* proxyIndex) {
+QModelIndex* QSortFilterProxyModel_QBaseMapToSource(const QSortFilterProxyModel* self, const QModelIndex* proxyIndex) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_MapToSource_IsBase(true);
@@ -367,7 +368,7 @@ void QSortFilterProxyModel_OnMapToSource(const QSortFilterProxyModel* self, intp
 }
 
 // Derived class handler implementation
-QModelIndex* QSortFilterProxyModel_MapFromSource(const QSortFilterProxyModel* self, QModelIndex* sourceIndex) {
+QModelIndex* QSortFilterProxyModel_MapFromSource(const QSortFilterProxyModel* self, const QModelIndex* sourceIndex) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return new QModelIndex(vqsortfilterproxymodel->mapFromSource(*sourceIndex));
@@ -377,7 +378,7 @@ QModelIndex* QSortFilterProxyModel_MapFromSource(const QSortFilterProxyModel* se
 }
 
 // Base class handler implementation
-QModelIndex* QSortFilterProxyModel_QBaseMapFromSource(const QSortFilterProxyModel* self, QModelIndex* sourceIndex) {
+QModelIndex* QSortFilterProxyModel_QBaseMapFromSource(const QSortFilterProxyModel* self, const QModelIndex* sourceIndex) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_MapFromSource_IsBase(true);
@@ -396,7 +397,7 @@ void QSortFilterProxyModel_OnMapFromSource(const QSortFilterProxyModel* self, in
 }
 
 // Derived class handler implementation
-QItemSelection* QSortFilterProxyModel_MapSelectionToSource(const QSortFilterProxyModel* self, QItemSelection* proxySelection) {
+QItemSelection* QSortFilterProxyModel_MapSelectionToSource(const QSortFilterProxyModel* self, const QItemSelection* proxySelection) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return new QItemSelection(vqsortfilterproxymodel->mapSelectionToSource(*proxySelection));
@@ -406,7 +407,7 @@ QItemSelection* QSortFilterProxyModel_MapSelectionToSource(const QSortFilterProx
 }
 
 // Base class handler implementation
-QItemSelection* QSortFilterProxyModel_QBaseMapSelectionToSource(const QSortFilterProxyModel* self, QItemSelection* proxySelection) {
+QItemSelection* QSortFilterProxyModel_QBaseMapSelectionToSource(const QSortFilterProxyModel* self, const QItemSelection* proxySelection) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_MapSelectionToSource_IsBase(true);
@@ -425,7 +426,7 @@ void QSortFilterProxyModel_OnMapSelectionToSource(const QSortFilterProxyModel* s
 }
 
 // Derived class handler implementation
-QItemSelection* QSortFilterProxyModel_MapSelectionFromSource(const QSortFilterProxyModel* self, QItemSelection* sourceSelection) {
+QItemSelection* QSortFilterProxyModel_MapSelectionFromSource(const QSortFilterProxyModel* self, const QItemSelection* sourceSelection) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return new QItemSelection(vqsortfilterproxymodel->mapSelectionFromSource(*sourceSelection));
@@ -435,7 +436,7 @@ QItemSelection* QSortFilterProxyModel_MapSelectionFromSource(const QSortFilterPr
 }
 
 // Base class handler implementation
-QItemSelection* QSortFilterProxyModel_QBaseMapSelectionFromSource(const QSortFilterProxyModel* self, QItemSelection* sourceSelection) {
+QItemSelection* QSortFilterProxyModel_QBaseMapSelectionFromSource(const QSortFilterProxyModel* self, const QItemSelection* sourceSelection) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_MapSelectionFromSource_IsBase(true);
@@ -454,7 +455,7 @@ void QSortFilterProxyModel_OnMapSelectionFromSource(const QSortFilterProxyModel*
 }
 
 // Derived class handler implementation
-bool QSortFilterProxyModel_FilterAcceptsRow(const QSortFilterProxyModel* self, int source_row, QModelIndex* source_parent) {
+bool QSortFilterProxyModel_FilterAcceptsRow(const QSortFilterProxyModel* self, int source_row, const QModelIndex* source_parent) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->filterAcceptsRow(static_cast<int>(source_row), *source_parent);
@@ -464,7 +465,7 @@ bool QSortFilterProxyModel_FilterAcceptsRow(const QSortFilterProxyModel* self, i
 }
 
 // Base class handler implementation
-bool QSortFilterProxyModel_QBaseFilterAcceptsRow(const QSortFilterProxyModel* self, int source_row, QModelIndex* source_parent) {
+bool QSortFilterProxyModel_QBaseFilterAcceptsRow(const QSortFilterProxyModel* self, int source_row, const QModelIndex* source_parent) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_FilterAcceptsRow_IsBase(true);
@@ -483,7 +484,7 @@ void QSortFilterProxyModel_OnFilterAcceptsRow(const QSortFilterProxyModel* self,
 }
 
 // Derived class handler implementation
-bool QSortFilterProxyModel_FilterAcceptsColumn(const QSortFilterProxyModel* self, int source_column, QModelIndex* source_parent) {
+bool QSortFilterProxyModel_FilterAcceptsColumn(const QSortFilterProxyModel* self, int source_column, const QModelIndex* source_parent) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->filterAcceptsColumn(static_cast<int>(source_column), *source_parent);
@@ -493,7 +494,7 @@ bool QSortFilterProxyModel_FilterAcceptsColumn(const QSortFilterProxyModel* self
 }
 
 // Base class handler implementation
-bool QSortFilterProxyModel_QBaseFilterAcceptsColumn(const QSortFilterProxyModel* self, int source_column, QModelIndex* source_parent) {
+bool QSortFilterProxyModel_QBaseFilterAcceptsColumn(const QSortFilterProxyModel* self, int source_column, const QModelIndex* source_parent) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_FilterAcceptsColumn_IsBase(true);
@@ -512,7 +513,7 @@ void QSortFilterProxyModel_OnFilterAcceptsColumn(const QSortFilterProxyModel* se
 }
 
 // Derived class handler implementation
-bool QSortFilterProxyModel_LessThan(const QSortFilterProxyModel* self, QModelIndex* source_left, QModelIndex* source_right) {
+bool QSortFilterProxyModel_LessThan(const QSortFilterProxyModel* self, const QModelIndex* source_left, const QModelIndex* source_right) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->lessThan(*source_left, *source_right);
@@ -522,7 +523,7 @@ bool QSortFilterProxyModel_LessThan(const QSortFilterProxyModel* self, QModelInd
 }
 
 // Base class handler implementation
-bool QSortFilterProxyModel_QBaseLessThan(const QSortFilterProxyModel* self, QModelIndex* source_left, QModelIndex* source_right) {
+bool QSortFilterProxyModel_QBaseLessThan(const QSortFilterProxyModel* self, const QModelIndex* source_left, const QModelIndex* source_right) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_LessThan_IsBase(true);
@@ -541,7 +542,7 @@ void QSortFilterProxyModel_OnLessThan(const QSortFilterProxyModel* self, intptr_
 }
 
 // Derived class handler implementation
-QModelIndex* QSortFilterProxyModel_Index(const QSortFilterProxyModel* self, int row, int column, QModelIndex* parent) {
+QModelIndex* QSortFilterProxyModel_Index(const QSortFilterProxyModel* self, int row, int column, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return new QModelIndex(vqsortfilterproxymodel->index(static_cast<int>(row), static_cast<int>(column), *parent));
@@ -551,7 +552,7 @@ QModelIndex* QSortFilterProxyModel_Index(const QSortFilterProxyModel* self, int 
 }
 
 // Base class handler implementation
-QModelIndex* QSortFilterProxyModel_QBaseIndex(const QSortFilterProxyModel* self, int row, int column, QModelIndex* parent) {
+QModelIndex* QSortFilterProxyModel_QBaseIndex(const QSortFilterProxyModel* self, int row, int column, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_Index_IsBase(true);
@@ -570,7 +571,7 @@ void QSortFilterProxyModel_OnIndex(const QSortFilterProxyModel* self, intptr_t s
 }
 
 // Derived class handler implementation
-QModelIndex* QSortFilterProxyModel_Parent(const QSortFilterProxyModel* self, QModelIndex* child) {
+QModelIndex* QSortFilterProxyModel_Parent(const QSortFilterProxyModel* self, const QModelIndex* child) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return new QModelIndex(vqsortfilterproxymodel->parent(*child));
@@ -580,7 +581,7 @@ QModelIndex* QSortFilterProxyModel_Parent(const QSortFilterProxyModel* self, QMo
 }
 
 // Base class handler implementation
-QModelIndex* QSortFilterProxyModel_QBaseParent(const QSortFilterProxyModel* self, QModelIndex* child) {
+QModelIndex* QSortFilterProxyModel_QBaseParent(const QSortFilterProxyModel* self, const QModelIndex* child) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_Parent_IsBase(true);
@@ -599,7 +600,7 @@ void QSortFilterProxyModel_OnParent(const QSortFilterProxyModel* self, intptr_t 
 }
 
 // Derived class handler implementation
-QModelIndex* QSortFilterProxyModel_Sibling(const QSortFilterProxyModel* self, int row, int column, QModelIndex* idx) {
+QModelIndex* QSortFilterProxyModel_Sibling(const QSortFilterProxyModel* self, int row, int column, const QModelIndex* idx) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return new QModelIndex(vqsortfilterproxymodel->sibling(static_cast<int>(row), static_cast<int>(column), *idx));
@@ -609,7 +610,7 @@ QModelIndex* QSortFilterProxyModel_Sibling(const QSortFilterProxyModel* self, in
 }
 
 // Base class handler implementation
-QModelIndex* QSortFilterProxyModel_QBaseSibling(const QSortFilterProxyModel* self, int row, int column, QModelIndex* idx) {
+QModelIndex* QSortFilterProxyModel_QBaseSibling(const QSortFilterProxyModel* self, int row, int column, const QModelIndex* idx) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_Sibling_IsBase(true);
@@ -628,7 +629,7 @@ void QSortFilterProxyModel_OnSibling(const QSortFilterProxyModel* self, intptr_t
 }
 
 // Derived class handler implementation
-int QSortFilterProxyModel_RowCount(const QSortFilterProxyModel* self, QModelIndex* parent) {
+int QSortFilterProxyModel_RowCount(const QSortFilterProxyModel* self, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->rowCount(*parent);
@@ -638,7 +639,7 @@ int QSortFilterProxyModel_RowCount(const QSortFilterProxyModel* self, QModelInde
 }
 
 // Base class handler implementation
-int QSortFilterProxyModel_QBaseRowCount(const QSortFilterProxyModel* self, QModelIndex* parent) {
+int QSortFilterProxyModel_QBaseRowCount(const QSortFilterProxyModel* self, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_RowCount_IsBase(true);
@@ -657,7 +658,7 @@ void QSortFilterProxyModel_OnRowCount(const QSortFilterProxyModel* self, intptr_
 }
 
 // Derived class handler implementation
-int QSortFilterProxyModel_ColumnCount(const QSortFilterProxyModel* self, QModelIndex* parent) {
+int QSortFilterProxyModel_ColumnCount(const QSortFilterProxyModel* self, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->columnCount(*parent);
@@ -667,7 +668,7 @@ int QSortFilterProxyModel_ColumnCount(const QSortFilterProxyModel* self, QModelI
 }
 
 // Base class handler implementation
-int QSortFilterProxyModel_QBaseColumnCount(const QSortFilterProxyModel* self, QModelIndex* parent) {
+int QSortFilterProxyModel_QBaseColumnCount(const QSortFilterProxyModel* self, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_ColumnCount_IsBase(true);
@@ -686,7 +687,7 @@ void QSortFilterProxyModel_OnColumnCount(const QSortFilterProxyModel* self, intp
 }
 
 // Derived class handler implementation
-bool QSortFilterProxyModel_HasChildren(const QSortFilterProxyModel* self, QModelIndex* parent) {
+bool QSortFilterProxyModel_HasChildren(const QSortFilterProxyModel* self, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->hasChildren(*parent);
@@ -696,7 +697,7 @@ bool QSortFilterProxyModel_HasChildren(const QSortFilterProxyModel* self, QModel
 }
 
 // Base class handler implementation
-bool QSortFilterProxyModel_QBaseHasChildren(const QSortFilterProxyModel* self, QModelIndex* parent) {
+bool QSortFilterProxyModel_QBaseHasChildren(const QSortFilterProxyModel* self, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_HasChildren_IsBase(true);
@@ -715,7 +716,7 @@ void QSortFilterProxyModel_OnHasChildren(const QSortFilterProxyModel* self, intp
 }
 
 // Derived class handler implementation
-QVariant* QSortFilterProxyModel_Data(const QSortFilterProxyModel* self, QModelIndex* index, int role) {
+QVariant* QSortFilterProxyModel_Data(const QSortFilterProxyModel* self, const QModelIndex* index, int role) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return new QVariant(vqsortfilterproxymodel->data(*index, static_cast<int>(role)));
@@ -725,7 +726,7 @@ QVariant* QSortFilterProxyModel_Data(const QSortFilterProxyModel* self, QModelIn
 }
 
 // Base class handler implementation
-QVariant* QSortFilterProxyModel_QBaseData(const QSortFilterProxyModel* self, QModelIndex* index, int role) {
+QVariant* QSortFilterProxyModel_QBaseData(const QSortFilterProxyModel* self, const QModelIndex* index, int role) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_Data_IsBase(true);
@@ -744,7 +745,7 @@ void QSortFilterProxyModel_OnData(const QSortFilterProxyModel* self, intptr_t sl
 }
 
 // Derived class handler implementation
-bool QSortFilterProxyModel_SetData(QSortFilterProxyModel* self, QModelIndex* index, QVariant* value, int role) {
+bool QSortFilterProxyModel_SetData(QSortFilterProxyModel* self, const QModelIndex* index, const QVariant* value, int role) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->setData(*index, *value, static_cast<int>(role));
@@ -754,7 +755,7 @@ bool QSortFilterProxyModel_SetData(QSortFilterProxyModel* self, QModelIndex* ind
 }
 
 // Base class handler implementation
-bool QSortFilterProxyModel_QBaseSetData(QSortFilterProxyModel* self, QModelIndex* index, QVariant* value, int role) {
+bool QSortFilterProxyModel_QBaseSetData(QSortFilterProxyModel* self, const QModelIndex* index, const QVariant* value, int role) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_SetData_IsBase(true);
@@ -802,7 +803,7 @@ void QSortFilterProxyModel_OnHeaderData(const QSortFilterProxyModel* self, intpt
 }
 
 // Derived class handler implementation
-bool QSortFilterProxyModel_SetHeaderData(QSortFilterProxyModel* self, int section, int orientation, QVariant* value, int role) {
+bool QSortFilterProxyModel_SetHeaderData(QSortFilterProxyModel* self, int section, int orientation, const QVariant* value, int role) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->setHeaderData(static_cast<int>(section), static_cast<Qt::Orientation>(orientation), *value, static_cast<int>(role));
@@ -812,7 +813,7 @@ bool QSortFilterProxyModel_SetHeaderData(QSortFilterProxyModel* self, int sectio
 }
 
 // Base class handler implementation
-bool QSortFilterProxyModel_QBaseSetHeaderData(QSortFilterProxyModel* self, int section, int orientation, QVariant* value, int role) {
+bool QSortFilterProxyModel_QBaseSetHeaderData(QSortFilterProxyModel* self, int section, int orientation, const QVariant* value, int role) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_SetHeaderData_IsBase(true);
@@ -831,9 +832,9 @@ void QSortFilterProxyModel_OnSetHeaderData(QSortFilterProxyModel* self, intptr_t
 }
 
 // Derived class handler implementation
-QMimeData* QSortFilterProxyModel_MimeData(const QSortFilterProxyModel* self, libqt_list /* of QModelIndex* */ indexes) {
+QMimeData* QSortFilterProxyModel_MimeData(const QSortFilterProxyModel* self, const libqt_list /* of QModelIndex* */ indexes) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
-    QModelIndexList indexes_QList;
+    QList<QModelIndex> indexes_QList;
     indexes_QList.reserve(indexes.len);
     QModelIndex** indexes_arr = static_cast<QModelIndex**>(indexes.data.ptr);
     for (size_t i = 0; i < indexes.len; ++i) {
@@ -847,9 +848,9 @@ QMimeData* QSortFilterProxyModel_MimeData(const QSortFilterProxyModel* self, lib
 }
 
 // Base class handler implementation
-QMimeData* QSortFilterProxyModel_QBaseMimeData(const QSortFilterProxyModel* self, libqt_list /* of QModelIndex* */ indexes) {
+QMimeData* QSortFilterProxyModel_QBaseMimeData(const QSortFilterProxyModel* self, const libqt_list /* of QModelIndex* */ indexes) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
-    QModelIndexList indexes_QList;
+    QList<QModelIndex> indexes_QList;
     indexes_QList.reserve(indexes.len);
     QModelIndex** indexes_arr = static_cast<QModelIndex**>(indexes.data.ptr);
     for (size_t i = 0; i < indexes.len; ++i) {
@@ -872,7 +873,7 @@ void QSortFilterProxyModel_OnMimeData(const QSortFilterProxyModel* self, intptr_
 }
 
 // Derived class handler implementation
-bool QSortFilterProxyModel_DropMimeData(QSortFilterProxyModel* self, QMimeData* data, int action, int row, int column, QModelIndex* parent) {
+bool QSortFilterProxyModel_DropMimeData(QSortFilterProxyModel* self, const QMimeData* data, int action, int row, int column, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->dropMimeData(data, static_cast<Qt::DropAction>(action), static_cast<int>(row), static_cast<int>(column), *parent);
@@ -882,7 +883,7 @@ bool QSortFilterProxyModel_DropMimeData(QSortFilterProxyModel* self, QMimeData* 
 }
 
 // Base class handler implementation
-bool QSortFilterProxyModel_QBaseDropMimeData(QSortFilterProxyModel* self, QMimeData* data, int action, int row, int column, QModelIndex* parent) {
+bool QSortFilterProxyModel_QBaseDropMimeData(QSortFilterProxyModel* self, const QMimeData* data, int action, int row, int column, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_DropMimeData_IsBase(true);
@@ -901,7 +902,7 @@ void QSortFilterProxyModel_OnDropMimeData(QSortFilterProxyModel* self, intptr_t 
 }
 
 // Derived class handler implementation
-bool QSortFilterProxyModel_InsertRows(QSortFilterProxyModel* self, int row, int count, QModelIndex* parent) {
+bool QSortFilterProxyModel_InsertRows(QSortFilterProxyModel* self, int row, int count, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->insertRows(static_cast<int>(row), static_cast<int>(count), *parent);
@@ -911,7 +912,7 @@ bool QSortFilterProxyModel_InsertRows(QSortFilterProxyModel* self, int row, int 
 }
 
 // Base class handler implementation
-bool QSortFilterProxyModel_QBaseInsertRows(QSortFilterProxyModel* self, int row, int count, QModelIndex* parent) {
+bool QSortFilterProxyModel_QBaseInsertRows(QSortFilterProxyModel* self, int row, int count, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_InsertRows_IsBase(true);
@@ -930,7 +931,7 @@ void QSortFilterProxyModel_OnInsertRows(QSortFilterProxyModel* self, intptr_t sl
 }
 
 // Derived class handler implementation
-bool QSortFilterProxyModel_InsertColumns(QSortFilterProxyModel* self, int column, int count, QModelIndex* parent) {
+bool QSortFilterProxyModel_InsertColumns(QSortFilterProxyModel* self, int column, int count, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->insertColumns(static_cast<int>(column), static_cast<int>(count), *parent);
@@ -940,7 +941,7 @@ bool QSortFilterProxyModel_InsertColumns(QSortFilterProxyModel* self, int column
 }
 
 // Base class handler implementation
-bool QSortFilterProxyModel_QBaseInsertColumns(QSortFilterProxyModel* self, int column, int count, QModelIndex* parent) {
+bool QSortFilterProxyModel_QBaseInsertColumns(QSortFilterProxyModel* self, int column, int count, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_InsertColumns_IsBase(true);
@@ -959,7 +960,7 @@ void QSortFilterProxyModel_OnInsertColumns(QSortFilterProxyModel* self, intptr_t
 }
 
 // Derived class handler implementation
-bool QSortFilterProxyModel_RemoveRows(QSortFilterProxyModel* self, int row, int count, QModelIndex* parent) {
+bool QSortFilterProxyModel_RemoveRows(QSortFilterProxyModel* self, int row, int count, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->removeRows(static_cast<int>(row), static_cast<int>(count), *parent);
@@ -969,7 +970,7 @@ bool QSortFilterProxyModel_RemoveRows(QSortFilterProxyModel* self, int row, int 
 }
 
 // Base class handler implementation
-bool QSortFilterProxyModel_QBaseRemoveRows(QSortFilterProxyModel* self, int row, int count, QModelIndex* parent) {
+bool QSortFilterProxyModel_QBaseRemoveRows(QSortFilterProxyModel* self, int row, int count, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_RemoveRows_IsBase(true);
@@ -988,7 +989,7 @@ void QSortFilterProxyModel_OnRemoveRows(QSortFilterProxyModel* self, intptr_t sl
 }
 
 // Derived class handler implementation
-bool QSortFilterProxyModel_RemoveColumns(QSortFilterProxyModel* self, int column, int count, QModelIndex* parent) {
+bool QSortFilterProxyModel_RemoveColumns(QSortFilterProxyModel* self, int column, int count, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->removeColumns(static_cast<int>(column), static_cast<int>(count), *parent);
@@ -998,7 +999,7 @@ bool QSortFilterProxyModel_RemoveColumns(QSortFilterProxyModel* self, int column
 }
 
 // Base class handler implementation
-bool QSortFilterProxyModel_QBaseRemoveColumns(QSortFilterProxyModel* self, int column, int count, QModelIndex* parent) {
+bool QSortFilterProxyModel_QBaseRemoveColumns(QSortFilterProxyModel* self, int column, int count, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_RemoveColumns_IsBase(true);
@@ -1017,7 +1018,7 @@ void QSortFilterProxyModel_OnRemoveColumns(QSortFilterProxyModel* self, intptr_t
 }
 
 // Derived class handler implementation
-void QSortFilterProxyModel_FetchMore(QSortFilterProxyModel* self, QModelIndex* parent) {
+void QSortFilterProxyModel_FetchMore(QSortFilterProxyModel* self, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->fetchMore(*parent);
@@ -1027,7 +1028,7 @@ void QSortFilterProxyModel_FetchMore(QSortFilterProxyModel* self, QModelIndex* p
 }
 
 // Base class handler implementation
-void QSortFilterProxyModel_QBaseFetchMore(QSortFilterProxyModel* self, QModelIndex* parent) {
+void QSortFilterProxyModel_QBaseFetchMore(QSortFilterProxyModel* self, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_FetchMore_IsBase(true);
@@ -1046,7 +1047,7 @@ void QSortFilterProxyModel_OnFetchMore(QSortFilterProxyModel* self, intptr_t slo
 }
 
 // Derived class handler implementation
-bool QSortFilterProxyModel_CanFetchMore(const QSortFilterProxyModel* self, QModelIndex* parent) {
+bool QSortFilterProxyModel_CanFetchMore(const QSortFilterProxyModel* self, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->canFetchMore(*parent);
@@ -1056,7 +1057,7 @@ bool QSortFilterProxyModel_CanFetchMore(const QSortFilterProxyModel* self, QMode
 }
 
 // Base class handler implementation
-bool QSortFilterProxyModel_QBaseCanFetchMore(const QSortFilterProxyModel* self, QModelIndex* parent) {
+bool QSortFilterProxyModel_QBaseCanFetchMore(const QSortFilterProxyModel* self, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_CanFetchMore_IsBase(true);
@@ -1075,7 +1076,7 @@ void QSortFilterProxyModel_OnCanFetchMore(const QSortFilterProxyModel* self, int
 }
 
 // Derived class handler implementation
-int QSortFilterProxyModel_Flags(const QSortFilterProxyModel* self, QModelIndex* index) {
+int QSortFilterProxyModel_Flags(const QSortFilterProxyModel* self, const QModelIndex* index) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return static_cast<int>(vqsortfilterproxymodel->flags(*index));
@@ -1085,7 +1086,7 @@ int QSortFilterProxyModel_Flags(const QSortFilterProxyModel* self, QModelIndex* 
 }
 
 // Base class handler implementation
-int QSortFilterProxyModel_QBaseFlags(const QSortFilterProxyModel* self, QModelIndex* index) {
+int QSortFilterProxyModel_QBaseFlags(const QSortFilterProxyModel* self, const QModelIndex* index) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_Flags_IsBase(true);
@@ -1104,7 +1105,7 @@ void QSortFilterProxyModel_OnFlags(const QSortFilterProxyModel* self, intptr_t s
 }
 
 // Derived class handler implementation
-QModelIndex* QSortFilterProxyModel_Buddy(const QSortFilterProxyModel* self, QModelIndex* index) {
+QModelIndex* QSortFilterProxyModel_Buddy(const QSortFilterProxyModel* self, const QModelIndex* index) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return new QModelIndex(vqsortfilterproxymodel->buddy(*index));
@@ -1114,7 +1115,7 @@ QModelIndex* QSortFilterProxyModel_Buddy(const QSortFilterProxyModel* self, QMod
 }
 
 // Base class handler implementation
-QModelIndex* QSortFilterProxyModel_QBaseBuddy(const QSortFilterProxyModel* self, QModelIndex* index) {
+QModelIndex* QSortFilterProxyModel_QBaseBuddy(const QSortFilterProxyModel* self, const QModelIndex* index) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_Buddy_IsBase(true);
@@ -1133,57 +1134,57 @@ void QSortFilterProxyModel_OnBuddy(const QSortFilterProxyModel* self, intptr_t s
 }
 
 // Derived class handler implementation
-libqt_list /* of QModelIndex* */ QSortFilterProxyModel_Match(const QSortFilterProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, int flags) {
+libqt_list /* of QModelIndex* */ QSortFilterProxyModel_Match(const QSortFilterProxyModel* self, const QModelIndex* start, int role, const QVariant* value, int hits, int flags) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
-        QModelIndexList _ret = vqsortfilterproxymodel->match(*start, static_cast<int>(role), *value, static_cast<int>(hits), static_cast<Qt::MatchFlags>(flags));
+        QList<QModelIndex> _ret = vqsortfilterproxymodel->match(*start, static_cast<int>(role), *value, static_cast<int>(hits), static_cast<Qt::MatchFlags>(flags));
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QModelIndexList _ret = self->QSortFilterProxyModel::match(*start, static_cast<int>(role), *value, static_cast<int>(hits), static_cast<Qt::MatchFlags>(flags));
+        QList<QModelIndex> _ret = self->QSortFilterProxyModel::match(*start, static_cast<int>(role), *value, static_cast<int>(hits), static_cast<Qt::MatchFlags>(flags));
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
 }
 
 // Base class handler implementation
-libqt_list /* of QModelIndex* */ QSortFilterProxyModel_QBaseMatch(const QSortFilterProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, int flags) {
+libqt_list /* of QModelIndex* */ QSortFilterProxyModel_QBaseMatch(const QSortFilterProxyModel* self, const QModelIndex* start, int role, const QVariant* value, int hits, int flags) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_Match_IsBase(true);
-        QModelIndexList _ret = vqsortfilterproxymodel->match(*start, static_cast<int>(role), *value, static_cast<int>(hits), static_cast<Qt::MatchFlags>(flags));
+        QList<QModelIndex> _ret = vqsortfilterproxymodel->match(*start, static_cast<int>(role), *value, static_cast<int>(hits), static_cast<Qt::MatchFlags>(flags));
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QModelIndexList _ret = self->QSortFilterProxyModel::match(*start, static_cast<int>(role), *value, static_cast<int>(hits), static_cast<Qt::MatchFlags>(flags));
+        QList<QModelIndex> _ret = self->QSortFilterProxyModel::match(*start, static_cast<int>(role), *value, static_cast<int>(hits), static_cast<Qt::MatchFlags>(flags));
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -1198,7 +1199,7 @@ void QSortFilterProxyModel_OnMatch(const QSortFilterProxyModel* self, intptr_t s
 }
 
 // Derived class handler implementation
-QSize* QSortFilterProxyModel_Span(const QSortFilterProxyModel* self, QModelIndex* index) {
+QSize* QSortFilterProxyModel_Span(const QSortFilterProxyModel* self, const QModelIndex* index) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return new QSize(vqsortfilterproxymodel->span(*index));
@@ -1208,7 +1209,7 @@ QSize* QSortFilterProxyModel_Span(const QSortFilterProxyModel* self, QModelIndex
 }
 
 // Base class handler implementation
-QSize* QSortFilterProxyModel_QBaseSpan(const QSortFilterProxyModel* self, QModelIndex* index) {
+QSize* QSortFilterProxyModel_QBaseSpan(const QSortFilterProxyModel* self, const QModelIndex* index) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_Span_IsBase(true);
@@ -1259,10 +1260,10 @@ void QSortFilterProxyModel_OnSort(QSortFilterProxyModel* self, intptr_t slot) {
 libqt_list /* of libqt_string */ QSortFilterProxyModel_MimeTypes(const QSortFilterProxyModel* self) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
-        QStringList _ret = vqsortfilterproxymodel->mimeTypes();
+        QList<QString> _ret = vqsortfilterproxymodel->mimeTypes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -1274,14 +1275,14 @@ libqt_list /* of libqt_string */ QSortFilterProxyModel_MimeTypes(const QSortFilt
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = self->QSortFilterProxyModel::mimeTypes();
+        QList<QString> _ret = self->QSortFilterProxyModel::mimeTypes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -1293,7 +1294,7 @@ libqt_list /* of libqt_string */ QSortFilterProxyModel_MimeTypes(const QSortFilt
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -1304,10 +1305,10 @@ libqt_list /* of libqt_string */ QSortFilterProxyModel_QBaseMimeTypes(const QSor
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_MimeTypes_IsBase(true);
-        QStringList _ret = vqsortfilterproxymodel->mimeTypes();
+        QList<QString> _ret = vqsortfilterproxymodel->mimeTypes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -1319,14 +1320,14 @@ libqt_list /* of libqt_string */ QSortFilterProxyModel_QBaseMimeTypes(const QSor
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = self->QSortFilterProxyModel::mimeTypes();
+        QList<QString> _ret = self->QSortFilterProxyModel::mimeTypes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -1338,7 +1339,7 @@ libqt_list /* of libqt_string */ QSortFilterProxyModel_QBaseMimeTypes(const QSor
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -1440,7 +1441,7 @@ void QSortFilterProxyModel_OnRevert(QSortFilterProxyModel* self, intptr_t slot) 
 }
 
 // Derived class handler implementation
-libqt_map /* of int to QVariant* */ QSortFilterProxyModel_ItemData(const QSortFilterProxyModel* self, QModelIndex* index) {
+libqt_map /* of int to QVariant* */ QSortFilterProxyModel_ItemData(const QSortFilterProxyModel* self, const QModelIndex* index) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         QMap<int, QVariant> _ret = vqsortfilterproxymodel->itemData(*index);
@@ -1478,7 +1479,7 @@ libqt_map /* of int to QVariant* */ QSortFilterProxyModel_ItemData(const QSortFi
 }
 
 // Base class handler implementation
-libqt_map /* of int to QVariant* */ QSortFilterProxyModel_QBaseItemData(const QSortFilterProxyModel* self, QModelIndex* index) {
+libqt_map /* of int to QVariant* */ QSortFilterProxyModel_QBaseItemData(const QSortFilterProxyModel* self, const QModelIndex* index) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_ItemData_IsBase(true);
@@ -1525,7 +1526,7 @@ void QSortFilterProxyModel_OnItemData(const QSortFilterProxyModel* self, intptr_
 }
 
 // Derived class handler implementation
-bool QSortFilterProxyModel_SetItemData(QSortFilterProxyModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ roles) {
+bool QSortFilterProxyModel_SetItemData(QSortFilterProxyModel* self, const QModelIndex* index, const libqt_map /* of int to QVariant* */ roles) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     QMap<int, QVariant> roles_QMap;
     int* roles_karr = static_cast<int*>(roles.keys);
@@ -1541,7 +1542,7 @@ bool QSortFilterProxyModel_SetItemData(QSortFilterProxyModel* self, QModelIndex*
 }
 
 // Base class handler implementation
-bool QSortFilterProxyModel_QBaseSetItemData(QSortFilterProxyModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ roles) {
+bool QSortFilterProxyModel_QBaseSetItemData(QSortFilterProxyModel* self, const QModelIndex* index, const libqt_map /* of int to QVariant* */ roles) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     QMap<int, QVariant> roles_QMap;
     int* roles_karr = static_cast<int*>(roles.keys);
@@ -1566,7 +1567,7 @@ void QSortFilterProxyModel_OnSetItemData(QSortFilterProxyModel* self, intptr_t s
 }
 
 // Derived class handler implementation
-bool QSortFilterProxyModel_ClearItemData(QSortFilterProxyModel* self, QModelIndex* index) {
+bool QSortFilterProxyModel_ClearItemData(QSortFilterProxyModel* self, const QModelIndex* index) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->clearItemData(*index);
@@ -1576,7 +1577,7 @@ bool QSortFilterProxyModel_ClearItemData(QSortFilterProxyModel* self, QModelInde
 }
 
 // Base class handler implementation
-bool QSortFilterProxyModel_QBaseClearItemData(QSortFilterProxyModel* self, QModelIndex* index) {
+bool QSortFilterProxyModel_QBaseClearItemData(QSortFilterProxyModel* self, const QModelIndex* index) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_ClearItemData_IsBase(true);
@@ -1595,7 +1596,7 @@ void QSortFilterProxyModel_OnClearItemData(QSortFilterProxyModel* self, intptr_t
 }
 
 // Derived class handler implementation
-bool QSortFilterProxyModel_CanDropMimeData(const QSortFilterProxyModel* self, QMimeData* data, int action, int row, int column, QModelIndex* parent) {
+bool QSortFilterProxyModel_CanDropMimeData(const QSortFilterProxyModel* self, const QMimeData* data, int action, int row, int column, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->canDropMimeData(data, static_cast<Qt::DropAction>(action), static_cast<int>(row), static_cast<int>(column), *parent);
@@ -1605,7 +1606,7 @@ bool QSortFilterProxyModel_CanDropMimeData(const QSortFilterProxyModel* self, QM
 }
 
 // Base class handler implementation
-bool QSortFilterProxyModel_QBaseCanDropMimeData(const QSortFilterProxyModel* self, QMimeData* data, int action, int row, int column, QModelIndex* parent) {
+bool QSortFilterProxyModel_QBaseCanDropMimeData(const QSortFilterProxyModel* self, const QMimeData* data, int action, int row, int column, const QModelIndex* parent) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_CanDropMimeData_IsBase(true);
@@ -1657,7 +1658,7 @@ libqt_map /* of int to libqt_string */ QSortFilterProxyModel_RoleNames(const QSo
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         QHash<int, QByteArray> _ret = vqsortfilterproxymodel->roleNames();
-        // Convert QMap<> from C++ memory to manually-managed C memory
+        // Convert QHash<> from C++ memory to manually-managed C memory
         int* _karr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
         libqt_string* _varr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
         int _ctr = 0;
@@ -1679,7 +1680,7 @@ libqt_map /* of int to libqt_string */ QSortFilterProxyModel_RoleNames(const QSo
         return _out;
     } else {
         QHash<int, QByteArray> _ret = self->QSortFilterProxyModel::roleNames();
-        // Convert QMap<> from C++ memory to manually-managed C memory
+        // Convert QHash<> from C++ memory to manually-managed C memory
         int* _karr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
         libqt_string* _varr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
         int _ctr = 0;
@@ -1708,7 +1709,7 @@ libqt_map /* of int to libqt_string */ QSortFilterProxyModel_QBaseRoleNames(cons
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_RoleNames_IsBase(true);
         QHash<int, QByteArray> _ret = vqsortfilterproxymodel->roleNames();
-        // Convert QMap<> from C++ memory to manually-managed C memory
+        // Convert QHash<> from C++ memory to manually-managed C memory
         int* _karr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
         libqt_string* _varr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
         int _ctr = 0;
@@ -1730,7 +1731,7 @@ libqt_map /* of int to libqt_string */ QSortFilterProxyModel_QBaseRoleNames(cons
         return _out;
     } else {
         QHash<int, QByteArray> _ret = self->QSortFilterProxyModel::roleNames();
-        // Convert QMap<> from C++ memory to manually-managed C memory
+        // Convert QHash<> from C++ memory to manually-managed C memory
         int* _karr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
         libqt_string* _varr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
         int _ctr = 0;
@@ -1762,7 +1763,7 @@ void QSortFilterProxyModel_OnRoleNames(const QSortFilterProxyModel* self, intptr
 }
 
 // Derived class handler implementation
-bool QSortFilterProxyModel_MoveRows(QSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild) {
+bool QSortFilterProxyModel_MoveRows(QSortFilterProxyModel* self, const QModelIndex* sourceParent, int sourceRow, int count, const QModelIndex* destinationParent, int destinationChild) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->moveRows(*sourceParent, static_cast<int>(sourceRow), static_cast<int>(count), *destinationParent, static_cast<int>(destinationChild));
@@ -1772,7 +1773,7 @@ bool QSortFilterProxyModel_MoveRows(QSortFilterProxyModel* self, QModelIndex* so
 }
 
 // Base class handler implementation
-bool QSortFilterProxyModel_QBaseMoveRows(QSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild) {
+bool QSortFilterProxyModel_QBaseMoveRows(QSortFilterProxyModel* self, const QModelIndex* sourceParent, int sourceRow, int count, const QModelIndex* destinationParent, int destinationChild) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_MoveRows_IsBase(true);
@@ -1791,7 +1792,7 @@ void QSortFilterProxyModel_OnMoveRows(QSortFilterProxyModel* self, intptr_t slot
 }
 
 // Derived class handler implementation
-bool QSortFilterProxyModel_MoveColumns(QSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild) {
+bool QSortFilterProxyModel_MoveColumns(QSortFilterProxyModel* self, const QModelIndex* sourceParent, int sourceColumn, int count, const QModelIndex* destinationParent, int destinationChild) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->moveColumns(*sourceParent, static_cast<int>(sourceColumn), static_cast<int>(count), *destinationParent, static_cast<int>(destinationChild));
@@ -1801,7 +1802,7 @@ bool QSortFilterProxyModel_MoveColumns(QSortFilterProxyModel* self, QModelIndex*
 }
 
 // Base class handler implementation
-bool QSortFilterProxyModel_QBaseMoveColumns(QSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild) {
+bool QSortFilterProxyModel_QBaseMoveColumns(QSortFilterProxyModel* self, const QModelIndex* sourceParent, int sourceColumn, int count, const QModelIndex* destinationParent, int destinationChild) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_MoveColumns_IsBase(true);
@@ -1820,7 +1821,7 @@ void QSortFilterProxyModel_OnMoveColumns(QSortFilterProxyModel* self, intptr_t s
 }
 
 // Derived class handler implementation
-void QSortFilterProxyModel_MultiData(const QSortFilterProxyModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan) {
+void QSortFilterProxyModel_MultiData(const QSortFilterProxyModel* self, const QModelIndex* index, QModelRoleDataSpan* roleDataSpan) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->multiData(*index, *roleDataSpan);
@@ -1830,7 +1831,7 @@ void QSortFilterProxyModel_MultiData(const QSortFilterProxyModel* self, QModelIn
 }
 
 // Base class handler implementation
-void QSortFilterProxyModel_QBaseMultiData(const QSortFilterProxyModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan) {
+void QSortFilterProxyModel_QBaseMultiData(const QSortFilterProxyModel* self, const QModelIndex* index, QModelRoleDataSpan* roleDataSpan) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_MultiData_IsBase(true);
@@ -2023,7 +2024,7 @@ void QSortFilterProxyModel_OnCustomEvent(QSortFilterProxyModel* self, intptr_t s
 }
 
 // Derived class handler implementation
-void QSortFilterProxyModel_ConnectNotify(QSortFilterProxyModel* self, QMetaMethod* signal) {
+void QSortFilterProxyModel_ConnectNotify(QSortFilterProxyModel* self, const QMetaMethod* signal) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->connectNotify(*signal);
@@ -2033,7 +2034,7 @@ void QSortFilterProxyModel_ConnectNotify(QSortFilterProxyModel* self, QMetaMetho
 }
 
 // Base class handler implementation
-void QSortFilterProxyModel_QBaseConnectNotify(QSortFilterProxyModel* self, QMetaMethod* signal) {
+void QSortFilterProxyModel_QBaseConnectNotify(QSortFilterProxyModel* self, const QMetaMethod* signal) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_ConnectNotify_IsBase(true);
@@ -2052,7 +2053,7 @@ void QSortFilterProxyModel_OnConnectNotify(QSortFilterProxyModel* self, intptr_t
 }
 
 // Derived class handler implementation
-void QSortFilterProxyModel_DisconnectNotify(QSortFilterProxyModel* self, QMetaMethod* signal) {
+void QSortFilterProxyModel_DisconnectNotify(QSortFilterProxyModel* self, const QMetaMethod* signal) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->disconnectNotify(*signal);
@@ -2062,7 +2063,7 @@ void QSortFilterProxyModel_DisconnectNotify(QSortFilterProxyModel* self, QMetaMe
 }
 
 // Base class handler implementation
-void QSortFilterProxyModel_QBaseDisconnectNotify(QSortFilterProxyModel* self, QMetaMethod* signal) {
+void QSortFilterProxyModel_QBaseDisconnectNotify(QSortFilterProxyModel* self, const QMetaMethod* signal) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_DisconnectNotify_IsBase(true);
@@ -2222,9 +2223,9 @@ void QSortFilterProxyModel_OnCreateIndex(const QSortFilterProxyModel* self, intp
 }
 
 // Derived class handler implementation
-void QSortFilterProxyModel_EncodeData(const QSortFilterProxyModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream) {
+void QSortFilterProxyModel_EncodeData(const QSortFilterProxyModel* self, const libqt_list /* of QModelIndex* */ indexes, QDataStream* stream) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
-    QModelIndexList indexes_QList;
+    QList<QModelIndex> indexes_QList;
     indexes_QList.reserve(indexes.len);
     QModelIndex** indexes_arr = static_cast<QModelIndex**>(indexes.data.ptr);
     for (size_t i = 0; i < indexes.len; ++i) {
@@ -2238,9 +2239,9 @@ void QSortFilterProxyModel_EncodeData(const QSortFilterProxyModel* self, libqt_l
 }
 
 // Base class handler implementation
-void QSortFilterProxyModel_QBaseEncodeData(const QSortFilterProxyModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream) {
+void QSortFilterProxyModel_QBaseEncodeData(const QSortFilterProxyModel* self, const libqt_list /* of QModelIndex* */ indexes, QDataStream* stream) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
-    QModelIndexList indexes_QList;
+    QList<QModelIndex> indexes_QList;
     indexes_QList.reserve(indexes.len);
     QModelIndex** indexes_arr = static_cast<QModelIndex**>(indexes.data.ptr);
     for (size_t i = 0; i < indexes.len; ++i) {
@@ -2263,7 +2264,7 @@ void QSortFilterProxyModel_OnEncodeData(const QSortFilterProxyModel* self, intpt
 }
 
 // Derived class handler implementation
-bool QSortFilterProxyModel_DecodeData(QSortFilterProxyModel* self, int row, int column, QModelIndex* parent, QDataStream* stream) {
+bool QSortFilterProxyModel_DecodeData(QSortFilterProxyModel* self, int row, int column, const QModelIndex* parent, QDataStream* stream) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->decodeData(static_cast<int>(row), static_cast<int>(column), *parent, *stream);
@@ -2273,7 +2274,7 @@ bool QSortFilterProxyModel_DecodeData(QSortFilterProxyModel* self, int row, int 
 }
 
 // Base class handler implementation
-bool QSortFilterProxyModel_QBaseDecodeData(QSortFilterProxyModel* self, int row, int column, QModelIndex* parent, QDataStream* stream) {
+bool QSortFilterProxyModel_QBaseDecodeData(QSortFilterProxyModel* self, int row, int column, const QModelIndex* parent, QDataStream* stream) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_DecodeData_IsBase(true);
@@ -2292,7 +2293,7 @@ void QSortFilterProxyModel_OnDecodeData(QSortFilterProxyModel* self, intptr_t sl
 }
 
 // Derived class handler implementation
-void QSortFilterProxyModel_BeginInsertRows(QSortFilterProxyModel* self, QModelIndex* parent, int first, int last) {
+void QSortFilterProxyModel_BeginInsertRows(QSortFilterProxyModel* self, const QModelIndex* parent, int first, int last) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->beginInsertRows(*parent, static_cast<int>(first), static_cast<int>(last));
@@ -2302,7 +2303,7 @@ void QSortFilterProxyModel_BeginInsertRows(QSortFilterProxyModel* self, QModelIn
 }
 
 // Base class handler implementation
-void QSortFilterProxyModel_QBaseBeginInsertRows(QSortFilterProxyModel* self, QModelIndex* parent, int first, int last) {
+void QSortFilterProxyModel_QBaseBeginInsertRows(QSortFilterProxyModel* self, const QModelIndex* parent, int first, int last) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_BeginInsertRows_IsBase(true);
@@ -2350,7 +2351,7 @@ void QSortFilterProxyModel_OnEndInsertRows(QSortFilterProxyModel* self, intptr_t
 }
 
 // Derived class handler implementation
-void QSortFilterProxyModel_BeginRemoveRows(QSortFilterProxyModel* self, QModelIndex* parent, int first, int last) {
+void QSortFilterProxyModel_BeginRemoveRows(QSortFilterProxyModel* self, const QModelIndex* parent, int first, int last) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->beginRemoveRows(*parent, static_cast<int>(first), static_cast<int>(last));
@@ -2360,7 +2361,7 @@ void QSortFilterProxyModel_BeginRemoveRows(QSortFilterProxyModel* self, QModelIn
 }
 
 // Base class handler implementation
-void QSortFilterProxyModel_QBaseBeginRemoveRows(QSortFilterProxyModel* self, QModelIndex* parent, int first, int last) {
+void QSortFilterProxyModel_QBaseBeginRemoveRows(QSortFilterProxyModel* self, const QModelIndex* parent, int first, int last) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_BeginRemoveRows_IsBase(true);
@@ -2408,7 +2409,7 @@ void QSortFilterProxyModel_OnEndRemoveRows(QSortFilterProxyModel* self, intptr_t
 }
 
 // Derived class handler implementation
-bool QSortFilterProxyModel_BeginMoveRows(QSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow) {
+bool QSortFilterProxyModel_BeginMoveRows(QSortFilterProxyModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationRow) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->beginMoveRows(*sourceParent, static_cast<int>(sourceFirst), static_cast<int>(sourceLast), *destinationParent, static_cast<int>(destinationRow));
@@ -2418,7 +2419,7 @@ bool QSortFilterProxyModel_BeginMoveRows(QSortFilterProxyModel* self, QModelInde
 }
 
 // Base class handler implementation
-bool QSortFilterProxyModel_QBaseBeginMoveRows(QSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow) {
+bool QSortFilterProxyModel_QBaseBeginMoveRows(QSortFilterProxyModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationRow) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_BeginMoveRows_IsBase(true);
@@ -2466,7 +2467,7 @@ void QSortFilterProxyModel_OnEndMoveRows(QSortFilterProxyModel* self, intptr_t s
 }
 
 // Derived class handler implementation
-void QSortFilterProxyModel_BeginInsertColumns(QSortFilterProxyModel* self, QModelIndex* parent, int first, int last) {
+void QSortFilterProxyModel_BeginInsertColumns(QSortFilterProxyModel* self, const QModelIndex* parent, int first, int last) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->beginInsertColumns(*parent, static_cast<int>(first), static_cast<int>(last));
@@ -2476,7 +2477,7 @@ void QSortFilterProxyModel_BeginInsertColumns(QSortFilterProxyModel* self, QMode
 }
 
 // Base class handler implementation
-void QSortFilterProxyModel_QBaseBeginInsertColumns(QSortFilterProxyModel* self, QModelIndex* parent, int first, int last) {
+void QSortFilterProxyModel_QBaseBeginInsertColumns(QSortFilterProxyModel* self, const QModelIndex* parent, int first, int last) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_BeginInsertColumns_IsBase(true);
@@ -2524,7 +2525,7 @@ void QSortFilterProxyModel_OnEndInsertColumns(QSortFilterProxyModel* self, intpt
 }
 
 // Derived class handler implementation
-void QSortFilterProxyModel_BeginRemoveColumns(QSortFilterProxyModel* self, QModelIndex* parent, int first, int last) {
+void QSortFilterProxyModel_BeginRemoveColumns(QSortFilterProxyModel* self, const QModelIndex* parent, int first, int last) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->beginRemoveColumns(*parent, static_cast<int>(first), static_cast<int>(last));
@@ -2534,7 +2535,7 @@ void QSortFilterProxyModel_BeginRemoveColumns(QSortFilterProxyModel* self, QMode
 }
 
 // Base class handler implementation
-void QSortFilterProxyModel_QBaseBeginRemoveColumns(QSortFilterProxyModel* self, QModelIndex* parent, int first, int last) {
+void QSortFilterProxyModel_QBaseBeginRemoveColumns(QSortFilterProxyModel* self, const QModelIndex* parent, int first, int last) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_BeginRemoveColumns_IsBase(true);
@@ -2582,7 +2583,7 @@ void QSortFilterProxyModel_OnEndRemoveColumns(QSortFilterProxyModel* self, intpt
 }
 
 // Derived class handler implementation
-bool QSortFilterProxyModel_BeginMoveColumns(QSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn) {
+bool QSortFilterProxyModel_BeginMoveColumns(QSortFilterProxyModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationColumn) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->beginMoveColumns(*sourceParent, static_cast<int>(sourceFirst), static_cast<int>(sourceLast), *destinationParent, static_cast<int>(destinationColumn));
@@ -2592,7 +2593,7 @@ bool QSortFilterProxyModel_BeginMoveColumns(QSortFilterProxyModel* self, QModelI
 }
 
 // Base class handler implementation
-bool QSortFilterProxyModel_QBaseBeginMoveColumns(QSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn) {
+bool QSortFilterProxyModel_QBaseBeginMoveColumns(QSortFilterProxyModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationColumn) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_BeginMoveColumns_IsBase(true);
@@ -2698,7 +2699,7 @@ void QSortFilterProxyModel_OnEndResetModel(QSortFilterProxyModel* self, intptr_t
 }
 
 // Derived class handler implementation
-void QSortFilterProxyModel_ChangePersistentIndex(QSortFilterProxyModel* self, QModelIndex* from, QModelIndex* to) {
+void QSortFilterProxyModel_ChangePersistentIndex(QSortFilterProxyModel* self, const QModelIndex* from, const QModelIndex* to) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->changePersistentIndex(*from, *to);
@@ -2708,7 +2709,7 @@ void QSortFilterProxyModel_ChangePersistentIndex(QSortFilterProxyModel* self, QM
 }
 
 // Base class handler implementation
-void QSortFilterProxyModel_QBaseChangePersistentIndex(QSortFilterProxyModel* self, QModelIndex* from, QModelIndex* to) {
+void QSortFilterProxyModel_QBaseChangePersistentIndex(QSortFilterProxyModel* self, const QModelIndex* from, const QModelIndex* to) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_ChangePersistentIndex_IsBase(true);
@@ -2727,15 +2728,15 @@ void QSortFilterProxyModel_OnChangePersistentIndex(QSortFilterProxyModel* self, 
 }
 
 // Derived class handler implementation
-void QSortFilterProxyModel_ChangePersistentIndexList(QSortFilterProxyModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
+void QSortFilterProxyModel_ChangePersistentIndexList(QSortFilterProxyModel* self, const libqt_list /* of QModelIndex* */ from, const libqt_list /* of QModelIndex* */ to) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
-    QModelIndexList from_QList;
+    QList<QModelIndex> from_QList;
     from_QList.reserve(from.len);
     QModelIndex** from_arr = static_cast<QModelIndex**>(from.data.ptr);
     for (size_t i = 0; i < from.len; ++i) {
         from_QList.push_back(*(from_arr[i]));
     }
-    QModelIndexList to_QList;
+    QList<QModelIndex> to_QList;
     to_QList.reserve(to.len);
     QModelIndex** to_arr = static_cast<QModelIndex**>(to.data.ptr);
     for (size_t i = 0; i < to.len; ++i) {
@@ -2749,15 +2750,15 @@ void QSortFilterProxyModel_ChangePersistentIndexList(QSortFilterProxyModel* self
 }
 
 // Base class handler implementation
-void QSortFilterProxyModel_QBaseChangePersistentIndexList(QSortFilterProxyModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
+void QSortFilterProxyModel_QBaseChangePersistentIndexList(QSortFilterProxyModel* self, const libqt_list /* of QModelIndex* */ from, const libqt_list /* of QModelIndex* */ to) {
     auto* vqsortfilterproxymodel = dynamic_cast<VirtualQSortFilterProxyModel*>(self);
-    QModelIndexList from_QList;
+    QList<QModelIndex> from_QList;
     from_QList.reserve(from.len);
     QModelIndex** from_arr = static_cast<QModelIndex**>(from.data.ptr);
     for (size_t i = 0; i < from.len; ++i) {
         from_QList.push_back(*(from_arr[i]));
     }
-    QModelIndexList to_QList;
+    QList<QModelIndex> to_QList;
     to_QList.reserve(to.len);
     QModelIndex** to_arr = static_cast<QModelIndex**>(to.data.ptr);
     for (size_t i = 0; i < to.len; ++i) {
@@ -2783,25 +2784,25 @@ void QSortFilterProxyModel_OnChangePersistentIndexList(QSortFilterProxyModel* se
 libqt_list /* of QModelIndex* */ QSortFilterProxyModel_PersistentIndexList(const QSortFilterProxyModel* self) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
-        QModelIndexList _ret = vqsortfilterproxymodel->persistentIndexList();
+        QList<QModelIndex> _ret = vqsortfilterproxymodel->persistentIndexList();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QModelIndexList _ret = ((VirtualQSortFilterProxyModel*)self)->persistentIndexList();
+        QList<QModelIndex> _ret = ((VirtualQSortFilterProxyModel*)self)->persistentIndexList();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -2812,25 +2813,25 @@ libqt_list /* of QModelIndex* */ QSortFilterProxyModel_QBasePersistentIndexList(
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_PersistentIndexList_IsBase(true);
-        QModelIndexList _ret = vqsortfilterproxymodel->persistentIndexList();
+        QList<QModelIndex> _ret = vqsortfilterproxymodel->persistentIndexList();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QModelIndexList _ret = ((VirtualQSortFilterProxyModel*)self)->persistentIndexList();
+        QList<QModelIndex> _ret = ((VirtualQSortFilterProxyModel*)self)->persistentIndexList();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -2932,7 +2933,7 @@ void QSortFilterProxyModel_OnReceivers(const QSortFilterProxyModel* self, intptr
 }
 
 // Derived class handler implementation
-bool QSortFilterProxyModel_IsSignalConnected(const QSortFilterProxyModel* self, QMetaMethod* signal) {
+bool QSortFilterProxyModel_IsSignalConnected(const QSortFilterProxyModel* self, const QMetaMethod* signal) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         return vqsortfilterproxymodel->isSignalConnected(*signal);
@@ -2942,7 +2943,7 @@ bool QSortFilterProxyModel_IsSignalConnected(const QSortFilterProxyModel* self, 
 }
 
 // Base class handler implementation
-bool QSortFilterProxyModel_QBaseIsSignalConnected(const QSortFilterProxyModel* self, QMetaMethod* signal) {
+bool QSortFilterProxyModel_QBaseIsSignalConnected(const QSortFilterProxyModel* self, const QMetaMethod* signal) {
     auto* vqsortfilterproxymodel = const_cast<VirtualQSortFilterProxyModel*>(dynamic_cast<const VirtualQSortFilterProxyModel*>(self));
     if (vqsortfilterproxymodel && vqsortfilterproxymodel->isVirtualQSortFilterProxyModel) {
         vqsortfilterproxymodel->setQSortFilterProxyModel_IsSignalConnected_IsBase(true);

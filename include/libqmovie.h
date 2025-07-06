@@ -12,17 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqcolor.h"
-#include "libqiodevice.h"
-#include "libqimage.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpixmap.h"
-#include "libqrect.h"
-#include "libqsize.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qmovie.html
 
 /// q_movie_new constructs a new QMovie object.
@@ -387,7 +376,7 @@ QThread* q_movie_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QMovie* self, QThread* thread ```
-void q_movie_move_to_thread(void* self, void* thread);
+bool q_movie_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -402,6 +391,13 @@ int32_t q_movie_start_timer(void* self, int interval);
 ///
 /// ``` QMovie* self, int id ```
 void q_movie_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QMovie* self, enum Qt__TimerId id ```
+void q_movie_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -542,6 +538,13 @@ bool q_movie_inherits(void* self, const char* classname);
 ///
 /// ``` QMovie* self ```
 void q_movie_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QMovie* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_movie_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

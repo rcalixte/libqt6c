@@ -34,9 +34,9 @@ int QIconEnginePlugin_Metacall(QIconEnginePlugin* self, int param1, int param2, 
 void QIconEnginePlugin_OnMetacall(QIconEnginePlugin* self, intptr_t slot);
 int QIconEnginePlugin_QBaseMetacall(QIconEnginePlugin* self, int param1, int param2, void** param3);
 libqt_string QIconEnginePlugin_Tr(const char* s);
-QIconEngine* QIconEnginePlugin_Create(QIconEnginePlugin* self, libqt_string filename);
+QIconEngine* QIconEnginePlugin_Create(QIconEnginePlugin* self, const libqt_string filename);
 void QIconEnginePlugin_OnCreate(QIconEnginePlugin* self, intptr_t slot);
-QIconEngine* QIconEnginePlugin_QBaseCreate(QIconEnginePlugin* self, libqt_string filename);
+QIconEngine* QIconEnginePlugin_QBaseCreate(QIconEnginePlugin* self, const libqt_string filename);
 libqt_string QIconEnginePlugin_Tr2(const char* s, const char* c);
 libqt_string QIconEnginePlugin_Tr3(const char* s, const char* c, int n);
 bool QIconEnginePlugin_Event(QIconEnginePlugin* self, QEvent* event);
@@ -54,12 +54,12 @@ void QIconEnginePlugin_QBaseChildEvent(QIconEnginePlugin* self, QChildEvent* eve
 void QIconEnginePlugin_CustomEvent(QIconEnginePlugin* self, QEvent* event);
 void QIconEnginePlugin_OnCustomEvent(QIconEnginePlugin* self, intptr_t slot);
 void QIconEnginePlugin_QBaseCustomEvent(QIconEnginePlugin* self, QEvent* event);
-void QIconEnginePlugin_ConnectNotify(QIconEnginePlugin* self, QMetaMethod* signal);
+void QIconEnginePlugin_ConnectNotify(QIconEnginePlugin* self, const QMetaMethod* signal);
 void QIconEnginePlugin_OnConnectNotify(QIconEnginePlugin* self, intptr_t slot);
-void QIconEnginePlugin_QBaseConnectNotify(QIconEnginePlugin* self, QMetaMethod* signal);
-void QIconEnginePlugin_DisconnectNotify(QIconEnginePlugin* self, QMetaMethod* signal);
+void QIconEnginePlugin_QBaseConnectNotify(QIconEnginePlugin* self, const QMetaMethod* signal);
+void QIconEnginePlugin_DisconnectNotify(QIconEnginePlugin* self, const QMetaMethod* signal);
 void QIconEnginePlugin_OnDisconnectNotify(QIconEnginePlugin* self, intptr_t slot);
-void QIconEnginePlugin_QBaseDisconnectNotify(QIconEnginePlugin* self, QMetaMethod* signal);
+void QIconEnginePlugin_QBaseDisconnectNotify(QIconEnginePlugin* self, const QMetaMethod* signal);
 QObject* QIconEnginePlugin_Sender(const QIconEnginePlugin* self);
 void QIconEnginePlugin_OnSender(const QIconEnginePlugin* self, intptr_t slot);
 QObject* QIconEnginePlugin_QBaseSender(const QIconEnginePlugin* self);
@@ -69,9 +69,9 @@ int QIconEnginePlugin_QBaseSenderSignalIndex(const QIconEnginePlugin* self);
 int QIconEnginePlugin_Receivers(const QIconEnginePlugin* self, const char* signal);
 void QIconEnginePlugin_OnReceivers(const QIconEnginePlugin* self, intptr_t slot);
 int QIconEnginePlugin_QBaseReceivers(const QIconEnginePlugin* self, const char* signal);
-bool QIconEnginePlugin_IsSignalConnected(const QIconEnginePlugin* self, QMetaMethod* signal);
+bool QIconEnginePlugin_IsSignalConnected(const QIconEnginePlugin* self, const QMetaMethod* signal);
 void QIconEnginePlugin_OnIsSignalConnected(const QIconEnginePlugin* self, intptr_t slot);
-bool QIconEnginePlugin_QBaseIsSignalConnected(const QIconEnginePlugin* self, QMetaMethod* signal);
+bool QIconEnginePlugin_QBaseIsSignalConnected(const QIconEnginePlugin* self, const QMetaMethod* signal);
 void QIconEnginePlugin_Delete(QIconEnginePlugin* self);
 
 #ifdef __cplusplus

@@ -12,13 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqabstractitemmodel.h"
-#include "libqcandlestickseries.h"
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qcandlestickmodelmapper-qtcharts.html
 
 /// q_candlestickmodelmapper_new constructs a new QCandlestickModelMapper object.
@@ -453,7 +446,7 @@ QThread* q_candlestickmodelmapper_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QCandlestickModelMapper* self, QThread* thread ```
-void q_candlestickmodelmapper_move_to_thread(void* self, void* thread);
+bool q_candlestickmodelmapper_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -468,6 +461,13 @@ int32_t q_candlestickmodelmapper_start_timer(void* self, int interval);
 ///
 /// ``` QCandlestickModelMapper* self, int id ```
 void q_candlestickmodelmapper_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QCandlestickModelMapper* self, enum Qt__TimerId id ```
+void q_candlestickmodelmapper_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -608,6 +608,13 @@ bool q_candlestickmodelmapper_inherits(void* self, const char* classname);
 ///
 /// ``` QCandlestickModelMapper* self ```
 void q_candlestickmodelmapper_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QCandlestickModelMapper* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_candlestickmodelmapper_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

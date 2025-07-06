@@ -12,18 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractsocket.h"
-#include "../libqevent.h"
-#include "libqhostaddress.h"
-#include "../libqiodevice.h"
-#include "../libqiodevicebase.h"
-#include "../libqmetaobject.h"
-#include "libqnetworkdatagram.h"
-#include "libqnetworkinterface.h"
-#include "../libqobject.h"
-#include <string.h>
-#include "../libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qudpsocket.html
 
 /// q_udpsocket_new constructs a new QUdpSocket object.
@@ -774,7 +762,7 @@ QThread* q_udpsocket_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QUdpSocket* self, QThread* thread ```
-void q_udpsocket_move_to_thread(void* self, void* thread);
+bool q_udpsocket_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -789,6 +777,13 @@ int32_t q_udpsocket_start_timer(void* self, int interval);
 ///
 /// ``` QUdpSocket* self, int id ```
 void q_udpsocket_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QUdpSocket* self, enum Qt__TimerId id ```
+void q_udpsocket_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -929,6 +924,13 @@ bool q_udpsocket_inherits(void* self, const char* classname);
 ///
 /// ``` QUdpSocket* self ```
 void q_udpsocket_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QUdpSocket* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_udpsocket_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

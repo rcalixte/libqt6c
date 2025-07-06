@@ -22,8 +22,10 @@
 #include <QWebChannel>
 #include <QWebEngineCertificateError>
 #include <QWebEngineClientCertificateSelection>
+#include <QWebEngineDesktopMediaRequest>
 #include <QWebEngineFileSystemAccessRequest>
 #include <QWebEngineFindTextResult>
+#include <QWebEngineFrame>
 #include <QWebEngineFullScreenRequest>
 #include <QWebEngineHistory>
 #include <QWebEngineHttpRequest>
@@ -31,12 +33,14 @@
 #include <QWebEngineNavigationRequest>
 #include <QWebEngineNewWindowRequest>
 #include <QWebEnginePage>
+#include <QWebEnginePermission>
 #include <QWebEngineProfile>
 #include <QWebEngineQuotaRequest>
 #include <QWebEngineRegisterProtocolHandlerRequest>
 #include <QWebEngineScriptCollection>
 #include <QWebEngineSettings>
 #include <QWebEngineUrlRequestInterceptor>
+#include <QWebEngineWebAuthUxRequest>
 #include <qwebenginepage.h>
 #include "libqwebenginepage.hpp"
 #include "libqwebenginepage.hxx"
@@ -133,37 +137,33 @@ QAction* QWebEnginePage_Action(const QWebEnginePage* self, int action) {
     return self->action(static_cast<QWebEnginePage::WebAction>(action));
 }
 
-void QWebEnginePage_ReplaceMisspelledWord(QWebEnginePage* self, libqt_string replacement) {
+void QWebEnginePage_ReplaceMisspelledWord(QWebEnginePage* self, const libqt_string replacement) {
     QString replacement_QString = QString::fromUtf8(replacement.data, replacement.len);
     self->replaceMisspelledWord(replacement_QString);
-}
-
-void QWebEnginePage_SetFeaturePermission(QWebEnginePage* self, QUrl* securityOrigin, int feature, int policy) {
-    self->setFeaturePermission(*securityOrigin, static_cast<QWebEnginePage::Feature>(feature), static_cast<QWebEnginePage::PermissionPolicy>(policy));
 }
 
 bool QWebEnginePage_IsLoading(const QWebEnginePage* self) {
     return self->isLoading();
 }
 
-void QWebEnginePage_Load(QWebEnginePage* self, QUrl* url) {
+void QWebEnginePage_Load(QWebEnginePage* self, const QUrl* url) {
     self->load(*url);
 }
 
-void QWebEnginePage_LoadWithRequest(QWebEnginePage* self, QWebEngineHttpRequest* request) {
+void QWebEnginePage_LoadWithRequest(QWebEnginePage* self, const QWebEngineHttpRequest* request) {
     self->load(*request);
 }
 
-void QWebEnginePage_Download(QWebEnginePage* self, QUrl* url) {
+void QWebEnginePage_Download(QWebEnginePage* self, const QUrl* url) {
     self->download(*url);
 }
 
-void QWebEnginePage_SetHtml(QWebEnginePage* self, libqt_string html) {
+void QWebEnginePage_SetHtml(QWebEnginePage* self, const libqt_string html) {
     QString html_QString = QString::fromUtf8(html.data, html.len);
     self->setHtml(html_QString);
 }
 
-void QWebEnginePage_SetContent(QWebEnginePage* self, libqt_string data) {
+void QWebEnginePage_SetContent(QWebEnginePage* self, const libqt_string data) {
     QByteArray data_QByteArray(data.data, data.len);
     self->setContent(data_QByteArray);
 }
@@ -180,7 +180,7 @@ libqt_string QWebEnginePage_Title(const QWebEnginePage* self) {
     return _str;
 }
 
-void QWebEnginePage_SetUrl(QWebEnginePage* self, QUrl* url) {
+void QWebEnginePage_SetUrl(QWebEnginePage* self, const QUrl* url) {
     self->setUrl(*url);
 }
 
@@ -238,11 +238,11 @@ QColor* QWebEnginePage_BackgroundColor(const QWebEnginePage* self) {
     return new QColor(self->backgroundColor());
 }
 
-void QWebEnginePage_SetBackgroundColor(QWebEnginePage* self, QColor* color) {
+void QWebEnginePage_SetBackgroundColor(QWebEnginePage* self, const QColor* color) {
     self->setBackgroundColor(*color);
 }
 
-void QWebEnginePage_Save(const QWebEnginePage* self, libqt_string filePath) {
+void QWebEnginePage_Save(const QWebEnginePage* self, const libqt_string filePath) {
     QString filePath_QString = QString::fromUtf8(filePath.data, filePath.len);
     self->save(filePath_QString);
 }
@@ -263,7 +263,7 @@ long long QWebEnginePage_RenderProcessPid(const QWebEnginePage* self) {
     return static_cast<long long>(self->renderProcessPid());
 }
 
-void QWebEnginePage_PrintToPdf(QWebEnginePage* self, libqt_string filePath) {
+void QWebEnginePage_PrintToPdf(QWebEnginePage* self, const libqt_string filePath) {
     QString filePath_QString = QString::fromUtf8(filePath.data, filePath.len);
     self->printToPdf(filePath_QString);
 }
@@ -282,6 +282,18 @@ void QWebEnginePage_SetDevToolsPage(QWebEnginePage* self, QWebEnginePage* page) 
 
 QWebEnginePage* QWebEnginePage_DevToolsPage(const QWebEnginePage* self) {
     return self->devToolsPage();
+}
+
+libqt_string QWebEnginePage_DevToolsId(const QWebEnginePage* self) {
+    QString _ret = self->devToolsId();
+    // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+    QByteArray _b = _ret.toUtf8();
+    libqt_string _str;
+    _str.len = _b.length();
+    _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+    memcpy((void*)_str.data, _b.data(), _str.len);
+    ((char*)_str.data)[_str.len] = '\0';
+    return _str;
 }
 
 void QWebEnginePage_SetUrlRequestInterceptor(QWebEnginePage* self, QWebEngineUrlRequestInterceptor* interceptor) {
@@ -306,6 +318,10 @@ bool QWebEnginePage_IsVisible(const QWebEnginePage* self) {
 
 void QWebEnginePage_SetVisible(QWebEnginePage* self, bool visible) {
     self->setVisible(visible);
+}
+
+QWebEngineFrame* QWebEnginePage_MainFrame(QWebEnginePage* self) {
+    return new QWebEngineFrame(self->mainFrame());
 }
 
 void QWebEnginePage_AcceptAsNewWindow(QWebEnginePage* self, QWebEngineNewWindowRequest* request) {
@@ -347,7 +363,7 @@ void QWebEnginePage_Connect_LoadFinished(QWebEnginePage* self, intptr_t slot) {
     });
 }
 
-void QWebEnginePage_LoadingChanged(QWebEnginePage* self, QWebEngineLoadingInfo* loadingInfo) {
+void QWebEnginePage_LoadingChanged(QWebEnginePage* self, const QWebEngineLoadingInfo* loadingInfo) {
     self->loadingChanged(*loadingInfo);
 }
 
@@ -361,7 +377,7 @@ void QWebEnginePage_Connect_LoadingChanged(QWebEnginePage* self, intptr_t slot) 
     });
 }
 
-void QWebEnginePage_LinkHovered(QWebEnginePage* self, libqt_string url) {
+void QWebEnginePage_LinkHovered(QWebEnginePage* self, const libqt_string url) {
     QString url_QString = QString::fromUtf8(url.data, url.len);
     self->linkHovered(url_QString);
 }
@@ -393,7 +409,7 @@ void QWebEnginePage_Connect_SelectionChanged(QWebEnginePage* self, intptr_t slot
     });
 }
 
-void QWebEnginePage_GeometryChangeRequested(QWebEnginePage* self, QRect* geom) {
+void QWebEnginePage_GeometryChangeRequested(QWebEnginePage* self, const QRect* geom) {
     self->geometryChangeRequested(*geom);
 }
 
@@ -418,7 +434,7 @@ void QWebEnginePage_Connect_WindowCloseRequested(QWebEnginePage* self, intptr_t 
     });
 }
 
-void QWebEnginePage_FeaturePermissionRequested(QWebEnginePage* self, QUrl* securityOrigin, int feature) {
+void QWebEnginePage_FeaturePermissionRequested(QWebEnginePage* self, const QUrl* securityOrigin, int feature) {
     self->featurePermissionRequested(*securityOrigin, static_cast<QWebEnginePage::Feature>(feature));
 }
 
@@ -433,7 +449,7 @@ void QWebEnginePage_Connect_FeaturePermissionRequested(QWebEnginePage* self, int
     });
 }
 
-void QWebEnginePage_FeaturePermissionRequestCanceled(QWebEnginePage* self, QUrl* securityOrigin, int feature) {
+void QWebEnginePage_FeaturePermissionRequestCanceled(QWebEnginePage* self, const QUrl* securityOrigin, int feature) {
     self->featurePermissionRequestCanceled(*securityOrigin, static_cast<QWebEnginePage::Feature>(feature));
 }
 
@@ -456,6 +472,18 @@ void QWebEnginePage_Connect_FullScreenRequested(QWebEnginePage* self, intptr_t s
     void (*slotFunc)(QWebEnginePage*, QWebEngineFullScreenRequest*) = reinterpret_cast<void (*)(QWebEnginePage*, QWebEngineFullScreenRequest*)>(slot);
     QWebEnginePage::connect(self, &QWebEnginePage::fullScreenRequested, [self, slotFunc](QWebEngineFullScreenRequest fullScreenRequest) {
         QWebEngineFullScreenRequest* sigval1 = new QWebEngineFullScreenRequest(fullScreenRequest);
+        slotFunc(self, sigval1);
+    });
+}
+
+void QWebEnginePage_PermissionRequested(QWebEnginePage* self, QWebEnginePermission* permissionRequest) {
+    self->permissionRequested(*permissionRequest);
+}
+
+void QWebEnginePage_Connect_PermissionRequested(QWebEnginePage* self, intptr_t slot) {
+    void (*slotFunc)(QWebEnginePage*, QWebEnginePermission*) = reinterpret_cast<void (*)(QWebEnginePage*, QWebEnginePermission*)>(slot);
+    QWebEnginePage::connect(self, &QWebEnginePage::permissionRequested, [self, slotFunc](QWebEnginePermission permissionRequest) {
+        QWebEnginePermission* sigval1 = new QWebEnginePermission(permissionRequest);
         slotFunc(self, sigval1);
     });
 }
@@ -508,7 +536,7 @@ void QWebEnginePage_Connect_SelectClientCertificate(QWebEnginePage* self, intptr
     });
 }
 
-void QWebEnginePage_AuthenticationRequired(QWebEnginePage* self, QUrl* requestUrl, QAuthenticator* authenticator) {
+void QWebEnginePage_AuthenticationRequired(QWebEnginePage* self, const QUrl* requestUrl, QAuthenticator* authenticator) {
     self->authenticationRequired(*requestUrl, authenticator);
 }
 
@@ -523,7 +551,7 @@ void QWebEnginePage_Connect_AuthenticationRequired(QWebEnginePage* self, intptr_
     });
 }
 
-void QWebEnginePage_ProxyAuthenticationRequired(QWebEnginePage* self, QUrl* requestUrl, QAuthenticator* authenticator, libqt_string proxyHost) {
+void QWebEnginePage_ProxyAuthenticationRequired(QWebEnginePage* self, const QUrl* requestUrl, QAuthenticator* authenticator, const libqt_string proxyHost) {
     QString proxyHost_QString = QString::fromUtf8(proxyHost.data, proxyHost.len);
     self->proxyAuthenticationRequired(*requestUrl, authenticator, proxyHost_QString);
 }
@@ -561,7 +589,21 @@ void QWebEnginePage_Connect_RenderProcessTerminated(QWebEnginePage* self, intptr
     });
 }
 
-void QWebEnginePage_CertificateError(QWebEnginePage* self, QWebEngineCertificateError* certificateError) {
+void QWebEnginePage_DesktopMediaRequested(QWebEnginePage* self, const QWebEngineDesktopMediaRequest* request) {
+    self->desktopMediaRequested(*request);
+}
+
+void QWebEnginePage_Connect_DesktopMediaRequested(QWebEnginePage* self, intptr_t slot) {
+    void (*slotFunc)(QWebEnginePage*, QWebEngineDesktopMediaRequest*) = reinterpret_cast<void (*)(QWebEnginePage*, QWebEngineDesktopMediaRequest*)>(slot);
+    QWebEnginePage::connect(self, &QWebEnginePage::desktopMediaRequested, [self, slotFunc](const QWebEngineDesktopMediaRequest& request) {
+        const QWebEngineDesktopMediaRequest& request_ret = request;
+        // Cast returned reference into pointer
+        QWebEngineDesktopMediaRequest* sigval1 = const_cast<QWebEngineDesktopMediaRequest*>(&request_ret);
+        slotFunc(self, sigval1);
+    });
+}
+
+void QWebEnginePage_CertificateError(QWebEnginePage* self, const QWebEngineCertificateError* certificateError) {
     self->certificateError(*certificateError);
 }
 
@@ -603,7 +645,7 @@ void QWebEnginePage_Connect_NewWindowRequested(QWebEnginePage* self, intptr_t sl
     });
 }
 
-void QWebEnginePage_TitleChanged(QWebEnginePage* self, libqt_string title) {
+void QWebEnginePage_TitleChanged(QWebEnginePage* self, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     self->titleChanged(title_QString);
 }
@@ -624,7 +666,7 @@ void QWebEnginePage_Connect_TitleChanged(QWebEnginePage* self, intptr_t slot) {
     });
 }
 
-void QWebEnginePage_UrlChanged(QWebEnginePage* self, QUrl* url) {
+void QWebEnginePage_UrlChanged(QWebEnginePage* self, const QUrl* url) {
     self->urlChanged(*url);
 }
 
@@ -638,7 +680,7 @@ void QWebEnginePage_Connect_UrlChanged(QWebEnginePage* self, intptr_t slot) {
     });
 }
 
-void QWebEnginePage_IconUrlChanged(QWebEnginePage* self, QUrl* url) {
+void QWebEnginePage_IconUrlChanged(QWebEnginePage* self, const QUrl* url) {
     self->iconUrlChanged(*url);
 }
 
@@ -652,7 +694,7 @@ void QWebEnginePage_Connect_IconUrlChanged(QWebEnginePage* self, intptr_t slot) 
     });
 }
 
-void QWebEnginePage_IconChanged(QWebEnginePage* self, QIcon* icon) {
+void QWebEnginePage_IconChanged(QWebEnginePage* self, const QIcon* icon) {
     self->iconChanged(*icon);
 }
 
@@ -666,7 +708,19 @@ void QWebEnginePage_Connect_IconChanged(QWebEnginePage* self, intptr_t slot) {
     });
 }
 
-void QWebEnginePage_ScrollPositionChanged(QWebEnginePage* self, QPointF* position) {
+void QWebEnginePage_ZoomFactorChanged(QWebEnginePage* self, double factor) {
+    self->zoomFactorChanged(static_cast<qreal>(factor));
+}
+
+void QWebEnginePage_Connect_ZoomFactorChanged(QWebEnginePage* self, intptr_t slot) {
+    void (*slotFunc)(QWebEnginePage*, double) = reinterpret_cast<void (*)(QWebEnginePage*, double)>(slot);
+    QWebEnginePage::connect(self, &QWebEnginePage::zoomFactorChanged, [self, slotFunc](qreal factor) {
+        double sigval1 = static_cast<double>(factor);
+        slotFunc(self, sigval1);
+    });
+}
+
+void QWebEnginePage_ScrollPositionChanged(QWebEnginePage* self, const QPointF* position) {
     self->scrollPositionChanged(*position);
 }
 
@@ -680,7 +734,7 @@ void QWebEnginePage_Connect_ScrollPositionChanged(QWebEnginePage* self, intptr_t
     });
 }
 
-void QWebEnginePage_ContentsSizeChanged(QWebEnginePage* self, QSizeF* size) {
+void QWebEnginePage_ContentsSizeChanged(QWebEnginePage* self, const QSizeF* size) {
     self->contentsSizeChanged(*size);
 }
 
@@ -730,7 +784,7 @@ void QWebEnginePage_Connect_RenderProcessPidChanged(QWebEnginePage* self, intptr
     });
 }
 
-void QWebEnginePage_PdfPrintingFinished(QWebEnginePage* self, libqt_string filePath, bool success) {
+void QWebEnginePage_PdfPrintingFinished(QWebEnginePage* self, const libqt_string filePath, bool success) {
     QString filePath_QString = QString::fromUtf8(filePath.data, filePath.len);
     self->pdfPrintingFinished(filePath_QString, success);
 }
@@ -760,6 +814,18 @@ void QWebEnginePage_Connect_PrintRequested(QWebEnginePage* self, intptr_t slot) 
     void (*slotFunc)(QWebEnginePage*) = reinterpret_cast<void (*)(QWebEnginePage*)>(slot);
     QWebEnginePage::connect(self, &QWebEnginePage::printRequested, [self, slotFunc]() {
         slotFunc(self);
+    });
+}
+
+void QWebEnginePage_PrintRequestedByFrame(QWebEnginePage* self, QWebEngineFrame* frame) {
+    self->printRequestedByFrame(*frame);
+}
+
+void QWebEnginePage_Connect_PrintRequestedByFrame(QWebEnginePage* self, intptr_t slot) {
+    void (*slotFunc)(QWebEnginePage*, QWebEngineFrame*) = reinterpret_cast<void (*)(QWebEnginePage*, QWebEngineFrame*)>(slot);
+    QWebEnginePage::connect(self, &QWebEnginePage::printRequestedByFrame, [self, slotFunc](QWebEngineFrame frame) {
+        QWebEngineFrame* sigval1 = new QWebEngineFrame(frame);
+        slotFunc(self, sigval1);
     });
 }
 
@@ -799,7 +865,7 @@ void QWebEnginePage_Connect_RecommendedStateChanged(QWebEnginePage* self, intptr
     });
 }
 
-void QWebEnginePage_FindTextFinished(QWebEnginePage* self, QWebEngineFindTextResult* result) {
+void QWebEnginePage_FindTextFinished(QWebEnginePage* self, const QWebEngineFindTextResult* result) {
     self->findTextFinished(*result);
 }
 
@@ -821,6 +887,18 @@ void QWebEnginePage_Connect_QAboutToDelete(QWebEnginePage* self, intptr_t slot) 
     void (*slotFunc)(QWebEnginePage*) = reinterpret_cast<void (*)(QWebEnginePage*)>(slot);
     QWebEnginePage::connect(self, &QWebEnginePage::_q_aboutToDelete, [self, slotFunc]() {
         slotFunc(self);
+    });
+}
+
+void QWebEnginePage_WebAuthUxRequested(QWebEnginePage* self, QWebEngineWebAuthUxRequest* request) {
+    self->webAuthUxRequested(request);
+}
+
+void QWebEnginePage_Connect_WebAuthUxRequested(QWebEnginePage* self, intptr_t slot) {
+    void (*slotFunc)(QWebEnginePage*, QWebEngineWebAuthUxRequest*) = reinterpret_cast<void (*)(QWebEnginePage*, QWebEngineWebAuthUxRequest*)>(slot);
+    QWebEnginePage::connect(self, &QWebEnginePage::webAuthUxRequested, [self, slotFunc](QWebEngineWebAuthUxRequest* request) {
+        QWebEngineWebAuthUxRequest* sigval1 = request;
+        slotFunc(self, sigval1);
     });
 }
 
@@ -848,23 +926,23 @@ libqt_string QWebEnginePage_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-void QWebEnginePage_Download2(QWebEnginePage* self, QUrl* url, libqt_string filename) {
+void QWebEnginePage_Download2(QWebEnginePage* self, const QUrl* url, const libqt_string filename) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     self->download(*url, filename_QString);
 }
 
-void QWebEnginePage_SetHtml2(QWebEnginePage* self, libqt_string html, QUrl* baseUrl) {
+void QWebEnginePage_SetHtml2(QWebEnginePage* self, const libqt_string html, const QUrl* baseUrl) {
     QString html_QString = QString::fromUtf8(html.data, html.len);
     self->setHtml(html_QString, *baseUrl);
 }
 
-void QWebEnginePage_SetContent2(QWebEnginePage* self, libqt_string data, libqt_string mimeType) {
+void QWebEnginePage_SetContent2(QWebEnginePage* self, const libqt_string data, const libqt_string mimeType) {
     QByteArray data_QByteArray(data.data, data.len);
     QString mimeType_QString = QString::fromUtf8(mimeType.data, mimeType.len);
     self->setContent(data_QByteArray, mimeType_QString);
 }
 
-void QWebEnginePage_SetContent3(QWebEnginePage* self, libqt_string data, libqt_string mimeType, QUrl* baseUrl) {
+void QWebEnginePage_SetContent3(QWebEnginePage* self, const libqt_string data, const libqt_string mimeType, const QUrl* baseUrl) {
     QByteArray data_QByteArray(data.data, data.len);
     QString mimeType_QString = QString::fromUtf8(mimeType.data, mimeType.len);
     self->setContent(data_QByteArray, mimeType_QString, *baseUrl);
@@ -874,17 +952,17 @@ void QWebEnginePage_SetWebChannel2(QWebEnginePage* self, QWebChannel* param1, un
     self->setWebChannel(param1, static_cast<quint32>(worldId));
 }
 
-void QWebEnginePage_Save2(const QWebEnginePage* self, libqt_string filePath, int format) {
+void QWebEnginePage_Save2(const QWebEnginePage* self, const libqt_string filePath, int format) {
     QString filePath_QString = QString::fromUtf8(filePath.data, filePath.len);
     self->save(filePath_QString, static_cast<QWebEngineDownloadRequest::SavePageFormat>(format));
 }
 
-void QWebEnginePage_PrintToPdf2(QWebEnginePage* self, libqt_string filePath, QPageLayout* layout) {
+void QWebEnginePage_PrintToPdf2(QWebEnginePage* self, const libqt_string filePath, const QPageLayout* layout) {
     QString filePath_QString = QString::fromUtf8(filePath.data, filePath.len);
     self->printToPdf(filePath_QString, *layout);
 }
 
-void QWebEnginePage_PrintToPdf3(QWebEnginePage* self, libqt_string filePath, QPageLayout* layout, QPageRanges* ranges) {
+void QWebEnginePage_PrintToPdf3(QWebEnginePage* self, const libqt_string filePath, const QPageLayout* layout, const QPageRanges* ranges) {
     QString filePath_QString = QString::fromUtf8(filePath.data, filePath.len);
     self->printToPdf(filePath_QString, *layout, *ranges);
 }
@@ -977,16 +1055,16 @@ void QWebEnginePage_OnCreateWindow(QWebEnginePage* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-libqt_list /* of libqt_string */ QWebEnginePage_ChooseFiles(QWebEnginePage* self, int mode, libqt_list /* of libqt_string */ oldFiles, libqt_list /* of libqt_string */ acceptedMimeTypes) {
+libqt_list /* of libqt_string */ QWebEnginePage_ChooseFiles(QWebEnginePage* self, int mode, const libqt_list /* of libqt_string */ oldFiles, const libqt_list /* of libqt_string */ acceptedMimeTypes) {
     auto* vqwebenginepage = dynamic_cast<VirtualQWebEnginePage*>(self);
-    QStringList oldFiles_QList;
+    QList<QString> oldFiles_QList;
     oldFiles_QList.reserve(oldFiles.len);
     libqt_string* oldFiles_arr = static_cast<libqt_string*>(oldFiles.data.ptr);
     for (size_t i = 0; i < oldFiles.len; ++i) {
         QString oldFiles_arr_i_QString = QString::fromUtf8(oldFiles_arr[i].data, oldFiles_arr[i].len);
         oldFiles_QList.push_back(oldFiles_arr_i_QString);
     }
-    QStringList acceptedMimeTypes_QList;
+    QList<QString> acceptedMimeTypes_QList;
     acceptedMimeTypes_QList.reserve(acceptedMimeTypes.len);
     libqt_string* acceptedMimeTypes_arr = static_cast<libqt_string*>(acceptedMimeTypes.data.ptr);
     for (size_t i = 0; i < acceptedMimeTypes.len; ++i) {
@@ -994,10 +1072,10 @@ libqt_list /* of libqt_string */ QWebEnginePage_ChooseFiles(QWebEnginePage* self
         acceptedMimeTypes_QList.push_back(acceptedMimeTypes_arr_i_QString);
     }
     if (vqwebenginepage && vqwebenginepage->isVirtualQWebEnginePage) {
-        QStringList _ret = vqwebenginepage->chooseFiles(static_cast<QWebEnginePage::FileSelectionMode>(mode), oldFiles_QList, acceptedMimeTypes_QList);
+        QList<QString> _ret = vqwebenginepage->chooseFiles(static_cast<QWebEnginePage::FileSelectionMode>(mode), oldFiles_QList, acceptedMimeTypes_QList);
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -1009,14 +1087,14 @@ libqt_list /* of libqt_string */ QWebEnginePage_ChooseFiles(QWebEnginePage* self
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = ((VirtualQWebEnginePage*)self)->chooseFiles(static_cast<QWebEnginePage::FileSelectionMode>(mode), oldFiles_QList, acceptedMimeTypes_QList);
+        QList<QString> _ret = ((VirtualQWebEnginePage*)self)->chooseFiles(static_cast<QWebEnginePage::FileSelectionMode>(mode), oldFiles_QList, acceptedMimeTypes_QList);
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -1028,23 +1106,23 @@ libqt_list /* of libqt_string */ QWebEnginePage_ChooseFiles(QWebEnginePage* self
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
 }
 
 // Base class handler implementation
-libqt_list /* of libqt_string */ QWebEnginePage_QBaseChooseFiles(QWebEnginePage* self, int mode, libqt_list /* of libqt_string */ oldFiles, libqt_list /* of libqt_string */ acceptedMimeTypes) {
+libqt_list /* of libqt_string */ QWebEnginePage_QBaseChooseFiles(QWebEnginePage* self, int mode, const libqt_list /* of libqt_string */ oldFiles, const libqt_list /* of libqt_string */ acceptedMimeTypes) {
     auto* vqwebenginepage = dynamic_cast<VirtualQWebEnginePage*>(self);
-    QStringList oldFiles_QList;
+    QList<QString> oldFiles_QList;
     oldFiles_QList.reserve(oldFiles.len);
     libqt_string* oldFiles_arr = static_cast<libqt_string*>(oldFiles.data.ptr);
     for (size_t i = 0; i < oldFiles.len; ++i) {
         QString oldFiles_arr_i_QString = QString::fromUtf8(oldFiles_arr[i].data, oldFiles_arr[i].len);
         oldFiles_QList.push_back(oldFiles_arr_i_QString);
     }
-    QStringList acceptedMimeTypes_QList;
+    QList<QString> acceptedMimeTypes_QList;
     acceptedMimeTypes_QList.reserve(acceptedMimeTypes.len);
     libqt_string* acceptedMimeTypes_arr = static_cast<libqt_string*>(acceptedMimeTypes.data.ptr);
     for (size_t i = 0; i < acceptedMimeTypes.len; ++i) {
@@ -1053,10 +1131,10 @@ libqt_list /* of libqt_string */ QWebEnginePage_QBaseChooseFiles(QWebEnginePage*
     }
     if (vqwebenginepage && vqwebenginepage->isVirtualQWebEnginePage) {
         vqwebenginepage->setQWebEnginePage_ChooseFiles_IsBase(true);
-        QStringList _ret = vqwebenginepage->chooseFiles(static_cast<QWebEnginePage::FileSelectionMode>(mode), oldFiles_QList, acceptedMimeTypes_QList);
+        QList<QString> _ret = vqwebenginepage->chooseFiles(static_cast<QWebEnginePage::FileSelectionMode>(mode), oldFiles_QList, acceptedMimeTypes_QList);
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -1068,14 +1146,14 @@ libqt_list /* of libqt_string */ QWebEnginePage_QBaseChooseFiles(QWebEnginePage*
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = ((VirtualQWebEnginePage*)self)->chooseFiles(static_cast<QWebEnginePage::FileSelectionMode>(mode), oldFiles_QList, acceptedMimeTypes_QList);
+        QList<QString> _ret = ((VirtualQWebEnginePage*)self)->chooseFiles(static_cast<QWebEnginePage::FileSelectionMode>(mode), oldFiles_QList, acceptedMimeTypes_QList);
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -1087,7 +1165,7 @@ libqt_list /* of libqt_string */ QWebEnginePage_QBaseChooseFiles(QWebEnginePage*
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -1102,7 +1180,7 @@ void QWebEnginePage_OnChooseFiles(QWebEnginePage* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWebEnginePage_JavaScriptAlert(QWebEnginePage* self, QUrl* securityOrigin, libqt_string msg) {
+void QWebEnginePage_JavaScriptAlert(QWebEnginePage* self, const QUrl* securityOrigin, const libqt_string msg) {
     auto* vqwebenginepage = dynamic_cast<VirtualQWebEnginePage*>(self);
     QString msg_QString = QString::fromUtf8(msg.data, msg.len);
     if (vqwebenginepage && vqwebenginepage->isVirtualQWebEnginePage) {
@@ -1113,7 +1191,7 @@ void QWebEnginePage_JavaScriptAlert(QWebEnginePage* self, QUrl* securityOrigin, 
 }
 
 // Base class handler implementation
-void QWebEnginePage_QBaseJavaScriptAlert(QWebEnginePage* self, QUrl* securityOrigin, libqt_string msg) {
+void QWebEnginePage_QBaseJavaScriptAlert(QWebEnginePage* self, const QUrl* securityOrigin, const libqt_string msg) {
     auto* vqwebenginepage = dynamic_cast<VirtualQWebEnginePage*>(self);
     QString msg_QString = QString::fromUtf8(msg.data, msg.len);
     if (vqwebenginepage && vqwebenginepage->isVirtualQWebEnginePage) {
@@ -1133,7 +1211,7 @@ void QWebEnginePage_OnJavaScriptAlert(QWebEnginePage* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QWebEnginePage_JavaScriptConfirm(QWebEnginePage* self, QUrl* securityOrigin, libqt_string msg) {
+bool QWebEnginePage_JavaScriptConfirm(QWebEnginePage* self, const QUrl* securityOrigin, const libqt_string msg) {
     auto* vqwebenginepage = dynamic_cast<VirtualQWebEnginePage*>(self);
     QString msg_QString = QString::fromUtf8(msg.data, msg.len);
     if (vqwebenginepage && vqwebenginepage->isVirtualQWebEnginePage) {
@@ -1144,7 +1222,7 @@ bool QWebEnginePage_JavaScriptConfirm(QWebEnginePage* self, QUrl* securityOrigin
 }
 
 // Base class handler implementation
-bool QWebEnginePage_QBaseJavaScriptConfirm(QWebEnginePage* self, QUrl* securityOrigin, libqt_string msg) {
+bool QWebEnginePage_QBaseJavaScriptConfirm(QWebEnginePage* self, const QUrl* securityOrigin, const libqt_string msg) {
     auto* vqwebenginepage = dynamic_cast<VirtualQWebEnginePage*>(self);
     QString msg_QString = QString::fromUtf8(msg.data, msg.len);
     if (vqwebenginepage && vqwebenginepage->isVirtualQWebEnginePage) {
@@ -1164,7 +1242,7 @@ void QWebEnginePage_OnJavaScriptConfirm(QWebEnginePage* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWebEnginePage_JavaScriptConsoleMessage(QWebEnginePage* self, int level, libqt_string message, int lineNumber, libqt_string sourceID) {
+void QWebEnginePage_JavaScriptConsoleMessage(QWebEnginePage* self, int level, const libqt_string message, int lineNumber, const libqt_string sourceID) {
     auto* vqwebenginepage = dynamic_cast<VirtualQWebEnginePage*>(self);
     QString message_QString = QString::fromUtf8(message.data, message.len);
     QString sourceID_QString = QString::fromUtf8(sourceID.data, sourceID.len);
@@ -1176,7 +1254,7 @@ void QWebEnginePage_JavaScriptConsoleMessage(QWebEnginePage* self, int level, li
 }
 
 // Base class handler implementation
-void QWebEnginePage_QBaseJavaScriptConsoleMessage(QWebEnginePage* self, int level, libqt_string message, int lineNumber, libqt_string sourceID) {
+void QWebEnginePage_QBaseJavaScriptConsoleMessage(QWebEnginePage* self, int level, const libqt_string message, int lineNumber, const libqt_string sourceID) {
     auto* vqwebenginepage = dynamic_cast<VirtualQWebEnginePage*>(self);
     QString message_QString = QString::fromUtf8(message.data, message.len);
     QString sourceID_QString = QString::fromUtf8(sourceID.data, sourceID.len);
@@ -1197,7 +1275,7 @@ void QWebEnginePage_OnJavaScriptConsoleMessage(QWebEnginePage* self, intptr_t sl
 }
 
 // Derived class handler implementation
-bool QWebEnginePage_AcceptNavigationRequest(QWebEnginePage* self, QUrl* url, int typeVal, bool isMainFrame) {
+bool QWebEnginePage_AcceptNavigationRequest(QWebEnginePage* self, const QUrl* url, int typeVal, bool isMainFrame) {
     auto* vqwebenginepage = dynamic_cast<VirtualQWebEnginePage*>(self);
     if (vqwebenginepage && vqwebenginepage->isVirtualQWebEnginePage) {
         return vqwebenginepage->acceptNavigationRequest(*url, static_cast<QWebEnginePage::NavigationType>(typeVal), isMainFrame);
@@ -1207,7 +1285,7 @@ bool QWebEnginePage_AcceptNavigationRequest(QWebEnginePage* self, QUrl* url, int
 }
 
 // Base class handler implementation
-bool QWebEnginePage_QBaseAcceptNavigationRequest(QWebEnginePage* self, QUrl* url, int typeVal, bool isMainFrame) {
+bool QWebEnginePage_QBaseAcceptNavigationRequest(QWebEnginePage* self, const QUrl* url, int typeVal, bool isMainFrame) {
     auto* vqwebenginepage = dynamic_cast<VirtualQWebEnginePage*>(self);
     if (vqwebenginepage && vqwebenginepage->isVirtualQWebEnginePage) {
         vqwebenginepage->setQWebEnginePage_AcceptNavigationRequest_IsBase(true);
@@ -1342,7 +1420,7 @@ void QWebEnginePage_OnCustomEvent(QWebEnginePage* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWebEnginePage_ConnectNotify(QWebEnginePage* self, QMetaMethod* signal) {
+void QWebEnginePage_ConnectNotify(QWebEnginePage* self, const QMetaMethod* signal) {
     auto* vqwebenginepage = dynamic_cast<VirtualQWebEnginePage*>(self);
     if (vqwebenginepage && vqwebenginepage->isVirtualQWebEnginePage) {
         vqwebenginepage->connectNotify(*signal);
@@ -1352,7 +1430,7 @@ void QWebEnginePage_ConnectNotify(QWebEnginePage* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QWebEnginePage_QBaseConnectNotify(QWebEnginePage* self, QMetaMethod* signal) {
+void QWebEnginePage_QBaseConnectNotify(QWebEnginePage* self, const QMetaMethod* signal) {
     auto* vqwebenginepage = dynamic_cast<VirtualQWebEnginePage*>(self);
     if (vqwebenginepage && vqwebenginepage->isVirtualQWebEnginePage) {
         vqwebenginepage->setQWebEnginePage_ConnectNotify_IsBase(true);
@@ -1371,7 +1449,7 @@ void QWebEnginePage_OnConnectNotify(QWebEnginePage* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWebEnginePage_DisconnectNotify(QWebEnginePage* self, QMetaMethod* signal) {
+void QWebEnginePage_DisconnectNotify(QWebEnginePage* self, const QMetaMethod* signal) {
     auto* vqwebenginepage = dynamic_cast<VirtualQWebEnginePage*>(self);
     if (vqwebenginepage && vqwebenginepage->isVirtualQWebEnginePage) {
         vqwebenginepage->disconnectNotify(*signal);
@@ -1381,7 +1459,7 @@ void QWebEnginePage_DisconnectNotify(QWebEnginePage* self, QMetaMethod* signal) 
 }
 
 // Base class handler implementation
-void QWebEnginePage_QBaseDisconnectNotify(QWebEnginePage* self, QMetaMethod* signal) {
+void QWebEnginePage_QBaseDisconnectNotify(QWebEnginePage* self, const QMetaMethod* signal) {
     auto* vqwebenginepage = dynamic_cast<VirtualQWebEnginePage*>(self);
     if (vqwebenginepage && vqwebenginepage->isVirtualQWebEnginePage) {
         vqwebenginepage->setQWebEnginePage_DisconnectNotify_IsBase(true);
@@ -1487,7 +1565,7 @@ void QWebEnginePage_OnReceivers(const QWebEnginePage* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QWebEnginePage_IsSignalConnected(const QWebEnginePage* self, QMetaMethod* signal) {
+bool QWebEnginePage_IsSignalConnected(const QWebEnginePage* self, const QMetaMethod* signal) {
     auto* vqwebenginepage = const_cast<VirtualQWebEnginePage*>(dynamic_cast<const VirtualQWebEnginePage*>(self));
     if (vqwebenginepage && vqwebenginepage->isVirtualQWebEnginePage) {
         return vqwebenginepage->isSignalConnected(*signal);
@@ -1497,7 +1575,7 @@ bool QWebEnginePage_IsSignalConnected(const QWebEnginePage* self, QMetaMethod* s
 }
 
 // Base class handler implementation
-bool QWebEnginePage_QBaseIsSignalConnected(const QWebEnginePage* self, QMetaMethod* signal) {
+bool QWebEnginePage_QBaseIsSignalConnected(const QWebEnginePage* self, const QMetaMethod* signal) {
     auto* vqwebenginepage = const_cast<VirtualQWebEnginePage*>(dynamic_cast<const VirtualQWebEnginePage*>(self));
     if (vqwebenginepage && vqwebenginepage->isVirtualQWebEnginePage) {
         vqwebenginepage->setQWebEnginePage_IsSignalConnected_IsBase(true);

@@ -61,14 +61,14 @@ class VirtualQMovie final : public QMovie {
     mutable bool qmovie_issignalconnected_isbase = false;
 
   public:
-    VirtualQMovie() : QMovie(){};
-    VirtualQMovie(QIODevice* device) : QMovie(device){};
-    VirtualQMovie(const QString& fileName) : QMovie(fileName){};
-    VirtualQMovie(QObject* parent) : QMovie(parent){};
-    VirtualQMovie(QIODevice* device, const QByteArray& format) : QMovie(device, format){};
-    VirtualQMovie(QIODevice* device, const QByteArray& format, QObject* parent) : QMovie(device, format, parent){};
-    VirtualQMovie(const QString& fileName, const QByteArray& format) : QMovie(fileName, format){};
-    VirtualQMovie(const QString& fileName, const QByteArray& format, QObject* parent) : QMovie(fileName, format, parent){};
+    VirtualQMovie() : QMovie() {};
+    VirtualQMovie(QIODevice* device) : QMovie(device) {};
+    VirtualQMovie(const QString& fileName) : QMovie(fileName) {};
+    VirtualQMovie(QObject* parent) : QMovie(parent) {};
+    VirtualQMovie(QIODevice* device, const QByteArray& format) : QMovie(device, format) {};
+    VirtualQMovie(QIODevice* device, const QByteArray& format, QObject* parent) : QMovie(device, format, parent) {};
+    VirtualQMovie(const QString& fileName, const QByteArray& format) : QMovie(fileName, format) {};
+    VirtualQMovie(const QString& fileName, const QByteArray& format, QObject* parent) : QMovie(fileName, format, parent) {};
 
     ~VirtualQMovie() {
         qmovie_metacall_callback = nullptr;
@@ -300,18 +300,18 @@ class VirtualQMovie final : public QMovie {
     friend void QMovie_QBaseChildEvent(QMovie* self, QChildEvent* event);
     friend void QMovie_CustomEvent(QMovie* self, QEvent* event);
     friend void QMovie_QBaseCustomEvent(QMovie* self, QEvent* event);
-    friend void QMovie_ConnectNotify(QMovie* self, QMetaMethod* signal);
-    friend void QMovie_QBaseConnectNotify(QMovie* self, QMetaMethod* signal);
-    friend void QMovie_DisconnectNotify(QMovie* self, QMetaMethod* signal);
-    friend void QMovie_QBaseDisconnectNotify(QMovie* self, QMetaMethod* signal);
+    friend void QMovie_ConnectNotify(QMovie* self, const QMetaMethod* signal);
+    friend void QMovie_QBaseConnectNotify(QMovie* self, const QMetaMethod* signal);
+    friend void QMovie_DisconnectNotify(QMovie* self, const QMetaMethod* signal);
+    friend void QMovie_QBaseDisconnectNotify(QMovie* self, const QMetaMethod* signal);
     friend QObject* QMovie_Sender(const QMovie* self);
     friend QObject* QMovie_QBaseSender(const QMovie* self);
     friend int QMovie_SenderSignalIndex(const QMovie* self);
     friend int QMovie_QBaseSenderSignalIndex(const QMovie* self);
     friend int QMovie_Receivers(const QMovie* self, const char* signal);
     friend int QMovie_QBaseReceivers(const QMovie* self, const char* signal);
-    friend bool QMovie_IsSignalConnected(const QMovie* self, QMetaMethod* signal);
-    friend bool QMovie_QBaseIsSignalConnected(const QMovie* self, QMetaMethod* signal);
+    friend bool QMovie_IsSignalConnected(const QMovie* self, const QMetaMethod* signal);
+    friend bool QMovie_QBaseIsSignalConnected(const QMovie* self, const QMetaMethod* signal);
 };
 
 #endif

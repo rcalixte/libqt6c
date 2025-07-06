@@ -61,10 +61,10 @@ class VirtualQAudioEngine final : public QAudioEngine {
     mutable bool qaudioengine_issignalconnected_isbase = false;
 
   public:
-    VirtualQAudioEngine() : QAudioEngine(){};
-    VirtualQAudioEngine(QObject* parent) : QAudioEngine(parent){};
-    VirtualQAudioEngine(int sampleRate) : QAudioEngine(sampleRate){};
-    VirtualQAudioEngine(int sampleRate, QObject* parent) : QAudioEngine(sampleRate, parent){};
+    VirtualQAudioEngine() : QAudioEngine() {};
+    VirtualQAudioEngine(QObject* parent) : QAudioEngine(parent) {};
+    VirtualQAudioEngine(int sampleRate) : QAudioEngine(sampleRate) {};
+    VirtualQAudioEngine(int sampleRate, QObject* parent) : QAudioEngine(sampleRate, parent) {};
 
     ~VirtualQAudioEngine() {
         qaudioengine_metacall_callback = nullptr;
@@ -296,18 +296,18 @@ class VirtualQAudioEngine final : public QAudioEngine {
     friend void QAudioEngine_QBaseChildEvent(QAudioEngine* self, QChildEvent* event);
     friend void QAudioEngine_CustomEvent(QAudioEngine* self, QEvent* event);
     friend void QAudioEngine_QBaseCustomEvent(QAudioEngine* self, QEvent* event);
-    friend void QAudioEngine_ConnectNotify(QAudioEngine* self, QMetaMethod* signal);
-    friend void QAudioEngine_QBaseConnectNotify(QAudioEngine* self, QMetaMethod* signal);
-    friend void QAudioEngine_DisconnectNotify(QAudioEngine* self, QMetaMethod* signal);
-    friend void QAudioEngine_QBaseDisconnectNotify(QAudioEngine* self, QMetaMethod* signal);
+    friend void QAudioEngine_ConnectNotify(QAudioEngine* self, const QMetaMethod* signal);
+    friend void QAudioEngine_QBaseConnectNotify(QAudioEngine* self, const QMetaMethod* signal);
+    friend void QAudioEngine_DisconnectNotify(QAudioEngine* self, const QMetaMethod* signal);
+    friend void QAudioEngine_QBaseDisconnectNotify(QAudioEngine* self, const QMetaMethod* signal);
     friend QObject* QAudioEngine_Sender(const QAudioEngine* self);
     friend QObject* QAudioEngine_QBaseSender(const QAudioEngine* self);
     friend int QAudioEngine_SenderSignalIndex(const QAudioEngine* self);
     friend int QAudioEngine_QBaseSenderSignalIndex(const QAudioEngine* self);
     friend int QAudioEngine_Receivers(const QAudioEngine* self, const char* signal);
     friend int QAudioEngine_QBaseReceivers(const QAudioEngine* self, const char* signal);
-    friend bool QAudioEngine_IsSignalConnected(const QAudioEngine* self, QMetaMethod* signal);
-    friend bool QAudioEngine_QBaseIsSignalConnected(const QAudioEngine* self, QMetaMethod* signal);
+    friend bool QAudioEngine_IsSignalConnected(const QAudioEngine* self, const QMetaMethod* signal);
+    friend bool QAudioEngine_QBaseIsSignalConnected(const QAudioEngine* self, const QMetaMethod* signal);
 };
 
 #endif

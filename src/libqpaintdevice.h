@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqpaintengine.h"
-#include "libqpainter.h"
-#include "libqpoint.h"
-
 /// https://doc.qt.io/qt-6/qpaintdevice.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devType)
@@ -98,6 +94,11 @@ int32_t q_paintdevice_depth(void* self);
 ///
 double q_paintdevice_device_pixel_ratio_f_scale();
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_paintdevice_encode_metric_f(int64_t metric, double value);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#dtor.QPaintDevice)
 ///
 /// Delete this object from C++ memory.
@@ -119,7 +120,9 @@ typedef enum {
     QPAINTDEVICE_PAINTDEVICEMETRIC_PDMPHYSICALDPIX = 9,
     QPAINTDEVICE_PAINTDEVICEMETRIC_PDMPHYSICALDPIY = 10,
     QPAINTDEVICE_PAINTDEVICEMETRIC_PDMDEVICEPIXELRATIO = 11,
-    QPAINTDEVICE_PAINTDEVICEMETRIC_PDMDEVICEPIXELRATIOSCALED = 12
+    QPAINTDEVICE_PAINTDEVICEMETRIC_PDMDEVICEPIXELRATIOSCALED = 12,
+    QPAINTDEVICE_PAINTDEVICEMETRIC_PDMDEVICEPIXELRATIOF_ENCODEDA = 13,
+    QPAINTDEVICE_PAINTDEVICEMETRIC_PDMDEVICEPIXELRATIOF_ENCODEDB = 14
 } QPaintDevice__PaintDeviceMetric;
 
 #endif

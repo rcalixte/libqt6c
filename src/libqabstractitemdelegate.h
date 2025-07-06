@@ -12,17 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractitemmodel.h"
-#include "libqabstractitemview.h"
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpainter.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqstyleoption.h"
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qabstractitemdelegate.html
 
 /// q_abstractitemdelegate_new constructs a new QAbstractItemDelegate object.
@@ -362,7 +351,7 @@ QThread* q_abstractitemdelegate_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QAbstractItemDelegate* self, QThread* thread ```
-void q_abstractitemdelegate_move_to_thread(void* self, void* thread);
+bool q_abstractitemdelegate_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -377,6 +366,13 @@ int32_t q_abstractitemdelegate_start_timer(void* self, int interval);
 ///
 /// ``` QAbstractItemDelegate* self, int id ```
 void q_abstractitemdelegate_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QAbstractItemDelegate* self, enum Qt__TimerId id ```
+void q_abstractitemdelegate_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -517,6 +513,13 @@ bool q_abstractitemdelegate_inherits(void* self, const char* classname);
 ///
 /// ``` QAbstractItemDelegate* self ```
 void q_abstractitemdelegate_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QAbstractItemDelegate* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_abstractitemdelegate_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

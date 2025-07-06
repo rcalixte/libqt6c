@@ -181,7 +181,7 @@ void q_dir_set_sorting(void* self, int64_t sort) {
     QDir_SetSorting((QDir*)self, sort);
 }
 
-uint32_t q_dir_count(void* self) {
+int64_t q_dir_count(void* self) {
     return QDir_Count((QDir*)self);
 }
 
@@ -189,7 +189,7 @@ bool q_dir_is_empty(void* self) {
     return QDir_IsEmpty((QDir*)self);
 }
 
-const char* q_dir_operator_subscript(void* self, int param1) {
+const char* q_dir_operator_subscript(void* self, long long param1) {
     libqt_string _str = QDir_OperatorSubscript((QDir*)self, param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -319,14 +319,6 @@ bool q_dir_make_absolute(void* self) {
     return QDir_MakeAbsolute((QDir*)self);
 }
 
-bool q_dir_operator_equal(void* self, void* dir) {
-    return QDir_OperatorEqual((QDir*)self, (QDir*)dir);
-}
-
-bool q_dir_operator_not_equal(void* self, void* dir) {
-    return QDir_OperatorNotEqual((QDir*)self, (QDir*)dir);
-}
-
 bool q_dir_remove(void* self, const char* fileName) {
     return QDir_Remove((QDir*)self, qstring(fileName));
 }
@@ -423,6 +415,10 @@ const char* q_dir_clean_path(const char* path) {
 
 void q_dir_refresh(void* self) {
     QDir_Refresh((QDir*)self);
+}
+
+int64_t q_dir_count1(void* self, void* param1) {
+    return QDir_Count1((QDir*)self, (Disambiguated_t*)param1);
 }
 
 bool q_dir_is_empty1(void* self, int64_t filters) {

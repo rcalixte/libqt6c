@@ -277,8 +277,8 @@ QThread* q_scilexeravs_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_scilexeravs_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_scilexeravs_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_scilexeravs_start_timer(void* self, int interval) {
@@ -287,6 +287,10 @@ int32_t q_scilexeravs_start_timer(void* self, int interval) {
 
 void q_scilexeravs_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_scilexeravs_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_scilexeravs_children(void* self) {
@@ -379,6 +383,10 @@ bool q_scilexeravs_inherits(void* self, const char* classname) {
 
 void q_scilexeravs_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_scilexeravs_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_scilexeravs_start_timer2(void* self, int interval, int64_t timerType) {
@@ -805,6 +813,42 @@ void q_scilexeravs_qbase_disconnect_notify(void* self, void* signal) {
 
 void q_scilexeravs_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
     QsciLexerAVS_OnDisconnectNotify((QsciLexerAVS*)self, (intptr_t)slot);
+}
+
+char* q_scilexeravs_text_as_bytes(void* self, const char* text) {
+    libqt_string _str = QsciLexerAVS_TextAsBytes((QsciLexerAVS*)self, qstring(text));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+char* q_scilexeravs_qbase_text_as_bytes(void* self, const char* text) {
+    libqt_string _str = QsciLexerAVS_QBaseTextAsBytes((QsciLexerAVS*)self, qstring(text));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_scilexeravs_on_text_as_bytes(void* self, char* (*slot)(void*, const char*)) {
+    QsciLexerAVS_OnTextAsBytes((QsciLexerAVS*)self, (intptr_t)slot);
+}
+
+const char* q_scilexeravs_bytes_as_text(void* self, const char* bytes, int size) {
+    libqt_string _str = QsciLexerAVS_BytesAsText((QsciLexerAVS*)self, bytes, size);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_scilexeravs_qbase_bytes_as_text(void* self, const char* bytes, int size) {
+    libqt_string _str = QsciLexerAVS_QBaseBytesAsText((QsciLexerAVS*)self, bytes, size);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_scilexeravs_on_bytes_as_text(void* self, const char* (*slot)(void*, const char*, int)) {
+    QsciLexerAVS_OnBytesAsText((QsciLexerAVS*)self, (intptr_t)slot);
 }
 
 QObject* q_scilexeravs_sender(void* self) {

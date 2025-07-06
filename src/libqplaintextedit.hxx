@@ -94,6 +94,7 @@ class VirtualQPlainTextEdit final : public QPlainTextEdit {
     using QPlainTextEdit_SenderSignalIndex_Callback = int (*)();
     using QPlainTextEdit_Receivers_Callback = int (*)(const QPlainTextEdit*, const char*);
     using QPlainTextEdit_IsSignalConnected_Callback = bool (*)(const QPlainTextEdit*, QMetaMethod*);
+    using QPlainTextEdit_GetDecodedMetricF_Callback = double (*)(const QPlainTextEdit*, int, int);
 
   protected:
     // Instance callback storage
@@ -173,6 +174,7 @@ class VirtualQPlainTextEdit final : public QPlainTextEdit {
     QPlainTextEdit_SenderSignalIndex_Callback qplaintextedit_sendersignalindex_callback = nullptr;
     QPlainTextEdit_Receivers_Callback qplaintextedit_receivers_callback = nullptr;
     QPlainTextEdit_IsSignalConnected_Callback qplaintextedit_issignalconnected_callback = nullptr;
+    QPlainTextEdit_GetDecodedMetricF_Callback qplaintextedit_getdecodedmetricf_callback = nullptr;
 
     // Instance base flags
     mutable bool qplaintextedit_metacall_isbase = false;
@@ -251,12 +253,13 @@ class VirtualQPlainTextEdit final : public QPlainTextEdit {
     mutable bool qplaintextedit_sendersignalindex_isbase = false;
     mutable bool qplaintextedit_receivers_isbase = false;
     mutable bool qplaintextedit_issignalconnected_isbase = false;
+    mutable bool qplaintextedit_getdecodedmetricf_isbase = false;
 
   public:
-    VirtualQPlainTextEdit(QWidget* parent) : QPlainTextEdit(parent){};
-    VirtualQPlainTextEdit() : QPlainTextEdit(){};
-    VirtualQPlainTextEdit(const QString& text) : QPlainTextEdit(text){};
-    VirtualQPlainTextEdit(const QString& text, QWidget* parent) : QPlainTextEdit(text, parent){};
+    VirtualQPlainTextEdit(QWidget* parent) : QPlainTextEdit(parent) {};
+    VirtualQPlainTextEdit() : QPlainTextEdit() {};
+    VirtualQPlainTextEdit(const QString& text) : QPlainTextEdit(text) {};
+    VirtualQPlainTextEdit(const QString& text, QWidget* parent) : QPlainTextEdit(text, parent) {};
 
     ~VirtualQPlainTextEdit() {
         qplaintextedit_metacall_callback = nullptr;
@@ -335,6 +338,7 @@ class VirtualQPlainTextEdit final : public QPlainTextEdit {
         qplaintextedit_sendersignalindex_callback = nullptr;
         qplaintextedit_receivers_callback = nullptr;
         qplaintextedit_issignalconnected_callback = nullptr;
+        qplaintextedit_getdecodedmetricf_callback = nullptr;
     }
 
     // Callback setters
@@ -414,6 +418,7 @@ class VirtualQPlainTextEdit final : public QPlainTextEdit {
     inline void setQPlainTextEdit_SenderSignalIndex_Callback(QPlainTextEdit_SenderSignalIndex_Callback cb) { qplaintextedit_sendersignalindex_callback = cb; }
     inline void setQPlainTextEdit_Receivers_Callback(QPlainTextEdit_Receivers_Callback cb) { qplaintextedit_receivers_callback = cb; }
     inline void setQPlainTextEdit_IsSignalConnected_Callback(QPlainTextEdit_IsSignalConnected_Callback cb) { qplaintextedit_issignalconnected_callback = cb; }
+    inline void setQPlainTextEdit_GetDecodedMetricF_Callback(QPlainTextEdit_GetDecodedMetricF_Callback cb) { qplaintextedit_getdecodedmetricf_callback = cb; }
 
     // Base flag setters
     inline void setQPlainTextEdit_Metacall_IsBase(bool value) const { qplaintextedit_metacall_isbase = value; }
@@ -492,6 +497,7 @@ class VirtualQPlainTextEdit final : public QPlainTextEdit {
     inline void setQPlainTextEdit_SenderSignalIndex_IsBase(bool value) const { qplaintextedit_sendersignalindex_isbase = value; }
     inline void setQPlainTextEdit_Receivers_IsBase(bool value) const { qplaintextedit_receivers_isbase = value; }
     inline void setQPlainTextEdit_IsSignalConnected_IsBase(bool value) const { qplaintextedit_issignalconnected_isbase = value; }
+    inline void setQPlainTextEdit_GetDecodedMetricF_IsBase(bool value) const { qplaintextedit_getdecodedmetricf_isbase = value; }
 
     // Virtual method for C ABI access and custom callback
     virtual int qt_metacall(QMetaObject::Call param1, int param2, void** param3) override {
@@ -1582,6 +1588,22 @@ class VirtualQPlainTextEdit final : public QPlainTextEdit {
         }
     }
 
+    // Virtual method for C ABI access and custom callback
+    double getDecodedMetricF(QPaintDevice::PaintDeviceMetric metricA, QPaintDevice::PaintDeviceMetric metricB) const {
+        if (qplaintextedit_getdecodedmetricf_isbase) {
+            qplaintextedit_getdecodedmetricf_isbase = false;
+            return QPlainTextEdit::getDecodedMetricF(metricA, metricB);
+        } else if (qplaintextedit_getdecodedmetricf_callback != nullptr) {
+            int cbval1 = static_cast<int>(metricA);
+            int cbval2 = static_cast<int>(metricB);
+
+            double callback_ret = qplaintextedit_getdecodedmetricf_callback(this, cbval1, cbval2);
+            return static_cast<double>(callback_ret);
+        } else {
+            return QPlainTextEdit::getDecodedMetricF(metricA, metricB);
+        }
+    }
+
     // Friend functions
     friend bool QPlainTextEdit_Event(QPlainTextEdit* self, QEvent* e);
     friend bool QPlainTextEdit_QBaseEvent(QPlainTextEdit* self, QEvent* e);
@@ -1627,16 +1649,16 @@ class VirtualQPlainTextEdit final : public QPlainTextEdit {
     friend void QPlainTextEdit_QBaseWheelEvent(QPlainTextEdit* self, QWheelEvent* e);
     friend QMimeData* QPlainTextEdit_CreateMimeDataFromSelection(const QPlainTextEdit* self);
     friend QMimeData* QPlainTextEdit_QBaseCreateMimeDataFromSelection(const QPlainTextEdit* self);
-    friend bool QPlainTextEdit_CanInsertFromMimeData(const QPlainTextEdit* self, QMimeData* source);
-    friend bool QPlainTextEdit_QBaseCanInsertFromMimeData(const QPlainTextEdit* self, QMimeData* source);
-    friend void QPlainTextEdit_InsertFromMimeData(QPlainTextEdit* self, QMimeData* source);
-    friend void QPlainTextEdit_QBaseInsertFromMimeData(QPlainTextEdit* self, QMimeData* source);
+    friend bool QPlainTextEdit_CanInsertFromMimeData(const QPlainTextEdit* self, const QMimeData* source);
+    friend bool QPlainTextEdit_QBaseCanInsertFromMimeData(const QPlainTextEdit* self, const QMimeData* source);
+    friend void QPlainTextEdit_InsertFromMimeData(QPlainTextEdit* self, const QMimeData* source);
+    friend void QPlainTextEdit_QBaseInsertFromMimeData(QPlainTextEdit* self, const QMimeData* source);
     friend void QPlainTextEdit_InputMethodEvent(QPlainTextEdit* self, QInputMethodEvent* param1);
     friend void QPlainTextEdit_QBaseInputMethodEvent(QPlainTextEdit* self, QInputMethodEvent* param1);
     friend void QPlainTextEdit_ScrollContentsBy(QPlainTextEdit* self, int dx, int dy);
     friend void QPlainTextEdit_QBaseScrollContentsBy(QPlainTextEdit* self, int dx, int dy);
-    friend void QPlainTextEdit_DoSetTextCursor(QPlainTextEdit* self, QTextCursor* cursor);
-    friend void QPlainTextEdit_QBaseDoSetTextCursor(QPlainTextEdit* self, QTextCursor* cursor);
+    friend void QPlainTextEdit_DoSetTextCursor(QPlainTextEdit* self, const QTextCursor* cursor);
+    friend void QPlainTextEdit_QBaseDoSetTextCursor(QPlainTextEdit* self, const QTextCursor* cursor);
     friend bool QPlainTextEdit_EventFilter(QPlainTextEdit* self, QObject* param1, QEvent* param2);
     friend bool QPlainTextEdit_QBaseEventFilter(QPlainTextEdit* self, QObject* param1, QEvent* param2);
     friend bool QPlainTextEdit_ViewportEvent(QPlainTextEdit* self, QEvent* param1);
@@ -1659,8 +1681,8 @@ class VirtualQPlainTextEdit final : public QPlainTextEdit {
     friend void QPlainTextEdit_QBaseActionEvent(QPlainTextEdit* self, QActionEvent* event);
     friend void QPlainTextEdit_HideEvent(QPlainTextEdit* self, QHideEvent* event);
     friend void QPlainTextEdit_QBaseHideEvent(QPlainTextEdit* self, QHideEvent* event);
-    friend bool QPlainTextEdit_NativeEvent(QPlainTextEdit* self, libqt_string eventType, void* message, intptr_t* result);
-    friend bool QPlainTextEdit_QBaseNativeEvent(QPlainTextEdit* self, libqt_string eventType, void* message, intptr_t* result);
+    friend bool QPlainTextEdit_NativeEvent(QPlainTextEdit* self, const libqt_string eventType, void* message, intptr_t* result);
+    friend bool QPlainTextEdit_QBaseNativeEvent(QPlainTextEdit* self, const libqt_string eventType, void* message, intptr_t* result);
     friend int QPlainTextEdit_Metric(const QPlainTextEdit* self, int param1);
     friend int QPlainTextEdit_QBaseMetric(const QPlainTextEdit* self, int param1);
     friend void QPlainTextEdit_InitPainter(const QPlainTextEdit* self, QPainter* painter);
@@ -1673,18 +1695,18 @@ class VirtualQPlainTextEdit final : public QPlainTextEdit {
     friend void QPlainTextEdit_QBaseChildEvent(QPlainTextEdit* self, QChildEvent* event);
     friend void QPlainTextEdit_CustomEvent(QPlainTextEdit* self, QEvent* event);
     friend void QPlainTextEdit_QBaseCustomEvent(QPlainTextEdit* self, QEvent* event);
-    friend void QPlainTextEdit_ConnectNotify(QPlainTextEdit* self, QMetaMethod* signal);
-    friend void QPlainTextEdit_QBaseConnectNotify(QPlainTextEdit* self, QMetaMethod* signal);
-    friend void QPlainTextEdit_DisconnectNotify(QPlainTextEdit* self, QMetaMethod* signal);
-    friend void QPlainTextEdit_QBaseDisconnectNotify(QPlainTextEdit* self, QMetaMethod* signal);
+    friend void QPlainTextEdit_ConnectNotify(QPlainTextEdit* self, const QMetaMethod* signal);
+    friend void QPlainTextEdit_QBaseConnectNotify(QPlainTextEdit* self, const QMetaMethod* signal);
+    friend void QPlainTextEdit_DisconnectNotify(QPlainTextEdit* self, const QMetaMethod* signal);
+    friend void QPlainTextEdit_QBaseDisconnectNotify(QPlainTextEdit* self, const QMetaMethod* signal);
     friend QTextBlock* QPlainTextEdit_FirstVisibleBlock(const QPlainTextEdit* self);
     friend QTextBlock* QPlainTextEdit_QBaseFirstVisibleBlock(const QPlainTextEdit* self);
     friend QPointF* QPlainTextEdit_ContentOffset(const QPlainTextEdit* self);
     friend QPointF* QPlainTextEdit_QBaseContentOffset(const QPlainTextEdit* self);
-    friend QRectF* QPlainTextEdit_BlockBoundingRect(const QPlainTextEdit* self, QTextBlock* block);
-    friend QRectF* QPlainTextEdit_QBaseBlockBoundingRect(const QPlainTextEdit* self, QTextBlock* block);
-    friend QRectF* QPlainTextEdit_BlockBoundingGeometry(const QPlainTextEdit* self, QTextBlock* block);
-    friend QRectF* QPlainTextEdit_QBaseBlockBoundingGeometry(const QPlainTextEdit* self, QTextBlock* block);
+    friend QRectF* QPlainTextEdit_BlockBoundingRect(const QPlainTextEdit* self, const QTextBlock* block);
+    friend QRectF* QPlainTextEdit_QBaseBlockBoundingRect(const QPlainTextEdit* self, const QTextBlock* block);
+    friend QRectF* QPlainTextEdit_BlockBoundingGeometry(const QPlainTextEdit* self, const QTextBlock* block);
+    friend QRectF* QPlainTextEdit_QBaseBlockBoundingGeometry(const QPlainTextEdit* self, const QTextBlock* block);
     friend QAbstractTextDocumentLayout__PaintContext* QPlainTextEdit_GetPaintContext(const QPlainTextEdit* self);
     friend QAbstractTextDocumentLayout__PaintContext* QPlainTextEdit_QBaseGetPaintContext(const QPlainTextEdit* self);
     friend void QPlainTextEdit_ZoomInF(QPlainTextEdit* self, float range);
@@ -1711,8 +1733,10 @@ class VirtualQPlainTextEdit final : public QPlainTextEdit {
     friend int QPlainTextEdit_QBaseSenderSignalIndex(const QPlainTextEdit* self);
     friend int QPlainTextEdit_Receivers(const QPlainTextEdit* self, const char* signal);
     friend int QPlainTextEdit_QBaseReceivers(const QPlainTextEdit* self, const char* signal);
-    friend bool QPlainTextEdit_IsSignalConnected(const QPlainTextEdit* self, QMetaMethod* signal);
-    friend bool QPlainTextEdit_QBaseIsSignalConnected(const QPlainTextEdit* self, QMetaMethod* signal);
+    friend bool QPlainTextEdit_IsSignalConnected(const QPlainTextEdit* self, const QMetaMethod* signal);
+    friend bool QPlainTextEdit_QBaseIsSignalConnected(const QPlainTextEdit* self, const QMetaMethod* signal);
+    friend double QPlainTextEdit_GetDecodedMetricF(const QPlainTextEdit* self, int metricA, int metricB);
+    friend double QPlainTextEdit_QBaseGetDecodedMetricF(const QPlainTextEdit* self, int metricA, int metricB);
 };
 
 // This class is a subclass of QPlainTextDocumentLayout so that we can call protected methods
@@ -1802,7 +1826,7 @@ class VirtualQPlainTextDocumentLayout final : public QPlainTextDocumentLayout {
     mutable bool qplaintextdocumentlayout_issignalconnected_isbase = false;
 
   public:
-    VirtualQPlainTextDocumentLayout(QTextDocument* document) : QPlainTextDocumentLayout(document){};
+    VirtualQPlainTextDocumentLayout(QTextDocument* document) : QPlainTextDocumentLayout(document) {};
 
     ~VirtualQPlainTextDocumentLayout() {
         qplaintextdocumentlayout_metacall_callback = nullptr;
@@ -2263,22 +2287,22 @@ class VirtualQPlainTextDocumentLayout final : public QPlainTextDocumentLayout {
     // Friend functions
     friend void QPlainTextDocumentLayout_DocumentChanged(QPlainTextDocumentLayout* self, int from, int param2, int charsAdded);
     friend void QPlainTextDocumentLayout_QBaseDocumentChanged(QPlainTextDocumentLayout* self, int from, int param2, int charsAdded);
-    friend void QPlainTextDocumentLayout_ResizeInlineObject(QPlainTextDocumentLayout* self, QTextInlineObject* item, int posInDocument, QTextFormat* format);
-    friend void QPlainTextDocumentLayout_QBaseResizeInlineObject(QPlainTextDocumentLayout* self, QTextInlineObject* item, int posInDocument, QTextFormat* format);
-    friend void QPlainTextDocumentLayout_PositionInlineObject(QPlainTextDocumentLayout* self, QTextInlineObject* item, int posInDocument, QTextFormat* format);
-    friend void QPlainTextDocumentLayout_QBasePositionInlineObject(QPlainTextDocumentLayout* self, QTextInlineObject* item, int posInDocument, QTextFormat* format);
-    friend void QPlainTextDocumentLayout_DrawInlineObject(QPlainTextDocumentLayout* self, QPainter* painter, QRectF* rect, QTextInlineObject* object, int posInDocument, QTextFormat* format);
-    friend void QPlainTextDocumentLayout_QBaseDrawInlineObject(QPlainTextDocumentLayout* self, QPainter* painter, QRectF* rect, QTextInlineObject* object, int posInDocument, QTextFormat* format);
+    friend void QPlainTextDocumentLayout_ResizeInlineObject(QPlainTextDocumentLayout* self, QTextInlineObject* item, int posInDocument, const QTextFormat* format);
+    friend void QPlainTextDocumentLayout_QBaseResizeInlineObject(QPlainTextDocumentLayout* self, QTextInlineObject* item, int posInDocument, const QTextFormat* format);
+    friend void QPlainTextDocumentLayout_PositionInlineObject(QPlainTextDocumentLayout* self, QTextInlineObject* item, int posInDocument, const QTextFormat* format);
+    friend void QPlainTextDocumentLayout_QBasePositionInlineObject(QPlainTextDocumentLayout* self, QTextInlineObject* item, int posInDocument, const QTextFormat* format);
+    friend void QPlainTextDocumentLayout_DrawInlineObject(QPlainTextDocumentLayout* self, QPainter* painter, const QRectF* rect, QTextInlineObject* object, int posInDocument, const QTextFormat* format);
+    friend void QPlainTextDocumentLayout_QBaseDrawInlineObject(QPlainTextDocumentLayout* self, QPainter* painter, const QRectF* rect, QTextInlineObject* object, int posInDocument, const QTextFormat* format);
     friend void QPlainTextDocumentLayout_TimerEvent(QPlainTextDocumentLayout* self, QTimerEvent* event);
     friend void QPlainTextDocumentLayout_QBaseTimerEvent(QPlainTextDocumentLayout* self, QTimerEvent* event);
     friend void QPlainTextDocumentLayout_ChildEvent(QPlainTextDocumentLayout* self, QChildEvent* event);
     friend void QPlainTextDocumentLayout_QBaseChildEvent(QPlainTextDocumentLayout* self, QChildEvent* event);
     friend void QPlainTextDocumentLayout_CustomEvent(QPlainTextDocumentLayout* self, QEvent* event);
     friend void QPlainTextDocumentLayout_QBaseCustomEvent(QPlainTextDocumentLayout* self, QEvent* event);
-    friend void QPlainTextDocumentLayout_ConnectNotify(QPlainTextDocumentLayout* self, QMetaMethod* signal);
-    friend void QPlainTextDocumentLayout_QBaseConnectNotify(QPlainTextDocumentLayout* self, QMetaMethod* signal);
-    friend void QPlainTextDocumentLayout_DisconnectNotify(QPlainTextDocumentLayout* self, QMetaMethod* signal);
-    friend void QPlainTextDocumentLayout_QBaseDisconnectNotify(QPlainTextDocumentLayout* self, QMetaMethod* signal);
+    friend void QPlainTextDocumentLayout_ConnectNotify(QPlainTextDocumentLayout* self, const QMetaMethod* signal);
+    friend void QPlainTextDocumentLayout_QBaseConnectNotify(QPlainTextDocumentLayout* self, const QMetaMethod* signal);
+    friend void QPlainTextDocumentLayout_DisconnectNotify(QPlainTextDocumentLayout* self, const QMetaMethod* signal);
+    friend void QPlainTextDocumentLayout_QBaseDisconnectNotify(QPlainTextDocumentLayout* self, const QMetaMethod* signal);
     friend int QPlainTextDocumentLayout_FormatIndex(QPlainTextDocumentLayout* self, int pos);
     friend int QPlainTextDocumentLayout_QBaseFormatIndex(QPlainTextDocumentLayout* self, int pos);
     friend QTextCharFormat* QPlainTextDocumentLayout_Format(QPlainTextDocumentLayout* self, int pos);
@@ -2289,8 +2313,8 @@ class VirtualQPlainTextDocumentLayout final : public QPlainTextDocumentLayout {
     friend int QPlainTextDocumentLayout_QBaseSenderSignalIndex(const QPlainTextDocumentLayout* self);
     friend int QPlainTextDocumentLayout_Receivers(const QPlainTextDocumentLayout* self, const char* signal);
     friend int QPlainTextDocumentLayout_QBaseReceivers(const QPlainTextDocumentLayout* self, const char* signal);
-    friend bool QPlainTextDocumentLayout_IsSignalConnected(const QPlainTextDocumentLayout* self, QMetaMethod* signal);
-    friend bool QPlainTextDocumentLayout_QBaseIsSignalConnected(const QPlainTextDocumentLayout* self, QMetaMethod* signal);
+    friend bool QPlainTextDocumentLayout_IsSignalConnected(const QPlainTextDocumentLayout* self, const QMetaMethod* signal);
+    friend bool QPlainTextDocumentLayout_QBaseIsSignalConnected(const QPlainTextDocumentLayout* self, const QMetaMethod* signal);
 };
 
 #endif

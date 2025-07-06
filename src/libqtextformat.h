@@ -12,13 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqbrush.h"
-#include "libqcolor.h"
-#include "libqfont.h"
-#include "libqpen.h"
-#include <string.h>
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qtextlength.html
 
 /// q_textlength_new constructs a new QTextLength object.
@@ -378,11 +371,6 @@ void q_textformat_delete(void* self);
 ///
 ///
 QTextCharFormat* q_textcharformat_new();
-
-/// q_textcharformat_new2 constructs a new QTextCharFormat object.
-///
-/// ``` QTextCharFormat* param1 ```
-QTextCharFormat* q_textcharformat_new2(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcharformat.html#isValid)
 ///
@@ -1093,11 +1081,6 @@ void q_textcharformat_delete(void* self);
 ///
 QTextBlockFormat* q_textblockformat_new();
 
-/// q_textblockformat_new2 constructs a new QTextBlockFormat object.
-///
-/// ``` QTextBlockFormat* param1 ```
-QTextBlockFormat* q_textblockformat_new2(void* param1);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblockformat.html#isValid)
 ///
 /// ``` QTextBlockFormat* self ```
@@ -1607,11 +1590,6 @@ void q_textblockformat_delete(void* self);
 ///
 QTextListFormat* q_textlistformat_new();
 
-/// q_textlistformat_new2 constructs a new QTextListFormat object.
-///
-/// ``` QTextListFormat* param1 ```
-QTextListFormat* q_textlistformat_new2(void* param1);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlistformat.html#isValid)
 ///
 /// ``` QTextListFormat* self ```
@@ -1656,6 +1634,16 @@ void q_textlistformat_set_number_suffix(void* self, const char* numberSuffix);
 ///
 /// ``` QTextListFormat* self ```
 const char* q_textlistformat_number_suffix(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextlistformat.html#setStart)
+///
+/// ``` QTextListFormat* self, int indent ```
+void q_textlistformat_set_start(void* self, int indent);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextlistformat.html#start)
+///
+/// ``` QTextListFormat* self ```
+int32_t q_textlistformat_start(void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -2045,6 +2033,16 @@ void q_textimageformat_set_width(void* self, double width);
 ///
 /// ``` QTextImageFormat* self ```
 double q_textimageformat_width(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextimageformat.html#setMaximumWidth)
+///
+/// ``` QTextImageFormat* self, QTextLength* maxWidth ```
+void q_textimageformat_set_maximum_width(void* self, void* maxWidth);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextimageformat.html#maximumWidth)
+///
+/// ``` QTextImageFormat* self ```
+QTextLength* q_textimageformat_maximum_width(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextimageformat.html#setHeight)
 ///
@@ -2910,11 +2908,6 @@ void q_textimageformat_delete(void* self);
 ///
 ///
 QTextFrameFormat* q_textframeformat_new();
-
-/// q_textframeformat_new2 constructs a new QTextFrameFormat object.
-///
-/// ``` QTextFrameFormat* param1 ```
-QTextFrameFormat* q_textframeformat_new2(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframeformat.html#isValid)
 ///
@@ -5169,6 +5162,7 @@ typedef enum {
     QTEXTFORMAT_PROPERTY_LISTINDENT = 12289,
     QTEXTFORMAT_PROPERTY_LISTNUMBERPREFIX = 12290,
     QTEXTFORMAT_PROPERTY_LISTNUMBERSUFFIX = 12291,
+    QTEXTFORMAT_PROPERTY_LISTSTART = 12292,
     QTEXTFORMAT_PROPERTY_FRAMEBORDER = 16384,
     QTEXTFORMAT_PROPERTY_FRAMEMARGIN = 16385,
     QTEXTFORMAT_PROPERTY_FRAMEPADDING = 16386,
@@ -5210,6 +5204,7 @@ typedef enum {
     QTEXTFORMAT_PROPERTY_IMAGEWIDTH = 20496,
     QTEXTFORMAT_PROPERTY_IMAGEHEIGHT = 20497,
     QTEXTFORMAT_PROPERTY_IMAGEQUALITY = 20500,
+    QTEXTFORMAT_PROPERTY_IMAGEMAXWIDTH = 20501,
     QTEXTFORMAT_PROPERTY_FULLWIDTHSELECTION = 24576,
     QTEXTFORMAT_PROPERTY_PAGEBREAKPOLICY = 28672,
     QTEXTFORMAT_PROPERTY_USERPROPERTY = 1048576

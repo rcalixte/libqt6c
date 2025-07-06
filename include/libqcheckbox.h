@@ -12,20 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractbutton.h"
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpaintdevice.h"
-#include "libqpaintengine.h"
-#include "libqpainter.h"
-#include "libqpoint.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqstyleoption.h"
-#include "libqvariant.h"
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qcheckbox.html
 
 /// q_checkbox_new constructs a new QCheckBox object.
@@ -141,6 +127,16 @@ void q_checkbox_state_changed(void* self, int param1);
 ///
 /// ``` QCheckBox* self, void (*slot)(QCheckBox*, int) ```
 void q_checkbox_on_state_changed(void* self, void (*slot)(void*, int));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#checkStateChanged)
+///
+/// ``` QCheckBox* self, enum Qt__CheckState param1 ```
+void q_checkbox_check_state_changed(void* self, int64_t param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#checkStateChanged)
+///
+/// ``` QCheckBox* self, void (*slot)(QCheckBox*, enum Qt__CheckState) ```
+void q_checkbox_on_check_state_changed(void* self, void (*slot)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#event)
 ///
@@ -2189,6 +2185,13 @@ QWidget* q_checkbox_child_at_with_q_point(void* self, void* p);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+///
+/// ``` QCheckBox* self, QPointF* p ```
+QWidget* q_checkbox_child_at_with_q_point_f(void* self, void* p);
+
+/// Inherited from QWidget
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
 /// ``` QCheckBox* self, enum Qt__WidgetAttribute param1 ```
@@ -2500,7 +2503,7 @@ QThread* q_checkbox_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QCheckBox* self, QThread* thread ```
-void q_checkbox_move_to_thread(void* self, void* thread);
+bool q_checkbox_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -2515,6 +2518,13 @@ int32_t q_checkbox_start_timer(void* self, int interval);
 ///
 /// ``` QCheckBox* self, int id ```
 void q_checkbox_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QCheckBox* self, enum Qt__TimerId id ```
+void q_checkbox_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -2651,6 +2661,13 @@ void q_checkbox_delete_later(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QCheckBox* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_checkbox_move_to_thread2(void* self, void* thread, void* param2);
+
+/// Inherited from QObject
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QCheckBox* self, int interval, enum Qt__TimerType timerType ```
@@ -2767,6 +2784,13 @@ int32_t q_checkbox_depth(void* self);
 ///
 ///
 double q_checkbox_device_pixel_ratio_f_scale();
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_checkbox_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QAbstractButton
 ///
@@ -4144,6 +4168,33 @@ bool q_checkbox_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// ``` QCheckBox* self, bool (*slot)(QCheckBox*, QMetaMethod*) ```
 void q_checkbox_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QCheckBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_checkbox_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QCheckBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_checkbox_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QCheckBox* self, double (*slot)(QCheckBox*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
+void q_checkbox_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///

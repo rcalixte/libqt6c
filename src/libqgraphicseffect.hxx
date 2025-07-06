@@ -97,8 +97,8 @@ class VirtualQGraphicsEffect final : public QGraphicsEffect {
     mutable bool qgraphicseffect_issignalconnected_isbase = false;
 
   public:
-    VirtualQGraphicsEffect() : QGraphicsEffect(){};
-    VirtualQGraphicsEffect(QObject* parent) : QGraphicsEffect(parent){};
+    VirtualQGraphicsEffect() : QGraphicsEffect() {};
+    VirtualQGraphicsEffect(QObject* parent) : QGraphicsEffect(parent) {};
 
     ~VirtualQGraphicsEffect() {
         qgraphicseffect_metacall_callback = nullptr;
@@ -538,10 +538,10 @@ class VirtualQGraphicsEffect final : public QGraphicsEffect {
     friend void QGraphicsEffect_QBaseChildEvent(QGraphicsEffect* self, QChildEvent* event);
     friend void QGraphicsEffect_CustomEvent(QGraphicsEffect* self, QEvent* event);
     friend void QGraphicsEffect_QBaseCustomEvent(QGraphicsEffect* self, QEvent* event);
-    friend void QGraphicsEffect_ConnectNotify(QGraphicsEffect* self, QMetaMethod* signal);
-    friend void QGraphicsEffect_QBaseConnectNotify(QGraphicsEffect* self, QMetaMethod* signal);
-    friend void QGraphicsEffect_DisconnectNotify(QGraphicsEffect* self, QMetaMethod* signal);
-    friend void QGraphicsEffect_QBaseDisconnectNotify(QGraphicsEffect* self, QMetaMethod* signal);
+    friend void QGraphicsEffect_ConnectNotify(QGraphicsEffect* self, const QMetaMethod* signal);
+    friend void QGraphicsEffect_QBaseConnectNotify(QGraphicsEffect* self, const QMetaMethod* signal);
+    friend void QGraphicsEffect_DisconnectNotify(QGraphicsEffect* self, const QMetaMethod* signal);
+    friend void QGraphicsEffect_QBaseDisconnectNotify(QGraphicsEffect* self, const QMetaMethod* signal);
     friend void QGraphicsEffect_UpdateBoundingRect(QGraphicsEffect* self);
     friend void QGraphicsEffect_QBaseUpdateBoundingRect(QGraphicsEffect* self);
     friend bool QGraphicsEffect_SourceIsPixmap(const QGraphicsEffect* self);
@@ -566,8 +566,8 @@ class VirtualQGraphicsEffect final : public QGraphicsEffect {
     friend int QGraphicsEffect_QBaseSenderSignalIndex(const QGraphicsEffect* self);
     friend int QGraphicsEffect_Receivers(const QGraphicsEffect* self, const char* signal);
     friend int QGraphicsEffect_QBaseReceivers(const QGraphicsEffect* self, const char* signal);
-    friend bool QGraphicsEffect_IsSignalConnected(const QGraphicsEffect* self, QMetaMethod* signal);
-    friend bool QGraphicsEffect_QBaseIsSignalConnected(const QGraphicsEffect* self, QMetaMethod* signal);
+    friend bool QGraphicsEffect_IsSignalConnected(const QGraphicsEffect* self, const QMetaMethod* signal);
+    friend bool QGraphicsEffect_QBaseIsSignalConnected(const QGraphicsEffect* self, const QMetaMethod* signal);
 };
 
 // This class is a subclass of QGraphicsColorizeEffect so that we can call protected methods
@@ -645,8 +645,8 @@ class VirtualQGraphicsColorizeEffect final : public QGraphicsColorizeEffect {
     mutable bool qgraphicscolorizeeffect_issignalconnected_isbase = false;
 
   public:
-    VirtualQGraphicsColorizeEffect() : QGraphicsColorizeEffect(){};
-    VirtualQGraphicsColorizeEffect(QObject* parent) : QGraphicsColorizeEffect(parent){};
+    VirtualQGraphicsColorizeEffect() : QGraphicsColorizeEffect() {};
+    VirtualQGraphicsColorizeEffect(QObject* parent) : QGraphicsColorizeEffect(parent) {};
 
     ~VirtualQGraphicsColorizeEffect() {
         qgraphicscolorizeeffect_metacall_callback = nullptr;
@@ -1016,10 +1016,10 @@ class VirtualQGraphicsColorizeEffect final : public QGraphicsColorizeEffect {
     friend void QGraphicsColorizeEffect_QBaseChildEvent(QGraphicsColorizeEffect* self, QChildEvent* event);
     friend void QGraphicsColorizeEffect_CustomEvent(QGraphicsColorizeEffect* self, QEvent* event);
     friend void QGraphicsColorizeEffect_QBaseCustomEvent(QGraphicsColorizeEffect* self, QEvent* event);
-    friend void QGraphicsColorizeEffect_ConnectNotify(QGraphicsColorizeEffect* self, QMetaMethod* signal);
-    friend void QGraphicsColorizeEffect_QBaseConnectNotify(QGraphicsColorizeEffect* self, QMetaMethod* signal);
-    friend void QGraphicsColorizeEffect_DisconnectNotify(QGraphicsColorizeEffect* self, QMetaMethod* signal);
-    friend void QGraphicsColorizeEffect_QBaseDisconnectNotify(QGraphicsColorizeEffect* self, QMetaMethod* signal);
+    friend void QGraphicsColorizeEffect_ConnectNotify(QGraphicsColorizeEffect* self, const QMetaMethod* signal);
+    friend void QGraphicsColorizeEffect_QBaseConnectNotify(QGraphicsColorizeEffect* self, const QMetaMethod* signal);
+    friend void QGraphicsColorizeEffect_DisconnectNotify(QGraphicsColorizeEffect* self, const QMetaMethod* signal);
+    friend void QGraphicsColorizeEffect_QBaseDisconnectNotify(QGraphicsColorizeEffect* self, const QMetaMethod* signal);
     friend void QGraphicsColorizeEffect_UpdateBoundingRect(QGraphicsColorizeEffect* self);
     friend void QGraphicsColorizeEffect_QBaseUpdateBoundingRect(QGraphicsColorizeEffect* self);
     friend bool QGraphicsColorizeEffect_SourceIsPixmap(const QGraphicsColorizeEffect* self);
@@ -1036,8 +1036,8 @@ class VirtualQGraphicsColorizeEffect final : public QGraphicsColorizeEffect {
     friend int QGraphicsColorizeEffect_QBaseSenderSignalIndex(const QGraphicsColorizeEffect* self);
     friend int QGraphicsColorizeEffect_Receivers(const QGraphicsColorizeEffect* self, const char* signal);
     friend int QGraphicsColorizeEffect_QBaseReceivers(const QGraphicsColorizeEffect* self, const char* signal);
-    friend bool QGraphicsColorizeEffect_IsSignalConnected(const QGraphicsColorizeEffect* self, QMetaMethod* signal);
-    friend bool QGraphicsColorizeEffect_QBaseIsSignalConnected(const QGraphicsColorizeEffect* self, QMetaMethod* signal);
+    friend bool QGraphicsColorizeEffect_IsSignalConnected(const QGraphicsColorizeEffect* self, const QMetaMethod* signal);
+    friend bool QGraphicsColorizeEffect_QBaseIsSignalConnected(const QGraphicsColorizeEffect* self, const QMetaMethod* signal);
 };
 
 // This class is a subclass of QGraphicsBlurEffect so that we can call protected methods
@@ -1115,8 +1115,8 @@ class VirtualQGraphicsBlurEffect final : public QGraphicsBlurEffect {
     mutable bool qgraphicsblureffect_issignalconnected_isbase = false;
 
   public:
-    VirtualQGraphicsBlurEffect() : QGraphicsBlurEffect(){};
-    VirtualQGraphicsBlurEffect(QObject* parent) : QGraphicsBlurEffect(parent){};
+    VirtualQGraphicsBlurEffect() : QGraphicsBlurEffect() {};
+    VirtualQGraphicsBlurEffect(QObject* parent) : QGraphicsBlurEffect(parent) {};
 
     ~VirtualQGraphicsBlurEffect() {
         qgraphicsblureffect_metacall_callback = nullptr;
@@ -1486,10 +1486,10 @@ class VirtualQGraphicsBlurEffect final : public QGraphicsBlurEffect {
     friend void QGraphicsBlurEffect_QBaseChildEvent(QGraphicsBlurEffect* self, QChildEvent* event);
     friend void QGraphicsBlurEffect_CustomEvent(QGraphicsBlurEffect* self, QEvent* event);
     friend void QGraphicsBlurEffect_QBaseCustomEvent(QGraphicsBlurEffect* self, QEvent* event);
-    friend void QGraphicsBlurEffect_ConnectNotify(QGraphicsBlurEffect* self, QMetaMethod* signal);
-    friend void QGraphicsBlurEffect_QBaseConnectNotify(QGraphicsBlurEffect* self, QMetaMethod* signal);
-    friend void QGraphicsBlurEffect_DisconnectNotify(QGraphicsBlurEffect* self, QMetaMethod* signal);
-    friend void QGraphicsBlurEffect_QBaseDisconnectNotify(QGraphicsBlurEffect* self, QMetaMethod* signal);
+    friend void QGraphicsBlurEffect_ConnectNotify(QGraphicsBlurEffect* self, const QMetaMethod* signal);
+    friend void QGraphicsBlurEffect_QBaseConnectNotify(QGraphicsBlurEffect* self, const QMetaMethod* signal);
+    friend void QGraphicsBlurEffect_DisconnectNotify(QGraphicsBlurEffect* self, const QMetaMethod* signal);
+    friend void QGraphicsBlurEffect_QBaseDisconnectNotify(QGraphicsBlurEffect* self, const QMetaMethod* signal);
     friend void QGraphicsBlurEffect_UpdateBoundingRect(QGraphicsBlurEffect* self);
     friend void QGraphicsBlurEffect_QBaseUpdateBoundingRect(QGraphicsBlurEffect* self);
     friend bool QGraphicsBlurEffect_SourceIsPixmap(const QGraphicsBlurEffect* self);
@@ -1506,8 +1506,8 @@ class VirtualQGraphicsBlurEffect final : public QGraphicsBlurEffect {
     friend int QGraphicsBlurEffect_QBaseSenderSignalIndex(const QGraphicsBlurEffect* self);
     friend int QGraphicsBlurEffect_Receivers(const QGraphicsBlurEffect* self, const char* signal);
     friend int QGraphicsBlurEffect_QBaseReceivers(const QGraphicsBlurEffect* self, const char* signal);
-    friend bool QGraphicsBlurEffect_IsSignalConnected(const QGraphicsBlurEffect* self, QMetaMethod* signal);
-    friend bool QGraphicsBlurEffect_QBaseIsSignalConnected(const QGraphicsBlurEffect* self, QMetaMethod* signal);
+    friend bool QGraphicsBlurEffect_IsSignalConnected(const QGraphicsBlurEffect* self, const QMetaMethod* signal);
+    friend bool QGraphicsBlurEffect_QBaseIsSignalConnected(const QGraphicsBlurEffect* self, const QMetaMethod* signal);
 };
 
 // This class is a subclass of QGraphicsDropShadowEffect so that we can call protected methods
@@ -1585,8 +1585,8 @@ class VirtualQGraphicsDropShadowEffect final : public QGraphicsDropShadowEffect 
     mutable bool qgraphicsdropshadoweffect_issignalconnected_isbase = false;
 
   public:
-    VirtualQGraphicsDropShadowEffect() : QGraphicsDropShadowEffect(){};
-    VirtualQGraphicsDropShadowEffect(QObject* parent) : QGraphicsDropShadowEffect(parent){};
+    VirtualQGraphicsDropShadowEffect() : QGraphicsDropShadowEffect() {};
+    VirtualQGraphicsDropShadowEffect(QObject* parent) : QGraphicsDropShadowEffect(parent) {};
 
     ~VirtualQGraphicsDropShadowEffect() {
         qgraphicsdropshadoweffect_metacall_callback = nullptr;
@@ -1956,10 +1956,10 @@ class VirtualQGraphicsDropShadowEffect final : public QGraphicsDropShadowEffect 
     friend void QGraphicsDropShadowEffect_QBaseChildEvent(QGraphicsDropShadowEffect* self, QChildEvent* event);
     friend void QGraphicsDropShadowEffect_CustomEvent(QGraphicsDropShadowEffect* self, QEvent* event);
     friend void QGraphicsDropShadowEffect_QBaseCustomEvent(QGraphicsDropShadowEffect* self, QEvent* event);
-    friend void QGraphicsDropShadowEffect_ConnectNotify(QGraphicsDropShadowEffect* self, QMetaMethod* signal);
-    friend void QGraphicsDropShadowEffect_QBaseConnectNotify(QGraphicsDropShadowEffect* self, QMetaMethod* signal);
-    friend void QGraphicsDropShadowEffect_DisconnectNotify(QGraphicsDropShadowEffect* self, QMetaMethod* signal);
-    friend void QGraphicsDropShadowEffect_QBaseDisconnectNotify(QGraphicsDropShadowEffect* self, QMetaMethod* signal);
+    friend void QGraphicsDropShadowEffect_ConnectNotify(QGraphicsDropShadowEffect* self, const QMetaMethod* signal);
+    friend void QGraphicsDropShadowEffect_QBaseConnectNotify(QGraphicsDropShadowEffect* self, const QMetaMethod* signal);
+    friend void QGraphicsDropShadowEffect_DisconnectNotify(QGraphicsDropShadowEffect* self, const QMetaMethod* signal);
+    friend void QGraphicsDropShadowEffect_QBaseDisconnectNotify(QGraphicsDropShadowEffect* self, const QMetaMethod* signal);
     friend void QGraphicsDropShadowEffect_UpdateBoundingRect(QGraphicsDropShadowEffect* self);
     friend void QGraphicsDropShadowEffect_QBaseUpdateBoundingRect(QGraphicsDropShadowEffect* self);
     friend bool QGraphicsDropShadowEffect_SourceIsPixmap(const QGraphicsDropShadowEffect* self);
@@ -1976,8 +1976,8 @@ class VirtualQGraphicsDropShadowEffect final : public QGraphicsDropShadowEffect 
     friend int QGraphicsDropShadowEffect_QBaseSenderSignalIndex(const QGraphicsDropShadowEffect* self);
     friend int QGraphicsDropShadowEffect_Receivers(const QGraphicsDropShadowEffect* self, const char* signal);
     friend int QGraphicsDropShadowEffect_QBaseReceivers(const QGraphicsDropShadowEffect* self, const char* signal);
-    friend bool QGraphicsDropShadowEffect_IsSignalConnected(const QGraphicsDropShadowEffect* self, QMetaMethod* signal);
-    friend bool QGraphicsDropShadowEffect_QBaseIsSignalConnected(const QGraphicsDropShadowEffect* self, QMetaMethod* signal);
+    friend bool QGraphicsDropShadowEffect_IsSignalConnected(const QGraphicsDropShadowEffect* self, const QMetaMethod* signal);
+    friend bool QGraphicsDropShadowEffect_QBaseIsSignalConnected(const QGraphicsDropShadowEffect* self, const QMetaMethod* signal);
 };
 
 // This class is a subclass of QGraphicsOpacityEffect so that we can call protected methods
@@ -2055,8 +2055,8 @@ class VirtualQGraphicsOpacityEffect final : public QGraphicsOpacityEffect {
     mutable bool qgraphicsopacityeffect_issignalconnected_isbase = false;
 
   public:
-    VirtualQGraphicsOpacityEffect() : QGraphicsOpacityEffect(){};
-    VirtualQGraphicsOpacityEffect(QObject* parent) : QGraphicsOpacityEffect(parent){};
+    VirtualQGraphicsOpacityEffect() : QGraphicsOpacityEffect() {};
+    VirtualQGraphicsOpacityEffect(QObject* parent) : QGraphicsOpacityEffect(parent) {};
 
     ~VirtualQGraphicsOpacityEffect() {
         qgraphicsopacityeffect_metacall_callback = nullptr;
@@ -2426,10 +2426,10 @@ class VirtualQGraphicsOpacityEffect final : public QGraphicsOpacityEffect {
     friend void QGraphicsOpacityEffect_QBaseChildEvent(QGraphicsOpacityEffect* self, QChildEvent* event);
     friend void QGraphicsOpacityEffect_CustomEvent(QGraphicsOpacityEffect* self, QEvent* event);
     friend void QGraphicsOpacityEffect_QBaseCustomEvent(QGraphicsOpacityEffect* self, QEvent* event);
-    friend void QGraphicsOpacityEffect_ConnectNotify(QGraphicsOpacityEffect* self, QMetaMethod* signal);
-    friend void QGraphicsOpacityEffect_QBaseConnectNotify(QGraphicsOpacityEffect* self, QMetaMethod* signal);
-    friend void QGraphicsOpacityEffect_DisconnectNotify(QGraphicsOpacityEffect* self, QMetaMethod* signal);
-    friend void QGraphicsOpacityEffect_QBaseDisconnectNotify(QGraphicsOpacityEffect* self, QMetaMethod* signal);
+    friend void QGraphicsOpacityEffect_ConnectNotify(QGraphicsOpacityEffect* self, const QMetaMethod* signal);
+    friend void QGraphicsOpacityEffect_QBaseConnectNotify(QGraphicsOpacityEffect* self, const QMetaMethod* signal);
+    friend void QGraphicsOpacityEffect_DisconnectNotify(QGraphicsOpacityEffect* self, const QMetaMethod* signal);
+    friend void QGraphicsOpacityEffect_QBaseDisconnectNotify(QGraphicsOpacityEffect* self, const QMetaMethod* signal);
     friend void QGraphicsOpacityEffect_UpdateBoundingRect(QGraphicsOpacityEffect* self);
     friend void QGraphicsOpacityEffect_QBaseUpdateBoundingRect(QGraphicsOpacityEffect* self);
     friend bool QGraphicsOpacityEffect_SourceIsPixmap(const QGraphicsOpacityEffect* self);
@@ -2446,8 +2446,8 @@ class VirtualQGraphicsOpacityEffect final : public QGraphicsOpacityEffect {
     friend int QGraphicsOpacityEffect_QBaseSenderSignalIndex(const QGraphicsOpacityEffect* self);
     friend int QGraphicsOpacityEffect_Receivers(const QGraphicsOpacityEffect* self, const char* signal);
     friend int QGraphicsOpacityEffect_QBaseReceivers(const QGraphicsOpacityEffect* self, const char* signal);
-    friend bool QGraphicsOpacityEffect_IsSignalConnected(const QGraphicsOpacityEffect* self, QMetaMethod* signal);
-    friend bool QGraphicsOpacityEffect_QBaseIsSignalConnected(const QGraphicsOpacityEffect* self, QMetaMethod* signal);
+    friend bool QGraphicsOpacityEffect_IsSignalConnected(const QGraphicsOpacityEffect* self, const QMetaMethod* signal);
+    friend bool QGraphicsOpacityEffect_QBaseIsSignalConnected(const QGraphicsOpacityEffect* self, const QMetaMethod* signal);
 };
 
 #endif

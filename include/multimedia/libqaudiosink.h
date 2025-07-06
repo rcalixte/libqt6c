@@ -12,14 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqaudiodevice.h"
-#include "libqaudioformat.h"
-#include "../libqevent.h"
-#include "../libqiodevice.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qaudiosink.html
 
 /// q_audiosink_new constructs a new QAudioSink object.
@@ -244,7 +236,7 @@ QThread* q_audiosink_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QAudioSink* self, QThread* thread ```
-void q_audiosink_move_to_thread(void* self, void* thread);
+bool q_audiosink_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -259,6 +251,13 @@ int32_t q_audiosink_start_timer(void* self, int interval);
 ///
 /// ``` QAudioSink* self, int id ```
 void q_audiosink_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QAudioSink* self, enum Qt__TimerId id ```
+void q_audiosink_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -399,6 +398,13 @@ bool q_audiosink_inherits(void* self, const char* classname);
 ///
 /// ``` QAudioSink* self ```
 void q_audiosink_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QAudioSink* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_audiosink_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

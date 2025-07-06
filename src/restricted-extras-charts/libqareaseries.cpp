@@ -99,7 +99,7 @@ QLineSeries* QAreaSeries_LowerSeries(const QAreaSeries* self) {
     return self->lowerSeries();
 }
 
-void QAreaSeries_SetPen(QAreaSeries* self, QPen* pen) {
+void QAreaSeries_SetPen(QAreaSeries* self, const QPen* pen) {
     self->setPen(*pen);
 }
 
@@ -107,7 +107,7 @@ QPen* QAreaSeries_Pen(const QAreaSeries* self) {
     return new QPen(self->pen());
 }
 
-void QAreaSeries_SetBrush(QAreaSeries* self, QBrush* brush) {
+void QAreaSeries_SetBrush(QAreaSeries* self, const QBrush* brush) {
     self->setBrush(*brush);
 }
 
@@ -115,7 +115,7 @@ QBrush* QAreaSeries_Brush(const QAreaSeries* self) {
     return new QBrush(self->brush());
 }
 
-void QAreaSeries_SetColor(QAreaSeries* self, QColor* color) {
+void QAreaSeries_SetColor(QAreaSeries* self, const QColor* color) {
     self->setColor(*color);
 }
 
@@ -123,7 +123,7 @@ QColor* QAreaSeries_Color(const QAreaSeries* self) {
     return new QColor(self->color());
 }
 
-void QAreaSeries_SetBorderColor(QAreaSeries* self, QColor* color) {
+void QAreaSeries_SetBorderColor(QAreaSeries* self, const QColor* color) {
     self->setBorderColor(*color);
 }
 
@@ -139,7 +139,7 @@ bool QAreaSeries_PointsVisible(const QAreaSeries* self) {
     return self->pointsVisible();
 }
 
-void QAreaSeries_SetPointLabelsFormat(QAreaSeries* self, libqt_string format) {
+void QAreaSeries_SetPointLabelsFormat(QAreaSeries* self, const libqt_string format) {
     QString format_QString = QString::fromUtf8(format.data, format.len);
     self->setPointLabelsFormat(format_QString);
 }
@@ -164,7 +164,7 @@ bool QAreaSeries_PointLabelsVisible(const QAreaSeries* self) {
     return self->pointLabelsVisible();
 }
 
-void QAreaSeries_SetPointLabelsFont(QAreaSeries* self, QFont* font) {
+void QAreaSeries_SetPointLabelsFont(QAreaSeries* self, const QFont* font) {
     self->setPointLabelsFont(*font);
 }
 
@@ -172,7 +172,7 @@ QFont* QAreaSeries_PointLabelsFont(const QAreaSeries* self) {
     return new QFont(self->pointLabelsFont());
 }
 
-void QAreaSeries_SetPointLabelsColor(QAreaSeries* self, QColor* color) {
+void QAreaSeries_SetPointLabelsColor(QAreaSeries* self, const QColor* color) {
     self->setPointLabelsColor(*color);
 }
 
@@ -188,7 +188,7 @@ bool QAreaSeries_PointLabelsClipping(const QAreaSeries* self) {
     return self->pointLabelsClipping();
 }
 
-void QAreaSeries_Clicked(QAreaSeries* self, QPointF* point) {
+void QAreaSeries_Clicked(QAreaSeries* self, const QPointF* point) {
     self->clicked(*point);
 }
 
@@ -202,7 +202,7 @@ void QAreaSeries_Connect_Clicked(QAreaSeries* self, intptr_t slot) {
     });
 }
 
-void QAreaSeries_Hovered(QAreaSeries* self, QPointF* point, bool state) {
+void QAreaSeries_Hovered(QAreaSeries* self, const QPointF* point, bool state) {
     self->hovered(*point, state);
 }
 
@@ -217,7 +217,7 @@ void QAreaSeries_Connect_Hovered(QAreaSeries* self, intptr_t slot) {
     });
 }
 
-void QAreaSeries_Pressed(QAreaSeries* self, QPointF* point) {
+void QAreaSeries_Pressed(QAreaSeries* self, const QPointF* point) {
     self->pressed(*point);
 }
 
@@ -231,7 +231,7 @@ void QAreaSeries_Connect_Pressed(QAreaSeries* self, intptr_t slot) {
     });
 }
 
-void QAreaSeries_Released(QAreaSeries* self, QPointF* point) {
+void QAreaSeries_Released(QAreaSeries* self, const QPointF* point) {
     self->released(*point);
 }
 
@@ -245,7 +245,7 @@ void QAreaSeries_Connect_Released(QAreaSeries* self, intptr_t slot) {
     });
 }
 
-void QAreaSeries_DoubleClicked(QAreaSeries* self, QPointF* point) {
+void QAreaSeries_DoubleClicked(QAreaSeries* self, const QPointF* point) {
     self->doubleClicked(*point);
 }
 
@@ -294,7 +294,7 @@ void QAreaSeries_Connect_BorderColorChanged(QAreaSeries* self, intptr_t slot) {
     });
 }
 
-void QAreaSeries_PointLabelsFormatChanged(QAreaSeries* self, libqt_string format) {
+void QAreaSeries_PointLabelsFormatChanged(QAreaSeries* self, const libqt_string format) {
     QString format_QString = QString::fromUtf8(format.data, format.len);
     self->pointLabelsFormatChanged(format_QString);
 }
@@ -327,7 +327,7 @@ void QAreaSeries_Connect_PointLabelsVisibilityChanged(QAreaSeries* self, intptr_
     });
 }
 
-void QAreaSeries_PointLabelsFontChanged(QAreaSeries* self, QFont* font) {
+void QAreaSeries_PointLabelsFontChanged(QAreaSeries* self, const QFont* font) {
     self->pointLabelsFontChanged(*font);
 }
 
@@ -341,7 +341,7 @@ void QAreaSeries_Connect_PointLabelsFontChanged(QAreaSeries* self, intptr_t slot
     });
 }
 
-void QAreaSeries_PointLabelsColorChanged(QAreaSeries* self, QColor* color) {
+void QAreaSeries_PointLabelsColorChanged(QAreaSeries* self, const QColor* color) {
     self->pointLabelsColorChanged(*color);
 }
 
@@ -578,7 +578,7 @@ void QAreaSeries_OnCustomEvent(QAreaSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAreaSeries_ConnectNotify(QAreaSeries* self, QMetaMethod* signal) {
+void QAreaSeries_ConnectNotify(QAreaSeries* self, const QMetaMethod* signal) {
     auto* vqareaseries = dynamic_cast<VirtualQAreaSeries*>(self);
     if (vqareaseries && vqareaseries->isVirtualQAreaSeries) {
         vqareaseries->connectNotify(*signal);
@@ -588,7 +588,7 @@ void QAreaSeries_ConnectNotify(QAreaSeries* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QAreaSeries_QBaseConnectNotify(QAreaSeries* self, QMetaMethod* signal) {
+void QAreaSeries_QBaseConnectNotify(QAreaSeries* self, const QMetaMethod* signal) {
     auto* vqareaseries = dynamic_cast<VirtualQAreaSeries*>(self);
     if (vqareaseries && vqareaseries->isVirtualQAreaSeries) {
         vqareaseries->setQAreaSeries_ConnectNotify_IsBase(true);
@@ -607,7 +607,7 @@ void QAreaSeries_OnConnectNotify(QAreaSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAreaSeries_DisconnectNotify(QAreaSeries* self, QMetaMethod* signal) {
+void QAreaSeries_DisconnectNotify(QAreaSeries* self, const QMetaMethod* signal) {
     auto* vqareaseries = dynamic_cast<VirtualQAreaSeries*>(self);
     if (vqareaseries && vqareaseries->isVirtualQAreaSeries) {
         vqareaseries->disconnectNotify(*signal);
@@ -617,7 +617,7 @@ void QAreaSeries_DisconnectNotify(QAreaSeries* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QAreaSeries_QBaseDisconnectNotify(QAreaSeries* self, QMetaMethod* signal) {
+void QAreaSeries_QBaseDisconnectNotify(QAreaSeries* self, const QMetaMethod* signal) {
     auto* vqareaseries = dynamic_cast<VirtualQAreaSeries*>(self);
     if (vqareaseries && vqareaseries->isVirtualQAreaSeries) {
         vqareaseries->setQAreaSeries_DisconnectNotify_IsBase(true);
@@ -723,7 +723,7 @@ void QAreaSeries_OnReceivers(const QAreaSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QAreaSeries_IsSignalConnected(const QAreaSeries* self, QMetaMethod* signal) {
+bool QAreaSeries_IsSignalConnected(const QAreaSeries* self, const QMetaMethod* signal) {
     auto* vqareaseries = const_cast<VirtualQAreaSeries*>(dynamic_cast<const VirtualQAreaSeries*>(self));
     if (vqareaseries && vqareaseries->isVirtualQAreaSeries) {
         return vqareaseries->isSignalConnected(*signal);
@@ -733,7 +733,7 @@ bool QAreaSeries_IsSignalConnected(const QAreaSeries* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QAreaSeries_QBaseIsSignalConnected(const QAreaSeries* self, QMetaMethod* signal) {
+bool QAreaSeries_QBaseIsSignalConnected(const QAreaSeries* self, const QMetaMethod* signal) {
     auto* vqareaseries = const_cast<VirtualQAreaSeries*>(dynamic_cast<const VirtualQAreaSeries*>(self));
     if (vqareaseries && vqareaseries->isVirtualQAreaSeries) {
         vqareaseries->setQAreaSeries_IsSignalConnected_IsBase(true);

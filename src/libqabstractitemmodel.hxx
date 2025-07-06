@@ -238,8 +238,8 @@ class VirtualQAbstractItemModel final : public QAbstractItemModel {
     mutable bool qabstractitemmodel_issignalconnected_isbase = false;
 
   public:
-    VirtualQAbstractItemModel() : QAbstractItemModel(){};
-    VirtualQAbstractItemModel(QObject* parent) : QAbstractItemModel(parent){};
+    VirtualQAbstractItemModel() : QAbstractItemModel() {};
+    VirtualQAbstractItemModel(QObject* parent) : QAbstractItemModel(parent) {};
 
     ~VirtualQAbstractItemModel() {
         qabstractitemmodel_metacall_callback = nullptr;
@@ -678,7 +678,7 @@ class VirtualQAbstractItemModel final : public QAbstractItemModel {
             // Cast returned reference into pointer
             QModelIndex* cbval1 = const_cast<QModelIndex*>(&index_ret);
             const QMap<int, QVariant>& roles_ret = roles;
-            // Convert QMap<> from C++ memory to manually-managed C memory
+            // Convert const QMap<> from C++ memory to manually-managed C memory
             int* roles_karr = static_cast<int*>(malloc(sizeof(int) * roles_ret.size()));
             QVariant** roles_varr = static_cast<QVariant**>(malloc(sizeof(QVariant*) * roles_ret.size()));
             int roles_ctr = 0;
@@ -718,13 +718,13 @@ class VirtualQAbstractItemModel final : public QAbstractItemModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QStringList mimeTypes() const override {
+    virtual QList<QString> mimeTypes() const override {
         if (qabstractitemmodel_mimetypes_isbase) {
             qabstractitemmodel_mimetypes_isbase = false;
             return QAbstractItemModel::mimeTypes();
         } else if (qabstractitemmodel_mimetypes_callback != nullptr) {
             libqt_list /* of libqt_string */ callback_ret = qabstractitemmodel_mimetypes_callback();
-            QStringList callback_ret_QList;
+            QList<QString> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             libqt_string* callback_ret_arr = static_cast<libqt_string*>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -738,19 +738,19 @@ class VirtualQAbstractItemModel final : public QAbstractItemModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QMimeData* mimeData(const QModelIndexList& indexes) const override {
+    virtual QMimeData* mimeData(const QList<QModelIndex>& indexes) const override {
         if (qabstractitemmodel_mimedata_isbase) {
             qabstractitemmodel_mimedata_isbase = false;
             return QAbstractItemModel::mimeData(indexes);
         } else if (qabstractitemmodel_mimedata_callback != nullptr) {
-            const QModelIndexList& indexes_ret = indexes;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.length()));
-            for (size_t i = 0; i < indexes_ret.length(); ++i) {
+            const QList<QModelIndex>& indexes_ret = indexes;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.size()));
+            for (size_t i = 0; i < indexes_ret.size(); ++i) {
                 indexes_arr[i] = new QModelIndex(indexes_ret[i]);
             }
             libqt_list indexes_out;
-            indexes_out.len = indexes_ret.length();
+            indexes_out.len = indexes_ret.size();
             indexes_out.data.ptr = static_cast<void*>(indexes_arr);
             libqt_list /* of QModelIndex* */ cbval1 = indexes_out;
 
@@ -1034,7 +1034,7 @@ class VirtualQAbstractItemModel final : public QAbstractItemModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QModelIndexList match(const QModelIndex& start, int role, const QVariant& value, int hits, Qt::MatchFlags flags) const override {
+    virtual QList<QModelIndex> match(const QModelIndex& start, int role, const QVariant& value, int hits, Qt::MatchFlags flags) const override {
         if (qabstractitemmodel_match_isbase) {
             qabstractitemmodel_match_isbase = false;
             return QAbstractItemModel::match(start, role, value, hits, flags);
@@ -1050,7 +1050,7 @@ class VirtualQAbstractItemModel final : public QAbstractItemModel {
             int cbval5 = static_cast<int>(flags);
 
             libqt_list /* of QModelIndex* */ callback_ret = qabstractitemmodel_match_callback(this, cbval1, cbval2, cbval3, cbval4, cbval5);
-            QModelIndexList callback_ret_QList;
+            QList<QModelIndex> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             QModelIndex** callback_ret_arr = static_cast<QModelIndex**>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -1293,19 +1293,19 @@ class VirtualQAbstractItemModel final : public QAbstractItemModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    void encodeData(const QModelIndexList& indexes, QDataStream& stream) const {
+    void encodeData(const QList<QModelIndex>& indexes, QDataStream& stream) const {
         if (qabstractitemmodel_encodedata_isbase) {
             qabstractitemmodel_encodedata_isbase = false;
             QAbstractItemModel::encodeData(indexes, stream);
         } else if (qabstractitemmodel_encodedata_callback != nullptr) {
-            const QModelIndexList& indexes_ret = indexes;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.length()));
-            for (size_t i = 0; i < indexes_ret.length(); ++i) {
+            const QList<QModelIndex>& indexes_ret = indexes;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.size()));
+            for (size_t i = 0; i < indexes_ret.size(); ++i) {
                 indexes_arr[i] = new QModelIndex(indexes_ret[i]);
             }
             libqt_list indexes_out;
-            indexes_out.len = indexes_ret.length();
+            indexes_out.len = indexes_ret.size();
             indexes_out.data.ptr = static_cast<void*>(indexes_arr);
             libqt_list /* of QModelIndex* */ cbval1 = indexes_out;
             QDataStream& stream_ret = stream;
@@ -1574,29 +1574,29 @@ class VirtualQAbstractItemModel final : public QAbstractItemModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    void changePersistentIndexList(const QModelIndexList& from, const QModelIndexList& to) {
+    void changePersistentIndexList(const QList<QModelIndex>& from, const QList<QModelIndex>& to) {
         if (qabstractitemmodel_changepersistentindexlist_isbase) {
             qabstractitemmodel_changepersistentindexlist_isbase = false;
             QAbstractItemModel::changePersistentIndexList(from, to);
         } else if (qabstractitemmodel_changepersistentindexlist_callback != nullptr) {
-            const QModelIndexList& from_ret = from;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** from_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * from_ret.length()));
-            for (size_t i = 0; i < from_ret.length(); ++i) {
+            const QList<QModelIndex>& from_ret = from;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** from_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * from_ret.size()));
+            for (size_t i = 0; i < from_ret.size(); ++i) {
                 from_arr[i] = new QModelIndex(from_ret[i]);
             }
             libqt_list from_out;
-            from_out.len = from_ret.length();
+            from_out.len = from_ret.size();
             from_out.data.ptr = static_cast<void*>(from_arr);
             libqt_list /* of QModelIndex* */ cbval1 = from_out;
-            const QModelIndexList& to_ret = to;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** to_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * to_ret.length()));
-            for (size_t i = 0; i < to_ret.length(); ++i) {
+            const QList<QModelIndex>& to_ret = to;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** to_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * to_ret.size()));
+            for (size_t i = 0; i < to_ret.size(); ++i) {
                 to_arr[i] = new QModelIndex(to_ret[i]);
             }
             libqt_list to_out;
-            to_out.len = to_ret.length();
+            to_out.len = to_ret.size();
             to_out.data.ptr = static_cast<void*>(to_arr);
             libqt_list /* of QModelIndex* */ cbval2 = to_out;
 
@@ -1607,13 +1607,13 @@ class VirtualQAbstractItemModel final : public QAbstractItemModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    QModelIndexList persistentIndexList() const {
+    QList<QModelIndex> persistentIndexList() const {
         if (qabstractitemmodel_persistentindexlist_isbase) {
             qabstractitemmodel_persistentindexlist_isbase = false;
             return QAbstractItemModel::persistentIndexList();
         } else if (qabstractitemmodel_persistentindexlist_callback != nullptr) {
             libqt_list /* of QModelIndex* */ callback_ret = qabstractitemmodel_persistentindexlist_callback();
-            QModelIndexList callback_ret_QList;
+            QList<QModelIndex> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             QModelIndex** callback_ret_arr = static_cast<QModelIndex**>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -1709,50 +1709,50 @@ class VirtualQAbstractItemModel final : public QAbstractItemModel {
     friend void QAbstractItemModel_QBaseChildEvent(QAbstractItemModel* self, QChildEvent* event);
     friend void QAbstractItemModel_CustomEvent(QAbstractItemModel* self, QEvent* event);
     friend void QAbstractItemModel_QBaseCustomEvent(QAbstractItemModel* self, QEvent* event);
-    friend void QAbstractItemModel_ConnectNotify(QAbstractItemModel* self, QMetaMethod* signal);
-    friend void QAbstractItemModel_QBaseConnectNotify(QAbstractItemModel* self, QMetaMethod* signal);
-    friend void QAbstractItemModel_DisconnectNotify(QAbstractItemModel* self, QMetaMethod* signal);
-    friend void QAbstractItemModel_QBaseDisconnectNotify(QAbstractItemModel* self, QMetaMethod* signal);
+    friend void QAbstractItemModel_ConnectNotify(QAbstractItemModel* self, const QMetaMethod* signal);
+    friend void QAbstractItemModel_QBaseConnectNotify(QAbstractItemModel* self, const QMetaMethod* signal);
+    friend void QAbstractItemModel_DisconnectNotify(QAbstractItemModel* self, const QMetaMethod* signal);
+    friend void QAbstractItemModel_QBaseDisconnectNotify(QAbstractItemModel* self, const QMetaMethod* signal);
     friend QModelIndex* QAbstractItemModel_CreateIndex(const QAbstractItemModel* self, int row, int column);
     friend QModelIndex* QAbstractItemModel_QBaseCreateIndex(const QAbstractItemModel* self, int row, int column);
     friend QModelIndex* QAbstractItemModel_CreateIndex2(const QAbstractItemModel* self, int row, int column, uintptr_t id);
     friend QModelIndex* QAbstractItemModel_QBaseCreateIndex2(const QAbstractItemModel* self, int row, int column, uintptr_t id);
-    friend void QAbstractItemModel_EncodeData(const QAbstractItemModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
-    friend void QAbstractItemModel_QBaseEncodeData(const QAbstractItemModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
-    friend bool QAbstractItemModel_DecodeData(QAbstractItemModel* self, int row, int column, QModelIndex* parent, QDataStream* stream);
-    friend bool QAbstractItemModel_QBaseDecodeData(QAbstractItemModel* self, int row, int column, QModelIndex* parent, QDataStream* stream);
-    friend void QAbstractItemModel_BeginInsertRows(QAbstractItemModel* self, QModelIndex* parent, int first, int last);
-    friend void QAbstractItemModel_QBaseBeginInsertRows(QAbstractItemModel* self, QModelIndex* parent, int first, int last);
+    friend void QAbstractItemModel_EncodeData(const QAbstractItemModel* self, const libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
+    friend void QAbstractItemModel_QBaseEncodeData(const QAbstractItemModel* self, const libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
+    friend bool QAbstractItemModel_DecodeData(QAbstractItemModel* self, int row, int column, const QModelIndex* parent, QDataStream* stream);
+    friend bool QAbstractItemModel_QBaseDecodeData(QAbstractItemModel* self, int row, int column, const QModelIndex* parent, QDataStream* stream);
+    friend void QAbstractItemModel_BeginInsertRows(QAbstractItemModel* self, const QModelIndex* parent, int first, int last);
+    friend void QAbstractItemModel_QBaseBeginInsertRows(QAbstractItemModel* self, const QModelIndex* parent, int first, int last);
     friend void QAbstractItemModel_EndInsertRows(QAbstractItemModel* self);
     friend void QAbstractItemModel_QBaseEndInsertRows(QAbstractItemModel* self);
-    friend void QAbstractItemModel_BeginRemoveRows(QAbstractItemModel* self, QModelIndex* parent, int first, int last);
-    friend void QAbstractItemModel_QBaseBeginRemoveRows(QAbstractItemModel* self, QModelIndex* parent, int first, int last);
+    friend void QAbstractItemModel_BeginRemoveRows(QAbstractItemModel* self, const QModelIndex* parent, int first, int last);
+    friend void QAbstractItemModel_QBaseBeginRemoveRows(QAbstractItemModel* self, const QModelIndex* parent, int first, int last);
     friend void QAbstractItemModel_EndRemoveRows(QAbstractItemModel* self);
     friend void QAbstractItemModel_QBaseEndRemoveRows(QAbstractItemModel* self);
-    friend bool QAbstractItemModel_BeginMoveRows(QAbstractItemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow);
-    friend bool QAbstractItemModel_QBaseBeginMoveRows(QAbstractItemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow);
+    friend bool QAbstractItemModel_BeginMoveRows(QAbstractItemModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationRow);
+    friend bool QAbstractItemModel_QBaseBeginMoveRows(QAbstractItemModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationRow);
     friend void QAbstractItemModel_EndMoveRows(QAbstractItemModel* self);
     friend void QAbstractItemModel_QBaseEndMoveRows(QAbstractItemModel* self);
-    friend void QAbstractItemModel_BeginInsertColumns(QAbstractItemModel* self, QModelIndex* parent, int first, int last);
-    friend void QAbstractItemModel_QBaseBeginInsertColumns(QAbstractItemModel* self, QModelIndex* parent, int first, int last);
+    friend void QAbstractItemModel_BeginInsertColumns(QAbstractItemModel* self, const QModelIndex* parent, int first, int last);
+    friend void QAbstractItemModel_QBaseBeginInsertColumns(QAbstractItemModel* self, const QModelIndex* parent, int first, int last);
     friend void QAbstractItemModel_EndInsertColumns(QAbstractItemModel* self);
     friend void QAbstractItemModel_QBaseEndInsertColumns(QAbstractItemModel* self);
-    friend void QAbstractItemModel_BeginRemoveColumns(QAbstractItemModel* self, QModelIndex* parent, int first, int last);
-    friend void QAbstractItemModel_QBaseBeginRemoveColumns(QAbstractItemModel* self, QModelIndex* parent, int first, int last);
+    friend void QAbstractItemModel_BeginRemoveColumns(QAbstractItemModel* self, const QModelIndex* parent, int first, int last);
+    friend void QAbstractItemModel_QBaseBeginRemoveColumns(QAbstractItemModel* self, const QModelIndex* parent, int first, int last);
     friend void QAbstractItemModel_EndRemoveColumns(QAbstractItemModel* self);
     friend void QAbstractItemModel_QBaseEndRemoveColumns(QAbstractItemModel* self);
-    friend bool QAbstractItemModel_BeginMoveColumns(QAbstractItemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn);
-    friend bool QAbstractItemModel_QBaseBeginMoveColumns(QAbstractItemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn);
+    friend bool QAbstractItemModel_BeginMoveColumns(QAbstractItemModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationColumn);
+    friend bool QAbstractItemModel_QBaseBeginMoveColumns(QAbstractItemModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationColumn);
     friend void QAbstractItemModel_EndMoveColumns(QAbstractItemModel* self);
     friend void QAbstractItemModel_QBaseEndMoveColumns(QAbstractItemModel* self);
     friend void QAbstractItemModel_BeginResetModel(QAbstractItemModel* self);
     friend void QAbstractItemModel_QBaseBeginResetModel(QAbstractItemModel* self);
     friend void QAbstractItemModel_EndResetModel(QAbstractItemModel* self);
     friend void QAbstractItemModel_QBaseEndResetModel(QAbstractItemModel* self);
-    friend void QAbstractItemModel_ChangePersistentIndex(QAbstractItemModel* self, QModelIndex* from, QModelIndex* to);
-    friend void QAbstractItemModel_QBaseChangePersistentIndex(QAbstractItemModel* self, QModelIndex* from, QModelIndex* to);
-    friend void QAbstractItemModel_ChangePersistentIndexList(QAbstractItemModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
-    friend void QAbstractItemModel_QBaseChangePersistentIndexList(QAbstractItemModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
+    friend void QAbstractItemModel_ChangePersistentIndex(QAbstractItemModel* self, const QModelIndex* from, const QModelIndex* to);
+    friend void QAbstractItemModel_QBaseChangePersistentIndex(QAbstractItemModel* self, const QModelIndex* from, const QModelIndex* to);
+    friend void QAbstractItemModel_ChangePersistentIndexList(QAbstractItemModel* self, const libqt_list /* of QModelIndex* */ from, const libqt_list /* of QModelIndex* */ to);
+    friend void QAbstractItemModel_QBaseChangePersistentIndexList(QAbstractItemModel* self, const libqt_list /* of QModelIndex* */ from, const libqt_list /* of QModelIndex* */ to);
     friend libqt_list /* of QModelIndex* */ QAbstractItemModel_PersistentIndexList(const QAbstractItemModel* self);
     friend libqt_list /* of QModelIndex* */ QAbstractItemModel_QBasePersistentIndexList(const QAbstractItemModel* self);
     friend QModelIndex* QAbstractItemModel_CreateIndex3(const QAbstractItemModel* self, int row, int column, const void* data);
@@ -1763,8 +1763,8 @@ class VirtualQAbstractItemModel final : public QAbstractItemModel {
     friend int QAbstractItemModel_QBaseSenderSignalIndex(const QAbstractItemModel* self);
     friend int QAbstractItemModel_Receivers(const QAbstractItemModel* self, const char* signal);
     friend int QAbstractItemModel_QBaseReceivers(const QAbstractItemModel* self, const char* signal);
-    friend bool QAbstractItemModel_IsSignalConnected(const QAbstractItemModel* self, QMetaMethod* signal);
-    friend bool QAbstractItemModel_QBaseIsSignalConnected(const QAbstractItemModel* self, QMetaMethod* signal);
+    friend bool QAbstractItemModel_IsSignalConnected(const QAbstractItemModel* self, const QMetaMethod* signal);
+    friend bool QAbstractItemModel_QBaseIsSignalConnected(const QAbstractItemModel* self, const QMetaMethod* signal);
 };
 
 // This class is a subclass of QAbstractTableModel so that we can call protected methods
@@ -1983,8 +1983,8 @@ class VirtualQAbstractTableModel final : public QAbstractTableModel {
     mutable bool qabstracttablemodel_issignalconnected_isbase = false;
 
   public:
-    VirtualQAbstractTableModel() : QAbstractTableModel(){};
-    VirtualQAbstractTableModel(QObject* parent) : QAbstractTableModel(parent){};
+    VirtualQAbstractTableModel() : QAbstractTableModel() {};
+    VirtualQAbstractTableModel(QObject* parent) : QAbstractTableModel(parent) {};
 
     ~VirtualQAbstractTableModel() {
         qabstracttablemodel_metacall_callback = nullptr;
@@ -2421,7 +2421,7 @@ class VirtualQAbstractTableModel final : public QAbstractTableModel {
             // Cast returned reference into pointer
             QModelIndex* cbval1 = const_cast<QModelIndex*>(&index_ret);
             const QMap<int, QVariant>& roles_ret = roles;
-            // Convert QMap<> from C++ memory to manually-managed C memory
+            // Convert const QMap<> from C++ memory to manually-managed C memory
             int* roles_karr = static_cast<int*>(malloc(sizeof(int) * roles_ret.size()));
             QVariant** roles_varr = static_cast<QVariant**>(malloc(sizeof(QVariant*) * roles_ret.size()));
             int roles_ctr = 0;
@@ -2461,13 +2461,13 @@ class VirtualQAbstractTableModel final : public QAbstractTableModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QStringList mimeTypes() const override {
+    virtual QList<QString> mimeTypes() const override {
         if (qabstracttablemodel_mimetypes_isbase) {
             qabstracttablemodel_mimetypes_isbase = false;
             return QAbstractTableModel::mimeTypes();
         } else if (qabstracttablemodel_mimetypes_callback != nullptr) {
             libqt_list /* of libqt_string */ callback_ret = qabstracttablemodel_mimetypes_callback();
-            QStringList callback_ret_QList;
+            QList<QString> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             libqt_string* callback_ret_arr = static_cast<libqt_string*>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -2481,19 +2481,19 @@ class VirtualQAbstractTableModel final : public QAbstractTableModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QMimeData* mimeData(const QModelIndexList& indexes) const override {
+    virtual QMimeData* mimeData(const QList<QModelIndex>& indexes) const override {
         if (qabstracttablemodel_mimedata_isbase) {
             qabstracttablemodel_mimedata_isbase = false;
             return QAbstractTableModel::mimeData(indexes);
         } else if (qabstracttablemodel_mimedata_callback != nullptr) {
-            const QModelIndexList& indexes_ret = indexes;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.length()));
-            for (size_t i = 0; i < indexes_ret.length(); ++i) {
+            const QList<QModelIndex>& indexes_ret = indexes;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.size()));
+            for (size_t i = 0; i < indexes_ret.size(); ++i) {
                 indexes_arr[i] = new QModelIndex(indexes_ret[i]);
             }
             libqt_list indexes_out;
-            indexes_out.len = indexes_ret.length();
+            indexes_out.len = indexes_ret.size();
             indexes_out.data.ptr = static_cast<void*>(indexes_arr);
             libqt_list /* of QModelIndex* */ cbval1 = indexes_out;
 
@@ -2739,7 +2739,7 @@ class VirtualQAbstractTableModel final : public QAbstractTableModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QModelIndexList match(const QModelIndex& start, int role, const QVariant& value, int hits, Qt::MatchFlags flags) const override {
+    virtual QList<QModelIndex> match(const QModelIndex& start, int role, const QVariant& value, int hits, Qt::MatchFlags flags) const override {
         if (qabstracttablemodel_match_isbase) {
             qabstracttablemodel_match_isbase = false;
             return QAbstractTableModel::match(start, role, value, hits, flags);
@@ -2755,7 +2755,7 @@ class VirtualQAbstractTableModel final : public QAbstractTableModel {
             int cbval5 = static_cast<int>(flags);
 
             libqt_list /* of QModelIndex* */ callback_ret = qabstracttablemodel_match_callback(this, cbval1, cbval2, cbval3, cbval4, cbval5);
-            QModelIndexList callback_ret_QList;
+            QList<QModelIndex> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             QModelIndex** callback_ret_arr = static_cast<QModelIndex**>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -2981,19 +2981,19 @@ class VirtualQAbstractTableModel final : public QAbstractTableModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    void encodeData(const QModelIndexList& indexes, QDataStream& stream) const {
+    void encodeData(const QList<QModelIndex>& indexes, QDataStream& stream) const {
         if (qabstracttablemodel_encodedata_isbase) {
             qabstracttablemodel_encodedata_isbase = false;
             QAbstractTableModel::encodeData(indexes, stream);
         } else if (qabstracttablemodel_encodedata_callback != nullptr) {
-            const QModelIndexList& indexes_ret = indexes;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.length()));
-            for (size_t i = 0; i < indexes_ret.length(); ++i) {
+            const QList<QModelIndex>& indexes_ret = indexes;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.size()));
+            for (size_t i = 0; i < indexes_ret.size(); ++i) {
                 indexes_arr[i] = new QModelIndex(indexes_ret[i]);
             }
             libqt_list indexes_out;
-            indexes_out.len = indexes_ret.length();
+            indexes_out.len = indexes_ret.size();
             indexes_out.data.ptr = static_cast<void*>(indexes_arr);
             libqt_list /* of QModelIndex* */ cbval1 = indexes_out;
             QDataStream& stream_ret = stream;
@@ -3262,29 +3262,29 @@ class VirtualQAbstractTableModel final : public QAbstractTableModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    void changePersistentIndexList(const QModelIndexList& from, const QModelIndexList& to) {
+    void changePersistentIndexList(const QList<QModelIndex>& from, const QList<QModelIndex>& to) {
         if (qabstracttablemodel_changepersistentindexlist_isbase) {
             qabstracttablemodel_changepersistentindexlist_isbase = false;
             QAbstractTableModel::changePersistentIndexList(from, to);
         } else if (qabstracttablemodel_changepersistentindexlist_callback != nullptr) {
-            const QModelIndexList& from_ret = from;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** from_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * from_ret.length()));
-            for (size_t i = 0; i < from_ret.length(); ++i) {
+            const QList<QModelIndex>& from_ret = from;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** from_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * from_ret.size()));
+            for (size_t i = 0; i < from_ret.size(); ++i) {
                 from_arr[i] = new QModelIndex(from_ret[i]);
             }
             libqt_list from_out;
-            from_out.len = from_ret.length();
+            from_out.len = from_ret.size();
             from_out.data.ptr = static_cast<void*>(from_arr);
             libqt_list /* of QModelIndex* */ cbval1 = from_out;
-            const QModelIndexList& to_ret = to;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** to_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * to_ret.length()));
-            for (size_t i = 0; i < to_ret.length(); ++i) {
+            const QList<QModelIndex>& to_ret = to;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** to_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * to_ret.size()));
+            for (size_t i = 0; i < to_ret.size(); ++i) {
                 to_arr[i] = new QModelIndex(to_ret[i]);
             }
             libqt_list to_out;
-            to_out.len = to_ret.length();
+            to_out.len = to_ret.size();
             to_out.data.ptr = static_cast<void*>(to_arr);
             libqt_list /* of QModelIndex* */ cbval2 = to_out;
 
@@ -3295,13 +3295,13 @@ class VirtualQAbstractTableModel final : public QAbstractTableModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    QModelIndexList persistentIndexList() const {
+    QList<QModelIndex> persistentIndexList() const {
         if (qabstracttablemodel_persistentindexlist_isbase) {
             qabstracttablemodel_persistentindexlist_isbase = false;
             return QAbstractTableModel::persistentIndexList();
         } else if (qabstracttablemodel_persistentindexlist_callback != nullptr) {
             libqt_list /* of QModelIndex* */ callback_ret = qabstracttablemodel_persistentindexlist_callback();
-            QModelIndexList callback_ret_QList;
+            QList<QModelIndex> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             QModelIndex** callback_ret_arr = static_cast<QModelIndex**>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -3380,48 +3380,48 @@ class VirtualQAbstractTableModel final : public QAbstractTableModel {
     friend void QAbstractTableModel_QBaseChildEvent(QAbstractTableModel* self, QChildEvent* event);
     friend void QAbstractTableModel_CustomEvent(QAbstractTableModel* self, QEvent* event);
     friend void QAbstractTableModel_QBaseCustomEvent(QAbstractTableModel* self, QEvent* event);
-    friend void QAbstractTableModel_ConnectNotify(QAbstractTableModel* self, QMetaMethod* signal);
-    friend void QAbstractTableModel_QBaseConnectNotify(QAbstractTableModel* self, QMetaMethod* signal);
-    friend void QAbstractTableModel_DisconnectNotify(QAbstractTableModel* self, QMetaMethod* signal);
-    friend void QAbstractTableModel_QBaseDisconnectNotify(QAbstractTableModel* self, QMetaMethod* signal);
+    friend void QAbstractTableModel_ConnectNotify(QAbstractTableModel* self, const QMetaMethod* signal);
+    friend void QAbstractTableModel_QBaseConnectNotify(QAbstractTableModel* self, const QMetaMethod* signal);
+    friend void QAbstractTableModel_DisconnectNotify(QAbstractTableModel* self, const QMetaMethod* signal);
+    friend void QAbstractTableModel_QBaseDisconnectNotify(QAbstractTableModel* self, const QMetaMethod* signal);
     friend QModelIndex* QAbstractTableModel_CreateIndex(const QAbstractTableModel* self, int row, int column);
     friend QModelIndex* QAbstractTableModel_QBaseCreateIndex(const QAbstractTableModel* self, int row, int column);
-    friend void QAbstractTableModel_EncodeData(const QAbstractTableModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
-    friend void QAbstractTableModel_QBaseEncodeData(const QAbstractTableModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
-    friend bool QAbstractTableModel_DecodeData(QAbstractTableModel* self, int row, int column, QModelIndex* parent, QDataStream* stream);
-    friend bool QAbstractTableModel_QBaseDecodeData(QAbstractTableModel* self, int row, int column, QModelIndex* parent, QDataStream* stream);
-    friend void QAbstractTableModel_BeginInsertRows(QAbstractTableModel* self, QModelIndex* parent, int first, int last);
-    friend void QAbstractTableModel_QBaseBeginInsertRows(QAbstractTableModel* self, QModelIndex* parent, int first, int last);
+    friend void QAbstractTableModel_EncodeData(const QAbstractTableModel* self, const libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
+    friend void QAbstractTableModel_QBaseEncodeData(const QAbstractTableModel* self, const libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
+    friend bool QAbstractTableModel_DecodeData(QAbstractTableModel* self, int row, int column, const QModelIndex* parent, QDataStream* stream);
+    friend bool QAbstractTableModel_QBaseDecodeData(QAbstractTableModel* self, int row, int column, const QModelIndex* parent, QDataStream* stream);
+    friend void QAbstractTableModel_BeginInsertRows(QAbstractTableModel* self, const QModelIndex* parent, int first, int last);
+    friend void QAbstractTableModel_QBaseBeginInsertRows(QAbstractTableModel* self, const QModelIndex* parent, int first, int last);
     friend void QAbstractTableModel_EndInsertRows(QAbstractTableModel* self);
     friend void QAbstractTableModel_QBaseEndInsertRows(QAbstractTableModel* self);
-    friend void QAbstractTableModel_BeginRemoveRows(QAbstractTableModel* self, QModelIndex* parent, int first, int last);
-    friend void QAbstractTableModel_QBaseBeginRemoveRows(QAbstractTableModel* self, QModelIndex* parent, int first, int last);
+    friend void QAbstractTableModel_BeginRemoveRows(QAbstractTableModel* self, const QModelIndex* parent, int first, int last);
+    friend void QAbstractTableModel_QBaseBeginRemoveRows(QAbstractTableModel* self, const QModelIndex* parent, int first, int last);
     friend void QAbstractTableModel_EndRemoveRows(QAbstractTableModel* self);
     friend void QAbstractTableModel_QBaseEndRemoveRows(QAbstractTableModel* self);
-    friend bool QAbstractTableModel_BeginMoveRows(QAbstractTableModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow);
-    friend bool QAbstractTableModel_QBaseBeginMoveRows(QAbstractTableModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow);
+    friend bool QAbstractTableModel_BeginMoveRows(QAbstractTableModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationRow);
+    friend bool QAbstractTableModel_QBaseBeginMoveRows(QAbstractTableModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationRow);
     friend void QAbstractTableModel_EndMoveRows(QAbstractTableModel* self);
     friend void QAbstractTableModel_QBaseEndMoveRows(QAbstractTableModel* self);
-    friend void QAbstractTableModel_BeginInsertColumns(QAbstractTableModel* self, QModelIndex* parent, int first, int last);
-    friend void QAbstractTableModel_QBaseBeginInsertColumns(QAbstractTableModel* self, QModelIndex* parent, int first, int last);
+    friend void QAbstractTableModel_BeginInsertColumns(QAbstractTableModel* self, const QModelIndex* parent, int first, int last);
+    friend void QAbstractTableModel_QBaseBeginInsertColumns(QAbstractTableModel* self, const QModelIndex* parent, int first, int last);
     friend void QAbstractTableModel_EndInsertColumns(QAbstractTableModel* self);
     friend void QAbstractTableModel_QBaseEndInsertColumns(QAbstractTableModel* self);
-    friend void QAbstractTableModel_BeginRemoveColumns(QAbstractTableModel* self, QModelIndex* parent, int first, int last);
-    friend void QAbstractTableModel_QBaseBeginRemoveColumns(QAbstractTableModel* self, QModelIndex* parent, int first, int last);
+    friend void QAbstractTableModel_BeginRemoveColumns(QAbstractTableModel* self, const QModelIndex* parent, int first, int last);
+    friend void QAbstractTableModel_QBaseBeginRemoveColumns(QAbstractTableModel* self, const QModelIndex* parent, int first, int last);
     friend void QAbstractTableModel_EndRemoveColumns(QAbstractTableModel* self);
     friend void QAbstractTableModel_QBaseEndRemoveColumns(QAbstractTableModel* self);
-    friend bool QAbstractTableModel_BeginMoveColumns(QAbstractTableModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn);
-    friend bool QAbstractTableModel_QBaseBeginMoveColumns(QAbstractTableModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn);
+    friend bool QAbstractTableModel_BeginMoveColumns(QAbstractTableModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationColumn);
+    friend bool QAbstractTableModel_QBaseBeginMoveColumns(QAbstractTableModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationColumn);
     friend void QAbstractTableModel_EndMoveColumns(QAbstractTableModel* self);
     friend void QAbstractTableModel_QBaseEndMoveColumns(QAbstractTableModel* self);
     friend void QAbstractTableModel_BeginResetModel(QAbstractTableModel* self);
     friend void QAbstractTableModel_QBaseBeginResetModel(QAbstractTableModel* self);
     friend void QAbstractTableModel_EndResetModel(QAbstractTableModel* self);
     friend void QAbstractTableModel_QBaseEndResetModel(QAbstractTableModel* self);
-    friend void QAbstractTableModel_ChangePersistentIndex(QAbstractTableModel* self, QModelIndex* from, QModelIndex* to);
-    friend void QAbstractTableModel_QBaseChangePersistentIndex(QAbstractTableModel* self, QModelIndex* from, QModelIndex* to);
-    friend void QAbstractTableModel_ChangePersistentIndexList(QAbstractTableModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
-    friend void QAbstractTableModel_QBaseChangePersistentIndexList(QAbstractTableModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
+    friend void QAbstractTableModel_ChangePersistentIndex(QAbstractTableModel* self, const QModelIndex* from, const QModelIndex* to);
+    friend void QAbstractTableModel_QBaseChangePersistentIndex(QAbstractTableModel* self, const QModelIndex* from, const QModelIndex* to);
+    friend void QAbstractTableModel_ChangePersistentIndexList(QAbstractTableModel* self, const libqt_list /* of QModelIndex* */ from, const libqt_list /* of QModelIndex* */ to);
+    friend void QAbstractTableModel_QBaseChangePersistentIndexList(QAbstractTableModel* self, const libqt_list /* of QModelIndex* */ from, const libqt_list /* of QModelIndex* */ to);
     friend libqt_list /* of QModelIndex* */ QAbstractTableModel_PersistentIndexList(const QAbstractTableModel* self);
     friend libqt_list /* of QModelIndex* */ QAbstractTableModel_QBasePersistentIndexList(const QAbstractTableModel* self);
     friend QObject* QAbstractTableModel_Sender(const QAbstractTableModel* self);
@@ -3430,8 +3430,8 @@ class VirtualQAbstractTableModel final : public QAbstractTableModel {
     friend int QAbstractTableModel_QBaseSenderSignalIndex(const QAbstractTableModel* self);
     friend int QAbstractTableModel_Receivers(const QAbstractTableModel* self, const char* signal);
     friend int QAbstractTableModel_QBaseReceivers(const QAbstractTableModel* self, const char* signal);
-    friend bool QAbstractTableModel_IsSignalConnected(const QAbstractTableModel* self, QMetaMethod* signal);
-    friend bool QAbstractTableModel_QBaseIsSignalConnected(const QAbstractTableModel* self, QMetaMethod* signal);
+    friend bool QAbstractTableModel_IsSignalConnected(const QAbstractTableModel* self, const QMetaMethod* signal);
+    friend bool QAbstractTableModel_QBaseIsSignalConnected(const QAbstractTableModel* self, const QMetaMethod* signal);
 };
 
 // This class is a subclass of QAbstractListModel so that we can call protected methods
@@ -3647,8 +3647,8 @@ class VirtualQAbstractListModel final : public QAbstractListModel {
     mutable bool qabstractlistmodel_issignalconnected_isbase = false;
 
   public:
-    VirtualQAbstractListModel() : QAbstractListModel(){};
-    VirtualQAbstractListModel(QObject* parent) : QAbstractListModel(parent){};
+    VirtualQAbstractListModel() : QAbstractListModel() {};
+    VirtualQAbstractListModel(QObject* parent) : QAbstractListModel(parent) {};
 
     ~VirtualQAbstractListModel() {
         qabstractlistmodel_metacall_callback = nullptr;
@@ -4068,7 +4068,7 @@ class VirtualQAbstractListModel final : public QAbstractListModel {
             // Cast returned reference into pointer
             QModelIndex* cbval1 = const_cast<QModelIndex*>(&index_ret);
             const QMap<int, QVariant>& roles_ret = roles;
-            // Convert QMap<> from C++ memory to manually-managed C memory
+            // Convert const QMap<> from C++ memory to manually-managed C memory
             int* roles_karr = static_cast<int*>(malloc(sizeof(int) * roles_ret.size()));
             QVariant** roles_varr = static_cast<QVariant**>(malloc(sizeof(QVariant*) * roles_ret.size()));
             int roles_ctr = 0;
@@ -4108,13 +4108,13 @@ class VirtualQAbstractListModel final : public QAbstractListModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QStringList mimeTypes() const override {
+    virtual QList<QString> mimeTypes() const override {
         if (qabstractlistmodel_mimetypes_isbase) {
             qabstractlistmodel_mimetypes_isbase = false;
             return QAbstractListModel::mimeTypes();
         } else if (qabstractlistmodel_mimetypes_callback != nullptr) {
             libqt_list /* of libqt_string */ callback_ret = qabstractlistmodel_mimetypes_callback();
-            QStringList callback_ret_QList;
+            QList<QString> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             libqt_string* callback_ret_arr = static_cast<libqt_string*>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -4128,19 +4128,19 @@ class VirtualQAbstractListModel final : public QAbstractListModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QMimeData* mimeData(const QModelIndexList& indexes) const override {
+    virtual QMimeData* mimeData(const QList<QModelIndex>& indexes) const override {
         if (qabstractlistmodel_mimedata_isbase) {
             qabstractlistmodel_mimedata_isbase = false;
             return QAbstractListModel::mimeData(indexes);
         } else if (qabstractlistmodel_mimedata_callback != nullptr) {
-            const QModelIndexList& indexes_ret = indexes;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.length()));
-            for (size_t i = 0; i < indexes_ret.length(); ++i) {
+            const QList<QModelIndex>& indexes_ret = indexes;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.size()));
+            for (size_t i = 0; i < indexes_ret.size(); ++i) {
                 indexes_arr[i] = new QModelIndex(indexes_ret[i]);
             }
             libqt_list indexes_out;
-            indexes_out.len = indexes_ret.length();
+            indexes_out.len = indexes_ret.size();
             indexes_out.data.ptr = static_cast<void*>(indexes_arr);
             libqt_list /* of QModelIndex* */ cbval1 = indexes_out;
 
@@ -4386,7 +4386,7 @@ class VirtualQAbstractListModel final : public QAbstractListModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QModelIndexList match(const QModelIndex& start, int role, const QVariant& value, int hits, Qt::MatchFlags flags) const override {
+    virtual QList<QModelIndex> match(const QModelIndex& start, int role, const QVariant& value, int hits, Qt::MatchFlags flags) const override {
         if (qabstractlistmodel_match_isbase) {
             qabstractlistmodel_match_isbase = false;
             return QAbstractListModel::match(start, role, value, hits, flags);
@@ -4402,7 +4402,7 @@ class VirtualQAbstractListModel final : public QAbstractListModel {
             int cbval5 = static_cast<int>(flags);
 
             libqt_list /* of QModelIndex* */ callback_ret = qabstractlistmodel_match_callback(this, cbval1, cbval2, cbval3, cbval4, cbval5);
-            QModelIndexList callback_ret_QList;
+            QList<QModelIndex> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             QModelIndex** callback_ret_arr = static_cast<QModelIndex**>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -4628,19 +4628,19 @@ class VirtualQAbstractListModel final : public QAbstractListModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    void encodeData(const QModelIndexList& indexes, QDataStream& stream) const {
+    void encodeData(const QList<QModelIndex>& indexes, QDataStream& stream) const {
         if (qabstractlistmodel_encodedata_isbase) {
             qabstractlistmodel_encodedata_isbase = false;
             QAbstractListModel::encodeData(indexes, stream);
         } else if (qabstractlistmodel_encodedata_callback != nullptr) {
-            const QModelIndexList& indexes_ret = indexes;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.length()));
-            for (size_t i = 0; i < indexes_ret.length(); ++i) {
+            const QList<QModelIndex>& indexes_ret = indexes;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.size()));
+            for (size_t i = 0; i < indexes_ret.size(); ++i) {
                 indexes_arr[i] = new QModelIndex(indexes_ret[i]);
             }
             libqt_list indexes_out;
-            indexes_out.len = indexes_ret.length();
+            indexes_out.len = indexes_ret.size();
             indexes_out.data.ptr = static_cast<void*>(indexes_arr);
             libqt_list /* of QModelIndex* */ cbval1 = indexes_out;
             QDataStream& stream_ret = stream;
@@ -4909,29 +4909,29 @@ class VirtualQAbstractListModel final : public QAbstractListModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    void changePersistentIndexList(const QModelIndexList& from, const QModelIndexList& to) {
+    void changePersistentIndexList(const QList<QModelIndex>& from, const QList<QModelIndex>& to) {
         if (qabstractlistmodel_changepersistentindexlist_isbase) {
             qabstractlistmodel_changepersistentindexlist_isbase = false;
             QAbstractListModel::changePersistentIndexList(from, to);
         } else if (qabstractlistmodel_changepersistentindexlist_callback != nullptr) {
-            const QModelIndexList& from_ret = from;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** from_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * from_ret.length()));
-            for (size_t i = 0; i < from_ret.length(); ++i) {
+            const QList<QModelIndex>& from_ret = from;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** from_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * from_ret.size()));
+            for (size_t i = 0; i < from_ret.size(); ++i) {
                 from_arr[i] = new QModelIndex(from_ret[i]);
             }
             libqt_list from_out;
-            from_out.len = from_ret.length();
+            from_out.len = from_ret.size();
             from_out.data.ptr = static_cast<void*>(from_arr);
             libqt_list /* of QModelIndex* */ cbval1 = from_out;
-            const QModelIndexList& to_ret = to;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** to_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * to_ret.length()));
-            for (size_t i = 0; i < to_ret.length(); ++i) {
+            const QList<QModelIndex>& to_ret = to;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** to_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * to_ret.size()));
+            for (size_t i = 0; i < to_ret.size(); ++i) {
                 to_arr[i] = new QModelIndex(to_ret[i]);
             }
             libqt_list to_out;
-            to_out.len = to_ret.length();
+            to_out.len = to_ret.size();
             to_out.data.ptr = static_cast<void*>(to_arr);
             libqt_list /* of QModelIndex* */ cbval2 = to_out;
 
@@ -4942,13 +4942,13 @@ class VirtualQAbstractListModel final : public QAbstractListModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    QModelIndexList persistentIndexList() const {
+    QList<QModelIndex> persistentIndexList() const {
         if (qabstractlistmodel_persistentindexlist_isbase) {
             qabstractlistmodel_persistentindexlist_isbase = false;
             return QAbstractListModel::persistentIndexList();
         } else if (qabstractlistmodel_persistentindexlist_callback != nullptr) {
             libqt_list /* of QModelIndex* */ callback_ret = qabstractlistmodel_persistentindexlist_callback();
-            QModelIndexList callback_ret_QList;
+            QList<QModelIndex> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             QModelIndex** callback_ret_arr = static_cast<QModelIndex**>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -5027,48 +5027,48 @@ class VirtualQAbstractListModel final : public QAbstractListModel {
     friend void QAbstractListModel_QBaseChildEvent(QAbstractListModel* self, QChildEvent* event);
     friend void QAbstractListModel_CustomEvent(QAbstractListModel* self, QEvent* event);
     friend void QAbstractListModel_QBaseCustomEvent(QAbstractListModel* self, QEvent* event);
-    friend void QAbstractListModel_ConnectNotify(QAbstractListModel* self, QMetaMethod* signal);
-    friend void QAbstractListModel_QBaseConnectNotify(QAbstractListModel* self, QMetaMethod* signal);
-    friend void QAbstractListModel_DisconnectNotify(QAbstractListModel* self, QMetaMethod* signal);
-    friend void QAbstractListModel_QBaseDisconnectNotify(QAbstractListModel* self, QMetaMethod* signal);
+    friend void QAbstractListModel_ConnectNotify(QAbstractListModel* self, const QMetaMethod* signal);
+    friend void QAbstractListModel_QBaseConnectNotify(QAbstractListModel* self, const QMetaMethod* signal);
+    friend void QAbstractListModel_DisconnectNotify(QAbstractListModel* self, const QMetaMethod* signal);
+    friend void QAbstractListModel_QBaseDisconnectNotify(QAbstractListModel* self, const QMetaMethod* signal);
     friend QModelIndex* QAbstractListModel_CreateIndex(const QAbstractListModel* self, int row, int column);
     friend QModelIndex* QAbstractListModel_QBaseCreateIndex(const QAbstractListModel* self, int row, int column);
-    friend void QAbstractListModel_EncodeData(const QAbstractListModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
-    friend void QAbstractListModel_QBaseEncodeData(const QAbstractListModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
-    friend bool QAbstractListModel_DecodeData(QAbstractListModel* self, int row, int column, QModelIndex* parent, QDataStream* stream);
-    friend bool QAbstractListModel_QBaseDecodeData(QAbstractListModel* self, int row, int column, QModelIndex* parent, QDataStream* stream);
-    friend void QAbstractListModel_BeginInsertRows(QAbstractListModel* self, QModelIndex* parent, int first, int last);
-    friend void QAbstractListModel_QBaseBeginInsertRows(QAbstractListModel* self, QModelIndex* parent, int first, int last);
+    friend void QAbstractListModel_EncodeData(const QAbstractListModel* self, const libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
+    friend void QAbstractListModel_QBaseEncodeData(const QAbstractListModel* self, const libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
+    friend bool QAbstractListModel_DecodeData(QAbstractListModel* self, int row, int column, const QModelIndex* parent, QDataStream* stream);
+    friend bool QAbstractListModel_QBaseDecodeData(QAbstractListModel* self, int row, int column, const QModelIndex* parent, QDataStream* stream);
+    friend void QAbstractListModel_BeginInsertRows(QAbstractListModel* self, const QModelIndex* parent, int first, int last);
+    friend void QAbstractListModel_QBaseBeginInsertRows(QAbstractListModel* self, const QModelIndex* parent, int first, int last);
     friend void QAbstractListModel_EndInsertRows(QAbstractListModel* self);
     friend void QAbstractListModel_QBaseEndInsertRows(QAbstractListModel* self);
-    friend void QAbstractListModel_BeginRemoveRows(QAbstractListModel* self, QModelIndex* parent, int first, int last);
-    friend void QAbstractListModel_QBaseBeginRemoveRows(QAbstractListModel* self, QModelIndex* parent, int first, int last);
+    friend void QAbstractListModel_BeginRemoveRows(QAbstractListModel* self, const QModelIndex* parent, int first, int last);
+    friend void QAbstractListModel_QBaseBeginRemoveRows(QAbstractListModel* self, const QModelIndex* parent, int first, int last);
     friend void QAbstractListModel_EndRemoveRows(QAbstractListModel* self);
     friend void QAbstractListModel_QBaseEndRemoveRows(QAbstractListModel* self);
-    friend bool QAbstractListModel_BeginMoveRows(QAbstractListModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow);
-    friend bool QAbstractListModel_QBaseBeginMoveRows(QAbstractListModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow);
+    friend bool QAbstractListModel_BeginMoveRows(QAbstractListModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationRow);
+    friend bool QAbstractListModel_QBaseBeginMoveRows(QAbstractListModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationRow);
     friend void QAbstractListModel_EndMoveRows(QAbstractListModel* self);
     friend void QAbstractListModel_QBaseEndMoveRows(QAbstractListModel* self);
-    friend void QAbstractListModel_BeginInsertColumns(QAbstractListModel* self, QModelIndex* parent, int first, int last);
-    friend void QAbstractListModel_QBaseBeginInsertColumns(QAbstractListModel* self, QModelIndex* parent, int first, int last);
+    friend void QAbstractListModel_BeginInsertColumns(QAbstractListModel* self, const QModelIndex* parent, int first, int last);
+    friend void QAbstractListModel_QBaseBeginInsertColumns(QAbstractListModel* self, const QModelIndex* parent, int first, int last);
     friend void QAbstractListModel_EndInsertColumns(QAbstractListModel* self);
     friend void QAbstractListModel_QBaseEndInsertColumns(QAbstractListModel* self);
-    friend void QAbstractListModel_BeginRemoveColumns(QAbstractListModel* self, QModelIndex* parent, int first, int last);
-    friend void QAbstractListModel_QBaseBeginRemoveColumns(QAbstractListModel* self, QModelIndex* parent, int first, int last);
+    friend void QAbstractListModel_BeginRemoveColumns(QAbstractListModel* self, const QModelIndex* parent, int first, int last);
+    friend void QAbstractListModel_QBaseBeginRemoveColumns(QAbstractListModel* self, const QModelIndex* parent, int first, int last);
     friend void QAbstractListModel_EndRemoveColumns(QAbstractListModel* self);
     friend void QAbstractListModel_QBaseEndRemoveColumns(QAbstractListModel* self);
-    friend bool QAbstractListModel_BeginMoveColumns(QAbstractListModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn);
-    friend bool QAbstractListModel_QBaseBeginMoveColumns(QAbstractListModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn);
+    friend bool QAbstractListModel_BeginMoveColumns(QAbstractListModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationColumn);
+    friend bool QAbstractListModel_QBaseBeginMoveColumns(QAbstractListModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationColumn);
     friend void QAbstractListModel_EndMoveColumns(QAbstractListModel* self);
     friend void QAbstractListModel_QBaseEndMoveColumns(QAbstractListModel* self);
     friend void QAbstractListModel_BeginResetModel(QAbstractListModel* self);
     friend void QAbstractListModel_QBaseBeginResetModel(QAbstractListModel* self);
     friend void QAbstractListModel_EndResetModel(QAbstractListModel* self);
     friend void QAbstractListModel_QBaseEndResetModel(QAbstractListModel* self);
-    friend void QAbstractListModel_ChangePersistentIndex(QAbstractListModel* self, QModelIndex* from, QModelIndex* to);
-    friend void QAbstractListModel_QBaseChangePersistentIndex(QAbstractListModel* self, QModelIndex* from, QModelIndex* to);
-    friend void QAbstractListModel_ChangePersistentIndexList(QAbstractListModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
-    friend void QAbstractListModel_QBaseChangePersistentIndexList(QAbstractListModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
+    friend void QAbstractListModel_ChangePersistentIndex(QAbstractListModel* self, const QModelIndex* from, const QModelIndex* to);
+    friend void QAbstractListModel_QBaseChangePersistentIndex(QAbstractListModel* self, const QModelIndex* from, const QModelIndex* to);
+    friend void QAbstractListModel_ChangePersistentIndexList(QAbstractListModel* self, const libqt_list /* of QModelIndex* */ from, const libqt_list /* of QModelIndex* */ to);
+    friend void QAbstractListModel_QBaseChangePersistentIndexList(QAbstractListModel* self, const libqt_list /* of QModelIndex* */ from, const libqt_list /* of QModelIndex* */ to);
     friend libqt_list /* of QModelIndex* */ QAbstractListModel_PersistentIndexList(const QAbstractListModel* self);
     friend libqt_list /* of QModelIndex* */ QAbstractListModel_QBasePersistentIndexList(const QAbstractListModel* self);
     friend QObject* QAbstractListModel_Sender(const QAbstractListModel* self);
@@ -5077,8 +5077,8 @@ class VirtualQAbstractListModel final : public QAbstractListModel {
     friend int QAbstractListModel_QBaseSenderSignalIndex(const QAbstractListModel* self);
     friend int QAbstractListModel_Receivers(const QAbstractListModel* self, const char* signal);
     friend int QAbstractListModel_QBaseReceivers(const QAbstractListModel* self, const char* signal);
-    friend bool QAbstractListModel_IsSignalConnected(const QAbstractListModel* self, QMetaMethod* signal);
-    friend bool QAbstractListModel_QBaseIsSignalConnected(const QAbstractListModel* self, QMetaMethod* signal);
+    friend bool QAbstractListModel_IsSignalConnected(const QAbstractListModel* self, const QMetaMethod* signal);
+    friend bool QAbstractListModel_QBaseIsSignalConnected(const QAbstractListModel* self, const QMetaMethod* signal);
 };
 
 #endif

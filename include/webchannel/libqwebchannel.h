@@ -12,12 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-#include "libqwebchannelabstracttransport.h"
-
 /// https://doc.qt.io/qt-6/qwebchannel.html
 
 /// q_webchannel_new constructs a new QWebChannel object.
@@ -187,7 +181,7 @@ QThread* q_webchannel_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QWebChannel* self, QThread* thread ```
-void q_webchannel_move_to_thread(void* self, void* thread);
+bool q_webchannel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -202,6 +196,13 @@ int32_t q_webchannel_start_timer(void* self, int interval);
 ///
 /// ``` QWebChannel* self, int id ```
 void q_webchannel_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QWebChannel* self, enum Qt__TimerId id ```
+void q_webchannel_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -342,6 +343,13 @@ bool q_webchannel_inherits(void* self, const char* classname);
 ///
 /// ``` QWebChannel* self ```
 void q_webchannel_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QWebChannel* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_webchannel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

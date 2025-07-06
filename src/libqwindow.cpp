@@ -146,7 +146,7 @@ void QWindow_SetModality(QWindow* self, int modality) {
     self->setModality(static_cast<Qt::WindowModality>(modality));
 }
 
-void QWindow_SetFormat(QWindow* self, QSurfaceFormat* format) {
+void QWindow_SetFormat(QWindow* self, const QSurfaceFormat* format) {
     self->setFormat(*format);
 }
 
@@ -190,7 +190,7 @@ double QWindow_Opacity(const QWindow* self) {
     return static_cast<double>(self->opacity());
 }
 
-void QWindow_SetMask(QWindow* self, QRegion* region) {
+void QWindow_SetMask(QWindow* self, const QRegion* region) {
     self->setMask(*region);
 }
 
@@ -238,7 +238,7 @@ QWindow* QWindow_TransientParent(const QWindow* self) {
     return self->transientParent();
 }
 
-bool QWindow_IsAncestorOf(const QWindow* self, QWindow* child) {
+bool QWindow_IsAncestorOf(const QWindow* self, const QWindow* child) {
     return self->isAncestorOf(child);
 }
 
@@ -278,19 +278,19 @@ QSize* QWindow_SizeIncrement(const QWindow* self) {
     return new QSize(self->sizeIncrement());
 }
 
-void QWindow_SetMinimumSize(QWindow* self, QSize* size) {
+void QWindow_SetMinimumSize(QWindow* self, const QSize* size) {
     self->setMinimumSize(*size);
 }
 
-void QWindow_SetMaximumSize(QWindow* self, QSize* size) {
+void QWindow_SetMaximumSize(QWindow* self, const QSize* size) {
     self->setMaximumSize(*size);
 }
 
-void QWindow_SetBaseSize(QWindow* self, QSize* size) {
+void QWindow_SetBaseSize(QWindow* self, const QSize* size) {
     self->setBaseSize(*size);
 }
 
-void QWindow_SetSizeIncrement(QWindow* self, QSize* size) {
+void QWindow_SetSizeIncrement(QWindow* self, const QSize* size) {
     self->setSizeIncrement(*size);
 }
 
@@ -310,7 +310,7 @@ QPoint* QWindow_FramePosition(const QWindow* self) {
     return new QPoint(self->framePosition());
 }
 
-void QWindow_SetFramePosition(QWindow* self, QPoint* point) {
+void QWindow_SetFramePosition(QWindow* self, const QPoint* point) {
     self->setFramePosition(*point);
 }
 
@@ -334,7 +334,7 @@ QPoint* QWindow_Position(const QWindow* self) {
     return new QPoint(self->position());
 }
 
-void QWindow_SetPosition(QWindow* self, QPoint* pt) {
+void QWindow_SetPosition(QWindow* self, const QPoint* pt) {
     self->setPosition(*pt);
 }
 
@@ -342,7 +342,7 @@ void QWindow_SetPosition2(QWindow* self, int posx, int posy) {
     self->setPosition(static_cast<int>(posx), static_cast<int>(posy));
 }
 
-void QWindow_Resize(QWindow* self, QSize* newSize) {
+void QWindow_Resize(QWindow* self, const QSize* newSize) {
     self->resize(*newSize);
 }
 
@@ -350,7 +350,7 @@ void QWindow_Resize2(QWindow* self, int w, int h) {
     self->resize(static_cast<int>(w), static_cast<int>(h));
 }
 
-void QWindow_SetFilePath(QWindow* self, libqt_string filePath) {
+void QWindow_SetFilePath(QWindow* self, const libqt_string filePath) {
     QString filePath_QString = QString::fromUtf8(filePath.data, filePath.len);
     self->setFilePath(filePath_QString);
 }
@@ -367,7 +367,7 @@ libqt_string QWindow_FilePath(const QWindow* self) {
     return _str;
 }
 
-void QWindow_SetIcon(QWindow* self, QIcon* icon) {
+void QWindow_SetIcon(QWindow* self, const QIcon* icon) {
     self->setIcon(*icon);
 }
 
@@ -395,19 +395,19 @@ void QWindow_SetScreen(QWindow* self, QScreen* screen) {
     self->setScreen(screen);
 }
 
-QPointF* QWindow_MapToGlobal(const QWindow* self, QPointF* pos) {
+QPointF* QWindow_MapToGlobal(const QWindow* self, const QPointF* pos) {
     return new QPointF(self->mapToGlobal(*pos));
 }
 
-QPointF* QWindow_MapFromGlobal(const QWindow* self, QPointF* pos) {
+QPointF* QWindow_MapFromGlobal(const QWindow* self, const QPointF* pos) {
     return new QPointF(self->mapFromGlobal(*pos));
 }
 
-QPoint* QWindow_MapToGlobalWithPos(const QWindow* self, QPoint* pos) {
+QPoint* QWindow_MapToGlobalWithPos(const QWindow* self, const QPoint* pos) {
     return new QPoint(self->mapToGlobal(*pos));
 }
 
-QPoint* QWindow_MapFromGlobalWithPos(const QWindow* self, QPoint* pos) {
+QPoint* QWindow_MapFromGlobalWithPos(const QWindow* self, const QPoint* pos) {
     return new QPoint(self->mapFromGlobal(*pos));
 }
 
@@ -415,7 +415,7 @@ QCursor* QWindow_Cursor(const QWindow* self) {
     return new QCursor(self->cursor());
 }
 
-void QWindow_SetCursor(QWindow* self, QCursor* cursor) {
+void QWindow_SetCursor(QWindow* self, const QCursor* cursor) {
     self->setCursor(*cursor);
 }
 
@@ -479,7 +479,7 @@ bool QWindow_StartSystemMove(QWindow* self) {
     return self->startSystemMove();
 }
 
-void QWindow_SetTitle(QWindow* self, libqt_string title) {
+void QWindow_SetTitle(QWindow* self, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     self->setTitle(title_QString);
 }
@@ -504,7 +504,7 @@ void QWindow_SetGeometry(QWindow* self, int posx, int posy, int w, int h) {
     self->setGeometry(static_cast<int>(posx), static_cast<int>(posy), static_cast<int>(w), static_cast<int>(h));
 }
 
-void QWindow_SetGeometryWithRect(QWindow* self, QRect* rect) {
+void QWindow_SetGeometryWithRect(QWindow* self, const QRect* rect) {
     self->setGeometry(*rect);
 }
 
@@ -568,7 +568,7 @@ void QWindow_Connect_WindowStateChanged(QWindow* self, intptr_t slot) {
     });
 }
 
-void QWindow_WindowTitleChanged(QWindow* self, libqt_string title) {
+void QWindow_WindowTitleChanged(QWindow* self, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     self->windowTitleChanged(title_QString);
 }
@@ -800,7 +800,7 @@ void QWindow_SetFlag2(QWindow* self, int param1, bool on) {
     self->setFlag(static_cast<Qt::WindowType>(param1), on);
 }
 
-bool QWindow_IsAncestorOf2(const QWindow* self, QWindow* child, int mode) {
+bool QWindow_IsAncestorOf2(const QWindow* self, const QWindow* child, int mode) {
     return self->isAncestorOf(child, static_cast<QWindow::AncestorMode>(mode));
 }
 
@@ -1501,7 +1501,7 @@ void QWindow_OnTabletEvent(QWindow* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QWindow_NativeEvent(QWindow* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QWindow_NativeEvent(QWindow* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqwindow = dynamic_cast<VirtualQWindow*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqwindow && vqwindow->isVirtualQWindow) {
@@ -1512,7 +1512,7 @@ bool QWindow_NativeEvent(QWindow* self, libqt_string eventType, void* message, i
 }
 
 // Base class handler implementation
-bool QWindow_QBaseNativeEvent(QWindow* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QWindow_QBaseNativeEvent(QWindow* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqwindow = dynamic_cast<VirtualQWindow*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqwindow && vqwindow->isVirtualQWindow) {
@@ -1648,7 +1648,7 @@ void QWindow_OnCustomEvent(QWindow* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWindow_ConnectNotify(QWindow* self, QMetaMethod* signal) {
+void QWindow_ConnectNotify(QWindow* self, const QMetaMethod* signal) {
     auto* vqwindow = dynamic_cast<VirtualQWindow*>(self);
     if (vqwindow && vqwindow->isVirtualQWindow) {
         vqwindow->connectNotify(*signal);
@@ -1658,7 +1658,7 @@ void QWindow_ConnectNotify(QWindow* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QWindow_QBaseConnectNotify(QWindow* self, QMetaMethod* signal) {
+void QWindow_QBaseConnectNotify(QWindow* self, const QMetaMethod* signal) {
     auto* vqwindow = dynamic_cast<VirtualQWindow*>(self);
     if (vqwindow && vqwindow->isVirtualQWindow) {
         vqwindow->setQWindow_ConnectNotify_IsBase(true);
@@ -1677,7 +1677,7 @@ void QWindow_OnConnectNotify(QWindow* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWindow_DisconnectNotify(QWindow* self, QMetaMethod* signal) {
+void QWindow_DisconnectNotify(QWindow* self, const QMetaMethod* signal) {
     auto* vqwindow = dynamic_cast<VirtualQWindow*>(self);
     if (vqwindow && vqwindow->isVirtualQWindow) {
         vqwindow->disconnectNotify(*signal);
@@ -1687,7 +1687,7 @@ void QWindow_DisconnectNotify(QWindow* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QWindow_QBaseDisconnectNotify(QWindow* self, QMetaMethod* signal) {
+void QWindow_QBaseDisconnectNotify(QWindow* self, const QMetaMethod* signal) {
     auto* vqwindow = dynamic_cast<VirtualQWindow*>(self);
     if (vqwindow && vqwindow->isVirtualQWindow) {
         vqwindow->setQWindow_DisconnectNotify_IsBase(true);
@@ -1822,7 +1822,7 @@ void QWindow_OnReceivers(const QWindow* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QWindow_IsSignalConnected(const QWindow* self, QMetaMethod* signal) {
+bool QWindow_IsSignalConnected(const QWindow* self, const QMetaMethod* signal) {
     auto* vqwindow = const_cast<VirtualQWindow*>(dynamic_cast<const VirtualQWindow*>(self));
     if (vqwindow && vqwindow->isVirtualQWindow) {
         return vqwindow->isSignalConnected(*signal);
@@ -1832,7 +1832,7 @@ bool QWindow_IsSignalConnected(const QWindow* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QWindow_QBaseIsSignalConnected(const QWindow* self, QMetaMethod* signal) {
+bool QWindow_QBaseIsSignalConnected(const QWindow* self, const QMetaMethod* signal) {
     auto* vqwindow = const_cast<VirtualQWindow*>(dynamic_cast<const VirtualQWindow*>(self));
     if (vqwindow && vqwindow->isVirtualQWindow) {
         vqwindow->setQWindow_IsSignalConnected_IsBase(true);

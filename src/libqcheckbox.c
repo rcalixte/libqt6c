@@ -106,6 +106,14 @@ void q_checkbox_on_state_changed(void* self, void (*slot)(void*, int)) {
     QCheckBox_Connect_StateChanged((QCheckBox*)self, (intptr_t)slot);
 }
 
+void q_checkbox_check_state_changed(void* self, int64_t param1) {
+    QCheckBox_CheckStateChanged((QCheckBox*)self, param1);
+}
+
+void q_checkbox_on_check_state_changed(void* self, void (*slot)(void*, int64_t)) {
+    QCheckBox_Connect_CheckStateChanged((QCheckBox*)self, (intptr_t)slot);
+}
+
 bool q_checkbox_event(void* self, void* e) {
     return QCheckBox_Event((QCheckBox*)self, (QEvent*)e);
 }
@@ -1329,6 +1337,10 @@ QWidget* q_checkbox_child_at_with_q_point(void* self, void* p) {
     return QWidget_ChildAtWithQPoint((QWidget*)self, (QPoint*)p);
 }
 
+QWidget* q_checkbox_child_at_with_q_point_f(void* self, void* p) {
+    return QWidget_ChildAtWithQPointF((QWidget*)self, (QPointF*)p);
+}
+
 void q_checkbox_set_attribute(void* self, int64_t param1) {
     QWidget_SetAttribute((QWidget*)self, param1);
 }
@@ -1508,8 +1520,8 @@ QThread* q_checkbox_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_checkbox_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_checkbox_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_checkbox_start_timer(void* self, int interval) {
@@ -1518,6 +1530,10 @@ int32_t q_checkbox_start_timer(void* self, int interval) {
 
 void q_checkbox_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_checkbox_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_checkbox_children(void* self) {
@@ -1608,6 +1624,10 @@ void q_checkbox_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
+bool q_checkbox_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
+}
+
 int32_t q_checkbox_start_timer2(void* self, int interval, int64_t timerType) {
     return QObject_StartTimer2((QObject*)self, interval, timerType);
 }
@@ -1674,6 +1694,10 @@ int32_t q_checkbox_depth(void* self) {
 
 double q_checkbox_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
+}
+
+int32_t q_checkbox_encode_metric_f(int64_t metric, double value) {
+    return QPaintDevice_EncodeMetricF(metric, value);
 }
 
 void q_checkbox_key_press_event(void* self, void* e) {
@@ -2286,6 +2310,18 @@ bool q_checkbox_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_checkbox_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QCheckBox_OnIsSignalConnected((QCheckBox*)self, (intptr_t)slot);
+}
+
+double q_checkbox_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QCheckBox_GetDecodedMetricF((QCheckBox*)self, metricA, metricB);
+}
+
+double q_checkbox_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QCheckBox_QBaseGetDecodedMetricF((QCheckBox*)self, metricA, metricB);
+}
+
+void q_checkbox_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
+    QCheckBox_OnGetDecodedMetricF((QCheckBox*)self, (intptr_t)slot);
 }
 
 void q_checkbox_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {

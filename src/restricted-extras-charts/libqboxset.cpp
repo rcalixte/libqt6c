@@ -23,22 +23,22 @@ QBoxSet* QBoxSet_new2(const double le, const double lq, const double m, const do
     return new VirtualQBoxSet(static_cast<const qreal>(le), static_cast<const qreal>(lq), static_cast<const qreal>(m), static_cast<const qreal>(uq), static_cast<const qreal>(ue));
 }
 
-QBoxSet* QBoxSet_new3(libqt_string label) {
+QBoxSet* QBoxSet_new3(const libqt_string label) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return new VirtualQBoxSet(label_QString);
 }
 
-QBoxSet* QBoxSet_new4(libqt_string label, QObject* parent) {
+QBoxSet* QBoxSet_new4(const libqt_string label, QObject* parent) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return new VirtualQBoxSet(label_QString, parent);
 }
 
-QBoxSet* QBoxSet_new5(const double le, const double lq, const double m, const double uq, const double ue, libqt_string label) {
+QBoxSet* QBoxSet_new5(const double le, const double lq, const double m, const double uq, const double ue, const libqt_string label) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return new VirtualQBoxSet(static_cast<const qreal>(le), static_cast<const qreal>(lq), static_cast<const qreal>(m), static_cast<const qreal>(uq), static_cast<const qreal>(ue), label_QString);
 }
 
-QBoxSet* QBoxSet_new6(const double le, const double lq, const double m, const double uq, const double ue, libqt_string label, QObject* parent) {
+QBoxSet* QBoxSet_new6(const double le, const double lq, const double m, const double uq, const double ue, const libqt_string label, QObject* parent) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return new VirtualQBoxSet(static_cast<const qreal>(le), static_cast<const qreal>(lq), static_cast<const qreal>(m), static_cast<const qreal>(uq), static_cast<const qreal>(ue), label_QString, parent);
 }
@@ -95,8 +95,8 @@ void QBoxSet_Append(QBoxSet* self, const double value) {
     self->append(static_cast<const qreal>(value));
 }
 
-void QBoxSet_AppendWithValues(QBoxSet* self, libqt_list /* of double */ values) {
-    QList<qreal> values_QList;
+void QBoxSet_AppendWithValues(QBoxSet* self, const libqt_list /* of double */ values) {
+    QList<double> values_QList;
     values_QList.reserve(values.len);
     double* values_arr = static_cast<double*>(values.data.doubles);
     for (size_t i = 0; i < values.len; ++i) {
@@ -109,7 +109,7 @@ void QBoxSet_Clear(QBoxSet* self) {
     self->clear();
 }
 
-void QBoxSet_SetLabel(QBoxSet* self, libqt_string label) {
+void QBoxSet_SetLabel(QBoxSet* self, const libqt_string label) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     self->setLabel(label_QString);
 }
@@ -148,7 +148,7 @@ int QBoxSet_Count(const QBoxSet* self) {
     return self->count();
 }
 
-void QBoxSet_SetPen(QBoxSet* self, QPen* pen) {
+void QBoxSet_SetPen(QBoxSet* self, const QPen* pen) {
     self->setPen(*pen);
 }
 
@@ -156,7 +156,7 @@ QPen* QBoxSet_Pen(const QBoxSet* self) {
     return new QPen(self->pen());
 }
 
-void QBoxSet_SetBrush(QBoxSet* self, QBrush* brush) {
+void QBoxSet_SetBrush(QBoxSet* self, const QBrush* brush) {
     self->setBrush(*brush);
 }
 
@@ -446,7 +446,7 @@ void QBoxSet_OnCustomEvent(QBoxSet* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QBoxSet_ConnectNotify(QBoxSet* self, QMetaMethod* signal) {
+void QBoxSet_ConnectNotify(QBoxSet* self, const QMetaMethod* signal) {
     auto* vqboxset = dynamic_cast<VirtualQBoxSet*>(self);
     if (vqboxset && vqboxset->isVirtualQBoxSet) {
         vqboxset->connectNotify(*signal);
@@ -456,7 +456,7 @@ void QBoxSet_ConnectNotify(QBoxSet* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QBoxSet_QBaseConnectNotify(QBoxSet* self, QMetaMethod* signal) {
+void QBoxSet_QBaseConnectNotify(QBoxSet* self, const QMetaMethod* signal) {
     auto* vqboxset = dynamic_cast<VirtualQBoxSet*>(self);
     if (vqboxset && vqboxset->isVirtualQBoxSet) {
         vqboxset->setQBoxSet_ConnectNotify_IsBase(true);
@@ -475,7 +475,7 @@ void QBoxSet_OnConnectNotify(QBoxSet* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QBoxSet_DisconnectNotify(QBoxSet* self, QMetaMethod* signal) {
+void QBoxSet_DisconnectNotify(QBoxSet* self, const QMetaMethod* signal) {
     auto* vqboxset = dynamic_cast<VirtualQBoxSet*>(self);
     if (vqboxset && vqboxset->isVirtualQBoxSet) {
         vqboxset->disconnectNotify(*signal);
@@ -485,7 +485,7 @@ void QBoxSet_DisconnectNotify(QBoxSet* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QBoxSet_QBaseDisconnectNotify(QBoxSet* self, QMetaMethod* signal) {
+void QBoxSet_QBaseDisconnectNotify(QBoxSet* self, const QMetaMethod* signal) {
     auto* vqboxset = dynamic_cast<VirtualQBoxSet*>(self);
     if (vqboxset && vqboxset->isVirtualQBoxSet) {
         vqboxset->setQBoxSet_DisconnectNotify_IsBase(true);
@@ -591,7 +591,7 @@ void QBoxSet_OnReceivers(const QBoxSet* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QBoxSet_IsSignalConnected(const QBoxSet* self, QMetaMethod* signal) {
+bool QBoxSet_IsSignalConnected(const QBoxSet* self, const QMetaMethod* signal) {
     auto* vqboxset = const_cast<VirtualQBoxSet*>(dynamic_cast<const VirtualQBoxSet*>(self));
     if (vqboxset && vqboxset->isVirtualQBoxSet) {
         return vqboxset->isSignalConnected(*signal);
@@ -601,7 +601,7 @@ bool QBoxSet_IsSignalConnected(const QBoxSet* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QBoxSet_QBaseIsSignalConnected(const QBoxSet* self, QMetaMethod* signal) {
+bool QBoxSet_QBaseIsSignalConnected(const QBoxSet* self, const QMetaMethod* signal) {
     auto* vqboxset = const_cast<VirtualQBoxSet*>(dynamic_cast<const VirtualQBoxSet*>(self));
     if (vqboxset && vqboxset->isVirtualQBoxSet) {
         vqboxset->setQBoxSet_IsSignalConnected_IsBase(true);

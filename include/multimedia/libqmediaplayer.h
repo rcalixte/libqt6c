@@ -12,17 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqaudiooutput.h"
-#include "../libqevent.h"
-#include "../libqiodevice.h"
-#include "libqmediametadata.h"
-#include "libqmediatimerange.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-#include "../libqurl.h"
-#include "libqvideosink.h"
-
 /// https://doc.qt.io/qt-6/qmediaplayer.html
 
 /// q_mediaplayer_new constructs a new QMediaPlayer object.
@@ -105,6 +94,16 @@ void q_mediaplayer_set_active_video_track(void* self, int index);
 ///
 /// ``` QMediaPlayer* self, int index ```
 void q_mediaplayer_set_active_subtitle_track(void* self, int index);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#setAudioBufferOutput)
+///
+/// ``` QMediaPlayer* self, QAudioBufferOutput* output ```
+void q_mediaplayer_set_audio_buffer_output(void* self, void* output);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#audioBufferOutput)
+///
+/// ``` QMediaPlayer* self ```
+QAudioBufferOutput* q_mediaplayer_audio_buffer_output(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#setAudioOutput)
 ///
@@ -195,6 +194,11 @@ bool q_mediaplayer_is_seekable(void* self);
 ///
 /// ``` QMediaPlayer* self ```
 double q_mediaplayer_playback_rate(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#isPlaying)
+///
+/// ``` QMediaPlayer* self ```
+bool q_mediaplayer_is_playing(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#loops)
 ///
@@ -351,6 +355,16 @@ void q_mediaplayer_seekable_changed(void* self, bool seekable);
 /// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*, bool) ```
 void q_mediaplayer_on_seekable_changed(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#playingChanged)
+///
+/// ``` QMediaPlayer* self, bool playing ```
+void q_mediaplayer_playing_changed(void* self, bool playing);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#playingChanged)
+///
+/// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*, bool) ```
+void q_mediaplayer_on_playing_changed(void* self, void (*slot)(void*, bool));
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#playbackRateChanged)
 ///
 /// ``` QMediaPlayer* self, double rate ```
@@ -400,6 +414,16 @@ void q_mediaplayer_audio_output_changed(void* self);
 ///
 /// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*) ```
 void q_mediaplayer_on_audio_output_changed(void* self, void (*slot)(void*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#audioBufferOutputChanged)
+///
+/// ``` QMediaPlayer* self ```
+void q_mediaplayer_audio_buffer_output_changed(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#audioBufferOutputChanged)
+///
+/// ``` QMediaPlayer* self, void (*slot)(QMediaPlayer*) ```
+void q_mediaplayer_on_audio_buffer_output_changed(void* self, void (*slot)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#tracksChanged)
 ///
@@ -517,7 +541,7 @@ QThread* q_mediaplayer_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QMediaPlayer* self, QThread* thread ```
-void q_mediaplayer_move_to_thread(void* self, void* thread);
+bool q_mediaplayer_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -532,6 +556,13 @@ int32_t q_mediaplayer_start_timer(void* self, int interval);
 ///
 /// ``` QMediaPlayer* self, int id ```
 void q_mediaplayer_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QMediaPlayer* self, enum Qt__TimerId id ```
+void q_mediaplayer_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -672,6 +703,13 @@ bool q_mediaplayer_inherits(void* self, const char* classname);
 ///
 /// ``` QMediaPlayer* self ```
 void q_mediaplayer_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QMediaPlayer* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_mediaplayer_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

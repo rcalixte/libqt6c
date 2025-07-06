@@ -67,8 +67,8 @@ class VirtualQGuiApplication final : public QGuiApplication {
     mutable bool qguiapplication_issignalconnected_isbase = false;
 
   public:
-    VirtualQGuiApplication(int& argc, char** argv) : QGuiApplication(argc, argv){};
-    VirtualQGuiApplication(int& argc, char** argv, int param3) : QGuiApplication(argc, argv, param3){};
+    VirtualQGuiApplication(int& argc, char** argv) : QGuiApplication(argc, argv) {};
+    VirtualQGuiApplication(int& argc, char** argv, int param3) : QGuiApplication(argc, argv, param3) {};
 
     ~VirtualQGuiApplication() {
         qguiapplication_metacall_callback = nullptr;
@@ -340,10 +340,10 @@ class VirtualQGuiApplication final : public QGuiApplication {
     friend void QGuiApplication_QBaseChildEvent(QGuiApplication* self, QChildEvent* event);
     friend void QGuiApplication_CustomEvent(QGuiApplication* self, QEvent* event);
     friend void QGuiApplication_QBaseCustomEvent(QGuiApplication* self, QEvent* event);
-    friend void QGuiApplication_ConnectNotify(QGuiApplication* self, QMetaMethod* signal);
-    friend void QGuiApplication_QBaseConnectNotify(QGuiApplication* self, QMetaMethod* signal);
-    friend void QGuiApplication_DisconnectNotify(QGuiApplication* self, QMetaMethod* signal);
-    friend void QGuiApplication_QBaseDisconnectNotify(QGuiApplication* self, QMetaMethod* signal);
+    friend void QGuiApplication_ConnectNotify(QGuiApplication* self, const QMetaMethod* signal);
+    friend void QGuiApplication_QBaseConnectNotify(QGuiApplication* self, const QMetaMethod* signal);
+    friend void QGuiApplication_DisconnectNotify(QGuiApplication* self, const QMetaMethod* signal);
+    friend void QGuiApplication_QBaseDisconnectNotify(QGuiApplication* self, const QMetaMethod* signal);
     friend void* QGuiApplication_ResolveInterface(const QGuiApplication* self, const char* name, int revision);
     friend void* QGuiApplication_QBaseResolveInterface(const QGuiApplication* self, const char* name, int revision);
     friend QObject* QGuiApplication_Sender(const QGuiApplication* self);
@@ -352,8 +352,8 @@ class VirtualQGuiApplication final : public QGuiApplication {
     friend int QGuiApplication_QBaseSenderSignalIndex(const QGuiApplication* self);
     friend int QGuiApplication_Receivers(const QGuiApplication* self, const char* signal);
     friend int QGuiApplication_QBaseReceivers(const QGuiApplication* self, const char* signal);
-    friend bool QGuiApplication_IsSignalConnected(const QGuiApplication* self, QMetaMethod* signal);
-    friend bool QGuiApplication_QBaseIsSignalConnected(const QGuiApplication* self, QMetaMethod* signal);
+    friend bool QGuiApplication_IsSignalConnected(const QGuiApplication* self, const QMetaMethod* signal);
+    friend bool QGuiApplication_QBaseIsSignalConnected(const QGuiApplication* self, const QMetaMethod* signal);
 };
 
 #endif

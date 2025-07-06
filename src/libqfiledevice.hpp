@@ -25,26 +25,6 @@ typedef struct QMetaObject QMetaObject;
 typedef struct QObject QObject;
 #endif
 
-#ifdef __cplusplus
-typedef QFileDevice::FileError FileError;             // C++ enum
-typedef QFileDevice::FileHandleFlag FileHandleFlag;   // C++ enum
-typedef QFileDevice::FileHandleFlags FileHandleFlags; // C++ QFlags
-typedef QFileDevice::FileTime FileTime;               // C++ enum
-typedef QFileDevice::MemoryMapFlag MemoryMapFlag;     // C++ enum
-typedef QFileDevice::MemoryMapFlags MemoryMapFlags;   // C++ QFlags
-typedef QFileDevice::Permission Permission;           // C++ enum
-typedef QFileDevice::Permissions Permissions;         // C++ QFlags
-#else
-typedef int FileError;       // C ABI enum
-typedef int FileHandleFlag;  // C ABI enum
-typedef int FileHandleFlags; // C ABI QFlags
-typedef int FileTime;        // C ABI enum
-typedef int MemoryMapFlag;   // C ABI enum
-typedef int MemoryMapFlags;  // C ABI QFlags
-typedef int Permission;      // C ABI enum
-typedef int Permissions;     // C ABI QFlags
-#endif
-
 QMetaObject* QFileDevice_MetaObject(const QFileDevice* self);
 void* QFileDevice_Metacast(QFileDevice* self, const char* param1);
 int QFileDevice_Metacall(QFileDevice* self, int param1, int param2, void** param3);
@@ -66,7 +46,7 @@ bool QFileDevice_SetPermissions(QFileDevice* self, int permissionSpec);
 unsigned char* QFileDevice_Map(QFileDevice* self, long long offset, long long size);
 bool QFileDevice_Unmap(QFileDevice* self, unsigned char* address);
 QDateTime* QFileDevice_FileTime(const QFileDevice* self, int time);
-bool QFileDevice_SetFileTime(QFileDevice* self, QDateTime* newDate, int fileTime);
+bool QFileDevice_SetFileTime(QFileDevice* self, const QDateTime* newDate, int fileTime);
 libqt_string QFileDevice_Tr2(const char* s, const char* c);
 libqt_string QFileDevice_Tr3(const char* s, const char* c, int n);
 unsigned char* QFileDevice_Map3(QFileDevice* self, long long offset, long long size, int flags);

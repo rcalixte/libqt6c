@@ -81,6 +81,7 @@ class VirtualQPageSetupDialog final : public QPageSetupDialog {
     using QPageSetupDialog_SenderSignalIndex_Callback = int (*)();
     using QPageSetupDialog_Receivers_Callback = int (*)(const QPageSetupDialog*, const char*);
     using QPageSetupDialog_IsSignalConnected_Callback = bool (*)(const QPageSetupDialog*, QMetaMethod*);
+    using QPageSetupDialog_GetDecodedMetricF_Callback = double (*)(const QPageSetupDialog*, int, int);
 
   protected:
     // Instance callback storage
@@ -147,6 +148,7 @@ class VirtualQPageSetupDialog final : public QPageSetupDialog {
     QPageSetupDialog_SenderSignalIndex_Callback qpagesetupdialog_sendersignalindex_callback = nullptr;
     QPageSetupDialog_Receivers_Callback qpagesetupdialog_receivers_callback = nullptr;
     QPageSetupDialog_IsSignalConnected_Callback qpagesetupdialog_issignalconnected_callback = nullptr;
+    QPageSetupDialog_GetDecodedMetricF_Callback qpagesetupdialog_getdecodedmetricf_callback = nullptr;
 
     // Instance base flags
     mutable bool qpagesetupdialog_metacall_isbase = false;
@@ -212,12 +214,13 @@ class VirtualQPageSetupDialog final : public QPageSetupDialog {
     mutable bool qpagesetupdialog_sendersignalindex_isbase = false;
     mutable bool qpagesetupdialog_receivers_isbase = false;
     mutable bool qpagesetupdialog_issignalconnected_isbase = false;
+    mutable bool qpagesetupdialog_getdecodedmetricf_isbase = false;
 
   public:
-    VirtualQPageSetupDialog(QWidget* parent) : QPageSetupDialog(parent){};
-    VirtualQPageSetupDialog(QPrinter* printer) : QPageSetupDialog(printer){};
-    VirtualQPageSetupDialog() : QPageSetupDialog(){};
-    VirtualQPageSetupDialog(QPrinter* printer, QWidget* parent) : QPageSetupDialog(printer, parent){};
+    VirtualQPageSetupDialog(QWidget* parent) : QPageSetupDialog(parent) {};
+    VirtualQPageSetupDialog(QPrinter* printer) : QPageSetupDialog(printer) {};
+    VirtualQPageSetupDialog() : QPageSetupDialog() {};
+    VirtualQPageSetupDialog(QPrinter* printer, QWidget* parent) : QPageSetupDialog(printer, parent) {};
 
     ~VirtualQPageSetupDialog() {
         qpagesetupdialog_metacall_callback = nullptr;
@@ -283,6 +286,7 @@ class VirtualQPageSetupDialog final : public QPageSetupDialog {
         qpagesetupdialog_sendersignalindex_callback = nullptr;
         qpagesetupdialog_receivers_callback = nullptr;
         qpagesetupdialog_issignalconnected_callback = nullptr;
+        qpagesetupdialog_getdecodedmetricf_callback = nullptr;
     }
 
     // Callback setters
@@ -349,6 +353,7 @@ class VirtualQPageSetupDialog final : public QPageSetupDialog {
     inline void setQPageSetupDialog_SenderSignalIndex_Callback(QPageSetupDialog_SenderSignalIndex_Callback cb) { qpagesetupdialog_sendersignalindex_callback = cb; }
     inline void setQPageSetupDialog_Receivers_Callback(QPageSetupDialog_Receivers_Callback cb) { qpagesetupdialog_receivers_callback = cb; }
     inline void setQPageSetupDialog_IsSignalConnected_Callback(QPageSetupDialog_IsSignalConnected_Callback cb) { qpagesetupdialog_issignalconnected_callback = cb; }
+    inline void setQPageSetupDialog_GetDecodedMetricF_Callback(QPageSetupDialog_GetDecodedMetricF_Callback cb) { qpagesetupdialog_getdecodedmetricf_callback = cb; }
 
     // Base flag setters
     inline void setQPageSetupDialog_Metacall_IsBase(bool value) const { qpagesetupdialog_metacall_isbase = value; }
@@ -414,6 +419,7 @@ class VirtualQPageSetupDialog final : public QPageSetupDialog {
     inline void setQPageSetupDialog_SenderSignalIndex_IsBase(bool value) const { qpagesetupdialog_sendersignalindex_isbase = value; }
     inline void setQPageSetupDialog_Receivers_IsBase(bool value) const { qpagesetupdialog_receivers_isbase = value; }
     inline void setQPageSetupDialog_IsSignalConnected_IsBase(bool value) const { qpagesetupdialog_issignalconnected_isbase = value; }
+    inline void setQPageSetupDialog_GetDecodedMetricF_IsBase(bool value) const { qpagesetupdialog_getdecodedmetricf_isbase = value; }
 
     // Virtual method for C ABI access and custom callback
     virtual int qt_metacall(QMetaObject::Call param1, int param2, void** param3) override {
@@ -1303,6 +1309,22 @@ class VirtualQPageSetupDialog final : public QPageSetupDialog {
         }
     }
 
+    // Virtual method for C ABI access and custom callback
+    double getDecodedMetricF(QPaintDevice::PaintDeviceMetric metricA, QPaintDevice::PaintDeviceMetric metricB) const {
+        if (qpagesetupdialog_getdecodedmetricf_isbase) {
+            qpagesetupdialog_getdecodedmetricf_isbase = false;
+            return QPageSetupDialog::getDecodedMetricF(metricA, metricB);
+        } else if (qpagesetupdialog_getdecodedmetricf_callback != nullptr) {
+            int cbval1 = static_cast<int>(metricA);
+            int cbval2 = static_cast<int>(metricB);
+
+            double callback_ret = qpagesetupdialog_getdecodedmetricf_callback(this, cbval1, cbval2);
+            return static_cast<double>(callback_ret);
+        } else {
+            return QPageSetupDialog::getDecodedMetricF(metricA, metricB);
+        }
+    }
+
     // Friend functions
     friend void QPageSetupDialog_KeyPressEvent(QPageSetupDialog* self, QKeyEvent* param1);
     friend void QPageSetupDialog_QBaseKeyPressEvent(QPageSetupDialog* self, QKeyEvent* param1);
@@ -1356,8 +1378,8 @@ class VirtualQPageSetupDialog final : public QPageSetupDialog {
     friend void QPageSetupDialog_QBaseDropEvent(QPageSetupDialog* self, QDropEvent* event);
     friend void QPageSetupDialog_HideEvent(QPageSetupDialog* self, QHideEvent* event);
     friend void QPageSetupDialog_QBaseHideEvent(QPageSetupDialog* self, QHideEvent* event);
-    friend bool QPageSetupDialog_NativeEvent(QPageSetupDialog* self, libqt_string eventType, void* message, intptr_t* result);
-    friend bool QPageSetupDialog_QBaseNativeEvent(QPageSetupDialog* self, libqt_string eventType, void* message, intptr_t* result);
+    friend bool QPageSetupDialog_NativeEvent(QPageSetupDialog* self, const libqt_string eventType, void* message, intptr_t* result);
+    friend bool QPageSetupDialog_QBaseNativeEvent(QPageSetupDialog* self, const libqt_string eventType, void* message, intptr_t* result);
     friend void QPageSetupDialog_ChangeEvent(QPageSetupDialog* self, QEvent* param1);
     friend void QPageSetupDialog_QBaseChangeEvent(QPageSetupDialog* self, QEvent* param1);
     friend int QPageSetupDialog_Metric(const QPageSetupDialog* self, int param1);
@@ -1378,10 +1400,10 @@ class VirtualQPageSetupDialog final : public QPageSetupDialog {
     friend void QPageSetupDialog_QBaseChildEvent(QPageSetupDialog* self, QChildEvent* event);
     friend void QPageSetupDialog_CustomEvent(QPageSetupDialog* self, QEvent* event);
     friend void QPageSetupDialog_QBaseCustomEvent(QPageSetupDialog* self, QEvent* event);
-    friend void QPageSetupDialog_ConnectNotify(QPageSetupDialog* self, QMetaMethod* signal);
-    friend void QPageSetupDialog_QBaseConnectNotify(QPageSetupDialog* self, QMetaMethod* signal);
-    friend void QPageSetupDialog_DisconnectNotify(QPageSetupDialog* self, QMetaMethod* signal);
-    friend void QPageSetupDialog_QBaseDisconnectNotify(QPageSetupDialog* self, QMetaMethod* signal);
+    friend void QPageSetupDialog_ConnectNotify(QPageSetupDialog* self, const QMetaMethod* signal);
+    friend void QPageSetupDialog_QBaseConnectNotify(QPageSetupDialog* self, const QMetaMethod* signal);
+    friend void QPageSetupDialog_DisconnectNotify(QPageSetupDialog* self, const QMetaMethod* signal);
+    friend void QPageSetupDialog_QBaseDisconnectNotify(QPageSetupDialog* self, const QMetaMethod* signal);
     friend void QPageSetupDialog_AdjustPosition(QPageSetupDialog* self, QWidget* param1);
     friend void QPageSetupDialog_QBaseAdjustPosition(QPageSetupDialog* self, QWidget* param1);
     friend void QPageSetupDialog_UpdateMicroFocus(QPageSetupDialog* self);
@@ -1400,8 +1422,10 @@ class VirtualQPageSetupDialog final : public QPageSetupDialog {
     friend int QPageSetupDialog_QBaseSenderSignalIndex(const QPageSetupDialog* self);
     friend int QPageSetupDialog_Receivers(const QPageSetupDialog* self, const char* signal);
     friend int QPageSetupDialog_QBaseReceivers(const QPageSetupDialog* self, const char* signal);
-    friend bool QPageSetupDialog_IsSignalConnected(const QPageSetupDialog* self, QMetaMethod* signal);
-    friend bool QPageSetupDialog_QBaseIsSignalConnected(const QPageSetupDialog* self, QMetaMethod* signal);
+    friend bool QPageSetupDialog_IsSignalConnected(const QPageSetupDialog* self, const QMetaMethod* signal);
+    friend bool QPageSetupDialog_QBaseIsSignalConnected(const QPageSetupDialog* self, const QMetaMethod* signal);
+    friend double QPageSetupDialog_GetDecodedMetricF(const QPageSetupDialog* self, int metricA, int metricB);
+    friend double QPageSetupDialog_QBaseGetDecodedMetricF(const QPageSetupDialog* self, int metricA, int metricB);
 };
 
 #endif

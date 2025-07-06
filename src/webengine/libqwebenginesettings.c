@@ -64,6 +64,18 @@ void q_webenginesettings_reset_unknown_url_scheme_policy(void* self) {
     QWebEngineSettings_ResetUnknownUrlSchemePolicy((QWebEngineSettings*)self);
 }
 
+void q_webenginesettings_set_image_animation_policy(void* self, int64_t policy) {
+    QWebEngineSettings_SetImageAnimationPolicy((QWebEngineSettings*)self, policy);
+}
+
+int64_t q_webenginesettings_image_animation_policy(void* self) {
+    return QWebEngineSettings_ImageAnimationPolicy((QWebEngineSettings*)self);
+}
+
+void q_webenginesettings_reset_image_animation_policy(void* self) {
+    QWebEngineSettings_ResetImageAnimationPolicy((QWebEngineSettings*)self);
+}
+
 void q_webenginesettings_delete(void* self) {
     QWebEngineSettings_Delete((QWebEngineSettings*)(self));
 }

@@ -40,6 +40,7 @@
 #include <QUrl>
 #include <QVariant>
 #include <QWebEngineContextMenuRequest>
+#include <QWebEngineFrame>
 #include <QWebEngineHistory>
 #include <QWebEngineHttpRequest>
 #include <QWebEnginePage>
@@ -124,7 +125,7 @@ libqt_string QWebEngineView_Tr(const char* s) {
     return _str;
 }
 
-QWebEngineView* QWebEngineView_ForPage(QWebEnginePage* page) {
+QWebEngineView* QWebEngineView_ForPage(const QWebEnginePage* page) {
     return QWebEngineView::forPage(page);
 }
 
@@ -136,20 +137,20 @@ void QWebEngineView_SetPage(QWebEngineView* self, QWebEnginePage* page) {
     self->setPage(page);
 }
 
-void QWebEngineView_Load(QWebEngineView* self, QUrl* url) {
+void QWebEngineView_Load(QWebEngineView* self, const QUrl* url) {
     self->load(*url);
 }
 
-void QWebEngineView_LoadWithRequest(QWebEngineView* self, QWebEngineHttpRequest* request) {
+void QWebEngineView_LoadWithRequest(QWebEngineView* self, const QWebEngineHttpRequest* request) {
     self->load(*request);
 }
 
-void QWebEngineView_SetHtml(QWebEngineView* self, libqt_string html) {
+void QWebEngineView_SetHtml(QWebEngineView* self, const libqt_string html) {
     QString html_QString = QString::fromUtf8(html.data, html.len);
     self->setHtml(html_QString);
 }
 
-void QWebEngineView_SetContent(QWebEngineView* self, libqt_string data) {
+void QWebEngineView_SetContent(QWebEngineView* self, const libqt_string data) {
     QByteArray data_QByteArray(data.data, data.len);
     self->setContent(data_QByteArray);
 }
@@ -170,7 +171,7 @@ libqt_string QWebEngineView_Title(const QWebEngineView* self) {
     return _str;
 }
 
-void QWebEngineView_SetUrl(QWebEngineView* self, QUrl* url) {
+void QWebEngineView_SetUrl(QWebEngineView* self, const QUrl* url) {
     self->setUrl(*url);
 }
 
@@ -230,7 +231,7 @@ QWebEngineContextMenuRequest* QWebEngineView_LastContextMenuRequest(const QWebEn
     return self->lastContextMenuRequest();
 }
 
-void QWebEngineView_PrintToPdf(QWebEngineView* self, libqt_string filePath) {
+void QWebEngineView_PrintToPdf(QWebEngineView* self, const libqt_string filePath) {
     QString filePath_QString = QString::fromUtf8(filePath.data, filePath.len);
     self->printToPdf(filePath_QString);
 }
@@ -290,7 +291,7 @@ void QWebEngineView_Connect_LoadFinished(QWebEngineView* self, intptr_t slot) {
     });
 }
 
-void QWebEngineView_TitleChanged(QWebEngineView* self, libqt_string title) {
+void QWebEngineView_TitleChanged(QWebEngineView* self, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     self->titleChanged(title_QString);
 }
@@ -322,7 +323,7 @@ void QWebEngineView_Connect_SelectionChanged(QWebEngineView* self, intptr_t slot
     });
 }
 
-void QWebEngineView_UrlChanged(QWebEngineView* self, QUrl* param1) {
+void QWebEngineView_UrlChanged(QWebEngineView* self, const QUrl* param1) {
     self->urlChanged(*param1);
 }
 
@@ -336,7 +337,7 @@ void QWebEngineView_Connect_UrlChanged(QWebEngineView* self, intptr_t slot) {
     });
 }
 
-void QWebEngineView_IconUrlChanged(QWebEngineView* self, QUrl* param1) {
+void QWebEngineView_IconUrlChanged(QWebEngineView* self, const QUrl* param1) {
     self->iconUrlChanged(*param1);
 }
 
@@ -350,7 +351,7 @@ void QWebEngineView_Connect_IconUrlChanged(QWebEngineView* self, intptr_t slot) 
     });
 }
 
-void QWebEngineView_IconChanged(QWebEngineView* self, QIcon* param1) {
+void QWebEngineView_IconChanged(QWebEngineView* self, const QIcon* param1) {
     self->iconChanged(*param1);
 }
 
@@ -377,7 +378,7 @@ void QWebEngineView_Connect_RenderProcessTerminated(QWebEngineView* self, intptr
     });
 }
 
-void QWebEngineView_PdfPrintingFinished(QWebEngineView* self, libqt_string filePath, bool success) {
+void QWebEngineView_PdfPrintingFinished(QWebEngineView* self, const libqt_string filePath, bool success) {
     QString filePath_QString = QString::fromUtf8(filePath.data, filePath.len);
     self->pdfPrintingFinished(filePath_QString, success);
 }
@@ -407,6 +408,18 @@ void QWebEngineView_Connect_PrintRequested(QWebEngineView* self, intptr_t slot) 
     void (*slotFunc)(QWebEngineView*) = reinterpret_cast<void (*)(QWebEngineView*)>(slot);
     QWebEngineView::connect(self, &QWebEngineView::printRequested, [self, slotFunc]() {
         slotFunc(self);
+    });
+}
+
+void QWebEngineView_PrintRequestedByFrame(QWebEngineView* self, QWebEngineFrame* frame) {
+    self->printRequestedByFrame(*frame);
+}
+
+void QWebEngineView_Connect_PrintRequestedByFrame(QWebEngineView* self, intptr_t slot) {
+    void (*slotFunc)(QWebEngineView*, QWebEngineFrame*) = reinterpret_cast<void (*)(QWebEngineView*, QWebEngineFrame*)>(slot);
+    QWebEngineView::connect(self, &QWebEngineView::printRequestedByFrame, [self, slotFunc](QWebEngineFrame frame) {
+        QWebEngineFrame* sigval1 = new QWebEngineFrame(frame);
+        slotFunc(self, sigval1);
     });
 }
 
@@ -446,18 +459,18 @@ libqt_string QWebEngineView_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-void QWebEngineView_SetHtml2(QWebEngineView* self, libqt_string html, QUrl* baseUrl) {
+void QWebEngineView_SetHtml2(QWebEngineView* self, const libqt_string html, const QUrl* baseUrl) {
     QString html_QString = QString::fromUtf8(html.data, html.len);
     self->setHtml(html_QString, *baseUrl);
 }
 
-void QWebEngineView_SetContent2(QWebEngineView* self, libqt_string data, libqt_string mimeType) {
+void QWebEngineView_SetContent2(QWebEngineView* self, const libqt_string data, const libqt_string mimeType) {
     QByteArray data_QByteArray(data.data, data.len);
     QString mimeType_QString = QString::fromUtf8(mimeType.data, mimeType.len);
     self->setContent(data_QByteArray, mimeType_QString);
 }
 
-void QWebEngineView_SetContent3(QWebEngineView* self, libqt_string data, libqt_string mimeType, QUrl* baseUrl) {
+void QWebEngineView_SetContent3(QWebEngineView* self, const libqt_string data, const libqt_string mimeType, const QUrl* baseUrl) {
     QByteArray data_QByteArray(data.data, data.len);
     QString mimeType_QString = QString::fromUtf8(mimeType.data, mimeType.len);
     self->setContent(data_QByteArray, mimeType_QString, *baseUrl);
@@ -467,12 +480,12 @@ void QWebEngineView_TriggerPageAction2(QWebEngineView* self, int action, bool ch
     self->triggerPageAction(static_cast<QWebEnginePage::WebAction>(action), checked);
 }
 
-void QWebEngineView_PrintToPdf2(QWebEngineView* self, libqt_string filePath, QPageLayout* layout) {
+void QWebEngineView_PrintToPdf2(QWebEngineView* self, const libqt_string filePath, const QPageLayout* layout) {
     QString filePath_QString = QString::fromUtf8(filePath.data, filePath.len);
     self->printToPdf(filePath_QString, *layout);
 }
 
-void QWebEngineView_PrintToPdf3(QWebEngineView* self, libqt_string filePath, QPageLayout* layout, QPageRanges* ranges) {
+void QWebEngineView_PrintToPdf3(QWebEngineView* self, const libqt_string filePath, const QPageLayout* layout, const QPageRanges* ranges) {
     QString filePath_QString = QString::fromUtf8(filePath.data, filePath.len);
     self->printToPdf(filePath_QString, *layout, *ranges);
 }
@@ -1435,7 +1448,7 @@ void QWebEngineView_OnActionEvent(QWebEngineView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QWebEngineView_NativeEvent(QWebEngineView* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QWebEngineView_NativeEvent(QWebEngineView* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqwebengineview = dynamic_cast<VirtualQWebEngineView*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqwebengineview && vqwebengineview->isVirtualQWebEngineView) {
@@ -1446,7 +1459,7 @@ bool QWebEngineView_NativeEvent(QWebEngineView* self, libqt_string eventType, vo
 }
 
 // Base class handler implementation
-bool QWebEngineView_QBaseNativeEvent(QWebEngineView* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QWebEngineView_QBaseNativeEvent(QWebEngineView* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqwebengineview = dynamic_cast<VirtualQWebEngineView*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqwebengineview && vqwebengineview->isVirtualQWebEngineView) {
@@ -1814,7 +1827,7 @@ void QWebEngineView_OnCustomEvent(QWebEngineView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWebEngineView_ConnectNotify(QWebEngineView* self, QMetaMethod* signal) {
+void QWebEngineView_ConnectNotify(QWebEngineView* self, const QMetaMethod* signal) {
     auto* vqwebengineview = dynamic_cast<VirtualQWebEngineView*>(self);
     if (vqwebengineview && vqwebengineview->isVirtualQWebEngineView) {
         vqwebengineview->connectNotify(*signal);
@@ -1824,7 +1837,7 @@ void QWebEngineView_ConnectNotify(QWebEngineView* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QWebEngineView_QBaseConnectNotify(QWebEngineView* self, QMetaMethod* signal) {
+void QWebEngineView_QBaseConnectNotify(QWebEngineView* self, const QMetaMethod* signal) {
     auto* vqwebengineview = dynamic_cast<VirtualQWebEngineView*>(self);
     if (vqwebengineview && vqwebengineview->isVirtualQWebEngineView) {
         vqwebengineview->setQWebEngineView_ConnectNotify_IsBase(true);
@@ -1843,7 +1856,7 @@ void QWebEngineView_OnConnectNotify(QWebEngineView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWebEngineView_DisconnectNotify(QWebEngineView* self, QMetaMethod* signal) {
+void QWebEngineView_DisconnectNotify(QWebEngineView* self, const QMetaMethod* signal) {
     auto* vqwebengineview = dynamic_cast<VirtualQWebEngineView*>(self);
     if (vqwebengineview && vqwebengineview->isVirtualQWebEngineView) {
         vqwebengineview->disconnectNotify(*signal);
@@ -1853,7 +1866,7 @@ void QWebEngineView_DisconnectNotify(QWebEngineView* self, QMetaMethod* signal) 
 }
 
 // Base class handler implementation
-void QWebEngineView_QBaseDisconnectNotify(QWebEngineView* self, QMetaMethod* signal) {
+void QWebEngineView_QBaseDisconnectNotify(QWebEngineView* self, const QMetaMethod* signal) {
     auto* vqwebengineview = dynamic_cast<VirtualQWebEngineView*>(self);
     if (vqwebengineview && vqwebengineview->isVirtualQWebEngineView) {
         vqwebengineview->setQWebEngineView_DisconnectNotify_IsBase(true);
@@ -2104,7 +2117,7 @@ void QWebEngineView_OnReceivers(const QWebEngineView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QWebEngineView_IsSignalConnected(const QWebEngineView* self, QMetaMethod* signal) {
+bool QWebEngineView_IsSignalConnected(const QWebEngineView* self, const QMetaMethod* signal) {
     auto* vqwebengineview = const_cast<VirtualQWebEngineView*>(dynamic_cast<const VirtualQWebEngineView*>(self));
     if (vqwebengineview && vqwebengineview->isVirtualQWebEngineView) {
         return vqwebengineview->isSignalConnected(*signal);
@@ -2114,7 +2127,7 @@ bool QWebEngineView_IsSignalConnected(const QWebEngineView* self, QMetaMethod* s
 }
 
 // Base class handler implementation
-bool QWebEngineView_QBaseIsSignalConnected(const QWebEngineView* self, QMetaMethod* signal) {
+bool QWebEngineView_QBaseIsSignalConnected(const QWebEngineView* self, const QMetaMethod* signal) {
     auto* vqwebengineview = const_cast<VirtualQWebEngineView*>(dynamic_cast<const VirtualQWebEngineView*>(self));
     if (vqwebengineview && vqwebengineview->isVirtualQWebEngineView) {
         vqwebengineview->setQWebEngineView_IsSignalConnected_IsBase(true);
@@ -2129,6 +2142,35 @@ void QWebEngineView_OnIsSignalConnected(const QWebEngineView* self, intptr_t slo
     auto* vqwebengineview = const_cast<VirtualQWebEngineView*>(dynamic_cast<const VirtualQWebEngineView*>(self));
     if (vqwebengineview && vqwebengineview->isVirtualQWebEngineView) {
         vqwebengineview->setQWebEngineView_IsSignalConnected_Callback(reinterpret_cast<VirtualQWebEngineView::QWebEngineView_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QWebEngineView_GetDecodedMetricF(const QWebEngineView* self, int metricA, int metricB) {
+    auto* vqwebengineview = const_cast<VirtualQWebEngineView*>(dynamic_cast<const VirtualQWebEngineView*>(self));
+    if (vqwebengineview && vqwebengineview->isVirtualQWebEngineView) {
+        return vqwebengineview->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQWebEngineView*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QWebEngineView_QBaseGetDecodedMetricF(const QWebEngineView* self, int metricA, int metricB) {
+    auto* vqwebengineview = const_cast<VirtualQWebEngineView*>(dynamic_cast<const VirtualQWebEngineView*>(self));
+    if (vqwebengineview && vqwebengineview->isVirtualQWebEngineView) {
+        vqwebengineview->setQWebEngineView_GetDecodedMetricF_IsBase(true);
+        return vqwebengineview->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQWebEngineView*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QWebEngineView_OnGetDecodedMetricF(const QWebEngineView* self, intptr_t slot) {
+    auto* vqwebengineview = const_cast<VirtualQWebEngineView*>(dynamic_cast<const VirtualQWebEngineView*>(self));
+    if (vqwebengineview && vqwebengineview->isVirtualQWebEngineView) {
+        vqwebengineview->setQWebEngineView_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQWebEngineView::QWebEngineView_GetDecodedMetricF_Callback>(slot));
     }
 }
 

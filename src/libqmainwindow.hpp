@@ -56,14 +56,6 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QMainWindow::DockOption DockOption;   // C++ enum
-typedef QMainWindow::DockOptions DockOptions; // C++ QFlags
-#else
-typedef int DockOption;  // C ABI enum
-typedef int DockOptions; // C ABI QFlags
-#endif
-
 QMainWindow* QMainWindow_new(QWidget* parent);
 QMainWindow* QMainWindow_new2();
 QMainWindow* QMainWindow_new3(QWidget* parent, int flags);
@@ -74,7 +66,7 @@ void QMainWindow_OnMetacall(QMainWindow* self, intptr_t slot);
 int QMainWindow_QBaseMetacall(QMainWindow* self, int param1, int param2, void** param3);
 libqt_string QMainWindow_Tr(const char* s);
 QSize* QMainWindow_IconSize(const QMainWindow* self);
-void QMainWindow_SetIconSize(QMainWindow* self, QSize* iconSize);
+void QMainWindow_SetIconSize(QMainWindow* self, const QSize* iconSize);
 int QMainWindow_ToolButtonStyle(const QMainWindow* self);
 void QMainWindow_SetToolButtonStyle(QMainWindow* self, int toolButtonStyle);
 bool QMainWindow_IsAnimated(const QMainWindow* self);
@@ -87,7 +79,7 @@ int QMainWindow_TabPosition(const QMainWindow* self, int area);
 void QMainWindow_SetTabPosition(QMainWindow* self, int areas, int tabPosition);
 void QMainWindow_SetDockOptions(QMainWindow* self, int options);
 int QMainWindow_DockOptions(const QMainWindow* self);
-bool QMainWindow_IsSeparator(const QMainWindow* self, QPoint* pos);
+bool QMainWindow_IsSeparator(const QMainWindow* self, const QPoint* pos);
 QMenuBar* QMainWindow_MenuBar(const QMainWindow* self);
 void QMainWindow_SetMenuBar(QMainWindow* self, QMenuBar* menubar);
 QWidget* QMainWindow_MenuWidget(const QMainWindow* self);
@@ -103,12 +95,12 @@ void QMainWindow_AddToolBarBreak(QMainWindow* self);
 void QMainWindow_InsertToolBarBreak(QMainWindow* self, QToolBar* before);
 void QMainWindow_AddToolBar(QMainWindow* self, int area, QToolBar* toolbar);
 void QMainWindow_AddToolBarWithToolbar(QMainWindow* self, QToolBar* toolbar);
-QToolBar* QMainWindow_AddToolBarWithTitle(QMainWindow* self, libqt_string title);
+QToolBar* QMainWindow_AddToolBarWithTitle(QMainWindow* self, const libqt_string title);
 void QMainWindow_InsertToolBar(QMainWindow* self, QToolBar* before, QToolBar* toolbar);
 void QMainWindow_RemoveToolBar(QMainWindow* self, QToolBar* toolbar);
 void QMainWindow_RemoveToolBarBreak(QMainWindow* self, QToolBar* before);
 bool QMainWindow_UnifiedTitleAndToolBarOnMac(const QMainWindow* self);
-int QMainWindow_ToolBarArea(const QMainWindow* self, QToolBar* toolbar);
+int QMainWindow_ToolBarArea(const QMainWindow* self, const QToolBar* toolbar);
 bool QMainWindow_ToolBarBreak(const QMainWindow* self, QToolBar* toolbar);
 void QMainWindow_AddDockWidget(QMainWindow* self, int area, QDockWidget* dockwidget);
 void QMainWindow_AddDockWidget2(QMainWindow* self, int area, QDockWidget* dockwidget, int orientation);
@@ -118,16 +110,16 @@ libqt_list /* of QDockWidget* */ QMainWindow_TabifiedDockWidgets(const QMainWind
 void QMainWindow_RemoveDockWidget(QMainWindow* self, QDockWidget* dockwidget);
 bool QMainWindow_RestoreDockWidget(QMainWindow* self, QDockWidget* dockwidget);
 int QMainWindow_DockWidgetArea(const QMainWindow* self, QDockWidget* dockwidget);
-void QMainWindow_ResizeDocks(QMainWindow* self, libqt_list /* of QDockWidget* */ docks, libqt_list /* of int */ sizes, int orientation);
+void QMainWindow_ResizeDocks(QMainWindow* self, const libqt_list /* of QDockWidget* */ docks, const libqt_list /* of int */ sizes, int orientation);
 libqt_string QMainWindow_SaveState(const QMainWindow* self);
-bool QMainWindow_RestoreState(QMainWindow* self, libqt_string state);
+bool QMainWindow_RestoreState(QMainWindow* self, const libqt_string state);
 QMenu* QMainWindow_CreatePopupMenu(QMainWindow* self);
 void QMainWindow_OnCreatePopupMenu(QMainWindow* self, intptr_t slot);
 QMenu* QMainWindow_QBaseCreatePopupMenu(QMainWindow* self);
 void QMainWindow_SetAnimated(QMainWindow* self, bool enabled);
 void QMainWindow_SetDockNestingEnabled(QMainWindow* self, bool enabled);
 void QMainWindow_SetUnifiedTitleAndToolBarOnMac(QMainWindow* self, bool set);
-void QMainWindow_IconSizeChanged(QMainWindow* self, QSize* iconSize);
+void QMainWindow_IconSizeChanged(QMainWindow* self, const QSize* iconSize);
 void QMainWindow_Connect_IconSizeChanged(QMainWindow* self, intptr_t slot);
 void QMainWindow_ToolButtonStyleChanged(QMainWindow* self, int toolButtonStyle);
 void QMainWindow_Connect_ToolButtonStyleChanged(QMainWindow* self, intptr_t slot);
@@ -143,7 +135,7 @@ libqt_string QMainWindow_Tr2(const char* s, const char* c);
 libqt_string QMainWindow_Tr3(const char* s, const char* c, int n);
 void QMainWindow_AddToolBarBreak1(QMainWindow* self, int area);
 libqt_string QMainWindow_SaveState1(const QMainWindow* self, int version);
-bool QMainWindow_RestoreState2(QMainWindow* self, libqt_string state, int version);
+bool QMainWindow_RestoreState2(QMainWindow* self, const libqt_string state, int version);
 int QMainWindow_DevType(const QMainWindow* self);
 void QMainWindow_OnDevType(const QMainWindow* self, intptr_t slot);
 int QMainWindow_QBaseDevType(const QMainWindow* self);
@@ -234,9 +226,9 @@ void QMainWindow_QBaseShowEvent(QMainWindow* self, QShowEvent* event);
 void QMainWindow_HideEvent(QMainWindow* self, QHideEvent* event);
 void QMainWindow_OnHideEvent(QMainWindow* self, intptr_t slot);
 void QMainWindow_QBaseHideEvent(QMainWindow* self, QHideEvent* event);
-bool QMainWindow_NativeEvent(QMainWindow* self, libqt_string eventType, void* message, intptr_t* result);
+bool QMainWindow_NativeEvent(QMainWindow* self, const libqt_string eventType, void* message, intptr_t* result);
 void QMainWindow_OnNativeEvent(QMainWindow* self, intptr_t slot);
-bool QMainWindow_QBaseNativeEvent(QMainWindow* self, libqt_string eventType, void* message, intptr_t* result);
+bool QMainWindow_QBaseNativeEvent(QMainWindow* self, const libqt_string eventType, void* message, intptr_t* result);
 void QMainWindow_ChangeEvent(QMainWindow* self, QEvent* param1);
 void QMainWindow_OnChangeEvent(QMainWindow* self, intptr_t slot);
 void QMainWindow_QBaseChangeEvent(QMainWindow* self, QEvent* param1);
@@ -273,12 +265,12 @@ void QMainWindow_QBaseChildEvent(QMainWindow* self, QChildEvent* event);
 void QMainWindow_CustomEvent(QMainWindow* self, QEvent* event);
 void QMainWindow_OnCustomEvent(QMainWindow* self, intptr_t slot);
 void QMainWindow_QBaseCustomEvent(QMainWindow* self, QEvent* event);
-void QMainWindow_ConnectNotify(QMainWindow* self, QMetaMethod* signal);
+void QMainWindow_ConnectNotify(QMainWindow* self, const QMetaMethod* signal);
 void QMainWindow_OnConnectNotify(QMainWindow* self, intptr_t slot);
-void QMainWindow_QBaseConnectNotify(QMainWindow* self, QMetaMethod* signal);
-void QMainWindow_DisconnectNotify(QMainWindow* self, QMetaMethod* signal);
+void QMainWindow_QBaseConnectNotify(QMainWindow* self, const QMetaMethod* signal);
+void QMainWindow_DisconnectNotify(QMainWindow* self, const QMetaMethod* signal);
 void QMainWindow_OnDisconnectNotify(QMainWindow* self, intptr_t slot);
-void QMainWindow_QBaseDisconnectNotify(QMainWindow* self, QMetaMethod* signal);
+void QMainWindow_QBaseDisconnectNotify(QMainWindow* self, const QMetaMethod* signal);
 void QMainWindow_UpdateMicroFocus(QMainWindow* self);
 void QMainWindow_OnUpdateMicroFocus(QMainWindow* self, intptr_t slot);
 void QMainWindow_QBaseUpdateMicroFocus(QMainWindow* self);
@@ -303,9 +295,12 @@ int QMainWindow_QBaseSenderSignalIndex(const QMainWindow* self);
 int QMainWindow_Receivers(const QMainWindow* self, const char* signal);
 void QMainWindow_OnReceivers(const QMainWindow* self, intptr_t slot);
 int QMainWindow_QBaseReceivers(const QMainWindow* self, const char* signal);
-bool QMainWindow_IsSignalConnected(const QMainWindow* self, QMetaMethod* signal);
+bool QMainWindow_IsSignalConnected(const QMainWindow* self, const QMetaMethod* signal);
 void QMainWindow_OnIsSignalConnected(const QMainWindow* self, intptr_t slot);
-bool QMainWindow_QBaseIsSignalConnected(const QMainWindow* self, QMetaMethod* signal);
+bool QMainWindow_QBaseIsSignalConnected(const QMainWindow* self, const QMetaMethod* signal);
+double QMainWindow_GetDecodedMetricF(const QMainWindow* self, int metricA, int metricB);
+void QMainWindow_OnGetDecodedMetricF(const QMainWindow* self, intptr_t slot);
+double QMainWindow_QBaseGetDecodedMetricF(const QMainWindow* self, int metricA, int metricB);
 void QMainWindow_Delete(QMainWindow* self);
 
 #ifdef __cplusplus

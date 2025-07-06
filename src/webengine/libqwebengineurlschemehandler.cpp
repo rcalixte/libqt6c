@@ -268,7 +268,7 @@ void QWebEngineUrlSchemeHandler_OnCustomEvent(QWebEngineUrlSchemeHandler* self, 
 }
 
 // Derived class handler implementation
-void QWebEngineUrlSchemeHandler_ConnectNotify(QWebEngineUrlSchemeHandler* self, QMetaMethod* signal) {
+void QWebEngineUrlSchemeHandler_ConnectNotify(QWebEngineUrlSchemeHandler* self, const QMetaMethod* signal) {
     auto* vqwebengineurlschemehandler = dynamic_cast<VirtualQWebEngineUrlSchemeHandler*>(self);
     if (vqwebengineurlschemehandler && vqwebengineurlschemehandler->isVirtualQWebEngineUrlSchemeHandler) {
         vqwebengineurlschemehandler->connectNotify(*signal);
@@ -278,7 +278,7 @@ void QWebEngineUrlSchemeHandler_ConnectNotify(QWebEngineUrlSchemeHandler* self, 
 }
 
 // Base class handler implementation
-void QWebEngineUrlSchemeHandler_QBaseConnectNotify(QWebEngineUrlSchemeHandler* self, QMetaMethod* signal) {
+void QWebEngineUrlSchemeHandler_QBaseConnectNotify(QWebEngineUrlSchemeHandler* self, const QMetaMethod* signal) {
     auto* vqwebengineurlschemehandler = dynamic_cast<VirtualQWebEngineUrlSchemeHandler*>(self);
     if (vqwebengineurlschemehandler && vqwebengineurlschemehandler->isVirtualQWebEngineUrlSchemeHandler) {
         vqwebengineurlschemehandler->setQWebEngineUrlSchemeHandler_ConnectNotify_IsBase(true);
@@ -297,7 +297,7 @@ void QWebEngineUrlSchemeHandler_OnConnectNotify(QWebEngineUrlSchemeHandler* self
 }
 
 // Derived class handler implementation
-void QWebEngineUrlSchemeHandler_DisconnectNotify(QWebEngineUrlSchemeHandler* self, QMetaMethod* signal) {
+void QWebEngineUrlSchemeHandler_DisconnectNotify(QWebEngineUrlSchemeHandler* self, const QMetaMethod* signal) {
     auto* vqwebengineurlschemehandler = dynamic_cast<VirtualQWebEngineUrlSchemeHandler*>(self);
     if (vqwebengineurlschemehandler && vqwebengineurlschemehandler->isVirtualQWebEngineUrlSchemeHandler) {
         vqwebengineurlschemehandler->disconnectNotify(*signal);
@@ -307,7 +307,7 @@ void QWebEngineUrlSchemeHandler_DisconnectNotify(QWebEngineUrlSchemeHandler* sel
 }
 
 // Base class handler implementation
-void QWebEngineUrlSchemeHandler_QBaseDisconnectNotify(QWebEngineUrlSchemeHandler* self, QMetaMethod* signal) {
+void QWebEngineUrlSchemeHandler_QBaseDisconnectNotify(QWebEngineUrlSchemeHandler* self, const QMetaMethod* signal) {
     auto* vqwebengineurlschemehandler = dynamic_cast<VirtualQWebEngineUrlSchemeHandler*>(self);
     if (vqwebengineurlschemehandler && vqwebengineurlschemehandler->isVirtualQWebEngineUrlSchemeHandler) {
         vqwebengineurlschemehandler->setQWebEngineUrlSchemeHandler_DisconnectNotify_IsBase(true);
@@ -413,7 +413,7 @@ void QWebEngineUrlSchemeHandler_OnReceivers(const QWebEngineUrlSchemeHandler* se
 }
 
 // Derived class handler implementation
-bool QWebEngineUrlSchemeHandler_IsSignalConnected(const QWebEngineUrlSchemeHandler* self, QMetaMethod* signal) {
+bool QWebEngineUrlSchemeHandler_IsSignalConnected(const QWebEngineUrlSchemeHandler* self, const QMetaMethod* signal) {
     auto* vqwebengineurlschemehandler = const_cast<VirtualQWebEngineUrlSchemeHandler*>(dynamic_cast<const VirtualQWebEngineUrlSchemeHandler*>(self));
     if (vqwebengineurlschemehandler && vqwebengineurlschemehandler->isVirtualQWebEngineUrlSchemeHandler) {
         return vqwebengineurlschemehandler->isSignalConnected(*signal);
@@ -423,7 +423,7 @@ bool QWebEngineUrlSchemeHandler_IsSignalConnected(const QWebEngineUrlSchemeHandl
 }
 
 // Base class handler implementation
-bool QWebEngineUrlSchemeHandler_QBaseIsSignalConnected(const QWebEngineUrlSchemeHandler* self, QMetaMethod* signal) {
+bool QWebEngineUrlSchemeHandler_QBaseIsSignalConnected(const QWebEngineUrlSchemeHandler* self, const QMetaMethod* signal) {
     auto* vqwebengineurlschemehandler = const_cast<VirtualQWebEngineUrlSchemeHandler*>(dynamic_cast<const VirtualQWebEngineUrlSchemeHandler*>(self));
     if (vqwebengineurlschemehandler && vqwebengineurlschemehandler->isVirtualQWebEngineUrlSchemeHandler) {
         vqwebengineurlschemehandler->setQWebEngineUrlSchemeHandler_IsSignalConnected_IsBase(true);

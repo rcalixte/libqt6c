@@ -1236,7 +1236,7 @@ void QPageSetupDialog_OnHideEvent(QPageSetupDialog* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPageSetupDialog_NativeEvent(QPageSetupDialog* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QPageSetupDialog_NativeEvent(QPageSetupDialog* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqpagesetupdialog = dynamic_cast<VirtualQPageSetupDialog*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqpagesetupdialog && vqpagesetupdialog->isVirtualQPageSetupDialog) {
@@ -1247,7 +1247,7 @@ bool QPageSetupDialog_NativeEvent(QPageSetupDialog* self, libqt_string eventType
 }
 
 // Base class handler implementation
-bool QPageSetupDialog_QBaseNativeEvent(QPageSetupDialog* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QPageSetupDialog_QBaseNativeEvent(QPageSetupDialog* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqpagesetupdialog = dynamic_cast<VirtualQPageSetupDialog*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqpagesetupdialog && vqpagesetupdialog->isVirtualQPageSetupDialog) {
@@ -1586,7 +1586,7 @@ void QPageSetupDialog_OnCustomEvent(QPageSetupDialog* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPageSetupDialog_ConnectNotify(QPageSetupDialog* self, QMetaMethod* signal) {
+void QPageSetupDialog_ConnectNotify(QPageSetupDialog* self, const QMetaMethod* signal) {
     auto* vqpagesetupdialog = dynamic_cast<VirtualQPageSetupDialog*>(self);
     if (vqpagesetupdialog && vqpagesetupdialog->isVirtualQPageSetupDialog) {
         vqpagesetupdialog->connectNotify(*signal);
@@ -1596,7 +1596,7 @@ void QPageSetupDialog_ConnectNotify(QPageSetupDialog* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-void QPageSetupDialog_QBaseConnectNotify(QPageSetupDialog* self, QMetaMethod* signal) {
+void QPageSetupDialog_QBaseConnectNotify(QPageSetupDialog* self, const QMetaMethod* signal) {
     auto* vqpagesetupdialog = dynamic_cast<VirtualQPageSetupDialog*>(self);
     if (vqpagesetupdialog && vqpagesetupdialog->isVirtualQPageSetupDialog) {
         vqpagesetupdialog->setQPageSetupDialog_ConnectNotify_IsBase(true);
@@ -1615,7 +1615,7 @@ void QPageSetupDialog_OnConnectNotify(QPageSetupDialog* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPageSetupDialog_DisconnectNotify(QPageSetupDialog* self, QMetaMethod* signal) {
+void QPageSetupDialog_DisconnectNotify(QPageSetupDialog* self, const QMetaMethod* signal) {
     auto* vqpagesetupdialog = dynamic_cast<VirtualQPageSetupDialog*>(self);
     if (vqpagesetupdialog && vqpagesetupdialog->isVirtualQPageSetupDialog) {
         vqpagesetupdialog->disconnectNotify(*signal);
@@ -1625,7 +1625,7 @@ void QPageSetupDialog_DisconnectNotify(QPageSetupDialog* self, QMetaMethod* sign
 }
 
 // Base class handler implementation
-void QPageSetupDialog_QBaseDisconnectNotify(QPageSetupDialog* self, QMetaMethod* signal) {
+void QPageSetupDialog_QBaseDisconnectNotify(QPageSetupDialog* self, const QMetaMethod* signal) {
     auto* vqpagesetupdialog = dynamic_cast<VirtualQPageSetupDialog*>(self);
     if (vqpagesetupdialog && vqpagesetupdialog->isVirtualQPageSetupDialog) {
         vqpagesetupdialog->setQPageSetupDialog_DisconnectNotify_IsBase(true);
@@ -1905,7 +1905,7 @@ void QPageSetupDialog_OnReceivers(const QPageSetupDialog* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPageSetupDialog_IsSignalConnected(const QPageSetupDialog* self, QMetaMethod* signal) {
+bool QPageSetupDialog_IsSignalConnected(const QPageSetupDialog* self, const QMetaMethod* signal) {
     auto* vqpagesetupdialog = const_cast<VirtualQPageSetupDialog*>(dynamic_cast<const VirtualQPageSetupDialog*>(self));
     if (vqpagesetupdialog && vqpagesetupdialog->isVirtualQPageSetupDialog) {
         return vqpagesetupdialog->isSignalConnected(*signal);
@@ -1915,7 +1915,7 @@ bool QPageSetupDialog_IsSignalConnected(const QPageSetupDialog* self, QMetaMetho
 }
 
 // Base class handler implementation
-bool QPageSetupDialog_QBaseIsSignalConnected(const QPageSetupDialog* self, QMetaMethod* signal) {
+bool QPageSetupDialog_QBaseIsSignalConnected(const QPageSetupDialog* self, const QMetaMethod* signal) {
     auto* vqpagesetupdialog = const_cast<VirtualQPageSetupDialog*>(dynamic_cast<const VirtualQPageSetupDialog*>(self));
     if (vqpagesetupdialog && vqpagesetupdialog->isVirtualQPageSetupDialog) {
         vqpagesetupdialog->setQPageSetupDialog_IsSignalConnected_IsBase(true);
@@ -1930,6 +1930,35 @@ void QPageSetupDialog_OnIsSignalConnected(const QPageSetupDialog* self, intptr_t
     auto* vqpagesetupdialog = const_cast<VirtualQPageSetupDialog*>(dynamic_cast<const VirtualQPageSetupDialog*>(self));
     if (vqpagesetupdialog && vqpagesetupdialog->isVirtualQPageSetupDialog) {
         vqpagesetupdialog->setQPageSetupDialog_IsSignalConnected_Callback(reinterpret_cast<VirtualQPageSetupDialog::QPageSetupDialog_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QPageSetupDialog_GetDecodedMetricF(const QPageSetupDialog* self, int metricA, int metricB) {
+    auto* vqpagesetupdialog = const_cast<VirtualQPageSetupDialog*>(dynamic_cast<const VirtualQPageSetupDialog*>(self));
+    if (vqpagesetupdialog && vqpagesetupdialog->isVirtualQPageSetupDialog) {
+        return vqpagesetupdialog->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQPageSetupDialog*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QPageSetupDialog_QBaseGetDecodedMetricF(const QPageSetupDialog* self, int metricA, int metricB) {
+    auto* vqpagesetupdialog = const_cast<VirtualQPageSetupDialog*>(dynamic_cast<const VirtualQPageSetupDialog*>(self));
+    if (vqpagesetupdialog && vqpagesetupdialog->isVirtualQPageSetupDialog) {
+        vqpagesetupdialog->setQPageSetupDialog_GetDecodedMetricF_IsBase(true);
+        return vqpagesetupdialog->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQPageSetupDialog*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QPageSetupDialog_OnGetDecodedMetricF(const QPageSetupDialog* self, intptr_t slot) {
+    auto* vqpagesetupdialog = const_cast<VirtualQPageSetupDialog*>(dynamic_cast<const VirtualQPageSetupDialog*>(self));
+    if (vqpagesetupdialog && vqpagesetupdialog->isVirtualQPageSetupDialog) {
+        vqpagesetupdialog->setQPageSetupDialog_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQPageSetupDialog::QPageSetupDialog_GetDecodedMetricF_Callback>(slot));
     }
 }
 

@@ -12,12 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqbitmap.h"
-#include "libqpixmap.h"
-#include "libqpoint.h"
-#include "libqscreen.h"
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qcursor.html
 
 /// q_cursor_new constructs a new QCursor object.

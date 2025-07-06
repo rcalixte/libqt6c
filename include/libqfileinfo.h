@@ -12,11 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqdatetime.h"
-#include "libqdir.h"
-#include "libqfiledevice.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qfileinfo.html
 
 /// q_fileinfo_new constructs a new QFileInfo object.
@@ -53,16 +48,6 @@ void q_fileinfo_operator_assign(void* self, void* fileinfo);
 ///
 /// ``` QFileInfo* self, QFileInfo* other ```
 void q_fileinfo_swap(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#operator==)
-///
-/// ``` QFileInfo* self, QFileInfo* fileinfo ```
-bool q_fileinfo_operator_equal(void* self, void* fileinfo);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#operator!=)
-///
-/// ``` QFileInfo* self, QFileInfo* fileinfo ```
-bool q_fileinfo_operator_not_equal(void* self, void* fileinfo);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#setFile)
 ///
@@ -254,6 +239,11 @@ bool q_fileinfo_is_bundle(void* self);
 /// ``` QFileInfo* self ```
 const char* q_fileinfo_sym_link_target(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#readSymLink)
+///
+/// ``` QFileInfo* self ```
+const char* q_fileinfo_read_sym_link(void* self);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#junctionTarget)
 ///
 /// ``` QFileInfo* self ```
@@ -318,6 +308,31 @@ QDateTime* q_fileinfo_last_read(void* self);
 ///
 /// ``` QFileInfo* self, enum QFileDevice__FileTime time ```
 QDateTime* q_fileinfo_file_time(void* self, int64_t time);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#birthTime)
+///
+/// ``` QFileInfo* self, QTimeZone* tz ```
+QDateTime* q_fileinfo_birth_time_with_tz(void* self, void* tz);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#metadataChangeTime)
+///
+/// ``` QFileInfo* self, QTimeZone* tz ```
+QDateTime* q_fileinfo_metadata_change_time_with_tz(void* self, void* tz);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#lastModified)
+///
+/// ``` QFileInfo* self, QTimeZone* tz ```
+QDateTime* q_fileinfo_last_modified_with_tz(void* self, void* tz);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#lastRead)
+///
+/// ``` QFileInfo* self, QTimeZone* tz ```
+QDateTime* q_fileinfo_last_read_with_tz(void* self, void* tz);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#fileTime)
+///
+/// ``` QFileInfo* self, enum QFileDevice__FileTime time, QTimeZone* tz ```
+QDateTime* q_fileinfo_file_time2(void* self, int64_t time, void* tz);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#caching)
 ///

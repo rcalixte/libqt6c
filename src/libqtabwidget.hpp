@@ -54,14 +54,6 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QTabWidget::TabPosition TabPosition; // C++ enum
-typedef QTabWidget::TabShape TabShape;       // C++ enum
-#else
-typedef int TabPosition; // C ABI enum
-typedef int TabShape;    // C ABI enum
-#endif
-
 QTabWidget* QTabWidget_new(QWidget* parent);
 QTabWidget* QTabWidget_new2();
 QMetaObject* QTabWidget_MetaObject(const QTabWidget* self);
@@ -70,27 +62,27 @@ int QTabWidget_Metacall(QTabWidget* self, int param1, int param2, void** param3)
 void QTabWidget_OnMetacall(QTabWidget* self, intptr_t slot);
 int QTabWidget_QBaseMetacall(QTabWidget* self, int param1, int param2, void** param3);
 libqt_string QTabWidget_Tr(const char* s);
-int QTabWidget_AddTab(QTabWidget* self, QWidget* widget, libqt_string param2);
-int QTabWidget_AddTab2(QTabWidget* self, QWidget* widget, QIcon* icon, libqt_string label);
-int QTabWidget_InsertTab(QTabWidget* self, int index, QWidget* widget, libqt_string param3);
-int QTabWidget_InsertTab2(QTabWidget* self, int index, QWidget* widget, QIcon* icon, libqt_string label);
+int QTabWidget_AddTab(QTabWidget* self, QWidget* widget, const libqt_string param2);
+int QTabWidget_AddTab2(QTabWidget* self, QWidget* widget, const QIcon* icon, const libqt_string label);
+int QTabWidget_InsertTab(QTabWidget* self, int index, QWidget* widget, const libqt_string param3);
+int QTabWidget_InsertTab2(QTabWidget* self, int index, QWidget* widget, const QIcon* icon, const libqt_string label);
 void QTabWidget_RemoveTab(QTabWidget* self, int index);
 bool QTabWidget_IsTabEnabled(const QTabWidget* self, int index);
 void QTabWidget_SetTabEnabled(QTabWidget* self, int index, bool enabled);
 bool QTabWidget_IsTabVisible(const QTabWidget* self, int index);
 void QTabWidget_SetTabVisible(QTabWidget* self, int index, bool visible);
 libqt_string QTabWidget_TabText(const QTabWidget* self, int index);
-void QTabWidget_SetTabText(QTabWidget* self, int index, libqt_string text);
+void QTabWidget_SetTabText(QTabWidget* self, int index, const libqt_string text);
 QIcon* QTabWidget_TabIcon(const QTabWidget* self, int index);
-void QTabWidget_SetTabIcon(QTabWidget* self, int index, QIcon* icon);
-void QTabWidget_SetTabToolTip(QTabWidget* self, int index, libqt_string tip);
+void QTabWidget_SetTabIcon(QTabWidget* self, int index, const QIcon* icon);
+void QTabWidget_SetTabToolTip(QTabWidget* self, int index, const libqt_string tip);
 libqt_string QTabWidget_TabToolTip(const QTabWidget* self, int index);
-void QTabWidget_SetTabWhatsThis(QTabWidget* self, int index, libqt_string text);
+void QTabWidget_SetTabWhatsThis(QTabWidget* self, int index, const libqt_string text);
 libqt_string QTabWidget_TabWhatsThis(const QTabWidget* self, int index);
 int QTabWidget_CurrentIndex(const QTabWidget* self);
 QWidget* QTabWidget_CurrentWidget(const QTabWidget* self);
 QWidget* QTabWidget_Widget(const QTabWidget* self, int index);
-int QTabWidget_IndexOf(const QTabWidget* self, QWidget* widget);
+int QTabWidget_IndexOf(const QTabWidget* self, const QWidget* widget);
 int QTabWidget_Count(const QTabWidget* self);
 int QTabWidget_TabPosition(const QTabWidget* self);
 void QTabWidget_SetTabPosition(QTabWidget* self, int position);
@@ -117,7 +109,7 @@ QWidget* QTabWidget_CornerWidget(const QTabWidget* self);
 int QTabWidget_ElideMode(const QTabWidget* self);
 void QTabWidget_SetElideMode(QTabWidget* self, int mode);
 QSize* QTabWidget_IconSize(const QTabWidget* self);
-void QTabWidget_SetIconSize(QTabWidget* self, QSize* size);
+void QTabWidget_SetIconSize(QTabWidget* self, const QSize* size);
 bool QTabWidget_UsesScrollButtons(const QTabWidget* self);
 void QTabWidget_SetUsesScrollButtons(QTabWidget* self, bool useButtons);
 bool QTabWidget_DocumentMode(const QTabWidget* self);
@@ -236,9 +228,9 @@ void QTabWidget_QBaseDropEvent(QTabWidget* self, QDropEvent* event);
 void QTabWidget_HideEvent(QTabWidget* self, QHideEvent* event);
 void QTabWidget_OnHideEvent(QTabWidget* self, intptr_t slot);
 void QTabWidget_QBaseHideEvent(QTabWidget* self, QHideEvent* event);
-bool QTabWidget_NativeEvent(QTabWidget* self, libqt_string eventType, void* message, intptr_t* result);
+bool QTabWidget_NativeEvent(QTabWidget* self, const libqt_string eventType, void* message, intptr_t* result);
 void QTabWidget_OnNativeEvent(QTabWidget* self, intptr_t slot);
-bool QTabWidget_QBaseNativeEvent(QTabWidget* self, libqt_string eventType, void* message, intptr_t* result);
+bool QTabWidget_QBaseNativeEvent(QTabWidget* self, const libqt_string eventType, void* message, intptr_t* result);
 int QTabWidget_Metric(const QTabWidget* self, int param1);
 void QTabWidget_OnMetric(const QTabWidget* self, intptr_t slot);
 int QTabWidget_QBaseMetric(const QTabWidget* self, int param1);
@@ -272,12 +264,12 @@ void QTabWidget_QBaseChildEvent(QTabWidget* self, QChildEvent* event);
 void QTabWidget_CustomEvent(QTabWidget* self, QEvent* event);
 void QTabWidget_OnCustomEvent(QTabWidget* self, intptr_t slot);
 void QTabWidget_QBaseCustomEvent(QTabWidget* self, QEvent* event);
-void QTabWidget_ConnectNotify(QTabWidget* self, QMetaMethod* signal);
+void QTabWidget_ConnectNotify(QTabWidget* self, const QMetaMethod* signal);
 void QTabWidget_OnConnectNotify(QTabWidget* self, intptr_t slot);
-void QTabWidget_QBaseConnectNotify(QTabWidget* self, QMetaMethod* signal);
-void QTabWidget_DisconnectNotify(QTabWidget* self, QMetaMethod* signal);
+void QTabWidget_QBaseConnectNotify(QTabWidget* self, const QMetaMethod* signal);
+void QTabWidget_DisconnectNotify(QTabWidget* self, const QMetaMethod* signal);
 void QTabWidget_OnDisconnectNotify(QTabWidget* self, intptr_t slot);
-void QTabWidget_QBaseDisconnectNotify(QTabWidget* self, QMetaMethod* signal);
+void QTabWidget_QBaseDisconnectNotify(QTabWidget* self, const QMetaMethod* signal);
 void QTabWidget_SetTabBar(QTabWidget* self, QTabBar* tabBar);
 void QTabWidget_OnSetTabBar(QTabWidget* self, intptr_t slot);
 void QTabWidget_QBaseSetTabBar(QTabWidget* self, QTabBar* tabBar);
@@ -305,9 +297,12 @@ int QTabWidget_QBaseSenderSignalIndex(const QTabWidget* self);
 int QTabWidget_Receivers(const QTabWidget* self, const char* signal);
 void QTabWidget_OnReceivers(const QTabWidget* self, intptr_t slot);
 int QTabWidget_QBaseReceivers(const QTabWidget* self, const char* signal);
-bool QTabWidget_IsSignalConnected(const QTabWidget* self, QMetaMethod* signal);
+bool QTabWidget_IsSignalConnected(const QTabWidget* self, const QMetaMethod* signal);
 void QTabWidget_OnIsSignalConnected(const QTabWidget* self, intptr_t slot);
-bool QTabWidget_QBaseIsSignalConnected(const QTabWidget* self, QMetaMethod* signal);
+bool QTabWidget_QBaseIsSignalConnected(const QTabWidget* self, const QMetaMethod* signal);
+double QTabWidget_GetDecodedMetricF(const QTabWidget* self, int metricA, int metricB);
+void QTabWidget_OnGetDecodedMetricF(const QTabWidget* self, intptr_t slot);
+double QTabWidget_QBaseGetDecodedMetricF(const QTabWidget* self, int metricA, int metricB);
 void QTabWidget_Delete(QTabWidget* self);
 
 #ifdef __cplusplus

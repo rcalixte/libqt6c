@@ -12,8 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qsslellipticcurve.html
 
 /// q_sslellipticcurve_new constructs a new QSslEllipticCurve object.

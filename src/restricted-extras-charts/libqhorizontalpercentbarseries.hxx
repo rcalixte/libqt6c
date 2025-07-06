@@ -64,8 +64,8 @@ class VirtualQHorizontalPercentBarSeries final : public QHorizontalPercentBarSer
     mutable bool qhorizontalpercentbarseries_issignalconnected_isbase = false;
 
   public:
-    VirtualQHorizontalPercentBarSeries() : QHorizontalPercentBarSeries(){};
-    VirtualQHorizontalPercentBarSeries(QObject* parent) : QHorizontalPercentBarSeries(parent){};
+    VirtualQHorizontalPercentBarSeries() : QHorizontalPercentBarSeries() {};
+    VirtualQHorizontalPercentBarSeries(QObject* parent) : QHorizontalPercentBarSeries(parent) {};
 
     ~VirtualQHorizontalPercentBarSeries() {
         qhorizontalpercentbarseries_metacall_callback = nullptr;
@@ -313,18 +313,18 @@ class VirtualQHorizontalPercentBarSeries final : public QHorizontalPercentBarSer
     friend void QHorizontalPercentBarSeries_QBaseChildEvent(QHorizontalPercentBarSeries* self, QChildEvent* event);
     friend void QHorizontalPercentBarSeries_CustomEvent(QHorizontalPercentBarSeries* self, QEvent* event);
     friend void QHorizontalPercentBarSeries_QBaseCustomEvent(QHorizontalPercentBarSeries* self, QEvent* event);
-    friend void QHorizontalPercentBarSeries_ConnectNotify(QHorizontalPercentBarSeries* self, QMetaMethod* signal);
-    friend void QHorizontalPercentBarSeries_QBaseConnectNotify(QHorizontalPercentBarSeries* self, QMetaMethod* signal);
-    friend void QHorizontalPercentBarSeries_DisconnectNotify(QHorizontalPercentBarSeries* self, QMetaMethod* signal);
-    friend void QHorizontalPercentBarSeries_QBaseDisconnectNotify(QHorizontalPercentBarSeries* self, QMetaMethod* signal);
+    friend void QHorizontalPercentBarSeries_ConnectNotify(QHorizontalPercentBarSeries* self, const QMetaMethod* signal);
+    friend void QHorizontalPercentBarSeries_QBaseConnectNotify(QHorizontalPercentBarSeries* self, const QMetaMethod* signal);
+    friend void QHorizontalPercentBarSeries_DisconnectNotify(QHorizontalPercentBarSeries* self, const QMetaMethod* signal);
+    friend void QHorizontalPercentBarSeries_QBaseDisconnectNotify(QHorizontalPercentBarSeries* self, const QMetaMethod* signal);
     friend QObject* QHorizontalPercentBarSeries_Sender(const QHorizontalPercentBarSeries* self);
     friend QObject* QHorizontalPercentBarSeries_QBaseSender(const QHorizontalPercentBarSeries* self);
     friend int QHorizontalPercentBarSeries_SenderSignalIndex(const QHorizontalPercentBarSeries* self);
     friend int QHorizontalPercentBarSeries_QBaseSenderSignalIndex(const QHorizontalPercentBarSeries* self);
     friend int QHorizontalPercentBarSeries_Receivers(const QHorizontalPercentBarSeries* self, const char* signal);
     friend int QHorizontalPercentBarSeries_QBaseReceivers(const QHorizontalPercentBarSeries* self, const char* signal);
-    friend bool QHorizontalPercentBarSeries_IsSignalConnected(const QHorizontalPercentBarSeries* self, QMetaMethod* signal);
-    friend bool QHorizontalPercentBarSeries_QBaseIsSignalConnected(const QHorizontalPercentBarSeries* self, QMetaMethod* signal);
+    friend bool QHorizontalPercentBarSeries_IsSignalConnected(const QHorizontalPercentBarSeries* self, const QMetaMethod* signal);
+    friend bool QHorizontalPercentBarSeries_QBaseIsSignalConnected(const QHorizontalPercentBarSeries* self, const QMetaMethod* signal);
 };
 
 #endif

@@ -81,6 +81,7 @@ class VirtualQPrintDialog final : public QPrintDialog {
     using QPrintDialog_SenderSignalIndex_Callback = int (*)();
     using QPrintDialog_Receivers_Callback = int (*)(const QPrintDialog*, const char*);
     using QPrintDialog_IsSignalConnected_Callback = bool (*)(const QPrintDialog*, QMetaMethod*);
+    using QPrintDialog_GetDecodedMetricF_Callback = double (*)(const QPrintDialog*, int, int);
 
   protected:
     // Instance callback storage
@@ -147,6 +148,7 @@ class VirtualQPrintDialog final : public QPrintDialog {
     QPrintDialog_SenderSignalIndex_Callback qprintdialog_sendersignalindex_callback = nullptr;
     QPrintDialog_Receivers_Callback qprintdialog_receivers_callback = nullptr;
     QPrintDialog_IsSignalConnected_Callback qprintdialog_issignalconnected_callback = nullptr;
+    QPrintDialog_GetDecodedMetricF_Callback qprintdialog_getdecodedmetricf_callback = nullptr;
 
     // Instance base flags
     mutable bool qprintdialog_metacall_isbase = false;
@@ -212,12 +214,13 @@ class VirtualQPrintDialog final : public QPrintDialog {
     mutable bool qprintdialog_sendersignalindex_isbase = false;
     mutable bool qprintdialog_receivers_isbase = false;
     mutable bool qprintdialog_issignalconnected_isbase = false;
+    mutable bool qprintdialog_getdecodedmetricf_isbase = false;
 
   public:
-    VirtualQPrintDialog(QWidget* parent) : QPrintDialog(parent){};
-    VirtualQPrintDialog(QPrinter* printer) : QPrintDialog(printer){};
-    VirtualQPrintDialog() : QPrintDialog(){};
-    VirtualQPrintDialog(QPrinter* printer, QWidget* parent) : QPrintDialog(printer, parent){};
+    VirtualQPrintDialog(QWidget* parent) : QPrintDialog(parent) {};
+    VirtualQPrintDialog(QPrinter* printer) : QPrintDialog(printer) {};
+    VirtualQPrintDialog() : QPrintDialog() {};
+    VirtualQPrintDialog(QPrinter* printer, QWidget* parent) : QPrintDialog(printer, parent) {};
 
     ~VirtualQPrintDialog() {
         qprintdialog_metacall_callback = nullptr;
@@ -283,6 +286,7 @@ class VirtualQPrintDialog final : public QPrintDialog {
         qprintdialog_sendersignalindex_callback = nullptr;
         qprintdialog_receivers_callback = nullptr;
         qprintdialog_issignalconnected_callback = nullptr;
+        qprintdialog_getdecodedmetricf_callback = nullptr;
     }
 
     // Callback setters
@@ -349,6 +353,7 @@ class VirtualQPrintDialog final : public QPrintDialog {
     inline void setQPrintDialog_SenderSignalIndex_Callback(QPrintDialog_SenderSignalIndex_Callback cb) { qprintdialog_sendersignalindex_callback = cb; }
     inline void setQPrintDialog_Receivers_Callback(QPrintDialog_Receivers_Callback cb) { qprintdialog_receivers_callback = cb; }
     inline void setQPrintDialog_IsSignalConnected_Callback(QPrintDialog_IsSignalConnected_Callback cb) { qprintdialog_issignalconnected_callback = cb; }
+    inline void setQPrintDialog_GetDecodedMetricF_Callback(QPrintDialog_GetDecodedMetricF_Callback cb) { qprintdialog_getdecodedmetricf_callback = cb; }
 
     // Base flag setters
     inline void setQPrintDialog_Metacall_IsBase(bool value) const { qprintdialog_metacall_isbase = value; }
@@ -414,6 +419,7 @@ class VirtualQPrintDialog final : public QPrintDialog {
     inline void setQPrintDialog_SenderSignalIndex_IsBase(bool value) const { qprintdialog_sendersignalindex_isbase = value; }
     inline void setQPrintDialog_Receivers_IsBase(bool value) const { qprintdialog_receivers_isbase = value; }
     inline void setQPrintDialog_IsSignalConnected_IsBase(bool value) const { qprintdialog_issignalconnected_isbase = value; }
+    inline void setQPrintDialog_GetDecodedMetricF_IsBase(bool value) const { qprintdialog_getdecodedmetricf_isbase = value; }
 
     // Virtual method for C ABI access and custom callback
     virtual int qt_metacall(QMetaObject::Call param1, int param2, void** param3) override {
@@ -1303,6 +1309,22 @@ class VirtualQPrintDialog final : public QPrintDialog {
         }
     }
 
+    // Virtual method for C ABI access and custom callback
+    double getDecodedMetricF(QPaintDevice::PaintDeviceMetric metricA, QPaintDevice::PaintDeviceMetric metricB) const {
+        if (qprintdialog_getdecodedmetricf_isbase) {
+            qprintdialog_getdecodedmetricf_isbase = false;
+            return QPrintDialog::getDecodedMetricF(metricA, metricB);
+        } else if (qprintdialog_getdecodedmetricf_callback != nullptr) {
+            int cbval1 = static_cast<int>(metricA);
+            int cbval2 = static_cast<int>(metricB);
+
+            double callback_ret = qprintdialog_getdecodedmetricf_callback(this, cbval1, cbval2);
+            return static_cast<double>(callback_ret);
+        } else {
+            return QPrintDialog::getDecodedMetricF(metricA, metricB);
+        }
+    }
+
     // Friend functions
     friend void QPrintDialog_KeyPressEvent(QPrintDialog* self, QKeyEvent* param1);
     friend void QPrintDialog_QBaseKeyPressEvent(QPrintDialog* self, QKeyEvent* param1);
@@ -1356,8 +1378,8 @@ class VirtualQPrintDialog final : public QPrintDialog {
     friend void QPrintDialog_QBaseDropEvent(QPrintDialog* self, QDropEvent* event);
     friend void QPrintDialog_HideEvent(QPrintDialog* self, QHideEvent* event);
     friend void QPrintDialog_QBaseHideEvent(QPrintDialog* self, QHideEvent* event);
-    friend bool QPrintDialog_NativeEvent(QPrintDialog* self, libqt_string eventType, void* message, intptr_t* result);
-    friend bool QPrintDialog_QBaseNativeEvent(QPrintDialog* self, libqt_string eventType, void* message, intptr_t* result);
+    friend bool QPrintDialog_NativeEvent(QPrintDialog* self, const libqt_string eventType, void* message, intptr_t* result);
+    friend bool QPrintDialog_QBaseNativeEvent(QPrintDialog* self, const libqt_string eventType, void* message, intptr_t* result);
     friend void QPrintDialog_ChangeEvent(QPrintDialog* self, QEvent* param1);
     friend void QPrintDialog_QBaseChangeEvent(QPrintDialog* self, QEvent* param1);
     friend int QPrintDialog_Metric(const QPrintDialog* self, int param1);
@@ -1378,10 +1400,10 @@ class VirtualQPrintDialog final : public QPrintDialog {
     friend void QPrintDialog_QBaseChildEvent(QPrintDialog* self, QChildEvent* event);
     friend void QPrintDialog_CustomEvent(QPrintDialog* self, QEvent* event);
     friend void QPrintDialog_QBaseCustomEvent(QPrintDialog* self, QEvent* event);
-    friend void QPrintDialog_ConnectNotify(QPrintDialog* self, QMetaMethod* signal);
-    friend void QPrintDialog_QBaseConnectNotify(QPrintDialog* self, QMetaMethod* signal);
-    friend void QPrintDialog_DisconnectNotify(QPrintDialog* self, QMetaMethod* signal);
-    friend void QPrintDialog_QBaseDisconnectNotify(QPrintDialog* self, QMetaMethod* signal);
+    friend void QPrintDialog_ConnectNotify(QPrintDialog* self, const QMetaMethod* signal);
+    friend void QPrintDialog_QBaseConnectNotify(QPrintDialog* self, const QMetaMethod* signal);
+    friend void QPrintDialog_DisconnectNotify(QPrintDialog* self, const QMetaMethod* signal);
+    friend void QPrintDialog_QBaseDisconnectNotify(QPrintDialog* self, const QMetaMethod* signal);
     friend void QPrintDialog_AdjustPosition(QPrintDialog* self, QWidget* param1);
     friend void QPrintDialog_QBaseAdjustPosition(QPrintDialog* self, QWidget* param1);
     friend void QPrintDialog_UpdateMicroFocus(QPrintDialog* self);
@@ -1400,8 +1422,10 @@ class VirtualQPrintDialog final : public QPrintDialog {
     friend int QPrintDialog_QBaseSenderSignalIndex(const QPrintDialog* self);
     friend int QPrintDialog_Receivers(const QPrintDialog* self, const char* signal);
     friend int QPrintDialog_QBaseReceivers(const QPrintDialog* self, const char* signal);
-    friend bool QPrintDialog_IsSignalConnected(const QPrintDialog* self, QMetaMethod* signal);
-    friend bool QPrintDialog_QBaseIsSignalConnected(const QPrintDialog* self, QMetaMethod* signal);
+    friend bool QPrintDialog_IsSignalConnected(const QPrintDialog* self, const QMetaMethod* signal);
+    friend bool QPrintDialog_QBaseIsSignalConnected(const QPrintDialog* self, const QMetaMethod* signal);
+    friend double QPrintDialog_GetDecodedMetricF(const QPrintDialog* self, int metricA, int metricB);
+    friend double QPrintDialog_QBaseGetDecodedMetricF(const QPrintDialog* self, int metricA, int metricB);
 };
 
 #endif

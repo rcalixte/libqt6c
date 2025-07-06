@@ -12,9 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqsslcertificate.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qsslerror.html
 
 /// q_sslerror_new constructs a new QSslError object.

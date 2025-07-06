@@ -61,7 +61,7 @@ class VirtualQObjectCleanupHandler final : public QObjectCleanupHandler {
     mutable bool qobjectcleanuphandler_issignalconnected_isbase = false;
 
   public:
-    VirtualQObjectCleanupHandler() : QObjectCleanupHandler(){};
+    VirtualQObjectCleanupHandler() : QObjectCleanupHandler() {};
 
     ~VirtualQObjectCleanupHandler() {
         qobjectcleanuphandler_metacall_callback = nullptr;
@@ -293,18 +293,18 @@ class VirtualQObjectCleanupHandler final : public QObjectCleanupHandler {
     friend void QObjectCleanupHandler_QBaseChildEvent(QObjectCleanupHandler* self, QChildEvent* event);
     friend void QObjectCleanupHandler_CustomEvent(QObjectCleanupHandler* self, QEvent* event);
     friend void QObjectCleanupHandler_QBaseCustomEvent(QObjectCleanupHandler* self, QEvent* event);
-    friend void QObjectCleanupHandler_ConnectNotify(QObjectCleanupHandler* self, QMetaMethod* signal);
-    friend void QObjectCleanupHandler_QBaseConnectNotify(QObjectCleanupHandler* self, QMetaMethod* signal);
-    friend void QObjectCleanupHandler_DisconnectNotify(QObjectCleanupHandler* self, QMetaMethod* signal);
-    friend void QObjectCleanupHandler_QBaseDisconnectNotify(QObjectCleanupHandler* self, QMetaMethod* signal);
+    friend void QObjectCleanupHandler_ConnectNotify(QObjectCleanupHandler* self, const QMetaMethod* signal);
+    friend void QObjectCleanupHandler_QBaseConnectNotify(QObjectCleanupHandler* self, const QMetaMethod* signal);
+    friend void QObjectCleanupHandler_DisconnectNotify(QObjectCleanupHandler* self, const QMetaMethod* signal);
+    friend void QObjectCleanupHandler_QBaseDisconnectNotify(QObjectCleanupHandler* self, const QMetaMethod* signal);
     friend QObject* QObjectCleanupHandler_Sender(const QObjectCleanupHandler* self);
     friend QObject* QObjectCleanupHandler_QBaseSender(const QObjectCleanupHandler* self);
     friend int QObjectCleanupHandler_SenderSignalIndex(const QObjectCleanupHandler* self);
     friend int QObjectCleanupHandler_QBaseSenderSignalIndex(const QObjectCleanupHandler* self);
     friend int QObjectCleanupHandler_Receivers(const QObjectCleanupHandler* self, const char* signal);
     friend int QObjectCleanupHandler_QBaseReceivers(const QObjectCleanupHandler* self, const char* signal);
-    friend bool QObjectCleanupHandler_IsSignalConnected(const QObjectCleanupHandler* self, QMetaMethod* signal);
-    friend bool QObjectCleanupHandler_QBaseIsSignalConnected(const QObjectCleanupHandler* self, QMetaMethod* signal);
+    friend bool QObjectCleanupHandler_IsSignalConnected(const QObjectCleanupHandler* self, const QMetaMethod* signal);
+    friend bool QObjectCleanupHandler_QBaseIsSignalConnected(const QObjectCleanupHandler* self, const QMetaMethod* signal);
 };
 
 #endif

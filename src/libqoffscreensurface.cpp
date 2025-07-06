@@ -88,7 +88,7 @@ bool QOffscreenSurface_IsValid(const QOffscreenSurface* self) {
     return self->isValid();
 }
 
-void QOffscreenSurface_SetFormat(QOffscreenSurface* self, QSurfaceFormat* format) {
+void QOffscreenSurface_SetFormat(QOffscreenSurface* self, const QSurfaceFormat* format) {
     self->setFormat(*format);
 }
 
@@ -373,7 +373,7 @@ void QOffscreenSurface_OnCustomEvent(QOffscreenSurface* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QOffscreenSurface_ConnectNotify(QOffscreenSurface* self, QMetaMethod* signal) {
+void QOffscreenSurface_ConnectNotify(QOffscreenSurface* self, const QMetaMethod* signal) {
     auto* vqoffscreensurface = dynamic_cast<VirtualQOffscreenSurface*>(self);
     if (vqoffscreensurface && vqoffscreensurface->isVirtualQOffscreenSurface) {
         vqoffscreensurface->connectNotify(*signal);
@@ -383,7 +383,7 @@ void QOffscreenSurface_ConnectNotify(QOffscreenSurface* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-void QOffscreenSurface_QBaseConnectNotify(QOffscreenSurface* self, QMetaMethod* signal) {
+void QOffscreenSurface_QBaseConnectNotify(QOffscreenSurface* self, const QMetaMethod* signal) {
     auto* vqoffscreensurface = dynamic_cast<VirtualQOffscreenSurface*>(self);
     if (vqoffscreensurface && vqoffscreensurface->isVirtualQOffscreenSurface) {
         vqoffscreensurface->setQOffscreenSurface_ConnectNotify_IsBase(true);
@@ -402,7 +402,7 @@ void QOffscreenSurface_OnConnectNotify(QOffscreenSurface* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QOffscreenSurface_DisconnectNotify(QOffscreenSurface* self, QMetaMethod* signal) {
+void QOffscreenSurface_DisconnectNotify(QOffscreenSurface* self, const QMetaMethod* signal) {
     auto* vqoffscreensurface = dynamic_cast<VirtualQOffscreenSurface*>(self);
     if (vqoffscreensurface && vqoffscreensurface->isVirtualQOffscreenSurface) {
         vqoffscreensurface->disconnectNotify(*signal);
@@ -412,7 +412,7 @@ void QOffscreenSurface_DisconnectNotify(QOffscreenSurface* self, QMetaMethod* si
 }
 
 // Base class handler implementation
-void QOffscreenSurface_QBaseDisconnectNotify(QOffscreenSurface* self, QMetaMethod* signal) {
+void QOffscreenSurface_QBaseDisconnectNotify(QOffscreenSurface* self, const QMetaMethod* signal) {
     auto* vqoffscreensurface = dynamic_cast<VirtualQOffscreenSurface*>(self);
     if (vqoffscreensurface && vqoffscreensurface->isVirtualQOffscreenSurface) {
         vqoffscreensurface->setQOffscreenSurface_DisconnectNotify_IsBase(true);
@@ -547,7 +547,7 @@ void QOffscreenSurface_OnReceivers(const QOffscreenSurface* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-bool QOffscreenSurface_IsSignalConnected(const QOffscreenSurface* self, QMetaMethod* signal) {
+bool QOffscreenSurface_IsSignalConnected(const QOffscreenSurface* self, const QMetaMethod* signal) {
     auto* vqoffscreensurface = const_cast<VirtualQOffscreenSurface*>(dynamic_cast<const VirtualQOffscreenSurface*>(self));
     if (vqoffscreensurface && vqoffscreensurface->isVirtualQOffscreenSurface) {
         return vqoffscreensurface->isSignalConnected(*signal);
@@ -557,7 +557,7 @@ bool QOffscreenSurface_IsSignalConnected(const QOffscreenSurface* self, QMetaMet
 }
 
 // Base class handler implementation
-bool QOffscreenSurface_QBaseIsSignalConnected(const QOffscreenSurface* self, QMetaMethod* signal) {
+bool QOffscreenSurface_QBaseIsSignalConnected(const QOffscreenSurface* self, const QMetaMethod* signal) {
     auto* vqoffscreensurface = const_cast<VirtualQOffscreenSurface*>(dynamic_cast<const VirtualQOffscreenSurface*>(self));
     if (vqoffscreensurface && vqoffscreensurface->isVirtualQOffscreenSurface) {
         vqoffscreensurface->setQOffscreenSurface_IsSignalConnected_IsBase(true);

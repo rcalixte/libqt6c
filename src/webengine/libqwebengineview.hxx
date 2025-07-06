@@ -76,6 +76,7 @@ class VirtualQWebEngineView final : public QWebEngineView {
     using QWebEngineView_SenderSignalIndex_Callback = int (*)();
     using QWebEngineView_Receivers_Callback = int (*)(const QWebEngineView*, const char*);
     using QWebEngineView_IsSignalConnected_Callback = bool (*)(const QWebEngineView*, QMetaMethod*);
+    using QWebEngineView_GetDecodedMetricF_Callback = double (*)(const QWebEngineView*, int, int);
 
   protected:
     // Instance callback storage
@@ -137,6 +138,7 @@ class VirtualQWebEngineView final : public QWebEngineView {
     QWebEngineView_SenderSignalIndex_Callback qwebengineview_sendersignalindex_callback = nullptr;
     QWebEngineView_Receivers_Callback qwebengineview_receivers_callback = nullptr;
     QWebEngineView_IsSignalConnected_Callback qwebengineview_issignalconnected_callback = nullptr;
+    QWebEngineView_GetDecodedMetricF_Callback qwebengineview_getdecodedmetricf_callback = nullptr;
 
     // Instance base flags
     mutable bool qwebengineview_metacall_isbase = false;
@@ -197,14 +199,15 @@ class VirtualQWebEngineView final : public QWebEngineView {
     mutable bool qwebengineview_sendersignalindex_isbase = false;
     mutable bool qwebengineview_receivers_isbase = false;
     mutable bool qwebengineview_issignalconnected_isbase = false;
+    mutable bool qwebengineview_getdecodedmetricf_isbase = false;
 
   public:
-    VirtualQWebEngineView(QWidget* parent) : QWebEngineView(parent){};
-    VirtualQWebEngineView() : QWebEngineView(){};
-    VirtualQWebEngineView(QWebEngineProfile* profile) : QWebEngineView(profile){};
-    VirtualQWebEngineView(QWebEnginePage* page) : QWebEngineView(page){};
-    VirtualQWebEngineView(QWebEngineProfile* profile, QWidget* parent) : QWebEngineView(profile, parent){};
-    VirtualQWebEngineView(QWebEnginePage* page, QWidget* parent) : QWebEngineView(page, parent){};
+    VirtualQWebEngineView(QWidget* parent) : QWebEngineView(parent) {};
+    VirtualQWebEngineView() : QWebEngineView() {};
+    VirtualQWebEngineView(QWebEngineProfile* profile) : QWebEngineView(profile) {};
+    VirtualQWebEngineView(QWebEnginePage* page) : QWebEngineView(page) {};
+    VirtualQWebEngineView(QWebEngineProfile* profile, QWidget* parent) : QWebEngineView(profile, parent) {};
+    VirtualQWebEngineView(QWebEnginePage* page, QWidget* parent) : QWebEngineView(page, parent) {};
 
     ~VirtualQWebEngineView() {
         qwebengineview_metacall_callback = nullptr;
@@ -265,6 +268,7 @@ class VirtualQWebEngineView final : public QWebEngineView {
         qwebengineview_sendersignalindex_callback = nullptr;
         qwebengineview_receivers_callback = nullptr;
         qwebengineview_issignalconnected_callback = nullptr;
+        qwebengineview_getdecodedmetricf_callback = nullptr;
     }
 
     // Callback setters
@@ -326,6 +330,7 @@ class VirtualQWebEngineView final : public QWebEngineView {
     inline void setQWebEngineView_SenderSignalIndex_Callback(QWebEngineView_SenderSignalIndex_Callback cb) { qwebengineview_sendersignalindex_callback = cb; }
     inline void setQWebEngineView_Receivers_Callback(QWebEngineView_Receivers_Callback cb) { qwebengineview_receivers_callback = cb; }
     inline void setQWebEngineView_IsSignalConnected_Callback(QWebEngineView_IsSignalConnected_Callback cb) { qwebengineview_issignalconnected_callback = cb; }
+    inline void setQWebEngineView_GetDecodedMetricF_Callback(QWebEngineView_GetDecodedMetricF_Callback cb) { qwebengineview_getdecodedmetricf_callback = cb; }
 
     // Base flag setters
     inline void setQWebEngineView_Metacall_IsBase(bool value) const { qwebengineview_metacall_isbase = value; }
@@ -386,6 +391,7 @@ class VirtualQWebEngineView final : public QWebEngineView {
     inline void setQWebEngineView_SenderSignalIndex_IsBase(bool value) const { qwebengineview_sendersignalindex_isbase = value; }
     inline void setQWebEngineView_Receivers_IsBase(bool value) const { qwebengineview_receivers_isbase = value; }
     inline void setQWebEngineView_IsSignalConnected_IsBase(bool value) const { qwebengineview_issignalconnected_isbase = value; }
+    inline void setQWebEngineView_GetDecodedMetricF_IsBase(bool value) const { qwebengineview_getdecodedmetricf_isbase = value; }
 
     // Virtual method for C ABI access and custom callback
     virtual int qt_metacall(QMetaObject::Call param1, int param2, void** param3) override {
@@ -1213,6 +1219,22 @@ class VirtualQWebEngineView final : public QWebEngineView {
         }
     }
 
+    // Virtual method for C ABI access and custom callback
+    double getDecodedMetricF(QPaintDevice::PaintDeviceMetric metricA, QPaintDevice::PaintDeviceMetric metricB) const {
+        if (qwebengineview_getdecodedmetricf_isbase) {
+            qwebengineview_getdecodedmetricf_isbase = false;
+            return QWebEngineView::getDecodedMetricF(metricA, metricB);
+        } else if (qwebengineview_getdecodedmetricf_callback != nullptr) {
+            int cbval1 = static_cast<int>(metricA);
+            int cbval2 = static_cast<int>(metricB);
+
+            double callback_ret = qwebengineview_getdecodedmetricf_callback(this, cbval1, cbval2);
+            return static_cast<double>(callback_ret);
+        } else {
+            return QWebEngineView::getDecodedMetricF(metricA, metricB);
+        }
+    }
+
     // Friend functions
     friend QWebEngineView* QWebEngineView_CreateWindow(QWebEngineView* self, int typeVal);
     friend QWebEngineView* QWebEngineView_QBaseCreateWindow(QWebEngineView* self, int typeVal);
@@ -1266,8 +1288,8 @@ class VirtualQWebEngineView final : public QWebEngineView {
     friend void QWebEngineView_QBaseTabletEvent(QWebEngineView* self, QTabletEvent* event);
     friend void QWebEngineView_ActionEvent(QWebEngineView* self, QActionEvent* event);
     friend void QWebEngineView_QBaseActionEvent(QWebEngineView* self, QActionEvent* event);
-    friend bool QWebEngineView_NativeEvent(QWebEngineView* self, libqt_string eventType, void* message, intptr_t* result);
-    friend bool QWebEngineView_QBaseNativeEvent(QWebEngineView* self, libqt_string eventType, void* message, intptr_t* result);
+    friend bool QWebEngineView_NativeEvent(QWebEngineView* self, const libqt_string eventType, void* message, intptr_t* result);
+    friend bool QWebEngineView_QBaseNativeEvent(QWebEngineView* self, const libqt_string eventType, void* message, intptr_t* result);
     friend void QWebEngineView_ChangeEvent(QWebEngineView* self, QEvent* param1);
     friend void QWebEngineView_QBaseChangeEvent(QWebEngineView* self, QEvent* param1);
     friend int QWebEngineView_Metric(const QWebEngineView* self, int param1);
@@ -1288,10 +1310,10 @@ class VirtualQWebEngineView final : public QWebEngineView {
     friend void QWebEngineView_QBaseChildEvent(QWebEngineView* self, QChildEvent* event);
     friend void QWebEngineView_CustomEvent(QWebEngineView* self, QEvent* event);
     friend void QWebEngineView_QBaseCustomEvent(QWebEngineView* self, QEvent* event);
-    friend void QWebEngineView_ConnectNotify(QWebEngineView* self, QMetaMethod* signal);
-    friend void QWebEngineView_QBaseConnectNotify(QWebEngineView* self, QMetaMethod* signal);
-    friend void QWebEngineView_DisconnectNotify(QWebEngineView* self, QMetaMethod* signal);
-    friend void QWebEngineView_QBaseDisconnectNotify(QWebEngineView* self, QMetaMethod* signal);
+    friend void QWebEngineView_ConnectNotify(QWebEngineView* self, const QMetaMethod* signal);
+    friend void QWebEngineView_QBaseConnectNotify(QWebEngineView* self, const QMetaMethod* signal);
+    friend void QWebEngineView_DisconnectNotify(QWebEngineView* self, const QMetaMethod* signal);
+    friend void QWebEngineView_QBaseDisconnectNotify(QWebEngineView* self, const QMetaMethod* signal);
     friend void QWebEngineView_UpdateMicroFocus(QWebEngineView* self);
     friend void QWebEngineView_QBaseUpdateMicroFocus(QWebEngineView* self);
     friend void QWebEngineView_Create(QWebEngineView* self);
@@ -1308,8 +1330,10 @@ class VirtualQWebEngineView final : public QWebEngineView {
     friend int QWebEngineView_QBaseSenderSignalIndex(const QWebEngineView* self);
     friend int QWebEngineView_Receivers(const QWebEngineView* self, const char* signal);
     friend int QWebEngineView_QBaseReceivers(const QWebEngineView* self, const char* signal);
-    friend bool QWebEngineView_IsSignalConnected(const QWebEngineView* self, QMetaMethod* signal);
-    friend bool QWebEngineView_QBaseIsSignalConnected(const QWebEngineView* self, QMetaMethod* signal);
+    friend bool QWebEngineView_IsSignalConnected(const QWebEngineView* self, const QMetaMethod* signal);
+    friend bool QWebEngineView_QBaseIsSignalConnected(const QWebEngineView* self, const QMetaMethod* signal);
+    friend double QWebEngineView_GetDecodedMetricF(const QWebEngineView* self, int metricA, int metricB);
+    friend double QWebEngineView_QBaseGetDecodedMetricF(const QWebEngineView* self, int metricA, int metricB);
 };
 
 #endif

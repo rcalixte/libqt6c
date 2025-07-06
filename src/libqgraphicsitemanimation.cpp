@@ -95,10 +95,10 @@ QPointF* QGraphicsItemAnimation_PosAt(const QGraphicsItemAnimation* self, double
 }
 
 libqt_list /* of libqt_pair  tuple of double and QPointF*  */ QGraphicsItemAnimation_PosList(const QGraphicsItemAnimation* self) {
-    QList<QPair<qreal, QPointF>> _ret = self->posList();
+    QList<QPair<double, QPointF>> _ret = self->posList();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_pair /* tuple of double and QPointF* */* _arr = static_cast<libqt_pair /* tuple of double and QPointF* */*>(malloc(sizeof(libqt_pair /* tuple of double and QPointF* */) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_pair /* tuple of double and QPointF* */* _arr = static_cast<libqt_pair /* tuple of double and QPointF* */*>(malloc(sizeof(libqt_pair /* tuple of double and QPointF* */) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QPair<double, QPointF> _lv_ret = _ret[i];
         // Convert QPair<> from C++ memory to manually-managed C memory
         double* _lv_first = static_cast<double*>(malloc(sizeof(double)));
@@ -111,12 +111,12 @@ libqt_list /* of libqt_pair  tuple of double and QPointF*  */ QGraphicsItemAnima
         _arr[i] = _lv_out;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-void QGraphicsItemAnimation_SetPosAt(QGraphicsItemAnimation* self, double step, QPointF* pos) {
+void QGraphicsItemAnimation_SetPosAt(QGraphicsItemAnimation* self, double step, const QPointF* pos) {
     self->setPosAt(static_cast<qreal>(step), *pos);
 }
 
@@ -129,10 +129,10 @@ double QGraphicsItemAnimation_RotationAt(const QGraphicsItemAnimation* self, dou
 }
 
 libqt_list /* of libqt_pair  tuple of double and double  */ QGraphicsItemAnimation_RotationList(const QGraphicsItemAnimation* self) {
-    QList<QPair<qreal, qreal>> _ret = self->rotationList();
+    QList<QPair<double, double>> _ret = self->rotationList();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_pair /* tuple of double and double */* _arr = static_cast<libqt_pair /* tuple of double and double */*>(malloc(sizeof(libqt_pair /* tuple of double and double */) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_pair /* tuple of double and double */* _arr = static_cast<libqt_pair /* tuple of double and double */*>(malloc(sizeof(libqt_pair /* tuple of double and double */) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QPair<double, double> _lv_ret = _ret[i];
         // Convert QPair<> from C++ memory to manually-managed C memory
         double* _lv_first = static_cast<double*>(malloc(sizeof(double)));
@@ -145,7 +145,7 @@ libqt_list /* of libqt_pair  tuple of double and double  */ QGraphicsItemAnimati
         _arr[i] = _lv_out;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -163,10 +163,10 @@ double QGraphicsItemAnimation_YTranslationAt(const QGraphicsItemAnimation* self,
 }
 
 libqt_list /* of libqt_pair  tuple of double and QPointF*  */ QGraphicsItemAnimation_TranslationList(const QGraphicsItemAnimation* self) {
-    QList<QPair<qreal, QPointF>> _ret = self->translationList();
+    QList<QPair<double, QPointF>> _ret = self->translationList();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_pair /* tuple of double and QPointF* */* _arr = static_cast<libqt_pair /* tuple of double and QPointF* */*>(malloc(sizeof(libqt_pair /* tuple of double and QPointF* */) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_pair /* tuple of double and QPointF* */* _arr = static_cast<libqt_pair /* tuple of double and QPointF* */*>(malloc(sizeof(libqt_pair /* tuple of double and QPointF* */) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QPair<double, QPointF> _lv_ret = _ret[i];
         // Convert QPair<> from C++ memory to manually-managed C memory
         double* _lv_first = static_cast<double*>(malloc(sizeof(double)));
@@ -179,7 +179,7 @@ libqt_list /* of libqt_pair  tuple of double and QPointF*  */ QGraphicsItemAnima
         _arr[i] = _lv_out;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -197,10 +197,10 @@ double QGraphicsItemAnimation_HorizontalScaleAt(const QGraphicsItemAnimation* se
 }
 
 libqt_list /* of libqt_pair  tuple of double and QPointF*  */ QGraphicsItemAnimation_ScaleList(const QGraphicsItemAnimation* self) {
-    QList<QPair<qreal, QPointF>> _ret = self->scaleList();
+    QList<QPair<double, QPointF>> _ret = self->scaleList();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_pair /* tuple of double and QPointF* */* _arr = static_cast<libqt_pair /* tuple of double and QPointF* */*>(malloc(sizeof(libqt_pair /* tuple of double and QPointF* */) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_pair /* tuple of double and QPointF* */* _arr = static_cast<libqt_pair /* tuple of double and QPointF* */*>(malloc(sizeof(libqt_pair /* tuple of double and QPointF* */) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QPair<double, QPointF> _lv_ret = _ret[i];
         // Convert QPair<> from C++ memory to manually-managed C memory
         double* _lv_first = static_cast<double*>(malloc(sizeof(double)));
@@ -213,7 +213,7 @@ libqt_list /* of libqt_pair  tuple of double and QPointF*  */ QGraphicsItemAnima
         _arr[i] = _lv_out;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -231,10 +231,10 @@ double QGraphicsItemAnimation_HorizontalShearAt(const QGraphicsItemAnimation* se
 }
 
 libqt_list /* of libqt_pair  tuple of double and QPointF*  */ QGraphicsItemAnimation_ShearList(const QGraphicsItemAnimation* self) {
-    QList<QPair<qreal, QPointF>> _ret = self->shearList();
+    QList<QPair<double, QPointF>> _ret = self->shearList();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_pair /* tuple of double and QPointF* */* _arr = static_cast<libqt_pair /* tuple of double and QPointF* */*>(malloc(sizeof(libqt_pair /* tuple of double and QPointF* */) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_pair /* tuple of double and QPointF* */* _arr = static_cast<libqt_pair /* tuple of double and QPointF* */*>(malloc(sizeof(libqt_pair /* tuple of double and QPointF* */) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QPair<double, QPointF> _lv_ret = _ret[i];
         // Convert QPair<> from C++ memory to manually-managed C memory
         double* _lv_first = static_cast<double*>(malloc(sizeof(double)));
@@ -247,7 +247,7 @@ libqt_list /* of libqt_pair  tuple of double and QPointF*  */ QGraphicsItemAnima
         _arr[i] = _lv_out;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -492,7 +492,7 @@ void QGraphicsItemAnimation_OnCustomEvent(QGraphicsItemAnimation* self, intptr_t
 }
 
 // Derived class handler implementation
-void QGraphicsItemAnimation_ConnectNotify(QGraphicsItemAnimation* self, QMetaMethod* signal) {
+void QGraphicsItemAnimation_ConnectNotify(QGraphicsItemAnimation* self, const QMetaMethod* signal) {
     auto* vqgraphicsitemanimation = dynamic_cast<VirtualQGraphicsItemAnimation*>(self);
     if (vqgraphicsitemanimation && vqgraphicsitemanimation->isVirtualQGraphicsItemAnimation) {
         vqgraphicsitemanimation->connectNotify(*signal);
@@ -502,7 +502,7 @@ void QGraphicsItemAnimation_ConnectNotify(QGraphicsItemAnimation* self, QMetaMet
 }
 
 // Base class handler implementation
-void QGraphicsItemAnimation_QBaseConnectNotify(QGraphicsItemAnimation* self, QMetaMethod* signal) {
+void QGraphicsItemAnimation_QBaseConnectNotify(QGraphicsItemAnimation* self, const QMetaMethod* signal) {
     auto* vqgraphicsitemanimation = dynamic_cast<VirtualQGraphicsItemAnimation*>(self);
     if (vqgraphicsitemanimation && vqgraphicsitemanimation->isVirtualQGraphicsItemAnimation) {
         vqgraphicsitemanimation->setQGraphicsItemAnimation_ConnectNotify_IsBase(true);
@@ -521,7 +521,7 @@ void QGraphicsItemAnimation_OnConnectNotify(QGraphicsItemAnimation* self, intptr
 }
 
 // Derived class handler implementation
-void QGraphicsItemAnimation_DisconnectNotify(QGraphicsItemAnimation* self, QMetaMethod* signal) {
+void QGraphicsItemAnimation_DisconnectNotify(QGraphicsItemAnimation* self, const QMetaMethod* signal) {
     auto* vqgraphicsitemanimation = dynamic_cast<VirtualQGraphicsItemAnimation*>(self);
     if (vqgraphicsitemanimation && vqgraphicsitemanimation->isVirtualQGraphicsItemAnimation) {
         vqgraphicsitemanimation->disconnectNotify(*signal);
@@ -531,7 +531,7 @@ void QGraphicsItemAnimation_DisconnectNotify(QGraphicsItemAnimation* self, QMeta
 }
 
 // Base class handler implementation
-void QGraphicsItemAnimation_QBaseDisconnectNotify(QGraphicsItemAnimation* self, QMetaMethod* signal) {
+void QGraphicsItemAnimation_QBaseDisconnectNotify(QGraphicsItemAnimation* self, const QMetaMethod* signal) {
     auto* vqgraphicsitemanimation = dynamic_cast<VirtualQGraphicsItemAnimation*>(self);
     if (vqgraphicsitemanimation && vqgraphicsitemanimation->isVirtualQGraphicsItemAnimation) {
         vqgraphicsitemanimation->setQGraphicsItemAnimation_DisconnectNotify_IsBase(true);
@@ -637,7 +637,7 @@ void QGraphicsItemAnimation_OnReceivers(const QGraphicsItemAnimation* self, intp
 }
 
 // Derived class handler implementation
-bool QGraphicsItemAnimation_IsSignalConnected(const QGraphicsItemAnimation* self, QMetaMethod* signal) {
+bool QGraphicsItemAnimation_IsSignalConnected(const QGraphicsItemAnimation* self, const QMetaMethod* signal) {
     auto* vqgraphicsitemanimation = const_cast<VirtualQGraphicsItemAnimation*>(dynamic_cast<const VirtualQGraphicsItemAnimation*>(self));
     if (vqgraphicsitemanimation && vqgraphicsitemanimation->isVirtualQGraphicsItemAnimation) {
         return vqgraphicsitemanimation->isSignalConnected(*signal);
@@ -647,7 +647,7 @@ bool QGraphicsItemAnimation_IsSignalConnected(const QGraphicsItemAnimation* self
 }
 
 // Base class handler implementation
-bool QGraphicsItemAnimation_QBaseIsSignalConnected(const QGraphicsItemAnimation* self, QMetaMethod* signal) {
+bool QGraphicsItemAnimation_QBaseIsSignalConnected(const QGraphicsItemAnimation* self, const QMetaMethod* signal) {
     auto* vqgraphicsitemanimation = const_cast<VirtualQGraphicsItemAnimation*>(dynamic_cast<const VirtualQGraphicsItemAnimation*>(self));
     if (vqgraphicsitemanimation && vqgraphicsitemanimation->isVirtualQGraphicsItemAnimation) {
         vqgraphicsitemanimation->setQGraphicsItemAnimation_IsSignalConnected_IsBase(true);

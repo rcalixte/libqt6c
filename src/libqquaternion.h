@@ -12,9 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqvariant.h"
-#include "libqvectornd.h"
-
 /// https://doc.qt.io/qt-6/qquaternion.html
 
 /// q_quaternion_new constructs a new QQuaternion object.

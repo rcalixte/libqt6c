@@ -1,10 +1,13 @@
 #define WORKAROUND_INNER_CLASS_DEFINITION_QAccessible__State
 #include <QAccessibleActionInterface>
+#include <QAccessibleAnnouncementEvent>
+#include <QAccessibleAttributesInterface>
 #include <QAccessibleEditableTextInterface>
 #include <QAccessibleEvent>
 #include <QAccessibleHyperlinkInterface>
 #include <QAccessibleImageInterface>
 #include <QAccessibleInterface>
+#include <QAccessibleSelectionInterface>
 #include <QAccessibleStateChangeEvent>
 #include <QAccessibleTableCellInterface>
 #include <QAccessibleTableInterface>
@@ -46,10 +49,10 @@ QWindow* QAccessibleInterface_Window(const QAccessibleInterface* self) {
 }
 
 libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int  */ QAccessibleInterface_Relations(const QAccessibleInterface* self, int match) {
-    QList<QPair<QAccessibleInterface*, QAccessible::Relation>> _ret = self->relations(static_cast<QAccessible::Relation>(match));
+    QList<QPair<QAccessibleInterface*, QFlags<QAccessible::RelationFlag>>> _ret = self->relations(static_cast<QAccessible::Relation>(match));
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_pair /* tuple of QAccessibleInterface* and int */* _arr = static_cast<libqt_pair /* tuple of QAccessibleInterface* and int */*>(malloc(sizeof(libqt_pair /* tuple of QAccessibleInterface* and int */) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_pair /* tuple of QAccessibleInterface* and int */* _arr = static_cast<libqt_pair /* tuple of QAccessibleInterface* and int */*>(malloc(sizeof(libqt_pair /* tuple of QAccessibleInterface* and int */) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QPair<QAccessibleInterface*, QFlags<QAccessible::RelationFlag>> _lv_ret = _ret[i];
         // Convert QPair<> from C++ memory to manually-managed C memory
         QAccessibleInterface** _lv_first = static_cast<QAccessibleInterface**>(malloc(sizeof(QAccessibleInterface*)));
@@ -62,7 +65,7 @@ libqt_list /* of libqt_pair  tuple of QAccessibleInterface* and int  */ QAccessi
         _arr[i] = _lv_out;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -87,7 +90,7 @@ int QAccessibleInterface_ChildCount(const QAccessibleInterface* self) {
     return self->childCount();
 }
 
-int QAccessibleInterface_IndexOfChild(const QAccessibleInterface* self, QAccessibleInterface* param1) {
+int QAccessibleInterface_IndexOfChild(const QAccessibleInterface* self, const QAccessibleInterface* param1) {
     return self->indexOfChild(param1);
 }
 
@@ -103,7 +106,7 @@ libqt_string QAccessibleInterface_Text(const QAccessibleInterface* self, int t) 
     return _str;
 }
 
-void QAccessibleInterface_SetText(QAccessibleInterface* self, int t, libqt_string text) {
+void QAccessibleInterface_SetText(QAccessibleInterface* self, int t, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setText(static_cast<QAccessible::Text>(t), text_QString);
 }
@@ -158,6 +161,14 @@ QAccessibleTableCellInterface* QAccessibleInterface_TableCellInterface(QAccessib
 
 QAccessibleHyperlinkInterface* QAccessibleInterface_HyperlinkInterface(QAccessibleInterface* self) {
     return self->hyperlinkInterface();
+}
+
+QAccessibleSelectionInterface* QAccessibleInterface_SelectionInterface(QAccessibleInterface* self) {
+    return self->selectionInterface();
+}
+
+QAccessibleAttributesInterface* QAccessibleInterface_AttributesInterface(QAccessibleInterface* self) {
+    return self->attributesInterface();
 }
 
 void QAccessibleInterface_VirtualHook(QAccessibleInterface* self, int id, void* data) {
@@ -252,7 +263,7 @@ QRect* QAccessibleTextInterface_CharacterRect(const QAccessibleTextInterface* se
     return new QRect(self->characterRect(static_cast<int>(offset)));
 }
 
-int QAccessibleTextInterface_OffsetAtPoint(const QAccessibleTextInterface* self, QPoint* point) {
+int QAccessibleTextInterface_OffsetAtPoint(const QAccessibleTextInterface* self, const QPoint* point) {
     return self->offsetAtPoint(*point);
 }
 
@@ -272,7 +283,7 @@ libqt_string QAccessibleTextInterface_Attributes(const QAccessibleTextInterface*
     return _str;
 }
 
-void QAccessibleTextInterface_OperatorAssign(QAccessibleTextInterface* self, QAccessibleTextInterface* param1) {
+void QAccessibleTextInterface_OperatorAssign(QAccessibleTextInterface* self, const QAccessibleTextInterface* param1) {
     self->operator=(*param1);
 }
 
@@ -284,17 +295,17 @@ void QAccessibleEditableTextInterface_DeleteText(QAccessibleEditableTextInterfac
     self->deleteText(static_cast<int>(startOffset), static_cast<int>(endOffset));
 }
 
-void QAccessibleEditableTextInterface_InsertText(QAccessibleEditableTextInterface* self, int offset, libqt_string text) {
+void QAccessibleEditableTextInterface_InsertText(QAccessibleEditableTextInterface* self, int offset, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->insertText(static_cast<int>(offset), text_QString);
 }
 
-void QAccessibleEditableTextInterface_ReplaceText(QAccessibleEditableTextInterface* self, int startOffset, int endOffset, libqt_string text) {
+void QAccessibleEditableTextInterface_ReplaceText(QAccessibleEditableTextInterface* self, int startOffset, int endOffset, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->replaceText(static_cast<int>(startOffset), static_cast<int>(endOffset), text_QString);
 }
 
-void QAccessibleEditableTextInterface_OperatorAssign(QAccessibleEditableTextInterface* self, QAccessibleEditableTextInterface* param1) {
+void QAccessibleEditableTextInterface_OperatorAssign(QAccessibleEditableTextInterface* self, const QAccessibleEditableTextInterface* param1) {
     self->operator=(*param1);
 }
 
@@ -306,7 +317,7 @@ QVariant* QAccessibleValueInterface_CurrentValue(const QAccessibleValueInterface
     return new QVariant(self->currentValue());
 }
 
-void QAccessibleValueInterface_SetCurrentValue(QAccessibleValueInterface* self, QVariant* value) {
+void QAccessibleValueInterface_SetCurrentValue(QAccessibleValueInterface* self, const QVariant* value) {
     self->setCurrentValue(*value);
 }
 
@@ -322,7 +333,7 @@ QVariant* QAccessibleValueInterface_MinimumStepSize(const QAccessibleValueInterf
     return new QVariant(self->minimumStepSize());
 }
 
-void QAccessibleValueInterface_OperatorAssign(QAccessibleValueInterface* self, QAccessibleValueInterface* param1) {
+void QAccessibleValueInterface_OperatorAssign(QAccessibleValueInterface* self, const QAccessibleValueInterface* param1) {
     self->operator=(*param1);
 }
 
@@ -337,12 +348,12 @@ bool QAccessibleTableCellInterface_IsSelected(const QAccessibleTableCellInterfac
 libqt_list /* of QAccessibleInterface* */ QAccessibleTableCellInterface_ColumnHeaderCells(const QAccessibleTableCellInterface* self) {
     QList<QAccessibleInterface*> _ret = self->columnHeaderCells();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QAccessibleInterface** _arr = static_cast<QAccessibleInterface**>(malloc(sizeof(QAccessibleInterface*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QAccessibleInterface** _arr = static_cast<QAccessibleInterface**>(malloc(sizeof(QAccessibleInterface*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -350,12 +361,12 @@ libqt_list /* of QAccessibleInterface* */ QAccessibleTableCellInterface_ColumnHe
 libqt_list /* of QAccessibleInterface* */ QAccessibleTableCellInterface_RowHeaderCells(const QAccessibleTableCellInterface* self) {
     QList<QAccessibleInterface*> _ret = self->rowHeaderCells();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QAccessibleInterface** _arr = static_cast<QAccessibleInterface**>(malloc(sizeof(QAccessibleInterface*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QAccessibleInterface** _arr = static_cast<QAccessibleInterface**>(malloc(sizeof(QAccessibleInterface*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -380,7 +391,7 @@ QAccessibleInterface* QAccessibleTableCellInterface_Table(const QAccessibleTable
     return self->table();
 }
 
-void QAccessibleTableCellInterface_OperatorAssign(QAccessibleTableCellInterface* self, QAccessibleTableCellInterface* param1) {
+void QAccessibleTableCellInterface_OperatorAssign(QAccessibleTableCellInterface* self, const QAccessibleTableCellInterface* param1) {
     self->operator=(*param1);
 }
 
@@ -407,12 +418,12 @@ int QAccessibleTableInterface_SelectedCellCount(const QAccessibleTableInterface*
 libqt_list /* of QAccessibleInterface* */ QAccessibleTableInterface_SelectedCells(const QAccessibleTableInterface* self) {
     QList<QAccessibleInterface*> _ret = self->selectedCells();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QAccessibleInterface** _arr = static_cast<QAccessibleInterface**>(malloc(sizeof(QAccessibleInterface*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QAccessibleInterface** _arr = static_cast<QAccessibleInterface**>(malloc(sizeof(QAccessibleInterface*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -460,12 +471,12 @@ int QAccessibleTableInterface_RowCount(const QAccessibleTableInterface* self) {
 libqt_list /* of int */ QAccessibleTableInterface_SelectedColumns(const QAccessibleTableInterface* self) {
     QList<int> _ret = self->selectedColumns();
     // Convert QList<> from C++ memory to manually-managed C memory
-    int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ints = _arr;
     return _out;
 }
@@ -473,12 +484,12 @@ libqt_list /* of int */ QAccessibleTableInterface_SelectedColumns(const QAccessi
 libqt_list /* of int */ QAccessibleTableInterface_SelectedRows(const QAccessibleTableInterface* self) {
     QList<int> _ret = self->selectedRows();
     // Convert QList<> from C++ memory to manually-managed C memory
-    int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ints = _arr;
     return _out;
 }
@@ -528,10 +539,10 @@ libqt_string QAccessibleActionInterface_Tr(const char* sourceText) {
 }
 
 libqt_list /* of libqt_string */ QAccessibleActionInterface_ActionNames(const QAccessibleActionInterface* self) {
-    QStringList _ret = self->actionNames();
+    QList<QString> _ret = self->actionNames();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -543,12 +554,12 @@ libqt_list /* of libqt_string */ QAccessibleActionInterface_ActionNames(const QA
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-libqt_string QAccessibleActionInterface_LocalizedActionName(const QAccessibleActionInterface* self, libqt_string name) {
+libqt_string QAccessibleActionInterface_LocalizedActionName(const QAccessibleActionInterface* self, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString _ret = self->localizedActionName(name_QString);
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -561,7 +572,7 @@ libqt_string QAccessibleActionInterface_LocalizedActionName(const QAccessibleAct
     return _str;
 }
 
-libqt_string QAccessibleActionInterface_LocalizedActionDescription(const QAccessibleActionInterface* self, libqt_string name) {
+libqt_string QAccessibleActionInterface_LocalizedActionDescription(const QAccessibleActionInterface* self, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString _ret = self->localizedActionDescription(name_QString);
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -574,17 +585,17 @@ libqt_string QAccessibleActionInterface_LocalizedActionDescription(const QAccess
     return _str;
 }
 
-void QAccessibleActionInterface_DoAction(QAccessibleActionInterface* self, libqt_string actionName) {
+void QAccessibleActionInterface_DoAction(QAccessibleActionInterface* self, const libqt_string actionName) {
     QString actionName_QString = QString::fromUtf8(actionName.data, actionName.len);
     self->doAction(actionName_QString);
 }
 
-libqt_list /* of libqt_string */ QAccessibleActionInterface_KeyBindingsForAction(const QAccessibleActionInterface* self, libqt_string actionName) {
+libqt_list /* of libqt_string */ QAccessibleActionInterface_KeyBindingsForAction(const QAccessibleActionInterface* self, const libqt_string actionName) {
     QString actionName_QString = QString::fromUtf8(actionName.data, actionName.len);
-    QStringList _ret = self->keyBindingsForAction(actionName_QString);
+    QList<QString> _ret = self->keyBindingsForAction(actionName_QString);
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -596,7 +607,7 @@ libqt_list /* of libqt_string */ QAccessibleActionInterface_KeyBindingsForAction
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -745,7 +756,7 @@ libqt_string QAccessibleActionInterface_PreviousPageAction() {
     return _str;
 }
 
-void QAccessibleActionInterface_OperatorAssign(QAccessibleActionInterface* self, QAccessibleActionInterface* param1) {
+void QAccessibleActionInterface_OperatorAssign(QAccessibleActionInterface* self, const QAccessibleActionInterface* param1) {
     self->operator=(*param1);
 }
 
@@ -797,7 +808,7 @@ QPoint* QAccessibleImageInterface_ImagePosition(const QAccessibleImageInterface*
     return new QPoint(self->imagePosition());
 }
 
-void QAccessibleImageInterface_OperatorAssign(QAccessibleImageInterface* self, QAccessibleImageInterface* param1) {
+void QAccessibleImageInterface_OperatorAssign(QAccessibleImageInterface* self, const QAccessibleImageInterface* param1) {
     self->operator=(*param1);
 }
 
@@ -841,11 +852,85 @@ bool QAccessibleHyperlinkInterface_IsValid(const QAccessibleHyperlinkInterface* 
     return self->isValid();
 }
 
-void QAccessibleHyperlinkInterface_OperatorAssign(QAccessibleHyperlinkInterface* self, QAccessibleHyperlinkInterface* param1) {
+void QAccessibleHyperlinkInterface_OperatorAssign(QAccessibleHyperlinkInterface* self, const QAccessibleHyperlinkInterface* param1) {
     self->operator=(*param1);
 }
 
 void QAccessibleHyperlinkInterface_Delete(QAccessibleHyperlinkInterface* self) {
+    delete self;
+}
+
+int QAccessibleSelectionInterface_SelectedItemCount(const QAccessibleSelectionInterface* self) {
+    return self->selectedItemCount();
+}
+
+libqt_list /* of QAccessibleInterface* */ QAccessibleSelectionInterface_SelectedItems(const QAccessibleSelectionInterface* self) {
+    QList<QAccessibleInterface*> _ret = self->selectedItems();
+    // Convert QList<> from C++ memory to manually-managed C memory
+    QAccessibleInterface** _arr = static_cast<QAccessibleInterface**>(malloc(sizeof(QAccessibleInterface*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
+        _arr[i] = _ret[i];
+    }
+    libqt_list _out;
+    _out.len = _ret.size();
+    _out.data.ptr = static_cast<void*>(_arr);
+    return _out;
+}
+
+QAccessibleInterface* QAccessibleSelectionInterface_SelectedItem(const QAccessibleSelectionInterface* self, int selectionIndex) {
+    return self->selectedItem(static_cast<int>(selectionIndex));
+}
+
+bool QAccessibleSelectionInterface_IsSelected(const QAccessibleSelectionInterface* self, QAccessibleInterface* childItem) {
+    return self->isSelected(childItem);
+}
+
+bool QAccessibleSelectionInterface_Select(QAccessibleSelectionInterface* self, QAccessibleInterface* childItem) {
+    return self->select(childItem);
+}
+
+bool QAccessibleSelectionInterface_Unselect(QAccessibleSelectionInterface* self, QAccessibleInterface* childItem) {
+    return self->unselect(childItem);
+}
+
+bool QAccessibleSelectionInterface_SelectAll(QAccessibleSelectionInterface* self) {
+    return self->selectAll();
+}
+
+bool QAccessibleSelectionInterface_Clear(QAccessibleSelectionInterface* self) {
+    return self->clear();
+}
+
+void QAccessibleSelectionInterface_OperatorAssign(QAccessibleSelectionInterface* self, const QAccessibleSelectionInterface* param1) {
+    self->operator=(*param1);
+}
+
+void QAccessibleSelectionInterface_Delete(QAccessibleSelectionInterface* self) {
+    delete self;
+}
+
+libqt_list /* of int */ QAccessibleAttributesInterface_AttributeKeys(const QAccessibleAttributesInterface* self) {
+    QList<QAccessible::Attribute> _ret = self->attributeKeys();
+    // Convert QList<> from C++ memory to manually-managed C memory
+    int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
+        _arr[i] = static_cast<int>(_ret[i]);
+    }
+    libqt_list _out;
+    _out.len = _ret.size();
+    _out.data.ints = _arr;
+    return _out;
+}
+
+QVariant* QAccessibleAttributesInterface_AttributeValue(const QAccessibleAttributesInterface* self, int key) {
+    return new QVariant(self->attributeValue(static_cast<QAccessible::Attribute>(key)));
+}
+
+void QAccessibleAttributesInterface_OperatorAssign(QAccessibleAttributesInterface* self, const QAccessibleAttributesInterface* param1) {
+    self->operator=(*param1);
+}
+
+void QAccessibleAttributesInterface_Delete(QAccessibleAttributesInterface* self) {
     delete self;
 }
 
@@ -1057,12 +1142,12 @@ void QAccessibleTextSelectionEvent_Delete(QAccessibleTextSelectionEvent* self) {
     delete self;
 }
 
-QAccessibleTextInsertEvent* QAccessibleTextInsertEvent_new(QObject* obj, int position, libqt_string text) {
+QAccessibleTextInsertEvent* QAccessibleTextInsertEvent_new(QObject* obj, int position, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQAccessibleTextInsertEvent(obj, static_cast<int>(position), text_QString);
 }
 
-QAccessibleTextInsertEvent* QAccessibleTextInsertEvent_new2(QAccessibleInterface* iface, int position, libqt_string text) {
+QAccessibleTextInsertEvent* QAccessibleTextInsertEvent_new2(QAccessibleInterface* iface, int position, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQAccessibleTextInsertEvent(iface, static_cast<int>(position), text_QString);
 }
@@ -1116,12 +1201,12 @@ void QAccessibleTextInsertEvent_Delete(QAccessibleTextInsertEvent* self) {
     delete self;
 }
 
-QAccessibleTextRemoveEvent* QAccessibleTextRemoveEvent_new(QObject* obj, int position, libqt_string text) {
+QAccessibleTextRemoveEvent* QAccessibleTextRemoveEvent_new(QObject* obj, int position, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQAccessibleTextRemoveEvent(obj, static_cast<int>(position), text_QString);
 }
 
-QAccessibleTextRemoveEvent* QAccessibleTextRemoveEvent_new2(QAccessibleInterface* iface, int position, libqt_string text) {
+QAccessibleTextRemoveEvent* QAccessibleTextRemoveEvent_new2(QAccessibleInterface* iface, int position, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQAccessibleTextRemoveEvent(iface, static_cast<int>(position), text_QString);
 }
@@ -1175,13 +1260,13 @@ void QAccessibleTextRemoveEvent_Delete(QAccessibleTextRemoveEvent* self) {
     delete self;
 }
 
-QAccessibleTextUpdateEvent* QAccessibleTextUpdateEvent_new(QObject* obj, int position, libqt_string oldText, libqt_string text) {
+QAccessibleTextUpdateEvent* QAccessibleTextUpdateEvent_new(QObject* obj, int position, const libqt_string oldText, const libqt_string text) {
     QString oldText_QString = QString::fromUtf8(oldText.data, oldText.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQAccessibleTextUpdateEvent(obj, static_cast<int>(position), oldText_QString, text_QString);
 }
 
-QAccessibleTextUpdateEvent* QAccessibleTextUpdateEvent_new2(QAccessibleInterface* iface, int position, libqt_string oldText, libqt_string text) {
+QAccessibleTextUpdateEvent* QAccessibleTextUpdateEvent_new2(QAccessibleInterface* iface, int position, const libqt_string oldText, const libqt_string text) {
     QString oldText_QString = QString::fromUtf8(oldText.data, oldText.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQAccessibleTextUpdateEvent(iface, static_cast<int>(position), oldText_QString, text_QString);
@@ -1248,15 +1333,15 @@ void QAccessibleTextUpdateEvent_Delete(QAccessibleTextUpdateEvent* self) {
     delete self;
 }
 
-QAccessibleValueChangeEvent* QAccessibleValueChangeEvent_new(QObject* obj, QVariant* val) {
+QAccessibleValueChangeEvent* QAccessibleValueChangeEvent_new(QObject* obj, const QVariant* val) {
     return new VirtualQAccessibleValueChangeEvent(obj, *val);
 }
 
-QAccessibleValueChangeEvent* QAccessibleValueChangeEvent_new2(QAccessibleInterface* iface, QVariant* val) {
+QAccessibleValueChangeEvent* QAccessibleValueChangeEvent_new2(QAccessibleInterface* iface, const QVariant* val) {
     return new VirtualQAccessibleValueChangeEvent(iface, *val);
 }
 
-void QAccessibleValueChangeEvent_SetValue(QAccessibleValueChangeEvent* self, QVariant* val) {
+void QAccessibleValueChangeEvent_SetValue(QAccessibleValueChangeEvent* self, const QVariant* val) {
     self->setValue(*val);
 }
 
@@ -1375,5 +1460,68 @@ void QAccessibleTableModelChangeEvent_OnAccessibleInterface(const QAccessibleTab
 }
 
 void QAccessibleTableModelChangeEvent_Delete(QAccessibleTableModelChangeEvent* self) {
+    delete self;
+}
+
+QAccessibleAnnouncementEvent* QAccessibleAnnouncementEvent_new(QObject* object, const libqt_string message) {
+    QString message_QString = QString::fromUtf8(message.data, message.len);
+    return new VirtualQAccessibleAnnouncementEvent(object, message_QString);
+}
+
+QAccessibleAnnouncementEvent* QAccessibleAnnouncementEvent_new2(QAccessibleInterface* iface, const libqt_string message) {
+    QString message_QString = QString::fromUtf8(message.data, message.len);
+    return new VirtualQAccessibleAnnouncementEvent(iface, message_QString);
+}
+
+libqt_string QAccessibleAnnouncementEvent_Message(const QAccessibleAnnouncementEvent* self) {
+    QString _ret = self->message();
+    // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+    QByteArray _b = _ret.toUtf8();
+    libqt_string _str;
+    _str.len = _b.length();
+    _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+    memcpy((void*)_str.data, _b.data(), _str.len);
+    ((char*)_str.data)[_str.len] = '\0';
+    return _str;
+}
+
+int QAccessibleAnnouncementEvent_Politeness(const QAccessibleAnnouncementEvent* self) {
+    return static_cast<int>(self->politeness());
+}
+
+void QAccessibleAnnouncementEvent_SetPoliteness(QAccessibleAnnouncementEvent* self, int politeness) {
+    self->setPoliteness(static_cast<QAccessible::AnnouncementPoliteness>(politeness));
+}
+
+// Derived class handler implementation
+QAccessibleInterface* QAccessibleAnnouncementEvent_AccessibleInterface(const QAccessibleAnnouncementEvent* self) {
+    auto* vqaccessibleannouncementevent = const_cast<VirtualQAccessibleAnnouncementEvent*>(dynamic_cast<const VirtualQAccessibleAnnouncementEvent*>(self));
+    if (vqaccessibleannouncementevent && vqaccessibleannouncementevent->isVirtualQAccessibleAnnouncementEvent) {
+        return vqaccessibleannouncementevent->accessibleInterface();
+    } else {
+        return self->QAccessibleAnnouncementEvent::accessibleInterface();
+    }
+}
+
+// Base class handler implementation
+QAccessibleInterface* QAccessibleAnnouncementEvent_QBaseAccessibleInterface(const QAccessibleAnnouncementEvent* self) {
+    auto* vqaccessibleannouncementevent = const_cast<VirtualQAccessibleAnnouncementEvent*>(dynamic_cast<const VirtualQAccessibleAnnouncementEvent*>(self));
+    if (vqaccessibleannouncementevent && vqaccessibleannouncementevent->isVirtualQAccessibleAnnouncementEvent) {
+        vqaccessibleannouncementevent->setQAccessibleAnnouncementEvent_AccessibleInterface_IsBase(true);
+        return vqaccessibleannouncementevent->accessibleInterface();
+    } else {
+        return self->QAccessibleAnnouncementEvent::accessibleInterface();
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QAccessibleAnnouncementEvent_OnAccessibleInterface(const QAccessibleAnnouncementEvent* self, intptr_t slot) {
+    auto* vqaccessibleannouncementevent = const_cast<VirtualQAccessibleAnnouncementEvent*>(dynamic_cast<const VirtualQAccessibleAnnouncementEvent*>(self));
+    if (vqaccessibleannouncementevent && vqaccessibleannouncementevent->isVirtualQAccessibleAnnouncementEvent) {
+        vqaccessibleannouncementevent->setQAccessibleAnnouncementEvent_AccessibleInterface_Callback(reinterpret_cast<VirtualQAccessibleAnnouncementEvent::QAccessibleAnnouncementEvent_AccessibleInterface_Callback>(slot));
+    }
+}
+
+void QAccessibleAnnouncementEvent_Delete(QAccessibleAnnouncementEvent* self) {
     delete self;
 }

@@ -608,7 +608,7 @@ void QGridLayout_OnCount(const QGridLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QGridLayout_SetGeometry(QGridLayout* self, QRect* geometry) {
+void QGridLayout_SetGeometry(QGridLayout* self, const QRect* geometry) {
     auto* vqgridlayout = dynamic_cast<VirtualQGridLayout*>(self);
     if (vqgridlayout && vqgridlayout->isVirtualQGridLayout) {
         vqgridlayout->setGeometry(*geometry);
@@ -618,7 +618,7 @@ void QGridLayout_SetGeometry(QGridLayout* self, QRect* geometry) {
 }
 
 // Base class handler implementation
-void QGridLayout_QBaseSetGeometry(QGridLayout* self, QRect* geometry) {
+void QGridLayout_QBaseSetGeometry(QGridLayout* self, const QRect* geometry) {
     auto* vqgridlayout = dynamic_cast<VirtualQGridLayout*>(self);
     if (vqgridlayout && vqgridlayout->isVirtualQGridLayout) {
         vqgridlayout->setQGridLayout_SetGeometry_IsBase(true);
@@ -695,7 +695,7 @@ void QGridLayout_OnGeometry(const QGridLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-int QGridLayout_IndexOf(const QGridLayout* self, QWidget* param1) {
+int QGridLayout_IndexOf(const QGridLayout* self, const QWidget* param1) {
     auto* vqgridlayout = const_cast<VirtualQGridLayout*>(dynamic_cast<const VirtualQGridLayout*>(self));
     if (vqgridlayout && vqgridlayout->isVirtualQGridLayout) {
         return vqgridlayout->indexOf(param1);
@@ -705,7 +705,7 @@ int QGridLayout_IndexOf(const QGridLayout* self, QWidget* param1) {
 }
 
 // Base class handler implementation
-int QGridLayout_QBaseIndexOf(const QGridLayout* self, QWidget* param1) {
+int QGridLayout_QBaseIndexOf(const QGridLayout* self, const QWidget* param1) {
     auto* vqgridlayout = const_cast<VirtualQGridLayout*>(dynamic_cast<const VirtualQGridLayout*>(self));
     if (vqgridlayout && vqgridlayout->isVirtualQGridLayout) {
         vqgridlayout->setQGridLayout_IndexOf_IsBase(true);
@@ -985,7 +985,7 @@ void QGridLayout_OnCustomEvent(QGridLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QGridLayout_ConnectNotify(QGridLayout* self, QMetaMethod* signal) {
+void QGridLayout_ConnectNotify(QGridLayout* self, const QMetaMethod* signal) {
     auto* vqgridlayout = dynamic_cast<VirtualQGridLayout*>(self);
     if (vqgridlayout && vqgridlayout->isVirtualQGridLayout) {
         vqgridlayout->connectNotify(*signal);
@@ -995,7 +995,7 @@ void QGridLayout_ConnectNotify(QGridLayout* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QGridLayout_QBaseConnectNotify(QGridLayout* self, QMetaMethod* signal) {
+void QGridLayout_QBaseConnectNotify(QGridLayout* self, const QMetaMethod* signal) {
     auto* vqgridlayout = dynamic_cast<VirtualQGridLayout*>(self);
     if (vqgridlayout && vqgridlayout->isVirtualQGridLayout) {
         vqgridlayout->setQGridLayout_ConnectNotify_IsBase(true);
@@ -1014,7 +1014,7 @@ void QGridLayout_OnConnectNotify(QGridLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QGridLayout_DisconnectNotify(QGridLayout* self, QMetaMethod* signal) {
+void QGridLayout_DisconnectNotify(QGridLayout* self, const QMetaMethod* signal) {
     auto* vqgridlayout = dynamic_cast<VirtualQGridLayout*>(self);
     if (vqgridlayout && vqgridlayout->isVirtualQGridLayout) {
         vqgridlayout->disconnectNotify(*signal);
@@ -1024,7 +1024,7 @@ void QGridLayout_DisconnectNotify(QGridLayout* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QGridLayout_QBaseDisconnectNotify(QGridLayout* self, QMetaMethod* signal) {
+void QGridLayout_QBaseDisconnectNotify(QGridLayout* self, const QMetaMethod* signal) {
     auto* vqgridlayout = dynamic_cast<VirtualQGridLayout*>(self);
     if (vqgridlayout && vqgridlayout->isVirtualQGridLayout) {
         vqgridlayout->setQGridLayout_DisconnectNotify_IsBase(true);
@@ -1217,7 +1217,7 @@ void QGridLayout_OnAdoptLayout(QGridLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QRect* QGridLayout_AlignmentRect(const QGridLayout* self, QRect* param1) {
+QRect* QGridLayout_AlignmentRect(const QGridLayout* self, const QRect* param1) {
     auto* vqgridlayout = const_cast<VirtualQGridLayout*>(dynamic_cast<const VirtualQGridLayout*>(self));
     if (vqgridlayout && vqgridlayout->isVirtualQGridLayout) {
         return new QRect(vqgridlayout->alignmentRect(*param1));
@@ -1226,7 +1226,7 @@ QRect* QGridLayout_AlignmentRect(const QGridLayout* self, QRect* param1) {
 }
 
 // Base class handler implementation
-QRect* QGridLayout_QBaseAlignmentRect(const QGridLayout* self, QRect* param1) {
+QRect* QGridLayout_QBaseAlignmentRect(const QGridLayout* self, const QRect* param1) {
     auto* vqgridlayout = const_cast<VirtualQGridLayout*>(dynamic_cast<const VirtualQGridLayout*>(self));
     if (vqgridlayout && vqgridlayout->isVirtualQGridLayout) {
         vqgridlayout->setQGridLayout_AlignmentRect_IsBase(true);
@@ -1331,7 +1331,7 @@ void QGridLayout_OnReceivers(const QGridLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QGridLayout_IsSignalConnected(const QGridLayout* self, QMetaMethod* signal) {
+bool QGridLayout_IsSignalConnected(const QGridLayout* self, const QMetaMethod* signal) {
     auto* vqgridlayout = const_cast<VirtualQGridLayout*>(dynamic_cast<const VirtualQGridLayout*>(self));
     if (vqgridlayout && vqgridlayout->isVirtualQGridLayout) {
         return vqgridlayout->isSignalConnected(*signal);
@@ -1341,7 +1341,7 @@ bool QGridLayout_IsSignalConnected(const QGridLayout* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QGridLayout_QBaseIsSignalConnected(const QGridLayout* self, QMetaMethod* signal) {
+bool QGridLayout_QBaseIsSignalConnected(const QGridLayout* self, const QMetaMethod* signal) {
     auto* vqgridlayout = const_cast<VirtualQGridLayout*>(dynamic_cast<const VirtualQGridLayout*>(self));
     if (vqgridlayout && vqgridlayout->isVirtualQGridLayout) {
         vqgridlayout->setQGridLayout_IsSignalConnected_IsBase(true);

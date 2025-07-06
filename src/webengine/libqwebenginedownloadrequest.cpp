@@ -127,7 +127,7 @@ libqt_string QWebEngineDownloadRequest_DownloadDirectory(const QWebEngineDownloa
     return _str;
 }
 
-void QWebEngineDownloadRequest_SetDownloadDirectory(QWebEngineDownloadRequest* self, libqt_string directory) {
+void QWebEngineDownloadRequest_SetDownloadDirectory(QWebEngineDownloadRequest* self, const libqt_string directory) {
     QString directory_QString = QString::fromUtf8(directory.data, directory.len);
     self->setDownloadDirectory(directory_QString);
 }
@@ -144,7 +144,7 @@ libqt_string QWebEngineDownloadRequest_DownloadFileName(const QWebEngineDownload
     return _str;
 }
 
-void QWebEngineDownloadRequest_SetDownloadFileName(QWebEngineDownloadRequest* self, libqt_string fileName) {
+void QWebEngineDownloadRequest_SetDownloadFileName(QWebEngineDownloadRequest* self, const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     self->setDownloadFileName(fileName_QString);
 }

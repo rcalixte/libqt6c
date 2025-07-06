@@ -133,7 +133,7 @@ QEasingCurve* QTimeLine_EasingCurve(const QTimeLine* self) {
     return new QEasingCurve(self->easingCurve());
 }
 
-void QTimeLine_SetEasingCurve(QTimeLine* self, QEasingCurve* curve) {
+void QTimeLine_SetEasingCurve(QTimeLine* self, const QEasingCurve* curve) {
     self->setEasingCurve(*curve);
 }
 
@@ -376,7 +376,7 @@ void QTimeLine_OnCustomEvent(QTimeLine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTimeLine_ConnectNotify(QTimeLine* self, QMetaMethod* signal) {
+void QTimeLine_ConnectNotify(QTimeLine* self, const QMetaMethod* signal) {
     auto* vqtimeline = dynamic_cast<VirtualQTimeLine*>(self);
     if (vqtimeline && vqtimeline->isVirtualQTimeLine) {
         vqtimeline->connectNotify(*signal);
@@ -386,7 +386,7 @@ void QTimeLine_ConnectNotify(QTimeLine* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTimeLine_QBaseConnectNotify(QTimeLine* self, QMetaMethod* signal) {
+void QTimeLine_QBaseConnectNotify(QTimeLine* self, const QMetaMethod* signal) {
     auto* vqtimeline = dynamic_cast<VirtualQTimeLine*>(self);
     if (vqtimeline && vqtimeline->isVirtualQTimeLine) {
         vqtimeline->setQTimeLine_ConnectNotify_IsBase(true);
@@ -405,7 +405,7 @@ void QTimeLine_OnConnectNotify(QTimeLine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTimeLine_DisconnectNotify(QTimeLine* self, QMetaMethod* signal) {
+void QTimeLine_DisconnectNotify(QTimeLine* self, const QMetaMethod* signal) {
     auto* vqtimeline = dynamic_cast<VirtualQTimeLine*>(self);
     if (vqtimeline && vqtimeline->isVirtualQTimeLine) {
         vqtimeline->disconnectNotify(*signal);
@@ -415,7 +415,7 @@ void QTimeLine_DisconnectNotify(QTimeLine* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTimeLine_QBaseDisconnectNotify(QTimeLine* self, QMetaMethod* signal) {
+void QTimeLine_QBaseDisconnectNotify(QTimeLine* self, const QMetaMethod* signal) {
     auto* vqtimeline = dynamic_cast<VirtualQTimeLine*>(self);
     if (vqtimeline && vqtimeline->isVirtualQTimeLine) {
         vqtimeline->setQTimeLine_DisconnectNotify_IsBase(true);
@@ -521,7 +521,7 @@ void QTimeLine_OnReceivers(const QTimeLine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTimeLine_IsSignalConnected(const QTimeLine* self, QMetaMethod* signal) {
+bool QTimeLine_IsSignalConnected(const QTimeLine* self, const QMetaMethod* signal) {
     auto* vqtimeline = const_cast<VirtualQTimeLine*>(dynamic_cast<const VirtualQTimeLine*>(self));
     if (vqtimeline && vqtimeline->isVirtualQTimeLine) {
         return vqtimeline->isSignalConnected(*signal);
@@ -531,7 +531,7 @@ bool QTimeLine_IsSignalConnected(const QTimeLine* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QTimeLine_QBaseIsSignalConnected(const QTimeLine* self, QMetaMethod* signal) {
+bool QTimeLine_QBaseIsSignalConnected(const QTimeLine* self, const QMetaMethod* signal) {
     auto* vqtimeline = const_cast<VirtualQTimeLine*>(dynamic_cast<const VirtualQTimeLine*>(self));
     if (vqtimeline && vqtimeline->isVirtualQTimeLine) {
         vqtimeline->setQTimeLine_IsSignalConnected_IsBase(true);

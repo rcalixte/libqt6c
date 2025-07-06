@@ -84,7 +84,7 @@ QUrl* QAudioDecoder_Source(const QAudioDecoder* self) {
     return new QUrl(self->source());
 }
 
-void QAudioDecoder_SetSource(QAudioDecoder* self, QUrl* fileName) {
+void QAudioDecoder_SetSource(QAudioDecoder* self, const QUrl* fileName) {
     self->setSource(*fileName);
 }
 
@@ -100,7 +100,7 @@ QAudioFormat* QAudioDecoder_AudioFormat(const QAudioDecoder* self) {
     return new QAudioFormat(self->audioFormat());
 }
 
-void QAudioDecoder_SetAudioFormat(QAudioDecoder* self, QAudioFormat* format) {
+void QAudioDecoder_SetAudioFormat(QAudioDecoder* self, const QAudioFormat* format) {
     self->setAudioFormat(*format);
 }
 
@@ -160,7 +160,7 @@ void QAudioDecoder_IsDecodingChanged(QAudioDecoder* self, bool param1) {
     self->isDecodingChanged(param1);
 }
 
-void QAudioDecoder_FormatChanged(QAudioDecoder* self, QAudioFormat* format) {
+void QAudioDecoder_FormatChanged(QAudioDecoder* self, const QAudioFormat* format) {
     self->formatChanged(*format);
 }
 
@@ -350,7 +350,7 @@ void QAudioDecoder_OnCustomEvent(QAudioDecoder* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAudioDecoder_ConnectNotify(QAudioDecoder* self, QMetaMethod* signal) {
+void QAudioDecoder_ConnectNotify(QAudioDecoder* self, const QMetaMethod* signal) {
     auto* vqaudiodecoder = dynamic_cast<VirtualQAudioDecoder*>(self);
     if (vqaudiodecoder && vqaudiodecoder->isVirtualQAudioDecoder) {
         vqaudiodecoder->connectNotify(*signal);
@@ -360,7 +360,7 @@ void QAudioDecoder_ConnectNotify(QAudioDecoder* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QAudioDecoder_QBaseConnectNotify(QAudioDecoder* self, QMetaMethod* signal) {
+void QAudioDecoder_QBaseConnectNotify(QAudioDecoder* self, const QMetaMethod* signal) {
     auto* vqaudiodecoder = dynamic_cast<VirtualQAudioDecoder*>(self);
     if (vqaudiodecoder && vqaudiodecoder->isVirtualQAudioDecoder) {
         vqaudiodecoder->setQAudioDecoder_ConnectNotify_IsBase(true);
@@ -379,7 +379,7 @@ void QAudioDecoder_OnConnectNotify(QAudioDecoder* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAudioDecoder_DisconnectNotify(QAudioDecoder* self, QMetaMethod* signal) {
+void QAudioDecoder_DisconnectNotify(QAudioDecoder* self, const QMetaMethod* signal) {
     auto* vqaudiodecoder = dynamic_cast<VirtualQAudioDecoder*>(self);
     if (vqaudiodecoder && vqaudiodecoder->isVirtualQAudioDecoder) {
         vqaudiodecoder->disconnectNotify(*signal);
@@ -389,7 +389,7 @@ void QAudioDecoder_DisconnectNotify(QAudioDecoder* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QAudioDecoder_QBaseDisconnectNotify(QAudioDecoder* self, QMetaMethod* signal) {
+void QAudioDecoder_QBaseDisconnectNotify(QAudioDecoder* self, const QMetaMethod* signal) {
     auto* vqaudiodecoder = dynamic_cast<VirtualQAudioDecoder*>(self);
     if (vqaudiodecoder && vqaudiodecoder->isVirtualQAudioDecoder) {
         vqaudiodecoder->setQAudioDecoder_DisconnectNotify_IsBase(true);
@@ -495,7 +495,7 @@ void QAudioDecoder_OnReceivers(const QAudioDecoder* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QAudioDecoder_IsSignalConnected(const QAudioDecoder* self, QMetaMethod* signal) {
+bool QAudioDecoder_IsSignalConnected(const QAudioDecoder* self, const QMetaMethod* signal) {
     auto* vqaudiodecoder = const_cast<VirtualQAudioDecoder*>(dynamic_cast<const VirtualQAudioDecoder*>(self));
     if (vqaudiodecoder && vqaudiodecoder->isVirtualQAudioDecoder) {
         return vqaudiodecoder->isSignalConnected(*signal);
@@ -505,7 +505,7 @@ bool QAudioDecoder_IsSignalConnected(const QAudioDecoder* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-bool QAudioDecoder_QBaseIsSignalConnected(const QAudioDecoder* self, QMetaMethod* signal) {
+bool QAudioDecoder_QBaseIsSignalConnected(const QAudioDecoder* self, const QMetaMethod* signal) {
     auto* vqaudiodecoder = const_cast<VirtualQAudioDecoder*>(dynamic_cast<const VirtualQAudioDecoder*>(self));
     if (vqaudiodecoder && vqaudiodecoder->isVirtualQAudioDecoder) {
         vqaudiodecoder->setQAudioDecoder_IsSignalConnected_IsBase(true);

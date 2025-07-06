@@ -12,16 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqpainter.h"
-#include "../libqrect.h"
-#include "../libqsize.h"
-#include <string.h>
-#include "../libqtransform.h"
-#include "../libqxmlstream.h"
-
 /// https://doc.qt.io/qt-6/qsvgrenderer.html
 
 /// q_svgrenderer_new constructs a new QSvgRenderer object.
@@ -130,6 +120,16 @@ int64_t q_svgrenderer_aspect_ratio_mode(void* self);
 /// ``` QSvgRenderer* self, enum Qt__AspectRatioMode mode ```
 void q_svgrenderer_set_aspect_ratio_mode(void* self, int64_t mode);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsvgrenderer.html#options)
+///
+/// ``` QSvgRenderer* self ```
+int64_t q_svgrenderer_options(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsvgrenderer.html#setOptions)
+///
+/// ``` QSvgRenderer* self, uint32_t flags ```
+void q_svgrenderer_set_options(void* self, int64_t flags);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvgrenderer.html#animated)
 ///
 /// ``` QSvgRenderer* self ```
@@ -160,6 +160,16 @@ void q_svgrenderer_set_current_frame(void* self, int currentFrame);
 /// ``` QSvgRenderer* self ```
 int32_t q_svgrenderer_animation_duration(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsvgrenderer.html#isAnimationEnabled)
+///
+/// ``` QSvgRenderer* self ```
+bool q_svgrenderer_is_animation_enabled(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsvgrenderer.html#setAnimationEnabled)
+///
+/// ``` QSvgRenderer* self, bool enable ```
+void q_svgrenderer_set_animation_enabled(void* self, bool enable);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvgrenderer.html#boundsOnElement)
 ///
 /// ``` QSvgRenderer* self, const char* id ```
@@ -174,6 +184,11 @@ bool q_svgrenderer_element_exists(void* self, const char* id);
 ///
 /// ``` QSvgRenderer* self, const char* id ```
 QTransform* q_svgrenderer_transform_for_element(void* self, const char* id);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsvgrenderer.html#setDefaultOptions)
+///
+/// ``` uint32_t flags ```
+void q_svgrenderer_set_default_options(int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvgrenderer.html#load)
 ///
@@ -291,7 +306,7 @@ QThread* q_svgrenderer_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QSvgRenderer* self, QThread* thread ```
-void q_svgrenderer_move_to_thread(void* self, void* thread);
+bool q_svgrenderer_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -306,6 +321,13 @@ int32_t q_svgrenderer_start_timer(void* self, int interval);
 ///
 /// ``` QSvgRenderer* self, int id ```
 void q_svgrenderer_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QSvgRenderer* self, enum Qt__TimerId id ```
+void q_svgrenderer_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -446,6 +468,13 @@ bool q_svgrenderer_inherits(void* self, const char* classname);
 ///
 /// ``` QSvgRenderer* self ```
 void q_svgrenderer_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QSvgRenderer* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_svgrenderer_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

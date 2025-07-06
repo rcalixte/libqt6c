@@ -13,17 +13,19 @@
 #include <QPaintDevice>
 #include <QPaintEngine>
 #include <QPainter>
+#include <QPdfOutputIntent>
 #include <QPdfWriter>
 #include <QPoint>
 #include <QString>
 #include <QByteArray>
 #include <cstring>
 #include <QTimerEvent>
+#include <QUuid>
 #include <qpdfwriter.h>
 #include "libqpdfwriter.hpp"
 #include "libqpdfwriter.hxx"
 
-QPdfWriter* QPdfWriter_new(libqt_string filename) {
+QPdfWriter* QPdfWriter_new(const libqt_string filename) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     return new VirtualQPdfWriter(filename_QString);
 }
@@ -100,7 +102,7 @@ libqt_string QPdfWriter_Title(const QPdfWriter* self) {
     return _str;
 }
 
-void QPdfWriter_SetTitle(QPdfWriter* self, libqt_string title) {
+void QPdfWriter_SetTitle(QPdfWriter* self, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     self->setTitle(title_QString);
 }
@@ -117,9 +119,17 @@ libqt_string QPdfWriter_Creator(const QPdfWriter* self) {
     return _str;
 }
 
-void QPdfWriter_SetCreator(QPdfWriter* self, libqt_string creator) {
+void QPdfWriter_SetCreator(QPdfWriter* self, const libqt_string creator) {
     QString creator_QString = QString::fromUtf8(creator.data, creator.len);
     self->setCreator(creator_QString);
+}
+
+QUuid* QPdfWriter_DocumentId(const QPdfWriter* self) {
+    return new QUuid(self->documentId());
+}
+
+void QPdfWriter_SetDocumentId(QPdfWriter* self, QUuid* documentId) {
+    self->setDocumentId(*documentId);
 }
 
 void QPdfWriter_SetResolution(QPdfWriter* self, int resolution) {
@@ -130,7 +140,7 @@ int QPdfWriter_Resolution(const QPdfWriter* self) {
     return self->resolution();
 }
 
-void QPdfWriter_SetDocumentXmpMetadata(QPdfWriter* self, libqt_string xmpMetadata) {
+void QPdfWriter_SetDocumentXmpMetadata(QPdfWriter* self, const libqt_string xmpMetadata) {
     QByteArray xmpMetadata_QByteArray(xmpMetadata.data, xmpMetadata.len);
     self->setDocumentXmpMetadata(xmpMetadata_QByteArray);
 }
@@ -145,10 +155,26 @@ libqt_string QPdfWriter_DocumentXmpMetadata(const QPdfWriter* self) {
     return _str;
 }
 
-void QPdfWriter_AddFileAttachment(QPdfWriter* self, libqt_string fileName, libqt_string data) {
+void QPdfWriter_AddFileAttachment(QPdfWriter* self, const libqt_string fileName, const libqt_string data) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QByteArray data_QByteArray(data.data, data.len);
     self->addFileAttachment(fileName_QString, data_QByteArray);
+}
+
+int QPdfWriter_ColorModel(const QPdfWriter* self) {
+    return static_cast<int>(self->colorModel());
+}
+
+void QPdfWriter_SetColorModel(QPdfWriter* self, int model) {
+    self->setColorModel(static_cast<QPdfWriter::ColorModel>(model));
+}
+
+QPdfOutputIntent* QPdfWriter_OutputIntent(const QPdfWriter* self) {
+    return new QPdfOutputIntent(self->outputIntent());
+}
+
+void QPdfWriter_SetOutputIntent(QPdfWriter* self, const QPdfOutputIntent* intent) {
+    self->setOutputIntent(*intent);
 }
 
 libqt_string QPdfWriter_Tr2(const char* s, const char* c) {
@@ -175,7 +201,7 @@ libqt_string QPdfWriter_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-void QPdfWriter_AddFileAttachment3(QPdfWriter* self, libqt_string fileName, libqt_string data, libqt_string mimeType) {
+void QPdfWriter_AddFileAttachment3(QPdfWriter* self, const libqt_string fileName, const libqt_string data, const libqt_string mimeType) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QByteArray data_QByteArray(data.data, data.len);
     QString mimeType_QString = QString::fromUtf8(mimeType.data, mimeType.len);
@@ -415,7 +441,7 @@ void QPdfWriter_OnCustomEvent(QPdfWriter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPdfWriter_ConnectNotify(QPdfWriter* self, QMetaMethod* signal) {
+void QPdfWriter_ConnectNotify(QPdfWriter* self, const QMetaMethod* signal) {
     auto* vqpdfwriter = dynamic_cast<VirtualQPdfWriter*>(self);
     if (vqpdfwriter && vqpdfwriter->isVirtualQPdfWriter) {
         vqpdfwriter->connectNotify(*signal);
@@ -425,7 +451,7 @@ void QPdfWriter_ConnectNotify(QPdfWriter* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPdfWriter_QBaseConnectNotify(QPdfWriter* self, QMetaMethod* signal) {
+void QPdfWriter_QBaseConnectNotify(QPdfWriter* self, const QMetaMethod* signal) {
     auto* vqpdfwriter = dynamic_cast<VirtualQPdfWriter*>(self);
     if (vqpdfwriter && vqpdfwriter->isVirtualQPdfWriter) {
         vqpdfwriter->setQPdfWriter_ConnectNotify_IsBase(true);
@@ -444,7 +470,7 @@ void QPdfWriter_OnConnectNotify(QPdfWriter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPdfWriter_DisconnectNotify(QPdfWriter* self, QMetaMethod* signal) {
+void QPdfWriter_DisconnectNotify(QPdfWriter* self, const QMetaMethod* signal) {
     auto* vqpdfwriter = dynamic_cast<VirtualQPdfWriter*>(self);
     if (vqpdfwriter && vqpdfwriter->isVirtualQPdfWriter) {
         vqpdfwriter->disconnectNotify(*signal);
@@ -454,7 +480,7 @@ void QPdfWriter_DisconnectNotify(QPdfWriter* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPdfWriter_QBaseDisconnectNotify(QPdfWriter* self, QMetaMethod* signal) {
+void QPdfWriter_QBaseDisconnectNotify(QPdfWriter* self, const QMetaMethod* signal) {
     auto* vqpdfwriter = dynamic_cast<VirtualQPdfWriter*>(self);
     if (vqpdfwriter && vqpdfwriter->isVirtualQPdfWriter) {
         vqpdfwriter->setQPdfWriter_DisconnectNotify_IsBase(true);
@@ -473,7 +499,7 @@ void QPdfWriter_OnDisconnectNotify(QPdfWriter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPdfWriter_SetPageLayout(QPdfWriter* self, QPageLayout* pageLayout) {
+bool QPdfWriter_SetPageLayout(QPdfWriter* self, const QPageLayout* pageLayout) {
     auto* vqpdfwriter = dynamic_cast<VirtualQPdfWriter*>(self);
     if (vqpdfwriter && vqpdfwriter->isVirtualQPdfWriter) {
         return vqpdfwriter->setPageLayout(*pageLayout);
@@ -483,7 +509,7 @@ bool QPdfWriter_SetPageLayout(QPdfWriter* self, QPageLayout* pageLayout) {
 }
 
 // Base class handler implementation
-bool QPdfWriter_QBaseSetPageLayout(QPdfWriter* self, QPageLayout* pageLayout) {
+bool QPdfWriter_QBaseSetPageLayout(QPdfWriter* self, const QPageLayout* pageLayout) {
     auto* vqpdfwriter = dynamic_cast<VirtualQPdfWriter*>(self);
     if (vqpdfwriter && vqpdfwriter->isVirtualQPdfWriter) {
         vqpdfwriter->setQPdfWriter_SetPageLayout_IsBase(true);
@@ -502,7 +528,7 @@ void QPdfWriter_OnSetPageLayout(QPdfWriter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPdfWriter_SetPageSize(QPdfWriter* self, QPageSize* pageSize) {
+bool QPdfWriter_SetPageSize(QPdfWriter* self, const QPageSize* pageSize) {
     auto* vqpdfwriter = dynamic_cast<VirtualQPdfWriter*>(self);
     if (vqpdfwriter && vqpdfwriter->isVirtualQPdfWriter) {
         return vqpdfwriter->setPageSize(*pageSize);
@@ -512,7 +538,7 @@ bool QPdfWriter_SetPageSize(QPdfWriter* self, QPageSize* pageSize) {
 }
 
 // Base class handler implementation
-bool QPdfWriter_QBaseSetPageSize(QPdfWriter* self, QPageSize* pageSize) {
+bool QPdfWriter_QBaseSetPageSize(QPdfWriter* self, const QPageSize* pageSize) {
     auto* vqpdfwriter = dynamic_cast<VirtualQPdfWriter*>(self);
     if (vqpdfwriter && vqpdfwriter->isVirtualQPdfWriter) {
         vqpdfwriter->setQPdfWriter_SetPageSize_IsBase(true);
@@ -560,7 +586,7 @@ void QPdfWriter_OnSetPageOrientation(QPdfWriter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPdfWriter_SetPageMargins(QPdfWriter* self, QMarginsF* margins, int units) {
+bool QPdfWriter_SetPageMargins(QPdfWriter* self, const QMarginsF* margins, int units) {
     auto* vqpdfwriter = dynamic_cast<VirtualQPdfWriter*>(self);
     if (vqpdfwriter && vqpdfwriter->isVirtualQPdfWriter) {
         return vqpdfwriter->setPageMargins(*margins, static_cast<QPageLayout::Unit>(units));
@@ -570,7 +596,7 @@ bool QPdfWriter_SetPageMargins(QPdfWriter* self, QMarginsF* margins, int units) 
 }
 
 // Base class handler implementation
-bool QPdfWriter_QBaseSetPageMargins(QPdfWriter* self, QMarginsF* margins, int units) {
+bool QPdfWriter_QBaseSetPageMargins(QPdfWriter* self, const QMarginsF* margins, int units) {
     auto* vqpdfwriter = dynamic_cast<VirtualQPdfWriter*>(self);
     if (vqpdfwriter && vqpdfwriter->isVirtualQPdfWriter) {
         vqpdfwriter->setQPdfWriter_SetPageMargins_IsBase(true);
@@ -589,7 +615,7 @@ void QPdfWriter_OnSetPageMargins(QPdfWriter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPdfWriter_SetPageRanges(QPdfWriter* self, QPageRanges* ranges) {
+void QPdfWriter_SetPageRanges(QPdfWriter* self, const QPageRanges* ranges) {
     auto* vqpdfwriter = dynamic_cast<VirtualQPdfWriter*>(self);
     if (vqpdfwriter && vqpdfwriter->isVirtualQPdfWriter) {
         vqpdfwriter->setPageRanges(*ranges);
@@ -599,7 +625,7 @@ void QPdfWriter_SetPageRanges(QPdfWriter* self, QPageRanges* ranges) {
 }
 
 // Base class handler implementation
-void QPdfWriter_QBaseSetPageRanges(QPdfWriter* self, QPageRanges* ranges) {
+void QPdfWriter_QBaseSetPageRanges(QPdfWriter* self, const QPageRanges* ranges) {
     auto* vqpdfwriter = dynamic_cast<VirtualQPdfWriter*>(self);
     if (vqpdfwriter && vqpdfwriter->isVirtualQPdfWriter) {
         vqpdfwriter->setQPdfWriter_SetPageRanges_IsBase(true);
@@ -821,7 +847,7 @@ void QPdfWriter_OnReceivers(const QPdfWriter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPdfWriter_IsSignalConnected(const QPdfWriter* self, QMetaMethod* signal) {
+bool QPdfWriter_IsSignalConnected(const QPdfWriter* self, const QMetaMethod* signal) {
     auto* vqpdfwriter = const_cast<VirtualQPdfWriter*>(dynamic_cast<const VirtualQPdfWriter*>(self));
     if (vqpdfwriter && vqpdfwriter->isVirtualQPdfWriter) {
         return vqpdfwriter->isSignalConnected(*signal);
@@ -831,7 +857,7 @@ bool QPdfWriter_IsSignalConnected(const QPdfWriter* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QPdfWriter_QBaseIsSignalConnected(const QPdfWriter* self, QMetaMethod* signal) {
+bool QPdfWriter_QBaseIsSignalConnected(const QPdfWriter* self, const QMetaMethod* signal) {
     auto* vqpdfwriter = const_cast<VirtualQPdfWriter*>(dynamic_cast<const VirtualQPdfWriter*>(self));
     if (vqpdfwriter && vqpdfwriter->isVirtualQPdfWriter) {
         vqpdfwriter->setQPdfWriter_IsSignalConnected_IsBase(true);
@@ -846,6 +872,35 @@ void QPdfWriter_OnIsSignalConnected(const QPdfWriter* self, intptr_t slot) {
     auto* vqpdfwriter = const_cast<VirtualQPdfWriter*>(dynamic_cast<const VirtualQPdfWriter*>(self));
     if (vqpdfwriter && vqpdfwriter->isVirtualQPdfWriter) {
         vqpdfwriter->setQPdfWriter_IsSignalConnected_Callback(reinterpret_cast<VirtualQPdfWriter::QPdfWriter_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QPdfWriter_GetDecodedMetricF(const QPdfWriter* self, int metricA, int metricB) {
+    auto* vqpdfwriter = const_cast<VirtualQPdfWriter*>(dynamic_cast<const VirtualQPdfWriter*>(self));
+    if (vqpdfwriter && vqpdfwriter->isVirtualQPdfWriter) {
+        return vqpdfwriter->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQPdfWriter*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QPdfWriter_QBaseGetDecodedMetricF(const QPdfWriter* self, int metricA, int metricB) {
+    auto* vqpdfwriter = const_cast<VirtualQPdfWriter*>(dynamic_cast<const VirtualQPdfWriter*>(self));
+    if (vqpdfwriter && vqpdfwriter->isVirtualQPdfWriter) {
+        vqpdfwriter->setQPdfWriter_GetDecodedMetricF_IsBase(true);
+        return vqpdfwriter->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQPdfWriter*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QPdfWriter_OnGetDecodedMetricF(const QPdfWriter* self, intptr_t slot) {
+    auto* vqpdfwriter = const_cast<VirtualQPdfWriter*>(dynamic_cast<const VirtualQPdfWriter*>(self));
+    if (vqpdfwriter && vqpdfwriter->isVirtualQPdfWriter) {
+        vqpdfwriter->setQPdfWriter_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQPdfWriter::QPdfWriter_GetDecodedMetricF_Callback>(slot));
     }
 }
 

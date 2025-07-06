@@ -81,7 +81,7 @@ libqt_string QGuiApplication_Tr(const char* s) {
     return _str;
 }
 
-void QGuiApplication_SetApplicationDisplayName(libqt_string name) {
+void QGuiApplication_SetApplicationDisplayName(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QGuiApplication::setApplicationDisplayName(name_QString);
 }
@@ -98,7 +98,11 @@ libqt_string QGuiApplication_ApplicationDisplayName() {
     return _str;
 }
 
-void QGuiApplication_SetDesktopFileName(libqt_string name) {
+void QGuiApplication_SetBadgeNumber(QGuiApplication* self, long long number) {
+    self->setBadgeNumber(static_cast<qint64>(number));
+}
+
+void QGuiApplication_SetDesktopFileName(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QGuiApplication::setDesktopFileName(name_QString);
 }
@@ -116,36 +120,36 @@ libqt_string QGuiApplication_DesktopFileName() {
 }
 
 libqt_list /* of QWindow* */ QGuiApplication_AllWindows() {
-    QWindowList _ret = QGuiApplication::allWindows();
+    QList<QWindow*> _ret = QGuiApplication::allWindows();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QWindow** _arr = static_cast<QWindow**>(malloc(sizeof(QWindow*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QWindow** _arr = static_cast<QWindow**>(malloc(sizeof(QWindow*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
 libqt_list /* of QWindow* */ QGuiApplication_TopLevelWindows() {
-    QWindowList _ret = QGuiApplication::topLevelWindows();
+    QList<QWindow*> _ret = QGuiApplication::topLevelWindows();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QWindow** _arr = static_cast<QWindow**>(malloc(sizeof(QWindow*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QWindow** _arr = static_cast<QWindow**>(malloc(sizeof(QWindow*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-QWindow* QGuiApplication_TopLevelAt(QPoint* pos) {
+QWindow* QGuiApplication_TopLevelAt(const QPoint* pos) {
     return QGuiApplication::topLevelAt(*pos);
 }
 
-void QGuiApplication_SetWindowIcon(QIcon* icon) {
+void QGuiApplication_SetWindowIcon(const QIcon* icon) {
     QGuiApplication::setWindowIcon(*icon);
 }
 
@@ -184,17 +188,17 @@ QScreen* QGuiApplication_PrimaryScreen() {
 libqt_list /* of QScreen* */ QGuiApplication_Screens() {
     QList<QScreen*> _ret = QGuiApplication::screens();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QScreen** _arr = static_cast<QScreen**>(malloc(sizeof(QScreen*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QScreen** _arr = static_cast<QScreen**>(malloc(sizeof(QScreen*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-QScreen* QGuiApplication_ScreenAt(QPoint* point) {
+QScreen* QGuiApplication_ScreenAt(const QPoint* point) {
     return QGuiApplication::screenAt(*point);
 }
 
@@ -206,11 +210,11 @@ QCursor* QGuiApplication_OverrideCursor() {
     return QGuiApplication::overrideCursor();
 }
 
-void QGuiApplication_SetOverrideCursor(QCursor* overrideCursor) {
+void QGuiApplication_SetOverrideCursor(const QCursor* overrideCursor) {
     QGuiApplication::setOverrideCursor(*overrideCursor);
 }
 
-void QGuiApplication_ChangeOverrideCursor(QCursor* param1) {
+void QGuiApplication_ChangeOverrideCursor(const QCursor* param1) {
     QGuiApplication::changeOverrideCursor(*param1);
 }
 
@@ -222,7 +226,7 @@ QFont* QGuiApplication_Font() {
     return new QFont(QGuiApplication::font());
 }
 
-void QGuiApplication_SetFont(QFont* font) {
+void QGuiApplication_SetFont(const QFont* font) {
     QGuiApplication::setFont(*font);
 }
 
@@ -234,7 +238,7 @@ QPalette* QGuiApplication_Palette() {
     return new QPalette(QGuiApplication::palette());
 }
 
-void QGuiApplication_SetPalette(QPalette* pal) {
+void QGuiApplication_SetPalette(const QPalette* pal) {
     QGuiApplication::setPalette(*pal);
 }
 
@@ -487,7 +491,7 @@ void QGuiApplication_Connect_ApplicationDisplayNameChanged(QGuiApplication* self
     });
 }
 
-void QGuiApplication_PaletteChanged(QGuiApplication* self, QPalette* pal) {
+void QGuiApplication_PaletteChanged(QGuiApplication* self, const QPalette* pal) {
     self->paletteChanged(*pal);
 }
 
@@ -501,7 +505,7 @@ void QGuiApplication_Connect_PaletteChanged(QGuiApplication* self, intptr_t slot
     });
 }
 
-void QGuiApplication_FontChanged(QGuiApplication* self, QFont* font) {
+void QGuiApplication_FontChanged(QGuiApplication* self, const QFont* font) {
     self->fontChanged(*font);
 }
 
@@ -714,7 +718,7 @@ void QGuiApplication_OnCustomEvent(QGuiApplication* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QGuiApplication_ConnectNotify(QGuiApplication* self, QMetaMethod* signal) {
+void QGuiApplication_ConnectNotify(QGuiApplication* self, const QMetaMethod* signal) {
     auto* vqguiapplication = dynamic_cast<VirtualQGuiApplication*>(self);
     if (vqguiapplication && vqguiapplication->isVirtualQGuiApplication) {
         vqguiapplication->connectNotify(*signal);
@@ -724,7 +728,7 @@ void QGuiApplication_ConnectNotify(QGuiApplication* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QGuiApplication_QBaseConnectNotify(QGuiApplication* self, QMetaMethod* signal) {
+void QGuiApplication_QBaseConnectNotify(QGuiApplication* self, const QMetaMethod* signal) {
     auto* vqguiapplication = dynamic_cast<VirtualQGuiApplication*>(self);
     if (vqguiapplication && vqguiapplication->isVirtualQGuiApplication) {
         vqguiapplication->setQGuiApplication_ConnectNotify_IsBase(true);
@@ -743,7 +747,7 @@ void QGuiApplication_OnConnectNotify(QGuiApplication* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QGuiApplication_DisconnectNotify(QGuiApplication* self, QMetaMethod* signal) {
+void QGuiApplication_DisconnectNotify(QGuiApplication* self, const QMetaMethod* signal) {
     auto* vqguiapplication = dynamic_cast<VirtualQGuiApplication*>(self);
     if (vqguiapplication && vqguiapplication->isVirtualQGuiApplication) {
         vqguiapplication->disconnectNotify(*signal);
@@ -753,7 +757,7 @@ void QGuiApplication_DisconnectNotify(QGuiApplication* self, QMetaMethod* signal
 }
 
 // Base class handler implementation
-void QGuiApplication_QBaseDisconnectNotify(QGuiApplication* self, QMetaMethod* signal) {
+void QGuiApplication_QBaseDisconnectNotify(QGuiApplication* self, const QMetaMethod* signal) {
     auto* vqguiapplication = dynamic_cast<VirtualQGuiApplication*>(self);
     if (vqguiapplication && vqguiapplication->isVirtualQGuiApplication) {
         vqguiapplication->setQGuiApplication_DisconnectNotify_IsBase(true);
@@ -888,7 +892,7 @@ void QGuiApplication_OnReceivers(const QGuiApplication* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QGuiApplication_IsSignalConnected(const QGuiApplication* self, QMetaMethod* signal) {
+bool QGuiApplication_IsSignalConnected(const QGuiApplication* self, const QMetaMethod* signal) {
     auto* vqguiapplication = const_cast<VirtualQGuiApplication*>(dynamic_cast<const VirtualQGuiApplication*>(self));
     if (vqguiapplication && vqguiapplication->isVirtualQGuiApplication) {
         return vqguiapplication->isSignalConnected(*signal);
@@ -898,7 +902,7 @@ bool QGuiApplication_IsSignalConnected(const QGuiApplication* self, QMetaMethod*
 }
 
 // Base class handler implementation
-bool QGuiApplication_QBaseIsSignalConnected(const QGuiApplication* self, QMetaMethod* signal) {
+bool QGuiApplication_QBaseIsSignalConnected(const QGuiApplication* self, const QMetaMethod* signal) {
     auto* vqguiapplication = const_cast<VirtualQGuiApplication*>(dynamic_cast<const VirtualQGuiApplication*>(self));
     if (vqguiapplication && vqguiapplication->isVirtualQGuiApplication) {
         vqguiapplication->setQGuiApplication_IsSignalConnected_IsBase(true);

@@ -160,6 +160,14 @@ QNetworkReply* q_networkaccessmanager_get(void* self, void* request) {
     return QNetworkAccessManager_Get((QNetworkAccessManager*)self, (QNetworkRequest*)request);
 }
 
+QNetworkReply* q_networkaccessmanager_get2(void* self, void* request, void* data) {
+    return QNetworkAccessManager_Get2((QNetworkAccessManager*)self, (QNetworkRequest*)request, (QIODevice*)data);
+}
+
+QNetworkReply* q_networkaccessmanager_get3(void* self, void* request, const char* data) {
+    return QNetworkAccessManager_Get3((QNetworkAccessManager*)self, (QNetworkRequest*)request, qstring(data));
+}
+
 QNetworkReply* q_networkaccessmanager_post(void* self, void* request, void* data) {
     return QNetworkAccessManager_Post((QNetworkAccessManager*)self, (QNetworkRequest*)request, (QIODevice*)data);
 }
@@ -188,12 +196,12 @@ QNetworkReply* q_networkaccessmanager_send_custom_request2(void* self, void* req
     return QNetworkAccessManager_SendCustomRequest2((QNetworkAccessManager*)self, (QNetworkRequest*)request, qstring(verb), qstring(data));
 }
 
-QNetworkReply* q_networkaccessmanager_post3(void* self, void* request, void* multiPart) {
-    return QNetworkAccessManager_Post3((QNetworkAccessManager*)self, (QNetworkRequest*)request, (QHttpMultiPart*)multiPart);
+QNetworkReply* q_networkaccessmanager_post4(void* self, void* request, void* multiPart) {
+    return QNetworkAccessManager_Post4((QNetworkAccessManager*)self, (QNetworkRequest*)request, (QHttpMultiPart*)multiPart);
 }
 
-QNetworkReply* q_networkaccessmanager_put3(void* self, void* request, void* multiPart) {
-    return QNetworkAccessManager_Put3((QNetworkAccessManager*)self, (QNetworkRequest*)request, (QHttpMultiPart*)multiPart);
+QNetworkReply* q_networkaccessmanager_put4(void* self, void* request, void* multiPart) {
+    return QNetworkAccessManager_Put4((QNetworkAccessManager*)self, (QNetworkRequest*)request, (QHttpMultiPart*)multiPart);
 }
 
 QNetworkReply* q_networkaccessmanager_send_custom_request3(void* self, void* request, const char* verb, void* multiPart) {
@@ -232,8 +240,12 @@ int32_t q_networkaccessmanager_transfer_timeout(void* self) {
     return QNetworkAccessManager_TransferTimeout((QNetworkAccessManager*)self);
 }
 
-void q_networkaccessmanager_set_transfer_timeout(void* self) {
-    QNetworkAccessManager_SetTransferTimeout((QNetworkAccessManager*)self);
+void q_networkaccessmanager_set_transfer_timeout(void* self, int timeout) {
+    QNetworkAccessManager_SetTransferTimeout((QNetworkAccessManager*)self, timeout);
+}
+
+void q_networkaccessmanager_set_transfer_timeout2(void* self) {
+    QNetworkAccessManager_SetTransferTimeout2((QNetworkAccessManager*)self);
 }
 
 void q_networkaccessmanager_proxy_authentication_required(void* self, void* proxy, void* authenticator) {
@@ -364,10 +376,6 @@ void q_networkaccessmanager_connect_to_host2(void* self, const char* hostName, u
     QNetworkAccessManager_ConnectToHost2((QNetworkAccessManager*)self, qstring(hostName), port);
 }
 
-void q_networkaccessmanager_set_transfer_timeout1(void* self, int timeout) {
-    QNetworkAccessManager_SetTransferTimeout1((QNetworkAccessManager*)self, timeout);
-}
-
 const char* q_networkaccessmanager_object_name(void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
@@ -403,8 +411,8 @@ QThread* q_networkaccessmanager_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_networkaccessmanager_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_networkaccessmanager_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_networkaccessmanager_start_timer(void* self, int interval) {
@@ -413,6 +421,10 @@ int32_t q_networkaccessmanager_start_timer(void* self, int interval) {
 
 void q_networkaccessmanager_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_networkaccessmanager_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_networkaccessmanager_children(void* self) {
@@ -505,6 +517,10 @@ bool q_networkaccessmanager_inherits(void* self, const char* classname) {
 
 void q_networkaccessmanager_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_networkaccessmanager_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_networkaccessmanager_start_timer2(void* self, int interval, int64_t timerType) {

@@ -35,7 +35,7 @@ libqt_string QWebEngineNotification_Tr(const char* s) {
     return _str;
 }
 
-bool QWebEngineNotification_Matches(const QWebEngineNotification* self, QWebEngineNotification* other) {
+bool QWebEngineNotification_Matches(const QWebEngineNotification* self, const QWebEngineNotification* other) {
     return self->matches(other);
 }
 

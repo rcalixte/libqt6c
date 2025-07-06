@@ -12,11 +12,11 @@ bool QPagedPaintDevice_NewPage(QPagedPaintDevice* self) {
     return self->newPage();
 }
 
-bool QPagedPaintDevice_SetPageLayout(QPagedPaintDevice* self, QPageLayout* pageLayout) {
+bool QPagedPaintDevice_SetPageLayout(QPagedPaintDevice* self, const QPageLayout* pageLayout) {
     return self->setPageLayout(*pageLayout);
 }
 
-bool QPagedPaintDevice_SetPageSize(QPagedPaintDevice* self, QPageSize* pageSize) {
+bool QPagedPaintDevice_SetPageSize(QPagedPaintDevice* self, const QPageSize* pageSize) {
     return self->setPageSize(*pageSize);
 }
 
@@ -24,7 +24,7 @@ bool QPagedPaintDevice_SetPageOrientation(QPagedPaintDevice* self, int orientati
     return self->setPageOrientation(static_cast<QPageLayout::Orientation>(orientation));
 }
 
-bool QPagedPaintDevice_SetPageMargins(QPagedPaintDevice* self, QMarginsF* margins, int units) {
+bool QPagedPaintDevice_SetPageMargins(QPagedPaintDevice* self, const QMarginsF* margins, int units) {
     return self->setPageMargins(*margins, static_cast<QPageLayout::Unit>(units));
 }
 
@@ -32,7 +32,7 @@ QPageLayout* QPagedPaintDevice_PageLayout(const QPagedPaintDevice* self) {
     return new QPageLayout(self->pageLayout());
 }
 
-void QPagedPaintDevice_SetPageRanges(QPagedPaintDevice* self, QPageRanges* ranges) {
+void QPagedPaintDevice_SetPageRanges(QPagedPaintDevice* self, const QPageRanges* ranges) {
     self->setPageRanges(*ranges);
 }
 

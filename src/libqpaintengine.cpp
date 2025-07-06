@@ -25,12 +25,20 @@
 #include "libqpaintengine.hpp"
 #include "libqpaintengine.hxx"
 
-QTextItem* QTextItem_new(QTextItem* other) {
+QTextItem* QTextItem_new(const QTextItem* other) {
     return new QTextItem(*other);
 }
 
 QTextItem* QTextItem_new2(QTextItem* other) {
     return new QTextItem(std::move(*other));
+}
+
+QTextItem* QTextItem_new3() {
+    return new QTextItem();
+}
+
+QTextItem* QTextItem_new4(const QTextItem* param1) {
+    return new QTextItem(*param1);
 }
 
 void QTextItem_CopyAssign(QTextItem* self, QTextItem* other) {
@@ -101,7 +109,7 @@ QPaintDevice* QPaintEngine_PaintDevice(const QPaintEngine* self) {
     return self->paintDevice();
 }
 
-void QPaintEngine_SetSystemClip(QPaintEngine* self, QRegion* baseClip) {
+void QPaintEngine_SetSystemClip(QPaintEngine* self, const QRegion* baseClip) {
     self->setSystemClip(*baseClip);
 }
 
@@ -109,7 +117,7 @@ QRegion* QPaintEngine_SystemClip(const QPaintEngine* self) {
     return new QRegion(self->systemClip());
 }
 
-void QPaintEngine_SetSystemRect(QPaintEngine* self, QRect* rect) {
+void QPaintEngine_SetSystemRect(QPaintEngine* self, const QRect* rect) {
     self->setSystemRect(*rect);
 }
 
@@ -208,7 +216,7 @@ void QPaintEngine_OnEnd(QPaintEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPaintEngine_UpdateState(QPaintEngine* self, QPaintEngineState* state) {
+void QPaintEngine_UpdateState(QPaintEngine* self, const QPaintEngineState* state) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->updateState(*state);
@@ -218,7 +226,7 @@ void QPaintEngine_UpdateState(QPaintEngine* self, QPaintEngineState* state) {
 }
 
 // Base class handler implementation
-void QPaintEngine_QBaseUpdateState(QPaintEngine* self, QPaintEngineState* state) {
+void QPaintEngine_QBaseUpdateState(QPaintEngine* self, const QPaintEngineState* state) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->setQPaintEngine_UpdateState_IsBase(true);
@@ -237,7 +245,7 @@ void QPaintEngine_OnUpdateState(QPaintEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPaintEngine_DrawRects(QPaintEngine* self, QRect* rects, int rectCount) {
+void QPaintEngine_DrawRects(QPaintEngine* self, const QRect* rects, int rectCount) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->drawRects(rects, static_cast<int>(rectCount));
@@ -247,7 +255,7 @@ void QPaintEngine_DrawRects(QPaintEngine* self, QRect* rects, int rectCount) {
 }
 
 // Base class handler implementation
-void QPaintEngine_QBaseDrawRects(QPaintEngine* self, QRect* rects, int rectCount) {
+void QPaintEngine_QBaseDrawRects(QPaintEngine* self, const QRect* rects, int rectCount) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->setQPaintEngine_DrawRects_IsBase(true);
@@ -266,7 +274,7 @@ void QPaintEngine_OnDrawRects(QPaintEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPaintEngine_DrawRects2(QPaintEngine* self, QRectF* rects, int rectCount) {
+void QPaintEngine_DrawRects2(QPaintEngine* self, const QRectF* rects, int rectCount) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->drawRects(rects, static_cast<int>(rectCount));
@@ -276,7 +284,7 @@ void QPaintEngine_DrawRects2(QPaintEngine* self, QRectF* rects, int rectCount) {
 }
 
 // Base class handler implementation
-void QPaintEngine_QBaseDrawRects2(QPaintEngine* self, QRectF* rects, int rectCount) {
+void QPaintEngine_QBaseDrawRects2(QPaintEngine* self, const QRectF* rects, int rectCount) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->setQPaintEngine_DrawRects2_IsBase(true);
@@ -295,7 +303,7 @@ void QPaintEngine_OnDrawRects2(QPaintEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPaintEngine_DrawLines(QPaintEngine* self, QLine* lines, int lineCount) {
+void QPaintEngine_DrawLines(QPaintEngine* self, const QLine* lines, int lineCount) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->drawLines(lines, static_cast<int>(lineCount));
@@ -305,7 +313,7 @@ void QPaintEngine_DrawLines(QPaintEngine* self, QLine* lines, int lineCount) {
 }
 
 // Base class handler implementation
-void QPaintEngine_QBaseDrawLines(QPaintEngine* self, QLine* lines, int lineCount) {
+void QPaintEngine_QBaseDrawLines(QPaintEngine* self, const QLine* lines, int lineCount) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->setQPaintEngine_DrawLines_IsBase(true);
@@ -324,7 +332,7 @@ void QPaintEngine_OnDrawLines(QPaintEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPaintEngine_DrawLines2(QPaintEngine* self, QLineF* lines, int lineCount) {
+void QPaintEngine_DrawLines2(QPaintEngine* self, const QLineF* lines, int lineCount) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->drawLines(lines, static_cast<int>(lineCount));
@@ -334,7 +342,7 @@ void QPaintEngine_DrawLines2(QPaintEngine* self, QLineF* lines, int lineCount) {
 }
 
 // Base class handler implementation
-void QPaintEngine_QBaseDrawLines2(QPaintEngine* self, QLineF* lines, int lineCount) {
+void QPaintEngine_QBaseDrawLines2(QPaintEngine* self, const QLineF* lines, int lineCount) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->setQPaintEngine_DrawLines2_IsBase(true);
@@ -353,7 +361,7 @@ void QPaintEngine_OnDrawLines2(QPaintEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPaintEngine_DrawEllipse(QPaintEngine* self, QRectF* r) {
+void QPaintEngine_DrawEllipse(QPaintEngine* self, const QRectF* r) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->drawEllipse(*r);
@@ -363,7 +371,7 @@ void QPaintEngine_DrawEllipse(QPaintEngine* self, QRectF* r) {
 }
 
 // Base class handler implementation
-void QPaintEngine_QBaseDrawEllipse(QPaintEngine* self, QRectF* r) {
+void QPaintEngine_QBaseDrawEllipse(QPaintEngine* self, const QRectF* r) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->setQPaintEngine_DrawEllipse_IsBase(true);
@@ -382,7 +390,7 @@ void QPaintEngine_OnDrawEllipse(QPaintEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPaintEngine_DrawEllipseWithQRect(QPaintEngine* self, QRect* r) {
+void QPaintEngine_DrawEllipseWithQRect(QPaintEngine* self, const QRect* r) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->drawEllipse(*r);
@@ -392,7 +400,7 @@ void QPaintEngine_DrawEllipseWithQRect(QPaintEngine* self, QRect* r) {
 }
 
 // Base class handler implementation
-void QPaintEngine_QBaseDrawEllipseWithQRect(QPaintEngine* self, QRect* r) {
+void QPaintEngine_QBaseDrawEllipseWithQRect(QPaintEngine* self, const QRect* r) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->setQPaintEngine_DrawEllipseWithQRect_IsBase(true);
@@ -411,7 +419,7 @@ void QPaintEngine_OnDrawEllipseWithQRect(QPaintEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPaintEngine_DrawPath(QPaintEngine* self, QPainterPath* path) {
+void QPaintEngine_DrawPath(QPaintEngine* self, const QPainterPath* path) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->drawPath(*path);
@@ -421,7 +429,7 @@ void QPaintEngine_DrawPath(QPaintEngine* self, QPainterPath* path) {
 }
 
 // Base class handler implementation
-void QPaintEngine_QBaseDrawPath(QPaintEngine* self, QPainterPath* path) {
+void QPaintEngine_QBaseDrawPath(QPaintEngine* self, const QPainterPath* path) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->setQPaintEngine_DrawPath_IsBase(true);
@@ -440,7 +448,7 @@ void QPaintEngine_OnDrawPath(QPaintEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPaintEngine_DrawPoints(QPaintEngine* self, QPointF* points, int pointCount) {
+void QPaintEngine_DrawPoints(QPaintEngine* self, const QPointF* points, int pointCount) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->drawPoints(points, static_cast<int>(pointCount));
@@ -450,7 +458,7 @@ void QPaintEngine_DrawPoints(QPaintEngine* self, QPointF* points, int pointCount
 }
 
 // Base class handler implementation
-void QPaintEngine_QBaseDrawPoints(QPaintEngine* self, QPointF* points, int pointCount) {
+void QPaintEngine_QBaseDrawPoints(QPaintEngine* self, const QPointF* points, int pointCount) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->setQPaintEngine_DrawPoints_IsBase(true);
@@ -469,7 +477,7 @@ void QPaintEngine_OnDrawPoints(QPaintEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPaintEngine_DrawPoints2(QPaintEngine* self, QPoint* points, int pointCount) {
+void QPaintEngine_DrawPoints2(QPaintEngine* self, const QPoint* points, int pointCount) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->drawPoints(points, static_cast<int>(pointCount));
@@ -479,7 +487,7 @@ void QPaintEngine_DrawPoints2(QPaintEngine* self, QPoint* points, int pointCount
 }
 
 // Base class handler implementation
-void QPaintEngine_QBaseDrawPoints2(QPaintEngine* self, QPoint* points, int pointCount) {
+void QPaintEngine_QBaseDrawPoints2(QPaintEngine* self, const QPoint* points, int pointCount) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->setQPaintEngine_DrawPoints2_IsBase(true);
@@ -498,7 +506,7 @@ void QPaintEngine_OnDrawPoints2(QPaintEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPaintEngine_DrawPolygon(QPaintEngine* self, QPointF* points, int pointCount, int mode) {
+void QPaintEngine_DrawPolygon(QPaintEngine* self, const QPointF* points, int pointCount, int mode) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->drawPolygon(points, static_cast<int>(pointCount), static_cast<QPaintEngine::PolygonDrawMode>(mode));
@@ -508,7 +516,7 @@ void QPaintEngine_DrawPolygon(QPaintEngine* self, QPointF* points, int pointCoun
 }
 
 // Base class handler implementation
-void QPaintEngine_QBaseDrawPolygon(QPaintEngine* self, QPointF* points, int pointCount, int mode) {
+void QPaintEngine_QBaseDrawPolygon(QPaintEngine* self, const QPointF* points, int pointCount, int mode) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->setQPaintEngine_DrawPolygon_IsBase(true);
@@ -527,7 +535,7 @@ void QPaintEngine_OnDrawPolygon(QPaintEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPaintEngine_DrawPolygon2(QPaintEngine* self, QPoint* points, int pointCount, int mode) {
+void QPaintEngine_DrawPolygon2(QPaintEngine* self, const QPoint* points, int pointCount, int mode) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->drawPolygon(points, static_cast<int>(pointCount), static_cast<QPaintEngine::PolygonDrawMode>(mode));
@@ -537,7 +545,7 @@ void QPaintEngine_DrawPolygon2(QPaintEngine* self, QPoint* points, int pointCoun
 }
 
 // Base class handler implementation
-void QPaintEngine_QBaseDrawPolygon2(QPaintEngine* self, QPoint* points, int pointCount, int mode) {
+void QPaintEngine_QBaseDrawPolygon2(QPaintEngine* self, const QPoint* points, int pointCount, int mode) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->setQPaintEngine_DrawPolygon2_IsBase(true);
@@ -556,7 +564,7 @@ void QPaintEngine_OnDrawPolygon2(QPaintEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPaintEngine_DrawPixmap(QPaintEngine* self, QRectF* r, QPixmap* pm, QRectF* sr) {
+void QPaintEngine_DrawPixmap(QPaintEngine* self, const QRectF* r, const QPixmap* pm, const QRectF* sr) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->drawPixmap(*r, *pm, *sr);
@@ -566,7 +574,7 @@ void QPaintEngine_DrawPixmap(QPaintEngine* self, QRectF* r, QPixmap* pm, QRectF*
 }
 
 // Base class handler implementation
-void QPaintEngine_QBaseDrawPixmap(QPaintEngine* self, QRectF* r, QPixmap* pm, QRectF* sr) {
+void QPaintEngine_QBaseDrawPixmap(QPaintEngine* self, const QRectF* r, const QPixmap* pm, const QRectF* sr) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->setQPaintEngine_DrawPixmap_IsBase(true);
@@ -585,7 +593,7 @@ void QPaintEngine_OnDrawPixmap(QPaintEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPaintEngine_DrawTextItem(QPaintEngine* self, QPointF* p, QTextItem* textItem) {
+void QPaintEngine_DrawTextItem(QPaintEngine* self, const QPointF* p, const QTextItem* textItem) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->drawTextItem(*p, *textItem);
@@ -595,7 +603,7 @@ void QPaintEngine_DrawTextItem(QPaintEngine* self, QPointF* p, QTextItem* textIt
 }
 
 // Base class handler implementation
-void QPaintEngine_QBaseDrawTextItem(QPaintEngine* self, QPointF* p, QTextItem* textItem) {
+void QPaintEngine_QBaseDrawTextItem(QPaintEngine* self, const QPointF* p, const QTextItem* textItem) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->setQPaintEngine_DrawTextItem_IsBase(true);
@@ -614,7 +622,7 @@ void QPaintEngine_OnDrawTextItem(QPaintEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPaintEngine_DrawTiledPixmap(QPaintEngine* self, QRectF* r, QPixmap* pixmap, QPointF* s) {
+void QPaintEngine_DrawTiledPixmap(QPaintEngine* self, const QRectF* r, const QPixmap* pixmap, const QPointF* s) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->drawTiledPixmap(*r, *pixmap, *s);
@@ -624,7 +632,7 @@ void QPaintEngine_DrawTiledPixmap(QPaintEngine* self, QRectF* r, QPixmap* pixmap
 }
 
 // Base class handler implementation
-void QPaintEngine_QBaseDrawTiledPixmap(QPaintEngine* self, QRectF* r, QPixmap* pixmap, QPointF* s) {
+void QPaintEngine_QBaseDrawTiledPixmap(QPaintEngine* self, const QRectF* r, const QPixmap* pixmap, const QPointF* s) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->setQPaintEngine_DrawTiledPixmap_IsBase(true);
@@ -643,7 +651,7 @@ void QPaintEngine_OnDrawTiledPixmap(QPaintEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPaintEngine_DrawImage(QPaintEngine* self, QRectF* r, QImage* pm, QRectF* sr, int flags) {
+void QPaintEngine_DrawImage(QPaintEngine* self, const QRectF* r, const QImage* pm, const QRectF* sr, int flags) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->drawImage(*r, *pm, *sr, static_cast<Qt::ImageConversionFlags>(flags));
@@ -653,7 +661,7 @@ void QPaintEngine_DrawImage(QPaintEngine* self, QRectF* r, QImage* pm, QRectF* s
 }
 
 // Base class handler implementation
-void QPaintEngine_QBaseDrawImage(QPaintEngine* self, QRectF* r, QImage* pm, QRectF* sr, int flags) {
+void QPaintEngine_QBaseDrawImage(QPaintEngine* self, const QRectF* r, const QImage* pm, const QRectF* sr, int flags) {
     auto* vqpaintengine = dynamic_cast<VirtualQPaintEngine*>(self);
     if (vqpaintengine && vqpaintengine->isVirtualQPaintEngine) {
         vqpaintengine->setQPaintEngine_DrawImage_IsBase(true);
@@ -791,7 +799,7 @@ void QPaintEngine_Delete(QPaintEngine* self) {
     delete self;
 }
 
-QPaintEngineState* QPaintEngineState_new(QPaintEngineState* other) {
+QPaintEngineState* QPaintEngineState_new(const QPaintEngineState* other) {
     return new QPaintEngineState(*other);
 }
 

@@ -12,18 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractseries.h"
-#include "../libqbrush.h"
-#include "../libqcolor.h"
-#include "../libqfont.h"
-#include "../libqimage.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqpen.h"
-#include "../libqpoint.h"
-#include <string.h>
-#include "../libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qxyseries-qtcharts.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
@@ -957,7 +945,7 @@ QThread* q_xyseries_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QXYSeries* self, QThread* thread ```
-void q_xyseries_move_to_thread(void* self, void* thread);
+bool q_xyseries_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -972,6 +960,13 @@ int32_t q_xyseries_start_timer(void* self, int interval);
 ///
 /// ``` QXYSeries* self, int id ```
 void q_xyseries_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QXYSeries* self, enum Qt__TimerId id ```
+void q_xyseries_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1115,6 +1110,13 @@ void q_xyseries_delete_later(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QXYSeries* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_xyseries_move_to_thread2(void* self, void* thread, void* param2);
+
+/// Inherited from QObject
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QXYSeries* self, int interval, enum Qt__TimerType timerType ```
@@ -1170,7 +1172,8 @@ typedef enum {
     QXYSERIES_POINTCONFIGURATION_COLOR = 0,
     QXYSERIES_POINTCONFIGURATION_SIZE = 1,
     QXYSERIES_POINTCONFIGURATION_VISIBILITY = 2,
-    QXYSERIES_POINTCONFIGURATION_LABELVISIBILITY = 3
+    QXYSERIES_POINTCONFIGURATION_LABELVISIBILITY = 3,
+    QXYSERIES_POINTCONFIGURATION_LABELFORMAT = 4
 } QXYSeries__PointConfiguration;
 
 #endif

@@ -28,7 +28,7 @@ QMetaObject* QWebEngineNotification_MetaObject(const QWebEngineNotification* sel
 void* QWebEngineNotification_Metacast(QWebEngineNotification* self, const char* param1);
 int QWebEngineNotification_Metacall(QWebEngineNotification* self, int param1, int param2, void** param3);
 libqt_string QWebEngineNotification_Tr(const char* s);
-bool QWebEngineNotification_Matches(const QWebEngineNotification* self, QWebEngineNotification* other);
+bool QWebEngineNotification_Matches(const QWebEngineNotification* self, const QWebEngineNotification* other);
 QUrl* QWebEngineNotification_Origin(const QWebEngineNotification* self);
 QImage* QWebEngineNotification_Icon(const QWebEngineNotification* self);
 libqt_string QWebEngineNotification_Title(const QWebEngineNotification* self);

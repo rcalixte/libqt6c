@@ -26,27 +26,21 @@ typedef struct QObject QObject;
 typedef struct QPen QPen;
 #endif
 
-#ifdef __cplusplus
-typedef QLegendMarker::LegendMarkerType LegendMarkerType; // C++ enum
-#else
-typedef int LegendMarkerType; // C ABI enum
-#endif
-
 QMetaObject* QLegendMarker_MetaObject(const QLegendMarker* self);
 void* QLegendMarker_Metacast(QLegendMarker* self, const char* param1);
 int QLegendMarker_Metacall(QLegendMarker* self, int param1, int param2, void** param3);
 libqt_string QLegendMarker_Tr(const char* s);
 int QLegendMarker_Type(QLegendMarker* self);
 libqt_string QLegendMarker_Label(const QLegendMarker* self);
-void QLegendMarker_SetLabel(QLegendMarker* self, libqt_string label);
+void QLegendMarker_SetLabel(QLegendMarker* self, const libqt_string label);
 QBrush* QLegendMarker_LabelBrush(const QLegendMarker* self);
-void QLegendMarker_SetLabelBrush(QLegendMarker* self, QBrush* brush);
+void QLegendMarker_SetLabelBrush(QLegendMarker* self, const QBrush* brush);
 QFont* QLegendMarker_Font(const QLegendMarker* self);
-void QLegendMarker_SetFont(QLegendMarker* self, QFont* font);
+void QLegendMarker_SetFont(QLegendMarker* self, const QFont* font);
 QPen* QLegendMarker_Pen(const QLegendMarker* self);
-void QLegendMarker_SetPen(QLegendMarker* self, QPen* pen);
+void QLegendMarker_SetPen(QLegendMarker* self, const QPen* pen);
 QBrush* QLegendMarker_Brush(const QLegendMarker* self);
-void QLegendMarker_SetBrush(QLegendMarker* self, QBrush* brush);
+void QLegendMarker_SetBrush(QLegendMarker* self, const QBrush* brush);
 bool QLegendMarker_IsVisible(const QLegendMarker* self);
 void QLegendMarker_SetVisible(QLegendMarker* self, bool visible);
 int QLegendMarker_Shape(const QLegendMarker* self);

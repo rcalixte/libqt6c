@@ -251,9 +251,9 @@ class VirtualQChart final : public QChart {
     mutable bool qchart_setownedbylayout_isbase = false;
 
   public:
-    VirtualQChart() : QChart(){};
-    VirtualQChart(QGraphicsItem* parent) : QChart(parent){};
-    VirtualQChart(QGraphicsItem* parent, Qt::WindowFlags wFlags) : QChart(parent, wFlags){};
+    VirtualQChart() : QChart() {};
+    VirtualQChart(QGraphicsItem* parent) : QChart(parent) {};
+    VirtualQChart(QGraphicsItem* parent, Qt::WindowFlags wFlags) : QChart(parent, wFlags) {};
 
     ~VirtualQChart() {
         qchart_metacall_callback = nullptr;
@@ -1590,20 +1590,20 @@ class VirtualQChart final : public QChart {
     // Friend functions
     friend void QChart_InitStyleOption(const QChart* self, QStyleOption* option);
     friend void QChart_QBaseInitStyleOption(const QChart* self, QStyleOption* option);
-    friend QSizeF* QChart_SizeHint(const QChart* self, int which, QSizeF* constraint);
-    friend QSizeF* QChart_QBaseSizeHint(const QChart* self, int which, QSizeF* constraint);
+    friend QSizeF* QChart_SizeHint(const QChart* self, int which, const QSizeF* constraint);
+    friend QSizeF* QChart_QBaseSizeHint(const QChart* self, int which, const QSizeF* constraint);
     friend void QChart_UpdateGeometry(QChart* self);
     friend void QChart_QBaseUpdateGeometry(QChart* self);
-    friend QVariant* QChart_ItemChange(QChart* self, int change, QVariant* value);
-    friend QVariant* QChart_QBaseItemChange(QChart* self, int change, QVariant* value);
-    friend QVariant* QChart_PropertyChange(QChart* self, libqt_string propertyName, QVariant* value);
-    friend QVariant* QChart_QBasePropertyChange(QChart* self, libqt_string propertyName, QVariant* value);
+    friend QVariant* QChart_ItemChange(QChart* self, int change, const QVariant* value);
+    friend QVariant* QChart_QBaseItemChange(QChart* self, int change, const QVariant* value);
+    friend QVariant* QChart_PropertyChange(QChart* self, const libqt_string propertyName, const QVariant* value);
+    friend QVariant* QChart_QBasePropertyChange(QChart* self, const libqt_string propertyName, const QVariant* value);
     friend bool QChart_SceneEvent(QChart* self, QEvent* event);
     friend bool QChart_QBaseSceneEvent(QChart* self, QEvent* event);
     friend bool QChart_WindowFrameEvent(QChart* self, QEvent* e);
     friend bool QChart_QBaseWindowFrameEvent(QChart* self, QEvent* e);
-    friend int QChart_WindowFrameSectionAt(const QChart* self, QPointF* pos);
-    friend int QChart_QBaseWindowFrameSectionAt(const QChart* self, QPointF* pos);
+    friend int QChart_WindowFrameSectionAt(const QChart* self, const QPointF* pos);
+    friend int QChart_QBaseWindowFrameSectionAt(const QChart* self, const QPointF* pos);
     friend bool QChart_Event(QChart* self, QEvent* event);
     friend bool QChart_QBaseEvent(QChart* self, QEvent* event);
     friend void QChart_ChangeEvent(QChart* self, QEvent* event);
@@ -1644,10 +1644,10 @@ class VirtualQChart final : public QChart {
     friend void QChart_QBaseChildEvent(QChart* self, QChildEvent* event);
     friend void QChart_CustomEvent(QChart* self, QEvent* event);
     friend void QChart_QBaseCustomEvent(QChart* self, QEvent* event);
-    friend void QChart_ConnectNotify(QChart* self, QMetaMethod* signal);
-    friend void QChart_QBaseConnectNotify(QChart* self, QMetaMethod* signal);
-    friend void QChart_DisconnectNotify(QChart* self, QMetaMethod* signal);
-    friend void QChart_QBaseDisconnectNotify(QChart* self, QMetaMethod* signal);
+    friend void QChart_ConnectNotify(QChart* self, const QMetaMethod* signal);
+    friend void QChart_QBaseConnectNotify(QChart* self, const QMetaMethod* signal);
+    friend void QChart_DisconnectNotify(QChart* self, const QMetaMethod* signal);
+    friend void QChart_QBaseDisconnectNotify(QChart* self, const QMetaMethod* signal);
     friend bool QChart_SceneEventFilter(QChart* self, QGraphicsItem* watched, QEvent* event);
     friend bool QChart_QBaseSceneEventFilter(QChart* self, QGraphicsItem* watched, QEvent* event);
     friend void QChart_ContextMenuEvent(QChart* self, QGraphicsSceneContextMenuEvent* event);
@@ -1682,10 +1682,10 @@ class VirtualQChart final : public QChart {
     friend QVariant* QChart_QBaseInputMethodQuery(const QChart* self, int query);
     friend bool QChart_SupportsExtension(const QChart* self, int extension);
     friend bool QChart_QBaseSupportsExtension(const QChart* self, int extension);
-    friend void QChart_SetExtension(QChart* self, int extension, QVariant* variant);
-    friend void QChart_QBaseSetExtension(QChart* self, int extension, QVariant* variant);
-    friend QVariant* QChart_Extension(const QChart* self, QVariant* variant);
-    friend QVariant* QChart_QBaseExtension(const QChart* self, QVariant* variant);
+    friend void QChart_SetExtension(QChart* self, int extension, const QVariant* variant);
+    friend void QChart_QBaseSetExtension(QChart* self, int extension, const QVariant* variant);
+    friend QVariant* QChart_Extension(const QChart* self, const QVariant* variant);
+    friend QVariant* QChart_QBaseExtension(const QChart* self, const QVariant* variant);
     friend void QChart_UpdateMicroFocus(QChart* self);
     friend void QChart_QBaseUpdateMicroFocus(QChart* self);
     friend QObject* QChart_Sender(const QChart* self);
@@ -1694,8 +1694,8 @@ class VirtualQChart final : public QChart {
     friend int QChart_QBaseSenderSignalIndex(const QChart* self);
     friend int QChart_Receivers(const QChart* self, const char* signal);
     friend int QChart_QBaseReceivers(const QChart* self, const char* signal);
-    friend bool QChart_IsSignalConnected(const QChart* self, QMetaMethod* signal);
-    friend bool QChart_QBaseIsSignalConnected(const QChart* self, QMetaMethod* signal);
+    friend bool QChart_IsSignalConnected(const QChart* self, const QMetaMethod* signal);
+    friend bool QChart_QBaseIsSignalConnected(const QChart* self, const QMetaMethod* signal);
     friend void QChart_AddToIndex(QChart* self);
     friend void QChart_QBaseAddToIndex(QChart* self);
     friend void QChart_RemoveFromIndex(QChart* self);

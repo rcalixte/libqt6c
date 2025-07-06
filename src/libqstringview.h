@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqchar.h"
-#include "libqregularexpression.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qstringview.html
 
 /// q_stringview_new constructs a new QStringView object.
@@ -101,7 +97,7 @@ int32_t q_stringview_compare_with_q_char(void* self, void* c);
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#compare)
 ///
 /// ``` QStringView* self, QChar* c, enum Qt__CaseSensitivity cs ```
-int32_t q_stringview_compare2(void* self, void* c, int64_t cs);
+int32_t q_stringview_compare3(void* self, void* c, int64_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#startsWith)
 ///
@@ -177,6 +173,16 @@ bool q_stringview_is_right_to_left(void* self);
 ///
 /// ``` QStringView* self ```
 bool q_stringview_is_valid_utf16(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#isUpper)
+///
+/// ``` QStringView* self ```
+bool q_stringview_is_upper(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#isLower)
+///
+/// ``` QStringView* self ```
+bool q_stringview_is_lower(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#toShort)
 ///
@@ -263,6 +269,11 @@ QChar* q_stringview_front(void* self);
 /// ``` QStringView* self ```
 QChar* q_stringview_back(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#max_size)
+///
+/// ``` QStringView* self ```
+int64_t q_stringview_max_size(void* self);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#constBegin)
 ///
 /// ``` QStringView* self ```
@@ -297,6 +308,11 @@ QChar* q_stringview_first2(void* self);
 ///
 /// ``` QStringView* self ```
 QChar* q_stringview_last2(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#maxSize)
+///
+///
+int64_t q_stringview_max_size2();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#indexOf)
 ///

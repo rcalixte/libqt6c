@@ -20,19 +20,13 @@ typedef struct QPrintEngine QPrintEngine;
 typedef struct QVariant QVariant;
 #endif
 
-#ifdef __cplusplus
-typedef QPrintEngine::PrintEnginePropertyKey PrintEnginePropertyKey; // C++ enum
-#else
-typedef int PrintEnginePropertyKey; // C ABI enum
-#endif
-
-void QPrintEngine_SetProperty(QPrintEngine* self, int key, QVariant* value);
+void QPrintEngine_SetProperty(QPrintEngine* self, int key, const QVariant* value);
 QVariant* QPrintEngine_Property(const QPrintEngine* self, int key);
 bool QPrintEngine_NewPage(QPrintEngine* self);
 bool QPrintEngine_Abort(QPrintEngine* self);
 int QPrintEngine_Metric(const QPrintEngine* self, int param1);
 int QPrintEngine_PrinterState(const QPrintEngine* self);
-void QPrintEngine_OperatorAssign(QPrintEngine* self, QPrintEngine* param1);
+void QPrintEngine_OperatorAssign(QPrintEngine* self, const QPrintEngine* param1);
 void QPrintEngine_Delete(QPrintEngine* self);
 
 #ifdef __cplusplus

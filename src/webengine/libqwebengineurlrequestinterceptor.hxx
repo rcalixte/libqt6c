@@ -64,8 +64,8 @@ class VirtualQWebEngineUrlRequestInterceptor final : public QWebEngineUrlRequest
     mutable bool qwebengineurlrequestinterceptor_issignalconnected_isbase = false;
 
   public:
-    VirtualQWebEngineUrlRequestInterceptor() : QWebEngineUrlRequestInterceptor(){};
-    VirtualQWebEngineUrlRequestInterceptor(QObject* p) : QWebEngineUrlRequestInterceptor(p){};
+    VirtualQWebEngineUrlRequestInterceptor() : QWebEngineUrlRequestInterceptor() {};
+    VirtualQWebEngineUrlRequestInterceptor(QObject* p) : QWebEngineUrlRequestInterceptor(p) {};
 
     ~VirtualQWebEngineUrlRequestInterceptor() {
         qwebengineurlrequestinterceptor_metacall_callback = nullptr;
@@ -311,18 +311,18 @@ class VirtualQWebEngineUrlRequestInterceptor final : public QWebEngineUrlRequest
     friend void QWebEngineUrlRequestInterceptor_QBaseChildEvent(QWebEngineUrlRequestInterceptor* self, QChildEvent* event);
     friend void QWebEngineUrlRequestInterceptor_CustomEvent(QWebEngineUrlRequestInterceptor* self, QEvent* event);
     friend void QWebEngineUrlRequestInterceptor_QBaseCustomEvent(QWebEngineUrlRequestInterceptor* self, QEvent* event);
-    friend void QWebEngineUrlRequestInterceptor_ConnectNotify(QWebEngineUrlRequestInterceptor* self, QMetaMethod* signal);
-    friend void QWebEngineUrlRequestInterceptor_QBaseConnectNotify(QWebEngineUrlRequestInterceptor* self, QMetaMethod* signal);
-    friend void QWebEngineUrlRequestInterceptor_DisconnectNotify(QWebEngineUrlRequestInterceptor* self, QMetaMethod* signal);
-    friend void QWebEngineUrlRequestInterceptor_QBaseDisconnectNotify(QWebEngineUrlRequestInterceptor* self, QMetaMethod* signal);
+    friend void QWebEngineUrlRequestInterceptor_ConnectNotify(QWebEngineUrlRequestInterceptor* self, const QMetaMethod* signal);
+    friend void QWebEngineUrlRequestInterceptor_QBaseConnectNotify(QWebEngineUrlRequestInterceptor* self, const QMetaMethod* signal);
+    friend void QWebEngineUrlRequestInterceptor_DisconnectNotify(QWebEngineUrlRequestInterceptor* self, const QMetaMethod* signal);
+    friend void QWebEngineUrlRequestInterceptor_QBaseDisconnectNotify(QWebEngineUrlRequestInterceptor* self, const QMetaMethod* signal);
     friend QObject* QWebEngineUrlRequestInterceptor_Sender(const QWebEngineUrlRequestInterceptor* self);
     friend QObject* QWebEngineUrlRequestInterceptor_QBaseSender(const QWebEngineUrlRequestInterceptor* self);
     friend int QWebEngineUrlRequestInterceptor_SenderSignalIndex(const QWebEngineUrlRequestInterceptor* self);
     friend int QWebEngineUrlRequestInterceptor_QBaseSenderSignalIndex(const QWebEngineUrlRequestInterceptor* self);
     friend int QWebEngineUrlRequestInterceptor_Receivers(const QWebEngineUrlRequestInterceptor* self, const char* signal);
     friend int QWebEngineUrlRequestInterceptor_QBaseReceivers(const QWebEngineUrlRequestInterceptor* self, const char* signal);
-    friend bool QWebEngineUrlRequestInterceptor_IsSignalConnected(const QWebEngineUrlRequestInterceptor* self, QMetaMethod* signal);
-    friend bool QWebEngineUrlRequestInterceptor_QBaseIsSignalConnected(const QWebEngineUrlRequestInterceptor* self, QMetaMethod* signal);
+    friend bool QWebEngineUrlRequestInterceptor_IsSignalConnected(const QWebEngineUrlRequestInterceptor* self, const QMetaMethod* signal);
+    friend bool QWebEngineUrlRequestInterceptor_QBaseIsSignalConnected(const QWebEngineUrlRequestInterceptor* self, const QMetaMethod* signal);
 };
 
 #endif

@@ -12,13 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqdatetime.h"
-#include "libqiodevice.h"
-#include "libqiodevicebase.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qfiledevice.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
@@ -574,7 +567,7 @@ QThread* q_filedevice_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QFileDevice* self, QThread* thread ```
-void q_filedevice_move_to_thread(void* self, void* thread);
+bool q_filedevice_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -589,6 +582,13 @@ int32_t q_filedevice_start_timer(void* self, int interval);
 ///
 /// ``` QFileDevice* self, int id ```
 void q_filedevice_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QFileDevice* self, enum Qt__TimerId id ```
+void q_filedevice_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -729,6 +729,13 @@ bool q_filedevice_inherits(void* self, const char* classname);
 ///
 /// ``` QFileDevice* self ```
 void q_filedevice_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QFileDevice* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_filedevice_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

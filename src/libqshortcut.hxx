@@ -61,15 +61,15 @@ class VirtualQShortcut final : public QShortcut {
     mutable bool qshortcut_issignalconnected_isbase = false;
 
   public:
-    VirtualQShortcut(QObject* parent) : QShortcut(parent){};
-    VirtualQShortcut(const QKeySequence& key, QObject* parent) : QShortcut(key, parent){};
-    VirtualQShortcut(QKeySequence::StandardKey key, QObject* parent) : QShortcut(key, parent){};
-    VirtualQShortcut(const QKeySequence& key, QObject* parent, const char* member) : QShortcut(key, parent, member){};
-    VirtualQShortcut(const QKeySequence& key, QObject* parent, const char* member, const char* ambiguousMember) : QShortcut(key, parent, member, ambiguousMember){};
-    VirtualQShortcut(const QKeySequence& key, QObject* parent, const char* member, const char* ambiguousMember, Qt::ShortcutContext context) : QShortcut(key, parent, member, ambiguousMember, context){};
-    VirtualQShortcut(QKeySequence::StandardKey key, QObject* parent, const char* member) : QShortcut(key, parent, member){};
-    VirtualQShortcut(QKeySequence::StandardKey key, QObject* parent, const char* member, const char* ambiguousMember) : QShortcut(key, parent, member, ambiguousMember){};
-    VirtualQShortcut(QKeySequence::StandardKey key, QObject* parent, const char* member, const char* ambiguousMember, Qt::ShortcutContext context) : QShortcut(key, parent, member, ambiguousMember, context){};
+    VirtualQShortcut(QObject* parent) : QShortcut(parent) {};
+    VirtualQShortcut(const QKeySequence& key, QObject* parent) : QShortcut(key, parent) {};
+    VirtualQShortcut(QKeySequence::StandardKey key, QObject* parent) : QShortcut(key, parent) {};
+    VirtualQShortcut(const QKeySequence& key, QObject* parent, const char* member) : QShortcut(key, parent, member) {};
+    VirtualQShortcut(const QKeySequence& key, QObject* parent, const char* member, const char* ambiguousMember) : QShortcut(key, parent, member, ambiguousMember) {};
+    VirtualQShortcut(const QKeySequence& key, QObject* parent, const char* member, const char* ambiguousMember, Qt::ShortcutContext context) : QShortcut(key, parent, member, ambiguousMember, context) {};
+    VirtualQShortcut(QKeySequence::StandardKey key, QObject* parent, const char* member) : QShortcut(key, parent, member) {};
+    VirtualQShortcut(QKeySequence::StandardKey key, QObject* parent, const char* member, const char* ambiguousMember) : QShortcut(key, parent, member, ambiguousMember) {};
+    VirtualQShortcut(QKeySequence::StandardKey key, QObject* parent, const char* member, const char* ambiguousMember, Qt::ShortcutContext context) : QShortcut(key, parent, member, ambiguousMember, context) {};
 
     ~VirtualQShortcut() {
         qshortcut_metacall_callback = nullptr;
@@ -303,18 +303,18 @@ class VirtualQShortcut final : public QShortcut {
     friend void QShortcut_QBaseChildEvent(QShortcut* self, QChildEvent* event);
     friend void QShortcut_CustomEvent(QShortcut* self, QEvent* event);
     friend void QShortcut_QBaseCustomEvent(QShortcut* self, QEvent* event);
-    friend void QShortcut_ConnectNotify(QShortcut* self, QMetaMethod* signal);
-    friend void QShortcut_QBaseConnectNotify(QShortcut* self, QMetaMethod* signal);
-    friend void QShortcut_DisconnectNotify(QShortcut* self, QMetaMethod* signal);
-    friend void QShortcut_QBaseDisconnectNotify(QShortcut* self, QMetaMethod* signal);
+    friend void QShortcut_ConnectNotify(QShortcut* self, const QMetaMethod* signal);
+    friend void QShortcut_QBaseConnectNotify(QShortcut* self, const QMetaMethod* signal);
+    friend void QShortcut_DisconnectNotify(QShortcut* self, const QMetaMethod* signal);
+    friend void QShortcut_QBaseDisconnectNotify(QShortcut* self, const QMetaMethod* signal);
     friend QObject* QShortcut_Sender(const QShortcut* self);
     friend QObject* QShortcut_QBaseSender(const QShortcut* self);
     friend int QShortcut_SenderSignalIndex(const QShortcut* self);
     friend int QShortcut_QBaseSenderSignalIndex(const QShortcut* self);
     friend int QShortcut_Receivers(const QShortcut* self, const char* signal);
     friend int QShortcut_QBaseReceivers(const QShortcut* self, const char* signal);
-    friend bool QShortcut_IsSignalConnected(const QShortcut* self, QMetaMethod* signal);
-    friend bool QShortcut_QBaseIsSignalConnected(const QShortcut* self, QMetaMethod* signal);
+    friend bool QShortcut_IsSignalConnected(const QShortcut* self, const QMetaMethod* signal);
+    friend bool QShortcut_QBaseIsSignalConnected(const QShortcut* self, const QMetaMethod* signal);
 };
 
 #endif

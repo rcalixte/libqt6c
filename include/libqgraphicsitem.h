@@ -12,34 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqbrush.h"
-#include "libqevent.h"
-#include "libqcolor.h"
-#include "libqcursor.h"
-#include "libqfont.h"
-#include "libqgraphicseffect.h"
-#include "libqgraphicsscene.h"
-#include "libqgraphicstransform.h"
-#include "libqgraphicswidget.h"
-#include "libqline.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpainter.h"
-#include "libqpainterpath.h"
-#include "libqpen.h"
-#include "libqpixmap.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqstyleoption.h"
-#include "libqtextcursor.h"
-#include "libqtextdocument.h"
-#include "libqtransform.h"
-#include "libqvariant.h"
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qgraphicsitem.html
 
 /// q_graphicsitem_new constructs a new QGraphicsItem object.
@@ -1907,7 +1879,7 @@ QThread* q_graphicsobject_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QGraphicsObject* self, QThread* thread ```
-void q_graphicsobject_move_to_thread(void* self, void* thread);
+bool q_graphicsobject_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -1922,6 +1894,13 @@ int32_t q_graphicsobject_start_timer(void* self, int interval);
 ///
 /// ``` QGraphicsObject* self, int id ```
 void q_graphicsobject_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QGraphicsObject* self, enum Qt__TimerId id ```
+void q_graphicsobject_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -2062,6 +2041,13 @@ bool q_graphicsobject_inherits(void* self, const char* classname);
 ///
 /// ``` QGraphicsObject* self ```
 void q_graphicsobject_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QGraphicsObject* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_graphicsobject_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -20994,7 +20980,7 @@ QThread* q_graphicstextitem_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QGraphicsTextItem* self, QThread* thread ```
-void q_graphicstextitem_move_to_thread(void* self, void* thread);
+bool q_graphicstextitem_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -21009,6 +20995,13 @@ int32_t q_graphicstextitem_start_timer(void* self, int interval);
 ///
 /// ``` QGraphicsTextItem* self, int id ```
 void q_graphicstextitem_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QGraphicsTextItem* self, enum Qt__TimerId id ```
+void q_graphicstextitem_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -21149,6 +21142,13 @@ bool q_graphicstextitem_inherits(void* self, const char* classname);
 ///
 /// ``` QGraphicsTextItem* self ```
 void q_graphicstextitem_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QGraphicsTextItem* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_graphicstextitem_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

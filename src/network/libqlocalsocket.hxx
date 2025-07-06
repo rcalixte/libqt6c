@@ -118,8 +118,8 @@ class VirtualQLocalSocket final : public QLocalSocket {
     mutable bool qlocalsocket_issignalconnected_isbase = false;
 
   public:
-    VirtualQLocalSocket() : QLocalSocket(){};
-    VirtualQLocalSocket(QObject* parent) : QLocalSocket(parent){};
+    VirtualQLocalSocket() : QLocalSocket() {};
+    VirtualQLocalSocket(QObject* parent) : QLocalSocket(parent) {};
 
     ~VirtualQLocalSocket() {
         qlocalsocket_metacall_callback = nullptr;
@@ -291,7 +291,7 @@ class VirtualQLocalSocket final : public QLocalSocket {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual bool open(QIODeviceBase::OpenMode openMode) override {
+    virtual bool open(QFlags<QIODeviceBase::OpenModeFlag> openMode) override {
         if (qlocalsocket_open_isbase) {
             qlocalsocket_open_isbase = false;
             return QLocalSocket::open(openMode);
@@ -691,22 +691,22 @@ class VirtualQLocalSocket final : public QLocalSocket {
     friend void QLocalSocket_QBaseChildEvent(QLocalSocket* self, QChildEvent* event);
     friend void QLocalSocket_CustomEvent(QLocalSocket* self, QEvent* event);
     friend void QLocalSocket_QBaseCustomEvent(QLocalSocket* self, QEvent* event);
-    friend void QLocalSocket_ConnectNotify(QLocalSocket* self, QMetaMethod* signal);
-    friend void QLocalSocket_QBaseConnectNotify(QLocalSocket* self, QMetaMethod* signal);
-    friend void QLocalSocket_DisconnectNotify(QLocalSocket* self, QMetaMethod* signal);
-    friend void QLocalSocket_QBaseDisconnectNotify(QLocalSocket* self, QMetaMethod* signal);
+    friend void QLocalSocket_ConnectNotify(QLocalSocket* self, const QMetaMethod* signal);
+    friend void QLocalSocket_QBaseConnectNotify(QLocalSocket* self, const QMetaMethod* signal);
+    friend void QLocalSocket_DisconnectNotify(QLocalSocket* self, const QMetaMethod* signal);
+    friend void QLocalSocket_QBaseDisconnectNotify(QLocalSocket* self, const QMetaMethod* signal);
     friend void QLocalSocket_SetOpenMode(QLocalSocket* self, int openMode);
     friend void QLocalSocket_QBaseSetOpenMode(QLocalSocket* self, int openMode);
-    friend void QLocalSocket_SetErrorString(QLocalSocket* self, libqt_string errorString);
-    friend void QLocalSocket_QBaseSetErrorString(QLocalSocket* self, libqt_string errorString);
+    friend void QLocalSocket_SetErrorString(QLocalSocket* self, const libqt_string errorString);
+    friend void QLocalSocket_QBaseSetErrorString(QLocalSocket* self, const libqt_string errorString);
     friend QObject* QLocalSocket_Sender(const QLocalSocket* self);
     friend QObject* QLocalSocket_QBaseSender(const QLocalSocket* self);
     friend int QLocalSocket_SenderSignalIndex(const QLocalSocket* self);
     friend int QLocalSocket_QBaseSenderSignalIndex(const QLocalSocket* self);
     friend int QLocalSocket_Receivers(const QLocalSocket* self, const char* signal);
     friend int QLocalSocket_QBaseReceivers(const QLocalSocket* self, const char* signal);
-    friend bool QLocalSocket_IsSignalConnected(const QLocalSocket* self, QMetaMethod* signal);
-    friend bool QLocalSocket_QBaseIsSignalConnected(const QLocalSocket* self, QMetaMethod* signal);
+    friend bool QLocalSocket_IsSignalConnected(const QLocalSocket* self, const QMetaMethod* signal);
+    friend bool QLocalSocket_QBaseIsSignalConnected(const QLocalSocket* self, const QMetaMethod* signal);
 };
 
 #endif

@@ -64,8 +64,8 @@ class VirtualQCategoryAxis final : public QCategoryAxis {
     mutable bool qcategoryaxis_issignalconnected_isbase = false;
 
   public:
-    VirtualQCategoryAxis() : QCategoryAxis(){};
-    VirtualQCategoryAxis(QObject* parent) : QCategoryAxis(parent){};
+    VirtualQCategoryAxis() : QCategoryAxis() {};
+    VirtualQCategoryAxis(QObject* parent) : QCategoryAxis(parent) {};
 
     ~VirtualQCategoryAxis() {
         qcategoryaxis_metacall_callback = nullptr;
@@ -313,18 +313,18 @@ class VirtualQCategoryAxis final : public QCategoryAxis {
     friend void QCategoryAxis_QBaseChildEvent(QCategoryAxis* self, QChildEvent* event);
     friend void QCategoryAxis_CustomEvent(QCategoryAxis* self, QEvent* event);
     friend void QCategoryAxis_QBaseCustomEvent(QCategoryAxis* self, QEvent* event);
-    friend void QCategoryAxis_ConnectNotify(QCategoryAxis* self, QMetaMethod* signal);
-    friend void QCategoryAxis_QBaseConnectNotify(QCategoryAxis* self, QMetaMethod* signal);
-    friend void QCategoryAxis_DisconnectNotify(QCategoryAxis* self, QMetaMethod* signal);
-    friend void QCategoryAxis_QBaseDisconnectNotify(QCategoryAxis* self, QMetaMethod* signal);
+    friend void QCategoryAxis_ConnectNotify(QCategoryAxis* self, const QMetaMethod* signal);
+    friend void QCategoryAxis_QBaseConnectNotify(QCategoryAxis* self, const QMetaMethod* signal);
+    friend void QCategoryAxis_DisconnectNotify(QCategoryAxis* self, const QMetaMethod* signal);
+    friend void QCategoryAxis_QBaseDisconnectNotify(QCategoryAxis* self, const QMetaMethod* signal);
     friend QObject* QCategoryAxis_Sender(const QCategoryAxis* self);
     friend QObject* QCategoryAxis_QBaseSender(const QCategoryAxis* self);
     friend int QCategoryAxis_SenderSignalIndex(const QCategoryAxis* self);
     friend int QCategoryAxis_QBaseSenderSignalIndex(const QCategoryAxis* self);
     friend int QCategoryAxis_Receivers(const QCategoryAxis* self, const char* signal);
     friend int QCategoryAxis_QBaseReceivers(const QCategoryAxis* self, const char* signal);
-    friend bool QCategoryAxis_IsSignalConnected(const QCategoryAxis* self, QMetaMethod* signal);
-    friend bool QCategoryAxis_QBaseIsSignalConnected(const QCategoryAxis* self, QMetaMethod* signal);
+    friend bool QCategoryAxis_IsSignalConnected(const QCategoryAxis* self, const QMetaMethod* signal);
+    friend bool QCategoryAxis_QBaseIsSignalConnected(const QCategoryAxis* self, const QMetaMethod* signal);
 };
 
 #endif

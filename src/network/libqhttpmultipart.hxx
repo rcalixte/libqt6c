@@ -61,10 +61,10 @@ class VirtualQHttpMultiPart final : public QHttpMultiPart {
     mutable bool qhttpmultipart_issignalconnected_isbase = false;
 
   public:
-    VirtualQHttpMultiPart() : QHttpMultiPart(){};
-    VirtualQHttpMultiPart(QHttpMultiPart::ContentType contentType) : QHttpMultiPart(contentType){};
-    VirtualQHttpMultiPart(QObject* parent) : QHttpMultiPart(parent){};
-    VirtualQHttpMultiPart(QHttpMultiPart::ContentType contentType, QObject* parent) : QHttpMultiPart(contentType, parent){};
+    VirtualQHttpMultiPart() : QHttpMultiPart() {};
+    VirtualQHttpMultiPart(QHttpMultiPart::ContentType contentType) : QHttpMultiPart(contentType) {};
+    VirtualQHttpMultiPart(QObject* parent) : QHttpMultiPart(parent) {};
+    VirtualQHttpMultiPart(QHttpMultiPart::ContentType contentType, QObject* parent) : QHttpMultiPart(contentType, parent) {};
 
     ~VirtualQHttpMultiPart() {
         qhttpmultipart_metacall_callback = nullptr;
@@ -296,18 +296,18 @@ class VirtualQHttpMultiPart final : public QHttpMultiPart {
     friend void QHttpMultiPart_QBaseChildEvent(QHttpMultiPart* self, QChildEvent* event);
     friend void QHttpMultiPart_CustomEvent(QHttpMultiPart* self, QEvent* event);
     friend void QHttpMultiPart_QBaseCustomEvent(QHttpMultiPart* self, QEvent* event);
-    friend void QHttpMultiPart_ConnectNotify(QHttpMultiPart* self, QMetaMethod* signal);
-    friend void QHttpMultiPart_QBaseConnectNotify(QHttpMultiPart* self, QMetaMethod* signal);
-    friend void QHttpMultiPart_DisconnectNotify(QHttpMultiPart* self, QMetaMethod* signal);
-    friend void QHttpMultiPart_QBaseDisconnectNotify(QHttpMultiPart* self, QMetaMethod* signal);
+    friend void QHttpMultiPart_ConnectNotify(QHttpMultiPart* self, const QMetaMethod* signal);
+    friend void QHttpMultiPart_QBaseConnectNotify(QHttpMultiPart* self, const QMetaMethod* signal);
+    friend void QHttpMultiPart_DisconnectNotify(QHttpMultiPart* self, const QMetaMethod* signal);
+    friend void QHttpMultiPart_QBaseDisconnectNotify(QHttpMultiPart* self, const QMetaMethod* signal);
     friend QObject* QHttpMultiPart_Sender(const QHttpMultiPart* self);
     friend QObject* QHttpMultiPart_QBaseSender(const QHttpMultiPart* self);
     friend int QHttpMultiPart_SenderSignalIndex(const QHttpMultiPart* self);
     friend int QHttpMultiPart_QBaseSenderSignalIndex(const QHttpMultiPart* self);
     friend int QHttpMultiPart_Receivers(const QHttpMultiPart* self, const char* signal);
     friend int QHttpMultiPart_QBaseReceivers(const QHttpMultiPart* self, const char* signal);
-    friend bool QHttpMultiPart_IsSignalConnected(const QHttpMultiPart* self, QMetaMethod* signal);
-    friend bool QHttpMultiPart_QBaseIsSignalConnected(const QHttpMultiPart* self, QMetaMethod* signal);
+    friend bool QHttpMultiPart_IsSignalConnected(const QHttpMultiPart* self, const QMetaMethod* signal);
+    friend bool QHttpMultiPart_QBaseIsSignalConnected(const QHttpMultiPart* self, const QMetaMethod* signal);
 };
 
 #endif

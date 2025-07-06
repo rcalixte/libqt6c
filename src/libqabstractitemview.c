@@ -2288,6 +2288,10 @@ QWidget* q_abstractitemview_child_at_with_q_point(void* self, void* p) {
     return QWidget_ChildAtWithQPoint((QWidget*)self, (QPoint*)p);
 }
 
+QWidget* q_abstractitemview_child_at_with_q_point_f(void* self, void* p) {
+    return QWidget_ChildAtWithQPointF((QWidget*)self, (QPointF*)p);
+}
+
 void q_abstractitemview_set_attribute(void* self, int64_t param1) {
     QWidget_SetAttribute((QWidget*)self, param1);
 }
@@ -2467,8 +2471,8 @@ QThread* q_abstractitemview_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_abstractitemview_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_abstractitemview_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_abstractitemview_start_timer(void* self, int interval) {
@@ -2477,6 +2481,10 @@ int32_t q_abstractitemview_start_timer(void* self, int interval) {
 
 void q_abstractitemview_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_abstractitemview_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_abstractitemview_children(void* self) {
@@ -2567,6 +2575,10 @@ void q_abstractitemview_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
+bool q_abstractitemview_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
+}
+
 int32_t q_abstractitemview_start_timer2(void* self, int interval, int64_t timerType) {
     return QObject_StartTimer2((QObject*)self, interval, timerType);
 }
@@ -2633,6 +2645,10 @@ int32_t q_abstractitemview_depth(void* self) {
 
 double q_abstractitemview_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
+}
+
+int32_t q_abstractitemview_encode_metric_f(int64_t metric, double value) {
+    return QPaintDevice_EncodeMetricF(metric, value);
 }
 
 QSize* q_abstractitemview_minimum_size_hint(void* self) {
@@ -3161,6 +3177,18 @@ bool q_abstractitemview_qbase_is_signal_connected(void* self, void* signal) {
 
 void q_abstractitemview_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
     QAbstractItemView_OnIsSignalConnected((QAbstractItemView*)self, (intptr_t)slot);
+}
+
+double q_abstractitemview_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QAbstractItemView_GetDecodedMetricF((QAbstractItemView*)self, metricA, metricB);
+}
+
+double q_abstractitemview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QAbstractItemView_QBaseGetDecodedMetricF((QAbstractItemView*)self, metricA, metricB);
+}
+
+void q_abstractitemview_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
+    QAbstractItemView_OnGetDecodedMetricF((QAbstractItemView*)self, (intptr_t)slot);
 }
 
 void q_abstractitemview_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {

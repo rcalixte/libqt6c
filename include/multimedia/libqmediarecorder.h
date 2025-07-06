@@ -12,16 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqevent.h"
-#include "libqmediacapturesession.h"
-#include "libqmediaformat.h"
-#include "libqmediametadata.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqsize.h"
-#include <string.h>
-#include "../libqurl.h"
-
 /// https://doc.qt.io/qt-6/qmediarecorder.html
 
 /// q_mediarecorder_new constructs a new QMediaRecorder object.
@@ -74,6 +64,16 @@ QUrl* q_mediarecorder_output_location(void* self);
 ///
 /// ``` QMediaRecorder* self, QUrl* location ```
 void q_mediarecorder_set_output_location(void* self, void* location);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#setOutputDevice)
+///
+/// ``` QMediaRecorder* self, QIODevice* device ```
+void q_mediarecorder_set_output_device(void* self, void* device);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#outputDevice)
+///
+/// ``` QMediaRecorder* self ```
+QIODevice* q_mediarecorder_output_device(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#actualLocation)
 ///
@@ -209,6 +209,16 @@ void q_mediarecorder_set_meta_data(void* self, void* metaData);
 ///
 /// ``` QMediaRecorder* self, QMediaMetaData* metaData ```
 void q_mediarecorder_add_meta_data(void* self, void* metaData);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#autoStop)
+///
+/// ``` QMediaRecorder* self ```
+bool q_mediarecorder_auto_stop(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#setAutoStop)
+///
+/// ``` QMediaRecorder* self, bool autoStop ```
+void q_mediarecorder_set_auto_stop(void* self, bool autoStop);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#captureSession)
 ///
@@ -390,6 +400,16 @@ void q_mediarecorder_audio_sample_rate_changed(void* self);
 /// ``` QMediaRecorder* self, void (*slot)(QMediaRecorder*) ```
 void q_mediarecorder_on_audio_sample_rate_changed(void* self, void (*slot)(void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#autoStopChanged)
+///
+/// ``` QMediaRecorder* self ```
+void q_mediarecorder_auto_stop_changed(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#autoStopChanged)
+///
+/// ``` QMediaRecorder* self, void (*slot)(QMediaRecorder*) ```
+void q_mediarecorder_on_auto_stop_changed(void* self, void (*slot)(void*));
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// ``` const char* s, const char* c ```
@@ -461,7 +481,7 @@ QThread* q_mediarecorder_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QMediaRecorder* self, QThread* thread ```
-void q_mediarecorder_move_to_thread(void* self, void* thread);
+bool q_mediarecorder_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -476,6 +496,13 @@ int32_t q_mediarecorder_start_timer(void* self, int interval);
 ///
 /// ``` QMediaRecorder* self, int id ```
 void q_mediarecorder_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QMediaRecorder* self, enum Qt__TimerId id ```
+void q_mediarecorder_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -616,6 +643,13 @@ bool q_mediarecorder_inherits(void* self, const char* classname);
 ///
 /// ``` QMediaRecorder* self ```
 void q_mediarecorder_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QMediaRecorder* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_mediarecorder_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

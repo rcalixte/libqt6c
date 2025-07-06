@@ -2,10 +2,10 @@
 #include <QBrush>
 #include <QColor>
 #include <QFont>
+#include <QHash>
 #include <QImage>
 #include <QLinearGradient>
 #include <QList>
-#include <QMap>
 #include <QMetaMethod>
 #include <QMetaObject>
 #include <QObject>
@@ -49,11 +49,11 @@ void QXYSeries_Append(QXYSeries* self, double x, double y) {
     self->append(static_cast<qreal>(x), static_cast<qreal>(y));
 }
 
-void QXYSeries_AppendWithPoint(QXYSeries* self, QPointF* point) {
+void QXYSeries_AppendWithPoint(QXYSeries* self, const QPointF* point) {
     self->append(*point);
 }
 
-void QXYSeries_AppendWithPoints(QXYSeries* self, libqt_list /* of QPointF* */ points) {
+void QXYSeries_AppendWithPoints(QXYSeries* self, const libqt_list /* of QPointF* */ points) {
     QList<QPointF> points_QList;
     points_QList.reserve(points.len);
     QPointF** points_arr = static_cast<QPointF**>(points.data.ptr);
@@ -67,7 +67,7 @@ void QXYSeries_Replace(QXYSeries* self, double oldX, double oldY, double newX, d
     self->replace(static_cast<qreal>(oldX), static_cast<qreal>(oldY), static_cast<qreal>(newX), static_cast<qreal>(newY));
 }
 
-void QXYSeries_Replace2(QXYSeries* self, QPointF* oldPoint, QPointF* newPoint) {
+void QXYSeries_Replace2(QXYSeries* self, const QPointF* oldPoint, const QPointF* newPoint) {
     self->replace(*oldPoint, *newPoint);
 }
 
@@ -75,7 +75,7 @@ void QXYSeries_Replace3(QXYSeries* self, int index, double newX, double newY) {
     self->replace(static_cast<int>(index), static_cast<qreal>(newX), static_cast<qreal>(newY));
 }
 
-void QXYSeries_Replace4(QXYSeries* self, int index, QPointF* newPoint) {
+void QXYSeries_Replace4(QXYSeries* self, int index, const QPointF* newPoint) {
     self->replace(static_cast<int>(index), *newPoint);
 }
 
@@ -83,7 +83,7 @@ void QXYSeries_Remove(QXYSeries* self, double x, double y) {
     self->remove(static_cast<qreal>(x), static_cast<qreal>(y));
 }
 
-void QXYSeries_RemoveWithPoint(QXYSeries* self, QPointF* point) {
+void QXYSeries_RemoveWithPoint(QXYSeries* self, const QPointF* point) {
     self->remove(*point);
 }
 
@@ -95,7 +95,7 @@ void QXYSeries_RemovePoints(QXYSeries* self, int index, int count) {
     self->removePoints(static_cast<int>(index), static_cast<int>(count));
 }
 
-void QXYSeries_Insert(QXYSeries* self, int index, QPointF* point) {
+void QXYSeries_Insert(QXYSeries* self, int index, const QPointF* point) {
     self->insert(static_cast<int>(index), *point);
 }
 
@@ -110,12 +110,12 @@ int QXYSeries_Count(const QXYSeries* self) {
 libqt_list /* of QPointF* */ QXYSeries_Points(const QXYSeries* self) {
     QList<QPointF> _ret = self->points();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QPointF** _arr = static_cast<QPointF**>(malloc(sizeof(QPointF*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QPointF** _arr = static_cast<QPointF**>(malloc(sizeof(QPointF*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QPointF(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -123,12 +123,12 @@ libqt_list /* of QPointF* */ QXYSeries_Points(const QXYSeries* self) {
 libqt_list /* of QPointF* */ QXYSeries_PointsVector(const QXYSeries* self) {
     QList<QPointF> _ret = self->pointsVector();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QPointF** _arr = static_cast<QPointF**>(malloc(sizeof(QPointF*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QPointF** _arr = static_cast<QPointF**>(malloc(sizeof(QPointF*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QPointF(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -139,13 +139,13 @@ QPointF* QXYSeries_At(const QXYSeries* self, int index) {
     return const_cast<QPointF*>(&_ret);
 }
 
-QXYSeries* QXYSeries_OperatorShiftLeft(QXYSeries* self, QPointF* point) {
+QXYSeries* QXYSeries_OperatorShiftLeft(QXYSeries* self, const QPointF* point) {
     QXYSeries& _ret = self->operator<<(*point);
     // Cast returned reference into pointer
     return &_ret;
 }
 
-QXYSeries* QXYSeries_OperatorShiftLeftWithPoints(QXYSeries* self, libqt_list /* of QPointF* */ points) {
+QXYSeries* QXYSeries_OperatorShiftLeftWithPoints(QXYSeries* self, const libqt_list /* of QPointF* */ points) {
     QList<QPointF> points_QList;
     points_QList.reserve(points.len);
     QPointF** points_arr = static_cast<QPointF**>(points.data.ptr);
@@ -157,7 +157,7 @@ QXYSeries* QXYSeries_OperatorShiftLeftWithPoints(QXYSeries* self, libqt_list /* 
     return &_ret;
 }
 
-void QXYSeries_SetPen(QXYSeries* self, QPen* pen) {
+void QXYSeries_SetPen(QXYSeries* self, const QPen* pen) {
     self->setPen(*pen);
 }
 
@@ -165,7 +165,7 @@ QPen* QXYSeries_Pen(const QXYSeries* self) {
     return new QPen(self->pen());
 }
 
-void QXYSeries_SetBrush(QXYSeries* self, QBrush* brush) {
+void QXYSeries_SetBrush(QXYSeries* self, const QBrush* brush) {
     self->setBrush(*brush);
 }
 
@@ -173,7 +173,7 @@ QBrush* QXYSeries_Brush(const QXYSeries* self) {
     return new QBrush(self->brush());
 }
 
-void QXYSeries_SetColor(QXYSeries* self, QColor* color) {
+void QXYSeries_SetColor(QXYSeries* self, const QColor* color) {
     self->setColor(*color);
 }
 
@@ -181,7 +181,7 @@ QColor* QXYSeries_Color(const QXYSeries* self) {
     return new QColor(self->color());
 }
 
-void QXYSeries_SetSelectedColor(QXYSeries* self, QColor* color) {
+void QXYSeries_SetSelectedColor(QXYSeries* self, const QColor* color) {
     self->setSelectedColor(*color);
 }
 
@@ -197,7 +197,7 @@ bool QXYSeries_PointsVisible(const QXYSeries* self) {
     return self->pointsVisible();
 }
 
-void QXYSeries_SetPointLabelsFormat(QXYSeries* self, libqt_string format) {
+void QXYSeries_SetPointLabelsFormat(QXYSeries* self, const libqt_string format) {
     QString format_QString = QString::fromUtf8(format.data, format.len);
     self->setPointLabelsFormat(format_QString);
 }
@@ -222,7 +222,7 @@ bool QXYSeries_PointLabelsVisible(const QXYSeries* self) {
     return self->pointLabelsVisible();
 }
 
-void QXYSeries_SetPointLabelsFont(QXYSeries* self, QFont* font) {
+void QXYSeries_SetPointLabelsFont(QXYSeries* self, const QFont* font) {
     self->setPointLabelsFont(*font);
 }
 
@@ -230,7 +230,7 @@ QFont* QXYSeries_PointLabelsFont(const QXYSeries* self) {
     return new QFont(self->pointLabelsFont());
 }
 
-void QXYSeries_SetPointLabelsColor(QXYSeries* self, QColor* color) {
+void QXYSeries_SetPointLabelsColor(QXYSeries* self, const QColor* color) {
     self->setPointLabelsColor(*color);
 }
 
@@ -246,7 +246,7 @@ bool QXYSeries_PointLabelsClipping(const QXYSeries* self) {
     return self->pointLabelsClipping();
 }
 
-void QXYSeries_ReplaceWithPoints(QXYSeries* self, libqt_list /* of QPointF* */ points) {
+void QXYSeries_ReplaceWithPoints(QXYSeries* self, const libqt_list /* of QPointF* */ points) {
     QList<QPointF> points_QList;
     points_QList.reserve(points.len);
     QPointF** points_arr = static_cast<QPointF**>(points.data.ptr);
@@ -280,7 +280,7 @@ void QXYSeries_DeselectAllPoints(QXYSeries* self) {
     self->deselectAllPoints();
 }
 
-void QXYSeries_SelectPoints(QXYSeries* self, libqt_list /* of int */ indexes) {
+void QXYSeries_SelectPoints(QXYSeries* self, const libqt_list /* of int */ indexes) {
     QList<int> indexes_QList;
     indexes_QList.reserve(indexes.len);
     int* indexes_arr = static_cast<int*>(indexes.data.ints);
@@ -290,7 +290,7 @@ void QXYSeries_SelectPoints(QXYSeries* self, libqt_list /* of int */ indexes) {
     self->selectPoints(indexes_QList);
 }
 
-void QXYSeries_DeselectPoints(QXYSeries* self, libqt_list /* of int */ indexes) {
+void QXYSeries_DeselectPoints(QXYSeries* self, const libqt_list /* of int */ indexes) {
     QList<int> indexes_QList;
     indexes_QList.reserve(indexes.len);
     int* indexes_arr = static_cast<int*>(indexes.data.ints);
@@ -300,7 +300,7 @@ void QXYSeries_DeselectPoints(QXYSeries* self, libqt_list /* of int */ indexes) 
     self->deselectPoints(indexes_QList);
 }
 
-void QXYSeries_ToggleSelection(QXYSeries* self, libqt_list /* of int */ indexes) {
+void QXYSeries_ToggleSelection(QXYSeries* self, const libqt_list /* of int */ indexes) {
     QList<int> indexes_QList;
     indexes_QList.reserve(indexes.len);
     int* indexes_arr = static_cast<int*>(indexes.data.ints);
@@ -313,17 +313,17 @@ void QXYSeries_ToggleSelection(QXYSeries* self, libqt_list /* of int */ indexes)
 libqt_list /* of int */ QXYSeries_SelectedPoints(const QXYSeries* self) {
     QList<int> _ret = self->selectedPoints();
     // Convert QList<> from C++ memory to manually-managed C memory
-    int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ints = _arr;
     return _out;
 }
 
-void QXYSeries_SetLightMarker(QXYSeries* self, QImage* lightMarker) {
+void QXYSeries_SetLightMarker(QXYSeries* self, const QImage* lightMarker) {
     self->setLightMarker(*lightMarker);
 }
 
@@ -333,7 +333,7 @@ QImage* QXYSeries_LightMarker(const QXYSeries* self) {
     return const_cast<QImage*>(&_ret);
 }
 
-void QXYSeries_SetSelectedLightMarker(QXYSeries* self, QImage* selectedLightMarker) {
+void QXYSeries_SetSelectedLightMarker(QXYSeries* self, const QImage* selectedLightMarker) {
     self->setSelectedLightMarker(*selectedLightMarker);
 }
 
@@ -360,7 +360,7 @@ bool QXYSeries_BestFitLineVisible(const QXYSeries* self) {
 }
 
 libqt_pair /* tuple of double and double */ QXYSeries_BestFitLineEquation(const QXYSeries* self, bool* ok) {
-    QPair<qreal, qreal> _ret = self->bestFitLineEquation(*ok);
+    QPair<double, double> _ret = self->bestFitLineEquation(*ok);
     // Convert QPair<> from C++ memory to manually-managed C memory
     double* _first = static_cast<double*>(malloc(sizeof(double)));
     double* _second = static_cast<double*>(malloc(sizeof(double)));
@@ -372,7 +372,7 @@ libqt_pair /* tuple of double and double */ QXYSeries_BestFitLineEquation(const 
     return _out;
 }
 
-void QXYSeries_SetBestFitLinePen(QXYSeries* self, QPen* pen) {
+void QXYSeries_SetBestFitLinePen(QXYSeries* self, const QPen* pen) {
     self->setBestFitLinePen(*pen);
 }
 
@@ -380,7 +380,7 @@ QPen* QXYSeries_BestFitLinePen(const QXYSeries* self) {
     return new QPen(self->bestFitLinePen());
 }
 
-void QXYSeries_SetBestFitLineColor(QXYSeries* self, QColor* color) {
+void QXYSeries_SetBestFitLineColor(QXYSeries* self, const QColor* color) {
     self->setBestFitLineColor(*color);
 }
 
@@ -392,7 +392,7 @@ void QXYSeries_ClearPointConfiguration(QXYSeries* self, const int index) {
     self->clearPointConfiguration(static_cast<const int>(index));
 }
 
-void QXYSeries_ClearPointConfiguration2(QXYSeries* self, const int index, int key) {
+void QXYSeries_ClearPointConfiguration2(QXYSeries* self, const int index, const int key) {
     self->clearPointConfiguration(static_cast<const int>(index), static_cast<const QXYSeries::PointConfiguration>(key));
 }
 
@@ -400,11 +400,11 @@ void QXYSeries_ClearPointsConfiguration(QXYSeries* self) {
     self->clearPointsConfiguration();
 }
 
-void QXYSeries_ClearPointsConfigurationWithKey(QXYSeries* self, int key) {
+void QXYSeries_ClearPointsConfigurationWithKey(QXYSeries* self, const int key) {
     self->clearPointsConfiguration(static_cast<const QXYSeries::PointConfiguration>(key));
 }
 
-void QXYSeries_SetPointConfiguration(QXYSeries* self, const int index, libqt_map /* of int to QVariant* */ configuration) {
+void QXYSeries_SetPointConfiguration(QXYSeries* self, const int index, const libqt_map /* of int to QVariant* */ configuration) {
     QHash<QXYSeries::PointConfiguration, QVariant> configuration_QMap;
     configuration_QMap.reserve(configuration.len);
     int* configuration_karr = static_cast<int*>(configuration.keys);
@@ -415,11 +415,11 @@ void QXYSeries_SetPointConfiguration(QXYSeries* self, const int index, libqt_map
     self->setPointConfiguration(static_cast<const int>(index), configuration_QMap);
 }
 
-void QXYSeries_SetPointConfiguration2(QXYSeries* self, const int index, int key, QVariant* value) {
+void QXYSeries_SetPointConfiguration2(QXYSeries* self, const int index, const int key, const QVariant* value) {
     self->setPointConfiguration(static_cast<const int>(index), static_cast<const QXYSeries::PointConfiguration>(key), *value);
 }
 
-void QXYSeries_SetPointsConfiguration(QXYSeries* self, libqt_map /* of int to libqt_map  of int to QVariant*  */ pointsConfiguration) {
+void QXYSeries_SetPointsConfiguration(QXYSeries* self, const libqt_map /* of int to libqt_map  of int to QVariant*  */ pointsConfiguration) {
     QHash<int, QHash<QXYSeries::PointConfiguration, QVariant>> pointsConfiguration_QMap;
     pointsConfiguration_QMap.reserve(pointsConfiguration.len);
     int* pointsConfiguration_karr = static_cast<int*>(pointsConfiguration.keys);
@@ -439,7 +439,7 @@ void QXYSeries_SetPointsConfiguration(QXYSeries* self, libqt_map /* of int to li
 
 libqt_map /* of int to QVariant* */ QXYSeries_PointConfiguration(const QXYSeries* self, const int index) {
     QHash<QXYSeries::PointConfiguration, QVariant> _ret = self->pointConfiguration(static_cast<const int>(index));
-    // Convert QMap<> from C++ memory to manually-managed C memory
+    // Convert QHash<> from C++ memory to manually-managed C memory
     int* _karr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
     QVariant** _varr = static_cast<QVariant**>(malloc(sizeof(QVariant*) * _ret.size()));
     int _ctr = 0;
@@ -457,14 +457,14 @@ libqt_map /* of int to QVariant* */ QXYSeries_PointConfiguration(const QXYSeries
 
 libqt_map /* of int to libqt_map  of int to QVariant*  */ QXYSeries_PointsConfiguration(const QXYSeries* self) {
     QHash<int, QHash<QXYSeries::PointConfiguration, QVariant>> _ret = self->pointsConfiguration();
-    // Convert QMap<> from C++ memory to manually-managed C memory
+    // Convert QHash<> from C++ memory to manually-managed C memory
     int* _karr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
     libqt_map /* of int to QVariant* */* _varr = static_cast<libqt_map /* of int to QVariant* */*>(malloc(sizeof(libqt_map /* of int to QVariant* */) * _ret.size()));
     int _ctr = 0;
     for (auto _itr = _ret.keyValueBegin(); _itr != _ret.keyValueEnd(); ++_itr) {
         _karr[_ctr] = _itr->first;
         QHash<QXYSeries::PointConfiguration, QVariant> _hashval_ret = _itr->second;
-        // Convert QMap<> from C++ memory to manually-managed C memory
+        // Convert QHash<> from C++ memory to manually-managed C memory
         int* _hashval_karr = static_cast<int*>(malloc(sizeof(int) * _hashval_ret.size()));
         QVariant** _hashval_varr = static_cast<QVariant**>(malloc(sizeof(QVariant*) * _hashval_ret.size()));
         int _hashval_ctr = 0;
@@ -487,8 +487,8 @@ libqt_map /* of int to libqt_map  of int to QVariant*  */ QXYSeries_PointsConfig
     return _out;
 }
 
-void QXYSeries_SizeBy(QXYSeries* self, libqt_list /* of double */ sourceData, const double minSize, const double maxSize) {
-    QList<qreal> sourceData_QList;
+void QXYSeries_SizeBy(QXYSeries* self, const libqt_list /* of double */ sourceData, const double minSize, const double maxSize) {
+    QList<double> sourceData_QList;
     sourceData_QList.reserve(sourceData.len);
     double* sourceData_arr = static_cast<double*>(sourceData.data.doubles);
     for (size_t i = 0; i < sourceData.len; ++i) {
@@ -497,8 +497,8 @@ void QXYSeries_SizeBy(QXYSeries* self, libqt_list /* of double */ sourceData, co
     self->sizeBy(sourceData_QList, static_cast<const qreal>(minSize), static_cast<const qreal>(maxSize));
 }
 
-void QXYSeries_ColorBy(QXYSeries* self, libqt_list /* of double */ sourceData) {
-    QList<qreal> sourceData_QList;
+void QXYSeries_ColorBy(QXYSeries* self, const libqt_list /* of double */ sourceData) {
+    QList<double> sourceData_QList;
     sourceData_QList.reserve(sourceData.len);
     double* sourceData_arr = static_cast<double*>(sourceData.data.doubles);
     for (size_t i = 0; i < sourceData.len; ++i) {
@@ -507,7 +507,7 @@ void QXYSeries_ColorBy(QXYSeries* self, libqt_list /* of double */ sourceData) {
     self->colorBy(sourceData_QList);
 }
 
-void QXYSeries_Clicked(QXYSeries* self, QPointF* point) {
+void QXYSeries_Clicked(QXYSeries* self, const QPointF* point) {
     self->clicked(*point);
 }
 
@@ -521,7 +521,7 @@ void QXYSeries_Connect_Clicked(QXYSeries* self, intptr_t slot) {
     });
 }
 
-void QXYSeries_Hovered(QXYSeries* self, QPointF* point, bool state) {
+void QXYSeries_Hovered(QXYSeries* self, const QPointF* point, bool state) {
     self->hovered(*point, state);
 }
 
@@ -536,7 +536,7 @@ void QXYSeries_Connect_Hovered(QXYSeries* self, intptr_t slot) {
     });
 }
 
-void QXYSeries_Pressed(QXYSeries* self, QPointF* point) {
+void QXYSeries_Pressed(QXYSeries* self, const QPointF* point) {
     self->pressed(*point);
 }
 
@@ -550,7 +550,7 @@ void QXYSeries_Connect_Pressed(QXYSeries* self, intptr_t slot) {
     });
 }
 
-void QXYSeries_Released(QXYSeries* self, QPointF* point) {
+void QXYSeries_Released(QXYSeries* self, const QPointF* point) {
     self->released(*point);
 }
 
@@ -564,7 +564,7 @@ void QXYSeries_Connect_Released(QXYSeries* self, intptr_t slot) {
     });
 }
 
-void QXYSeries_DoubleClicked(QXYSeries* self, QPointF* point) {
+void QXYSeries_DoubleClicked(QXYSeries* self, const QPointF* point) {
     self->doubleClicked(*point);
 }
 
@@ -626,7 +626,7 @@ void QXYSeries_Connect_ColorChanged(QXYSeries* self, intptr_t slot) {
     });
 }
 
-void QXYSeries_SelectedColorChanged(QXYSeries* self, QColor* color) {
+void QXYSeries_SelectedColorChanged(QXYSeries* self, const QColor* color) {
     self->selectedColorChanged(*color);
 }
 
@@ -651,7 +651,7 @@ void QXYSeries_Connect_PointsReplaced(QXYSeries* self, intptr_t slot) {
     });
 }
 
-void QXYSeries_PointLabelsFormatChanged(QXYSeries* self, libqt_string format) {
+void QXYSeries_PointLabelsFormatChanged(QXYSeries* self, const libqt_string format) {
     QString format_QString = QString::fromUtf8(format.data, format.len);
     self->pointLabelsFormatChanged(format_QString);
 }
@@ -684,7 +684,7 @@ void QXYSeries_Connect_PointLabelsVisibilityChanged(QXYSeries* self, intptr_t sl
     });
 }
 
-void QXYSeries_PointLabelsFontChanged(QXYSeries* self, QFont* font) {
+void QXYSeries_PointLabelsFontChanged(QXYSeries* self, const QFont* font) {
     self->pointLabelsFontChanged(*font);
 }
 
@@ -698,7 +698,7 @@ void QXYSeries_Connect_PointLabelsFontChanged(QXYSeries* self, intptr_t slot) {
     });
 }
 
-void QXYSeries_PointLabelsColorChanged(QXYSeries* self, QColor* color) {
+void QXYSeries_PointLabelsColorChanged(QXYSeries* self, const QColor* color) {
     self->pointLabelsColorChanged(*color);
 }
 
@@ -737,7 +737,7 @@ void QXYSeries_Connect_PointsRemoved(QXYSeries* self, intptr_t slot) {
     });
 }
 
-void QXYSeries_PenChanged(QXYSeries* self, QPen* pen) {
+void QXYSeries_PenChanged(QXYSeries* self, const QPen* pen) {
     self->penChanged(*pen);
 }
 
@@ -762,7 +762,7 @@ void QXYSeries_Connect_SelectedPointsChanged(QXYSeries* self, intptr_t slot) {
     });
 }
 
-void QXYSeries_LightMarkerChanged(QXYSeries* self, QImage* lightMarker) {
+void QXYSeries_LightMarkerChanged(QXYSeries* self, const QImage* lightMarker) {
     self->lightMarkerChanged(*lightMarker);
 }
 
@@ -776,7 +776,7 @@ void QXYSeries_Connect_LightMarkerChanged(QXYSeries* self, intptr_t slot) {
     });
 }
 
-void QXYSeries_SelectedLightMarkerChanged(QXYSeries* self, QImage* selectedLightMarker) {
+void QXYSeries_SelectedLightMarkerChanged(QXYSeries* self, const QImage* selectedLightMarker) {
     self->selectedLightMarkerChanged(*selectedLightMarker);
 }
 
@@ -802,7 +802,7 @@ void QXYSeries_Connect_BestFitLineVisibilityChanged(QXYSeries* self, intptr_t sl
     });
 }
 
-void QXYSeries_BestFitLinePenChanged(QXYSeries* self, QPen* pen) {
+void QXYSeries_BestFitLinePenChanged(QXYSeries* self, const QPen* pen) {
     self->bestFitLinePenChanged(*pen);
 }
 
@@ -816,7 +816,7 @@ void QXYSeries_Connect_BestFitLinePenChanged(QXYSeries* self, intptr_t slot) {
     });
 }
 
-void QXYSeries_BestFitLineColorChanged(QXYSeries* self, QColor* color) {
+void QXYSeries_BestFitLineColorChanged(QXYSeries* self, const QColor* color) {
     self->bestFitLineColorChanged(*color);
 }
 
@@ -830,7 +830,7 @@ void QXYSeries_Connect_BestFitLineColorChanged(QXYSeries* self, intptr_t slot) {
     });
 }
 
-void QXYSeries_PointsConfigurationChanged(QXYSeries* self, libqt_map /* of int to libqt_map  of int to QVariant*  */ configuration) {
+void QXYSeries_PointsConfigurationChanged(QXYSeries* self, const libqt_map /* of int to libqt_map  of int to QVariant*  */ configuration) {
     QHash<int, QHash<QXYSeries::PointConfiguration, QVariant>> configuration_QMap;
     configuration_QMap.reserve(configuration.len);
     int* configuration_karr = static_cast<int*>(configuration.keys);
@@ -852,14 +852,14 @@ void QXYSeries_Connect_PointsConfigurationChanged(QXYSeries* self, intptr_t slot
     void (*slotFunc)(QXYSeries*, libqt_map /* of int to libqt_map  of int to QVariant*  */) = reinterpret_cast<void (*)(QXYSeries*, libqt_map /* of int to libqt_map  of int to QVariant*  */)>(slot);
     QXYSeries::connect(self, &QXYSeries::pointsConfigurationChanged, [self, slotFunc](const QHash<int, QHash<QXYSeries::PointConfiguration, QVariant>>& configuration) {
         const QHash<int, QHash<QXYSeries::PointConfiguration, QVariant>>& configuration_ret = configuration;
-        // Convert QMap<> from C++ memory to manually-managed C memory
+        // Convert const QHash<> from C++ memory to manually-managed C memory
         int* configuration_karr = static_cast<int*>(malloc(sizeof(int) * configuration_ret.size()));
         libqt_map /* of int to QVariant* */* configuration_varr = static_cast<libqt_map /* of int to QVariant* */*>(malloc(sizeof(libqt_map /* of int to QVariant* */) * configuration_ret.size()));
         int configuration_ctr = 0;
         for (auto configuration_itr = configuration_ret.keyValueBegin(); configuration_itr != configuration_ret.keyValueEnd(); ++configuration_itr) {
             configuration_karr[configuration_ctr] = configuration_itr->first;
             QHash<QXYSeries::PointConfiguration, QVariant> configuration_hashval_ret = configuration_itr->second;
-            // Convert QMap<> from C++ memory to manually-managed C memory
+            // Convert QHash<> from C++ memory to manually-managed C memory
             int* configuration_hashval_karr = static_cast<int*>(malloc(sizeof(int) * configuration_hashval_ret.size()));
             QVariant** configuration_hashval_varr = static_cast<QVariant**>(malloc(sizeof(QVariant*) * configuration_hashval_ret.size()));
             int configuration_hashval_ctr = 0;
@@ -936,8 +936,8 @@ void QXYSeries_SetBestFitLineVisible1(QXYSeries* self, bool visible) {
     self->setBestFitLineVisible(visible);
 }
 
-void QXYSeries_ColorBy2(QXYSeries* self, libqt_list /* of double */ sourceData, QLinearGradient* gradient) {
-    QList<qreal> sourceData_QList;
+void QXYSeries_ColorBy2(QXYSeries* self, const libqt_list /* of double */ sourceData, const QLinearGradient* gradient) {
+    QList<double> sourceData_QList;
     sourceData_QList.reserve(sourceData.len);
     double* sourceData_arr = static_cast<double*>(sourceData.data.doubles);
     for (size_t i = 0; i < sourceData.len; ++i) {

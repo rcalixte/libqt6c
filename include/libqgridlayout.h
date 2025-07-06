@@ -12,16 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqlayout.h"
-#include "libqlayoutitem.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqrect.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qgridlayout.html
 
 /// q_gridlayout_new constructs a new QGridLayout object.
@@ -781,7 +771,7 @@ QThread* q_gridlayout_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QGridLayout* self, QThread* thread ```
-void q_gridlayout_move_to_thread(void* self, void* thread);
+bool q_gridlayout_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -796,6 +786,13 @@ int32_t q_gridlayout_start_timer(void* self, int interval);
 ///
 /// ``` QGridLayout* self, int id ```
 void q_gridlayout_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QGridLayout* self, enum Qt__TimerId id ```
+void q_gridlayout_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -936,6 +933,13 @@ bool q_gridlayout_inherits(void* self, const char* classname);
 ///
 /// ``` QGridLayout* self ```
 void q_gridlayout_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QGridLayout* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_gridlayout_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

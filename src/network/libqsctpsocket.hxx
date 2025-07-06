@@ -172,8 +172,8 @@ class VirtualQSctpSocket final : public QSctpSocket {
     mutable bool qsctpsocket_issignalconnected_isbase = false;
 
   public:
-    VirtualQSctpSocket() : QSctpSocket(){};
-    VirtualQSctpSocket(QObject* parent) : QSctpSocket(parent){};
+    VirtualQSctpSocket() : QSctpSocket() {};
+    VirtualQSctpSocket(QObject* parent) : QSctpSocket(parent) {};
 
     ~VirtualQSctpSocket() {
         qsctpsocket_metacall_callback = nullptr;
@@ -415,7 +415,7 @@ class VirtualQSctpSocket final : public QSctpSocket {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual bool bind(const QHostAddress& address, quint16 port, QAbstractSocket::BindMode mode) override {
+    virtual bool bind(const QHostAddress& address, quint16 port, QFlags<QAbstractSocket::BindFlag> mode) override {
         if (qsctpsocket_bind_isbase) {
             qsctpsocket_bind_isbase = false;
             return QSctpSocket::bind(address, port, mode);
@@ -434,7 +434,7 @@ class VirtualQSctpSocket final : public QSctpSocket {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual void connectToHost(const QString& hostName, quint16 port, QIODeviceBase::OpenMode mode, QAbstractSocket::NetworkLayerProtocol protocol) override {
+    virtual void connectToHost(const QString& hostName, quint16 port, QFlags<QIODeviceBase::OpenModeFlag> mode, QAbstractSocket::NetworkLayerProtocol protocol) override {
         if (qsctpsocket_connecttohost_isbase) {
             qsctpsocket_connecttohost_isbase = false;
             QSctpSocket::connectToHost(hostName, port, mode, protocol);
@@ -512,7 +512,7 @@ class VirtualQSctpSocket final : public QSctpSocket {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual bool setSocketDescriptor(qintptr socketDescriptor, QAbstractSocket::SocketState state, QIODeviceBase::OpenMode openMode) override {
+    virtual bool setSocketDescriptor(qintptr socketDescriptor, QAbstractSocket::SocketState state, QFlags<QIODeviceBase::OpenModeFlag> openMode) override {
         if (qsctpsocket_setsocketdescriptor_isbase) {
             qsctpsocket_setsocketdescriptor_isbase = false;
             return QSctpSocket::setSocketDescriptor(socketDescriptor, state, openMode);
@@ -1084,36 +1084,36 @@ class VirtualQSctpSocket final : public QSctpSocket {
     friend void QSctpSocket_QBaseChildEvent(QSctpSocket* self, QChildEvent* event);
     friend void QSctpSocket_CustomEvent(QSctpSocket* self, QEvent* event);
     friend void QSctpSocket_QBaseCustomEvent(QSctpSocket* self, QEvent* event);
-    friend void QSctpSocket_ConnectNotify(QSctpSocket* self, QMetaMethod* signal);
-    friend void QSctpSocket_QBaseConnectNotify(QSctpSocket* self, QMetaMethod* signal);
-    friend void QSctpSocket_DisconnectNotify(QSctpSocket* self, QMetaMethod* signal);
-    friend void QSctpSocket_QBaseDisconnectNotify(QSctpSocket* self, QMetaMethod* signal);
+    friend void QSctpSocket_ConnectNotify(QSctpSocket* self, const QMetaMethod* signal);
+    friend void QSctpSocket_QBaseConnectNotify(QSctpSocket* self, const QMetaMethod* signal);
+    friend void QSctpSocket_DisconnectNotify(QSctpSocket* self, const QMetaMethod* signal);
+    friend void QSctpSocket_QBaseDisconnectNotify(QSctpSocket* self, const QMetaMethod* signal);
     friend void QSctpSocket_SetSocketState(QSctpSocket* self, int state);
     friend void QSctpSocket_QBaseSetSocketState(QSctpSocket* self, int state);
     friend void QSctpSocket_SetSocketError(QSctpSocket* self, int socketError);
     friend void QSctpSocket_QBaseSetSocketError(QSctpSocket* self, int socketError);
     friend void QSctpSocket_SetLocalPort(QSctpSocket* self, uint16_t port);
     friend void QSctpSocket_QBaseSetLocalPort(QSctpSocket* self, uint16_t port);
-    friend void QSctpSocket_SetLocalAddress(QSctpSocket* self, QHostAddress* address);
-    friend void QSctpSocket_QBaseSetLocalAddress(QSctpSocket* self, QHostAddress* address);
+    friend void QSctpSocket_SetLocalAddress(QSctpSocket* self, const QHostAddress* address);
+    friend void QSctpSocket_QBaseSetLocalAddress(QSctpSocket* self, const QHostAddress* address);
     friend void QSctpSocket_SetPeerPort(QSctpSocket* self, uint16_t port);
     friend void QSctpSocket_QBaseSetPeerPort(QSctpSocket* self, uint16_t port);
-    friend void QSctpSocket_SetPeerAddress(QSctpSocket* self, QHostAddress* address);
-    friend void QSctpSocket_QBaseSetPeerAddress(QSctpSocket* self, QHostAddress* address);
-    friend void QSctpSocket_SetPeerName(QSctpSocket* self, libqt_string name);
-    friend void QSctpSocket_QBaseSetPeerName(QSctpSocket* self, libqt_string name);
+    friend void QSctpSocket_SetPeerAddress(QSctpSocket* self, const QHostAddress* address);
+    friend void QSctpSocket_QBaseSetPeerAddress(QSctpSocket* self, const QHostAddress* address);
+    friend void QSctpSocket_SetPeerName(QSctpSocket* self, const libqt_string name);
+    friend void QSctpSocket_QBaseSetPeerName(QSctpSocket* self, const libqt_string name);
     friend void QSctpSocket_SetOpenMode(QSctpSocket* self, int openMode);
     friend void QSctpSocket_QBaseSetOpenMode(QSctpSocket* self, int openMode);
-    friend void QSctpSocket_SetErrorString(QSctpSocket* self, libqt_string errorString);
-    friend void QSctpSocket_QBaseSetErrorString(QSctpSocket* self, libqt_string errorString);
+    friend void QSctpSocket_SetErrorString(QSctpSocket* self, const libqt_string errorString);
+    friend void QSctpSocket_QBaseSetErrorString(QSctpSocket* self, const libqt_string errorString);
     friend QObject* QSctpSocket_Sender(const QSctpSocket* self);
     friend QObject* QSctpSocket_QBaseSender(const QSctpSocket* self);
     friend int QSctpSocket_SenderSignalIndex(const QSctpSocket* self);
     friend int QSctpSocket_QBaseSenderSignalIndex(const QSctpSocket* self);
     friend int QSctpSocket_Receivers(const QSctpSocket* self, const char* signal);
     friend int QSctpSocket_QBaseReceivers(const QSctpSocket* self, const char* signal);
-    friend bool QSctpSocket_IsSignalConnected(const QSctpSocket* self, QMetaMethod* signal);
-    friend bool QSctpSocket_QBaseIsSignalConnected(const QSctpSocket* self, QMetaMethod* signal);
+    friend bool QSctpSocket_IsSignalConnected(const QSctpSocket* self, const QMetaMethod* signal);
+    friend bool QSctpSocket_QBaseIsSignalConnected(const QSctpSocket* self, const QMetaMethod* signal);
 };
 
 #endif

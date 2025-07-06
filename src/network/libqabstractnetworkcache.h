@@ -12,14 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqdatetime.h"
-#include "../libqiodevice.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-#include "../libqurl.h"
-#include "../libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qnetworkcachemetadata.html
 
 /// q_networkcachemetadata_new constructs a new QNetworkCacheMetaData object.
@@ -76,6 +68,16 @@ libqt_list /* of libqt_pair  tuple of char* and char*  */ q_networkcachemetadata
 ///
 /// ``` QNetworkCacheMetaData* self, libqt_list /* of libqt_pair  tuple of char* and char*  */ headers ```
 void q_networkcachemetadata_set_raw_headers(void* self, libqt_list /* of libqt_pair  tuple of char* and char*  */ headers);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#headers)
+///
+/// ``` QNetworkCacheMetaData* self ```
+QHttpHeaders* q_networkcachemetadata_headers(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#setHeaders)
+///
+/// ``` QNetworkCacheMetaData* self, QHttpHeaders* headers ```
+void q_networkcachemetadata_set_headers(void* self, void* headers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#lastModified)
 ///
@@ -267,7 +269,7 @@ QThread* q_abstractnetworkcache_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QAbstractNetworkCache* self, QThread* thread ```
-void q_abstractnetworkcache_move_to_thread(void* self, void* thread);
+bool q_abstractnetworkcache_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -282,6 +284,13 @@ int32_t q_abstractnetworkcache_start_timer(void* self, int interval);
 ///
 /// ``` QAbstractNetworkCache* self, int id ```
 void q_abstractnetworkcache_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QAbstractNetworkCache* self, enum Qt__TimerId id ```
+void q_abstractnetworkcache_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -422,6 +431,13 @@ bool q_abstractnetworkcache_inherits(void* self, const char* classname);
 ///
 /// ``` QAbstractNetworkCache* self ```
 void q_abstractnetworkcache_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QAbstractNetworkCache* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_abstractnetworkcache_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

@@ -112,7 +112,7 @@ QDateTime* QFileDevice_FileTime(const QFileDevice* self, int time) {
     return new QDateTime(self->fileTime(static_cast<QFileDevice::FileTime>(time)));
 }
 
-bool QFileDevice_SetFileTime(QFileDevice* self, QDateTime* newDate, int fileTime) {
+bool QFileDevice_SetFileTime(QFileDevice* self, const QDateTime* newDate, int fileTime) {
     return self->setFileTime(*newDate, static_cast<QFileDevice::FileTime>(fileTime));
 }
 

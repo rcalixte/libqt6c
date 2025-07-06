@@ -96,57 +96,57 @@ libqt_string QNetworkCookieJar_Tr3(const char* s, const char* c, int n) {
 }
 
 // Derived class handler implementation
-libqt_list /* of QNetworkCookie* */ QNetworkCookieJar_CookiesForUrl(const QNetworkCookieJar* self, QUrl* url) {
+libqt_list /* of QNetworkCookie* */ QNetworkCookieJar_CookiesForUrl(const QNetworkCookieJar* self, const QUrl* url) {
     auto* vqnetworkcookiejar = const_cast<VirtualQNetworkCookieJar*>(dynamic_cast<const VirtualQNetworkCookieJar*>(self));
     if (vqnetworkcookiejar && vqnetworkcookiejar->isVirtualQNetworkCookieJar) {
         QList<QNetworkCookie> _ret = vqnetworkcookiejar->cookiesForUrl(*url);
         // Convert QList<> from C++ memory to manually-managed C memory
-        QNetworkCookie** _arr = static_cast<QNetworkCookie**>(malloc(sizeof(QNetworkCookie*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QNetworkCookie** _arr = static_cast<QNetworkCookie**>(malloc(sizeof(QNetworkCookie*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QNetworkCookie(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
         QList<QNetworkCookie> _ret = self->QNetworkCookieJar::cookiesForUrl(*url);
         // Convert QList<> from C++ memory to manually-managed C memory
-        QNetworkCookie** _arr = static_cast<QNetworkCookie**>(malloc(sizeof(QNetworkCookie*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QNetworkCookie** _arr = static_cast<QNetworkCookie**>(malloc(sizeof(QNetworkCookie*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QNetworkCookie(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
 }
 
 // Base class handler implementation
-libqt_list /* of QNetworkCookie* */ QNetworkCookieJar_QBaseCookiesForUrl(const QNetworkCookieJar* self, QUrl* url) {
+libqt_list /* of QNetworkCookie* */ QNetworkCookieJar_QBaseCookiesForUrl(const QNetworkCookieJar* self, const QUrl* url) {
     auto* vqnetworkcookiejar = const_cast<VirtualQNetworkCookieJar*>(dynamic_cast<const VirtualQNetworkCookieJar*>(self));
     if (vqnetworkcookiejar && vqnetworkcookiejar->isVirtualQNetworkCookieJar) {
         vqnetworkcookiejar->setQNetworkCookieJar_CookiesForUrl_IsBase(true);
         QList<QNetworkCookie> _ret = vqnetworkcookiejar->cookiesForUrl(*url);
         // Convert QList<> from C++ memory to manually-managed C memory
-        QNetworkCookie** _arr = static_cast<QNetworkCookie**>(malloc(sizeof(QNetworkCookie*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QNetworkCookie** _arr = static_cast<QNetworkCookie**>(malloc(sizeof(QNetworkCookie*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QNetworkCookie(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
         QList<QNetworkCookie> _ret = self->QNetworkCookieJar::cookiesForUrl(*url);
         // Convert QList<> from C++ memory to manually-managed C memory
-        QNetworkCookie** _arr = static_cast<QNetworkCookie**>(malloc(sizeof(QNetworkCookie*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QNetworkCookie** _arr = static_cast<QNetworkCookie**>(malloc(sizeof(QNetworkCookie*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QNetworkCookie(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -161,7 +161,7 @@ void QNetworkCookieJar_OnCookiesForUrl(const QNetworkCookieJar* self, intptr_t s
 }
 
 // Derived class handler implementation
-bool QNetworkCookieJar_SetCookiesFromUrl(QNetworkCookieJar* self, libqt_list /* of QNetworkCookie* */ cookieList, QUrl* url) {
+bool QNetworkCookieJar_SetCookiesFromUrl(QNetworkCookieJar* self, const libqt_list /* of QNetworkCookie* */ cookieList, const QUrl* url) {
     auto* vqnetworkcookiejar = dynamic_cast<VirtualQNetworkCookieJar*>(self);
     QList<QNetworkCookie> cookieList_QList;
     cookieList_QList.reserve(cookieList.len);
@@ -177,7 +177,7 @@ bool QNetworkCookieJar_SetCookiesFromUrl(QNetworkCookieJar* self, libqt_list /* 
 }
 
 // Base class handler implementation
-bool QNetworkCookieJar_QBaseSetCookiesFromUrl(QNetworkCookieJar* self, libqt_list /* of QNetworkCookie* */ cookieList, QUrl* url) {
+bool QNetworkCookieJar_QBaseSetCookiesFromUrl(QNetworkCookieJar* self, const libqt_list /* of QNetworkCookie* */ cookieList, const QUrl* url) {
     auto* vqnetworkcookiejar = dynamic_cast<VirtualQNetworkCookieJar*>(self);
     QList<QNetworkCookie> cookieList_QList;
     cookieList_QList.reserve(cookieList.len);
@@ -202,7 +202,7 @@ void QNetworkCookieJar_OnSetCookiesFromUrl(QNetworkCookieJar* self, intptr_t slo
 }
 
 // Derived class handler implementation
-bool QNetworkCookieJar_InsertCookie(QNetworkCookieJar* self, QNetworkCookie* cookie) {
+bool QNetworkCookieJar_InsertCookie(QNetworkCookieJar* self, const QNetworkCookie* cookie) {
     auto* vqnetworkcookiejar = dynamic_cast<VirtualQNetworkCookieJar*>(self);
     if (vqnetworkcookiejar && vqnetworkcookiejar->isVirtualQNetworkCookieJar) {
         return vqnetworkcookiejar->insertCookie(*cookie);
@@ -212,7 +212,7 @@ bool QNetworkCookieJar_InsertCookie(QNetworkCookieJar* self, QNetworkCookie* coo
 }
 
 // Base class handler implementation
-bool QNetworkCookieJar_QBaseInsertCookie(QNetworkCookieJar* self, QNetworkCookie* cookie) {
+bool QNetworkCookieJar_QBaseInsertCookie(QNetworkCookieJar* self, const QNetworkCookie* cookie) {
     auto* vqnetworkcookiejar = dynamic_cast<VirtualQNetworkCookieJar*>(self);
     if (vqnetworkcookiejar && vqnetworkcookiejar->isVirtualQNetworkCookieJar) {
         vqnetworkcookiejar->setQNetworkCookieJar_InsertCookie_IsBase(true);
@@ -231,7 +231,7 @@ void QNetworkCookieJar_OnInsertCookie(QNetworkCookieJar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QNetworkCookieJar_UpdateCookie(QNetworkCookieJar* self, QNetworkCookie* cookie) {
+bool QNetworkCookieJar_UpdateCookie(QNetworkCookieJar* self, const QNetworkCookie* cookie) {
     auto* vqnetworkcookiejar = dynamic_cast<VirtualQNetworkCookieJar*>(self);
     if (vqnetworkcookiejar && vqnetworkcookiejar->isVirtualQNetworkCookieJar) {
         return vqnetworkcookiejar->updateCookie(*cookie);
@@ -241,7 +241,7 @@ bool QNetworkCookieJar_UpdateCookie(QNetworkCookieJar* self, QNetworkCookie* coo
 }
 
 // Base class handler implementation
-bool QNetworkCookieJar_QBaseUpdateCookie(QNetworkCookieJar* self, QNetworkCookie* cookie) {
+bool QNetworkCookieJar_QBaseUpdateCookie(QNetworkCookieJar* self, const QNetworkCookie* cookie) {
     auto* vqnetworkcookiejar = dynamic_cast<VirtualQNetworkCookieJar*>(self);
     if (vqnetworkcookiejar && vqnetworkcookiejar->isVirtualQNetworkCookieJar) {
         vqnetworkcookiejar->setQNetworkCookieJar_UpdateCookie_IsBase(true);
@@ -260,7 +260,7 @@ void QNetworkCookieJar_OnUpdateCookie(QNetworkCookieJar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QNetworkCookieJar_DeleteCookie(QNetworkCookieJar* self, QNetworkCookie* cookie) {
+bool QNetworkCookieJar_DeleteCookie(QNetworkCookieJar* self, const QNetworkCookie* cookie) {
     auto* vqnetworkcookiejar = dynamic_cast<VirtualQNetworkCookieJar*>(self);
     if (vqnetworkcookiejar && vqnetworkcookiejar->isVirtualQNetworkCookieJar) {
         return vqnetworkcookiejar->deleteCookie(*cookie);
@@ -270,7 +270,7 @@ bool QNetworkCookieJar_DeleteCookie(QNetworkCookieJar* self, QNetworkCookie* coo
 }
 
 // Base class handler implementation
-bool QNetworkCookieJar_QBaseDeleteCookie(QNetworkCookieJar* self, QNetworkCookie* cookie) {
+bool QNetworkCookieJar_QBaseDeleteCookie(QNetworkCookieJar* self, const QNetworkCookie* cookie) {
     auto* vqnetworkcookiejar = dynamic_cast<VirtualQNetworkCookieJar*>(self);
     if (vqnetworkcookiejar && vqnetworkcookiejar->isVirtualQNetworkCookieJar) {
         vqnetworkcookiejar->setQNetworkCookieJar_DeleteCookie_IsBase(true);
@@ -289,7 +289,7 @@ void QNetworkCookieJar_OnDeleteCookie(QNetworkCookieJar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QNetworkCookieJar_ValidateCookie(const QNetworkCookieJar* self, QNetworkCookie* cookie, QUrl* url) {
+bool QNetworkCookieJar_ValidateCookie(const QNetworkCookieJar* self, const QNetworkCookie* cookie, const QUrl* url) {
     auto* vqnetworkcookiejar = const_cast<VirtualQNetworkCookieJar*>(dynamic_cast<const VirtualQNetworkCookieJar*>(self));
     if (vqnetworkcookiejar && vqnetworkcookiejar->isVirtualQNetworkCookieJar) {
         return vqnetworkcookiejar->validateCookie(*cookie, *url);
@@ -299,7 +299,7 @@ bool QNetworkCookieJar_ValidateCookie(const QNetworkCookieJar* self, QNetworkCoo
 }
 
 // Base class handler implementation
-bool QNetworkCookieJar_QBaseValidateCookie(const QNetworkCookieJar* self, QNetworkCookie* cookie, QUrl* url) {
+bool QNetworkCookieJar_QBaseValidateCookie(const QNetworkCookieJar* self, const QNetworkCookie* cookie, const QUrl* url) {
     auto* vqnetworkcookiejar = const_cast<VirtualQNetworkCookieJar*>(dynamic_cast<const VirtualQNetworkCookieJar*>(self));
     if (vqnetworkcookiejar && vqnetworkcookiejar->isVirtualQNetworkCookieJar) {
         vqnetworkcookiejar->setQNetworkCookieJar_ValidateCookie_IsBase(true);
@@ -463,7 +463,7 @@ void QNetworkCookieJar_OnCustomEvent(QNetworkCookieJar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QNetworkCookieJar_ConnectNotify(QNetworkCookieJar* self, QMetaMethod* signal) {
+void QNetworkCookieJar_ConnectNotify(QNetworkCookieJar* self, const QMetaMethod* signal) {
     auto* vqnetworkcookiejar = dynamic_cast<VirtualQNetworkCookieJar*>(self);
     if (vqnetworkcookiejar && vqnetworkcookiejar->isVirtualQNetworkCookieJar) {
         vqnetworkcookiejar->connectNotify(*signal);
@@ -473,7 +473,7 @@ void QNetworkCookieJar_ConnectNotify(QNetworkCookieJar* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-void QNetworkCookieJar_QBaseConnectNotify(QNetworkCookieJar* self, QMetaMethod* signal) {
+void QNetworkCookieJar_QBaseConnectNotify(QNetworkCookieJar* self, const QMetaMethod* signal) {
     auto* vqnetworkcookiejar = dynamic_cast<VirtualQNetworkCookieJar*>(self);
     if (vqnetworkcookiejar && vqnetworkcookiejar->isVirtualQNetworkCookieJar) {
         vqnetworkcookiejar->setQNetworkCookieJar_ConnectNotify_IsBase(true);
@@ -492,7 +492,7 @@ void QNetworkCookieJar_OnConnectNotify(QNetworkCookieJar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QNetworkCookieJar_DisconnectNotify(QNetworkCookieJar* self, QMetaMethod* signal) {
+void QNetworkCookieJar_DisconnectNotify(QNetworkCookieJar* self, const QMetaMethod* signal) {
     auto* vqnetworkcookiejar = dynamic_cast<VirtualQNetworkCookieJar*>(self);
     if (vqnetworkcookiejar && vqnetworkcookiejar->isVirtualQNetworkCookieJar) {
         vqnetworkcookiejar->disconnectNotify(*signal);
@@ -502,7 +502,7 @@ void QNetworkCookieJar_DisconnectNotify(QNetworkCookieJar* self, QMetaMethod* si
 }
 
 // Base class handler implementation
-void QNetworkCookieJar_QBaseDisconnectNotify(QNetworkCookieJar* self, QMetaMethod* signal) {
+void QNetworkCookieJar_QBaseDisconnectNotify(QNetworkCookieJar* self, const QMetaMethod* signal) {
     auto* vqnetworkcookiejar = dynamic_cast<VirtualQNetworkCookieJar*>(self);
     if (vqnetworkcookiejar && vqnetworkcookiejar->isVirtualQNetworkCookieJar) {
         vqnetworkcookiejar->setQNetworkCookieJar_DisconnectNotify_IsBase(true);
@@ -526,23 +526,23 @@ libqt_list /* of QNetworkCookie* */ QNetworkCookieJar_AllCookies(const QNetworkC
     if (vqnetworkcookiejar && vqnetworkcookiejar->isVirtualQNetworkCookieJar) {
         QList<QNetworkCookie> _ret = vqnetworkcookiejar->allCookies();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QNetworkCookie** _arr = static_cast<QNetworkCookie**>(malloc(sizeof(QNetworkCookie*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QNetworkCookie** _arr = static_cast<QNetworkCookie**>(malloc(sizeof(QNetworkCookie*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QNetworkCookie(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
         QList<QNetworkCookie> _ret = ((VirtualQNetworkCookieJar*)self)->allCookies();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QNetworkCookie** _arr = static_cast<QNetworkCookie**>(malloc(sizeof(QNetworkCookie*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QNetworkCookie** _arr = static_cast<QNetworkCookie**>(malloc(sizeof(QNetworkCookie*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QNetworkCookie(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -555,23 +555,23 @@ libqt_list /* of QNetworkCookie* */ QNetworkCookieJar_QBaseAllCookies(const QNet
         vqnetworkcookiejar->setQNetworkCookieJar_AllCookies_IsBase(true);
         QList<QNetworkCookie> _ret = vqnetworkcookiejar->allCookies();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QNetworkCookie** _arr = static_cast<QNetworkCookie**>(malloc(sizeof(QNetworkCookie*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QNetworkCookie** _arr = static_cast<QNetworkCookie**>(malloc(sizeof(QNetworkCookie*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QNetworkCookie(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
         QList<QNetworkCookie> _ret = ((VirtualQNetworkCookieJar*)self)->allCookies();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QNetworkCookie** _arr = static_cast<QNetworkCookie**>(malloc(sizeof(QNetworkCookie*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QNetworkCookie** _arr = static_cast<QNetworkCookie**>(malloc(sizeof(QNetworkCookie*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QNetworkCookie(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -586,7 +586,7 @@ void QNetworkCookieJar_OnAllCookies(const QNetworkCookieJar* self, intptr_t slot
 }
 
 // Derived class handler implementation
-void QNetworkCookieJar_SetAllCookies(QNetworkCookieJar* self, libqt_list /* of QNetworkCookie* */ cookieList) {
+void QNetworkCookieJar_SetAllCookies(QNetworkCookieJar* self, const libqt_list /* of QNetworkCookie* */ cookieList) {
     auto* vqnetworkcookiejar = dynamic_cast<VirtualQNetworkCookieJar*>(self);
     QList<QNetworkCookie> cookieList_QList;
     cookieList_QList.reserve(cookieList.len);
@@ -602,7 +602,7 @@ void QNetworkCookieJar_SetAllCookies(QNetworkCookieJar* self, libqt_list /* of Q
 }
 
 // Base class handler implementation
-void QNetworkCookieJar_QBaseSetAllCookies(QNetworkCookieJar* self, libqt_list /* of QNetworkCookie* */ cookieList) {
+void QNetworkCookieJar_QBaseSetAllCookies(QNetworkCookieJar* self, const libqt_list /* of QNetworkCookie* */ cookieList) {
     auto* vqnetworkcookiejar = dynamic_cast<VirtualQNetworkCookieJar*>(self);
     QList<QNetworkCookie> cookieList_QList;
     cookieList_QList.reserve(cookieList.len);
@@ -714,7 +714,7 @@ void QNetworkCookieJar_OnReceivers(const QNetworkCookieJar* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-bool QNetworkCookieJar_IsSignalConnected(const QNetworkCookieJar* self, QMetaMethod* signal) {
+bool QNetworkCookieJar_IsSignalConnected(const QNetworkCookieJar* self, const QMetaMethod* signal) {
     auto* vqnetworkcookiejar = const_cast<VirtualQNetworkCookieJar*>(dynamic_cast<const VirtualQNetworkCookieJar*>(self));
     if (vqnetworkcookiejar && vqnetworkcookiejar->isVirtualQNetworkCookieJar) {
         return vqnetworkcookiejar->isSignalConnected(*signal);
@@ -724,7 +724,7 @@ bool QNetworkCookieJar_IsSignalConnected(const QNetworkCookieJar* self, QMetaMet
 }
 
 // Base class handler implementation
-bool QNetworkCookieJar_QBaseIsSignalConnected(const QNetworkCookieJar* self, QMetaMethod* signal) {
+bool QNetworkCookieJar_QBaseIsSignalConnected(const QNetworkCookieJar* self, const QMetaMethod* signal) {
     auto* vqnetworkcookiejar = const_cast<VirtualQNetworkCookieJar*>(dynamic_cast<const VirtualQNetworkCookieJar*>(self));
     if (vqnetworkcookiejar && vqnetworkcookiejar->isVirtualQNetworkCookieJar) {
         vqnetworkcookiejar->setQNetworkCookieJar_IsSignalConnected_IsBase(true);

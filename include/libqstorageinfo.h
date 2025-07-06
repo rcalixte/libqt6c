@@ -12,9 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqdir.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qstorageinfo.html
 
 /// q_storageinfo_new constructs a new QStorageInfo object.

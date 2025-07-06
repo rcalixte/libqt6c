@@ -12,11 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqbitmap.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qregion.html
 
 /// q_region_new constructs a new QRegion object.
@@ -173,6 +168,16 @@ QRect* q_region_bounding_rect(void* self);
 ///
 /// ``` QRegion* self, QRect* rect, int num ```
 void q_region_set_rects(void* self, void* rect, int num);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#setRects)
+///
+/// ``` QRegion* self, libqt_list /* of QRect* */ r ```
+void q_region_set_rects_with_q_span_lesserconst_q_rect_greater(void* self, libqt_list r);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#rects)
+///
+/// ``` QRegion* self ```
+libqt_list /* of QRect* */ q_region_rects(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#rectCount)
 ///

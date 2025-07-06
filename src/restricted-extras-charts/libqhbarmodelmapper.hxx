@@ -91,8 +91,8 @@ class VirtualQHBarModelMapper final : public QHBarModelMapper {
     mutable bool qhbarmodelmapper_issignalconnected_isbase = false;
 
   public:
-    VirtualQHBarModelMapper() : QHBarModelMapper(){};
-    VirtualQHBarModelMapper(QObject* parent) : QHBarModelMapper(parent){};
+    VirtualQHBarModelMapper() : QHBarModelMapper() {};
+    VirtualQHBarModelMapper(QObject* parent) : QHBarModelMapper(parent) {};
 
     ~VirtualQHBarModelMapper() {
         qhbarmodelmapper_metacall_callback = nullptr;
@@ -489,10 +489,10 @@ class VirtualQHBarModelMapper final : public QHBarModelMapper {
     friend void QHBarModelMapper_QBaseChildEvent(QHBarModelMapper* self, QChildEvent* event);
     friend void QHBarModelMapper_CustomEvent(QHBarModelMapper* self, QEvent* event);
     friend void QHBarModelMapper_QBaseCustomEvent(QHBarModelMapper* self, QEvent* event);
-    friend void QHBarModelMapper_ConnectNotify(QHBarModelMapper* self, QMetaMethod* signal);
-    friend void QHBarModelMapper_QBaseConnectNotify(QHBarModelMapper* self, QMetaMethod* signal);
-    friend void QHBarModelMapper_DisconnectNotify(QHBarModelMapper* self, QMetaMethod* signal);
-    friend void QHBarModelMapper_QBaseDisconnectNotify(QHBarModelMapper* self, QMetaMethod* signal);
+    friend void QHBarModelMapper_ConnectNotify(QHBarModelMapper* self, const QMetaMethod* signal);
+    friend void QHBarModelMapper_QBaseConnectNotify(QHBarModelMapper* self, const QMetaMethod* signal);
+    friend void QHBarModelMapper_DisconnectNotify(QHBarModelMapper* self, const QMetaMethod* signal);
+    friend void QHBarModelMapper_QBaseDisconnectNotify(QHBarModelMapper* self, const QMetaMethod* signal);
     friend int QHBarModelMapper_First(const QHBarModelMapper* self);
     friend int QHBarModelMapper_QBaseFirst(const QHBarModelMapper* self);
     friend void QHBarModelMapper_SetFirst(QHBarModelMapper* self, int first);
@@ -519,8 +519,8 @@ class VirtualQHBarModelMapper final : public QHBarModelMapper {
     friend int QHBarModelMapper_QBaseSenderSignalIndex(const QHBarModelMapper* self);
     friend int QHBarModelMapper_Receivers(const QHBarModelMapper* self, const char* signal);
     friend int QHBarModelMapper_QBaseReceivers(const QHBarModelMapper* self, const char* signal);
-    friend bool QHBarModelMapper_IsSignalConnected(const QHBarModelMapper* self, QMetaMethod* signal);
-    friend bool QHBarModelMapper_QBaseIsSignalConnected(const QHBarModelMapper* self, QMetaMethod* signal);
+    friend bool QHBarModelMapper_IsSignalConnected(const QHBarModelMapper* self, const QMetaMethod* signal);
+    friend bool QHBarModelMapper_QBaseIsSignalConnected(const QHBarModelMapper* self, const QMetaMethod* signal);
 };
 
 #endif

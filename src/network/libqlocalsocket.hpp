@@ -27,18 +27,6 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-#ifdef __cplusplus
-typedef QLocalSocket::LocalSocketError LocalSocketError; // C++ enum
-typedef QLocalSocket::LocalSocketState LocalSocketState; // C++ enum
-typedef QLocalSocket::SocketOption SocketOption;         // C++ enum
-typedef QLocalSocket::SocketOptions SocketOptions;       // C++ QFlags
-#else
-typedef int LocalSocketError; // C ABI enum
-typedef int LocalSocketState; // C ABI enum
-typedef int SocketOption;     // C ABI enum
-typedef int SocketOptions;    // C ABI QFlags
-#endif
-
 QLocalSocket* QLocalSocket_new();
 QLocalSocket* QLocalSocket_new2(QObject* parent);
 QMetaObject* QLocalSocket_MetaObject(const QLocalSocket* self);
@@ -48,9 +36,9 @@ void QLocalSocket_OnMetacall(QLocalSocket* self, intptr_t slot);
 int QLocalSocket_QBaseMetacall(QLocalSocket* self, int param1, int param2, void** param3);
 libqt_string QLocalSocket_Tr(const char* s);
 void QLocalSocket_ConnectToServer(QLocalSocket* self);
-void QLocalSocket_ConnectToServerWithName(QLocalSocket* self, libqt_string name);
+void QLocalSocket_ConnectToServerWithName(QLocalSocket* self, const libqt_string name);
 void QLocalSocket_DisconnectFromServer(QLocalSocket* self);
-void QLocalSocket_SetServerName(QLocalSocket* self, libqt_string name);
+void QLocalSocket_SetServerName(QLocalSocket* self, const libqt_string name);
 libqt_string QLocalSocket_ServerName(const QLocalSocket* self);
 libqt_string QLocalSocket_FullServerName(const QLocalSocket* self);
 void QLocalSocket_Abort(QLocalSocket* self);
@@ -113,7 +101,7 @@ long long QLocalSocket_QBaseWriteData(QLocalSocket* self, const char* param1, lo
 libqt_string QLocalSocket_Tr2(const char* s, const char* c);
 libqt_string QLocalSocket_Tr3(const char* s, const char* c, int n);
 void QLocalSocket_ConnectToServer1(QLocalSocket* self, int openMode);
-void QLocalSocket_ConnectToServer2(QLocalSocket* self, libqt_string name, int openMode);
+void QLocalSocket_ConnectToServer2(QLocalSocket* self, const libqt_string name, int openMode);
 bool QLocalSocket_SetSocketDescriptor2(QLocalSocket* self, intptr_t socketDescriptor, int socketState);
 bool QLocalSocket_SetSocketDescriptor3(QLocalSocket* self, intptr_t socketDescriptor, int socketState, int openMode);
 bool QLocalSocket_WaitForConnected1(QLocalSocket* self, int msecs);
@@ -148,18 +136,18 @@ void QLocalSocket_QBaseChildEvent(QLocalSocket* self, QChildEvent* event);
 void QLocalSocket_CustomEvent(QLocalSocket* self, QEvent* event);
 void QLocalSocket_OnCustomEvent(QLocalSocket* self, intptr_t slot);
 void QLocalSocket_QBaseCustomEvent(QLocalSocket* self, QEvent* event);
-void QLocalSocket_ConnectNotify(QLocalSocket* self, QMetaMethod* signal);
+void QLocalSocket_ConnectNotify(QLocalSocket* self, const QMetaMethod* signal);
 void QLocalSocket_OnConnectNotify(QLocalSocket* self, intptr_t slot);
-void QLocalSocket_QBaseConnectNotify(QLocalSocket* self, QMetaMethod* signal);
-void QLocalSocket_DisconnectNotify(QLocalSocket* self, QMetaMethod* signal);
+void QLocalSocket_QBaseConnectNotify(QLocalSocket* self, const QMetaMethod* signal);
+void QLocalSocket_DisconnectNotify(QLocalSocket* self, const QMetaMethod* signal);
 void QLocalSocket_OnDisconnectNotify(QLocalSocket* self, intptr_t slot);
-void QLocalSocket_QBaseDisconnectNotify(QLocalSocket* self, QMetaMethod* signal);
+void QLocalSocket_QBaseDisconnectNotify(QLocalSocket* self, const QMetaMethod* signal);
 void QLocalSocket_SetOpenMode(QLocalSocket* self, int openMode);
 void QLocalSocket_OnSetOpenMode(QLocalSocket* self, intptr_t slot);
 void QLocalSocket_QBaseSetOpenMode(QLocalSocket* self, int openMode);
-void QLocalSocket_SetErrorString(QLocalSocket* self, libqt_string errorString);
+void QLocalSocket_SetErrorString(QLocalSocket* self, const libqt_string errorString);
 void QLocalSocket_OnSetErrorString(QLocalSocket* self, intptr_t slot);
-void QLocalSocket_QBaseSetErrorString(QLocalSocket* self, libqt_string errorString);
+void QLocalSocket_QBaseSetErrorString(QLocalSocket* self, const libqt_string errorString);
 QObject* QLocalSocket_Sender(const QLocalSocket* self);
 void QLocalSocket_OnSender(const QLocalSocket* self, intptr_t slot);
 QObject* QLocalSocket_QBaseSender(const QLocalSocket* self);
@@ -169,9 +157,9 @@ int QLocalSocket_QBaseSenderSignalIndex(const QLocalSocket* self);
 int QLocalSocket_Receivers(const QLocalSocket* self, const char* signal);
 void QLocalSocket_OnReceivers(const QLocalSocket* self, intptr_t slot);
 int QLocalSocket_QBaseReceivers(const QLocalSocket* self, const char* signal);
-bool QLocalSocket_IsSignalConnected(const QLocalSocket* self, QMetaMethod* signal);
+bool QLocalSocket_IsSignalConnected(const QLocalSocket* self, const QMetaMethod* signal);
 void QLocalSocket_OnIsSignalConnected(const QLocalSocket* self, intptr_t slot);
-bool QLocalSocket_QBaseIsSignalConnected(const QLocalSocket* self, QMetaMethod* signal);
+bool QLocalSocket_QBaseIsSignalConnected(const QLocalSocket* self, const QMetaMethod* signal);
 void QLocalSocket_Delete(QLocalSocket* self);
 
 #ifdef __cplusplus

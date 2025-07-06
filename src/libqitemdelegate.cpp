@@ -124,7 +124,7 @@ libqt_string QItemDelegate_Tr3(const char* s, const char* c, int n) {
 }
 
 // Derived class handler implementation
-void QItemDelegate_Paint(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index) {
+void QItemDelegate_Paint(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QModelIndex* index) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->paint(painter, *option, *index);
@@ -134,7 +134,7 @@ void QItemDelegate_Paint(const QItemDelegate* self, QPainter* painter, QStyleOpt
 }
 
 // Base class handler implementation
-void QItemDelegate_QBasePaint(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index) {
+void QItemDelegate_QBasePaint(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QModelIndex* index) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setQItemDelegate_Paint_IsBase(true);
@@ -153,7 +153,7 @@ void QItemDelegate_OnPaint(const QItemDelegate* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QSize* QItemDelegate_SizeHint(const QItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index) {
+QSize* QItemDelegate_SizeHint(const QItemDelegate* self, const QStyleOptionViewItem* option, const QModelIndex* index) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         return new QSize(vqitemdelegate->sizeHint(*option, *index));
@@ -163,7 +163,7 @@ QSize* QItemDelegate_SizeHint(const QItemDelegate* self, QStyleOptionViewItem* o
 }
 
 // Base class handler implementation
-QSize* QItemDelegate_QBaseSizeHint(const QItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index) {
+QSize* QItemDelegate_QBaseSizeHint(const QItemDelegate* self, const QStyleOptionViewItem* option, const QModelIndex* index) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setQItemDelegate_SizeHint_IsBase(true);
@@ -182,7 +182,7 @@ void QItemDelegate_OnSizeHint(const QItemDelegate* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QWidget* QItemDelegate_CreateEditor(const QItemDelegate* self, QWidget* parent, QStyleOptionViewItem* option, QModelIndex* index) {
+QWidget* QItemDelegate_CreateEditor(const QItemDelegate* self, QWidget* parent, const QStyleOptionViewItem* option, const QModelIndex* index) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         return vqitemdelegate->createEditor(parent, *option, *index);
@@ -192,7 +192,7 @@ QWidget* QItemDelegate_CreateEditor(const QItemDelegate* self, QWidget* parent, 
 }
 
 // Base class handler implementation
-QWidget* QItemDelegate_QBaseCreateEditor(const QItemDelegate* self, QWidget* parent, QStyleOptionViewItem* option, QModelIndex* index) {
+QWidget* QItemDelegate_QBaseCreateEditor(const QItemDelegate* self, QWidget* parent, const QStyleOptionViewItem* option, const QModelIndex* index) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setQItemDelegate_CreateEditor_IsBase(true);
@@ -211,7 +211,7 @@ void QItemDelegate_OnCreateEditor(const QItemDelegate* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QItemDelegate_SetEditorData(const QItemDelegate* self, QWidget* editor, QModelIndex* index) {
+void QItemDelegate_SetEditorData(const QItemDelegate* self, QWidget* editor, const QModelIndex* index) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setEditorData(editor, *index);
@@ -221,7 +221,7 @@ void QItemDelegate_SetEditorData(const QItemDelegate* self, QWidget* editor, QMo
 }
 
 // Base class handler implementation
-void QItemDelegate_QBaseSetEditorData(const QItemDelegate* self, QWidget* editor, QModelIndex* index) {
+void QItemDelegate_QBaseSetEditorData(const QItemDelegate* self, QWidget* editor, const QModelIndex* index) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setQItemDelegate_SetEditorData_IsBase(true);
@@ -240,7 +240,7 @@ void QItemDelegate_OnSetEditorData(const QItemDelegate* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QItemDelegate_SetModelData(const QItemDelegate* self, QWidget* editor, QAbstractItemModel* model, QModelIndex* index) {
+void QItemDelegate_SetModelData(const QItemDelegate* self, QWidget* editor, QAbstractItemModel* model, const QModelIndex* index) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setModelData(editor, model, *index);
@@ -250,7 +250,7 @@ void QItemDelegate_SetModelData(const QItemDelegate* self, QWidget* editor, QAbs
 }
 
 // Base class handler implementation
-void QItemDelegate_QBaseSetModelData(const QItemDelegate* self, QWidget* editor, QAbstractItemModel* model, QModelIndex* index) {
+void QItemDelegate_QBaseSetModelData(const QItemDelegate* self, QWidget* editor, QAbstractItemModel* model, const QModelIndex* index) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setQItemDelegate_SetModelData_IsBase(true);
@@ -269,7 +269,7 @@ void QItemDelegate_OnSetModelData(const QItemDelegate* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QItemDelegate_UpdateEditorGeometry(const QItemDelegate* self, QWidget* editor, QStyleOptionViewItem* option, QModelIndex* index) {
+void QItemDelegate_UpdateEditorGeometry(const QItemDelegate* self, QWidget* editor, const QStyleOptionViewItem* option, const QModelIndex* index) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->updateEditorGeometry(editor, *option, *index);
@@ -279,7 +279,7 @@ void QItemDelegate_UpdateEditorGeometry(const QItemDelegate* self, QWidget* edit
 }
 
 // Base class handler implementation
-void QItemDelegate_QBaseUpdateEditorGeometry(const QItemDelegate* self, QWidget* editor, QStyleOptionViewItem* option, QModelIndex* index) {
+void QItemDelegate_QBaseUpdateEditorGeometry(const QItemDelegate* self, QWidget* editor, const QStyleOptionViewItem* option, const QModelIndex* index) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setQItemDelegate_UpdateEditorGeometry_IsBase(true);
@@ -298,7 +298,7 @@ void QItemDelegate_OnUpdateEditorGeometry(const QItemDelegate* self, intptr_t sl
 }
 
 // Derived class handler implementation
-void QItemDelegate_DrawDisplay(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect, libqt_string text) {
+void QItemDelegate_DrawDisplay(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QRect* rect, const libqt_string text) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     QString text_QString = QString::fromUtf8(text.data, text.len);
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
@@ -309,7 +309,7 @@ void QItemDelegate_DrawDisplay(const QItemDelegate* self, QPainter* painter, QSt
 }
 
 // Base class handler implementation
-void QItemDelegate_QBaseDrawDisplay(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect, libqt_string text) {
+void QItemDelegate_QBaseDrawDisplay(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QRect* rect, const libqt_string text) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     QString text_QString = QString::fromUtf8(text.data, text.len);
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
@@ -329,7 +329,7 @@ void QItemDelegate_OnDrawDisplay(const QItemDelegate* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QItemDelegate_DrawDecoration(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect, QPixmap* pixmap) {
+void QItemDelegate_DrawDecoration(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QRect* rect, const QPixmap* pixmap) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->drawDecoration(painter, *option, *rect, *pixmap);
@@ -339,7 +339,7 @@ void QItemDelegate_DrawDecoration(const QItemDelegate* self, QPainter* painter, 
 }
 
 // Base class handler implementation
-void QItemDelegate_QBaseDrawDecoration(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect, QPixmap* pixmap) {
+void QItemDelegate_QBaseDrawDecoration(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QRect* rect, const QPixmap* pixmap) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setQItemDelegate_DrawDecoration_IsBase(true);
@@ -358,7 +358,7 @@ void QItemDelegate_OnDrawDecoration(const QItemDelegate* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QItemDelegate_DrawFocus(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect) {
+void QItemDelegate_DrawFocus(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QRect* rect) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->drawFocus(painter, *option, *rect);
@@ -368,7 +368,7 @@ void QItemDelegate_DrawFocus(const QItemDelegate* self, QPainter* painter, QStyl
 }
 
 // Base class handler implementation
-void QItemDelegate_QBaseDrawFocus(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect) {
+void QItemDelegate_QBaseDrawFocus(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QRect* rect) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setQItemDelegate_DrawFocus_IsBase(true);
@@ -387,7 +387,7 @@ void QItemDelegate_OnDrawFocus(const QItemDelegate* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QItemDelegate_DrawCheck(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect, int state) {
+void QItemDelegate_DrawCheck(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QRect* rect, int state) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->drawCheck(painter, *option, *rect, static_cast<Qt::CheckState>(state));
@@ -397,7 +397,7 @@ void QItemDelegate_DrawCheck(const QItemDelegate* self, QPainter* painter, QStyl
 }
 
 // Base class handler implementation
-void QItemDelegate_QBaseDrawCheck(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QRect* rect, int state) {
+void QItemDelegate_QBaseDrawCheck(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QRect* rect, int state) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setQItemDelegate_DrawCheck_IsBase(true);
@@ -445,7 +445,7 @@ void QItemDelegate_OnEventFilter(QItemDelegate* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QItemDelegate_EditorEvent(QItemDelegate* self, QEvent* event, QAbstractItemModel* model, QStyleOptionViewItem* option, QModelIndex* index) {
+bool QItemDelegate_EditorEvent(QItemDelegate* self, QEvent* event, QAbstractItemModel* model, const QStyleOptionViewItem* option, const QModelIndex* index) {
     auto* vqitemdelegate = dynamic_cast<VirtualQItemDelegate*>(self);
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         return vqitemdelegate->editorEvent(event, model, *option, *index);
@@ -455,7 +455,7 @@ bool QItemDelegate_EditorEvent(QItemDelegate* self, QEvent* event, QAbstractItem
 }
 
 // Base class handler implementation
-bool QItemDelegate_QBaseEditorEvent(QItemDelegate* self, QEvent* event, QAbstractItemModel* model, QStyleOptionViewItem* option, QModelIndex* index) {
+bool QItemDelegate_QBaseEditorEvent(QItemDelegate* self, QEvent* event, QAbstractItemModel* model, const QStyleOptionViewItem* option, const QModelIndex* index) {
     auto* vqitemdelegate = dynamic_cast<VirtualQItemDelegate*>(self);
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setQItemDelegate_EditorEvent_IsBase(true);
@@ -474,7 +474,7 @@ void QItemDelegate_OnEditorEvent(QItemDelegate* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QItemDelegate_DestroyEditor(const QItemDelegate* self, QWidget* editor, QModelIndex* index) {
+void QItemDelegate_DestroyEditor(const QItemDelegate* self, QWidget* editor, const QModelIndex* index) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->destroyEditor(editor, *index);
@@ -484,7 +484,7 @@ void QItemDelegate_DestroyEditor(const QItemDelegate* self, QWidget* editor, QMo
 }
 
 // Base class handler implementation
-void QItemDelegate_QBaseDestroyEditor(const QItemDelegate* self, QWidget* editor, QModelIndex* index) {
+void QItemDelegate_QBaseDestroyEditor(const QItemDelegate* self, QWidget* editor, const QModelIndex* index) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setQItemDelegate_DestroyEditor_IsBase(true);
@@ -503,7 +503,7 @@ void QItemDelegate_OnDestroyEditor(const QItemDelegate* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QItemDelegate_HelpEvent(QItemDelegate* self, QHelpEvent* event, QAbstractItemView* view, QStyleOptionViewItem* option, QModelIndex* index) {
+bool QItemDelegate_HelpEvent(QItemDelegate* self, QHelpEvent* event, QAbstractItemView* view, const QStyleOptionViewItem* option, const QModelIndex* index) {
     auto* vqitemdelegate = dynamic_cast<VirtualQItemDelegate*>(self);
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         return vqitemdelegate->helpEvent(event, view, *option, *index);
@@ -513,7 +513,7 @@ bool QItemDelegate_HelpEvent(QItemDelegate* self, QHelpEvent* event, QAbstractIt
 }
 
 // Base class handler implementation
-bool QItemDelegate_QBaseHelpEvent(QItemDelegate* self, QHelpEvent* event, QAbstractItemView* view, QStyleOptionViewItem* option, QModelIndex* index) {
+bool QItemDelegate_QBaseHelpEvent(QItemDelegate* self, QHelpEvent* event, QAbstractItemView* view, const QStyleOptionViewItem* option, const QModelIndex* index) {
     auto* vqitemdelegate = dynamic_cast<VirtualQItemDelegate*>(self);
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setQItemDelegate_HelpEvent_IsBase(true);
@@ -537,23 +537,23 @@ libqt_list /* of int */ QItemDelegate_PaintingRoles(const QItemDelegate* self) {
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         QList<int> _ret = vqitemdelegate->paintingRoles();
         // Convert QList<> from C++ memory to manually-managed C memory
-        int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = _ret[i];
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ints = _arr;
         return _out;
     } else {
         QList<int> _ret = self->QItemDelegate::paintingRoles();
         // Convert QList<> from C++ memory to manually-managed C memory
-        int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = _ret[i];
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ints = _arr;
         return _out;
     }
@@ -566,23 +566,23 @@ libqt_list /* of int */ QItemDelegate_QBasePaintingRoles(const QItemDelegate* se
         vqitemdelegate->setQItemDelegate_PaintingRoles_IsBase(true);
         QList<int> _ret = vqitemdelegate->paintingRoles();
         // Convert QList<> from C++ memory to manually-managed C memory
-        int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = _ret[i];
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ints = _arr;
         return _out;
     } else {
         QList<int> _ret = self->QItemDelegate::paintingRoles();
         // Convert QList<> from C++ memory to manually-managed C memory
-        int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = _ret[i];
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ints = _arr;
         return _out;
     }
@@ -713,7 +713,7 @@ void QItemDelegate_OnCustomEvent(QItemDelegate* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QItemDelegate_ConnectNotify(QItemDelegate* self, QMetaMethod* signal) {
+void QItemDelegate_ConnectNotify(QItemDelegate* self, const QMetaMethod* signal) {
     auto* vqitemdelegate = dynamic_cast<VirtualQItemDelegate*>(self);
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->connectNotify(*signal);
@@ -723,7 +723,7 @@ void QItemDelegate_ConnectNotify(QItemDelegate* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QItemDelegate_QBaseConnectNotify(QItemDelegate* self, QMetaMethod* signal) {
+void QItemDelegate_QBaseConnectNotify(QItemDelegate* self, const QMetaMethod* signal) {
     auto* vqitemdelegate = dynamic_cast<VirtualQItemDelegate*>(self);
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setQItemDelegate_ConnectNotify_IsBase(true);
@@ -742,7 +742,7 @@ void QItemDelegate_OnConnectNotify(QItemDelegate* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QItemDelegate_DisconnectNotify(QItemDelegate* self, QMetaMethod* signal) {
+void QItemDelegate_DisconnectNotify(QItemDelegate* self, const QMetaMethod* signal) {
     auto* vqitemdelegate = dynamic_cast<VirtualQItemDelegate*>(self);
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->disconnectNotify(*signal);
@@ -752,7 +752,7 @@ void QItemDelegate_DisconnectNotify(QItemDelegate* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QItemDelegate_QBaseDisconnectNotify(QItemDelegate* self, QMetaMethod* signal) {
+void QItemDelegate_QBaseDisconnectNotify(QItemDelegate* self, const QMetaMethod* signal) {
     auto* vqitemdelegate = dynamic_cast<VirtualQItemDelegate*>(self);
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setQItemDelegate_DisconnectNotify_IsBase(true);
@@ -771,7 +771,7 @@ void QItemDelegate_OnDisconnectNotify(QItemDelegate* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QItemDelegate_DrawBackground(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index) {
+void QItemDelegate_DrawBackground(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QModelIndex* index) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->drawBackground(painter, *option, *index);
@@ -781,7 +781,7 @@ void QItemDelegate_DrawBackground(const QItemDelegate* self, QPainter* painter, 
 }
 
 // Base class handler implementation
-void QItemDelegate_QBaseDrawBackground(const QItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index) {
+void QItemDelegate_QBaseDrawBackground(const QItemDelegate* self, QPainter* painter, const QStyleOptionViewItem* option, const QModelIndex* index) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setQItemDelegate_DrawBackground_IsBase(true);
@@ -800,7 +800,7 @@ void QItemDelegate_OnDrawBackground(const QItemDelegate* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QItemDelegate_DoLayout(const QItemDelegate* self, QStyleOptionViewItem* option, QRect* checkRect, QRect* iconRect, QRect* textRect, bool hint) {
+void QItemDelegate_DoLayout(const QItemDelegate* self, const QStyleOptionViewItem* option, QRect* checkRect, QRect* iconRect, QRect* textRect, bool hint) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->doLayout(*option, checkRect, iconRect, textRect, hint);
@@ -810,7 +810,7 @@ void QItemDelegate_DoLayout(const QItemDelegate* self, QStyleOptionViewItem* opt
 }
 
 // Base class handler implementation
-void QItemDelegate_QBaseDoLayout(const QItemDelegate* self, QStyleOptionViewItem* option, QRect* checkRect, QRect* iconRect, QRect* textRect, bool hint) {
+void QItemDelegate_QBaseDoLayout(const QItemDelegate* self, const QStyleOptionViewItem* option, QRect* checkRect, QRect* iconRect, QRect* textRect, bool hint) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setQItemDelegate_DoLayout_IsBase(true);
@@ -829,7 +829,7 @@ void QItemDelegate_OnDoLayout(const QItemDelegate* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QRect* QItemDelegate_Rect(const QItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index, int role) {
+QRect* QItemDelegate_Rect(const QItemDelegate* self, const QStyleOptionViewItem* option, const QModelIndex* index, int role) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         return new QRect(vqitemdelegate->rect(*option, *index, static_cast<int>(role)));
@@ -838,7 +838,7 @@ QRect* QItemDelegate_Rect(const QItemDelegate* self, QStyleOptionViewItem* optio
 }
 
 // Base class handler implementation
-QRect* QItemDelegate_QBaseRect(const QItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index, int role) {
+QRect* QItemDelegate_QBaseRect(const QItemDelegate* self, const QStyleOptionViewItem* option, const QModelIndex* index, int role) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setQItemDelegate_Rect_IsBase(true);
@@ -856,7 +856,7 @@ void QItemDelegate_OnRect(const QItemDelegate* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QStyleOptionViewItem* QItemDelegate_SetOptions(const QItemDelegate* self, QModelIndex* index, QStyleOptionViewItem* option) {
+QStyleOptionViewItem* QItemDelegate_SetOptions(const QItemDelegate* self, const QModelIndex* index, const QStyleOptionViewItem* option) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         return new QStyleOptionViewItem(vqitemdelegate->setOptions(*index, *option));
@@ -865,7 +865,7 @@ QStyleOptionViewItem* QItemDelegate_SetOptions(const QItemDelegate* self, QModel
 }
 
 // Base class handler implementation
-QStyleOptionViewItem* QItemDelegate_QBaseSetOptions(const QItemDelegate* self, QModelIndex* index, QStyleOptionViewItem* option) {
+QStyleOptionViewItem* QItemDelegate_QBaseSetOptions(const QItemDelegate* self, const QModelIndex* index, const QStyleOptionViewItem* option) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setQItemDelegate_SetOptions_IsBase(true);
@@ -883,7 +883,7 @@ void QItemDelegate_OnSetOptions(const QItemDelegate* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QPixmap* QItemDelegate_Decoration(const QItemDelegate* self, QStyleOptionViewItem* option, QVariant* variant) {
+QPixmap* QItemDelegate_Decoration(const QItemDelegate* self, const QStyleOptionViewItem* option, const QVariant* variant) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         return new QPixmap(vqitemdelegate->decoration(*option, *variant));
@@ -892,7 +892,7 @@ QPixmap* QItemDelegate_Decoration(const QItemDelegate* self, QStyleOptionViewIte
 }
 
 // Base class handler implementation
-QPixmap* QItemDelegate_QBaseDecoration(const QItemDelegate* self, QStyleOptionViewItem* option, QVariant* variant) {
+QPixmap* QItemDelegate_QBaseDecoration(const QItemDelegate* self, const QStyleOptionViewItem* option, const QVariant* variant) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setQItemDelegate_Decoration_IsBase(true);
@@ -910,7 +910,7 @@ void QItemDelegate_OnDecoration(const QItemDelegate* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QRect* QItemDelegate_DoCheck(const QItemDelegate* self, QStyleOptionViewItem* option, QRect* bounding, QVariant* variant) {
+QRect* QItemDelegate_DoCheck(const QItemDelegate* self, const QStyleOptionViewItem* option, const QRect* bounding, const QVariant* variant) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         return new QRect(vqitemdelegate->doCheck(*option, *bounding, *variant));
@@ -919,7 +919,7 @@ QRect* QItemDelegate_DoCheck(const QItemDelegate* self, QStyleOptionViewItem* op
 }
 
 // Base class handler implementation
-QRect* QItemDelegate_QBaseDoCheck(const QItemDelegate* self, QStyleOptionViewItem* option, QRect* bounding, QVariant* variant) {
+QRect* QItemDelegate_QBaseDoCheck(const QItemDelegate* self, const QStyleOptionViewItem* option, const QRect* bounding, const QVariant* variant) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setQItemDelegate_DoCheck_IsBase(true);
@@ -937,7 +937,7 @@ void QItemDelegate_OnDoCheck(const QItemDelegate* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QRect* QItemDelegate_TextRectangle(const QItemDelegate* self, QPainter* painter, QRect* rect, QFont* font, libqt_string text) {
+QRect* QItemDelegate_TextRectangle(const QItemDelegate* self, QPainter* painter, const QRect* rect, const QFont* font, const libqt_string text) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     QString text_QString = QString::fromUtf8(text.data, text.len);
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
@@ -947,7 +947,7 @@ QRect* QItemDelegate_TextRectangle(const QItemDelegate* self, QPainter* painter,
 }
 
 // Base class handler implementation
-QRect* QItemDelegate_QBaseTextRectangle(const QItemDelegate* self, QPainter* painter, QRect* rect, QFont* font, libqt_string text) {
+QRect* QItemDelegate_QBaseTextRectangle(const QItemDelegate* self, QPainter* painter, const QRect* rect, const QFont* font, const libqt_string text) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     QString text_QString = QString::fromUtf8(text.data, text.len);
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
@@ -1053,7 +1053,7 @@ void QItemDelegate_OnReceivers(const QItemDelegate* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QItemDelegate_IsSignalConnected(const QItemDelegate* self, QMetaMethod* signal) {
+bool QItemDelegate_IsSignalConnected(const QItemDelegate* self, const QMetaMethod* signal) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         return vqitemdelegate->isSignalConnected(*signal);
@@ -1063,7 +1063,7 @@ bool QItemDelegate_IsSignalConnected(const QItemDelegate* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-bool QItemDelegate_QBaseIsSignalConnected(const QItemDelegate* self, QMetaMethod* signal) {
+bool QItemDelegate_QBaseIsSignalConnected(const QItemDelegate* self, const QMetaMethod* signal) {
     auto* vqitemdelegate = const_cast<VirtualQItemDelegate*>(dynamic_cast<const VirtualQItemDelegate*>(self));
     if (vqitemdelegate && vqitemdelegate->isVirtualQItemDelegate) {
         vqitemdelegate->setQItemDelegate_IsSignalConnected_IsBase(true);

@@ -12,13 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqcolor.h"
-#include "libqimage.h"
-#include "libqpixmap.h"
-#include "libqpoint.h"
-#include "libqtransform.h"
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qbrush.html
 
 /// q_brush_new constructs a new QBrush object.

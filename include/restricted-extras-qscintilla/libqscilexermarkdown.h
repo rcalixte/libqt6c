@@ -12,14 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqevent.h"
-#include "../libqcolor.h"
-#include "../libqfont.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqsettings.h"
-#include <string.h>
-
 /// https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerMarkdown.html
 
 /// q_scilexermarkdown_new constructs a new QsciLexerMarkdown object.
@@ -306,7 +298,7 @@ QThread* q_scilexermarkdown_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QsciLexerMarkdown* self, QThread* thread ```
-void q_scilexermarkdown_move_to_thread(void* self, void* thread);
+bool q_scilexermarkdown_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -321,6 +313,13 @@ int32_t q_scilexermarkdown_start_timer(void* self, int interval);
 ///
 /// ``` QsciLexerMarkdown* self, int id ```
 void q_scilexermarkdown_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QsciLexerMarkdown* self, enum Qt__TimerId id ```
+void q_scilexermarkdown_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -461,6 +460,13 @@ bool q_scilexermarkdown_inherits(void* self, const char* classname);
 ///
 /// ``` QsciLexerMarkdown* self ```
 void q_scilexermarkdown_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QsciLexerMarkdown* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_scilexermarkdown_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -1522,6 +1528,60 @@ void q_scilexermarkdown_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// ``` QsciLexerMarkdown* self, void (*slot)(QsciLexerMarkdown*, QMetaMethod*) ```
 void q_scilexermarkdown_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerMarkdown* self, const char* text ```
+char* q_scilexermarkdown_text_as_bytes(void* self, const char* text);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerMarkdown* self, const char* text ```
+char* q_scilexermarkdown_qbase_text_as_bytes(void* self, const char* text);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerMarkdown* self, char* (*slot)(QsciLexerMarkdown*, const char*) ```
+void q_scilexermarkdown_on_text_as_bytes(void* self, char* (*slot)(void*, const char*));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerMarkdown* self, const char* bytes, int size ```
+const char* q_scilexermarkdown_bytes_as_text(void* self, const char* bytes, int size);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerMarkdown* self, const char* bytes, int size ```
+const char* q_scilexermarkdown_qbase_bytes_as_text(void* self, const char* bytes, int size);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerMarkdown* self, const char* (*slot)(QsciLexerMarkdown*, const char*, int) ```
+void q_scilexermarkdown_on_bytes_as_text(void* self, const char* (*slot)(void*, const char*, int));
 
 /// Inherited from QObject
 ///

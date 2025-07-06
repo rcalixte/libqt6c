@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqfont.h"
-#include "libqfontinfo.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qfontdatabase.html
 
 /// q_fontdatabase_new constructs a new QFontDatabase object.
@@ -172,6 +168,26 @@ bool q_fontdatabase_remove_application_font(int id);
 ///
 ///
 bool q_fontdatabase_remove_all_application_fonts();
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#addApplicationFallbackFontFamily)
+///
+/// ``` enum QChar__Script script, const char* familyName ```
+void q_fontdatabase_add_application_fallback_font_family(int64_t script, const char* familyName);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#removeApplicationFallbackFontFamily)
+///
+/// ``` enum QChar__Script script, const char* familyName ```
+bool q_fontdatabase_remove_application_fallback_font_family(int64_t script, const char* familyName);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#setApplicationFallbackFontFamilies)
+///
+/// ``` enum QChar__Script param1, const char* familyNames[] ```
+void q_fontdatabase_set_application_fallback_font_families(int64_t param1, const char* familyNames[]);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#applicationFallbackFontFamilies)
+///
+/// ``` enum QChar__Script script ```
+const char** q_fontdatabase_application_fallback_font_families(int64_t script);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#systemFont)
 ///

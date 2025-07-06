@@ -12,10 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqdatetime.h"
-#include <string.h>
-#include "../libqurl.h"
-
 /// https://doc.qt.io/qt-6/qnetworkcookie.html
 
 /// q_networkcookie_new constructs a new QNetworkCookie object.

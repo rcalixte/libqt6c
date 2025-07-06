@@ -90,6 +90,10 @@ bool q_metatype_is_registered2(void* self) {
     return QMetaType_IsRegistered2((QMetaType*)self);
 }
 
+void q_metatype_register_type(void* self) {
+    QMetaType_RegisterType((QMetaType*)self);
+}
+
 int32_t q_metatype_id(void* self) {
     return QMetaType_Id((QMetaType*)self);
 }
@@ -138,6 +142,22 @@ bool q_metatype_equals(void* self, void* lhs, void* rhs) {
     return QMetaType_Equals((QMetaType*)self, lhs, rhs);
 }
 
+bool q_metatype_is_default_constructible(void* self) {
+    return QMetaType_IsDefaultConstructible((QMetaType*)self);
+}
+
+bool q_metatype_is_copy_constructible(void* self) {
+    return QMetaType_IsCopyConstructible((QMetaType*)self);
+}
+
+bool q_metatype_is_move_constructible(void* self) {
+    return QMetaType_IsMoveConstructible((QMetaType*)self);
+}
+
+bool q_metatype_is_destructible(void* self) {
+    return QMetaType_IsDestructible((QMetaType*)self);
+}
+
 bool q_metatype_is_equality_comparable(void* self) {
     return QMetaType_IsEqualityComparable((QMetaType*)self);
 }
@@ -164,6 +184,10 @@ bool q_metatype_save2(void* stream, int typeVal, void* data) {
 
 bool q_metatype_load2(void* stream, int typeVal, void* data) {
     return QMetaType_Load2((QDataStream*)stream, typeVal, data);
+}
+
+QMetaType* q_metatype_underlying_type(void* self) {
+    return QMetaType_UnderlyingType((QMetaType*)self);
 }
 
 QMetaType* q_metatype_from_name(const char* name) {

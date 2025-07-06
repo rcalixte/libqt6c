@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qmimetype.html
 
 /// q_mimetype_new constructs a new QMimeType object.
@@ -35,16 +33,6 @@ void q_mimetype_operator_assign(void* self, void* other);
 ///
 /// ``` QMimeType* self, QMimeType* other ```
 void q_mimetype_swap(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#operator==)
-///
-/// ``` QMimeType* self, QMimeType* other ```
-bool q_mimetype_operator_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#operator!=)
-///
-/// ``` QMimeType* self, QMimeType* other ```
-bool q_mimetype_operator_not_equal(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#isValid)
 ///

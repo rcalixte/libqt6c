@@ -12,14 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqareaseries.h"
-#include "../libqevent.h"
-#include "libqlegend.h"
-#include "libqlegendmarker.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qarealegendmarker-qtcharts.html
 
 /// q_arealegendmarker_new constructs a new QAreaLegendMarker object.
@@ -391,7 +383,7 @@ QThread* q_arealegendmarker_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QAreaLegendMarker* self, QThread* thread ```
-void q_arealegendmarker_move_to_thread(void* self, void* thread);
+bool q_arealegendmarker_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -406,6 +398,13 @@ int32_t q_arealegendmarker_start_timer(void* self, int interval);
 ///
 /// ``` QAreaLegendMarker* self, int id ```
 void q_arealegendmarker_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QAreaLegendMarker* self, enum Qt__TimerId id ```
+void q_arealegendmarker_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -546,6 +545,13 @@ bool q_arealegendmarker_inherits(void* self, const char* classname);
 ///
 /// ``` QAreaLegendMarker* self ```
 void q_arealegendmarker_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QAreaLegendMarker* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_arealegendmarker_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

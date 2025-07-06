@@ -12,9 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqhostaddress.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qhostinfo.html
 
 /// q_hostinfo_new constructs a new QHostInfo object.

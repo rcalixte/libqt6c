@@ -12,29 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqbrush.h"
-#include "libqevent.h"
-#include "libqfont.h"
-#include "libqgraphicsitem.h"
-#include "libqgraphicsproxywidget.h"
-#include "libqgraphicsview.h"
-#include "libqgraphicswidget.h"
-#include "libqline.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpainter.h"
-#include "libqpainterpath.h"
-#include "libqpalette.h"
-#include "libqpen.h"
-#include "libqpixmap.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include <string.h>
-#include "libqstyle.h"
-#include "libqtransform.h"
-#include "libqvariant.h"
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qgraphicsscene.html
 
 /// q_graphicsscene_new constructs a new QGraphicsScene object.
@@ -1187,7 +1164,7 @@ QThread* q_graphicsscene_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QGraphicsScene* self, QThread* thread ```
-void q_graphicsscene_move_to_thread(void* self, void* thread);
+bool q_graphicsscene_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -1202,6 +1179,13 @@ int32_t q_graphicsscene_start_timer(void* self, int interval);
 ///
 /// ``` QGraphicsScene* self, int id ```
 void q_graphicsscene_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QGraphicsScene* self, enum Qt__TimerId id ```
+void q_graphicsscene_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1342,6 +1326,13 @@ bool q_graphicsscene_inherits(void* self, const char* classname);
 ///
 /// ``` QGraphicsScene* self ```
 void q_graphicsscene_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QGraphicsScene* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_graphicsscene_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

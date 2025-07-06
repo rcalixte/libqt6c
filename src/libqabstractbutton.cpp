@@ -98,7 +98,7 @@ libqt_string QAbstractButton_Tr(const char* s) {
     return _str;
 }
 
-void QAbstractButton_SetText(QAbstractButton* self, libqt_string text) {
+void QAbstractButton_SetText(QAbstractButton* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setText(text_QString);
 }
@@ -115,7 +115,7 @@ libqt_string QAbstractButton_Text(const QAbstractButton* self) {
     return _str;
 }
 
-void QAbstractButton_SetIcon(QAbstractButton* self, QIcon* icon) {
+void QAbstractButton_SetIcon(QAbstractButton* self, const QIcon* icon) {
     self->setIcon(*icon);
 }
 
@@ -127,7 +127,7 @@ QSize* QAbstractButton_IconSize(const QAbstractButton* self) {
     return new QSize(self->iconSize());
 }
 
-void QAbstractButton_SetShortcut(QAbstractButton* self, QKeySequence* key) {
+void QAbstractButton_SetShortcut(QAbstractButton* self, const QKeySequence* key) {
     self->setShortcut(*key);
 }
 
@@ -191,7 +191,7 @@ QButtonGroup* QAbstractButton_Group(const QAbstractButton* self) {
     return self->group();
 }
 
-void QAbstractButton_SetIconSize(QAbstractButton* self, QSize* size) {
+void QAbstractButton_SetIconSize(QAbstractButton* self, const QSize* size) {
     self->setIconSize(*size);
 }
 
@@ -322,7 +322,7 @@ void QAbstractButton_OnPaintEvent(QAbstractButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QAbstractButton_HitButton(const QAbstractButton* self, QPoint* pos) {
+bool QAbstractButton_HitButton(const QAbstractButton* self, const QPoint* pos) {
     auto* vqabstractbutton = const_cast<VirtualQAbstractButton*>(dynamic_cast<const VirtualQAbstractButton*>(self));
     if (vqabstractbutton && vqabstractbutton->isVirtualQAbstractButton) {
         return vqabstractbutton->hitButton(*pos);
@@ -332,7 +332,7 @@ bool QAbstractButton_HitButton(const QAbstractButton* self, QPoint* pos) {
 }
 
 // Base class handler implementation
-bool QAbstractButton_QBaseHitButton(const QAbstractButton* self, QPoint* pos) {
+bool QAbstractButton_QBaseHitButton(const QAbstractButton* self, const QPoint* pos) {
     auto* vqabstractbutton = const_cast<VirtualQAbstractButton*>(dynamic_cast<const VirtualQAbstractButton*>(self));
     if (vqabstractbutton && vqabstractbutton->isVirtualQAbstractButton) {
         vqabstractbutton->setQAbstractButton_HitButton_IsBase(true);
@@ -1366,7 +1366,7 @@ void QAbstractButton_OnHideEvent(QAbstractButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QAbstractButton_NativeEvent(QAbstractButton* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QAbstractButton_NativeEvent(QAbstractButton* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqabstractbutton = dynamic_cast<VirtualQAbstractButton*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqabstractbutton && vqabstractbutton->isVirtualQAbstractButton) {
@@ -1377,7 +1377,7 @@ bool QAbstractButton_NativeEvent(QAbstractButton* self, libqt_string eventType, 
 }
 
 // Base class handler implementation
-bool QAbstractButton_QBaseNativeEvent(QAbstractButton* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QAbstractButton_QBaseNativeEvent(QAbstractButton* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqabstractbutton = dynamic_cast<VirtualQAbstractButton*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqabstractbutton && vqabstractbutton->isVirtualQAbstractButton) {
@@ -1687,7 +1687,7 @@ void QAbstractButton_OnCustomEvent(QAbstractButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAbstractButton_ConnectNotify(QAbstractButton* self, QMetaMethod* signal) {
+void QAbstractButton_ConnectNotify(QAbstractButton* self, const QMetaMethod* signal) {
     auto* vqabstractbutton = dynamic_cast<VirtualQAbstractButton*>(self);
     if (vqabstractbutton && vqabstractbutton->isVirtualQAbstractButton) {
         vqabstractbutton->connectNotify(*signal);
@@ -1697,7 +1697,7 @@ void QAbstractButton_ConnectNotify(QAbstractButton* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QAbstractButton_QBaseConnectNotify(QAbstractButton* self, QMetaMethod* signal) {
+void QAbstractButton_QBaseConnectNotify(QAbstractButton* self, const QMetaMethod* signal) {
     auto* vqabstractbutton = dynamic_cast<VirtualQAbstractButton*>(self);
     if (vqabstractbutton && vqabstractbutton->isVirtualQAbstractButton) {
         vqabstractbutton->setQAbstractButton_ConnectNotify_IsBase(true);
@@ -1716,7 +1716,7 @@ void QAbstractButton_OnConnectNotify(QAbstractButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAbstractButton_DisconnectNotify(QAbstractButton* self, QMetaMethod* signal) {
+void QAbstractButton_DisconnectNotify(QAbstractButton* self, const QMetaMethod* signal) {
     auto* vqabstractbutton = dynamic_cast<VirtualQAbstractButton*>(self);
     if (vqabstractbutton && vqabstractbutton->isVirtualQAbstractButton) {
         vqabstractbutton->disconnectNotify(*signal);
@@ -1726,7 +1726,7 @@ void QAbstractButton_DisconnectNotify(QAbstractButton* self, QMetaMethod* signal
 }
 
 // Base class handler implementation
-void QAbstractButton_QBaseDisconnectNotify(QAbstractButton* self, QMetaMethod* signal) {
+void QAbstractButton_QBaseDisconnectNotify(QAbstractButton* self, const QMetaMethod* signal) {
     auto* vqabstractbutton = dynamic_cast<VirtualQAbstractButton*>(self);
     if (vqabstractbutton && vqabstractbutton->isVirtualQAbstractButton) {
         vqabstractbutton->setQAbstractButton_DisconnectNotify_IsBase(true);
@@ -1977,7 +1977,7 @@ void QAbstractButton_OnReceivers(const QAbstractButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QAbstractButton_IsSignalConnected(const QAbstractButton* self, QMetaMethod* signal) {
+bool QAbstractButton_IsSignalConnected(const QAbstractButton* self, const QMetaMethod* signal) {
     auto* vqabstractbutton = const_cast<VirtualQAbstractButton*>(dynamic_cast<const VirtualQAbstractButton*>(self));
     if (vqabstractbutton && vqabstractbutton->isVirtualQAbstractButton) {
         return vqabstractbutton->isSignalConnected(*signal);
@@ -1987,7 +1987,7 @@ bool QAbstractButton_IsSignalConnected(const QAbstractButton* self, QMetaMethod*
 }
 
 // Base class handler implementation
-bool QAbstractButton_QBaseIsSignalConnected(const QAbstractButton* self, QMetaMethod* signal) {
+bool QAbstractButton_QBaseIsSignalConnected(const QAbstractButton* self, const QMetaMethod* signal) {
     auto* vqabstractbutton = const_cast<VirtualQAbstractButton*>(dynamic_cast<const VirtualQAbstractButton*>(self));
     if (vqabstractbutton && vqabstractbutton->isVirtualQAbstractButton) {
         vqabstractbutton->setQAbstractButton_IsSignalConnected_IsBase(true);
@@ -2002,6 +2002,35 @@ void QAbstractButton_OnIsSignalConnected(const QAbstractButton* self, intptr_t s
     auto* vqabstractbutton = const_cast<VirtualQAbstractButton*>(dynamic_cast<const VirtualQAbstractButton*>(self));
     if (vqabstractbutton && vqabstractbutton->isVirtualQAbstractButton) {
         vqabstractbutton->setQAbstractButton_IsSignalConnected_Callback(reinterpret_cast<VirtualQAbstractButton::QAbstractButton_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QAbstractButton_GetDecodedMetricF(const QAbstractButton* self, int metricA, int metricB) {
+    auto* vqabstractbutton = const_cast<VirtualQAbstractButton*>(dynamic_cast<const VirtualQAbstractButton*>(self));
+    if (vqabstractbutton && vqabstractbutton->isVirtualQAbstractButton) {
+        return vqabstractbutton->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQAbstractButton*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QAbstractButton_QBaseGetDecodedMetricF(const QAbstractButton* self, int metricA, int metricB) {
+    auto* vqabstractbutton = const_cast<VirtualQAbstractButton*>(dynamic_cast<const VirtualQAbstractButton*>(self));
+    if (vqabstractbutton && vqabstractbutton->isVirtualQAbstractButton) {
+        vqabstractbutton->setQAbstractButton_GetDecodedMetricF_IsBase(true);
+        return vqabstractbutton->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQAbstractButton*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QAbstractButton_OnGetDecodedMetricF(const QAbstractButton* self, intptr_t slot) {
+    auto* vqabstractbutton = const_cast<VirtualQAbstractButton*>(dynamic_cast<const VirtualQAbstractButton*>(self));
+    if (vqabstractbutton && vqabstractbutton->isVirtualQAbstractButton) {
+        vqabstractbutton->setQAbstractButton_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQAbstractButton::QAbstractButton_GetDecodedMetricF_Callback>(slot));
     }
 }
 

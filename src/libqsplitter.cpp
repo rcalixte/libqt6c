@@ -158,17 +158,17 @@ void QSplitter_Refresh(QSplitter* self) {
 libqt_list /* of int */ QSplitter_Sizes(const QSplitter* self) {
     QList<int> _ret = self->sizes();
     // Convert QList<> from C++ memory to manually-managed C memory
-    int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ints = _arr;
     return _out;
 }
 
-void QSplitter_SetSizes(QSplitter* self, libqt_list /* of int */ list) {
+void QSplitter_SetSizes(QSplitter* self, const libqt_list /* of int */ list) {
     QList<int> list_QList;
     list_QList.reserve(list.len);
     int* list_arr = static_cast<int*>(list.data.ints);
@@ -188,7 +188,7 @@ libqt_string QSplitter_SaveState(const QSplitter* self) {
     return _str;
 }
 
-bool QSplitter_RestoreState(QSplitter* self, libqt_string state) {
+bool QSplitter_RestoreState(QSplitter* self, const libqt_string state) {
     QByteArray state_QByteArray(state.data, state.len);
     return self->restoreState(state_QByteArray);
 }
@@ -1311,7 +1311,7 @@ void QSplitter_OnHideEvent(QSplitter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSplitter_NativeEvent(QSplitter* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QSplitter_NativeEvent(QSplitter* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqsplitter = dynamic_cast<VirtualQSplitter*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqsplitter && vqsplitter->isVirtualQSplitter) {
@@ -1322,7 +1322,7 @@ bool QSplitter_NativeEvent(QSplitter* self, libqt_string eventType, void* messag
 }
 
 // Base class handler implementation
-bool QSplitter_QBaseNativeEvent(QSplitter* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QSplitter_QBaseNativeEvent(QSplitter* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqsplitter = dynamic_cast<VirtualQSplitter*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqsplitter && vqsplitter->isVirtualQSplitter) {
@@ -1632,7 +1632,7 @@ void QSplitter_OnCustomEvent(QSplitter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSplitter_ConnectNotify(QSplitter* self, QMetaMethod* signal) {
+void QSplitter_ConnectNotify(QSplitter* self, const QMetaMethod* signal) {
     auto* vqsplitter = dynamic_cast<VirtualQSplitter*>(self);
     if (vqsplitter && vqsplitter->isVirtualQSplitter) {
         vqsplitter->connectNotify(*signal);
@@ -1642,7 +1642,7 @@ void QSplitter_ConnectNotify(QSplitter* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSplitter_QBaseConnectNotify(QSplitter* self, QMetaMethod* signal) {
+void QSplitter_QBaseConnectNotify(QSplitter* self, const QMetaMethod* signal) {
     auto* vqsplitter = dynamic_cast<VirtualQSplitter*>(self);
     if (vqsplitter && vqsplitter->isVirtualQSplitter) {
         vqsplitter->setQSplitter_ConnectNotify_IsBase(true);
@@ -1661,7 +1661,7 @@ void QSplitter_OnConnectNotify(QSplitter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSplitter_DisconnectNotify(QSplitter* self, QMetaMethod* signal) {
+void QSplitter_DisconnectNotify(QSplitter* self, const QMetaMethod* signal) {
     auto* vqsplitter = dynamic_cast<VirtualQSplitter*>(self);
     if (vqsplitter && vqsplitter->isVirtualQSplitter) {
         vqsplitter->disconnectNotify(*signal);
@@ -1671,7 +1671,7 @@ void QSplitter_DisconnectNotify(QSplitter* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSplitter_QBaseDisconnectNotify(QSplitter* self, QMetaMethod* signal) {
+void QSplitter_QBaseDisconnectNotify(QSplitter* self, const QMetaMethod* signal) {
     auto* vqsplitter = dynamic_cast<VirtualQSplitter*>(self);
     if (vqsplitter && vqsplitter->isVirtualQSplitter) {
         vqsplitter->setQSplitter_DisconnectNotify_IsBase(true);
@@ -2038,7 +2038,7 @@ void QSplitter_OnReceivers(const QSplitter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSplitter_IsSignalConnected(const QSplitter* self, QMetaMethod* signal) {
+bool QSplitter_IsSignalConnected(const QSplitter* self, const QMetaMethod* signal) {
     auto* vqsplitter = const_cast<VirtualQSplitter*>(dynamic_cast<const VirtualQSplitter*>(self));
     if (vqsplitter && vqsplitter->isVirtualQSplitter) {
         return vqsplitter->isSignalConnected(*signal);
@@ -2048,7 +2048,7 @@ bool QSplitter_IsSignalConnected(const QSplitter* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QSplitter_QBaseIsSignalConnected(const QSplitter* self, QMetaMethod* signal) {
+bool QSplitter_QBaseIsSignalConnected(const QSplitter* self, const QMetaMethod* signal) {
     auto* vqsplitter = const_cast<VirtualQSplitter*>(dynamic_cast<const VirtualQSplitter*>(self));
     if (vqsplitter && vqsplitter->isVirtualQSplitter) {
         vqsplitter->setQSplitter_IsSignalConnected_IsBase(true);
@@ -2063,6 +2063,35 @@ void QSplitter_OnIsSignalConnected(const QSplitter* self, intptr_t slot) {
     auto* vqsplitter = const_cast<VirtualQSplitter*>(dynamic_cast<const VirtualQSplitter*>(self));
     if (vqsplitter && vqsplitter->isVirtualQSplitter) {
         vqsplitter->setQSplitter_IsSignalConnected_Callback(reinterpret_cast<VirtualQSplitter::QSplitter_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QSplitter_GetDecodedMetricF(const QSplitter* self, int metricA, int metricB) {
+    auto* vqsplitter = const_cast<VirtualQSplitter*>(dynamic_cast<const VirtualQSplitter*>(self));
+    if (vqsplitter && vqsplitter->isVirtualQSplitter) {
+        return vqsplitter->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQSplitter*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QSplitter_QBaseGetDecodedMetricF(const QSplitter* self, int metricA, int metricB) {
+    auto* vqsplitter = const_cast<VirtualQSplitter*>(dynamic_cast<const VirtualQSplitter*>(self));
+    if (vqsplitter && vqsplitter->isVirtualQSplitter) {
+        vqsplitter->setQSplitter_GetDecodedMetricF_IsBase(true);
+        return vqsplitter->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQSplitter*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QSplitter_OnGetDecodedMetricF(const QSplitter* self, intptr_t slot) {
+    auto* vqsplitter = const_cast<VirtualQSplitter*>(dynamic_cast<const VirtualQSplitter*>(self));
+    if (vqsplitter && vqsplitter->isVirtualQSplitter) {
+        vqsplitter->setQSplitter_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQSplitter::QSplitter_GetDecodedMetricF_Callback>(slot));
     }
 }
 
@@ -3091,7 +3120,7 @@ void QSplitterHandle_OnHideEvent(QSplitterHandle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSplitterHandle_NativeEvent(QSplitterHandle* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QSplitterHandle_NativeEvent(QSplitterHandle* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqsplitterhandle = dynamic_cast<VirtualQSplitterHandle*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqsplitterhandle && vqsplitterhandle->isVirtualQSplitterHandle) {
@@ -3102,7 +3131,7 @@ bool QSplitterHandle_NativeEvent(QSplitterHandle* self, libqt_string eventType, 
 }
 
 // Base class handler implementation
-bool QSplitterHandle_QBaseNativeEvent(QSplitterHandle* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QSplitterHandle_QBaseNativeEvent(QSplitterHandle* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqsplitterhandle = dynamic_cast<VirtualQSplitterHandle*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqsplitterhandle && vqsplitterhandle->isVirtualQSplitterHandle) {
@@ -3470,7 +3499,7 @@ void QSplitterHandle_OnCustomEvent(QSplitterHandle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSplitterHandle_ConnectNotify(QSplitterHandle* self, QMetaMethod* signal) {
+void QSplitterHandle_ConnectNotify(QSplitterHandle* self, const QMetaMethod* signal) {
     auto* vqsplitterhandle = dynamic_cast<VirtualQSplitterHandle*>(self);
     if (vqsplitterhandle && vqsplitterhandle->isVirtualQSplitterHandle) {
         vqsplitterhandle->connectNotify(*signal);
@@ -3480,7 +3509,7 @@ void QSplitterHandle_ConnectNotify(QSplitterHandle* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSplitterHandle_QBaseConnectNotify(QSplitterHandle* self, QMetaMethod* signal) {
+void QSplitterHandle_QBaseConnectNotify(QSplitterHandle* self, const QMetaMethod* signal) {
     auto* vqsplitterhandle = dynamic_cast<VirtualQSplitterHandle*>(self);
     if (vqsplitterhandle && vqsplitterhandle->isVirtualQSplitterHandle) {
         vqsplitterhandle->setQSplitterHandle_ConnectNotify_IsBase(true);
@@ -3499,7 +3528,7 @@ void QSplitterHandle_OnConnectNotify(QSplitterHandle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSplitterHandle_DisconnectNotify(QSplitterHandle* self, QMetaMethod* signal) {
+void QSplitterHandle_DisconnectNotify(QSplitterHandle* self, const QMetaMethod* signal) {
     auto* vqsplitterhandle = dynamic_cast<VirtualQSplitterHandle*>(self);
     if (vqsplitterhandle && vqsplitterhandle->isVirtualQSplitterHandle) {
         vqsplitterhandle->disconnectNotify(*signal);
@@ -3509,7 +3538,7 @@ void QSplitterHandle_DisconnectNotify(QSplitterHandle* self, QMetaMethod* signal
 }
 
 // Base class handler implementation
-void QSplitterHandle_QBaseDisconnectNotify(QSplitterHandle* self, QMetaMethod* signal) {
+void QSplitterHandle_QBaseDisconnectNotify(QSplitterHandle* self, const QMetaMethod* signal) {
     auto* vqsplitterhandle = dynamic_cast<VirtualQSplitterHandle*>(self);
     if (vqsplitterhandle && vqsplitterhandle->isVirtualQSplitterHandle) {
         vqsplitterhandle->setQSplitterHandle_DisconnectNotify_IsBase(true);
@@ -3818,7 +3847,7 @@ void QSplitterHandle_OnReceivers(const QSplitterHandle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSplitterHandle_IsSignalConnected(const QSplitterHandle* self, QMetaMethod* signal) {
+bool QSplitterHandle_IsSignalConnected(const QSplitterHandle* self, const QMetaMethod* signal) {
     auto* vqsplitterhandle = const_cast<VirtualQSplitterHandle*>(dynamic_cast<const VirtualQSplitterHandle*>(self));
     if (vqsplitterhandle && vqsplitterhandle->isVirtualQSplitterHandle) {
         return vqsplitterhandle->isSignalConnected(*signal);
@@ -3828,7 +3857,7 @@ bool QSplitterHandle_IsSignalConnected(const QSplitterHandle* self, QMetaMethod*
 }
 
 // Base class handler implementation
-bool QSplitterHandle_QBaseIsSignalConnected(const QSplitterHandle* self, QMetaMethod* signal) {
+bool QSplitterHandle_QBaseIsSignalConnected(const QSplitterHandle* self, const QMetaMethod* signal) {
     auto* vqsplitterhandle = const_cast<VirtualQSplitterHandle*>(dynamic_cast<const VirtualQSplitterHandle*>(self));
     if (vqsplitterhandle && vqsplitterhandle->isVirtualQSplitterHandle) {
         vqsplitterhandle->setQSplitterHandle_IsSignalConnected_IsBase(true);
@@ -3843,6 +3872,35 @@ void QSplitterHandle_OnIsSignalConnected(const QSplitterHandle* self, intptr_t s
     auto* vqsplitterhandle = const_cast<VirtualQSplitterHandle*>(dynamic_cast<const VirtualQSplitterHandle*>(self));
     if (vqsplitterhandle && vqsplitterhandle->isVirtualQSplitterHandle) {
         vqsplitterhandle->setQSplitterHandle_IsSignalConnected_Callback(reinterpret_cast<VirtualQSplitterHandle::QSplitterHandle_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QSplitterHandle_GetDecodedMetricF(const QSplitterHandle* self, int metricA, int metricB) {
+    auto* vqsplitterhandle = const_cast<VirtualQSplitterHandle*>(dynamic_cast<const VirtualQSplitterHandle*>(self));
+    if (vqsplitterhandle && vqsplitterhandle->isVirtualQSplitterHandle) {
+        return vqsplitterhandle->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQSplitterHandle*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QSplitterHandle_QBaseGetDecodedMetricF(const QSplitterHandle* self, int metricA, int metricB) {
+    auto* vqsplitterhandle = const_cast<VirtualQSplitterHandle*>(dynamic_cast<const VirtualQSplitterHandle*>(self));
+    if (vqsplitterhandle && vqsplitterhandle->isVirtualQSplitterHandle) {
+        vqsplitterhandle->setQSplitterHandle_GetDecodedMetricF_IsBase(true);
+        return vqsplitterhandle->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQSplitterHandle*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QSplitterHandle_OnGetDecodedMetricF(const QSplitterHandle* self, intptr_t slot) {
+    auto* vqsplitterhandle = const_cast<VirtualQSplitterHandle*>(dynamic_cast<const VirtualQSplitterHandle*>(self));
+    if (vqsplitterhandle && vqsplitterhandle->isVirtualQSplitterHandle) {
+        vqsplitterhandle->setQSplitterHandle_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQSplitterHandle::QSplitterHandle_GetDecodedMetricF_Callback>(slot));
     }
 }
 

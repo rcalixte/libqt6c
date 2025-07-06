@@ -53,14 +53,6 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QLCDNumber::Mode Mode;                 // C++ enum
-typedef QLCDNumber::SegmentStyle SegmentStyle; // C++ enum
-#else
-typedef int Mode;         // C ABI enum
-typedef int SegmentStyle; // C ABI enum
-#endif
-
 QLCDNumber* QLCDNumber_new(QWidget* parent);
 QLCDNumber* QLCDNumber_new2();
 QLCDNumber* QLCDNumber_new3(unsigned int numDigits);
@@ -85,7 +77,7 @@ int QLCDNumber_IntValue(const QLCDNumber* self);
 QSize* QLCDNumber_SizeHint(const QLCDNumber* self);
 void QLCDNumber_OnSizeHint(const QLCDNumber* self, intptr_t slot);
 QSize* QLCDNumber_QBaseSizeHint(const QLCDNumber* self);
-void QLCDNumber_Display(QLCDNumber* self, libqt_string str);
+void QLCDNumber_Display(QLCDNumber* self, const libqt_string str);
 void QLCDNumber_DisplayWithNum(QLCDNumber* self, int num);
 void QLCDNumber_Display2(QLCDNumber* self, double num);
 void QLCDNumber_SetHexMode(QLCDNumber* self);
@@ -196,9 +188,9 @@ void QLCDNumber_QBaseShowEvent(QLCDNumber* self, QShowEvent* event);
 void QLCDNumber_HideEvent(QLCDNumber* self, QHideEvent* event);
 void QLCDNumber_OnHideEvent(QLCDNumber* self, intptr_t slot);
 void QLCDNumber_QBaseHideEvent(QLCDNumber* self, QHideEvent* event);
-bool QLCDNumber_NativeEvent(QLCDNumber* self, libqt_string eventType, void* message, intptr_t* result);
+bool QLCDNumber_NativeEvent(QLCDNumber* self, const libqt_string eventType, void* message, intptr_t* result);
 void QLCDNumber_OnNativeEvent(QLCDNumber* self, intptr_t slot);
-bool QLCDNumber_QBaseNativeEvent(QLCDNumber* self, libqt_string eventType, void* message, intptr_t* result);
+bool QLCDNumber_QBaseNativeEvent(QLCDNumber* self, const libqt_string eventType, void* message, intptr_t* result);
 int QLCDNumber_Metric(const QLCDNumber* self, int param1);
 void QLCDNumber_OnMetric(const QLCDNumber* self, intptr_t slot);
 int QLCDNumber_QBaseMetric(const QLCDNumber* self, int param1);
@@ -232,12 +224,12 @@ void QLCDNumber_QBaseChildEvent(QLCDNumber* self, QChildEvent* event);
 void QLCDNumber_CustomEvent(QLCDNumber* self, QEvent* event);
 void QLCDNumber_OnCustomEvent(QLCDNumber* self, intptr_t slot);
 void QLCDNumber_QBaseCustomEvent(QLCDNumber* self, QEvent* event);
-void QLCDNumber_ConnectNotify(QLCDNumber* self, QMetaMethod* signal);
+void QLCDNumber_ConnectNotify(QLCDNumber* self, const QMetaMethod* signal);
 void QLCDNumber_OnConnectNotify(QLCDNumber* self, intptr_t slot);
-void QLCDNumber_QBaseConnectNotify(QLCDNumber* self, QMetaMethod* signal);
-void QLCDNumber_DisconnectNotify(QLCDNumber* self, QMetaMethod* signal);
+void QLCDNumber_QBaseConnectNotify(QLCDNumber* self, const QMetaMethod* signal);
+void QLCDNumber_DisconnectNotify(QLCDNumber* self, const QMetaMethod* signal);
 void QLCDNumber_OnDisconnectNotify(QLCDNumber* self, intptr_t slot);
-void QLCDNumber_QBaseDisconnectNotify(QLCDNumber* self, QMetaMethod* signal);
+void QLCDNumber_QBaseDisconnectNotify(QLCDNumber* self, const QMetaMethod* signal);
 void QLCDNumber_DrawFrame(QLCDNumber* self, QPainter* param1);
 void QLCDNumber_OnDrawFrame(QLCDNumber* self, intptr_t slot);
 void QLCDNumber_QBaseDrawFrame(QLCDNumber* self, QPainter* param1);
@@ -265,9 +257,12 @@ int QLCDNumber_QBaseSenderSignalIndex(const QLCDNumber* self);
 int QLCDNumber_Receivers(const QLCDNumber* self, const char* signal);
 void QLCDNumber_OnReceivers(const QLCDNumber* self, intptr_t slot);
 int QLCDNumber_QBaseReceivers(const QLCDNumber* self, const char* signal);
-bool QLCDNumber_IsSignalConnected(const QLCDNumber* self, QMetaMethod* signal);
+bool QLCDNumber_IsSignalConnected(const QLCDNumber* self, const QMetaMethod* signal);
 void QLCDNumber_OnIsSignalConnected(const QLCDNumber* self, intptr_t slot);
-bool QLCDNumber_QBaseIsSignalConnected(const QLCDNumber* self, QMetaMethod* signal);
+bool QLCDNumber_QBaseIsSignalConnected(const QLCDNumber* self, const QMetaMethod* signal);
+double QLCDNumber_GetDecodedMetricF(const QLCDNumber* self, int metricA, int metricB);
+void QLCDNumber_OnGetDecodedMetricF(const QLCDNumber* self, intptr_t slot);
+double QLCDNumber_QBaseGetDecodedMetricF(const QLCDNumber* self, int metricA, int metricB);
 void QLCDNumber_Delete(QLCDNumber* self);
 
 #ifdef __cplusplus

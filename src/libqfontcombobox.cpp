@@ -119,7 +119,7 @@ QFont* QFontComboBox_CurrentFont(const QFontComboBox* self) {
     return new QFont(self->currentFont());
 }
 
-void QFontComboBox_SetSampleTextForSystem(QFontComboBox* self, int writingSystem, libqt_string sampleText) {
+void QFontComboBox_SetSampleTextForSystem(QFontComboBox* self, int writingSystem, const libqt_string sampleText) {
     QString sampleText_QString = QString::fromUtf8(sampleText.data, sampleText.len);
     self->setSampleTextForSystem(static_cast<QFontDatabase::WritingSystem>(writingSystem), sampleText_QString);
 }
@@ -136,13 +136,13 @@ libqt_string QFontComboBox_SampleTextForSystem(const QFontComboBox* self, int wr
     return _str;
 }
 
-void QFontComboBox_SetSampleTextForFont(QFontComboBox* self, libqt_string fontFamily, libqt_string sampleText) {
+void QFontComboBox_SetSampleTextForFont(QFontComboBox* self, const libqt_string fontFamily, const libqt_string sampleText) {
     QString fontFamily_QString = QString::fromUtf8(fontFamily.data, fontFamily.len);
     QString sampleText_QString = QString::fromUtf8(sampleText.data, sampleText.len);
     self->setSampleTextForFont(fontFamily_QString, sampleText_QString);
 }
 
-libqt_string QFontComboBox_SampleTextForFont(const QFontComboBox* self, libqt_string fontFamily) {
+libqt_string QFontComboBox_SampleTextForFont(const QFontComboBox* self, const libqt_string fontFamily) {
     QString fontFamily_QString = QString::fromUtf8(fontFamily.data, fontFamily.len);
     QString _ret = self->sampleTextForFont(fontFamily_QString);
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -155,16 +155,16 @@ libqt_string QFontComboBox_SampleTextForFont(const QFontComboBox* self, libqt_st
     return _str;
 }
 
-void QFontComboBox_SetDisplayFont(QFontComboBox* self, libqt_string fontFamily, QFont* font) {
+void QFontComboBox_SetDisplayFont(QFontComboBox* self, const libqt_string fontFamily, const QFont* font) {
     QString fontFamily_QString = QString::fromUtf8(fontFamily.data, fontFamily.len);
     self->setDisplayFont(fontFamily_QString, *font);
 }
 
-void QFontComboBox_SetCurrentFont(QFontComboBox* self, QFont* f) {
+void QFontComboBox_SetCurrentFont(QFontComboBox* self, const QFont* f) {
     self->setCurrentFont(*f);
 }
 
-void QFontComboBox_CurrentFontChanged(QFontComboBox* self, QFont* f) {
+void QFontComboBox_CurrentFontChanged(QFontComboBox* self, const QFont* f) {
     self->currentFontChanged(*f);
 }
 
@@ -1334,7 +1334,7 @@ void QFontComboBox_OnDropEvent(QFontComboBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFontComboBox_NativeEvent(QFontComboBox* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QFontComboBox_NativeEvent(QFontComboBox* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqfontcombobox = dynamic_cast<VirtualQFontComboBox*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqfontcombobox && vqfontcombobox->isVirtualQFontComboBox) {
@@ -1345,7 +1345,7 @@ bool QFontComboBox_NativeEvent(QFontComboBox* self, libqt_string eventType, void
 }
 
 // Base class handler implementation
-bool QFontComboBox_QBaseNativeEvent(QFontComboBox* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QFontComboBox_QBaseNativeEvent(QFontComboBox* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqfontcombobox = dynamic_cast<VirtualQFontComboBox*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqfontcombobox && vqfontcombobox->isVirtualQFontComboBox) {
@@ -1626,7 +1626,7 @@ void QFontComboBox_OnCustomEvent(QFontComboBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFontComboBox_ConnectNotify(QFontComboBox* self, QMetaMethod* signal) {
+void QFontComboBox_ConnectNotify(QFontComboBox* self, const QMetaMethod* signal) {
     auto* vqfontcombobox = dynamic_cast<VirtualQFontComboBox*>(self);
     if (vqfontcombobox && vqfontcombobox->isVirtualQFontComboBox) {
         vqfontcombobox->connectNotify(*signal);
@@ -1636,7 +1636,7 @@ void QFontComboBox_ConnectNotify(QFontComboBox* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QFontComboBox_QBaseConnectNotify(QFontComboBox* self, QMetaMethod* signal) {
+void QFontComboBox_QBaseConnectNotify(QFontComboBox* self, const QMetaMethod* signal) {
     auto* vqfontcombobox = dynamic_cast<VirtualQFontComboBox*>(self);
     if (vqfontcombobox && vqfontcombobox->isVirtualQFontComboBox) {
         vqfontcombobox->setQFontComboBox_ConnectNotify_IsBase(true);
@@ -1655,7 +1655,7 @@ void QFontComboBox_OnConnectNotify(QFontComboBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFontComboBox_DisconnectNotify(QFontComboBox* self, QMetaMethod* signal) {
+void QFontComboBox_DisconnectNotify(QFontComboBox* self, const QMetaMethod* signal) {
     auto* vqfontcombobox = dynamic_cast<VirtualQFontComboBox*>(self);
     if (vqfontcombobox && vqfontcombobox->isVirtualQFontComboBox) {
         vqfontcombobox->disconnectNotify(*signal);
@@ -1665,7 +1665,7 @@ void QFontComboBox_DisconnectNotify(QFontComboBox* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QFontComboBox_QBaseDisconnectNotify(QFontComboBox* self, QMetaMethod* signal) {
+void QFontComboBox_QBaseDisconnectNotify(QFontComboBox* self, const QMetaMethod* signal) {
     auto* vqfontcombobox = dynamic_cast<VirtualQFontComboBox*>(self);
     if (vqfontcombobox && vqfontcombobox->isVirtualQFontComboBox) {
         vqfontcombobox->setQFontComboBox_DisconnectNotify_IsBase(true);
@@ -1916,7 +1916,7 @@ void QFontComboBox_OnReceivers(const QFontComboBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFontComboBox_IsSignalConnected(const QFontComboBox* self, QMetaMethod* signal) {
+bool QFontComboBox_IsSignalConnected(const QFontComboBox* self, const QMetaMethod* signal) {
     auto* vqfontcombobox = const_cast<VirtualQFontComboBox*>(dynamic_cast<const VirtualQFontComboBox*>(self));
     if (vqfontcombobox && vqfontcombobox->isVirtualQFontComboBox) {
         return vqfontcombobox->isSignalConnected(*signal);
@@ -1926,7 +1926,7 @@ bool QFontComboBox_IsSignalConnected(const QFontComboBox* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-bool QFontComboBox_QBaseIsSignalConnected(const QFontComboBox* self, QMetaMethod* signal) {
+bool QFontComboBox_QBaseIsSignalConnected(const QFontComboBox* self, const QMetaMethod* signal) {
     auto* vqfontcombobox = const_cast<VirtualQFontComboBox*>(dynamic_cast<const VirtualQFontComboBox*>(self));
     if (vqfontcombobox && vqfontcombobox->isVirtualQFontComboBox) {
         vqfontcombobox->setQFontComboBox_IsSignalConnected_IsBase(true);
@@ -1941,6 +1941,35 @@ void QFontComboBox_OnIsSignalConnected(const QFontComboBox* self, intptr_t slot)
     auto* vqfontcombobox = const_cast<VirtualQFontComboBox*>(dynamic_cast<const VirtualQFontComboBox*>(self));
     if (vqfontcombobox && vqfontcombobox->isVirtualQFontComboBox) {
         vqfontcombobox->setQFontComboBox_IsSignalConnected_Callback(reinterpret_cast<VirtualQFontComboBox::QFontComboBox_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QFontComboBox_GetDecodedMetricF(const QFontComboBox* self, int metricA, int metricB) {
+    auto* vqfontcombobox = const_cast<VirtualQFontComboBox*>(dynamic_cast<const VirtualQFontComboBox*>(self));
+    if (vqfontcombobox && vqfontcombobox->isVirtualQFontComboBox) {
+        return vqfontcombobox->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQFontComboBox*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QFontComboBox_QBaseGetDecodedMetricF(const QFontComboBox* self, int metricA, int metricB) {
+    auto* vqfontcombobox = const_cast<VirtualQFontComboBox*>(dynamic_cast<const VirtualQFontComboBox*>(self));
+    if (vqfontcombobox && vqfontcombobox->isVirtualQFontComboBox) {
+        vqfontcombobox->setQFontComboBox_GetDecodedMetricF_IsBase(true);
+        return vqfontcombobox->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQFontComboBox*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QFontComboBox_OnGetDecodedMetricF(const QFontComboBox* self, intptr_t slot) {
+    auto* vqfontcombobox = const_cast<VirtualQFontComboBox*>(dynamic_cast<const VirtualQFontComboBox*>(self));
+    if (vqfontcombobox && vqfontcombobox->isVirtualQFontComboBox) {
+        vqfontcombobox->setQFontComboBox_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQFontComboBox::QFontComboBox_GetDecodedMetricF_Callback>(slot));
     }
 }
 

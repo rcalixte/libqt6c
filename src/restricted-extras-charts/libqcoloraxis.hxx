@@ -64,8 +64,8 @@ class VirtualQColorAxis final : public QColorAxis {
     mutable bool qcoloraxis_issignalconnected_isbase = false;
 
   public:
-    VirtualQColorAxis() : QColorAxis(){};
-    VirtualQColorAxis(QObject* parent) : QColorAxis(parent){};
+    VirtualQColorAxis() : QColorAxis() {};
+    VirtualQColorAxis(QObject* parent) : QColorAxis(parent) {};
 
     ~VirtualQColorAxis() {
         qcoloraxis_metacall_callback = nullptr;
@@ -313,18 +313,18 @@ class VirtualQColorAxis final : public QColorAxis {
     friend void QColorAxis_QBaseChildEvent(QColorAxis* self, QChildEvent* event);
     friend void QColorAxis_CustomEvent(QColorAxis* self, QEvent* event);
     friend void QColorAxis_QBaseCustomEvent(QColorAxis* self, QEvent* event);
-    friend void QColorAxis_ConnectNotify(QColorAxis* self, QMetaMethod* signal);
-    friend void QColorAxis_QBaseConnectNotify(QColorAxis* self, QMetaMethod* signal);
-    friend void QColorAxis_DisconnectNotify(QColorAxis* self, QMetaMethod* signal);
-    friend void QColorAxis_QBaseDisconnectNotify(QColorAxis* self, QMetaMethod* signal);
+    friend void QColorAxis_ConnectNotify(QColorAxis* self, const QMetaMethod* signal);
+    friend void QColorAxis_QBaseConnectNotify(QColorAxis* self, const QMetaMethod* signal);
+    friend void QColorAxis_DisconnectNotify(QColorAxis* self, const QMetaMethod* signal);
+    friend void QColorAxis_QBaseDisconnectNotify(QColorAxis* self, const QMetaMethod* signal);
     friend QObject* QColorAxis_Sender(const QColorAxis* self);
     friend QObject* QColorAxis_QBaseSender(const QColorAxis* self);
     friend int QColorAxis_SenderSignalIndex(const QColorAxis* self);
     friend int QColorAxis_QBaseSenderSignalIndex(const QColorAxis* self);
     friend int QColorAxis_Receivers(const QColorAxis* self, const char* signal);
     friend int QColorAxis_QBaseReceivers(const QColorAxis* self, const char* signal);
-    friend bool QColorAxis_IsSignalConnected(const QColorAxis* self, QMetaMethod* signal);
-    friend bool QColorAxis_QBaseIsSignalConnected(const QColorAxis* self, QMetaMethod* signal);
+    friend bool QColorAxis_IsSignalConnected(const QColorAxis* self, const QMetaMethod* signal);
+    friend bool QColorAxis_QBaseIsSignalConnected(const QColorAxis* self, const QMetaMethod* signal);
 };
 
 #endif

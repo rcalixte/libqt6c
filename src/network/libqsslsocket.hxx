@@ -172,8 +172,8 @@ class VirtualQSslSocket final : public QSslSocket {
     mutable bool qsslsocket_issignalconnected_isbase = false;
 
   public:
-    VirtualQSslSocket() : QSslSocket(){};
-    VirtualQSslSocket(QObject* parent) : QSslSocket(parent){};
+    VirtualQSslSocket() : QSslSocket() {};
+    VirtualQSslSocket(QObject* parent) : QSslSocket(parent) {};
 
     ~VirtualQSslSocket() {
         qsslsocket_metacall_callback = nullptr;
@@ -359,7 +359,7 @@ class VirtualQSslSocket final : public QSslSocket {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual bool setSocketDescriptor(qintptr socketDescriptor, QAbstractSocket::SocketState state, QIODeviceBase::OpenMode openMode) override {
+    virtual bool setSocketDescriptor(qintptr socketDescriptor, QAbstractSocket::SocketState state, QFlags<QIODeviceBase::OpenModeFlag> openMode) override {
         if (qsslsocket_setsocketdescriptor_isbase) {
             qsslsocket_setsocketdescriptor_isbase = false;
             return QSslSocket::setSocketDescriptor(socketDescriptor, state, openMode);
@@ -377,7 +377,7 @@ class VirtualQSslSocket final : public QSslSocket {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual void connectToHost(const QString& hostName, quint16 port, QIODeviceBase::OpenMode openMode, QAbstractSocket::NetworkLayerProtocol protocol) override {
+    virtual void connectToHost(const QString& hostName, quint16 port, QFlags<QIODeviceBase::OpenModeFlag> openMode, QAbstractSocket::NetworkLayerProtocol protocol) override {
         if (qsslsocket_connecttohost_isbase) {
             qsslsocket_connecttohost_isbase = false;
             QSslSocket::connectToHost(hostName, port, openMode, protocol);
@@ -631,7 +631,7 @@ class VirtualQSslSocket final : public QSslSocket {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual bool bind(const QHostAddress& address, quint16 port, QAbstractSocket::BindMode mode) override {
+    virtual bool bind(const QHostAddress& address, quint16 port, QFlags<QAbstractSocket::BindFlag> mode) override {
         if (qsslsocket_bind_isbase) {
             qsslsocket_bind_isbase = false;
             return QSslSocket::bind(address, port, mode);
@@ -1084,36 +1084,36 @@ class VirtualQSslSocket final : public QSslSocket {
     friend void QSslSocket_QBaseChildEvent(QSslSocket* self, QChildEvent* event);
     friend void QSslSocket_CustomEvent(QSslSocket* self, QEvent* event);
     friend void QSslSocket_QBaseCustomEvent(QSslSocket* self, QEvent* event);
-    friend void QSslSocket_ConnectNotify(QSslSocket* self, QMetaMethod* signal);
-    friend void QSslSocket_QBaseConnectNotify(QSslSocket* self, QMetaMethod* signal);
-    friend void QSslSocket_DisconnectNotify(QSslSocket* self, QMetaMethod* signal);
-    friend void QSslSocket_QBaseDisconnectNotify(QSslSocket* self, QMetaMethod* signal);
+    friend void QSslSocket_ConnectNotify(QSslSocket* self, const QMetaMethod* signal);
+    friend void QSslSocket_QBaseConnectNotify(QSslSocket* self, const QMetaMethod* signal);
+    friend void QSslSocket_DisconnectNotify(QSslSocket* self, const QMetaMethod* signal);
+    friend void QSslSocket_QBaseDisconnectNotify(QSslSocket* self, const QMetaMethod* signal);
     friend void QSslSocket_SetSocketState(QSslSocket* self, int state);
     friend void QSslSocket_QBaseSetSocketState(QSslSocket* self, int state);
     friend void QSslSocket_SetSocketError(QSslSocket* self, int socketError);
     friend void QSslSocket_QBaseSetSocketError(QSslSocket* self, int socketError);
     friend void QSslSocket_SetLocalPort(QSslSocket* self, uint16_t port);
     friend void QSslSocket_QBaseSetLocalPort(QSslSocket* self, uint16_t port);
-    friend void QSslSocket_SetLocalAddress(QSslSocket* self, QHostAddress* address);
-    friend void QSslSocket_QBaseSetLocalAddress(QSslSocket* self, QHostAddress* address);
+    friend void QSslSocket_SetLocalAddress(QSslSocket* self, const QHostAddress* address);
+    friend void QSslSocket_QBaseSetLocalAddress(QSslSocket* self, const QHostAddress* address);
     friend void QSslSocket_SetPeerPort(QSslSocket* self, uint16_t port);
     friend void QSslSocket_QBaseSetPeerPort(QSslSocket* self, uint16_t port);
-    friend void QSslSocket_SetPeerAddress(QSslSocket* self, QHostAddress* address);
-    friend void QSslSocket_QBaseSetPeerAddress(QSslSocket* self, QHostAddress* address);
-    friend void QSslSocket_SetPeerName(QSslSocket* self, libqt_string name);
-    friend void QSslSocket_QBaseSetPeerName(QSslSocket* self, libqt_string name);
+    friend void QSslSocket_SetPeerAddress(QSslSocket* self, const QHostAddress* address);
+    friend void QSslSocket_QBaseSetPeerAddress(QSslSocket* self, const QHostAddress* address);
+    friend void QSslSocket_SetPeerName(QSslSocket* self, const libqt_string name);
+    friend void QSslSocket_QBaseSetPeerName(QSslSocket* self, const libqt_string name);
     friend void QSslSocket_SetOpenMode(QSslSocket* self, int openMode);
     friend void QSslSocket_QBaseSetOpenMode(QSslSocket* self, int openMode);
-    friend void QSslSocket_SetErrorString(QSslSocket* self, libqt_string errorString);
-    friend void QSslSocket_QBaseSetErrorString(QSslSocket* self, libqt_string errorString);
+    friend void QSslSocket_SetErrorString(QSslSocket* self, const libqt_string errorString);
+    friend void QSslSocket_QBaseSetErrorString(QSslSocket* self, const libqt_string errorString);
     friend QObject* QSslSocket_Sender(const QSslSocket* self);
     friend QObject* QSslSocket_QBaseSender(const QSslSocket* self);
     friend int QSslSocket_SenderSignalIndex(const QSslSocket* self);
     friend int QSslSocket_QBaseSenderSignalIndex(const QSslSocket* self);
     friend int QSslSocket_Receivers(const QSslSocket* self, const char* signal);
     friend int QSslSocket_QBaseReceivers(const QSslSocket* self, const char* signal);
-    friend bool QSslSocket_IsSignalConnected(const QSslSocket* self, QMetaMethod* signal);
-    friend bool QSslSocket_QBaseIsSignalConnected(const QSslSocket* self, QMetaMethod* signal);
+    friend bool QSslSocket_IsSignalConnected(const QSslSocket* self, const QMetaMethod* signal);
+    friend bool QSslSocket_QBaseIsSignalConnected(const QSslSocket* self, const QMetaMethod* signal);
 };
 
 #endif

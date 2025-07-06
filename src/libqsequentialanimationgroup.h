@@ -12,14 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractanimation.h"
-#include "libqanimationgroup.h"
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpauseanimation.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qsequentialanimationgroup.html
 
 /// q_sequentialanimationgroup_new constructs a new QSequentialAnimationGroup object.
@@ -480,7 +472,7 @@ QThread* q_sequentialanimationgroup_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QSequentialAnimationGroup* self, QThread* thread ```
-void q_sequentialanimationgroup_move_to_thread(void* self, void* thread);
+bool q_sequentialanimationgroup_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -495,6 +487,13 @@ int32_t q_sequentialanimationgroup_start_timer(void* self, int interval);
 ///
 /// ``` QSequentialAnimationGroup* self, int id ```
 void q_sequentialanimationgroup_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QSequentialAnimationGroup* self, enum Qt__TimerId id ```
+void q_sequentialanimationgroup_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -635,6 +634,13 @@ bool q_sequentialanimationgroup_inherits(void* self, const char* classname);
 ///
 /// ``` QSequentialAnimationGroup* self ```
 void q_sequentialanimationgroup_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QSequentialAnimationGroup* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_sequentialanimationgroup_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

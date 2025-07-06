@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqmargins.h"
-#include "libqpagesize.h"
-#include "libqrect.h"
-
 /// https://doc.qt.io/qt-6/qpagelayout.html
 
 /// q_pagelayout_new constructs a new QPageLayout object.
@@ -208,6 +204,31 @@ QRect* q_pagelayout_paint_rect_pixels(void* self, int resolution);
 /// ``` QPageLayout* self, QPageSize* pageSize, QMarginsF* minMargins ```
 void q_pagelayout_set_page_size2(void* self, void* pageSize, void* minMargins);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#setMargins)
+///
+/// ``` QPageLayout* self, QMarginsF* margins, enum QPageLayout__OutOfBoundsPolicy outOfBoundsPolicy ```
+bool q_pagelayout_set_margins2(void* self, void* margins, int64_t outOfBoundsPolicy);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#setLeftMargin)
+///
+/// ``` QPageLayout* self, double leftMargin, enum QPageLayout__OutOfBoundsPolicy outOfBoundsPolicy ```
+bool q_pagelayout_set_left_margin2(void* self, double leftMargin, int64_t outOfBoundsPolicy);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#setRightMargin)
+///
+/// ``` QPageLayout* self, double rightMargin, enum QPageLayout__OutOfBoundsPolicy outOfBoundsPolicy ```
+bool q_pagelayout_set_right_margin2(void* self, double rightMargin, int64_t outOfBoundsPolicy);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#setTopMargin)
+///
+/// ``` QPageLayout* self, double topMargin, enum QPageLayout__OutOfBoundsPolicy outOfBoundsPolicy ```
+bool q_pagelayout_set_top_margin2(void* self, double topMargin, int64_t outOfBoundsPolicy);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#setBottomMargin)
+///
+/// ``` QPageLayout* self, double bottomMargin, enum QPageLayout__OutOfBoundsPolicy outOfBoundsPolicy ```
+bool q_pagelayout_set_bottom_margin2(void* self, double bottomMargin, int64_t outOfBoundsPolicy);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#dtor.QPageLayout)
 ///
 /// Delete this object from C++ memory.
@@ -235,5 +256,10 @@ typedef enum {
     QPAGELAYOUT_MODE_STANDARDMODE = 0,
     QPAGELAYOUT_MODE_FULLPAGEMODE = 1
 } QPageLayout__Mode;
+
+typedef enum {
+    QPAGELAYOUT_OUTOFBOUNDSPOLICY_REJECT = 0,
+    QPAGELAYOUT_OUTOFBOUNDSPOLICY_CLAMP = 1
+} QPageLayout__OutOfBoundsPolicy;
 
 #endif

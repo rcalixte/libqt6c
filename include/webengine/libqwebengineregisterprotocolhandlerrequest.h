@@ -12,9 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include <string.h>
-#include "../libqurl.h"
-
 /// https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html
 
 /// q_webengineregisterprotocolhandlerrequest_new constructs a new QWebEngineRegisterProtocolHandlerRequest object.

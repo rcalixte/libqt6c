@@ -12,16 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqactiongroup.h"
-#include "libqevent.h"
-#include "libqfont.h"
-#include "libqicon.h"
-#include "libqkeysequence.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qaction.html
 
 /// q_action_new constructs a new QAction object.
@@ -520,7 +510,7 @@ QThread* q_action_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QAction* self, QThread* thread ```
-void q_action_move_to_thread(void* self, void* thread);
+bool q_action_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -535,6 +525,13 @@ int32_t q_action_start_timer(void* self, int interval);
 ///
 /// ``` QAction* self, int id ```
 void q_action_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QAction* self, enum Qt__TimerId id ```
+void q_action_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -675,6 +672,13 @@ bool q_action_inherits(void* self, const char* classname);
 ///
 /// ``` QAction* self ```
 void q_action_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QAction* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_action_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

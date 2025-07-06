@@ -1,3 +1,4 @@
+#include "libqaudiobufferoutput.hpp"
 #include "libqaudiooutput.hpp"
 #include "../libqevent.hpp"
 #include "../libqiodevice.hpp"
@@ -86,6 +87,14 @@ void q_mediaplayer_set_active_subtitle_track(void* self, int index) {
     QMediaPlayer_SetActiveSubtitleTrack((QMediaPlayer*)self, index);
 }
 
+void q_mediaplayer_set_audio_buffer_output(void* self, void* output) {
+    QMediaPlayer_SetAudioBufferOutput((QMediaPlayer*)self, (QAudioBufferOutput*)output);
+}
+
+QAudioBufferOutput* q_mediaplayer_audio_buffer_output(void* self) {
+    return QMediaPlayer_AudioBufferOutput((QMediaPlayer*)self);
+}
+
 void q_mediaplayer_set_audio_output(void* self, void* output) {
     QMediaPlayer_SetAudioOutput((QMediaPlayer*)self, (QAudioOutput*)output);
 }
@@ -156,6 +165,10 @@ bool q_mediaplayer_is_seekable(void* self) {
 
 double q_mediaplayer_playback_rate(void* self) {
     return QMediaPlayer_PlaybackRate((QMediaPlayer*)self);
+}
+
+bool q_mediaplayer_is_playing(void* self) {
+    return QMediaPlayer_IsPlaying((QMediaPlayer*)self);
 }
 
 int32_t q_mediaplayer_loops(void* self) {
@@ -285,6 +298,14 @@ void q_mediaplayer_on_seekable_changed(void* self, void (*slot)(void*, bool)) {
     QMediaPlayer_Connect_SeekableChanged((QMediaPlayer*)self, (intptr_t)slot);
 }
 
+void q_mediaplayer_playing_changed(void* self, bool playing) {
+    QMediaPlayer_PlayingChanged((QMediaPlayer*)self, playing);
+}
+
+void q_mediaplayer_on_playing_changed(void* self, void (*slot)(void*, bool)) {
+    QMediaPlayer_Connect_PlayingChanged((QMediaPlayer*)self, (intptr_t)slot);
+}
+
 void q_mediaplayer_playback_rate_changed(void* self, double rate) {
     QMediaPlayer_PlaybackRateChanged((QMediaPlayer*)self, rate);
 }
@@ -323,6 +344,14 @@ void q_mediaplayer_audio_output_changed(void* self) {
 
 void q_mediaplayer_on_audio_output_changed(void* self, void (*slot)(void*)) {
     QMediaPlayer_Connect_AudioOutputChanged((QMediaPlayer*)self, (intptr_t)slot);
+}
+
+void q_mediaplayer_audio_buffer_output_changed(void* self) {
+    QMediaPlayer_AudioBufferOutputChanged((QMediaPlayer*)self);
+}
+
+void q_mediaplayer_on_audio_buffer_output_changed(void* self, void (*slot)(void*)) {
+    QMediaPlayer_Connect_AudioBufferOutputChanged((QMediaPlayer*)self, (intptr_t)slot);
 }
 
 void q_mediaplayer_tracks_changed(void* self) {
@@ -410,8 +439,8 @@ QThread* q_mediaplayer_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_mediaplayer_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_mediaplayer_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_mediaplayer_start_timer(void* self, int interval) {
@@ -420,6 +449,10 @@ int32_t q_mediaplayer_start_timer(void* self, int interval) {
 
 void q_mediaplayer_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_mediaplayer_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_mediaplayer_children(void* self) {
@@ -512,6 +545,10 @@ bool q_mediaplayer_inherits(void* self, const char* classname) {
 
 void q_mediaplayer_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_mediaplayer_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_mediaplayer_start_timer2(void* self, int interval, int64_t timerType) {

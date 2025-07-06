@@ -1,4 +1,5 @@
 #include "libqevent.hpp"
+#include "libqdeadlinetimer.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include <string.h>
@@ -48,6 +49,10 @@ bool q_eventloop_process_events(void* self) {
 
 void q_eventloop_process_events2(void* self, int64_t flags, int maximumTime) {
     QEventLoop_ProcessEvents2((QEventLoop*)self, flags, maximumTime);
+}
+
+void q_eventloop_process_events3(void* self, int64_t flags, void* deadline) {
+    QEventLoop_ProcessEvents3((QEventLoop*)self, flags, (QDeadlineTimer*)deadline);
 }
 
 int32_t q_eventloop_exec(void* self) {
@@ -143,8 +148,8 @@ QThread* q_eventloop_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_eventloop_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_eventloop_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_eventloop_start_timer(void* self, int interval) {
@@ -153,6 +158,10 @@ int32_t q_eventloop_start_timer(void* self, int interval) {
 
 void q_eventloop_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_eventloop_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_eventloop_children(void* self) {
@@ -245,6 +254,10 @@ bool q_eventloop_inherits(void* self, const char* classname) {
 
 void q_eventloop_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_eventloop_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_eventloop_start_timer2(void* self, int interval, int64_t timerType) {
@@ -405,6 +418,10 @@ QEventLoopLocker* q_eventlooplocker_new2(void* loop) {
 
 QEventLoopLocker* q_eventlooplocker_new3(void* thread) {
     return QEventLoopLocker_new3((QThread*)thread);
+}
+
+void q_eventlooplocker_swap(void* self, void* other) {
+    QEventLoopLocker_Swap((QEventLoopLocker*)self, (QEventLoopLocker*)other);
 }
 
 void q_eventlooplocker_delete(void* self) {

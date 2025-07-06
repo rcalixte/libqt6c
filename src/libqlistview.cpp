@@ -165,7 +165,7 @@ int QListView_BatchSize(const QListView* self) {
     return self->batchSize();
 }
 
-void QListView_SetGridSize(QListView* self, QSize* size) {
+void QListView_SetGridSize(QListView* self, const QSize* size) {
     self->setGridSize(*size);
 }
 
@@ -233,8 +233,8 @@ int QListView_ItemAlignment(const QListView* self) {
     return static_cast<int>(self->itemAlignment());
 }
 
-void QListView_IndexesMoved(QListView* self, libqt_list /* of QModelIndex* */ indexes) {
-    QModelIndexList indexes_QList;
+void QListView_IndexesMoved(QListView* self, const libqt_list /* of QModelIndex* */ indexes) {
+    QList<QModelIndex> indexes_QList;
     indexes_QList.reserve(indexes.len);
     QModelIndex** indexes_arr = static_cast<QModelIndex**>(indexes.data.ptr);
     for (size_t i = 0; i < indexes.len; ++i) {
@@ -245,15 +245,15 @@ void QListView_IndexesMoved(QListView* self, libqt_list /* of QModelIndex* */ in
 
 void QListView_Connect_IndexesMoved(QListView* self, intptr_t slot) {
     void (*slotFunc)(QListView*, libqt_list /* of QModelIndex* */) = reinterpret_cast<void (*)(QListView*, libqt_list /* of QModelIndex* */)>(slot);
-    QListView::connect(self, &QListView::indexesMoved, [self, slotFunc](const QModelIndexList& indexes) {
-        const QModelIndexList& indexes_ret = indexes;
-        // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.length()));
-        for (size_t i = 0; i < indexes_ret.length(); ++i) {
+    QListView::connect(self, &QListView::indexesMoved, [self, slotFunc](const QList<QModelIndex>& indexes) {
+        const QList<QModelIndex>& indexes_ret = indexes;
+        // Convert const QList<> from C++ memory to manually-managed C memory
+        QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.size()));
+        for (size_t i = 0; i < indexes_ret.size(); ++i) {
             indexes_arr[i] = new QModelIndex(indexes_ret[i]);
         }
         libqt_list indexes_out;
-        indexes_out.len = indexes_ret.length();
+        indexes_out.len = indexes_ret.size();
         indexes_out.data.ptr = static_cast<void*>(indexes_arr);
         libqt_list /* of QModelIndex* */ sigval1 = indexes_out;
         slotFunc(self, sigval1);
@@ -285,7 +285,7 @@ libqt_string QListView_Tr3(const char* s, const char* c, int n) {
 }
 
 // Derived class handler implementation
-QRect* QListView_VisualRect(const QListView* self, QModelIndex* index) {
+QRect* QListView_VisualRect(const QListView* self, const QModelIndex* index) {
     auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
     if (vqlistview && vqlistview->isVirtualQListView) {
         return new QRect(vqlistview->visualRect(*index));
@@ -295,7 +295,7 @@ QRect* QListView_VisualRect(const QListView* self, QModelIndex* index) {
 }
 
 // Base class handler implementation
-QRect* QListView_QBaseVisualRect(const QListView* self, QModelIndex* index) {
+QRect* QListView_QBaseVisualRect(const QListView* self, const QModelIndex* index) {
     auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_VisualRect_IsBase(true);
@@ -314,7 +314,7 @@ void QListView_OnVisualRect(const QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QListView_ScrollTo(QListView* self, QModelIndex* index, int hint) {
+void QListView_ScrollTo(QListView* self, const QModelIndex* index, int hint) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->scrollTo(*index, static_cast<QAbstractItemView::ScrollHint>(hint));
@@ -324,7 +324,7 @@ void QListView_ScrollTo(QListView* self, QModelIndex* index, int hint) {
 }
 
 // Base class handler implementation
-void QListView_QBaseScrollTo(QListView* self, QModelIndex* index, int hint) {
+void QListView_QBaseScrollTo(QListView* self, const QModelIndex* index, int hint) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_ScrollTo_IsBase(true);
@@ -343,7 +343,7 @@ void QListView_OnScrollTo(QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QModelIndex* QListView_IndexAt(const QListView* self, QPoint* p) {
+QModelIndex* QListView_IndexAt(const QListView* self, const QPoint* p) {
     auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
     if (vqlistview && vqlistview->isVirtualQListView) {
         return new QModelIndex(vqlistview->indexAt(*p));
@@ -353,7 +353,7 @@ QModelIndex* QListView_IndexAt(const QListView* self, QPoint* p) {
 }
 
 // Base class handler implementation
-QModelIndex* QListView_QBaseIndexAt(const QListView* self, QPoint* p) {
+QModelIndex* QListView_QBaseIndexAt(const QListView* self, const QPoint* p) {
     auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_IndexAt_IsBase(true);
@@ -430,7 +430,7 @@ void QListView_OnReset(QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QListView_SetRootIndex(QListView* self, QModelIndex* index) {
+void QListView_SetRootIndex(QListView* self, const QModelIndex* index) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setRootIndex(*index);
@@ -440,7 +440,7 @@ void QListView_SetRootIndex(QListView* self, QModelIndex* index) {
 }
 
 // Base class handler implementation
-void QListView_QBaseSetRootIndex(QListView* self, QModelIndex* index) {
+void QListView_QBaseSetRootIndex(QListView* self, const QModelIndex* index) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_SetRootIndex_IsBase(true);
@@ -517,7 +517,7 @@ void QListView_OnScrollContentsBy(QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QListView_DataChanged(QListView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles) {
+void QListView_DataChanged(QListView* self, const QModelIndex* topLeft, const QModelIndex* bottomRight, const libqt_list /* of int */ roles) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     QList<int> roles_QList;
     roles_QList.reserve(roles.len);
@@ -533,7 +533,7 @@ void QListView_DataChanged(QListView* self, QModelIndex* topLeft, QModelIndex* b
 }
 
 // Base class handler implementation
-void QListView_QBaseDataChanged(QListView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles) {
+void QListView_QBaseDataChanged(QListView* self, const QModelIndex* topLeft, const QModelIndex* bottomRight, const libqt_list /* of int */ roles) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     QList<int> roles_QList;
     roles_QList.reserve(roles.len);
@@ -558,7 +558,7 @@ void QListView_OnDataChanged(QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QListView_RowsInserted(QListView* self, QModelIndex* parent, int start, int end) {
+void QListView_RowsInserted(QListView* self, const QModelIndex* parent, int start, int end) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->rowsInserted(*parent, static_cast<int>(start), static_cast<int>(end));
@@ -568,7 +568,7 @@ void QListView_RowsInserted(QListView* self, QModelIndex* parent, int start, int
 }
 
 // Base class handler implementation
-void QListView_QBaseRowsInserted(QListView* self, QModelIndex* parent, int start, int end) {
+void QListView_QBaseRowsInserted(QListView* self, const QModelIndex* parent, int start, int end) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_RowsInserted_IsBase(true);
@@ -587,7 +587,7 @@ void QListView_OnRowsInserted(QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QListView_RowsAboutToBeRemoved(QListView* self, QModelIndex* parent, int start, int end) {
+void QListView_RowsAboutToBeRemoved(QListView* self, const QModelIndex* parent, int start, int end) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->rowsAboutToBeRemoved(*parent, static_cast<int>(start), static_cast<int>(end));
@@ -597,7 +597,7 @@ void QListView_RowsAboutToBeRemoved(QListView* self, QModelIndex* parent, int st
 }
 
 // Base class handler implementation
-void QListView_QBaseRowsAboutToBeRemoved(QListView* self, QModelIndex* parent, int start, int end) {
+void QListView_QBaseRowsAboutToBeRemoved(QListView* self, const QModelIndex* parent, int start, int end) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_RowsAboutToBeRemoved_IsBase(true);
@@ -1020,7 +1020,7 @@ void QListView_OnMoveCursor(QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QListView_SetSelection(QListView* self, QRect* rect, int command) {
+void QListView_SetSelection(QListView* self, const QRect* rect, int command) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setSelection(*rect, static_cast<QItemSelectionModel::SelectionFlags>(command));
@@ -1030,7 +1030,7 @@ void QListView_SetSelection(QListView* self, QRect* rect, int command) {
 }
 
 // Base class handler implementation
-void QListView_QBaseSetSelection(QListView* self, QRect* rect, int command) {
+void QListView_QBaseSetSelection(QListView* self, const QRect* rect, int command) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_SetSelection_IsBase(true);
@@ -1049,7 +1049,7 @@ void QListView_OnSetSelection(QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QRegion* QListView_VisualRegionForSelection(const QListView* self, QItemSelection* selection) {
+QRegion* QListView_VisualRegionForSelection(const QListView* self, const QItemSelection* selection) {
     auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
     if (vqlistview && vqlistview->isVirtualQListView) {
         return new QRegion(vqlistview->visualRegionForSelection(*selection));
@@ -1058,7 +1058,7 @@ QRegion* QListView_VisualRegionForSelection(const QListView* self, QItemSelectio
 }
 
 // Base class handler implementation
-QRegion* QListView_QBaseVisualRegionForSelection(const QListView* self, QItemSelection* selection) {
+QRegion* QListView_QBaseVisualRegionForSelection(const QListView* self, const QItemSelection* selection) {
     auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_VisualRegionForSelection_IsBase(true);
@@ -1079,25 +1079,25 @@ void QListView_OnVisualRegionForSelection(const QListView* self, intptr_t slot) 
 libqt_list /* of QModelIndex* */ QListView_SelectedIndexes(const QListView* self) {
     auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
     if (vqlistview && vqlistview->isVirtualQListView) {
-        QModelIndexList _ret = vqlistview->selectedIndexes();
+        QList<QModelIndex> _ret = vqlistview->selectedIndexes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QModelIndexList _ret = ((VirtualQListView*)self)->selectedIndexes();
+        QList<QModelIndex> _ret = ((VirtualQListView*)self)->selectedIndexes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -1108,25 +1108,25 @@ libqt_list /* of QModelIndex* */ QListView_QBaseSelectedIndexes(const QListView*
     auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_SelectedIndexes_IsBase(true);
-        QModelIndexList _ret = vqlistview->selectedIndexes();
+        QList<QModelIndex> _ret = vqlistview->selectedIndexes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QModelIndexList _ret = ((VirtualQListView*)self)->selectedIndexes();
+        QList<QModelIndex> _ret = ((VirtualQListView*)self)->selectedIndexes();
         // Convert QList<> from C++ memory to manually-managed C memory
-        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QModelIndex(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -1170,7 +1170,7 @@ void QListView_OnUpdateGeometries(QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QListView_IsIndexHidden(const QListView* self, QModelIndex* index) {
+bool QListView_IsIndexHidden(const QListView* self, const QModelIndex* index) {
     auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
     if (vqlistview && vqlistview->isVirtualQListView) {
         return vqlistview->isIndexHidden(*index);
@@ -1180,7 +1180,7 @@ bool QListView_IsIndexHidden(const QListView* self, QModelIndex* index) {
 }
 
 // Base class handler implementation
-bool QListView_QBaseIsIndexHidden(const QListView* self, QModelIndex* index) {
+bool QListView_QBaseIsIndexHidden(const QListView* self, const QModelIndex* index) {
     auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_IsIndexHidden_IsBase(true);
@@ -1199,7 +1199,7 @@ void QListView_OnIsIndexHidden(const QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QListView_SelectionChanged(QListView* self, QItemSelection* selected, QItemSelection* deselected) {
+void QListView_SelectionChanged(QListView* self, const QItemSelection* selected, const QItemSelection* deselected) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->selectionChanged(*selected, *deselected);
@@ -1209,7 +1209,7 @@ void QListView_SelectionChanged(QListView* self, QItemSelection* selected, QItem
 }
 
 // Base class handler implementation
-void QListView_QBaseSelectionChanged(QListView* self, QItemSelection* selected, QItemSelection* deselected) {
+void QListView_QBaseSelectionChanged(QListView* self, const QItemSelection* selected, const QItemSelection* deselected) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_SelectionChanged_IsBase(true);
@@ -1228,7 +1228,7 @@ void QListView_OnSelectionChanged(QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QListView_CurrentChanged(QListView* self, QModelIndex* current, QModelIndex* previous) {
+void QListView_CurrentChanged(QListView* self, const QModelIndex* current, const QModelIndex* previous) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->currentChanged(*current, *previous);
@@ -1238,7 +1238,7 @@ void QListView_CurrentChanged(QListView* self, QModelIndex* current, QModelIndex
 }
 
 // Base class handler implementation
-void QListView_QBaseCurrentChanged(QListView* self, QModelIndex* current, QModelIndex* previous) {
+void QListView_QBaseCurrentChanged(QListView* self, const QModelIndex* current, const QModelIndex* previous) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_CurrentChanged_IsBase(true);
@@ -1342,7 +1342,7 @@ void QListView_OnSetSelectionModel(QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QListView_KeyboardSearch(QListView* self, libqt_string search) {
+void QListView_KeyboardSearch(QListView* self, const libqt_string search) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     QString search_QString = QString::fromUtf8(search.data, search.len);
     if (vqlistview && vqlistview->isVirtualQListView) {
@@ -1353,7 +1353,7 @@ void QListView_KeyboardSearch(QListView* self, libqt_string search) {
 }
 
 // Base class handler implementation
-void QListView_QBaseKeyboardSearch(QListView* self, libqt_string search) {
+void QListView_QBaseKeyboardSearch(QListView* self, const libqt_string search) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     QString search_QString = QString::fromUtf8(search.data, search.len);
     if (vqlistview && vqlistview->isVirtualQListView) {
@@ -1431,7 +1431,7 @@ void QListView_OnSizeHintForColumn(const QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QAbstractItemDelegate* QListView_ItemDelegateForIndex(const QListView* self, QModelIndex* index) {
+QAbstractItemDelegate* QListView_ItemDelegateForIndex(const QListView* self, const QModelIndex* index) {
     auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
     if (vqlistview && vqlistview->isVirtualQListView) {
         return vqlistview->itemDelegateForIndex(*index);
@@ -1441,7 +1441,7 @@ QAbstractItemDelegate* QListView_ItemDelegateForIndex(const QListView* self, QMo
 }
 
 // Base class handler implementation
-QAbstractItemDelegate* QListView_QBaseItemDelegateForIndex(const QListView* self, QModelIndex* index) {
+QAbstractItemDelegate* QListView_QBaseItemDelegateForIndex(const QListView* self, const QModelIndex* index) {
     auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_ItemDelegateForIndex_IsBase(true);
@@ -1779,7 +1779,7 @@ void QListView_OnEditorDestroyed(QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QListView_Edit2(QListView* self, QModelIndex* index, int trigger, QEvent* event) {
+bool QListView_Edit2(QListView* self, const QModelIndex* index, int trigger, QEvent* event) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         return vqlistview->edit(*index, static_cast<QAbstractItemView::EditTrigger>(trigger), event);
@@ -1789,7 +1789,7 @@ bool QListView_Edit2(QListView* self, QModelIndex* index, int trigger, QEvent* e
 }
 
 // Base class handler implementation
-bool QListView_QBaseEdit2(QListView* self, QModelIndex* index, int trigger, QEvent* event) {
+bool QListView_QBaseEdit2(QListView* self, const QModelIndex* index, int trigger, QEvent* event) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_Edit2_IsBase(true);
@@ -1808,7 +1808,7 @@ void QListView_OnEdit2(QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-int QListView_SelectionCommand(const QListView* self, QModelIndex* index, QEvent* event) {
+int QListView_SelectionCommand(const QListView* self, const QModelIndex* index, const QEvent* event) {
     auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
     if (vqlistview && vqlistview->isVirtualQListView) {
         return static_cast<int>(vqlistview->selectionCommand(*index, event));
@@ -1818,7 +1818,7 @@ int QListView_SelectionCommand(const QListView* self, QModelIndex* index, QEvent
 }
 
 // Base class handler implementation
-int QListView_QBaseSelectionCommand(const QListView* self, QModelIndex* index, QEvent* event) {
+int QListView_QBaseSelectionCommand(const QListView* self, const QModelIndex* index, const QEvent* event) {
     auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_SelectionCommand_IsBase(true);
@@ -2707,7 +2707,7 @@ void QListView_OnHideEvent(QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QListView_NativeEvent(QListView* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QListView_NativeEvent(QListView* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqlistview && vqlistview->isVirtualQListView) {
@@ -2718,7 +2718,7 @@ bool QListView_NativeEvent(QListView* self, libqt_string eventType, void* messag
 }
 
 // Base class handler implementation
-bool QListView_QBaseNativeEvent(QListView* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QListView_QBaseNativeEvent(QListView* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqlistview && vqlistview->isVirtualQListView) {
@@ -2912,7 +2912,7 @@ void QListView_OnCustomEvent(QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QListView_ConnectNotify(QListView* self, QMetaMethod* signal) {
+void QListView_ConnectNotify(QListView* self, const QMetaMethod* signal) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->connectNotify(*signal);
@@ -2922,7 +2922,7 @@ void QListView_ConnectNotify(QListView* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QListView_QBaseConnectNotify(QListView* self, QMetaMethod* signal) {
+void QListView_QBaseConnectNotify(QListView* self, const QMetaMethod* signal) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_ConnectNotify_IsBase(true);
@@ -2941,7 +2941,7 @@ void QListView_OnConnectNotify(QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QListView_DisconnectNotify(QListView* self, QMetaMethod* signal) {
+void QListView_DisconnectNotify(QListView* self, const QMetaMethod* signal) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->disconnectNotify(*signal);
@@ -2951,7 +2951,7 @@ void QListView_DisconnectNotify(QListView* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QListView_QBaseDisconnectNotify(QListView* self, QMetaMethod* signal) {
+void QListView_QBaseDisconnectNotify(QListView* self, const QMetaMethod* signal) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_DisconnectNotify_IsBase(true);
@@ -3026,7 +3026,7 @@ void QListView_OnContentsSize(const QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QRect* QListView_RectForIndex(const QListView* self, QModelIndex* index) {
+QRect* QListView_RectForIndex(const QListView* self, const QModelIndex* index) {
     auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
     if (vqlistview && vqlistview->isVirtualQListView) {
         return new QRect(vqlistview->rectForIndex(*index));
@@ -3035,7 +3035,7 @@ QRect* QListView_RectForIndex(const QListView* self, QModelIndex* index) {
 }
 
 // Base class handler implementation
-QRect* QListView_QBaseRectForIndex(const QListView* self, QModelIndex* index) {
+QRect* QListView_QBaseRectForIndex(const QListView* self, const QModelIndex* index) {
     auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_RectForIndex_IsBase(true);
@@ -3053,7 +3053,7 @@ void QListView_OnRectForIndex(const QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QListView_SetPositionForIndex(QListView* self, QPoint* position, QModelIndex* index) {
+void QListView_SetPositionForIndex(QListView* self, const QPoint* position, const QModelIndex* index) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setPositionForIndex(*position, *index);
@@ -3063,7 +3063,7 @@ void QListView_SetPositionForIndex(QListView* self, QPoint* position, QModelInde
 }
 
 // Base class handler implementation
-void QListView_QBaseSetPositionForIndex(QListView* self, QPoint* position, QModelIndex* index) {
+void QListView_QBaseSetPositionForIndex(QListView* self, const QPoint* position, const QModelIndex* index) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_SetPositionForIndex_IsBase(true);
@@ -3198,7 +3198,7 @@ void QListView_OnExecuteDelayedItemsLayout(QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QListView_SetDirtyRegion(QListView* self, QRegion* region) {
+void QListView_SetDirtyRegion(QListView* self, const QRegion* region) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setDirtyRegion(*region);
@@ -3208,7 +3208,7 @@ void QListView_SetDirtyRegion(QListView* self, QRegion* region) {
 }
 
 // Base class handler implementation
-void QListView_QBaseSetDirtyRegion(QListView* self, QRegion* region) {
+void QListView_QBaseSetDirtyRegion(QListView* self, const QRegion* region) {
     auto* vqlistview = dynamic_cast<VirtualQListView*>(self);
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_SetDirtyRegion_IsBase(true);
@@ -3716,7 +3716,7 @@ void QListView_OnReceivers(const QListView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QListView_IsSignalConnected(const QListView* self, QMetaMethod* signal) {
+bool QListView_IsSignalConnected(const QListView* self, const QMetaMethod* signal) {
     auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
     if (vqlistview && vqlistview->isVirtualQListView) {
         return vqlistview->isSignalConnected(*signal);
@@ -3726,7 +3726,7 @@ bool QListView_IsSignalConnected(const QListView* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QListView_QBaseIsSignalConnected(const QListView* self, QMetaMethod* signal) {
+bool QListView_QBaseIsSignalConnected(const QListView* self, const QMetaMethod* signal) {
     auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_IsSignalConnected_IsBase(true);
@@ -3741,6 +3741,35 @@ void QListView_OnIsSignalConnected(const QListView* self, intptr_t slot) {
     auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
     if (vqlistview && vqlistview->isVirtualQListView) {
         vqlistview->setQListView_IsSignalConnected_Callback(reinterpret_cast<VirtualQListView::QListView_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QListView_GetDecodedMetricF(const QListView* self, int metricA, int metricB) {
+    auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
+    if (vqlistview && vqlistview->isVirtualQListView) {
+        return vqlistview->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQListView*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QListView_QBaseGetDecodedMetricF(const QListView* self, int metricA, int metricB) {
+    auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
+    if (vqlistview && vqlistview->isVirtualQListView) {
+        vqlistview->setQListView_GetDecodedMetricF_IsBase(true);
+        return vqlistview->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQListView*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QListView_OnGetDecodedMetricF(const QListView* self, intptr_t slot) {
+    auto* vqlistview = const_cast<VirtualQListView*>(dynamic_cast<const VirtualQListView*>(self));
+    if (vqlistview && vqlistview->isVirtualQListView) {
+        vqlistview->setQListView_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQListView::QListView_GetDecodedMetricF_Callback>(slot));
     }
 }
 

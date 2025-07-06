@@ -49,11 +49,11 @@ QColorDialog* QColorDialog_new2() {
     return new VirtualQColorDialog();
 }
 
-QColorDialog* QColorDialog_new3(QColor* initial) {
+QColorDialog* QColorDialog_new3(const QColor* initial) {
     return new VirtualQColorDialog(*initial);
 }
 
-QColorDialog* QColorDialog_new4(QColor* initial, QWidget* parent) {
+QColorDialog* QColorDialog_new4(const QColor* initial, QWidget* parent) {
     return new VirtualQColorDialog(*initial, parent);
 }
 
@@ -105,7 +105,7 @@ libqt_string QColorDialog_Tr(const char* s) {
     return _str;
 }
 
-void QColorDialog_SetCurrentColor(QColorDialog* self, QColor* color) {
+void QColorDialog_SetCurrentColor(QColorDialog* self, const QColor* color) {
     self->setCurrentColor(*color);
 }
 
@@ -157,7 +157,7 @@ void QColorDialog_SetStandardColor(int index, QColor* color) {
     QColorDialog::setStandardColor(static_cast<int>(index), *color);
 }
 
-void QColorDialog_CurrentColorChanged(QColorDialog* self, QColor* color) {
+void QColorDialog_CurrentColorChanged(QColorDialog* self, const QColor* color) {
     self->currentColorChanged(*color);
 }
 
@@ -171,7 +171,7 @@ void QColorDialog_Connect_CurrentColorChanged(QColorDialog* self, intptr_t slot)
     });
 }
 
-void QColorDialog_ColorSelected(QColorDialog* self, QColor* color) {
+void QColorDialog_ColorSelected(QColorDialog* self, const QColor* color) {
     self->colorSelected(*color);
 }
 
@@ -213,20 +213,20 @@ void QColorDialog_SetOption2(QColorDialog* self, int option, bool on) {
     self->setOption(static_cast<QColorDialog::ColorDialogOption>(option), on);
 }
 
-QColor* QColorDialog_GetColor1(QColor* initial) {
+QColor* QColorDialog_GetColor1(const QColor* initial) {
     return new QColor(QColorDialog::getColor(*initial));
 }
 
-QColor* QColorDialog_GetColor2(QColor* initial, QWidget* parent) {
+QColor* QColorDialog_GetColor2(const QColor* initial, QWidget* parent) {
     return new QColor(QColorDialog::getColor(*initial, parent));
 }
 
-QColor* QColorDialog_GetColor3(QColor* initial, QWidget* parent, libqt_string title) {
+QColor* QColorDialog_GetColor3(const QColor* initial, QWidget* parent, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new QColor(QColorDialog::getColor(*initial, parent, title_QString));
 }
 
-QColor* QColorDialog_GetColor4(QColor* initial, QWidget* parent, libqt_string title, int options) {
+QColor* QColorDialog_GetColor4(const QColor* initial, QWidget* parent, const libqt_string title, int options) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new QColor(QColorDialog::getColor(*initial, parent, title_QString, static_cast<QColorDialog::ColorDialogOptions>(options)));
 }
@@ -1363,7 +1363,7 @@ void QColorDialog_OnHideEvent(QColorDialog* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QColorDialog_NativeEvent(QColorDialog* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QColorDialog_NativeEvent(QColorDialog* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqcolordialog = dynamic_cast<VirtualQColorDialog*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqcolordialog && vqcolordialog->isVirtualQColorDialog) {
@@ -1374,7 +1374,7 @@ bool QColorDialog_NativeEvent(QColorDialog* self, libqt_string eventType, void* 
 }
 
 // Base class handler implementation
-bool QColorDialog_QBaseNativeEvent(QColorDialog* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QColorDialog_QBaseNativeEvent(QColorDialog* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqcolordialog = dynamic_cast<VirtualQColorDialog*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqcolordialog && vqcolordialog->isVirtualQColorDialog) {
@@ -1684,7 +1684,7 @@ void QColorDialog_OnCustomEvent(QColorDialog* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QColorDialog_ConnectNotify(QColorDialog* self, QMetaMethod* signal) {
+void QColorDialog_ConnectNotify(QColorDialog* self, const QMetaMethod* signal) {
     auto* vqcolordialog = dynamic_cast<VirtualQColorDialog*>(self);
     if (vqcolordialog && vqcolordialog->isVirtualQColorDialog) {
         vqcolordialog->connectNotify(*signal);
@@ -1694,7 +1694,7 @@ void QColorDialog_ConnectNotify(QColorDialog* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QColorDialog_QBaseConnectNotify(QColorDialog* self, QMetaMethod* signal) {
+void QColorDialog_QBaseConnectNotify(QColorDialog* self, const QMetaMethod* signal) {
     auto* vqcolordialog = dynamic_cast<VirtualQColorDialog*>(self);
     if (vqcolordialog && vqcolordialog->isVirtualQColorDialog) {
         vqcolordialog->setQColorDialog_ConnectNotify_IsBase(true);
@@ -1713,7 +1713,7 @@ void QColorDialog_OnConnectNotify(QColorDialog* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QColorDialog_DisconnectNotify(QColorDialog* self, QMetaMethod* signal) {
+void QColorDialog_DisconnectNotify(QColorDialog* self, const QMetaMethod* signal) {
     auto* vqcolordialog = dynamic_cast<VirtualQColorDialog*>(self);
     if (vqcolordialog && vqcolordialog->isVirtualQColorDialog) {
         vqcolordialog->disconnectNotify(*signal);
@@ -1723,7 +1723,7 @@ void QColorDialog_DisconnectNotify(QColorDialog* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QColorDialog_QBaseDisconnectNotify(QColorDialog* self, QMetaMethod* signal) {
+void QColorDialog_QBaseDisconnectNotify(QColorDialog* self, const QMetaMethod* signal) {
     auto* vqcolordialog = dynamic_cast<VirtualQColorDialog*>(self);
     if (vqcolordialog && vqcolordialog->isVirtualQColorDialog) {
         vqcolordialog->setQColorDialog_DisconnectNotify_IsBase(true);
@@ -2003,7 +2003,7 @@ void QColorDialog_OnReceivers(const QColorDialog* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QColorDialog_IsSignalConnected(const QColorDialog* self, QMetaMethod* signal) {
+bool QColorDialog_IsSignalConnected(const QColorDialog* self, const QMetaMethod* signal) {
     auto* vqcolordialog = const_cast<VirtualQColorDialog*>(dynamic_cast<const VirtualQColorDialog*>(self));
     if (vqcolordialog && vqcolordialog->isVirtualQColorDialog) {
         return vqcolordialog->isSignalConnected(*signal);
@@ -2013,7 +2013,7 @@ bool QColorDialog_IsSignalConnected(const QColorDialog* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-bool QColorDialog_QBaseIsSignalConnected(const QColorDialog* self, QMetaMethod* signal) {
+bool QColorDialog_QBaseIsSignalConnected(const QColorDialog* self, const QMetaMethod* signal) {
     auto* vqcolordialog = const_cast<VirtualQColorDialog*>(dynamic_cast<const VirtualQColorDialog*>(self));
     if (vqcolordialog && vqcolordialog->isVirtualQColorDialog) {
         vqcolordialog->setQColorDialog_IsSignalConnected_IsBase(true);
@@ -2028,6 +2028,35 @@ void QColorDialog_OnIsSignalConnected(const QColorDialog* self, intptr_t slot) {
     auto* vqcolordialog = const_cast<VirtualQColorDialog*>(dynamic_cast<const VirtualQColorDialog*>(self));
     if (vqcolordialog && vqcolordialog->isVirtualQColorDialog) {
         vqcolordialog->setQColorDialog_IsSignalConnected_Callback(reinterpret_cast<VirtualQColorDialog::QColorDialog_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QColorDialog_GetDecodedMetricF(const QColorDialog* self, int metricA, int metricB) {
+    auto* vqcolordialog = const_cast<VirtualQColorDialog*>(dynamic_cast<const VirtualQColorDialog*>(self));
+    if (vqcolordialog && vqcolordialog->isVirtualQColorDialog) {
+        return vqcolordialog->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQColorDialog*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QColorDialog_QBaseGetDecodedMetricF(const QColorDialog* self, int metricA, int metricB) {
+    auto* vqcolordialog = const_cast<VirtualQColorDialog*>(dynamic_cast<const VirtualQColorDialog*>(self));
+    if (vqcolordialog && vqcolordialog->isVirtualQColorDialog) {
+        vqcolordialog->setQColorDialog_GetDecodedMetricF_IsBase(true);
+        return vqcolordialog->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQColorDialog*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QColorDialog_OnGetDecodedMetricF(const QColorDialog* self, intptr_t slot) {
+    auto* vqcolordialog = const_cast<VirtualQColorDialog*>(dynamic_cast<const VirtualQColorDialog*>(self));
+    if (vqcolordialog && vqcolordialog->isVirtualQColorDialog) {
+        vqcolordialog->setQColorDialog_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQColorDialog::QColorDialog_GetDecodedMetricF_Callback>(slot));
     }
 }
 

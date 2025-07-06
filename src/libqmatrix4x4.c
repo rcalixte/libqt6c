@@ -259,8 +259,12 @@ QVariant* q_matrix4x4_to_q_variant(void* self) {
     return QMatrix4x4_ToQVariant((QMatrix4x4*)self);
 }
 
-void q_matrix4x4_projected_rotate(void* self, float angle, float x, float y, float z) {
-    QMatrix4x4_ProjectedRotate((QMatrix4x4*)self, angle, x, y, z);
+void q_matrix4x4_projected_rotate(void* self, float angle, float x, float y, float z, float distanceToPlane) {
+    QMatrix4x4_ProjectedRotate((QMatrix4x4*)self, angle, x, y, z, distanceToPlane);
+}
+
+void q_matrix4x4_projected_rotate2(void* self, float angle, float x, float y, float z) {
+    QMatrix4x4_ProjectedRotate2((QMatrix4x4*)self, angle, x, y, z);
 }
 
 int64_t q_matrix4x4_flags(void* self) {

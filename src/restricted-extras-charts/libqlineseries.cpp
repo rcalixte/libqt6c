@@ -127,7 +127,7 @@ void QLineSeries_OnType(const QLineSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLineSeries_SetPen(QLineSeries* self, QPen* pen) {
+void QLineSeries_SetPen(QLineSeries* self, const QPen* pen) {
     auto* vqlineseries = dynamic_cast<VirtualQLineSeries*>(self);
     if (vqlineseries && vqlineseries->isVirtualQLineSeries) {
         vqlineseries->setPen(*pen);
@@ -137,7 +137,7 @@ void QLineSeries_SetPen(QLineSeries* self, QPen* pen) {
 }
 
 // Base class handler implementation
-void QLineSeries_QBaseSetPen(QLineSeries* self, QPen* pen) {
+void QLineSeries_QBaseSetPen(QLineSeries* self, const QPen* pen) {
     auto* vqlineseries = dynamic_cast<VirtualQLineSeries*>(self);
     if (vqlineseries && vqlineseries->isVirtualQLineSeries) {
         vqlineseries->setQLineSeries_SetPen_IsBase(true);
@@ -156,7 +156,7 @@ void QLineSeries_OnSetPen(QLineSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLineSeries_SetBrush(QLineSeries* self, QBrush* brush) {
+void QLineSeries_SetBrush(QLineSeries* self, const QBrush* brush) {
     auto* vqlineseries = dynamic_cast<VirtualQLineSeries*>(self);
     if (vqlineseries && vqlineseries->isVirtualQLineSeries) {
         vqlineseries->setBrush(*brush);
@@ -166,7 +166,7 @@ void QLineSeries_SetBrush(QLineSeries* self, QBrush* brush) {
 }
 
 // Base class handler implementation
-void QLineSeries_QBaseSetBrush(QLineSeries* self, QBrush* brush) {
+void QLineSeries_QBaseSetBrush(QLineSeries* self, const QBrush* brush) {
     auto* vqlineseries = dynamic_cast<VirtualQLineSeries*>(self);
     if (vqlineseries && vqlineseries->isVirtualQLineSeries) {
         vqlineseries->setQLineSeries_SetBrush_IsBase(true);
@@ -185,7 +185,7 @@ void QLineSeries_OnSetBrush(QLineSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLineSeries_SetColor(QLineSeries* self, QColor* color) {
+void QLineSeries_SetColor(QLineSeries* self, const QColor* color) {
     auto* vqlineseries = dynamic_cast<VirtualQLineSeries*>(self);
     if (vqlineseries && vqlineseries->isVirtualQLineSeries) {
         vqlineseries->setColor(*color);
@@ -195,7 +195,7 @@ void QLineSeries_SetColor(QLineSeries* self, QColor* color) {
 }
 
 // Base class handler implementation
-void QLineSeries_QBaseSetColor(QLineSeries* self, QColor* color) {
+void QLineSeries_QBaseSetColor(QLineSeries* self, const QColor* color) {
     auto* vqlineseries = dynamic_cast<VirtualQLineSeries*>(self);
     if (vqlineseries && vqlineseries->isVirtualQLineSeries) {
         vqlineseries->setQLineSeries_SetColor_IsBase(true);
@@ -388,7 +388,7 @@ void QLineSeries_OnCustomEvent(QLineSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLineSeries_ConnectNotify(QLineSeries* self, QMetaMethod* signal) {
+void QLineSeries_ConnectNotify(QLineSeries* self, const QMetaMethod* signal) {
     auto* vqlineseries = dynamic_cast<VirtualQLineSeries*>(self);
     if (vqlineseries && vqlineseries->isVirtualQLineSeries) {
         vqlineseries->connectNotify(*signal);
@@ -398,7 +398,7 @@ void QLineSeries_ConnectNotify(QLineSeries* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QLineSeries_QBaseConnectNotify(QLineSeries* self, QMetaMethod* signal) {
+void QLineSeries_QBaseConnectNotify(QLineSeries* self, const QMetaMethod* signal) {
     auto* vqlineseries = dynamic_cast<VirtualQLineSeries*>(self);
     if (vqlineseries && vqlineseries->isVirtualQLineSeries) {
         vqlineseries->setQLineSeries_ConnectNotify_IsBase(true);
@@ -417,7 +417,7 @@ void QLineSeries_OnConnectNotify(QLineSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLineSeries_DisconnectNotify(QLineSeries* self, QMetaMethod* signal) {
+void QLineSeries_DisconnectNotify(QLineSeries* self, const QMetaMethod* signal) {
     auto* vqlineseries = dynamic_cast<VirtualQLineSeries*>(self);
     if (vqlineseries && vqlineseries->isVirtualQLineSeries) {
         vqlineseries->disconnectNotify(*signal);
@@ -427,7 +427,7 @@ void QLineSeries_DisconnectNotify(QLineSeries* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QLineSeries_QBaseDisconnectNotify(QLineSeries* self, QMetaMethod* signal) {
+void QLineSeries_QBaseDisconnectNotify(QLineSeries* self, const QMetaMethod* signal) {
     auto* vqlineseries = dynamic_cast<VirtualQLineSeries*>(self);
     if (vqlineseries && vqlineseries->isVirtualQLineSeries) {
         vqlineseries->setQLineSeries_DisconnectNotify_IsBase(true);
@@ -533,7 +533,7 @@ void QLineSeries_OnReceivers(const QLineSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QLineSeries_IsSignalConnected(const QLineSeries* self, QMetaMethod* signal) {
+bool QLineSeries_IsSignalConnected(const QLineSeries* self, const QMetaMethod* signal) {
     auto* vqlineseries = const_cast<VirtualQLineSeries*>(dynamic_cast<const VirtualQLineSeries*>(self));
     if (vqlineseries && vqlineseries->isVirtualQLineSeries) {
         return vqlineseries->isSignalConnected(*signal);
@@ -543,7 +543,7 @@ bool QLineSeries_IsSignalConnected(const QLineSeries* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QLineSeries_QBaseIsSignalConnected(const QLineSeries* self, QMetaMethod* signal) {
+bool QLineSeries_QBaseIsSignalConnected(const QLineSeries* self, const QMetaMethod* signal) {
     auto* vqlineseries = const_cast<VirtualQLineSeries*>(dynamic_cast<const VirtualQLineSeries*>(self));
     if (vqlineseries && vqlineseries->isVirtualQLineSeries) {
         vqlineseries->setQLineSeries_IsSignalConnected_IsBase(true);

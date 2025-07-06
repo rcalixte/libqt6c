@@ -92,6 +92,14 @@ void q_videoframeformat_set_frame_rate(void* self, double rate) {
     QVideoFrameFormat_SetFrameRate((QVideoFrameFormat*)self, rate);
 }
 
+double q_videoframeformat_stream_frame_rate(void* self) {
+    return QVideoFrameFormat_StreamFrameRate((QVideoFrameFormat*)self);
+}
+
+void q_videoframeformat_set_stream_frame_rate(void* self, double rate) {
+    QVideoFrameFormat_SetStreamFrameRate((QVideoFrameFormat*)self, rate);
+}
+
 int64_t q_videoframeformat_y_cb_cr_color_space(void* self) {
     return QVideoFrameFormat_YCbCrColorSpace((QVideoFrameFormat*)self);
 }
@@ -130,6 +138,14 @@ bool q_videoframeformat_is_mirrored(void* self) {
 
 void q_videoframeformat_set_mirrored(void* self, bool mirrored) {
     QVideoFrameFormat_SetMirrored((QVideoFrameFormat*)self, mirrored);
+}
+
+int64_t q_videoframeformat_rotation(void* self) {
+    return QVideoFrameFormat_Rotation((QVideoFrameFormat*)self);
+}
+
+void q_videoframeformat_set_rotation(void* self, int64_t rotation) {
+    QVideoFrameFormat_SetRotation((QVideoFrameFormat*)self, rotation);
 }
 
 const char* q_videoframeformat_vertex_shader_file_name(void* self) {

@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqcolorspace.h"
-
 /// https://doc.qt.io/qt-6/qsurfaceformat.html
 
 /// q_surfaceformat_new constructs a new QSurfaceFormat object.

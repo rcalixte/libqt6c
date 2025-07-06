@@ -12,14 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqiodevice.h"
-#include "libqpaintdevice.h"
-#include "libqpaintengine.h"
-#include "libqpainter.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qpicture.html
 
 /// q_picture_new constructs a new QPicture object.
@@ -283,6 +275,13 @@ double q_picture_device_pixel_ratio_f_scale();
 
 /// Inherited from QPaintDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_picture_encode_metric_f(int64_t metric, double value);
+
+/// Inherited from QPaintDevice
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#initPainter)
 ///
 /// Wrapper to allow calling virtual or protected method
@@ -361,6 +360,33 @@ QPainter* q_picture_qbase_shared_painter(void* self);
 ///
 /// ``` QPicture* self, QPainter* (*slot)() ```
 void q_picture_on_shared_painter(void* self, QPainter* (*slot)());
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QPicture* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_picture_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QPicture* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_picture_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QPicture* self, double (*slot)(QPicture*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
+void q_picture_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#dtor.QPicture)
 ///

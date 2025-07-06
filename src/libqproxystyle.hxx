@@ -130,9 +130,9 @@ class VirtualQProxyStyle final : public QProxyStyle {
     mutable bool qproxystyle_issignalconnected_isbase = false;
 
   public:
-    VirtualQProxyStyle() : QProxyStyle(){};
-    VirtualQProxyStyle(const QString& key) : QProxyStyle(key){};
-    VirtualQProxyStyle(QStyle* style) : QProxyStyle(style){};
+    VirtualQProxyStyle() : QProxyStyle() {};
+    VirtualQProxyStyle(const QString& key) : QProxyStyle(key) {};
+    VirtualQProxyStyle(QStyle* style) : QProxyStyle(style) {};
 
     ~VirtualQProxyStyle() {
         qproxystyle_metacall_callback = nullptr;
@@ -858,18 +858,18 @@ class VirtualQProxyStyle final : public QProxyStyle {
     friend void QProxyStyle_QBaseChildEvent(QProxyStyle* self, QChildEvent* event);
     friend void QProxyStyle_CustomEvent(QProxyStyle* self, QEvent* event);
     friend void QProxyStyle_QBaseCustomEvent(QProxyStyle* self, QEvent* event);
-    friend void QProxyStyle_ConnectNotify(QProxyStyle* self, QMetaMethod* signal);
-    friend void QProxyStyle_QBaseConnectNotify(QProxyStyle* self, QMetaMethod* signal);
-    friend void QProxyStyle_DisconnectNotify(QProxyStyle* self, QMetaMethod* signal);
-    friend void QProxyStyle_QBaseDisconnectNotify(QProxyStyle* self, QMetaMethod* signal);
+    friend void QProxyStyle_ConnectNotify(QProxyStyle* self, const QMetaMethod* signal);
+    friend void QProxyStyle_QBaseConnectNotify(QProxyStyle* self, const QMetaMethod* signal);
+    friend void QProxyStyle_DisconnectNotify(QProxyStyle* self, const QMetaMethod* signal);
+    friend void QProxyStyle_QBaseDisconnectNotify(QProxyStyle* self, const QMetaMethod* signal);
     friend QObject* QProxyStyle_Sender(const QProxyStyle* self);
     friend QObject* QProxyStyle_QBaseSender(const QProxyStyle* self);
     friend int QProxyStyle_SenderSignalIndex(const QProxyStyle* self);
     friend int QProxyStyle_QBaseSenderSignalIndex(const QProxyStyle* self);
     friend int QProxyStyle_Receivers(const QProxyStyle* self, const char* signal);
     friend int QProxyStyle_QBaseReceivers(const QProxyStyle* self, const char* signal);
-    friend bool QProxyStyle_IsSignalConnected(const QProxyStyle* self, QMetaMethod* signal);
-    friend bool QProxyStyle_QBaseIsSignalConnected(const QProxyStyle* self, QMetaMethod* signal);
+    friend bool QProxyStyle_IsSignalConnected(const QProxyStyle* self, const QMetaMethod* signal);
+    friend bool QProxyStyle_QBaseIsSignalConnected(const QProxyStyle* self, const QMetaMethod* signal);
 };
 
 #endif

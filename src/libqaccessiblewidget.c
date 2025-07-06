@@ -357,6 +357,14 @@ QAccessibleHyperlinkInterface* q_accessiblewidget_hyperlink_interface(void* self
     return QAccessibleInterface_HyperlinkInterface((QAccessibleInterface*)self);
 }
 
+QAccessibleSelectionInterface* q_accessiblewidget_selection_interface(void* self) {
+    return QAccessibleInterface_SelectionInterface((QAccessibleInterface*)self);
+}
+
+QAccessibleAttributesInterface* q_accessiblewidget_attributes_interface(void* self) {
+    return QAccessibleInterface_AttributesInterface((QAccessibleInterface*)self);
+}
+
 const char* q_accessiblewidget_tr(const char* sourceText) {
     libqt_string _str = QAccessibleActionInterface_Tr(sourceText);
     char* _ret = qstring_to_char(_str);

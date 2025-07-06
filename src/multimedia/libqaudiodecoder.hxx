@@ -61,8 +61,8 @@ class VirtualQAudioDecoder final : public QAudioDecoder {
     mutable bool qaudiodecoder_issignalconnected_isbase = false;
 
   public:
-    VirtualQAudioDecoder() : QAudioDecoder(){};
-    VirtualQAudioDecoder(QObject* parent) : QAudioDecoder(parent){};
+    VirtualQAudioDecoder() : QAudioDecoder() {};
+    VirtualQAudioDecoder(QObject* parent) : QAudioDecoder(parent) {};
 
     ~VirtualQAudioDecoder() {
         qaudiodecoder_metacall_callback = nullptr;
@@ -294,18 +294,18 @@ class VirtualQAudioDecoder final : public QAudioDecoder {
     friend void QAudioDecoder_QBaseChildEvent(QAudioDecoder* self, QChildEvent* event);
     friend void QAudioDecoder_CustomEvent(QAudioDecoder* self, QEvent* event);
     friend void QAudioDecoder_QBaseCustomEvent(QAudioDecoder* self, QEvent* event);
-    friend void QAudioDecoder_ConnectNotify(QAudioDecoder* self, QMetaMethod* signal);
-    friend void QAudioDecoder_QBaseConnectNotify(QAudioDecoder* self, QMetaMethod* signal);
-    friend void QAudioDecoder_DisconnectNotify(QAudioDecoder* self, QMetaMethod* signal);
-    friend void QAudioDecoder_QBaseDisconnectNotify(QAudioDecoder* self, QMetaMethod* signal);
+    friend void QAudioDecoder_ConnectNotify(QAudioDecoder* self, const QMetaMethod* signal);
+    friend void QAudioDecoder_QBaseConnectNotify(QAudioDecoder* self, const QMetaMethod* signal);
+    friend void QAudioDecoder_DisconnectNotify(QAudioDecoder* self, const QMetaMethod* signal);
+    friend void QAudioDecoder_QBaseDisconnectNotify(QAudioDecoder* self, const QMetaMethod* signal);
     friend QObject* QAudioDecoder_Sender(const QAudioDecoder* self);
     friend QObject* QAudioDecoder_QBaseSender(const QAudioDecoder* self);
     friend int QAudioDecoder_SenderSignalIndex(const QAudioDecoder* self);
     friend int QAudioDecoder_QBaseSenderSignalIndex(const QAudioDecoder* self);
     friend int QAudioDecoder_Receivers(const QAudioDecoder* self, const char* signal);
     friend int QAudioDecoder_QBaseReceivers(const QAudioDecoder* self, const char* signal);
-    friend bool QAudioDecoder_IsSignalConnected(const QAudioDecoder* self, QMetaMethod* signal);
-    friend bool QAudioDecoder_QBaseIsSignalConnected(const QAudioDecoder* self, QMetaMethod* signal);
+    friend bool QAudioDecoder_IsSignalConnected(const QAudioDecoder* self, const QMetaMethod* signal);
+    friend bool QAudioDecoder_QBaseIsSignalConnected(const QAudioDecoder* self, const QMetaMethod* signal);
 };
 
 #endif

@@ -20,28 +20,10 @@ typedef struct QColorSpace QColorSpace;
 typedef struct QSurfaceFormat QSurfaceFormat;
 #endif
 
-#ifdef __cplusplus
-typedef QSurfaceFormat::ColorSpace ColorSpace;                     // C++ enum
-typedef QSurfaceFormat::FormatOption FormatOption;                 // C++ enum
-typedef QSurfaceFormat::FormatOptions FormatOptions;               // C++ QFlags
-typedef QSurfaceFormat::OpenGLContextProfile OpenGLContextProfile; // C++ enum
-typedef QSurfaceFormat::QtGadgetHelper QtGadgetHelper;             // C++ QFlags
-typedef QSurfaceFormat::RenderableType RenderableType;             // C++ enum
-typedef QSurfaceFormat::SwapBehavior SwapBehavior;                 // C++ enum
-#else
-typedef int ColorSpace;           // C ABI enum
-typedef int FormatOption;         // C ABI enum
-typedef int FormatOptions;        // C ABI QFlags
-typedef int OpenGLContextProfile; // C ABI enum
-typedef int RenderableType;       // C ABI enum
-typedef int SwapBehavior;         // C ABI enum
-typedef void QtGadgetHelper;      // C ABI QFlags
-#endif
-
 QSurfaceFormat* QSurfaceFormat_new();
 QSurfaceFormat* QSurfaceFormat_new2(int options);
-QSurfaceFormat* QSurfaceFormat_new3(QSurfaceFormat* other);
-void QSurfaceFormat_OperatorAssign(QSurfaceFormat* self, QSurfaceFormat* other);
+QSurfaceFormat* QSurfaceFormat_new3(const QSurfaceFormat* other);
+void QSurfaceFormat_OperatorAssign(QSurfaceFormat* self, const QSurfaceFormat* other);
 void QSurfaceFormat_SetDepthBufferSize(QSurfaceFormat* self, int size);
 int QSurfaceFormat_DepthBufferSize(const QSurfaceFormat* self);
 void QSurfaceFormat_SetStencilBufferSize(QSurfaceFormat* self, int size);
@@ -78,9 +60,9 @@ int QSurfaceFormat_Options(const QSurfaceFormat* self);
 int QSurfaceFormat_SwapInterval(const QSurfaceFormat* self);
 void QSurfaceFormat_SetSwapInterval(QSurfaceFormat* self, int interval);
 QColorSpace* QSurfaceFormat_ColorSpace(const QSurfaceFormat* self);
-void QSurfaceFormat_SetColorSpace(QSurfaceFormat* self, QColorSpace* colorSpace);
+void QSurfaceFormat_SetColorSpace(QSurfaceFormat* self, const QColorSpace* colorSpace);
 void QSurfaceFormat_SetColorSpaceWithColorSpace(QSurfaceFormat* self, int colorSpace);
-void QSurfaceFormat_SetDefaultFormat(QSurfaceFormat* format);
+void QSurfaceFormat_SetDefaultFormat(const QSurfaceFormat* format);
 QSurfaceFormat* QSurfaceFormat_DefaultFormat();
 void QSurfaceFormat_SetOption2(QSurfaceFormat* self, int option, bool on);
 void QSurfaceFormat_Delete(QSurfaceFormat* self);

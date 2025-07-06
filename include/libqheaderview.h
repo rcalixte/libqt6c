@@ -12,28 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractitemdelegate.h"
-#include "libqabstractitemmodel.h"
-#include "libqabstractitemview.h"
-#include "libqabstractscrollarea.h"
-#include "libqevent.h"
-#include "libqframe.h"
-#include "libqitemselectionmodel.h"
-#include "libqmargins.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpaintdevice.h"
-#include "libqpaintengine.h"
-#include "libqpainter.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqstyleoption.h"
-#include "libqvariant.h"
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qheaderview.html
 
 /// q_headerview_new constructs a new QHeaderView object.
@@ -3567,6 +3545,13 @@ QWidget* q_headerview_child_at_with_q_point(void* self, void* p);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+///
+/// ``` QHeaderView* self, QPointF* p ```
+QWidget* q_headerview_child_at_with_q_point_f(void* self, void* p);
+
+/// Inherited from QWidget
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
 /// ``` QHeaderView* self, enum Qt__WidgetAttribute param1 ```
@@ -3878,7 +3863,7 @@ QThread* q_headerview_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QHeaderView* self, QThread* thread ```
-void q_headerview_move_to_thread(void* self, void* thread);
+bool q_headerview_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -3893,6 +3878,13 @@ int32_t q_headerview_start_timer(void* self, int interval);
 ///
 /// ``` QHeaderView* self, int id ```
 void q_headerview_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QHeaderView* self, enum Qt__TimerId id ```
+void q_headerview_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -4029,6 +4021,13 @@ void q_headerview_delete_later(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QHeaderView* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_headerview_move_to_thread2(void* self, void* thread, void* param2);
+
+/// Inherited from QObject
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QHeaderView* self, int interval, enum Qt__TimerType timerType ```
@@ -4145,6 +4144,13 @@ int32_t q_headerview_depth(void* self);
 ///
 ///
 double q_headerview_device_pixel_ratio_f_scale();
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_headerview_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6494,6 +6500,33 @@ bool q_headerview_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// ``` QHeaderView* self, bool (*slot)(QHeaderView*, QMetaMethod*) ```
 void q_headerview_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QHeaderView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_headerview_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QHeaderView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_headerview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QHeaderView* self, double (*slot)(QHeaderView*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
+void q_headerview_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///

@@ -356,6 +356,10 @@ double q_sciprinter_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
 }
 
+int32_t q_sciprinter_encode_metric_f(int64_t metric, double value) {
+    return QPaintDevice_EncodeMetricF(metric, value);
+}
+
 int32_t q_sciprinter_dev_type(void* self) {
     return QsciPrinter_DevType((QsciPrinter*)self);
 }
@@ -510,6 +514,18 @@ void q_sciprinter_qbase_set_engines(void* self, void* printEngine, void* paintEn
 
 void q_sciprinter_on_set_engines(void* self, void (*slot)(void*, void*, void*)) {
     QsciPrinter_OnSetEngines((QsciPrinter*)self, (intptr_t)slot);
+}
+
+double q_sciprinter_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QsciPrinter_GetDecodedMetricF((QsciPrinter*)self, metricA, metricB);
+}
+
+double q_sciprinter_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QsciPrinter_QBaseGetDecodedMetricF((QsciPrinter*)self, metricA, metricB);
+}
+
+void q_sciprinter_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
+    QsciPrinter_OnGetDecodedMetricF((QsciPrinter*)self, (intptr_t)slot);
 }
 
 void q_sciprinter_delete(void* self) {

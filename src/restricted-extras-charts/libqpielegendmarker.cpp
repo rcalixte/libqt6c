@@ -304,7 +304,7 @@ void QPieLegendMarker_OnCustomEvent(QPieLegendMarker* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPieLegendMarker_ConnectNotify(QPieLegendMarker* self, QMetaMethod* signal) {
+void QPieLegendMarker_ConnectNotify(QPieLegendMarker* self, const QMetaMethod* signal) {
     auto* vqpielegendmarker = dynamic_cast<VirtualQPieLegendMarker*>(self);
     if (vqpielegendmarker && vqpielegendmarker->isVirtualQPieLegendMarker) {
         vqpielegendmarker->connectNotify(*signal);
@@ -314,7 +314,7 @@ void QPieLegendMarker_ConnectNotify(QPieLegendMarker* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-void QPieLegendMarker_QBaseConnectNotify(QPieLegendMarker* self, QMetaMethod* signal) {
+void QPieLegendMarker_QBaseConnectNotify(QPieLegendMarker* self, const QMetaMethod* signal) {
     auto* vqpielegendmarker = dynamic_cast<VirtualQPieLegendMarker*>(self);
     if (vqpielegendmarker && vqpielegendmarker->isVirtualQPieLegendMarker) {
         vqpielegendmarker->setQPieLegendMarker_ConnectNotify_IsBase(true);
@@ -333,7 +333,7 @@ void QPieLegendMarker_OnConnectNotify(QPieLegendMarker* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPieLegendMarker_DisconnectNotify(QPieLegendMarker* self, QMetaMethod* signal) {
+void QPieLegendMarker_DisconnectNotify(QPieLegendMarker* self, const QMetaMethod* signal) {
     auto* vqpielegendmarker = dynamic_cast<VirtualQPieLegendMarker*>(self);
     if (vqpielegendmarker && vqpielegendmarker->isVirtualQPieLegendMarker) {
         vqpielegendmarker->disconnectNotify(*signal);
@@ -343,7 +343,7 @@ void QPieLegendMarker_DisconnectNotify(QPieLegendMarker* self, QMetaMethod* sign
 }
 
 // Base class handler implementation
-void QPieLegendMarker_QBaseDisconnectNotify(QPieLegendMarker* self, QMetaMethod* signal) {
+void QPieLegendMarker_QBaseDisconnectNotify(QPieLegendMarker* self, const QMetaMethod* signal) {
     auto* vqpielegendmarker = dynamic_cast<VirtualQPieLegendMarker*>(self);
     if (vqpielegendmarker && vqpielegendmarker->isVirtualQPieLegendMarker) {
         vqpielegendmarker->setQPieLegendMarker_DisconnectNotify_IsBase(true);
@@ -449,7 +449,7 @@ void QPieLegendMarker_OnReceivers(const QPieLegendMarker* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPieLegendMarker_IsSignalConnected(const QPieLegendMarker* self, QMetaMethod* signal) {
+bool QPieLegendMarker_IsSignalConnected(const QPieLegendMarker* self, const QMetaMethod* signal) {
     auto* vqpielegendmarker = const_cast<VirtualQPieLegendMarker*>(dynamic_cast<const VirtualQPieLegendMarker*>(self));
     if (vqpielegendmarker && vqpielegendmarker->isVirtualQPieLegendMarker) {
         return vqpielegendmarker->isSignalConnected(*signal);
@@ -459,7 +459,7 @@ bool QPieLegendMarker_IsSignalConnected(const QPieLegendMarker* self, QMetaMetho
 }
 
 // Base class handler implementation
-bool QPieLegendMarker_QBaseIsSignalConnected(const QPieLegendMarker* self, QMetaMethod* signal) {
+bool QPieLegendMarker_QBaseIsSignalConnected(const QPieLegendMarker* self, const QMetaMethod* signal) {
     auto* vqpielegendmarker = const_cast<VirtualQPieLegendMarker*>(dynamic_cast<const VirtualQPieLegendMarker*>(self));
     if (vqpielegendmarker && vqpielegendmarker->isVirtualQPieLegendMarker) {
         vqpielegendmarker->setQPieLegendMarker_IsSignalConnected_IsBase(true);

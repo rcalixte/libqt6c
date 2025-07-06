@@ -12,13 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqbrush.h"
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqpen.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qboxset-qtcharts.html
 
 /// q_boxset_new constructs a new QBoxSet object.
@@ -318,7 +311,7 @@ QThread* q_boxset_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QBoxSet* self, QThread* thread ```
-void q_boxset_move_to_thread(void* self, void* thread);
+bool q_boxset_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -333,6 +326,13 @@ int32_t q_boxset_start_timer(void* self, int interval);
 ///
 /// ``` QBoxSet* self, int id ```
 void q_boxset_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QBoxSet* self, enum Qt__TimerId id ```
+void q_boxset_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -473,6 +473,13 @@ bool q_boxset_inherits(void* self, const char* classname);
 ///
 /// ``` QBoxSet* self ```
 void q_boxset_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QBoxSet* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_boxset_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

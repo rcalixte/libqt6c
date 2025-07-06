@@ -12,25 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqaction.h"
-#include "libqeventpoint.h"
-#include "libqfile.h"
-#include "libqinputdevice.h"
-#include "libqnamespace.h"
-#include "libqkeysequence.h"
-#include "libqmimedata.h"
-#include "libqobject.h"
-#include "libqpoint.h"
-#include "libqpointingdevice.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqscreen.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqurl.h"
-#include "libqvariant.h"
-#include "libqcoreevent.h"
-
 /// https://doc.qt.io/qt-6/qinputevent.html
 
 /// q_inputevent_new constructs a new QInputEvent object.
@@ -7502,8 +7483,23 @@ QShortcutEvent* q_shortcutevent_new(void* key, int id);
 
 /// q_shortcutevent_new2 constructs a new QShortcutEvent object.
 ///
+/// ``` QKeySequence* key ```
+QShortcutEvent* q_shortcutevent_new2(void* key);
+
+/// q_shortcutevent_new3 constructs a new QShortcutEvent object.
+///
 /// ``` QKeySequence* key, int id, bool ambiguous ```
-QShortcutEvent* q_shortcutevent_new2(void* key, int id, bool ambiguous);
+QShortcutEvent* q_shortcutevent_new3(void* key, int id, bool ambiguous);
+
+/// q_shortcutevent_new4 constructs a new QShortcutEvent object.
+///
+/// ``` QKeySequence* key, QShortcut* shortcut ```
+QShortcutEvent* q_shortcutevent_new4(void* key, void* shortcut);
+
+/// q_shortcutevent_new5 constructs a new QShortcutEvent object.
+///
+/// ``` QKeySequence* key, QShortcut* shortcut, bool ambiguous ```
+QShortcutEvent* q_shortcutevent_new5(void* key, void* shortcut, bool ambiguous);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qshortcutevent.html#clone)
 ///
@@ -8753,6 +8749,141 @@ void q_applicationstatechangeevent_on_set_accepted(void* self, void (*slot)(void
 /// ``` QApplicationStateChangeEvent* self ```
 void q_applicationstatechangeevent_delete(void* self);
 
+/// https://doc.qt.io/qt-6/qchildwindowevent.html
+
+/// q_childwindowevent_new constructs a new QChildWindowEvent object.
+///
+/// ``` enum QEvent__Type typeVal, QWindow* childWindow ```
+QChildWindowEvent* q_childwindowevent_new(int64_t typeVal, void* childWindow);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchildwindowevent.html#clone)
+///
+/// ``` QChildWindowEvent* self ```
+QChildWindowEvent* q_childwindowevent_clone(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchildwindowevent.html#clone)
+///
+/// Allows for overriding the related default method
+///
+/// ``` QChildWindowEvent* self, QChildWindowEvent* (*slot)() ```
+void q_childwindowevent_on_clone(void* self, QChildWindowEvent* (*slot)());
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchildwindowevent.html#clone)
+///
+/// Base class method implementation
+///
+/// ``` QChildWindowEvent* self ```
+QChildWindowEvent* q_childwindowevent_qbase_clone(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchildwindowevent.html#child)
+///
+/// ``` QChildWindowEvent* self ```
+QWindow* q_childwindowevent_child(void* self);
+
+/// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
+///
+/// ``` QChildWindowEvent* self ```
+int64_t q_childwindowevent_type(void* self);
+
+/// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
+///
+/// ``` QChildWindowEvent* self ```
+bool q_childwindowevent_spontaneous(void* self);
+
+/// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
+///
+/// ``` QChildWindowEvent* self ```
+bool q_childwindowevent_is_accepted(void* self);
+
+/// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
+///
+/// ``` QChildWindowEvent* self ```
+void q_childwindowevent_accept(void* self);
+
+/// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
+///
+/// ``` QChildWindowEvent* self ```
+void q_childwindowevent_ignore(void* self);
+
+/// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
+///
+/// ``` QChildWindowEvent* self ```
+bool q_childwindowevent_is_input_event(void* self);
+
+/// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
+///
+/// ``` QChildWindowEvent* self ```
+bool q_childwindowevent_is_pointer_event(void* self);
+
+/// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
+///
+/// ``` QChildWindowEvent* self ```
+bool q_childwindowevent_is_single_point_event(void* self);
+
+/// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
+///
+///
+int32_t q_childwindowevent_register_event_type();
+
+/// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
+///
+/// ``` int hint ```
+int32_t q_childwindowevent_register_event_type1(int hint);
+
+/// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QChildWindowEvent* self, bool accepted ```
+void q_childwindowevent_set_accepted(void* self, bool accepted);
+
+/// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QChildWindowEvent* self, bool accepted ```
+void q_childwindowevent_qbase_set_accepted(void* self, bool accepted);
+
+/// Inherited from QEvent
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QChildWindowEvent* self, void (*slot)(QChildWindowEvent*, bool) ```
+void q_childwindowevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qchildwindowevent.html#dtor.QChildWindowEvent)
+///
+/// Delete this object from C++ memory.
+///
+/// ``` QChildWindowEvent* self ```
+void q_childwindowevent_delete(void* self);
+
 /// https://doc.qt.io/qt-6/qinputmethodevent-attribute.html
 
 /// q_inputmethodevent__attribute_new constructs a new QInputMethodEvent::Attribute object.
@@ -8764,11 +8895,6 @@ QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new(int64_t typ, int
 ///
 /// ``` enum QInputMethodEvent__AttributeType typ, int s, int l ```
 QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new2(int64_t typ, int s, int l);
-
-/// q_inputmethodevent__attribute_new3 constructs a new QInputMethodEvent::Attribute object.
-///
-/// ``` QInputMethodEvent__Attribute* param1 ```
-QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new3(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent__attribute.html#operator=)
 ///

@@ -61,8 +61,8 @@ class VirtualQPdfDocument final : public QPdfDocument {
     mutable bool qpdfdocument_issignalconnected_isbase = false;
 
   public:
-    VirtualQPdfDocument() : QPdfDocument(){};
-    VirtualQPdfDocument(QObject* parent) : QPdfDocument(parent){};
+    VirtualQPdfDocument() : QPdfDocument() {};
+    VirtualQPdfDocument(QObject* parent) : QPdfDocument(parent) {};
 
     ~VirtualQPdfDocument() {
         qpdfdocument_metacall_callback = nullptr;
@@ -294,18 +294,18 @@ class VirtualQPdfDocument final : public QPdfDocument {
     friend void QPdfDocument_QBaseChildEvent(QPdfDocument* self, QChildEvent* event);
     friend void QPdfDocument_CustomEvent(QPdfDocument* self, QEvent* event);
     friend void QPdfDocument_QBaseCustomEvent(QPdfDocument* self, QEvent* event);
-    friend void QPdfDocument_ConnectNotify(QPdfDocument* self, QMetaMethod* signal);
-    friend void QPdfDocument_QBaseConnectNotify(QPdfDocument* self, QMetaMethod* signal);
-    friend void QPdfDocument_DisconnectNotify(QPdfDocument* self, QMetaMethod* signal);
-    friend void QPdfDocument_QBaseDisconnectNotify(QPdfDocument* self, QMetaMethod* signal);
+    friend void QPdfDocument_ConnectNotify(QPdfDocument* self, const QMetaMethod* signal);
+    friend void QPdfDocument_QBaseConnectNotify(QPdfDocument* self, const QMetaMethod* signal);
+    friend void QPdfDocument_DisconnectNotify(QPdfDocument* self, const QMetaMethod* signal);
+    friend void QPdfDocument_QBaseDisconnectNotify(QPdfDocument* self, const QMetaMethod* signal);
     friend QObject* QPdfDocument_Sender(const QPdfDocument* self);
     friend QObject* QPdfDocument_QBaseSender(const QPdfDocument* self);
     friend int QPdfDocument_SenderSignalIndex(const QPdfDocument* self);
     friend int QPdfDocument_QBaseSenderSignalIndex(const QPdfDocument* self);
     friend int QPdfDocument_Receivers(const QPdfDocument* self, const char* signal);
     friend int QPdfDocument_QBaseReceivers(const QPdfDocument* self, const char* signal);
-    friend bool QPdfDocument_IsSignalConnected(const QPdfDocument* self, QMetaMethod* signal);
-    friend bool QPdfDocument_QBaseIsSignalConnected(const QPdfDocument* self, QMetaMethod* signal);
+    friend bool QPdfDocument_IsSignalConnected(const QPdfDocument* self, const QMetaMethod* signal);
+    friend bool QPdfDocument_QBaseIsSignalConnected(const QPdfDocument* self, const QMetaMethod* signal);
 };
 
 #endif

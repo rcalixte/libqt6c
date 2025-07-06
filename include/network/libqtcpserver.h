@@ -12,14 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqevent.h"
-#include "libqhostaddress.h"
-#include "../libqmetaobject.h"
-#include "libqnetworkproxy.h"
-#include "../libqobject.h"
-#include <string.h>
-#include "libqtcpsocket.h"
-
 /// https://doc.qt.io/qt-6/qtcpserver.html
 
 /// q_tcpserver_new constructs a new QTcpServer object.
@@ -335,7 +327,7 @@ QThread* q_tcpserver_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QTcpServer* self, QThread* thread ```
-void q_tcpserver_move_to_thread(void* self, void* thread);
+bool q_tcpserver_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -350,6 +342,13 @@ int32_t q_tcpserver_start_timer(void* self, int interval);
 ///
 /// ``` QTcpServer* self, int id ```
 void q_tcpserver_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QTcpServer* self, enum Qt__TimerId id ```
+void q_tcpserver_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -490,6 +489,13 @@ bool q_tcpserver_inherits(void* self, const char* classname);
 ///
 /// ``` QTcpServer* self ```
 void q_tcpserver_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QTcpServer* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_tcpserver_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

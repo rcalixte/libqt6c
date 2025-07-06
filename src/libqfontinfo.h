@@ -12,9 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqfont.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qfontinfo.html
 
 /// q_fontinfo_new constructs a new QFontInfo object.

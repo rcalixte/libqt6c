@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqcalendar.h"
-#include <string.h>
-#include "libqtimezone.h"
-
 /// https://doc.qt.io/qt-6/qdate.html
 
 /// q_date_new constructs a new QDate object.
@@ -145,13 +141,13 @@ int32_t q_date_days_in_year_with_cal(void* self, void* cal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#startOfDay)
 ///
-/// ``` QDate* self ```
-QDateTime* q_date_start_of_day(void* self);
+/// ``` QDate* self, enum Qt__TimeSpec spec ```
+QDateTime* q_date_start_of_day(void* self, int64_t spec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#endOfDay)
 ///
-/// ``` QDate* self ```
-QDateTime* q_date_end_of_day(void* self);
+/// ``` QDate* self, enum Qt__TimeSpec spec ```
+QDateTime* q_date_end_of_day(void* self, int64_t spec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#startOfDay)
 ///
@@ -163,6 +159,16 @@ QDateTime* q_date_start_of_day_with_zone(void* self, void* zone);
 /// ``` QDate* self, QTimeZone* zone ```
 QDateTime* q_date_end_of_day_with_zone(void* self, void* zone);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#startOfDay)
+///
+/// ``` QDate* self ```
+QDateTime* q_date_start_of_day2(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#endOfDay)
+///
+/// ``` QDate* self ```
+QDateTime* q_date_end_of_day2(void* self);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#toString)
 ///
 /// ``` QDate* self ```
@@ -172,6 +178,11 @@ const char* q_date_to_string(void* self);
 ///
 /// ``` QDate* self, const char* format ```
 const char* q_date_to_string_with_format(void* self, const char* format);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#toString)
+///
+/// ``` QDate* self, const char* format, QCalendar* cal ```
+const char* q_date_to_string2(void* self, const char* format, void* cal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#setDate)
 ///
@@ -230,8 +241,18 @@ QDate* q_date_from_string_with_string_val(const char* stringVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#fromString)
 ///
+/// ``` const char* stringVal, const char* format, QCalendar* cal ```
+QDate* q_date_from_string4(const char* stringVal, const char* format, void* cal);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#fromString)
+///
 /// ``` const char* stringVal, const char* format ```
-QDate* q_date_from_string4(const char* stringVal, const char* format);
+QDate* q_date_from_string9(const char* stringVal, const char* format);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#fromString)
+///
+/// ``` const char* stringVal, const char* format, int baseYear, QCalendar* cal ```
+QDate* q_date_from_string10(const char* stringVal, const char* format, int baseYear, void* cal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#isValid)
 ///
@@ -260,33 +281,18 @@ int32_t q_date_week_number1(void* self, int* yearNum);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#startOfDay)
 ///
-/// ``` QDate* self, enum Qt__TimeSpec spec ```
-QDateTime* q_date_start_of_day1(void* self, int64_t spec);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#startOfDay)
-///
 /// ``` QDate* self, enum Qt__TimeSpec spec, int offsetSeconds ```
-QDateTime* q_date_start_of_day2(void* self, int64_t spec, int offsetSeconds);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#endOfDay)
-///
-/// ``` QDate* self, enum Qt__TimeSpec spec ```
-QDateTime* q_date_end_of_day1(void* self, int64_t spec);
+QDateTime* q_date_start_of_day22(void* self, int64_t spec, int offsetSeconds);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#endOfDay)
 ///
 /// ``` QDate* self, enum Qt__TimeSpec spec, int offsetSeconds ```
-QDateTime* q_date_end_of_day2(void* self, int64_t spec, int offsetSeconds);
+QDateTime* q_date_end_of_day22(void* self, int64_t spec, int offsetSeconds);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#toString)
 ///
 /// ``` QDate* self, enum Qt__DateFormat format ```
 const char* q_date_to_string1(void* self, int64_t format);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#toString)
-///
-/// ``` QDate* self, const char* format, QCalendar* cal ```
-const char* q_date_to_string22(void* self, const char* format, void* cal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#fromString)
 ///
@@ -295,8 +301,8 @@ QDate* q_date_from_string23(const char* stringVal, int64_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#fromString)
 ///
-/// ``` const char* stringVal, const char* format, QCalendar* cal ```
-QDate* q_date_from_string34(const char* stringVal, const char* format, void* cal);
+/// ``` const char* stringVal, const char* format, int baseYear ```
+QDate* q_date_from_string34(const char* stringVal, const char* format, int baseYear);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdate.html#dtor.QDate)
 ///
@@ -483,8 +489,8 @@ QDateTime* q_datetime_new();
 
 /// q_datetime_new2 constructs a new QDateTime object.
 ///
-/// ``` QDate* date, QTime* time ```
-QDateTime* q_datetime_new2(void* date, void* time);
+/// ``` QDate* date, QTime* time, enum Qt__TimeSpec spec ```
+QDateTime* q_datetime_new2(void* date, void* time, int64_t spec);
 
 /// q_datetime_new3 constructs a new QDateTime object.
 ///
@@ -493,18 +499,28 @@ QDateTime* q_datetime_new3(void* date, void* time, void* timeZone);
 
 /// q_datetime_new4 constructs a new QDateTime object.
 ///
-/// ``` QDateTime* other ```
-QDateTime* q_datetime_new4(void* other);
+/// ``` QDate* date, QTime* time ```
+QDateTime* q_datetime_new4(void* date, void* time);
 
 /// q_datetime_new5 constructs a new QDateTime object.
 ///
-/// ``` QDate* date, QTime* time, enum Qt__TimeSpec spec ```
-QDateTime* q_datetime_new5(void* date, void* time, int64_t spec);
+/// ``` QDateTime* other ```
+QDateTime* q_datetime_new5(void* other);
 
 /// q_datetime_new6 constructs a new QDateTime object.
 ///
 /// ``` QDate* date, QTime* time, enum Qt__TimeSpec spec, int offsetSeconds ```
 QDateTime* q_datetime_new6(void* date, void* time, int64_t spec, int offsetSeconds);
+
+/// q_datetime_new7 constructs a new QDateTime object.
+///
+/// ``` QDate* date, QTime* time, QTimeZone* timeZone, enum QDateTime__TransitionResolution resolve ```
+QDateTime* q_datetime_new7(void* date, void* time, void* timeZone, int64_t resolve);
+
+/// q_datetime_new8 constructs a new QDateTime object.
+///
+/// ``` QDate* date, QTime* time, enum QDateTime__TransitionResolution resolve ```
+QDateTime* q_datetime_new8(void* date, void* time, int64_t resolve);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#operator=)
 ///
@@ -545,6 +561,11 @@ int64_t q_datetime_time_spec(void* self);
 ///
 /// ``` QDateTime* self ```
 int32_t q_datetime_offset_from_utc(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#timeRepresentation)
+///
+/// ``` QDateTime* self ```
+QTimeZone* q_datetime_time_representation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#timeZone)
 ///
@@ -616,6 +637,11 @@ const char* q_datetime_to_string(void* self);
 /// ``` QDateTime* self, const char* format ```
 const char* q_datetime_to_string_with_format(void* self, const char* format);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#toString)
+///
+/// ``` QDateTime* self, const char* format, QCalendar* cal ```
+const char* q_datetime_to_string2(void* self, const char* format, void* cal);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#addDays)
 ///
 /// ``` QDateTime* self, long long days ```
@@ -683,8 +709,13 @@ long long q_datetime_msecs_to(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#currentDateTime)
 ///
+/// ``` QTimeZone* zone ```
+QDateTime* q_datetime_current_date_time(void* zone);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#currentDateTime)
 ///
-QDateTime* q_datetime_current_date_time();
+///
+QDateTime* q_datetime_current_date_time2();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#currentDateTimeUtc)
 ///
@@ -698,18 +729,28 @@ QDateTime* q_datetime_from_string_with_string_val(const char* stringVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#fromString)
 ///
+/// ``` const char* stringVal, const char* format, QCalendar* cal ```
+QDateTime* q_datetime_from_string4(const char* stringVal, const char* format, void* cal);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#fromString)
+///
 /// ``` const char* stringVal, const char* format ```
-QDateTime* q_datetime_from_string4(const char* stringVal, const char* format);
+QDateTime* q_datetime_from_string9(const char* stringVal, const char* format);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#fromString)
+///
+/// ``` const char* stringVal, const char* format, int baseYear, QCalendar* cal ```
+QDateTime* q_datetime_from_string10(const char* stringVal, const char* format, int baseYear, void* cal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#fromMSecsSinceEpoch)
 ///
-/// ``` long long msecs ```
-QDateTime* q_datetime_from_m_secs_since_epoch(long long msecs);
+/// ``` long long msecs, enum Qt__TimeSpec spec ```
+QDateTime* q_datetime_from_m_secs_since_epoch(long long msecs, int64_t spec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#fromSecsSinceEpoch)
 ///
-/// ``` long long secs ```
-QDateTime* q_datetime_from_secs_since_epoch(long long secs);
+/// ``` long long secs, enum Qt__TimeSpec spec ```
+QDateTime* q_datetime_from_secs_since_epoch(long long secs, int64_t spec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#fromMSecsSinceEpoch)
 ///
@@ -721,6 +762,16 @@ QDateTime* q_datetime_from_m_secs_since_epoch2(long long msecs, void* timeZone);
 /// ``` long long secs, QTimeZone* timeZone ```
 QDateTime* q_datetime_from_secs_since_epoch2(long long secs, void* timeZone);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#fromMSecsSinceEpoch)
+///
+/// ``` long long msecs ```
+QDateTime* q_datetime_from_m_secs_since_epoch_with_msecs(long long msecs);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#fromSecsSinceEpoch)
+///
+/// ``` long long secs ```
+QDateTime* q_datetime_from_secs_since_epoch_with_secs(long long secs);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#currentMSecsSinceEpoch)
 ///
 ///
@@ -731,15 +782,25 @@ long long q_datetime_current_m_secs_since_epoch();
 ///
 long long q_datetime_current_secs_since_epoch();
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#setDate)
+///
+/// ``` QDateTime* self, QDate* date, enum QDateTime__TransitionResolution resolve ```
+void q_datetime_set_date2(void* self, void* date, int64_t resolve);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#setTime)
+///
+/// ``` QDateTime* self, QTime* time, enum QDateTime__TransitionResolution resolve ```
+void q_datetime_set_time2(void* self, void* time, int64_t resolve);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#setTimeZone)
+///
+/// ``` QDateTime* self, QTimeZone* toZone, enum QDateTime__TransitionResolution resolve ```
+void q_datetime_set_time_zone2(void* self, void* toZone, int64_t resolve);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#toString)
 ///
 /// ``` QDateTime* self, enum Qt__DateFormat format ```
 const char* q_datetime_to_string1(void* self, int64_t format);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#toString)
-///
-/// ``` QDateTime* self, const char* format, QCalendar* cal ```
-const char* q_datetime_to_string22(void* self, const char* format, void* cal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#fromString)
 ///
@@ -748,23 +809,13 @@ QDateTime* q_datetime_from_string23(const char* stringVal, int64_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#fromString)
 ///
-/// ``` const char* stringVal, const char* format, QCalendar* cal ```
-QDateTime* q_datetime_from_string34(const char* stringVal, const char* format, void* cal);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#fromMSecsSinceEpoch)
-///
-/// ``` long long msecs, enum Qt__TimeSpec spec ```
-QDateTime* q_datetime_from_m_secs_since_epoch22(long long msecs, int64_t spec);
+/// ``` const char* stringVal, const char* format, int baseYear ```
+QDateTime* q_datetime_from_string34(const char* stringVal, const char* format, int baseYear);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#fromMSecsSinceEpoch)
 ///
 /// ``` long long msecs, enum Qt__TimeSpec spec, int offsetFromUtc ```
 QDateTime* q_datetime_from_m_secs_since_epoch3(long long msecs, int64_t spec, int offsetFromUtc);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#fromSecsSinceEpoch)
-///
-/// ``` long long secs, enum Qt__TimeSpec spec ```
-QDateTime* q_datetime_from_secs_since_epoch22(long long secs, int64_t spec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#fromSecsSinceEpoch)
 ///
@@ -779,6 +830,17 @@ QDateTime* q_datetime_from_secs_since_epoch3(long long secs, int64_t spec, int o
 void q_datetime_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qdatetime.html#types
+
+typedef enum {
+    QDATETIME_TRANSITIONRESOLUTION_REJECT = 0,
+    QDATETIME_TRANSITIONRESOLUTION_RELATIVETOBEFORE = 1,
+    QDATETIME_TRANSITIONRESOLUTION_RELATIVETOAFTER = 2,
+    QDATETIME_TRANSITIONRESOLUTION_PREFERBEFORE = 3,
+    QDATETIME_TRANSITIONRESOLUTION_PREFERAFTER = 4,
+    QDATETIME_TRANSITIONRESOLUTION_PREFERSTANDARD = 5,
+    QDATETIME_TRANSITIONRESOLUTION_PREFERDAYLIGHTSAVING = 6,
+    QDATETIME_TRANSITIONRESOLUTION_LEGACYBEHAVIOR = 1
+} QDateTime__TransitionResolution;
 
 typedef enum {
     QDATETIME_YEARRANGE_FIRST = -292275056,

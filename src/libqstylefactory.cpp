@@ -8,7 +8,7 @@
 #include "libqstylefactory.hpp"
 #include "libqstylefactory.hxx"
 
-QStyleFactory* QStyleFactory_new(QStyleFactory* other) {
+QStyleFactory* QStyleFactory_new(const QStyleFactory* other) {
     return new QStyleFactory(*other);
 }
 
@@ -25,10 +25,10 @@ void QStyleFactory_MoveAssign(QStyleFactory* self, QStyleFactory* other) {
 }
 
 libqt_list /* of libqt_string */ QStyleFactory_Keys() {
-    QStringList _ret = QStyleFactory::keys();
+    QList<QString> _ret = QStyleFactory::keys();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -40,12 +40,12 @@ libqt_list /* of libqt_string */ QStyleFactory_Keys() {
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-QStyle* QStyleFactory_Create(libqt_string param1) {
+QStyle* QStyleFactory_Create(const libqt_string param1) {
     QString param1_QString = QString::fromUtf8(param1.data, param1.len);
     return QStyleFactory::create(param1_QString);
 }

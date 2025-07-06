@@ -12,12 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqaction.h"
-#include "libqobject.h"
-#include "libqpoint.h"
-#include <string.h>
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qwhatsthis.html
 
 /// q_whatsthis_new constructs a new QWhatsThis object.

@@ -12,12 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqfont.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqtextoption.h"
-#include "libqtransform.h"
-
 /// https://doc.qt.io/qt-6/qstatictext.html
 
 /// q_statictext_new constructs a new QStaticText object.

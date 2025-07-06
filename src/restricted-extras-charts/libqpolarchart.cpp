@@ -109,12 +109,12 @@ void QPolarChart_AddAxis(QPolarChart* self, QAbstractAxis* axis, int polarOrient
 libqt_list /* of QAbstractAxis* */ QPolarChart_Axes(const QPolarChart* self) {
     QList<QAbstractAxis*> _ret = self->axes();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QAbstractAxis** _arr = static_cast<QAbstractAxis**>(malloc(sizeof(QAbstractAxis*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QAbstractAxis** _arr = static_cast<QAbstractAxis**>(malloc(sizeof(QAbstractAxis*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -150,12 +150,12 @@ libqt_string QPolarChart_Tr3(const char* s, const char* c, int n) {
 libqt_list /* of QAbstractAxis* */ QPolarChart_Axes1(const QPolarChart* self, int polarOrientation) {
     QList<QAbstractAxis*> _ret = self->axes(static_cast<QPolarChart::PolarOrientations>(polarOrientation));
     // Convert QList<> from C++ memory to manually-managed C memory
-    QAbstractAxis** _arr = static_cast<QAbstractAxis**>(malloc(sizeof(QAbstractAxis*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QAbstractAxis** _arr = static_cast<QAbstractAxis**>(malloc(sizeof(QAbstractAxis*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -163,18 +163,18 @@ libqt_list /* of QAbstractAxis* */ QPolarChart_Axes1(const QPolarChart* self, in
 libqt_list /* of QAbstractAxis* */ QPolarChart_Axes2(const QPolarChart* self, int polarOrientation, QAbstractSeries* series) {
     QList<QAbstractAxis*> _ret = self->axes(static_cast<QPolarChart::PolarOrientations>(polarOrientation), series);
     // Convert QList<> from C++ memory to manually-managed C memory
-    QAbstractAxis** _arr = static_cast<QAbstractAxis**>(malloc(sizeof(QAbstractAxis*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QAbstractAxis** _arr = static_cast<QAbstractAxis**>(malloc(sizeof(QAbstractAxis*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
 // Derived class handler implementation
-void QPolarChart_SetGeometry(QPolarChart* self, QRectF* rect) {
+void QPolarChart_SetGeometry(QPolarChart* self, const QRectF* rect) {
     auto* vqpolarchart = dynamic_cast<VirtualQPolarChart*>(self);
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         vqpolarchart->setGeometry(*rect);
@@ -184,7 +184,7 @@ void QPolarChart_SetGeometry(QPolarChart* self, QRectF* rect) {
 }
 
 // Base class handler implementation
-void QPolarChart_QBaseSetGeometry(QPolarChart* self, QRectF* rect) {
+void QPolarChart_QBaseSetGeometry(QPolarChart* self, const QRectF* rect) {
     auto* vqpolarchart = dynamic_cast<VirtualQPolarChart*>(self);
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         vqpolarchart->setQPolarChart_SetGeometry_IsBase(true);
@@ -261,7 +261,7 @@ void QPolarChart_OnType(const QPolarChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPolarChart_Paint(QPolarChart* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget) {
+void QPolarChart_Paint(QPolarChart* self, QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget) {
     auto* vqpolarchart = dynamic_cast<VirtualQPolarChart*>(self);
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         vqpolarchart->paint(painter, option, widget);
@@ -271,7 +271,7 @@ void QPolarChart_Paint(QPolarChart* self, QPainter* painter, QStyleOptionGraphic
 }
 
 // Base class handler implementation
-void QPolarChart_QBasePaint(QPolarChart* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget) {
+void QPolarChart_QBasePaint(QPolarChart* self, QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget) {
     auto* vqpolarchart = dynamic_cast<VirtualQPolarChart*>(self);
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         vqpolarchart->setQPolarChart_Paint_IsBase(true);
@@ -290,7 +290,7 @@ void QPolarChart_OnPaint(QPolarChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPolarChart_PaintWindowFrame(QPolarChart* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget) {
+void QPolarChart_PaintWindowFrame(QPolarChart* self, QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget) {
     auto* vqpolarchart = dynamic_cast<VirtualQPolarChart*>(self);
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         vqpolarchart->paintWindowFrame(painter, option, widget);
@@ -300,7 +300,7 @@ void QPolarChart_PaintWindowFrame(QPolarChart* self, QPainter* painter, QStyleOp
 }
 
 // Base class handler implementation
-void QPolarChart_QBasePaintWindowFrame(QPolarChart* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget) {
+void QPolarChart_QBasePaintWindowFrame(QPolarChart* self, QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget) {
     auto* vqpolarchart = dynamic_cast<VirtualQPolarChart*>(self);
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         vqpolarchart->setQPolarChart_PaintWindowFrame_IsBase(true);
@@ -406,7 +406,7 @@ void QPolarChart_OnInitStyleOption(const QPolarChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QSizeF* QPolarChart_SizeHint(const QPolarChart* self, int which, QSizeF* constraint) {
+QSizeF* QPolarChart_SizeHint(const QPolarChart* self, int which, const QSizeF* constraint) {
     auto* vqpolarchart = const_cast<VirtualQPolarChart*>(dynamic_cast<const VirtualQPolarChart*>(self));
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         return new QSizeF(vqpolarchart->sizeHint(static_cast<Qt::SizeHint>(which), *constraint));
@@ -415,7 +415,7 @@ QSizeF* QPolarChart_SizeHint(const QPolarChart* self, int which, QSizeF* constra
 }
 
 // Base class handler implementation
-QSizeF* QPolarChart_QBaseSizeHint(const QPolarChart* self, int which, QSizeF* constraint) {
+QSizeF* QPolarChart_QBaseSizeHint(const QPolarChart* self, int which, const QSizeF* constraint) {
     auto* vqpolarchart = const_cast<VirtualQPolarChart*>(dynamic_cast<const VirtualQPolarChart*>(self));
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         vqpolarchart->setQPolarChart_SizeHint_IsBase(true);
@@ -462,7 +462,7 @@ void QPolarChart_OnUpdateGeometry(QPolarChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QVariant* QPolarChart_ItemChange(QPolarChart* self, int change, QVariant* value) {
+QVariant* QPolarChart_ItemChange(QPolarChart* self, int change, const QVariant* value) {
     auto* vqpolarchart = dynamic_cast<VirtualQPolarChart*>(self);
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         return new QVariant(vqpolarchart->itemChange(static_cast<QGraphicsItem::GraphicsItemChange>(change), *value));
@@ -471,7 +471,7 @@ QVariant* QPolarChart_ItemChange(QPolarChart* self, int change, QVariant* value)
 }
 
 // Base class handler implementation
-QVariant* QPolarChart_QBaseItemChange(QPolarChart* self, int change, QVariant* value) {
+QVariant* QPolarChart_QBaseItemChange(QPolarChart* self, int change, const QVariant* value) {
     auto* vqpolarchart = dynamic_cast<VirtualQPolarChart*>(self);
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         vqpolarchart->setQPolarChart_ItemChange_IsBase(true);
@@ -489,7 +489,7 @@ void QPolarChart_OnItemChange(QPolarChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QVariant* QPolarChart_PropertyChange(QPolarChart* self, libqt_string propertyName, QVariant* value) {
+QVariant* QPolarChart_PropertyChange(QPolarChart* self, const libqt_string propertyName, const QVariant* value) {
     auto* vqpolarchart = dynamic_cast<VirtualQPolarChart*>(self);
     QString propertyName_QString = QString::fromUtf8(propertyName.data, propertyName.len);
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
@@ -499,7 +499,7 @@ QVariant* QPolarChart_PropertyChange(QPolarChart* self, libqt_string propertyNam
 }
 
 // Base class handler implementation
-QVariant* QPolarChart_QBasePropertyChange(QPolarChart* self, libqt_string propertyName, QVariant* value) {
+QVariant* QPolarChart_QBasePropertyChange(QPolarChart* self, const libqt_string propertyName, const QVariant* value) {
     auto* vqpolarchart = dynamic_cast<VirtualQPolarChart*>(self);
     QString propertyName_QString = QString::fromUtf8(propertyName.data, propertyName.len);
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
@@ -576,7 +576,7 @@ void QPolarChart_OnWindowFrameEvent(QPolarChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-int QPolarChart_WindowFrameSectionAt(const QPolarChart* self, QPointF* pos) {
+int QPolarChart_WindowFrameSectionAt(const QPolarChart* self, const QPointF* pos) {
     auto* vqpolarchart = const_cast<VirtualQPolarChart*>(dynamic_cast<const VirtualQPolarChart*>(self));
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         return static_cast<int>(vqpolarchart->windowFrameSectionAt(*pos));
@@ -586,7 +586,7 @@ int QPolarChart_WindowFrameSectionAt(const QPolarChart* self, QPointF* pos) {
 }
 
 // Base class handler implementation
-int QPolarChart_QBaseWindowFrameSectionAt(const QPolarChart* self, QPointF* pos) {
+int QPolarChart_QBaseWindowFrameSectionAt(const QPolarChart* self, const QPointF* pos) {
     auto* vqpolarchart = const_cast<VirtualQPolarChart*>(dynamic_cast<const VirtualQPolarChart*>(self));
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         vqpolarchart->setQPolarChart_WindowFrameSectionAt_IsBase(true);
@@ -1214,7 +1214,7 @@ void QPolarChart_OnCustomEvent(QPolarChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPolarChart_ConnectNotify(QPolarChart* self, QMetaMethod* signal) {
+void QPolarChart_ConnectNotify(QPolarChart* self, const QMetaMethod* signal) {
     auto* vqpolarchart = dynamic_cast<VirtualQPolarChart*>(self);
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         vqpolarchart->connectNotify(*signal);
@@ -1224,7 +1224,7 @@ void QPolarChart_ConnectNotify(QPolarChart* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPolarChart_QBaseConnectNotify(QPolarChart* self, QMetaMethod* signal) {
+void QPolarChart_QBaseConnectNotify(QPolarChart* self, const QMetaMethod* signal) {
     auto* vqpolarchart = dynamic_cast<VirtualQPolarChart*>(self);
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         vqpolarchart->setQPolarChart_ConnectNotify_IsBase(true);
@@ -1243,7 +1243,7 @@ void QPolarChart_OnConnectNotify(QPolarChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPolarChart_DisconnectNotify(QPolarChart* self, QMetaMethod* signal) {
+void QPolarChart_DisconnectNotify(QPolarChart* self, const QMetaMethod* signal) {
     auto* vqpolarchart = dynamic_cast<VirtualQPolarChart*>(self);
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         vqpolarchart->disconnectNotify(*signal);
@@ -1253,7 +1253,7 @@ void QPolarChart_DisconnectNotify(QPolarChart* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPolarChart_QBaseDisconnectNotify(QPolarChart* self, QMetaMethod* signal) {
+void QPolarChart_QBaseDisconnectNotify(QPolarChart* self, const QMetaMethod* signal) {
     auto* vqpolarchart = dynamic_cast<VirtualQPolarChart*>(self);
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         vqpolarchart->setQPolarChart_DisconnectNotify_IsBase(true);
@@ -1301,7 +1301,7 @@ void QPolarChart_OnAdvance(QPolarChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPolarChart_Contains(const QPolarChart* self, QPointF* point) {
+bool QPolarChart_Contains(const QPolarChart* self, const QPointF* point) {
     auto* vqpolarchart = const_cast<VirtualQPolarChart*>(dynamic_cast<const VirtualQPolarChart*>(self));
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         return vqpolarchart->contains(*point);
@@ -1311,7 +1311,7 @@ bool QPolarChart_Contains(const QPolarChart* self, QPointF* point) {
 }
 
 // Base class handler implementation
-bool QPolarChart_QBaseContains(const QPolarChart* self, QPointF* point) {
+bool QPolarChart_QBaseContains(const QPolarChart* self, const QPointF* point) {
     auto* vqpolarchart = const_cast<VirtualQPolarChart*>(dynamic_cast<const VirtualQPolarChart*>(self));
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         vqpolarchart->setQPolarChart_Contains_IsBase(true);
@@ -1330,7 +1330,7 @@ void QPolarChart_OnContains(const QPolarChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPolarChart_CollidesWithItem(const QPolarChart* self, QGraphicsItem* other, int mode) {
+bool QPolarChart_CollidesWithItem(const QPolarChart* self, const QGraphicsItem* other, int mode) {
     auto* vqpolarchart = const_cast<VirtualQPolarChart*>(dynamic_cast<const VirtualQPolarChart*>(self));
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         return vqpolarchart->collidesWithItem(other, static_cast<Qt::ItemSelectionMode>(mode));
@@ -1340,7 +1340,7 @@ bool QPolarChart_CollidesWithItem(const QPolarChart* self, QGraphicsItem* other,
 }
 
 // Base class handler implementation
-bool QPolarChart_QBaseCollidesWithItem(const QPolarChart* self, QGraphicsItem* other, int mode) {
+bool QPolarChart_QBaseCollidesWithItem(const QPolarChart* self, const QGraphicsItem* other, int mode) {
     auto* vqpolarchart = const_cast<VirtualQPolarChart*>(dynamic_cast<const VirtualQPolarChart*>(self));
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         vqpolarchart->setQPolarChart_CollidesWithItem_IsBase(true);
@@ -1359,7 +1359,7 @@ void QPolarChart_OnCollidesWithItem(const QPolarChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPolarChart_CollidesWithPath(const QPolarChart* self, QPainterPath* path, int mode) {
+bool QPolarChart_CollidesWithPath(const QPolarChart* self, const QPainterPath* path, int mode) {
     auto* vqpolarchart = const_cast<VirtualQPolarChart*>(dynamic_cast<const VirtualQPolarChart*>(self));
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         return vqpolarchart->collidesWithPath(*path, static_cast<Qt::ItemSelectionMode>(mode));
@@ -1369,7 +1369,7 @@ bool QPolarChart_CollidesWithPath(const QPolarChart* self, QPainterPath* path, i
 }
 
 // Base class handler implementation
-bool QPolarChart_QBaseCollidesWithPath(const QPolarChart* self, QPainterPath* path, int mode) {
+bool QPolarChart_QBaseCollidesWithPath(const QPolarChart* self, const QPainterPath* path, int mode) {
     auto* vqpolarchart = const_cast<VirtualQPolarChart*>(dynamic_cast<const VirtualQPolarChart*>(self));
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         vqpolarchart->setQPolarChart_CollidesWithPath_IsBase(true);
@@ -1388,7 +1388,7 @@ void QPolarChart_OnCollidesWithPath(const QPolarChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPolarChart_IsObscuredBy(const QPolarChart* self, QGraphicsItem* item) {
+bool QPolarChart_IsObscuredBy(const QPolarChart* self, const QGraphicsItem* item) {
     auto* vqpolarchart = const_cast<VirtualQPolarChart*>(dynamic_cast<const VirtualQPolarChart*>(self));
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         return vqpolarchart->isObscuredBy(item);
@@ -1398,7 +1398,7 @@ bool QPolarChart_IsObscuredBy(const QPolarChart* self, QGraphicsItem* item) {
 }
 
 // Base class handler implementation
-bool QPolarChart_QBaseIsObscuredBy(const QPolarChart* self, QGraphicsItem* item) {
+bool QPolarChart_QBaseIsObscuredBy(const QPolarChart* self, const QGraphicsItem* item) {
     auto* vqpolarchart = const_cast<VirtualQPolarChart*>(dynamic_cast<const VirtualQPolarChart*>(self));
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         vqpolarchart->setQPolarChart_IsObscuredBy_IsBase(true);
@@ -1937,7 +1937,7 @@ void QPolarChart_OnSupportsExtension(const QPolarChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPolarChart_SetExtension(QPolarChart* self, int extension, QVariant* variant) {
+void QPolarChart_SetExtension(QPolarChart* self, int extension, const QVariant* variant) {
     auto* vqpolarchart = dynamic_cast<VirtualQPolarChart*>(self);
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         vqpolarchart->setExtension(static_cast<VirtualQPolarChart::Extension>(extension), *variant);
@@ -1947,7 +1947,7 @@ void QPolarChart_SetExtension(QPolarChart* self, int extension, QVariant* varian
 }
 
 // Base class handler implementation
-void QPolarChart_QBaseSetExtension(QPolarChart* self, int extension, QVariant* variant) {
+void QPolarChart_QBaseSetExtension(QPolarChart* self, int extension, const QVariant* variant) {
     auto* vqpolarchart = dynamic_cast<VirtualQPolarChart*>(self);
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         vqpolarchart->setQPolarChart_SetExtension_IsBase(true);
@@ -1966,7 +1966,7 @@ void QPolarChart_OnSetExtension(QPolarChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QVariant* QPolarChart_Extension(const QPolarChart* self, QVariant* variant) {
+QVariant* QPolarChart_Extension(const QPolarChart* self, const QVariant* variant) {
     auto* vqpolarchart = const_cast<VirtualQPolarChart*>(dynamic_cast<const VirtualQPolarChart*>(self));
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         return new QVariant(vqpolarchart->extension(*variant));
@@ -1975,7 +1975,7 @@ QVariant* QPolarChart_Extension(const QPolarChart* self, QVariant* variant) {
 }
 
 // Base class handler implementation
-QVariant* QPolarChart_QBaseExtension(const QPolarChart* self, QVariant* variant) {
+QVariant* QPolarChart_QBaseExtension(const QPolarChart* self, const QVariant* variant) {
     auto* vqpolarchart = const_cast<VirtualQPolarChart*>(dynamic_cast<const VirtualQPolarChart*>(self));
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         vqpolarchart->setQPolarChart_Extension_IsBase(true);
@@ -2138,7 +2138,7 @@ void QPolarChart_OnReceivers(const QPolarChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPolarChart_IsSignalConnected(const QPolarChart* self, QMetaMethod* signal) {
+bool QPolarChart_IsSignalConnected(const QPolarChart* self, const QMetaMethod* signal) {
     auto* vqpolarchart = const_cast<VirtualQPolarChart*>(dynamic_cast<const VirtualQPolarChart*>(self));
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         return vqpolarchart->isSignalConnected(*signal);
@@ -2148,7 +2148,7 @@ bool QPolarChart_IsSignalConnected(const QPolarChart* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QPolarChart_QBaseIsSignalConnected(const QPolarChart* self, QMetaMethod* signal) {
+bool QPolarChart_QBaseIsSignalConnected(const QPolarChart* self, const QMetaMethod* signal) {
     auto* vqpolarchart = const_cast<VirtualQPolarChart*>(dynamic_cast<const VirtualQPolarChart*>(self));
     if (vqpolarchart && vqpolarchart->isVirtualQPolarChart) {
         vqpolarchart->setQPolarChart_IsSignalConnected_IsBase(true);

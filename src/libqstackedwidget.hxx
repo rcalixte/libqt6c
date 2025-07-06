@@ -77,6 +77,7 @@ class VirtualQStackedWidget final : public QStackedWidget {
     using QStackedWidget_SenderSignalIndex_Callback = int (*)();
     using QStackedWidget_Receivers_Callback = int (*)(const QStackedWidget*, const char*);
     using QStackedWidget_IsSignalConnected_Callback = bool (*)(const QStackedWidget*, QMetaMethod*);
+    using QStackedWidget_GetDecodedMetricF_Callback = double (*)(const QStackedWidget*, int, int);
 
   protected:
     // Instance callback storage
@@ -139,6 +140,7 @@ class VirtualQStackedWidget final : public QStackedWidget {
     QStackedWidget_SenderSignalIndex_Callback qstackedwidget_sendersignalindex_callback = nullptr;
     QStackedWidget_Receivers_Callback qstackedwidget_receivers_callback = nullptr;
     QStackedWidget_IsSignalConnected_Callback qstackedwidget_issignalconnected_callback = nullptr;
+    QStackedWidget_GetDecodedMetricF_Callback qstackedwidget_getdecodedmetricf_callback = nullptr;
 
     // Instance base flags
     mutable bool qstackedwidget_metacall_isbase = false;
@@ -200,10 +202,11 @@ class VirtualQStackedWidget final : public QStackedWidget {
     mutable bool qstackedwidget_sendersignalindex_isbase = false;
     mutable bool qstackedwidget_receivers_isbase = false;
     mutable bool qstackedwidget_issignalconnected_isbase = false;
+    mutable bool qstackedwidget_getdecodedmetricf_isbase = false;
 
   public:
-    VirtualQStackedWidget(QWidget* parent) : QStackedWidget(parent){};
-    VirtualQStackedWidget() : QStackedWidget(){};
+    VirtualQStackedWidget(QWidget* parent) : QStackedWidget(parent) {};
+    VirtualQStackedWidget() : QStackedWidget() {};
 
     ~VirtualQStackedWidget() {
         qstackedwidget_metacall_callback = nullptr;
@@ -265,6 +268,7 @@ class VirtualQStackedWidget final : public QStackedWidget {
         qstackedwidget_sendersignalindex_callback = nullptr;
         qstackedwidget_receivers_callback = nullptr;
         qstackedwidget_issignalconnected_callback = nullptr;
+        qstackedwidget_getdecodedmetricf_callback = nullptr;
     }
 
     // Callback setters
@@ -327,6 +331,7 @@ class VirtualQStackedWidget final : public QStackedWidget {
     inline void setQStackedWidget_SenderSignalIndex_Callback(QStackedWidget_SenderSignalIndex_Callback cb) { qstackedwidget_sendersignalindex_callback = cb; }
     inline void setQStackedWidget_Receivers_Callback(QStackedWidget_Receivers_Callback cb) { qstackedwidget_receivers_callback = cb; }
     inline void setQStackedWidget_IsSignalConnected_Callback(QStackedWidget_IsSignalConnected_Callback cb) { qstackedwidget_issignalconnected_callback = cb; }
+    inline void setQStackedWidget_GetDecodedMetricF_Callback(QStackedWidget_GetDecodedMetricF_Callback cb) { qstackedwidget_getdecodedmetricf_callback = cb; }
 
     // Base flag setters
     inline void setQStackedWidget_Metacall_IsBase(bool value) const { qstackedwidget_metacall_isbase = value; }
@@ -388,6 +393,7 @@ class VirtualQStackedWidget final : public QStackedWidget {
     inline void setQStackedWidget_SenderSignalIndex_IsBase(bool value) const { qstackedwidget_sendersignalindex_isbase = value; }
     inline void setQStackedWidget_Receivers_IsBase(bool value) const { qstackedwidget_receivers_isbase = value; }
     inline void setQStackedWidget_IsSignalConnected_IsBase(bool value) const { qstackedwidget_issignalconnected_isbase = value; }
+    inline void setQStackedWidget_GetDecodedMetricF_IsBase(bool value) const { qstackedwidget_getdecodedmetricf_isbase = value; }
 
     // Virtual method for C ABI access and custom callback
     virtual int qt_metacall(QMetaObject::Call param1, int param2, void** param3) override {
@@ -1228,6 +1234,22 @@ class VirtualQStackedWidget final : public QStackedWidget {
         }
     }
 
+    // Virtual method for C ABI access and custom callback
+    double getDecodedMetricF(QPaintDevice::PaintDeviceMetric metricA, QPaintDevice::PaintDeviceMetric metricB) const {
+        if (qstackedwidget_getdecodedmetricf_isbase) {
+            qstackedwidget_getdecodedmetricf_isbase = false;
+            return QStackedWidget::getDecodedMetricF(metricA, metricB);
+        } else if (qstackedwidget_getdecodedmetricf_callback != nullptr) {
+            int cbval1 = static_cast<int>(metricA);
+            int cbval2 = static_cast<int>(metricB);
+
+            double callback_ret = qstackedwidget_getdecodedmetricf_callback(this, cbval1, cbval2);
+            return static_cast<double>(callback_ret);
+        } else {
+            return QStackedWidget::getDecodedMetricF(metricA, metricB);
+        }
+    }
+
     // Friend functions
     friend bool QStackedWidget_Event(QStackedWidget* self, QEvent* e);
     friend bool QStackedWidget_QBaseEvent(QStackedWidget* self, QEvent* e);
@@ -1283,8 +1305,8 @@ class VirtualQStackedWidget final : public QStackedWidget {
     friend void QStackedWidget_QBaseShowEvent(QStackedWidget* self, QShowEvent* event);
     friend void QStackedWidget_HideEvent(QStackedWidget* self, QHideEvent* event);
     friend void QStackedWidget_QBaseHideEvent(QStackedWidget* self, QHideEvent* event);
-    friend bool QStackedWidget_NativeEvent(QStackedWidget* self, libqt_string eventType, void* message, intptr_t* result);
-    friend bool QStackedWidget_QBaseNativeEvent(QStackedWidget* self, libqt_string eventType, void* message, intptr_t* result);
+    friend bool QStackedWidget_NativeEvent(QStackedWidget* self, const libqt_string eventType, void* message, intptr_t* result);
+    friend bool QStackedWidget_QBaseNativeEvent(QStackedWidget* self, const libqt_string eventType, void* message, intptr_t* result);
     friend int QStackedWidget_Metric(const QStackedWidget* self, int param1);
     friend int QStackedWidget_QBaseMetric(const QStackedWidget* self, int param1);
     friend void QStackedWidget_InitPainter(const QStackedWidget* self, QPainter* painter);
@@ -1303,10 +1325,10 @@ class VirtualQStackedWidget final : public QStackedWidget {
     friend void QStackedWidget_QBaseChildEvent(QStackedWidget* self, QChildEvent* event);
     friend void QStackedWidget_CustomEvent(QStackedWidget* self, QEvent* event);
     friend void QStackedWidget_QBaseCustomEvent(QStackedWidget* self, QEvent* event);
-    friend void QStackedWidget_ConnectNotify(QStackedWidget* self, QMetaMethod* signal);
-    friend void QStackedWidget_QBaseConnectNotify(QStackedWidget* self, QMetaMethod* signal);
-    friend void QStackedWidget_DisconnectNotify(QStackedWidget* self, QMetaMethod* signal);
-    friend void QStackedWidget_QBaseDisconnectNotify(QStackedWidget* self, QMetaMethod* signal);
+    friend void QStackedWidget_ConnectNotify(QStackedWidget* self, const QMetaMethod* signal);
+    friend void QStackedWidget_QBaseConnectNotify(QStackedWidget* self, const QMetaMethod* signal);
+    friend void QStackedWidget_DisconnectNotify(QStackedWidget* self, const QMetaMethod* signal);
+    friend void QStackedWidget_QBaseDisconnectNotify(QStackedWidget* self, const QMetaMethod* signal);
     friend void QStackedWidget_DrawFrame(QStackedWidget* self, QPainter* param1);
     friend void QStackedWidget_QBaseDrawFrame(QStackedWidget* self, QPainter* param1);
     friend void QStackedWidget_UpdateMicroFocus(QStackedWidget* self);
@@ -1325,8 +1347,10 @@ class VirtualQStackedWidget final : public QStackedWidget {
     friend int QStackedWidget_QBaseSenderSignalIndex(const QStackedWidget* self);
     friend int QStackedWidget_Receivers(const QStackedWidget* self, const char* signal);
     friend int QStackedWidget_QBaseReceivers(const QStackedWidget* self, const char* signal);
-    friend bool QStackedWidget_IsSignalConnected(const QStackedWidget* self, QMetaMethod* signal);
-    friend bool QStackedWidget_QBaseIsSignalConnected(const QStackedWidget* self, QMetaMethod* signal);
+    friend bool QStackedWidget_IsSignalConnected(const QStackedWidget* self, const QMetaMethod* signal);
+    friend bool QStackedWidget_QBaseIsSignalConnected(const QStackedWidget* self, const QMetaMethod* signal);
+    friend double QStackedWidget_GetDecodedMetricF(const QStackedWidget* self, int metricA, int metricB);
+    friend double QStackedWidget_QBaseGetDecodedMetricF(const QStackedWidget* self, int metricA, int metricB);
 };
 
 #endif

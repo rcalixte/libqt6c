@@ -98,7 +98,7 @@ libqt_string QAbstractPrintDialog_Tr(const char* s) {
     return _str;
 }
 
-void QAbstractPrintDialog_SetOptionTabs(QAbstractPrintDialog* self, libqt_list /* of QWidget* */ tabs) {
+void QAbstractPrintDialog_SetOptionTabs(QAbstractPrintDialog* self, const libqt_list /* of QWidget* */ tabs) {
     QList<QWidget*> tabs_QList;
     tabs_QList.reserve(tabs.len);
     QWidget** tabs_arr = static_cast<QWidget**>(tabs.data.ptr);
@@ -1271,7 +1271,7 @@ void QAbstractPrintDialog_OnHideEvent(QAbstractPrintDialog* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-bool QAbstractPrintDialog_NativeEvent(QAbstractPrintDialog* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QAbstractPrintDialog_NativeEvent(QAbstractPrintDialog* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqabstractprintdialog = dynamic_cast<VirtualQAbstractPrintDialog*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqabstractprintdialog && vqabstractprintdialog->isVirtualQAbstractPrintDialog) {
@@ -1282,7 +1282,7 @@ bool QAbstractPrintDialog_NativeEvent(QAbstractPrintDialog* self, libqt_string e
 }
 
 // Base class handler implementation
-bool QAbstractPrintDialog_QBaseNativeEvent(QAbstractPrintDialog* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QAbstractPrintDialog_QBaseNativeEvent(QAbstractPrintDialog* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqabstractprintdialog = dynamic_cast<VirtualQAbstractPrintDialog*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqabstractprintdialog && vqabstractprintdialog->isVirtualQAbstractPrintDialog) {
@@ -1621,7 +1621,7 @@ void QAbstractPrintDialog_OnCustomEvent(QAbstractPrintDialog* self, intptr_t slo
 }
 
 // Derived class handler implementation
-void QAbstractPrintDialog_ConnectNotify(QAbstractPrintDialog* self, QMetaMethod* signal) {
+void QAbstractPrintDialog_ConnectNotify(QAbstractPrintDialog* self, const QMetaMethod* signal) {
     auto* vqabstractprintdialog = dynamic_cast<VirtualQAbstractPrintDialog*>(self);
     if (vqabstractprintdialog && vqabstractprintdialog->isVirtualQAbstractPrintDialog) {
         vqabstractprintdialog->connectNotify(*signal);
@@ -1631,7 +1631,7 @@ void QAbstractPrintDialog_ConnectNotify(QAbstractPrintDialog* self, QMetaMethod*
 }
 
 // Base class handler implementation
-void QAbstractPrintDialog_QBaseConnectNotify(QAbstractPrintDialog* self, QMetaMethod* signal) {
+void QAbstractPrintDialog_QBaseConnectNotify(QAbstractPrintDialog* self, const QMetaMethod* signal) {
     auto* vqabstractprintdialog = dynamic_cast<VirtualQAbstractPrintDialog*>(self);
     if (vqabstractprintdialog && vqabstractprintdialog->isVirtualQAbstractPrintDialog) {
         vqabstractprintdialog->setQAbstractPrintDialog_ConnectNotify_IsBase(true);
@@ -1650,7 +1650,7 @@ void QAbstractPrintDialog_OnConnectNotify(QAbstractPrintDialog* self, intptr_t s
 }
 
 // Derived class handler implementation
-void QAbstractPrintDialog_DisconnectNotify(QAbstractPrintDialog* self, QMetaMethod* signal) {
+void QAbstractPrintDialog_DisconnectNotify(QAbstractPrintDialog* self, const QMetaMethod* signal) {
     auto* vqabstractprintdialog = dynamic_cast<VirtualQAbstractPrintDialog*>(self);
     if (vqabstractprintdialog && vqabstractprintdialog->isVirtualQAbstractPrintDialog) {
         vqabstractprintdialog->disconnectNotify(*signal);
@@ -1660,7 +1660,7 @@ void QAbstractPrintDialog_DisconnectNotify(QAbstractPrintDialog* self, QMetaMeth
 }
 
 // Base class handler implementation
-void QAbstractPrintDialog_QBaseDisconnectNotify(QAbstractPrintDialog* self, QMetaMethod* signal) {
+void QAbstractPrintDialog_QBaseDisconnectNotify(QAbstractPrintDialog* self, const QMetaMethod* signal) {
     auto* vqabstractprintdialog = dynamic_cast<VirtualQAbstractPrintDialog*>(self);
     if (vqabstractprintdialog && vqabstractprintdialog->isVirtualQAbstractPrintDialog) {
         vqabstractprintdialog->setQAbstractPrintDialog_DisconnectNotify_IsBase(true);
@@ -1940,7 +1940,7 @@ void QAbstractPrintDialog_OnReceivers(const QAbstractPrintDialog* self, intptr_t
 }
 
 // Derived class handler implementation
-bool QAbstractPrintDialog_IsSignalConnected(const QAbstractPrintDialog* self, QMetaMethod* signal) {
+bool QAbstractPrintDialog_IsSignalConnected(const QAbstractPrintDialog* self, const QMetaMethod* signal) {
     auto* vqabstractprintdialog = const_cast<VirtualQAbstractPrintDialog*>(dynamic_cast<const VirtualQAbstractPrintDialog*>(self));
     if (vqabstractprintdialog && vqabstractprintdialog->isVirtualQAbstractPrintDialog) {
         return vqabstractprintdialog->isSignalConnected(*signal);
@@ -1950,7 +1950,7 @@ bool QAbstractPrintDialog_IsSignalConnected(const QAbstractPrintDialog* self, QM
 }
 
 // Base class handler implementation
-bool QAbstractPrintDialog_QBaseIsSignalConnected(const QAbstractPrintDialog* self, QMetaMethod* signal) {
+bool QAbstractPrintDialog_QBaseIsSignalConnected(const QAbstractPrintDialog* self, const QMetaMethod* signal) {
     auto* vqabstractprintdialog = const_cast<VirtualQAbstractPrintDialog*>(dynamic_cast<const VirtualQAbstractPrintDialog*>(self));
     if (vqabstractprintdialog && vqabstractprintdialog->isVirtualQAbstractPrintDialog) {
         vqabstractprintdialog->setQAbstractPrintDialog_IsSignalConnected_IsBase(true);
@@ -1965,6 +1965,35 @@ void QAbstractPrintDialog_OnIsSignalConnected(const QAbstractPrintDialog* self, 
     auto* vqabstractprintdialog = const_cast<VirtualQAbstractPrintDialog*>(dynamic_cast<const VirtualQAbstractPrintDialog*>(self));
     if (vqabstractprintdialog && vqabstractprintdialog->isVirtualQAbstractPrintDialog) {
         vqabstractprintdialog->setQAbstractPrintDialog_IsSignalConnected_Callback(reinterpret_cast<VirtualQAbstractPrintDialog::QAbstractPrintDialog_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QAbstractPrintDialog_GetDecodedMetricF(const QAbstractPrintDialog* self, int metricA, int metricB) {
+    auto* vqabstractprintdialog = const_cast<VirtualQAbstractPrintDialog*>(dynamic_cast<const VirtualQAbstractPrintDialog*>(self));
+    if (vqabstractprintdialog && vqabstractprintdialog->isVirtualQAbstractPrintDialog) {
+        return vqabstractprintdialog->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQAbstractPrintDialog*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QAbstractPrintDialog_QBaseGetDecodedMetricF(const QAbstractPrintDialog* self, int metricA, int metricB) {
+    auto* vqabstractprintdialog = const_cast<VirtualQAbstractPrintDialog*>(dynamic_cast<const VirtualQAbstractPrintDialog*>(self));
+    if (vqabstractprintdialog && vqabstractprintdialog->isVirtualQAbstractPrintDialog) {
+        vqabstractprintdialog->setQAbstractPrintDialog_GetDecodedMetricF_IsBase(true);
+        return vqabstractprintdialog->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQAbstractPrintDialog*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QAbstractPrintDialog_OnGetDecodedMetricF(const QAbstractPrintDialog* self, intptr_t slot) {
+    auto* vqabstractprintdialog = const_cast<VirtualQAbstractPrintDialog*>(dynamic_cast<const VirtualQAbstractPrintDialog*>(self));
+    if (vqabstractprintdialog && vqabstractprintdialog->isVirtualQAbstractPrintDialog) {
+        vqabstractprintdialog->setQAbstractPrintDialog_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQAbstractPrintDialog::QAbstractPrintDialog_GetDecodedMetricF_Callback>(slot));
     }
 }
 

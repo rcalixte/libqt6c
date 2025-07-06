@@ -75,7 +75,7 @@ bool QPieSeries_Append(QPieSeries* self, QPieSlice* slice) {
     return self->append(slice);
 }
 
-bool QPieSeries_AppendWithSlices(QPieSeries* self, libqt_list /* of QPieSlice* */ slices) {
+bool QPieSeries_AppendWithSlices(QPieSeries* self, const libqt_list /* of QPieSlice* */ slices) {
     QList<QPieSlice*> slices_QList;
     slices_QList.reserve(slices.len);
     QPieSlice** slices_arr = static_cast<QPieSlice**>(slices.data.ptr);
@@ -91,7 +91,7 @@ QPieSeries* QPieSeries_OperatorShiftLeft(QPieSeries* self, QPieSlice* slice) {
     return &_ret;
 }
 
-QPieSlice* QPieSeries_Append2(QPieSeries* self, libqt_string label, double value) {
+QPieSlice* QPieSeries_Append2(QPieSeries* self, const libqt_string label, double value) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return self->append(label_QString, static_cast<qreal>(value));
 }
@@ -115,12 +115,12 @@ void QPieSeries_Clear(QPieSeries* self) {
 libqt_list /* of QPieSlice* */ QPieSeries_Slices(const QPieSeries* self) {
     QList<QPieSlice*> _ret = self->slices();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QPieSlice** _arr = static_cast<QPieSlice**>(malloc(sizeof(QPieSlice*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QPieSlice** _arr = static_cast<QPieSlice**>(malloc(sizeof(QPieSlice*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -193,7 +193,7 @@ void QPieSeries_SetLabelsPosition(QPieSeries* self, int position) {
     self->setLabelsPosition(static_cast<QPieSlice::LabelPosition>(position));
 }
 
-void QPieSeries_Added(QPieSeries* self, libqt_list /* of QPieSlice* */ slices) {
+void QPieSeries_Added(QPieSeries* self, const libqt_list /* of QPieSlice* */ slices) {
     QList<QPieSlice*> slices_QList;
     slices_QList.reserve(slices.len);
     QPieSlice** slices_arr = static_cast<QPieSlice**>(slices.data.ptr);
@@ -207,20 +207,20 @@ void QPieSeries_Connect_Added(QPieSeries* self, intptr_t slot) {
     void (*slotFunc)(QPieSeries*, libqt_list /* of QPieSlice* */) = reinterpret_cast<void (*)(QPieSeries*, libqt_list /* of QPieSlice* */)>(slot);
     QPieSeries::connect(self, &QPieSeries::added, [self, slotFunc](const QList<QPieSlice*>& slices) {
         const QList<QPieSlice*>& slices_ret = slices;
-        // Convert QList<> from C++ memory to manually-managed C memory
-        QPieSlice** slices_arr = static_cast<QPieSlice**>(malloc(sizeof(QPieSlice*) * slices_ret.length()));
-        for (size_t i = 0; i < slices_ret.length(); ++i) {
+        // Convert const QList<> from C++ memory to manually-managed C memory
+        QPieSlice** slices_arr = static_cast<QPieSlice**>(malloc(sizeof(QPieSlice*) * slices_ret.size()));
+        for (size_t i = 0; i < slices_ret.size(); ++i) {
             slices_arr[i] = slices_ret[i];
         }
         libqt_list slices_out;
-        slices_out.len = slices_ret.length();
+        slices_out.len = slices_ret.size();
         slices_out.data.ptr = static_cast<void*>(slices_arr);
         libqt_list /* of QPieSlice* */ sigval1 = slices_out;
         slotFunc(self, sigval1);
     });
 }
 
-void QPieSeries_Removed(QPieSeries* self, libqt_list /* of QPieSlice* */ slices) {
+void QPieSeries_Removed(QPieSeries* self, const libqt_list /* of QPieSlice* */ slices) {
     QList<QPieSlice*> slices_QList;
     slices_QList.reserve(slices.len);
     QPieSlice** slices_arr = static_cast<QPieSlice**>(slices.data.ptr);
@@ -234,13 +234,13 @@ void QPieSeries_Connect_Removed(QPieSeries* self, intptr_t slot) {
     void (*slotFunc)(QPieSeries*, libqt_list /* of QPieSlice* */) = reinterpret_cast<void (*)(QPieSeries*, libqt_list /* of QPieSlice* */)>(slot);
     QPieSeries::connect(self, &QPieSeries::removed, [self, slotFunc](const QList<QPieSlice*>& slices) {
         const QList<QPieSlice*>& slices_ret = slices;
-        // Convert QList<> from C++ memory to manually-managed C memory
-        QPieSlice** slices_arr = static_cast<QPieSlice**>(malloc(sizeof(QPieSlice*) * slices_ret.length()));
-        for (size_t i = 0; i < slices_ret.length(); ++i) {
+        // Convert const QList<> from C++ memory to manually-managed C memory
+        QPieSlice** slices_arr = static_cast<QPieSlice**>(malloc(sizeof(QPieSlice*) * slices_ret.size()));
+        for (size_t i = 0; i < slices_ret.size(); ++i) {
             slices_arr[i] = slices_ret[i];
         }
         libqt_list slices_out;
-        slices_out.len = slices_ret.length();
+        slices_out.len = slices_ret.size();
         slices_out.data.ptr = static_cast<void*>(slices_arr);
         libqt_list /* of QPieSlice* */ sigval1 = slices_out;
         slotFunc(self, sigval1);
@@ -533,7 +533,7 @@ void QPieSeries_OnCustomEvent(QPieSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPieSeries_ConnectNotify(QPieSeries* self, QMetaMethod* signal) {
+void QPieSeries_ConnectNotify(QPieSeries* self, const QMetaMethod* signal) {
     auto* vqpieseries = dynamic_cast<VirtualQPieSeries*>(self);
     if (vqpieseries && vqpieseries->isVirtualQPieSeries) {
         vqpieseries->connectNotify(*signal);
@@ -543,7 +543,7 @@ void QPieSeries_ConnectNotify(QPieSeries* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPieSeries_QBaseConnectNotify(QPieSeries* self, QMetaMethod* signal) {
+void QPieSeries_QBaseConnectNotify(QPieSeries* self, const QMetaMethod* signal) {
     auto* vqpieseries = dynamic_cast<VirtualQPieSeries*>(self);
     if (vqpieseries && vqpieseries->isVirtualQPieSeries) {
         vqpieseries->setQPieSeries_ConnectNotify_IsBase(true);
@@ -562,7 +562,7 @@ void QPieSeries_OnConnectNotify(QPieSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPieSeries_DisconnectNotify(QPieSeries* self, QMetaMethod* signal) {
+void QPieSeries_DisconnectNotify(QPieSeries* self, const QMetaMethod* signal) {
     auto* vqpieseries = dynamic_cast<VirtualQPieSeries*>(self);
     if (vqpieseries && vqpieseries->isVirtualQPieSeries) {
         vqpieseries->disconnectNotify(*signal);
@@ -572,7 +572,7 @@ void QPieSeries_DisconnectNotify(QPieSeries* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPieSeries_QBaseDisconnectNotify(QPieSeries* self, QMetaMethod* signal) {
+void QPieSeries_QBaseDisconnectNotify(QPieSeries* self, const QMetaMethod* signal) {
     auto* vqpieseries = dynamic_cast<VirtualQPieSeries*>(self);
     if (vqpieseries && vqpieseries->isVirtualQPieSeries) {
         vqpieseries->setQPieSeries_DisconnectNotify_IsBase(true);
@@ -678,7 +678,7 @@ void QPieSeries_OnReceivers(const QPieSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPieSeries_IsSignalConnected(const QPieSeries* self, QMetaMethod* signal) {
+bool QPieSeries_IsSignalConnected(const QPieSeries* self, const QMetaMethod* signal) {
     auto* vqpieseries = const_cast<VirtualQPieSeries*>(dynamic_cast<const VirtualQPieSeries*>(self));
     if (vqpieseries && vqpieseries->isVirtualQPieSeries) {
         return vqpieseries->isSignalConnected(*signal);
@@ -688,7 +688,7 @@ bool QPieSeries_IsSignalConnected(const QPieSeries* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QPieSeries_QBaseIsSignalConnected(const QPieSeries* self, QMetaMethod* signal) {
+bool QPieSeries_QBaseIsSignalConnected(const QPieSeries* self, const QMetaMethod* signal) {
     auto* vqpieseries = const_cast<VirtualQPieSeries*>(dynamic_cast<const VirtualQPieSeries*>(self));
     if (vqpieseries && vqpieseries->isVirtualQPieSeries) {
         vqpieseries->setQPieSeries_IsSignalConnected_IsBase(true);

@@ -81,6 +81,7 @@ class VirtualQColorDialog final : public QColorDialog {
     using QColorDialog_SenderSignalIndex_Callback = int (*)();
     using QColorDialog_Receivers_Callback = int (*)(const QColorDialog*, const char*);
     using QColorDialog_IsSignalConnected_Callback = bool (*)(const QColorDialog*, QMetaMethod*);
+    using QColorDialog_GetDecodedMetricF_Callback = double (*)(const QColorDialog*, int, int);
 
   protected:
     // Instance callback storage
@@ -147,6 +148,7 @@ class VirtualQColorDialog final : public QColorDialog {
     QColorDialog_SenderSignalIndex_Callback qcolordialog_sendersignalindex_callback = nullptr;
     QColorDialog_Receivers_Callback qcolordialog_receivers_callback = nullptr;
     QColorDialog_IsSignalConnected_Callback qcolordialog_issignalconnected_callback = nullptr;
+    QColorDialog_GetDecodedMetricF_Callback qcolordialog_getdecodedmetricf_callback = nullptr;
 
     // Instance base flags
     mutable bool qcolordialog_metacall_isbase = false;
@@ -212,12 +214,13 @@ class VirtualQColorDialog final : public QColorDialog {
     mutable bool qcolordialog_sendersignalindex_isbase = false;
     mutable bool qcolordialog_receivers_isbase = false;
     mutable bool qcolordialog_issignalconnected_isbase = false;
+    mutable bool qcolordialog_getdecodedmetricf_isbase = false;
 
   public:
-    VirtualQColorDialog(QWidget* parent) : QColorDialog(parent){};
-    VirtualQColorDialog() : QColorDialog(){};
-    VirtualQColorDialog(const QColor& initial) : QColorDialog(initial){};
-    VirtualQColorDialog(const QColor& initial, QWidget* parent) : QColorDialog(initial, parent){};
+    VirtualQColorDialog(QWidget* parent) : QColorDialog(parent) {};
+    VirtualQColorDialog() : QColorDialog() {};
+    VirtualQColorDialog(const QColor& initial) : QColorDialog(initial) {};
+    VirtualQColorDialog(const QColor& initial, QWidget* parent) : QColorDialog(initial, parent) {};
 
     ~VirtualQColorDialog() {
         qcolordialog_metacall_callback = nullptr;
@@ -283,6 +286,7 @@ class VirtualQColorDialog final : public QColorDialog {
         qcolordialog_sendersignalindex_callback = nullptr;
         qcolordialog_receivers_callback = nullptr;
         qcolordialog_issignalconnected_callback = nullptr;
+        qcolordialog_getdecodedmetricf_callback = nullptr;
     }
 
     // Callback setters
@@ -349,6 +353,7 @@ class VirtualQColorDialog final : public QColorDialog {
     inline void setQColorDialog_SenderSignalIndex_Callback(QColorDialog_SenderSignalIndex_Callback cb) { qcolordialog_sendersignalindex_callback = cb; }
     inline void setQColorDialog_Receivers_Callback(QColorDialog_Receivers_Callback cb) { qcolordialog_receivers_callback = cb; }
     inline void setQColorDialog_IsSignalConnected_Callback(QColorDialog_IsSignalConnected_Callback cb) { qcolordialog_issignalconnected_callback = cb; }
+    inline void setQColorDialog_GetDecodedMetricF_Callback(QColorDialog_GetDecodedMetricF_Callback cb) { qcolordialog_getdecodedmetricf_callback = cb; }
 
     // Base flag setters
     inline void setQColorDialog_Metacall_IsBase(bool value) const { qcolordialog_metacall_isbase = value; }
@@ -414,6 +419,7 @@ class VirtualQColorDialog final : public QColorDialog {
     inline void setQColorDialog_SenderSignalIndex_IsBase(bool value) const { qcolordialog_sendersignalindex_isbase = value; }
     inline void setQColorDialog_Receivers_IsBase(bool value) const { qcolordialog_receivers_isbase = value; }
     inline void setQColorDialog_IsSignalConnected_IsBase(bool value) const { qcolordialog_issignalconnected_isbase = value; }
+    inline void setQColorDialog_GetDecodedMetricF_IsBase(bool value) const { qcolordialog_getdecodedmetricf_isbase = value; }
 
     // Virtual method for C ABI access and custom callback
     virtual int qt_metacall(QMetaObject::Call param1, int param2, void** param3) override {
@@ -1303,6 +1309,22 @@ class VirtualQColorDialog final : public QColorDialog {
         }
     }
 
+    // Virtual method for C ABI access and custom callback
+    double getDecodedMetricF(QPaintDevice::PaintDeviceMetric metricA, QPaintDevice::PaintDeviceMetric metricB) const {
+        if (qcolordialog_getdecodedmetricf_isbase) {
+            qcolordialog_getdecodedmetricf_isbase = false;
+            return QColorDialog::getDecodedMetricF(metricA, metricB);
+        } else if (qcolordialog_getdecodedmetricf_callback != nullptr) {
+            int cbval1 = static_cast<int>(metricA);
+            int cbval2 = static_cast<int>(metricB);
+
+            double callback_ret = qcolordialog_getdecodedmetricf_callback(this, cbval1, cbval2);
+            return static_cast<double>(callback_ret);
+        } else {
+            return QColorDialog::getDecodedMetricF(metricA, metricB);
+        }
+    }
+
     // Friend functions
     friend void QColorDialog_ChangeEvent(QColorDialog* self, QEvent* event);
     friend void QColorDialog_QBaseChangeEvent(QColorDialog* self, QEvent* event);
@@ -1360,8 +1382,8 @@ class VirtualQColorDialog final : public QColorDialog {
     friend void QColorDialog_QBaseDropEvent(QColorDialog* self, QDropEvent* event);
     friend void QColorDialog_HideEvent(QColorDialog* self, QHideEvent* event);
     friend void QColorDialog_QBaseHideEvent(QColorDialog* self, QHideEvent* event);
-    friend bool QColorDialog_NativeEvent(QColorDialog* self, libqt_string eventType, void* message, intptr_t* result);
-    friend bool QColorDialog_QBaseNativeEvent(QColorDialog* self, libqt_string eventType, void* message, intptr_t* result);
+    friend bool QColorDialog_NativeEvent(QColorDialog* self, const libqt_string eventType, void* message, intptr_t* result);
+    friend bool QColorDialog_QBaseNativeEvent(QColorDialog* self, const libqt_string eventType, void* message, intptr_t* result);
     friend int QColorDialog_Metric(const QColorDialog* self, int param1);
     friend int QColorDialog_QBaseMetric(const QColorDialog* self, int param1);
     friend void QColorDialog_InitPainter(const QColorDialog* self, QPainter* painter);
@@ -1380,10 +1402,10 @@ class VirtualQColorDialog final : public QColorDialog {
     friend void QColorDialog_QBaseChildEvent(QColorDialog* self, QChildEvent* event);
     friend void QColorDialog_CustomEvent(QColorDialog* self, QEvent* event);
     friend void QColorDialog_QBaseCustomEvent(QColorDialog* self, QEvent* event);
-    friend void QColorDialog_ConnectNotify(QColorDialog* self, QMetaMethod* signal);
-    friend void QColorDialog_QBaseConnectNotify(QColorDialog* self, QMetaMethod* signal);
-    friend void QColorDialog_DisconnectNotify(QColorDialog* self, QMetaMethod* signal);
-    friend void QColorDialog_QBaseDisconnectNotify(QColorDialog* self, QMetaMethod* signal);
+    friend void QColorDialog_ConnectNotify(QColorDialog* self, const QMetaMethod* signal);
+    friend void QColorDialog_QBaseConnectNotify(QColorDialog* self, const QMetaMethod* signal);
+    friend void QColorDialog_DisconnectNotify(QColorDialog* self, const QMetaMethod* signal);
+    friend void QColorDialog_QBaseDisconnectNotify(QColorDialog* self, const QMetaMethod* signal);
     friend void QColorDialog_AdjustPosition(QColorDialog* self, QWidget* param1);
     friend void QColorDialog_QBaseAdjustPosition(QColorDialog* self, QWidget* param1);
     friend void QColorDialog_UpdateMicroFocus(QColorDialog* self);
@@ -1402,8 +1424,10 @@ class VirtualQColorDialog final : public QColorDialog {
     friend int QColorDialog_QBaseSenderSignalIndex(const QColorDialog* self);
     friend int QColorDialog_Receivers(const QColorDialog* self, const char* signal);
     friend int QColorDialog_QBaseReceivers(const QColorDialog* self, const char* signal);
-    friend bool QColorDialog_IsSignalConnected(const QColorDialog* self, QMetaMethod* signal);
-    friend bool QColorDialog_QBaseIsSignalConnected(const QColorDialog* self, QMetaMethod* signal);
+    friend bool QColorDialog_IsSignalConnected(const QColorDialog* self, const QMetaMethod* signal);
+    friend bool QColorDialog_QBaseIsSignalConnected(const QColorDialog* self, const QMetaMethod* signal);
+    friend double QColorDialog_GetDecodedMetricF(const QColorDialog* self, int metricA, int metricB);
+    friend double QColorDialog_QBaseGetDecodedMetricF(const QColorDialog* self, int metricA, int metricB);
 };
 
 #endif

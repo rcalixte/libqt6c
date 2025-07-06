@@ -55,16 +55,6 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QCalendarWidget::HorizontalHeaderFormat HorizontalHeaderFormat; // C++ enum
-typedef QCalendarWidget::SelectionMode SelectionMode;                   // C++ enum
-typedef QCalendarWidget::VerticalHeaderFormat VerticalHeaderFormat;     // C++ enum
-#else
-typedef int HorizontalHeaderFormat; // C ABI enum
-typedef int SelectionMode;          // C ABI enum
-typedef int VerticalHeaderFormat;   // C ABI enum
-#endif
-
 QCalendarWidget* QCalendarWidget_new(QWidget* parent);
 QCalendarWidget* QCalendarWidget_new2();
 QMetaObject* QCalendarWidget_MetaObject(const QCalendarWidget* self);
@@ -84,8 +74,10 @@ int QCalendarWidget_YearShown(const QCalendarWidget* self);
 int QCalendarWidget_MonthShown(const QCalendarWidget* self);
 QDate* QCalendarWidget_MinimumDate(const QCalendarWidget* self);
 void QCalendarWidget_SetMinimumDate(QCalendarWidget* self, QDate* date);
+void QCalendarWidget_ClearMinimumDate(QCalendarWidget* self);
 QDate* QCalendarWidget_MaximumDate(const QCalendarWidget* self);
 void QCalendarWidget_SetMaximumDate(QCalendarWidget* self, QDate* date);
+void QCalendarWidget_ClearMaximumDate(QCalendarWidget* self);
 int QCalendarWidget_FirstDayOfWeek(const QCalendarWidget* self);
 void QCalendarWidget_SetFirstDayOfWeek(QCalendarWidget* self, int dayOfWeek);
 bool QCalendarWidget_IsNavigationBarVisible(const QCalendarWidget* self);
@@ -99,12 +91,12 @@ void QCalendarWidget_SetHorizontalHeaderFormat(QCalendarWidget* self, int format
 int QCalendarWidget_VerticalHeaderFormat(const QCalendarWidget* self);
 void QCalendarWidget_SetVerticalHeaderFormat(QCalendarWidget* self, int format);
 QTextCharFormat* QCalendarWidget_HeaderTextFormat(const QCalendarWidget* self);
-void QCalendarWidget_SetHeaderTextFormat(QCalendarWidget* self, QTextCharFormat* format);
+void QCalendarWidget_SetHeaderTextFormat(QCalendarWidget* self, const QTextCharFormat* format);
 QTextCharFormat* QCalendarWidget_WeekdayTextFormat(const QCalendarWidget* self, int dayOfWeek);
-void QCalendarWidget_SetWeekdayTextFormat(QCalendarWidget* self, int dayOfWeek, QTextCharFormat* format);
+void QCalendarWidget_SetWeekdayTextFormat(QCalendarWidget* self, int dayOfWeek, const QTextCharFormat* format);
 libqt_map /* of QDate* to QTextCharFormat* */ QCalendarWidget_DateTextFormat(const QCalendarWidget* self);
 QTextCharFormat* QCalendarWidget_DateTextFormatWithDate(const QCalendarWidget* self, QDate* date);
-void QCalendarWidget_SetDateTextFormat(QCalendarWidget* self, QDate* date, QTextCharFormat* format);
+void QCalendarWidget_SetDateTextFormat(QCalendarWidget* self, QDate* date, const QTextCharFormat* format);
 bool QCalendarWidget_IsDateEditEnabled(const QCalendarWidget* self);
 void QCalendarWidget_SetDateEditEnabled(QCalendarWidget* self, bool enable);
 int QCalendarWidget_DateEditAcceptDelay(const QCalendarWidget* self);
@@ -124,9 +116,9 @@ void QCalendarWidget_QBaseResizeEvent(QCalendarWidget* self, QResizeEvent* event
 void QCalendarWidget_KeyPressEvent(QCalendarWidget* self, QKeyEvent* event);
 void QCalendarWidget_OnKeyPressEvent(QCalendarWidget* self, intptr_t slot);
 void QCalendarWidget_QBaseKeyPressEvent(QCalendarWidget* self, QKeyEvent* event);
-void QCalendarWidget_PaintCell(const QCalendarWidget* self, QPainter* painter, QRect* rect, QDate* date);
+void QCalendarWidget_PaintCell(const QCalendarWidget* self, QPainter* painter, const QRect* rect, QDate* date);
 void QCalendarWidget_OnPaintCell(const QCalendarWidget* self, intptr_t slot);
-void QCalendarWidget_QBasePaintCell(const QCalendarWidget* self, QPainter* painter, QRect* rect, QDate* date);
+void QCalendarWidget_QBasePaintCell(const QCalendarWidget* self, QPainter* painter, const QRect* rect, QDate* date);
 void QCalendarWidget_SetSelectedDate(QCalendarWidget* self, QDate* date);
 void QCalendarWidget_SetDateRange(QCalendarWidget* self, QDate* min, QDate* max);
 void QCalendarWidget_SetCurrentPage(QCalendarWidget* self, int year, int month);
@@ -226,9 +218,9 @@ void QCalendarWidget_QBaseShowEvent(QCalendarWidget* self, QShowEvent* event);
 void QCalendarWidget_HideEvent(QCalendarWidget* self, QHideEvent* event);
 void QCalendarWidget_OnHideEvent(QCalendarWidget* self, intptr_t slot);
 void QCalendarWidget_QBaseHideEvent(QCalendarWidget* self, QHideEvent* event);
-bool QCalendarWidget_NativeEvent(QCalendarWidget* self, libqt_string eventType, void* message, intptr_t* result);
+bool QCalendarWidget_NativeEvent(QCalendarWidget* self, const libqt_string eventType, void* message, intptr_t* result);
 void QCalendarWidget_OnNativeEvent(QCalendarWidget* self, intptr_t slot);
-bool QCalendarWidget_QBaseNativeEvent(QCalendarWidget* self, libqt_string eventType, void* message, intptr_t* result);
+bool QCalendarWidget_QBaseNativeEvent(QCalendarWidget* self, const libqt_string eventType, void* message, intptr_t* result);
 void QCalendarWidget_ChangeEvent(QCalendarWidget* self, QEvent* param1);
 void QCalendarWidget_OnChangeEvent(QCalendarWidget* self, intptr_t slot);
 void QCalendarWidget_QBaseChangeEvent(QCalendarWidget* self, QEvent* param1);
@@ -262,12 +254,12 @@ void QCalendarWidget_QBaseChildEvent(QCalendarWidget* self, QChildEvent* event);
 void QCalendarWidget_CustomEvent(QCalendarWidget* self, QEvent* event);
 void QCalendarWidget_OnCustomEvent(QCalendarWidget* self, intptr_t slot);
 void QCalendarWidget_QBaseCustomEvent(QCalendarWidget* self, QEvent* event);
-void QCalendarWidget_ConnectNotify(QCalendarWidget* self, QMetaMethod* signal);
+void QCalendarWidget_ConnectNotify(QCalendarWidget* self, const QMetaMethod* signal);
 void QCalendarWidget_OnConnectNotify(QCalendarWidget* self, intptr_t slot);
-void QCalendarWidget_QBaseConnectNotify(QCalendarWidget* self, QMetaMethod* signal);
-void QCalendarWidget_DisconnectNotify(QCalendarWidget* self, QMetaMethod* signal);
+void QCalendarWidget_QBaseConnectNotify(QCalendarWidget* self, const QMetaMethod* signal);
+void QCalendarWidget_DisconnectNotify(QCalendarWidget* self, const QMetaMethod* signal);
 void QCalendarWidget_OnDisconnectNotify(QCalendarWidget* self, intptr_t slot);
-void QCalendarWidget_QBaseDisconnectNotify(QCalendarWidget* self, QMetaMethod* signal);
+void QCalendarWidget_QBaseDisconnectNotify(QCalendarWidget* self, const QMetaMethod* signal);
 void QCalendarWidget_UpdateCell(QCalendarWidget* self, QDate* date);
 void QCalendarWidget_OnUpdateCell(QCalendarWidget* self, intptr_t slot);
 void QCalendarWidget_QBaseUpdateCell(QCalendarWidget* self, QDate* date);
@@ -298,9 +290,12 @@ int QCalendarWidget_QBaseSenderSignalIndex(const QCalendarWidget* self);
 int QCalendarWidget_Receivers(const QCalendarWidget* self, const char* signal);
 void QCalendarWidget_OnReceivers(const QCalendarWidget* self, intptr_t slot);
 int QCalendarWidget_QBaseReceivers(const QCalendarWidget* self, const char* signal);
-bool QCalendarWidget_IsSignalConnected(const QCalendarWidget* self, QMetaMethod* signal);
+bool QCalendarWidget_IsSignalConnected(const QCalendarWidget* self, const QMetaMethod* signal);
 void QCalendarWidget_OnIsSignalConnected(const QCalendarWidget* self, intptr_t slot);
-bool QCalendarWidget_QBaseIsSignalConnected(const QCalendarWidget* self, QMetaMethod* signal);
+bool QCalendarWidget_QBaseIsSignalConnected(const QCalendarWidget* self, const QMetaMethod* signal);
+double QCalendarWidget_GetDecodedMetricF(const QCalendarWidget* self, int metricA, int metricB);
+void QCalendarWidget_OnGetDecodedMetricF(const QCalendarWidget* self, intptr_t slot);
+double QCalendarWidget_QBaseGetDecodedMetricF(const QCalendarWidget* self, int metricA, int metricB);
 void QCalendarWidget_Delete(QCalendarWidget* self);
 
 #ifdef __cplusplus

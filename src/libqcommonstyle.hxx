@@ -130,7 +130,7 @@ class VirtualQCommonStyle final : public QCommonStyle {
     mutable bool qcommonstyle_issignalconnected_isbase = false;
 
   public:
-    VirtualQCommonStyle() : QCommonStyle(){};
+    VirtualQCommonStyle() : QCommonStyle() {};
 
     ~VirtualQCommonStyle() {
         qcommonstyle_metacall_callback = nullptr;
@@ -854,18 +854,18 @@ class VirtualQCommonStyle final : public QCommonStyle {
     friend void QCommonStyle_QBaseChildEvent(QCommonStyle* self, QChildEvent* event);
     friend void QCommonStyle_CustomEvent(QCommonStyle* self, QEvent* event);
     friend void QCommonStyle_QBaseCustomEvent(QCommonStyle* self, QEvent* event);
-    friend void QCommonStyle_ConnectNotify(QCommonStyle* self, QMetaMethod* signal);
-    friend void QCommonStyle_QBaseConnectNotify(QCommonStyle* self, QMetaMethod* signal);
-    friend void QCommonStyle_DisconnectNotify(QCommonStyle* self, QMetaMethod* signal);
-    friend void QCommonStyle_QBaseDisconnectNotify(QCommonStyle* self, QMetaMethod* signal);
+    friend void QCommonStyle_ConnectNotify(QCommonStyle* self, const QMetaMethod* signal);
+    friend void QCommonStyle_QBaseConnectNotify(QCommonStyle* self, const QMetaMethod* signal);
+    friend void QCommonStyle_DisconnectNotify(QCommonStyle* self, const QMetaMethod* signal);
+    friend void QCommonStyle_QBaseDisconnectNotify(QCommonStyle* self, const QMetaMethod* signal);
     friend QObject* QCommonStyle_Sender(const QCommonStyle* self);
     friend QObject* QCommonStyle_QBaseSender(const QCommonStyle* self);
     friend int QCommonStyle_SenderSignalIndex(const QCommonStyle* self);
     friend int QCommonStyle_QBaseSenderSignalIndex(const QCommonStyle* self);
     friend int QCommonStyle_Receivers(const QCommonStyle* self, const char* signal);
     friend int QCommonStyle_QBaseReceivers(const QCommonStyle* self, const char* signal);
-    friend bool QCommonStyle_IsSignalConnected(const QCommonStyle* self, QMetaMethod* signal);
-    friend bool QCommonStyle_QBaseIsSignalConnected(const QCommonStyle* self, QMetaMethod* signal);
+    friend bool QCommonStyle_IsSignalConnected(const QCommonStyle* self, const QMetaMethod* signal);
+    friend bool QCommonStyle_QBaseIsSignalConnected(const QCommonStyle* self, const QMetaMethod* signal);
 };
 
 #endif

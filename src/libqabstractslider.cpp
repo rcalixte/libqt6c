@@ -1302,7 +1302,7 @@ void QAbstractSlider_OnHideEvent(QAbstractSlider* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QAbstractSlider_NativeEvent(QAbstractSlider* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QAbstractSlider_NativeEvent(QAbstractSlider* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqabstractslider = dynamic_cast<VirtualQAbstractSlider*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqabstractslider && vqabstractslider->isVirtualQAbstractSlider) {
@@ -1313,7 +1313,7 @@ bool QAbstractSlider_NativeEvent(QAbstractSlider* self, libqt_string eventType, 
 }
 
 // Base class handler implementation
-bool QAbstractSlider_QBaseNativeEvent(QAbstractSlider* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QAbstractSlider_QBaseNativeEvent(QAbstractSlider* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqabstractslider = dynamic_cast<VirtualQAbstractSlider*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqabstractslider && vqabstractslider->isVirtualQAbstractSlider) {
@@ -1623,7 +1623,7 @@ void QAbstractSlider_OnCustomEvent(QAbstractSlider* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAbstractSlider_ConnectNotify(QAbstractSlider* self, QMetaMethod* signal) {
+void QAbstractSlider_ConnectNotify(QAbstractSlider* self, const QMetaMethod* signal) {
     auto* vqabstractslider = dynamic_cast<VirtualQAbstractSlider*>(self);
     if (vqabstractslider && vqabstractslider->isVirtualQAbstractSlider) {
         vqabstractslider->connectNotify(*signal);
@@ -1633,7 +1633,7 @@ void QAbstractSlider_ConnectNotify(QAbstractSlider* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QAbstractSlider_QBaseConnectNotify(QAbstractSlider* self, QMetaMethod* signal) {
+void QAbstractSlider_QBaseConnectNotify(QAbstractSlider* self, const QMetaMethod* signal) {
     auto* vqabstractslider = dynamic_cast<VirtualQAbstractSlider*>(self);
     if (vqabstractslider && vqabstractslider->isVirtualQAbstractSlider) {
         vqabstractslider->setQAbstractSlider_ConnectNotify_IsBase(true);
@@ -1652,7 +1652,7 @@ void QAbstractSlider_OnConnectNotify(QAbstractSlider* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAbstractSlider_DisconnectNotify(QAbstractSlider* self, QMetaMethod* signal) {
+void QAbstractSlider_DisconnectNotify(QAbstractSlider* self, const QMetaMethod* signal) {
     auto* vqabstractslider = dynamic_cast<VirtualQAbstractSlider*>(self);
     if (vqabstractslider && vqabstractslider->isVirtualQAbstractSlider) {
         vqabstractslider->disconnectNotify(*signal);
@@ -1662,7 +1662,7 @@ void QAbstractSlider_DisconnectNotify(QAbstractSlider* self, QMetaMethod* signal
 }
 
 // Base class handler implementation
-void QAbstractSlider_QBaseDisconnectNotify(QAbstractSlider* self, QMetaMethod* signal) {
+void QAbstractSlider_QBaseDisconnectNotify(QAbstractSlider* self, const QMetaMethod* signal) {
     auto* vqabstractslider = dynamic_cast<VirtualQAbstractSlider*>(self);
     if (vqabstractslider && vqabstractslider->isVirtualQAbstractSlider) {
         vqabstractslider->setQAbstractSlider_DisconnectNotify_IsBase(true);
@@ -2029,7 +2029,7 @@ void QAbstractSlider_OnReceivers(const QAbstractSlider* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QAbstractSlider_IsSignalConnected(const QAbstractSlider* self, QMetaMethod* signal) {
+bool QAbstractSlider_IsSignalConnected(const QAbstractSlider* self, const QMetaMethod* signal) {
     auto* vqabstractslider = const_cast<VirtualQAbstractSlider*>(dynamic_cast<const VirtualQAbstractSlider*>(self));
     if (vqabstractslider && vqabstractslider->isVirtualQAbstractSlider) {
         return vqabstractslider->isSignalConnected(*signal);
@@ -2039,7 +2039,7 @@ bool QAbstractSlider_IsSignalConnected(const QAbstractSlider* self, QMetaMethod*
 }
 
 // Base class handler implementation
-bool QAbstractSlider_QBaseIsSignalConnected(const QAbstractSlider* self, QMetaMethod* signal) {
+bool QAbstractSlider_QBaseIsSignalConnected(const QAbstractSlider* self, const QMetaMethod* signal) {
     auto* vqabstractslider = const_cast<VirtualQAbstractSlider*>(dynamic_cast<const VirtualQAbstractSlider*>(self));
     if (vqabstractslider && vqabstractslider->isVirtualQAbstractSlider) {
         vqabstractslider->setQAbstractSlider_IsSignalConnected_IsBase(true);
@@ -2054,6 +2054,35 @@ void QAbstractSlider_OnIsSignalConnected(const QAbstractSlider* self, intptr_t s
     auto* vqabstractslider = const_cast<VirtualQAbstractSlider*>(dynamic_cast<const VirtualQAbstractSlider*>(self));
     if (vqabstractslider && vqabstractslider->isVirtualQAbstractSlider) {
         vqabstractslider->setQAbstractSlider_IsSignalConnected_Callback(reinterpret_cast<VirtualQAbstractSlider::QAbstractSlider_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QAbstractSlider_GetDecodedMetricF(const QAbstractSlider* self, int metricA, int metricB) {
+    auto* vqabstractslider = const_cast<VirtualQAbstractSlider*>(dynamic_cast<const VirtualQAbstractSlider*>(self));
+    if (vqabstractslider && vqabstractslider->isVirtualQAbstractSlider) {
+        return vqabstractslider->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQAbstractSlider*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QAbstractSlider_QBaseGetDecodedMetricF(const QAbstractSlider* self, int metricA, int metricB) {
+    auto* vqabstractslider = const_cast<VirtualQAbstractSlider*>(dynamic_cast<const VirtualQAbstractSlider*>(self));
+    if (vqabstractslider && vqabstractslider->isVirtualQAbstractSlider) {
+        vqabstractslider->setQAbstractSlider_GetDecodedMetricF_IsBase(true);
+        return vqabstractslider->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQAbstractSlider*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QAbstractSlider_OnGetDecodedMetricF(const QAbstractSlider* self, intptr_t slot) {
+    auto* vqabstractslider = const_cast<VirtualQAbstractSlider*>(dynamic_cast<const VirtualQAbstractSlider*>(self));
+    if (vqabstractslider && vqabstractslider->isVirtualQAbstractSlider) {
+        vqabstractslider->setQAbstractSlider_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQAbstractSlider::QAbstractSlider_GetDecodedMetricF_Callback>(slot));
     }
 }
 

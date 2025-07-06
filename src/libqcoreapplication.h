@@ -12,14 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstracteventdispatcher.h"
-#include "libqabstractnativeeventfilter.h"
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-#include "libqtranslator.h"
-
 /// https://doc.qt.io/qt-6/qcoreapplication.html
 
 /// q_coreapplication_new constructs a new QCoreApplication object.
@@ -143,6 +135,11 @@ void q_coreapplication_process_events();
 /// ``` int flags, int maxtime ```
 void q_coreapplication_process_events2(int64_t flags, int maxtime);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#processEvents)
+///
+/// ``` int flags, QDeadlineTimer* deadline ```
+void q_coreapplication_process_events3(int64_t flags, void* deadline);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#sendEvent)
 ///
 /// ``` QObject* receiver, QEvent* event ```
@@ -216,6 +213,11 @@ const char* q_coreapplication_application_file_path();
 ///
 ///
 long long q_coreapplication_application_pid();
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#checkPermission)
+///
+/// ``` QCoreApplication* self, QPermission* permission ```
+int64_t q_coreapplication_check_permission(void* self, void* permission);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setLibraryPaths)
 ///
@@ -486,7 +488,7 @@ QThread* q_coreapplication_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QCoreApplication* self, QThread* thread ```
-void q_coreapplication_move_to_thread(void* self, void* thread);
+bool q_coreapplication_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -501,6 +503,13 @@ int32_t q_coreapplication_start_timer(void* self, int interval);
 ///
 /// ``` QCoreApplication* self, int id ```
 void q_coreapplication_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QCoreApplication* self, enum Qt__TimerId id ```
+void q_coreapplication_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -641,6 +650,13 @@ bool q_coreapplication_inherits(void* self, const char* classname);
 ///
 /// ``` QCoreApplication* self ```
 void q_coreapplication_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QCoreApplication* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_coreapplication_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -973,7 +989,7 @@ void q_coreapplication_delete(void* self);
 /// https://doc.qt.io/qt-6/qcoreapplication.html#types
 
 typedef enum {
-    QCOREAPPLICATION__APPLICATIONFLAGS = 394242
+    QCOREAPPLICATION__APPLICATIONFLAGS = 395266
 } QCoreApplication__;
 
 #endif

@@ -12,22 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqapplication.h"
-#include "libqevent.h"
-#include "libqfontmetrics.h"
-#include "libqicon.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqstyleoption.h"
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qstyle.html
 
 /// q_style_new constructs a new QStyle object.
@@ -634,7 +618,7 @@ QThread* q_style_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QStyle* self, QThread* thread ```
-void q_style_move_to_thread(void* self, void* thread);
+bool q_style_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -649,6 +633,13 @@ int32_t q_style_start_timer(void* self, int interval);
 ///
 /// ``` QStyle* self, int id ```
 void q_style_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QStyle* self, enum Qt__TimerId id ```
+void q_style_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -789,6 +780,13 @@ bool q_style_inherits(void* self, const char* classname);
 ///
 /// ``` QStyle* self ```
 void q_style_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QStyle* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_style_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -1440,9 +1438,6 @@ typedef enum {
     QSTYLE_PIXELMETRIC_PM_INDICATORHEIGHT = 38,
     QSTYLE_PIXELMETRIC_PM_EXCLUSIVEINDICATORWIDTH = 39,
     QSTYLE_PIXELMETRIC_PM_EXCLUSIVEINDICATORHEIGHT = 40,
-    QSTYLE_PIXELMETRIC_PM_DIALOGBUTTONSSEPARATOR = 41,
-    QSTYLE_PIXELMETRIC_PM_DIALOGBUTTONSBUTTONWIDTH = 42,
-    QSTYLE_PIXELMETRIC_PM_DIALOGBUTTONSBUTTONHEIGHT = 43,
     QSTYLE_PIXELMETRIC_PM_MDISUBWINDOWFRAMEWIDTH = 44,
     QSTYLE_PIXELMETRIC_PM_MDISUBWINDOWMINIMIZEDWIDTH = 45,
     QSTYLE_PIXELMETRIC_PM_HEADERMARGIN = 46,

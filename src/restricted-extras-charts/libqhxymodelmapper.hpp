@@ -77,12 +77,12 @@ void QHXYModelMapper_QBaseChildEvent(QHXYModelMapper* self, QChildEvent* event);
 void QHXYModelMapper_CustomEvent(QHXYModelMapper* self, QEvent* event);
 void QHXYModelMapper_OnCustomEvent(QHXYModelMapper* self, intptr_t slot);
 void QHXYModelMapper_QBaseCustomEvent(QHXYModelMapper* self, QEvent* event);
-void QHXYModelMapper_ConnectNotify(QHXYModelMapper* self, QMetaMethod* signal);
+void QHXYModelMapper_ConnectNotify(QHXYModelMapper* self, const QMetaMethod* signal);
 void QHXYModelMapper_OnConnectNotify(QHXYModelMapper* self, intptr_t slot);
-void QHXYModelMapper_QBaseConnectNotify(QHXYModelMapper* self, QMetaMethod* signal);
-void QHXYModelMapper_DisconnectNotify(QHXYModelMapper* self, QMetaMethod* signal);
+void QHXYModelMapper_QBaseConnectNotify(QHXYModelMapper* self, const QMetaMethod* signal);
+void QHXYModelMapper_DisconnectNotify(QHXYModelMapper* self, const QMetaMethod* signal);
 void QHXYModelMapper_OnDisconnectNotify(QHXYModelMapper* self, intptr_t slot);
-void QHXYModelMapper_QBaseDisconnectNotify(QHXYModelMapper* self, QMetaMethod* signal);
+void QHXYModelMapper_QBaseDisconnectNotify(QHXYModelMapper* self, const QMetaMethod* signal);
 int QHXYModelMapper_First(const QHXYModelMapper* self);
 void QHXYModelMapper_OnFirst(const QHXYModelMapper* self, intptr_t slot);
 int QHXYModelMapper_QBaseFirst(const QHXYModelMapper* self);
@@ -122,9 +122,9 @@ int QHXYModelMapper_QBaseSenderSignalIndex(const QHXYModelMapper* self);
 int QHXYModelMapper_Receivers(const QHXYModelMapper* self, const char* signal);
 void QHXYModelMapper_OnReceivers(const QHXYModelMapper* self, intptr_t slot);
 int QHXYModelMapper_QBaseReceivers(const QHXYModelMapper* self, const char* signal);
-bool QHXYModelMapper_IsSignalConnected(const QHXYModelMapper* self, QMetaMethod* signal);
+bool QHXYModelMapper_IsSignalConnected(const QHXYModelMapper* self, const QMetaMethod* signal);
 void QHXYModelMapper_OnIsSignalConnected(const QHXYModelMapper* self, intptr_t slot);
-bool QHXYModelMapper_QBaseIsSignalConnected(const QHXYModelMapper* self, QMetaMethod* signal);
+bool QHXYModelMapper_QBaseIsSignalConnected(const QHXYModelMapper* self, const QMetaMethod* signal);
 void QHXYModelMapper_Delete(QHXYModelMapper* self);
 
 #ifdef __cplusplus

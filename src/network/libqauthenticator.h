@@ -12,9 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include <string.h>
-#include "../libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qauthenticator.html
 
 /// q_authenticator_new constructs a new QAuthenticator object.

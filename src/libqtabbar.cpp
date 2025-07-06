@@ -107,22 +107,22 @@ void QTabBar_SetShape(QTabBar* self, int shape) {
     self->setShape(static_cast<QTabBar::Shape>(shape));
 }
 
-int QTabBar_AddTab(QTabBar* self, libqt_string text) {
+int QTabBar_AddTab(QTabBar* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->addTab(text_QString);
 }
 
-int QTabBar_AddTab2(QTabBar* self, QIcon* icon, libqt_string text) {
+int QTabBar_AddTab2(QTabBar* self, const QIcon* icon, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->addTab(*icon, text_QString);
 }
 
-int QTabBar_InsertTab(QTabBar* self, int index, libqt_string text) {
+int QTabBar_InsertTab(QTabBar* self, int index, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->insertTab(static_cast<int>(index), text_QString);
 }
 
-int QTabBar_InsertTab2(QTabBar* self, int index, QIcon* icon, libqt_string text) {
+int QTabBar_InsertTab2(QTabBar* self, int index, const QIcon* icon, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->insertTab(static_cast<int>(index), *icon, text_QString);
 }
@@ -163,7 +163,7 @@ libqt_string QTabBar_TabText(const QTabBar* self, int index) {
     return _str;
 }
 
-void QTabBar_SetTabText(QTabBar* self, int index, libqt_string text) {
+void QTabBar_SetTabText(QTabBar* self, int index, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setTabText(static_cast<int>(index), text_QString);
 }
@@ -172,7 +172,7 @@ QColor* QTabBar_TabTextColor(const QTabBar* self, int index) {
     return new QColor(self->tabTextColor(static_cast<int>(index)));
 }
 
-void QTabBar_SetTabTextColor(QTabBar* self, int index, QColor* color) {
+void QTabBar_SetTabTextColor(QTabBar* self, int index, const QColor* color) {
     self->setTabTextColor(static_cast<int>(index), *color);
 }
 
@@ -180,7 +180,7 @@ QIcon* QTabBar_TabIcon(const QTabBar* self, int index) {
     return new QIcon(self->tabIcon(static_cast<int>(index)));
 }
 
-void QTabBar_SetTabIcon(QTabBar* self, int index, QIcon* icon) {
+void QTabBar_SetTabIcon(QTabBar* self, int index, const QIcon* icon) {
     self->setTabIcon(static_cast<int>(index), *icon);
 }
 
@@ -192,7 +192,7 @@ void QTabBar_SetElideMode(QTabBar* self, int mode) {
     self->setElideMode(static_cast<Qt::TextElideMode>(mode));
 }
 
-void QTabBar_SetTabToolTip(QTabBar* self, int index, libqt_string tip) {
+void QTabBar_SetTabToolTip(QTabBar* self, int index, const libqt_string tip) {
     QString tip_QString = QString::fromUtf8(tip.data, tip.len);
     self->setTabToolTip(static_cast<int>(index), tip_QString);
 }
@@ -209,7 +209,7 @@ libqt_string QTabBar_TabToolTip(const QTabBar* self, int index) {
     return _str;
 }
 
-void QTabBar_SetTabWhatsThis(QTabBar* self, int index, libqt_string text) {
+void QTabBar_SetTabWhatsThis(QTabBar* self, int index, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setTabWhatsThis(static_cast<int>(index), text_QString);
 }
@@ -226,7 +226,7 @@ libqt_string QTabBar_TabWhatsThis(const QTabBar* self, int index) {
     return _str;
 }
 
-void QTabBar_SetTabData(QTabBar* self, int index, QVariant* data) {
+void QTabBar_SetTabData(QTabBar* self, int index, const QVariant* data) {
     self->setTabData(static_cast<int>(index), *data);
 }
 
@@ -238,7 +238,7 @@ QRect* QTabBar_TabRect(const QTabBar* self, int index) {
     return new QRect(self->tabRect(static_cast<int>(index)));
 }
 
-int QTabBar_TabAt(const QTabBar* self, QPoint* pos) {
+int QTabBar_TabAt(const QTabBar* self, const QPoint* pos) {
     return self->tabAt(*pos);
 }
 
@@ -262,7 +262,7 @@ QSize* QTabBar_IconSize(const QTabBar* self) {
     return new QSize(self->iconSize());
 }
 
-void QTabBar_SetIconSize(QTabBar* self, QSize* size) {
+void QTabBar_SetIconSize(QTabBar* self, const QSize* size) {
     self->setIconSize(*size);
 }
 
@@ -350,7 +350,7 @@ libqt_string QTabBar_AccessibleTabName(const QTabBar* self, int index) {
     return _str;
 }
 
-void QTabBar_SetAccessibleTabName(QTabBar* self, int index, libqt_string name) {
+void QTabBar_SetAccessibleTabName(QTabBar* self, int index, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     self->setAccessibleTabName(static_cast<int>(index), name_QString);
 }
@@ -1601,7 +1601,7 @@ void QTabBar_OnDropEvent(QTabBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTabBar_NativeEvent(QTabBar* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QTabBar_NativeEvent(QTabBar* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqtabbar = dynamic_cast<VirtualQTabBar*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqtabbar && vqtabbar->isVirtualQTabBar) {
@@ -1612,7 +1612,7 @@ bool QTabBar_NativeEvent(QTabBar* self, libqt_string eventType, void* message, i
 }
 
 // Base class handler implementation
-bool QTabBar_QBaseNativeEvent(QTabBar* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QTabBar_QBaseNativeEvent(QTabBar* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqtabbar = dynamic_cast<VirtualQTabBar*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqtabbar && vqtabbar->isVirtualQTabBar) {
@@ -1922,7 +1922,7 @@ void QTabBar_OnCustomEvent(QTabBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTabBar_ConnectNotify(QTabBar* self, QMetaMethod* signal) {
+void QTabBar_ConnectNotify(QTabBar* self, const QMetaMethod* signal) {
     auto* vqtabbar = dynamic_cast<VirtualQTabBar*>(self);
     if (vqtabbar && vqtabbar->isVirtualQTabBar) {
         vqtabbar->connectNotify(*signal);
@@ -1932,7 +1932,7 @@ void QTabBar_ConnectNotify(QTabBar* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTabBar_QBaseConnectNotify(QTabBar* self, QMetaMethod* signal) {
+void QTabBar_QBaseConnectNotify(QTabBar* self, const QMetaMethod* signal) {
     auto* vqtabbar = dynamic_cast<VirtualQTabBar*>(self);
     if (vqtabbar && vqtabbar->isVirtualQTabBar) {
         vqtabbar->setQTabBar_ConnectNotify_IsBase(true);
@@ -1951,7 +1951,7 @@ void QTabBar_OnConnectNotify(QTabBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTabBar_DisconnectNotify(QTabBar* self, QMetaMethod* signal) {
+void QTabBar_DisconnectNotify(QTabBar* self, const QMetaMethod* signal) {
     auto* vqtabbar = dynamic_cast<VirtualQTabBar*>(self);
     if (vqtabbar && vqtabbar->isVirtualQTabBar) {
         vqtabbar->disconnectNotify(*signal);
@@ -1961,7 +1961,7 @@ void QTabBar_DisconnectNotify(QTabBar* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTabBar_QBaseDisconnectNotify(QTabBar* self, QMetaMethod* signal) {
+void QTabBar_QBaseDisconnectNotify(QTabBar* self, const QMetaMethod* signal) {
     auto* vqtabbar = dynamic_cast<VirtualQTabBar*>(self);
     if (vqtabbar && vqtabbar->isVirtualQTabBar) {
         vqtabbar->setQTabBar_DisconnectNotify_IsBase(true);
@@ -2212,7 +2212,7 @@ void QTabBar_OnReceivers(const QTabBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTabBar_IsSignalConnected(const QTabBar* self, QMetaMethod* signal) {
+bool QTabBar_IsSignalConnected(const QTabBar* self, const QMetaMethod* signal) {
     auto* vqtabbar = const_cast<VirtualQTabBar*>(dynamic_cast<const VirtualQTabBar*>(self));
     if (vqtabbar && vqtabbar->isVirtualQTabBar) {
         return vqtabbar->isSignalConnected(*signal);
@@ -2222,7 +2222,7 @@ bool QTabBar_IsSignalConnected(const QTabBar* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QTabBar_QBaseIsSignalConnected(const QTabBar* self, QMetaMethod* signal) {
+bool QTabBar_QBaseIsSignalConnected(const QTabBar* self, const QMetaMethod* signal) {
     auto* vqtabbar = const_cast<VirtualQTabBar*>(dynamic_cast<const VirtualQTabBar*>(self));
     if (vqtabbar && vqtabbar->isVirtualQTabBar) {
         vqtabbar->setQTabBar_IsSignalConnected_IsBase(true);
@@ -2237,6 +2237,35 @@ void QTabBar_OnIsSignalConnected(const QTabBar* self, intptr_t slot) {
     auto* vqtabbar = const_cast<VirtualQTabBar*>(dynamic_cast<const VirtualQTabBar*>(self));
     if (vqtabbar && vqtabbar->isVirtualQTabBar) {
         vqtabbar->setQTabBar_IsSignalConnected_Callback(reinterpret_cast<VirtualQTabBar::QTabBar_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QTabBar_GetDecodedMetricF(const QTabBar* self, int metricA, int metricB) {
+    auto* vqtabbar = const_cast<VirtualQTabBar*>(dynamic_cast<const VirtualQTabBar*>(self));
+    if (vqtabbar && vqtabbar->isVirtualQTabBar) {
+        return vqtabbar->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQTabBar*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QTabBar_QBaseGetDecodedMetricF(const QTabBar* self, int metricA, int metricB) {
+    auto* vqtabbar = const_cast<VirtualQTabBar*>(dynamic_cast<const VirtualQTabBar*>(self));
+    if (vqtabbar && vqtabbar->isVirtualQTabBar) {
+        vqtabbar->setQTabBar_GetDecodedMetricF_IsBase(true);
+        return vqtabbar->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQTabBar*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QTabBar_OnGetDecodedMetricF(const QTabBar* self, intptr_t slot) {
+    auto* vqtabbar = const_cast<VirtualQTabBar*>(dynamic_cast<const VirtualQTabBar*>(self));
+    if (vqtabbar && vqtabbar->isVirtualQTabBar) {
+        vqtabbar->setQTabBar_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQTabBar::QTabBar_GetDecodedMetricF_Callback>(slot));
     }
 }
 

@@ -75,7 +75,7 @@ QMimeData* QDrag_MimeData(const QDrag* self) {
     return self->mimeData();
 }
 
-void QDrag_SetPixmap(QDrag* self, QPixmap* pixmap) {
+void QDrag_SetPixmap(QDrag* self, const QPixmap* pixmap) {
     self->setPixmap(*pixmap);
 }
 
@@ -83,7 +83,7 @@ QPixmap* QDrag_Pixmap(const QDrag* self) {
     return new QPixmap(self->pixmap());
 }
 
-void QDrag_SetHotSpot(QDrag* self, QPoint* hotspot) {
+void QDrag_SetHotSpot(QDrag* self, const QPoint* hotspot) {
     self->setHotSpot(*hotspot);
 }
 
@@ -107,7 +107,7 @@ int QDrag_Exec2(QDrag* self, int supportedActions, int defaultAction) {
     return static_cast<int>(self->exec(static_cast<Qt::DropActions>(supportedActions), static_cast<Qt::DropAction>(defaultAction)));
 }
 
-void QDrag_SetDragCursor(QDrag* self, QPixmap* cursor, int action) {
+void QDrag_SetDragCursor(QDrag* self, const QPixmap* cursor, int action) {
     self->setDragCursor(*cursor, static_cast<Qt::DropAction>(action));
 }
 
@@ -325,7 +325,7 @@ void QDrag_OnCustomEvent(QDrag* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QDrag_ConnectNotify(QDrag* self, QMetaMethod* signal) {
+void QDrag_ConnectNotify(QDrag* self, const QMetaMethod* signal) {
     auto* vqdrag = dynamic_cast<VirtualQDrag*>(self);
     if (vqdrag && vqdrag->isVirtualQDrag) {
         vqdrag->connectNotify(*signal);
@@ -335,7 +335,7 @@ void QDrag_ConnectNotify(QDrag* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QDrag_QBaseConnectNotify(QDrag* self, QMetaMethod* signal) {
+void QDrag_QBaseConnectNotify(QDrag* self, const QMetaMethod* signal) {
     auto* vqdrag = dynamic_cast<VirtualQDrag*>(self);
     if (vqdrag && vqdrag->isVirtualQDrag) {
         vqdrag->setQDrag_ConnectNotify_IsBase(true);
@@ -354,7 +354,7 @@ void QDrag_OnConnectNotify(QDrag* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QDrag_DisconnectNotify(QDrag* self, QMetaMethod* signal) {
+void QDrag_DisconnectNotify(QDrag* self, const QMetaMethod* signal) {
     auto* vqdrag = dynamic_cast<VirtualQDrag*>(self);
     if (vqdrag && vqdrag->isVirtualQDrag) {
         vqdrag->disconnectNotify(*signal);
@@ -364,7 +364,7 @@ void QDrag_DisconnectNotify(QDrag* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QDrag_QBaseDisconnectNotify(QDrag* self, QMetaMethod* signal) {
+void QDrag_QBaseDisconnectNotify(QDrag* self, const QMetaMethod* signal) {
     auto* vqdrag = dynamic_cast<VirtualQDrag*>(self);
     if (vqdrag && vqdrag->isVirtualQDrag) {
         vqdrag->setQDrag_DisconnectNotify_IsBase(true);
@@ -470,7 +470,7 @@ void QDrag_OnReceivers(const QDrag* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QDrag_IsSignalConnected(const QDrag* self, QMetaMethod* signal) {
+bool QDrag_IsSignalConnected(const QDrag* self, const QMetaMethod* signal) {
     auto* vqdrag = const_cast<VirtualQDrag*>(dynamic_cast<const VirtualQDrag*>(self));
     if (vqdrag && vqdrag->isVirtualQDrag) {
         return vqdrag->isSignalConnected(*signal);
@@ -480,7 +480,7 @@ bool QDrag_IsSignalConnected(const QDrag* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QDrag_QBaseIsSignalConnected(const QDrag* self, QMetaMethod* signal) {
+bool QDrag_QBaseIsSignalConnected(const QDrag* self, const QMetaMethod* signal) {
     auto* vqdrag = const_cast<VirtualQDrag*>(dynamic_cast<const VirtualQDrag*>(self));
     if (vqdrag && vqdrag->isVirtualQDrag) {
         vqdrag->setQDrag_IsSignalConnected_IsBase(true);

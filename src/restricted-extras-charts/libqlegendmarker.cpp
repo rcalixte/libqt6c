@@ -53,7 +53,7 @@ libqt_string QLegendMarker_Label(const QLegendMarker* self) {
     return _str;
 }
 
-void QLegendMarker_SetLabel(QLegendMarker* self, libqt_string label) {
+void QLegendMarker_SetLabel(QLegendMarker* self, const libqt_string label) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     self->setLabel(label_QString);
 }
@@ -62,7 +62,7 @@ QBrush* QLegendMarker_LabelBrush(const QLegendMarker* self) {
     return new QBrush(self->labelBrush());
 }
 
-void QLegendMarker_SetLabelBrush(QLegendMarker* self, QBrush* brush) {
+void QLegendMarker_SetLabelBrush(QLegendMarker* self, const QBrush* brush) {
     self->setLabelBrush(*brush);
 }
 
@@ -70,7 +70,7 @@ QFont* QLegendMarker_Font(const QLegendMarker* self) {
     return new QFont(self->font());
 }
 
-void QLegendMarker_SetFont(QLegendMarker* self, QFont* font) {
+void QLegendMarker_SetFont(QLegendMarker* self, const QFont* font) {
     self->setFont(*font);
 }
 
@@ -78,7 +78,7 @@ QPen* QLegendMarker_Pen(const QLegendMarker* self) {
     return new QPen(self->pen());
 }
 
-void QLegendMarker_SetPen(QLegendMarker* self, QPen* pen) {
+void QLegendMarker_SetPen(QLegendMarker* self, const QPen* pen) {
     self->setPen(*pen);
 }
 
@@ -86,7 +86,7 @@ QBrush* QLegendMarker_Brush(const QLegendMarker* self) {
     return new QBrush(self->brush());
 }
 
-void QLegendMarker_SetBrush(QLegendMarker* self, QBrush* brush) {
+void QLegendMarker_SetBrush(QLegendMarker* self, const QBrush* brush) {
     self->setBrush(*brush);
 }
 

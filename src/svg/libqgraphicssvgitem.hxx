@@ -179,10 +179,10 @@ class VirtualQGraphicsSvgItem final : public QGraphicsSvgItem {
     mutable bool qgraphicssvgitem_preparegeometrychange_isbase = false;
 
   public:
-    VirtualQGraphicsSvgItem() : QGraphicsSvgItem(){};
-    VirtualQGraphicsSvgItem(const QString& fileName) : QGraphicsSvgItem(fileName){};
-    VirtualQGraphicsSvgItem(QGraphicsItem* parentItem) : QGraphicsSvgItem(parentItem){};
-    VirtualQGraphicsSvgItem(const QString& fileName, QGraphicsItem* parentItem) : QGraphicsSvgItem(fileName, parentItem){};
+    VirtualQGraphicsSvgItem() : QGraphicsSvgItem() {};
+    VirtualQGraphicsSvgItem(const QString& fileName) : QGraphicsSvgItem(fileName) {};
+    VirtualQGraphicsSvgItem(QGraphicsItem* parentItem) : QGraphicsSvgItem(parentItem) {};
+    VirtualQGraphicsSvgItem(const QString& fileName, QGraphicsItem* parentItem) : QGraphicsSvgItem(fileName, parentItem) {};
 
     ~VirtualQGraphicsSvgItem() {
         qgraphicssvgitem_metacall_callback = nullptr;
@@ -1094,10 +1094,10 @@ class VirtualQGraphicsSvgItem final : public QGraphicsSvgItem {
     friend void QGraphicsSvgItem_QBaseChildEvent(QGraphicsSvgItem* self, QChildEvent* event);
     friend void QGraphicsSvgItem_CustomEvent(QGraphicsSvgItem* self, QEvent* event);
     friend void QGraphicsSvgItem_QBaseCustomEvent(QGraphicsSvgItem* self, QEvent* event);
-    friend void QGraphicsSvgItem_ConnectNotify(QGraphicsSvgItem* self, QMetaMethod* signal);
-    friend void QGraphicsSvgItem_QBaseConnectNotify(QGraphicsSvgItem* self, QMetaMethod* signal);
-    friend void QGraphicsSvgItem_DisconnectNotify(QGraphicsSvgItem* self, QMetaMethod* signal);
-    friend void QGraphicsSvgItem_QBaseDisconnectNotify(QGraphicsSvgItem* self, QMetaMethod* signal);
+    friend void QGraphicsSvgItem_ConnectNotify(QGraphicsSvgItem* self, const QMetaMethod* signal);
+    friend void QGraphicsSvgItem_QBaseConnectNotify(QGraphicsSvgItem* self, const QMetaMethod* signal);
+    friend void QGraphicsSvgItem_DisconnectNotify(QGraphicsSvgItem* self, const QMetaMethod* signal);
+    friend void QGraphicsSvgItem_QBaseDisconnectNotify(QGraphicsSvgItem* self, const QMetaMethod* signal);
     friend bool QGraphicsSvgItem_SceneEventFilter(QGraphicsSvgItem* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsSvgItem_QBaseSceneEventFilter(QGraphicsSvgItem* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsSvgItem_SceneEvent(QGraphicsSvgItem* self, QEvent* event);
@@ -1140,14 +1140,14 @@ class VirtualQGraphicsSvgItem final : public QGraphicsSvgItem {
     friend void QGraphicsSvgItem_QBaseInputMethodEvent(QGraphicsSvgItem* self, QInputMethodEvent* event);
     friend QVariant* QGraphicsSvgItem_InputMethodQuery(const QGraphicsSvgItem* self, int query);
     friend QVariant* QGraphicsSvgItem_QBaseInputMethodQuery(const QGraphicsSvgItem* self, int query);
-    friend QVariant* QGraphicsSvgItem_ItemChange(QGraphicsSvgItem* self, int change, QVariant* value);
-    friend QVariant* QGraphicsSvgItem_QBaseItemChange(QGraphicsSvgItem* self, int change, QVariant* value);
+    friend QVariant* QGraphicsSvgItem_ItemChange(QGraphicsSvgItem* self, int change, const QVariant* value);
+    friend QVariant* QGraphicsSvgItem_QBaseItemChange(QGraphicsSvgItem* self, int change, const QVariant* value);
     friend bool QGraphicsSvgItem_SupportsExtension(const QGraphicsSvgItem* self, int extension);
     friend bool QGraphicsSvgItem_QBaseSupportsExtension(const QGraphicsSvgItem* self, int extension);
-    friend void QGraphicsSvgItem_SetExtension(QGraphicsSvgItem* self, int extension, QVariant* variant);
-    friend void QGraphicsSvgItem_QBaseSetExtension(QGraphicsSvgItem* self, int extension, QVariant* variant);
-    friend QVariant* QGraphicsSvgItem_Extension(const QGraphicsSvgItem* self, QVariant* variant);
-    friend QVariant* QGraphicsSvgItem_QBaseExtension(const QGraphicsSvgItem* self, QVariant* variant);
+    friend void QGraphicsSvgItem_SetExtension(QGraphicsSvgItem* self, int extension, const QVariant* variant);
+    friend void QGraphicsSvgItem_QBaseSetExtension(QGraphicsSvgItem* self, int extension, const QVariant* variant);
+    friend QVariant* QGraphicsSvgItem_Extension(const QGraphicsSvgItem* self, const QVariant* variant);
+    friend QVariant* QGraphicsSvgItem_QBaseExtension(const QGraphicsSvgItem* self, const QVariant* variant);
     friend void QGraphicsSvgItem_UpdateMicroFocus(QGraphicsSvgItem* self);
     friend void QGraphicsSvgItem_QBaseUpdateMicroFocus(QGraphicsSvgItem* self);
     friend QObject* QGraphicsSvgItem_Sender(const QGraphicsSvgItem* self);
@@ -1156,8 +1156,8 @@ class VirtualQGraphicsSvgItem final : public QGraphicsSvgItem {
     friend int QGraphicsSvgItem_QBaseSenderSignalIndex(const QGraphicsSvgItem* self);
     friend int QGraphicsSvgItem_Receivers(const QGraphicsSvgItem* self, const char* signal);
     friend int QGraphicsSvgItem_QBaseReceivers(const QGraphicsSvgItem* self, const char* signal);
-    friend bool QGraphicsSvgItem_IsSignalConnected(const QGraphicsSvgItem* self, QMetaMethod* signal);
-    friend bool QGraphicsSvgItem_QBaseIsSignalConnected(const QGraphicsSvgItem* self, QMetaMethod* signal);
+    friend bool QGraphicsSvgItem_IsSignalConnected(const QGraphicsSvgItem* self, const QMetaMethod* signal);
+    friend bool QGraphicsSvgItem_QBaseIsSignalConnected(const QGraphicsSvgItem* self, const QMetaMethod* signal);
     friend void QGraphicsSvgItem_AddToIndex(QGraphicsSvgItem* self);
     friend void QGraphicsSvgItem_QBaseAddToIndex(QGraphicsSvgItem* self);
     friend void QGraphicsSvgItem_RemoveFromIndex(QGraphicsSvgItem* self);

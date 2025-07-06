@@ -12,12 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqpoint.h"
-#include <string.h>
-#include "../libqurl.h"
-
 /// https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
@@ -186,7 +180,7 @@ QThread* q_webenginecontextmenurequest_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QWebEngineContextMenuRequest* self, QThread* thread ```
-void q_webenginecontextmenurequest_move_to_thread(void* self, void* thread);
+bool q_webenginecontextmenurequest_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -201,6 +195,13 @@ int32_t q_webenginecontextmenurequest_start_timer(void* self, int interval);
 ///
 /// ``` QWebEngineContextMenuRequest* self, int id ```
 void q_webenginecontextmenurequest_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QWebEngineContextMenuRequest* self, enum Qt__TimerId id ```
+void q_webenginecontextmenurequest_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -341,6 +342,13 @@ bool q_webenginecontextmenurequest_inherits(void* self, const char* classname);
 ///
 /// ``` QWebEngineContextMenuRequest* self ```
 void q_webenginecontextmenurequest_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QWebEngineContextMenuRequest* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_webenginecontextmenurequest_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

@@ -1,4 +1,5 @@
 #include <QChildEvent>
+#include <QDeadlineTimer>
 #include <QEvent>
 #include <QEventLoop>
 #include <QEventLoopLocker>
@@ -76,6 +77,10 @@ bool QEventLoop_ProcessEvents(QEventLoop* self) {
 
 void QEventLoop_ProcessEvents2(QEventLoop* self, int flags, int maximumTime) {
     self->processEvents(static_cast<QEventLoop::ProcessEventsFlags>(flags), static_cast<int>(maximumTime));
+}
+
+void QEventLoop_ProcessEvents3(QEventLoop* self, int flags, QDeadlineTimer* deadline) {
+    self->processEvents(static_cast<QEventLoop::ProcessEventsFlags>(flags), *deadline);
 }
 
 int QEventLoop_Exec(QEventLoop* self) {
@@ -280,7 +285,7 @@ void QEventLoop_OnCustomEvent(QEventLoop* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QEventLoop_ConnectNotify(QEventLoop* self, QMetaMethod* signal) {
+void QEventLoop_ConnectNotify(QEventLoop* self, const QMetaMethod* signal) {
     auto* vqeventloop = dynamic_cast<VirtualQEventLoop*>(self);
     if (vqeventloop && vqeventloop->isVirtualQEventLoop) {
         vqeventloop->connectNotify(*signal);
@@ -290,7 +295,7 @@ void QEventLoop_ConnectNotify(QEventLoop* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QEventLoop_QBaseConnectNotify(QEventLoop* self, QMetaMethod* signal) {
+void QEventLoop_QBaseConnectNotify(QEventLoop* self, const QMetaMethod* signal) {
     auto* vqeventloop = dynamic_cast<VirtualQEventLoop*>(self);
     if (vqeventloop && vqeventloop->isVirtualQEventLoop) {
         vqeventloop->setQEventLoop_ConnectNotify_IsBase(true);
@@ -309,7 +314,7 @@ void QEventLoop_OnConnectNotify(QEventLoop* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QEventLoop_DisconnectNotify(QEventLoop* self, QMetaMethod* signal) {
+void QEventLoop_DisconnectNotify(QEventLoop* self, const QMetaMethod* signal) {
     auto* vqeventloop = dynamic_cast<VirtualQEventLoop*>(self);
     if (vqeventloop && vqeventloop->isVirtualQEventLoop) {
         vqeventloop->disconnectNotify(*signal);
@@ -319,7 +324,7 @@ void QEventLoop_DisconnectNotify(QEventLoop* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QEventLoop_QBaseDisconnectNotify(QEventLoop* self, QMetaMethod* signal) {
+void QEventLoop_QBaseDisconnectNotify(QEventLoop* self, const QMetaMethod* signal) {
     auto* vqeventloop = dynamic_cast<VirtualQEventLoop*>(self);
     if (vqeventloop && vqeventloop->isVirtualQEventLoop) {
         vqeventloop->setQEventLoop_DisconnectNotify_IsBase(true);
@@ -425,7 +430,7 @@ void QEventLoop_OnReceivers(const QEventLoop* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QEventLoop_IsSignalConnected(const QEventLoop* self, QMetaMethod* signal) {
+bool QEventLoop_IsSignalConnected(const QEventLoop* self, const QMetaMethod* signal) {
     auto* vqeventloop = const_cast<VirtualQEventLoop*>(dynamic_cast<const VirtualQEventLoop*>(self));
     if (vqeventloop && vqeventloop->isVirtualQEventLoop) {
         return vqeventloop->isSignalConnected(*signal);
@@ -435,7 +440,7 @@ bool QEventLoop_IsSignalConnected(const QEventLoop* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QEventLoop_QBaseIsSignalConnected(const QEventLoop* self, QMetaMethod* signal) {
+bool QEventLoop_QBaseIsSignalConnected(const QEventLoop* self, const QMetaMethod* signal) {
     auto* vqeventloop = const_cast<VirtualQEventLoop*>(dynamic_cast<const VirtualQEventLoop*>(self));
     if (vqeventloop && vqeventloop->isVirtualQEventLoop) {
         vqeventloop->setQEventLoop_IsSignalConnected_IsBase(true);
@@ -467,6 +472,10 @@ QEventLoopLocker* QEventLoopLocker_new2(QEventLoop* loop) {
 
 QEventLoopLocker* QEventLoopLocker_new3(QThread* thread) {
     return new QEventLoopLocker(thread);
+}
+
+void QEventLoopLocker_Swap(QEventLoopLocker* self, QEventLoopLocker* other) {
+    self->swap(*other);
 }
 
 void QEventLoopLocker_Delete(QEventLoopLocker* self) {

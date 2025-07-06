@@ -151,12 +151,20 @@ QTransform* q_transform_shear(void* self, double sh, double sv) {
     return QTransform_Shear((QTransform*)self, sh, sv);
 }
 
-QTransform* q_transform_rotate(void* self, double a) {
-    return QTransform_Rotate((QTransform*)self, a);
+QTransform* q_transform_rotate(void* self, double a, int64_t axis, double distanceToPlane) {
+    return QTransform_Rotate((QTransform*)self, a, axis, distanceToPlane);
 }
 
-QTransform* q_transform_rotate_radians(void* self, double a) {
-    return QTransform_RotateRadians((QTransform*)self, a);
+QTransform* q_transform_rotate_with_qreal(void* self, double a) {
+    return QTransform_RotateWithQreal((QTransform*)self, a);
+}
+
+QTransform* q_transform_rotate_radians(void* self, double a, int64_t axis, double distanceToPlane) {
+    return QTransform_RotateRadians((QTransform*)self, a, axis, distanceToPlane);
+}
+
+QTransform* q_transform_rotate_radians_with_qreal(void* self, double a) {
+    return QTransform_RotateRadiansWithQreal((QTransform*)self, a);
 }
 
 bool q_transform_operator_equal(void* self, void* param1) {

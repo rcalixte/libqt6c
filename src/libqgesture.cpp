@@ -89,7 +89,7 @@ QPointF* QGesture_HotSpot(const QGesture* self) {
     return new QPointF(self->hotSpot());
 }
 
-void QGesture_SetHotSpot(QGesture* self, QPointF* value) {
+void QGesture_SetHotSpot(QGesture* self, const QPointF* value) {
     self->setHotSpot(*value);
 }
 
@@ -279,7 +279,7 @@ void QGesture_OnCustomEvent(QGesture* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QGesture_ConnectNotify(QGesture* self, QMetaMethod* signal) {
+void QGesture_ConnectNotify(QGesture* self, const QMetaMethod* signal) {
     auto* vqgesture = dynamic_cast<VirtualQGesture*>(self);
     if (vqgesture && vqgesture->isVirtualQGesture) {
         vqgesture->connectNotify(*signal);
@@ -289,7 +289,7 @@ void QGesture_ConnectNotify(QGesture* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QGesture_QBaseConnectNotify(QGesture* self, QMetaMethod* signal) {
+void QGesture_QBaseConnectNotify(QGesture* self, const QMetaMethod* signal) {
     auto* vqgesture = dynamic_cast<VirtualQGesture*>(self);
     if (vqgesture && vqgesture->isVirtualQGesture) {
         vqgesture->setQGesture_ConnectNotify_IsBase(true);
@@ -308,7 +308,7 @@ void QGesture_OnConnectNotify(QGesture* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QGesture_DisconnectNotify(QGesture* self, QMetaMethod* signal) {
+void QGesture_DisconnectNotify(QGesture* self, const QMetaMethod* signal) {
     auto* vqgesture = dynamic_cast<VirtualQGesture*>(self);
     if (vqgesture && vqgesture->isVirtualQGesture) {
         vqgesture->disconnectNotify(*signal);
@@ -318,7 +318,7 @@ void QGesture_DisconnectNotify(QGesture* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QGesture_QBaseDisconnectNotify(QGesture* self, QMetaMethod* signal) {
+void QGesture_QBaseDisconnectNotify(QGesture* self, const QMetaMethod* signal) {
     auto* vqgesture = dynamic_cast<VirtualQGesture*>(self);
     if (vqgesture && vqgesture->isVirtualQGesture) {
         vqgesture->setQGesture_DisconnectNotify_IsBase(true);
@@ -424,7 +424,7 @@ void QGesture_OnReceivers(const QGesture* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QGesture_IsSignalConnected(const QGesture* self, QMetaMethod* signal) {
+bool QGesture_IsSignalConnected(const QGesture* self, const QMetaMethod* signal) {
     auto* vqgesture = const_cast<VirtualQGesture*>(dynamic_cast<const VirtualQGesture*>(self));
     if (vqgesture && vqgesture->isVirtualQGesture) {
         return vqgesture->isSignalConnected(*signal);
@@ -434,7 +434,7 @@ bool QGesture_IsSignalConnected(const QGesture* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QGesture_QBaseIsSignalConnected(const QGesture* self, QMetaMethod* signal) {
+bool QGesture_QBaseIsSignalConnected(const QGesture* self, const QMetaMethod* signal) {
     auto* vqgesture = const_cast<VirtualQGesture*>(dynamic_cast<const VirtualQGesture*>(self));
     if (vqgesture && vqgesture->isVirtualQGesture) {
         vqgesture->setQGesture_IsSignalConnected_IsBase(true);
@@ -528,11 +528,11 @@ double QPanGesture_Acceleration(const QPanGesture* self) {
     return static_cast<double>(self->acceleration());
 }
 
-void QPanGesture_SetLastOffset(QPanGesture* self, QPointF* value) {
+void QPanGesture_SetLastOffset(QPanGesture* self, const QPointF* value) {
     self->setLastOffset(*value);
 }
 
-void QPanGesture_SetOffset(QPanGesture* self, QPointF* value) {
+void QPanGesture_SetOffset(QPanGesture* self, const QPointF* value) {
     self->setOffset(*value);
 }
 
@@ -710,7 +710,7 @@ void QPanGesture_OnCustomEvent(QPanGesture* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPanGesture_ConnectNotify(QPanGesture* self, QMetaMethod* signal) {
+void QPanGesture_ConnectNotify(QPanGesture* self, const QMetaMethod* signal) {
     auto* vqpangesture = dynamic_cast<VirtualQPanGesture*>(self);
     if (vqpangesture && vqpangesture->isVirtualQPanGesture) {
         vqpangesture->connectNotify(*signal);
@@ -720,7 +720,7 @@ void QPanGesture_ConnectNotify(QPanGesture* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPanGesture_QBaseConnectNotify(QPanGesture* self, QMetaMethod* signal) {
+void QPanGesture_QBaseConnectNotify(QPanGesture* self, const QMetaMethod* signal) {
     auto* vqpangesture = dynamic_cast<VirtualQPanGesture*>(self);
     if (vqpangesture && vqpangesture->isVirtualQPanGesture) {
         vqpangesture->setQPanGesture_ConnectNotify_IsBase(true);
@@ -739,7 +739,7 @@ void QPanGesture_OnConnectNotify(QPanGesture* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPanGesture_DisconnectNotify(QPanGesture* self, QMetaMethod* signal) {
+void QPanGesture_DisconnectNotify(QPanGesture* self, const QMetaMethod* signal) {
     auto* vqpangesture = dynamic_cast<VirtualQPanGesture*>(self);
     if (vqpangesture && vqpangesture->isVirtualQPanGesture) {
         vqpangesture->disconnectNotify(*signal);
@@ -749,7 +749,7 @@ void QPanGesture_DisconnectNotify(QPanGesture* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPanGesture_QBaseDisconnectNotify(QPanGesture* self, QMetaMethod* signal) {
+void QPanGesture_QBaseDisconnectNotify(QPanGesture* self, const QMetaMethod* signal) {
     auto* vqpangesture = dynamic_cast<VirtualQPanGesture*>(self);
     if (vqpangesture && vqpangesture->isVirtualQPanGesture) {
         vqpangesture->setQPanGesture_DisconnectNotify_IsBase(true);
@@ -855,7 +855,7 @@ void QPanGesture_OnReceivers(const QPanGesture* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPanGesture_IsSignalConnected(const QPanGesture* self, QMetaMethod* signal) {
+bool QPanGesture_IsSignalConnected(const QPanGesture* self, const QMetaMethod* signal) {
     auto* vqpangesture = const_cast<VirtualQPanGesture*>(dynamic_cast<const VirtualQPanGesture*>(self));
     if (vqpangesture && vqpangesture->isVirtualQPanGesture) {
         return vqpangesture->isSignalConnected(*signal);
@@ -865,7 +865,7 @@ bool QPanGesture_IsSignalConnected(const QPanGesture* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QPanGesture_QBaseIsSignalConnected(const QPanGesture* self, QMetaMethod* signal) {
+bool QPanGesture_QBaseIsSignalConnected(const QPanGesture* self, const QMetaMethod* signal) {
     auto* vqpangesture = const_cast<VirtualQPanGesture*>(dynamic_cast<const VirtualQPanGesture*>(self));
     if (vqpangesture && vqpangesture->isVirtualQPanGesture) {
         vqpangesture->setQPanGesture_IsSignalConnected_IsBase(true);
@@ -971,15 +971,15 @@ QPointF* QPinchGesture_CenterPoint(const QPinchGesture* self) {
     return new QPointF(self->centerPoint());
 }
 
-void QPinchGesture_SetStartCenterPoint(QPinchGesture* self, QPointF* value) {
+void QPinchGesture_SetStartCenterPoint(QPinchGesture* self, const QPointF* value) {
     self->setStartCenterPoint(*value);
 }
 
-void QPinchGesture_SetLastCenterPoint(QPinchGesture* self, QPointF* value) {
+void QPinchGesture_SetLastCenterPoint(QPinchGesture* self, const QPointF* value) {
     self->setLastCenterPoint(*value);
 }
 
-void QPinchGesture_SetCenterPoint(QPinchGesture* self, QPointF* value) {
+void QPinchGesture_SetCenterPoint(QPinchGesture* self, const QPointF* value) {
     self->setCenterPoint(*value);
 }
 
@@ -1201,7 +1201,7 @@ void QPinchGesture_OnCustomEvent(QPinchGesture* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPinchGesture_ConnectNotify(QPinchGesture* self, QMetaMethod* signal) {
+void QPinchGesture_ConnectNotify(QPinchGesture* self, const QMetaMethod* signal) {
     auto* vqpinchgesture = dynamic_cast<VirtualQPinchGesture*>(self);
     if (vqpinchgesture && vqpinchgesture->isVirtualQPinchGesture) {
         vqpinchgesture->connectNotify(*signal);
@@ -1211,7 +1211,7 @@ void QPinchGesture_ConnectNotify(QPinchGesture* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPinchGesture_QBaseConnectNotify(QPinchGesture* self, QMetaMethod* signal) {
+void QPinchGesture_QBaseConnectNotify(QPinchGesture* self, const QMetaMethod* signal) {
     auto* vqpinchgesture = dynamic_cast<VirtualQPinchGesture*>(self);
     if (vqpinchgesture && vqpinchgesture->isVirtualQPinchGesture) {
         vqpinchgesture->setQPinchGesture_ConnectNotify_IsBase(true);
@@ -1230,7 +1230,7 @@ void QPinchGesture_OnConnectNotify(QPinchGesture* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPinchGesture_DisconnectNotify(QPinchGesture* self, QMetaMethod* signal) {
+void QPinchGesture_DisconnectNotify(QPinchGesture* self, const QMetaMethod* signal) {
     auto* vqpinchgesture = dynamic_cast<VirtualQPinchGesture*>(self);
     if (vqpinchgesture && vqpinchgesture->isVirtualQPinchGesture) {
         vqpinchgesture->disconnectNotify(*signal);
@@ -1240,7 +1240,7 @@ void QPinchGesture_DisconnectNotify(QPinchGesture* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPinchGesture_QBaseDisconnectNotify(QPinchGesture* self, QMetaMethod* signal) {
+void QPinchGesture_QBaseDisconnectNotify(QPinchGesture* self, const QMetaMethod* signal) {
     auto* vqpinchgesture = dynamic_cast<VirtualQPinchGesture*>(self);
     if (vqpinchgesture && vqpinchgesture->isVirtualQPinchGesture) {
         vqpinchgesture->setQPinchGesture_DisconnectNotify_IsBase(true);
@@ -1346,7 +1346,7 @@ void QPinchGesture_OnReceivers(const QPinchGesture* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPinchGesture_IsSignalConnected(const QPinchGesture* self, QMetaMethod* signal) {
+bool QPinchGesture_IsSignalConnected(const QPinchGesture* self, const QMetaMethod* signal) {
     auto* vqpinchgesture = const_cast<VirtualQPinchGesture*>(dynamic_cast<const VirtualQPinchGesture*>(self));
     if (vqpinchgesture && vqpinchgesture->isVirtualQPinchGesture) {
         return vqpinchgesture->isSignalConnected(*signal);
@@ -1356,7 +1356,7 @@ bool QPinchGesture_IsSignalConnected(const QPinchGesture* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-bool QPinchGesture_QBaseIsSignalConnected(const QPinchGesture* self, QMetaMethod* signal) {
+bool QPinchGesture_QBaseIsSignalConnected(const QPinchGesture* self, const QMetaMethod* signal) {
     auto* vqpinchgesture = const_cast<VirtualQPinchGesture*>(dynamic_cast<const VirtualQPinchGesture*>(self));
     if (vqpinchgesture && vqpinchgesture->isVirtualQPinchGesture) {
         vqpinchgesture->setQPinchGesture_IsSignalConnected_IsBase(true);
@@ -1620,7 +1620,7 @@ void QSwipeGesture_OnCustomEvent(QSwipeGesture* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSwipeGesture_ConnectNotify(QSwipeGesture* self, QMetaMethod* signal) {
+void QSwipeGesture_ConnectNotify(QSwipeGesture* self, const QMetaMethod* signal) {
     auto* vqswipegesture = dynamic_cast<VirtualQSwipeGesture*>(self);
     if (vqswipegesture && vqswipegesture->isVirtualQSwipeGesture) {
         vqswipegesture->connectNotify(*signal);
@@ -1630,7 +1630,7 @@ void QSwipeGesture_ConnectNotify(QSwipeGesture* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSwipeGesture_QBaseConnectNotify(QSwipeGesture* self, QMetaMethod* signal) {
+void QSwipeGesture_QBaseConnectNotify(QSwipeGesture* self, const QMetaMethod* signal) {
     auto* vqswipegesture = dynamic_cast<VirtualQSwipeGesture*>(self);
     if (vqswipegesture && vqswipegesture->isVirtualQSwipeGesture) {
         vqswipegesture->setQSwipeGesture_ConnectNotify_IsBase(true);
@@ -1649,7 +1649,7 @@ void QSwipeGesture_OnConnectNotify(QSwipeGesture* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSwipeGesture_DisconnectNotify(QSwipeGesture* self, QMetaMethod* signal) {
+void QSwipeGesture_DisconnectNotify(QSwipeGesture* self, const QMetaMethod* signal) {
     auto* vqswipegesture = dynamic_cast<VirtualQSwipeGesture*>(self);
     if (vqswipegesture && vqswipegesture->isVirtualQSwipeGesture) {
         vqswipegesture->disconnectNotify(*signal);
@@ -1659,7 +1659,7 @@ void QSwipeGesture_DisconnectNotify(QSwipeGesture* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSwipeGesture_QBaseDisconnectNotify(QSwipeGesture* self, QMetaMethod* signal) {
+void QSwipeGesture_QBaseDisconnectNotify(QSwipeGesture* self, const QMetaMethod* signal) {
     auto* vqswipegesture = dynamic_cast<VirtualQSwipeGesture*>(self);
     if (vqswipegesture && vqswipegesture->isVirtualQSwipeGesture) {
         vqswipegesture->setQSwipeGesture_DisconnectNotify_IsBase(true);
@@ -1765,7 +1765,7 @@ void QSwipeGesture_OnReceivers(const QSwipeGesture* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSwipeGesture_IsSignalConnected(const QSwipeGesture* self, QMetaMethod* signal) {
+bool QSwipeGesture_IsSignalConnected(const QSwipeGesture* self, const QMetaMethod* signal) {
     auto* vqswipegesture = const_cast<VirtualQSwipeGesture*>(dynamic_cast<const VirtualQSwipeGesture*>(self));
     if (vqswipegesture && vqswipegesture->isVirtualQSwipeGesture) {
         return vqswipegesture->isSignalConnected(*signal);
@@ -1775,7 +1775,7 @@ bool QSwipeGesture_IsSignalConnected(const QSwipeGesture* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-bool QSwipeGesture_QBaseIsSignalConnected(const QSwipeGesture* self, QMetaMethod* signal) {
+bool QSwipeGesture_QBaseIsSignalConnected(const QSwipeGesture* self, const QMetaMethod* signal) {
     auto* vqswipegesture = const_cast<VirtualQSwipeGesture*>(dynamic_cast<const VirtualQSwipeGesture*>(self));
     if (vqswipegesture && vqswipegesture->isVirtualQSwipeGesture) {
         vqswipegesture->setQSwipeGesture_IsSignalConnected_IsBase(true);
@@ -1857,7 +1857,7 @@ QPointF* QTapGesture_Position(const QTapGesture* self) {
     return new QPointF(self->position());
 }
 
-void QTapGesture_SetPosition(QTapGesture* self, QPointF* pos) {
+void QTapGesture_SetPosition(QTapGesture* self, const QPointF* pos) {
     self->setPosition(*pos);
 }
 
@@ -2031,7 +2031,7 @@ void QTapGesture_OnCustomEvent(QTapGesture* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTapGesture_ConnectNotify(QTapGesture* self, QMetaMethod* signal) {
+void QTapGesture_ConnectNotify(QTapGesture* self, const QMetaMethod* signal) {
     auto* vqtapgesture = dynamic_cast<VirtualQTapGesture*>(self);
     if (vqtapgesture && vqtapgesture->isVirtualQTapGesture) {
         vqtapgesture->connectNotify(*signal);
@@ -2041,7 +2041,7 @@ void QTapGesture_ConnectNotify(QTapGesture* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTapGesture_QBaseConnectNotify(QTapGesture* self, QMetaMethod* signal) {
+void QTapGesture_QBaseConnectNotify(QTapGesture* self, const QMetaMethod* signal) {
     auto* vqtapgesture = dynamic_cast<VirtualQTapGesture*>(self);
     if (vqtapgesture && vqtapgesture->isVirtualQTapGesture) {
         vqtapgesture->setQTapGesture_ConnectNotify_IsBase(true);
@@ -2060,7 +2060,7 @@ void QTapGesture_OnConnectNotify(QTapGesture* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTapGesture_DisconnectNotify(QTapGesture* self, QMetaMethod* signal) {
+void QTapGesture_DisconnectNotify(QTapGesture* self, const QMetaMethod* signal) {
     auto* vqtapgesture = dynamic_cast<VirtualQTapGesture*>(self);
     if (vqtapgesture && vqtapgesture->isVirtualQTapGesture) {
         vqtapgesture->disconnectNotify(*signal);
@@ -2070,7 +2070,7 @@ void QTapGesture_DisconnectNotify(QTapGesture* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTapGesture_QBaseDisconnectNotify(QTapGesture* self, QMetaMethod* signal) {
+void QTapGesture_QBaseDisconnectNotify(QTapGesture* self, const QMetaMethod* signal) {
     auto* vqtapgesture = dynamic_cast<VirtualQTapGesture*>(self);
     if (vqtapgesture && vqtapgesture->isVirtualQTapGesture) {
         vqtapgesture->setQTapGesture_DisconnectNotify_IsBase(true);
@@ -2176,7 +2176,7 @@ void QTapGesture_OnReceivers(const QTapGesture* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTapGesture_IsSignalConnected(const QTapGesture* self, QMetaMethod* signal) {
+bool QTapGesture_IsSignalConnected(const QTapGesture* self, const QMetaMethod* signal) {
     auto* vqtapgesture = const_cast<VirtualQTapGesture*>(dynamic_cast<const VirtualQTapGesture*>(self));
     if (vqtapgesture && vqtapgesture->isVirtualQTapGesture) {
         return vqtapgesture->isSignalConnected(*signal);
@@ -2186,7 +2186,7 @@ bool QTapGesture_IsSignalConnected(const QTapGesture* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QTapGesture_QBaseIsSignalConnected(const QTapGesture* self, QMetaMethod* signal) {
+bool QTapGesture_QBaseIsSignalConnected(const QTapGesture* self, const QMetaMethod* signal) {
     auto* vqtapgesture = const_cast<VirtualQTapGesture*>(dynamic_cast<const VirtualQTapGesture*>(self));
     if (vqtapgesture && vqtapgesture->isVirtualQTapGesture) {
         vqtapgesture->setQTapGesture_IsSignalConnected_IsBase(true);
@@ -2268,7 +2268,7 @@ QPointF* QTapAndHoldGesture_Position(const QTapAndHoldGesture* self) {
     return new QPointF(self->position());
 }
 
-void QTapAndHoldGesture_SetPosition(QTapAndHoldGesture* self, QPointF* pos) {
+void QTapAndHoldGesture_SetPosition(QTapAndHoldGesture* self, const QPointF* pos) {
     self->setPosition(*pos);
 }
 
@@ -2450,7 +2450,7 @@ void QTapAndHoldGesture_OnCustomEvent(QTapAndHoldGesture* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTapAndHoldGesture_ConnectNotify(QTapAndHoldGesture* self, QMetaMethod* signal) {
+void QTapAndHoldGesture_ConnectNotify(QTapAndHoldGesture* self, const QMetaMethod* signal) {
     auto* vqtapandholdgesture = dynamic_cast<VirtualQTapAndHoldGesture*>(self);
     if (vqtapandholdgesture && vqtapandholdgesture->isVirtualQTapAndHoldGesture) {
         vqtapandholdgesture->connectNotify(*signal);
@@ -2460,7 +2460,7 @@ void QTapAndHoldGesture_ConnectNotify(QTapAndHoldGesture* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-void QTapAndHoldGesture_QBaseConnectNotify(QTapAndHoldGesture* self, QMetaMethod* signal) {
+void QTapAndHoldGesture_QBaseConnectNotify(QTapAndHoldGesture* self, const QMetaMethod* signal) {
     auto* vqtapandholdgesture = dynamic_cast<VirtualQTapAndHoldGesture*>(self);
     if (vqtapandholdgesture && vqtapandholdgesture->isVirtualQTapAndHoldGesture) {
         vqtapandholdgesture->setQTapAndHoldGesture_ConnectNotify_IsBase(true);
@@ -2479,7 +2479,7 @@ void QTapAndHoldGesture_OnConnectNotify(QTapAndHoldGesture* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-void QTapAndHoldGesture_DisconnectNotify(QTapAndHoldGesture* self, QMetaMethod* signal) {
+void QTapAndHoldGesture_DisconnectNotify(QTapAndHoldGesture* self, const QMetaMethod* signal) {
     auto* vqtapandholdgesture = dynamic_cast<VirtualQTapAndHoldGesture*>(self);
     if (vqtapandholdgesture && vqtapandholdgesture->isVirtualQTapAndHoldGesture) {
         vqtapandholdgesture->disconnectNotify(*signal);
@@ -2489,7 +2489,7 @@ void QTapAndHoldGesture_DisconnectNotify(QTapAndHoldGesture* self, QMetaMethod* 
 }
 
 // Base class handler implementation
-void QTapAndHoldGesture_QBaseDisconnectNotify(QTapAndHoldGesture* self, QMetaMethod* signal) {
+void QTapAndHoldGesture_QBaseDisconnectNotify(QTapAndHoldGesture* self, const QMetaMethod* signal) {
     auto* vqtapandholdgesture = dynamic_cast<VirtualQTapAndHoldGesture*>(self);
     if (vqtapandholdgesture && vqtapandholdgesture->isVirtualQTapAndHoldGesture) {
         vqtapandholdgesture->setQTapAndHoldGesture_DisconnectNotify_IsBase(true);
@@ -2595,7 +2595,7 @@ void QTapAndHoldGesture_OnReceivers(const QTapAndHoldGesture* self, intptr_t slo
 }
 
 // Derived class handler implementation
-bool QTapAndHoldGesture_IsSignalConnected(const QTapAndHoldGesture* self, QMetaMethod* signal) {
+bool QTapAndHoldGesture_IsSignalConnected(const QTapAndHoldGesture* self, const QMetaMethod* signal) {
     auto* vqtapandholdgesture = const_cast<VirtualQTapAndHoldGesture*>(dynamic_cast<const VirtualQTapAndHoldGesture*>(self));
     if (vqtapandholdgesture && vqtapandholdgesture->isVirtualQTapAndHoldGesture) {
         return vqtapandholdgesture->isSignalConnected(*signal);
@@ -2605,7 +2605,7 @@ bool QTapAndHoldGesture_IsSignalConnected(const QTapAndHoldGesture* self, QMetaM
 }
 
 // Base class handler implementation
-bool QTapAndHoldGesture_QBaseIsSignalConnected(const QTapAndHoldGesture* self, QMetaMethod* signal) {
+bool QTapAndHoldGesture_QBaseIsSignalConnected(const QTapAndHoldGesture* self, const QMetaMethod* signal) {
     auto* vqtapandholdgesture = const_cast<VirtualQTapAndHoldGesture*>(dynamic_cast<const VirtualQTapAndHoldGesture*>(self));
     if (vqtapandholdgesture && vqtapandholdgesture->isVirtualQTapAndHoldGesture) {
         vqtapandholdgesture->setQTapAndHoldGesture_IsSignalConnected_IsBase(true);
@@ -2627,7 +2627,7 @@ void QTapAndHoldGesture_Delete(QTapAndHoldGesture* self) {
     delete self;
 }
 
-QGestureEvent* QGestureEvent_new(libqt_list /* of QGesture* */ gestures) {
+QGestureEvent* QGestureEvent_new(const libqt_list /* of QGesture* */ gestures) {
     QList<QGesture*> gestures_QList;
     gestures_QList.reserve(gestures.len);
     QGesture** gestures_arr = static_cast<QGesture**>(gestures.data.ptr);
@@ -2637,19 +2637,19 @@ QGestureEvent* QGestureEvent_new(libqt_list /* of QGesture* */ gestures) {
     return new VirtualQGestureEvent(gestures_QList);
 }
 
-QGestureEvent* QGestureEvent_new2(QGestureEvent* param1) {
+QGestureEvent* QGestureEvent_new2(const QGestureEvent* param1) {
     return new VirtualQGestureEvent(*param1);
 }
 
 libqt_list /* of QGesture* */ QGestureEvent_Gestures(const QGestureEvent* self) {
     QList<QGesture*> _ret = self->gestures();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QGesture** _arr = static_cast<QGesture**>(malloc(sizeof(QGesture*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QGesture** _arr = static_cast<QGesture**>(malloc(sizeof(QGesture*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -2661,12 +2661,12 @@ QGesture* QGestureEvent_Gesture(const QGestureEvent* self, int typeVal) {
 libqt_list /* of QGesture* */ QGestureEvent_ActiveGestures(const QGestureEvent* self) {
     QList<QGesture*> _ret = self->activeGestures();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QGesture** _arr = static_cast<QGesture**>(malloc(sizeof(QGesture*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QGesture** _arr = static_cast<QGesture**>(malloc(sizeof(QGesture*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -2674,12 +2674,12 @@ libqt_list /* of QGesture* */ QGestureEvent_ActiveGestures(const QGestureEvent* 
 libqt_list /* of QGesture* */ QGestureEvent_CanceledGestures(const QGestureEvent* self) {
     QList<QGesture*> _ret = self->canceledGestures();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QGesture** _arr = static_cast<QGesture**>(malloc(sizeof(QGesture*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QGesture** _arr = static_cast<QGesture**>(malloc(sizeof(QGesture*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -2720,7 +2720,7 @@ QWidget* QGestureEvent_Widget(const QGestureEvent* self) {
     return self->widget();
 }
 
-QPointF* QGestureEvent_MapToGraphicsScene(const QGestureEvent* self, QPointF* gesturePoint) {
+QPointF* QGestureEvent_MapToGraphicsScene(const QGestureEvent* self, const QPointF* gesturePoint) {
     return new QPointF(self->mapToGraphicsScene(*gesturePoint));
 }
 

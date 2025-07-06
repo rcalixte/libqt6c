@@ -1,3 +1,4 @@
+#include "libqanystringview.hpp"
 #include "libqbytearrayview.hpp"
 #include "libqchar.hpp"
 #include "libqstringconverter_base.hpp"
@@ -12,7 +13,7 @@ QStringEncoder* q_stringencoder_new2(int64_t encoding) {
     return QStringEncoder_new2(encoding);
 }
 
-QStringEncoder* q_stringencoder_new3(const char* name) {
+QStringEncoder* q_stringencoder_new3(char* name) {
     return QStringEncoder_new3(name);
 }
 
@@ -20,7 +21,7 @@ QStringEncoder* q_stringencoder_new4(int64_t encoding, int64_t flags) {
     return QStringEncoder_new4(encoding, flags);
 }
 
-QStringEncoder* q_stringencoder_new5(const char* name, int64_t flags) {
+QStringEncoder* q_stringencoder_new5(char* name, int64_t flags) {
     return QStringEncoder_new5(name, flags);
 }
 
@@ -48,6 +49,21 @@ const char* q_stringencoder_name_for_encoding(int64_t e) {
     return QStringConverter_NameForEncoding(e);
 }
 
+const char** q_stringencoder_available_codecs() {
+    libqt_list _arr = QStringConverter_AvailableCodecs();
+    const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
+    const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
+    for (size_t _i = 0; _i < _arr.len; ++_i) {
+        _ret[_i] = qstring_to_char(_qstr[_i]);
+    }
+    _ret[_arr.len] = NULL;
+    for (size_t _i = 0; _i < _arr.len; ++_i) {
+        libqt_string_free((libqt_string*)&_qstr[_i]);
+    }
+    free((void*)_arr.data.ptr);
+    return _ret;
+}
+
 void q_stringencoder_delete(void* self) {
     QStringEncoder_Delete((QStringEncoder*)(self));
 }
@@ -60,7 +76,7 @@ QStringDecoder* q_stringdecoder_new2() {
     return QStringDecoder_new2();
 }
 
-QStringDecoder* q_stringdecoder_new3(const char* name) {
+QStringDecoder* q_stringdecoder_new3(char* name) {
     return QStringDecoder_new3(name);
 }
 
@@ -68,7 +84,7 @@ QStringDecoder* q_stringdecoder_new4(int64_t encoding, int64_t flags) {
     return QStringDecoder_new4(encoding, flags);
 }
 
-QStringDecoder* q_stringdecoder_new5(const char* name, int64_t f) {
+QStringDecoder* q_stringdecoder_new5(char* name, int64_t f) {
     return QStringDecoder_new5(name, f);
 }
 
@@ -104,6 +120,21 @@ const char* q_stringdecoder_name(void* self) {
 
 const char* q_stringdecoder_name_for_encoding(int64_t e) {
     return QStringConverter_NameForEncoding(e);
+}
+
+const char** q_stringdecoder_available_codecs() {
+    libqt_list _arr = QStringConverter_AvailableCodecs();
+    const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
+    const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
+    for (size_t _i = 0; _i < _arr.len; ++_i) {
+        _ret[_i] = qstring_to_char(_qstr[_i]);
+    }
+    _ret[_arr.len] = NULL;
+    for (size_t _i = 0; _i < _arr.len; ++_i) {
+        libqt_string_free((libqt_string*)&_qstr[_i]);
+    }
+    free((void*)_arr.data.ptr);
+    return _ret;
 }
 
 void q_stringdecoder_delete(void* self) {

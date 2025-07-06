@@ -73,8 +73,8 @@ class VirtualQParallelAnimationGroup final : public QParallelAnimationGroup {
     mutable bool qparallelanimationgroup_issignalconnected_isbase = false;
 
   public:
-    VirtualQParallelAnimationGroup() : QParallelAnimationGroup(){};
-    VirtualQParallelAnimationGroup(QObject* parent) : QParallelAnimationGroup(parent){};
+    VirtualQParallelAnimationGroup() : QParallelAnimationGroup() {};
+    VirtualQParallelAnimationGroup(QObject* parent) : QParallelAnimationGroup(parent) {};
 
     ~VirtualQParallelAnimationGroup() {
         qparallelanimationgroup_metacall_callback = nullptr;
@@ -382,18 +382,18 @@ class VirtualQParallelAnimationGroup final : public QParallelAnimationGroup {
     friend void QParallelAnimationGroup_QBaseChildEvent(QParallelAnimationGroup* self, QChildEvent* event);
     friend void QParallelAnimationGroup_CustomEvent(QParallelAnimationGroup* self, QEvent* event);
     friend void QParallelAnimationGroup_QBaseCustomEvent(QParallelAnimationGroup* self, QEvent* event);
-    friend void QParallelAnimationGroup_ConnectNotify(QParallelAnimationGroup* self, QMetaMethod* signal);
-    friend void QParallelAnimationGroup_QBaseConnectNotify(QParallelAnimationGroup* self, QMetaMethod* signal);
-    friend void QParallelAnimationGroup_DisconnectNotify(QParallelAnimationGroup* self, QMetaMethod* signal);
-    friend void QParallelAnimationGroup_QBaseDisconnectNotify(QParallelAnimationGroup* self, QMetaMethod* signal);
+    friend void QParallelAnimationGroup_ConnectNotify(QParallelAnimationGroup* self, const QMetaMethod* signal);
+    friend void QParallelAnimationGroup_QBaseConnectNotify(QParallelAnimationGroup* self, const QMetaMethod* signal);
+    friend void QParallelAnimationGroup_DisconnectNotify(QParallelAnimationGroup* self, const QMetaMethod* signal);
+    friend void QParallelAnimationGroup_QBaseDisconnectNotify(QParallelAnimationGroup* self, const QMetaMethod* signal);
     friend QObject* QParallelAnimationGroup_Sender(const QParallelAnimationGroup* self);
     friend QObject* QParallelAnimationGroup_QBaseSender(const QParallelAnimationGroup* self);
     friend int QParallelAnimationGroup_SenderSignalIndex(const QParallelAnimationGroup* self);
     friend int QParallelAnimationGroup_QBaseSenderSignalIndex(const QParallelAnimationGroup* self);
     friend int QParallelAnimationGroup_Receivers(const QParallelAnimationGroup* self, const char* signal);
     friend int QParallelAnimationGroup_QBaseReceivers(const QParallelAnimationGroup* self, const char* signal);
-    friend bool QParallelAnimationGroup_IsSignalConnected(const QParallelAnimationGroup* self, QMetaMethod* signal);
-    friend bool QParallelAnimationGroup_QBaseIsSignalConnected(const QParallelAnimationGroup* self, QMetaMethod* signal);
+    friend bool QParallelAnimationGroup_IsSignalConnected(const QParallelAnimationGroup* self, const QMetaMethod* signal);
+    friend bool QParallelAnimationGroup_QBaseIsSignalConnected(const QParallelAnimationGroup* self, const QMetaMethod* signal);
 };
 
 #endif

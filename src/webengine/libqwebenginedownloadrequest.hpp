@@ -24,16 +24,6 @@ typedef struct QWebEngineDownloadRequest QWebEngineDownloadRequest;
 typedef struct QWebEnginePage QWebEnginePage;
 #endif
 
-#ifdef __cplusplus
-typedef QWebEngineDownloadRequest::DownloadInterruptReason DownloadInterruptReason; // C++ enum
-typedef QWebEngineDownloadRequest::DownloadState DownloadState;                     // C++ enum
-typedef QWebEngineDownloadRequest::SavePageFormat SavePageFormat;                   // C++ enum
-#else
-typedef int DownloadInterruptReason; // C ABI enum
-typedef int DownloadState;           // C ABI enum
-typedef int SavePageFormat;          // C ABI enum
-#endif
-
 QMetaObject* QWebEngineDownloadRequest_MetaObject(const QWebEngineDownloadRequest* self);
 void* QWebEngineDownloadRequest_Metacast(QWebEngineDownloadRequest* self, const char* param1);
 int QWebEngineDownloadRequest_Metacall(QWebEngineDownloadRequest* self, int param1, int param2, void** param3);
@@ -53,9 +43,9 @@ libqt_string QWebEngineDownloadRequest_InterruptReasonString(const QWebEngineDow
 bool QWebEngineDownloadRequest_IsSavePageDownload(const QWebEngineDownloadRequest* self);
 libqt_string QWebEngineDownloadRequest_SuggestedFileName(const QWebEngineDownloadRequest* self);
 libqt_string QWebEngineDownloadRequest_DownloadDirectory(const QWebEngineDownloadRequest* self);
-void QWebEngineDownloadRequest_SetDownloadDirectory(QWebEngineDownloadRequest* self, libqt_string directory);
+void QWebEngineDownloadRequest_SetDownloadDirectory(QWebEngineDownloadRequest* self, const libqt_string directory);
 libqt_string QWebEngineDownloadRequest_DownloadFileName(const QWebEngineDownloadRequest* self);
-void QWebEngineDownloadRequest_SetDownloadFileName(QWebEngineDownloadRequest* self, libqt_string fileName);
+void QWebEngineDownloadRequest_SetDownloadFileName(QWebEngineDownloadRequest* self, const libqt_string fileName);
 QWebEnginePage* QWebEngineDownloadRequest_Page(const QWebEngineDownloadRequest* self);
 void QWebEngineDownloadRequest_Accept(QWebEngineDownloadRequest* self);
 void QWebEngineDownloadRequest_Cancel(QWebEngineDownloadRequest* self);

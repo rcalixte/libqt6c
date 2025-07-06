@@ -75,7 +75,7 @@ libqt_string QSslServer_Tr(const char* s) {
     return _str;
 }
 
-void QSslServer_SetSslConfiguration(QSslServer* self, QSslConfiguration* sslConfiguration) {
+void QSslServer_SetSslConfiguration(QSslServer* self, const QSslConfiguration* sslConfiguration) {
     self->setSslConfiguration(*sslConfiguration);
 }
 
@@ -91,7 +91,7 @@ int QSslServer_HandshakeTimeout(const QSslServer* self) {
     return self->handshakeTimeout();
 }
 
-void QSslServer_SslErrors(QSslServer* self, QSslSocket* socket, libqt_list /* of QSslError* */ errors) {
+void QSslServer_SslErrors(QSslServer* self, QSslSocket* socket, const libqt_list /* of QSslError* */ errors) {
     QList<QSslError> errors_QList;
     errors_QList.reserve(errors.len);
     QSslError** errors_arr = static_cast<QSslError**>(errors.data.ptr);
@@ -106,20 +106,20 @@ void QSslServer_Connect_SslErrors(QSslServer* self, intptr_t slot) {
     QSslServer::connect(self, &QSslServer::sslErrors, [self, slotFunc](QSslSocket* socket, const QList<QSslError>& errors) {
         QSslSocket* sigval1 = socket;
         const QList<QSslError>& errors_ret = errors;
-        // Convert QList<> from C++ memory to manually-managed C memory
-        QSslError** errors_arr = static_cast<QSslError**>(malloc(sizeof(QSslError*) * errors_ret.length()));
-        for (size_t i = 0; i < errors_ret.length(); ++i) {
+        // Convert const QList<> from C++ memory to manually-managed C memory
+        QSslError** errors_arr = static_cast<QSslError**>(malloc(sizeof(QSslError*) * errors_ret.size()));
+        for (size_t i = 0; i < errors_ret.size(); ++i) {
             errors_arr[i] = new QSslError(errors_ret[i]);
         }
         libqt_list errors_out;
-        errors_out.len = errors_ret.length();
+        errors_out.len = errors_ret.size();
         errors_out.data.ptr = static_cast<void*>(errors_arr);
         libqt_list /* of QSslError* */ sigval2 = errors_out;
         slotFunc(self, sigval1, sigval2);
     });
 }
 
-void QSslServer_PeerVerifyError(QSslServer* self, QSslSocket* socket, QSslError* errorVal) {
+void QSslServer_PeerVerifyError(QSslServer* self, QSslSocket* socket, const QSslError* errorVal) {
     self->peerVerifyError(socket, *errorVal);
 }
 
@@ -160,7 +160,7 @@ void QSslServer_Connect_PreSharedKeyAuthenticationRequired(QSslServer* self, int
     });
 }
 
-void QSslServer_AlertSent(QSslServer* self, QSslSocket* socket, int level, int typeVal, libqt_string description) {
+void QSslServer_AlertSent(QSslServer* self, QSslSocket* socket, int level, int typeVal, const libqt_string description) {
     QString description_QString = QString::fromUtf8(description.data, description.len);
     self->alertSent(socket, static_cast<QSsl::AlertLevel>(level), static_cast<QSsl::AlertType>(typeVal), description_QString);
 }
@@ -184,7 +184,7 @@ void QSslServer_Connect_AlertSent(QSslServer* self, intptr_t slot) {
     });
 }
 
-void QSslServer_AlertReceived(QSslServer* self, QSslSocket* socket, int level, int typeVal, libqt_string description) {
+void QSslServer_AlertReceived(QSslServer* self, QSslSocket* socket, int level, int typeVal, const libqt_string description) {
     QString description_QString = QString::fromUtf8(description.data, description.len);
     self->alertReceived(socket, static_cast<QSsl::AlertLevel>(level), static_cast<QSsl::AlertType>(typeVal), description_QString);
 }
@@ -208,7 +208,7 @@ void QSslServer_Connect_AlertReceived(QSslServer* self, intptr_t slot) {
     });
 }
 
-void QSslServer_HandshakeInterruptedOnError(QSslServer* self, QSslSocket* socket, QSslError* errorVal) {
+void QSslServer_HandshakeInterruptedOnError(QSslServer* self, QSslSocket* socket, const QSslError* errorVal) {
     self->handshakeInterruptedOnError(socket, *errorVal);
 }
 
@@ -492,7 +492,7 @@ void QSslServer_OnCustomEvent(QSslServer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSslServer_ConnectNotify(QSslServer* self, QMetaMethod* signal) {
+void QSslServer_ConnectNotify(QSslServer* self, const QMetaMethod* signal) {
     auto* vqsslserver = dynamic_cast<VirtualQSslServer*>(self);
     if (vqsslserver && vqsslserver->isVirtualQSslServer) {
         vqsslserver->connectNotify(*signal);
@@ -502,7 +502,7 @@ void QSslServer_ConnectNotify(QSslServer* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSslServer_QBaseConnectNotify(QSslServer* self, QMetaMethod* signal) {
+void QSslServer_QBaseConnectNotify(QSslServer* self, const QMetaMethod* signal) {
     auto* vqsslserver = dynamic_cast<VirtualQSslServer*>(self);
     if (vqsslserver && vqsslserver->isVirtualQSslServer) {
         vqsslserver->setQSslServer_ConnectNotify_IsBase(true);
@@ -521,7 +521,7 @@ void QSslServer_OnConnectNotify(QSslServer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSslServer_DisconnectNotify(QSslServer* self, QMetaMethod* signal) {
+void QSslServer_DisconnectNotify(QSslServer* self, const QMetaMethod* signal) {
     auto* vqsslserver = dynamic_cast<VirtualQSslServer*>(self);
     if (vqsslserver && vqsslserver->isVirtualQSslServer) {
         vqsslserver->disconnectNotify(*signal);
@@ -531,7 +531,7 @@ void QSslServer_DisconnectNotify(QSslServer* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSslServer_QBaseDisconnectNotify(QSslServer* self, QMetaMethod* signal) {
+void QSslServer_QBaseDisconnectNotify(QSslServer* self, const QMetaMethod* signal) {
     auto* vqsslserver = dynamic_cast<VirtualQSslServer*>(self);
     if (vqsslserver && vqsslserver->isVirtualQSslServer) {
         vqsslserver->setQSslServer_DisconnectNotify_IsBase(true);
@@ -666,7 +666,7 @@ void QSslServer_OnReceivers(const QSslServer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSslServer_IsSignalConnected(const QSslServer* self, QMetaMethod* signal) {
+bool QSslServer_IsSignalConnected(const QSslServer* self, const QMetaMethod* signal) {
     auto* vqsslserver = const_cast<VirtualQSslServer*>(dynamic_cast<const VirtualQSslServer*>(self));
     if (vqsslserver && vqsslserver->isVirtualQSslServer) {
         return vqsslserver->isSignalConnected(*signal);
@@ -676,7 +676,7 @@ bool QSslServer_IsSignalConnected(const QSslServer* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QSslServer_QBaseIsSignalConnected(const QSslServer* self, QMetaMethod* signal) {
+bool QSslServer_QBaseIsSignalConnected(const QSslServer* self, const QMetaMethod* signal) {
     auto* vqsslserver = const_cast<VirtualQSslServer*>(dynamic_cast<const VirtualQSslServer*>(self));
     if (vqsslserver && vqsslserver->isVirtualQSslServer) {
         vqsslserver->setQSslServer_IsSignalConnected_IsBase(true);

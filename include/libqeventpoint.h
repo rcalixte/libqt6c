@@ -12,11 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqpoint.h"
-#include "libqpointingdevice.h"
-#include "libqsize.h"
-#include "libqvectornd.h"
-
 /// https://doc.qt.io/qt-6/qeventpoint.html
 
 /// q_eventpoint_new constructs a new QEventPoint object.

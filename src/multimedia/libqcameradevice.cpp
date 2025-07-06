@@ -14,11 +14,11 @@ QCameraFormat* QCameraFormat_new() {
     return new QCameraFormat();
 }
 
-QCameraFormat* QCameraFormat_new2(QCameraFormat* other) {
+QCameraFormat* QCameraFormat_new2(const QCameraFormat* other) {
     return new QCameraFormat(*other);
 }
 
-void QCameraFormat_OperatorAssign(QCameraFormat* self, QCameraFormat* other) {
+void QCameraFormat_OperatorAssign(QCameraFormat* self, const QCameraFormat* other) {
     self->operator=(*other);
 }
 
@@ -42,11 +42,11 @@ bool QCameraFormat_IsNull(const QCameraFormat* self) {
     return self->isNull();
 }
 
-bool QCameraFormat_OperatorEqual(const QCameraFormat* self, QCameraFormat* other) {
+bool QCameraFormat_OperatorEqual(const QCameraFormat* self, const QCameraFormat* other) {
     return (*self == *other);
 }
 
-bool QCameraFormat_OperatorNotEqual(const QCameraFormat* self, QCameraFormat* other) {
+bool QCameraFormat_OperatorNotEqual(const QCameraFormat* self, const QCameraFormat* other) {
     return (*self != *other);
 }
 
@@ -58,19 +58,19 @@ QCameraDevice* QCameraDevice_new() {
     return new QCameraDevice();
 }
 
-QCameraDevice* QCameraDevice_new2(QCameraDevice* other) {
+QCameraDevice* QCameraDevice_new2(const QCameraDevice* other) {
     return new QCameraDevice(*other);
 }
 
-void QCameraDevice_OperatorAssign(QCameraDevice* self, QCameraDevice* other) {
+void QCameraDevice_OperatorAssign(QCameraDevice* self, const QCameraDevice* other) {
     self->operator=(*other);
 }
 
-bool QCameraDevice_OperatorEqual(const QCameraDevice* self, QCameraDevice* other) {
+bool QCameraDevice_OperatorEqual(const QCameraDevice* self, const QCameraDevice* other) {
     return (*self == *other);
 }
 
-bool QCameraDevice_OperatorNotEqual(const QCameraDevice* self, QCameraDevice* other) {
+bool QCameraDevice_OperatorNotEqual(const QCameraDevice* self, const QCameraDevice* other) {
     return (*self != *other);
 }
 
@@ -111,12 +111,12 @@ int QCameraDevice_Position(const QCameraDevice* self) {
 libqt_list /* of QSize* */ QCameraDevice_PhotoResolutions(const QCameraDevice* self) {
     QList<QSize> _ret = self->photoResolutions();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QSize** _arr = static_cast<QSize**>(malloc(sizeof(QSize*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QSize** _arr = static_cast<QSize**>(malloc(sizeof(QSize*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QSize(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -124,14 +124,18 @@ libqt_list /* of QSize* */ QCameraDevice_PhotoResolutions(const QCameraDevice* s
 libqt_list /* of QCameraFormat* */ QCameraDevice_VideoFormats(const QCameraDevice* self) {
     QList<QCameraFormat> _ret = self->videoFormats();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QCameraFormat** _arr = static_cast<QCameraFormat**>(malloc(sizeof(QCameraFormat*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QCameraFormat** _arr = static_cast<QCameraFormat**>(malloc(sizeof(QCameraFormat*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QCameraFormat(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
+}
+
+int QCameraDevice_CorrectionAngle(const QCameraDevice* self) {
+    return static_cast<int>(self->correctionAngle());
 }
 
 void QCameraDevice_Delete(QCameraDevice* self) {

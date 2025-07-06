@@ -64,8 +64,8 @@ class VirtualQLogValueAxis final : public QLogValueAxis {
     mutable bool qlogvalueaxis_issignalconnected_isbase = false;
 
   public:
-    VirtualQLogValueAxis() : QLogValueAxis(){};
-    VirtualQLogValueAxis(QObject* parent) : QLogValueAxis(parent){};
+    VirtualQLogValueAxis() : QLogValueAxis() {};
+    VirtualQLogValueAxis(QObject* parent) : QLogValueAxis(parent) {};
 
     ~VirtualQLogValueAxis() {
         qlogvalueaxis_metacall_callback = nullptr;
@@ -313,18 +313,18 @@ class VirtualQLogValueAxis final : public QLogValueAxis {
     friend void QLogValueAxis_QBaseChildEvent(QLogValueAxis* self, QChildEvent* event);
     friend void QLogValueAxis_CustomEvent(QLogValueAxis* self, QEvent* event);
     friend void QLogValueAxis_QBaseCustomEvent(QLogValueAxis* self, QEvent* event);
-    friend void QLogValueAxis_ConnectNotify(QLogValueAxis* self, QMetaMethod* signal);
-    friend void QLogValueAxis_QBaseConnectNotify(QLogValueAxis* self, QMetaMethod* signal);
-    friend void QLogValueAxis_DisconnectNotify(QLogValueAxis* self, QMetaMethod* signal);
-    friend void QLogValueAxis_QBaseDisconnectNotify(QLogValueAxis* self, QMetaMethod* signal);
+    friend void QLogValueAxis_ConnectNotify(QLogValueAxis* self, const QMetaMethod* signal);
+    friend void QLogValueAxis_QBaseConnectNotify(QLogValueAxis* self, const QMetaMethod* signal);
+    friend void QLogValueAxis_DisconnectNotify(QLogValueAxis* self, const QMetaMethod* signal);
+    friend void QLogValueAxis_QBaseDisconnectNotify(QLogValueAxis* self, const QMetaMethod* signal);
     friend QObject* QLogValueAxis_Sender(const QLogValueAxis* self);
     friend QObject* QLogValueAxis_QBaseSender(const QLogValueAxis* self);
     friend int QLogValueAxis_SenderSignalIndex(const QLogValueAxis* self);
     friend int QLogValueAxis_QBaseSenderSignalIndex(const QLogValueAxis* self);
     friend int QLogValueAxis_Receivers(const QLogValueAxis* self, const char* signal);
     friend int QLogValueAxis_QBaseReceivers(const QLogValueAxis* self, const char* signal);
-    friend bool QLogValueAxis_IsSignalConnected(const QLogValueAxis* self, QMetaMethod* signal);
-    friend bool QLogValueAxis_QBaseIsSignalConnected(const QLogValueAxis* self, QMetaMethod* signal);
+    friend bool QLogValueAxis_IsSignalConnected(const QLogValueAxis* self, const QMetaMethod* signal);
+    friend bool QLogValueAxis_QBaseIsSignalConnected(const QLogValueAxis* self, const QMetaMethod* signal);
 };
 
 #endif

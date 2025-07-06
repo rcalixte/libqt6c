@@ -85,8 +85,8 @@ class VirtualQNetworkCookieJar final : public QNetworkCookieJar {
     mutable bool qnetworkcookiejar_issignalconnected_isbase = false;
 
   public:
-    VirtualQNetworkCookieJar() : QNetworkCookieJar(){};
-    VirtualQNetworkCookieJar(QObject* parent) : QNetworkCookieJar(parent){};
+    VirtualQNetworkCookieJar() : QNetworkCookieJar() {};
+    VirtualQNetworkCookieJar(QObject* parent) : QNetworkCookieJar(parent) {};
 
     ~VirtualQNetworkCookieJar() {
         qnetworkcookiejar_metacall_callback = nullptr;
@@ -202,13 +202,13 @@ class VirtualQNetworkCookieJar final : public QNetworkCookieJar {
             return QNetworkCookieJar::setCookiesFromUrl(cookieList, url);
         } else if (qnetworkcookiejar_setcookiesfromurl_callback != nullptr) {
             const QList<QNetworkCookie>& cookieList_ret = cookieList;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QNetworkCookie** cookieList_arr = static_cast<QNetworkCookie**>(malloc(sizeof(QNetworkCookie*) * cookieList_ret.length()));
-            for (size_t i = 0; i < cookieList_ret.length(); ++i) {
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QNetworkCookie** cookieList_arr = static_cast<QNetworkCookie**>(malloc(sizeof(QNetworkCookie*) * cookieList_ret.size()));
+            for (size_t i = 0; i < cookieList_ret.size(); ++i) {
                 cookieList_arr[i] = new QNetworkCookie(cookieList_ret[i]);
             }
             libqt_list cookieList_out;
-            cookieList_out.len = cookieList_ret.length();
+            cookieList_out.len = cookieList_ret.size();
             cookieList_out.data.ptr = static_cast<void*>(cookieList_arr);
             libqt_list /* of QNetworkCookie* */ cbval1 = cookieList_out;
             const QUrl& url_ret = url;
@@ -424,13 +424,13 @@ class VirtualQNetworkCookieJar final : public QNetworkCookieJar {
             QNetworkCookieJar::setAllCookies(cookieList);
         } else if (qnetworkcookiejar_setallcookies_callback != nullptr) {
             const QList<QNetworkCookie>& cookieList_ret = cookieList;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QNetworkCookie** cookieList_arr = static_cast<QNetworkCookie**>(malloc(sizeof(QNetworkCookie*) * cookieList_ret.length()));
-            for (size_t i = 0; i < cookieList_ret.length(); ++i) {
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QNetworkCookie** cookieList_arr = static_cast<QNetworkCookie**>(malloc(sizeof(QNetworkCookie*) * cookieList_ret.size()));
+            for (size_t i = 0; i < cookieList_ret.size(); ++i) {
                 cookieList_arr[i] = new QNetworkCookie(cookieList_ret[i]);
             }
             libqt_list cookieList_out;
-            cookieList_out.len = cookieList_ret.length();
+            cookieList_out.len = cookieList_ret.size();
             cookieList_out.data.ptr = static_cast<void*>(cookieList_arr);
             libqt_list /* of QNetworkCookie* */ cbval1 = cookieList_out;
 
@@ -499,30 +499,30 @@ class VirtualQNetworkCookieJar final : public QNetworkCookieJar {
     }
 
     // Friend functions
-    friend bool QNetworkCookieJar_ValidateCookie(const QNetworkCookieJar* self, QNetworkCookie* cookie, QUrl* url);
-    friend bool QNetworkCookieJar_QBaseValidateCookie(const QNetworkCookieJar* self, QNetworkCookie* cookie, QUrl* url);
+    friend bool QNetworkCookieJar_ValidateCookie(const QNetworkCookieJar* self, const QNetworkCookie* cookie, const QUrl* url);
+    friend bool QNetworkCookieJar_QBaseValidateCookie(const QNetworkCookieJar* self, const QNetworkCookie* cookie, const QUrl* url);
     friend void QNetworkCookieJar_TimerEvent(QNetworkCookieJar* self, QTimerEvent* event);
     friend void QNetworkCookieJar_QBaseTimerEvent(QNetworkCookieJar* self, QTimerEvent* event);
     friend void QNetworkCookieJar_ChildEvent(QNetworkCookieJar* self, QChildEvent* event);
     friend void QNetworkCookieJar_QBaseChildEvent(QNetworkCookieJar* self, QChildEvent* event);
     friend void QNetworkCookieJar_CustomEvent(QNetworkCookieJar* self, QEvent* event);
     friend void QNetworkCookieJar_QBaseCustomEvent(QNetworkCookieJar* self, QEvent* event);
-    friend void QNetworkCookieJar_ConnectNotify(QNetworkCookieJar* self, QMetaMethod* signal);
-    friend void QNetworkCookieJar_QBaseConnectNotify(QNetworkCookieJar* self, QMetaMethod* signal);
-    friend void QNetworkCookieJar_DisconnectNotify(QNetworkCookieJar* self, QMetaMethod* signal);
-    friend void QNetworkCookieJar_QBaseDisconnectNotify(QNetworkCookieJar* self, QMetaMethod* signal);
+    friend void QNetworkCookieJar_ConnectNotify(QNetworkCookieJar* self, const QMetaMethod* signal);
+    friend void QNetworkCookieJar_QBaseConnectNotify(QNetworkCookieJar* self, const QMetaMethod* signal);
+    friend void QNetworkCookieJar_DisconnectNotify(QNetworkCookieJar* self, const QMetaMethod* signal);
+    friend void QNetworkCookieJar_QBaseDisconnectNotify(QNetworkCookieJar* self, const QMetaMethod* signal);
     friend libqt_list /* of QNetworkCookie* */ QNetworkCookieJar_AllCookies(const QNetworkCookieJar* self);
     friend libqt_list /* of QNetworkCookie* */ QNetworkCookieJar_QBaseAllCookies(const QNetworkCookieJar* self);
-    friend void QNetworkCookieJar_SetAllCookies(QNetworkCookieJar* self, libqt_list /* of QNetworkCookie* */ cookieList);
-    friend void QNetworkCookieJar_QBaseSetAllCookies(QNetworkCookieJar* self, libqt_list /* of QNetworkCookie* */ cookieList);
+    friend void QNetworkCookieJar_SetAllCookies(QNetworkCookieJar* self, const libqt_list /* of QNetworkCookie* */ cookieList);
+    friend void QNetworkCookieJar_QBaseSetAllCookies(QNetworkCookieJar* self, const libqt_list /* of QNetworkCookie* */ cookieList);
     friend QObject* QNetworkCookieJar_Sender(const QNetworkCookieJar* self);
     friend QObject* QNetworkCookieJar_QBaseSender(const QNetworkCookieJar* self);
     friend int QNetworkCookieJar_SenderSignalIndex(const QNetworkCookieJar* self);
     friend int QNetworkCookieJar_QBaseSenderSignalIndex(const QNetworkCookieJar* self);
     friend int QNetworkCookieJar_Receivers(const QNetworkCookieJar* self, const char* signal);
     friend int QNetworkCookieJar_QBaseReceivers(const QNetworkCookieJar* self, const char* signal);
-    friend bool QNetworkCookieJar_IsSignalConnected(const QNetworkCookieJar* self, QMetaMethod* signal);
-    friend bool QNetworkCookieJar_QBaseIsSignalConnected(const QNetworkCookieJar* self, QMetaMethod* signal);
+    friend bool QNetworkCookieJar_IsSignalConnected(const QNetworkCookieJar* self, const QMetaMethod* signal);
+    friend bool QNetworkCookieJar_QBaseIsSignalConnected(const QNetworkCookieJar* self, const QMetaMethod* signal);
 };
 
 #endif

@@ -80,6 +80,10 @@ int32_t q_stylehints_keyboard_auto_repeat_rate(void* self) {
     return QStyleHints_KeyboardAutoRepeatRate((QStyleHints*)self);
 }
 
+double q_stylehints_keyboard_auto_repeat_rate_f(void* self) {
+    return QStyleHints_KeyboardAutoRepeatRateF((QStyleHints*)self);
+}
+
 void q_stylehints_set_cursor_flash_time(void* self, int cursorFlashTime) {
     QStyleHints_SetCursorFlashTime((QStyleHints*)self, cursorFlashTime);
 }
@@ -102,6 +106,14 @@ bool q_stylehints_show_shortcuts_in_context_menus(void* self) {
 
 void q_stylehints_set_show_shortcuts_in_context_menus(void* self, bool showShortcutsInContextMenus) {
     QStyleHints_SetShowShortcutsInContextMenus((QStyleHints*)self, showShortcutsInContextMenus);
+}
+
+int64_t q_stylehints_context_menu_trigger(void* self) {
+    return QStyleHints_ContextMenuTrigger((QStyleHints*)self);
+}
+
+void q_stylehints_set_context_menu_trigger(void* self, int64_t contextMenuTrigger) {
+    QStyleHints_SetContextMenuTrigger((QStyleHints*)self, contextMenuTrigger);
 }
 
 int32_t q_stylehints_password_mask_delay(void* self) {
@@ -158,6 +170,18 @@ void q_stylehints_set_mouse_quick_selection_threshold(void* self, int threshold)
 
 int32_t q_stylehints_mouse_quick_selection_threshold(void* self) {
     return QStyleHints_MouseQuickSelectionThreshold((QStyleHints*)self);
+}
+
+int64_t q_stylehints_color_scheme(void* self) {
+    return QStyleHints_ColorScheme((QStyleHints*)self);
+}
+
+void q_stylehints_set_color_scheme(void* self, int64_t scheme) {
+    QStyleHints_SetColorScheme((QStyleHints*)self, scheme);
+}
+
+void q_stylehints_unset_color_scheme(void* self) {
+    QStyleHints_UnsetColorScheme((QStyleHints*)self);
 }
 
 void q_stylehints_cursor_flash_time_changed(void* self, int cursorFlashTime) {
@@ -232,6 +256,14 @@ void q_stylehints_on_show_shortcuts_in_context_menus_changed(void* self, void (*
     QStyleHints_Connect_ShowShortcutsInContextMenusChanged((QStyleHints*)self, (intptr_t)slot);
 }
 
+void q_stylehints_context_menu_trigger_changed(void* self, int64_t contextMenuTrigger) {
+    QStyleHints_ContextMenuTriggerChanged((QStyleHints*)self, contextMenuTrigger);
+}
+
+void q_stylehints_on_context_menu_trigger_changed(void* self, void (*slot)(void*, int64_t)) {
+    QStyleHints_Connect_ContextMenuTriggerChanged((QStyleHints*)self, (intptr_t)slot);
+}
+
 void q_stylehints_wheel_scroll_lines_changed(void* self, int scrollLines) {
     QStyleHints_WheelScrollLinesChanged((QStyleHints*)self, scrollLines);
 }
@@ -246,6 +278,14 @@ void q_stylehints_mouse_quick_selection_threshold_changed(void* self, int thresh
 
 void q_stylehints_on_mouse_quick_selection_threshold_changed(void* self, void (*slot)(void*, int)) {
     QStyleHints_Connect_MouseQuickSelectionThresholdChanged((QStyleHints*)self, (intptr_t)slot);
+}
+
+void q_stylehints_color_scheme_changed(void* self, int64_t colorScheme) {
+    QStyleHints_ColorSchemeChanged((QStyleHints*)self, colorScheme);
+}
+
+void q_stylehints_on_color_scheme_changed(void* self, void (*slot)(void*, int64_t)) {
+    QStyleHints_Connect_ColorSchemeChanged((QStyleHints*)self, (intptr_t)slot);
 }
 
 const char* q_stylehints_tr2(const char* s, const char* c) {
@@ -305,8 +345,8 @@ QThread* q_stylehints_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_stylehints_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_stylehints_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_stylehints_start_timer(void* self, int interval) {
@@ -315,6 +355,10 @@ int32_t q_stylehints_start_timer(void* self, int interval) {
 
 void q_stylehints_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_stylehints_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_stylehints_children(void* self) {
@@ -407,6 +451,10 @@ bool q_stylehints_inherits(void* self, const char* classname) {
 
 void q_stylehints_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_stylehints_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_stylehints_start_timer2(void* self, int interval, int64_t timerType) {

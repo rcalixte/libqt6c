@@ -20,14 +20,8 @@ typedef struct QUrl QUrl;
 typedef struct QWebEngineFullScreenRequest QWebEngineFullScreenRequest;
 #endif
 
-#ifdef __cplusplus
-typedef QWebEngineFullScreenRequest::QtGadgetHelper QtGadgetHelper; // C++ QFlags
-#else
-typedef void QtGadgetHelper; // C ABI QFlags
-#endif
-
-QWebEngineFullScreenRequest* QWebEngineFullScreenRequest_new(QWebEngineFullScreenRequest* other);
-void QWebEngineFullScreenRequest_OperatorAssign(QWebEngineFullScreenRequest* self, QWebEngineFullScreenRequest* other);
+QWebEngineFullScreenRequest* QWebEngineFullScreenRequest_new(const QWebEngineFullScreenRequest* other);
+void QWebEngineFullScreenRequest_OperatorAssign(QWebEngineFullScreenRequest* self, const QWebEngineFullScreenRequest* other);
 void QWebEngineFullScreenRequest_Reject(QWebEngineFullScreenRequest* self);
 void QWebEngineFullScreenRequest_Accept(QWebEngineFullScreenRequest* self);
 bool QWebEngineFullScreenRequest_ToggleOn(const QWebEngineFullScreenRequest* self);

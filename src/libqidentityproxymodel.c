@@ -278,6 +278,38 @@ bool q_identityproxymodel_qbase_move_columns(void* self, void* sourceParent, int
     return QIdentityProxyModel_QBaseMoveColumns((QIdentityProxyModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
+bool q_identityproxymodel_handle_source_layout_changes(void* self) {
+    return QIdentityProxyModel_HandleSourceLayoutChanges((QIdentityProxyModel*)self);
+}
+
+bool q_identityproxymodel_handle_source_data_changes(void* self) {
+    return QIdentityProxyModel_HandleSourceDataChanges((QIdentityProxyModel*)self);
+}
+
+void q_identityproxymodel_set_handle_source_layout_changes(void* self, bool handleSourceLayoutChanges) {
+    QIdentityProxyModel_SetHandleSourceLayoutChanges((QIdentityProxyModel*)self, handleSourceLayoutChanges);
+}
+
+void q_identityproxymodel_on_set_handle_source_layout_changes(void* self, void (*slot)(void*, bool)) {
+    QIdentityProxyModel_OnSetHandleSourceLayoutChanges((QIdentityProxyModel*)self, (intptr_t)slot);
+}
+
+void q_identityproxymodel_qbase_set_handle_source_layout_changes(void* self, bool handleSourceLayoutChanges) {
+    QIdentityProxyModel_QBaseSetHandleSourceLayoutChanges((QIdentityProxyModel*)self, handleSourceLayoutChanges);
+}
+
+void q_identityproxymodel_set_handle_source_data_changes(void* self, bool handleSourceDataChanges) {
+    QIdentityProxyModel_SetHandleSourceDataChanges((QIdentityProxyModel*)self, handleSourceDataChanges);
+}
+
+void q_identityproxymodel_on_set_handle_source_data_changes(void* self, void (*slot)(void*, bool)) {
+    QIdentityProxyModel_OnSetHandleSourceDataChanges((QIdentityProxyModel*)self, (intptr_t)slot);
+}
+
+void q_identityproxymodel_qbase_set_handle_source_data_changes(void* self, bool handleSourceDataChanges) {
+    QIdentityProxyModel_QBaseSetHandleSourceDataChanges((QIdentityProxyModel*)self, handleSourceDataChanges);
+}
+
 const char* q_identityproxymodel_tr2(const char* s, const char* c) {
     libqt_string _str = QIdentityProxyModel_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
@@ -459,8 +491,8 @@ QThread* q_identityproxymodel_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_identityproxymodel_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_identityproxymodel_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_identityproxymodel_start_timer(void* self, int interval) {
@@ -469,6 +501,10 @@ int32_t q_identityproxymodel_start_timer(void* self, int interval) {
 
 void q_identityproxymodel_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_identityproxymodel_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_identityproxymodel_children(void* self) {
@@ -557,6 +593,10 @@ bool q_identityproxymodel_inherits(void* self, const char* classname) {
 
 void q_identityproxymodel_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_identityproxymodel_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_identityproxymodel_start_timer2(void* self, int interval, int64_t timerType) {

@@ -12,13 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqgraphicsitem.h"
-#include "libqgraphicslayout.h"
-#include "libqgraphicslayoutitem.h"
-#include "libqrect.h"
-#include "libqsize.h"
-
 /// https://doc.qt.io/qt-6/qgraphicsgridlayout.html
 
 /// q_graphicsgridlayout_new constructs a new QGraphicsGridLayout object.

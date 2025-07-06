@@ -12,18 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractitemmodel.h"
-#include "libqabstractproxymodel.h"
-#include "libqevent.h"
-#include "libqdatastream.h"
-#include "libqitemselectionmodel.h"
-#include "libqmetaobject.h"
-#include "libqmimedata.h"
-#include "libqobject.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qidentityproxymodel.html
 
 /// q_identityproxymodel_new constructs a new QIdentityProxyModel object.
@@ -423,6 +411,54 @@ void q_identityproxymodel_on_move_columns(void* self, bool (*slot)(void*, void*,
 /// ``` QIdentityProxyModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild ```
 bool q_identityproxymodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#handleSourceLayoutChanges)
+///
+/// ``` QIdentityProxyModel* self ```
+bool q_identityproxymodel_handle_source_layout_changes(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#handleSourceDataChanges)
+///
+/// ``` QIdentityProxyModel* self ```
+bool q_identityproxymodel_handle_source_data_changes(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceLayoutChanges)
+///
+/// ``` QIdentityProxyModel* self, bool handleSourceLayoutChanges ```
+void q_identityproxymodel_set_handle_source_layout_changes(void* self, bool handleSourceLayoutChanges);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceLayoutChanges)
+///
+/// Allows for overriding the related default method
+///
+/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, bool) ```
+void q_identityproxymodel_on_set_handle_source_layout_changes(void* self, void (*slot)(void*, bool));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceLayoutChanges)
+///
+/// Base class method implementation
+///
+/// ``` QIdentityProxyModel* self, bool handleSourceLayoutChanges ```
+void q_identityproxymodel_qbase_set_handle_source_layout_changes(void* self, bool handleSourceLayoutChanges);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceDataChanges)
+///
+/// ``` QIdentityProxyModel* self, bool handleSourceDataChanges ```
+void q_identityproxymodel_set_handle_source_data_changes(void* self, bool handleSourceDataChanges);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceDataChanges)
+///
+/// Allows for overriding the related default method
+///
+/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, bool) ```
+void q_identityproxymodel_on_set_handle_source_data_changes(void* self, void (*slot)(void*, bool));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceDataChanges)
+///
+/// Base class method implementation
+///
+/// ``` QIdentityProxyModel* self, bool handleSourceDataChanges ```
+void q_identityproxymodel_qbase_set_handle_source_data_changes(void* self, bool handleSourceDataChanges);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// ``` const char* s, const char* c ```
@@ -725,7 +761,7 @@ QThread* q_identityproxymodel_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QIdentityProxyModel* self, QThread* thread ```
-void q_identityproxymodel_move_to_thread(void* self, void* thread);
+bool q_identityproxymodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -740,6 +776,13 @@ int32_t q_identityproxymodel_start_timer(void* self, int interval);
 ///
 /// ``` QIdentityProxyModel* self, int id ```
 void q_identityproxymodel_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QIdentityProxyModel* self, enum Qt__TimerId id ```
+void q_identityproxymodel_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -873,6 +916,13 @@ bool q_identityproxymodel_inherits(void* self, const char* classname);
 ///
 /// ``` QIdentityProxyModel* self ```
 void q_identityproxymodel_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QIdentityProxyModel* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_identityproxymodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

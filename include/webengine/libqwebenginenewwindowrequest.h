@@ -12,13 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqrect.h"
-#include <string.h>
-#include "../libqurl.h"
-#include "libqwebenginepage.h"
-
 /// https://doc.qt.io/qt-6/qwebenginenewwindowrequest.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
@@ -147,7 +140,7 @@ QThread* q_webenginenewwindowrequest_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QWebEngineNewWindowRequest* self, QThread* thread ```
-void q_webenginenewwindowrequest_move_to_thread(void* self, void* thread);
+bool q_webenginenewwindowrequest_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -162,6 +155,13 @@ int32_t q_webenginenewwindowrequest_start_timer(void* self, int interval);
 ///
 /// ``` QWebEngineNewWindowRequest* self, int id ```
 void q_webenginenewwindowrequest_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QWebEngineNewWindowRequest* self, enum Qt__TimerId id ```
+void q_webenginenewwindowrequest_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -302,6 +302,13 @@ bool q_webenginenewwindowrequest_inherits(void* self, const char* classname);
 ///
 /// ``` QWebEngineNewWindowRequest* self ```
 void q_webenginenewwindowrequest_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QWebEngineNewWindowRequest* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_webenginenewwindowrequest_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

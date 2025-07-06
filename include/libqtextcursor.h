@@ -12,15 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqimage.h"
-#include <string.h>
-#include "libqtextobject.h"
-#include "libqtextformat.h"
-#include "libqtextdocument.h"
-#include "libqtextdocumentfragment.h"
-#include "libqtextlist.h"
-#include "libqtexttable.h"
-
 /// https://doc.qt.io/qt-6/qtextcursor.html
 
 /// q_textcursor_new constructs a new QTextCursor object.

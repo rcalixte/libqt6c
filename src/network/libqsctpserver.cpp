@@ -340,7 +340,7 @@ void QSctpServer_OnCustomEvent(QSctpServer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSctpServer_ConnectNotify(QSctpServer* self, QMetaMethod* signal) {
+void QSctpServer_ConnectNotify(QSctpServer* self, const QMetaMethod* signal) {
     auto* vqsctpserver = dynamic_cast<VirtualQSctpServer*>(self);
     if (vqsctpserver && vqsctpserver->isVirtualQSctpServer) {
         vqsctpserver->connectNotify(*signal);
@@ -350,7 +350,7 @@ void QSctpServer_ConnectNotify(QSctpServer* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSctpServer_QBaseConnectNotify(QSctpServer* self, QMetaMethod* signal) {
+void QSctpServer_QBaseConnectNotify(QSctpServer* self, const QMetaMethod* signal) {
     auto* vqsctpserver = dynamic_cast<VirtualQSctpServer*>(self);
     if (vqsctpserver && vqsctpserver->isVirtualQSctpServer) {
         vqsctpserver->setQSctpServer_ConnectNotify_IsBase(true);
@@ -369,7 +369,7 @@ void QSctpServer_OnConnectNotify(QSctpServer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSctpServer_DisconnectNotify(QSctpServer* self, QMetaMethod* signal) {
+void QSctpServer_DisconnectNotify(QSctpServer* self, const QMetaMethod* signal) {
     auto* vqsctpserver = dynamic_cast<VirtualQSctpServer*>(self);
     if (vqsctpserver && vqsctpserver->isVirtualQSctpServer) {
         vqsctpserver->disconnectNotify(*signal);
@@ -379,7 +379,7 @@ void QSctpServer_DisconnectNotify(QSctpServer* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSctpServer_QBaseDisconnectNotify(QSctpServer* self, QMetaMethod* signal) {
+void QSctpServer_QBaseDisconnectNotify(QSctpServer* self, const QMetaMethod* signal) {
     auto* vqsctpserver = dynamic_cast<VirtualQSctpServer*>(self);
     if (vqsctpserver && vqsctpserver->isVirtualQSctpServer) {
         vqsctpserver->setQSctpServer_DisconnectNotify_IsBase(true);
@@ -514,7 +514,7 @@ void QSctpServer_OnReceivers(const QSctpServer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSctpServer_IsSignalConnected(const QSctpServer* self, QMetaMethod* signal) {
+bool QSctpServer_IsSignalConnected(const QSctpServer* self, const QMetaMethod* signal) {
     auto* vqsctpserver = const_cast<VirtualQSctpServer*>(dynamic_cast<const VirtualQSctpServer*>(self));
     if (vqsctpserver && vqsctpserver->isVirtualQSctpServer) {
         return vqsctpserver->isSignalConnected(*signal);
@@ -524,7 +524,7 @@ bool QSctpServer_IsSignalConnected(const QSctpServer* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QSctpServer_QBaseIsSignalConnected(const QSctpServer* self, QMetaMethod* signal) {
+bool QSctpServer_QBaseIsSignalConnected(const QSctpServer* self, const QMetaMethod* signal) {
     auto* vqsctpserver = const_cast<VirtualQSctpServer*>(dynamic_cast<const VirtualQSctpServer*>(self));
     if (vqsctpserver && vqsctpserver->isVirtualQSctpServer) {
         vqsctpserver->setQSctpServer_IsSignalConnected_IsBase(true);

@@ -121,12 +121,12 @@ class VirtualQGraphicsScene final : public QGraphicsScene {
     mutable bool qgraphicsscene_issignalconnected_isbase = false;
 
   public:
-    VirtualQGraphicsScene() : QGraphicsScene(){};
-    VirtualQGraphicsScene(const QRectF& sceneRect) : QGraphicsScene(sceneRect){};
-    VirtualQGraphicsScene(qreal x, qreal y, qreal width, qreal height) : QGraphicsScene(x, y, width, height){};
-    VirtualQGraphicsScene(QObject* parent) : QGraphicsScene(parent){};
-    VirtualQGraphicsScene(const QRectF& sceneRect, QObject* parent) : QGraphicsScene(sceneRect, parent){};
-    VirtualQGraphicsScene(qreal x, qreal y, qreal width, qreal height, QObject* parent) : QGraphicsScene(x, y, width, height, parent){};
+    VirtualQGraphicsScene() : QGraphicsScene() {};
+    VirtualQGraphicsScene(const QRectF& sceneRect) : QGraphicsScene(sceneRect) {};
+    VirtualQGraphicsScene(qreal x, qreal y, qreal width, qreal height) : QGraphicsScene(x, y, width, height) {};
+    VirtualQGraphicsScene(QObject* parent) : QGraphicsScene(parent) {};
+    VirtualQGraphicsScene(const QRectF& sceneRect, QObject* parent) : QGraphicsScene(sceneRect, parent) {};
+    VirtualQGraphicsScene(qreal x, qreal y, qreal width, qreal height, QObject* parent) : QGraphicsScene(x, y, width, height, parent) {};
 
     ~VirtualQGraphicsScene() {
         qgraphicsscene_metacall_callback = nullptr;
@@ -736,10 +736,10 @@ class VirtualQGraphicsScene final : public QGraphicsScene {
     friend void QGraphicsScene_QBaseWheelEvent(QGraphicsScene* self, QGraphicsSceneWheelEvent* event);
     friend void QGraphicsScene_InputMethodEvent(QGraphicsScene* self, QInputMethodEvent* event);
     friend void QGraphicsScene_QBaseInputMethodEvent(QGraphicsScene* self, QInputMethodEvent* event);
-    friend void QGraphicsScene_DrawBackground(QGraphicsScene* self, QPainter* painter, QRectF* rect);
-    friend void QGraphicsScene_QBaseDrawBackground(QGraphicsScene* self, QPainter* painter, QRectF* rect);
-    friend void QGraphicsScene_DrawForeground(QGraphicsScene* self, QPainter* painter, QRectF* rect);
-    friend void QGraphicsScene_QBaseDrawForeground(QGraphicsScene* self, QPainter* painter, QRectF* rect);
+    friend void QGraphicsScene_DrawBackground(QGraphicsScene* self, QPainter* painter, const QRectF* rect);
+    friend void QGraphicsScene_QBaseDrawBackground(QGraphicsScene* self, QPainter* painter, const QRectF* rect);
+    friend void QGraphicsScene_DrawForeground(QGraphicsScene* self, QPainter* painter, const QRectF* rect);
+    friend void QGraphicsScene_QBaseDrawForeground(QGraphicsScene* self, QPainter* painter, const QRectF* rect);
     friend bool QGraphicsScene_FocusNextPrevChild(QGraphicsScene* self, bool next);
     friend bool QGraphicsScene_QBaseFocusNextPrevChild(QGraphicsScene* self, bool next);
     friend void QGraphicsScene_TimerEvent(QGraphicsScene* self, QTimerEvent* event);
@@ -748,18 +748,18 @@ class VirtualQGraphicsScene final : public QGraphicsScene {
     friend void QGraphicsScene_QBaseChildEvent(QGraphicsScene* self, QChildEvent* event);
     friend void QGraphicsScene_CustomEvent(QGraphicsScene* self, QEvent* event);
     friend void QGraphicsScene_QBaseCustomEvent(QGraphicsScene* self, QEvent* event);
-    friend void QGraphicsScene_ConnectNotify(QGraphicsScene* self, QMetaMethod* signal);
-    friend void QGraphicsScene_QBaseConnectNotify(QGraphicsScene* self, QMetaMethod* signal);
-    friend void QGraphicsScene_DisconnectNotify(QGraphicsScene* self, QMetaMethod* signal);
-    friend void QGraphicsScene_QBaseDisconnectNotify(QGraphicsScene* self, QMetaMethod* signal);
+    friend void QGraphicsScene_ConnectNotify(QGraphicsScene* self, const QMetaMethod* signal);
+    friend void QGraphicsScene_QBaseConnectNotify(QGraphicsScene* self, const QMetaMethod* signal);
+    friend void QGraphicsScene_DisconnectNotify(QGraphicsScene* self, const QMetaMethod* signal);
+    friend void QGraphicsScene_QBaseDisconnectNotify(QGraphicsScene* self, const QMetaMethod* signal);
     friend QObject* QGraphicsScene_Sender(const QGraphicsScene* self);
     friend QObject* QGraphicsScene_QBaseSender(const QGraphicsScene* self);
     friend int QGraphicsScene_SenderSignalIndex(const QGraphicsScene* self);
     friend int QGraphicsScene_QBaseSenderSignalIndex(const QGraphicsScene* self);
     friend int QGraphicsScene_Receivers(const QGraphicsScene* self, const char* signal);
     friend int QGraphicsScene_QBaseReceivers(const QGraphicsScene* self, const char* signal);
-    friend bool QGraphicsScene_IsSignalConnected(const QGraphicsScene* self, QMetaMethod* signal);
-    friend bool QGraphicsScene_QBaseIsSignalConnected(const QGraphicsScene* self, QMetaMethod* signal);
+    friend bool QGraphicsScene_IsSignalConnected(const QGraphicsScene* self, const QMetaMethod* signal);
+    friend bool QGraphicsScene_QBaseIsSignalConnected(const QGraphicsScene* self, const QMetaMethod* signal);
 };
 
 #endif

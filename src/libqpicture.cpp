@@ -16,7 +16,7 @@ QPicture* QPicture_new() {
     return new VirtualQPicture();
 }
 
-QPicture* QPicture_new2(QPicture* param1) {
+QPicture* QPicture_new2(const QPicture* param1) {
     return new VirtualQPicture(*param1);
 }
 
@@ -44,7 +44,7 @@ bool QPicture_Load(QPicture* self, QIODevice* dev) {
     return self->load(dev);
 }
 
-bool QPicture_LoadWithFileName(QPicture* self, libqt_string fileName) {
+bool QPicture_LoadWithFileName(QPicture* self, const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return self->load(fileName_QString);
 }
@@ -53,7 +53,7 @@ bool QPicture_Save(QPicture* self, QIODevice* dev) {
     return self->save(dev);
 }
 
-bool QPicture_SaveWithFileName(QPicture* self, libqt_string fileName) {
+bool QPicture_SaveWithFileName(QPicture* self, const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return self->save(fileName_QString);
 }
@@ -62,11 +62,11 @@ QRect* QPicture_BoundingRect(const QPicture* self) {
     return new QRect(self->boundingRect());
 }
 
-void QPicture_SetBoundingRect(QPicture* self, QRect* r) {
+void QPicture_SetBoundingRect(QPicture* self, const QRect* r) {
     self->setBoundingRect(*r);
 }
 
-void QPicture_OperatorAssign(QPicture* self, QPicture* p) {
+void QPicture_OperatorAssign(QPicture* self, const QPicture* p) {
     self->operator=(*p);
 }
 
@@ -282,6 +282,35 @@ void QPicture_OnSharedPainter(const QPicture* self, intptr_t slot) {
     auto* vqpicture = const_cast<VirtualQPicture*>(dynamic_cast<const VirtualQPicture*>(self));
     if (vqpicture && vqpicture->isVirtualQPicture) {
         vqpicture->setQPicture_SharedPainter_Callback(reinterpret_cast<VirtualQPicture::QPicture_SharedPainter_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QPicture_GetDecodedMetricF(const QPicture* self, int metricA, int metricB) {
+    auto* vqpicture = const_cast<VirtualQPicture*>(dynamic_cast<const VirtualQPicture*>(self));
+    if (vqpicture && vqpicture->isVirtualQPicture) {
+        return vqpicture->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQPicture*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QPicture_QBaseGetDecodedMetricF(const QPicture* self, int metricA, int metricB) {
+    auto* vqpicture = const_cast<VirtualQPicture*>(dynamic_cast<const VirtualQPicture*>(self));
+    if (vqpicture && vqpicture->isVirtualQPicture) {
+        vqpicture->setQPicture_GetDecodedMetricF_IsBase(true);
+        return vqpicture->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQPicture*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QPicture_OnGetDecodedMetricF(const QPicture* self, intptr_t slot) {
+    auto* vqpicture = const_cast<VirtualQPicture*>(dynamic_cast<const VirtualQPicture*>(self));
+    if (vqpicture && vqpicture->isVirtualQPicture) {
+        vqpicture->setQPicture_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQPicture::QPicture_GetDecodedMetricF_Callback>(slot));
     }
 }
 

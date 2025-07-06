@@ -28,7 +28,7 @@ QMovie* QMovie_new2(QIODevice* device) {
     return new VirtualQMovie(device);
 }
 
-QMovie* QMovie_new3(libqt_string fileName) {
+QMovie* QMovie_new3(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQMovie(fileName_QString);
 }
@@ -37,23 +37,23 @@ QMovie* QMovie_new4(QObject* parent) {
     return new VirtualQMovie(parent);
 }
 
-QMovie* QMovie_new5(QIODevice* device, libqt_string format) {
+QMovie* QMovie_new5(QIODevice* device, const libqt_string format) {
     QByteArray format_QByteArray(format.data, format.len);
     return new VirtualQMovie(device, format_QByteArray);
 }
 
-QMovie* QMovie_new6(QIODevice* device, libqt_string format, QObject* parent) {
+QMovie* QMovie_new6(QIODevice* device, const libqt_string format, QObject* parent) {
     QByteArray format_QByteArray(format.data, format.len);
     return new VirtualQMovie(device, format_QByteArray, parent);
 }
 
-QMovie* QMovie_new7(libqt_string fileName, libqt_string format) {
+QMovie* QMovie_new7(const libqt_string fileName, const libqt_string format) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QByteArray format_QByteArray(format.data, format.len);
     return new VirtualQMovie(fileName_QString, format_QByteArray);
 }
 
-QMovie* QMovie_new8(libqt_string fileName, libqt_string format, QObject* parent) {
+QMovie* QMovie_new8(const libqt_string fileName, const libqt_string format, QObject* parent) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QByteArray format_QByteArray(format.data, format.len);
     return new VirtualQMovie(fileName_QString, format_QByteArray, parent);
@@ -110,8 +110,8 @@ libqt_string QMovie_Tr(const char* s) {
 libqt_list /* of libqt_string */ QMovie_SupportedFormats() {
     QList<QByteArray> _ret = QMovie::supportedFormats();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QByteArray _lv_qb = _ret[i];
         libqt_string _lv_str;
         _lv_str.len = _lv_qb.length();
@@ -121,7 +121,7 @@ libqt_list /* of libqt_string */ QMovie_SupportedFormats() {
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -134,7 +134,7 @@ QIODevice* QMovie_Device(const QMovie* self) {
     return self->device();
 }
 
-void QMovie_SetFileName(QMovie* self, libqt_string fileName) {
+void QMovie_SetFileName(QMovie* self, const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     self->setFileName(fileName_QString);
 }
@@ -151,7 +151,7 @@ libqt_string QMovie_FileName(const QMovie* self) {
     return _str;
 }
 
-void QMovie_SetFormat(QMovie* self, libqt_string format) {
+void QMovie_SetFormat(QMovie* self, const libqt_string format) {
     QByteArray format_QByteArray(format.data, format.len);
     self->setFormat(format_QByteArray);
 }
@@ -166,7 +166,7 @@ libqt_string QMovie_Format(const QMovie* self) {
     return _str;
 }
 
-void QMovie_SetBackgroundColor(QMovie* self, QColor* color) {
+void QMovie_SetBackgroundColor(QMovie* self, const QColor* color) {
     self->setBackgroundColor(*color);
 }
 
@@ -238,7 +238,7 @@ QSize* QMovie_ScaledSize(QMovie* self) {
     return new QSize(self->scaledSize());
 }
 
-void QMovie_SetScaledSize(QMovie* self, QSize* size) {
+void QMovie_SetScaledSize(QMovie* self, const QSize* size) {
     self->setScaledSize(*size);
 }
 
@@ -261,7 +261,7 @@ void QMovie_Connect_Started(QMovie* self, intptr_t slot) {
     });
 }
 
-void QMovie_Resized(QMovie* self, QSize* size) {
+void QMovie_Resized(QMovie* self, const QSize* size) {
     self->resized(*size);
 }
 
@@ -275,7 +275,7 @@ void QMovie_Connect_Resized(QMovie* self, intptr_t slot) {
     });
 }
 
-void QMovie_Updated(QMovie* self, QRect* rect) {
+void QMovie_Updated(QMovie* self, const QRect* rect) {
     self->updated(*rect);
 }
 
@@ -526,7 +526,7 @@ void QMovie_OnCustomEvent(QMovie* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMovie_ConnectNotify(QMovie* self, QMetaMethod* signal) {
+void QMovie_ConnectNotify(QMovie* self, const QMetaMethod* signal) {
     auto* vqmovie = dynamic_cast<VirtualQMovie*>(self);
     if (vqmovie && vqmovie->isVirtualQMovie) {
         vqmovie->connectNotify(*signal);
@@ -536,7 +536,7 @@ void QMovie_ConnectNotify(QMovie* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QMovie_QBaseConnectNotify(QMovie* self, QMetaMethod* signal) {
+void QMovie_QBaseConnectNotify(QMovie* self, const QMetaMethod* signal) {
     auto* vqmovie = dynamic_cast<VirtualQMovie*>(self);
     if (vqmovie && vqmovie->isVirtualQMovie) {
         vqmovie->setQMovie_ConnectNotify_IsBase(true);
@@ -555,7 +555,7 @@ void QMovie_OnConnectNotify(QMovie* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMovie_DisconnectNotify(QMovie* self, QMetaMethod* signal) {
+void QMovie_DisconnectNotify(QMovie* self, const QMetaMethod* signal) {
     auto* vqmovie = dynamic_cast<VirtualQMovie*>(self);
     if (vqmovie && vqmovie->isVirtualQMovie) {
         vqmovie->disconnectNotify(*signal);
@@ -565,7 +565,7 @@ void QMovie_DisconnectNotify(QMovie* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QMovie_QBaseDisconnectNotify(QMovie* self, QMetaMethod* signal) {
+void QMovie_QBaseDisconnectNotify(QMovie* self, const QMetaMethod* signal) {
     auto* vqmovie = dynamic_cast<VirtualQMovie*>(self);
     if (vqmovie && vqmovie->isVirtualQMovie) {
         vqmovie->setQMovie_DisconnectNotify_IsBase(true);
@@ -671,7 +671,7 @@ void QMovie_OnReceivers(const QMovie* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QMovie_IsSignalConnected(const QMovie* self, QMetaMethod* signal) {
+bool QMovie_IsSignalConnected(const QMovie* self, const QMetaMethod* signal) {
     auto* vqmovie = const_cast<VirtualQMovie*>(dynamic_cast<const VirtualQMovie*>(self));
     if (vqmovie && vqmovie->isVirtualQMovie) {
         return vqmovie->isSignalConnected(*signal);
@@ -681,7 +681,7 @@ bool QMovie_IsSignalConnected(const QMovie* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QMovie_QBaseIsSignalConnected(const QMovie* self, QMetaMethod* signal) {
+bool QMovie_QBaseIsSignalConnected(const QMovie* self, const QMetaMethod* signal) {
     auto* vqmovie = const_cast<VirtualQMovie*>(dynamic_cast<const VirtualQMovie*>(self));
     if (vqmovie && vqmovie->isVirtualQMovie) {
         vqmovie->setQMovie_IsSignalConnected_IsBase(true);

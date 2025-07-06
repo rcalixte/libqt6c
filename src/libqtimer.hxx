@@ -61,8 +61,8 @@ class VirtualQTimer final : public QTimer {
     mutable bool qtimer_issignalconnected_isbase = false;
 
   public:
-    VirtualQTimer() : QTimer(){};
-    VirtualQTimer(QObject* parent) : QTimer(parent){};
+    VirtualQTimer() : QTimer() {};
+    VirtualQTimer(QObject* parent) : QTimer(parent) {};
 
     ~VirtualQTimer() {
         qtimer_metacall_callback = nullptr;
@@ -294,18 +294,18 @@ class VirtualQTimer final : public QTimer {
     friend void QTimer_QBaseChildEvent(QTimer* self, QChildEvent* event);
     friend void QTimer_CustomEvent(QTimer* self, QEvent* event);
     friend void QTimer_QBaseCustomEvent(QTimer* self, QEvent* event);
-    friend void QTimer_ConnectNotify(QTimer* self, QMetaMethod* signal);
-    friend void QTimer_QBaseConnectNotify(QTimer* self, QMetaMethod* signal);
-    friend void QTimer_DisconnectNotify(QTimer* self, QMetaMethod* signal);
-    friend void QTimer_QBaseDisconnectNotify(QTimer* self, QMetaMethod* signal);
+    friend void QTimer_ConnectNotify(QTimer* self, const QMetaMethod* signal);
+    friend void QTimer_QBaseConnectNotify(QTimer* self, const QMetaMethod* signal);
+    friend void QTimer_DisconnectNotify(QTimer* self, const QMetaMethod* signal);
+    friend void QTimer_QBaseDisconnectNotify(QTimer* self, const QMetaMethod* signal);
     friend QObject* QTimer_Sender(const QTimer* self);
     friend QObject* QTimer_QBaseSender(const QTimer* self);
     friend int QTimer_SenderSignalIndex(const QTimer* self);
     friend int QTimer_QBaseSenderSignalIndex(const QTimer* self);
     friend int QTimer_Receivers(const QTimer* self, const char* signal);
     friend int QTimer_QBaseReceivers(const QTimer* self, const char* signal);
-    friend bool QTimer_IsSignalConnected(const QTimer* self, QMetaMethod* signal);
-    friend bool QTimer_QBaseIsSignalConnected(const QTimer* self, QMetaMethod* signal);
+    friend bool QTimer_IsSignalConnected(const QTimer* self, const QMetaMethod* signal);
+    friend bool QTimer_QBaseIsSignalConnected(const QTimer* self, const QMetaMethod* signal);
 };
 
 #endif

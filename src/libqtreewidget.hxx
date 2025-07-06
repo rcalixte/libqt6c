@@ -46,23 +46,23 @@ class VirtualQTreeWidgetItem final : public QTreeWidgetItem {
     mutable bool qtreewidgetitem_emitdatachanged_isbase = false;
 
   public:
-    VirtualQTreeWidgetItem() : QTreeWidgetItem(){};
-    VirtualQTreeWidgetItem(const QStringList& strings) : QTreeWidgetItem(strings){};
-    VirtualQTreeWidgetItem(QTreeWidget* treeview) : QTreeWidgetItem(treeview){};
-    VirtualQTreeWidgetItem(QTreeWidget* treeview, const QStringList& strings) : QTreeWidgetItem(treeview, strings){};
-    VirtualQTreeWidgetItem(QTreeWidget* treeview, QTreeWidgetItem* after) : QTreeWidgetItem(treeview, after){};
-    VirtualQTreeWidgetItem(QTreeWidgetItem* parent) : QTreeWidgetItem(parent){};
-    VirtualQTreeWidgetItem(QTreeWidgetItem* parent, const QStringList& strings) : QTreeWidgetItem(parent, strings){};
-    VirtualQTreeWidgetItem(QTreeWidgetItem* parent, QTreeWidgetItem* after) : QTreeWidgetItem(parent, after){};
-    VirtualQTreeWidgetItem(const QTreeWidgetItem& other) : QTreeWidgetItem(other){};
-    VirtualQTreeWidgetItem(int typeVal) : QTreeWidgetItem(typeVal){};
-    VirtualQTreeWidgetItem(const QStringList& strings, int typeVal) : QTreeWidgetItem(strings, typeVal){};
-    VirtualQTreeWidgetItem(QTreeWidget* treeview, int typeVal) : QTreeWidgetItem(treeview, typeVal){};
-    VirtualQTreeWidgetItem(QTreeWidget* treeview, const QStringList& strings, int typeVal) : QTreeWidgetItem(treeview, strings, typeVal){};
-    VirtualQTreeWidgetItem(QTreeWidget* treeview, QTreeWidgetItem* after, int typeVal) : QTreeWidgetItem(treeview, after, typeVal){};
-    VirtualQTreeWidgetItem(QTreeWidgetItem* parent, int typeVal) : QTreeWidgetItem(parent, typeVal){};
-    VirtualQTreeWidgetItem(QTreeWidgetItem* parent, const QStringList& strings, int typeVal) : QTreeWidgetItem(parent, strings, typeVal){};
-    VirtualQTreeWidgetItem(QTreeWidgetItem* parent, QTreeWidgetItem* after, int typeVal) : QTreeWidgetItem(parent, after, typeVal){};
+    VirtualQTreeWidgetItem() : QTreeWidgetItem() {};
+    VirtualQTreeWidgetItem(const QList<QString>& strings) : QTreeWidgetItem(strings) {};
+    VirtualQTreeWidgetItem(QTreeWidget* treeview) : QTreeWidgetItem(treeview) {};
+    VirtualQTreeWidgetItem(QTreeWidget* treeview, const QList<QString>& strings) : QTreeWidgetItem(treeview, strings) {};
+    VirtualQTreeWidgetItem(QTreeWidget* treeview, QTreeWidgetItem* after) : QTreeWidgetItem(treeview, after) {};
+    VirtualQTreeWidgetItem(QTreeWidgetItem* parent) : QTreeWidgetItem(parent) {};
+    VirtualQTreeWidgetItem(QTreeWidgetItem* parent, const QList<QString>& strings) : QTreeWidgetItem(parent, strings) {};
+    VirtualQTreeWidgetItem(QTreeWidgetItem* parent, QTreeWidgetItem* after) : QTreeWidgetItem(parent, after) {};
+    VirtualQTreeWidgetItem(const QTreeWidgetItem& other) : QTreeWidgetItem(other) {};
+    VirtualQTreeWidgetItem(int typeVal) : QTreeWidgetItem(typeVal) {};
+    VirtualQTreeWidgetItem(const QList<QString>& strings, int typeVal) : QTreeWidgetItem(strings, typeVal) {};
+    VirtualQTreeWidgetItem(QTreeWidget* treeview, int typeVal) : QTreeWidgetItem(treeview, typeVal) {};
+    VirtualQTreeWidgetItem(QTreeWidget* treeview, const QList<QString>& strings, int typeVal) : QTreeWidgetItem(treeview, strings, typeVal) {};
+    VirtualQTreeWidgetItem(QTreeWidget* treeview, QTreeWidgetItem* after, int typeVal) : QTreeWidgetItem(treeview, after, typeVal) {};
+    VirtualQTreeWidgetItem(QTreeWidgetItem* parent, int typeVal) : QTreeWidgetItem(parent, typeVal) {};
+    VirtualQTreeWidgetItem(QTreeWidgetItem* parent, const QList<QString>& strings, int typeVal) : QTreeWidgetItem(parent, strings, typeVal) {};
+    VirtualQTreeWidgetItem(QTreeWidgetItem* parent, QTreeWidgetItem* after, int typeVal) : QTreeWidgetItem(parent, after, typeVal) {};
 
     ~VirtualQTreeWidgetItem() {
         qtreewidgetitem_clone_callback = nullptr;
@@ -344,6 +344,7 @@ class VirtualQTreeWidget final : public QTreeWidget {
     using QTreeWidget_SenderSignalIndex_Callback = int (*)();
     using QTreeWidget_Receivers_Callback = int (*)(const QTreeWidget*, const char*);
     using QTreeWidget_IsSignalConnected_Callback = bool (*)(const QTreeWidget*, QMetaMethod*);
+    using QTreeWidget_GetDecodedMetricF_Callback = double (*)(const QTreeWidget*, int, int);
 
   protected:
     // Instance callback storage
@@ -475,6 +476,7 @@ class VirtualQTreeWidget final : public QTreeWidget {
     QTreeWidget_SenderSignalIndex_Callback qtreewidget_sendersignalindex_callback = nullptr;
     QTreeWidget_Receivers_Callback qtreewidget_receivers_callback = nullptr;
     QTreeWidget_IsSignalConnected_Callback qtreewidget_issignalconnected_callback = nullptr;
+    QTreeWidget_GetDecodedMetricF_Callback qtreewidget_getdecodedmetricf_callback = nullptr;
 
     // Instance base flags
     mutable bool qtreewidget_metacall_isbase = false;
@@ -605,10 +607,11 @@ class VirtualQTreeWidget final : public QTreeWidget {
     mutable bool qtreewidget_sendersignalindex_isbase = false;
     mutable bool qtreewidget_receivers_isbase = false;
     mutable bool qtreewidget_issignalconnected_isbase = false;
+    mutable bool qtreewidget_getdecodedmetricf_isbase = false;
 
   public:
-    VirtualQTreeWidget(QWidget* parent) : QTreeWidget(parent){};
-    VirtualQTreeWidget() : QTreeWidget(){};
+    VirtualQTreeWidget(QWidget* parent) : QTreeWidget(parent) {};
+    VirtualQTreeWidget() : QTreeWidget() {};
 
     ~VirtualQTreeWidget() {
         qtreewidget_metacall_callback = nullptr;
@@ -739,6 +742,7 @@ class VirtualQTreeWidget final : public QTreeWidget {
         qtreewidget_sendersignalindex_callback = nullptr;
         qtreewidget_receivers_callback = nullptr;
         qtreewidget_issignalconnected_callback = nullptr;
+        qtreewidget_getdecodedmetricf_callback = nullptr;
     }
 
     // Callback setters
@@ -870,6 +874,7 @@ class VirtualQTreeWidget final : public QTreeWidget {
     inline void setQTreeWidget_SenderSignalIndex_Callback(QTreeWidget_SenderSignalIndex_Callback cb) { qtreewidget_sendersignalindex_callback = cb; }
     inline void setQTreeWidget_Receivers_Callback(QTreeWidget_Receivers_Callback cb) { qtreewidget_receivers_callback = cb; }
     inline void setQTreeWidget_IsSignalConnected_Callback(QTreeWidget_IsSignalConnected_Callback cb) { qtreewidget_issignalconnected_callback = cb; }
+    inline void setQTreeWidget_GetDecodedMetricF_Callback(QTreeWidget_GetDecodedMetricF_Callback cb) { qtreewidget_getdecodedmetricf_callback = cb; }
 
     // Base flag setters
     inline void setQTreeWidget_Metacall_IsBase(bool value) const { qtreewidget_metacall_isbase = value; }
@@ -1000,6 +1005,7 @@ class VirtualQTreeWidget final : public QTreeWidget {
     inline void setQTreeWidget_SenderSignalIndex_IsBase(bool value) const { qtreewidget_sendersignalindex_isbase = value; }
     inline void setQTreeWidget_Receivers_IsBase(bool value) const { qtreewidget_receivers_isbase = value; }
     inline void setQTreeWidget_IsSignalConnected_IsBase(bool value) const { qtreewidget_issignalconnected_isbase = value; }
+    inline void setQTreeWidget_GetDecodedMetricF_IsBase(bool value) const { qtreewidget_getdecodedmetricf_isbase = value; }
 
     // Virtual method for C ABI access and custom callback
     virtual int qt_metacall(QMetaObject::Call param1, int param2, void** param3) override {
@@ -1048,13 +1054,13 @@ class VirtualQTreeWidget final : public QTreeWidget {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QStringList mimeTypes() const override {
+    virtual QList<QString> mimeTypes() const override {
         if (qtreewidget_mimetypes_isbase) {
             qtreewidget_mimetypes_isbase = false;
             return QTreeWidget::mimeTypes();
         } else if (qtreewidget_mimetypes_callback != nullptr) {
             libqt_list /* of libqt_string */ callback_ret = qtreewidget_mimetypes_callback();
-            QStringList callback_ret_QList;
+            QList<QString> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             libqt_string* callback_ret_arr = static_cast<libqt_string*>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -1074,13 +1080,13 @@ class VirtualQTreeWidget final : public QTreeWidget {
             return QTreeWidget::mimeData(items);
         } else if (qtreewidget_mimedata_callback != nullptr) {
             const QList<QTreeWidgetItem*>& items_ret = items;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QTreeWidgetItem** items_arr = static_cast<QTreeWidgetItem**>(malloc(sizeof(QTreeWidgetItem*) * items_ret.length()));
-            for (size_t i = 0; i < items_ret.length(); ++i) {
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QTreeWidgetItem** items_arr = static_cast<QTreeWidgetItem**>(malloc(sizeof(QTreeWidgetItem*) * items_ret.size()));
+            for (size_t i = 0; i < items_ret.size(); ++i) {
                 items_arr[i] = items_ret[i];
             }
             libqt_list items_out;
-            items_out.len = items_ret.length();
+            items_out.len = items_ret.size();
             items_out.data.ptr = static_cast<void*>(items_arr);
             libqt_list /* of QTreeWidgetItem* */ cbval1 = items_out;
 
@@ -1262,13 +1268,13 @@ class VirtualQTreeWidget final : public QTreeWidget {
             // Cast returned reference into pointer
             QModelIndex* cbval2 = const_cast<QModelIndex*>(&bottomRight_ret);
             const QList<int>& roles_ret = roles;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            int* roles_arr = static_cast<int*>(malloc(sizeof(int) * roles_ret.length()));
-            for (size_t i = 0; i < roles_ret.length(); ++i) {
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            int* roles_arr = static_cast<int*>(malloc(sizeof(int) * roles_ret.size()));
+            for (size_t i = 0; i < roles_ret.size(); ++i) {
                 roles_arr[i] = roles_ret[i];
             }
             libqt_list roles_out;
-            roles_out.len = roles_ret.length();
+            roles_out.len = roles_ret.size();
             roles_out.data.ints = roles_arr;
             libqt_list /* of int */ cbval3 = roles_out;
 
@@ -1432,13 +1438,13 @@ class VirtualQTreeWidget final : public QTreeWidget {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QModelIndexList selectedIndexes() const override {
+    virtual QList<QModelIndex> selectedIndexes() const override {
         if (qtreewidget_selectedindexes_isbase) {
             qtreewidget_selectedindexes_isbase = false;
             return QTreeWidget::selectedIndexes();
         } else if (qtreewidget_selectedindexes_callback != nullptr) {
             libqt_list /* of QModelIndex* */ callback_ret = qtreewidget_selectedindexes_callback();
-            QModelIndexList callback_ret_QList;
+            QList<QModelIndex> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             QModelIndex** callback_ret_arr = static_cast<QModelIndex**>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -2911,15 +2917,31 @@ class VirtualQTreeWidget final : public QTreeWidget {
         }
     }
 
+    // Virtual method for C ABI access and custom callback
+    double getDecodedMetricF(QPaintDevice::PaintDeviceMetric metricA, QPaintDevice::PaintDeviceMetric metricB) const {
+        if (qtreewidget_getdecodedmetricf_isbase) {
+            qtreewidget_getdecodedmetricf_isbase = false;
+            return QTreeWidget::getDecodedMetricF(metricA, metricB);
+        } else if (qtreewidget_getdecodedmetricf_callback != nullptr) {
+            int cbval1 = static_cast<int>(metricA);
+            int cbval2 = static_cast<int>(metricB);
+
+            double callback_ret = qtreewidget_getdecodedmetricf_callback(this, cbval1, cbval2);
+            return static_cast<double>(callback_ret);
+        } else {
+            return QTreeWidget::getDecodedMetricF(metricA, metricB);
+        }
+    }
+
     // Friend functions
     friend bool QTreeWidget_Event(QTreeWidget* self, QEvent* e);
     friend bool QTreeWidget_QBaseEvent(QTreeWidget* self, QEvent* e);
     friend libqt_list /* of libqt_string */ QTreeWidget_MimeTypes(const QTreeWidget* self);
     friend libqt_list /* of libqt_string */ QTreeWidget_QBaseMimeTypes(const QTreeWidget* self);
-    friend QMimeData* QTreeWidget_MimeData(const QTreeWidget* self, libqt_list /* of QTreeWidgetItem* */ items);
-    friend QMimeData* QTreeWidget_QBaseMimeData(const QTreeWidget* self, libqt_list /* of QTreeWidgetItem* */ items);
-    friend bool QTreeWidget_DropMimeData(QTreeWidget* self, QTreeWidgetItem* parent, int index, QMimeData* data, int action);
-    friend bool QTreeWidget_QBaseDropMimeData(QTreeWidget* self, QTreeWidgetItem* parent, int index, QMimeData* data, int action);
+    friend QMimeData* QTreeWidget_MimeData(const QTreeWidget* self, const libqt_list /* of QTreeWidgetItem* */ items);
+    friend QMimeData* QTreeWidget_QBaseMimeData(const QTreeWidget* self, const libqt_list /* of QTreeWidgetItem* */ items);
+    friend bool QTreeWidget_DropMimeData(QTreeWidget* self, QTreeWidgetItem* parent, int index, const QMimeData* data, int action);
+    friend bool QTreeWidget_QBaseDropMimeData(QTreeWidget* self, QTreeWidgetItem* parent, int index, const QMimeData* data, int action);
     friend int QTreeWidget_SupportedDropActions(const QTreeWidget* self);
     friend int QTreeWidget_QBaseSupportedDropActions(const QTreeWidget* self);
     friend void QTreeWidget_DropEvent(QTreeWidget* self, QDropEvent* event);
@@ -2928,20 +2950,20 @@ class VirtualQTreeWidget final : public QTreeWidget {
     friend void QTreeWidget_QBaseVerticalScrollbarValueChanged(QTreeWidget* self, int value);
     friend void QTreeWidget_ScrollContentsBy(QTreeWidget* self, int dx, int dy);
     friend void QTreeWidget_QBaseScrollContentsBy(QTreeWidget* self, int dx, int dy);
-    friend void QTreeWidget_RowsInserted(QTreeWidget* self, QModelIndex* parent, int start, int end);
-    friend void QTreeWidget_QBaseRowsInserted(QTreeWidget* self, QModelIndex* parent, int start, int end);
-    friend void QTreeWidget_RowsAboutToBeRemoved(QTreeWidget* self, QModelIndex* parent, int start, int end);
-    friend void QTreeWidget_QBaseRowsAboutToBeRemoved(QTreeWidget* self, QModelIndex* parent, int start, int end);
+    friend void QTreeWidget_RowsInserted(QTreeWidget* self, const QModelIndex* parent, int start, int end);
+    friend void QTreeWidget_QBaseRowsInserted(QTreeWidget* self, const QModelIndex* parent, int start, int end);
+    friend void QTreeWidget_RowsAboutToBeRemoved(QTreeWidget* self, const QModelIndex* parent, int start, int end);
+    friend void QTreeWidget_QBaseRowsAboutToBeRemoved(QTreeWidget* self, const QModelIndex* parent, int start, int end);
     friend QModelIndex* QTreeWidget_MoveCursor(QTreeWidget* self, int cursorAction, int modifiers);
     friend QModelIndex* QTreeWidget_QBaseMoveCursor(QTreeWidget* self, int cursorAction, int modifiers);
     friend int QTreeWidget_HorizontalOffset(const QTreeWidget* self);
     friend int QTreeWidget_QBaseHorizontalOffset(const QTreeWidget* self);
     friend int QTreeWidget_VerticalOffset(const QTreeWidget* self);
     friend int QTreeWidget_QBaseVerticalOffset(const QTreeWidget* self);
-    friend void QTreeWidget_SetSelection(QTreeWidget* self, QRect* rect, int command);
-    friend void QTreeWidget_QBaseSetSelection(QTreeWidget* self, QRect* rect, int command);
-    friend QRegion* QTreeWidget_VisualRegionForSelection(const QTreeWidget* self, QItemSelection* selection);
-    friend QRegion* QTreeWidget_QBaseVisualRegionForSelection(const QTreeWidget* self, QItemSelection* selection);
+    friend void QTreeWidget_SetSelection(QTreeWidget* self, const QRect* rect, int command);
+    friend void QTreeWidget_QBaseSetSelection(QTreeWidget* self, const QRect* rect, int command);
+    friend QRegion* QTreeWidget_VisualRegionForSelection(const QTreeWidget* self, const QItemSelection* selection);
+    friend QRegion* QTreeWidget_QBaseVisualRegionForSelection(const QTreeWidget* self, const QItemSelection* selection);
     friend libqt_list /* of QModelIndex* */ QTreeWidget_SelectedIndexes(const QTreeWidget* self);
     friend libqt_list /* of QModelIndex* */ QTreeWidget_QBaseSelectedIndexes(const QTreeWidget* self);
     friend void QTreeWidget_ChangeEvent(QTreeWidget* self, QEvent* event);
@@ -2950,10 +2972,10 @@ class VirtualQTreeWidget final : public QTreeWidget {
     friend void QTreeWidget_QBaseTimerEvent(QTreeWidget* self, QTimerEvent* event);
     friend void QTreeWidget_PaintEvent(QTreeWidget* self, QPaintEvent* event);
     friend void QTreeWidget_QBasePaintEvent(QTreeWidget* self, QPaintEvent* event);
-    friend void QTreeWidget_DrawRow(const QTreeWidget* self, QPainter* painter, QStyleOptionViewItem* options, QModelIndex* index);
-    friend void QTreeWidget_QBaseDrawRow(const QTreeWidget* self, QPainter* painter, QStyleOptionViewItem* options, QModelIndex* index);
-    friend void QTreeWidget_DrawBranches(const QTreeWidget* self, QPainter* painter, QRect* rect, QModelIndex* index);
-    friend void QTreeWidget_QBaseDrawBranches(const QTreeWidget* self, QPainter* painter, QRect* rect, QModelIndex* index);
+    friend void QTreeWidget_DrawRow(const QTreeWidget* self, QPainter* painter, const QStyleOptionViewItem* options, const QModelIndex* index);
+    friend void QTreeWidget_QBaseDrawRow(const QTreeWidget* self, QPainter* painter, const QStyleOptionViewItem* options, const QModelIndex* index);
+    friend void QTreeWidget_DrawBranches(const QTreeWidget* self, QPainter* painter, const QRect* rect, const QModelIndex* index);
+    friend void QTreeWidget_QBaseDrawBranches(const QTreeWidget* self, QPainter* painter, const QRect* rect, const QModelIndex* index);
     friend void QTreeWidget_MousePressEvent(QTreeWidget* self, QMouseEvent* event);
     friend void QTreeWidget_QBaseMousePressEvent(QTreeWidget* self, QMouseEvent* event);
     friend void QTreeWidget_MouseReleaseEvent(QTreeWidget* self, QMouseEvent* event);
@@ -2976,12 +2998,12 @@ class VirtualQTreeWidget final : public QTreeWidget {
     friend int QTreeWidget_QBaseSizeHintForColumn(const QTreeWidget* self, int column);
     friend void QTreeWidget_HorizontalScrollbarAction(QTreeWidget* self, int action);
     friend void QTreeWidget_QBaseHorizontalScrollbarAction(QTreeWidget* self, int action);
-    friend bool QTreeWidget_IsIndexHidden(const QTreeWidget* self, QModelIndex* index);
-    friend bool QTreeWidget_QBaseIsIndexHidden(const QTreeWidget* self, QModelIndex* index);
-    friend void QTreeWidget_SelectionChanged(QTreeWidget* self, QItemSelection* selected, QItemSelection* deselected);
-    friend void QTreeWidget_QBaseSelectionChanged(QTreeWidget* self, QItemSelection* selected, QItemSelection* deselected);
-    friend void QTreeWidget_CurrentChanged(QTreeWidget* self, QModelIndex* current, QModelIndex* previous);
-    friend void QTreeWidget_QBaseCurrentChanged(QTreeWidget* self, QModelIndex* current, QModelIndex* previous);
+    friend bool QTreeWidget_IsIndexHidden(const QTreeWidget* self, const QModelIndex* index);
+    friend bool QTreeWidget_QBaseIsIndexHidden(const QTreeWidget* self, const QModelIndex* index);
+    friend void QTreeWidget_SelectionChanged(QTreeWidget* self, const QItemSelection* selected, const QItemSelection* deselected);
+    friend void QTreeWidget_QBaseSelectionChanged(QTreeWidget* self, const QItemSelection* selected, const QItemSelection* deselected);
+    friend void QTreeWidget_CurrentChanged(QTreeWidget* self, const QModelIndex* current, const QModelIndex* previous);
+    friend void QTreeWidget_QBaseCurrentChanged(QTreeWidget* self, const QModelIndex* current, const QModelIndex* previous);
     friend void QTreeWidget_UpdateEditorData(QTreeWidget* self);
     friend void QTreeWidget_QBaseUpdateEditorData(QTreeWidget* self);
     friend void QTreeWidget_UpdateEditorGeometries(QTreeWidget* self);
@@ -2996,10 +3018,10 @@ class VirtualQTreeWidget final : public QTreeWidget {
     friend void QTreeWidget_QBaseCommitData(QTreeWidget* self, QWidget* editor);
     friend void QTreeWidget_EditorDestroyed(QTreeWidget* self, QObject* editor);
     friend void QTreeWidget_QBaseEditorDestroyed(QTreeWidget* self, QObject* editor);
-    friend bool QTreeWidget_Edit2(QTreeWidget* self, QModelIndex* index, int trigger, QEvent* event);
-    friend bool QTreeWidget_QBaseEdit2(QTreeWidget* self, QModelIndex* index, int trigger, QEvent* event);
-    friend int QTreeWidget_SelectionCommand(const QTreeWidget* self, QModelIndex* index, QEvent* event);
-    friend int QTreeWidget_QBaseSelectionCommand(const QTreeWidget* self, QModelIndex* index, QEvent* event);
+    friend bool QTreeWidget_Edit2(QTreeWidget* self, const QModelIndex* index, int trigger, QEvent* event);
+    friend bool QTreeWidget_QBaseEdit2(QTreeWidget* self, const QModelIndex* index, int trigger, QEvent* event);
+    friend int QTreeWidget_SelectionCommand(const QTreeWidget* self, const QModelIndex* index, const QEvent* event);
+    friend int QTreeWidget_QBaseSelectionCommand(const QTreeWidget* self, const QModelIndex* index, const QEvent* event);
     friend void QTreeWidget_StartDrag(QTreeWidget* self, int supportedActions);
     friend void QTreeWidget_QBaseStartDrag(QTreeWidget* self, int supportedActions);
     friend void QTreeWidget_InitViewItemOption(const QTreeWidget* self, QStyleOptionViewItem* option);
@@ -3044,8 +3066,8 @@ class VirtualQTreeWidget final : public QTreeWidget {
     friend void QTreeWidget_QBaseShowEvent(QTreeWidget* self, QShowEvent* event);
     friend void QTreeWidget_HideEvent(QTreeWidget* self, QHideEvent* event);
     friend void QTreeWidget_QBaseHideEvent(QTreeWidget* self, QHideEvent* event);
-    friend bool QTreeWidget_NativeEvent(QTreeWidget* self, libqt_string eventType, void* message, intptr_t* result);
-    friend bool QTreeWidget_QBaseNativeEvent(QTreeWidget* self, libqt_string eventType, void* message, intptr_t* result);
+    friend bool QTreeWidget_NativeEvent(QTreeWidget* self, const libqt_string eventType, void* message, intptr_t* result);
+    friend bool QTreeWidget_QBaseNativeEvent(QTreeWidget* self, const libqt_string eventType, void* message, intptr_t* result);
     friend int QTreeWidget_Metric(const QTreeWidget* self, int param1);
     friend int QTreeWidget_QBaseMetric(const QTreeWidget* self, int param1);
     friend void QTreeWidget_InitPainter(const QTreeWidget* self, QPainter* painter);
@@ -3058,10 +3080,10 @@ class VirtualQTreeWidget final : public QTreeWidget {
     friend void QTreeWidget_QBaseChildEvent(QTreeWidget* self, QChildEvent* event);
     friend void QTreeWidget_CustomEvent(QTreeWidget* self, QEvent* event);
     friend void QTreeWidget_QBaseCustomEvent(QTreeWidget* self, QEvent* event);
-    friend void QTreeWidget_ConnectNotify(QTreeWidget* self, QMetaMethod* signal);
-    friend void QTreeWidget_QBaseConnectNotify(QTreeWidget* self, QMetaMethod* signal);
-    friend void QTreeWidget_DisconnectNotify(QTreeWidget* self, QMetaMethod* signal);
-    friend void QTreeWidget_QBaseDisconnectNotify(QTreeWidget* self, QMetaMethod* signal);
+    friend void QTreeWidget_ConnectNotify(QTreeWidget* self, const QMetaMethod* signal);
+    friend void QTreeWidget_QBaseConnectNotify(QTreeWidget* self, const QMetaMethod* signal);
+    friend void QTreeWidget_DisconnectNotify(QTreeWidget* self, const QMetaMethod* signal);
+    friend void QTreeWidget_QBaseDisconnectNotify(QTreeWidget* self, const QMetaMethod* signal);
     friend void QTreeWidget_ColumnResized(QTreeWidget* self, int column, int oldSize, int newSize);
     friend void QTreeWidget_QBaseColumnResized(QTreeWidget* self, int column, int oldSize, int newSize);
     friend void QTreeWidget_ColumnCountChanged(QTreeWidget* self, int oldCount, int newCount);
@@ -3070,14 +3092,14 @@ class VirtualQTreeWidget final : public QTreeWidget {
     friend void QTreeWidget_QBaseColumnMoved(QTreeWidget* self);
     friend void QTreeWidget_Reexpand(QTreeWidget* self);
     friend void QTreeWidget_QBaseReexpand(QTreeWidget* self);
-    friend void QTreeWidget_RowsRemoved(QTreeWidget* self, QModelIndex* parent, int first, int last);
-    friend void QTreeWidget_QBaseRowsRemoved(QTreeWidget* self, QModelIndex* parent, int first, int last);
-    friend void QTreeWidget_DrawTree(const QTreeWidget* self, QPainter* painter, QRegion* region);
-    friend void QTreeWidget_QBaseDrawTree(const QTreeWidget* self, QPainter* painter, QRegion* region);
-    friend int QTreeWidget_IndexRowSizeHint(const QTreeWidget* self, QModelIndex* index);
-    friend int QTreeWidget_QBaseIndexRowSizeHint(const QTreeWidget* self, QModelIndex* index);
-    friend int QTreeWidget_RowHeight(const QTreeWidget* self, QModelIndex* index);
-    friend int QTreeWidget_QBaseRowHeight(const QTreeWidget* self, QModelIndex* index);
+    friend void QTreeWidget_RowsRemoved(QTreeWidget* self, const QModelIndex* parent, int first, int last);
+    friend void QTreeWidget_QBaseRowsRemoved(QTreeWidget* self, const QModelIndex* parent, int first, int last);
+    friend void QTreeWidget_DrawTree(const QTreeWidget* self, QPainter* painter, const QRegion* region);
+    friend void QTreeWidget_QBaseDrawTree(const QTreeWidget* self, QPainter* painter, const QRegion* region);
+    friend int QTreeWidget_IndexRowSizeHint(const QTreeWidget* self, const QModelIndex* index);
+    friend int QTreeWidget_QBaseIndexRowSizeHint(const QTreeWidget* self, const QModelIndex* index);
+    friend int QTreeWidget_RowHeight(const QTreeWidget* self, const QModelIndex* index);
+    friend int QTreeWidget_QBaseRowHeight(const QTreeWidget* self, const QModelIndex* index);
     friend int QTreeWidget_State(const QTreeWidget* self);
     friend int QTreeWidget_QBaseState(const QTreeWidget* self);
     friend void QTreeWidget_SetState(QTreeWidget* self, int state);
@@ -3086,8 +3108,8 @@ class VirtualQTreeWidget final : public QTreeWidget {
     friend void QTreeWidget_QBaseScheduleDelayedItemsLayout(QTreeWidget* self);
     friend void QTreeWidget_ExecuteDelayedItemsLayout(QTreeWidget* self);
     friend void QTreeWidget_QBaseExecuteDelayedItemsLayout(QTreeWidget* self);
-    friend void QTreeWidget_SetDirtyRegion(QTreeWidget* self, QRegion* region);
-    friend void QTreeWidget_QBaseSetDirtyRegion(QTreeWidget* self, QRegion* region);
+    friend void QTreeWidget_SetDirtyRegion(QTreeWidget* self, const QRegion* region);
+    friend void QTreeWidget_QBaseSetDirtyRegion(QTreeWidget* self, const QRegion* region);
     friend void QTreeWidget_ScrollDirtyRegion(QTreeWidget* self, int dx, int dy);
     friend void QTreeWidget_QBaseScrollDirtyRegion(QTreeWidget* self, int dx, int dy);
     friend QPoint* QTreeWidget_DirtyRegionOffset(const QTreeWidget* self);
@@ -3122,8 +3144,10 @@ class VirtualQTreeWidget final : public QTreeWidget {
     friend int QTreeWidget_QBaseSenderSignalIndex(const QTreeWidget* self);
     friend int QTreeWidget_Receivers(const QTreeWidget* self, const char* signal);
     friend int QTreeWidget_QBaseReceivers(const QTreeWidget* self, const char* signal);
-    friend bool QTreeWidget_IsSignalConnected(const QTreeWidget* self, QMetaMethod* signal);
-    friend bool QTreeWidget_QBaseIsSignalConnected(const QTreeWidget* self, QMetaMethod* signal);
+    friend bool QTreeWidget_IsSignalConnected(const QTreeWidget* self, const QMetaMethod* signal);
+    friend bool QTreeWidget_QBaseIsSignalConnected(const QTreeWidget* self, const QMetaMethod* signal);
+    friend double QTreeWidget_GetDecodedMetricF(const QTreeWidget* self, int metricA, int metricB);
+    friend double QTreeWidget_QBaseGetDecodedMetricF(const QTreeWidget* self, int metricA, int metricB);
 };
 
 #endif

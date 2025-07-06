@@ -52,7 +52,7 @@ QLabel* QLabel_new2() {
     return new VirtualQLabel();
 }
 
-QLabel* QLabel_new3(libqt_string text) {
+QLabel* QLabel_new3(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQLabel(text_QString);
 }
@@ -61,12 +61,12 @@ QLabel* QLabel_new4(QWidget* parent, int f) {
     return new VirtualQLabel(parent, static_cast<Qt::WindowFlags>(f));
 }
 
-QLabel* QLabel_new5(libqt_string text, QWidget* parent) {
+QLabel* QLabel_new5(const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQLabel(text_QString, parent);
 }
 
-QLabel* QLabel_new6(libqt_string text, QWidget* parent, int f) {
+QLabel* QLabel_new6(const libqt_string text, QWidget* parent, int f) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQLabel(text_QString, parent, static_cast<Qt::WindowFlags>(f));
 }
@@ -247,16 +247,16 @@ int QLabel_SelectionStart(const QLabel* self) {
     return self->selectionStart();
 }
 
-void QLabel_SetText(QLabel* self, libqt_string text) {
+void QLabel_SetText(QLabel* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setText(text_QString);
 }
 
-void QLabel_SetPixmap(QLabel* self, QPixmap* pixmap) {
+void QLabel_SetPixmap(QLabel* self, const QPixmap* pixmap) {
     self->setPixmap(*pixmap);
 }
 
-void QLabel_SetPicture(QLabel* self, QPicture* picture) {
+void QLabel_SetPicture(QLabel* self, const QPicture* picture) {
     self->setPicture(*picture);
 }
 
@@ -276,7 +276,7 @@ void QLabel_Clear(QLabel* self) {
     self->clear();
 }
 
-void QLabel_LinkActivated(QLabel* self, libqt_string link) {
+void QLabel_LinkActivated(QLabel* self, const libqt_string link) {
     QString link_QString = QString::fromUtf8(link.data, link.len);
     self->linkActivated(link_QString);
 }
@@ -297,7 +297,7 @@ void QLabel_Connect_LinkActivated(QLabel* self, intptr_t slot) {
     });
 }
 
-void QLabel_LinkHovered(QLabel* self, libqt_string link) {
+void QLabel_LinkHovered(QLabel* self, const libqt_string link) {
     QString link_QString = QString::fromUtf8(link.data, link.len);
     self->linkHovered(link_QString);
 }
@@ -1358,7 +1358,7 @@ void QLabel_OnHideEvent(QLabel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QLabel_NativeEvent(QLabel* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QLabel_NativeEvent(QLabel* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqlabel = dynamic_cast<VirtualQLabel*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqlabel && vqlabel->isVirtualQLabel) {
@@ -1369,7 +1369,7 @@ bool QLabel_NativeEvent(QLabel* self, libqt_string eventType, void* message, int
 }
 
 // Base class handler implementation
-bool QLabel_QBaseNativeEvent(QLabel* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QLabel_QBaseNativeEvent(QLabel* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqlabel = dynamic_cast<VirtualQLabel*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqlabel && vqlabel->isVirtualQLabel) {
@@ -1679,7 +1679,7 @@ void QLabel_OnCustomEvent(QLabel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLabel_ConnectNotify(QLabel* self, QMetaMethod* signal) {
+void QLabel_ConnectNotify(QLabel* self, const QMetaMethod* signal) {
     auto* vqlabel = dynamic_cast<VirtualQLabel*>(self);
     if (vqlabel && vqlabel->isVirtualQLabel) {
         vqlabel->connectNotify(*signal);
@@ -1689,7 +1689,7 @@ void QLabel_ConnectNotify(QLabel* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QLabel_QBaseConnectNotify(QLabel* self, QMetaMethod* signal) {
+void QLabel_QBaseConnectNotify(QLabel* self, const QMetaMethod* signal) {
     auto* vqlabel = dynamic_cast<VirtualQLabel*>(self);
     if (vqlabel && vqlabel->isVirtualQLabel) {
         vqlabel->setQLabel_ConnectNotify_IsBase(true);
@@ -1708,7 +1708,7 @@ void QLabel_OnConnectNotify(QLabel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLabel_DisconnectNotify(QLabel* self, QMetaMethod* signal) {
+void QLabel_DisconnectNotify(QLabel* self, const QMetaMethod* signal) {
     auto* vqlabel = dynamic_cast<VirtualQLabel*>(self);
     if (vqlabel && vqlabel->isVirtualQLabel) {
         vqlabel->disconnectNotify(*signal);
@@ -1718,7 +1718,7 @@ void QLabel_DisconnectNotify(QLabel* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QLabel_QBaseDisconnectNotify(QLabel* self, QMetaMethod* signal) {
+void QLabel_QBaseDisconnectNotify(QLabel* self, const QMetaMethod* signal) {
     auto* vqlabel = dynamic_cast<VirtualQLabel*>(self);
     if (vqlabel && vqlabel->isVirtualQLabel) {
         vqlabel->setQLabel_DisconnectNotify_IsBase(true);
@@ -1998,7 +1998,7 @@ void QLabel_OnReceivers(const QLabel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QLabel_IsSignalConnected(const QLabel* self, QMetaMethod* signal) {
+bool QLabel_IsSignalConnected(const QLabel* self, const QMetaMethod* signal) {
     auto* vqlabel = const_cast<VirtualQLabel*>(dynamic_cast<const VirtualQLabel*>(self));
     if (vqlabel && vqlabel->isVirtualQLabel) {
         return vqlabel->isSignalConnected(*signal);
@@ -2008,7 +2008,7 @@ bool QLabel_IsSignalConnected(const QLabel* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QLabel_QBaseIsSignalConnected(const QLabel* self, QMetaMethod* signal) {
+bool QLabel_QBaseIsSignalConnected(const QLabel* self, const QMetaMethod* signal) {
     auto* vqlabel = const_cast<VirtualQLabel*>(dynamic_cast<const VirtualQLabel*>(self));
     if (vqlabel && vqlabel->isVirtualQLabel) {
         vqlabel->setQLabel_IsSignalConnected_IsBase(true);
@@ -2023,6 +2023,35 @@ void QLabel_OnIsSignalConnected(const QLabel* self, intptr_t slot) {
     auto* vqlabel = const_cast<VirtualQLabel*>(dynamic_cast<const VirtualQLabel*>(self));
     if (vqlabel && vqlabel->isVirtualQLabel) {
         vqlabel->setQLabel_IsSignalConnected_Callback(reinterpret_cast<VirtualQLabel::QLabel_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QLabel_GetDecodedMetricF(const QLabel* self, int metricA, int metricB) {
+    auto* vqlabel = const_cast<VirtualQLabel*>(dynamic_cast<const VirtualQLabel*>(self));
+    if (vqlabel && vqlabel->isVirtualQLabel) {
+        return vqlabel->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQLabel*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QLabel_QBaseGetDecodedMetricF(const QLabel* self, int metricA, int metricB) {
+    auto* vqlabel = const_cast<VirtualQLabel*>(dynamic_cast<const VirtualQLabel*>(self));
+    if (vqlabel && vqlabel->isVirtualQLabel) {
+        vqlabel->setQLabel_GetDecodedMetricF_IsBase(true);
+        return vqlabel->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQLabel*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QLabel_OnGetDecodedMetricF(const QLabel* self, intptr_t slot) {
+    auto* vqlabel = const_cast<VirtualQLabel*>(dynamic_cast<const VirtualQLabel*>(self));
+    if (vqlabel && vqlabel->isVirtualQLabel) {
+        vqlabel->setQLabel_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQLabel::QLabel_GetDecodedMetricF_Callback>(slot));
     }
 }
 

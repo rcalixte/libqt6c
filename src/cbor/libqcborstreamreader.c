@@ -1,5 +1,6 @@
 #include "libqcborcommon.hpp"
 #include "../libqiodevice.hpp"
+#include <string.h>
 #include "libqcborstreamreader.hpp"
 #include "libqcborstreamreader.h"
 
@@ -183,6 +184,18 @@ bool q_cborstreamreader_leave_container(void* self) {
     return QCborStreamReader_LeaveContainer((QCborStreamReader*)self);
 }
 
+bool q_cborstreamreader_read_and_append_to_string(void* self, const char* dst) {
+    return QCborStreamReader_ReadAndAppendToString((QCborStreamReader*)self, qstring(dst));
+}
+
+bool q_cborstreamreader_read_and_append_to_utf8_string(void* self, char* dst) {
+    return QCborStreamReader_ReadAndAppendToUtf8String((QCborStreamReader*)self, qstring(dst));
+}
+
+bool q_cborstreamreader_read_and_append_to_byte_array(void* self, char* dst) {
+    return QCborStreamReader_ReadAndAppendToByteArray((QCborStreamReader*)self, qstring(dst));
+}
+
 int64_t q_cborstreamreader_current_string_chunk_size(void* self) {
     return QCborStreamReader_CurrentStringChunkSize((QCborStreamReader*)self);
 }
@@ -217,6 +230,27 @@ double q_cborstreamreader_to_double(void* self) {
 
 long long q_cborstreamreader_to_integer(void* self) {
     return QCborStreamReader_ToInteger((QCborStreamReader*)self);
+}
+
+const char* q_cborstreamreader_read_all_string(void* self) {
+    libqt_string _str = QCborStreamReader_ReadAllString((QCborStreamReader*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+char* q_cborstreamreader_read_all_utf8_string(void* self) {
+    libqt_string _str = QCborStreamReader_ReadAllUtf8String((QCborStreamReader*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+char* q_cborstreamreader_read_all_byte_array(void* self) {
+    libqt_string _str = QCborStreamReader_ReadAllByteArray((QCborStreamReader*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
 }
 
 bool q_cborstreamreader_next1(void* self, int maxRecursion) {

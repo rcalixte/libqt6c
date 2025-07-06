@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqdatetime.h"
-#include "libqlocale.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qtimezone.html
 
 /// q_timezone_new constructs a new QTimeZone object.
@@ -25,8 +21,8 @@ QTimeZone* q_timezone_new();
 
 /// q_timezone_new2 constructs a new QTimeZone object.
 ///
-/// ``` const char* ianaId ```
-QTimeZone* q_timezone_new2(const char* ianaId);
+/// ``` enum QTimeZone__Initialization spec ```
+QTimeZone* q_timezone_new2(int64_t spec);
 
 /// q_timezone_new3 constructs a new QTimeZone object.
 ///
@@ -35,23 +31,28 @@ QTimeZone* q_timezone_new3(int offsetSeconds);
 
 /// q_timezone_new4 constructs a new QTimeZone object.
 ///
-/// ``` const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation ```
-QTimeZone* q_timezone_new4(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation);
+/// ``` const char* ianaId ```
+QTimeZone* q_timezone_new4(const char* ianaId);
 
 /// q_timezone_new5 constructs a new QTimeZone object.
 ///
-/// ``` QTimeZone* other ```
-QTimeZone* q_timezone_new5(void* other);
+/// ``` const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation ```
+QTimeZone* q_timezone_new5(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation);
 
 /// q_timezone_new6 constructs a new QTimeZone object.
 ///
-/// ``` const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, enum QLocale__Country territory ```
-QTimeZone* q_timezone_new6(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, int64_t territory);
+/// ``` QTimeZone* other ```
+QTimeZone* q_timezone_new6(void* other);
 
 /// q_timezone_new7 constructs a new QTimeZone object.
 ///
+/// ``` const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, enum QLocale__Country territory ```
+QTimeZone* q_timezone_new7(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, int64_t territory);
+
+/// q_timezone_new8 constructs a new QTimeZone object.
+///
 /// ``` const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, enum QLocale__Country territory, const char* comment ```
-QTimeZone* q_timezone_new7(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, int64_t territory, const char* comment);
+QTimeZone* q_timezone_new8(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, int64_t territory, const char* comment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimezone.html#operator=)
 ///
@@ -67,6 +68,41 @@ void q_timezone_swap(void* self, void* other);
 ///
 /// ``` QTimeZone* self ```
 bool q_timezone_is_valid(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone.html#fromSecondsAheadOfUtc)
+///
+/// ``` int offset ```
+QTimeZone* q_timezone_from_seconds_ahead_of_utc(int offset);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone.html#timeSpec)
+///
+/// ``` QTimeZone* self ```
+int64_t q_timezone_time_spec(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone.html#fixedSecondsAheadOfUtc)
+///
+/// ``` QTimeZone* self ```
+int32_t q_timezone_fixed_seconds_ahead_of_utc(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone.html#isUtcOrFixedOffset)
+///
+/// ``` enum Qt__TimeSpec spec ```
+bool q_timezone_is_utc_or_fixed_offset(int64_t spec);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone.html#isUtcOrFixedOffset)
+///
+/// ``` QTimeZone* self ```
+bool q_timezone_is_utc_or_fixed_offset2(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone.html#asBackendZone)
+///
+/// ``` QTimeZone* self ```
+QTimeZone* q_timezone_as_backend_zone(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone.html#hasAlternativeName)
+///
+/// ``` QTimeZone* self, const char* alias ```
+bool q_timezone_has_alternative_name(void* self, const char* alias);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimezone.html#id)
 ///
@@ -247,6 +283,11 @@ void q_timezone_delete(void* self);
 /// ``` QTimeZone__OffsetData* param1 ```
 QTimeZone__OffsetData* q_timezone__offsetdata_new(void* param1);
 
+/// q_timezone__offsetdata_new2 constructs a new QTimeZone::OffsetData object.
+///
+///
+QTimeZone__OffsetData* q_timezone__offsetdata_new2();
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimezone__offsetdata.html#operator=)
 ///
 /// ``` QTimeZone__OffsetData* self, QTimeZone__OffsetData* param1 ```
@@ -262,9 +303,9 @@ void q_timezone__offsetdata_delete(void* self);
 /// https://doc.qt.io/qt-6/qtimezone.html#types
 
 typedef enum {
-    QTIMEZONE__MINUTCOFFSETSECS = -50400,
-    QTIMEZONE__MAXUTCOFFSETSECS = 50400
-} QTimeZone__;
+    QTIMEZONE_INITIALIZATION_LOCALTIME = 0,
+    QTIMEZONE_INITIALIZATION_UTC = 1
+} QTimeZone__Initialization;
 
 typedef enum {
     QTIMEZONE_TIMETYPE_STANDARDTIME = 0,

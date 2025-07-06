@@ -61,10 +61,10 @@ class VirtualQPieSlice final : public QPieSlice {
     mutable bool qpieslice_issignalconnected_isbase = false;
 
   public:
-    VirtualQPieSlice() : QPieSlice(){};
-    VirtualQPieSlice(QString label, qreal value) : QPieSlice(label, value){};
-    VirtualQPieSlice(QObject* parent) : QPieSlice(parent){};
-    VirtualQPieSlice(QString label, qreal value, QObject* parent) : QPieSlice(label, value, parent){};
+    VirtualQPieSlice() : QPieSlice() {};
+    VirtualQPieSlice(QString label, qreal value) : QPieSlice(label, value) {};
+    VirtualQPieSlice(QObject* parent) : QPieSlice(parent) {};
+    VirtualQPieSlice(QString label, qreal value, QObject* parent) : QPieSlice(label, value, parent) {};
 
     ~VirtualQPieSlice() {
         qpieslice_metacall_callback = nullptr;
@@ -296,18 +296,18 @@ class VirtualQPieSlice final : public QPieSlice {
     friend void QPieSlice_QBaseChildEvent(QPieSlice* self, QChildEvent* event);
     friend void QPieSlice_CustomEvent(QPieSlice* self, QEvent* event);
     friend void QPieSlice_QBaseCustomEvent(QPieSlice* self, QEvent* event);
-    friend void QPieSlice_ConnectNotify(QPieSlice* self, QMetaMethod* signal);
-    friend void QPieSlice_QBaseConnectNotify(QPieSlice* self, QMetaMethod* signal);
-    friend void QPieSlice_DisconnectNotify(QPieSlice* self, QMetaMethod* signal);
-    friend void QPieSlice_QBaseDisconnectNotify(QPieSlice* self, QMetaMethod* signal);
+    friend void QPieSlice_ConnectNotify(QPieSlice* self, const QMetaMethod* signal);
+    friend void QPieSlice_QBaseConnectNotify(QPieSlice* self, const QMetaMethod* signal);
+    friend void QPieSlice_DisconnectNotify(QPieSlice* self, const QMetaMethod* signal);
+    friend void QPieSlice_QBaseDisconnectNotify(QPieSlice* self, const QMetaMethod* signal);
     friend QObject* QPieSlice_Sender(const QPieSlice* self);
     friend QObject* QPieSlice_QBaseSender(const QPieSlice* self);
     friend int QPieSlice_SenderSignalIndex(const QPieSlice* self);
     friend int QPieSlice_QBaseSenderSignalIndex(const QPieSlice* self);
     friend int QPieSlice_Receivers(const QPieSlice* self, const char* signal);
     friend int QPieSlice_QBaseReceivers(const QPieSlice* self, const char* signal);
-    friend bool QPieSlice_IsSignalConnected(const QPieSlice* self, QMetaMethod* signal);
-    friend bool QPieSlice_QBaseIsSignalConnected(const QPieSlice* self, QMetaMethod* signal);
+    friend bool QPieSlice_IsSignalConnected(const QPieSlice* self, const QMetaMethod* signal);
+    friend bool QPieSlice_QBaseIsSignalConnected(const QPieSlice* self, const QMetaMethod* signal);
 };
 
 #endif

@@ -12,28 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractitemdelegate.h"
-#include "libqabstractitemmodel.h"
-#include "libqabstractitemview.h"
-#include "libqabstractscrollarea.h"
-#include "libqevent.h"
-#include "libqframe.h"
-#include "libqitemselectionmodel.h"
-#include "libqmargins.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpaintdevice.h"
-#include "libqpaintengine.h"
-#include "libqpainter.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqstyleoption.h"
-#include "libqvariant.h"
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qcolumnview.html
 
 /// q_columnview_new constructs a new QColumnView object.
@@ -2849,6 +2827,13 @@ QWidget* q_columnview_child_at_with_q_point(void* self, void* p);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+///
+/// ``` QColumnView* self, QPointF* p ```
+QWidget* q_columnview_child_at_with_q_point_f(void* self, void* p);
+
+/// Inherited from QWidget
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
 /// ``` QColumnView* self, enum Qt__WidgetAttribute param1 ```
@@ -3160,7 +3145,7 @@ QThread* q_columnview_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QColumnView* self, QThread* thread ```
-void q_columnview_move_to_thread(void* self, void* thread);
+bool q_columnview_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -3175,6 +3160,13 @@ int32_t q_columnview_start_timer(void* self, int interval);
 ///
 /// ``` QColumnView* self, int id ```
 void q_columnview_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QColumnView* self, enum Qt__TimerId id ```
+void q_columnview_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -3311,6 +3303,13 @@ void q_columnview_delete_later(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QColumnView* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_columnview_move_to_thread2(void* self, void* thread, void* param2);
+
+/// Inherited from QObject
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QColumnView* self, int interval, enum Qt__TimerType timerType ```
@@ -3427,6 +3426,13 @@ int32_t q_columnview_depth(void* self);
 ///
 ///
 double q_columnview_device_pixel_ratio_f_scale();
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_columnview_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6019,6 +6025,33 @@ bool q_columnview_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// ``` QColumnView* self, bool (*slot)(QColumnView*, QMetaMethod*) ```
 void q_columnview_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QColumnView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_columnview_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QColumnView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_columnview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QColumnView* self, double (*slot)(QColumnView*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
+void q_columnview_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///

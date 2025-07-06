@@ -72,12 +72,12 @@ QPlainTextEdit* QPlainTextEdit_new2() {
     return new VirtualQPlainTextEdit();
 }
 
-QPlainTextEdit* QPlainTextEdit_new3(libqt_string text) {
+QPlainTextEdit* QPlainTextEdit_new3(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQPlainTextEdit(text_QString);
 }
 
-QPlainTextEdit* QPlainTextEdit_new4(libqt_string text, QWidget* parent) {
+QPlainTextEdit* QPlainTextEdit_new4(const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQPlainTextEdit(text_QString, parent);
 }
@@ -138,7 +138,7 @@ QTextDocument* QPlainTextEdit_Document(const QPlainTextEdit* self) {
     return self->document();
 }
 
-void QPlainTextEdit_SetPlaceholderText(QPlainTextEdit* self, libqt_string placeholderText) {
+void QPlainTextEdit_SetPlaceholderText(QPlainTextEdit* self, const libqt_string placeholderText) {
     QString placeholderText_QString = QString::fromUtf8(placeholderText.data, placeholderText.len);
     self->setPlaceholderText(placeholderText_QString);
 }
@@ -155,7 +155,7 @@ libqt_string QPlainTextEdit_PlaceholderText(const QPlainTextEdit* self) {
     return _str;
 }
 
-void QPlainTextEdit_SetTextCursor(QPlainTextEdit* self, QTextCursor* cursor) {
+void QPlainTextEdit_SetTextCursor(QPlainTextEdit* self, const QTextCursor* cursor) {
     self->setTextCursor(*cursor);
 }
 
@@ -179,11 +179,11 @@ int QPlainTextEdit_TextInteractionFlags(const QPlainTextEdit* self) {
     return static_cast<int>(self->textInteractionFlags());
 }
 
-void QPlainTextEdit_MergeCurrentCharFormat(QPlainTextEdit* self, QTextCharFormat* modifier) {
+void QPlainTextEdit_MergeCurrentCharFormat(QPlainTextEdit* self, const QTextCharFormat* modifier) {
     self->mergeCurrentCharFormat(*modifier);
 }
 
-void QPlainTextEdit_SetCurrentCharFormat(QPlainTextEdit* self, QTextCharFormat* format) {
+void QPlainTextEdit_SetCurrentCharFormat(QPlainTextEdit* self, const QTextCharFormat* format) {
     self->setCurrentCharFormat(*format);
 }
 
@@ -199,7 +199,7 @@ void QPlainTextEdit_SetTabChangesFocus(QPlainTextEdit* self, bool b) {
     self->setTabChangesFocus(b);
 }
 
-void QPlainTextEdit_SetDocumentTitle(QPlainTextEdit* self, libqt_string title) {
+void QPlainTextEdit_SetDocumentTitle(QPlainTextEdit* self, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     self->setDocumentTitle(title_QString);
 }
@@ -264,12 +264,12 @@ bool QPlainTextEdit_CenterOnScroll(const QPlainTextEdit* self) {
     return self->centerOnScroll();
 }
 
-bool QPlainTextEdit_Find(QPlainTextEdit* self, libqt_string exp) {
+bool QPlainTextEdit_Find(QPlainTextEdit* self, const libqt_string exp) {
     QString exp_QString = QString::fromUtf8(exp.data, exp.len);
     return self->find(exp_QString);
 }
 
-bool QPlainTextEdit_FindWithExp(QPlainTextEdit* self, QRegularExpression* exp) {
+bool QPlainTextEdit_FindWithExp(QPlainTextEdit* self, const QRegularExpression* exp) {
     return self->find(*exp);
 }
 
@@ -293,15 +293,15 @@ QMenu* QPlainTextEdit_CreateStandardContextMenu(QPlainTextEdit* self) {
     return self->createStandardContextMenu();
 }
 
-QMenu* QPlainTextEdit_CreateStandardContextMenuWithPosition(QPlainTextEdit* self, QPoint* position) {
+QMenu* QPlainTextEdit_CreateStandardContextMenuWithPosition(QPlainTextEdit* self, const QPoint* position) {
     return self->createStandardContextMenu(*position);
 }
 
-QTextCursor* QPlainTextEdit_CursorForPosition(const QPlainTextEdit* self, QPoint* pos) {
+QTextCursor* QPlainTextEdit_CursorForPosition(const QPlainTextEdit* self, const QPoint* pos) {
     return new QTextCursor(self->cursorForPosition(*pos));
 }
 
-QRect* QPlainTextEdit_CursorRect(const QPlainTextEdit* self, QTextCursor* cursor) {
+QRect* QPlainTextEdit_CursorRect(const QPlainTextEdit* self, const QTextCursor* cursor) {
     return new QRect(self->cursorRect(*cursor));
 }
 
@@ -309,7 +309,7 @@ QRect* QPlainTextEdit_CursorRect2(const QPlainTextEdit* self) {
     return new QRect(self->cursorRect());
 }
 
-libqt_string QPlainTextEdit_AnchorAt(const QPlainTextEdit* self, QPoint* pos) {
+libqt_string QPlainTextEdit_AnchorAt(const QPlainTextEdit* self, const QPoint* pos) {
     QString _ret = self->anchorAt(*pos);
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
     QByteArray _b = _ret.toUtf8();
@@ -345,7 +345,7 @@ void QPlainTextEdit_SetCursorWidth(QPlainTextEdit* self, int width) {
     self->setCursorWidth(static_cast<int>(width));
 }
 
-void QPlainTextEdit_SetExtraSelections(QPlainTextEdit* self, libqt_list /* of QTextEdit__ExtraSelection* */ selections) {
+void QPlainTextEdit_SetExtraSelections(QPlainTextEdit* self, const libqt_list /* of QTextEdit__ExtraSelection* */ selections) {
     QList<QTextEdit::ExtraSelection> selections_QList;
     selections_QList.reserve(selections.len);
     QTextEdit__ExtraSelection** selections_arr = static_cast<QTextEdit__ExtraSelection**>(selections.data.ptr);
@@ -358,12 +358,12 @@ void QPlainTextEdit_SetExtraSelections(QPlainTextEdit* self, libqt_list /* of QT
 libqt_list /* of QTextEdit__ExtraSelection* */ QPlainTextEdit_ExtraSelections(const QPlainTextEdit* self) {
     QList<QTextEdit::ExtraSelection> _ret = self->extraSelections();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QTextEdit__ExtraSelection** _arr = static_cast<QTextEdit__ExtraSelection**>(malloc(sizeof(QTextEdit__ExtraSelection*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QTextEdit__ExtraSelection** _arr = static_cast<QTextEdit__ExtraSelection**>(malloc(sizeof(QTextEdit__ExtraSelection*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QTextEdit::ExtraSelection(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -388,7 +388,7 @@ QVariant* QPlainTextEdit_InputMethodQuery2(const QPlainTextEdit* self, int query
     return new QVariant(self->inputMethodQuery(static_cast<Qt::InputMethodQuery>(query), *argument));
 }
 
-void QPlainTextEdit_SetPlainText(QPlainTextEdit* self, libqt_string text) {
+void QPlainTextEdit_SetPlainText(QPlainTextEdit* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setPlainText(text_QString);
 }
@@ -421,17 +421,17 @@ void QPlainTextEdit_SelectAll(QPlainTextEdit* self) {
     self->selectAll();
 }
 
-void QPlainTextEdit_InsertPlainText(QPlainTextEdit* self, libqt_string text) {
+void QPlainTextEdit_InsertPlainText(QPlainTextEdit* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->insertPlainText(text_QString);
 }
 
-void QPlainTextEdit_AppendPlainText(QPlainTextEdit* self, libqt_string text) {
+void QPlainTextEdit_AppendPlainText(QPlainTextEdit* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->appendPlainText(text_QString);
 }
 
-void QPlainTextEdit_AppendHtml(QPlainTextEdit* self, libqt_string html) {
+void QPlainTextEdit_AppendHtml(QPlainTextEdit* self, const libqt_string html) {
     QString html_QString = QString::fromUtf8(html.data, html.len);
     self->appendHtml(html_QString);
 }
@@ -517,7 +517,7 @@ void QPlainTextEdit_Connect_CursorPositionChanged(QPlainTextEdit* self, intptr_t
     });
 }
 
-void QPlainTextEdit_UpdateRequest(QPlainTextEdit* self, QRect* rect, int dy) {
+void QPlainTextEdit_UpdateRequest(QPlainTextEdit* self, const QRect* rect, int dy) {
     self->updateRequest(*rect, static_cast<int>(dy));
 }
 
@@ -580,12 +580,12 @@ libqt_string QPlainTextEdit_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-bool QPlainTextEdit_Find2(QPlainTextEdit* self, libqt_string exp, int options) {
+bool QPlainTextEdit_Find2(QPlainTextEdit* self, const libqt_string exp, int options) {
     QString exp_QString = QString::fromUtf8(exp.data, exp.len);
     return self->find(exp_QString, static_cast<QTextDocument::FindFlags>(options));
 }
 
-bool QPlainTextEdit_Find22(QPlainTextEdit* self, QRegularExpression* exp, int options) {
+bool QPlainTextEdit_Find22(QPlainTextEdit* self, const QRegularExpression* exp, int options) {
     return self->find(*exp, static_cast<QTextDocument::FindFlags>(options));
 }
 
@@ -602,7 +602,7 @@ void QPlainTextEdit_ZoomOut1(QPlainTextEdit* self, int range) {
 }
 
 // Derived class handler implementation
-QVariant* QPlainTextEdit_LoadResource(QPlainTextEdit* self, int typeVal, QUrl* name) {
+QVariant* QPlainTextEdit_LoadResource(QPlainTextEdit* self, int typeVal, const QUrl* name) {
     auto* vqplaintextedit = dynamic_cast<VirtualQPlainTextEdit*>(self);
     if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
         return new QVariant(vqplaintextedit->loadResource(static_cast<int>(typeVal), *name));
@@ -612,7 +612,7 @@ QVariant* QPlainTextEdit_LoadResource(QPlainTextEdit* self, int typeVal, QUrl* n
 }
 
 // Base class handler implementation
-QVariant* QPlainTextEdit_QBaseLoadResource(QPlainTextEdit* self, int typeVal, QUrl* name) {
+QVariant* QPlainTextEdit_QBaseLoadResource(QPlainTextEdit* self, int typeVal, const QUrl* name) {
     auto* vqplaintextedit = dynamic_cast<VirtualQPlainTextEdit*>(self);
     if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
         vqplaintextedit->setQPlainTextEdit_LoadResource_IsBase(true);
@@ -1298,7 +1298,7 @@ void QPlainTextEdit_OnCreateMimeDataFromSelection(const QPlainTextEdit* self, in
 }
 
 // Derived class handler implementation
-bool QPlainTextEdit_CanInsertFromMimeData(const QPlainTextEdit* self, QMimeData* source) {
+bool QPlainTextEdit_CanInsertFromMimeData(const QPlainTextEdit* self, const QMimeData* source) {
     auto* vqplaintextedit = const_cast<VirtualQPlainTextEdit*>(dynamic_cast<const VirtualQPlainTextEdit*>(self));
     if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
         return vqplaintextedit->canInsertFromMimeData(source);
@@ -1308,7 +1308,7 @@ bool QPlainTextEdit_CanInsertFromMimeData(const QPlainTextEdit* self, QMimeData*
 }
 
 // Base class handler implementation
-bool QPlainTextEdit_QBaseCanInsertFromMimeData(const QPlainTextEdit* self, QMimeData* source) {
+bool QPlainTextEdit_QBaseCanInsertFromMimeData(const QPlainTextEdit* self, const QMimeData* source) {
     auto* vqplaintextedit = const_cast<VirtualQPlainTextEdit*>(dynamic_cast<const VirtualQPlainTextEdit*>(self));
     if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
         vqplaintextedit->setQPlainTextEdit_CanInsertFromMimeData_IsBase(true);
@@ -1327,7 +1327,7 @@ void QPlainTextEdit_OnCanInsertFromMimeData(const QPlainTextEdit* self, intptr_t
 }
 
 // Derived class handler implementation
-void QPlainTextEdit_InsertFromMimeData(QPlainTextEdit* self, QMimeData* source) {
+void QPlainTextEdit_InsertFromMimeData(QPlainTextEdit* self, const QMimeData* source) {
     auto* vqplaintextedit = dynamic_cast<VirtualQPlainTextEdit*>(self);
     if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
         vqplaintextedit->insertFromMimeData(source);
@@ -1337,7 +1337,7 @@ void QPlainTextEdit_InsertFromMimeData(QPlainTextEdit* self, QMimeData* source) 
 }
 
 // Base class handler implementation
-void QPlainTextEdit_QBaseInsertFromMimeData(QPlainTextEdit* self, QMimeData* source) {
+void QPlainTextEdit_QBaseInsertFromMimeData(QPlainTextEdit* self, const QMimeData* source) {
     auto* vqplaintextedit = dynamic_cast<VirtualQPlainTextEdit*>(self);
     if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
         vqplaintextedit->setQPlainTextEdit_InsertFromMimeData_IsBase(true);
@@ -1414,7 +1414,7 @@ void QPlainTextEdit_OnScrollContentsBy(QPlainTextEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPlainTextEdit_DoSetTextCursor(QPlainTextEdit* self, QTextCursor* cursor) {
+void QPlainTextEdit_DoSetTextCursor(QPlainTextEdit* self, const QTextCursor* cursor) {
     auto* vqplaintextedit = dynamic_cast<VirtualQPlainTextEdit*>(self);
     if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
         vqplaintextedit->doSetTextCursor(*cursor);
@@ -1424,7 +1424,7 @@ void QPlainTextEdit_DoSetTextCursor(QPlainTextEdit* self, QTextCursor* cursor) {
 }
 
 // Base class handler implementation
-void QPlainTextEdit_QBaseDoSetTextCursor(QPlainTextEdit* self, QTextCursor* cursor) {
+void QPlainTextEdit_QBaseDoSetTextCursor(QPlainTextEdit* self, const QTextCursor* cursor) {
     auto* vqplaintextedit = dynamic_cast<VirtualQPlainTextEdit*>(self);
     if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
         vqplaintextedit->setQPlainTextEdit_DoSetTextCursor_IsBase(true);
@@ -1992,7 +1992,7 @@ void QPlainTextEdit_OnHideEvent(QPlainTextEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPlainTextEdit_NativeEvent(QPlainTextEdit* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QPlainTextEdit_NativeEvent(QPlainTextEdit* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqplaintextedit = dynamic_cast<VirtualQPlainTextEdit*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
@@ -2003,7 +2003,7 @@ bool QPlainTextEdit_NativeEvent(QPlainTextEdit* self, libqt_string eventType, vo
 }
 
 // Base class handler implementation
-bool QPlainTextEdit_QBaseNativeEvent(QPlainTextEdit* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QPlainTextEdit_QBaseNativeEvent(QPlainTextEdit* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqplaintextedit = dynamic_cast<VirtualQPlainTextEdit*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
@@ -2197,7 +2197,7 @@ void QPlainTextEdit_OnCustomEvent(QPlainTextEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPlainTextEdit_ConnectNotify(QPlainTextEdit* self, QMetaMethod* signal) {
+void QPlainTextEdit_ConnectNotify(QPlainTextEdit* self, const QMetaMethod* signal) {
     auto* vqplaintextedit = dynamic_cast<VirtualQPlainTextEdit*>(self);
     if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
         vqplaintextedit->connectNotify(*signal);
@@ -2207,7 +2207,7 @@ void QPlainTextEdit_ConnectNotify(QPlainTextEdit* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPlainTextEdit_QBaseConnectNotify(QPlainTextEdit* self, QMetaMethod* signal) {
+void QPlainTextEdit_QBaseConnectNotify(QPlainTextEdit* self, const QMetaMethod* signal) {
     auto* vqplaintextedit = dynamic_cast<VirtualQPlainTextEdit*>(self);
     if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
         vqplaintextedit->setQPlainTextEdit_ConnectNotify_IsBase(true);
@@ -2226,7 +2226,7 @@ void QPlainTextEdit_OnConnectNotify(QPlainTextEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPlainTextEdit_DisconnectNotify(QPlainTextEdit* self, QMetaMethod* signal) {
+void QPlainTextEdit_DisconnectNotify(QPlainTextEdit* self, const QMetaMethod* signal) {
     auto* vqplaintextedit = dynamic_cast<VirtualQPlainTextEdit*>(self);
     if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
         vqplaintextedit->disconnectNotify(*signal);
@@ -2236,7 +2236,7 @@ void QPlainTextEdit_DisconnectNotify(QPlainTextEdit* self, QMetaMethod* signal) 
 }
 
 // Base class handler implementation
-void QPlainTextEdit_QBaseDisconnectNotify(QPlainTextEdit* self, QMetaMethod* signal) {
+void QPlainTextEdit_QBaseDisconnectNotify(QPlainTextEdit* self, const QMetaMethod* signal) {
     auto* vqplaintextedit = dynamic_cast<VirtualQPlainTextEdit*>(self);
     if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
         vqplaintextedit->setQPlainTextEdit_DisconnectNotify_IsBase(true);
@@ -2309,7 +2309,7 @@ void QPlainTextEdit_OnContentOffset(const QPlainTextEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QRectF* QPlainTextEdit_BlockBoundingRect(const QPlainTextEdit* self, QTextBlock* block) {
+QRectF* QPlainTextEdit_BlockBoundingRect(const QPlainTextEdit* self, const QTextBlock* block) {
     auto* vqplaintextedit = const_cast<VirtualQPlainTextEdit*>(dynamic_cast<const VirtualQPlainTextEdit*>(self));
     if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
         return new QRectF(vqplaintextedit->blockBoundingRect(*block));
@@ -2318,7 +2318,7 @@ QRectF* QPlainTextEdit_BlockBoundingRect(const QPlainTextEdit* self, QTextBlock*
 }
 
 // Base class handler implementation
-QRectF* QPlainTextEdit_QBaseBlockBoundingRect(const QPlainTextEdit* self, QTextBlock* block) {
+QRectF* QPlainTextEdit_QBaseBlockBoundingRect(const QPlainTextEdit* self, const QTextBlock* block) {
     auto* vqplaintextedit = const_cast<VirtualQPlainTextEdit*>(dynamic_cast<const VirtualQPlainTextEdit*>(self));
     if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
         vqplaintextedit->setQPlainTextEdit_BlockBoundingRect_IsBase(true);
@@ -2336,7 +2336,7 @@ void QPlainTextEdit_OnBlockBoundingRect(const QPlainTextEdit* self, intptr_t slo
 }
 
 // Derived class handler implementation
-QRectF* QPlainTextEdit_BlockBoundingGeometry(const QPlainTextEdit* self, QTextBlock* block) {
+QRectF* QPlainTextEdit_BlockBoundingGeometry(const QPlainTextEdit* self, const QTextBlock* block) {
     auto* vqplaintextedit = const_cast<VirtualQPlainTextEdit*>(dynamic_cast<const VirtualQPlainTextEdit*>(self));
     if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
         return new QRectF(vqplaintextedit->blockBoundingGeometry(*block));
@@ -2345,7 +2345,7 @@ QRectF* QPlainTextEdit_BlockBoundingGeometry(const QPlainTextEdit* self, QTextBl
 }
 
 // Base class handler implementation
-QRectF* QPlainTextEdit_QBaseBlockBoundingGeometry(const QPlainTextEdit* self, QTextBlock* block) {
+QRectF* QPlainTextEdit_QBaseBlockBoundingGeometry(const QPlainTextEdit* self, const QTextBlock* block) {
     auto* vqplaintextedit = const_cast<VirtualQPlainTextEdit*>(dynamic_cast<const VirtualQPlainTextEdit*>(self));
     if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
         vqplaintextedit->setQPlainTextEdit_BlockBoundingGeometry_IsBase(true);
@@ -2736,7 +2736,7 @@ void QPlainTextEdit_OnReceivers(const QPlainTextEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPlainTextEdit_IsSignalConnected(const QPlainTextEdit* self, QMetaMethod* signal) {
+bool QPlainTextEdit_IsSignalConnected(const QPlainTextEdit* self, const QMetaMethod* signal) {
     auto* vqplaintextedit = const_cast<VirtualQPlainTextEdit*>(dynamic_cast<const VirtualQPlainTextEdit*>(self));
     if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
         return vqplaintextedit->isSignalConnected(*signal);
@@ -2746,7 +2746,7 @@ bool QPlainTextEdit_IsSignalConnected(const QPlainTextEdit* self, QMetaMethod* s
 }
 
 // Base class handler implementation
-bool QPlainTextEdit_QBaseIsSignalConnected(const QPlainTextEdit* self, QMetaMethod* signal) {
+bool QPlainTextEdit_QBaseIsSignalConnected(const QPlainTextEdit* self, const QMetaMethod* signal) {
     auto* vqplaintextedit = const_cast<VirtualQPlainTextEdit*>(dynamic_cast<const VirtualQPlainTextEdit*>(self));
     if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
         vqplaintextedit->setQPlainTextEdit_IsSignalConnected_IsBase(true);
@@ -2761,6 +2761,35 @@ void QPlainTextEdit_OnIsSignalConnected(const QPlainTextEdit* self, intptr_t slo
     auto* vqplaintextedit = const_cast<VirtualQPlainTextEdit*>(dynamic_cast<const VirtualQPlainTextEdit*>(self));
     if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
         vqplaintextedit->setQPlainTextEdit_IsSignalConnected_Callback(reinterpret_cast<VirtualQPlainTextEdit::QPlainTextEdit_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QPlainTextEdit_GetDecodedMetricF(const QPlainTextEdit* self, int metricA, int metricB) {
+    auto* vqplaintextedit = const_cast<VirtualQPlainTextEdit*>(dynamic_cast<const VirtualQPlainTextEdit*>(self));
+    if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
+        return vqplaintextedit->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQPlainTextEdit*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QPlainTextEdit_QBaseGetDecodedMetricF(const QPlainTextEdit* self, int metricA, int metricB) {
+    auto* vqplaintextedit = const_cast<VirtualQPlainTextEdit*>(dynamic_cast<const VirtualQPlainTextEdit*>(self));
+    if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
+        vqplaintextedit->setQPlainTextEdit_GetDecodedMetricF_IsBase(true);
+        return vqplaintextedit->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQPlainTextEdit*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QPlainTextEdit_OnGetDecodedMetricF(const QPlainTextEdit* self, intptr_t slot) {
+    auto* vqplaintextedit = const_cast<VirtualQPlainTextEdit*>(dynamic_cast<const VirtualQPlainTextEdit*>(self));
+    if (vqplaintextedit && vqplaintextedit->isVirtualQPlainTextEdit) {
+        vqplaintextedit->setQPlainTextEdit_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQPlainTextEdit::QPlainTextEdit_GetDecodedMetricF_Callback>(slot));
     }
 }
 
@@ -2820,7 +2849,7 @@ libqt_string QPlainTextDocumentLayout_Tr(const char* s) {
     return _str;
 }
 
-void QPlainTextDocumentLayout_EnsureBlockLayout(const QPlainTextDocumentLayout* self, QTextBlock* block) {
+void QPlainTextDocumentLayout_EnsureBlockLayout(const QPlainTextDocumentLayout* self, const QTextBlock* block) {
     self->ensureBlockLayout(*block);
 }
 
@@ -2861,7 +2890,7 @@ libqt_string QPlainTextDocumentLayout_Tr3(const char* s, const char* c, int n) {
 }
 
 // Derived class handler implementation
-void QPlainTextDocumentLayout_Draw(QPlainTextDocumentLayout* self, QPainter* param1, QAbstractTextDocumentLayout__PaintContext* param2) {
+void QPlainTextDocumentLayout_Draw(QPlainTextDocumentLayout* self, QPainter* param1, const QAbstractTextDocumentLayout__PaintContext* param2) {
     auto* vqplaintextdocumentlayout = dynamic_cast<VirtualQPlainTextDocumentLayout*>(self);
     if (vqplaintextdocumentlayout && vqplaintextdocumentlayout->isVirtualQPlainTextDocumentLayout) {
         vqplaintextdocumentlayout->draw(param1, *param2);
@@ -2871,7 +2900,7 @@ void QPlainTextDocumentLayout_Draw(QPlainTextDocumentLayout* self, QPainter* par
 }
 
 // Base class handler implementation
-void QPlainTextDocumentLayout_QBaseDraw(QPlainTextDocumentLayout* self, QPainter* param1, QAbstractTextDocumentLayout__PaintContext* param2) {
+void QPlainTextDocumentLayout_QBaseDraw(QPlainTextDocumentLayout* self, QPainter* param1, const QAbstractTextDocumentLayout__PaintContext* param2) {
     auto* vqplaintextdocumentlayout = dynamic_cast<VirtualQPlainTextDocumentLayout*>(self);
     if (vqplaintextdocumentlayout && vqplaintextdocumentlayout->isVirtualQPlainTextDocumentLayout) {
         vqplaintextdocumentlayout->setQPlainTextDocumentLayout_Draw_IsBase(true);
@@ -2890,7 +2919,7 @@ void QPlainTextDocumentLayout_OnDraw(QPlainTextDocumentLayout* self, intptr_t sl
 }
 
 // Derived class handler implementation
-int QPlainTextDocumentLayout_HitTest(const QPlainTextDocumentLayout* self, QPointF* param1, int param2) {
+int QPlainTextDocumentLayout_HitTest(const QPlainTextDocumentLayout* self, const QPointF* param1, int param2) {
     auto* vqplaintextdocumentlayout = const_cast<VirtualQPlainTextDocumentLayout*>(dynamic_cast<const VirtualQPlainTextDocumentLayout*>(self));
     if (vqplaintextdocumentlayout && vqplaintextdocumentlayout->isVirtualQPlainTextDocumentLayout) {
         return vqplaintextdocumentlayout->hitTest(*param1, static_cast<Qt::HitTestAccuracy>(param2));
@@ -2900,7 +2929,7 @@ int QPlainTextDocumentLayout_HitTest(const QPlainTextDocumentLayout* self, QPoin
 }
 
 // Base class handler implementation
-int QPlainTextDocumentLayout_QBaseHitTest(const QPlainTextDocumentLayout* self, QPointF* param1, int param2) {
+int QPlainTextDocumentLayout_QBaseHitTest(const QPlainTextDocumentLayout* self, const QPointF* param1, int param2) {
     auto* vqplaintextdocumentlayout = const_cast<VirtualQPlainTextDocumentLayout*>(dynamic_cast<const VirtualQPlainTextDocumentLayout*>(self));
     if (vqplaintextdocumentlayout && vqplaintextdocumentlayout->isVirtualQPlainTextDocumentLayout) {
         vqplaintextdocumentlayout->setQPlainTextDocumentLayout_HitTest_IsBase(true);
@@ -3006,7 +3035,7 @@ void QPlainTextDocumentLayout_OnFrameBoundingRect(const QPlainTextDocumentLayout
 }
 
 // Derived class handler implementation
-QRectF* QPlainTextDocumentLayout_BlockBoundingRect(const QPlainTextDocumentLayout* self, QTextBlock* block) {
+QRectF* QPlainTextDocumentLayout_BlockBoundingRect(const QPlainTextDocumentLayout* self, const QTextBlock* block) {
     auto* vqplaintextdocumentlayout = const_cast<VirtualQPlainTextDocumentLayout*>(dynamic_cast<const VirtualQPlainTextDocumentLayout*>(self));
     if (vqplaintextdocumentlayout && vqplaintextdocumentlayout->isVirtualQPlainTextDocumentLayout) {
         return new QRectF(vqplaintextdocumentlayout->blockBoundingRect(*block));
@@ -3016,7 +3045,7 @@ QRectF* QPlainTextDocumentLayout_BlockBoundingRect(const QPlainTextDocumentLayou
 }
 
 // Base class handler implementation
-QRectF* QPlainTextDocumentLayout_QBaseBlockBoundingRect(const QPlainTextDocumentLayout* self, QTextBlock* block) {
+QRectF* QPlainTextDocumentLayout_QBaseBlockBoundingRect(const QPlainTextDocumentLayout* self, const QTextBlock* block) {
     auto* vqplaintextdocumentlayout = const_cast<VirtualQPlainTextDocumentLayout*>(dynamic_cast<const VirtualQPlainTextDocumentLayout*>(self));
     if (vqplaintextdocumentlayout && vqplaintextdocumentlayout->isVirtualQPlainTextDocumentLayout) {
         vqplaintextdocumentlayout->setQPlainTextDocumentLayout_BlockBoundingRect_IsBase(true);
@@ -3064,7 +3093,7 @@ void QPlainTextDocumentLayout_OnDocumentChanged(QPlainTextDocumentLayout* self, 
 }
 
 // Derived class handler implementation
-void QPlainTextDocumentLayout_ResizeInlineObject(QPlainTextDocumentLayout* self, QTextInlineObject* item, int posInDocument, QTextFormat* format) {
+void QPlainTextDocumentLayout_ResizeInlineObject(QPlainTextDocumentLayout* self, QTextInlineObject* item, int posInDocument, const QTextFormat* format) {
     auto* vqplaintextdocumentlayout = dynamic_cast<VirtualQPlainTextDocumentLayout*>(self);
     if (vqplaintextdocumentlayout && vqplaintextdocumentlayout->isVirtualQPlainTextDocumentLayout) {
         vqplaintextdocumentlayout->resizeInlineObject(*item, static_cast<int>(posInDocument), *format);
@@ -3074,7 +3103,7 @@ void QPlainTextDocumentLayout_ResizeInlineObject(QPlainTextDocumentLayout* self,
 }
 
 // Base class handler implementation
-void QPlainTextDocumentLayout_QBaseResizeInlineObject(QPlainTextDocumentLayout* self, QTextInlineObject* item, int posInDocument, QTextFormat* format) {
+void QPlainTextDocumentLayout_QBaseResizeInlineObject(QPlainTextDocumentLayout* self, QTextInlineObject* item, int posInDocument, const QTextFormat* format) {
     auto* vqplaintextdocumentlayout = dynamic_cast<VirtualQPlainTextDocumentLayout*>(self);
     if (vqplaintextdocumentlayout && vqplaintextdocumentlayout->isVirtualQPlainTextDocumentLayout) {
         vqplaintextdocumentlayout->setQPlainTextDocumentLayout_ResizeInlineObject_IsBase(true);
@@ -3093,7 +3122,7 @@ void QPlainTextDocumentLayout_OnResizeInlineObject(QPlainTextDocumentLayout* sel
 }
 
 // Derived class handler implementation
-void QPlainTextDocumentLayout_PositionInlineObject(QPlainTextDocumentLayout* self, QTextInlineObject* item, int posInDocument, QTextFormat* format) {
+void QPlainTextDocumentLayout_PositionInlineObject(QPlainTextDocumentLayout* self, QTextInlineObject* item, int posInDocument, const QTextFormat* format) {
     auto* vqplaintextdocumentlayout = dynamic_cast<VirtualQPlainTextDocumentLayout*>(self);
     if (vqplaintextdocumentlayout && vqplaintextdocumentlayout->isVirtualQPlainTextDocumentLayout) {
         vqplaintextdocumentlayout->positionInlineObject(*item, static_cast<int>(posInDocument), *format);
@@ -3103,7 +3132,7 @@ void QPlainTextDocumentLayout_PositionInlineObject(QPlainTextDocumentLayout* sel
 }
 
 // Base class handler implementation
-void QPlainTextDocumentLayout_QBasePositionInlineObject(QPlainTextDocumentLayout* self, QTextInlineObject* item, int posInDocument, QTextFormat* format) {
+void QPlainTextDocumentLayout_QBasePositionInlineObject(QPlainTextDocumentLayout* self, QTextInlineObject* item, int posInDocument, const QTextFormat* format) {
     auto* vqplaintextdocumentlayout = dynamic_cast<VirtualQPlainTextDocumentLayout*>(self);
     if (vqplaintextdocumentlayout && vqplaintextdocumentlayout->isVirtualQPlainTextDocumentLayout) {
         vqplaintextdocumentlayout->setQPlainTextDocumentLayout_PositionInlineObject_IsBase(true);
@@ -3122,7 +3151,7 @@ void QPlainTextDocumentLayout_OnPositionInlineObject(QPlainTextDocumentLayout* s
 }
 
 // Derived class handler implementation
-void QPlainTextDocumentLayout_DrawInlineObject(QPlainTextDocumentLayout* self, QPainter* painter, QRectF* rect, QTextInlineObject* object, int posInDocument, QTextFormat* format) {
+void QPlainTextDocumentLayout_DrawInlineObject(QPlainTextDocumentLayout* self, QPainter* painter, const QRectF* rect, QTextInlineObject* object, int posInDocument, const QTextFormat* format) {
     auto* vqplaintextdocumentlayout = dynamic_cast<VirtualQPlainTextDocumentLayout*>(self);
     if (vqplaintextdocumentlayout && vqplaintextdocumentlayout->isVirtualQPlainTextDocumentLayout) {
         vqplaintextdocumentlayout->drawInlineObject(painter, *rect, *object, static_cast<int>(posInDocument), *format);
@@ -3132,7 +3161,7 @@ void QPlainTextDocumentLayout_DrawInlineObject(QPlainTextDocumentLayout* self, Q
 }
 
 // Base class handler implementation
-void QPlainTextDocumentLayout_QBaseDrawInlineObject(QPlainTextDocumentLayout* self, QPainter* painter, QRectF* rect, QTextInlineObject* object, int posInDocument, QTextFormat* format) {
+void QPlainTextDocumentLayout_QBaseDrawInlineObject(QPlainTextDocumentLayout* self, QPainter* painter, const QRectF* rect, QTextInlineObject* object, int posInDocument, const QTextFormat* format) {
     auto* vqplaintextdocumentlayout = dynamic_cast<VirtualQPlainTextDocumentLayout*>(self);
     if (vqplaintextdocumentlayout && vqplaintextdocumentlayout->isVirtualQPlainTextDocumentLayout) {
         vqplaintextdocumentlayout->setQPlainTextDocumentLayout_DrawInlineObject_IsBase(true);
@@ -3296,7 +3325,7 @@ void QPlainTextDocumentLayout_OnCustomEvent(QPlainTextDocumentLayout* self, intp
 }
 
 // Derived class handler implementation
-void QPlainTextDocumentLayout_ConnectNotify(QPlainTextDocumentLayout* self, QMetaMethod* signal) {
+void QPlainTextDocumentLayout_ConnectNotify(QPlainTextDocumentLayout* self, const QMetaMethod* signal) {
     auto* vqplaintextdocumentlayout = dynamic_cast<VirtualQPlainTextDocumentLayout*>(self);
     if (vqplaintextdocumentlayout && vqplaintextdocumentlayout->isVirtualQPlainTextDocumentLayout) {
         vqplaintextdocumentlayout->connectNotify(*signal);
@@ -3306,7 +3335,7 @@ void QPlainTextDocumentLayout_ConnectNotify(QPlainTextDocumentLayout* self, QMet
 }
 
 // Base class handler implementation
-void QPlainTextDocumentLayout_QBaseConnectNotify(QPlainTextDocumentLayout* self, QMetaMethod* signal) {
+void QPlainTextDocumentLayout_QBaseConnectNotify(QPlainTextDocumentLayout* self, const QMetaMethod* signal) {
     auto* vqplaintextdocumentlayout = dynamic_cast<VirtualQPlainTextDocumentLayout*>(self);
     if (vqplaintextdocumentlayout && vqplaintextdocumentlayout->isVirtualQPlainTextDocumentLayout) {
         vqplaintextdocumentlayout->setQPlainTextDocumentLayout_ConnectNotify_IsBase(true);
@@ -3325,7 +3354,7 @@ void QPlainTextDocumentLayout_OnConnectNotify(QPlainTextDocumentLayout* self, in
 }
 
 // Derived class handler implementation
-void QPlainTextDocumentLayout_DisconnectNotify(QPlainTextDocumentLayout* self, QMetaMethod* signal) {
+void QPlainTextDocumentLayout_DisconnectNotify(QPlainTextDocumentLayout* self, const QMetaMethod* signal) {
     auto* vqplaintextdocumentlayout = dynamic_cast<VirtualQPlainTextDocumentLayout*>(self);
     if (vqplaintextdocumentlayout && vqplaintextdocumentlayout->isVirtualQPlainTextDocumentLayout) {
         vqplaintextdocumentlayout->disconnectNotify(*signal);
@@ -3335,7 +3364,7 @@ void QPlainTextDocumentLayout_DisconnectNotify(QPlainTextDocumentLayout* self, Q
 }
 
 // Base class handler implementation
-void QPlainTextDocumentLayout_QBaseDisconnectNotify(QPlainTextDocumentLayout* self, QMetaMethod* signal) {
+void QPlainTextDocumentLayout_QBaseDisconnectNotify(QPlainTextDocumentLayout* self, const QMetaMethod* signal) {
     auto* vqplaintextdocumentlayout = dynamic_cast<VirtualQPlainTextDocumentLayout*>(self);
     if (vqplaintextdocumentlayout && vqplaintextdocumentlayout->isVirtualQPlainTextDocumentLayout) {
         vqplaintextdocumentlayout->setQPlainTextDocumentLayout_DisconnectNotify_IsBase(true);
@@ -3497,7 +3526,7 @@ void QPlainTextDocumentLayout_OnReceivers(const QPlainTextDocumentLayout* self, 
 }
 
 // Derived class handler implementation
-bool QPlainTextDocumentLayout_IsSignalConnected(const QPlainTextDocumentLayout* self, QMetaMethod* signal) {
+bool QPlainTextDocumentLayout_IsSignalConnected(const QPlainTextDocumentLayout* self, const QMetaMethod* signal) {
     auto* vqplaintextdocumentlayout = const_cast<VirtualQPlainTextDocumentLayout*>(dynamic_cast<const VirtualQPlainTextDocumentLayout*>(self));
     if (vqplaintextdocumentlayout && vqplaintextdocumentlayout->isVirtualQPlainTextDocumentLayout) {
         return vqplaintextdocumentlayout->isSignalConnected(*signal);
@@ -3507,7 +3536,7 @@ bool QPlainTextDocumentLayout_IsSignalConnected(const QPlainTextDocumentLayout* 
 }
 
 // Base class handler implementation
-bool QPlainTextDocumentLayout_QBaseIsSignalConnected(const QPlainTextDocumentLayout* self, QMetaMethod* signal) {
+bool QPlainTextDocumentLayout_QBaseIsSignalConnected(const QPlainTextDocumentLayout* self, const QMetaMethod* signal) {
     auto* vqplaintextdocumentlayout = const_cast<VirtualQPlainTextDocumentLayout*>(dynamic_cast<const VirtualQPlainTextDocumentLayout*>(self));
     if (vqplaintextdocumentlayout && vqplaintextdocumentlayout->isVirtualQPlainTextDocumentLayout) {
         vqplaintextdocumentlayout->setQPlainTextDocumentLayout_IsSignalConnected_IsBase(true);

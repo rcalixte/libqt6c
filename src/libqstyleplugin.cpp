@@ -94,7 +94,7 @@ libqt_string QStylePlugin_Tr3(const char* s, const char* c, int n) {
 }
 
 // Derived class handler implementation
-QStyle* QStylePlugin_Create(QStylePlugin* self, libqt_string key) {
+QStyle* QStylePlugin_Create(QStylePlugin* self, const libqt_string key) {
     auto* vqstyleplugin = dynamic_cast<VirtualQStylePlugin*>(self);
     QString key_QString = QString::fromUtf8(key.data, key.len);
     if (vqstyleplugin && vqstyleplugin->isVirtualQStylePlugin) {
@@ -105,7 +105,7 @@ QStyle* QStylePlugin_Create(QStylePlugin* self, libqt_string key) {
 }
 
 // Base class handler implementation
-QStyle* QStylePlugin_QBaseCreate(QStylePlugin* self, libqt_string key) {
+QStyle* QStylePlugin_QBaseCreate(QStylePlugin* self, const libqt_string key) {
     auto* vqstyleplugin = dynamic_cast<VirtualQStylePlugin*>(self);
     QString key_QString = QString::fromUtf8(key.data, key.len);
     if (vqstyleplugin && vqstyleplugin->isVirtualQStylePlugin) {
@@ -270,7 +270,7 @@ void QStylePlugin_OnCustomEvent(QStylePlugin* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QStylePlugin_ConnectNotify(QStylePlugin* self, QMetaMethod* signal) {
+void QStylePlugin_ConnectNotify(QStylePlugin* self, const QMetaMethod* signal) {
     auto* vqstyleplugin = dynamic_cast<VirtualQStylePlugin*>(self);
     if (vqstyleplugin && vqstyleplugin->isVirtualQStylePlugin) {
         vqstyleplugin->connectNotify(*signal);
@@ -280,7 +280,7 @@ void QStylePlugin_ConnectNotify(QStylePlugin* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QStylePlugin_QBaseConnectNotify(QStylePlugin* self, QMetaMethod* signal) {
+void QStylePlugin_QBaseConnectNotify(QStylePlugin* self, const QMetaMethod* signal) {
     auto* vqstyleplugin = dynamic_cast<VirtualQStylePlugin*>(self);
     if (vqstyleplugin && vqstyleplugin->isVirtualQStylePlugin) {
         vqstyleplugin->setQStylePlugin_ConnectNotify_IsBase(true);
@@ -299,7 +299,7 @@ void QStylePlugin_OnConnectNotify(QStylePlugin* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QStylePlugin_DisconnectNotify(QStylePlugin* self, QMetaMethod* signal) {
+void QStylePlugin_DisconnectNotify(QStylePlugin* self, const QMetaMethod* signal) {
     auto* vqstyleplugin = dynamic_cast<VirtualQStylePlugin*>(self);
     if (vqstyleplugin && vqstyleplugin->isVirtualQStylePlugin) {
         vqstyleplugin->disconnectNotify(*signal);
@@ -309,7 +309,7 @@ void QStylePlugin_DisconnectNotify(QStylePlugin* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QStylePlugin_QBaseDisconnectNotify(QStylePlugin* self, QMetaMethod* signal) {
+void QStylePlugin_QBaseDisconnectNotify(QStylePlugin* self, const QMetaMethod* signal) {
     auto* vqstyleplugin = dynamic_cast<VirtualQStylePlugin*>(self);
     if (vqstyleplugin && vqstyleplugin->isVirtualQStylePlugin) {
         vqstyleplugin->setQStylePlugin_DisconnectNotify_IsBase(true);
@@ -415,7 +415,7 @@ void QStylePlugin_OnReceivers(const QStylePlugin* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QStylePlugin_IsSignalConnected(const QStylePlugin* self, QMetaMethod* signal) {
+bool QStylePlugin_IsSignalConnected(const QStylePlugin* self, const QMetaMethod* signal) {
     auto* vqstyleplugin = const_cast<VirtualQStylePlugin*>(dynamic_cast<const VirtualQStylePlugin*>(self));
     if (vqstyleplugin && vqstyleplugin->isVirtualQStylePlugin) {
         return vqstyleplugin->isSignalConnected(*signal);
@@ -425,7 +425,7 @@ bool QStylePlugin_IsSignalConnected(const QStylePlugin* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-bool QStylePlugin_QBaseIsSignalConnected(const QStylePlugin* self, QMetaMethod* signal) {
+bool QStylePlugin_QBaseIsSignalConnected(const QStylePlugin* self, const QMetaMethod* signal) {
     auto* vqstyleplugin = const_cast<VirtualQStylePlugin*>(dynamic_cast<const VirtualQStylePlugin*>(self));
     if (vqstyleplugin && vqstyleplugin->isVirtualQStylePlugin) {
         vqstyleplugin->setQStylePlugin_IsSignalConnected_IsBase(true);

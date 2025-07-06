@@ -12,14 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqcandlestickseries.h"
-#include "../libqevent.h"
-#include "libqlegend.h"
-#include "libqlegendmarker.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qcandlesticklegendmarker-qtcharts.html
 
 /// q_candlesticklegendmarker_new constructs a new QCandlestickLegendMarker object.
@@ -391,7 +383,7 @@ QThread* q_candlesticklegendmarker_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QCandlestickLegendMarker* self, QThread* thread ```
-void q_candlesticklegendmarker_move_to_thread(void* self, void* thread);
+bool q_candlesticklegendmarker_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -406,6 +398,13 @@ int32_t q_candlesticklegendmarker_start_timer(void* self, int interval);
 ///
 /// ``` QCandlestickLegendMarker* self, int id ```
 void q_candlesticklegendmarker_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QCandlestickLegendMarker* self, enum Qt__TimerId id ```
+void q_candlesticklegendmarker_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -546,6 +545,13 @@ bool q_candlesticklegendmarker_inherits(void* self, const char* classname);
 ///
 /// ``` QCandlestickLegendMarker* self ```
 void q_candlesticklegendmarker_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QCandlestickLegendMarker* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_candlesticklegendmarker_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

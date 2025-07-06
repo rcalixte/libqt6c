@@ -12,20 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpaintdevice.h"
-#include "libqpainter.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqtextobject.h"
-#include "libqtextformat.h"
-#include "libqtextdocument.h"
-#include "libqtextlayout.h"
-
 /// https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html
 
 /// q_abstracttextdocumentlayout_new constructs a new QAbstractTextDocumentLayout object.
@@ -463,7 +449,7 @@ QThread* q_abstracttextdocumentlayout_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QAbstractTextDocumentLayout* self, QThread* thread ```
-void q_abstracttextdocumentlayout_move_to_thread(void* self, void* thread);
+bool q_abstracttextdocumentlayout_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -478,6 +464,13 @@ int32_t q_abstracttextdocumentlayout_start_timer(void* self, int interval);
 ///
 /// ``` QAbstractTextDocumentLayout* self, int id ```
 void q_abstracttextdocumentlayout_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QAbstractTextDocumentLayout* self, enum Qt__TimerId id ```
+void q_abstracttextdocumentlayout_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -618,6 +611,13 @@ bool q_abstracttextdocumentlayout_inherits(void* self, const char* classname);
 ///
 /// ``` QAbstractTextDocumentLayout* self ```
 void q_abstracttextdocumentlayout_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QAbstractTextDocumentLayout* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_abstracttextdocumentlayout_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -995,8 +995,8 @@ void q_textobjectinterface_delete(void* self);
 
 /// q_abstracttextdocumentlayout__selection_new constructs a new QAbstractTextDocumentLayout::Selection object.
 ///
-/// ``` QAbstractTextDocumentLayout__Selection* param1 ```
-QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new(void* param1);
+///
+QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout__selection.html#operator=)
 ///
@@ -1016,11 +1016,6 @@ void q_abstracttextdocumentlayout__selection_delete(void* self);
 ///
 ///
 QAbstractTextDocumentLayout__PaintContext* q_abstracttextdocumentlayout__paintcontext_new();
-
-/// q_abstracttextdocumentlayout__paintcontext_new2 constructs a new QAbstractTextDocumentLayout::PaintContext object.
-///
-/// ``` QAbstractTextDocumentLayout__PaintContext* param1 ```
-QAbstractTextDocumentLayout__PaintContext* q_abstracttextdocumentlayout__paintcontext_new2(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout__paintcontext.html#operator=)
 ///

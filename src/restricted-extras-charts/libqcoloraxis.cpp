@@ -106,7 +106,7 @@ double QColorAxis_Size(const QColorAxis* self) {
     return static_cast<double>(self->size());
 }
 
-void QColorAxis_SetGradient(QColorAxis* self, QLinearGradient* gradient) {
+void QColorAxis_SetGradient(QColorAxis* self, const QLinearGradient* gradient) {
     self->setGradient(*gradient);
 }
 
@@ -171,7 +171,7 @@ void QColorAxis_Connect_TickCountChanged(QColorAxis* self, intptr_t slot) {
     });
 }
 
-void QColorAxis_GradientChanged(QColorAxis* self, QLinearGradient* gradient) {
+void QColorAxis_GradientChanged(QColorAxis* self, const QLinearGradient* gradient) {
     self->gradientChanged(*gradient);
 }
 
@@ -408,7 +408,7 @@ void QColorAxis_OnCustomEvent(QColorAxis* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QColorAxis_ConnectNotify(QColorAxis* self, QMetaMethod* signal) {
+void QColorAxis_ConnectNotify(QColorAxis* self, const QMetaMethod* signal) {
     auto* vqcoloraxis = dynamic_cast<VirtualQColorAxis*>(self);
     if (vqcoloraxis && vqcoloraxis->isVirtualQColorAxis) {
         vqcoloraxis->connectNotify(*signal);
@@ -418,7 +418,7 @@ void QColorAxis_ConnectNotify(QColorAxis* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QColorAxis_QBaseConnectNotify(QColorAxis* self, QMetaMethod* signal) {
+void QColorAxis_QBaseConnectNotify(QColorAxis* self, const QMetaMethod* signal) {
     auto* vqcoloraxis = dynamic_cast<VirtualQColorAxis*>(self);
     if (vqcoloraxis && vqcoloraxis->isVirtualQColorAxis) {
         vqcoloraxis->setQColorAxis_ConnectNotify_IsBase(true);
@@ -437,7 +437,7 @@ void QColorAxis_OnConnectNotify(QColorAxis* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QColorAxis_DisconnectNotify(QColorAxis* self, QMetaMethod* signal) {
+void QColorAxis_DisconnectNotify(QColorAxis* self, const QMetaMethod* signal) {
     auto* vqcoloraxis = dynamic_cast<VirtualQColorAxis*>(self);
     if (vqcoloraxis && vqcoloraxis->isVirtualQColorAxis) {
         vqcoloraxis->disconnectNotify(*signal);
@@ -447,7 +447,7 @@ void QColorAxis_DisconnectNotify(QColorAxis* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QColorAxis_QBaseDisconnectNotify(QColorAxis* self, QMetaMethod* signal) {
+void QColorAxis_QBaseDisconnectNotify(QColorAxis* self, const QMetaMethod* signal) {
     auto* vqcoloraxis = dynamic_cast<VirtualQColorAxis*>(self);
     if (vqcoloraxis && vqcoloraxis->isVirtualQColorAxis) {
         vqcoloraxis->setQColorAxis_DisconnectNotify_IsBase(true);
@@ -553,7 +553,7 @@ void QColorAxis_OnReceivers(const QColorAxis* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QColorAxis_IsSignalConnected(const QColorAxis* self, QMetaMethod* signal) {
+bool QColorAxis_IsSignalConnected(const QColorAxis* self, const QMetaMethod* signal) {
     auto* vqcoloraxis = const_cast<VirtualQColorAxis*>(dynamic_cast<const VirtualQColorAxis*>(self));
     if (vqcoloraxis && vqcoloraxis->isVirtualQColorAxis) {
         return vqcoloraxis->isSignalConnected(*signal);
@@ -563,7 +563,7 @@ bool QColorAxis_IsSignalConnected(const QColorAxis* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QColorAxis_QBaseIsSignalConnected(const QColorAxis* self, QMetaMethod* signal) {
+bool QColorAxis_QBaseIsSignalConnected(const QColorAxis* self, const QMetaMethod* signal) {
     auto* vqcoloraxis = const_cast<VirtualQColorAxis*>(dynamic_cast<const VirtualQColorAxis*>(self));
     if (vqcoloraxis && vqcoloraxis->isVirtualQColorAxis) {
         vqcoloraxis->setQColorAxis_IsSignalConnected_IsBase(true);

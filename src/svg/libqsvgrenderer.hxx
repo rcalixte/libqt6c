@@ -61,14 +61,14 @@ class VirtualQSvgRenderer final : public QSvgRenderer {
     mutable bool qsvgrenderer_issignalconnected_isbase = false;
 
   public:
-    VirtualQSvgRenderer() : QSvgRenderer(){};
-    VirtualQSvgRenderer(const QString& filename) : QSvgRenderer(filename){};
-    VirtualQSvgRenderer(const QByteArray& contents) : QSvgRenderer(contents){};
-    VirtualQSvgRenderer(QXmlStreamReader* contents) : QSvgRenderer(contents){};
-    VirtualQSvgRenderer(QObject* parent) : QSvgRenderer(parent){};
-    VirtualQSvgRenderer(const QString& filename, QObject* parent) : QSvgRenderer(filename, parent){};
-    VirtualQSvgRenderer(const QByteArray& contents, QObject* parent) : QSvgRenderer(contents, parent){};
-    VirtualQSvgRenderer(QXmlStreamReader* contents, QObject* parent) : QSvgRenderer(contents, parent){};
+    VirtualQSvgRenderer() : QSvgRenderer() {};
+    VirtualQSvgRenderer(const QString& filename) : QSvgRenderer(filename) {};
+    VirtualQSvgRenderer(const QByteArray& contents) : QSvgRenderer(contents) {};
+    VirtualQSvgRenderer(QXmlStreamReader* contents) : QSvgRenderer(contents) {};
+    VirtualQSvgRenderer(QObject* parent) : QSvgRenderer(parent) {};
+    VirtualQSvgRenderer(const QString& filename, QObject* parent) : QSvgRenderer(filename, parent) {};
+    VirtualQSvgRenderer(const QByteArray& contents, QObject* parent) : QSvgRenderer(contents, parent) {};
+    VirtualQSvgRenderer(QXmlStreamReader* contents, QObject* parent) : QSvgRenderer(contents, parent) {};
 
     ~VirtualQSvgRenderer() {
         qsvgrenderer_metacall_callback = nullptr;
@@ -300,18 +300,18 @@ class VirtualQSvgRenderer final : public QSvgRenderer {
     friend void QSvgRenderer_QBaseChildEvent(QSvgRenderer* self, QChildEvent* event);
     friend void QSvgRenderer_CustomEvent(QSvgRenderer* self, QEvent* event);
     friend void QSvgRenderer_QBaseCustomEvent(QSvgRenderer* self, QEvent* event);
-    friend void QSvgRenderer_ConnectNotify(QSvgRenderer* self, QMetaMethod* signal);
-    friend void QSvgRenderer_QBaseConnectNotify(QSvgRenderer* self, QMetaMethod* signal);
-    friend void QSvgRenderer_DisconnectNotify(QSvgRenderer* self, QMetaMethod* signal);
-    friend void QSvgRenderer_QBaseDisconnectNotify(QSvgRenderer* self, QMetaMethod* signal);
+    friend void QSvgRenderer_ConnectNotify(QSvgRenderer* self, const QMetaMethod* signal);
+    friend void QSvgRenderer_QBaseConnectNotify(QSvgRenderer* self, const QMetaMethod* signal);
+    friend void QSvgRenderer_DisconnectNotify(QSvgRenderer* self, const QMetaMethod* signal);
+    friend void QSvgRenderer_QBaseDisconnectNotify(QSvgRenderer* self, const QMetaMethod* signal);
     friend QObject* QSvgRenderer_Sender(const QSvgRenderer* self);
     friend QObject* QSvgRenderer_QBaseSender(const QSvgRenderer* self);
     friend int QSvgRenderer_SenderSignalIndex(const QSvgRenderer* self);
     friend int QSvgRenderer_QBaseSenderSignalIndex(const QSvgRenderer* self);
     friend int QSvgRenderer_Receivers(const QSvgRenderer* self, const char* signal);
     friend int QSvgRenderer_QBaseReceivers(const QSvgRenderer* self, const char* signal);
-    friend bool QSvgRenderer_IsSignalConnected(const QSvgRenderer* self, QMetaMethod* signal);
-    friend bool QSvgRenderer_QBaseIsSignalConnected(const QSvgRenderer* self, QMetaMethod* signal);
+    friend bool QSvgRenderer_IsSignalConnected(const QSvgRenderer* self, const QMetaMethod* signal);
+    friend bool QSvgRenderer_QBaseIsSignalConnected(const QSvgRenderer* self, const QMetaMethod* signal);
 };
 
 #endif

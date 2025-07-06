@@ -14,10 +14,6 @@ QModelRoleData* q_modelroledata_new(int role) {
     return QModelRoleData_new(role);
 }
 
-QModelRoleData* q_modelroledata_new2(void* param1) {
-    return QModelRoleData_new2((QModelRoleData*)param1);
-}
-
 int32_t q_modelroledata_role(void* self) {
     return QModelRoleData_Role((QModelRoleData*)self);
 }
@@ -186,18 +182,6 @@ bool q_modelindex_is_valid(void* self) {
     return QModelIndex_IsValid((QModelIndex*)self);
 }
 
-bool q_modelindex_operator_equal(void* self, void* other) {
-    return QModelIndex_OperatorEqual((QModelIndex*)self, (QModelIndex*)other);
-}
-
-bool q_modelindex_operator_not_equal(void* self, void* other) {
-    return QModelIndex_OperatorNotEqual((QModelIndex*)self, (QModelIndex*)other);
-}
-
-bool q_modelindex_operator_lesser(void* self, void* other) {
-    return QModelIndex_OperatorLesser((QModelIndex*)self, (QModelIndex*)other);
-}
-
 QVariant* q_modelindex_data1(void* self, int role) {
     return QModelIndex_Data1((QModelIndex*)self, role);
 }
@@ -218,32 +202,12 @@ QPersistentModelIndex* q_persistentmodelindex_new3(void* other) {
     return QPersistentModelIndex_new3((QPersistentModelIndex*)other);
 }
 
-bool q_persistentmodelindex_operator_lesser(void* self, void* other) {
-    return QPersistentModelIndex_OperatorLesser((QPersistentModelIndex*)self, (QPersistentModelIndex*)other);
-}
-
-bool q_persistentmodelindex_operator_equal(void* self, void* other) {
-    return QPersistentModelIndex_OperatorEqual((QPersistentModelIndex*)self, (QPersistentModelIndex*)other);
-}
-
-bool q_persistentmodelindex_operator_not_equal(void* self, void* other) {
-    return QPersistentModelIndex_OperatorNotEqual((QPersistentModelIndex*)self, (QPersistentModelIndex*)other);
-}
-
 void q_persistentmodelindex_operator_assign(void* self, void* other) {
     QPersistentModelIndex_OperatorAssign((QPersistentModelIndex*)self, (QPersistentModelIndex*)other);
 }
 
 void q_persistentmodelindex_swap(void* self, void* other) {
     QPersistentModelIndex_Swap((QPersistentModelIndex*)self, (QPersistentModelIndex*)other);
-}
-
-bool q_persistentmodelindex_operator_equal_with_other(void* self, void* other) {
-    return QPersistentModelIndex_OperatorEqualWithOther((QPersistentModelIndex*)self, (QModelIndex*)other);
-}
-
-bool q_persistentmodelindex_operator_not_equal_with_other(void* self, void* other) {
-    return QPersistentModelIndex_OperatorNotEqualWithOther((QPersistentModelIndex*)self, (QModelIndex*)other);
 }
 
 void q_persistentmodelindex_operator_assign_with_other(void* self, void* other) {
@@ -1256,8 +1220,8 @@ QThread* q_abstractitemmodel_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_abstractitemmodel_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_abstractitemmodel_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_abstractitemmodel_start_timer(void* self, int interval) {
@@ -1266,6 +1230,10 @@ int32_t q_abstractitemmodel_start_timer(void* self, int interval) {
 
 void q_abstractitemmodel_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_abstractitemmodel_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_abstractitemmodel_children(void* self) {
@@ -1354,6 +1322,10 @@ bool q_abstractitemmodel_inherits(void* self, const char* classname) {
 
 void q_abstractitemmodel_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_abstractitemmodel_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_abstractitemmodel_start_timer2(void* self, int interval, int64_t timerType) {
@@ -1856,8 +1828,8 @@ QThread* q_abstracttablemodel_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_abstracttablemodel_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_abstracttablemodel_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_abstracttablemodel_start_timer(void* self, int interval) {
@@ -1866,6 +1838,10 @@ int32_t q_abstracttablemodel_start_timer(void* self, int interval) {
 
 void q_abstracttablemodel_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_abstracttablemodel_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_abstracttablemodel_children(void* self) {
@@ -1954,6 +1930,10 @@ bool q_abstracttablemodel_inherits(void* self, const char* classname) {
 
 void q_abstracttablemodel_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_abstracttablemodel_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_abstracttablemodel_start_timer2(void* self, int interval, int64_t timerType) {
@@ -3106,8 +3086,8 @@ QThread* q_abstractlistmodel_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_abstractlistmodel_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_abstractlistmodel_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_abstractlistmodel_start_timer(void* self, int interval) {
@@ -3116,6 +3096,10 @@ int32_t q_abstractlistmodel_start_timer(void* self, int interval) {
 
 void q_abstractlistmodel_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_abstractlistmodel_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_abstractlistmodel_children(void* self) {
@@ -3204,6 +3188,10 @@ bool q_abstractlistmodel_inherits(void* self, const char* classname) {
 
 void q_abstractlistmodel_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_abstractlistmodel_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_abstractlistmodel_start_timer2(void* self, int interval, int64_t timerType) {

@@ -232,8 +232,8 @@ class VirtualQFileSystemModel final : public QFileSystemModel {
     mutable bool qfilesystemmodel_issignalconnected_isbase = false;
 
   public:
-    VirtualQFileSystemModel() : QFileSystemModel(){};
-    VirtualQFileSystemModel(QObject* parent) : QFileSystemModel(parent){};
+    VirtualQFileSystemModel() : QFileSystemModel() {};
+    VirtualQFileSystemModel(QObject* parent) : QFileSystemModel(parent) {};
 
     ~VirtualQFileSystemModel() {
         qfilesystemmodel_metacall_callback = nullptr;
@@ -694,13 +694,13 @@ class VirtualQFileSystemModel final : public QFileSystemModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QStringList mimeTypes() const override {
+    virtual QList<QString> mimeTypes() const override {
         if (qfilesystemmodel_mimetypes_isbase) {
             qfilesystemmodel_mimetypes_isbase = false;
             return QFileSystemModel::mimeTypes();
         } else if (qfilesystemmodel_mimetypes_callback != nullptr) {
             libqt_list /* of libqt_string */ callback_ret = qfilesystemmodel_mimetypes_callback();
-            QStringList callback_ret_QList;
+            QList<QString> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             libqt_string* callback_ret_arr = static_cast<libqt_string*>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -714,19 +714,19 @@ class VirtualQFileSystemModel final : public QFileSystemModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QMimeData* mimeData(const QModelIndexList& indexes) const override {
+    virtual QMimeData* mimeData(const QList<QModelIndex>& indexes) const override {
         if (qfilesystemmodel_mimedata_isbase) {
             qfilesystemmodel_mimedata_isbase = false;
             return QFileSystemModel::mimeData(indexes);
         } else if (qfilesystemmodel_mimedata_callback != nullptr) {
-            const QModelIndexList& indexes_ret = indexes;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.length()));
-            for (size_t i = 0; i < indexes_ret.length(); ++i) {
+            const QList<QModelIndex>& indexes_ret = indexes;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.size()));
+            for (size_t i = 0; i < indexes_ret.size(); ++i) {
                 indexes_arr[i] = new QModelIndex(indexes_ret[i]);
             }
             libqt_list indexes_out;
-            indexes_out.len = indexes_ret.length();
+            indexes_out.len = indexes_ret.size();
             indexes_out.data.ptr = static_cast<void*>(indexes_arr);
             libqt_list /* of QModelIndex* */ cbval1 = indexes_out;
 
@@ -874,7 +874,7 @@ class VirtualQFileSystemModel final : public QFileSystemModel {
             // Cast returned reference into pointer
             QModelIndex* cbval1 = const_cast<QModelIndex*>(&index_ret);
             const QMap<int, QVariant>& roles_ret = roles;
-            // Convert QMap<> from C++ memory to manually-managed C memory
+            // Convert const QMap<> from C++ memory to manually-managed C memory
             int* roles_karr = static_cast<int*>(malloc(sizeof(int) * roles_ret.size()));
             QVariant** roles_varr = static_cast<QVariant**>(malloc(sizeof(QVariant*) * roles_ret.size()));
             int roles_ctr = 0;
@@ -1087,7 +1087,7 @@ class VirtualQFileSystemModel final : public QFileSystemModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QModelIndexList match(const QModelIndex& start, int role, const QVariant& value, int hits, Qt::MatchFlags flags) const override {
+    virtual QList<QModelIndex> match(const QModelIndex& start, int role, const QVariant& value, int hits, Qt::MatchFlags flags) const override {
         if (qfilesystemmodel_match_isbase) {
             qfilesystemmodel_match_isbase = false;
             return QFileSystemModel::match(start, role, value, hits, flags);
@@ -1103,7 +1103,7 @@ class VirtualQFileSystemModel final : public QFileSystemModel {
             int cbval5 = static_cast<int>(flags);
 
             libqt_list /* of QModelIndex* */ callback_ret = qfilesystemmodel_match_callback(this, cbval1, cbval2, cbval3, cbval4, cbval5);
-            QModelIndexList callback_ret_QList;
+            QList<QModelIndex> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             QModelIndex** callback_ret_arr = static_cast<QModelIndex**>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -1279,19 +1279,19 @@ class VirtualQFileSystemModel final : public QFileSystemModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    void encodeData(const QModelIndexList& indexes, QDataStream& stream) const {
+    void encodeData(const QList<QModelIndex>& indexes, QDataStream& stream) const {
         if (qfilesystemmodel_encodedata_isbase) {
             qfilesystemmodel_encodedata_isbase = false;
             QFileSystemModel::encodeData(indexes, stream);
         } else if (qfilesystemmodel_encodedata_callback != nullptr) {
-            const QModelIndexList& indexes_ret = indexes;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.length()));
-            for (size_t i = 0; i < indexes_ret.length(); ++i) {
+            const QList<QModelIndex>& indexes_ret = indexes;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.size()));
+            for (size_t i = 0; i < indexes_ret.size(); ++i) {
                 indexes_arr[i] = new QModelIndex(indexes_ret[i]);
             }
             libqt_list indexes_out;
-            indexes_out.len = indexes_ret.length();
+            indexes_out.len = indexes_ret.size();
             indexes_out.data.ptr = static_cast<void*>(indexes_arr);
             libqt_list /* of QModelIndex* */ cbval1 = indexes_out;
             QDataStream& stream_ret = stream;
@@ -1560,29 +1560,29 @@ class VirtualQFileSystemModel final : public QFileSystemModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    void changePersistentIndexList(const QModelIndexList& from, const QModelIndexList& to) {
+    void changePersistentIndexList(const QList<QModelIndex>& from, const QList<QModelIndex>& to) {
         if (qfilesystemmodel_changepersistentindexlist_isbase) {
             qfilesystemmodel_changepersistentindexlist_isbase = false;
             QFileSystemModel::changePersistentIndexList(from, to);
         } else if (qfilesystemmodel_changepersistentindexlist_callback != nullptr) {
-            const QModelIndexList& from_ret = from;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** from_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * from_ret.length()));
-            for (size_t i = 0; i < from_ret.length(); ++i) {
+            const QList<QModelIndex>& from_ret = from;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** from_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * from_ret.size()));
+            for (size_t i = 0; i < from_ret.size(); ++i) {
                 from_arr[i] = new QModelIndex(from_ret[i]);
             }
             libqt_list from_out;
-            from_out.len = from_ret.length();
+            from_out.len = from_ret.size();
             from_out.data.ptr = static_cast<void*>(from_arr);
             libqt_list /* of QModelIndex* */ cbval1 = from_out;
-            const QModelIndexList& to_ret = to;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** to_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * to_ret.length()));
-            for (size_t i = 0; i < to_ret.length(); ++i) {
+            const QList<QModelIndex>& to_ret = to;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** to_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * to_ret.size()));
+            for (size_t i = 0; i < to_ret.size(); ++i) {
                 to_arr[i] = new QModelIndex(to_ret[i]);
             }
             libqt_list to_out;
-            to_out.len = to_ret.length();
+            to_out.len = to_ret.size();
             to_out.data.ptr = static_cast<void*>(to_arr);
             libqt_list /* of QModelIndex* */ cbval2 = to_out;
 
@@ -1593,13 +1593,13 @@ class VirtualQFileSystemModel final : public QFileSystemModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    QModelIndexList persistentIndexList() const {
+    QList<QModelIndex> persistentIndexList() const {
         if (qfilesystemmodel_persistentindexlist_isbase) {
             qfilesystemmodel_persistentindexlist_isbase = false;
             return QFileSystemModel::persistentIndexList();
         } else if (qfilesystemmodel_persistentindexlist_callback != nullptr) {
             libqt_list /* of QModelIndex* */ callback_ret = qfilesystemmodel_persistentindexlist_callback();
-            QModelIndexList callback_ret_QList;
+            QList<QModelIndex> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             QModelIndex** callback_ret_arr = static_cast<QModelIndex**>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -1680,48 +1680,48 @@ class VirtualQFileSystemModel final : public QFileSystemModel {
     friend void QFileSystemModel_QBaseChildEvent(QFileSystemModel* self, QChildEvent* event);
     friend void QFileSystemModel_CustomEvent(QFileSystemModel* self, QEvent* event);
     friend void QFileSystemModel_QBaseCustomEvent(QFileSystemModel* self, QEvent* event);
-    friend void QFileSystemModel_ConnectNotify(QFileSystemModel* self, QMetaMethod* signal);
-    friend void QFileSystemModel_QBaseConnectNotify(QFileSystemModel* self, QMetaMethod* signal);
-    friend void QFileSystemModel_DisconnectNotify(QFileSystemModel* self, QMetaMethod* signal);
-    friend void QFileSystemModel_QBaseDisconnectNotify(QFileSystemModel* self, QMetaMethod* signal);
+    friend void QFileSystemModel_ConnectNotify(QFileSystemModel* self, const QMetaMethod* signal);
+    friend void QFileSystemModel_QBaseConnectNotify(QFileSystemModel* self, const QMetaMethod* signal);
+    friend void QFileSystemModel_DisconnectNotify(QFileSystemModel* self, const QMetaMethod* signal);
+    friend void QFileSystemModel_QBaseDisconnectNotify(QFileSystemModel* self, const QMetaMethod* signal);
     friend QModelIndex* QFileSystemModel_CreateIndex(const QFileSystemModel* self, int row, int column);
     friend QModelIndex* QFileSystemModel_QBaseCreateIndex(const QFileSystemModel* self, int row, int column);
-    friend void QFileSystemModel_EncodeData(const QFileSystemModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
-    friend void QFileSystemModel_QBaseEncodeData(const QFileSystemModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
-    friend bool QFileSystemModel_DecodeData(QFileSystemModel* self, int row, int column, QModelIndex* parent, QDataStream* stream);
-    friend bool QFileSystemModel_QBaseDecodeData(QFileSystemModel* self, int row, int column, QModelIndex* parent, QDataStream* stream);
-    friend void QFileSystemModel_BeginInsertRows(QFileSystemModel* self, QModelIndex* parent, int first, int last);
-    friend void QFileSystemModel_QBaseBeginInsertRows(QFileSystemModel* self, QModelIndex* parent, int first, int last);
+    friend void QFileSystemModel_EncodeData(const QFileSystemModel* self, const libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
+    friend void QFileSystemModel_QBaseEncodeData(const QFileSystemModel* self, const libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
+    friend bool QFileSystemModel_DecodeData(QFileSystemModel* self, int row, int column, const QModelIndex* parent, QDataStream* stream);
+    friend bool QFileSystemModel_QBaseDecodeData(QFileSystemModel* self, int row, int column, const QModelIndex* parent, QDataStream* stream);
+    friend void QFileSystemModel_BeginInsertRows(QFileSystemModel* self, const QModelIndex* parent, int first, int last);
+    friend void QFileSystemModel_QBaseBeginInsertRows(QFileSystemModel* self, const QModelIndex* parent, int first, int last);
     friend void QFileSystemModel_EndInsertRows(QFileSystemModel* self);
     friend void QFileSystemModel_QBaseEndInsertRows(QFileSystemModel* self);
-    friend void QFileSystemModel_BeginRemoveRows(QFileSystemModel* self, QModelIndex* parent, int first, int last);
-    friend void QFileSystemModel_QBaseBeginRemoveRows(QFileSystemModel* self, QModelIndex* parent, int first, int last);
+    friend void QFileSystemModel_BeginRemoveRows(QFileSystemModel* self, const QModelIndex* parent, int first, int last);
+    friend void QFileSystemModel_QBaseBeginRemoveRows(QFileSystemModel* self, const QModelIndex* parent, int first, int last);
     friend void QFileSystemModel_EndRemoveRows(QFileSystemModel* self);
     friend void QFileSystemModel_QBaseEndRemoveRows(QFileSystemModel* self);
-    friend bool QFileSystemModel_BeginMoveRows(QFileSystemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow);
-    friend bool QFileSystemModel_QBaseBeginMoveRows(QFileSystemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow);
+    friend bool QFileSystemModel_BeginMoveRows(QFileSystemModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationRow);
+    friend bool QFileSystemModel_QBaseBeginMoveRows(QFileSystemModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationRow);
     friend void QFileSystemModel_EndMoveRows(QFileSystemModel* self);
     friend void QFileSystemModel_QBaseEndMoveRows(QFileSystemModel* self);
-    friend void QFileSystemModel_BeginInsertColumns(QFileSystemModel* self, QModelIndex* parent, int first, int last);
-    friend void QFileSystemModel_QBaseBeginInsertColumns(QFileSystemModel* self, QModelIndex* parent, int first, int last);
+    friend void QFileSystemModel_BeginInsertColumns(QFileSystemModel* self, const QModelIndex* parent, int first, int last);
+    friend void QFileSystemModel_QBaseBeginInsertColumns(QFileSystemModel* self, const QModelIndex* parent, int first, int last);
     friend void QFileSystemModel_EndInsertColumns(QFileSystemModel* self);
     friend void QFileSystemModel_QBaseEndInsertColumns(QFileSystemModel* self);
-    friend void QFileSystemModel_BeginRemoveColumns(QFileSystemModel* self, QModelIndex* parent, int first, int last);
-    friend void QFileSystemModel_QBaseBeginRemoveColumns(QFileSystemModel* self, QModelIndex* parent, int first, int last);
+    friend void QFileSystemModel_BeginRemoveColumns(QFileSystemModel* self, const QModelIndex* parent, int first, int last);
+    friend void QFileSystemModel_QBaseBeginRemoveColumns(QFileSystemModel* self, const QModelIndex* parent, int first, int last);
     friend void QFileSystemModel_EndRemoveColumns(QFileSystemModel* self);
     friend void QFileSystemModel_QBaseEndRemoveColumns(QFileSystemModel* self);
-    friend bool QFileSystemModel_BeginMoveColumns(QFileSystemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn);
-    friend bool QFileSystemModel_QBaseBeginMoveColumns(QFileSystemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn);
+    friend bool QFileSystemModel_BeginMoveColumns(QFileSystemModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationColumn);
+    friend bool QFileSystemModel_QBaseBeginMoveColumns(QFileSystemModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationColumn);
     friend void QFileSystemModel_EndMoveColumns(QFileSystemModel* self);
     friend void QFileSystemModel_QBaseEndMoveColumns(QFileSystemModel* self);
     friend void QFileSystemModel_BeginResetModel(QFileSystemModel* self);
     friend void QFileSystemModel_QBaseBeginResetModel(QFileSystemModel* self);
     friend void QFileSystemModel_EndResetModel(QFileSystemModel* self);
     friend void QFileSystemModel_QBaseEndResetModel(QFileSystemModel* self);
-    friend void QFileSystemModel_ChangePersistentIndex(QFileSystemModel* self, QModelIndex* from, QModelIndex* to);
-    friend void QFileSystemModel_QBaseChangePersistentIndex(QFileSystemModel* self, QModelIndex* from, QModelIndex* to);
-    friend void QFileSystemModel_ChangePersistentIndexList(QFileSystemModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
-    friend void QFileSystemModel_QBaseChangePersistentIndexList(QFileSystemModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
+    friend void QFileSystemModel_ChangePersistentIndex(QFileSystemModel* self, const QModelIndex* from, const QModelIndex* to);
+    friend void QFileSystemModel_QBaseChangePersistentIndex(QFileSystemModel* self, const QModelIndex* from, const QModelIndex* to);
+    friend void QFileSystemModel_ChangePersistentIndexList(QFileSystemModel* self, const libqt_list /* of QModelIndex* */ from, const libqt_list /* of QModelIndex* */ to);
+    friend void QFileSystemModel_QBaseChangePersistentIndexList(QFileSystemModel* self, const libqt_list /* of QModelIndex* */ from, const libqt_list /* of QModelIndex* */ to);
     friend libqt_list /* of QModelIndex* */ QFileSystemModel_PersistentIndexList(const QFileSystemModel* self);
     friend libqt_list /* of QModelIndex* */ QFileSystemModel_QBasePersistentIndexList(const QFileSystemModel* self);
     friend QObject* QFileSystemModel_Sender(const QFileSystemModel* self);
@@ -1730,8 +1730,8 @@ class VirtualQFileSystemModel final : public QFileSystemModel {
     friend int QFileSystemModel_QBaseSenderSignalIndex(const QFileSystemModel* self);
     friend int QFileSystemModel_Receivers(const QFileSystemModel* self, const char* signal);
     friend int QFileSystemModel_QBaseReceivers(const QFileSystemModel* self, const char* signal);
-    friend bool QFileSystemModel_IsSignalConnected(const QFileSystemModel* self, QMetaMethod* signal);
-    friend bool QFileSystemModel_QBaseIsSignalConnected(const QFileSystemModel* self, QMetaMethod* signal);
+    friend bool QFileSystemModel_IsSignalConnected(const QFileSystemModel* self, const QMetaMethod* signal);
+    friend bool QFileSystemModel_QBaseIsSignalConnected(const QFileSystemModel* self, const QMetaMethod* signal);
 };
 
 #endif

@@ -140,6 +140,7 @@ class VirtualQUndoView final : public QUndoView {
     using QUndoView_SenderSignalIndex_Callback = int (*)();
     using QUndoView_Receivers_Callback = int (*)(const QUndoView*, const char*);
     using QUndoView_IsSignalConnected_Callback = bool (*)(const QUndoView*, QMetaMethod*);
+    using QUndoView_GetDecodedMetricF_Callback = double (*)(const QUndoView*, int, int);
 
   protected:
     // Instance callback storage
@@ -262,6 +263,7 @@ class VirtualQUndoView final : public QUndoView {
     QUndoView_SenderSignalIndex_Callback qundoview_sendersignalindex_callback = nullptr;
     QUndoView_Receivers_Callback qundoview_receivers_callback = nullptr;
     QUndoView_IsSignalConnected_Callback qundoview_issignalconnected_callback = nullptr;
+    QUndoView_GetDecodedMetricF_Callback qundoview_getdecodedmetricf_callback = nullptr;
 
     // Instance base flags
     mutable bool qundoview_metacall_isbase = false;
@@ -383,14 +385,15 @@ class VirtualQUndoView final : public QUndoView {
     mutable bool qundoview_sendersignalindex_isbase = false;
     mutable bool qundoview_receivers_isbase = false;
     mutable bool qundoview_issignalconnected_isbase = false;
+    mutable bool qundoview_getdecodedmetricf_isbase = false;
 
   public:
-    VirtualQUndoView(QWidget* parent) : QUndoView(parent){};
-    VirtualQUndoView() : QUndoView(){};
-    VirtualQUndoView(QUndoStack* stack) : QUndoView(stack){};
-    VirtualQUndoView(QUndoGroup* group) : QUndoView(group){};
-    VirtualQUndoView(QUndoStack* stack, QWidget* parent) : QUndoView(stack, parent){};
-    VirtualQUndoView(QUndoGroup* group, QWidget* parent) : QUndoView(group, parent){};
+    VirtualQUndoView(QWidget* parent) : QUndoView(parent) {};
+    VirtualQUndoView() : QUndoView() {};
+    VirtualQUndoView(QUndoStack* stack) : QUndoView(stack) {};
+    VirtualQUndoView(QUndoGroup* group) : QUndoView(group) {};
+    VirtualQUndoView(QUndoStack* stack, QWidget* parent) : QUndoView(stack, parent) {};
+    VirtualQUndoView(QUndoGroup* group, QWidget* parent) : QUndoView(group, parent) {};
 
     ~VirtualQUndoView() {
         qundoview_metacall_callback = nullptr;
@@ -512,6 +515,7 @@ class VirtualQUndoView final : public QUndoView {
         qundoview_sendersignalindex_callback = nullptr;
         qundoview_receivers_callback = nullptr;
         qundoview_issignalconnected_callback = nullptr;
+        qundoview_getdecodedmetricf_callback = nullptr;
     }
 
     // Callback setters
@@ -634,6 +638,7 @@ class VirtualQUndoView final : public QUndoView {
     inline void setQUndoView_SenderSignalIndex_Callback(QUndoView_SenderSignalIndex_Callback cb) { qundoview_sendersignalindex_callback = cb; }
     inline void setQUndoView_Receivers_Callback(QUndoView_Receivers_Callback cb) { qundoview_receivers_callback = cb; }
     inline void setQUndoView_IsSignalConnected_Callback(QUndoView_IsSignalConnected_Callback cb) { qundoview_issignalconnected_callback = cb; }
+    inline void setQUndoView_GetDecodedMetricF_Callback(QUndoView_GetDecodedMetricF_Callback cb) { qundoview_getdecodedmetricf_callback = cb; }
 
     // Base flag setters
     inline void setQUndoView_Metacall_IsBase(bool value) const { qundoview_metacall_isbase = value; }
@@ -755,6 +760,7 @@ class VirtualQUndoView final : public QUndoView {
     inline void setQUndoView_SenderSignalIndex_IsBase(bool value) const { qundoview_sendersignalindex_isbase = value; }
     inline void setQUndoView_Receivers_IsBase(bool value) const { qundoview_receivers_isbase = value; }
     inline void setQUndoView_IsSignalConnected_IsBase(bool value) const { qundoview_issignalconnected_isbase = value; }
+    inline void setQUndoView_GetDecodedMetricF_IsBase(bool value) const { qundoview_getdecodedmetricf_isbase = value; }
 
     // Virtual method for C ABI access and custom callback
     virtual int qt_metacall(QMetaObject::Call param1, int param2, void** param3) override {
@@ -907,13 +913,13 @@ class VirtualQUndoView final : public QUndoView {
             // Cast returned reference into pointer
             QModelIndex* cbval2 = const_cast<QModelIndex*>(&bottomRight_ret);
             const QList<int>& roles_ret = roles;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            int* roles_arr = static_cast<int*>(malloc(sizeof(int) * roles_ret.length()));
-            for (size_t i = 0; i < roles_ret.length(); ++i) {
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            int* roles_arr = static_cast<int*>(malloc(sizeof(int) * roles_ret.size()));
+            for (size_t i = 0; i < roles_ret.size(); ++i) {
                 roles_arr[i] = roles_ret[i];
             }
             libqt_list roles_out;
-            roles_out.len = roles_ret.length();
+            roles_out.len = roles_ret.size();
             roles_out.data.ints = roles_arr;
             libqt_list /* of int */ cbval3 = roles_out;
 
@@ -1190,13 +1196,13 @@ class VirtualQUndoView final : public QUndoView {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QModelIndexList selectedIndexes() const override {
+    virtual QList<QModelIndex> selectedIndexes() const override {
         if (qundoview_selectedindexes_isbase) {
             qundoview_selectedindexes_isbase = false;
             return QUndoView::selectedIndexes();
         } else if (qundoview_selectedindexes_callback != nullptr) {
             libqt_list /* of QModelIndex* */ callback_ret = qundoview_selectedindexes_callback();
-            QModelIndexList callback_ret_QList;
+            QList<QModelIndex> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             QModelIndex** callback_ret_arr = static_cast<QModelIndex**>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -2505,17 +2511,33 @@ class VirtualQUndoView final : public QUndoView {
         }
     }
 
+    // Virtual method for C ABI access and custom callback
+    double getDecodedMetricF(QPaintDevice::PaintDeviceMetric metricA, QPaintDevice::PaintDeviceMetric metricB) const {
+        if (qundoview_getdecodedmetricf_isbase) {
+            qundoview_getdecodedmetricf_isbase = false;
+            return QUndoView::getDecodedMetricF(metricA, metricB);
+        } else if (qundoview_getdecodedmetricf_callback != nullptr) {
+            int cbval1 = static_cast<int>(metricA);
+            int cbval2 = static_cast<int>(metricB);
+
+            double callback_ret = qundoview_getdecodedmetricf_callback(this, cbval1, cbval2);
+            return static_cast<double>(callback_ret);
+        } else {
+            return QUndoView::getDecodedMetricF(metricA, metricB);
+        }
+    }
+
     // Friend functions
     friend bool QUndoView_Event(QUndoView* self, QEvent* e);
     friend bool QUndoView_QBaseEvent(QUndoView* self, QEvent* e);
     friend void QUndoView_ScrollContentsBy(QUndoView* self, int dx, int dy);
     friend void QUndoView_QBaseScrollContentsBy(QUndoView* self, int dx, int dy);
-    friend void QUndoView_DataChanged(QUndoView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles);
-    friend void QUndoView_QBaseDataChanged(QUndoView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles);
-    friend void QUndoView_RowsInserted(QUndoView* self, QModelIndex* parent, int start, int end);
-    friend void QUndoView_QBaseRowsInserted(QUndoView* self, QModelIndex* parent, int start, int end);
-    friend void QUndoView_RowsAboutToBeRemoved(QUndoView* self, QModelIndex* parent, int start, int end);
-    friend void QUndoView_QBaseRowsAboutToBeRemoved(QUndoView* self, QModelIndex* parent, int start, int end);
+    friend void QUndoView_DataChanged(QUndoView* self, const QModelIndex* topLeft, const QModelIndex* bottomRight, const libqt_list /* of int */ roles);
+    friend void QUndoView_QBaseDataChanged(QUndoView* self, const QModelIndex* topLeft, const QModelIndex* bottomRight, const libqt_list /* of int */ roles);
+    friend void QUndoView_RowsInserted(QUndoView* self, const QModelIndex* parent, int start, int end);
+    friend void QUndoView_QBaseRowsInserted(QUndoView* self, const QModelIndex* parent, int start, int end);
+    friend void QUndoView_RowsAboutToBeRemoved(QUndoView* self, const QModelIndex* parent, int start, int end);
+    friend void QUndoView_QBaseRowsAboutToBeRemoved(QUndoView* self, const QModelIndex* parent, int start, int end);
     friend void QUndoView_MouseMoveEvent(QUndoView* self, QMouseEvent* e);
     friend void QUndoView_QBaseMouseMoveEvent(QUndoView* self, QMouseEvent* e);
     friend void QUndoView_MouseReleaseEvent(QUndoView* self, QMouseEvent* e);
@@ -2544,20 +2566,20 @@ class VirtualQUndoView final : public QUndoView {
     friend int QUndoView_QBaseVerticalOffset(const QUndoView* self);
     friend QModelIndex* QUndoView_MoveCursor(QUndoView* self, int cursorAction, int modifiers);
     friend QModelIndex* QUndoView_QBaseMoveCursor(QUndoView* self, int cursorAction, int modifiers);
-    friend void QUndoView_SetSelection(QUndoView* self, QRect* rect, int command);
-    friend void QUndoView_QBaseSetSelection(QUndoView* self, QRect* rect, int command);
-    friend QRegion* QUndoView_VisualRegionForSelection(const QUndoView* self, QItemSelection* selection);
-    friend QRegion* QUndoView_QBaseVisualRegionForSelection(const QUndoView* self, QItemSelection* selection);
+    friend void QUndoView_SetSelection(QUndoView* self, const QRect* rect, int command);
+    friend void QUndoView_QBaseSetSelection(QUndoView* self, const QRect* rect, int command);
+    friend QRegion* QUndoView_VisualRegionForSelection(const QUndoView* self, const QItemSelection* selection);
+    friend QRegion* QUndoView_QBaseVisualRegionForSelection(const QUndoView* self, const QItemSelection* selection);
     friend libqt_list /* of QModelIndex* */ QUndoView_SelectedIndexes(const QUndoView* self);
     friend libqt_list /* of QModelIndex* */ QUndoView_QBaseSelectedIndexes(const QUndoView* self);
     friend void QUndoView_UpdateGeometries(QUndoView* self);
     friend void QUndoView_QBaseUpdateGeometries(QUndoView* self);
-    friend bool QUndoView_IsIndexHidden(const QUndoView* self, QModelIndex* index);
-    friend bool QUndoView_QBaseIsIndexHidden(const QUndoView* self, QModelIndex* index);
-    friend void QUndoView_SelectionChanged(QUndoView* self, QItemSelection* selected, QItemSelection* deselected);
-    friend void QUndoView_QBaseSelectionChanged(QUndoView* self, QItemSelection* selected, QItemSelection* deselected);
-    friend void QUndoView_CurrentChanged(QUndoView* self, QModelIndex* current, QModelIndex* previous);
-    friend void QUndoView_QBaseCurrentChanged(QUndoView* self, QModelIndex* current, QModelIndex* previous);
+    friend bool QUndoView_IsIndexHidden(const QUndoView* self, const QModelIndex* index);
+    friend bool QUndoView_QBaseIsIndexHidden(const QUndoView* self, const QModelIndex* index);
+    friend void QUndoView_SelectionChanged(QUndoView* self, const QItemSelection* selected, const QItemSelection* deselected);
+    friend void QUndoView_QBaseSelectionChanged(QUndoView* self, const QItemSelection* selected, const QItemSelection* deselected);
+    friend void QUndoView_CurrentChanged(QUndoView* self, const QModelIndex* current, const QModelIndex* previous);
+    friend void QUndoView_QBaseCurrentChanged(QUndoView* self, const QModelIndex* current, const QModelIndex* previous);
     friend QSize* QUndoView_ViewportSizeHint(const QUndoView* self);
     friend QSize* QUndoView_QBaseViewportSizeHint(const QUndoView* self);
     friend void QUndoView_UpdateEditorData(QUndoView* self);
@@ -2578,10 +2600,10 @@ class VirtualQUndoView final : public QUndoView {
     friend void QUndoView_QBaseCommitData(QUndoView* self, QWidget* editor);
     friend void QUndoView_EditorDestroyed(QUndoView* self, QObject* editor);
     friend void QUndoView_QBaseEditorDestroyed(QUndoView* self, QObject* editor);
-    friend bool QUndoView_Edit2(QUndoView* self, QModelIndex* index, int trigger, QEvent* event);
-    friend bool QUndoView_QBaseEdit2(QUndoView* self, QModelIndex* index, int trigger, QEvent* event);
-    friend int QUndoView_SelectionCommand(const QUndoView* self, QModelIndex* index, QEvent* event);
-    friend int QUndoView_QBaseSelectionCommand(const QUndoView* self, QModelIndex* index, QEvent* event);
+    friend bool QUndoView_Edit2(QUndoView* self, const QModelIndex* index, int trigger, QEvent* event);
+    friend bool QUndoView_QBaseEdit2(QUndoView* self, const QModelIndex* index, int trigger, QEvent* event);
+    friend int QUndoView_SelectionCommand(const QUndoView* self, const QModelIndex* index, const QEvent* event);
+    friend int QUndoView_QBaseSelectionCommand(const QUndoView* self, const QModelIndex* index, const QEvent* event);
     friend bool QUndoView_FocusNextPrevChild(QUndoView* self, bool next);
     friend bool QUndoView_QBaseFocusNextPrevChild(QUndoView* self, bool next);
     friend bool QUndoView_ViewportEvent(QUndoView* self, QEvent* event);
@@ -2626,8 +2648,8 @@ class VirtualQUndoView final : public QUndoView {
     friend void QUndoView_QBaseShowEvent(QUndoView* self, QShowEvent* event);
     friend void QUndoView_HideEvent(QUndoView* self, QHideEvent* event);
     friend void QUndoView_QBaseHideEvent(QUndoView* self, QHideEvent* event);
-    friend bool QUndoView_NativeEvent(QUndoView* self, libqt_string eventType, void* message, intptr_t* result);
-    friend bool QUndoView_QBaseNativeEvent(QUndoView* self, libqt_string eventType, void* message, intptr_t* result);
+    friend bool QUndoView_NativeEvent(QUndoView* self, const libqt_string eventType, void* message, intptr_t* result);
+    friend bool QUndoView_QBaseNativeEvent(QUndoView* self, const libqt_string eventType, void* message, intptr_t* result);
     friend int QUndoView_Metric(const QUndoView* self, int param1);
     friend int QUndoView_QBaseMetric(const QUndoView* self, int param1);
     friend void QUndoView_InitPainter(const QUndoView* self, QPainter* painter);
@@ -2640,18 +2662,18 @@ class VirtualQUndoView final : public QUndoView {
     friend void QUndoView_QBaseChildEvent(QUndoView* self, QChildEvent* event);
     friend void QUndoView_CustomEvent(QUndoView* self, QEvent* event);
     friend void QUndoView_QBaseCustomEvent(QUndoView* self, QEvent* event);
-    friend void QUndoView_ConnectNotify(QUndoView* self, QMetaMethod* signal);
-    friend void QUndoView_QBaseConnectNotify(QUndoView* self, QMetaMethod* signal);
-    friend void QUndoView_DisconnectNotify(QUndoView* self, QMetaMethod* signal);
-    friend void QUndoView_QBaseDisconnectNotify(QUndoView* self, QMetaMethod* signal);
+    friend void QUndoView_ConnectNotify(QUndoView* self, const QMetaMethod* signal);
+    friend void QUndoView_QBaseConnectNotify(QUndoView* self, const QMetaMethod* signal);
+    friend void QUndoView_DisconnectNotify(QUndoView* self, const QMetaMethod* signal);
+    friend void QUndoView_QBaseDisconnectNotify(QUndoView* self, const QMetaMethod* signal);
     friend void QUndoView_ResizeContents(QUndoView* self, int width, int height);
     friend void QUndoView_QBaseResizeContents(QUndoView* self, int width, int height);
     friend QSize* QUndoView_ContentsSize(const QUndoView* self);
     friend QSize* QUndoView_QBaseContentsSize(const QUndoView* self);
-    friend QRect* QUndoView_RectForIndex(const QUndoView* self, QModelIndex* index);
-    friend QRect* QUndoView_QBaseRectForIndex(const QUndoView* self, QModelIndex* index);
-    friend void QUndoView_SetPositionForIndex(QUndoView* self, QPoint* position, QModelIndex* index);
-    friend void QUndoView_QBaseSetPositionForIndex(QUndoView* self, QPoint* position, QModelIndex* index);
+    friend QRect* QUndoView_RectForIndex(const QUndoView* self, const QModelIndex* index);
+    friend QRect* QUndoView_QBaseRectForIndex(const QUndoView* self, const QModelIndex* index);
+    friend void QUndoView_SetPositionForIndex(QUndoView* self, const QPoint* position, const QModelIndex* index);
+    friend void QUndoView_QBaseSetPositionForIndex(QUndoView* self, const QPoint* position, const QModelIndex* index);
     friend int QUndoView_State(const QUndoView* self);
     friend int QUndoView_QBaseState(const QUndoView* self);
     friend void QUndoView_SetState(QUndoView* self, int state);
@@ -2660,8 +2682,8 @@ class VirtualQUndoView final : public QUndoView {
     friend void QUndoView_QBaseScheduleDelayedItemsLayout(QUndoView* self);
     friend void QUndoView_ExecuteDelayedItemsLayout(QUndoView* self);
     friend void QUndoView_QBaseExecuteDelayedItemsLayout(QUndoView* self);
-    friend void QUndoView_SetDirtyRegion(QUndoView* self, QRegion* region);
-    friend void QUndoView_QBaseSetDirtyRegion(QUndoView* self, QRegion* region);
+    friend void QUndoView_SetDirtyRegion(QUndoView* self, const QRegion* region);
+    friend void QUndoView_QBaseSetDirtyRegion(QUndoView* self, const QRegion* region);
     friend void QUndoView_ScrollDirtyRegion(QUndoView* self, int dx, int dy);
     friend void QUndoView_QBaseScrollDirtyRegion(QUndoView* self, int dx, int dy);
     friend QPoint* QUndoView_DirtyRegionOffset(const QUndoView* self);
@@ -2696,8 +2718,10 @@ class VirtualQUndoView final : public QUndoView {
     friend int QUndoView_QBaseSenderSignalIndex(const QUndoView* self);
     friend int QUndoView_Receivers(const QUndoView* self, const char* signal);
     friend int QUndoView_QBaseReceivers(const QUndoView* self, const char* signal);
-    friend bool QUndoView_IsSignalConnected(const QUndoView* self, QMetaMethod* signal);
-    friend bool QUndoView_QBaseIsSignalConnected(const QUndoView* self, QMetaMethod* signal);
+    friend bool QUndoView_IsSignalConnected(const QUndoView* self, const QMetaMethod* signal);
+    friend bool QUndoView_QBaseIsSignalConnected(const QUndoView* self, const QMetaMethod* signal);
+    friend double QUndoView_GetDecodedMetricF(const QUndoView* self, int metricA, int metricB);
+    friend double QUndoView_QBaseGetDecodedMetricF(const QUndoView* self, int metricA, int metricB);
 };
 
 #endif

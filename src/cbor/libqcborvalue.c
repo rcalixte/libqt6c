@@ -1,7 +1,7 @@
 #include "libqcborarray.hpp"
 #include "libqcbormap.hpp"
 #include "libqcborstreamreader.hpp"
-#include "libqcborstreamwriter.hpp"
+#include "libqcborcommon.hpp"
 #include "../libqdatetime.hpp"
 #include "../libqjsonvalue.hpp"
 #include "../libqregularexpression.hpp"
@@ -307,18 +307,6 @@ QCborValueRef* q_cborvalue_operator_subscript5(void* self, const char* key) {
 
 int32_t q_cborvalue_compare(void* self, void* other) {
     return QCborValue_Compare((QCborValue*)self, (QCborValue*)other);
-}
-
-bool q_cborvalue_operator_equal(void* self, void* other) {
-    return QCborValue_OperatorEqual((QCborValue*)self, (QCborValue*)other);
-}
-
-bool q_cborvalue_operator_not_equal(void* self, void* other) {
-    return QCborValue_OperatorNotEqual((QCborValue*)self, (QCborValue*)other);
-}
-
-bool q_cborvalue_operator_lesser(void* self, void* other) {
-    return QCborValue_OperatorLesser((QCborValue*)self, (QCborValue*)other);
 }
 
 QCborValue* q_cborvalue_from_variant(void* variant) {
@@ -637,18 +625,6 @@ int32_t q_cborvalueconstref_compare(void* self, void* other) {
     return QCborValueConstRef_Compare((QCborValueConstRef*)self, (QCborValue*)other);
 }
 
-bool q_cborvalueconstref_operator_equal(void* self, void* other) {
-    return QCborValueConstRef_OperatorEqual((QCborValueConstRef*)self, (QCborValue*)other);
-}
-
-bool q_cborvalueconstref_operator_not_equal(void* self, void* other) {
-    return QCborValueConstRef_OperatorNotEqual((QCborValueConstRef*)self, (QCborValue*)other);
-}
-
-bool q_cborvalueconstref_operator_lesser(void* self, void* other) {
-    return QCborValueConstRef_OperatorLesser((QCborValueConstRef*)self, (QCborValue*)other);
-}
-
 QVariant* q_cborvalueconstref_to_variant(void* self) {
     return QCborValueConstRef_ToVariant((QCborValueConstRef*)self);
 }
@@ -947,18 +923,6 @@ const QCborValue* q_cborvalueref_operator_subscript5(void* self, long long key) 
 
 int32_t q_cborvalueref_compare(void* self, void* other) {
     return QCborValueRef_Compare((QCborValueRef*)self, (QCborValue*)other);
-}
-
-bool q_cborvalueref_operator_equal(void* self, void* other) {
-    return QCborValueRef_OperatorEqual((QCborValueRef*)self, (QCborValue*)other);
-}
-
-bool q_cborvalueref_operator_not_equal(void* self, void* other) {
-    return QCborValueRef_OperatorNotEqual((QCborValueRef*)self, (QCborValue*)other);
-}
-
-bool q_cborvalueref_operator_lesser(void* self, void* other) {
-    return QCborValueRef_OperatorLesser((QCborValueRef*)self, (QCborValue*)other);
 }
 
 QVariant* q_cborvalueref_to_variant(void* self) {

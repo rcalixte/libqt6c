@@ -53,16 +53,6 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QFrame::Shadow Shadow;       // C++ enum
-typedef QFrame::Shape Shape;         // C++ enum
-typedef QFrame::StyleMask StyleMask; // C++ enum
-#else
-typedef int Shadow;    // C ABI enum
-typedef int Shape;     // C ABI enum
-typedef int StyleMask; // C ABI enum
-#endif
-
 QFrame* QFrame_new(QWidget* parent);
 QFrame* QFrame_new2();
 QFrame* QFrame_new3(QWidget* parent, int f);
@@ -87,7 +77,7 @@ void QFrame_SetLineWidth(QFrame* self, int lineWidth);
 int QFrame_MidLineWidth(const QFrame* self);
 void QFrame_SetMidLineWidth(QFrame* self, int midLineWidth);
 QRect* QFrame_FrameRect(const QFrame* self);
-void QFrame_SetFrameRect(QFrame* self, QRect* frameRect);
+void QFrame_SetFrameRect(QFrame* self, const QRect* frameRect);
 bool QFrame_Event(QFrame* self, QEvent* e);
 void QFrame_OnEvent(QFrame* self, intptr_t slot);
 bool QFrame_QBaseEvent(QFrame* self, QEvent* e);
@@ -189,9 +179,9 @@ void QFrame_QBaseShowEvent(QFrame* self, QShowEvent* event);
 void QFrame_HideEvent(QFrame* self, QHideEvent* event);
 void QFrame_OnHideEvent(QFrame* self, intptr_t slot);
 void QFrame_QBaseHideEvent(QFrame* self, QHideEvent* event);
-bool QFrame_NativeEvent(QFrame* self, libqt_string eventType, void* message, intptr_t* result);
+bool QFrame_NativeEvent(QFrame* self, const libqt_string eventType, void* message, intptr_t* result);
 void QFrame_OnNativeEvent(QFrame* self, intptr_t slot);
-bool QFrame_QBaseNativeEvent(QFrame* self, libqt_string eventType, void* message, intptr_t* result);
+bool QFrame_QBaseNativeEvent(QFrame* self, const libqt_string eventType, void* message, intptr_t* result);
 int QFrame_Metric(const QFrame* self, int param1);
 void QFrame_OnMetric(const QFrame* self, intptr_t slot);
 int QFrame_QBaseMetric(const QFrame* self, int param1);
@@ -225,12 +215,12 @@ void QFrame_QBaseChildEvent(QFrame* self, QChildEvent* event);
 void QFrame_CustomEvent(QFrame* self, QEvent* event);
 void QFrame_OnCustomEvent(QFrame* self, intptr_t slot);
 void QFrame_QBaseCustomEvent(QFrame* self, QEvent* event);
-void QFrame_ConnectNotify(QFrame* self, QMetaMethod* signal);
+void QFrame_ConnectNotify(QFrame* self, const QMetaMethod* signal);
 void QFrame_OnConnectNotify(QFrame* self, intptr_t slot);
-void QFrame_QBaseConnectNotify(QFrame* self, QMetaMethod* signal);
-void QFrame_DisconnectNotify(QFrame* self, QMetaMethod* signal);
+void QFrame_QBaseConnectNotify(QFrame* self, const QMetaMethod* signal);
+void QFrame_DisconnectNotify(QFrame* self, const QMetaMethod* signal);
 void QFrame_OnDisconnectNotify(QFrame* self, intptr_t slot);
-void QFrame_QBaseDisconnectNotify(QFrame* self, QMetaMethod* signal);
+void QFrame_QBaseDisconnectNotify(QFrame* self, const QMetaMethod* signal);
 void QFrame_DrawFrame(QFrame* self, QPainter* param1);
 void QFrame_OnDrawFrame(QFrame* self, intptr_t slot);
 void QFrame_QBaseDrawFrame(QFrame* self, QPainter* param1);
@@ -258,9 +248,12 @@ int QFrame_QBaseSenderSignalIndex(const QFrame* self);
 int QFrame_Receivers(const QFrame* self, const char* signal);
 void QFrame_OnReceivers(const QFrame* self, intptr_t slot);
 int QFrame_QBaseReceivers(const QFrame* self, const char* signal);
-bool QFrame_IsSignalConnected(const QFrame* self, QMetaMethod* signal);
+bool QFrame_IsSignalConnected(const QFrame* self, const QMetaMethod* signal);
 void QFrame_OnIsSignalConnected(const QFrame* self, intptr_t slot);
-bool QFrame_QBaseIsSignalConnected(const QFrame* self, QMetaMethod* signal);
+bool QFrame_QBaseIsSignalConnected(const QFrame* self, const QMetaMethod* signal);
+double QFrame_GetDecodedMetricF(const QFrame* self, int metricA, int metricB);
+void QFrame_OnGetDecodedMetricF(const QFrame* self, intptr_t slot);
+double QFrame_QBaseGetDecodedMetricF(const QFrame* self, int metricA, int metricB);
 void QFrame_Delete(QFrame* self);
 
 #ifdef __cplusplus

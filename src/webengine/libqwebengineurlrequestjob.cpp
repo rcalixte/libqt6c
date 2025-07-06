@@ -54,7 +54,11 @@ QUrl* QWebEngineUrlRequestJob_Initiator(const QWebEngineUrlRequestJob* self) {
     return new QUrl(self->initiator());
 }
 
-void QWebEngineUrlRequestJob_Reply(QWebEngineUrlRequestJob* self, libqt_string contentType, QIODevice* device) {
+QIODevice* QWebEngineUrlRequestJob_RequestBody(const QWebEngineUrlRequestJob* self) {
+    return self->requestBody();
+}
+
+void QWebEngineUrlRequestJob_Reply(QWebEngineUrlRequestJob* self, const libqt_string contentType, QIODevice* device) {
     QByteArray contentType_QByteArray(contentType.data, contentType.len);
     self->reply(contentType_QByteArray, device);
 }
@@ -63,7 +67,7 @@ void QWebEngineUrlRequestJob_Fail(QWebEngineUrlRequestJob* self, int errorVal) {
     self->fail(static_cast<QWebEngineUrlRequestJob::Error>(errorVal));
 }
 
-void QWebEngineUrlRequestJob_Redirect(QWebEngineUrlRequestJob* self, QUrl* url) {
+void QWebEngineUrlRequestJob_Redirect(QWebEngineUrlRequestJob* self, const QUrl* url) {
     self->redirect(*url);
 }
 

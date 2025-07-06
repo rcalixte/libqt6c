@@ -12,23 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractnetworkcache.h"
-#include "libqauthenticator.h"
-#include "../libqevent.h"
-#include "libqhstspolicy.h"
-#include "libqhttpmultipart.h"
-#include "../libqiodevice.h"
-#include "../libqmetaobject.h"
-#include "libqnetworkcookiejar.h"
-#include "libqnetworkproxy.h"
-#include "libqnetworkreply.h"
-#include "libqnetworkrequest.h"
-#include "../libqobject.h"
-#include "libqsslconfiguration.h"
-#include "libqsslerror.h"
-#include "libqsslpresharedkeyauthenticator.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qnetworkaccessmanager.html
 
 /// q_networkaccessmanager_new constructs a new QNetworkAccessManager object.
@@ -176,6 +159,16 @@ QNetworkReply* q_networkaccessmanager_head(void* self, void* request);
 /// ``` QNetworkAccessManager* self, QNetworkRequest* request ```
 QNetworkReply* q_networkaccessmanager_get(void* self, void* request);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#get)
+///
+/// ``` QNetworkAccessManager* self, QNetworkRequest* request, QIODevice* data ```
+QNetworkReply* q_networkaccessmanager_get2(void* self, void* request, void* data);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#get)
+///
+/// ``` QNetworkAccessManager* self, QNetworkRequest* request, const char* data ```
+QNetworkReply* q_networkaccessmanager_get3(void* self, void* request, const char* data);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#post)
 ///
 /// ``` QNetworkAccessManager* self, QNetworkRequest* request, QIODevice* data ```
@@ -214,12 +207,12 @@ QNetworkReply* q_networkaccessmanager_send_custom_request2(void* self, void* req
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#post)
 ///
 /// ``` QNetworkAccessManager* self, QNetworkRequest* request, QHttpMultiPart* multiPart ```
-QNetworkReply* q_networkaccessmanager_post3(void* self, void* request, void* multiPart);
+QNetworkReply* q_networkaccessmanager_post4(void* self, void* request, void* multiPart);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#put)
 ///
 /// ``` QNetworkAccessManager* self, QNetworkRequest* request, QHttpMultiPart* multiPart ```
-QNetworkReply* q_networkaccessmanager_put3(void* self, void* request, void* multiPart);
+QNetworkReply* q_networkaccessmanager_put4(void* self, void* request, void* multiPart);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#sendCustomRequest)
 ///
@@ -268,8 +261,13 @@ int32_t q_networkaccessmanager_transfer_timeout(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#setTransferTimeout)
 ///
+/// ``` QNetworkAccessManager* self, int timeout ```
+void q_networkaccessmanager_set_transfer_timeout(void* self, int timeout);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#setTransferTimeout)
+///
 /// ``` QNetworkAccessManager* self ```
-void q_networkaccessmanager_set_transfer_timeout(void* self);
+void q_networkaccessmanager_set_transfer_timeout2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#proxyAuthenticationRequired)
 ///
@@ -404,11 +402,6 @@ void q_networkaccessmanager_connect_to_host_encrypted3(void* self, const char* h
 /// ``` QNetworkAccessManager* self, const char* hostName, unsigned short port ```
 void q_networkaccessmanager_connect_to_host2(void* self, const char* hostName, unsigned short port);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#setTransferTimeout)
-///
-/// ``` QNetworkAccessManager* self, int timeout ```
-void q_networkaccessmanager_set_transfer_timeout1(void* self, int timeout);
-
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
@@ -470,7 +463,7 @@ QThread* q_networkaccessmanager_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QNetworkAccessManager* self, QThread* thread ```
-void q_networkaccessmanager_move_to_thread(void* self, void* thread);
+bool q_networkaccessmanager_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -485,6 +478,13 @@ int32_t q_networkaccessmanager_start_timer(void* self, int interval);
 ///
 /// ``` QNetworkAccessManager* self, int id ```
 void q_networkaccessmanager_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QNetworkAccessManager* self, enum Qt__TimerId id ```
+void q_networkaccessmanager_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -625,6 +625,13 @@ bool q_networkaccessmanager_inherits(void* self, const char* classname);
 ///
 /// ``` QNetworkAccessManager* self ```
 void q_networkaccessmanager_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QNetworkAccessManager* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_networkaccessmanager_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

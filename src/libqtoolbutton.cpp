@@ -507,7 +507,7 @@ void QToolButton_OnChangeEvent(QToolButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QToolButton_HitButton(const QToolButton* self, QPoint* pos) {
+bool QToolButton_HitButton(const QToolButton* self, const QPoint* pos) {
     auto* vqtoolbutton = const_cast<VirtualQToolButton*>(dynamic_cast<const VirtualQToolButton*>(self));
     if (vqtoolbutton && vqtoolbutton->isVirtualQToolButton) {
         return vqtoolbutton->hitButton(*pos);
@@ -517,7 +517,7 @@ bool QToolButton_HitButton(const QToolButton* self, QPoint* pos) {
 }
 
 // Base class handler implementation
-bool QToolButton_QBaseHitButton(const QToolButton* self, QPoint* pos) {
+bool QToolButton_QBaseHitButton(const QToolButton* self, const QPoint* pos) {
     auto* vqtoolbutton = const_cast<VirtualQToolButton*>(dynamic_cast<const VirtualQToolButton*>(self));
     if (vqtoolbutton && vqtoolbutton->isVirtualQToolButton) {
         vqtoolbutton->setQToolButton_HitButton_IsBase(true);
@@ -1290,7 +1290,7 @@ void QToolButton_OnHideEvent(QToolButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QToolButton_NativeEvent(QToolButton* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QToolButton_NativeEvent(QToolButton* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqtoolbutton = dynamic_cast<VirtualQToolButton*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqtoolbutton && vqtoolbutton->isVirtualQToolButton) {
@@ -1301,7 +1301,7 @@ bool QToolButton_NativeEvent(QToolButton* self, libqt_string eventType, void* me
 }
 
 // Base class handler implementation
-bool QToolButton_QBaseNativeEvent(QToolButton* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QToolButton_QBaseNativeEvent(QToolButton* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqtoolbutton = dynamic_cast<VirtualQToolButton*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqtoolbutton && vqtoolbutton->isVirtualQToolButton) {
@@ -1611,7 +1611,7 @@ void QToolButton_OnCustomEvent(QToolButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QToolButton_ConnectNotify(QToolButton* self, QMetaMethod* signal) {
+void QToolButton_ConnectNotify(QToolButton* self, const QMetaMethod* signal) {
     auto* vqtoolbutton = dynamic_cast<VirtualQToolButton*>(self);
     if (vqtoolbutton && vqtoolbutton->isVirtualQToolButton) {
         vqtoolbutton->connectNotify(*signal);
@@ -1621,7 +1621,7 @@ void QToolButton_ConnectNotify(QToolButton* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QToolButton_QBaseConnectNotify(QToolButton* self, QMetaMethod* signal) {
+void QToolButton_QBaseConnectNotify(QToolButton* self, const QMetaMethod* signal) {
     auto* vqtoolbutton = dynamic_cast<VirtualQToolButton*>(self);
     if (vqtoolbutton && vqtoolbutton->isVirtualQToolButton) {
         vqtoolbutton->setQToolButton_ConnectNotify_IsBase(true);
@@ -1640,7 +1640,7 @@ void QToolButton_OnConnectNotify(QToolButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QToolButton_DisconnectNotify(QToolButton* self, QMetaMethod* signal) {
+void QToolButton_DisconnectNotify(QToolButton* self, const QMetaMethod* signal) {
     auto* vqtoolbutton = dynamic_cast<VirtualQToolButton*>(self);
     if (vqtoolbutton && vqtoolbutton->isVirtualQToolButton) {
         vqtoolbutton->disconnectNotify(*signal);
@@ -1650,7 +1650,7 @@ void QToolButton_DisconnectNotify(QToolButton* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QToolButton_QBaseDisconnectNotify(QToolButton* self, QMetaMethod* signal) {
+void QToolButton_QBaseDisconnectNotify(QToolButton* self, const QMetaMethod* signal) {
     auto* vqtoolbutton = dynamic_cast<VirtualQToolButton*>(self);
     if (vqtoolbutton && vqtoolbutton->isVirtualQToolButton) {
         vqtoolbutton->setQToolButton_DisconnectNotify_IsBase(true);
@@ -1901,7 +1901,7 @@ void QToolButton_OnReceivers(const QToolButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QToolButton_IsSignalConnected(const QToolButton* self, QMetaMethod* signal) {
+bool QToolButton_IsSignalConnected(const QToolButton* self, const QMetaMethod* signal) {
     auto* vqtoolbutton = const_cast<VirtualQToolButton*>(dynamic_cast<const VirtualQToolButton*>(self));
     if (vqtoolbutton && vqtoolbutton->isVirtualQToolButton) {
         return vqtoolbutton->isSignalConnected(*signal);
@@ -1911,7 +1911,7 @@ bool QToolButton_IsSignalConnected(const QToolButton* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QToolButton_QBaseIsSignalConnected(const QToolButton* self, QMetaMethod* signal) {
+bool QToolButton_QBaseIsSignalConnected(const QToolButton* self, const QMetaMethod* signal) {
     auto* vqtoolbutton = const_cast<VirtualQToolButton*>(dynamic_cast<const VirtualQToolButton*>(self));
     if (vqtoolbutton && vqtoolbutton->isVirtualQToolButton) {
         vqtoolbutton->setQToolButton_IsSignalConnected_IsBase(true);
@@ -1926,6 +1926,35 @@ void QToolButton_OnIsSignalConnected(const QToolButton* self, intptr_t slot) {
     auto* vqtoolbutton = const_cast<VirtualQToolButton*>(dynamic_cast<const VirtualQToolButton*>(self));
     if (vqtoolbutton && vqtoolbutton->isVirtualQToolButton) {
         vqtoolbutton->setQToolButton_IsSignalConnected_Callback(reinterpret_cast<VirtualQToolButton::QToolButton_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QToolButton_GetDecodedMetricF(const QToolButton* self, int metricA, int metricB) {
+    auto* vqtoolbutton = const_cast<VirtualQToolButton*>(dynamic_cast<const VirtualQToolButton*>(self));
+    if (vqtoolbutton && vqtoolbutton->isVirtualQToolButton) {
+        return vqtoolbutton->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQToolButton*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QToolButton_QBaseGetDecodedMetricF(const QToolButton* self, int metricA, int metricB) {
+    auto* vqtoolbutton = const_cast<VirtualQToolButton*>(dynamic_cast<const VirtualQToolButton*>(self));
+    if (vqtoolbutton && vqtoolbutton->isVirtualQToolButton) {
+        vqtoolbutton->setQToolButton_GetDecodedMetricF_IsBase(true);
+        return vqtoolbutton->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQToolButton*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QToolButton_OnGetDecodedMetricF(const QToolButton* self, intptr_t slot) {
+    auto* vqtoolbutton = const_cast<VirtualQToolButton*>(dynamic_cast<const VirtualQToolButton*>(self));
+    if (vqtoolbutton && vqtoolbutton->isVirtualQToolButton) {
+        vqtoolbutton->setQToolButton_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQToolButton::QToolButton_GetDecodedMetricF_Callback>(slot));
     }
 }
 

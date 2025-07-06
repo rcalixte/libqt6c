@@ -110,7 +110,7 @@ libqt_string QChartView_Tr(const char* s) {
     return _str;
 }
 
-void QChartView_SetRubberBand(QChartView* self, int* rubberBands) {
+void QChartView_SetRubberBand(QChartView* self, const int* rubberBands) {
     self->setRubberBand((const QChartView::RubberBands&)(*rubberBands));
 }
 
@@ -876,7 +876,7 @@ void QChartView_OnInputMethodEvent(QChartView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QChartView_DrawBackground(QChartView* self, QPainter* painter, QRectF* rect) {
+void QChartView_DrawBackground(QChartView* self, QPainter* painter, const QRectF* rect) {
     auto* vqchartview = dynamic_cast<VirtualQChartView*>(self);
     if (vqchartview && vqchartview->isVirtualQChartView) {
         vqchartview->drawBackground(painter, *rect);
@@ -886,7 +886,7 @@ void QChartView_DrawBackground(QChartView* self, QPainter* painter, QRectF* rect
 }
 
 // Base class handler implementation
-void QChartView_QBaseDrawBackground(QChartView* self, QPainter* painter, QRectF* rect) {
+void QChartView_QBaseDrawBackground(QChartView* self, QPainter* painter, const QRectF* rect) {
     auto* vqchartview = dynamic_cast<VirtualQChartView*>(self);
     if (vqchartview && vqchartview->isVirtualQChartView) {
         vqchartview->setQChartView_DrawBackground_IsBase(true);
@@ -905,7 +905,7 @@ void QChartView_OnDrawBackground(QChartView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QChartView_DrawForeground(QChartView* self, QPainter* painter, QRectF* rect) {
+void QChartView_DrawForeground(QChartView* self, QPainter* painter, const QRectF* rect) {
     auto* vqchartview = dynamic_cast<VirtualQChartView*>(self);
     if (vqchartview && vqchartview->isVirtualQChartView) {
         vqchartview->drawForeground(painter, *rect);
@@ -915,7 +915,7 @@ void QChartView_DrawForeground(QChartView* self, QPainter* painter, QRectF* rect
 }
 
 // Base class handler implementation
-void QChartView_QBaseDrawForeground(QChartView* self, QPainter* painter, QRectF* rect) {
+void QChartView_QBaseDrawForeground(QChartView* self, QPainter* painter, const QRectF* rect) {
     auto* vqchartview = dynamic_cast<VirtualQChartView*>(self);
     if (vqchartview && vqchartview->isVirtualQChartView) {
         vqchartview->setQChartView_DrawForeground_IsBase(true);
@@ -1425,7 +1425,7 @@ void QChartView_OnHideEvent(QChartView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QChartView_NativeEvent(QChartView* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QChartView_NativeEvent(QChartView* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqchartview = dynamic_cast<VirtualQChartView*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqchartview && vqchartview->isVirtualQChartView) {
@@ -1436,7 +1436,7 @@ bool QChartView_NativeEvent(QChartView* self, libqt_string eventType, void* mess
 }
 
 // Base class handler implementation
-bool QChartView_QBaseNativeEvent(QChartView* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QChartView_QBaseNativeEvent(QChartView* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqchartview = dynamic_cast<VirtualQChartView*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqchartview && vqchartview->isVirtualQChartView) {
@@ -1659,7 +1659,7 @@ void QChartView_OnCustomEvent(QChartView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QChartView_ConnectNotify(QChartView* self, QMetaMethod* signal) {
+void QChartView_ConnectNotify(QChartView* self, const QMetaMethod* signal) {
     auto* vqchartview = dynamic_cast<VirtualQChartView*>(self);
     if (vqchartview && vqchartview->isVirtualQChartView) {
         vqchartview->connectNotify(*signal);
@@ -1669,7 +1669,7 @@ void QChartView_ConnectNotify(QChartView* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QChartView_QBaseConnectNotify(QChartView* self, QMetaMethod* signal) {
+void QChartView_QBaseConnectNotify(QChartView* self, const QMetaMethod* signal) {
     auto* vqchartview = dynamic_cast<VirtualQChartView*>(self);
     if (vqchartview && vqchartview->isVirtualQChartView) {
         vqchartview->setQChartView_ConnectNotify_IsBase(true);
@@ -1688,7 +1688,7 @@ void QChartView_OnConnectNotify(QChartView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QChartView_DisconnectNotify(QChartView* self, QMetaMethod* signal) {
+void QChartView_DisconnectNotify(QChartView* self, const QMetaMethod* signal) {
     auto* vqchartview = dynamic_cast<VirtualQChartView*>(self);
     if (vqchartview && vqchartview->isVirtualQChartView) {
         vqchartview->disconnectNotify(*signal);
@@ -1698,7 +1698,7 @@ void QChartView_DisconnectNotify(QChartView* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QChartView_QBaseDisconnectNotify(QChartView* self, QMetaMethod* signal) {
+void QChartView_QBaseDisconnectNotify(QChartView* self, const QMetaMethod* signal) {
     auto* vqchartview = dynamic_cast<VirtualQChartView*>(self);
     if (vqchartview && vqchartview->isVirtualQChartView) {
         vqchartview->setQChartView_DisconnectNotify_IsBase(true);
@@ -2034,7 +2034,7 @@ void QChartView_OnReceivers(const QChartView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QChartView_IsSignalConnected(const QChartView* self, QMetaMethod* signal) {
+bool QChartView_IsSignalConnected(const QChartView* self, const QMetaMethod* signal) {
     auto* vqchartview = const_cast<VirtualQChartView*>(dynamic_cast<const VirtualQChartView*>(self));
     if (vqchartview && vqchartview->isVirtualQChartView) {
         return vqchartview->isSignalConnected(*signal);
@@ -2044,7 +2044,7 @@ bool QChartView_IsSignalConnected(const QChartView* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QChartView_QBaseIsSignalConnected(const QChartView* self, QMetaMethod* signal) {
+bool QChartView_QBaseIsSignalConnected(const QChartView* self, const QMetaMethod* signal) {
     auto* vqchartview = const_cast<VirtualQChartView*>(dynamic_cast<const VirtualQChartView*>(self));
     if (vqchartview && vqchartview->isVirtualQChartView) {
         vqchartview->setQChartView_IsSignalConnected_IsBase(true);
@@ -2059,6 +2059,35 @@ void QChartView_OnIsSignalConnected(const QChartView* self, intptr_t slot) {
     auto* vqchartview = const_cast<VirtualQChartView*>(dynamic_cast<const VirtualQChartView*>(self));
     if (vqchartview && vqchartview->isVirtualQChartView) {
         vqchartview->setQChartView_IsSignalConnected_Callback(reinterpret_cast<VirtualQChartView::QChartView_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QChartView_GetDecodedMetricF(const QChartView* self, int metricA, int metricB) {
+    auto* vqchartview = const_cast<VirtualQChartView*>(dynamic_cast<const VirtualQChartView*>(self));
+    if (vqchartview && vqchartview->isVirtualQChartView) {
+        return vqchartview->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQChartView*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QChartView_QBaseGetDecodedMetricF(const QChartView* self, int metricA, int metricB) {
+    auto* vqchartview = const_cast<VirtualQChartView*>(dynamic_cast<const VirtualQChartView*>(self));
+    if (vqchartview && vqchartview->isVirtualQChartView) {
+        vqchartview->setQChartView_GetDecodedMetricF_IsBase(true);
+        return vqchartview->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQChartView*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QChartView_OnGetDecodedMetricF(const QChartView* self, intptr_t slot) {
+    auto* vqchartview = const_cast<VirtualQChartView*>(dynamic_cast<const VirtualQChartView*>(self));
+    if (vqchartview && vqchartview->isVirtualQChartView) {
+        vqchartview->setQChartView_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQChartView::QChartView_GetDecodedMetricF_Callback>(slot));
     }
 }
 

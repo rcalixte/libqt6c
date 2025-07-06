@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqobject.h"
-#include <string.h>
-#include "libqurl.h"
-
 /// https://doc.qt.io/qt-6/qdesktopservices.html
 
 /// q_desktopservices_new constructs a new QDesktopServices object.

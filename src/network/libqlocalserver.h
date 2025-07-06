@@ -12,12 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqevent.h"
-#include "libqlocalsocket.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qlocalserver.html
 
 /// q_localserver_new constructs a new QLocalServer object.
@@ -208,6 +202,25 @@ void q_localserver_on_incoming_connection(void* self, void (*slot)(void*, uintpt
 /// ``` QLocalServer* self, uintptr_t socketDescriptor ```
 void q_localserver_qbase_incoming_connection(void* self, uintptr_t socketDescriptor);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#addPendingConnection)
+///
+/// ``` QLocalServer* self, QLocalSocket* socket ```
+void q_localserver_add_pending_connection(void* self, void* socket);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#addPendingConnection)
+///
+/// Allows for overriding the related default method
+///
+/// ``` QLocalServer* self, void (*slot)(QLocalServer*, QLocalSocket*) ```
+void q_localserver_on_add_pending_connection(void* self, void (*slot)(void*, void*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#addPendingConnection)
+///
+/// Base class method implementation
+///
+/// ``` QLocalServer* self, QLocalSocket* socket ```
+void q_localserver_qbase_add_pending_connection(void* self, void* socket);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// ``` const char* s, const char* c ```
@@ -289,7 +302,7 @@ QThread* q_localserver_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QLocalServer* self, QThread* thread ```
-void q_localserver_move_to_thread(void* self, void* thread);
+bool q_localserver_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -304,6 +317,13 @@ int32_t q_localserver_start_timer(void* self, int interval);
 ///
 /// ``` QLocalServer* self, int id ```
 void q_localserver_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QLocalServer* self, enum Qt__TimerId id ```
+void q_localserver_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -444,6 +464,13 @@ bool q_localserver_inherits(void* self, const char* classname);
 ///
 /// ``` QLocalServer* self ```
 void q_localserver_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QLocalServer* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_localserver_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

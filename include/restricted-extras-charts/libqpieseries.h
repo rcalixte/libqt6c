@@ -12,13 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractseries.h"
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "libqpieslice.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qpieseries-qtcharts.html
 
 /// q_pieseries_new constructs a new QPieSeries object.
@@ -540,7 +533,7 @@ QThread* q_pieseries_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QPieSeries* self, QThread* thread ```
-void q_pieseries_move_to_thread(void* self, void* thread);
+bool q_pieseries_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -555,6 +548,13 @@ int32_t q_pieseries_start_timer(void* self, int interval);
 ///
 /// ``` QPieSeries* self, int id ```
 void q_pieseries_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QPieSeries* self, enum Qt__TimerId id ```
+void q_pieseries_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -695,6 +695,13 @@ bool q_pieseries_inherits(void* self, const char* classname);
 ///
 /// ``` QPieSeries* self ```
 void q_pieseries_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QPieSeries* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_pieseries_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

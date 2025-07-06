@@ -53,25 +53,17 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QFontDialog::FontDialogOption FontDialogOption;   // C++ enum
-typedef QFontDialog::FontDialogOptions FontDialogOptions; // C++ QFlags
-#else
-typedef int FontDialogOption;  // C ABI enum
-typedef int FontDialogOptions; // C ABI QFlags
-#endif
-
 QFontDialog* QFontDialog_new(QWidget* parent);
 QFontDialog* QFontDialog_new2();
-QFontDialog* QFontDialog_new3(QFont* initial);
-QFontDialog* QFontDialog_new4(QFont* initial, QWidget* parent);
+QFontDialog* QFontDialog_new3(const QFont* initial);
+QFontDialog* QFontDialog_new4(const QFont* initial, QWidget* parent);
 QMetaObject* QFontDialog_MetaObject(const QFontDialog* self);
 void* QFontDialog_Metacast(QFontDialog* self, const char* param1);
 int QFontDialog_Metacall(QFontDialog* self, int param1, int param2, void** param3);
 void QFontDialog_OnMetacall(QFontDialog* self, intptr_t slot);
 int QFontDialog_QBaseMetacall(QFontDialog* self, int param1, int param2, void** param3);
 libqt_string QFontDialog_Tr(const char* s);
-void QFontDialog_SetCurrentFont(QFontDialog* self, QFont* font);
+void QFontDialog_SetCurrentFont(QFontDialog* self, const QFont* font);
 QFont* QFontDialog_CurrentFont(const QFontDialog* self);
 QFont* QFontDialog_SelectedFont(const QFontDialog* self);
 void QFontDialog_SetOption(QFontDialog* self, int option);
@@ -82,10 +74,10 @@ void QFontDialog_SetVisible(QFontDialog* self, bool visible);
 void QFontDialog_OnSetVisible(QFontDialog* self, intptr_t slot);
 void QFontDialog_QBaseSetVisible(QFontDialog* self, bool visible);
 QFont* QFontDialog_GetFont(bool* ok);
-QFont* QFontDialog_GetFont2(bool* ok, QFont* initial);
-void QFontDialog_CurrentFontChanged(QFontDialog* self, QFont* font);
+QFont* QFontDialog_GetFont2(bool* ok, const QFont* initial);
+void QFontDialog_CurrentFontChanged(QFontDialog* self, const QFont* font);
 void QFontDialog_Connect_CurrentFontChanged(QFontDialog* self, intptr_t slot);
-void QFontDialog_FontSelected(QFontDialog* self, QFont* font);
+void QFontDialog_FontSelected(QFontDialog* self, const QFont* font);
 void QFontDialog_Connect_FontSelected(QFontDialog* self, intptr_t slot);
 void QFontDialog_ChangeEvent(QFontDialog* self, QEvent* event);
 void QFontDialog_OnChangeEvent(QFontDialog* self, intptr_t slot);
@@ -100,9 +92,9 @@ libqt_string QFontDialog_Tr2(const char* s, const char* c);
 libqt_string QFontDialog_Tr3(const char* s, const char* c, int n);
 void QFontDialog_SetOption2(QFontDialog* self, int option, bool on);
 QFont* QFontDialog_GetFont22(bool* ok, QWidget* parent);
-QFont* QFontDialog_GetFont3(bool* ok, QFont* initial, QWidget* parent);
-QFont* QFontDialog_GetFont4(bool* ok, QFont* initial, QWidget* parent, libqt_string title);
-QFont* QFontDialog_GetFont5(bool* ok, QFont* initial, QWidget* parent, libqt_string title, int options);
+QFont* QFontDialog_GetFont3(bool* ok, const QFont* initial, QWidget* parent);
+QFont* QFontDialog_GetFont4(bool* ok, const QFont* initial, QWidget* parent, const libqt_string title);
+QFont* QFontDialog_GetFont5(bool* ok, const QFont* initial, QWidget* parent, const libqt_string title, int options);
 QSize* QFontDialog_SizeHint(const QFontDialog* self);
 void QFontDialog_OnSizeHint(const QFontDialog* self, intptr_t slot);
 QSize* QFontDialog_QBaseSizeHint(const QFontDialog* self);
@@ -208,9 +200,9 @@ void QFontDialog_QBaseDropEvent(QFontDialog* self, QDropEvent* event);
 void QFontDialog_HideEvent(QFontDialog* self, QHideEvent* event);
 void QFontDialog_OnHideEvent(QFontDialog* self, intptr_t slot);
 void QFontDialog_QBaseHideEvent(QFontDialog* self, QHideEvent* event);
-bool QFontDialog_NativeEvent(QFontDialog* self, libqt_string eventType, void* message, intptr_t* result);
+bool QFontDialog_NativeEvent(QFontDialog* self, const libqt_string eventType, void* message, intptr_t* result);
 void QFontDialog_OnNativeEvent(QFontDialog* self, intptr_t slot);
-bool QFontDialog_QBaseNativeEvent(QFontDialog* self, libqt_string eventType, void* message, intptr_t* result);
+bool QFontDialog_QBaseNativeEvent(QFontDialog* self, const libqt_string eventType, void* message, intptr_t* result);
 int QFontDialog_Metric(const QFontDialog* self, int param1);
 void QFontDialog_OnMetric(const QFontDialog* self, intptr_t slot);
 int QFontDialog_QBaseMetric(const QFontDialog* self, int param1);
@@ -241,12 +233,12 @@ void QFontDialog_QBaseChildEvent(QFontDialog* self, QChildEvent* event);
 void QFontDialog_CustomEvent(QFontDialog* self, QEvent* event);
 void QFontDialog_OnCustomEvent(QFontDialog* self, intptr_t slot);
 void QFontDialog_QBaseCustomEvent(QFontDialog* self, QEvent* event);
-void QFontDialog_ConnectNotify(QFontDialog* self, QMetaMethod* signal);
+void QFontDialog_ConnectNotify(QFontDialog* self, const QMetaMethod* signal);
 void QFontDialog_OnConnectNotify(QFontDialog* self, intptr_t slot);
-void QFontDialog_QBaseConnectNotify(QFontDialog* self, QMetaMethod* signal);
-void QFontDialog_DisconnectNotify(QFontDialog* self, QMetaMethod* signal);
+void QFontDialog_QBaseConnectNotify(QFontDialog* self, const QMetaMethod* signal);
+void QFontDialog_DisconnectNotify(QFontDialog* self, const QMetaMethod* signal);
 void QFontDialog_OnDisconnectNotify(QFontDialog* self, intptr_t slot);
-void QFontDialog_QBaseDisconnectNotify(QFontDialog* self, QMetaMethod* signal);
+void QFontDialog_QBaseDisconnectNotify(QFontDialog* self, const QMetaMethod* signal);
 void QFontDialog_AdjustPosition(QFontDialog* self, QWidget* param1);
 void QFontDialog_OnAdjustPosition(QFontDialog* self, intptr_t slot);
 void QFontDialog_QBaseAdjustPosition(QFontDialog* self, QWidget* param1);
@@ -274,9 +266,12 @@ int QFontDialog_QBaseSenderSignalIndex(const QFontDialog* self);
 int QFontDialog_Receivers(const QFontDialog* self, const char* signal);
 void QFontDialog_OnReceivers(const QFontDialog* self, intptr_t slot);
 int QFontDialog_QBaseReceivers(const QFontDialog* self, const char* signal);
-bool QFontDialog_IsSignalConnected(const QFontDialog* self, QMetaMethod* signal);
+bool QFontDialog_IsSignalConnected(const QFontDialog* self, const QMetaMethod* signal);
 void QFontDialog_OnIsSignalConnected(const QFontDialog* self, intptr_t slot);
-bool QFontDialog_QBaseIsSignalConnected(const QFontDialog* self, QMetaMethod* signal);
+bool QFontDialog_QBaseIsSignalConnected(const QFontDialog* self, const QMetaMethod* signal);
+double QFontDialog_GetDecodedMetricF(const QFontDialog* self, int metricA, int metricB);
+void QFontDialog_OnGetDecodedMetricF(const QFontDialog* self, intptr_t slot);
+double QFontDialog_QBaseGetDecodedMetricF(const QFontDialog* self, int metricA, int metricB);
 void QFontDialog_Delete(QFontDialog* self);
 
 #ifdef __cplusplus

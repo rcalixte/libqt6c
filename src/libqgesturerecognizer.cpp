@@ -18,7 +18,7 @@ void QGestureRecognizer_UnregisterRecognizer(int typeVal) {
     QGestureRecognizer::unregisterRecognizer(static_cast<Qt::GestureType>(typeVal));
 }
 
-void QGestureRecognizer_OperatorAssign(QGestureRecognizer* self, QGestureRecognizer* param1) {
+void QGestureRecognizer_OperatorAssign(QGestureRecognizer* self, const QGestureRecognizer* param1) {
     self->operator=(*param1);
 }
 

@@ -57,18 +57,6 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QMdiArea::AreaOption AreaOption;   // C++ enum
-typedef QMdiArea::AreaOptions AreaOptions; // C++ QFlags
-typedef QMdiArea::ViewMode ViewMode;       // C++ enum
-typedef QMdiArea::WindowOrder WindowOrder; // C++ enum
-#else
-typedef int AreaOption;  // C ABI enum
-typedef int AreaOptions; // C ABI QFlags
-typedef int ViewMode;    // C ABI enum
-typedef int WindowOrder; // C ABI enum
-#endif
-
 QMdiArea* QMdiArea_new(QWidget* parent);
 QMdiArea* QMdiArea_new2();
 QMetaObject* QMdiArea_MetaObject(const QMdiArea* self);
@@ -89,7 +77,7 @@ libqt_list /* of QMdiSubWindow* */ QMdiArea_SubWindowList(const QMdiArea* self);
 QMdiSubWindow* QMdiArea_AddSubWindow(QMdiArea* self, QWidget* widget);
 void QMdiArea_RemoveSubWindow(QMdiArea* self, QWidget* widget);
 QBrush* QMdiArea_Background(const QMdiArea* self);
-void QMdiArea_SetBackground(QMdiArea* self, QBrush* background);
+void QMdiArea_SetBackground(QMdiArea* self, const QBrush* background);
 int QMdiArea_ActivationOrder(const QMdiArea* self);
 void QMdiArea_SetActivationOrder(QMdiArea* self, int order);
 void QMdiArea_SetOption(QMdiArea* self, int option);
@@ -237,9 +225,9 @@ void QMdiArea_QBaseActionEvent(QMdiArea* self, QActionEvent* event);
 void QMdiArea_HideEvent(QMdiArea* self, QHideEvent* event);
 void QMdiArea_OnHideEvent(QMdiArea* self, intptr_t slot);
 void QMdiArea_QBaseHideEvent(QMdiArea* self, QHideEvent* event);
-bool QMdiArea_NativeEvent(QMdiArea* self, libqt_string eventType, void* message, intptr_t* result);
+bool QMdiArea_NativeEvent(QMdiArea* self, const libqt_string eventType, void* message, intptr_t* result);
 void QMdiArea_OnNativeEvent(QMdiArea* self, intptr_t slot);
-bool QMdiArea_QBaseNativeEvent(QMdiArea* self, libqt_string eventType, void* message, intptr_t* result);
+bool QMdiArea_QBaseNativeEvent(QMdiArea* self, const libqt_string eventType, void* message, intptr_t* result);
 int QMdiArea_Metric(const QMdiArea* self, int param1);
 void QMdiArea_OnMetric(const QMdiArea* self, intptr_t slot);
 int QMdiArea_QBaseMetric(const QMdiArea* self, int param1);
@@ -264,12 +252,12 @@ bool QMdiArea_QBaseFocusNextPrevChild(QMdiArea* self, bool next);
 void QMdiArea_CustomEvent(QMdiArea* self, QEvent* event);
 void QMdiArea_OnCustomEvent(QMdiArea* self, intptr_t slot);
 void QMdiArea_QBaseCustomEvent(QMdiArea* self, QEvent* event);
-void QMdiArea_ConnectNotify(QMdiArea* self, QMetaMethod* signal);
+void QMdiArea_ConnectNotify(QMdiArea* self, const QMetaMethod* signal);
 void QMdiArea_OnConnectNotify(QMdiArea* self, intptr_t slot);
-void QMdiArea_QBaseConnectNotify(QMdiArea* self, QMetaMethod* signal);
-void QMdiArea_DisconnectNotify(QMdiArea* self, QMetaMethod* signal);
+void QMdiArea_QBaseConnectNotify(QMdiArea* self, const QMetaMethod* signal);
+void QMdiArea_DisconnectNotify(QMdiArea* self, const QMetaMethod* signal);
 void QMdiArea_OnDisconnectNotify(QMdiArea* self, intptr_t slot);
-void QMdiArea_QBaseDisconnectNotify(QMdiArea* self, QMetaMethod* signal);
+void QMdiArea_QBaseDisconnectNotify(QMdiArea* self, const QMetaMethod* signal);
 void QMdiArea_SetViewportMargins(QMdiArea* self, int left, int top, int right, int bottom);
 void QMdiArea_OnSetViewportMargins(QMdiArea* self, intptr_t slot);
 void QMdiArea_QBaseSetViewportMargins(QMdiArea* self, int left, int top, int right, int bottom);
@@ -303,9 +291,12 @@ int QMdiArea_QBaseSenderSignalIndex(const QMdiArea* self);
 int QMdiArea_Receivers(const QMdiArea* self, const char* signal);
 void QMdiArea_OnReceivers(const QMdiArea* self, intptr_t slot);
 int QMdiArea_QBaseReceivers(const QMdiArea* self, const char* signal);
-bool QMdiArea_IsSignalConnected(const QMdiArea* self, QMetaMethod* signal);
+bool QMdiArea_IsSignalConnected(const QMdiArea* self, const QMetaMethod* signal);
 void QMdiArea_OnIsSignalConnected(const QMdiArea* self, intptr_t slot);
-bool QMdiArea_QBaseIsSignalConnected(const QMdiArea* self, QMetaMethod* signal);
+bool QMdiArea_QBaseIsSignalConnected(const QMdiArea* self, const QMetaMethod* signal);
+double QMdiArea_GetDecodedMetricF(const QMdiArea* self, int metricA, int metricB);
+void QMdiArea_OnGetDecodedMetricF(const QMdiArea* self, intptr_t slot);
+double QMdiArea_QBaseGetDecodedMetricF(const QMdiArea* self, int metricA, int metricB);
 void QMdiArea_Delete(QMdiArea* self);
 
 #ifdef __cplusplus

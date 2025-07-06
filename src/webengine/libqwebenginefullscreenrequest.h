@@ -12,8 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqurl.h"
-
 /// https://doc.qt.io/qt-6/qwebenginefullscreenrequest.html
 
 /// q_webenginefullscreenrequest_new constructs a new QWebEngineFullScreenRequest object.

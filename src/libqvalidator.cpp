@@ -73,7 +73,7 @@ libqt_string QValidator_Tr(const char* s) {
     return _str;
 }
 
-void QValidator_SetLocale(QValidator* self, QLocale* locale) {
+void QValidator_SetLocale(QValidator* self, const QLocale* locale) {
     self->setLocale(*locale);
 }
 
@@ -324,7 +324,7 @@ void QValidator_OnCustomEvent(QValidator* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QValidator_ConnectNotify(QValidator* self, QMetaMethod* signal) {
+void QValidator_ConnectNotify(QValidator* self, const QMetaMethod* signal) {
     auto* vqvalidator = dynamic_cast<VirtualQValidator*>(self);
     if (vqvalidator && vqvalidator->isVirtualQValidator) {
         vqvalidator->connectNotify(*signal);
@@ -334,7 +334,7 @@ void QValidator_ConnectNotify(QValidator* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QValidator_QBaseConnectNotify(QValidator* self, QMetaMethod* signal) {
+void QValidator_QBaseConnectNotify(QValidator* self, const QMetaMethod* signal) {
     auto* vqvalidator = dynamic_cast<VirtualQValidator*>(self);
     if (vqvalidator && vqvalidator->isVirtualQValidator) {
         vqvalidator->setQValidator_ConnectNotify_IsBase(true);
@@ -353,7 +353,7 @@ void QValidator_OnConnectNotify(QValidator* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QValidator_DisconnectNotify(QValidator* self, QMetaMethod* signal) {
+void QValidator_DisconnectNotify(QValidator* self, const QMetaMethod* signal) {
     auto* vqvalidator = dynamic_cast<VirtualQValidator*>(self);
     if (vqvalidator && vqvalidator->isVirtualQValidator) {
         vqvalidator->disconnectNotify(*signal);
@@ -363,7 +363,7 @@ void QValidator_DisconnectNotify(QValidator* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QValidator_QBaseDisconnectNotify(QValidator* self, QMetaMethod* signal) {
+void QValidator_QBaseDisconnectNotify(QValidator* self, const QMetaMethod* signal) {
     auto* vqvalidator = dynamic_cast<VirtualQValidator*>(self);
     if (vqvalidator && vqvalidator->isVirtualQValidator) {
         vqvalidator->setQValidator_DisconnectNotify_IsBase(true);
@@ -469,7 +469,7 @@ void QValidator_OnReceivers(const QValidator* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QValidator_IsSignalConnected(const QValidator* self, QMetaMethod* signal) {
+bool QValidator_IsSignalConnected(const QValidator* self, const QMetaMethod* signal) {
     auto* vqvalidator = const_cast<VirtualQValidator*>(dynamic_cast<const VirtualQValidator*>(self));
     if (vqvalidator && vqvalidator->isVirtualQValidator) {
         return vqvalidator->isSignalConnected(*signal);
@@ -479,7 +479,7 @@ bool QValidator_IsSignalConnected(const QValidator* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QValidator_QBaseIsSignalConnected(const QValidator* self, QMetaMethod* signal) {
+bool QValidator_QBaseIsSignalConnected(const QValidator* self, const QMetaMethod* signal) {
     auto* vqvalidator = const_cast<VirtualQValidator*>(dynamic_cast<const VirtualQValidator*>(self));
     if (vqvalidator && vqvalidator->isVirtualQValidator) {
         vqvalidator->setQValidator_IsSignalConnected_IsBase(true);
@@ -841,7 +841,7 @@ void QIntValidator_OnCustomEvent(QIntValidator* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QIntValidator_ConnectNotify(QIntValidator* self, QMetaMethod* signal) {
+void QIntValidator_ConnectNotify(QIntValidator* self, const QMetaMethod* signal) {
     auto* vqintvalidator = dynamic_cast<VirtualQIntValidator*>(self);
     if (vqintvalidator && vqintvalidator->isVirtualQIntValidator) {
         vqintvalidator->connectNotify(*signal);
@@ -851,7 +851,7 @@ void QIntValidator_ConnectNotify(QIntValidator* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QIntValidator_QBaseConnectNotify(QIntValidator* self, QMetaMethod* signal) {
+void QIntValidator_QBaseConnectNotify(QIntValidator* self, const QMetaMethod* signal) {
     auto* vqintvalidator = dynamic_cast<VirtualQIntValidator*>(self);
     if (vqintvalidator && vqintvalidator->isVirtualQIntValidator) {
         vqintvalidator->setQIntValidator_ConnectNotify_IsBase(true);
@@ -870,7 +870,7 @@ void QIntValidator_OnConnectNotify(QIntValidator* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QIntValidator_DisconnectNotify(QIntValidator* self, QMetaMethod* signal) {
+void QIntValidator_DisconnectNotify(QIntValidator* self, const QMetaMethod* signal) {
     auto* vqintvalidator = dynamic_cast<VirtualQIntValidator*>(self);
     if (vqintvalidator && vqintvalidator->isVirtualQIntValidator) {
         vqintvalidator->disconnectNotify(*signal);
@@ -880,7 +880,7 @@ void QIntValidator_DisconnectNotify(QIntValidator* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QIntValidator_QBaseDisconnectNotify(QIntValidator* self, QMetaMethod* signal) {
+void QIntValidator_QBaseDisconnectNotify(QIntValidator* self, const QMetaMethod* signal) {
     auto* vqintvalidator = dynamic_cast<VirtualQIntValidator*>(self);
     if (vqintvalidator && vqintvalidator->isVirtualQIntValidator) {
         vqintvalidator->setQIntValidator_DisconnectNotify_IsBase(true);
@@ -986,7 +986,7 @@ void QIntValidator_OnReceivers(const QIntValidator* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QIntValidator_IsSignalConnected(const QIntValidator* self, QMetaMethod* signal) {
+bool QIntValidator_IsSignalConnected(const QIntValidator* self, const QMetaMethod* signal) {
     auto* vqintvalidator = const_cast<VirtualQIntValidator*>(dynamic_cast<const VirtualQIntValidator*>(self));
     if (vqintvalidator && vqintvalidator->isVirtualQIntValidator) {
         return vqintvalidator->isSignalConnected(*signal);
@@ -996,7 +996,7 @@ bool QIntValidator_IsSignalConnected(const QIntValidator* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-bool QIntValidator_QBaseIsSignalConnected(const QIntValidator* self, QMetaMethod* signal) {
+bool QIntValidator_QBaseIsSignalConnected(const QIntValidator* self, const QMetaMethod* signal) {
     auto* vqintvalidator = const_cast<VirtualQIntValidator*>(dynamic_cast<const VirtualQIntValidator*>(self));
     if (vqintvalidator && vqintvalidator->isVirtualQIntValidator) {
         vqintvalidator->setQIntValidator_IsSignalConnected_IsBase(true);
@@ -1402,7 +1402,7 @@ void QDoubleValidator_OnCustomEvent(QDoubleValidator* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QDoubleValidator_ConnectNotify(QDoubleValidator* self, QMetaMethod* signal) {
+void QDoubleValidator_ConnectNotify(QDoubleValidator* self, const QMetaMethod* signal) {
     auto* vqdoublevalidator = dynamic_cast<VirtualQDoubleValidator*>(self);
     if (vqdoublevalidator && vqdoublevalidator->isVirtualQDoubleValidator) {
         vqdoublevalidator->connectNotify(*signal);
@@ -1412,7 +1412,7 @@ void QDoubleValidator_ConnectNotify(QDoubleValidator* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-void QDoubleValidator_QBaseConnectNotify(QDoubleValidator* self, QMetaMethod* signal) {
+void QDoubleValidator_QBaseConnectNotify(QDoubleValidator* self, const QMetaMethod* signal) {
     auto* vqdoublevalidator = dynamic_cast<VirtualQDoubleValidator*>(self);
     if (vqdoublevalidator && vqdoublevalidator->isVirtualQDoubleValidator) {
         vqdoublevalidator->setQDoubleValidator_ConnectNotify_IsBase(true);
@@ -1431,7 +1431,7 @@ void QDoubleValidator_OnConnectNotify(QDoubleValidator* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QDoubleValidator_DisconnectNotify(QDoubleValidator* self, QMetaMethod* signal) {
+void QDoubleValidator_DisconnectNotify(QDoubleValidator* self, const QMetaMethod* signal) {
     auto* vqdoublevalidator = dynamic_cast<VirtualQDoubleValidator*>(self);
     if (vqdoublevalidator && vqdoublevalidator->isVirtualQDoubleValidator) {
         vqdoublevalidator->disconnectNotify(*signal);
@@ -1441,7 +1441,7 @@ void QDoubleValidator_DisconnectNotify(QDoubleValidator* self, QMetaMethod* sign
 }
 
 // Base class handler implementation
-void QDoubleValidator_QBaseDisconnectNotify(QDoubleValidator* self, QMetaMethod* signal) {
+void QDoubleValidator_QBaseDisconnectNotify(QDoubleValidator* self, const QMetaMethod* signal) {
     auto* vqdoublevalidator = dynamic_cast<VirtualQDoubleValidator*>(self);
     if (vqdoublevalidator && vqdoublevalidator->isVirtualQDoubleValidator) {
         vqdoublevalidator->setQDoubleValidator_DisconnectNotify_IsBase(true);
@@ -1547,7 +1547,7 @@ void QDoubleValidator_OnReceivers(const QDoubleValidator* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QDoubleValidator_IsSignalConnected(const QDoubleValidator* self, QMetaMethod* signal) {
+bool QDoubleValidator_IsSignalConnected(const QDoubleValidator* self, const QMetaMethod* signal) {
     auto* vqdoublevalidator = const_cast<VirtualQDoubleValidator*>(dynamic_cast<const VirtualQDoubleValidator*>(self));
     if (vqdoublevalidator && vqdoublevalidator->isVirtualQDoubleValidator) {
         return vqdoublevalidator->isSignalConnected(*signal);
@@ -1557,7 +1557,7 @@ bool QDoubleValidator_IsSignalConnected(const QDoubleValidator* self, QMetaMetho
 }
 
 // Base class handler implementation
-bool QDoubleValidator_QBaseIsSignalConnected(const QDoubleValidator* self, QMetaMethod* signal) {
+bool QDoubleValidator_QBaseIsSignalConnected(const QDoubleValidator* self, const QMetaMethod* signal) {
     auto* vqdoublevalidator = const_cast<VirtualQDoubleValidator*>(dynamic_cast<const VirtualQDoubleValidator*>(self));
     if (vqdoublevalidator && vqdoublevalidator->isVirtualQDoubleValidator) {
         vqdoublevalidator->setQDoubleValidator_IsSignalConnected_IsBase(true);
@@ -1583,7 +1583,7 @@ QRegularExpressionValidator* QRegularExpressionValidator_new() {
     return new VirtualQRegularExpressionValidator();
 }
 
-QRegularExpressionValidator* QRegularExpressionValidator_new2(QRegularExpression* re) {
+QRegularExpressionValidator* QRegularExpressionValidator_new2(const QRegularExpression* re) {
     return new VirtualQRegularExpressionValidator(*re);
 }
 
@@ -1591,7 +1591,7 @@ QRegularExpressionValidator* QRegularExpressionValidator_new3(QObject* parent) {
     return new VirtualQRegularExpressionValidator(parent);
 }
 
-QRegularExpressionValidator* QRegularExpressionValidator_new4(QRegularExpression* re, QObject* parent) {
+QRegularExpressionValidator* QRegularExpressionValidator_new4(const QRegularExpression* re, QObject* parent) {
     return new VirtualQRegularExpressionValidator(*re, parent);
 }
 
@@ -1647,11 +1647,11 @@ QRegularExpression* QRegularExpressionValidator_RegularExpression(const QRegular
     return new QRegularExpression(self->regularExpression());
 }
 
-void QRegularExpressionValidator_SetRegularExpression(QRegularExpressionValidator* self, QRegularExpression* re) {
+void QRegularExpressionValidator_SetRegularExpression(QRegularExpressionValidator* self, const QRegularExpression* re) {
     self->setRegularExpression(*re);
 }
 
-void QRegularExpressionValidator_RegularExpressionChanged(QRegularExpressionValidator* self, QRegularExpression* re) {
+void QRegularExpressionValidator_RegularExpressionChanged(QRegularExpressionValidator* self, const QRegularExpression* re) {
     self->regularExpressionChanged(*re);
 }
 
@@ -1897,7 +1897,7 @@ void QRegularExpressionValidator_OnCustomEvent(QRegularExpressionValidator* self
 }
 
 // Derived class handler implementation
-void QRegularExpressionValidator_ConnectNotify(QRegularExpressionValidator* self, QMetaMethod* signal) {
+void QRegularExpressionValidator_ConnectNotify(QRegularExpressionValidator* self, const QMetaMethod* signal) {
     auto* vqregularexpressionvalidator = dynamic_cast<VirtualQRegularExpressionValidator*>(self);
     if (vqregularexpressionvalidator && vqregularexpressionvalidator->isVirtualQRegularExpressionValidator) {
         vqregularexpressionvalidator->connectNotify(*signal);
@@ -1907,7 +1907,7 @@ void QRegularExpressionValidator_ConnectNotify(QRegularExpressionValidator* self
 }
 
 // Base class handler implementation
-void QRegularExpressionValidator_QBaseConnectNotify(QRegularExpressionValidator* self, QMetaMethod* signal) {
+void QRegularExpressionValidator_QBaseConnectNotify(QRegularExpressionValidator* self, const QMetaMethod* signal) {
     auto* vqregularexpressionvalidator = dynamic_cast<VirtualQRegularExpressionValidator*>(self);
     if (vqregularexpressionvalidator && vqregularexpressionvalidator->isVirtualQRegularExpressionValidator) {
         vqregularexpressionvalidator->setQRegularExpressionValidator_ConnectNotify_IsBase(true);
@@ -1926,7 +1926,7 @@ void QRegularExpressionValidator_OnConnectNotify(QRegularExpressionValidator* se
 }
 
 // Derived class handler implementation
-void QRegularExpressionValidator_DisconnectNotify(QRegularExpressionValidator* self, QMetaMethod* signal) {
+void QRegularExpressionValidator_DisconnectNotify(QRegularExpressionValidator* self, const QMetaMethod* signal) {
     auto* vqregularexpressionvalidator = dynamic_cast<VirtualQRegularExpressionValidator*>(self);
     if (vqregularexpressionvalidator && vqregularexpressionvalidator->isVirtualQRegularExpressionValidator) {
         vqregularexpressionvalidator->disconnectNotify(*signal);
@@ -1936,7 +1936,7 @@ void QRegularExpressionValidator_DisconnectNotify(QRegularExpressionValidator* s
 }
 
 // Base class handler implementation
-void QRegularExpressionValidator_QBaseDisconnectNotify(QRegularExpressionValidator* self, QMetaMethod* signal) {
+void QRegularExpressionValidator_QBaseDisconnectNotify(QRegularExpressionValidator* self, const QMetaMethod* signal) {
     auto* vqregularexpressionvalidator = dynamic_cast<VirtualQRegularExpressionValidator*>(self);
     if (vqregularexpressionvalidator && vqregularexpressionvalidator->isVirtualQRegularExpressionValidator) {
         vqregularexpressionvalidator->setQRegularExpressionValidator_DisconnectNotify_IsBase(true);
@@ -2042,7 +2042,7 @@ void QRegularExpressionValidator_OnReceivers(const QRegularExpressionValidator* 
 }
 
 // Derived class handler implementation
-bool QRegularExpressionValidator_IsSignalConnected(const QRegularExpressionValidator* self, QMetaMethod* signal) {
+bool QRegularExpressionValidator_IsSignalConnected(const QRegularExpressionValidator* self, const QMetaMethod* signal) {
     auto* vqregularexpressionvalidator = const_cast<VirtualQRegularExpressionValidator*>(dynamic_cast<const VirtualQRegularExpressionValidator*>(self));
     if (vqregularexpressionvalidator && vqregularexpressionvalidator->isVirtualQRegularExpressionValidator) {
         return vqregularexpressionvalidator->isSignalConnected(*signal);
@@ -2052,7 +2052,7 @@ bool QRegularExpressionValidator_IsSignalConnected(const QRegularExpressionValid
 }
 
 // Base class handler implementation
-bool QRegularExpressionValidator_QBaseIsSignalConnected(const QRegularExpressionValidator* self, QMetaMethod* signal) {
+bool QRegularExpressionValidator_QBaseIsSignalConnected(const QRegularExpressionValidator* self, const QMetaMethod* signal) {
     auto* vqregularexpressionvalidator = const_cast<VirtualQRegularExpressionValidator*>(dynamic_cast<const VirtualQRegularExpressionValidator*>(self));
     if (vqregularexpressionvalidator && vqregularexpressionvalidator->isVirtualQRegularExpressionValidator) {
         vqregularexpressionvalidator->setQRegularExpressionValidator_IsSignalConnected_IsBase(true);

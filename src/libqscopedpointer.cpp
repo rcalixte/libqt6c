@@ -3,7 +3,7 @@
 #include "libqscopedpointer.hpp"
 #include "libqscopedpointer.hxx"
 
-QScopedPointerPodDeleter* QScopedPointerPodDeleter_new(QScopedPointerPodDeleter* other) {
+QScopedPointerPodDeleter* QScopedPointerPodDeleter_new(const QScopedPointerPodDeleter* other) {
     return new QScopedPointerPodDeleter(*other);
 }
 

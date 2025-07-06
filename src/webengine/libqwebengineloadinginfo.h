@@ -12,9 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include <string.h>
-#include "../libqurl.h"
-
 /// https://doc.qt.io/qt-6/qwebengineloadinginfo.html
 
 /// q_webengineloadinginfo_new constructs a new QWebEngineLoadingInfo object.

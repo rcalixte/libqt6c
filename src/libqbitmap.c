@@ -31,12 +31,8 @@ QBitmap* q_bitmap_new5(const char* fileName) {
     return QBitmap_new5(qstring(fileName));
 }
 
-QBitmap* q_bitmap_new6(void* param1) {
-    return QBitmap_new6((QBitmap*)param1);
-}
-
-QBitmap* q_bitmap_new7(const char* fileName, const char* format) {
-    return QBitmap_new7(qstring(fileName), format);
+QBitmap* q_bitmap_new6(const char* fileName, const char* format) {
+    return QBitmap_new6(qstring(fileName), format);
 }
 
 void q_bitmap_operator_assign(void* self, void* param1) {
@@ -379,6 +375,10 @@ double q_bitmap_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
 }
 
+int32_t q_bitmap_encode_metric_f(int64_t metric, double value) {
+    return QPaintDevice_EncodeMetricF(metric, value);
+}
+
 int32_t q_bitmap_dev_type(void* self) {
     return QBitmap_DevType((QBitmap*)self);
 }
@@ -449,6 +449,18 @@ QPainter* q_bitmap_qbase_shared_painter(void* self) {
 
 void q_bitmap_on_shared_painter(void* self, QPainter* (*slot)()) {
     QBitmap_OnSharedPainter((QBitmap*)self, (intptr_t)slot);
+}
+
+double q_bitmap_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QBitmap_GetDecodedMetricF((QBitmap*)self, metricA, metricB);
+}
+
+double q_bitmap_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QBitmap_QBaseGetDecodedMetricF((QBitmap*)self, metricA, metricB);
+}
+
+void q_bitmap_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
+    QBitmap_OnGetDecodedMetricF((QBitmap*)self, (intptr_t)slot);
 }
 
 void q_bitmap_delete(void* self) {

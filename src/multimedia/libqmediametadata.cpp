@@ -8,7 +8,7 @@
 #include "libqmediametadata.hpp"
 #include "libqmediametadata.hxx"
 
-QMediaMetaData* QMediaMetaData_new(QMediaMetaData* param1) {
+QMediaMetaData* QMediaMetaData_new(const QMediaMetaData* param1) {
     return new QMediaMetaData(*param1);
 }
 
@@ -20,7 +20,7 @@ QVariant* QMediaMetaData_Value(const QMediaMetaData* self, int k) {
     return new QVariant(self->value(static_cast<QMediaMetaData::Key>(k)));
 }
 
-void QMediaMetaData_Insert(QMediaMetaData* self, int k, QVariant* value) {
+void QMediaMetaData_Insert(QMediaMetaData* self, int k, const QVariant* value) {
     self->insert(static_cast<QMediaMetaData::Key>(k), *value);
 }
 
@@ -31,12 +31,12 @@ void QMediaMetaData_Remove(QMediaMetaData* self, int k) {
 libqt_list /* of int */ QMediaMetaData_Keys(const QMediaMetaData* self) {
     QList<QMediaMetaData::Key> _ret = self->keys();
     // Convert QList<> from C++ memory to manually-managed C memory
-    int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = static_cast<int>(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ints = _arr;
     return _out;
 }

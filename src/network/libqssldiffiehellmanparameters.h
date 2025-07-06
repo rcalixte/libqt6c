@@ -12,9 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqiodevice.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html
 
 /// q_ssldiffiehellmanparameters_new constructs a new QSslDiffieHellmanParameters object.

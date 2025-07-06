@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqbrush.h"
-#include "libqcolor.h"
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qpen.html
 
 /// q_pen_new constructs a new QPen object.

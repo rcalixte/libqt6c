@@ -12,12 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqfileinfo.h"
-#include "libqiodevice.h"
-#include "libqmimetype.h"
-#include <string.h>
-#include "libqurl.h"
-
 /// https://doc.qt.io/qt-6/qmimedatabase.html
 
 /// q_mimedatabase_new constructs a new QMimeDatabase object.

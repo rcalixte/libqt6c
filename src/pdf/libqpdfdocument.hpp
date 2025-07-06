@@ -34,18 +34,6 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-#ifdef __cplusplus
-typedef QPdfDocument::Error Error;                 // C++ enum
-typedef QPdfDocument::MetaDataField MetaDataField; // C++ enum
-typedef QPdfDocument::PageModelRole PageModelRole; // C++ enum
-typedef QPdfDocument::Status Status;               // C++ enum
-#else
-typedef int Error;         // C ABI enum
-typedef int MetaDataField; // C ABI enum
-typedef int PageModelRole; // C ABI enum
-typedef int Status;        // C ABI enum
-#endif
-
 QPdfDocument* QPdfDocument_new();
 QPdfDocument* QPdfDocument_new2(QObject* parent);
 QMetaObject* QPdfDocument_MetaObject(const QPdfDocument* self);
@@ -54,10 +42,10 @@ int QPdfDocument_Metacall(QPdfDocument* self, int param1, int param2, void** par
 void QPdfDocument_OnMetacall(QPdfDocument* self, intptr_t slot);
 int QPdfDocument_QBaseMetacall(QPdfDocument* self, int param1, int param2, void** param3);
 libqt_string QPdfDocument_Tr(const char* s);
-int QPdfDocument_Load(QPdfDocument* self, libqt_string fileName);
+int QPdfDocument_Load(QPdfDocument* self, const libqt_string fileName);
 int QPdfDocument_Status(const QPdfDocument* self);
 void QPdfDocument_LoadWithDevice(QPdfDocument* self, QIODevice* device);
-void QPdfDocument_SetPassword(QPdfDocument* self, libqt_string password);
+void QPdfDocument_SetPassword(QPdfDocument* self, const libqt_string password);
 libqt_string QPdfDocument_Password(const QPdfDocument* self);
 QVariant* QPdfDocument_MetaData(const QPdfDocument* self, int field);
 int QPdfDocument_Error(const QPdfDocument* self);
@@ -65,6 +53,7 @@ void QPdfDocument_Close(QPdfDocument* self);
 int QPdfDocument_PageCount(const QPdfDocument* self);
 QSizeF* QPdfDocument_PagePointSize(const QPdfDocument* self, int page);
 libqt_string QPdfDocument_PageLabel(QPdfDocument* self, int page);
+int QPdfDocument_PageIndexForLabel(QPdfDocument* self, const libqt_string label);
 QAbstractListModel* QPdfDocument_PageModel(QPdfDocument* self);
 QImage* QPdfDocument_Render(QPdfDocument* self, int page, QSize* imageSize);
 QPdfSelection* QPdfDocument_GetSelection(QPdfDocument* self, int page, QPointF* start, QPointF* end);
@@ -98,12 +87,12 @@ void QPdfDocument_QBaseChildEvent(QPdfDocument* self, QChildEvent* event);
 void QPdfDocument_CustomEvent(QPdfDocument* self, QEvent* event);
 void QPdfDocument_OnCustomEvent(QPdfDocument* self, intptr_t slot);
 void QPdfDocument_QBaseCustomEvent(QPdfDocument* self, QEvent* event);
-void QPdfDocument_ConnectNotify(QPdfDocument* self, QMetaMethod* signal);
+void QPdfDocument_ConnectNotify(QPdfDocument* self, const QMetaMethod* signal);
 void QPdfDocument_OnConnectNotify(QPdfDocument* self, intptr_t slot);
-void QPdfDocument_QBaseConnectNotify(QPdfDocument* self, QMetaMethod* signal);
-void QPdfDocument_DisconnectNotify(QPdfDocument* self, QMetaMethod* signal);
+void QPdfDocument_QBaseConnectNotify(QPdfDocument* self, const QMetaMethod* signal);
+void QPdfDocument_DisconnectNotify(QPdfDocument* self, const QMetaMethod* signal);
 void QPdfDocument_OnDisconnectNotify(QPdfDocument* self, intptr_t slot);
-void QPdfDocument_QBaseDisconnectNotify(QPdfDocument* self, QMetaMethod* signal);
+void QPdfDocument_QBaseDisconnectNotify(QPdfDocument* self, const QMetaMethod* signal);
 QObject* QPdfDocument_Sender(const QPdfDocument* self);
 void QPdfDocument_OnSender(const QPdfDocument* self, intptr_t slot);
 QObject* QPdfDocument_QBaseSender(const QPdfDocument* self);
@@ -113,9 +102,9 @@ int QPdfDocument_QBaseSenderSignalIndex(const QPdfDocument* self);
 int QPdfDocument_Receivers(const QPdfDocument* self, const char* signal);
 void QPdfDocument_OnReceivers(const QPdfDocument* self, intptr_t slot);
 int QPdfDocument_QBaseReceivers(const QPdfDocument* self, const char* signal);
-bool QPdfDocument_IsSignalConnected(const QPdfDocument* self, QMetaMethod* signal);
+bool QPdfDocument_IsSignalConnected(const QPdfDocument* self, const QMetaMethod* signal);
 void QPdfDocument_OnIsSignalConnected(const QPdfDocument* self, intptr_t slot);
-bool QPdfDocument_QBaseIsSignalConnected(const QPdfDocument* self, QMetaMethod* signal);
+bool QPdfDocument_QBaseIsSignalConnected(const QPdfDocument* self, const QMetaMethod* signal);
 void QPdfDocument_Delete(QPdfDocument* self);
 
 #ifdef __cplusplus

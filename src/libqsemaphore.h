@@ -39,6 +39,11 @@ bool q_semaphore_try_acquire(void* self);
 /// ``` QSemaphore* self, int n, int timeout ```
 bool q_semaphore_try_acquire2(void* self, int n, int timeout);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsemaphore.html#tryAcquire)
+///
+/// ``` QSemaphore* self, int n, QDeadlineTimer* timeout ```
+bool q_semaphore_try_acquire3(void* self, int n, void* timeout);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qsemaphore.html#release)
 ///
 /// ``` QSemaphore* self ```
@@ -52,7 +57,7 @@ int32_t q_semaphore_available(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsemaphore.html#try_acquire)
 ///
 /// ``` QSemaphore* self ```
-bool q_semaphore_try_acquire3(void* self);
+bool q_semaphore_try_acquire4(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsemaphore.html#acquire)
 ///

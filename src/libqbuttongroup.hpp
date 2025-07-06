@@ -78,12 +78,12 @@ void QButtonGroup_QBaseChildEvent(QButtonGroup* self, QChildEvent* event);
 void QButtonGroup_CustomEvent(QButtonGroup* self, QEvent* event);
 void QButtonGroup_OnCustomEvent(QButtonGroup* self, intptr_t slot);
 void QButtonGroup_QBaseCustomEvent(QButtonGroup* self, QEvent* event);
-void QButtonGroup_ConnectNotify(QButtonGroup* self, QMetaMethod* signal);
+void QButtonGroup_ConnectNotify(QButtonGroup* self, const QMetaMethod* signal);
 void QButtonGroup_OnConnectNotify(QButtonGroup* self, intptr_t slot);
-void QButtonGroup_QBaseConnectNotify(QButtonGroup* self, QMetaMethod* signal);
-void QButtonGroup_DisconnectNotify(QButtonGroup* self, QMetaMethod* signal);
+void QButtonGroup_QBaseConnectNotify(QButtonGroup* self, const QMetaMethod* signal);
+void QButtonGroup_DisconnectNotify(QButtonGroup* self, const QMetaMethod* signal);
 void QButtonGroup_OnDisconnectNotify(QButtonGroup* self, intptr_t slot);
-void QButtonGroup_QBaseDisconnectNotify(QButtonGroup* self, QMetaMethod* signal);
+void QButtonGroup_QBaseDisconnectNotify(QButtonGroup* self, const QMetaMethod* signal);
 QObject* QButtonGroup_Sender(const QButtonGroup* self);
 void QButtonGroup_OnSender(const QButtonGroup* self, intptr_t slot);
 QObject* QButtonGroup_QBaseSender(const QButtonGroup* self);
@@ -93,9 +93,9 @@ int QButtonGroup_QBaseSenderSignalIndex(const QButtonGroup* self);
 int QButtonGroup_Receivers(const QButtonGroup* self, const char* signal);
 void QButtonGroup_OnReceivers(const QButtonGroup* self, intptr_t slot);
 int QButtonGroup_QBaseReceivers(const QButtonGroup* self, const char* signal);
-bool QButtonGroup_IsSignalConnected(const QButtonGroup* self, QMetaMethod* signal);
+bool QButtonGroup_IsSignalConnected(const QButtonGroup* self, const QMetaMethod* signal);
 void QButtonGroup_OnIsSignalConnected(const QButtonGroup* self, intptr_t slot);
-bool QButtonGroup_QBaseIsSignalConnected(const QButtonGroup* self, QMetaMethod* signal);
+bool QButtonGroup_QBaseIsSignalConnected(const QButtonGroup* self, const QMetaMethod* signal);
 void QButtonGroup_Delete(QButtonGroup* self);
 
 #ifdef __cplusplus

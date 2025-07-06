@@ -12,22 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqbrush.h"
-#include "libqfont.h"
-#include "libqimage.h"
-#include "libqline.h"
-#include "libqpaintdevice.h"
-#include "libqpainter.h"
-#include "libqpainterpath.h"
-#include "libqpen.h"
-#include "libqpixmap.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqtransform.h"
-
 /// https://doc.qt.io/qt-6/qtextitem.html
 
 /// q_textitem_new constructs a new QTextItem object.
@@ -39,6 +23,16 @@ QTextItem* q_textitem_new(void* other);
 ///
 /// ``` QTextItem* other ```
 QTextItem* q_textitem_new2(void* other);
+
+/// q_textitem_new3 constructs a new QTextItem object.
+///
+///
+QTextItem* q_textitem_new3();
+
+/// q_textitem_new4 constructs a new QTextItem object.
+///
+/// ``` QTextItem* param1 ```
+QTextItem* q_textitem_new4(void* param1);
 
 /// q_textitem_copy_assign shallow copies `other` into `self`.
 ///

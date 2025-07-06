@@ -19,20 +19,10 @@ extern "C" {
 typedef struct QAudioFormat QAudioFormat;
 #endif
 
-#ifdef __cplusplus
-typedef QAudioFormat::AudioChannelPosition AudioChannelPosition; // C++ enum
-typedef QAudioFormat::ChannelConfig ChannelConfig;               // C++ enum
-typedef QAudioFormat::SampleFormat SampleFormat;                 // C++ enum
-#else
-typedef int AudioChannelPosition;   // C ABI enum
-typedef uint16_t SampleFormat;      // C ABI enum
-typedef unsigned int ChannelConfig; // C ABI enum
-#endif
-
-QAudioFormat* QAudioFormat_new(QAudioFormat* other);
+QAudioFormat* QAudioFormat_new(const QAudioFormat* other);
 QAudioFormat* QAudioFormat_new2(QAudioFormat* other);
 QAudioFormat* QAudioFormat_new3();
-QAudioFormat* QAudioFormat_new4(QAudioFormat* param1);
+QAudioFormat* QAudioFormat_new4(const QAudioFormat* param1);
 void QAudioFormat_CopyAssign(QAudioFormat* self, QAudioFormat* other);
 void QAudioFormat_MoveAssign(QAudioFormat* self, QAudioFormat* other);
 bool QAudioFormat_IsValid(const QAudioFormat* self);

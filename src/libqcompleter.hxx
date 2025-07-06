@@ -67,12 +67,12 @@ class VirtualQCompleter final : public QCompleter {
     mutable bool qcompleter_issignalconnected_isbase = false;
 
   public:
-    VirtualQCompleter() : QCompleter(){};
-    VirtualQCompleter(QAbstractItemModel* model) : QCompleter(model){};
-    VirtualQCompleter(const QStringList& completions) : QCompleter(completions){};
-    VirtualQCompleter(QObject* parent) : QCompleter(parent){};
-    VirtualQCompleter(QAbstractItemModel* model, QObject* parent) : QCompleter(model, parent){};
-    VirtualQCompleter(const QStringList& completions, QObject* parent) : QCompleter(completions, parent){};
+    VirtualQCompleter() : QCompleter() {};
+    VirtualQCompleter(QAbstractItemModel* model) : QCompleter(model) {};
+    VirtualQCompleter(const QList<QString>& completions) : QCompleter(completions) {};
+    VirtualQCompleter(QObject* parent) : QCompleter(parent) {};
+    VirtualQCompleter(QAbstractItemModel* model, QObject* parent) : QCompleter(model, parent) {};
+    VirtualQCompleter(const QList<QString>& completions, QObject* parent) : QCompleter(completions, parent) {};
 
     ~VirtualQCompleter() {
         qcompleter_metacall_callback = nullptr;
@@ -159,7 +159,7 @@ class VirtualQCompleter final : public QCompleter {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QStringList splitPath(const QString& path) const override {
+    virtual QList<QString> splitPath(const QString& path) const override {
         if (qcompleter_splitpath_isbase) {
             qcompleter_splitpath_isbase = false;
             return QCompleter::splitPath(path);
@@ -175,7 +175,7 @@ class VirtualQCompleter final : public QCompleter {
             libqt_string cbval1 = path_str;
 
             libqt_list /* of libqt_string */ callback_ret = qcompleter_splitpath_callback(this, cbval1);
-            QStringList callback_ret_QList;
+            QList<QString> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             libqt_string* callback_ret_arr = static_cast<libqt_string*>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -362,18 +362,18 @@ class VirtualQCompleter final : public QCompleter {
     friend void QCompleter_QBaseChildEvent(QCompleter* self, QChildEvent* event);
     friend void QCompleter_CustomEvent(QCompleter* self, QEvent* event);
     friend void QCompleter_QBaseCustomEvent(QCompleter* self, QEvent* event);
-    friend void QCompleter_ConnectNotify(QCompleter* self, QMetaMethod* signal);
-    friend void QCompleter_QBaseConnectNotify(QCompleter* self, QMetaMethod* signal);
-    friend void QCompleter_DisconnectNotify(QCompleter* self, QMetaMethod* signal);
-    friend void QCompleter_QBaseDisconnectNotify(QCompleter* self, QMetaMethod* signal);
+    friend void QCompleter_ConnectNotify(QCompleter* self, const QMetaMethod* signal);
+    friend void QCompleter_QBaseConnectNotify(QCompleter* self, const QMetaMethod* signal);
+    friend void QCompleter_DisconnectNotify(QCompleter* self, const QMetaMethod* signal);
+    friend void QCompleter_QBaseDisconnectNotify(QCompleter* self, const QMetaMethod* signal);
     friend QObject* QCompleter_Sender(const QCompleter* self);
     friend QObject* QCompleter_QBaseSender(const QCompleter* self);
     friend int QCompleter_SenderSignalIndex(const QCompleter* self);
     friend int QCompleter_QBaseSenderSignalIndex(const QCompleter* self);
     friend int QCompleter_Receivers(const QCompleter* self, const char* signal);
     friend int QCompleter_QBaseReceivers(const QCompleter* self, const char* signal);
-    friend bool QCompleter_IsSignalConnected(const QCompleter* self, QMetaMethod* signal);
-    friend bool QCompleter_QBaseIsSignalConnected(const QCompleter* self, QMetaMethod* signal);
+    friend bool QCompleter_IsSignalConnected(const QCompleter* self, const QMetaMethod* signal);
+    friend bool QCompleter_QBaseIsSignalConnected(const QCompleter* self, const QMetaMethod* signal);
 };
 
 #endif

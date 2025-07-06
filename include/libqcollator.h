@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqchar.h"
-#include "libqlocale.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qcollatorsortkey.html
 
 /// q_collatorsortkey_new constructs a new QCollatorSortKey object.

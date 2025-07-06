@@ -61,12 +61,12 @@ class VirtualQCandlestickSet final : public QCandlestickSet {
     mutable bool qcandlestickset_issignalconnected_isbase = false;
 
   public:
-    VirtualQCandlestickSet() : QCandlestickSet(){};
-    VirtualQCandlestickSet(qreal open, qreal high, qreal low, qreal close) : QCandlestickSet(open, high, low, close){};
-    VirtualQCandlestickSet(qreal timestamp) : QCandlestickSet(timestamp){};
-    VirtualQCandlestickSet(qreal timestamp, QObject* parent) : QCandlestickSet(timestamp, parent){};
-    VirtualQCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal timestamp) : QCandlestickSet(open, high, low, close, timestamp){};
-    VirtualQCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal timestamp, QObject* parent) : QCandlestickSet(open, high, low, close, timestamp, parent){};
+    VirtualQCandlestickSet() : QCandlestickSet() {};
+    VirtualQCandlestickSet(qreal open, qreal high, qreal low, qreal close) : QCandlestickSet(open, high, low, close) {};
+    VirtualQCandlestickSet(qreal timestamp) : QCandlestickSet(timestamp) {};
+    VirtualQCandlestickSet(qreal timestamp, QObject* parent) : QCandlestickSet(timestamp, parent) {};
+    VirtualQCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal timestamp) : QCandlestickSet(open, high, low, close, timestamp) {};
+    VirtualQCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal timestamp, QObject* parent) : QCandlestickSet(open, high, low, close, timestamp, parent) {};
 
     ~VirtualQCandlestickSet() {
         qcandlestickset_metacall_callback = nullptr;
@@ -298,18 +298,18 @@ class VirtualQCandlestickSet final : public QCandlestickSet {
     friend void QCandlestickSet_QBaseChildEvent(QCandlestickSet* self, QChildEvent* event);
     friend void QCandlestickSet_CustomEvent(QCandlestickSet* self, QEvent* event);
     friend void QCandlestickSet_QBaseCustomEvent(QCandlestickSet* self, QEvent* event);
-    friend void QCandlestickSet_ConnectNotify(QCandlestickSet* self, QMetaMethod* signal);
-    friend void QCandlestickSet_QBaseConnectNotify(QCandlestickSet* self, QMetaMethod* signal);
-    friend void QCandlestickSet_DisconnectNotify(QCandlestickSet* self, QMetaMethod* signal);
-    friend void QCandlestickSet_QBaseDisconnectNotify(QCandlestickSet* self, QMetaMethod* signal);
+    friend void QCandlestickSet_ConnectNotify(QCandlestickSet* self, const QMetaMethod* signal);
+    friend void QCandlestickSet_QBaseConnectNotify(QCandlestickSet* self, const QMetaMethod* signal);
+    friend void QCandlestickSet_DisconnectNotify(QCandlestickSet* self, const QMetaMethod* signal);
+    friend void QCandlestickSet_QBaseDisconnectNotify(QCandlestickSet* self, const QMetaMethod* signal);
     friend QObject* QCandlestickSet_Sender(const QCandlestickSet* self);
     friend QObject* QCandlestickSet_QBaseSender(const QCandlestickSet* self);
     friend int QCandlestickSet_SenderSignalIndex(const QCandlestickSet* self);
     friend int QCandlestickSet_QBaseSenderSignalIndex(const QCandlestickSet* self);
     friend int QCandlestickSet_Receivers(const QCandlestickSet* self, const char* signal);
     friend int QCandlestickSet_QBaseReceivers(const QCandlestickSet* self, const char* signal);
-    friend bool QCandlestickSet_IsSignalConnected(const QCandlestickSet* self, QMetaMethod* signal);
-    friend bool QCandlestickSet_QBaseIsSignalConnected(const QCandlestickSet* self, QMetaMethod* signal);
+    friend bool QCandlestickSet_IsSignalConnected(const QCandlestickSet* self, const QMetaMethod* signal);
+    friend bool QCandlestickSet_QBaseIsSignalConnected(const QCandlestickSet* self, const QMetaMethod* signal);
 };
 
 #endif

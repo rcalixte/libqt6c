@@ -79,6 +79,7 @@ class VirtualQCommandLinkButton final : public QCommandLinkButton {
     using QCommandLinkButton_SenderSignalIndex_Callback = int (*)();
     using QCommandLinkButton_Receivers_Callback = int (*)(const QCommandLinkButton*, const char*);
     using QCommandLinkButton_IsSignalConnected_Callback = bool (*)(const QCommandLinkButton*, QMetaMethod*);
+    using QCommandLinkButton_GetDecodedMetricF_Callback = double (*)(const QCommandLinkButton*, int, int);
 
   protected:
     // Instance callback storage
@@ -143,6 +144,7 @@ class VirtualQCommandLinkButton final : public QCommandLinkButton {
     QCommandLinkButton_SenderSignalIndex_Callback qcommandlinkbutton_sendersignalindex_callback = nullptr;
     QCommandLinkButton_Receivers_Callback qcommandlinkbutton_receivers_callback = nullptr;
     QCommandLinkButton_IsSignalConnected_Callback qcommandlinkbutton_issignalconnected_callback = nullptr;
+    QCommandLinkButton_GetDecodedMetricF_Callback qcommandlinkbutton_getdecodedmetricf_callback = nullptr;
 
     // Instance base flags
     mutable bool qcommandlinkbutton_metacall_isbase = false;
@@ -206,14 +208,15 @@ class VirtualQCommandLinkButton final : public QCommandLinkButton {
     mutable bool qcommandlinkbutton_sendersignalindex_isbase = false;
     mutable bool qcommandlinkbutton_receivers_isbase = false;
     mutable bool qcommandlinkbutton_issignalconnected_isbase = false;
+    mutable bool qcommandlinkbutton_getdecodedmetricf_isbase = false;
 
   public:
-    VirtualQCommandLinkButton(QWidget* parent) : QCommandLinkButton(parent){};
-    VirtualQCommandLinkButton() : QCommandLinkButton(){};
-    VirtualQCommandLinkButton(const QString& text) : QCommandLinkButton(text){};
-    VirtualQCommandLinkButton(const QString& text, const QString& description) : QCommandLinkButton(text, description){};
-    VirtualQCommandLinkButton(const QString& text, QWidget* parent) : QCommandLinkButton(text, parent){};
-    VirtualQCommandLinkButton(const QString& text, const QString& description, QWidget* parent) : QCommandLinkButton(text, description, parent){};
+    VirtualQCommandLinkButton(QWidget* parent) : QCommandLinkButton(parent) {};
+    VirtualQCommandLinkButton() : QCommandLinkButton() {};
+    VirtualQCommandLinkButton(const QString& text) : QCommandLinkButton(text) {};
+    VirtualQCommandLinkButton(const QString& text, const QString& description) : QCommandLinkButton(text, description) {};
+    VirtualQCommandLinkButton(const QString& text, QWidget* parent) : QCommandLinkButton(text, parent) {};
+    VirtualQCommandLinkButton(const QString& text, const QString& description, QWidget* parent) : QCommandLinkButton(text, description, parent) {};
 
     ~VirtualQCommandLinkButton() {
         qcommandlinkbutton_metacall_callback = nullptr;
@@ -277,6 +280,7 @@ class VirtualQCommandLinkButton final : public QCommandLinkButton {
         qcommandlinkbutton_sendersignalindex_callback = nullptr;
         qcommandlinkbutton_receivers_callback = nullptr;
         qcommandlinkbutton_issignalconnected_callback = nullptr;
+        qcommandlinkbutton_getdecodedmetricf_callback = nullptr;
     }
 
     // Callback setters
@@ -341,6 +345,7 @@ class VirtualQCommandLinkButton final : public QCommandLinkButton {
     inline void setQCommandLinkButton_SenderSignalIndex_Callback(QCommandLinkButton_SenderSignalIndex_Callback cb) { qcommandlinkbutton_sendersignalindex_callback = cb; }
     inline void setQCommandLinkButton_Receivers_Callback(QCommandLinkButton_Receivers_Callback cb) { qcommandlinkbutton_receivers_callback = cb; }
     inline void setQCommandLinkButton_IsSignalConnected_Callback(QCommandLinkButton_IsSignalConnected_Callback cb) { qcommandlinkbutton_issignalconnected_callback = cb; }
+    inline void setQCommandLinkButton_GetDecodedMetricF_Callback(QCommandLinkButton_GetDecodedMetricF_Callback cb) { qcommandlinkbutton_getdecodedmetricf_callback = cb; }
 
     // Base flag setters
     inline void setQCommandLinkButton_Metacall_IsBase(bool value) const { qcommandlinkbutton_metacall_isbase = value; }
@@ -404,6 +409,7 @@ class VirtualQCommandLinkButton final : public QCommandLinkButton {
     inline void setQCommandLinkButton_SenderSignalIndex_IsBase(bool value) const { qcommandlinkbutton_sendersignalindex_isbase = value; }
     inline void setQCommandLinkButton_Receivers_IsBase(bool value) const { qcommandlinkbutton_receivers_isbase = value; }
     inline void setQCommandLinkButton_IsSignalConnected_IsBase(bool value) const { qcommandlinkbutton_issignalconnected_isbase = value; }
+    inline void setQCommandLinkButton_GetDecodedMetricF_IsBase(bool value) const { qcommandlinkbutton_getdecodedmetricf_isbase = value; }
 
     // Virtual method for C ABI access and custom callback
     virtual int qt_metacall(QMetaObject::Call param1, int param2, void** param3) override {
@@ -1271,6 +1277,22 @@ class VirtualQCommandLinkButton final : public QCommandLinkButton {
         }
     }
 
+    // Virtual method for C ABI access and custom callback
+    double getDecodedMetricF(QPaintDevice::PaintDeviceMetric metricA, QPaintDevice::PaintDeviceMetric metricB) const {
+        if (qcommandlinkbutton_getdecodedmetricf_isbase) {
+            qcommandlinkbutton_getdecodedmetricf_isbase = false;
+            return QCommandLinkButton::getDecodedMetricF(metricA, metricB);
+        } else if (qcommandlinkbutton_getdecodedmetricf_callback != nullptr) {
+            int cbval1 = static_cast<int>(metricA);
+            int cbval2 = static_cast<int>(metricB);
+
+            double callback_ret = qcommandlinkbutton_getdecodedmetricf_callback(this, cbval1, cbval2);
+            return static_cast<double>(callback_ret);
+        } else {
+            return QCommandLinkButton::getDecodedMetricF(metricA, metricB);
+        }
+    }
+
     // Friend functions
     friend bool QCommandLinkButton_Event(QCommandLinkButton* self, QEvent* e);
     friend bool QCommandLinkButton_QBaseEvent(QCommandLinkButton* self, QEvent* e);
@@ -1284,8 +1306,8 @@ class VirtualQCommandLinkButton final : public QCommandLinkButton {
     friend void QCommandLinkButton_QBaseFocusOutEvent(QCommandLinkButton* self, QFocusEvent* param1);
     friend void QCommandLinkButton_MouseMoveEvent(QCommandLinkButton* self, QMouseEvent* param1);
     friend void QCommandLinkButton_QBaseMouseMoveEvent(QCommandLinkButton* self, QMouseEvent* param1);
-    friend bool QCommandLinkButton_HitButton(const QCommandLinkButton* self, QPoint* pos);
-    friend bool QCommandLinkButton_QBaseHitButton(const QCommandLinkButton* self, QPoint* pos);
+    friend bool QCommandLinkButton_HitButton(const QCommandLinkButton* self, const QPoint* pos);
+    friend bool QCommandLinkButton_QBaseHitButton(const QCommandLinkButton* self, const QPoint* pos);
     friend void QCommandLinkButton_CheckStateSet(QCommandLinkButton* self);
     friend void QCommandLinkButton_QBaseCheckStateSet(QCommandLinkButton* self);
     friend void QCommandLinkButton_NextCheckState(QCommandLinkButton* self);
@@ -1332,8 +1354,8 @@ class VirtualQCommandLinkButton final : public QCommandLinkButton {
     friend void QCommandLinkButton_QBaseShowEvent(QCommandLinkButton* self, QShowEvent* event);
     friend void QCommandLinkButton_HideEvent(QCommandLinkButton* self, QHideEvent* event);
     friend void QCommandLinkButton_QBaseHideEvent(QCommandLinkButton* self, QHideEvent* event);
-    friend bool QCommandLinkButton_NativeEvent(QCommandLinkButton* self, libqt_string eventType, void* message, intptr_t* result);
-    friend bool QCommandLinkButton_QBaseNativeEvent(QCommandLinkButton* self, libqt_string eventType, void* message, intptr_t* result);
+    friend bool QCommandLinkButton_NativeEvent(QCommandLinkButton* self, const libqt_string eventType, void* message, intptr_t* result);
+    friend bool QCommandLinkButton_QBaseNativeEvent(QCommandLinkButton* self, const libqt_string eventType, void* message, intptr_t* result);
     friend int QCommandLinkButton_Metric(const QCommandLinkButton* self, int param1);
     friend int QCommandLinkButton_QBaseMetric(const QCommandLinkButton* self, int param1);
     friend void QCommandLinkButton_InitPainter(const QCommandLinkButton* self, QPainter* painter);
@@ -1350,10 +1372,10 @@ class VirtualQCommandLinkButton final : public QCommandLinkButton {
     friend void QCommandLinkButton_QBaseChildEvent(QCommandLinkButton* self, QChildEvent* event);
     friend void QCommandLinkButton_CustomEvent(QCommandLinkButton* self, QEvent* event);
     friend void QCommandLinkButton_QBaseCustomEvent(QCommandLinkButton* self, QEvent* event);
-    friend void QCommandLinkButton_ConnectNotify(QCommandLinkButton* self, QMetaMethod* signal);
-    friend void QCommandLinkButton_QBaseConnectNotify(QCommandLinkButton* self, QMetaMethod* signal);
-    friend void QCommandLinkButton_DisconnectNotify(QCommandLinkButton* self, QMetaMethod* signal);
-    friend void QCommandLinkButton_QBaseDisconnectNotify(QCommandLinkButton* self, QMetaMethod* signal);
+    friend void QCommandLinkButton_ConnectNotify(QCommandLinkButton* self, const QMetaMethod* signal);
+    friend void QCommandLinkButton_QBaseConnectNotify(QCommandLinkButton* self, const QMetaMethod* signal);
+    friend void QCommandLinkButton_DisconnectNotify(QCommandLinkButton* self, const QMetaMethod* signal);
+    friend void QCommandLinkButton_QBaseDisconnectNotify(QCommandLinkButton* self, const QMetaMethod* signal);
     friend void QCommandLinkButton_UpdateMicroFocus(QCommandLinkButton* self);
     friend void QCommandLinkButton_QBaseUpdateMicroFocus(QCommandLinkButton* self);
     friend void QCommandLinkButton_Create(QCommandLinkButton* self);
@@ -1370,8 +1392,10 @@ class VirtualQCommandLinkButton final : public QCommandLinkButton {
     friend int QCommandLinkButton_QBaseSenderSignalIndex(const QCommandLinkButton* self);
     friend int QCommandLinkButton_Receivers(const QCommandLinkButton* self, const char* signal);
     friend int QCommandLinkButton_QBaseReceivers(const QCommandLinkButton* self, const char* signal);
-    friend bool QCommandLinkButton_IsSignalConnected(const QCommandLinkButton* self, QMetaMethod* signal);
-    friend bool QCommandLinkButton_QBaseIsSignalConnected(const QCommandLinkButton* self, QMetaMethod* signal);
+    friend bool QCommandLinkButton_IsSignalConnected(const QCommandLinkButton* self, const QMetaMethod* signal);
+    friend bool QCommandLinkButton_QBaseIsSignalConnected(const QCommandLinkButton* self, const QMetaMethod* signal);
+    friend double QCommandLinkButton_GetDecodedMetricF(const QCommandLinkButton* self, int metricA, int metricB);
+    friend double QCommandLinkButton_QBaseGetDecodedMetricF(const QCommandLinkButton* self, int metricA, int metricB);
 };
 
 #endif

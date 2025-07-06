@@ -380,6 +380,14 @@ void q_painterpathstroker_delete(void* self) {
     QPainterPathStroker_Delete((QPainterPathStroker*)(self));
 }
 
+QPainterPath__Element* q_painterpath__element_new() {
+    return QPainterPath__Element_new();
+}
+
+QPainterPath__Element* q_painterpath__element_new2(void* param1) {
+    return QPainterPath__Element_new2((QPainterPath__Element*)param1);
+}
+
 bool q_painterpath__element_is_move_to(void* self) {
     return QPainterPath__Element_IsMoveTo((QPainterPath__Element*)self);
 }

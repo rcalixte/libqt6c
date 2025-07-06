@@ -101,7 +101,7 @@ int QRubberBand_Shape(const QRubberBand* self) {
     return static_cast<int>(self->shape());
 }
 
-void QRubberBand_SetGeometry(QRubberBand* self, QRect* r) {
+void QRubberBand_SetGeometry(QRubberBand* self, const QRect* r) {
     self->setGeometry(*r);
 }
 
@@ -113,7 +113,7 @@ void QRubberBand_Move(QRubberBand* self, int x, int y) {
     self->move(static_cast<int>(x), static_cast<int>(y));
 }
 
-void QRubberBand_MoveWithQPoint(QRubberBand* self, QPoint* p) {
+void QRubberBand_MoveWithQPoint(QRubberBand* self, const QPoint* p) {
     self->move(*p);
 }
 
@@ -121,7 +121,7 @@ void QRubberBand_Resize(QRubberBand* self, int w, int h) {
     self->resize(static_cast<int>(w), static_cast<int>(h));
 }
 
-void QRubberBand_ResizeWithQSize(QRubberBand* self, QSize* s) {
+void QRubberBand_ResizeWithQSize(QRubberBand* self, const QSize* s) {
     self->resize(*s);
 }
 
@@ -1136,7 +1136,7 @@ void QRubberBand_OnHideEvent(QRubberBand* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QRubberBand_NativeEvent(QRubberBand* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QRubberBand_NativeEvent(QRubberBand* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqrubberband = dynamic_cast<VirtualQRubberBand*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqrubberband && vqrubberband->isVirtualQRubberBand) {
@@ -1147,7 +1147,7 @@ bool QRubberBand_NativeEvent(QRubberBand* self, libqt_string eventType, void* me
 }
 
 // Base class handler implementation
-bool QRubberBand_QBaseNativeEvent(QRubberBand* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QRubberBand_QBaseNativeEvent(QRubberBand* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqrubberband = dynamic_cast<VirtualQRubberBand*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqrubberband && vqrubberband->isVirtualQRubberBand) {
@@ -1486,7 +1486,7 @@ void QRubberBand_OnCustomEvent(QRubberBand* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QRubberBand_ConnectNotify(QRubberBand* self, QMetaMethod* signal) {
+void QRubberBand_ConnectNotify(QRubberBand* self, const QMetaMethod* signal) {
     auto* vqrubberband = dynamic_cast<VirtualQRubberBand*>(self);
     if (vqrubberband && vqrubberband->isVirtualQRubberBand) {
         vqrubberband->connectNotify(*signal);
@@ -1496,7 +1496,7 @@ void QRubberBand_ConnectNotify(QRubberBand* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QRubberBand_QBaseConnectNotify(QRubberBand* self, QMetaMethod* signal) {
+void QRubberBand_QBaseConnectNotify(QRubberBand* self, const QMetaMethod* signal) {
     auto* vqrubberband = dynamic_cast<VirtualQRubberBand*>(self);
     if (vqrubberband && vqrubberband->isVirtualQRubberBand) {
         vqrubberband->setQRubberBand_ConnectNotify_IsBase(true);
@@ -1515,7 +1515,7 @@ void QRubberBand_OnConnectNotify(QRubberBand* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QRubberBand_DisconnectNotify(QRubberBand* self, QMetaMethod* signal) {
+void QRubberBand_DisconnectNotify(QRubberBand* self, const QMetaMethod* signal) {
     auto* vqrubberband = dynamic_cast<VirtualQRubberBand*>(self);
     if (vqrubberband && vqrubberband->isVirtualQRubberBand) {
         vqrubberband->disconnectNotify(*signal);
@@ -1525,7 +1525,7 @@ void QRubberBand_DisconnectNotify(QRubberBand* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QRubberBand_QBaseDisconnectNotify(QRubberBand* self, QMetaMethod* signal) {
+void QRubberBand_QBaseDisconnectNotify(QRubberBand* self, const QMetaMethod* signal) {
     auto* vqrubberband = dynamic_cast<VirtualQRubberBand*>(self);
     if (vqrubberband && vqrubberband->isVirtualQRubberBand) {
         vqrubberband->setQRubberBand_DisconnectNotify_IsBase(true);
@@ -1776,7 +1776,7 @@ void QRubberBand_OnReceivers(const QRubberBand* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QRubberBand_IsSignalConnected(const QRubberBand* self, QMetaMethod* signal) {
+bool QRubberBand_IsSignalConnected(const QRubberBand* self, const QMetaMethod* signal) {
     auto* vqrubberband = const_cast<VirtualQRubberBand*>(dynamic_cast<const VirtualQRubberBand*>(self));
     if (vqrubberband && vqrubberband->isVirtualQRubberBand) {
         return vqrubberband->isSignalConnected(*signal);
@@ -1786,7 +1786,7 @@ bool QRubberBand_IsSignalConnected(const QRubberBand* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QRubberBand_QBaseIsSignalConnected(const QRubberBand* self, QMetaMethod* signal) {
+bool QRubberBand_QBaseIsSignalConnected(const QRubberBand* self, const QMetaMethod* signal) {
     auto* vqrubberband = const_cast<VirtualQRubberBand*>(dynamic_cast<const VirtualQRubberBand*>(self));
     if (vqrubberband && vqrubberband->isVirtualQRubberBand) {
         vqrubberband->setQRubberBand_IsSignalConnected_IsBase(true);
@@ -1801,6 +1801,35 @@ void QRubberBand_OnIsSignalConnected(const QRubberBand* self, intptr_t slot) {
     auto* vqrubberband = const_cast<VirtualQRubberBand*>(dynamic_cast<const VirtualQRubberBand*>(self));
     if (vqrubberband && vqrubberband->isVirtualQRubberBand) {
         vqrubberband->setQRubberBand_IsSignalConnected_Callback(reinterpret_cast<VirtualQRubberBand::QRubberBand_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QRubberBand_GetDecodedMetricF(const QRubberBand* self, int metricA, int metricB) {
+    auto* vqrubberband = const_cast<VirtualQRubberBand*>(dynamic_cast<const VirtualQRubberBand*>(self));
+    if (vqrubberband && vqrubberband->isVirtualQRubberBand) {
+        return vqrubberband->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQRubberBand*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QRubberBand_QBaseGetDecodedMetricF(const QRubberBand* self, int metricA, int metricB) {
+    auto* vqrubberband = const_cast<VirtualQRubberBand*>(dynamic_cast<const VirtualQRubberBand*>(self));
+    if (vqrubberband && vqrubberband->isVirtualQRubberBand) {
+        vqrubberband->setQRubberBand_GetDecodedMetricF_IsBase(true);
+        return vqrubberband->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQRubberBand*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QRubberBand_OnGetDecodedMetricF(const QRubberBand* self, intptr_t slot) {
+    auto* vqrubberband = const_cast<VirtualQRubberBand*>(dynamic_cast<const VirtualQRubberBand*>(self));
+    if (vqrubberband && vqrubberband->isVirtualQRubberBand) {
+        vqrubberband->setQRubberBand_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQRubberBand::QRubberBand_GetDecodedMetricF_Callback>(slot));
     }
 }
 

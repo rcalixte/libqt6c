@@ -61,12 +61,12 @@ class VirtualQPointingDevice final : public QPointingDevice {
     mutable bool qpointingdevice_issignalconnected_isbase = false;
 
   public:
-    VirtualQPointingDevice() : QPointingDevice(){};
-    VirtualQPointingDevice(const QString& name, qint64 systemId, QInputDevice::DeviceType devType, QPointingDevice::PointerType pType, QInputDevice::Capabilities caps, int maxPoints, int buttonCount) : QPointingDevice(name, systemId, devType, pType, caps, maxPoints, buttonCount){};
-    VirtualQPointingDevice(QObject* parent) : QPointingDevice(parent){};
-    VirtualQPointingDevice(const QString& name, qint64 systemId, QInputDevice::DeviceType devType, QPointingDevice::PointerType pType, QInputDevice::Capabilities caps, int maxPoints, int buttonCount, const QString& seatName) : QPointingDevice(name, systemId, devType, pType, caps, maxPoints, buttonCount, seatName){};
-    VirtualQPointingDevice(const QString& name, qint64 systemId, QInputDevice::DeviceType devType, QPointingDevice::PointerType pType, QInputDevice::Capabilities caps, int maxPoints, int buttonCount, const QString& seatName, QPointingDeviceUniqueId uniqueId) : QPointingDevice(name, systemId, devType, pType, caps, maxPoints, buttonCount, seatName, uniqueId){};
-    VirtualQPointingDevice(const QString& name, qint64 systemId, QInputDevice::DeviceType devType, QPointingDevice::PointerType pType, QInputDevice::Capabilities caps, int maxPoints, int buttonCount, const QString& seatName, QPointingDeviceUniqueId uniqueId, QObject* parent) : QPointingDevice(name, systemId, devType, pType, caps, maxPoints, buttonCount, seatName, uniqueId, parent){};
+    VirtualQPointingDevice() : QPointingDevice() {};
+    VirtualQPointingDevice(const QString& name, qint64 systemId, QInputDevice::DeviceType devType, QPointingDevice::PointerType pType, QFlags<QInputDevice::Capability> caps, int maxPoints, int buttonCount) : QPointingDevice(name, systemId, devType, pType, caps, maxPoints, buttonCount) {};
+    VirtualQPointingDevice(QObject* parent) : QPointingDevice(parent) {};
+    VirtualQPointingDevice(const QString& name, qint64 systemId, QInputDevice::DeviceType devType, QPointingDevice::PointerType pType, QFlags<QInputDevice::Capability> caps, int maxPoints, int buttonCount, const QString& seatName) : QPointingDevice(name, systemId, devType, pType, caps, maxPoints, buttonCount, seatName) {};
+    VirtualQPointingDevice(const QString& name, qint64 systemId, QInputDevice::DeviceType devType, QPointingDevice::PointerType pType, QFlags<QInputDevice::Capability> caps, int maxPoints, int buttonCount, const QString& seatName, QPointingDeviceUniqueId uniqueId) : QPointingDevice(name, systemId, devType, pType, caps, maxPoints, buttonCount, seatName, uniqueId) {};
+    VirtualQPointingDevice(const QString& name, qint64 systemId, QInputDevice::DeviceType devType, QPointingDevice::PointerType pType, QFlags<QInputDevice::Capability> caps, int maxPoints, int buttonCount, const QString& seatName, QPointingDeviceUniqueId uniqueId, QObject* parent) : QPointingDevice(name, systemId, devType, pType, caps, maxPoints, buttonCount, seatName, uniqueId, parent) {};
 
     ~VirtualQPointingDevice() {
         qpointingdevice_metacall_callback = nullptr;
@@ -298,18 +298,18 @@ class VirtualQPointingDevice final : public QPointingDevice {
     friend void QPointingDevice_QBaseChildEvent(QPointingDevice* self, QChildEvent* event);
     friend void QPointingDevice_CustomEvent(QPointingDevice* self, QEvent* event);
     friend void QPointingDevice_QBaseCustomEvent(QPointingDevice* self, QEvent* event);
-    friend void QPointingDevice_ConnectNotify(QPointingDevice* self, QMetaMethod* signal);
-    friend void QPointingDevice_QBaseConnectNotify(QPointingDevice* self, QMetaMethod* signal);
-    friend void QPointingDevice_DisconnectNotify(QPointingDevice* self, QMetaMethod* signal);
-    friend void QPointingDevice_QBaseDisconnectNotify(QPointingDevice* self, QMetaMethod* signal);
+    friend void QPointingDevice_ConnectNotify(QPointingDevice* self, const QMetaMethod* signal);
+    friend void QPointingDevice_QBaseConnectNotify(QPointingDevice* self, const QMetaMethod* signal);
+    friend void QPointingDevice_DisconnectNotify(QPointingDevice* self, const QMetaMethod* signal);
+    friend void QPointingDevice_QBaseDisconnectNotify(QPointingDevice* self, const QMetaMethod* signal);
     friend QObject* QPointingDevice_Sender(const QPointingDevice* self);
     friend QObject* QPointingDevice_QBaseSender(const QPointingDevice* self);
     friend int QPointingDevice_SenderSignalIndex(const QPointingDevice* self);
     friend int QPointingDevice_QBaseSenderSignalIndex(const QPointingDevice* self);
     friend int QPointingDevice_Receivers(const QPointingDevice* self, const char* signal);
     friend int QPointingDevice_QBaseReceivers(const QPointingDevice* self, const char* signal);
-    friend bool QPointingDevice_IsSignalConnected(const QPointingDevice* self, QMetaMethod* signal);
-    friend bool QPointingDevice_QBaseIsSignalConnected(const QPointingDevice* self, QMetaMethod* signal);
+    friend bool QPointingDevice_IsSignalConnected(const QPointingDevice* self, const QMetaMethod* signal);
+    friend bool QPointingDevice_QBaseIsSignalConnected(const QPointingDevice* self, const QMetaMethod* signal);
 };
 
 #endif

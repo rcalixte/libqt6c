@@ -17,8 +17,8 @@ QFileSystemWatcher* QFileSystemWatcher_new() {
     return new VirtualQFileSystemWatcher();
 }
 
-QFileSystemWatcher* QFileSystemWatcher_new2(libqt_list /* of libqt_string */ paths) {
-    QStringList paths_QList;
+QFileSystemWatcher* QFileSystemWatcher_new2(const libqt_list /* of libqt_string */ paths) {
+    QList<QString> paths_QList;
     paths_QList.reserve(paths.len);
     libqt_string* paths_arr = static_cast<libqt_string*>(paths.data.ptr);
     for (size_t i = 0; i < paths.len; ++i) {
@@ -32,8 +32,8 @@ QFileSystemWatcher* QFileSystemWatcher_new3(QObject* parent) {
     return new VirtualQFileSystemWatcher(parent);
 }
 
-QFileSystemWatcher* QFileSystemWatcher_new4(libqt_list /* of libqt_string */ paths, QObject* parent) {
-    QStringList paths_QList;
+QFileSystemWatcher* QFileSystemWatcher_new4(const libqt_list /* of libqt_string */ paths, QObject* parent) {
+    QList<QString> paths_QList;
     paths_QList.reserve(paths.len);
     libqt_string* paths_arr = static_cast<libqt_string*>(paths.data.ptr);
     for (size_t i = 0; i < paths.len; ++i) {
@@ -91,23 +91,23 @@ libqt_string QFileSystemWatcher_Tr(const char* s) {
     return _str;
 }
 
-bool QFileSystemWatcher_AddPath(QFileSystemWatcher* self, libqt_string file) {
+bool QFileSystemWatcher_AddPath(QFileSystemWatcher* self, const libqt_string file) {
     QString file_QString = QString::fromUtf8(file.data, file.len);
     return self->addPath(file_QString);
 }
 
-libqt_list /* of libqt_string */ QFileSystemWatcher_AddPaths(QFileSystemWatcher* self, libqt_list /* of libqt_string */ files) {
-    QStringList files_QList;
+libqt_list /* of libqt_string */ QFileSystemWatcher_AddPaths(QFileSystemWatcher* self, const libqt_list /* of libqt_string */ files) {
+    QList<QString> files_QList;
     files_QList.reserve(files.len);
     libqt_string* files_arr = static_cast<libqt_string*>(files.data.ptr);
     for (size_t i = 0; i < files.len; ++i) {
         QString files_arr_i_QString = QString::fromUtf8(files_arr[i].data, files_arr[i].len);
         files_QList.push_back(files_arr_i_QString);
     }
-    QStringList _ret = self->addPaths(files_QList);
+    QList<QString> _ret = self->addPaths(files_QList);
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -119,28 +119,28 @@ libqt_list /* of libqt_string */ QFileSystemWatcher_AddPaths(QFileSystemWatcher*
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-bool QFileSystemWatcher_RemovePath(QFileSystemWatcher* self, libqt_string file) {
+bool QFileSystemWatcher_RemovePath(QFileSystemWatcher* self, const libqt_string file) {
     QString file_QString = QString::fromUtf8(file.data, file.len);
     return self->removePath(file_QString);
 }
 
-libqt_list /* of libqt_string */ QFileSystemWatcher_RemovePaths(QFileSystemWatcher* self, libqt_list /* of libqt_string */ files) {
-    QStringList files_QList;
+libqt_list /* of libqt_string */ QFileSystemWatcher_RemovePaths(QFileSystemWatcher* self, const libqt_list /* of libqt_string */ files) {
+    QList<QString> files_QList;
     files_QList.reserve(files.len);
     libqt_string* files_arr = static_cast<libqt_string*>(files.data.ptr);
     for (size_t i = 0; i < files.len; ++i) {
         QString files_arr_i_QString = QString::fromUtf8(files_arr[i].data, files_arr[i].len);
         files_QList.push_back(files_arr_i_QString);
     }
-    QStringList _ret = self->removePaths(files_QList);
+    QList<QString> _ret = self->removePaths(files_QList);
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -152,16 +152,16 @@ libqt_list /* of libqt_string */ QFileSystemWatcher_RemovePaths(QFileSystemWatch
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
 libqt_list /* of libqt_string */ QFileSystemWatcher_Files(const QFileSystemWatcher* self) {
-    QStringList _ret = self->files();
+    QList<QString> _ret = self->files();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -173,16 +173,16 @@ libqt_list /* of libqt_string */ QFileSystemWatcher_Files(const QFileSystemWatch
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
 libqt_list /* of libqt_string */ QFileSystemWatcher_Directories(const QFileSystemWatcher* self) {
-    QStringList _ret = self->directories();
+    QList<QString> _ret = self->directories();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -194,7 +194,7 @@ libqt_list /* of libqt_string */ QFileSystemWatcher_Directories(const QFileSyste
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -369,7 +369,7 @@ void QFileSystemWatcher_OnCustomEvent(QFileSystemWatcher* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFileSystemWatcher_ConnectNotify(QFileSystemWatcher* self, QMetaMethod* signal) {
+void QFileSystemWatcher_ConnectNotify(QFileSystemWatcher* self, const QMetaMethod* signal) {
     auto* vqfilesystemwatcher = dynamic_cast<VirtualQFileSystemWatcher*>(self);
     if (vqfilesystemwatcher && vqfilesystemwatcher->isVirtualQFileSystemWatcher) {
         vqfilesystemwatcher->connectNotify(*signal);
@@ -379,7 +379,7 @@ void QFileSystemWatcher_ConnectNotify(QFileSystemWatcher* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-void QFileSystemWatcher_QBaseConnectNotify(QFileSystemWatcher* self, QMetaMethod* signal) {
+void QFileSystemWatcher_QBaseConnectNotify(QFileSystemWatcher* self, const QMetaMethod* signal) {
     auto* vqfilesystemwatcher = dynamic_cast<VirtualQFileSystemWatcher*>(self);
     if (vqfilesystemwatcher && vqfilesystemwatcher->isVirtualQFileSystemWatcher) {
         vqfilesystemwatcher->setQFileSystemWatcher_ConnectNotify_IsBase(true);
@@ -398,7 +398,7 @@ void QFileSystemWatcher_OnConnectNotify(QFileSystemWatcher* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-void QFileSystemWatcher_DisconnectNotify(QFileSystemWatcher* self, QMetaMethod* signal) {
+void QFileSystemWatcher_DisconnectNotify(QFileSystemWatcher* self, const QMetaMethod* signal) {
     auto* vqfilesystemwatcher = dynamic_cast<VirtualQFileSystemWatcher*>(self);
     if (vqfilesystemwatcher && vqfilesystemwatcher->isVirtualQFileSystemWatcher) {
         vqfilesystemwatcher->disconnectNotify(*signal);
@@ -408,7 +408,7 @@ void QFileSystemWatcher_DisconnectNotify(QFileSystemWatcher* self, QMetaMethod* 
 }
 
 // Base class handler implementation
-void QFileSystemWatcher_QBaseDisconnectNotify(QFileSystemWatcher* self, QMetaMethod* signal) {
+void QFileSystemWatcher_QBaseDisconnectNotify(QFileSystemWatcher* self, const QMetaMethod* signal) {
     auto* vqfilesystemwatcher = dynamic_cast<VirtualQFileSystemWatcher*>(self);
     if (vqfilesystemwatcher && vqfilesystemwatcher->isVirtualQFileSystemWatcher) {
         vqfilesystemwatcher->setQFileSystemWatcher_DisconnectNotify_IsBase(true);
@@ -514,7 +514,7 @@ void QFileSystemWatcher_OnReceivers(const QFileSystemWatcher* self, intptr_t slo
 }
 
 // Derived class handler implementation
-bool QFileSystemWatcher_IsSignalConnected(const QFileSystemWatcher* self, QMetaMethod* signal) {
+bool QFileSystemWatcher_IsSignalConnected(const QFileSystemWatcher* self, const QMetaMethod* signal) {
     auto* vqfilesystemwatcher = const_cast<VirtualQFileSystemWatcher*>(dynamic_cast<const VirtualQFileSystemWatcher*>(self));
     if (vqfilesystemwatcher && vqfilesystemwatcher->isVirtualQFileSystemWatcher) {
         return vqfilesystemwatcher->isSignalConnected(*signal);
@@ -524,7 +524,7 @@ bool QFileSystemWatcher_IsSignalConnected(const QFileSystemWatcher* self, QMetaM
 }
 
 // Base class handler implementation
-bool QFileSystemWatcher_QBaseIsSignalConnected(const QFileSystemWatcher* self, QMetaMethod* signal) {
+bool QFileSystemWatcher_QBaseIsSignalConnected(const QFileSystemWatcher* self, const QMetaMethod* signal) {
     auto* vqfilesystemwatcher = const_cast<VirtualQFileSystemWatcher*>(dynamic_cast<const VirtualQFileSystemWatcher*>(self));
     if (vqfilesystemwatcher && vqfilesystemwatcher->isVirtualQFileSystemWatcher) {
         vqfilesystemwatcher->setQFileSystemWatcher_IsSignalConnected_IsBase(true);

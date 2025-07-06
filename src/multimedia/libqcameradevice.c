@@ -103,6 +103,10 @@ libqt_list /* of QCameraFormat* */ q_cameradevice_video_formats(void* self) {
     return _arr;
 }
 
+int64_t q_cameradevice_correction_angle(void* self) {
+    return QCameraDevice_CorrectionAngle((QCameraDevice*)self);
+}
+
 void q_cameradevice_delete(void* self) {
     QCameraDevice_Delete((QCameraDevice*)(self));
 }

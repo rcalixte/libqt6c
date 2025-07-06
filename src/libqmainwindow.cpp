@@ -109,7 +109,7 @@ QSize* QMainWindow_IconSize(const QMainWindow* self) {
     return new QSize(self->iconSize());
 }
 
-void QMainWindow_SetIconSize(QMainWindow* self, QSize* iconSize) {
+void QMainWindow_SetIconSize(QMainWindow* self, const QSize* iconSize) {
     self->setIconSize(*iconSize);
 }
 
@@ -161,7 +161,7 @@ int QMainWindow_DockOptions(const QMainWindow* self) {
     return static_cast<int>(self->dockOptions());
 }
 
-bool QMainWindow_IsSeparator(const QMainWindow* self, QPoint* pos) {
+bool QMainWindow_IsSeparator(const QMainWindow* self, const QPoint* pos) {
     return self->isSeparator(*pos);
 }
 
@@ -225,7 +225,7 @@ void QMainWindow_AddToolBarWithToolbar(QMainWindow* self, QToolBar* toolbar) {
     self->addToolBar(toolbar);
 }
 
-QToolBar* QMainWindow_AddToolBarWithTitle(QMainWindow* self, libqt_string title) {
+QToolBar* QMainWindow_AddToolBarWithTitle(QMainWindow* self, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return self->addToolBar(title_QString);
 }
@@ -246,7 +246,7 @@ bool QMainWindow_UnifiedTitleAndToolBarOnMac(const QMainWindow* self) {
     return self->unifiedTitleAndToolBarOnMac();
 }
 
-int QMainWindow_ToolBarArea(const QMainWindow* self, QToolBar* toolbar) {
+int QMainWindow_ToolBarArea(const QMainWindow* self, const QToolBar* toolbar) {
     return static_cast<int>(self->toolBarArea(toolbar));
 }
 
@@ -273,12 +273,12 @@ void QMainWindow_TabifyDockWidget(QMainWindow* self, QDockWidget* first, QDockWi
 libqt_list /* of QDockWidget* */ QMainWindow_TabifiedDockWidgets(const QMainWindow* self, QDockWidget* dockwidget) {
     QList<QDockWidget*> _ret = self->tabifiedDockWidgets(dockwidget);
     // Convert QList<> from C++ memory to manually-managed C memory
-    QDockWidget** _arr = static_cast<QDockWidget**>(malloc(sizeof(QDockWidget*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QDockWidget** _arr = static_cast<QDockWidget**>(malloc(sizeof(QDockWidget*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -295,7 +295,7 @@ int QMainWindow_DockWidgetArea(const QMainWindow* self, QDockWidget* dockwidget)
     return static_cast<int>(self->dockWidgetArea(dockwidget));
 }
 
-void QMainWindow_ResizeDocks(QMainWindow* self, libqt_list /* of QDockWidget* */ docks, libqt_list /* of int */ sizes, int orientation) {
+void QMainWindow_ResizeDocks(QMainWindow* self, const libqt_list /* of QDockWidget* */ docks, const libqt_list /* of int */ sizes, int orientation) {
     QList<QDockWidget*> docks_QList;
     docks_QList.reserve(docks.len);
     QDockWidget** docks_arr = static_cast<QDockWidget**>(docks.data.ptr);
@@ -321,7 +321,7 @@ libqt_string QMainWindow_SaveState(const QMainWindow* self) {
     return _str;
 }
 
-bool QMainWindow_RestoreState(QMainWindow* self, libqt_string state) {
+bool QMainWindow_RestoreState(QMainWindow* self, const libqt_string state) {
     QByteArray state_QByteArray(state.data, state.len);
     return self->restoreState(state_QByteArray);
 }
@@ -338,7 +338,7 @@ void QMainWindow_SetUnifiedTitleAndToolBarOnMac(QMainWindow* self, bool set) {
     self->setUnifiedTitleAndToolBarOnMac(set);
 }
 
-void QMainWindow_IconSizeChanged(QMainWindow* self, QSize* iconSize) {
+void QMainWindow_IconSizeChanged(QMainWindow* self, const QSize* iconSize) {
     self->iconSizeChanged(*iconSize);
 }
 
@@ -414,7 +414,7 @@ libqt_string QMainWindow_SaveState1(const QMainWindow* self, int version) {
     return _str;
 }
 
-bool QMainWindow_RestoreState2(QMainWindow* self, libqt_string state, int version) {
+bool QMainWindow_RestoreState2(QMainWindow* self, const libqt_string state, int version) {
     QByteArray state_QByteArray(state.data, state.len);
     return self->restoreState(state_QByteArray, static_cast<int>(version));
 }
@@ -1377,7 +1377,7 @@ void QMainWindow_OnHideEvent(QMainWindow* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QMainWindow_NativeEvent(QMainWindow* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QMainWindow_NativeEvent(QMainWindow* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqmainwindow = dynamic_cast<VirtualQMainWindow*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqmainwindow && vqmainwindow->isVirtualQMainWindow) {
@@ -1388,7 +1388,7 @@ bool QMainWindow_NativeEvent(QMainWindow* self, libqt_string eventType, void* me
 }
 
 // Base class handler implementation
-bool QMainWindow_QBaseNativeEvent(QMainWindow* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QMainWindow_QBaseNativeEvent(QMainWindow* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqmainwindow = dynamic_cast<VirtualQMainWindow*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqmainwindow && vqmainwindow->isVirtualQMainWindow) {
@@ -1756,7 +1756,7 @@ void QMainWindow_OnCustomEvent(QMainWindow* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMainWindow_ConnectNotify(QMainWindow* self, QMetaMethod* signal) {
+void QMainWindow_ConnectNotify(QMainWindow* self, const QMetaMethod* signal) {
     auto* vqmainwindow = dynamic_cast<VirtualQMainWindow*>(self);
     if (vqmainwindow && vqmainwindow->isVirtualQMainWindow) {
         vqmainwindow->connectNotify(*signal);
@@ -1766,7 +1766,7 @@ void QMainWindow_ConnectNotify(QMainWindow* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QMainWindow_QBaseConnectNotify(QMainWindow* self, QMetaMethod* signal) {
+void QMainWindow_QBaseConnectNotify(QMainWindow* self, const QMetaMethod* signal) {
     auto* vqmainwindow = dynamic_cast<VirtualQMainWindow*>(self);
     if (vqmainwindow && vqmainwindow->isVirtualQMainWindow) {
         vqmainwindow->setQMainWindow_ConnectNotify_IsBase(true);
@@ -1785,7 +1785,7 @@ void QMainWindow_OnConnectNotify(QMainWindow* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMainWindow_DisconnectNotify(QMainWindow* self, QMetaMethod* signal) {
+void QMainWindow_DisconnectNotify(QMainWindow* self, const QMetaMethod* signal) {
     auto* vqmainwindow = dynamic_cast<VirtualQMainWindow*>(self);
     if (vqmainwindow && vqmainwindow->isVirtualQMainWindow) {
         vqmainwindow->disconnectNotify(*signal);
@@ -1795,7 +1795,7 @@ void QMainWindow_DisconnectNotify(QMainWindow* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QMainWindow_QBaseDisconnectNotify(QMainWindow* self, QMetaMethod* signal) {
+void QMainWindow_QBaseDisconnectNotify(QMainWindow* self, const QMetaMethod* signal) {
     auto* vqmainwindow = dynamic_cast<VirtualQMainWindow*>(self);
     if (vqmainwindow && vqmainwindow->isVirtualQMainWindow) {
         vqmainwindow->setQMainWindow_DisconnectNotify_IsBase(true);
@@ -2046,7 +2046,7 @@ void QMainWindow_OnReceivers(const QMainWindow* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QMainWindow_IsSignalConnected(const QMainWindow* self, QMetaMethod* signal) {
+bool QMainWindow_IsSignalConnected(const QMainWindow* self, const QMetaMethod* signal) {
     auto* vqmainwindow = const_cast<VirtualQMainWindow*>(dynamic_cast<const VirtualQMainWindow*>(self));
     if (vqmainwindow && vqmainwindow->isVirtualQMainWindow) {
         return vqmainwindow->isSignalConnected(*signal);
@@ -2056,7 +2056,7 @@ bool QMainWindow_IsSignalConnected(const QMainWindow* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QMainWindow_QBaseIsSignalConnected(const QMainWindow* self, QMetaMethod* signal) {
+bool QMainWindow_QBaseIsSignalConnected(const QMainWindow* self, const QMetaMethod* signal) {
     auto* vqmainwindow = const_cast<VirtualQMainWindow*>(dynamic_cast<const VirtualQMainWindow*>(self));
     if (vqmainwindow && vqmainwindow->isVirtualQMainWindow) {
         vqmainwindow->setQMainWindow_IsSignalConnected_IsBase(true);
@@ -2071,6 +2071,35 @@ void QMainWindow_OnIsSignalConnected(const QMainWindow* self, intptr_t slot) {
     auto* vqmainwindow = const_cast<VirtualQMainWindow*>(dynamic_cast<const VirtualQMainWindow*>(self));
     if (vqmainwindow && vqmainwindow->isVirtualQMainWindow) {
         vqmainwindow->setQMainWindow_IsSignalConnected_Callback(reinterpret_cast<VirtualQMainWindow::QMainWindow_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QMainWindow_GetDecodedMetricF(const QMainWindow* self, int metricA, int metricB) {
+    auto* vqmainwindow = const_cast<VirtualQMainWindow*>(dynamic_cast<const VirtualQMainWindow*>(self));
+    if (vqmainwindow && vqmainwindow->isVirtualQMainWindow) {
+        return vqmainwindow->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQMainWindow*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QMainWindow_QBaseGetDecodedMetricF(const QMainWindow* self, int metricA, int metricB) {
+    auto* vqmainwindow = const_cast<VirtualQMainWindow*>(dynamic_cast<const VirtualQMainWindow*>(self));
+    if (vqmainwindow && vqmainwindow->isVirtualQMainWindow) {
+        vqmainwindow->setQMainWindow_GetDecodedMetricF_IsBase(true);
+        return vqmainwindow->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQMainWindow*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QMainWindow_OnGetDecodedMetricF(const QMainWindow* self, intptr_t slot) {
+    auto* vqmainwindow = const_cast<VirtualQMainWindow*>(dynamic_cast<const VirtualQMainWindow*>(self));
+    if (vqmainwindow && vqmainwindow->isVirtualQMainWindow) {
+        vqmainwindow->setQMainWindow_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQMainWindow::QMainWindow_GetDecodedMetricF_Callback>(slot));
     }
 }
 

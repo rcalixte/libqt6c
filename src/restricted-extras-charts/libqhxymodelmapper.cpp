@@ -355,7 +355,7 @@ void QHXYModelMapper_OnCustomEvent(QHXYModelMapper* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHXYModelMapper_ConnectNotify(QHXYModelMapper* self, QMetaMethod* signal) {
+void QHXYModelMapper_ConnectNotify(QHXYModelMapper* self, const QMetaMethod* signal) {
     auto* vqhxymodelmapper = dynamic_cast<VirtualQHXYModelMapper*>(self);
     if (vqhxymodelmapper && vqhxymodelmapper->isVirtualQHXYModelMapper) {
         vqhxymodelmapper->connectNotify(*signal);
@@ -365,7 +365,7 @@ void QHXYModelMapper_ConnectNotify(QHXYModelMapper* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QHXYModelMapper_QBaseConnectNotify(QHXYModelMapper* self, QMetaMethod* signal) {
+void QHXYModelMapper_QBaseConnectNotify(QHXYModelMapper* self, const QMetaMethod* signal) {
     auto* vqhxymodelmapper = dynamic_cast<VirtualQHXYModelMapper*>(self);
     if (vqhxymodelmapper && vqhxymodelmapper->isVirtualQHXYModelMapper) {
         vqhxymodelmapper->setQHXYModelMapper_ConnectNotify_IsBase(true);
@@ -384,7 +384,7 @@ void QHXYModelMapper_OnConnectNotify(QHXYModelMapper* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHXYModelMapper_DisconnectNotify(QHXYModelMapper* self, QMetaMethod* signal) {
+void QHXYModelMapper_DisconnectNotify(QHXYModelMapper* self, const QMetaMethod* signal) {
     auto* vqhxymodelmapper = dynamic_cast<VirtualQHXYModelMapper*>(self);
     if (vqhxymodelmapper && vqhxymodelmapper->isVirtualQHXYModelMapper) {
         vqhxymodelmapper->disconnectNotify(*signal);
@@ -394,7 +394,7 @@ void QHXYModelMapper_DisconnectNotify(QHXYModelMapper* self, QMetaMethod* signal
 }
 
 // Base class handler implementation
-void QHXYModelMapper_QBaseDisconnectNotify(QHXYModelMapper* self, QMetaMethod* signal) {
+void QHXYModelMapper_QBaseDisconnectNotify(QHXYModelMapper* self, const QMetaMethod* signal) {
     auto* vqhxymodelmapper = dynamic_cast<VirtualQHXYModelMapper*>(self);
     if (vqhxymodelmapper && vqhxymodelmapper->isVirtualQHXYModelMapper) {
         vqhxymodelmapper->setQHXYModelMapper_DisconnectNotify_IsBase(true);
@@ -790,7 +790,7 @@ void QHXYModelMapper_OnReceivers(const QHXYModelMapper* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QHXYModelMapper_IsSignalConnected(const QHXYModelMapper* self, QMetaMethod* signal) {
+bool QHXYModelMapper_IsSignalConnected(const QHXYModelMapper* self, const QMetaMethod* signal) {
     auto* vqhxymodelmapper = const_cast<VirtualQHXYModelMapper*>(dynamic_cast<const VirtualQHXYModelMapper*>(self));
     if (vqhxymodelmapper && vqhxymodelmapper->isVirtualQHXYModelMapper) {
         return vqhxymodelmapper->isSignalConnected(*signal);
@@ -800,7 +800,7 @@ bool QHXYModelMapper_IsSignalConnected(const QHXYModelMapper* self, QMetaMethod*
 }
 
 // Base class handler implementation
-bool QHXYModelMapper_QBaseIsSignalConnected(const QHXYModelMapper* self, QMetaMethod* signal) {
+bool QHXYModelMapper_QBaseIsSignalConnected(const QHXYModelMapper* self, const QMetaMethod* signal) {
     auto* vqhxymodelmapper = const_cast<VirtualQHXYModelMapper*>(dynamic_cast<const VirtualQHXYModelMapper*>(self));
     if (vqhxymodelmapper && vqhxymodelmapper->isVirtualQHXYModelMapper) {
         vqhxymodelmapper->setQHXYModelMapper_IsSignalConnected_IsBase(true);

@@ -79,6 +79,7 @@ class VirtualQComboBox final : public QComboBox {
     using QComboBox_SenderSignalIndex_Callback = int (*)();
     using QComboBox_Receivers_Callback = int (*)(const QComboBox*, const char*);
     using QComboBox_IsSignalConnected_Callback = bool (*)(const QComboBox*, QMetaMethod*);
+    using QComboBox_GetDecodedMetricF_Callback = double (*)(const QComboBox*, int, int);
 
   protected:
     // Instance callback storage
@@ -143,6 +144,7 @@ class VirtualQComboBox final : public QComboBox {
     QComboBox_SenderSignalIndex_Callback qcombobox_sendersignalindex_callback = nullptr;
     QComboBox_Receivers_Callback qcombobox_receivers_callback = nullptr;
     QComboBox_IsSignalConnected_Callback qcombobox_issignalconnected_callback = nullptr;
+    QComboBox_GetDecodedMetricF_Callback qcombobox_getdecodedmetricf_callback = nullptr;
 
     // Instance base flags
     mutable bool qcombobox_metacall_isbase = false;
@@ -206,10 +208,11 @@ class VirtualQComboBox final : public QComboBox {
     mutable bool qcombobox_sendersignalindex_isbase = false;
     mutable bool qcombobox_receivers_isbase = false;
     mutable bool qcombobox_issignalconnected_isbase = false;
+    mutable bool qcombobox_getdecodedmetricf_isbase = false;
 
   public:
-    VirtualQComboBox(QWidget* parent) : QComboBox(parent){};
-    VirtualQComboBox() : QComboBox(){};
+    VirtualQComboBox(QWidget* parent) : QComboBox(parent) {};
+    VirtualQComboBox() : QComboBox() {};
 
     ~VirtualQComboBox() {
         qcombobox_metacall_callback = nullptr;
@@ -273,6 +276,7 @@ class VirtualQComboBox final : public QComboBox {
         qcombobox_sendersignalindex_callback = nullptr;
         qcombobox_receivers_callback = nullptr;
         qcombobox_issignalconnected_callback = nullptr;
+        qcombobox_getdecodedmetricf_callback = nullptr;
     }
 
     // Callback setters
@@ -337,6 +341,7 @@ class VirtualQComboBox final : public QComboBox {
     inline void setQComboBox_SenderSignalIndex_Callback(QComboBox_SenderSignalIndex_Callback cb) { qcombobox_sendersignalindex_callback = cb; }
     inline void setQComboBox_Receivers_Callback(QComboBox_Receivers_Callback cb) { qcombobox_receivers_callback = cb; }
     inline void setQComboBox_IsSignalConnected_Callback(QComboBox_IsSignalConnected_Callback cb) { qcombobox_issignalconnected_callback = cb; }
+    inline void setQComboBox_GetDecodedMetricF_Callback(QComboBox_GetDecodedMetricF_Callback cb) { qcombobox_getdecodedmetricf_callback = cb; }
 
     // Base flag setters
     inline void setQComboBox_Metacall_IsBase(bool value) const { qcombobox_metacall_isbase = value; }
@@ -400,6 +405,7 @@ class VirtualQComboBox final : public QComboBox {
     inline void setQComboBox_SenderSignalIndex_IsBase(bool value) const { qcombobox_sendersignalindex_isbase = value; }
     inline void setQComboBox_Receivers_IsBase(bool value) const { qcombobox_receivers_isbase = value; }
     inline void setQComboBox_IsSignalConnected_IsBase(bool value) const { qcombobox_issignalconnected_isbase = value; }
+    inline void setQComboBox_GetDecodedMetricF_IsBase(bool value) const { qcombobox_getdecodedmetricf_isbase = value; }
 
     // Virtual method for C ABI access and custom callback
     virtual int qt_metacall(QMetaObject::Call param1, int param2, void** param3) override {
@@ -1264,6 +1270,22 @@ class VirtualQComboBox final : public QComboBox {
         }
     }
 
+    // Virtual method for C ABI access and custom callback
+    double getDecodedMetricF(QPaintDevice::PaintDeviceMetric metricA, QPaintDevice::PaintDeviceMetric metricB) const {
+        if (qcombobox_getdecodedmetricf_isbase) {
+            qcombobox_getdecodedmetricf_isbase = false;
+            return QComboBox::getDecodedMetricF(metricA, metricB);
+        } else if (qcombobox_getdecodedmetricf_callback != nullptr) {
+            int cbval1 = static_cast<int>(metricA);
+            int cbval2 = static_cast<int>(metricB);
+
+            double callback_ret = qcombobox_getdecodedmetricf_callback(this, cbval1, cbval2);
+            return static_cast<double>(callback_ret);
+        } else {
+            return QComboBox::getDecodedMetricF(metricA, metricB);
+        }
+    }
+
     // Friend functions
     friend void QComboBox_FocusInEvent(QComboBox* self, QFocusEvent* e);
     friend void QComboBox_QBaseFocusInEvent(QComboBox* self, QFocusEvent* e);
@@ -1319,8 +1341,8 @@ class VirtualQComboBox final : public QComboBox {
     friend void QComboBox_QBaseDragLeaveEvent(QComboBox* self, QDragLeaveEvent* event);
     friend void QComboBox_DropEvent(QComboBox* self, QDropEvent* event);
     friend void QComboBox_QBaseDropEvent(QComboBox* self, QDropEvent* event);
-    friend bool QComboBox_NativeEvent(QComboBox* self, libqt_string eventType, void* message, intptr_t* result);
-    friend bool QComboBox_QBaseNativeEvent(QComboBox* self, libqt_string eventType, void* message, intptr_t* result);
+    friend bool QComboBox_NativeEvent(QComboBox* self, const libqt_string eventType, void* message, intptr_t* result);
+    friend bool QComboBox_QBaseNativeEvent(QComboBox* self, const libqt_string eventType, void* message, intptr_t* result);
     friend int QComboBox_Metric(const QComboBox* self, int param1);
     friend int QComboBox_QBaseMetric(const QComboBox* self, int param1);
     friend void QComboBox_InitPainter(const QComboBox* self, QPainter* painter);
@@ -1337,10 +1359,10 @@ class VirtualQComboBox final : public QComboBox {
     friend void QComboBox_QBaseChildEvent(QComboBox* self, QChildEvent* event);
     friend void QComboBox_CustomEvent(QComboBox* self, QEvent* event);
     friend void QComboBox_QBaseCustomEvent(QComboBox* self, QEvent* event);
-    friend void QComboBox_ConnectNotify(QComboBox* self, QMetaMethod* signal);
-    friend void QComboBox_QBaseConnectNotify(QComboBox* self, QMetaMethod* signal);
-    friend void QComboBox_DisconnectNotify(QComboBox* self, QMetaMethod* signal);
-    friend void QComboBox_QBaseDisconnectNotify(QComboBox* self, QMetaMethod* signal);
+    friend void QComboBox_ConnectNotify(QComboBox* self, const QMetaMethod* signal);
+    friend void QComboBox_QBaseConnectNotify(QComboBox* self, const QMetaMethod* signal);
+    friend void QComboBox_DisconnectNotify(QComboBox* self, const QMetaMethod* signal);
+    friend void QComboBox_QBaseDisconnectNotify(QComboBox* self, const QMetaMethod* signal);
     friend void QComboBox_UpdateMicroFocus(QComboBox* self);
     friend void QComboBox_QBaseUpdateMicroFocus(QComboBox* self);
     friend void QComboBox_Create(QComboBox* self);
@@ -1357,8 +1379,10 @@ class VirtualQComboBox final : public QComboBox {
     friend int QComboBox_QBaseSenderSignalIndex(const QComboBox* self);
     friend int QComboBox_Receivers(const QComboBox* self, const char* signal);
     friend int QComboBox_QBaseReceivers(const QComboBox* self, const char* signal);
-    friend bool QComboBox_IsSignalConnected(const QComboBox* self, QMetaMethod* signal);
-    friend bool QComboBox_QBaseIsSignalConnected(const QComboBox* self, QMetaMethod* signal);
+    friend bool QComboBox_IsSignalConnected(const QComboBox* self, const QMetaMethod* signal);
+    friend bool QComboBox_QBaseIsSignalConnected(const QComboBox* self, const QMetaMethod* signal);
+    friend double QComboBox_GetDecodedMetricF(const QComboBox* self, int metricA, int metricB);
+    friend double QComboBox_QBaseGetDecodedMetricF(const QComboBox* self, int metricA, int metricB);
 };
 
 #endif

@@ -12,15 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-#include "libqtextformat.h"
-#include "libqtextcursor.h"
-#include "libqtextdocument.h"
-#include "libqtextobject.h"
-
 /// https://doc.qt.io/qt-6/qtexttablecell.html
 
 /// q_texttablecell_new constructs a new QTextTableCell object.
@@ -102,16 +93,6 @@ bool q_texttablecell_operator_equal(void* self, void* other);
 ///
 /// ``` QTextTableCell* self, QTextTableCell* other ```
 bool q_texttablecell_operator_not_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#begin)
-///
-/// ``` QTextTableCell* self ```
-QTextFrame__iterator* q_texttablecell_begin(void* self);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#end)
-///
-/// ``` QTextTableCell* self ```
-QTextFrame__iterator* q_texttablecell_end(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#tableCellFormatIndex)
 ///
@@ -333,20 +314,6 @@ libqt_list /* of QTextFrame* */ q_texttable_child_frames(void* self);
 /// ``` QTextTable* self ```
 QTextFrame* q_texttable_parent_frame(void* self);
 
-/// Inherited from QTextFrame
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#begin)
-///
-/// ``` QTextTable* self ```
-QTextFrame__iterator* q_texttable_begin(void* self);
-
-/// Inherited from QTextFrame
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#end)
-///
-/// ``` QTextTable* self ```
-QTextFrame__iterator* q_texttable_end(void* self);
-
 /// Inherited from QTextObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextobject.html#formatIndex)
@@ -429,7 +396,7 @@ QThread* q_texttable_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QTextTable* self, QThread* thread ```
-void q_texttable_move_to_thread(void* self, void* thread);
+bool q_texttable_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -444,6 +411,13 @@ int32_t q_texttable_start_timer(void* self, int interval);
 ///
 /// ``` QTextTable* self, int id ```
 void q_texttable_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QTextTable* self, enum Qt__TimerId id ```
+void q_texttable_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -584,6 +558,13 @@ bool q_texttable_inherits(void* self, const char* classname);
 ///
 /// ``` QTextTable* self ```
 void q_texttable_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QTextTable* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_texttable_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

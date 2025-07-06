@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqcommandlineoption.h"
-#include "libqcoreapplication.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qcommandlineparser.html
 
 /// q_commandlineparser_new constructs a new QCommandLineParser object.

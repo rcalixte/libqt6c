@@ -12,12 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqanimationgroup.h"
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qabstractanimation.html
 
 /// q_abstractanimation_new constructs a new QAbstractAnimation object.
@@ -347,7 +341,7 @@ QThread* q_abstractanimation_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QAbstractAnimation* self, QThread* thread ```
-void q_abstractanimation_move_to_thread(void* self, void* thread);
+bool q_abstractanimation_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -362,6 +356,13 @@ int32_t q_abstractanimation_start_timer(void* self, int interval);
 ///
 /// ``` QAbstractAnimation* self, int id ```
 void q_abstractanimation_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QAbstractAnimation* self, enum Qt__TimerId id ```
+void q_abstractanimation_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -502,6 +503,13 @@ bool q_abstractanimation_inherits(void* self, const char* classname);
 ///
 /// ``` QAbstractAnimation* self ```
 void q_abstractanimation_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QAbstractAnimation* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_abstractanimation_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -1063,7 +1071,7 @@ QThread* q_animationdriver_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QAnimationDriver* self, QThread* thread ```
-void q_animationdriver_move_to_thread(void* self, void* thread);
+bool q_animationdriver_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -1078,6 +1086,13 @@ int32_t q_animationdriver_start_timer(void* self, int interval);
 ///
 /// ``` QAnimationDriver* self, int id ```
 void q_animationdriver_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QAnimationDriver* self, enum Qt__TimerId id ```
+void q_animationdriver_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1218,6 +1233,13 @@ bool q_animationdriver_inherits(void* self, const char* classname);
 ///
 /// ``` QAnimationDriver* self ```
 void q_animationdriver_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QAnimationDriver* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_animationdriver_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

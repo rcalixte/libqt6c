@@ -53,12 +53,6 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QRubberBand::Shape Shape; // C++ enum
-#else
-typedef int Shape; // C ABI enum
-#endif
-
 QRubberBand* QRubberBand_new(int param1);
 QRubberBand* QRubberBand_new2(int param1, QWidget* param2);
 QMetaObject* QRubberBand_MetaObject(const QRubberBand* self);
@@ -68,12 +62,12 @@ void QRubberBand_OnMetacall(QRubberBand* self, intptr_t slot);
 int QRubberBand_QBaseMetacall(QRubberBand* self, int param1, int param2, void** param3);
 libqt_string QRubberBand_Tr(const char* s);
 int QRubberBand_Shape(const QRubberBand* self);
-void QRubberBand_SetGeometry(QRubberBand* self, QRect* r);
+void QRubberBand_SetGeometry(QRubberBand* self, const QRect* r);
 void QRubberBand_SetGeometry2(QRubberBand* self, int x, int y, int w, int h);
 void QRubberBand_Move(QRubberBand* self, int x, int y);
-void QRubberBand_MoveWithQPoint(QRubberBand* self, QPoint* p);
+void QRubberBand_MoveWithQPoint(QRubberBand* self, const QPoint* p);
 void QRubberBand_Resize(QRubberBand* self, int w, int h);
-void QRubberBand_ResizeWithQSize(QRubberBand* self, QSize* s);
+void QRubberBand_ResizeWithQSize(QRubberBand* self, const QSize* s);
 bool QRubberBand_Event(QRubberBand* self, QEvent* e);
 void QRubberBand_OnEvent(QRubberBand* self, intptr_t slot);
 bool QRubberBand_QBaseEvent(QRubberBand* self, QEvent* e);
@@ -178,9 +172,9 @@ void QRubberBand_QBaseDropEvent(QRubberBand* self, QDropEvent* event);
 void QRubberBand_HideEvent(QRubberBand* self, QHideEvent* event);
 void QRubberBand_OnHideEvent(QRubberBand* self, intptr_t slot);
 void QRubberBand_QBaseHideEvent(QRubberBand* self, QHideEvent* event);
-bool QRubberBand_NativeEvent(QRubberBand* self, libqt_string eventType, void* message, intptr_t* result);
+bool QRubberBand_NativeEvent(QRubberBand* self, const libqt_string eventType, void* message, intptr_t* result);
 void QRubberBand_OnNativeEvent(QRubberBand* self, intptr_t slot);
-bool QRubberBand_QBaseNativeEvent(QRubberBand* self, libqt_string eventType, void* message, intptr_t* result);
+bool QRubberBand_QBaseNativeEvent(QRubberBand* self, const libqt_string eventType, void* message, intptr_t* result);
 int QRubberBand_Metric(const QRubberBand* self, int param1);
 void QRubberBand_OnMetric(const QRubberBand* self, intptr_t slot);
 int QRubberBand_QBaseMetric(const QRubberBand* self, int param1);
@@ -214,12 +208,12 @@ void QRubberBand_QBaseChildEvent(QRubberBand* self, QChildEvent* event);
 void QRubberBand_CustomEvent(QRubberBand* self, QEvent* event);
 void QRubberBand_OnCustomEvent(QRubberBand* self, intptr_t slot);
 void QRubberBand_QBaseCustomEvent(QRubberBand* self, QEvent* event);
-void QRubberBand_ConnectNotify(QRubberBand* self, QMetaMethod* signal);
+void QRubberBand_ConnectNotify(QRubberBand* self, const QMetaMethod* signal);
 void QRubberBand_OnConnectNotify(QRubberBand* self, intptr_t slot);
-void QRubberBand_QBaseConnectNotify(QRubberBand* self, QMetaMethod* signal);
-void QRubberBand_DisconnectNotify(QRubberBand* self, QMetaMethod* signal);
+void QRubberBand_QBaseConnectNotify(QRubberBand* self, const QMetaMethod* signal);
+void QRubberBand_DisconnectNotify(QRubberBand* self, const QMetaMethod* signal);
 void QRubberBand_OnDisconnectNotify(QRubberBand* self, intptr_t slot);
-void QRubberBand_QBaseDisconnectNotify(QRubberBand* self, QMetaMethod* signal);
+void QRubberBand_QBaseDisconnectNotify(QRubberBand* self, const QMetaMethod* signal);
 void QRubberBand_UpdateMicroFocus(QRubberBand* self);
 void QRubberBand_OnUpdateMicroFocus(QRubberBand* self, intptr_t slot);
 void QRubberBand_QBaseUpdateMicroFocus(QRubberBand* self);
@@ -244,9 +238,12 @@ int QRubberBand_QBaseSenderSignalIndex(const QRubberBand* self);
 int QRubberBand_Receivers(const QRubberBand* self, const char* signal);
 void QRubberBand_OnReceivers(const QRubberBand* self, intptr_t slot);
 int QRubberBand_QBaseReceivers(const QRubberBand* self, const char* signal);
-bool QRubberBand_IsSignalConnected(const QRubberBand* self, QMetaMethod* signal);
+bool QRubberBand_IsSignalConnected(const QRubberBand* self, const QMetaMethod* signal);
 void QRubberBand_OnIsSignalConnected(const QRubberBand* self, intptr_t slot);
-bool QRubberBand_QBaseIsSignalConnected(const QRubberBand* self, QMetaMethod* signal);
+bool QRubberBand_QBaseIsSignalConnected(const QRubberBand* self, const QMetaMethod* signal);
+double QRubberBand_GetDecodedMetricF(const QRubberBand* self, int metricA, int metricB);
+void QRubberBand_OnGetDecodedMetricF(const QRubberBand* self, intptr_t slot);
+double QRubberBand_QBaseGetDecodedMetricF(const QRubberBand* self, int metricA, int metricB);
 void QRubberBand_Delete(QRubberBand* self);
 
 #ifdef __cplusplus

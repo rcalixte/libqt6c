@@ -18,7 +18,7 @@ QIconEngine* QIconEngine_new() {
 }
 
 // Derived class handler implementation
-void QIconEngine_Paint(QIconEngine* self, QPainter* painter, QRect* rect, int mode, int state) {
+void QIconEngine_Paint(QIconEngine* self, QPainter* painter, const QRect* rect, int mode, int state) {
     auto* vqiconengine = dynamic_cast<VirtualQIconEngine*>(self);
     if (vqiconengine && vqiconengine->isVirtualQIconEngine) {
         vqiconengine->paint(painter, *rect, static_cast<QIcon::Mode>(mode), static_cast<QIcon::State>(state));
@@ -28,7 +28,7 @@ void QIconEngine_Paint(QIconEngine* self, QPainter* painter, QRect* rect, int mo
 }
 
 // Base class handler implementation
-void QIconEngine_QBasePaint(QIconEngine* self, QPainter* painter, QRect* rect, int mode, int state) {
+void QIconEngine_QBasePaint(QIconEngine* self, QPainter* painter, const QRect* rect, int mode, int state) {
     auto* vqiconengine = dynamic_cast<VirtualQIconEngine*>(self);
     if (vqiconengine && vqiconengine->isVirtualQIconEngine) {
         vqiconengine->setQIconEngine_Paint_IsBase(true);
@@ -47,7 +47,7 @@ void QIconEngine_OnPaint(QIconEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QSize* QIconEngine_ActualSize(QIconEngine* self, QSize* size, int mode, int state) {
+QSize* QIconEngine_ActualSize(QIconEngine* self, const QSize* size, int mode, int state) {
     auto* vqiconengine = dynamic_cast<VirtualQIconEngine*>(self);
     if (vqiconengine && vqiconengine->isVirtualQIconEngine) {
         return new QSize(vqiconengine->actualSize(*size, static_cast<QIcon::Mode>(mode), static_cast<QIcon::State>(state)));
@@ -57,7 +57,7 @@ QSize* QIconEngine_ActualSize(QIconEngine* self, QSize* size, int mode, int stat
 }
 
 // Base class handler implementation
-QSize* QIconEngine_QBaseActualSize(QIconEngine* self, QSize* size, int mode, int state) {
+QSize* QIconEngine_QBaseActualSize(QIconEngine* self, const QSize* size, int mode, int state) {
     auto* vqiconengine = dynamic_cast<VirtualQIconEngine*>(self);
     if (vqiconengine && vqiconengine->isVirtualQIconEngine) {
         vqiconengine->setQIconEngine_ActualSize_IsBase(true);
@@ -76,7 +76,7 @@ void QIconEngine_OnActualSize(QIconEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QPixmap* QIconEngine_Pixmap(QIconEngine* self, QSize* size, int mode, int state) {
+QPixmap* QIconEngine_Pixmap(QIconEngine* self, const QSize* size, int mode, int state) {
     auto* vqiconengine = dynamic_cast<VirtualQIconEngine*>(self);
     if (vqiconengine && vqiconengine->isVirtualQIconEngine) {
         return new QPixmap(vqiconengine->pixmap(*size, static_cast<QIcon::Mode>(mode), static_cast<QIcon::State>(state)));
@@ -86,7 +86,7 @@ QPixmap* QIconEngine_Pixmap(QIconEngine* self, QSize* size, int mode, int state)
 }
 
 // Base class handler implementation
-QPixmap* QIconEngine_QBasePixmap(QIconEngine* self, QSize* size, int mode, int state) {
+QPixmap* QIconEngine_QBasePixmap(QIconEngine* self, const QSize* size, int mode, int state) {
     auto* vqiconengine = dynamic_cast<VirtualQIconEngine*>(self);
     if (vqiconengine && vqiconengine->isVirtualQIconEngine) {
         vqiconengine->setQIconEngine_Pixmap_IsBase(true);
@@ -105,7 +105,7 @@ void QIconEngine_OnPixmap(QIconEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QIconEngine_AddPixmap(QIconEngine* self, QPixmap* pixmap, int mode, int state) {
+void QIconEngine_AddPixmap(QIconEngine* self, const QPixmap* pixmap, int mode, int state) {
     auto* vqiconengine = dynamic_cast<VirtualQIconEngine*>(self);
     if (vqiconengine && vqiconengine->isVirtualQIconEngine) {
         vqiconengine->addPixmap(*pixmap, static_cast<QIcon::Mode>(mode), static_cast<QIcon::State>(state));
@@ -115,7 +115,7 @@ void QIconEngine_AddPixmap(QIconEngine* self, QPixmap* pixmap, int mode, int sta
 }
 
 // Base class handler implementation
-void QIconEngine_QBaseAddPixmap(QIconEngine* self, QPixmap* pixmap, int mode, int state) {
+void QIconEngine_QBaseAddPixmap(QIconEngine* self, const QPixmap* pixmap, int mode, int state) {
     auto* vqiconengine = dynamic_cast<VirtualQIconEngine*>(self);
     if (vqiconengine && vqiconengine->isVirtualQIconEngine) {
         vqiconengine->setQIconEngine_AddPixmap_IsBase(true);
@@ -134,7 +134,7 @@ void QIconEngine_OnAddPixmap(QIconEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QIconEngine_AddFile(QIconEngine* self, libqt_string fileName, QSize* size, int mode, int state) {
+void QIconEngine_AddFile(QIconEngine* self, const libqt_string fileName, const QSize* size, int mode, int state) {
     auto* vqiconengine = dynamic_cast<VirtualQIconEngine*>(self);
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     if (vqiconengine && vqiconengine->isVirtualQIconEngine) {
@@ -145,7 +145,7 @@ void QIconEngine_AddFile(QIconEngine* self, libqt_string fileName, QSize* size, 
 }
 
 // Base class handler implementation
-void QIconEngine_QBaseAddFile(QIconEngine* self, libqt_string fileName, QSize* size, int mode, int state) {
+void QIconEngine_QBaseAddFile(QIconEngine* self, const libqt_string fileName, const QSize* size, int mode, int state) {
     auto* vqiconengine = dynamic_cast<VirtualQIconEngine*>(self);
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     if (vqiconengine && vqiconengine->isVirtualQIconEngine) {
@@ -318,23 +318,23 @@ libqt_list /* of QSize* */ QIconEngine_AvailableSizes(QIconEngine* self, int mod
     if (vqiconengine && vqiconengine->isVirtualQIconEngine) {
         QList<QSize> _ret = vqiconengine->availableSizes(static_cast<QIcon::Mode>(mode), static_cast<QIcon::State>(state));
         // Convert QList<> from C++ memory to manually-managed C memory
-        QSize** _arr = static_cast<QSize**>(malloc(sizeof(QSize*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QSize** _arr = static_cast<QSize**>(malloc(sizeof(QSize*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QSize(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
         QList<QSize> _ret = self->QIconEngine::availableSizes(static_cast<QIcon::Mode>(mode), static_cast<QIcon::State>(state));
         // Convert QList<> from C++ memory to manually-managed C memory
-        QSize** _arr = static_cast<QSize**>(malloc(sizeof(QSize*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QSize** _arr = static_cast<QSize**>(malloc(sizeof(QSize*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QSize(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -347,23 +347,23 @@ libqt_list /* of QSize* */ QIconEngine_QBaseAvailableSizes(QIconEngine* self, in
         vqiconengine->setQIconEngine_AvailableSizes_IsBase(true);
         QList<QSize> _ret = vqiconengine->availableSizes(static_cast<QIcon::Mode>(mode), static_cast<QIcon::State>(state));
         // Convert QList<> from C++ memory to manually-managed C memory
-        QSize** _arr = static_cast<QSize**>(malloc(sizeof(QSize*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QSize** _arr = static_cast<QSize**>(malloc(sizeof(QSize*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QSize(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
         QList<QSize> _ret = self->QIconEngine::availableSizes(static_cast<QIcon::Mode>(mode), static_cast<QIcon::State>(state));
         // Convert QList<> from C++ memory to manually-managed C memory
-        QSize** _arr = static_cast<QSize**>(malloc(sizeof(QSize*) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        QSize** _arr = static_cast<QSize**>(malloc(sizeof(QSize*) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             _arr[i] = new QSize(_ret[i]);
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -468,7 +468,7 @@ void QIconEngine_OnIsNull(QIconEngine* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QPixmap* QIconEngine_ScaledPixmap(QIconEngine* self, QSize* size, int mode, int state, double scale) {
+QPixmap* QIconEngine_ScaledPixmap(QIconEngine* self, const QSize* size, int mode, int state, double scale) {
     auto* vqiconengine = dynamic_cast<VirtualQIconEngine*>(self);
     if (vqiconengine && vqiconengine->isVirtualQIconEngine) {
         return new QPixmap(vqiconengine->scaledPixmap(*size, static_cast<QIcon::Mode>(mode), static_cast<QIcon::State>(state), static_cast<qreal>(scale)));
@@ -478,7 +478,7 @@ QPixmap* QIconEngine_ScaledPixmap(QIconEngine* self, QSize* size, int mode, int 
 }
 
 // Base class handler implementation
-QPixmap* QIconEngine_QBaseScaledPixmap(QIconEngine* self, QSize* size, int mode, int state, double scale) {
+QPixmap* QIconEngine_QBaseScaledPixmap(QIconEngine* self, const QSize* size, int mode, int state, double scale) {
     auto* vqiconengine = dynamic_cast<VirtualQIconEngine*>(self);
     if (vqiconengine && vqiconengine->isVirtualQIconEngine) {
         vqiconengine->setQIconEngine_ScaledPixmap_IsBase(true);
@@ -529,11 +529,11 @@ void QIconEngine_Delete(QIconEngine* self) {
     delete self;
 }
 
-QIconEngine__ScaledPixmapArgument* QIconEngine__ScaledPixmapArgument_new(QIconEngine__ScaledPixmapArgument* param1) {
+QIconEngine__ScaledPixmapArgument* QIconEngine__ScaledPixmapArgument_new(const QIconEngine__ScaledPixmapArgument* param1) {
     return new QIconEngine::ScaledPixmapArgument(*param1);
 }
 
-void QIconEngine__ScaledPixmapArgument_OperatorAssign(QIconEngine__ScaledPixmapArgument* self, QIconEngine__ScaledPixmapArgument* param1) {
+void QIconEngine__ScaledPixmapArgument_OperatorAssign(QIconEngine__ScaledPixmapArgument* self, const QIconEngine__ScaledPixmapArgument* param1) {
     self->operator=(*param1);
 }
 

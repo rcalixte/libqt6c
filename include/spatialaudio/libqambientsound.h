@@ -12,13 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqaudioengine.h"
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-#include "../libqurl.h"
-
 /// https://doc.qt.io/qt-6/qambientsound.html
 
 /// q_ambientsound_new constructs a new QAmbientSound object.
@@ -223,7 +216,7 @@ QThread* q_ambientsound_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QAmbientSound* self, QThread* thread ```
-void q_ambientsound_move_to_thread(void* self, void* thread);
+bool q_ambientsound_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -238,6 +231,13 @@ int32_t q_ambientsound_start_timer(void* self, int interval);
 ///
 /// ``` QAmbientSound* self, int id ```
 void q_ambientsound_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QAmbientSound* self, enum Qt__TimerId id ```
+void q_ambientsound_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -378,6 +378,13 @@ bool q_ambientsound_inherits(void* self, const char* classname);
 ///
 /// ``` QAmbientSound* self ```
 void q_ambientsound_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QAmbientSound* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_ambientsound_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

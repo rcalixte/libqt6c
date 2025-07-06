@@ -17,12 +17,12 @@
 #include "libqbarset.hpp"
 #include "libqbarset.hxx"
 
-QBarSet* QBarSet_new(libqt_string label) {
+QBarSet* QBarSet_new(const libqt_string label) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return new VirtualQBarSet(label_QString);
 }
 
-QBarSet* QBarSet_new2(libqt_string label, QObject* parent) {
+QBarSet* QBarSet_new2(const libqt_string label, QObject* parent) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return new VirtualQBarSet(label_QString, parent);
 }
@@ -75,7 +75,7 @@ libqt_string QBarSet_Tr(const char* s) {
     return _str;
 }
 
-void QBarSet_SetLabel(QBarSet* self, libqt_string label) {
+void QBarSet_SetLabel(QBarSet* self, const libqt_string label) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     self->setLabel(label_QString);
 }
@@ -96,8 +96,8 @@ void QBarSet_Append(QBarSet* self, const double value) {
     self->append(static_cast<const qreal>(value));
 }
 
-void QBarSet_AppendWithValues(QBarSet* self, libqt_list /* of double */ values) {
-    QList<qreal> values_QList;
+void QBarSet_AppendWithValues(QBarSet* self, const libqt_list /* of double */ values) {
+    QList<double> values_QList;
     values_QList.reserve(values.len);
     double* values_arr = static_cast<double*>(values.data.doubles);
     for (size_t i = 0; i < values.len; ++i) {
@@ -140,7 +140,7 @@ double QBarSet_Sum(const QBarSet* self) {
     return static_cast<double>(self->sum());
 }
 
-void QBarSet_SetPen(QBarSet* self, QPen* pen) {
+void QBarSet_SetPen(QBarSet* self, const QPen* pen) {
     self->setPen(*pen);
 }
 
@@ -148,7 +148,7 @@ QPen* QBarSet_Pen(const QBarSet* self) {
     return new QPen(self->pen());
 }
 
-void QBarSet_SetBrush(QBarSet* self, QBrush* brush) {
+void QBarSet_SetBrush(QBarSet* self, const QBrush* brush) {
     self->setBrush(*brush);
 }
 
@@ -156,7 +156,7 @@ QBrush* QBarSet_Brush(const QBarSet* self) {
     return new QBrush(self->brush());
 }
 
-void QBarSet_SetLabelBrush(QBarSet* self, QBrush* brush) {
+void QBarSet_SetLabelBrush(QBarSet* self, const QBrush* brush) {
     self->setLabelBrush(*brush);
 }
 
@@ -164,7 +164,7 @@ QBrush* QBarSet_LabelBrush(const QBarSet* self) {
     return new QBrush(self->labelBrush());
 }
 
-void QBarSet_SetLabelFont(QBarSet* self, QFont* font) {
+void QBarSet_SetLabelFont(QBarSet* self, const QFont* font) {
     self->setLabelFont(*font);
 }
 
@@ -200,7 +200,7 @@ QColor* QBarSet_SelectedColor(const QBarSet* self) {
     return new QColor(self->selectedColor());
 }
 
-void QBarSet_SetSelectedColor(QBarSet* self, QColor* color) {
+void QBarSet_SetSelectedColor(QBarSet* self, const QColor* color) {
     self->setSelectedColor(*color);
 }
 
@@ -228,7 +228,7 @@ void QBarSet_DeselectAllBars(QBarSet* self) {
     self->deselectAllBars();
 }
 
-void QBarSet_SelectBars(QBarSet* self, libqt_list /* of int */ indexes) {
+void QBarSet_SelectBars(QBarSet* self, const libqt_list /* of int */ indexes) {
     QList<int> indexes_QList;
     indexes_QList.reserve(indexes.len);
     int* indexes_arr = static_cast<int*>(indexes.data.ints);
@@ -238,7 +238,7 @@ void QBarSet_SelectBars(QBarSet* self, libqt_list /* of int */ indexes) {
     self->selectBars(indexes_QList);
 }
 
-void QBarSet_DeselectBars(QBarSet* self, libqt_list /* of int */ indexes) {
+void QBarSet_DeselectBars(QBarSet* self, const libqt_list /* of int */ indexes) {
     QList<int> indexes_QList;
     indexes_QList.reserve(indexes.len);
     int* indexes_arr = static_cast<int*>(indexes.data.ints);
@@ -248,7 +248,7 @@ void QBarSet_DeselectBars(QBarSet* self, libqt_list /* of int */ indexes) {
     self->deselectBars(indexes_QList);
 }
 
-void QBarSet_ToggleSelection(QBarSet* self, libqt_list /* of int */ indexes) {
+void QBarSet_ToggleSelection(QBarSet* self, const libqt_list /* of int */ indexes) {
     QList<int> indexes_QList;
     indexes_QList.reserve(indexes.len);
     int* indexes_arr = static_cast<int*>(indexes.data.ints);
@@ -261,12 +261,12 @@ void QBarSet_ToggleSelection(QBarSet* self, libqt_list /* of int */ indexes) {
 libqt_list /* of int */ QBarSet_SelectedBars(const QBarSet* self) {
     QList<int> _ret = self->selectedBars();
     // Convert QList<> from C++ memory to manually-managed C memory
-    int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ints = _arr;
     return _out;
 }
@@ -423,7 +423,7 @@ void QBarSet_Connect_LabelColorChanged(QBarSet* self, intptr_t slot) {
     });
 }
 
-void QBarSet_SelectedColorChanged(QBarSet* self, QColor* color) {
+void QBarSet_SelectedColorChanged(QBarSet* self, const QColor* color) {
     self->selectedColorChanged(*color);
 }
 
@@ -475,7 +475,7 @@ void QBarSet_Connect_ValueChanged(QBarSet* self, intptr_t slot) {
     });
 }
 
-void QBarSet_SelectedBarsChanged(QBarSet* self, libqt_list /* of int */ indexes) {
+void QBarSet_SelectedBarsChanged(QBarSet* self, const libqt_list /* of int */ indexes) {
     QList<int> indexes_QList;
     indexes_QList.reserve(indexes.len);
     int* indexes_arr = static_cast<int*>(indexes.data.ints);
@@ -489,13 +489,13 @@ void QBarSet_Connect_SelectedBarsChanged(QBarSet* self, intptr_t slot) {
     void (*slotFunc)(QBarSet*, libqt_list /* of int */) = reinterpret_cast<void (*)(QBarSet*, libqt_list /* of int */)>(slot);
     QBarSet::connect(self, &QBarSet::selectedBarsChanged, [self, slotFunc](const QList<int>& indexes) {
         const QList<int>& indexes_ret = indexes;
-        // Convert QList<> from C++ memory to manually-managed C memory
-        int* indexes_arr = static_cast<int*>(malloc(sizeof(int) * indexes_ret.length()));
-        for (size_t i = 0; i < indexes_ret.length(); ++i) {
+        // Convert const QList<> from C++ memory to manually-managed C memory
+        int* indexes_arr = static_cast<int*>(malloc(sizeof(int) * indexes_ret.size()));
+        for (size_t i = 0; i < indexes_ret.size(); ++i) {
             indexes_arr[i] = indexes_ret[i];
         }
         libqt_list indexes_out;
-        indexes_out.len = indexes_ret.length();
+        indexes_out.len = indexes_ret.size();
         indexes_out.data.ints = indexes_arr;
         libqt_list /* of int */ sigval1 = indexes_out;
         slotFunc(self, sigval1);
@@ -676,7 +676,7 @@ void QBarSet_OnCustomEvent(QBarSet* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QBarSet_ConnectNotify(QBarSet* self, QMetaMethod* signal) {
+void QBarSet_ConnectNotify(QBarSet* self, const QMetaMethod* signal) {
     auto* vqbarset = dynamic_cast<VirtualQBarSet*>(self);
     if (vqbarset && vqbarset->isVirtualQBarSet) {
         vqbarset->connectNotify(*signal);
@@ -686,7 +686,7 @@ void QBarSet_ConnectNotify(QBarSet* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QBarSet_QBaseConnectNotify(QBarSet* self, QMetaMethod* signal) {
+void QBarSet_QBaseConnectNotify(QBarSet* self, const QMetaMethod* signal) {
     auto* vqbarset = dynamic_cast<VirtualQBarSet*>(self);
     if (vqbarset && vqbarset->isVirtualQBarSet) {
         vqbarset->setQBarSet_ConnectNotify_IsBase(true);
@@ -705,7 +705,7 @@ void QBarSet_OnConnectNotify(QBarSet* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QBarSet_DisconnectNotify(QBarSet* self, QMetaMethod* signal) {
+void QBarSet_DisconnectNotify(QBarSet* self, const QMetaMethod* signal) {
     auto* vqbarset = dynamic_cast<VirtualQBarSet*>(self);
     if (vqbarset && vqbarset->isVirtualQBarSet) {
         vqbarset->disconnectNotify(*signal);
@@ -715,7 +715,7 @@ void QBarSet_DisconnectNotify(QBarSet* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QBarSet_QBaseDisconnectNotify(QBarSet* self, QMetaMethod* signal) {
+void QBarSet_QBaseDisconnectNotify(QBarSet* self, const QMetaMethod* signal) {
     auto* vqbarset = dynamic_cast<VirtualQBarSet*>(self);
     if (vqbarset && vqbarset->isVirtualQBarSet) {
         vqbarset->setQBarSet_DisconnectNotify_IsBase(true);
@@ -821,7 +821,7 @@ void QBarSet_OnReceivers(const QBarSet* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QBarSet_IsSignalConnected(const QBarSet* self, QMetaMethod* signal) {
+bool QBarSet_IsSignalConnected(const QBarSet* self, const QMetaMethod* signal) {
     auto* vqbarset = const_cast<VirtualQBarSet*>(dynamic_cast<const VirtualQBarSet*>(self));
     if (vqbarset && vqbarset->isVirtualQBarSet) {
         return vqbarset->isSignalConnected(*signal);
@@ -831,7 +831,7 @@ bool QBarSet_IsSignalConnected(const QBarSet* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QBarSet_QBaseIsSignalConnected(const QBarSet* self, QMetaMethod* signal) {
+bool QBarSet_QBaseIsSignalConnected(const QBarSet* self, const QMetaMethod* signal) {
     auto* vqbarset = const_cast<VirtualQBarSet*>(dynamic_cast<const VirtualQBarSet*>(self));
     if (vqbarset && vqbarset->isVirtualQBarSet) {
         vqbarset->setQBarSet_IsSignalConnected_IsBase(true);

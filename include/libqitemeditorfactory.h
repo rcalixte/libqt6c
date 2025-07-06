@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qitemeditorcreatorbase.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemeditorcreatorbase.html#createWidget)

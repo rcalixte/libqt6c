@@ -12,8 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqsslcertificate.h"
-
 /// https://doc.qt.io/qt-6/qocspresponse.html
 
 /// q_ocspresponse_new constructs a new QOcspResponse object.

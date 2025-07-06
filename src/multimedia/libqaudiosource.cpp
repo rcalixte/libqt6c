@@ -19,23 +19,23 @@ QAudioSource* QAudioSource_new() {
     return new VirtualQAudioSource();
 }
 
-QAudioSource* QAudioSource_new2(QAudioDevice* audioDeviceInfo) {
+QAudioSource* QAudioSource_new2(const QAudioDevice* audioDeviceInfo) {
     return new VirtualQAudioSource(*audioDeviceInfo);
 }
 
-QAudioSource* QAudioSource_new3(QAudioFormat* format) {
+QAudioSource* QAudioSource_new3(const QAudioFormat* format) {
     return new VirtualQAudioSource(*format);
 }
 
-QAudioSource* QAudioSource_new4(QAudioFormat* format, QObject* parent) {
+QAudioSource* QAudioSource_new4(const QAudioFormat* format, QObject* parent) {
     return new VirtualQAudioSource(*format, parent);
 }
 
-QAudioSource* QAudioSource_new5(QAudioDevice* audioDeviceInfo, QAudioFormat* format) {
+QAudioSource* QAudioSource_new5(const QAudioDevice* audioDeviceInfo, const QAudioFormat* format) {
     return new VirtualQAudioSource(*audioDeviceInfo, *format);
 }
 
-QAudioSource* QAudioSource_new6(QAudioDevice* audioDeviceInfo, QAudioFormat* format, QObject* parent) {
+QAudioSource* QAudioSource_new6(const QAudioDevice* audioDeviceInfo, const QAudioFormat* format, QObject* parent) {
     return new VirtualQAudioSource(*audioDeviceInfo, *format, parent);
 }
 
@@ -337,7 +337,7 @@ void QAudioSource_OnCustomEvent(QAudioSource* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAudioSource_ConnectNotify(QAudioSource* self, QMetaMethod* signal) {
+void QAudioSource_ConnectNotify(QAudioSource* self, const QMetaMethod* signal) {
     auto* vqaudiosource = dynamic_cast<VirtualQAudioSource*>(self);
     if (vqaudiosource && vqaudiosource->isVirtualQAudioSource) {
         vqaudiosource->connectNotify(*signal);
@@ -347,7 +347,7 @@ void QAudioSource_ConnectNotify(QAudioSource* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QAudioSource_QBaseConnectNotify(QAudioSource* self, QMetaMethod* signal) {
+void QAudioSource_QBaseConnectNotify(QAudioSource* self, const QMetaMethod* signal) {
     auto* vqaudiosource = dynamic_cast<VirtualQAudioSource*>(self);
     if (vqaudiosource && vqaudiosource->isVirtualQAudioSource) {
         vqaudiosource->setQAudioSource_ConnectNotify_IsBase(true);
@@ -366,7 +366,7 @@ void QAudioSource_OnConnectNotify(QAudioSource* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAudioSource_DisconnectNotify(QAudioSource* self, QMetaMethod* signal) {
+void QAudioSource_DisconnectNotify(QAudioSource* self, const QMetaMethod* signal) {
     auto* vqaudiosource = dynamic_cast<VirtualQAudioSource*>(self);
     if (vqaudiosource && vqaudiosource->isVirtualQAudioSource) {
         vqaudiosource->disconnectNotify(*signal);
@@ -376,7 +376,7 @@ void QAudioSource_DisconnectNotify(QAudioSource* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QAudioSource_QBaseDisconnectNotify(QAudioSource* self, QMetaMethod* signal) {
+void QAudioSource_QBaseDisconnectNotify(QAudioSource* self, const QMetaMethod* signal) {
     auto* vqaudiosource = dynamic_cast<VirtualQAudioSource*>(self);
     if (vqaudiosource && vqaudiosource->isVirtualQAudioSource) {
         vqaudiosource->setQAudioSource_DisconnectNotify_IsBase(true);
@@ -482,7 +482,7 @@ void QAudioSource_OnReceivers(const QAudioSource* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QAudioSource_IsSignalConnected(const QAudioSource* self, QMetaMethod* signal) {
+bool QAudioSource_IsSignalConnected(const QAudioSource* self, const QMetaMethod* signal) {
     auto* vqaudiosource = const_cast<VirtualQAudioSource*>(dynamic_cast<const VirtualQAudioSource*>(self));
     if (vqaudiosource && vqaudiosource->isVirtualQAudioSource) {
         return vqaudiosource->isSignalConnected(*signal);
@@ -492,7 +492,7 @@ bool QAudioSource_IsSignalConnected(const QAudioSource* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-bool QAudioSource_QBaseIsSignalConnected(const QAudioSource* self, QMetaMethod* signal) {
+bool QAudioSource_QBaseIsSignalConnected(const QAudioSource* self, const QMetaMethod* signal) {
     auto* vqaudiosource = const_cast<VirtualQAudioSource*>(dynamic_cast<const VirtualQAudioSource*>(self));
     if (vqaudiosource && vqaudiosource->isVirtualQAudioSource) {
         vqaudiosource->setQAudioSource_IsSignalConnected_IsBase(true);

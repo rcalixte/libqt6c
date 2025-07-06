@@ -25,12 +25,6 @@ typedef struct QObject QObject;
 typedef struct QPixmap QPixmap;
 #endif
 
-#ifdef __cplusplus
-typedef QClipboard::Mode Mode; // C++ enum
-#else
-typedef int Mode; // C ABI enum
-#endif
-
 QMetaObject* QClipboard_MetaObject(const QClipboard* self);
 void* QClipboard_Metacast(QClipboard* self, const char* param1);
 int QClipboard_Metacall(QClipboard* self, int param1, int param2, void** param3);
@@ -43,13 +37,13 @@ bool QClipboard_OwnsClipboard(const QClipboard* self);
 bool QClipboard_OwnsFindBuffer(const QClipboard* self);
 libqt_string QClipboard_Text(const QClipboard* self);
 libqt_string QClipboard_TextWithSubtype(const QClipboard* self, libqt_string subtype);
-void QClipboard_SetText(QClipboard* self, libqt_string param1);
+void QClipboard_SetText(QClipboard* self, const libqt_string param1);
 QMimeData* QClipboard_MimeData(const QClipboard* self);
 void QClipboard_SetMimeData(QClipboard* self, QMimeData* data);
 QImage* QClipboard_Image(const QClipboard* self);
 QPixmap* QClipboard_Pixmap(const QClipboard* self);
-void QClipboard_SetImage(QClipboard* self, QImage* param1);
-void QClipboard_SetPixmap(QClipboard* self, QPixmap* param1);
+void QClipboard_SetImage(QClipboard* self, const QImage* param1);
+void QClipboard_SetPixmap(QClipboard* self, const QPixmap* param1);
 void QClipboard_Changed(QClipboard* self, int mode);
 void QClipboard_Connect_Changed(QClipboard* self, intptr_t slot);
 void QClipboard_SelectionChanged(QClipboard* self);
@@ -63,13 +57,13 @@ libqt_string QClipboard_Tr3(const char* s, const char* c, int n);
 void QClipboard_Clear1(QClipboard* self, int mode);
 libqt_string QClipboard_Text1(const QClipboard* self, int mode);
 libqt_string QClipboard_Text2(const QClipboard* self, libqt_string subtype, int mode);
-void QClipboard_SetText2(QClipboard* self, libqt_string param1, int mode);
+void QClipboard_SetText2(QClipboard* self, const libqt_string param1, int mode);
 QMimeData* QClipboard_MimeData1(const QClipboard* self, int mode);
 void QClipboard_SetMimeData2(QClipboard* self, QMimeData* data, int mode);
 QImage* QClipboard_Image1(const QClipboard* self, int mode);
 QPixmap* QClipboard_Pixmap1(const QClipboard* self, int mode);
-void QClipboard_SetImage2(QClipboard* self, QImage* param1, int mode);
-void QClipboard_SetPixmap2(QClipboard* self, QPixmap* param1, int mode);
+void QClipboard_SetImage2(QClipboard* self, const QImage* param1, int mode);
+void QClipboard_SetPixmap2(QClipboard* self, const QPixmap* param1, int mode);
 
 #ifdef __cplusplus
 } /* extern C */

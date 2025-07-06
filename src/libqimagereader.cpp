@@ -21,17 +21,17 @@ QImageReader* QImageReader_new2(QIODevice* device) {
     return new QImageReader(device);
 }
 
-QImageReader* QImageReader_new3(libqt_string fileName) {
+QImageReader* QImageReader_new3(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new QImageReader(fileName_QString);
 }
 
-QImageReader* QImageReader_new4(QIODevice* device, libqt_string format) {
+QImageReader* QImageReader_new4(QIODevice* device, const libqt_string format) {
     QByteArray format_QByteArray(format.data, format.len);
     return new QImageReader(device, format_QByteArray);
 }
 
-QImageReader* QImageReader_new5(libqt_string fileName, libqt_string format) {
+QImageReader* QImageReader_new5(const libqt_string fileName, const libqt_string format) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QByteArray format_QByteArray(format.data, format.len);
     return new QImageReader(fileName_QString, format_QByteArray);
@@ -49,7 +49,7 @@ libqt_string QImageReader_Tr(const char* sourceText) {
     return _str;
 }
 
-void QImageReader_SetFormat(QImageReader* self, libqt_string format) {
+void QImageReader_SetFormat(QImageReader* self, const libqt_string format) {
     QByteArray format_QByteArray(format.data, format.len);
     self->setFormat(format_QByteArray);
 }
@@ -88,7 +88,7 @@ QIODevice* QImageReader_Device(const QImageReader* self) {
     return self->device();
 }
 
-void QImageReader_SetFileName(QImageReader* self, libqt_string fileName) {
+void QImageReader_SetFileName(QImageReader* self, const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     self->setFileName(fileName_QString);
 }
@@ -114,10 +114,10 @@ int QImageReader_ImageFormat(const QImageReader* self) {
 }
 
 libqt_list /* of libqt_string */ QImageReader_TextKeys(const QImageReader* self) {
-    QStringList _ret = self->textKeys();
+    QList<QString> _ret = self->textKeys();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -129,12 +129,12 @@ libqt_list /* of libqt_string */ QImageReader_TextKeys(const QImageReader* self)
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-libqt_string QImageReader_Text(const QImageReader* self, libqt_string key) {
+libqt_string QImageReader_Text(const QImageReader* self, const libqt_string key) {
     QString key_QString = QString::fromUtf8(key.data, key.len);
     QString _ret = self->text(key_QString);
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -147,7 +147,7 @@ libqt_string QImageReader_Text(const QImageReader* self, libqt_string key) {
     return _str;
 }
 
-void QImageReader_SetClipRect(QImageReader* self, QRect* rect) {
+void QImageReader_SetClipRect(QImageReader* self, const QRect* rect) {
     self->setClipRect(*rect);
 }
 
@@ -155,7 +155,7 @@ QRect* QImageReader_ClipRect(const QImageReader* self) {
     return new QRect(self->clipRect());
 }
 
-void QImageReader_SetScaledSize(QImageReader* self, QSize* size) {
+void QImageReader_SetScaledSize(QImageReader* self, const QSize* size) {
     self->setScaledSize(*size);
 }
 
@@ -171,7 +171,7 @@ int QImageReader_Quality(const QImageReader* self) {
     return self->quality();
 }
 
-void QImageReader_SetScaledClipRect(QImageReader* self, QRect* rect) {
+void QImageReader_SetScaledClipRect(QImageReader* self, const QRect* rect) {
     self->setScaledClipRect(*rect);
 }
 
@@ -179,7 +179,7 @@ QRect* QImageReader_ScaledClipRect(const QImageReader* self) {
     return new QRect(self->scaledClipRect());
 }
 
-void QImageReader_SetBackgroundColor(QImageReader* self, QColor* color) {
+void QImageReader_SetBackgroundColor(QImageReader* self, const QColor* color) {
     self->setBackgroundColor(*color);
 }
 
@@ -216,8 +216,8 @@ libqt_string QImageReader_SubType(const QImageReader* self) {
 libqt_list /* of libqt_string */ QImageReader_SupportedSubTypes(const QImageReader* self) {
     QList<QByteArray> _ret = self->supportedSubTypes();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QByteArray _lv_qb = _ret[i];
         libqt_string _lv_str;
         _lv_str.len = _lv_qb.length();
@@ -227,7 +227,7 @@ libqt_list /* of libqt_string */ QImageReader_SupportedSubTypes(const QImageRead
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -292,7 +292,7 @@ bool QImageReader_SupportsOption(const QImageReader* self, int option) {
     return self->supportsOption(static_cast<QImageIOHandler::ImageOption>(option));
 }
 
-libqt_string QImageReader_ImageFormatWithFileName(libqt_string fileName) {
+libqt_string QImageReader_ImageFormatWithFileName(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QByteArray _qb = QImageReader::imageFormat(fileName_QString);
     libqt_string _str;
@@ -316,8 +316,8 @@ libqt_string QImageReader_ImageFormatWithDevice(QIODevice* device) {
 libqt_list /* of libqt_string */ QImageReader_SupportedImageFormats() {
     QList<QByteArray> _ret = QImageReader::supportedImageFormats();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QByteArray _lv_qb = _ret[i];
         libqt_string _lv_str;
         _lv_str.len = _lv_qb.length();
@@ -327,7 +327,7 @@ libqt_list /* of libqt_string */ QImageReader_SupportedImageFormats() {
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -335,8 +335,8 @@ libqt_list /* of libqt_string */ QImageReader_SupportedImageFormats() {
 libqt_list /* of libqt_string */ QImageReader_SupportedMimeTypes() {
     QList<QByteArray> _ret = QImageReader::supportedMimeTypes();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QByteArray _lv_qb = _ret[i];
         libqt_string _lv_str;
         _lv_str.len = _lv_qb.length();
@@ -346,17 +346,17 @@ libqt_list /* of libqt_string */ QImageReader_SupportedMimeTypes() {
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-libqt_list /* of libqt_string */ QImageReader_ImageFormatsForMimeType(libqt_string mimeType) {
+libqt_list /* of libqt_string */ QImageReader_ImageFormatsForMimeType(const libqt_string mimeType) {
     QByteArray mimeType_QByteArray(mimeType.data, mimeType.len);
     QList<QByteArray> _ret = QImageReader::imageFormatsForMimeType(mimeType_QByteArray);
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QByteArray _lv_qb = _ret[i];
         libqt_string _lv_str;
         _lv_str.len = _lv_qb.length();
@@ -366,7 +366,7 @@ libqt_list /* of libqt_string */ QImageReader_ImageFormatsForMimeType(libqt_stri
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }

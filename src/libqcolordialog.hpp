@@ -53,25 +53,17 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QColorDialog::ColorDialogOption ColorDialogOption;   // C++ enum
-typedef QColorDialog::ColorDialogOptions ColorDialogOptions; // C++ QFlags
-#else
-typedef int ColorDialogOption;  // C ABI enum
-typedef int ColorDialogOptions; // C ABI QFlags
-#endif
-
 QColorDialog* QColorDialog_new(QWidget* parent);
 QColorDialog* QColorDialog_new2();
-QColorDialog* QColorDialog_new3(QColor* initial);
-QColorDialog* QColorDialog_new4(QColor* initial, QWidget* parent);
+QColorDialog* QColorDialog_new3(const QColor* initial);
+QColorDialog* QColorDialog_new4(const QColor* initial, QWidget* parent);
 QMetaObject* QColorDialog_MetaObject(const QColorDialog* self);
 void* QColorDialog_Metacast(QColorDialog* self, const char* param1);
 int QColorDialog_Metacall(QColorDialog* self, int param1, int param2, void** param3);
 void QColorDialog_OnMetacall(QColorDialog* self, intptr_t slot);
 int QColorDialog_QBaseMetacall(QColorDialog* self, int param1, int param2, void** param3);
 libqt_string QColorDialog_Tr(const char* s);
-void QColorDialog_SetCurrentColor(QColorDialog* self, QColor* color);
+void QColorDialog_SetCurrentColor(QColorDialog* self, const QColor* color);
 QColor* QColorDialog_CurrentColor(const QColorDialog* self);
 QColor* QColorDialog_SelectedColor(const QColorDialog* self);
 void QColorDialog_SetOption(QColorDialog* self, int option);
@@ -87,9 +79,9 @@ QColor* QColorDialog_CustomColor(int index);
 void QColorDialog_SetCustomColor(int index, QColor* color);
 QColor* QColorDialog_StandardColor(int index);
 void QColorDialog_SetStandardColor(int index, QColor* color);
-void QColorDialog_CurrentColorChanged(QColorDialog* self, QColor* color);
+void QColorDialog_CurrentColorChanged(QColorDialog* self, const QColor* color);
 void QColorDialog_Connect_CurrentColorChanged(QColorDialog* self, intptr_t slot);
-void QColorDialog_ColorSelected(QColorDialog* self, QColor* color);
+void QColorDialog_ColorSelected(QColorDialog* self, const QColor* color);
 void QColorDialog_Connect_ColorSelected(QColorDialog* self, intptr_t slot);
 void QColorDialog_ChangeEvent(QColorDialog* self, QEvent* event);
 void QColorDialog_OnChangeEvent(QColorDialog* self, intptr_t slot);
@@ -100,10 +92,10 @@ void QColorDialog_QBaseDone(QColorDialog* self, int result);
 libqt_string QColorDialog_Tr2(const char* s, const char* c);
 libqt_string QColorDialog_Tr3(const char* s, const char* c, int n);
 void QColorDialog_SetOption2(QColorDialog* self, int option, bool on);
-QColor* QColorDialog_GetColor1(QColor* initial);
-QColor* QColorDialog_GetColor2(QColor* initial, QWidget* parent);
-QColor* QColorDialog_GetColor3(QColor* initial, QWidget* parent, libqt_string title);
-QColor* QColorDialog_GetColor4(QColor* initial, QWidget* parent, libqt_string title, int options);
+QColor* QColorDialog_GetColor1(const QColor* initial);
+QColor* QColorDialog_GetColor2(const QColor* initial, QWidget* parent);
+QColor* QColorDialog_GetColor3(const QColor* initial, QWidget* parent, const libqt_string title);
+QColor* QColorDialog_GetColor4(const QColor* initial, QWidget* parent, const libqt_string title, int options);
 QSize* QColorDialog_SizeHint(const QColorDialog* self);
 void QColorDialog_OnSizeHint(const QColorDialog* self, intptr_t slot);
 QSize* QColorDialog_QBaseSizeHint(const QColorDialog* self);
@@ -212,9 +204,9 @@ void QColorDialog_QBaseDropEvent(QColorDialog* self, QDropEvent* event);
 void QColorDialog_HideEvent(QColorDialog* self, QHideEvent* event);
 void QColorDialog_OnHideEvent(QColorDialog* self, intptr_t slot);
 void QColorDialog_QBaseHideEvent(QColorDialog* self, QHideEvent* event);
-bool QColorDialog_NativeEvent(QColorDialog* self, libqt_string eventType, void* message, intptr_t* result);
+bool QColorDialog_NativeEvent(QColorDialog* self, const libqt_string eventType, void* message, intptr_t* result);
 void QColorDialog_OnNativeEvent(QColorDialog* self, intptr_t slot);
-bool QColorDialog_QBaseNativeEvent(QColorDialog* self, libqt_string eventType, void* message, intptr_t* result);
+bool QColorDialog_QBaseNativeEvent(QColorDialog* self, const libqt_string eventType, void* message, intptr_t* result);
 int QColorDialog_Metric(const QColorDialog* self, int param1);
 void QColorDialog_OnMetric(const QColorDialog* self, intptr_t slot);
 int QColorDialog_QBaseMetric(const QColorDialog* self, int param1);
@@ -245,12 +237,12 @@ void QColorDialog_QBaseChildEvent(QColorDialog* self, QChildEvent* event);
 void QColorDialog_CustomEvent(QColorDialog* self, QEvent* event);
 void QColorDialog_OnCustomEvent(QColorDialog* self, intptr_t slot);
 void QColorDialog_QBaseCustomEvent(QColorDialog* self, QEvent* event);
-void QColorDialog_ConnectNotify(QColorDialog* self, QMetaMethod* signal);
+void QColorDialog_ConnectNotify(QColorDialog* self, const QMetaMethod* signal);
 void QColorDialog_OnConnectNotify(QColorDialog* self, intptr_t slot);
-void QColorDialog_QBaseConnectNotify(QColorDialog* self, QMetaMethod* signal);
-void QColorDialog_DisconnectNotify(QColorDialog* self, QMetaMethod* signal);
+void QColorDialog_QBaseConnectNotify(QColorDialog* self, const QMetaMethod* signal);
+void QColorDialog_DisconnectNotify(QColorDialog* self, const QMetaMethod* signal);
 void QColorDialog_OnDisconnectNotify(QColorDialog* self, intptr_t slot);
-void QColorDialog_QBaseDisconnectNotify(QColorDialog* self, QMetaMethod* signal);
+void QColorDialog_QBaseDisconnectNotify(QColorDialog* self, const QMetaMethod* signal);
 void QColorDialog_AdjustPosition(QColorDialog* self, QWidget* param1);
 void QColorDialog_OnAdjustPosition(QColorDialog* self, intptr_t slot);
 void QColorDialog_QBaseAdjustPosition(QColorDialog* self, QWidget* param1);
@@ -278,9 +270,12 @@ int QColorDialog_QBaseSenderSignalIndex(const QColorDialog* self);
 int QColorDialog_Receivers(const QColorDialog* self, const char* signal);
 void QColorDialog_OnReceivers(const QColorDialog* self, intptr_t slot);
 int QColorDialog_QBaseReceivers(const QColorDialog* self, const char* signal);
-bool QColorDialog_IsSignalConnected(const QColorDialog* self, QMetaMethod* signal);
+bool QColorDialog_IsSignalConnected(const QColorDialog* self, const QMetaMethod* signal);
 void QColorDialog_OnIsSignalConnected(const QColorDialog* self, intptr_t slot);
-bool QColorDialog_QBaseIsSignalConnected(const QColorDialog* self, QMetaMethod* signal);
+bool QColorDialog_QBaseIsSignalConnected(const QColorDialog* self, const QMetaMethod* signal);
+double QColorDialog_GetDecodedMetricF(const QColorDialog* self, int metricA, int metricB);
+void QColorDialog_OnGetDecodedMetricF(const QColorDialog* self, intptr_t slot);
+double QColorDialog_QBaseGetDecodedMetricF(const QColorDialog* self, int metricA, int metricB);
 void QColorDialog_Delete(QColorDialog* self);
 
 #ifdef __cplusplus

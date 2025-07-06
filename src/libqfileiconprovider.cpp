@@ -43,7 +43,7 @@ void QFileIconProvider_OnIcon(const QFileIconProvider* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QIcon* QFileIconProvider_IconWithInfo(const QFileIconProvider* self, QFileInfo* info) {
+QIcon* QFileIconProvider_IconWithInfo(const QFileIconProvider* self, const QFileInfo* info) {
     auto* vqfileiconprovider = const_cast<VirtualQFileIconProvider*>(dynamic_cast<const VirtualQFileIconProvider*>(self));
     if (vqfileiconprovider && vqfileiconprovider->isVirtualQFileIconProvider) {
         return new QIcon(vqfileiconprovider->icon(*info));
@@ -53,7 +53,7 @@ QIcon* QFileIconProvider_IconWithInfo(const QFileIconProvider* self, QFileInfo* 
 }
 
 // Base class handler implementation
-QIcon* QFileIconProvider_QBaseIconWithInfo(const QFileIconProvider* self, QFileInfo* info) {
+QIcon* QFileIconProvider_QBaseIconWithInfo(const QFileIconProvider* self, const QFileInfo* info) {
     auto* vqfileiconprovider = const_cast<VirtualQFileIconProvider*>(dynamic_cast<const VirtualQFileIconProvider*>(self));
     if (vqfileiconprovider && vqfileiconprovider->isVirtualQFileIconProvider) {
         vqfileiconprovider->setQFileIconProvider_IconWithInfo_IsBase(true);
@@ -72,7 +72,7 @@ void QFileIconProvider_OnIconWithInfo(const QFileIconProvider* self, intptr_t sl
 }
 
 // Derived class handler implementation
-libqt_string QFileIconProvider_Type(const QFileIconProvider* self, QFileInfo* param1) {
+libqt_string QFileIconProvider_Type(const QFileIconProvider* self, const QFileInfo* param1) {
     auto* vqfileiconprovider = const_cast<VirtualQFileIconProvider*>(dynamic_cast<const VirtualQFileIconProvider*>(self));
     if (vqfileiconprovider && vqfileiconprovider->isVirtualQFileIconProvider) {
         QString _ret = vqfileiconprovider->type(*param1);
@@ -98,7 +98,7 @@ libqt_string QFileIconProvider_Type(const QFileIconProvider* self, QFileInfo* pa
 }
 
 // Base class handler implementation
-libqt_string QFileIconProvider_QBaseType(const QFileIconProvider* self, QFileInfo* param1) {
+libqt_string QFileIconProvider_QBaseType(const QFileIconProvider* self, const QFileInfo* param1) {
     auto* vqfileiconprovider = const_cast<VirtualQFileIconProvider*>(dynamic_cast<const VirtualQFileIconProvider*>(self));
     if (vqfileiconprovider && vqfileiconprovider->isVirtualQFileIconProvider) {
         vqfileiconprovider->setQFileIconProvider_Type_IsBase(true);

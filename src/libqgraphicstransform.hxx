@@ -67,8 +67,8 @@ class VirtualQGraphicsTransform final : public QGraphicsTransform {
     mutable bool qgraphicstransform_issignalconnected_isbase = false;
 
   public:
-    VirtualQGraphicsTransform() : QGraphicsTransform(){};
-    VirtualQGraphicsTransform(QObject* parent) : QGraphicsTransform(parent){};
+    VirtualQGraphicsTransform() : QGraphicsTransform() {};
+    VirtualQGraphicsTransform(QObject* parent) : QGraphicsTransform(parent) {};
 
     ~VirtualQGraphicsTransform() {
         qgraphicstransform_metacall_callback = nullptr;
@@ -327,10 +327,10 @@ class VirtualQGraphicsTransform final : public QGraphicsTransform {
     friend void QGraphicsTransform_QBaseChildEvent(QGraphicsTransform* self, QChildEvent* event);
     friend void QGraphicsTransform_CustomEvent(QGraphicsTransform* self, QEvent* event);
     friend void QGraphicsTransform_QBaseCustomEvent(QGraphicsTransform* self, QEvent* event);
-    friend void QGraphicsTransform_ConnectNotify(QGraphicsTransform* self, QMetaMethod* signal);
-    friend void QGraphicsTransform_QBaseConnectNotify(QGraphicsTransform* self, QMetaMethod* signal);
-    friend void QGraphicsTransform_DisconnectNotify(QGraphicsTransform* self, QMetaMethod* signal);
-    friend void QGraphicsTransform_QBaseDisconnectNotify(QGraphicsTransform* self, QMetaMethod* signal);
+    friend void QGraphicsTransform_ConnectNotify(QGraphicsTransform* self, const QMetaMethod* signal);
+    friend void QGraphicsTransform_QBaseConnectNotify(QGraphicsTransform* self, const QMetaMethod* signal);
+    friend void QGraphicsTransform_DisconnectNotify(QGraphicsTransform* self, const QMetaMethod* signal);
+    friend void QGraphicsTransform_QBaseDisconnectNotify(QGraphicsTransform* self, const QMetaMethod* signal);
     friend void QGraphicsTransform_Update(QGraphicsTransform* self);
     friend void QGraphicsTransform_QBaseUpdate(QGraphicsTransform* self);
     friend QObject* QGraphicsTransform_Sender(const QGraphicsTransform* self);
@@ -339,8 +339,8 @@ class VirtualQGraphicsTransform final : public QGraphicsTransform {
     friend int QGraphicsTransform_QBaseSenderSignalIndex(const QGraphicsTransform* self);
     friend int QGraphicsTransform_Receivers(const QGraphicsTransform* self, const char* signal);
     friend int QGraphicsTransform_QBaseReceivers(const QGraphicsTransform* self, const char* signal);
-    friend bool QGraphicsTransform_IsSignalConnected(const QGraphicsTransform* self, QMetaMethod* signal);
-    friend bool QGraphicsTransform_QBaseIsSignalConnected(const QGraphicsTransform* self, QMetaMethod* signal);
+    friend bool QGraphicsTransform_IsSignalConnected(const QGraphicsTransform* self, const QMetaMethod* signal);
+    friend bool QGraphicsTransform_QBaseIsSignalConnected(const QGraphicsTransform* self, const QMetaMethod* signal);
 };
 
 // This class is a subclass of QGraphicsScale so that we can call protected methods
@@ -400,8 +400,8 @@ class VirtualQGraphicsScale final : public QGraphicsScale {
     mutable bool qgraphicsscale_issignalconnected_isbase = false;
 
   public:
-    VirtualQGraphicsScale() : QGraphicsScale(){};
-    VirtualQGraphicsScale(QObject* parent) : QGraphicsScale(parent){};
+    VirtualQGraphicsScale() : QGraphicsScale() {};
+    VirtualQGraphicsScale(QObject* parent) : QGraphicsScale(parent) {};
 
     ~VirtualQGraphicsScale() {
         qgraphicsscale_metacall_callback = nullptr;
@@ -665,10 +665,10 @@ class VirtualQGraphicsScale final : public QGraphicsScale {
     friend void QGraphicsScale_QBaseChildEvent(QGraphicsScale* self, QChildEvent* event);
     friend void QGraphicsScale_CustomEvent(QGraphicsScale* self, QEvent* event);
     friend void QGraphicsScale_QBaseCustomEvent(QGraphicsScale* self, QEvent* event);
-    friend void QGraphicsScale_ConnectNotify(QGraphicsScale* self, QMetaMethod* signal);
-    friend void QGraphicsScale_QBaseConnectNotify(QGraphicsScale* self, QMetaMethod* signal);
-    friend void QGraphicsScale_DisconnectNotify(QGraphicsScale* self, QMetaMethod* signal);
-    friend void QGraphicsScale_QBaseDisconnectNotify(QGraphicsScale* self, QMetaMethod* signal);
+    friend void QGraphicsScale_ConnectNotify(QGraphicsScale* self, const QMetaMethod* signal);
+    friend void QGraphicsScale_QBaseConnectNotify(QGraphicsScale* self, const QMetaMethod* signal);
+    friend void QGraphicsScale_DisconnectNotify(QGraphicsScale* self, const QMetaMethod* signal);
+    friend void QGraphicsScale_QBaseDisconnectNotify(QGraphicsScale* self, const QMetaMethod* signal);
     friend void QGraphicsScale_Update(QGraphicsScale* self);
     friend void QGraphicsScale_QBaseUpdate(QGraphicsScale* self);
     friend QObject* QGraphicsScale_Sender(const QGraphicsScale* self);
@@ -677,8 +677,8 @@ class VirtualQGraphicsScale final : public QGraphicsScale {
     friend int QGraphicsScale_QBaseSenderSignalIndex(const QGraphicsScale* self);
     friend int QGraphicsScale_Receivers(const QGraphicsScale* self, const char* signal);
     friend int QGraphicsScale_QBaseReceivers(const QGraphicsScale* self, const char* signal);
-    friend bool QGraphicsScale_IsSignalConnected(const QGraphicsScale* self, QMetaMethod* signal);
-    friend bool QGraphicsScale_QBaseIsSignalConnected(const QGraphicsScale* self, QMetaMethod* signal);
+    friend bool QGraphicsScale_IsSignalConnected(const QGraphicsScale* self, const QMetaMethod* signal);
+    friend bool QGraphicsScale_QBaseIsSignalConnected(const QGraphicsScale* self, const QMetaMethod* signal);
 };
 
 // This class is a subclass of QGraphicsRotation so that we can call protected methods
@@ -738,8 +738,8 @@ class VirtualQGraphicsRotation final : public QGraphicsRotation {
     mutable bool qgraphicsrotation_issignalconnected_isbase = false;
 
   public:
-    VirtualQGraphicsRotation() : QGraphicsRotation(){};
-    VirtualQGraphicsRotation(QObject* parent) : QGraphicsRotation(parent){};
+    VirtualQGraphicsRotation() : QGraphicsRotation() {};
+    VirtualQGraphicsRotation(QObject* parent) : QGraphicsRotation(parent) {};
 
     ~VirtualQGraphicsRotation() {
         qgraphicsrotation_metacall_callback = nullptr;
@@ -1003,10 +1003,10 @@ class VirtualQGraphicsRotation final : public QGraphicsRotation {
     friend void QGraphicsRotation_QBaseChildEvent(QGraphicsRotation* self, QChildEvent* event);
     friend void QGraphicsRotation_CustomEvent(QGraphicsRotation* self, QEvent* event);
     friend void QGraphicsRotation_QBaseCustomEvent(QGraphicsRotation* self, QEvent* event);
-    friend void QGraphicsRotation_ConnectNotify(QGraphicsRotation* self, QMetaMethod* signal);
-    friend void QGraphicsRotation_QBaseConnectNotify(QGraphicsRotation* self, QMetaMethod* signal);
-    friend void QGraphicsRotation_DisconnectNotify(QGraphicsRotation* self, QMetaMethod* signal);
-    friend void QGraphicsRotation_QBaseDisconnectNotify(QGraphicsRotation* self, QMetaMethod* signal);
+    friend void QGraphicsRotation_ConnectNotify(QGraphicsRotation* self, const QMetaMethod* signal);
+    friend void QGraphicsRotation_QBaseConnectNotify(QGraphicsRotation* self, const QMetaMethod* signal);
+    friend void QGraphicsRotation_DisconnectNotify(QGraphicsRotation* self, const QMetaMethod* signal);
+    friend void QGraphicsRotation_QBaseDisconnectNotify(QGraphicsRotation* self, const QMetaMethod* signal);
     friend void QGraphicsRotation_Update(QGraphicsRotation* self);
     friend void QGraphicsRotation_QBaseUpdate(QGraphicsRotation* self);
     friend QObject* QGraphicsRotation_Sender(const QGraphicsRotation* self);
@@ -1015,8 +1015,8 @@ class VirtualQGraphicsRotation final : public QGraphicsRotation {
     friend int QGraphicsRotation_QBaseSenderSignalIndex(const QGraphicsRotation* self);
     friend int QGraphicsRotation_Receivers(const QGraphicsRotation* self, const char* signal);
     friend int QGraphicsRotation_QBaseReceivers(const QGraphicsRotation* self, const char* signal);
-    friend bool QGraphicsRotation_IsSignalConnected(const QGraphicsRotation* self, QMetaMethod* signal);
-    friend bool QGraphicsRotation_QBaseIsSignalConnected(const QGraphicsRotation* self, QMetaMethod* signal);
+    friend bool QGraphicsRotation_IsSignalConnected(const QGraphicsRotation* self, const QMetaMethod* signal);
+    friend bool QGraphicsRotation_QBaseIsSignalConnected(const QGraphicsRotation* self, const QMetaMethod* signal);
 };
 
 #endif

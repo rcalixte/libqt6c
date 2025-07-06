@@ -85,12 +85,12 @@ void QApplication_SetStyle(QStyle* style) {
     QApplication::setStyle(style);
 }
 
-QStyle* QApplication_SetStyleWithStyle(libqt_string style) {
+QStyle* QApplication_SetStyleWithStyle(const libqt_string style) {
     QString style_QString = QString::fromUtf8(style.data, style.len);
     return QApplication::setStyle(style_QString);
 }
 
-QPalette* QApplication_Palette(QWidget* param1) {
+QPalette* QApplication_Palette(const QWidget* param1) {
     return new QPalette(QApplication::palette(param1));
 }
 
@@ -98,7 +98,7 @@ QPalette* QApplication_PaletteWithClassName(const char* className) {
     return new QPalette(QApplication::palette(className));
 }
 
-void QApplication_SetPalette(QPalette* param1) {
+void QApplication_SetPalette(const QPalette* param1) {
     QApplication::setPalette(*param1);
 }
 
@@ -106,7 +106,7 @@ QFont* QApplication_Font() {
     return new QFont(QApplication::font());
 }
 
-QFont* QApplication_FontWithQWidget(QWidget* param1) {
+QFont* QApplication_FontWithQWidget(const QWidget* param1) {
     return new QFont(QApplication::font(param1));
 }
 
@@ -114,7 +114,7 @@ QFont* QApplication_FontWithClassName(const char* className) {
     return new QFont(QApplication::font(className));
 }
 
-void QApplication_SetFont(QFont* param1) {
+void QApplication_SetFont(const QFont* param1) {
     QApplication::setFont(*param1);
 }
 
@@ -123,27 +123,27 @@ QFontMetrics* QApplication_FontMetrics() {
 }
 
 libqt_list /* of QWidget* */ QApplication_AllWidgets() {
-    QWidgetList _ret = QApplication::allWidgets();
+    QList<QWidget*> _ret = QApplication::allWidgets();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QWidget** _arr = static_cast<QWidget**>(malloc(sizeof(QWidget*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QWidget** _arr = static_cast<QWidget**>(malloc(sizeof(QWidget*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
 libqt_list /* of QWidget* */ QApplication_TopLevelWidgets() {
-    QWidgetList _ret = QApplication::topLevelWidgets();
+    QList<QWidget*> _ret = QApplication::topLevelWidgets();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QWidget** _arr = static_cast<QWidget**>(malloc(sizeof(QWidget*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QWidget** _arr = static_cast<QWidget**>(malloc(sizeof(QWidget*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -168,7 +168,7 @@ void QApplication_SetActiveWindow(QWidget* act) {
     QApplication::setActiveWindow(act);
 }
 
-QWidget* QApplication_WidgetAt(QPoint* p) {
+QWidget* QApplication_WidgetAt(const QPoint* p) {
     return QApplication::widgetAt(*p);
 }
 
@@ -176,7 +176,7 @@ QWidget* QApplication_WidgetAt2(int x, int y) {
     return QApplication::widgetAt(static_cast<int>(x), static_cast<int>(y));
 }
 
-QWidget* QApplication_TopLevelAt(QPoint* p) {
+QWidget* QApplication_TopLevelAt(const QPoint* p) {
     return QApplication::topLevelAt(*p);
 }
 
@@ -277,17 +277,17 @@ libqt_string QApplication_StyleSheet(const QApplication* self) {
     return _str;
 }
 
-void QApplication_SetStyleSheet(QApplication* self, libqt_string sheet) {
+bool QApplication_AutoSipEnabled(const QApplication* self) {
+    return self->autoSipEnabled();
+}
+
+void QApplication_SetStyleSheet(QApplication* self, const libqt_string sheet) {
     QString sheet_QString = QString::fromUtf8(sheet.data, sheet.len);
     self->setStyleSheet(sheet_QString);
 }
 
 void QApplication_SetAutoSipEnabled(QApplication* self, const bool enabled) {
     self->setAutoSipEnabled(enabled);
-}
-
-bool QApplication_AutoSipEnabled(const QApplication* self) {
-    return self->autoSipEnabled();
 }
 
 void QApplication_CloseAllWindows() {
@@ -322,11 +322,11 @@ libqt_string QApplication_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-void QApplication_SetPalette2(QPalette* param1, const char* className) {
+void QApplication_SetPalette2(const QPalette* param1, const char* className) {
     QApplication::setPalette(*param1, className);
 }
 
-void QApplication_SetFont2(QFont* param1, const char* className) {
+void QApplication_SetFont2(const QFont* param1, const char* className) {
     QApplication::setFont(*param1, className);
 }
 
@@ -513,7 +513,7 @@ void QApplication_OnCustomEvent(QApplication* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QApplication_ConnectNotify(QApplication* self, QMetaMethod* signal) {
+void QApplication_ConnectNotify(QApplication* self, const QMetaMethod* signal) {
     auto* vqapplication = dynamic_cast<VirtualQApplication*>(self);
     if (vqapplication && vqapplication->isVirtualQApplication) {
         vqapplication->connectNotify(*signal);
@@ -523,7 +523,7 @@ void QApplication_ConnectNotify(QApplication* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QApplication_QBaseConnectNotify(QApplication* self, QMetaMethod* signal) {
+void QApplication_QBaseConnectNotify(QApplication* self, const QMetaMethod* signal) {
     auto* vqapplication = dynamic_cast<VirtualQApplication*>(self);
     if (vqapplication && vqapplication->isVirtualQApplication) {
         vqapplication->setQApplication_ConnectNotify_IsBase(true);
@@ -542,7 +542,7 @@ void QApplication_OnConnectNotify(QApplication* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QApplication_DisconnectNotify(QApplication* self, QMetaMethod* signal) {
+void QApplication_DisconnectNotify(QApplication* self, const QMetaMethod* signal) {
     auto* vqapplication = dynamic_cast<VirtualQApplication*>(self);
     if (vqapplication && vqapplication->isVirtualQApplication) {
         vqapplication->disconnectNotify(*signal);
@@ -552,7 +552,7 @@ void QApplication_DisconnectNotify(QApplication* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QApplication_QBaseDisconnectNotify(QApplication* self, QMetaMethod* signal) {
+void QApplication_QBaseDisconnectNotify(QApplication* self, const QMetaMethod* signal) {
     auto* vqapplication = dynamic_cast<VirtualQApplication*>(self);
     if (vqapplication && vqapplication->isVirtualQApplication) {
         vqapplication->setQApplication_DisconnectNotify_IsBase(true);
@@ -687,7 +687,7 @@ void QApplication_OnReceivers(const QApplication* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QApplication_IsSignalConnected(const QApplication* self, QMetaMethod* signal) {
+bool QApplication_IsSignalConnected(const QApplication* self, const QMetaMethod* signal) {
     auto* vqapplication = const_cast<VirtualQApplication*>(dynamic_cast<const VirtualQApplication*>(self));
     if (vqapplication && vqapplication->isVirtualQApplication) {
         return vqapplication->isSignalConnected(*signal);
@@ -697,7 +697,7 @@ bool QApplication_IsSignalConnected(const QApplication* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-bool QApplication_QBaseIsSignalConnected(const QApplication* self, QMetaMethod* signal) {
+bool QApplication_QBaseIsSignalConnected(const QApplication* self, const QMetaMethod* signal) {
     auto* vqapplication = const_cast<VirtualQApplication*>(dynamic_cast<const VirtualQApplication*>(self));
     if (vqapplication && vqapplication->isVirtualQApplication) {
         vqapplication->setQApplication_IsSignalConnected_IsBase(true);

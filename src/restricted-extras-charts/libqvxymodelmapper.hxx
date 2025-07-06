@@ -91,8 +91,8 @@ class VirtualQVXYModelMapper final : public QVXYModelMapper {
     mutable bool qvxymodelmapper_issignalconnected_isbase = false;
 
   public:
-    VirtualQVXYModelMapper() : QVXYModelMapper(){};
-    VirtualQVXYModelMapper(QObject* parent) : QVXYModelMapper(parent){};
+    VirtualQVXYModelMapper() : QVXYModelMapper() {};
+    VirtualQVXYModelMapper(QObject* parent) : QVXYModelMapper(parent) {};
 
     ~VirtualQVXYModelMapper() {
         qvxymodelmapper_metacall_callback = nullptr;
@@ -489,10 +489,10 @@ class VirtualQVXYModelMapper final : public QVXYModelMapper {
     friend void QVXYModelMapper_QBaseChildEvent(QVXYModelMapper* self, QChildEvent* event);
     friend void QVXYModelMapper_CustomEvent(QVXYModelMapper* self, QEvent* event);
     friend void QVXYModelMapper_QBaseCustomEvent(QVXYModelMapper* self, QEvent* event);
-    friend void QVXYModelMapper_ConnectNotify(QVXYModelMapper* self, QMetaMethod* signal);
-    friend void QVXYModelMapper_QBaseConnectNotify(QVXYModelMapper* self, QMetaMethod* signal);
-    friend void QVXYModelMapper_DisconnectNotify(QVXYModelMapper* self, QMetaMethod* signal);
-    friend void QVXYModelMapper_QBaseDisconnectNotify(QVXYModelMapper* self, QMetaMethod* signal);
+    friend void QVXYModelMapper_ConnectNotify(QVXYModelMapper* self, const QMetaMethod* signal);
+    friend void QVXYModelMapper_QBaseConnectNotify(QVXYModelMapper* self, const QMetaMethod* signal);
+    friend void QVXYModelMapper_DisconnectNotify(QVXYModelMapper* self, const QMetaMethod* signal);
+    friend void QVXYModelMapper_QBaseDisconnectNotify(QVXYModelMapper* self, const QMetaMethod* signal);
     friend int QVXYModelMapper_First(const QVXYModelMapper* self);
     friend int QVXYModelMapper_QBaseFirst(const QVXYModelMapper* self);
     friend void QVXYModelMapper_SetFirst(QVXYModelMapper* self, int first);
@@ -519,8 +519,8 @@ class VirtualQVXYModelMapper final : public QVXYModelMapper {
     friend int QVXYModelMapper_QBaseSenderSignalIndex(const QVXYModelMapper* self);
     friend int QVXYModelMapper_Receivers(const QVXYModelMapper* self, const char* signal);
     friend int QVXYModelMapper_QBaseReceivers(const QVXYModelMapper* self, const char* signal);
-    friend bool QVXYModelMapper_IsSignalConnected(const QVXYModelMapper* self, QMetaMethod* signal);
-    friend bool QVXYModelMapper_QBaseIsSignalConnected(const QVXYModelMapper* self, QMetaMethod* signal);
+    friend bool QVXYModelMapper_IsSignalConnected(const QVXYModelMapper* self, const QMetaMethod* signal);
+    friend bool QVXYModelMapper_QBaseIsSignalConnected(const QVXYModelMapper* self, const QMetaMethod* signal);
 };
 
 #endif

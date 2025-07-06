@@ -111,8 +111,8 @@ QThread* q_object_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_object_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_object_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_object_start_timer(void* self, int interval) {
@@ -121,6 +121,10 @@ int32_t q_object_start_timer(void* self, int interval) {
 
 void q_object_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_object_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_object_children(void* self) {
@@ -337,6 +341,10 @@ const char* q_object_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
+bool q_object_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
+}
+
 int32_t q_object_start_timer2(void* self, int interval, int64_t timerType) {
     return QObject_StartTimer2((QObject*)self, interval, timerType);
 }
@@ -379,6 +387,10 @@ void q_signalblocker_reblock(void* self) {
 
 void q_signalblocker_unblock(void* self) {
     QSignalBlocker_Unblock((QSignalBlocker*)self);
+}
+
+void q_signalblocker_dismiss(void* self) {
+    QSignalBlocker_Dismiss((QSignalBlocker*)self);
 }
 
 void q_signalblocker_delete(void* self) {

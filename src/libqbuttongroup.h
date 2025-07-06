@@ -12,12 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractbutton.h"
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qbuttongroup.html
 
 /// q_buttongroup_new constructs a new QButtonGroup object.
@@ -262,7 +256,7 @@ QThread* q_buttongroup_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QButtonGroup* self, QThread* thread ```
-void q_buttongroup_move_to_thread(void* self, void* thread);
+bool q_buttongroup_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -277,6 +271,13 @@ int32_t q_buttongroup_start_timer(void* self, int interval);
 ///
 /// ``` QButtonGroup* self, int id ```
 void q_buttongroup_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QButtonGroup* self, enum Qt__TimerId id ```
+void q_buttongroup_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -417,6 +418,13 @@ bool q_buttongroup_inherits(void* self, const char* classname);
 ///
 /// ``` QButtonGroup* self ```
 void q_buttongroup_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QButtonGroup* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_buttongroup_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

@@ -59,12 +59,12 @@ void QXYLegendMarker_QBaseChildEvent(QXYLegendMarker* self, QChildEvent* event);
 void QXYLegendMarker_CustomEvent(QXYLegendMarker* self, QEvent* event);
 void QXYLegendMarker_OnCustomEvent(QXYLegendMarker* self, intptr_t slot);
 void QXYLegendMarker_QBaseCustomEvent(QXYLegendMarker* self, QEvent* event);
-void QXYLegendMarker_ConnectNotify(QXYLegendMarker* self, QMetaMethod* signal);
+void QXYLegendMarker_ConnectNotify(QXYLegendMarker* self, const QMetaMethod* signal);
 void QXYLegendMarker_OnConnectNotify(QXYLegendMarker* self, intptr_t slot);
-void QXYLegendMarker_QBaseConnectNotify(QXYLegendMarker* self, QMetaMethod* signal);
-void QXYLegendMarker_DisconnectNotify(QXYLegendMarker* self, QMetaMethod* signal);
+void QXYLegendMarker_QBaseConnectNotify(QXYLegendMarker* self, const QMetaMethod* signal);
+void QXYLegendMarker_DisconnectNotify(QXYLegendMarker* self, const QMetaMethod* signal);
 void QXYLegendMarker_OnDisconnectNotify(QXYLegendMarker* self, intptr_t slot);
-void QXYLegendMarker_QBaseDisconnectNotify(QXYLegendMarker* self, QMetaMethod* signal);
+void QXYLegendMarker_QBaseDisconnectNotify(QXYLegendMarker* self, const QMetaMethod* signal);
 QObject* QXYLegendMarker_Sender(const QXYLegendMarker* self);
 void QXYLegendMarker_OnSender(const QXYLegendMarker* self, intptr_t slot);
 QObject* QXYLegendMarker_QBaseSender(const QXYLegendMarker* self);
@@ -74,9 +74,9 @@ int QXYLegendMarker_QBaseSenderSignalIndex(const QXYLegendMarker* self);
 int QXYLegendMarker_Receivers(const QXYLegendMarker* self, const char* signal);
 void QXYLegendMarker_OnReceivers(const QXYLegendMarker* self, intptr_t slot);
 int QXYLegendMarker_QBaseReceivers(const QXYLegendMarker* self, const char* signal);
-bool QXYLegendMarker_IsSignalConnected(const QXYLegendMarker* self, QMetaMethod* signal);
+bool QXYLegendMarker_IsSignalConnected(const QXYLegendMarker* self, const QMetaMethod* signal);
 void QXYLegendMarker_OnIsSignalConnected(const QXYLegendMarker* self, intptr_t slot);
-bool QXYLegendMarker_QBaseIsSignalConnected(const QXYLegendMarker* self, QMetaMethod* signal);
+bool QXYLegendMarker_QBaseIsSignalConnected(const QXYLegendMarker* self, const QMetaMethod* signal);
 void QXYLegendMarker_Delete(QXYLegendMarker* self);
 
 #ifdef __cplusplus

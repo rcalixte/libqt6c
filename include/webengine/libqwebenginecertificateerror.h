@@ -12,10 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../network/libqsslcertificate.h"
-#include <string.h>
-#include "../libqurl.h"
-
 /// https://doc.qt.io/qt-6/qwebenginecertificateerror.html
 
 /// q_webenginecertificateerror_new constructs a new QWebEngineCertificateError object.
@@ -47,6 +43,11 @@ bool q_webenginecertificateerror_is_overridable(void* self);
 ///
 /// ``` QWebEngineCertificateError* self ```
 const char* q_webenginecertificateerror_description(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#isMainFrame)
+///
+/// ``` QWebEngineCertificateError* self ```
+bool q_webenginecertificateerror_is_main_frame(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#defer)
 ///

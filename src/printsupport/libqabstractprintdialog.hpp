@@ -53,16 +53,6 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QAbstractPrintDialog::PrintDialogOption PrintDialogOption;   // C++ enum
-typedef QAbstractPrintDialog::PrintDialogOptions PrintDialogOptions; // C++ QFlags
-typedef QAbstractPrintDialog::PrintRange PrintRange;                 // C++ enum
-#else
-typedef int PrintDialogOption;  // C ABI enum
-typedef int PrintDialogOptions; // C ABI QFlags
-typedef int PrintRange;         // C ABI enum
-#endif
-
 QAbstractPrintDialog* QAbstractPrintDialog_new(QPrinter* printer);
 QAbstractPrintDialog* QAbstractPrintDialog_new2(QPrinter* printer, QWidget* parent);
 QMetaObject* QAbstractPrintDialog_MetaObject(const QAbstractPrintDialog* self);
@@ -71,7 +61,7 @@ int QAbstractPrintDialog_Metacall(QAbstractPrintDialog* self, int param1, int pa
 void QAbstractPrintDialog_OnMetacall(QAbstractPrintDialog* self, intptr_t slot);
 int QAbstractPrintDialog_QBaseMetacall(QAbstractPrintDialog* self, int param1, int param2, void** param3);
 libqt_string QAbstractPrintDialog_Tr(const char* s);
-void QAbstractPrintDialog_SetOptionTabs(QAbstractPrintDialog* self, libqt_list /* of QWidget* */ tabs);
+void QAbstractPrintDialog_SetOptionTabs(QAbstractPrintDialog* self, const libqt_list /* of QWidget* */ tabs);
 void QAbstractPrintDialog_SetPrintRange(QAbstractPrintDialog* self, int range);
 int QAbstractPrintDialog_PrintRange(const QAbstractPrintDialog* self);
 void QAbstractPrintDialog_SetMinMax(QAbstractPrintDialog* self, int min, int max);
@@ -197,9 +187,9 @@ void QAbstractPrintDialog_QBaseDropEvent(QAbstractPrintDialog* self, QDropEvent*
 void QAbstractPrintDialog_HideEvent(QAbstractPrintDialog* self, QHideEvent* event);
 void QAbstractPrintDialog_OnHideEvent(QAbstractPrintDialog* self, intptr_t slot);
 void QAbstractPrintDialog_QBaseHideEvent(QAbstractPrintDialog* self, QHideEvent* event);
-bool QAbstractPrintDialog_NativeEvent(QAbstractPrintDialog* self, libqt_string eventType, void* message, intptr_t* result);
+bool QAbstractPrintDialog_NativeEvent(QAbstractPrintDialog* self, const libqt_string eventType, void* message, intptr_t* result);
 void QAbstractPrintDialog_OnNativeEvent(QAbstractPrintDialog* self, intptr_t slot);
-bool QAbstractPrintDialog_QBaseNativeEvent(QAbstractPrintDialog* self, libqt_string eventType, void* message, intptr_t* result);
+bool QAbstractPrintDialog_QBaseNativeEvent(QAbstractPrintDialog* self, const libqt_string eventType, void* message, intptr_t* result);
 void QAbstractPrintDialog_ChangeEvent(QAbstractPrintDialog* self, QEvent* param1);
 void QAbstractPrintDialog_OnChangeEvent(QAbstractPrintDialog* self, intptr_t slot);
 void QAbstractPrintDialog_QBaseChangeEvent(QAbstractPrintDialog* self, QEvent* param1);
@@ -233,12 +223,12 @@ void QAbstractPrintDialog_QBaseChildEvent(QAbstractPrintDialog* self, QChildEven
 void QAbstractPrintDialog_CustomEvent(QAbstractPrintDialog* self, QEvent* event);
 void QAbstractPrintDialog_OnCustomEvent(QAbstractPrintDialog* self, intptr_t slot);
 void QAbstractPrintDialog_QBaseCustomEvent(QAbstractPrintDialog* self, QEvent* event);
-void QAbstractPrintDialog_ConnectNotify(QAbstractPrintDialog* self, QMetaMethod* signal);
+void QAbstractPrintDialog_ConnectNotify(QAbstractPrintDialog* self, const QMetaMethod* signal);
 void QAbstractPrintDialog_OnConnectNotify(QAbstractPrintDialog* self, intptr_t slot);
-void QAbstractPrintDialog_QBaseConnectNotify(QAbstractPrintDialog* self, QMetaMethod* signal);
-void QAbstractPrintDialog_DisconnectNotify(QAbstractPrintDialog* self, QMetaMethod* signal);
+void QAbstractPrintDialog_QBaseConnectNotify(QAbstractPrintDialog* self, const QMetaMethod* signal);
+void QAbstractPrintDialog_DisconnectNotify(QAbstractPrintDialog* self, const QMetaMethod* signal);
 void QAbstractPrintDialog_OnDisconnectNotify(QAbstractPrintDialog* self, intptr_t slot);
-void QAbstractPrintDialog_QBaseDisconnectNotify(QAbstractPrintDialog* self, QMetaMethod* signal);
+void QAbstractPrintDialog_QBaseDisconnectNotify(QAbstractPrintDialog* self, const QMetaMethod* signal);
 void QAbstractPrintDialog_AdjustPosition(QAbstractPrintDialog* self, QWidget* param1);
 void QAbstractPrintDialog_OnAdjustPosition(QAbstractPrintDialog* self, intptr_t slot);
 void QAbstractPrintDialog_QBaseAdjustPosition(QAbstractPrintDialog* self, QWidget* param1);
@@ -266,9 +256,12 @@ int QAbstractPrintDialog_QBaseSenderSignalIndex(const QAbstractPrintDialog* self
 int QAbstractPrintDialog_Receivers(const QAbstractPrintDialog* self, const char* signal);
 void QAbstractPrintDialog_OnReceivers(const QAbstractPrintDialog* self, intptr_t slot);
 int QAbstractPrintDialog_QBaseReceivers(const QAbstractPrintDialog* self, const char* signal);
-bool QAbstractPrintDialog_IsSignalConnected(const QAbstractPrintDialog* self, QMetaMethod* signal);
+bool QAbstractPrintDialog_IsSignalConnected(const QAbstractPrintDialog* self, const QMetaMethod* signal);
 void QAbstractPrintDialog_OnIsSignalConnected(const QAbstractPrintDialog* self, intptr_t slot);
-bool QAbstractPrintDialog_QBaseIsSignalConnected(const QAbstractPrintDialog* self, QMetaMethod* signal);
+bool QAbstractPrintDialog_QBaseIsSignalConnected(const QAbstractPrintDialog* self, const QMetaMethod* signal);
+double QAbstractPrintDialog_GetDecodedMetricF(const QAbstractPrintDialog* self, int metricA, int metricB);
+void QAbstractPrintDialog_OnGetDecodedMetricF(const QAbstractPrintDialog* self, intptr_t slot);
+double QAbstractPrintDialog_QBaseGetDecodedMetricF(const QAbstractPrintDialog* self, int metricA, int metricB);
 void QAbstractPrintDialog_Delete(QAbstractPrintDialog* self);
 
 #ifdef __cplusplus

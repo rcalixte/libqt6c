@@ -12,20 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqmargins.h"
-#include "../libqpagelayout.h"
-#include "../libqpageranges.h"
-#include "../libqpagesize.h"
-#include "../libqpagedpaintdevice.h"
-#include "../libqpaintdevice.h"
-#include "../libqpaintengine.h"
-#include "../libqpainter.h"
-#include "../libqpoint.h"
-#include "libqprintengine.h"
-#include "libqprinterinfo.h"
-#include "../libqrect.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qprinter.html
 
 /// q_printer_new constructs a new QPrinter object.
@@ -490,6 +476,13 @@ int32_t q_printer_depth(void* self);
 ///
 double q_printer_device_pixel_ratio_f_scale();
 
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_printer_encode_metric_f(int64_t metric, double value);
+
 /// Inherited from QPagedPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagedpaintdevice.html#setPageLayout)
@@ -705,6 +698,33 @@ QPainter* q_printer_qbase_shared_painter(void* self);
 ///
 /// ``` QPrinter* self, QPainter* (*slot)() ```
 void q_printer_on_shared_painter(void* self, QPainter* (*slot)());
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QPrinter* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_printer_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QPrinter* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_printer_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QPrinter* self, double (*slot)(QPrinter*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
+void q_printer_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#dtor.QPrinter)
 ///

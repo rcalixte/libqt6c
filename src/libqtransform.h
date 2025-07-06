@@ -12,13 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqline.h"
-#include "libqpainterpath.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qtransform.html
 
 /// q_transform_new constructs a new QTransform object.
@@ -203,13 +196,23 @@ QTransform* q_transform_shear(void* self, double sh, double sv);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#rotate)
 ///
+/// ``` QTransform* self, double a, enum Qt__Axis axis, double distanceToPlane ```
+QTransform* q_transform_rotate(void* self, double a, int64_t axis, double distanceToPlane);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#rotate)
+///
 /// ``` QTransform* self, double a ```
-QTransform* q_transform_rotate(void* self, double a);
+QTransform* q_transform_rotate_with_qreal(void* self, double a);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#rotateRadians)
+///
+/// ``` QTransform* self, double a, enum Qt__Axis axis, double distanceToPlane ```
+QTransform* q_transform_rotate_radians(void* self, double a, int64_t axis, double distanceToPlane);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#rotateRadians)
 ///
 /// ``` QTransform* self, double a ```
-QTransform* q_transform_rotate_radians(void* self, double a);
+QTransform* q_transform_rotate_radians_with_qreal(void* self, double a);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator==)
 ///

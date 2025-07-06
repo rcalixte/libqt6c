@@ -12,9 +12,6 @@
 
 #include "qtlibc.h"
 
-#include <string.h>
-#include "libqurlquery.h"
-
 /// https://doc.qt.io/qt-6/qurl.html
 
 /// q_url_new constructs a new QUrl object.
@@ -79,8 +76,8 @@ char* q_url_to_encoded(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#fromEncoded)
 ///
-/// ``` const char* url ```
-QUrl* q_url_from_encoded(const char* url);
+/// ``` const char* input ```
+QUrl* q_url_from_encoded(const char* input);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#fromUserInput)
 ///
@@ -267,21 +264,6 @@ void q_url_detach(void* self);
 /// ``` QUrl* self ```
 bool q_url_is_detached(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#operator<)
-///
-/// ``` QUrl* self, QUrl* url ```
-bool q_url_operator_lesser(void* self, void* url);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#operator==)
-///
-/// ``` QUrl* self, QUrl* url ```
-bool q_url_operator_equal(void* self, void* url);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#operator!=)
-///
-/// ``` QUrl* self, QUrl* url ```
-bool q_url_operator_not_equal(void* self, void* url);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#fromPercentEncoding)
 ///
 /// ``` const char* param1 ```
@@ -329,8 +311,8 @@ void q_url_set_url2(void* self, const char* url, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#fromEncoded)
 ///
-/// ``` const char* url, enum QUrl__ParsingMode mode ```
-QUrl* q_url_from_encoded2(const char* url, int64_t mode);
+/// ``` const char* input, enum QUrl__ParsingMode mode ```
+QUrl* q_url_from_encoded2(const char* input, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#fromUserInput)
 ///
